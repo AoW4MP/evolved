@@ -1,0 +1,529 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        $("#body").ready(function() {
+
+            $("#header").load("/evolved/HTML/header.html", function() {
+                CheckData();
+            });
+        });
+
+        function HandlePage() {
+            SetRandomStart();
+        }
+
+    </script>
+
+
+    <title>Age of Wonders 4 Evolved - Faction Creator</title>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="tome_name">Faction creator</div>
+
+    <div style="color:white;
+    display: table;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;">
+        <button class="button-random" onclick="GetQuickLink()">Get Share Link</button>
+        <input type="text" value="" class="inputfield" id="shareLink" style="width:600px"><br>
+        <button class="button-random" onclick="SetRandomStart(true)">Randomise</button><br>
+    </div>
+
+    <div class="factioncreator">
+        <div class="typeHolder" id="factioncreator">
+
+            <div class="container">
+
+                <div style="height:90px">
+                    <div class="playerSigil" onclick="SetupButtons(event,'Symbol')">
+                        <img class="shield" id="shield" src="/evolved/Icons/Interface/Sigil.png" width="70px" height="70px" style="float:left">
+                        <!--<img class="symbol" id="symbol" src="/evolved/Icons/Symbols/SigilIcons_01.png" height="50px" style="float:left">-->
+                    </div>
+                    <!--<button class="test" id="shieldColor" onclick="ChangeShieldCol()">Color 1</button>
+                    <button class="test" id="shieldColor2" onclick="ChangeSymbolCol()">Color 2</button>-->
+                    <div style="  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;">
+                        <div id="currentAffinity" class="affinityText"> </div>
+                        <div>
+                            Extra Affinity Points
+                            <div id="extraAffinity" style="
+    max-width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f0f8ff2b;
+    position: relative;">
+
+                                <div style="display: flex;height: 50px;">
+
+
+                                    <div id="extraOrder"></div>
+                                    <div style="
+    display: flex;
+    flex-direction: column;">
+                                        <button class="AddSubtract" onclick="AddExtra('order','⮝')">
+                                            ⮝
+                                        </button>
+                                        <button class="AddSubtract" onclick="AddExtra('order','⮟')">
+                                            ⮟
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex;height: 50px;">
+                                    <div id="extraChaos"></div>
+
+                                    <div style="
+    display: flex;
+    flex-direction: column;">
+                                        <button class="AddSubtract" onclick="AddExtra('chaos','⮝')">
+                                            ⮝
+                                        </button>
+                                        <button class="AddSubtract" onclick="AddExtra('chaos','⮟')">
+                                            ⮟
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex;height: 50px;">
+                                    <div id="extraNature"></div>
+                                    <div style="
+    display: flex;
+    flex-direction: column;">
+                                        <button class="AddSubtract" onclick="AddExtra('nature','⮝')">
+                                            ⮝
+                                        </button>
+                                        <button class="AddSubtract" onclick="AddExtra('nature','⮟')">
+                                            ⮟
+                                        </button>
+                                    </div>
+                                </div>
+                                <div style="display: flex;height: 50px;">
+
+                                    <div id="extraShadow"></div>
+
+                                    <div style="
+    display: flex;
+    flex-direction: column;">
+                                        <button class="AddSubtract" onclick="AddExtra('shadow','⮝')">
+                                            ⮝
+                                        </button>
+                                        <button class="AddSubtract" onclick="AddExtra('shadow','⮟')">
+                                            ⮟
+                                        </button>
+                                    </div>
+                                </div>
+                                <div style="display: flex;height: 50px;">
+                                    <div id="extraMaterium"></div>
+
+                                    <div style="
+    display: flex;
+    flex-direction: column;">
+                                        <button class="AddSubtract" onclick="AddExtra('materium','⮝')">
+                                            ⮝
+                                        </button>
+                                        <button class="AddSubtract" onclick="AddExtra('materium','⮟')">
+                                            ⮟
+                                        </button>
+                                    </div>
+                                </div>
+                                <div style="display: flex;height: 50px;">
+                                    <div id="extraAstral"></div>
+
+                                    <div style="
+    display: flex;
+    flex-direction: column;">
+                                        <button class="AddSubtract" onclick="AddExtra('astral','⮝')">
+                                            ⮝
+                                        </button>
+                                        <button class="AddSubtract" onclick="AddExtra('astral','⮟')">
+                                            ⮟
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+                </div>
+                <div class="subDivider">
+
+                    <div style="width:250px"><span class="small_title"> Ruler</span> <input type="text" value="Ruler Name" class="inputfield" id="fname1" name="fname">
+
+                        <br>
+                        <!--<input type="text" value="Title" class="inputfield" id="fname2" name="fname">-->
+                        <div id="buttonContainer">
+                            <button class="button" id="originButtonOrigin" onclick="SetupButtons(event,'Origin')"></button>
+
+                        </div>
+
+                        <div id="buttonContainer">
+                            <button class="button-inset" id="originButtonTome" onclick="SetupButtons(event,'Tome')"></button>
+
+                        </div>
+
+                        <div id="buttonContainer">
+                            <button class="button-inset" id="originButtonLoadout" onclick="SetupButtons(event,'Loadout')"></button>
+
+                        </div>
+
+                    </div>
+
+                    <div style="width:250px"><span class="small_title"> Race</span> <input type="text" class="inputfield" value="Race Name" id="fname" name="fname">
+
+                        <div id="buttonContainer">
+
+                            <button class="button" id="originButtonForm" onclick="SetupButtons(event,'Form')"></button>
+
+                        </div>
+
+                        <div id="buttonContainer">
+                            <button style="background-color: transparent;     border: none;" id="originButtonFormTrait" onclick="SetupButtons(event,'FormTrait')">
+                                <div id="selected-options-container"></div>
+                            </button>
+
+
+                        </div>
+                        <br>
+                        <div id="buttonContainer">
+                            <button class="button" id="originButtonCulture" onclick="SetupButtons(event,'Culture')"></button>
+
+                        </div>
+
+                        <div id="buttonContainer">
+                            <button class="button-inset" id="originButtonSociety1" onclick="SetupButtons(event,'Society1')"></button>
+
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="button-inset" id="originButtonSociety2" onclick="SetupButtons(event,'Society2')"></button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <hr>
+
+                    <button class="button-inset" id="originButtonTome2"></button>
+
+                    <span class="small_title"> Tome Path</span>
+
+                    <button style="float:right; color:red" class="button" onclick="ClearTomePath()"> Clear Tome Path</button>
+                    <br>
+                    <div style="display:grid;grid-template-columns: repeat(8, 2fr); margin: 15px;" id="tomePathButton"></div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="selections" id="selectionsHolder">
+        <p id="selections" style="text-align: center"></p> <button style="float: right;position: relative;top: -20px;color: red;" class="button" onclick="toggleOriginButtons()">X</button>
+
+        <div id="originWrapperOptions" class="wrappers">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+<script>
+
+
+</script>
+<style>
+    button {
+        font-family: 'Regular', sans-serif;
+    }
+
+    .small_title {
+        font-family: 'Decorative';
+        color: burlywood;
+        font-size: 14px;
+    }
+
+    /* CSS styles for buttons */
+    .button {
+
+        background-color: #007bff00;
+        color: #fff;
+        border: none;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    /* CSS styles for origin buttons */
+    .origin-button {
+        padding: 5px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+        border-radius: 5px;
+
+    }
+
+    .button-inset {
+        background-color: #007bff00;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        left: 30px;
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-button {
+
+
+        border-width: 3px;
+        border-style: solid;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 10 10 10 10;
+        border-image-repeat: stretch;
+        width: 100%;
+        background-color: #111;
+        color: #fff;
+        /* border: none; */
+        cursor: pointer;
+        position: relative;
+
+        display: flex;
+        justify-content: normal;
+    }
+
+    .list-button.selected {
+
+        background-color: #4CAF50;
+        color: white;
+
+    }
+
+    .list-button-small {
+
+
+        border-width: 3px;
+        border-style: solid;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 10 10 10 10;
+        border-image-repeat: stretch;
+        width: 60px;
+
+        background-color: #111;
+        color: #fff;
+        /* border: none; */
+        cursor: pointer;
+        position: relative;
+
+
+    }
+
+    .list-button-long {
+
+        /* border-width: 3px; */
+        /* border-style: solid; */
+        /* border-image: url(/evolved/Icons/9slicetooltip.png); */
+        /* border-image-slice: 10 10 10 10; */
+        /* border-image-repeat: stretch; */
+        width: 100px;
+        height: 30px;
+        background-color: #111;
+        color: #fff;
+        height: 60px;
+        /* border: none; */
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tome-button-small {
+
+        width: 60px;
+        height: 80px;
+
+        color: #fff;
+        /* border: none; */
+        cursor: pointer;
+        position: relative;
+    }
+
+    .subDivider {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-button-small:hover {
+
+        background-color: dimgrey;
+
+    }
+
+    .list-button:hover {
+
+        background-color: dimgrey;
+
+    }
+
+    .button-random {
+
+        background-color: #9a0f96e8;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        position: relative;
+
+        height: 30px;
+        /* display: flex; */
+        /* justify-content: space-between; */
+
+    }
+
+    .wrappers {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: repeat(7, 2fr);
+        overflow-y: visible;
+        height: fit-content;
+
+    }
+
+    .shield {
+        float: left;
+    }
+
+    .symbol {
+
+        position: absolute;
+        /* float: left; */
+        top: 42px;
+
+        left: 16px;
+    }
+
+    .selections {
+        width: fit-content;
+
+        height: fit-content;
+        color: white;
+        display: inline-block;
+        position: absolute;
+        border-width: 10px;
+        border-style: solid;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 10 10 10 10;
+        background-color: black;
+    }
+
+
+    .container {
+
+        display: inline-block;
+        position: relative;
+
+        width: 650px;
+
+        left: 102px;
+
+
+        background-image: url(/evolved/Icons/tooltipBG.png);
+        font-size: 13px;
+        color: #bbcdf6;
+        text-align: left;
+        border-width: 10px;
+        border-style: solid;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 10 10 10 10;
+        text-shadow: 2px 2px black;
+    }
+
+    .inputfield {
+        border-width: 6px;
+        /* width: 300px; */
+        width: auto;
+        border-style: solid;
+        border-width: 10px;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 10 10 10 10;
+        background-color: black;
+        color: #F0F8FF;
+    }
+
+    .affinityText {
+
+        top: 20px;
+        max-width: 300px;
+        font-size: 15px;
+        position: relative;
+    }
+
+
+    .factioncreator {
+
+        margin: auto;
+        left: -127px;
+        width: 800px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .AddSubtract {
+
+        margin: -2px;
+        font-weight: 900;
+        color: white;
+        background-color: transparent;
+        border: none;
+    }
+
+    .AddSubtract:hover {
+
+        margin: -2px;
+        font-weight: 1900;
+        color: aqua;
+        background-color: transparent;
+        border: none;
+    }
+
+    .sortingButton:hover {
+        background-color: dimgrey;
+    }
+
+</style>
+
+</html>
+<footer><br><br></footer>

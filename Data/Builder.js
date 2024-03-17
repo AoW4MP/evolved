@@ -94,7 +94,6 @@ async function GetAllData() {
                 } else if (index == 4) {
                     jsonFactionCreation2 = data;
                 } else if (index == 5) {
-                    console.log('jsonTomes before', data)
                     jsonTomes = fixMissingSummonSlug(data);
                 } else if (index == 6) {
                     jsonUnitAbilities = data;
@@ -122,7 +121,6 @@ async function GetAllData() {
                     jsonExtraAscendedInfo = data;
                 }
             });
-            console.log('jsonTomes', jsonTomes)
         })
         .catch(error => {
             console.error('Error fetching JSON files:', error.message);

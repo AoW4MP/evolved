@@ -17,6 +17,11 @@ var extraOrder, extraChaos, extraNature, extraMaterium, extraShadow, extraAstral
 
 var currentTomeList = [];
 
+const traitPointsMax = 10
+const affinityT3 = 2
+const affinityT4 = 4
+const affinityT5 = 6
+
 function ChangeShieldCol() {
 
     var shieldElement = document.getElementById("shield");
@@ -1110,7 +1115,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 3) {
                 // 3 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 2)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, affinityT3 - 1)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -1125,7 +1130,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 4) {
                 // 6 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 5)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, affinityT4 - 1)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -1138,7 +1143,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 5) {
                 // 8 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 7)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, affinityT5 - 1)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -1191,17 +1196,15 @@ function GetAffinityMatches(affinityTotal, substringToCount, number) {
             // console.log(match);
         }
 
-        var finalNumber = 0;
+        // var finalNumber = 0;
         for (let index = 0; index < numberMatches.length; index++) {
-            finalNumber += numberMatches[index];
-
+            if (!moreThanNumber && numberMatches[index] > number) {
+                moreThanNumber = true
+            }
+            // finalNumber += numberMatches[index];
         }
 
-
-
-
-
-        moreThanNumber = finalNumber > number;
+        // moreThanNumber = finalNumber > number;
     }
 
 
@@ -1515,7 +1518,7 @@ function updateSelectedOptions(origin) {
         //         currentFormTraitList.pop();
         //     }
         // } else {
-        if (getPoints() > 5) {
+        if (getPoints() > traitPointsMax) {
             currentFormTraitList.pop();
         }
         // }

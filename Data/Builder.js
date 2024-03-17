@@ -2,6 +2,18 @@ var searchParams = new URLSearchParams(window.location.search);
 var sorting = searchParams.get('sort');
 var currentView = "";
 
+function fixMissingSummonSlug(tomes) {
+    return tomes.map(tome => {
+        const skills = tome?.skills?.map(skill => {
+            if (!skill.type.includes('Summon Spell')) {
+                return skill
+            }
+            return { ...skill, spell_slug: skill.name.toLowerCase().replaceAll(' ', '_') }
+        })
+        return { ...tome, skills }
+    })  
+}
+
 function CheckBoxTooltips() {
     var checkboxTooltip = document.getElementById("tooltipCheckbox");
 
@@ -82,7 +94,8 @@ async function GetAllData() {
                 } else if (index == 4) {
                     jsonFactionCreation2 = data;
                 } else if (index == 5) {
-                    jsonTomes = data;
+                    console.log('jsonTomes before', data)
+                    jsonTomes = fixMissingSummonSlug(data);
                 } else if (index == 6) {
                     jsonUnitAbilities = data;
                 } else if (index == 7) {
@@ -109,6 +122,7 @@ async function GetAllData() {
                     jsonExtraAscendedInfo = data;
                 }
             });
+            console.log('jsonTomes', jsonTomes)
         })
         .catch(error => {
             console.error('Error fetching JSON files:', error.message);

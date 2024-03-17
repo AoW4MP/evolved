@@ -137,7 +137,7 @@
   "category": "Chaos Empire Skill",
   "id": "battlefield_looting",
   "required_xp": 40,
-  "description": "Gain +6 <gold></gold> <hyperlink>Gold</hyperlink> per <hyperlink>Unit Tier</Hyperlink> of the <hyperlink>Units</hyperlink> killed in <hyperlink>Combat</hyperlink>.",
+  "description": "Gain +4 <gold></gold> <hyperlink>Gold</hyperlink> per <hyperlink>Unit Tier</Hyperlink> of the <hyperlink>Units</hyperlink> killed in <hyperlink>Combat</hyperlink>.",
   "name": "Battlefield Looting",
   "icon": "battlefield_looting",
   "required_level": 2,
@@ -147,12 +147,12 @@
  {
   "category": "Chaos Empire Skill",
   "id": "call_of_chaos",
-  "required_xp": 15,
+  "required_xp": 60,
   "description": "Defeating an Infestation grants you a unit based on the Infestation defeated.",
   "name": "Call of Chaos",
   "icon": "call_of_chaos",
-  "required_level": 1,
-  "cost": "100<influence></influence> ",
+  "required_level": 3,
+  "cost": "150<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -864,7 +864,7 @@
   "category": "Order Empire Skill",
   "id": "justified_wars",
   "required_xp": 160,
-  "description": "Gain +30 more <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an opposing <hyperlink>Alignment</hyperlink>.<br></br>Gain +20 <happiness></happiness> <hyperlink>City Stability</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
+  "description": "Gain +30 more <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an opposing <hyperlink>Alignment</hyperlink>.<br></br>Gain <happiness></happiness> <hyperlink>City Stability</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
   "name": "Justified Wars",
   "icon": "justified_wars",
   "required_level": 6,
@@ -1028,12 +1028,12 @@
  {
   "category": "Chaos Empire Skill",
   "id": "impressment",
-  "required_xp": 60,
+  "required_xp": 15,
   "description": "<hyperlink>Unit tier</hyperlink> I and II <hyperlink>Units</hyperlink> cost -20% <hyperlink>Unit Upkeep</hyperlink>.",
   "name": "Impressment",
   "icon": "impressment",
-  "required_level": 3,
-  "cost": "150<influence></influence> ",
+  "required_level": 1,
+  "cost": "100<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {

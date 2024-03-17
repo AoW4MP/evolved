@@ -812,7 +812,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>"
    },
    {
-    "description": "Enchanted units gain:<bulletlist><bullet>+% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>+ <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on base attacks.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Enchanted units gain:<bulletlist><bullet>+% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>+ <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on attacks.</bullet></bulletlist>",
     "name": "Force of Nature",
     "spell_slug": "force_of_nature",
     "tier": 9,
@@ -1087,7 +1087,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Units in a -hex radius:<bulletlist><bullet>Sustain  <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by  hex.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> removed.</bullet></bulletlist>",
+    "description": "Units in a -hex radius:<bulletlist><bullet>Sustain  <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by  hex.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> cancelled.</bullet></bulletlist>",
     "name": "Displacing Winds",
     "spell_slug": "displacing_winds",
     "tier": 3,
@@ -1177,7 +1177,7 @@
   "icon": "tome_of_the_god_emperor",
   "skills": [
    {
-    "description": "Targets all friendly dead units with Faithful or Zeal. They come back to life with % of their total <hyperlink><hp></hp> Hit Points</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
+    "description": "<bulletlist><bullet>Brings all dead friendly units with Faithful or Zeal back to life with % of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All revived units gain 3 Bolstered Defense and 3 Bolstered Resistance.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
     "name": "Mass Revive",
     "spell_slug": "mass_revive",
     "tier": 10,
@@ -1444,7 +1444,7 @@
   "icon": "tome_of_the_inquisition",
   "skills": [
    {
-    "description": "Target enemy army loses 50% of its Move Points on the <hyperlink>World Map</hyperlink>.",
+    "description": "Target enemy army gains Despair for  World Map <turn></turn> Turn.",
     "name": "Burden of Guilt",
     "spell_slug": "burden_of_guilt",
     "tier": 3,
@@ -1672,7 +1672,7 @@
   "icon": "tome_of_the_reaper",
   "skills": [
    {
-    "description": "Target friendly City:<bulletlist><bullet>No longer gains any <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
+    "description": "Target friendly City:<bulletlist><bullet>Has -50% <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
     "name": "Harvest Population",
     "spell_slug": "harvest_population",
     "tier": 7,
@@ -1800,7 +1800,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
    },
    {
-    "description": "Target friendly city:<bulletlist><bullet>Has +20 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
+    "description": "Target friendly city:<bulletlist><bullet>Has +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
     "name": "Domain of Death",
     "spell_slug": "domain_of_death",
     "tier": 5,
@@ -2266,7 +2266,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
    },
    {
-    "description": "All enemies in the target army provide you with vision for 15 <turn></turn> Turns.",
+    "description": "All enemies in the target army provide you with vision for 5 <turn></turn> Turns.",
     "name": "Scry Enemy",
     "spell_slug": "scry_enemy",
     "tier": 3,
@@ -2370,9 +2370,9 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
-    "name": "Lightning Focus",
-    "spell_slug": "lightning_focus",
+    "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "name": "Lightning Magic",
+    "spell_slug": "lightning_magic",
     "tier": 1,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
@@ -2618,7 +2618,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>+2 <food></food> <hyperlink>Food</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet><bullet>+2 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
+    "description": "<bulletlist><bullet>+3 <food></food> <hyperlink>Food</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet><bullet>+1 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
     "name": "Temple of Fertility",
     "tier": 3,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -2661,7 +2661,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Until the end of battle, whenever a friendly unit dies, all other friendly units heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+    "description": "Until the end of battle, whenever a friendly unit dies, all other friendly units within hexes heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
     "name": "Parting Gifts",
     "spell_slug": "parting_gifts",
     "tier": 5,
@@ -2682,7 +2682,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Decaying, a damage-over-time effect that prevents enemies from healing.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Makes <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Decaying, a damage-over-time effect that prevents enemies from healing.</bullet></bulletlist>",
     "name": "Projectiles of Decay",
     "spell_slug": "projectiles_of_decay",
     "tier": 6,
@@ -2845,7 +2845,7 @@
   "icon": "tome_of_souls",
   "skills": [
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Base % chance of inflicting Soulbound on base attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Grants enchanted units:<bulletlist><bullet>Base % chance of inflicting Soulbound on attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Soulbinders",
     "spell_slug": "soulbinders",
     "tier": 2,
@@ -2996,7 +2996,7 @@
  {
   "passives": [
    {
-    "description": "Units standing on the center of this <hyperlink>Outpost</hyperlink> or <hyperlink>City</hyperlink> restore 50% <hyperlink><hp></hp> Hit Points</hyperlink>, and remove Exhausted from <hyperlink>Forced March</hyperlink>. The <hyperlink>Outpost</hyperlink> or <hyperlink>City</hyperlink> has a 3 cooldown before it can use this again.",
+    "description": "Units standing on the center of this <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink> restore 50% <hyperlink><hp></hp> Hit Points</hyperlink> and 100% <hyperlink>Move Points</hyperlink>. The <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink> has a 3 <turn></turn> <hyperlink>Turn</hyperlink> cooldown before it can use this again.",
     "name": "Ritual of Alacrity",
     "type": ""
    }
@@ -3503,7 +3503,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Grants base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Base % chance of inflicting a random negative status effect.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Base % chance of inflicting a random negative status effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Havoc Magic",
     "spell_slug": "havoc_magic",
     "tier": 5,
@@ -3561,7 +3561,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Non-Hero units in target friendly army gain +30% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
+    "description": "Non-Hero units in target friendly army gain +50% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
     "name": "Revels of Carnage",
     "spell_slug": "revels_of_carnage",
     "tier": 3,
@@ -3625,7 +3625,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Inflict Misfortune.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Grants attacks of enchanted units:<bulletlist><bullet>Base % of inflicting Misfortune.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Mark of Misfortune",
     "spell_slug": "mark_of_misfortune",
     "tier": 3,
@@ -3842,7 +3842,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Grants non-Dark units:<bulletlist><bullet>Cull the Weak, which increases damage dealt to enemies with the Weakened status effect and grants the attacker Regeneration once per turn.</bullet></bulletlist>",
+    "description": "Grants non-Dark units:<bulletlist><bullet>Cull the Weak, which increases damage dealt to enemies with a negative status effect and grants the attacker Regeneration once per turn.</bullet></bulletlist>",
     "name": "Brand of Wrath",
     "spell_slug": "brand_of_wrath",
     "tier": 3,
@@ -4035,9 +4035,9 @@
   "icon": "tome_of_pyromancy",
   "skills": [
    {
-    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+ <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet> <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Burning.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
-    "name": "Fiery Arrows",
-    "spell_slug": "fiery_arrows",
+    "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "name": "Blazing Magic",
+    "spell_slug": "blazing_magic",
     "tier": 2,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },

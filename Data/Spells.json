@@ -1196,14 +1196,14 @@
   "icon": "gaias_chosen"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4694399254676,
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "mass_rejuvenation",
   "tactical": true,
   "description": "<bulletlist><bullet>Heals all friendly units +40 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Brings all dead friendly Animals and Plants back to life with 50% of their total <hp></hp> Hit Points.</bullet></bulletlist>",
   "name": "Mass Rejuvenation",
-  "operation_point_cost": 50,
+  "operation_point_cost": 65,
   "icon": "mass_rejuvenation"
  },
  {
@@ -1290,7 +1290,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "mass_revive",
   "tactical": true,
-  "description": "Targets all friendly dead units with Faithful or Zeal. They come back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "<bulletlist><bullet>Brings all dead friendly units with Faithful or Zeal back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All revived units gain 3 Bolstered Defense and 3 Bolstered Resistance.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
   "name": "Mass Revive",
   "operation_point_cost": 65,
   "icon": "mass_revive"
@@ -1342,7 +1342,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "burden_of_guilt",
   "tactical": false,
-  "description": "Target enemy army loses 50% of its Move Points on the <hyperlink>World Map</hyperlink>.",
+  "description": "Target enemy army gains Despair for 1 World Map <turn></turn> Turn.",
   "name": "Burden of Guilt",
   "operation_point_cost": 60,
   "icon": "burden_of_guilt"
@@ -1477,14 +1477,14 @@
   "icon": "true_death_magic"
  },
  {
-  "casting_cost": "50<souls></souls> ",
+  "casting_cost": "45<souls></souls> ",
   "resid": 4514010634391,
-  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "battlefield_reanimation",
   "tactical": true,
   "description": "<bulletlist><bullet>All friendly Undead units come back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-undead Corpses come back to life as <hyperlink>Decaying Zombies</hyperlink> under your control until the end of battle.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
   "name": "Battlefield Reanimation",
-  "operation_point_cost": 80,
+  "operation_point_cost": 65,
   "icon": "battlefield_reanimation"
  },
  {
@@ -1528,7 +1528,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "domain_of_death",
   "tactical": false,
-  "description": "Target friendly city:<bulletlist><bullet>Has +20 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
+  "description": "Target friendly city:<bulletlist><bullet>Has +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
   "name": "Domain of Death",
   "operation_point_cost": 50,
   "icon": "domain_of_death"
@@ -2008,7 +2008,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "tectonic_shatter",
   "tactical": true,
-  "description": "<bulletlist><bullet>All enemies sustain 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 60% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>All enemies sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 60% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
   "name": "Tectonic Shatter",
   "operation_point_cost": 65,
   "icon": "tectonic_shatter"
@@ -2199,7 +2199,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "displacing_winds",
   "tactical": true,
-  "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by 1 hex.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> removed.</bullet></bulletlist>",
+  "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by 1 hex.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> cancelled.</bullet></bulletlist>",
   "name": "Displacing Winds",
   "operation_point_cost": 20,
   "icon": "displacing_winds"
@@ -2415,7 +2415,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "poison_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Deal -1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain base 30% chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Deal -1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -2520,7 +2520,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "havoc_magic",
   "tactical": false,
-  "description": "Grants base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Base 60% chance of inflicting a random negative status effect.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Base 60% chance of inflicting a random negative status effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -2604,7 +2604,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "mark_of_misfortune",
   "tactical": false,
-  "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Inflict Misfortune.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants attacks of enchanted units:<bulletlist><bullet>Base 60% of inflicting Misfortune.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3014,7 +3014,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "harvest_population",
   "tactical": false,
-  "description": "Target friendly City:<bulletlist><bullet>No longer gains any <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
+  "description": "Target friendly City:<bulletlist><bullet>Has -50% <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
   "name": "Harvest Population",
   "operation_point_cost": 45,
   "icon": "harvest_population"
@@ -3025,7 +3025,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "force_of_nature",
   "tactical": false,
-  "description": "Enchanted units gain:<bulletlist><bullet>+20% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on base attacks.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Enchanted units gain:<bulletlist><bullet>+20% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on attacks.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitCavalry></unitCavalry> Cavalry"
@@ -3038,6 +3038,9 @@
    },
    {
     "requisite": "<unitFey></unitFey> Fey"
+   },
+   {
+    "requisite": "<unitNaval></unitNaval> Naga"
    }
   ],
   "name": "Force of Nature",
@@ -3523,9 +3526,9 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4273492485023,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "lightning_focus",
+  "id": "lightning_magic",
   "tactical": false,
-  "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 30% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3534,9 +3537,9 @@
     "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    }
   ],
-  "name": "Lightning Focus",
+  "name": "Lightning Magic",
   "operation_point_cost": 80,
-  "icon": "lightning_focus"
+  "icon": "lightning_magic"
  },
  {
   "casting_cost": "80<mana></mana> ",
@@ -3563,7 +3566,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "amplified_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>30% of their damage to another target within 3 hexes.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>30% of their damage to another target within 2 hexes.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3580,20 +3583,20 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4273492484987,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "fiery_arrows",
+  "id": "blazing_magic",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Burning.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
-    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+    "requisite": "<unitSupport></unitSupport> Support Unit"
    },
    {
-    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    }
   ],
-  "name": "Fiery Arrows",
+  "name": "Blazing Magic",
   "operation_point_cost": 80,
-  "icon": "fiery_arrows"
+  "icon": "blazing_magic"
  },
  {
   "casting_cost": "200<mana></mana> ",
@@ -3909,7 +3912,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "soulbinders",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Base 90% chance of inflicting Soulbound on base attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+20% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants enchanted units:<bulletlist><bullet>Base 60% chance of inflicting Soulbound on attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+10% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -4123,7 +4126,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "scry_enemy",
   "tactical": false,
-  "description": "All enemies in the target army provide you with vision for 15 <turn></turn> Turns.",
+  "description": "All enemies in the target army provide you with vision for 5 <turn></turn> Turns.",
   "name": "Scry Enemy",
   "operation_point_cost": 30,
   "icon": "scry_enemy"
@@ -4368,7 +4371,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "projectiles_of_decay",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Decaying, a damage-over-time effect that prevents enemies from healing.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Decaying, a damage-over-time effect that prevents enemies from healing.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"

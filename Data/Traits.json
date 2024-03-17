@@ -2,7 +2,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
-  "point_cost": 4,
+  "point_cost": 7,
   "id": "eagle_mounts",
   "name": "Eagle Mounts",
   "screen_description": "",
@@ -19,12 +19,12 @@
   "front_end": true,
   "icon": "eagle_mounts",
   "type": "form",
-  "display_order": -1
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common</helpcolor>",
   "biography_description": "They ride to battle on impressive cavalry.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "mount_masters",
   "name": "Mount Masters",
   "screen_description": "",
@@ -38,13 +38,13 @@
   "front_end": true,
   "icon": "mount_masters",
   "type": "form",
-  "display_order": 2
+  "display_order": 7
  },
  {
   "biography_description": "They share a deep kinship with mighty Elephants.",
   "lore_description": "<helpcolor>Mounted units are more common and gain an Elephant mount </helpcolor>",
   "DLC": "PRIMALFURY ",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "elephant_mounts",
   "name": "Elephant Mounts",
   "screen_description": "",
@@ -67,13 +67,13 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "elephant_mounts",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "biography_description": "They have tamed the furry Mammoths from the tundra.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Mammoth mount.</helpcolor>",
   "DLC": "PRIMALFURY ",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "mammoth_mounts",
   "name": "Mammoth Mounts",
   "screen_description": "",
@@ -99,7 +99,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "mammoth_mounts",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Units can consume plants in order to heal and strengthen themselves.</helpcolor>",
@@ -118,12 +118,12 @@
   "front_end": true,
   "icon": "herbivore",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Deal more damage to enemies surrounded by your units.</helpcolor>",
   "biography_description": "They surround and overrun their enemies.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "pack_tactics",
   "name": "Pack Tactics",
   "screen_description": "",
@@ -137,7 +137,7 @@
   "front_end": true,
   "icon": "pack_tactics",
   "type": "form",
-  "display_order": 3
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Moving around and settling in Ashland areas becomes easier.</helpcolor>",
@@ -165,13 +165,13 @@
   "front_end": true,
   "icon": "desolate_adaptation",
   "type": "form",
-  "display_order": 6
+  "display_order": 10
  },
  {
   "biography_description": "They made friends with the Dire Bears.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Dire Bear mount </helpcolor>",
   "DLC": "EMPIRESANDASHES ",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "dire_bear_mounts",
   "name": "Dire Bear Mounts",
   "screen_description": "",
@@ -194,7 +194,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "dire_bear_mounts",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Units can see further on the World Map</helpcolor>",
@@ -213,12 +213,12 @@
   "front_end": true,
   "icon": "sharp_eyes",
   "type": "form",
-  "display_order": 4
+  "display_order": 9
  },
  {
   "lore_description": "<helpcolor>Allows for better positioning by being able to move through friendly units.</helpcolor>",
   "biography_description": "They move past their own troops with ease.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "light_footed",
   "name": "Light Footed",
   "screen_description": "",
@@ -232,12 +232,12 @@
   "front_end": true,
   "icon": "light_footed",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Reduces the resistance to magic and status effects of nearby units.</helpcolor>",
   "biography_description": "They have a grisly stench following them.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "hideous_stench",
   "name": "Hideous Stench",
   "screen_description": "",
@@ -251,7 +251,7 @@
   "front_end": true,
   "icon": "hideous_stench",
   "type": "form",
-  "display_order": 3
+  "display_order": 6
  },
  {
   "affinities": [
@@ -267,7 +267,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain <bulletlist><bullet>+20% <food></food> <hyperlink>Food</hyperlink> if the city core province contains Grasslands or Fungus Fields.</bullet><bullet>+20% <structureprod></structureprod> <hyperlink>Production</hyperlink> if the city core province contains Forest, Rocky or Mountains.</bullet><bullet>+10% <gold></gold> <hyperlink>Gold</hyperlink> if the city core province contains Ashlands.</bullet><bullet>+10% <mana></mana> <hyperlink>Mana</hyperlink> if the city core province contains Snow, Ice or Sand.</bullet></bulletlist>"
+    "name": "<hyperlink>Cities</hyperlink> gain <bulletlist><bullet>+30% <food></food> <hyperlink>Food</hyperlink> if the city core province contains Grasslands or Fungus Fields.</bullet><bullet>+30% <structureprod></structureprod> <hyperlink>Production</hyperlink> if the city core province contains Forest, Rocky or Mountains.</bullet><bullet>+15% <gold></gold> <hyperlink>Gold</hyperlink> if the city core province contains Ashlands.</bullet><bullet>+15% <mana></mana> <hyperlink>Mana</hyperlink> if the city core province contains Snow, Ice or Sand.</bullet></bulletlist>"
    },
    {
     "name": "Terraforming spells cost -25% less <mana></mana> <hyperlink>Mana</hyperlink> and <caststrategic></caststrategic> <hyperlink>World Map Casting Point</hyperlink> to cast."
@@ -363,10 +363,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain 1 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Marauder</hyperlink> or <minorcity></minorcity><hyperlink>Free City</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat."
+    "name": "Gain +1 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Marauder</hyperlink> or <minorcity></minorcity><hyperlink>Free City</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat."
    },
    {
-    "name": "Gain 4 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Empire</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat.<br></br>This reward increases by +2 for each level of <evilact></evilact>evil <hyperlink>Alignment</hyperlink> of the Faction they belonged to."
+    "name": "Gain 2 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Empire</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat.<br></br>This reward increases by +1 for each level of <evilact></evilact>evil <hyperlink>Alignment</hyperlink> of the Faction they belonged to."
    },
    {
     "name": "Gain +30 <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an <evilact></evilact>evil <hyperlink>Alignment</hyperlink>."
@@ -929,7 +929,7 @@
   "front_end": true,
   "icon": "swamp_adaptation",
   "type": "form",
-  "display_order": 6
+  "display_order": 10
  },
  {
   "lore_description": "<helpcolor>Moving around and settling in desert areas becomes easier.</helpcolor>",
@@ -957,7 +957,7 @@
   "front_end": true,
   "icon": "desert_adaptation",
   "type": "form",
-  "display_order": 6
+  "display_order": 10
  },
  {
   "lore_description": "<helpcolor>Moving around and settling in cold areas becomes easier.</helpcolor>",
@@ -985,7 +985,7 @@
   "front_end": true,
   "icon": "arctic_adaptation",
   "type": "form",
-  "display_order": 6
+  "display_order": 10
  },
  {
   "starting_bonuses": [
@@ -1014,13 +1014,13 @@
   "type": "form",
   "group_name": "ADAPTATION",
   "front_end": true,
-  "display_order": 6,
+  "display_order": 10,
   "icon": "underground_adaptation"
  },
  {
   "lore_description": "<helpcolor>Units at low health will still deal a lot of damage.</helpcolor>",
   "biography_description": "The more they are pushed to the edge, the harder they will fight.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "tenacious",
   "name": "Tenacious",
   "screen_description": "",
@@ -1034,12 +1034,12 @@
   "front_end": true,
   "icon": "tenacious",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Great for mobile hit and run tactics.</helpcolor>",
   "biography_description": "They have trained to dart in and out of combat, not giving their enemies much time to strike back.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "elusive",
   "name": "Elusive",
   "screen_description": "",
@@ -1053,12 +1053,12 @@
   "front_end": true,
   "icon": "elusive",
   "type": "form",
-  "display_order": 5
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Units normally only have 32 movement.</helpcolor>",
   "biography_description": "Trained in long distance running, they are exceptionally fast.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "athletics",
   "name": "Athletics",
   "screen_description": "",
@@ -1072,12 +1072,12 @@
   "front_end": true,
   "icon": "athletics",
   "type": "form",
-  "display_order": 2
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Units become tougher when standing next to allies.</helpcolor>",
   "biography_description": "They have trained to cover any gaps in their defensive formations.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "defensive_tactics",
   "name": "Defensive Tactics",
   "screen_description": "",
@@ -1091,12 +1091,12 @@
   "front_end": true,
   "icon": "defensive_tactics",
   "type": "form",
-  "display_order": 3
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Units deal more damage when fighting in groups.</helpcolor>",
   "biography_description": "They work together to bring down even the largest of foes.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "overwhelm_tactics",
   "name": "Overwhelm Tactics",
   "screen_description": "",
@@ -1110,12 +1110,12 @@
   "front_end": true,
   "icon": "overwhelm_tactics",
   "type": "form",
-  "display_order": 3
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Encourages a slow and steady play style.</helpcolor>",
   "biography_description": "To them, the best defense are their shields and their patience in battle.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "bulwark",
   "name": "Bulwark",
   "screen_description": "",
@@ -1129,12 +1129,12 @@
   "front_end": true,
   "icon": "bulwark",
   "type": "form",
-  "display_order": 4
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Useful for armies focusing on battle mages.</helpcolor>",
   "biography_description": "They prefer to fight using magic.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "arcane_focus",
   "name": "Arcane Focus",
   "screen_description": "",
@@ -1148,12 +1148,12 @@
   "front_end": true,
   "icon": "arcane_focus",
   "type": "form",
-  "display_order": 4
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Units are less likely to be affected by negative status effects.</helpcolor>",
   "biography_description": "Their natural resilience makes them less likely to be affected by magic.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "resilient",
   "name": "Resilient",
   "screen_description": "",
@@ -1167,12 +1167,12 @@
   "front_end": true,
   "icon": "resilient",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Your units can take a little more damage.</helpcolor>",
   "biography_description": "They are vigorous and strong, true beacons of health.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "hardy",
   "name": "Hardy",
   "screen_description": "",
@@ -1186,7 +1186,7 @@
   "front_end": true,
   "icon": "hardy",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "biography_description": "They are talented spies, sneaking past enemy lines to gain precious information.",
@@ -1226,10 +1226,10 @@
   ],
   "starting_bonuses": [
    {
-    "description": "Wayfinder Enchantment is already active and costs no upkeep."
+    "description": "Wayfinder Enchantment and Enchanted Crow Companion are already active and cost no upkeep."
    },
    {
-    "description": "Start with an extra Scout Unit."
+    "description": "Start with 2 extra Scout Units."
    }
   ],
   "icon": "devious_watchers"
@@ -1251,7 +1251,7 @@
     "name": "Racial Battle Mage Units and Support Units have +1 Rank."
    },
    {
-    "name": "Battle Mage Units and Support Units provide +10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> at the start of combat."
+    "name": "Battle Mage Units and Support Units provide +5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> at the start of combat."
    }
   ],
   "enabled": true,
@@ -1391,7 +1391,7 @@
     "name": "Quarries yield +5 <gold></gold> <hyperlink>Gold</hyperlink> and +5 <structureprod></structureprod> <hyperlink>Production</hyperlink>."
    },
    {
-    "name": "Special Province Improvements cost -25% <structureprod></structureprod> Production."
+    "name": "Special Province Improvements cost -50% <structureprod></structureprod> Production."
    }
   ],
   "enabled": true,
@@ -1426,7 +1426,7 @@
     "name": "Coast, River, and Underground Lake provinces yield +3 <gold></gold> Gold, +3 <food></food> Food, and +3 <unitprod></unitprod> Draft."
    },
    {
-    "name": "Embarked units:<bulletlist><bullet>Deal +30% damage</bullet><bullet>Gain +30% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
+    "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +20% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
    }
   ],
   "enabled": true,
@@ -1819,7 +1819,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Wolf mount.</helpcolor>",
   "biography_description": "They have made companions of the White Wolves.",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "white_wolf_mounts",
   "name": "White Wolf Mounts",
   "screen_description": "",
@@ -1845,12 +1845,12 @@
   "front_end": true,
   "icon": "white_wolf_mounts",
   "type": "form",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Nightmare mount.</helpcolor>",
   "biography_description": "They have tamed the Flaming Horses of the Inferno.",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "nightmare_mounts",
   "name": "Nightmare Mounts",
   "screen_description": "",
@@ -1876,12 +1876,12 @@
   "front_end": true,
   "icon": "nightmare_mounts",
   "type": "form",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Great for fighting enemies up close.</helpcolor>",
   "biography_description": "They hone their reflexes and will not let their enemy walk away from a fight unscathed.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "ferocious",
   "name": "Ferocious",
   "screen_description": "",
@@ -1895,12 +1895,12 @@
   "front_end": true,
   "icon": "ferocious",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Increases the damage of melee and ranged units.</helpcolor>",
   "biography_description": "They pride themselves on their strength and musculature.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "strong",
   "name": "Strong",
   "screen_description": "",
@@ -1914,12 +1914,12 @@
   "front_end": true,
   "icon": "strong",
   "type": "form",
-  "display_order": 4
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Reduce damage from magical attacks.</helpcolor>",
   "biography_description": "They have a natural armor against magical damage.",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "resistant",
   "name": "Resistant",
   "screen_description": "",
@@ -1933,7 +1933,7 @@
   "front_end": true,
   "icon": "resistant",
   "type": "form",
-  "display_order": 1
+  "display_order": 5
  },
  {
   "biography_description": "They harbor knowledge dating back to the beginning of time.",
@@ -1952,7 +1952,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "When a Tome is unlocked, a random skill from that Tome costs -80% <knowledge></knowledge> Knowledge."
+    "name": "When a Tome is unlocked, a random skill from that Tome costs -60% <knowledge></knowledge> Knowledge."
    }
   ],
   "enabled": true,
@@ -2127,7 +2127,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Unicorn mount.</helpcolor>",
   "biography_description": "They share a deep kinship with Unicorns.",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "unicorn_mounts",
   "name": "Unicorn Mounts",
   "screen_description": "",
@@ -2150,12 +2150,12 @@
   "front_end": true,
   "icon": "unicorn_mounts",
   "type": "form",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Spider mount.</helpcolor>",
   "biography_description": "They share a deep kinship with Spiders.",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "dread_spider_mounts",
   "name": "Dread Spider Mounts",
   "screen_description": "",
@@ -2178,12 +2178,12 @@
   "front_end": true,
   "icon": "dread_spider_mounts",
   "type": "form",
-  "display_order": 0
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Melee attackers have a chance of being poisoned.</helpcolor>",
   "biography_description": "They have poison glands which they use to ward off attackers.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "poisonous",
   "name": "Poisonous",
   "screen_description": "",
@@ -2203,12 +2203,12 @@
   "front_end": true,
   "icon": "poisonous",
   "type": "form",
-  "display_order": 3
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Units are less likely to rout.</helpcolor>",
   "biography_description": "Some call them cold-hearted. They prefer the term \\\"practical\\\".",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "cold_blooded",
   "name": "Cold Blooded",
   "screen_description": "",
@@ -2222,12 +2222,12 @@
   "front_end": true,
   "icon": "cold_blooded",
   "type": "form",
-  "display_order": 5
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Units grow strong at a faster rate from winning fights.</helpcolor>",
   "biography_description": "With their talent to learn new skills, they can adapt to almost any situation.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "adaptable",
   "name": "Adaptable",
   "screen_description": "",
@@ -2241,12 +2241,12 @@
   "front_end": true,
   "icon": "adaptable",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Rewards smart positioning in combat.</helpcolor>",
   "biography_description": "They love to sneak around to find weak spots in their enemies' defenses.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "sneaky",
   "name": "Sneaky",
   "screen_description": "",
@@ -2260,12 +2260,12 @@
   "front_end": true,
   "icon": "sneaky",
   "type": "form",
-  "display_order": 4
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Useful for approaching enemy ranged units.</helpcolor>",
   "biography_description": "They move with uncanny agility, much to the jealousy of other beings.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "quick_reflexes",
   "name": "Quick Reflexes",
   "screen_description": "",
@@ -2279,12 +2279,12 @@
   "front_end": true,
   "icon": "quick_reflexes",
   "type": "form",
-  "display_order": 4
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Ranged shots hit more often.</helpcolor>",
   "biography_description": "Their keen vision makes for great feats of archery.",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "keen-sighted",
   "name": "Keen-Sighted",
   "screen_description": "",
@@ -2298,12 +2298,12 @@
   "front_end": true,
   "icon": "keen-sighted",
   "type": "form",
-  "display_order": 3
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Units take less damage from physical attacks.</helpcolor>",
   "biography_description": "They are tough and used to taking a few hits in battle.",
-  "point_cost": 3,
+  "point_cost": 5,
   "id": "tough",
   "name": "Tough",
   "screen_description": "",
@@ -2317,12 +2317,12 @@
   "front_end": true,
   "icon": "tough",
   "type": "form",
-  "display_order": 1
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Armies can fight longer on the world map.</helpcolor>",
   "biography_description": "Their blood is strong, which allows them to recuperate from wounds faster than others.",
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "fast_recuperation",
   "name": "Fast Recuperation",
   "screen_description": "",
@@ -2336,7 +2336,7 @@
   "front_end": true,
   "icon": "fast_recuperation",
   "type": "form",
-  "display_order": 4
+  "display_order": 8
  },
  {
   "affinities": [

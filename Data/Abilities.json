@@ -1556,7 +1556,13 @@
   "icon": "stomp_primal_mammoth"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
+   }
+  ],
   "description": "Units in a 3-hex line:<bulletlist><bullet>Sustain damage.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled and <hyperlink>Retaliation Attacks</hyperlink> removed.</bullet></bulletlist>",
   "name": "Fire Cannon",
   "slug": "fire_cannon_magelock_cannon",
@@ -1971,26 +1977,6 @@
    }
   ],
   "icon": "fire_heavy_magelock_magelock"
- },
- {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
-  "description": "Apply Marked to the target, then enter Defense Mode.",
-  "name": "Take Aim",
-  "slug": "take_aim_magelock",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Debuff"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "5",
-  "icon": "take_aim_magelock"
  },
  {
   "modifiers": [
@@ -3172,7 +3158,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_phase_beast",
-  "damage": "27<damagephysical></damagephysical> ",
+  "damage": "17<damagelightning></damagelightning> 10<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -4159,7 +4145,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting -10 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
+    "description": "Inflicts -5 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
     "name": "Demoralizing Charge Strike",
     "count": 1
    }
@@ -6917,8 +6903,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "4",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
   "icon": "crushing_anguish_corrupt_soul"
  },
  {
@@ -7373,7 +7359,7 @@
   "description": "Enemy units within a 2-hex radius sustain damage and have a base 90% chance of:<bulletlist><bullet>Having their <happiness></happiness> <hyperlink>Morale</hyperlink> reduced by -10.</bullet><bullet>Becoming 2 Weakened.</bullet></bulletlist>",
   "name": "Wail of the Banshee",
   "slug": "wail_of_the_banshee_banshee",
-  "damage": "16<damagefrost></damagefrost> ",
+  "damage": "12<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -7552,7 +7538,7 @@
  },
  {
   "modifiers": [],
-  "description": "Target enemy unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 60% of becoming Stunned.</bullet><bullet>Gains 2 Marked</bullet></bulletlist>",
+  "description": "Target enemy unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 60% of becoming Stunned.</bullet><bullet>Gains 1 Marked</bullet></bulletlist>",
   "name": "Psychic Gaze",
   "slug": "psychic_gaze_watcher",
   "damage": "36<damagelightning></damagelightning> ",
@@ -10213,17 +10199,12 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
-    "name": "Poisoned",
-    "count": 1
-   },
-   {
     "description": "Heals a random allied unit within 2 hexes of the target for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
     "name": "Reclaim",
     "count": 1
    }
   ],
-  "description": "Single magical attack at target unit.",
+  "description": "Single magic attack at target unit.<bulletlist><bullet>Poisoned<br></br>Base 90% chance of inflicting Poisoned for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet>",
   "name": "Reclaiming Bolt",
   "slug": "reclaiming_bolt_horned_god",
   "damage": "32<damageblight></damageblight> ",
@@ -12918,7 +12899,7 @@
   "icon": "materium_transformation"
  },
  {
-  "description": "<bulletlist><bullet>Unit gains the Demonkin unit type.</bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Has 2 separate base 60% chance of inflicting a random negative status effect.</bullet><bullet>Always inflicts Ghostfire.</bullet></bulletlist></bulletlist><br></br><br></br>Increases unit upkeep by 15 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "<bulletlist><bullet>Unit gains the Demonkin unit type.</bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Has 3 separate base 60% chance of inflicting a random negative status effect.</bullet><bullet>Always inflicts Ghostfire.</bullet></bulletlist></bulletlist><br></br><br></br>Increases unit upkeep by 15 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Chaos Transformation",
   "slug": "chaos_transformation",
   "icon": "chaos_transformation"
@@ -13264,6 +13245,9 @@
  {
   "notes": [
    {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
     "note": "Can only be used once per battle."
    }
   ],
@@ -13346,6 +13330,9 @@
   "requisites": [
    {
     "requisite": "Magic"
+   },
+   {
+    "requisite": "Debuff"
    }
   ],
   "accuracy": "Always Hits",
@@ -13562,16 +13549,13 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Unit teleports to target hex, deals damage to adjacent units and enters <hyperlink>Defense Mode</hyperlink>.<br></br><br></br>Adjacent units have a base 90% chance of becoming Taunted for 1 <turn></turn> Turn,",
+  "description": "Unit teleports to target hex, deals damage to adjacent units and enters <hyperlink>Defense Mode</hyperlink>.<br></br><br></br>Adjacent units are inflicted with Burning.",
   "name": "Demon Step",
   "slug": "demon_step_demon_step",
   "damage": "30<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Movement"
-   },
-   {
-    "requisite": "Debuff"
    }
   ],
   "accuracy": "Always Hits",

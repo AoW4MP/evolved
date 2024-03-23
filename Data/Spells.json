@@ -746,46 +746,16 @@
     "slug": "white_wolf"
    },
    {
-    "slug": "thunderbird"
-   },
-   {
-    "slug": "goretusk_matriarch"
-   },
-   {
-    "slug": "frost_wyvern"
+    "slug": "hunter_spider_matriarch"
    },
    {
     "slug": "dire_bear"
    },
    {
-    "slug": "hunter_spider_matriarch"
-   },
-   {
-    "slug": "dread_spider_matriarch"
-   },
-   {
-    "slug": "spirit_wolf"
-   },
-   {
-    "slug": "unicorn"
-   },
-   {
-    "slug": "caustic_worm"
-   },
-   {
-    "slug": "vampire_spider_matriarch"
-   },
-   {
-    "slug": "nightmare"
-   },
-   {
     "slug": "phoenix"
    },
    {
-    "slug": "fire_wyvern"
-   },
-   {
-    "slug": "deep-sea_nimu"
+    "slug": "infernal_juggernaut"
    },
    {
     "slug": "kraken"
@@ -836,6 +806,9 @@
   "tactical": false,
   "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>A base 60% chance of inflicting Disrupted for 2 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet>",
   "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
    {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
    },
@@ -1863,7 +1836,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "emergency_teleportation",
   "tactical": true,
-  "description": "Makes closest allied unit teleport to within 4 hexes of the target hex and heals this allied unit +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Makes closest allied unit teleport to within 3 hexes of the target hex and heals this allied unit +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Emergency Teleportation",
   "operation_point_cost": 30,
   "icon": "emergency_teleportation"
@@ -2493,14 +2466,14 @@
   "icon": "demonic_focus"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4514010631246,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "fan_the_inferno",
   "tactical": true,
   "description": "All enemy units:<bulletlist><bullet>Sustain 5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Are inflicted with Burning.</bullet></bulletlist>",
   "name": "Fan the Inferno",
-  "operation_point_cost": 50,
+  "operation_point_cost": 30,
   "icon": "fan_the_inferno"
  },
  {
@@ -2745,14 +2718,14 @@
   "icon": "soul_overflow"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "250<mana></mana> ",
   "resid": 4514010629343,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_greater_animal",
   "tactical": false,
-  "description": "Summons a random Tier III Animal unit onto target location.<br></br><br></br>Has a small chance of summoning a Tier IV Animal.",
+  "description": "Summons a random Tier IV Animal unit onto target location.",
   "name": "Summon Greater Animal",
-  "operation_point_cost": 150,
+  "operation_point_cost": 250,
   "icon": "summon_greater_animal",
   "summoned_units": [
    {
@@ -2760,24 +2733,6 @@
    },
    {
     "slug": "white_wolf"
-   },
-   {
-    "slug": "thunderbird"
-   },
-   {
-    "slug": "goretusk_matriarch"
-   },
-   {
-    "slug": "frost_wyvern"
-   },
-   {
-    "slug": "dire_bear"
-   },
-   {
-    "slug": "mammoth"
-   },
-   {
-    "slug": "sabertooth"
    },
    {
     "slug": "slither"
@@ -2789,37 +2744,16 @@
     "slug": "hunter_spider_matriarch"
    },
    {
-    "slug": "dread_spider_matriarch"
-   },
-   {
-    "slug": "spirit_wolf"
-   },
-   {
-    "slug": "unicorn"
+    "slug": "dire_bear"
    },
    {
     "slug": "obsidian_wyvern"
    },
    {
-    "slug": "caustic_worm"
-   },
-   {
-    "slug": "vampire_spider_matriarch"
-   },
-   {
-    "slug": "nightmare"
-   },
-   {
     "slug": "phoenix"
    },
    {
-    "slug": "fire_wyvern"
-   },
-   {
     "slug": "infernal_juggernaut"
-   },
-   {
-    "slug": "deep-sea_nimu"
    },
    {
     "slug": "kraken"
@@ -3040,7 +2974,7 @@
     "requisite": "<unitFey></unitFey> Fey"
    },
    {
-    "requisite": "<unitNaval></unitNaval> Naga"
+    "requisite": "<unitNaga></unitNaga> Naga"
    }
   ],
   "name": "Force of Nature",
@@ -3198,7 +3132,7 @@
   "id": "designate_target",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Target enemy gains:<bulletlist><bullet>2 Marked.</bullet><bullet>Distracted.</bullet></bulletlist>",
+  "description": "Target enemy gains:<bulletlist><bullet>3 Marked.</bullet><bullet>Distracted.</bullet></bulletlist>",
   "name": "Designate Target",
   "operation_point_cost": 20,
   "icon": "designate_target"
@@ -4602,14 +4536,14 @@
   "icon": "scroll_of_attunement"
  },
  {
-  "casting_cost": "5<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 4273492480993,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "magic_shield",
   "tactical": true,
-  "description": "Target unit gains:<bulletlist><bullet>2 Bolstered Defense</bullet><bullet>2 Bolstered Resistance</bullet></bulletlist>",
+  "description": "Target unit gains:<bulletlist><bullet>3 Bolstered Defense</bullet><bullet>3 Bolstered Resistance</bullet></bulletlist>",
   "name": "Magic Shield",
-  "operation_point_cost": 10,
+  "operation_point_cost": 15,
   "icon": "magic_shield"
  },
  {
@@ -4645,7 +4579,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "brand_of_wrath",
   "tactical": false,
-  "description": "Grants non-Dark units:<bulletlist><bullet>Cull the Weak, which increases damage dealt to enemies with the Weakened status effect.</bullet></bulletlist>",
+  "description": "Grants non-Dark units:<bulletlist><bullet>Cull the Weak, which increases damage dealt to enemies with a negative status effect and grants the attacker Regeneration once per turn.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -4757,6 +4691,12 @@
    },
    {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
    }
   ],
   "name": "Mirror Veil",

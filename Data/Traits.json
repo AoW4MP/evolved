@@ -30,6 +30,9 @@
   "screen_description": "",
   "effect_descriptions": [
    {
+    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+   },
+   {
     "name": "Additional units become Cavalry"
    }
   ],
@@ -893,7 +896,7 @@
     "name": "<hyperlink>Cities</hyperlink> of this race gain <xpCol>+2</xpCol> <happiness></happiness> <hyperlink>City Stability</hyperlink> for each <population></population> <hyperlink>Population</hyperlink>."
    },
    {
-    "name": "<hyperlink>Units</hyperlink> of this race earn <fireCol>-50%</fireCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
+    "name": "<hyperlink>Units</hyperlink> of this race earn <fireCol>-25%</fireCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
    }
   ],
   "enabled": true,
@@ -1324,7 +1327,7 @@
     "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a City."
    },
    {
-    "name": "Cities gain +30% <structureprod></structureprod> <hyperlink>Production</hyperlink> per annexed <hyperlink>Ancient Wonders</hyperlink>."
+    "name": "Cities gain +20% <structureprod></structureprod> <hyperlink>Production</hyperlink> per annexed <hyperlink>Ancient Wonders</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1426,7 +1429,7 @@
     "name": "Coast, River, and Underground Lake provinces yield +3 <gold></gold> Gold, +3 <food></food> Food, and +3 <unitprod></unitprod> Draft."
    },
    {
-    "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +20% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
+    "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +25% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
    }
   ],
   "enabled": true,
@@ -2355,7 +2358,7 @@
     "name": "<xpCol>-10</xpCol><reputation0></reputation0> <hyperlink>Alignment</hyperlink>"
    },
    {
-    "name": "<hyperlink>Units</hyperlink> of this race earn <xpCol>+50%</xpCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
+    "name": "<hyperlink>Units</hyperlink> of this race earn <xpCol>+25%</xpCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
    },
    {
     "name": "<hyperlink>Cities</hyperlink> of this race lose <fireCol>-2</fireCol> <happiness></happiness> <hyperlink>City Stability</hyperlink> for each <population></population> <hyperlink>Population</hyperlink>."

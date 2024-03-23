@@ -117,7 +117,7 @@
   "category": "General Empire Skill",
   "id": "road_building",
   "required_xp": 100,
-  "description": "<hyperlink>Unit</hyperlink> can build roads on the <hyperlink>World Map</hyperlink>. Most terrain costs 6-8 <hyperlink>Move Points</hyperlink> while roads cost 5.<br></br><br></br>Road Building can be enabled in the <hyperlink>Army</hyperlink> panel. Roads are built on hexes along which the <hyperlink>Army</hyperlink> moves and cost 3 <gold></gold> <hyperlink>Gold</hyperlink> per hex.",
+  "description": "<hyperlink>Unit</hyperlink> can build roads on the <hyperlink>World Map</hyperlink>. Most terrain costs 6-8 <hyperlink>Move Points</hyperlink> while roads cost 4.<br></br><br></br>Road Building can be enabled in the <hyperlink>Army</hyperlink> panel. Roads are built on hexes along which the <hyperlink>Army</hyperlink> moves and cost 3 <gold></gold> <hyperlink>Gold</hyperlink> per hex.",
   "name": "Road Building",
   "icon": "road_building",
   "required_level": 4,
@@ -242,11 +242,11 @@
  },
  {
   "category": "Shadow Empire Skill",
-  "id": "shadow_domain",
+  "id": "cloak_of_shadows",
   "required_xp": 300,
-  "description": "Your Units gain Universal Camouflage in your <hyperlink>Domain</hyperlink>.<br></br>Your Cities gain +4 <hyperlink>Vision Range</hyperlink>.",
-  "name": "Shadow Domain",
-  "icon": "shadow_domain",
+  "description": "Your units gain Universal Camouflage.",
+  "name": "Cloak of Shadows",
+  "icon": "cloak_of_shadows",
   "required_level": 8,
   "cost": "350<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
@@ -254,12 +254,12 @@
  {
   "category": "Shadow Empire Skill",
   "id": "death_magic",
-  "required_xp": 200,
-  "description": "Gain +10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> per friendly unit death in combat.",
+  "required_xp": 400,
+  "description": "Gain +10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> per unit death or kill in combat.",
   "name": "Death Magic",
   "icon": "death_magic",
-  "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "required_level": 9,
+  "cost": "400<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -350,23 +350,23 @@
  {
   "category": "Materium Rite",
   "id": "rite_of_the_dreadnought",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "All currently active <hyperlink>Units</hyperlink> permanently gain +1 <defense></defense> <hyperlink>Defense</hyperlink> and +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
   "name": "Rite of the Dreadnought",
   "icon": "rite_of_the_dreadnought",
-  "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "required_level": 8,
+  "cost": "350<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
   "category": "Order Rite",
   "id": "rite_of_enduring_duty",
-  "required_xp": 300,
+  "required_xp": 160,
   "description": "All your <hyperlink>Units</hyperlink> instantly regain all <hyperlink><hp></hp> Hit Points</hyperlink> and non-<hyperlink>Hero</hyperlink> <hyperlink>Units</hyperlink> gain +1 Rank.",
   "name": "Rite of Enduring Duty",
   "icon": "rite_of_enduring_duty",
-  "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "required_level": 6,
+  "cost": "250<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -401,21 +401,21 @@
  {
   "category": "Chaos Rite",
   "id": "rite_of_chosen_warriors",
-  "required_xp": 300,
-  "description": "Your <hyperlink>Cities</hyperlink> gain +700 <unitprod></unitprod> <hyperlink>Draft</hyperlink> this <turn></turn> <hyperlink>Turn</hyperlink>.",
+  "required_xp": 160,
+  "description": "Your <hyperlink>Cities</hyperlink> gain +500 <unitprod></unitprod> <hyperlink>Draft</hyperlink> this <turn></turn> <hyperlink>Turn</hyperlink>.",
   "name": "Rite of Chosen Warriors",
   "icon": "rite_of_chosen_warriors",
-  "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "required_level": 6,
+  "cost": "250<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
   "category": "Chaos Rite",
-  "id": "rite_of_possession",
+  "id": "rite_of_slaughter",
   "required_xp": 500,
-  "description": "Your <hyperlink>Throne City</hyperlink> loses -1 <population></population> <hyperlink>Population</hyperlink> but immediately summons a <hyperlink>Balor</hyperlink> with Power from Slaughter",
-  "name": "Rite of Possession",
-  "icon": "rite_of_possession",
+  "description": "All currently active non-<hyperlink>Hero</hyperlink> <hyperlink>Units</hyperlink> permanently gain Power from Slaughter.",
+  "name": "Rite of Slaughter",
+  "icon": "rite_of_slaughter",
   "required_level": 10,
   "cost": "500<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
@@ -478,23 +478,23 @@
  {
   "category": "Order Empire Skill",
   "id": "house_levies",
-  "required_xp": 200,
+  "required_xp": 300,
   "description": "Recruiting <hyperlink>Units</hyperlink> during the <hyperlink>Rally of the Lieges</hyperlink> costs -50% <gold></gold> <hyperlink>Gold</hyperlink>.<br></br>Time between <hyperlink>Rallies of the Lieges</hyperlink> is reduced by -5 <turn></turn> <hyperlink>Turns</hyperlink>.",
   "name": "House Levies",
   "icon": "house_levies",
-  "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "required_level": 8,
+  "cost": "350<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
   "category": "Shadow Empire Skill",
   "id": "exalted_by_shadows",
-  "required_xp": 400,
-  "description": "Your <hyperlink>Heroes</hyperlink> gain <hyperlink><xp></xp> Experience</hyperlink> 200% faster.",
+  "required_xp": 200,
+  "description": "Your <hyperlink>Heroes</hyperlink> gain <hyperlink><xp></xp> Experience</hyperlink> 100% faster.",
   "name": "Exalted by Shadows",
   "icon": "exalted_by_shadows",
-  "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "required_level": 7,
+  "cost": "300<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -511,12 +511,12 @@
  {
   "category": "Shadow Empire Skill",
   "id": "stolen_power",
-  "required_xp": 60,
-  "description": "Gain +200 <mana></mana> <hyperlink>Mana</hyperlink> and +200 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> upon completing conquest of a city.",
+  "required_xp": 120,
+  "description": "Gain +300 <mana></mana> <hyperlink>Mana</hyperlink> and +300 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> upon completing conquest of a city.",
   "name": "Stolen Power",
   "icon": "stolen_power",
-  "required_level": 3,
-  "cost": "150<influence></influence> ",
+  "required_level": 5,
+  "cost": "200<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -654,12 +654,12 @@
  {
   "category": "Materium Empire Skill",
   "id": "resourceful_vigor",
-  "required_xp": 300,
+  "required_xp": 400,
   "description": "Your <hyperlink>Units</hyperlink> regenerate an additional +1 <hyperlink><hp></hp> Hit Point</hyperlink> per 1 <hyperlink>Move Point</hyperlink> they have remaining at the end of your <turn></turn> <hyperlink>Turn</hyperlink>.",
   "name": "Resourceful Vigor",
   "icon": "resourceful_vigor",
-  "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "required_level": 9,
+  "cost": "400<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -797,12 +797,12 @@
  {
   "category": "Shadow Empire Skill",
   "id": "knowledge_extraction",
-  "required_xp": 120,
-  "description": "Gain 50 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per level of <hyperlink>Heroes</hyperlink> defeated in combat.",
+  "required_xp": 60,
+  "description": "Gain +3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per <hyperlink>Unit Tier</Hyperlink> of the <hyperlink>Units</hyperlink> killed in <hyperlink>Combat</hyperlink>.",
   "name": "Knowledge Extraction",
   "icon": "knowledge_extraction",
-  "required_level": 5,
-  "cost": "200<influence></influence> ",
+  "required_level": 3,
+  "cost": "150<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -863,12 +863,12 @@
  {
   "category": "Order Empire Skill",
   "id": "justified_wars",
-  "required_xp": 160,
-  "description": "Gain +30 more <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an opposing <hyperlink>Alignment</hyperlink>.<br></br>Gain <happiness></happiness> <hyperlink>City Stability</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
+  "required_xp": 200,
+  "description": "Gain +30 more <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an opposing <hyperlink>Alignment</hyperlink>.<br></br>Gain +20 <happiness></happiness> <hyperlink>City Stability</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
   "name": "Justified Wars",
   "icon": "justified_wars",
-  "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "required_level": 7,
+  "cost": "300<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -941,7 +941,7 @@
   "category": "Nature Empire Skill",
   "id": "expert_sailors",
   "required_xp": 100,
-  "description": "Coast, River and Underground Lake <hyperlink>Provinces</hyperlink> grant +5 <food></food> <hyperlink>Food</hyperlink>.<br></br>Rivers count as roads for the purposes of movement for your units.",
+  "description": "Coast and River <hyperlink>Provinces</hyperlink> grant +2 <gold></gold> <hyperlink>Gold</hyperlink>, <food></food> <hyperlink>Food</hyperlink> and <unitprod></unitprod> <hyperlink>Draft</hyperlink>.<br></br>Rivers count as roads for the purposes of movement for your units.",
   "name": "Expert Sailors",
   "icon": "expert_sailors",
   "required_level": 4,
@@ -984,23 +984,23 @@
  {
   "category": "Chaos Empire Skill",
   "id": "spoils_of_destruction",
-  "required_xp": 200,
-  "description": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> yields a permanent +30 <influence></influence> <hyperlink>Imperium</hyperlink> income.",
+  "required_xp": 300,
+  "description": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> yields a permanent +20 <influence></influence> <hyperlink>Imperium</hyperlink> income.",
   "name": "Spoils of Destruction",
   "icon": "spoils_of_destruction",
-  "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "required_level": 8,
+  "cost": "350<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
   "category": "Chaos Empire Skill",
   "id": "destined_conquerors",
-  "required_xp": 160,
+  "required_xp": 200,
   "description": "+20 <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against all other <hyperlink>Empires</hyperlink>. These cannot be traded or lost.<br></br>Gain +30 <gold></gold> <hyperlink>Gold</hyperlink> and +30 <mana></mana> <hyperlink>Mana</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
   "name": "Destined Conquerors",
   "icon": "destined_conquerors",
-  "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "required_level": 7,
+  "cost": "300<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {

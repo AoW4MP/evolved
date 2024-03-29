@@ -53,9 +53,20 @@ function GetRandomSymbol() {
 
 }
 
+function isTraitCompatible(trait) {
+    if (trait.group_name === 'ADAPTATION' && currentCulture && currentCulture.name.indexOf("Primal") !== -1) {
+        return false;
+    }
+
+    if (trait.group_name) {
+        return !currentFormTraitList.some(item => trait.group_name === item.group_name);
+    }
+
+    return true;
+}
+
 function AddExtra(type, add) {
     if (type === "order") {
-
         extraOrder = addOrSubtract(extraOrder, add);
     }
     if (type === "chaos") {
@@ -142,29 +153,14 @@ function SetRandomStart(overwriteParameter) {
                     currentFormTraitList = [];
                     currentFormTraitList.push(randomEntry);
 
-
-                    while (getPoints() < 5) {
+                    while (getPoints() < traitPointsMax) {
                         var randomEntry = GetRandomEntry(listofChoice[j]);
-                        if (getPoints() + randomEntry.point_cost < 6 && !isInArray(currentFormTraitList, randomEntry)) {
-                            if (randomEntry.group_name === "ADAPTATION") {
-                                hasAdaptionGroup = currentFormTraitList.some(item => item.group_name === 'ADAPTATION');
-
-                                if (!hasAdaptionGroup) {
-                                    currentFormTraitList.push(randomEntry);
-                                }
-                            } else {
+                        if (getPoints() + randomEntry.point_cost < traitPointsMax + 1 && !isInArray(currentFormTraitList, randomEntry)) {
+                            if (isTraitCompatible(randomEntry)) {
                                 currentFormTraitList.push(randomEntry);
                             }
-
-
-
-
                         }
-
                     }
-
-
-
                     break;
                 case "Culture":
                     hasAdaptionGroup = currentFormTraitList.some(item => item.group_name === 'ADAPTATION')
@@ -413,7 +409,6 @@ function SetTomePathInfoSmall(buttonHolder, origin) {
     const affinityText = document.createElement("div");
     affinityText.style = "position: relative;left: -3px;top: -80px;";
 
-    console.log(origin);
     if ('affinities' in origin) {
 
         affinity = ClearAffinityExtraTags(duplicateTags(origin.affinities));
@@ -1506,26 +1501,12 @@ function updateSelectedOptions(origin) {
     const selectedOptionsContainer = document.getElementById('selected-options-container');
     const selectedButtons = document.querySelectorAll('#options-container button');
 
-
-
-    // if already in list, remove it
-
     if (origin != undefined) {
-
         toggleArrayEntry(currentFormTraitList, origin);
-
-        //     if (getPoints() > 5) {
-        //         currentFormTraitList.pop();
-        //     }
-        // } else {
         if (getPoints() > traitPointsMax) {
             currentFormTraitList.pop();
         }
-        // }
-
-
     }
-
 
     // Clear the selected options container
     selectedOptionsContainer.innerHTML = '';
@@ -1561,18 +1542,7 @@ function toggleArrayEntry(array, entry) {
         array.splice(index, 1);
     } else {
         // Entry doesn't exist, add it
-
-        if (entry.group_name === "ADAPTATION") {
-            var hasAdaptionGroup = currentFormTraitList.some(item => item.group_name === 'ADAPTATION');
-            //console.log(hasAdaptionGroup);
-            // already has adaption or already has primal culture
-            if (hasAdaptionGroup || currentCulture.name.indexOf("Primal") != -1) {
-
-
-            } else {
-                array.push(entry);
-            }
-        } else {
+        if (isTraitCompatible(entry)) {
             array.push(entry);
         }
     }
@@ -1796,9 +1766,7 @@ function reversLookUp(code) {
 
     // 7 = extraaffinity
     var list = splitcode[8];
-    console.log(list);
     var currentExtraAffinityLoad = list;
-    console.log(currentExtraAffinityLoad);
     extraAstral = currentExtraAffinityLoad[0];
     extraChaos = currentExtraAffinityLoad[1];
     extraMaterium = currentExtraAffinityLoad[2];

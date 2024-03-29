@@ -141,7 +141,6 @@ async function CheckData() {
             });
         } else {
             var checkboxTooltip = document.getElementById("tooltipCheckbox");
-            console.log(storedSettings.tooltipselectable);
             checkboxTooltip.checked = storedSettings.tooltipselectable;
 
             if (checkboxTooltip.checked === true) {

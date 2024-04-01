@@ -2720,15 +2720,22 @@
   ]
  },
  {
-  "primary_passives": [],
+    "primary_passives": [
+     {
+      "slug": "focused_aggression"
+     }
+  ],
   "mp": 32,
   "abilities": [
-   {
-    "slug": "fire_heavy_magelock_magelock"
-   },
-   {
-    "slug": "defense_mode"
-   }
+    {
+     "slug": "fire_heavy_magelock_magelock"
+    },
+    {
+     "slug": "take_aim_magelock"
+    },
+    {
+     "slug": "defense_mode"
+    }
   ],
   "medal_rewards_5": [
    {
@@ -2750,7 +2757,7 @@
   "id": "magelock",
   "name": "Magelock",
   "hp": 65,
-  "armor": 3,
+  "armor": 1,
   "medal_rewards_2": [
    {
     "slug": "_6_hp__"

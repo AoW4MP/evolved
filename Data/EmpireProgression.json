@@ -51,7 +51,7 @@
  {
   "category": "General Empire Skill",
   "id": "advanced_logistics",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "Roads cost 3 <hyperlink>Move Points</hyperlink> instead of 4.<br></br><br></br>Units gain Fast Embark and while embarked they gain Very Fast Movement on the <hyperlink>World Map</hyperlink>.",
   "name": "Advanced Logistics",
   "icon": "advanced_logistics",
@@ -61,23 +61,23 @@
  {
   "category": "Materium Empire Skill",
   "id": "specialist_districts",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "<hyperlink>Special Province Improvements</hyperlink> grant +10 <gold></gold> <hyperlink>Gold</hyperlink>.",
   "name": "Specialist Districts",
   "icon": "specialist_districts",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
   "category": "Nature Empire Skill",
   "id": "wild_expansion",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "Completing a <hyperlink>Province Annexation</hyperlink> summons a <hyperlink>Unit tier</hyperlink> IV Animal <hyperlink>Unit</hyperlink> under your control, depending on the province.",
   "name": "Wild Expansion",
   "icon": "wild_expansion",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -94,7 +94,7 @@
  {
   "category": "Repeatable General Rite",
   "id": "expanded_governance",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Increase the <hyperlink>City Cap</hyperlink> by +1<citytier></citytier>.",
   "repeat_xp_increase": 0,
   "name": "Expanded Governance",
@@ -116,7 +116,7 @@
  {
   "category": "General Empire Skill",
   "id": "road_building",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "<hyperlink>Unit</hyperlink> can build roads on the <hyperlink>World Map</hyperlink>. Most terrain costs 6-8 <hyperlink>Move Points</hyperlink> while roads cost 4.<br></br><br></br>Road Building can be enabled in the <hyperlink>Army</hyperlink> panel. Roads are built on hexes along which the <hyperlink>Army</hyperlink> moves and cost 3 <gold></gold> <hyperlink>Gold</hyperlink> per hex.",
   "name": "Road Building",
   "icon": "road_building",
@@ -137,7 +137,7 @@
   "category": "Chaos Empire Skill",
   "id": "battlefield_looting",
   "required_xp": 40,
-  "description": "Gain +4 <gold></gold> <hyperlink>Gold</hyperlink> per <hyperlink>Unit Tier</Hyperlink> of the <hyperlink>Units</hyperlink> killed in <hyperlink>Combat</hyperlink>.",
+  "description": "Gain +6 <gold></gold> <hyperlink>Gold</hyperlink> per <hyperlink>Unit Tier</Hyperlink> of the <hyperlink>Units</hyperlink> killed in <hyperlink>Combat</hyperlink>.",
   "name": "Battlefield Looting",
   "icon": "battlefield_looting",
   "required_level": 2,
@@ -168,12 +168,12 @@
  {
   "category": "Materium Empire Skill",
   "id": "indomitable_defenders",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Your units gain +20 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of any <hyperlink>Combat</hyperlink> where their side is defending.<br></br>Your <hyperlink>Cities</hyperlink> suffer no economic penalties while under <hyperlink>Siege</hyperlink>.",
   "name": "Indomitable Defenders",
   "icon": "indomitable_defenders",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -184,7 +184,7 @@
   "name": "Philosopher Soldiers",
   "icon": "philosopher_soldiers",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -221,12 +221,12 @@
  {
   "category": "Shadow Empire Skill",
   "id": "spying_shadows",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "Immediately reveal the full <hyperlink>World Map</hyperlink>.<br></br>Your <hyperlink>Throne City</hyperlink> gains infinite <hyperlink>Sensing Range</hyperlink>.<br></br><hyperlink>Armies</hyperlink> in <hyperlink>Sensing Range</hyperlink> reveal their numbers and allegiance.",
   "name": "Spying Shadows",
   "icon": "spying_shadows",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -237,46 +237,46 @@
   "name": "Dark Vigor",
   "icon": "dark_vigor",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
   "category": "Shadow Empire Skill",
   "id": "cloak_of_shadows",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Your units gain Universal Camouflage.",
   "name": "Cloak of Shadows",
   "icon": "cloak_of_shadows",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
   "category": "Shadow Empire Skill",
   "id": "death_magic",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "Gain +10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> per unit death or kill in combat.",
   "name": "Death Magic",
   "icon": "death_magic",
   "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
   "category": "Chaos Empire Skill",
   "id": "reign_of_destruction",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> takes -2 <turn></turn> <hyperlink>Turns</hyperlink> less.<br></br><hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> yields +50 <gold></gold> <hyperlink>Gold</hyperlink> per <population></population> <hyperlink>Population</hyperlink>.<br></br><hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> grants a <hyperlink>Herald of War</hyperlink>.",
   "name": "Reign of Destruction",
   "icon": "reign_of_destruction",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
   "category": "Chaos Empire Skill",
   "id": "lure_of_the_horde",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "When you win in battle, you have a 50% chance of gaining a Tier II or III unit that can be produced in a city.",
   "name": "Lure of the Horde",
   "icon": "lure_of_the_horde",
@@ -297,7 +297,7 @@
  {
   "category": "General Empire Skill",
   "id": "forced_march",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Unlocks the ability for your <hyperlink>Armies</hyperlink> to use <hyperlink>Forced March</hyperlink>.",
   "name": "Forced March",
   "icon": "forced_march",
@@ -307,7 +307,7 @@
  {
   "category": "General Empire Skill",
   "id": "teleporter_infrastructure",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "<hyperlink>Cities</hyperlink> can now build <teleporter></teleporter> <hyperlink>Teleporter</hyperlink> <hyperlink>Special Province Improvements</hyperlink>.",
   "name": "Teleporter Infrastructure",
   "icon": "teleporter_infrastructure",
@@ -317,18 +317,18 @@
  {
   "category": "Shadow Rite",
   "id": "rite_of_the_exalted",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "All your <hyperlink>Heroes</hyperlink> instantly gain +1 Rank.",
   "name": "Rite of the Exalted",
   "icon": "rite_of_the_exalted",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
   "category": "Shadow Rite",
   "id": "rite_of_the_cryptblade",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Gain the <hyperlink>Cryptblade</hyperlink> hero item.",
   "name": "Rite of the Cryptblade",
   "icon": "rite_of_the_cryptblade",
@@ -339,23 +339,23 @@
  {
   "category": "Astral Rite",
   "id": "rite_of_conjuration",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Immediately conjure a defended <hyperlink>Magic Material</hyperlink> near each <hyperlink>City</hyperlink> in your <hyperlink>Empire</hyperlink>.",
   "name": "Rite of Conjuration",
   "icon": "rite_of_conjuration",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
   "category": "Materium Rite",
   "id": "rite_of_the_dreadnought",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "All currently active <hyperlink>Units</hyperlink> permanently gain +1 <defense></defense> <hyperlink>Defense</hyperlink> and +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
   "name": "Rite of the Dreadnought",
   "icon": "rite_of_the_dreadnought",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -366,18 +366,18 @@
   "name": "Rite of Enduring Duty",
   "icon": "rite_of_enduring_duty",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
   "category": "Order Rite",
   "id": "rite_of_the_banners",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "Call a <hyperlink>Rally of the Lieges</hyperlink> event, where you may recruit units at no cost.<br></br>Gain +10 <recruitmentPoints></recruitmentPoints> <hyperlink>Recruitment Points</hyperlink>.",
   "name": "Rite of the Banners",
   "icon": "rite_of_the_banners",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -406,18 +406,18 @@
   "name": "Rite of Chosen Warriors",
   "icon": "rite_of_chosen_warriors",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
   "category": "Chaos Rite",
   "id": "rite_of_slaughter",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "All currently active non-<hyperlink>Hero</hyperlink> <hyperlink>Units</hyperlink> permanently gain Power from Slaughter.",
   "name": "Rite of Slaughter",
   "icon": "rite_of_slaughter",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -428,13 +428,13 @@
   "name": "Rite of the Astral Summons",
   "icon": "rite_of_the_astral_summons",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
   "category": "Materium Rite",
   "id": "rite_of_the_armorer",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Gain the <hyperlink>Breastplate of the Champion</hyperlink> hero item.",
   "name": "Rite of the Armorer",
   "icon": "rite_of_the_armorer",
@@ -445,12 +445,12 @@
  {
   "category": "Nature Rite",
   "id": "rite_of_awakening",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Instantly gain +30 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> for each <hyperlink>Province</hyperlink> in your empire's <hyperlink>Domain</hyperlink>.",
   "name": "Rite of Awakening",
   "icon": "rite_of_awakening",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -461,29 +461,29 @@
   "name": "Rite of Forbidden Knowledge",
   "icon": "rite_of_forbidden_knowledge",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
   "category": "Order Empire Skill",
   "id": "master_of_houses",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "Your <hyperlink>Vassals</hyperlink> grant +50% more resources in tribute.",
   "name": "Master of Houses",
   "icon": "master_of_houses",
   "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
   "category": "Order Empire Skill",
   "id": "house_levies",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Recruiting <hyperlink>Units</hyperlink> during the <hyperlink>Rally of the Lieges</hyperlink> costs -50% <gold></gold> <hyperlink>Gold</hyperlink>.<br></br>Time between <hyperlink>Rallies of the Lieges</hyperlink> is reduced by -5 <turn></turn> <hyperlink>Turns</hyperlink>.",
   "name": "House Levies",
   "icon": "house_levies",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -494,13 +494,13 @@
   "name": "Exalted by Shadows",
   "icon": "exalted_by_shadows",
   "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
   "category": "Shadow Empire Skill",
   "id": "court_of_whispers",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Gain the ability to assign <whisperingStone></whisperingStone> <hyperlink>Whispering Stones</hyperlink> to other empires' <hyperlink>Vassals</hyperlink> to gain their tribute.<br></br>Gain +1 <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>.",
   "name": "Court of Whispers",
   "icon": "court_of_whispers",
@@ -544,7 +544,7 @@
  {
   "category": "Order Rite",
   "id": "rite_of_allegiance",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Instantly gain +20 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> with all <minorcity></minorcity><hyperlink>Free Cities</hyperlink>.",
   "name": "Rite of Allegiance",
   "icon": "rite_of_allegiance",
@@ -555,7 +555,7 @@
  {
   "category": "Chaos Rite",
   "id": "rite_of_war",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Instantly summon a bandit <hyperlink>Army</hyperlink> under your control to your <hyperlink>Throne City</hyperlink>.",
   "name": "Rite of War",
   "icon": "rite_of_war",
@@ -566,7 +566,7 @@
  {
   "category": "Astral Rite",
   "id": "rite_of_astral_abundance",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Instantly gain +1000 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Rite of Astral Abundance",
   "icon": "rite_of_astral_abundance",
@@ -582,13 +582,13 @@
   "name": "Rite of Wealth",
   "icon": "rite_of_wealth",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
   "category": "Nature Rite",
   "id": "rite_of_the_guardian_spirit",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Immediately summon a <hyperlink>Spirit Wolf</hyperlink> with Guardian Spirit and Resurgence at your <hyperlink>Throne City</hyperlink>.",
   "name": "Rite of the Guardian Spirit",
   "icon": "rite_of_the_guardian_spirit",
@@ -604,24 +604,24 @@
   "name": "Rite of Expansive Growth",
   "icon": "rite_of_expansive_growth",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
   "category": "Order Empire Skill",
   "id": "knightly_orders",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "Units of Legendary Rank gain a buff depending on their unit type.<bulletlist><bullet>Shield Units gain Order of the Unbreakable.</bullet><bullet>Polearm Units gain Order of the Tyrantslayer.</bullet><bullet>Shock Units gain Order of the Thunderer.</bullet><bullet>Skirmisher Units gain Order of the Windborne.</bullet><bullet>Support Units gain Order of the Soulwarden.</bullet><bullet>Battle Mage Units gain Order of the Warmage.</bullet><bullet>Ranged Units gain Order of the Titanslayer.</bullet><bullet>Fighter Units gain Order of the Berserker.</bullet><bullet>Mythic Units gain Order of the Indomitable.</bullet></bulletlist>",
   "name": "Knightly Orders",
   "icon": "knightly_orders",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
   "category": "Order Empire Skill",
   "id": "career_soldiers",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Shock Units, Shield Units, and Polearm Units gain <hyperlink><xp></xp> Experience</hyperlink> +100% faster.",
   "name": "Career Soldiers",
   "icon": "career_soldiers",
@@ -637,7 +637,7 @@
   "name": "Tributaries",
   "icon": "tributaries",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -654,12 +654,12 @@
  {
   "category": "Materium Empire Skill",
   "id": "resourceful_vigor",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "Your <hyperlink>Units</hyperlink> regenerate an additional +1 <hyperlink><hp></hp> Hit Point</hyperlink> per 1 <hyperlink>Move Point</hyperlink> they have remaining at the end of your <turn></turn> <hyperlink>Turn</hyperlink>.",
   "name": "Resourceful Vigor",
   "icon": "resourceful_vigor",
   "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -692,13 +692,13 @@
   "name": "Metropolitan Society",
   "icon": "metropolitan_society",
   "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
   "category": "Materium Empire Skill",
   "id": "siege_masters",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Gain +1 <hyperlink>Siege Project</hyperlink> slot.<br></br><hyperlink>Siege Projects</hyperlink> cost -50% less.",
   "name": "Siege Masters",
   "icon": "siege_masters",
@@ -714,14 +714,14 @@
   "name": "Consolidated Industry",
   "icon": "consolidated_industry",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
   "category": "Materium Empire Skill",
   "id": "military_engineering",
   "required_xp": 15,
-  "description": "<hyperlink>Outposts</hyperlink> and Outpost structures cost -25% <gold></gold> <hyperlink>Gold</hyperlink> less and take -1 <turn></turn> Turn less to build.",
+  "description": "<hyperlink>Outposts</hyperlink> cost -25% <gold></gold> <hyperlink>Gold</hyperlink>. <hyperlink>Outpost</hyperlink> structures cost -50% <gold></gold> <hyperlink>Gold</hyperlink> and take -1 <turn></turn> Turn less to build.",
   "name": "Military Engineering",
   "icon": "military_engineering",
   "required_level": 1,
@@ -731,23 +731,23 @@
  {
   "category": "Astral Empire Skill",
   "id": "astral_binding",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "New Magic Origin <hyperlink>Units</hyperlink> gain +3 Ranks.",
   "name": "Astral Binding",
   "icon": "astral_binding",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
   "category": "Astral Empire Skill",
   "id": "teleportation_mastery",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "<hyperlink>Units</hyperlink> are restored to full <hyperlink><hp></hp> Hit Points</hyperlink> and regain 50% of their <hyperlink>Move Points</hyperlink> after using a <teleporter></teleporter> Teleporter if they have not yet regained any <hyperlink>Move Point</hyperlink> this turn.<br></br><teleporter></teleporter> Teleporters grant +15 <mana></mana> <hyperlink>Mana</hyperlink> income.",
   "name": "Teleportation Mastery",
   "icon": "teleportation_mastery",
   "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -764,12 +764,12 @@
  {
   "category": "Astral Empire Skill",
   "id": "ingredient_experimentation",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "Your <hyperlink>Throne City</hyperlink> gains +10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> for each <hyperlink>Magic Material</hyperlink> your Empire has access to.",
   "name": "Ingredient Experimentation",
   "icon": "ingredient_experimentation",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -780,13 +780,13 @@
   "name": "Focused Studies",
   "icon": "focused_studies",
   "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
   "category": "Astral Empire Skill",
   "id": "astral_inspiration",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Whenever a new <hyperlink>Research</hyperlink> Skill is researched, the <knowledge></knowledge><hyperlink>Knowledge</hyperlink> cost of another random Skill is reduced by -25%.",
   "name": "Astral Inspiration",
   "icon": "astral_inspiration",
@@ -808,12 +808,12 @@
  {
   "category": "Materium Empire Skill",
   "id": "martial_ancestry",
-  "required_xp": 500,
+  "required_xp": 400,
   "description": "<hyperlink>Unit Upkeep</hyperlink> is reduced by -10% per Rank that unit has.",
   "name": "Martial Ancestry",
   "icon": "martial_ancestry",
   "required_level": 10,
-  "cost": "500<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -868,7 +868,7 @@
   "name": "Justified Wars",
   "icon": "justified_wars",
   "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -907,40 +907,40 @@
  {
   "category": "Nature Empire Skill",
   "id": "rangers",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "Movement cost for friendly <hyperlink>Units</hyperlink> in your <hyperlink>Domain</hyperlink> is reduced by -2 <hyperlink>Move Points</hyperlink>.",
   "name": "Rangers",
   "icon": "rangers",
   "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
   "category": "Nature Empire Skill",
   "id": "druidic_care",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "<hyperlink>Cities</hyperlink> gain +5 <mana></mana> <hyperlink>Mana</hyperlink> for each <hyperlink>Resource Node</hyperlink> in their <hyperlink>Domain</hyperlink>.",
   "name": "Druidic Care",
   "icon": "druidic_care",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
   "category": "Nature Empire Skill",
   "id": "expansive_reach",
   "required_xp": 160,
-  "description": "<hyperlink>Cities</hyperlink> may expand to <hyperlink>Provinces</hyperlink> located +3 <hyperlink>Province</hyperlink> further from the center.",
+  "description": "<hyperlink>Cities</hyperlink> may expand to <hyperlink>Provinces</hyperlink> located +2 <hyperlink>Province</hyperlink> further from the center.",
   "name": "Expansive Reach",
   "icon": "expansive_reach",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
   "category": "Nature Empire Skill",
   "id": "expert_sailors",
-  "required_xp": 100,
+  "required_xp": 80,
   "description": "Coast and River <hyperlink>Provinces</hyperlink> grant +2 <gold></gold> <hyperlink>Gold</hyperlink>, <food></food> <hyperlink>Food</hyperlink> and <unitprod></unitprod> <hyperlink>Draft</hyperlink>.<br></br>Rivers count as roads for the purposes of movement for your units.",
   "name": "Expert Sailors",
   "icon": "expert_sailors",
@@ -956,7 +956,7 @@
   "name": "Natural Order",
   "icon": "natural_order",
   "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -984,12 +984,12 @@
  {
   "category": "Chaos Empire Skill",
   "id": "spoils_of_destruction",
-  "required_xp": 300,
+  "required_xp": 240,
   "description": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> yields a permanent +20 <influence></influence> <hyperlink>Imperium</hyperlink> income.",
   "name": "Spoils of Destruction",
   "icon": "spoils_of_destruction",
   "required_level": 8,
-  "cost": "350<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1000,7 +1000,7 @@
   "name": "Destined Conquerors",
   "icon": "destined_conquerors",
   "required_level": 7,
-  "cost": "300<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1011,18 +1011,18 @@
   "name": "War Slaves",
   "icon": "war_slaves",
   "required_level": 6,
-  "cost": "250<influence></influence> ",
+  "cost": "225<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
   "category": "Chaos Empire Skill",
   "id": "tireless_marchers",
-  "required_xp": 400,
+  "required_xp": 300,
   "description": "<hyperlink>Forced March</hyperlink> costs -75% less <mana></mana> <hyperlink>Mana</hyperlink> and inflicts -75% less damage to your <hyperlink>Units</hyperlink>.",
   "name": "Tireless Marchers",
   "icon": "tireless_marchers",
   "required_level": 9,
-  "cost": "400<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {

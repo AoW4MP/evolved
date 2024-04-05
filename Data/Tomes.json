@@ -748,7 +748,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink> against magic attacks.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
     "name": "Warding Metals",
     "spell_slug": "warding_metals",
     "tier": 4,
@@ -1027,7 +1027,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
    },
    {
-    "description": "Deals  <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to units in a -hex radius and inflicts Slowed.<br></br>This spell deals double damage to obstacles.",
+    "description": "Target enemies in a -hex radius:<bulletlist><bullet>Sustain  <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 1 Sundered Defense.</bullet><bullet>Are inflicted with Slowed.</bullet></bulletlist><br></br>This spell deals double damage to obstacles.",
     "name": "Seismic Shock",
     "spell_slug": "seismic_shock",
     "tier": 5,
@@ -1391,7 +1391,7 @@
   "icon": "tome_of_the_beacon",
   "skills": [
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>+ <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on attacks for each difference in Unit Tier of the target, up to a maximum of 2.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Grants enchanted units:<bulletlist><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>+ <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on base attacks for each difference in Unit Tier of the target, up to a maximum of 2.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Mighty Meek",
     "spell_slug": "mighty_meek",
     "tier": 4,
@@ -1457,7 +1457,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>+20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
+    "description": "<bulletlist><bullet>+20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+1 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
     "name": "Tribunal",
     "tier": 3,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -1754,6 +1754,13 @@
     "name": "Summon Snow Spirit",
     "tier": 5,
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   },
+   {
+    "description": "All units in target enemy army suffer -2 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+    "name": "Blizzard",
+    "spell_slug": "blizzard",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
    }
   ],
   "initial_upgrades": [
@@ -1865,9 +1872,9 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
    },
    {
-    "description": "Grants attacks of enchanted units:<bulletlist><bullet>A base % chance of inflicting Decaying, a damage-over-time effect that prevents the unit from gaining health.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
-    "name": "Necrotic Magic",
-    "spell_slug": "necrotic_magic",
+    "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+ <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>+ <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet> <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "name": "Necrotic Blades",
+    "spell_slug": "necrotic_blades",
     "tier": 3,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
@@ -2070,6 +2077,13 @@
   "tier": 4,
   "icon": "tome_of_astral_convergence",
   "skills": [
+   {
+    "description": "All units in target enemy army suffer -2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+    "name": "Lightning Torrent",
+    "spell_slug": "lightning_torrent",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
+   },
    {
     "description": "Whenever you cast a spell in Tactical Combat, add a Stack of Cascading Power to that combat.",
     "name": "Cascading Power",
@@ -2355,13 +2369,6 @@
   "icon": "tome_of_evocation",
   "skills": [
    {
-    "description": "All units in target enemy army suffer -2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
-    "name": "Lightning Torrent",
-    "spell_slug": "lightning_torrent",
-    "tier": 3,
-    "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
-   },
-   {
     "description": "A Battle Mage Unit with offensive chain lightning magic.",
     "name": "Evoker",
     "tier": 2,
@@ -2538,7 +2545,7 @@
   "icon": "tome_of_roots",
   "skills": [
    {
-    "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+ <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet> <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+% damage against Poisoned or Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+ <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet> <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+% damage against Poisoned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Blight Blades",
     "spell_slug": "blight_blades",
     "tier": 1,
@@ -2559,7 +2566,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Target friendly unit:<bulletlist><bullet>Heals + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 2 Regeneration.</bullet></bulletlist>",
+    "description": "Target friendly unit:<bulletlist><bullet>Heals + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 Regeneration.</bullet></bulletlist>",
     "name": "Healing Roots",
     "spell_slug": "healing_roots",
     "tier": 1,
@@ -2771,13 +2778,6 @@
   "tier": 1,
   "icon": "tome_of_cryomancy",
   "skills": [
-   {
-    "description": "All units in target enemy army suffer -2 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
-    "name": "Blizzard",
-    "spell_slug": "blizzard",
-    "tier": 3,
-    "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
-   },
    {
     "description": "Summons a <hyperlink>Lesser Snow Spirit</hyperlink>, a Skirmisher Unit with attacks that inflict Frozen.",
     "name": "Summon Lesser Snow Spirit",

@@ -241,10 +241,13 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "3",
   "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
@@ -1880,7 +1883,7 @@
   "description": "Single magical attack at target unit.",
   "name": "Marking Blast",
   "slug": "magic_blast_overseer",
-  "damage": "10<damagefire></damagefire> ",
+  "damage": "14<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -1977,6 +1980,29 @@
    }
   ],
   "icon": "fire_heavy_magelock_magelock"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "description": "Apply Marked to the target.",
+  "name": "Take Aim",
+  "slug": "take_aim_magelock",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Debuff"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "5",
+  "icon": "take_aim_magelock"
  },
  {
   "modifiers": [
@@ -3047,7 +3073,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "icon": "bolt_of_judgment_inquisitor"
@@ -3189,8 +3215,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "2",
   "icon": "phase_phase_beast"
  },
  {
@@ -3268,25 +3294,6 @@
   "icon": "magic_bolts_severing_golem"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
-    "name": "Electrified",
-    "count": 1
-   }
-  ],
-  "description": "Target enemy unit and 2 others within 3 hexes are dealt damage.",
-  "name": "Electrifying Arc",
-  "slug": "electrifying_arc_evoker",
-  "damage": "16<damagelightning></damagelightning> ",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -3295,6 +3302,18 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
+  "description": "Target enemy unit and 2 others within 3 hexes are dealt damage.",
+  "name": "Electrifying Arc",
+  "slug": "electrifying_arc_evoker",
+  "damage": "18<damagelightning></damagelightning> ",
+  "requisites": [
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "icon": "electrifying_arc_evoker"
  },
  {
@@ -3907,7 +3926,7 @@
  },
  {
   "modifiers": [],
-  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>, unless the target has Charge Resistance.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>.</bullet></bulletlist>",
   "name": "Behind You!",
   "slug": "behind_you!_gremlin",
   "damage": "13<damagephysical></damagephysical> 13<damagefire></damagefire> ",
@@ -4248,7 +4267,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_entwined_protector",
-  "damage": "13<damagephysical></damagephysical> ",
+  "damage": "14<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -4266,7 +4285,7 @@
  {
   "notes": [
    {
-    "note": "Can only be used once per battle."
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "This unit and all friendly adjacent units heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>. This unit then enters Defense Mode.",
@@ -4701,7 +4720,11 @@
   "name": "Sap Strength",
   "slug": "sap_strength_entwined_scourge",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Debuff"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
@@ -5306,7 +5329,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "4",
+  "range": "2",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -5357,17 +5380,11 @@
   "icon": "mountain_walk"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
-    "name": "Burning",
-    "count": 1
-   }
-  ],
+  "modifiers": [],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_magma_spirit",
-  "damage": "11<damagefire></damagefire> ",
+  "damage": "12<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -5390,17 +5407,11 @@
   "icon": "magic_bolts_severing_golem"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
-    "name": "Burning",
-    "count": 1
-   }
-  ],
+  "modifiers": [],
   "description": "Deals damage in a 1-hex radius.",
   "name": "Incinerate",
   "slug": "incinerate_magma_spirit",
-  "damage": "20<damagefire></damagefire> ",
+  "damage": "22<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -5441,7 +5452,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "4",
+  "range": "2",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -6067,7 +6078,7 @@
   "icon": "tireless_retaliation"
  },
  {
-  "description": "Unit has +3 <resistance></resistance> <hyperlink>Resistance</hyperlink> against <hyperlink>Magic</hyperlink> attacks.",
+  "description": "Unit has +2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
   "name": "Warded",
   "slug": "warded",
   "icon": "warded"
@@ -7177,6 +7188,16 @@
     "description": "Base 90% chance of inflicting Weakened for 3 <turn></turn> Turns.",
     "name": "Weakened",
     "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+    "name": "Breaching",
+    "count": 1
    }
   ],
   "description": "Strikes target enemy unit.",
@@ -7237,6 +7258,12 @@
   "actionPoints": "<freeaction></freeaction>",
   "range": "4",
   "icon": "greater_corpse_consumption_reaper"
+ },
+ {
+  "description": "<bulletlist><bullet>When an enemy unit dies:<bulletlist></bullet><bullet>Heal 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain Strengthened.</bullet></bulletlist><bullet>Does not trigger on the death of Combat Summons, Tower and Siegecraft units.</bullet></bulletlist>",
+  "name": "Dark Rites",
+  "slug": "dark_rites",
+  "icon": "dark_rites"
  },
  {
   "description": "<bulletlist><bullet>Has an added 5 <souls></souls> <hyperlink>Soul</hyperlink> upkeep.</bullet><bullet><gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> <hyperlink>Unit Upkeep</hyperlink> is reduced by -50%</bullet></bulletlist>",
@@ -7350,8 +7377,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "2",
   "icon": "phase_phase_beast"
  },
  {
@@ -10579,7 +10606,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "4",
+  "range": "2",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -11212,25 +11239,6 @@
   "icon": "magic_bolts_severing_golem"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
-    "name": "Burning",
-    "count": 1
-   }
-  ],
-  "description": "Deals damage in a 1-hex radius, and sets these hexes <hyperlink>On Fire</hyperlink>.",
-  "name": "Flamestrike",
-  "slug": "flamestrike_pyromancer",
-  "damage": "16<damagefire></damagefire> ",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -11239,6 +11247,18 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
+  "description": "Deals damage in a 1-hex radius, and sets these hexes <hyperlink>On Fire</hyperlink>.",
+  "name": "Flamestrike",
+  "slug": "flamestrike_pyromancer",
+  "damage": "18<damagefire></damagefire> ",
+  "requisites": [
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "icon": "flamestrike_pyromancer"
  },
  {
@@ -11642,8 +11662,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "2",
   "icon": "phase_phase_beast"
  },
  {
@@ -11759,17 +11779,18 @@
   "slug": "fire_resistance_8"
  },
  {
-  "modifiers": [
+  "notes": [
    {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
-    "name": "Burning",
-    "count": 1
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_lesser_magma_spirit",
-  "damage": "9<damagefire></damagefire> ",
+  "damage": "10<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11781,14 +11802,6 @@
   "accuracy": "90%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
   "icon": "magic_bolts_severing_golem"
  },
  {
@@ -12292,7 +12305,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Target a 1-hex radius.<bulletlist><bullet>Inflicts Marked.</bullet><bullet>At the start of next turn, inflict 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet></bulletlist>",
+  "description": "Target a 2-hex radius.<bulletlist><bullet>Inflicts Marked.</bullet><bullet>At the start of next turn, inflict 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Artillery Barrage",
   "slug": "artillery_barrage_artillerist",
   "damage": "",
@@ -12395,7 +12408,7 @@
   "icon": "condemn_condemn"
  },
  {
-  "description": "<bulletlist><bullet>When this Hero unit is killed in battle, after 2 <turn></turn> Turns, it comes back to life with 35% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Can be used any number of times.</bullet><bullet>Does not function if all other units are dead.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>When this Hero unit is killed in battle, after 1 <turn></turn> Turn, it comes back to life with 35% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Can be used any number of times.</bullet><bullet>Does not function if all other units are dead.</bullet></bulletlist>",
   "name": "Eternal One",
   "slug": "eternal_one",
   "icon": "eternal_one"
@@ -12457,7 +12470,7 @@
   "requisites": [],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "3",
+  "range": "2",
   "icon": "quick_phase_quick_phase"
  },
  {
@@ -12485,7 +12498,7 @@
   "icon": "avenging_winds"
  },
  {
-  "description": "Base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal 2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "name": "Meteor Strikes",
   "slug": "meteor_strikes",
   "icon": "meteor_strikes"
@@ -12716,7 +12729,7 @@
   "icon": "sundering_curse_warlock"
  },
  {
-  "description": "Adjacent friendly units have:<bulletlist><bullet>+10% damage</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet></bulletlist>",
+  "description": "Adjacent friendly units have:<bulletlist><bullet>+10% damage</bullet></bulletlist>",
   "name": "Feudal Ruler",
   "slug": "feudal_ruler",
   "icon": "feudal_ruler"
@@ -12724,7 +12737,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 4 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Target friendly unit gains Steadfast for 1 <turn></turn> Turn.",
@@ -12831,10 +12844,10 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit becomes Marked.",
+  "description": "Target unit gains 3 Marked.",
   "name": "Mark Target",
   "slug": "mark_target_mark_target",
   "damage": "",
@@ -13569,7 +13582,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Makes this unit teleport to target hex and grants it 70% <hyperlink>Evasion</hyperlink> for 1 <turn></turn> Turn.",
+  "description": "Makes this unit teleport to target hex and grants it 60% <hyperlink>Evasion</hyperlink> for 1 <turn></turn> Turn.",
   "name": "Blink",
   "slug": "blink_blink",
   "damage": "",
@@ -13761,7 +13774,11 @@
   "name": "Sap Strength",
   "slug": "sap_strength_sap_strength",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Debuff"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
@@ -16516,8 +16533,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "2",
   "icon": "phase_phase_beast"
  },
  {
@@ -16920,8 +16937,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "2",
   "icon": "phase_phase_beast"
  },
  {

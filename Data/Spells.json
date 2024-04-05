@@ -942,7 +942,7 @@
   "id": "warding_metals",
   "DLC": "EMPIRESANDASHES ",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink> against magic attacks.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -962,7 +962,7 @@
   "id": "pinning_barrage",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Units in a 2-hex radius:<bulletlist><bullet>Suffer 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Marked.</bullet><bullet>Have a base 60% chance of becoming Immobilized.</bullet></bulletlist>",
+  "description": "Units in a 2-hex radius:<bulletlist><bullet>Suffer 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Marked.</bullet><bullet>Have a base 90% chance of becoming Immobilized.</bullet></bulletlist>",
   "name": "Pinning Barrage",
   "operation_point_cost": 35,
   "icon": "pinning_barrage"
@@ -1938,14 +1938,14 @@
   "icon": "lightning_blades"
  },
  {
-  "casting_cost": "60<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4514010632946,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "lightning_torrent",
   "tactical": false,
   "description": "All units in target enemy army suffer -2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Lightning Torrent",
-  "operation_point_cost": 60,
+  "operation_point_cost": 80,
   "icon": "lightning_torrent"
  },
  {
@@ -2018,7 +2018,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "meteor_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -2407,7 +2407,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "healing_roots",
   "tactical": true,
-  "description": "Target friendly unit:<bulletlist><bullet>Heals +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 2 Regeneration.</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 Regeneration.</bullet></bulletlist>",
   "name": "Healing Roots",
   "operation_point_cost": 15,
   "icon": "healing_roots"
@@ -3029,7 +3029,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blight_blades",
   "tactical": false,
-  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>-2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+20% damage against Poisoned or Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>-2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+20% damage against Poisoned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -3462,7 +3462,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "lightning_magic",
   "tactical": false,
-  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3500,7 +3500,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "amplified_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>30% of their damage to another target within 2 hexes.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>20% of their damage to another target within 2 hexes.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3519,7 +3519,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blazing_magic",
   "tactical": false,
-  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3703,7 +3703,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "mighty_meek",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>+4 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on attacks for each difference in Unit Tier of the target, up to a maximum of 2.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants enchanted units:<bulletlist><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>+4 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on base attacks for each difference in Unit Tier of the target, up to a maximum of 2.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "Tier I"
@@ -3803,20 +3803,29 @@
   "casting_cost": "90<mana></mana> ",
   "resid": 4273492484056,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "necrotic_magic",
+  "id": "necrotic_blades",
   "tactical": false,
-  "description": "Grants attacks of enchanted units:<bulletlist><bullet>A base 60% chance of inflicting Decaying, a damage-over-time effect that prevents the unit from gaining health.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+20% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
-    "requisite": "<unitSupport></unitSupport> Support Unit"
+    "requisite": "<unitShield></unitShield> Shield Unit"
    },
    {
-    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    }
   ],
-  "name": "Necrotic Magic",
+  "name": "Necrotic Blades",
   "operation_point_cost": 90,
-  "icon": "necrotic_magic"
+  "icon": "necrotic_blades"
  },
  {
   "casting_cost": "15<souls></souls> ",
@@ -4097,14 +4106,14 @@
   "icon": "staves_of_warding"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 4273492483578,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "static_shield",
   "tactical": true,
   "description": "Target friendly unit gains a shield that has a base 60% chance of inflicting Stunned on attackers.<br></br>Lasts for 3 <turn></turn> Turns.",
   "name": "Static Shield",
-  "operation_point_cost": 25,
+  "operation_point_cost": 15,
   "icon": "static_shield"
  },
  {
@@ -4193,7 +4202,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "seismic_shock",
   "tactical": true,
-  "description": "Deals 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to units in a 1-hex radius and inflicts Slowed.<br></br>This spell deals double damage to obstacles.",
+  "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Sustain 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 1 Sundered Defense.</bullet><bullet>Are inflicted with Slowed.</bullet></bulletlist><br></br>This spell deals double damage to obstacles.",
   "name": "Seismic Shock",
   "operation_point_cost": 30,
   "icon": "seismic_shock"

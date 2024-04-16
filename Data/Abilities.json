@@ -1985,12 +1985,9 @@
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Apply Marked to the target.",
+  "description": "Apply Marked to the target, then enter Defense Mode.",
   "name": "Take Aim",
   "slug": "take_aim_magelock",
   "damage": "",
@@ -2000,7 +1997,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "5",
   "icon": "take_aim_magelock"
  },
@@ -2320,7 +2317,7 @@
   "icon": "evolve"
  },
  {
-  "description": "This unit is a Slow Learner and receives -25% <hyperlink><xp></xp> Experience</hyperlink> from combat.",
+  "description": "This unit is a Slow Learner and receives -20% <hyperlink><xp></xp> Experience</hyperlink> from combat.",
   "name": "Slow Learner",
   "slug": "slow_learner",
   "icon": "slow_learner"
@@ -3465,7 +3462,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Stunned for 1 <turn></turn> Turn.",
+    "description": "Base 60% chance of inflicting Stunned for 1 <turn></turn> Turn.",
     "name": "Stunned",
     "count": 1
    }
@@ -3835,7 +3832,7 @@
     "count": 1
    },
    {
-    "description": "60% chance of inflicting a random negative status effect.",
+    "description": "Base 30% chance of inflicting a random negative status effect.",
     "name": "Havoc Magic",
     "count": 1
    }
@@ -4188,11 +4185,18 @@
   "icon": "charge_strike_primal_mammoth"
  },
  {
-  "modifiers": [],
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "description": "Single magical attack at target unit.",
   "name": "Poison Blast",
   "slug": "magic_blast_wildspeaker",
-  "damage": "14<damageblight></damageblight> ",
+  "damage": "16<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -4204,14 +4208,6 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
   "icon": "magic_blast_animist"
  },
  {
@@ -4240,7 +4236,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "Summon a random Tier I animal unit.<br></br>This summon lasts for 4 <turn></turn> Turns.",
+  "description": "Summon a random Tier I animal unit.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Animal",
   "slug": "conjure_animal_wildspeaker",
   "damage": "",
@@ -7527,8 +7523,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "2",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -7565,10 +7561,10 @@
  },
  {
   "modifiers": [],
-  "description": "Target enemy unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 60% of becoming Stunned.</bullet><bullet>Gains 1 Marked</bullet></bulletlist>",
+  "description": "Target enemy unit and 1 other within 3 hexes:<bulletlist><bullet>Are dealt damage.</bullet><bullet>Have a base 60% of becoming Stunned.</bullet><bullet>Gain 1 Marked</bullet></bulletlist>",
   "name": "Psychic Gaze",
   "slug": "psychic_gaze_watcher",
-  "damage": "36<damagelightning></damagelightning> ",
+  "damage": "18<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -7631,6 +7627,11 @@
     "description": "Base 60% chance of inflicting Gilded for 1 <turn></turn> Turn.",
     "name": "Gilded",
     "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
    }
   ],
   "description": "Deal damage to enemy units in a 1-hex cone.",
@@ -7652,25 +7653,14 @@
   "icon": "gilded_cleave_golden_golem"
  },
  {
-  "modifiers": [
-   {
-    "description": "+40% damage to Cavalry units.",
-    "name": "Cavalry Slayer",
-    "count": 1
-   },
-   {
-    "description": "Base attacks deal +40% damage to Large Target units.",
-    "name": "Giant Slayer",
-    "count": 1
-   }
-  ],
+  "modifiers": [],
   "description": "Deals damage to all Gilded units within a 3-hex radius. If any are killed, this unit heals +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Strike Gold",
   "slug": "strike_gold_golden_golem",
   "damage": "45<damagephysical></damagephysical> ",
   "requisites": [
    {
-    "requisite": "Magic"
+    "requisite": "Debuff"
    }
   ],
   "accuracy": "Always Hits",
@@ -8288,7 +8278,7 @@
     "count": 1
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Becomes Berserk until the end of battle.</bullet><bullet>If not a <hyperlink>Hero</hyperlink>, unit turns into a Tier I Fiend unit under your control upon its death.</bullet></bulletlist>",
+  "description": "Target non-<hyperlink>Hero</hyperlink> unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Becomes Berserk until the end of battle.</bullet><bullet>Turns into a Tier I Fiend unit under your control upon its death.</bullet></bulletlist>",
   "name": "Chaos Brand",
   "slug": "chaos_brand_balor",
   "damage": "35<damagefire></damagefire> ",
@@ -8336,12 +8326,6 @@
    }
   ],
   "icon": "sunder_the_earth_balor"
- },
- {
-  "description": "When this unit dies, it explodes, dealing 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> within a 2-hex radius.",
-  "name": "Death Explosion",
-  "slug": "death_explosion",
-  "icon": "death_explosion"
  },
  {
   "modifiers": [
@@ -8568,10 +8552,10 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose all positive status effects.</bullet><bullet>Sustain damage. Double damage to Magic Origin units.</bullet></bulletlist>",
-  "name": "Star Purge",
-  "slug": "star_purge_spellbreaker",
-  "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> 6<damagefrost></damagefrost> ",
+  "description": "Deals damage in a 1-hex radius.<br></br>Double damage to Magic Origin units.",
+  "name": "Severing Starlight",
+  "slug": "severing_starlight_spellbreaker",
+  "damage": "7<damagelightning></damagelightning> 7<damagefire></damagefire> 7<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8580,7 +8564,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
-  "icon": "star_purge_spellbreaker"
+  "icon": "severing_starlight_spellbreaker"
  },
  {
   "description": "When a friendly spell is cast, this unit's base attack randomly gains +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, or <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> for 3 <turn></turn> Turns.<br></br>Stacks up to 3 times.",
@@ -12328,7 +12312,7 @@
   "icon": "lord_of_war"
  },
  {
-  "description": "Unit's attacks gain:<bulletlist><bullet>A base 60% chance of inflicting Soulbound.</bullet><bullet>+10% damage against units that are Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Unit's <hyperlink>Magic</hyperlink> attacks have:<bulletlist><bullet>A base 30% chance of inflicting Soulbound.</bullet><bullet>+10% damage against units that are Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "name": "Soulbinders",
   "slug": "soulbinders",
   "icon": "soulbinders"
@@ -12498,7 +12482,7 @@
   "icon": "avenging_winds"
  },
  {
-  "description": "Base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal 2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "name": "Meteor Strikes",
   "slug": "meteor_strikes",
   "icon": "meteor_strikes"
@@ -12836,7 +12820,7 @@
   "icon": "flameburst_weapons"
  },
  {
-  "description": "Summons a random Tier II Fiend whenever this unit kills another unit. There is a small chance a Tier III Fiend will be summoned instead.",
+  "description": "Summons a random Tier I Fiend whenever this unit kills another unit. There is a small chance a Tier II Fiend will be summoned instead.<br></br>Does not work in Water battles.",
   "name": "Demonic Slaughter",
   "slug": "demonic_slaughter",
   "icon": "demonic_slaughter"
@@ -12900,7 +12884,7 @@
   "icon": "order_transformation"
  },
  {
-  "description": "<bulletlist><bullet>Unit gains the Plant unit type.</bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Grants 2 Regeneration to friendly units hit.</bullet><bullet>Always inflicts Decaying.</bullet><bullet>Always inflicts Poisoned.</bullet></bulletlist></bulletlist><br></br><br></br>Increases unit upkeep by 15 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "<bulletlist><bullet>Unit gains the Plant unit type.</bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Grants 3 Regeneration to friendly units hit.</bullet><bullet>Always inflicts Decaying.</bullet><bullet>Always inflicts Poisoned.</bullet></bulletlist></bulletlist><br></br><br></br>Increases unit upkeep by 15 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Nature Transformation",
   "slug": "nature_transformation",
   "icon": "nature_transformation"
@@ -12962,19 +12946,19 @@
   "icon": "shadow_aspect"
  },
  {
-  "description": "This unit:<bulletlist><bullet>Gains Faithful.</bullet><bullet>Gains 5 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Inflicts Condemned with their attacks.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 7 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "This unit:<bulletlist><bullet>Gains Faithful.</bullet><bullet>Gains 4 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Inflicts Condemned with their attacks.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 7 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Order Aspect",
   "slug": "order_aspect",
   "icon": "order_aspect"
  },
  {
-  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Fearless.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 7 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Watchful</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 7 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Nature Aspect",
   "slug": "nature_aspect",
   "icon": "nature_aspect"
  },
  {
-  "description": "This unit gains:<bulletlist><bullet>+20% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>+2 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 7 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "This unit gains:<bulletlist><bullet>+20% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 7 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Materium Aspect",
   "slug": "materium_aspect",
   "icon": "materium_aspect"
@@ -13306,7 +13290,7 @@
   "icon": "draining_blade_draining_blade"
  },
  {
-  "description": "While this unit is the army leader, friendly non-Hero units in the army transform into Tier I Fiends upon death in battle. They have a small chance of transforming intoTier II Fiends instead.",
+  "description": "While this unit is the army leader, friendly non-Fiend and non-Hero units in the army:<bulletlist><bullet>Transform into Tier I Fiends upon death in battle.</bullet><bullet>Have a small chance of transforming into Tier II Fiends instead.</bullet></bulletlist>",
   "name": "Demonic Anthem",
   "slug": "demonic_anthem",
   "icon": "demonic_anthem"

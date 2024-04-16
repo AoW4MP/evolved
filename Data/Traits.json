@@ -660,7 +660,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Razing cities grants a permanent +40 <gold></gold> <hyperlink>Gold</hyperlink>, +40 <mana></mana> <hyperlink>Mana</hyperlink>, +40 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income, and +20 <unitprod></unitprod> <hyperlink>Draft</hyperlink> to your <hyperlink>Throne City</hyperlink>."
+    "name": "Razing cities grant a permanent +40 <gold></gold> <hyperlink>Gold</hyperlink>, +40 <mana></mana> <hyperlink>Mana</hyperlink>, and +40 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income."
+   },
+   {
+    "name": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> takes 2 <turn></turn> <hyperlink>Turns</hyperlink> less."
    },
    {
     "name": "Can not obtain new <hyperlink>Cities</hyperlink> and conquered cities can only be razed."
@@ -1029,7 +1032,7 @@
  {
   "lore_description": "<helpcolor>Units at low health will still deal a lot of damage.</helpcolor>",
   "biography_description": "The more they are pushed to the edge, the harder they will fight.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "tenacious",
   "name": "Tenacious",
   "screen_description": "",
@@ -1043,7 +1046,7 @@
   "front_end": true,
   "icon": "tenacious",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Great for mobile hit and run tactics.</helpcolor>",
@@ -1435,7 +1438,7 @@
     "name": "Coast, River, and Underground Lake provinces yield +3 <gold></gold> Gold, +3 <food></food> Food, and +3 <unitprod></unitprod> Draft."
    },
    {
-    "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +25% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
+    "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +20% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
    }
   ],
   "enabled": true,
@@ -2242,7 +2245,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Non-hero units gain +25% <hyperlink><xp></xp> Experience</hyperlink>."
+    "name": "Non-hero units gain +20% <hyperlink><xp></xp> Experience</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2337,7 +2340,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Regenerate an additional +5 <hyperlink><hp></hp> Hit Points</hyperlink> per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>."
+    "name": "Regenerate an additional +10 <hyperlink><hp></hp> Hit Points</hyperlink> per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>."
    }
   ],
   "enabled": true,

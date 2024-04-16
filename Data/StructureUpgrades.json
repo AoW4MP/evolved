@@ -845,7 +845,7 @@
   "prediction_description": "",
   "resid": 4578435139920,
   "id": "shadow_bolstering_matrix",
-  "description": "Shadow Buff and Healing <hyperlink>Spells</hyperlink> grant 3 stacks of Evasion.",
+  "description": "Shadow Buff and Healing <hyperlink>Spells</hyperlink> grant 2 stacks of Evasion.",
   "name": "Shadow Bolstering Matrix",
   "icon": "shadow_bolstering_matrix",
   "is_sector_upgrade": false
@@ -856,7 +856,7 @@
   "prediction_description": "",
   "resid": 4578435139917,
   "id": "materium_bolstering_matrix",
-  "description": "Materium Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Bolstered Defense.",
+  "description": "Materium Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Bolstered Defense.",
   "name": "Materium Bolstering Matrix",
   "icon": "materium_bolstering_matrix",
   "is_sector_upgrade": false
@@ -867,7 +867,7 @@
   "prediction_description": "",
   "resid": 4578435139914,
   "id": "astral_bolstering_matrix",
-  "description": "Astral Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Bolstered Resistance.",
+  "description": "Astral Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Bolstered Resistance.",
   "name": "Astral Bolstering Matrix",
   "icon": "astral_bolstering_matrix",
   "is_sector_upgrade": false
@@ -889,7 +889,7 @@
   "prediction_description": "",
   "resid": 4578435139908,
   "id": "chaos_bolstering_matrix",
-  "description": "Chaos Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Strengthened.",
+  "description": "Chaos Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Strengthened.",
   "name": "Chaos Bolstering Matrix",
   "icon": "chaos_bolstering_matrix",
   "is_sector_upgrade": false
@@ -900,7 +900,7 @@
   "prediction_description": "",
   "resid": 4578435139905,
   "id": "order_bolstering_matrix",
-  "description": "Order Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Fortune.",
+  "description": "Order Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Fortune.",
   "name": "Order Bolstering Matrix",
   "icon": "order_bolstering_matrix",
   "is_sector_upgrade": false
@@ -1219,7 +1219,7 @@
   "prediction_description": "+10 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435139384,
   "id": "_conduit___summoning_well",
-  "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> and +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Combat Summon Spells</hyperlink> in the domain cost -50% less mana.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> and +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Combat Summon Spells</hyperlink> in the domain cost -25% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Summoning Well",
   "icon": "_conduit___summoning_well",
   "is_sector_upgrade": true
@@ -1237,7 +1237,7 @@
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
   "prediction_description": "+10 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435139351,
   "id": "_conduit___channeling_tower",
@@ -2440,11 +2440,11 @@
  },
  {
   "requirement_description": "",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 4273492483625,
   "id": "tower_of_true_sight",
-  "description": "The domain gains + vision and True Sight, making it possible to spot invisible or camouflaged enemies.",
+  "description": "The domain gains +6 vision and True Sight, making it possible to spot invisible or camouflaged enemies.",
   "name": "Tower of True Sight",
   "icon": "tower_of_true_sight",
   "is_sector_upgrade": false

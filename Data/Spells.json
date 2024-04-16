@@ -862,7 +862,7 @@
   "id": "astral_severance",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Target Magic Origin <hyperlink>Unit</hyperlink>:<bulletlist><bullet>Has a base 60% chance of being killed.</bullet><bullet>If unsuccessful, inflicts Disrupted and Decaying.</bullet></bulletlist>",
+  "description": "Target Magic Origin <hyperlink>Unit</hyperlink>:<bulletlist><bullet>Has a base 90% chance of being killed.</bullet><bullet>If unsuccessful, inflicts Disrupted and Decaying.</bullet></bulletlist>",
   "name": "Astral Severance",
   "operation_point_cost": 50,
   "icon": "astral_severance"
@@ -1203,14 +1203,14 @@
   "icon": "call_forth_avatar_of_chaos"
  },
  {
-  "casting_cost": "300<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4672924418199,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "demonic_onslaught",
   "tactical": true,
   "description": "All attacking units gain Killing Momentum and Hastened for 3 <turn></turn> Turns.",
   "name": "Demonic Onslaught",
-  "operation_point_cost": 80,
+  "operation_point_cost": 65,
   "icon": "demonic_onslaught"
  },
  {
@@ -1241,7 +1241,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "wrath_of_the_emperor",
   "tactical": false,
-  "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
+  "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> m:<turn></turn> Turn.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> m:<turn></turn> Turn.</bullet></bulletlist>",
   "name": "Wrath of the Emperor",
   "operation_point_cost": 120,
   "icon": "wrath_of_the_emperor"
@@ -1315,7 +1315,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "burden_of_guilt",
   "tactical": false,
-  "description": "Target enemy army gains Despair for 1 World Map <turn></turn> Turn.",
+  "description": "All units in target enemy army gain Despair for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Burden of Guilt",
   "operation_point_cost": 60,
   "icon": "burden_of_guilt"
@@ -1768,21 +1768,21 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "time_stop",
   "tactical": true,
-  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 3 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Target enemy units in a 2-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 3 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Time Stop",
   "operation_point_cost": 65,
   "icon": "time_stop"
  },
  {
-  "casting_cost": "300<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010633535,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>",
-  "id": "disruption_wave",
+  "id": "dispelling_wave",
   "tactical": true,
-  "description": "<bulletlist><bullet>All enemy units become Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Dispels all positive status effects on all enemies.</bullet><bullet>Dispels all negative status effects on all allies.</bullet></bulletlist>",
-  "name": "Disruption Wave",
-  "operation_point_cost": 80,
-  "icon": "disruption_wave"
+  "description": "<bulletlist><bullet>Dispels all positive status effects on all enemies.</bullet><bullet>Dispels all negative status effects on all allies.</bullet></bulletlist>",
+  "name": "Dispelling Wave",
+  "operation_point_cost": 40,
+  "icon": "dispelling_wave"
  },
  {
   "casting_cost": "120<mana></mana> ",
@@ -2018,7 +2018,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "meteor_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -2257,18 +2257,21 @@
    },
    {
     "slug": "entwined_scourge"
+   },
+   {
+    "slug": "nymph"
    }
   ]
  },
  {
-  "casting_cost": "80<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4514010631836,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "devolve",
   "tactical": true,
   "description": "Target non-Hero enemy:<bulletlist><bullet>Has a base 90% chance of being transformed into a random Tier I animal until the end of battle.</bullet><bullet>If resisted, inflicts Stunned instead.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
   "name": "Devolve",
-  "operation_point_cost": 35,
+  "operation_point_cost": 30,
   "icon": "devolve"
  },
  {
@@ -2471,7 +2474,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "fan_the_inferno",
   "tactical": true,
-  "description": "All enemy units:<bulletlist><bullet>Sustain 5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Are inflicted with Burning.</bullet></bulletlist>",
+  "description": "All enemy units:<bulletlist><bullet>Sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Are inflicted with Burning.</bullet></bulletlist>",
   "name": "Fan the Inferno",
   "operation_point_cost": 30,
   "icon": "fan_the_inferno"
@@ -2493,7 +2496,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "havoc_magic",
   "tactical": false,
-  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Base 60% chance of inflicting a random negative status effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>A base 30% chance of inflicting a random negative status effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -2577,7 +2580,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "mark_of_misfortune",
   "tactical": false,
-  "description": "Grants attacks of enchanted units:<bulletlist><bullet>Base 60% of inflicting Misfortune.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>A base 30% of inflicting Misfortune.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3120,7 +3123,7 @@
   "id": "suppressing_barrage",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Units in a 1-hex radius:<bulletlist><bullet>Suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 30% chance of becoming Immobilized.</bullet></bulletlist>",
+  "description": "Units in a 1-hex radius:<bulletlist><bullet>Suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 60% chance of becoming Immobilized.</bullet></bulletlist>",
   "name": "Suppressing Barrage",
   "operation_point_cost": 20,
   "icon": "suppressing_barrage"
@@ -3195,7 +3198,7 @@
   ]
  },
  {
-  "casting_cost": "80<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4273492487095,
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "purifying_flame",
@@ -3203,7 +3206,7 @@
   "tactical": true,
   "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
   "name": "Purifying Flame",
-  "operation_point_cost": 35,
+  "operation_point_cost": 30,
   "icon": "purifying_flame"
  },
  {
@@ -3285,7 +3288,7 @@
   "id": "rapid_evolution_enchantment",
   "DLC": "DRAGONLORDS ",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>+25% <hyperlink><xp></xp> Experience</hyperlink> from combat.</bullet><bullet>Slip Away if Tier I or II, healing them once per battle if their <hyperlink><hp></hp> Hit Points</hyperlink> would be reduce to zero.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>+20% <hyperlink><xp></xp> Experience</hyperlink> from combat.</bullet><bullet>Slip Away if Tier I or II, healing them once per battle if their <hyperlink><hp></hp> Hit Points</hyperlink> would be reduce to zero.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "Units that Evolve"
@@ -3462,7 +3465,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "lightning_magic",
   "tactical": false,
-  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3519,7 +3522,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blazing_magic",
   "tactical": false,
-  "description": "Makes <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3660,7 +3663,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "consecrated_domain",
   "tactical": false,
-  "description": "Target friendly City, friendly units in the Domain gain:<bulletlist><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+20 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of battle.</bullet></bulletlist>",
+  "description": "Target friendly City, friendly units in the Domain gain:<bulletlist><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+20 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of battle.</bullet></bulletlist>",
   "name": "Consecrated Domain",
   "operation_point_cost": 80,
   "icon": "consecrated_domain"
@@ -3833,7 +3836,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "restore_undead_army",
   "tactical": false,
-  "description": "Restore 20 <hyperlink><hp></hp> Hit Points</hyperlink> of all Undead units in target friendly army.",
+  "description": "Restore 25 <hyperlink><hp></hp> Hit Points</hyperlink> of all Undead units in target friendly army.",
   "name": "Restore Undead Army",
   "operation_point_cost": 20,
   "icon": "restore_undead_army"
@@ -3855,7 +3858,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "soulbinders",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Base 60% chance of inflicting Soulbound on attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+10% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>A base 30% chance of inflicting Soulbound on attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+10% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3993,7 +3996,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "arcane_supercharge",
   "tactical": true,
-  "description": "Target friendly Magic Origin unit gains:<bulletlist><bullet>3 Strengthened.</bullet><bullet>3 Bolstered Defense.</bullet><bullet>3 Bolstered Resistance.</bullet><bullet>Static Charge for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "All friendly Magic Origin units in a 1-hex radius gain:<bulletlist><bullet>1 Bolstered Defense.</bullet><bullet>1 Bolstered Resistance.</bullet><bullet>Hastened for 3 <turn></turn> Turns.</bullet><bullet>Static Charge for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Arcane Supercharge",
   "operation_point_cost": 30,
   "icon": "arcane_supercharge"
@@ -4042,7 +4045,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "mental_mark",
   "tactical": true,
-  "description": "Target Enemies in a 1-hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>3 Sundered Resistance.</bullet></bulletlist>",
+  "description": "Target Enemies in a 1-hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>2 Sundered Resistance.</bullet></bulletlist>",
   "name": "Mental Mark",
   "operation_point_cost": 20,
   "icon": "mental_mark"
@@ -4314,7 +4317,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "projectiles_of_decay",
   "tactical": false,
-  "description": "Makes <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Decaying, a damage-over-time effect that prevents enemies from healing.</bullet></bulletlist>",
+  "description": "Grants <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>+2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Decaying, a damage-over-time effect that prevents enemies from healing.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -4395,7 +4398,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "revels_of_carnage",
   "tactical": false,
-  "description": "Non-Hero units in target friendly army gain +50% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
+  "description": "Non-Hero units in target friendly army gain +40% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
   "name": "Revels of Carnage",
   "operation_point_cost": 60,
   "icon": "revels_of_carnage"
@@ -4642,14 +4645,14 @@
   "icon": "ice_shackles"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4273492478730,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "unleash_beast",
   "tactical": true,
-  "description": "Target Animal or Cavalry unit gains, for 3 <turn></turn> Turns:<bulletlist><bullet>3 Strengthened</bullet><bullet>3 Bolstered Defense.</bullet>",
+  "description": "Target friendly Animal or Cavalry unit and two others within 2 hexes gain Killing Momentum for 3 <turn></turn> <hyperlink>Turns</hyperlink>.",
   "name": "Unleash Beast",
-  "operation_point_cost": 25,
+  "operation_point_cost": 30,
   "icon": "unleash_beast"
  },
  {
@@ -4658,7 +4661,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "focus_of_devastation",
   "tactical": false,
-  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Demolisher, which allows them to destroy <hyperlink>Fortified</hyperlink> obstacles.</bullet><bullet>A base 60% chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Demolisher, which allows them to destroy <hyperlink>Fortified</hyperlink> obstacles.</bullet><bullet>A base 30% chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"

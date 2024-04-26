@@ -18,9 +18,9 @@ var extraOrder, extraChaos, extraNature, extraMaterium, extraShadow, extraAstral
 var currentTomeList = [];
 
 const traitPointsMax = 10
-const affinityT3 = 2
-const affinityT4 = 4
-const affinityT5 = 6
+const affinityT3 = 3
+const affinityT4 = 5
+const affinityT5 = 7
 
 function ChangeShieldCol() {
 

@@ -887,7 +887,7 @@
   "icon": "havoc_magic",
   "type": "normal",
   "resid": 4801773436984,
-  "description": "<hyperlink>Magic</hyperlink> attacks have a base 60% chance of inflicting a random negative status effect."
+  "description": "<hyperlink>Magic</hyperlink> attacks have a base 30% chance of inflicting a random negative status effect."
  },
  {
   "id": "avatar_of_nature",
@@ -971,12 +971,8 @@
   "level_name": "<hyperlink>Adept Hero Skill</hyperlink>",
   "icon": "soul_collector",
   "type": "normal",
-  "abilities": [
-   {
-    "slug": "soulbinders"
-   }
-  ],
-  "resid": 4578435139454
+  "resid": 4578435139454,
+  "description": "<hyperlink>Magic</hyperlink> attacks gain:<bulletlist><bullet>A base 30% chance of inflicting Soulbound.</bullet><bullet>+20% damage against units that are Soulbound.</bullet></bulletlist>"
  },
  {
   "id": "conjure_dome_of_protection",

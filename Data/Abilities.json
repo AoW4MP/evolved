@@ -112,7 +112,7 @@
   "description": "Strikes target enemy unit and then teleports back 3 hexes.",
   "name": "Misty Strike",
   "slug": "melee_single_strike_mistling",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -206,7 +206,7 @@
   "description": "Strikes target enemy unit and deal 20% of the damage to up to 2 other enemy units within 2 hexes.",
   "name": "Storm Strikes",
   "slug": "melee_strike_stormbringer",
-  "damage": "7<damagephysical></damagephysical> 7<damagelightning></damagelightning> ",
+  "damage": "6<damagephysical></damagephysical> 6<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -454,7 +454,11 @@
   "name": "Dispelling Field",
   "slug": "dispelling_field_severing_golem",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
   "range": "0",
@@ -1569,7 +1573,7 @@
   "description": "Units in a 3-hex line:<bulletlist><bullet>Sustain damage.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled and <hyperlink>Retaliation Attacks</hyperlink> removed.</bullet></bulletlist>",
   "name": "Fire Cannon",
   "slug": "fire_cannon_magelock_cannon",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -2966,7 +2970,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_exemplar",
-  "damage": "8<damagephysical></damagephysical> 8<damagespirit></damagespirit> ",
+  "damage": "10<damagespirit></damagespirit> 8<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -3014,6 +3018,12 @@
   "icon": "inspiring_presence"
  },
  {
+  "description": "<bulletlist><bullet>Base attacks gain +2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>This damage is doubled against Condemned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "name": "Zeal",
+  "slug": "zeal",
+  "icon": "zeal"
+ },
+ {
   "modifiers": [
    {
     "description": "Base 60% chance of inflicting Condemned until the end of battle.",
@@ -3024,7 +3034,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_inquisitor",
-  "damage": "16<damagephysical></damagephysical> ",
+  "damage": "16<damagephysical></damagephysical> 2<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -3050,7 +3060,7 @@
   "description": "Shoots crossbow at target enemy unit.",
   "name": "Bolt of Judgment",
   "slug": "bolt_of_judgment_inquisitor",
-  "damage": "24<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> 4<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -3291,12 +3301,11 @@
   "icon": "magic_bolts_severing_golem"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 2 <turn></turn>"
+    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "name": "Electrified",
+    "count": 1
    }
   ],
   "description": "Target enemy unit and 2 others within 3 hexes are dealt damage.",
@@ -3311,6 +3320,14 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
   "icon": "electrifying_arc_evoker"
  },
  {
@@ -3462,7 +3479,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Stunned for 1 <turn></turn> Turn.",
+    "description": "Base 90% chance of inflicting Stunned for 1 <turn></turn> Turn.",
     "name": "Stunned",
     "count": 1
    }
@@ -3608,7 +3625,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_floral_stinger",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "14<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -3832,7 +3849,7 @@
     "count": 1
    },
    {
-    "description": "Base 30% chance of inflicting a random negative status effect.",
+    "description": "60% chance of inflicting a random negative status effect.",
     "name": "Havoc Magic",
     "count": 1
    }
@@ -3876,7 +3893,7 @@
   "damage": "",
   "requisites": [
    {
-    "requisite": "Debuff"
+    "requisite": "Magic"
    }
   ],
   "accuracy": "Always Hits",
@@ -3926,7 +3943,7 @@
   "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>.</bullet></bulletlist>",
   "name": "Behind You!",
   "slug": "behind_you!_gremlin",
-  "damage": "13<damagephysical></damagephysical> 13<damagefire></damagefire> ",
+  "damage": "12<damagephysical></damagephysical> 12<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -4028,7 +4045,7 @@
   "description": "Deal damage to target enemy unit.<bulletlist><bullet>Frozen<br></br>Base 90% chance of inflicting Frozen to the primary target for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.</bullet><bullet>Slowed<br></br>Base 60% chance of inflicting Slowed in a 1-hex radius around the target.</bullet>",
   "name": "Freezing Blast",
   "slug": "freezing_blast_white_witch",
-  "damage": "14<damagefrost></damagefrost> ",
+  "damage": "16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -4043,11 +4060,18 @@
   "icon": "freezing_blast_white_witch"
  },
  {
-  "modifiers": [],
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "description": "Single magical attack at target unit.",
   "name": "Frost Blast",
   "slug": "magic_blast_necromancer",
-  "damage": "18<damagefrost></damagefrost> ",
+  "damage": "16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -4059,14 +4083,6 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
   "icon": "magic_blast_animist"
  },
  {
@@ -4143,7 +4159,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_spirit_hawk",
-  "damage": "5<damagespirit></damagespirit> 3<damagephysical></damagephysical> ",
+  "damage": "5<damagephysical></damagephysical> 5<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -4934,11 +4950,11 @@
   "slug": "frost_weakness_4"
  },
  {
-  "notes": [],
+  "modifiers": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_carrion_bird",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -4950,6 +4966,7 @@
   "accuracy": "100%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
+  "notes": [],
   "icon": "melee_strike_sabertooth"
  },
  {
@@ -5403,7 +5420,13 @@
   "icon": "magic_bolts_severing_golem"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
+   }
+  ],
   "description": "Deals damage in a 1-hex radius.",
   "name": "Incinerate",
   "slug": "incinerate_magma_spirit",
@@ -6296,7 +6319,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_decaying_zombie",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -7309,7 +7332,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_zombie",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -7564,7 +7587,7 @@
   "description": "Target enemy unit and 1 other within 3 hexes:<bulletlist><bullet>Are dealt damage.</bullet><bullet>Have a base 60% of becoming Stunned.</bullet><bullet>Gain 1 Marked</bullet></bulletlist>",
   "name": "Psychic Gaze",
   "slug": "psychic_gaze_watcher",
-  "damage": "18<damagelightning></damagelightning> ",
+  "damage": "20<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -7924,7 +7947,7 @@
   "description": "Single magical attack at target unit.",
   "name": "Poison Blast",
   "slug": "magic_blast_druid_of_the_cycle",
-  "damage": "24<damageblight></damageblight> ",
+  "damage": "22<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -7978,7 +8001,7 @@
   "damage": "",
   "requisites": [
    {
-    "requisite": "Support"
+    "requisite": "Magic"
    }
   ],
   "accuracy": "Always Hits",
@@ -8002,7 +8025,7 @@
   "damage": "",
   "requisites": [
    {
-    "requisite": "Support"
+    "requisite": "Magic"
    }
   ],
   "accuracy": "Always Hits",
@@ -9570,7 +9593,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_lightseeker",
-  "damage": "5<damagephysical></damagephysical> ",
+  "damage": "6<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -10082,7 +10105,7 @@
   "icon": "shoot_bow_skeleton_archer"
  },
  {
-  "description": "Moving over Roads costs 3 <hyperlink>Move Points</hyperlink> instead of 4.",
+  "description": "Moving over Roads costs 4 <hyperlink>Move Points</hyperlink> instead of 5.",
   "name": "Road Walk",
   "slug": "road_walk",
   "icon": "road_walk"
@@ -10103,7 +10126,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_peasant_pikeman",
-  "damage": "11<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10119,7 +10142,7 @@
   "icon": "melee_strike_sabertooth"
  },
  {
-  "description": "Unit gains +25% more Experience from battle and gets promoted to a Defender unit upon reaching Champion rank.",
+  "description": "Unit gains +20% more Experience from battle and gets promoted to a Defender unit upon reaching Champion rank.",
   "name": "Feudal Training",
   "slug": "feudal_training",
   "icon": "feudal_training"
@@ -10192,7 +10215,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_grimbeak_crow",
-  "damage": "8<damagephysical></damagephysical> ",
+  "damage": "10<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11223,12 +11246,11 @@
   "icon": "magic_bolts_severing_golem"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 2 <turn></turn>"
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
    }
   ],
   "description": "Deals damage in a 1-hex radius, and sets these hexes <hyperlink>On Fire</hyperlink>.",
@@ -11243,6 +11265,14 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
   "icon": "flamestrike_pyromancer"
  },
  {
@@ -11515,7 +11545,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_goretusk_matriarch",
-  "damage": "21<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -12312,12 +12342,6 @@
   "icon": "lord_of_war"
  },
  {
-  "description": "Unit's <hyperlink>Magic</hyperlink> attacks have:<bulletlist><bullet>A base 30% chance of inflicting Soulbound.</bullet><bullet>+10% damage against units that are Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
-  "name": "Soulbinders",
-  "slug": "soulbinders",
-  "icon": "soulbinders"
- },
- {
   "notes": [
    {
     "note": "Cooldown: 3 <turn></turn>"
@@ -12364,12 +12388,6 @@
   "name": "Champion of the Faithful",
   "slug": "champion_of_the_faithful",
   "icon": "champion_of_the_faithful"
- },
- {
-  "description": "<bulletlist><bullet>Base attacks gain +2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>This damage is doubled against Condemned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
-  "name": "Zeal",
-  "slug": "zeal",
-  "icon": "zeal"
  },
  {
   "notes": [
@@ -13780,7 +13798,7 @@
   "description": "Deal damage to target enemy unit.<bulletlist><bullet>Frozen<br></br>Base 90% chance of inflicting Frozen to the primary target for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.</bullet><bullet>Slowed<br></br>Base 60% chance of inflicting Slowed in a 1-hex radius around the target.</bullet>",
   "name": "Freezing Blast",
   "slug": "freezing_blast_freezing_blast",
-  "damage": "14<damagefrost></damagefrost> ",
+  "damage": "16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -14640,7 +14658,11 @@
   "name": "Dispelling Field",
   "slug": "dispelling_field_severing_golem_mount",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
   "range": "0",

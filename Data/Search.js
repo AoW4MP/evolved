@@ -32,7 +32,8 @@ function searchData(keywords) {
     }
 
 
-    var test = filter.replaceAll(' ', "_");
+    //var test = filter.replaceAll(' ', "_");
+    var test = filter;
     searchUnits(test);
     var currenturl = window.location.href.split('?')[0];
 
@@ -46,7 +47,7 @@ function returnUnitList(fieldToSearch) {
     for (i = 0; i < jsonUnits.length; i++) {
         if (document.getElementById("namesCheck").checked) {
             textvalue = jsonUnits[i].id;
-            if (textvalue.toUpperCase().indexOf(fieldToSearch) > -1) {
+            if (textvalue.toUpperCase().indexOf(fieldToSearch.replaceAll(" ", "_")) > -1) {
                 if (list.length >= 1) {
                     if (!isInArray(list, jsonUnits[i].id)) {
                         list.push(jsonUnits[i].id);
@@ -60,8 +61,8 @@ function returnUnitList(fieldToSearch) {
             searchArray(fieldToSearch, jsonUnits[i].abilities, list, i);
         }
         if (document.getElementById("passivesCheck").checked) {
-            searchArray(fieldToSearch, jsonUnits[i].primary_passives, list, i);
-            searchArray(fieldToSearch, jsonUnits[i].secondary_passives, list, i);
+            searchArray(fieldToSearch.replaceAll(" ", "_"), jsonUnits[i].primary_passives, list, i);
+            searchArray(fieldToSearch.replaceAll(" ", "_"), jsonUnits[i].secondary_passives, list, i);
         }
         if (document.getElementById("resistancesCheck").checked) {
             searchArray(fieldToSearch, jsonUnits[i].resistances, list, i);
@@ -590,10 +591,10 @@ function returnAbilitiesUnits(fieldToSearch, unitListToCheckTo) {
         if ('name' in jsonUnitAbilities[j]) {
 
             textvalue = jsonUnitAbilities[j].name;
-            fieldToSearch = fieldToSearch.replaceAll("_", " ");
-            if (textvalue.toUpperCase().indexOf(fieldToSearch.toUpperCase()) != -1) {
+            if (textvalue.toLowerCase().indexOf(fieldToSearch.toLowerCase()) != -1) {
 
                 if (!isInArray(abilitiesList, jsonUnitAbilities[j].slug)) {
+
                     abilitiesList.push(jsonUnitAbilities[j].slug);
                 }
 
@@ -605,16 +606,20 @@ function returnAbilitiesUnits(fieldToSearch, unitListToCheckTo) {
 
     }
     var returnList = new Array();
+
+
     for (var i = 0; i < abilitiesList.length; i++) {
 
         findUnitWithAbility(abilitiesList[i], returnList);
     }
 
 
+
+
     for (var i = 0; i < returnList.length; i++) {
 
         if (!isInArray(unitListToCheckTo, returnList[i])) {
-            console.log(returnList);
+
             unitListToCheckTo.push(returnList[i]);
 
 
@@ -649,7 +654,7 @@ function depCheck(id) {
             for (l in jsonUnits[p].primary_passives) {
                 if (jsonUnits[p].primary_passives[l].slug.indexOf("deprecated") != -1) {
                     if (jsonUnits[p].id != "magma_spirit") {
-                        console.log("true");
+
                         return true;
                     }
 
@@ -733,7 +738,8 @@ function findUnitWithAbility(ability, listToPushTo) {
         if ('abilities' in jsonUnits[i]) {
             for (j in jsonUnits[i].abilities) {
 
-                if (ability === jsonUnits[i].abilities[j].slug) {
+                if (jsonUnits[i].abilities[j].slug.indexOf(ability) != -1) {
+
                     if (!isInArray(listToPushTo, jsonUnits[i].id)) {
                         listToPushTo.push(jsonUnits[i].id);
                     }

@@ -2,7 +2,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    }
@@ -198,7 +198,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
     "name": "Electrified",
     "count": 1
    }
@@ -861,7 +861,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -3574,7 +3574,7 @@
   "description": "Deals damage to all adjacent enemies and displaces them up to 2 hexes.",
   "name": "Whirlwind",
   "slug": "whirlwind_wind_rager",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -4745,7 +4745,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "description": "Base 30% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
     "name": "Poisoned",
     "count": 1
    }
@@ -4771,7 +4771,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
     "name": "Poisoned",
     "count": 1
    }
@@ -5557,7 +5557,13 @@
   "icon": "heavy_charge_strike_storm_giant"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Inflicts Electrified for 3 <turn></turn> Turns.",
+    "name": "Electrified",
+    "count": 1
+   }
+  ],
   "description": "Deals damage to target and up to 2 other units within 4 hexes.",
   "name": "Lightning Strike",
   "slug": "lightning_strike_storm_giant",
@@ -5583,12 +5589,12 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "description": "Inflicts Electrified for 3 <turn></turn> Turns.",
     "name": "Electrified",
     "count": 1
    }
   ],
-  "description": "Deals damage to target unit. Enemy units in a 3- hex line behind the original target sustain 30% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
+  "description": "Deals damage to target unit. Enemy units in a 3-hex line behind the original target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Tempestuous Smash",
   "slug": "tempestuous_smash_storm_giant",
   "damage": "14<damagephysical></damagephysical> 14<damagelightning></damagelightning> ",
@@ -5649,12 +5655,12 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Inflicts Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
   ],
-  "description": "Deals damage to target unit. Enemy units within  hex of the target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
+  "description": "Deals damage to target unit. Enemy units within 1 hex of the target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Volcanic Smash",
   "slug": "volcanic_smash_fire_giant",
   "damage": "14<damagephysical></damagephysical> 14<damagefire></damagefire> ",
@@ -5705,42 +5711,12 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Slowed for 2 <turn></turn> Turns.",
-    "name": "Slowed",
-    "count": 1
-   }
-  ],
-  "description": "Deals damage to target.",
-  "name": "Throw Boulder",
-  "slug": "throw_boulder_rock_giant",
-  "damage": "24<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "Physical Ranged"
-   }
-  ],
-  "accuracy": "90%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "6",
-  "notes": [
-   {
-    "note": "Ignores line of sight penalties."
-   },
-   {
-    "note": "Cooldown: 1 <turn></turn>"
-   }
-  ],
-  "icon": "throw_boulder_rock_giant"
- },
- {
-  "modifiers": [
-   {
     "description": "Base 90% chance of inflicting Stunned for 1 <turn></turn> Turn.",
     "name": "Stunned",
     "count": 1
    }
   ],
-  "description": "Deals damage to target unit. Enemy units within  hex of the target sustain 30% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
+  "description": "Deals damage to target unit. Enemy units within 1 hex of the target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Earthquake Smash",
   "slug": "earthquake_smash_rock_giant",
   "damage": "28<damagephysical></damagephysical> ",
@@ -5869,7 +5845,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
     "name": "Poisoned",
     "count": 1
    }
@@ -7130,20 +7106,20 @@
  },
  {
   "modifiers": [],
-  "description": "Single magical attack at target unit.",
-  "name": "Spirit Blast",
-  "slug": "magic_blast_lightbringer",
-  "damage": "20<damagespirit></damagespirit> ",
+  "description": "Unleashes a magical bolt at target enemy.",
+  "name": "Magic Bolts",
+  "slug": "magic_bolts_lightbringer",
+  "damage": "10<damagelightning></damagelightning> 4<damagespirit></damagespirit> ",
   "requisites": [
    {
-    "requisite": "Base"
+    "requisite": "Magic"
    },
    {
-    "requisite": "Magic"
+    "requisite": "Base"
    }
   ],
   "accuracy": "90%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
   "notes": [
    {
@@ -7153,27 +7129,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "icon": "magic_blast_animist"
- },
- {
-  "notes": [
-   {
-    "note": "Cooldown: 3 <turn></turn>"
-   }
-  ],
-  "description": "Base 60% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
-  "name": "Convert",
-  "slug": "convert_lightbringer",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Debuff"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
-  "icon": "convert_lightbringer"
+  "icon": "magic_bolts_severing_golem"
  },
  {
   "notes": [
@@ -7194,6 +7150,26 @@
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
   "icon": "rebuke_the_wicked_lightbringer"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "description": "Base 60% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
+  "name": "Convert",
+  "slug": "convert_lightbringer",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Debuff"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "convert_lightbringer"
  },
  {
   "description": "<hyperlink>Unit Upkeep</hyperlink> is reduced by 10%.",
@@ -7502,7 +7478,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
     "name": "Electrified",
     "count": 1
    }
@@ -8575,10 +8551,10 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Deals damage in a 1-hex radius.<br></br>Double damage to Magic Origin units.",
-  "name": "Severing Starlight",
-  "slug": "severing_starlight_spellbreaker",
-  "damage": "7<damagelightning></damagelightning> 7<damagefire></damagefire> 7<damagefrost></damagefrost> ",
+  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose 1 positive status effect.</bullet><bullet>Sustain damage. Double damage to Magic Origin units.</bullet></bulletlist>",
+  "name": "Star Purge",
+  "slug": "star_purge_spellbreaker",
+  "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> 6<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8587,19 +8563,32 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
-  "icon": "severing_starlight_spellbreaker"
+  "icon": "star_purge_spellbreaker"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "description": "Add 10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> to this combat.",
+  "name": "Attuned Cast",
+  "slug": "attuned_cast_spellbreaker",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "0",
+  "icon": "attuned_cast_spellbreaker"
  },
  {
   "description": "When a friendly spell is cast, this unit's base attack randomly gains +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, or <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> for 3 <turn></turn> Turns.<br></br>Stacks up to 3 times.",
   "name": "Attunement: Star Blades",
   "slug": "attunement_star_blades",
   "icon": "attunement_star_blades"
- },
- {
-  "description": "While this unit is in battle, spells are 20% cheaper to cast.<br></br>Doesn't stack.",
-  "name": "Spell Channeling",
-  "slug": "spell_channeling",
-  "icon": "spell_channeling"
  },
  {
   "modifiers": [
@@ -9045,7 +9034,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_bastion",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9667,7 +9656,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
     "name": "Poisoned",
     "count": 1
    },
@@ -10238,7 +10227,7 @@
     "count": 1
    }
   ],
-  "description": "Single magic attack at target unit.<bulletlist><bullet>Poisoned<br></br>Base 90% chance of inflicting Poisoned for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet>",
+  "description": "Single magical attack at target unit.<bulletlist><bullet>Poisoned</bullet>\nInflicts Poisoned for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bulletlist>",
   "name": "Reclaiming Bolt",
   "slug": "reclaiming_bolt_horned_god",
   "damage": "32<damageblight></damageblight> ",
@@ -10740,7 +10729,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    },
@@ -10829,7 +10818,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 30% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    },
@@ -10933,7 +10922,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "description": "Base 30% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
     "name": "Poisoned",
     "count": 1
    }
@@ -11511,7 +11500,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 30% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    }
@@ -11537,7 +11526,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    }
@@ -11683,7 +11672,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -12613,7 +12602,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "0",
-  "icon": "attuned_cast_combat_casting"
+  "icon": "attuned_cast_spellbreaker"
  },
  {
   "description": "While army leader, all non-Hero units in the army gain:<bulletlist><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
@@ -13320,7 +13309,7 @@
   "icon": "revelers_triumph"
  },
  {
-  "description": "While this unit is the leader of the army, all Tier I and II units in the army gain:<bulletlist><bullet>+1<defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+5<hyperlink><hp></hp> Hit Point</hyperlink></bullet><bullet>+2<statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>",
+  "description": "While this unit is the leader of the army, all Tier I and II units in the army gain:<bulletlist><bullet>+1<defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+10<hyperlink><hp></hp> Hit Point</hyperlink></bullet><bullet>+2<statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>",
   "name": "Battle Seeker Training",
   "slug": "battle_seeker_training",
   "icon": "battle_seeker_training"
@@ -13521,7 +13510,7 @@
   "icon": "rallying_blessing_rallying_blessing"
  },
  {
-  "description": "",
+  "description": "Attacks that hit this unit deal 8 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink> to the attacker.",
   "name": "Holy Retribution",
   "slug": "holy_retribution",
   "icon": "holy_retribution"
@@ -13986,9 +13975,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_greataxe",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_greataxe",
   "damage": "21<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -14002,7 +13991,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "notes": [],
@@ -14670,9 +14659,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_lance",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_lance",
   "damage": "19<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -14941,10 +14930,30 @@
  },
  {
   "modifiers": [],
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_greathammer",
+  "damage": "21<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "1",
+  "notes": [],
+  "icon": "heavy_charge_strike_storm_giant"
+ },
+ {
+  "modifiers": [],
   "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
-  "slug": "charge_strike_greathammer",
-  "damage": "21<damagephysical></damagephysical> ",
+  "slug": "charge_strike_greataxe",
+  "damage": "18<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -14961,9 +14970,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_greatsword",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_greatsword",
   "damage": "21<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -14977,7 +14986,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "notes": [],
@@ -15300,9 +15309,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_mystic_mace",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_mystic_mace",
   "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -15316,7 +15325,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "description": "Grants Siege Breaker to all units in the army.",
@@ -15452,9 +15461,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_godir_greataxe",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_godir_greataxe",
   "damage": "21<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -15468,7 +15477,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "notes": [
@@ -15495,9 +15504,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_archons_deliverance",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_archons_deliverance",
   "damage": "15<damagephysical></damagephysical> 15<damagespirit></damagespirit> ",
   "requisites": [
    {
@@ -15511,7 +15520,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "description": "Summons a Lightbringer next to this <hyperlink>Hero</hyperlink> at the start of battle.<br></br>This summon lasts for 3 <turn></turn> Turns.",
@@ -15527,9 +15536,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_giants_bane",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_giants_bane",
   "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -15543,7 +15552,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [
@@ -15553,9 +15562,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_yakas_fury",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_yakas_fury",
   "damage": "14<damagephysical></damagephysical> 14<damagefire></damagefire> ",
   "requisites": [
    {
@@ -15569,7 +15578,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [
@@ -15599,9 +15608,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_whirlwind_blade",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_whirlwind_blade",
   "damage": "25<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -15615,7 +15624,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [],
@@ -15643,9 +15652,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_crusaders_claymore",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_crusaders_claymore",
   "damage": "15<damagespirit></damagespirit> 10<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -15659,7 +15668,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [
@@ -16198,9 +16207,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_dwarven_hammer",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_dwarven_hammer",
   "damage": "26<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -16214,7 +16223,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [],
@@ -16637,9 +16646,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_frost_greataxe",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_frost_greataxe",
   "damage": "13<damagephysical></damagephysical> 13<damagefrost></damagefrost> ",
   "requisites": [
    {
@@ -16653,7 +16662,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [],
@@ -16909,9 +16918,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_bloody_edge",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_bloody_edge",
   "damage": "25<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -16925,7 +16934,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "notes": [
@@ -17364,9 +17373,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_green_lance",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_green_lance",
   "damage": "17<damageblight></damageblight> 10<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -17380,7 +17389,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_primal_mammoth"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [

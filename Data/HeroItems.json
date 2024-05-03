@@ -83,9 +83,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -132,7 +129,7 @@
   "DLC": "PRIMALFURY ",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greataxe"
+    "slug": "heavy_charge_strike_greataxe"
    }
   ],
   "icon": "greataxe",
@@ -203,11 +200,39 @@
   ]
  },
  {
+  "resid": 5046586576201,
+  "id": "swiftfoot_raptor_mount",
+  "ability_slugs": [
+   {
+    "slug": "slippery"
+   }
+  ],
+  "description": "Unit gains:<bulletlist><bullet>Very Fast Movement</bullet><bullet>Cavalry unit type</bullet><bullet>Slippery</bullet></bulletlist>",
+  "name": "Swiftfoot Raptor Mount",
+  "tier": "Tier II",
+  "tier_numerals": "II",
+  "slot": "Mount",
+  "icon": "swiftfoot_raptor_mount",
+  "disabled_slots": []
+ },
+ {
+  "resid": 5046586576198,
+  "id": "raptor_mount",
+  "ability_slugs": [],
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "name": "Raptor Mount",
+  "tier": "Tier I",
+  "tier_numerals": "I",
+  "slot": "Mount",
+  "icon": "raptor_mount",
+  "disabled_slots": []
+ },
+ {
   "resid": 5046586575001,
   "id": "crocodile_mount",
   "DLC": "PRIMALFURY ",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit gains:<bulletlist><bullet>Fast Movement.</bullet><bullet>Cavalry unit type.</bullet></bulletlist>",
   "name": "Crocodile Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -238,9 +263,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -296,9 +318,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -325,9 +344,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -354,9 +370,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -383,9 +396,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -412,9 +422,6 @@
   "disabled_slots": [
    {
     "slot_name": "Secondary"
-   },
-   {
-    "slot_name": "Mount"
    }
   ]
  },
@@ -505,7 +512,7 @@
     "slug": "dispelling_field_severing_golem_mount"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Dispelling Field</bullet><bullet>+2<resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet></bulletlist>",
+  "description": "Unit gains:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>Cavalry unit type.</bullet><bullet>Dispelling Field</bullet><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet></bulletlist>",
   "name": "Severing Golem Mount",
   "tier": "Tier IV",
   "tier_numerals": "IV",
@@ -522,7 +529,7 @@
     "slug": "overwhelm"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Overwhelm.</bullet></bulletlist>",
+  "description": "Unit gains:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>Cavalry unit type.</bullet><bullet>Overwhelm.</bullet></bulletlist>",
   "name": "Dire Bear Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -534,7 +541,7 @@
   "resid": 5016521803356,
   "id": "zebra_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Zebra Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -546,7 +553,7 @@
   "resid": 5016521803350,
   "id": "warhound_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Warhound Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -558,7 +565,7 @@
   "resid": 5016521803347,
   "id": "tiger_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Tiger Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -570,7 +577,7 @@
   "resid": 5016521803337,
   "id": "panther_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Panther Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -582,7 +589,7 @@
   "resid": 5016521803334,
   "id": "lion_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Lion Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -594,7 +601,7 @@
   "resid": 5016521803203,
   "id": "stag_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Stag Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -611,7 +618,7 @@
     "slug": "juggernaut"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit gains:<bulletlist><bullet>Fast Movement.</bullet><bullet>Cavalry unit type.</bullet></bulletlist>",
   "name": "Elephant Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -628,7 +635,7 @@
     "slug": "juggernaut"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit gains:<bulletlist><bullet>Fast Movement.</bullet><bullet>Cavalry unit type.</bullet></bulletlist>",
   "name": "Mammoth Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -643,7 +650,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance",
@@ -660,7 +667,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_2",
@@ -692,7 +699,7 @@
   "DLC": "PRIMALFURY ",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greataxe"
+    "slug": "heavy_charge_strike_greataxe"
    }
   ],
   "icon": "greataxe",
@@ -710,7 +717,7 @@
   "id": "sabertooth_mount",
   "DLC": "PRIMALFURY ",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Sabertooth Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -723,7 +730,7 @@
   "id": "polar_bear_mount",
   "DLC": "EMPIRESANDASHES ",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Polar Bear Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -736,7 +743,7 @@
   "id": "grizzly_bear_mount",
   "DLC": "EMPIRESANDASHES ",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Grizzly Bear Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -1864,7 +1871,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_3",
@@ -1881,7 +1888,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_4",
@@ -1898,7 +1905,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_5",
@@ -1915,7 +1922,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_6",
@@ -1932,7 +1939,7 @@
   "name": "Greathammer",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greathammer"
+    "slug": "heavy_charge_strike_greathammer"
    }
   ],
   "icon": "greathammer",
@@ -1952,7 +1959,7 @@
   "name": "Greathammer",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greathammer"
+    "slug": "heavy_charge_strike_greathammer"
    }
   ],
   "icon": "greathammer_2",
@@ -1992,7 +1999,7 @@
   "name": "Greathammer",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greathammer"
+    "slug": "heavy_charge_strike_greathammer"
    }
   ],
   "icon": "greathammer_3",
@@ -2012,7 +2019,7 @@
   "name": "Greatsword",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greatsword"
+    "slug": "heavy_charge_strike_greatsword"
    }
   ],
   "icon": "greatsword",
@@ -2032,7 +2039,7 @@
   "name": "Greataxe",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greataxe"
+    "slug": "heavy_charge_strike_greataxe"
    }
   ],
   "icon": "greataxe_3",
@@ -2052,7 +2059,7 @@
   "name": "Greataxe",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greataxe"
+    "slug": "heavy_charge_strike_greataxe"
    }
   ],
   "icon": "greataxe_4",
@@ -2072,7 +2079,7 @@
   "name": "Greatsword",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greatsword"
+    "slug": "heavy_charge_strike_greatsword"
    }
   ],
   "icon": "greatsword_2",
@@ -2092,7 +2099,7 @@
   "name": "Greathammer",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greathammer"
+    "slug": "heavy_charge_strike_greathammer"
    }
   ],
   "icon": "greathammer_4",
@@ -2112,7 +2119,7 @@
   "name": "Greatsword",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greatsword"
+    "slug": "heavy_charge_strike_greatsword"
    }
   ],
   "icon": "greatsword_3",
@@ -2910,7 +2917,7 @@
   "name": "Lance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_7",
@@ -2927,7 +2934,7 @@
   "name": "Greataxe",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greataxe"
+    "slug": "heavy_charge_strike_greataxe"
    }
   ],
   "icon": "greataxe_5",
@@ -3298,7 +3305,7 @@
   "resid": 4728758993573,
   "id": "eagle_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet></bulletlist>",
   "name": "Eagle Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -3315,7 +3322,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_mystic_mace"
+    "slug": "heavy_charge_strike_mystic_mace"
    }
   ],
   "icon": "mystic_mace_2",
@@ -3337,7 +3344,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greathammer"
+    "slug": "heavy_charge_strike_greathammer"
    }
   ],
   "icon": "greathammer_5",
@@ -3470,7 +3477,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_godir_greataxe"
+    "slug": "heavy_charge_strike_godir_greataxe"
    }
   ],
   "icon": "godir_greataxe",
@@ -3515,7 +3522,7 @@
   "id": "archons_deliverance",
   "ability_slugs": [
    {
-    "slug": "charge_strike_archons_deliverance"
+    "slug": "heavy_charge_strike_archons_deliverance"
    },
    {
     "slug": "call_lightbringer"
@@ -3542,7 +3549,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_giants_bane"
+    "slug": "heavy_charge_strike_giants_bane"
    }
   ],
   "icon": "giants_bane",
@@ -3557,7 +3564,7 @@
   "id": "yakas_fury",
   "ability_slugs": [
    {
-    "slug": "charge_strike_yakas_fury"
+    "slug": "heavy_charge_strike_yakas_fury"
    }
   ],
   "description": "Grants immunity to Burning.",
@@ -3606,7 +3613,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_whirlwind_blade"
+    "slug": "heavy_charge_strike_whirlwind_blade"
    },
    {
     "slug": "whirlwind_strike_whirlwind_blade"
@@ -3631,7 +3638,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_crusaders_claymore"
+    "slug": "heavy_charge_strike_crusaders_claymore"
    }
   ],
   "icon": "crusaders_claymore",
@@ -3702,7 +3709,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greatsword"
+    "slug": "heavy_charge_strike_greatsword"
    }
   ],
   "icon": "greatsword_4",
@@ -3723,7 +3730,7 @@
     "slug": "enfeebling_howl_white_wolf_mount"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Pack Hunter.</bullet><bullet> <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet></bulletlist>",
+  "description": "Unit gains:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>Cavalry unit type.</bullet><bullet>Pack Hunter.</bullet><bullet>2 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet></bulletlist>",
   "name": "White Wolf Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -4341,7 +4348,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_dwarven_hammer"
+    "slug": "heavy_charge_strike_dwarven_hammer"
    }
   ],
   "icon": "dwarven_hammer",
@@ -4732,7 +4739,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_frost_greataxe"
+    "slug": "heavy_charge_strike_frost_greataxe"
    }
   ],
   "icon": "frost_greataxe",
@@ -4821,7 +4828,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_greataxe"
+    "slug": "heavy_charge_strike_greataxe"
    }
   ],
   "icon": "greataxe_6",
@@ -4959,7 +4966,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_lance"
+    "slug": "heavy_charge_strike_lance"
    }
   ],
   "icon": "lance_8",
@@ -5003,7 +5010,7 @@
   "resid": 4389456576982,
   "id": "horse_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Horse Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -5020,7 +5027,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_bloody_edge"
+    "slug": "heavy_charge_strike_bloody_edge"
    }
   ],
   "icon": "bloody_edge",
@@ -5060,7 +5067,7 @@
   "resid": 4312147171204,
   "id": "nightmare_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Demoralizing Strike</bullet><bullet>Vicious Killer</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Demoralizing Strike</bullet><bullet>Vicious Killer</bullet></bulletlist>",
   "name": "Nightmare Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -5076,7 +5083,7 @@
     "slug": "phase_unicorn_mount"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Unicorn Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -5088,7 +5095,7 @@
   "resid": 4312147170613,
   "id": "boar_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Boar Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -5100,7 +5107,7 @@
   "resid": 4312147170544,
   "id": "thunderbird_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet></bulletlist>",
   "name": "Thunderbird Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -5112,7 +5119,7 @@
   "resid": 4312147170541,
   "id": "bone_wyvern_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet></bulletlist>",
   "name": "Bone Wyvern Mount",
   "tier": "Tier II",
   "tier_numerals": "II",
@@ -5146,7 +5153,7 @@
   "resid": 4312147170227,
   "id": "warg_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Warg Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -5158,7 +5165,7 @@
   "resid": 4307852199304,
   "id": "white_horse_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "White Horse Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -5170,7 +5177,7 @@
   "resid": 4307852199301,
   "id": "wolf_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Wolf Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -5182,7 +5189,7 @@
   "resid": 4307852199298,
   "id": "pony_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Pony Mount",
   "tier": "Tier I",
   "tier_numerals": "I",
@@ -5378,7 +5385,7 @@
   "resid": 4273492485083,
   "id": "golden_wyvern_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet></bulletlist>",
   "name": "Golden Wyvern Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -5390,7 +5397,7 @@
   "resid": 4273492485080,
   "id": "frost_wyvern_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet></bulletlist>",
   "name": "Frost Wyvern Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -5402,7 +5409,7 @@
   "resid": 4273492485077,
   "id": "fire_wyvern_mount",
   "ability_slugs": [],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet><bullet>Flying Movement.</bullet><bullet>+4<defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet></bulletlist>",
   "name": "Fire Wyvern Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -5675,7 +5682,7 @@
   "slot": "Primary",
   "ability_slugs": [
    {
-    "slug": "charge_strike_green_lance"
+    "slug": "heavy_charge_strike_green_lance"
    }
   ],
   "icon": "green_lance",
@@ -5989,7 +5996,7 @@
     "slug": "web_hunter_spider_mount"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Hunter Spider Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -6005,7 +6012,7 @@
     "slug": "barbed_webs_vampire_spider_mount"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Vampire Spider Mount",
   "tier": "Tier III",
   "tier_numerals": "III",
@@ -6021,7 +6028,7 @@
     "slug": "web_dread_spider_mount"
    }
   ],
-  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
+  "description": "Unit has:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>The Cavalry unit type.</bullet></bulletlist>",
   "name": "Dread Spider Mount",
   "tier": "Tier II",
   "tier_numerals": "II",

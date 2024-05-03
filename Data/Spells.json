@@ -1241,7 +1241,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "wrath_of_the_emperor",
   "tactical": false,
-  "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> m:<turn></turn> Turn.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> m:<turn></turn> Turn.</bullet></bulletlist>",
+  "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Wrath of the Emperor",
   "operation_point_cost": 120,
   "icon": "wrath_of_the_emperor"
@@ -1425,7 +1425,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "condemnation",
   "tactical": true,
-  "description": "Target enemy unit:<bulletlist><bullet>Sustains 15 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Condemned until the end of battle.</bullet></bulletlist>",
+  "description": "Target enemy unit:<bulletlist><bullet>Sustains 25 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Condemned until the end of battle.</bullet></bulletlist>",
   "name": "Condemnation",
   "operation_point_cost": 10,
   "icon": "condemnation"
@@ -2351,14 +2351,14 @@
   "icon": "mark_as_prey"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4514010631724,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "vine_prison",
   "tactical": true,
   "description": "Summon 6 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.<br></br><br></br>Cannot be used in Water battles.",
   "name": "Vine Prison",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "vine_prison",
   "summoned_units": [
    {
@@ -2391,7 +2391,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "poison_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Deal -1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Deal -1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain base 30% chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -2671,14 +2671,14 @@
   "icon": "frost_blades"
  },
  {
-  "casting_cost": "15<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 4514010629843,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "ice_coffin",
   "tactical": true,
-  "description": "Target enemy:<bulletlist><bullet>Sustains 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist>",
+  "description": "Target enemy:<bulletlist><bullet>Sustains 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist>",
   "name": "Ice Coffin",
-  "operation_point_cost": 20,
+  "operation_point_cost": 15,
   "icon": "ice_coffin"
  },
  {
@@ -2764,14 +2764,14 @@
   ]
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4514010629182,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "immolate",
   "tactical": true,
   "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain an extra 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if they are Burning.</bullet></bulletlist>",
   "name": "Immolate",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "immolate"
  },
  {
@@ -3032,7 +3032,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blight_blades",
   "tactical": false,
-  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>-2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+20% damage against Poisoned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>-2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+20% damage against Poisoned or Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -3055,14 +3055,14 @@
   "icon": "blight_blades"
  },
  {
-  "casting_cost": "10<mana></mana> ",
+  "casting_cost": "5<mana></mana> ",
   "resid": 4286377362416,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "ignite",
   "tactical": true,
   "description": "Target enemy unit:<bulletlist><bullet>Sustains 25 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Is inflicted with Burning.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
   "name": "Ignite",
-  "operation_point_cost": 15,
+  "operation_point_cost": 10,
   "icon": "ignite"
  },
  {
@@ -3484,7 +3484,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "frost_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3663,7 +3663,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "consecrated_domain",
   "tactical": false,
-  "description": "Target friendly City, friendly units in the Domain gain:<bulletlist><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of battle.</bullet></bulletlist>",
+  "description": "Target friendly City, friendly units in the Domain gain:<bulletlist><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+20 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of battle.</bullet></bulletlist>",
   "name": "Consecrated Domain",
   "operation_point_cost": 80,
   "icon": "consecrated_domain"
@@ -3713,9 +3713,6 @@
    },
    {
     "requisite": "Tier II"
-   },
-   {
-    "requisite": "Tier III"
    }
   ],
   "name": "Mighty Meek",
@@ -3806,29 +3803,20 @@
   "casting_cost": "90<mana></mana> ",
   "resid": 4273492484056,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "necrotic_blades",
+  "id": "necrotic_magic",
   "tactical": false,
-  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units deal:<bulletlist><bullet>+2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>+20% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants attacks of enchanted units:<bulletlist><bullet>A base 60% chance of inflicting Decaying, a damage-over-time effect that prevents the unit from gaining health.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
-    "requisite": "<unitShield></unitShield> Shield Unit"
+    "requisite": "<unitSupport></unitSupport> Support Unit"
    },
    {
-    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
-   },
-   {
-    "requisite": "<unitShock></unitShock> Shock Unit"
-   },
-   {
-    "requisite": "<unitFighter></unitFighter> Fighter Unit"
-   },
-   {
-    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    }
   ],
-  "name": "Necrotic Blades",
+  "name": "Necrotic Magic",
   "operation_point_cost": 90,
-  "icon": "necrotic_blades"
+  "icon": "necrotic_magic"
  },
  {
   "casting_cost": "15<souls></souls> ",
@@ -4109,14 +4097,14 @@
   "icon": "staves_of_warding"
  },
  {
-  "casting_cost": "10<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4273492483578,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "static_shield",
   "tactical": true,
-  "description": "Target friendly unit gains a shield that has a base 60% chance of inflicting Stunned on attackers.<br></br>Lasts for 3 <turn></turn> Turns.",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain a shield that has a base 30% chance of inflicting Stunned on attackers for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Static Shield",
-  "operation_point_cost": 15,
+  "operation_point_cost": 20,
   "icon": "static_shield"
  },
  {
@@ -5004,5 +4992,16 @@
   "name": "Final Ultimatum",
   "operation_point_cost": 30,
   "icon": "final_ultimatum"
+ },
+ {
+  "casting_cost": "45<warspoils></warspoils> ",
+  "resid": -8277668028376677552,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
+  "id": "convert_war_spoils",
+  "tactical": false,
+  "description": "Target owned city converts <warspoils></warspoils> <hyperlink>War Spoils</hyperlink>, gaining +25 <gold></gold> Gold income for 3 <turn></turn> Turns.",
+  "name": "Convert War Spoils",
+  "operation_point_cost": 45,
+  "icon": "convert_war_spoils"
  }
 ]

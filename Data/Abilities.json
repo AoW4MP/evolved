@@ -1324,7 +1324,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist",
   "damage": "",
@@ -3887,7 +3887,7 @@
     "count": 1
    }
   ],
-  "description": "Targets all enemies in a 2-hex radius:<bulletlist><bullet>Removes all negative status effects.</bullet><bullet>Deals 12 random elemental damage for each status effect removed.</bullet></bulletlist>",
+  "description": "Targets all adjacent enemies:<bulletlist><bullet>Removes all negative status effects.</bullet><bullet>Deals 12 random elemental damage for each status effect removed.</bullet></bulletlist>",
   "name": "Consume Chaos",
   "slug": "consume_chaos_chaos_eater",
   "damage": "",
@@ -6073,7 +6073,7 @@
   "icon": "tireless_retaliation"
  },
  {
-  "description": "Unit has +2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+  "description": "Unit has +2 <resistance></resistance> <hyperlink>Resistance</hyperlink> against <hyperlink>Magic</hyperlink> attacks.",
   "name": "Warded",
   "slug": "warded",
   "icon": "warded"
@@ -7017,7 +7017,7 @@
  {
   "modifiers": [
    {
-    "description": "For each friendly Faithful unit in battle (up to 10), this attack gains:<bulletlist><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink></bullet><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
+    "description": "For each friendly Faithful unit in battle (up to 10), this attack gains:<bulletlist><bullet>+1 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink></bullet><bullet>+1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
     "name": "Smiting Prayer",
     "count": 1
    },
@@ -7027,14 +7027,44 @@
     "count": 1
    }
   ],
-  "description": "Single magical attack at target unit.",
+  "description": "Blasts target enemy with divine energy.",
   "name": "Smiting Prayer Blast",
-  "slug": "magic_blast_shrine_of_smiting",
-  "damage": "15<damagefire></damagefire> 15<damagespirit></damagespirit> ",
+  "slug": "smiting_prayer_blast_shrine_of_smiting",
+  "damage": "5<damagefire></damagefire> 5<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
    },
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "90%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "icon": "smiting_prayer_blast_shrine_of_smiting"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "Base 90% chance of inflicting Blind for 1 <turn></turn> Turn.",
+    "name": "Blind",
+    "count": 1
+   }
+  ],
+  "description": "Enemy units within a 2-hex radius sustain damage.",
+  "name": "Divine Vengeance",
+  "slug": "divine_vengeance_shrine_of_smiting",
+  "damage": "24<damagespirit></damagespirit> ",
+  "requisites": [
    {
     "requisite": "Magic"
    }
@@ -7044,32 +7074,9 @@
   "range": "6",
   "notes": [
    {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "icon": "magic_blast_shrine_of_smiting"
- },
- {
-  "modifiers": [
-   {
-    "description": "Inflict Blind for 1 <turn></turn> Turn.",
-    "name": "Blind",
-    "count": 1
-   }
-  ],
-  "description": "Enemy units within a 2-hex radius sustain damage.",
-  "name": "Divine Vengeance",
-  "slug": "divine_vengeance_shrine_of_smiting",
-  "damage": "15<damagespirit></damagespirit> ",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "0",
-  "notes": [],
   "icon": "divine_vengeance_shrine_of_smiting"
  },
  {
@@ -7107,9 +7114,9 @@
  {
   "modifiers": [],
   "description": "Unleashes a magical bolt at target enemy.",
-  "name": "Magic Bolts",
+  "name": "Sun Bolts",
   "slug": "magic_bolts_lightbringer",
-  "damage": "10<damagelightning></damagelightning> 4<damagespirit></damagespirit> ",
+  "damage": "6<damagefire></damagefire> 6<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -7261,7 +7268,7 @@
   "icon": "dark_rites"
  },
  {
-  "description": "<bulletlist><bullet>Has an added 5 <souls></souls> <hyperlink>Soul</hyperlink> upkeep.</bullet><bullet><gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> <hyperlink>Unit Upkeep</hyperlink> is reduced by -50%</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Has an added 10 <souls></souls> <hyperlink>Soul</hyperlink> upkeep.</bullet><bullet><gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> <hyperlink>Unit Upkeep</hyperlink> is reduced by -50%</bullet></bulletlist>",
   "name": "Soul Maintenance",
   "slug": "soul_maintenance",
   "icon": "soul_maintenance"
@@ -7378,10 +7385,10 @@
  },
  {
   "modifiers": [],
-  "description": "Enemy units within a 2-hex radius sustain damage and have a base 90% chance of:<bulletlist><bullet>Having their <happiness></happiness> <hyperlink>Morale</hyperlink> reduced by -10.</bullet><bullet>Becoming 2 Weakened.</bullet></bulletlist>",
+  "description": "Enemy units within a 2-hex radius sustain damage and have a base 90% chance of:<bulletlist><bullet>Having their <happiness></happiness> <hyperlink>Morale</hyperlink> reduced by -10.</bullet><bullet>Becoming 1 Weakened.</bullet></bulletlist>",
   "name": "Wail of the Banshee",
   "slug": "wail_of_the_banshee_banshee",
-  "damage": "12<damagefrost></damagefrost> ",
+  "damage": "16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -7596,7 +7603,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_phantasm_warrior",
-  "damage": "5<damagephysical></damagephysical> 5<damagelightning></damagelightning> ",
+  "damage": "6<damagephysical></damagephysical> 6<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10707,7 +10714,7 @@
  },
  {
   "modifiers": [],
-  "description": "Enemy units in a 2-hex cone sustain damage and gain 2 stacks of Weakened.",
+  "description": "Enemy units in a 2-hex cone sustain damage and gain 1 stack of Weakened.",
   "name": "Enfeebling Howl",
   "slug": "enfeebling_howl_white_wolf",
   "damage": "18<damagefrost></damagefrost> ",
@@ -11962,7 +11969,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_spiritual_healing",
   "damage": "",
@@ -13640,7 +13647,7 @@
   "icon": "endurance_training"
  },
  {
-  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>+10% <hyperlink>Accuracy</hyperlink></bullet></bulletlist>",
+  "description": "While army leader, all non-Hero units in the army gain:<bulletlist><bullet>+10% <hyperlink>Accuracy</hyperlink></bullet><bullet>+10% <hyperlink>Critical Hit</hyperlink></bullet></bulletlist>",
   "name": "Precision Training",
   "slug": "precision_training",
   "icon": "precision_training"

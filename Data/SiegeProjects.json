@@ -117,7 +117,7 @@
   "id": "tower_bombardment",
   "description": "<bulletlist><bullet>Half of the defender's Tower <hyperlink>Units</hyperlink> are destroyed at the start of combat.</bullet></bulletlist>",
   "name": "Tower Bombardment",
-  "siege_health_damage": 1,
+  "siege_health_damage": 2,
   "needs_research_to_unlock": false,
   "icon": "tower_bombardment"
  },
@@ -133,7 +133,7 @@
  },
  {
   "resid": 4389456579070,
-  "cost": "200<gold></gold> ",
+  "cost": "150<gold></gold> ",
   "id": "inspired_assault",
   "description": "<bulletlist><bullet>\\\"Motivate\\\" your army with the glitter of gold.</bullet></bulletlist>",
   "name": "Inspired Assault",
@@ -143,11 +143,11 @@
  },
  {
   "resid": 4389456579064,
-  "cost": "250<gold></gold> ",
+  "cost": "200<gold></gold> ",
   "id": "construct_onagers",
   "description": "<bulletlist><bullet>At the start of the battle, gain 2 <hyperlink>Onagers</hyperlink> on the attacker's side until the end of battle.</bullet><bullet><hyperlink>Onagers</hyperlink> are immobile Siegecraft <hyperlink>Units</hyperlink> with long range, area of effect attacks that are great for destroying obstacles, but are inaccurate against <hyperlink>Units</hyperlink></bullet><bullet>Only one type of Siegecraft unit can be brought into <hyperlink>Combat</hyperlink>. If multiple <hyperlink>Siege Projects</hyperlink> would bring them, only the strongest of them will appear.</bullet></bulletlist>",
   "name": "Construct Onagers",
-  "siege_health_damage": 3,
+  "siege_health_damage": 4,
   "needs_research_to_unlock": false,
   "icon": "construct_onagers"
  },
@@ -184,12 +184,12 @@
  },
  {
   "resid": 4273492487097,
-  "cost": "60<mana></mana> ",
+  "cost": "100<mana></mana> ",
   "id": "dragon_attack",
   "DLC": "DRAGONLORDS ",
   "description": "At the start of combat:<bulletlist><bullet>Units defending the city take 26 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Units defending the city have a base 90% of becoming Burning.</bullet><bullet>Fires are randomly added.</bullet></bulletlist>",
   "name": "Dragon Attack",
-  "siege_health_damage": 0,
+  "siege_health_damage": 5,
   "needs_research_to_unlock": true,
   "icon": "dragon_attack"
  },

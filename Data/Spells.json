@@ -942,7 +942,7 @@
   "id": "warding_metals",
   "DLC": "EMPIRESANDASHES ",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink> against magic attacks.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -1702,14 +1702,14 @@
   "icon": "cascading_power"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010633586,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "explosive_manifestation",
   "tactical": true,
-  "description": "Target non-occupied hex:<bulletlist><bullet>Summon an <hyperlink>Astral Serpent</hyperlink> or <hyperlink>Astral Siphoner</hyperlink> unit at random that lasts for 3 <turn></turn> Turns.</bullet><bullet>All adjacent units sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, 15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, and 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
+  "description": "Target non-occupied hex:<bulletlist><bullet>Summon an <hyperlink>Astral Serpent</hyperlink> or <hyperlink>Astral Siphoner</hyperlink> unit at random that lasts for 3 <turn></turn> Turns.</bullet><bullet>All adjacent units sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Explosive Manifestation",
-  "operation_point_cost": 30,
+  "operation_point_cost": 40,
   "icon": "explosive_manifestation",
   "summoned_units": [
    {
@@ -3248,7 +3248,7 @@
   "id": "draconic_vitality",
   "DLC": "DRAGONLORDS ",
   "tactical": false,
-  "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+3 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet>",
+  "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+4 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet>",
   "name": "Draconic Vitality",
   "operation_point_cost": 150,
   "icon": "draconic_vitality"
@@ -3326,14 +3326,14 @@
   ]
  },
  {
-  "casting_cost": "20<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4273492486090,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_astral_keeper",
   "tactical": true,
   "description": "Summons an <hyperlink>Astral Keeper</hyperlink>, a Support Unit that heals units even in death.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Astral Keeper",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "summoned_units": [
    {
     "slug": "astral_keeper"
@@ -3690,7 +3690,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_lightbringer",
   "tactical": false,
-  "description": "Summons a <hyperlink>Lightbringer</hyperlink> Support Unit that can Convert other units to your cause or Condemn them.",
+  "description": "Summons a <hyperlink>Lightbringer</hyperlink>, a Battle Mage Unit that can Convert other units to your cause or Condemn them.",
   "name": "Summon Lightbringer",
   "operation_point_cost": 150,
   "icon": "summon_lightbringer",
@@ -3757,14 +3757,14 @@
   ]
  },
  {
-  "casting_cost": "150<souls></souls> ",
+  "casting_cost": "200<souls></souls> ",
   "resid": 4273492484161,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_reaper",
   "tactical": false,
   "description": "Summons a Reaper, a Mythic Unit that can instantly kill units and empowers your Undead.",
   "name": "Summon Reaper",
-  "operation_point_cost": 200,
+  "operation_point_cost": 300,
   "icon": "summon_reaper",
   "summoned_units": [
    {
@@ -4102,7 +4102,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "static_shield",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain a shield that has a base 30% chance of inflicting Stunned on attackers for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "For 3 <turn></turn> Turns, friendly units in a 1-hex radius:<bulletlist><bullet>Gain a shield that has a base 30% chance of inflicting Stunned on attackers.</bullet></bulletlist>",
   "name": "Static Shield",
   "operation_point_cost": 20,
   "icon": "static_shield"

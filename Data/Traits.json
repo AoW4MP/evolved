@@ -11,10 +11,10 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Grants the Slippery passive ability."
+    "name": "Units have Very Fast Movement."
    },
    {
-    "name": "Units have Very Fast Movement."
+    "name": "Gain the Slippery passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -28,7 +28,7 @@
   "front_end": true,
   "icon": "swiftfoot_raptor_mounts",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
@@ -40,6 +40,9 @@
   "effect_descriptions": [
    {
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+   },
+   {
+    "name": "Gain Flying."
    },
    {
     "name": "Additional units become Cavalry"
@@ -93,7 +96,7 @@
     "name": "Decreased number of units in formation."
    },
    {
-    "name": "Gain the Juggernaut ability."
+    "name": "Gain the Juggernaut passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -107,7 +110,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "elephant_mounts",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "biography_description": "They have tamed the furry Mammoths from the tundra.",
@@ -128,7 +131,7 @@
     "name": "Decreased number of units in formation."
    },
    {
-    "name": "Gain the Juggernaut ability."
+    "name": "Gain the Juggernaut passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -142,7 +145,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "mammoth_mounts",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Units can consume plants in order to heal and strengthen themselves.</helpcolor>",
@@ -223,7 +226,10 @@
     "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gains the Overwhelm passive."
+    "name": "Gain the Swipe ability."
+   },
+   {
+    "name": "Gain the Overwhelm passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -237,7 +243,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "dire_bear_mounts",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Units can see further on the World Map</helpcolor>",
@@ -1088,7 +1094,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gains +4 Defense and Resistance against Retaliation Attacks and Opportunity Attacks."
+    "name": "Gain +4 Defense and Resistance against Retaliation Attacks and Opportunity Attacks."
    }
   ],
   "enabled": true,
@@ -1101,13 +1107,13 @@
  {
   "lore_description": "<helpcolor>Units normally only have 32 movement.</helpcolor>",
   "biography_description": "Trained in long distance running, they are exceptionally fast.",
-  "point_cost": 4,
+  "point_cost": 5,
   "id": "athletics",
   "name": "Athletics",
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Fast Movement, having 40 movement on the <hyperlink>World Map</hyperlink> and in <hyperlink>Combat</hyperlink>."
+    "name": "Gain Fast Movement on the <hyperlink>World Map</hyperlink> and in <hyperlink>Combat</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1115,7 +1121,7 @@
   "front_end": true,
   "icon": "athletics",
   "type": "form",
-  "display_order": 6
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Units become tougher when standing next to allies.</helpcolor>",
@@ -1295,6 +1301,9 @@
    },
    {
     "name": "Battle Mage Units and Support Units provide +5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> at the start of combat."
+   },
+   {
+    "name": "Battle Mage Units and Support Units increase the damage of your <hyperlink>Combat Spells</hyperlink> by 5%."
    }
   ],
   "enabled": true,
@@ -1653,6 +1662,12 @@
   "screen_description": "",
   "effect_descriptions": [
    {
+    "name": "+20 <optactical></optactical> Combat Casting Points"
+   },
+   {
+    "name": "+20 <caststrategic></caststrategic> World Map Casting Points."
+   },
+   {
     "name": "<hyperlink>Combat Spells</hyperlink> cost -25% <mana></mana> <hyperlink>Mana</hyperlink> and -25% <optactical></optactical> <hyperlink> Combat Casting Point</hyperlink> to cast."
    }
   ],
@@ -1871,10 +1886,10 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gains the Pack Hunter passive ability."
+    "name": "Gain the Enfeebling Howl ability."
    },
    {
-    "name": "Grants the Enfeebling Howl ability."
+    "name": "Gain the Pack Hunter passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -1888,7 +1903,7 @@
   "front_end": true,
   "icon": "white_wolf_mounts",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Nightmare mount.</helpcolor>",
@@ -1902,10 +1917,10 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gains the Demoralizing Strike ability."
+    "name": "Gain the Demoralizing Strike passive."
    },
    {
-    "name": "Gains the Vicious Killer ability."
+    "name": "Gain the Vicious Killer passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -1919,7 +1934,7 @@
   "front_end": true,
   "icon": "nightmare_mounts",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Great for fighting enemies up close.</helpcolor>",
@@ -2179,7 +2194,10 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gains the Phase ability."
+    "name": "Gain the Phase ability."
+   },
+   {
+    "name": "Gain the Inspiring Killer passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -2193,21 +2211,24 @@
   "front_end": true,
   "icon": "unicorn_mounts",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Spider mount.</helpcolor>",
   "biography_description": "They share a deep kinship with Spiders.",
   "point_cost": 5,
-  "id": "dread_spider_mounts",
-  "name": "Dread Spider Mounts",
+  "id": "vampire_spider_mounts",
+  "name": "Vampire Spider Mounts",
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gains the Web ability."
+    "name": "Gain the Barbed Webs ability."
+   },
+   {
+    "name": "Gain the Life Steal passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -2219,14 +2240,14 @@
   "enabled": true,
   "group_name": "MOUNT",
   "front_end": true,
-  "icon": "dread_spider_mounts",
+  "icon": "vampire_spider_mounts",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Melee attackers have a chance of being poisoned.</helpcolor>",
   "biography_description": "They have poison glands which they use to ward off attackers.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "poisonous",
   "name": "Poisonous",
   "screen_description": "",
@@ -2235,7 +2256,7 @@
     "name": "+2 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink>."
    },
    {
-    "name": "Melee attackers have a base 90% chance of becoming Poisoned."
+    "name": "Melee attackers have a base 60% chance of becoming Poisoned."
    },
    {
     "name": "Immunity to becoming Poisoned."
@@ -2246,7 +2267,7 @@
   "front_end": true,
   "icon": "poisonous",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Units are less likely to rout.</helpcolor>",
@@ -2289,7 +2310,7 @@
  {
   "lore_description": "<helpcolor>Rewards smart positioning in combat.</helpcolor>",
   "biography_description": "They love to sneak around to find weak spots in their enemies' defenses.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "sneaky",
   "name": "Sneaky",
   "screen_description": "",
@@ -2303,12 +2324,12 @@
   "front_end": true,
   "icon": "sneaky",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Useful for approaching enemy ranged units.</helpcolor>",
   "biography_description": "They move with uncanny agility, much to the jealousy of other beings.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "quick_reflexes",
   "name": "Quick Reflexes",
   "screen_description": "",
@@ -2322,12 +2343,12 @@
   "front_end": true,
   "icon": "quick_reflexes",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Ranged shots hit more often.</helpcolor>",
   "biography_description": "Their keen vision makes for great feats of archery.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "keen-sighted",
   "name": "Keen-Sighted",
   "screen_description": "",
@@ -2341,7 +2362,7 @@
   "front_end": true,
   "icon": "keen-sighted",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Units take less damage from physical attacks.</helpcolor>",

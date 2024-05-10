@@ -748,7 +748,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink> against magic attacks.</bullet></bulletlist>",
     "name": "Warding Metals",
     "spell_slug": "warding_metals",
     "tier": 4,
@@ -1412,10 +1412,10 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Summons a <hyperlink>Lightbringer</hyperlink> Support Unit that can Convert other units to your cause or Condemn them.",
+    "description": "Summons a <hyperlink>Lightbringer</hyperlink>, a Battle Mage Unit that can Convert other units to your cause or Condemn them.",
     "name": "Summon Lightbringer",
     "tier": 4,
-    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+    "type": "<hyperlink>Unit</hyperlink>"
    },
    {
     "description": "Summons a <hyperlink>Divine Beacon</hyperlink>. Upon casting and at the start of each turn, friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain + <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist><br></br>This summon lasts for <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
@@ -2434,7 +2434,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Gain a shield that has a base % chance of inflicting Stunned on attackers for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "For <turn></turn> Turns, friendly units in a -hex radius:<bulletlist><bullet>Gain a shield that has a base % chance of inflicting Stunned on attackers.</bullet></bulletlist>",
     "name": "Static Shield",
     "spell_slug": "static_shield",
     "tier": 3,
@@ -2995,7 +2995,7 @@
  {
   "passives": [
    {
-    "description": "Units standing on the center of this <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink> restore 50% <hyperlink><hp></hp> Hit Points</hyperlink> and 100% <hyperlink>Move Points</hyperlink>. The <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink> has a 3 <turn></turn> <hyperlink>Turn</hyperlink> cooldown before it can use this again.",
+    "description": "Units standing on the center of this city or outpost restore 50% <hyperlink><hp></hp> Hit Points</hyperlink>, 100% <hyperlink>Move Points</hyperlink>, and remove Exhausted from <hyperlink>Forced March</hyperlink>. The city or outpost has a 3 <turn></turn> <hyperlink>Turn</hyperlink> cooldown before it can use this again.",
     "name": "Ritual of Alacrity",
     "type": ""
    }
@@ -3051,7 +3051,7 @@
  {
   "passives": [
    {
-    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +5% <knowledge></knowledge><hyperlink>Knowledge</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +15% <knowledge></knowledge><hyperlink>Knowledge</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +30% <knowledge></knowledge><hyperlink>Knowledge</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation3></reputation3>Slightly Evil: +5% <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +15% <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +30% <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
+    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +5% <knowledge></knowledge><hyperlink>Knowledge</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +15% <knowledge></knowledge><hyperlink>Knowledge</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +25% <knowledge></knowledge><hyperlink>Knowledge</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation3></reputation3>Slightly Evil: +5% <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +15% <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +25% <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
     "name": "Alignment Agenda",
     "type": ""
    }

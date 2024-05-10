@@ -4936,6 +4936,9 @@
    },
    {
     "slug": "land_movement"
+   },
+   {
+    "slug": "optional_cavalry"
    }
   ],
   "medal_rewards_4": [
@@ -9951,6 +9954,9 @@
     "slug": "land_movement"
    },
    {
+    "slug": "optional_cavalry"
+   },
+   {
     "slug": "ranged_unit"
    }
   ],
@@ -11346,7 +11352,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_shrine_of_smiting"
+    "slug": "smiting_prayer_blast_shrine_of_smiting"
    },
    {
     "slug": "divine_vengeance_shrine_of_smiting"
@@ -11582,9 +11588,6 @@
    },
    {
     "slug": "inspiring_killer"
-   },
-   {
-    "slug": "magical_mending"
    }
   ],
   "mp": 40,
@@ -11599,7 +11602,7 @@
     "slug": "convert_lightbringer"
    },
    {
-    "slug": "defense_mode_warding"
+    "slug": "defense_mode"
    }
   ],
   "medal_rewards_5": [
@@ -11626,11 +11629,11 @@
     "slug": "frost_weakness_2"
    }
   ],
-  "status_resistance": 5,
+  "status_resistance": 3,
   "upkeep": "20<gold></gold> ",
   "id": "lightbringer",
   "name": "Lightbringer",
-  "hp": 80,
+  "hp": 75,
   "armor": 2,
   "medal_rewards_2": [
    {
@@ -11638,8 +11641,11 @@
    }
   ],
   "tier": 3,
-  "resistance": 4,
+  "resistance": 2,
   "secondary_passives": [
+   {
+    "slug": "battle_mage_unit"
+   },
    {
     "slug": "celestial"
    },
@@ -11648,9 +11654,6 @@
    },
    {
     "slug": "magic_origin"
-   },
-   {
-    "slug": "support_unit"
    }
   ],
   "medal_rewards_4": [
@@ -11658,7 +11661,7 @@
     "slug": "_8_hp__"
    },
    {
-    "slug": "elite_medal_resistance"
+    "slug": "elite_medal_damage"
    }
   ],
   "medal_rewards_6": [
@@ -11666,7 +11669,7 @@
     "slug": "_8_hp__"
    },
    {
-    "slug": "legend_medal_exalted_resistance"
+    "slug": "legend_medal_evoker"
    }
   ]
  },
@@ -12444,7 +12447,7 @@
    }
   ],
   "description": "",
-  "cost": "80<unitprod></unitprod> 60<mana></mana> ",
+  "cost": "140<unitprod></unitprod> 100<mana></mana> ",
   "resid": 4273492483608,
   "medal_rewards_3": [
    {
@@ -18852,6 +18855,9 @@
   "secondary_passives": [
    {
     "slug": "land_movement"
+   },
+   {
+    "slug": "optional_cavalry"
    },
    {
     "slug": "support_unit"

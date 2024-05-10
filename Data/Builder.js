@@ -384,7 +384,7 @@ function SetButtonsAndDivs(list, parent, cardType) {
                 divChild.setAttribute("id", splitIcon[0] + "_card");
                 div.setAttribute("id", splitIcon[0]);
                 btn.setAttribute("id", splitIcon[0] + "-button");
-                btn.innerHTML = "<img style=\"float:left;\" src=\"/aow4db/Icons/TomeIcons/" + splitIcon[1] + ".png\" width='25px'\">" + GetUnitTierAndName(splitIcon[0]);
+                btn.innerHTML = "<img style=\"float:left;\" src=\"/evolved/Icons/TomeIcons/" + splitIcon[1] + ".png\" width='25px'\">" + GetUnitTierAndName(splitIcon[0]);
                 AddTriangleForDLCUnits("Unit", splitIcon[0], btn);
                 showUnitFromString(splitIcon[0], splitIcon[0]);
                 btn.setAttribute("onclick", 'openDiv(event,\'' + splitIcon[0] + '\')');

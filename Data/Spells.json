@@ -1461,16 +1461,19 @@
   "icon": "battlefield_reanimation"
  },
  {
-  "casting_cost": "150<souls></souls> ",
+  "casting_cost": "200<souls></souls> ",
   "resid": 4514010634381,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "raise_undead_army",
   "tactical": false,
-  "description": "Summons a full army stack of mid-Tier Undead units onto a target world hex.",
+  "description": "Summons a full army of mid-Tier Undead units onto target world hex.",
   "name": "Raise Undead Army",
-  "operation_point_cost": 200,
+  "operation_point_cost": 300,
   "icon": "raise_undead_army",
   "summoned_units": [
+   {
+    "slug": "bone_dragon"
+   },
    {
     "slug": "corrupt_soul"
    },
@@ -2250,13 +2253,13 @@
   "icon": "awaken_the_forest",
   "summoned_units": [
    {
+    "slug": "entwined_scourge"
+   },
+   {
     "slug": "entwined_protector"
    },
    {
     "slug": "goretusk_matriarch"
-   },
-   {
-    "slug": "entwined_scourge"
    },
    {
     "slug": "nymph"

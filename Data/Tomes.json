@@ -1806,7 +1806,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
    },
    {
-    "description": "Target friendly city:<bulletlist><bullet>Has +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
+    "description": "Target friendly city:<bulletlist><bullet>Has +20 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
     "name": "Domain of Death",
     "spell_slug": "domain_of_death",
     "tier": 5,
@@ -2617,14 +2617,14 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius gain 3 Regeneration.",
+    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 2 Regeneration.</bullet></bulletlist>",
     "name": "Blossom of Life",
     "spell_slug": "blossom_of_life",
     "tier": 4,
     "type": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>+3 <food></food> <hyperlink>Food</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet><bullet>+1 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
+    "description": "<bulletlist><bullet>+3 <food></food> <hyperlink>Food</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet><bullet>+2 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
     "name": "Temple of Fertility",
     "tier": 3,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -3801,7 +3801,7 @@
  {
   "passives": [
    {
-    "description": "The <hyperlink>Dark</hyperlink> Culture has a <happiness></happiness> <hyperlink>City Stability</hyperlink> Agenda, which grants bonuses for the following negative stability levels:<br></br><bulletlist><bullet>Unstable: +15 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet>Unrest: +30 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet>Rioting: +45 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet>",
+    "description": "The <hyperlink>Dark</hyperlink> Culture has a <happiness></happiness> <hyperlink>City Stability</hyperlink> Agenda, which grants bonuses for the following negative stability levels:<br></br><bulletlist><bullet>Unstable: +15 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Unrest: +30 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Rioting: +45 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet>",
     "name": "Stability Agenda",
     "type": ""
    }

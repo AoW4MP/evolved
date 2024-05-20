@@ -1504,7 +1504,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "domain_of_death",
   "tactical": false,
-  "description": "Target friendly city:<bulletlist><bullet>Has +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
+  "description": "Target friendly city:<bulletlist><bullet>Has +20 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
   "name": "Domain of Death",
   "operation_point_cost": 50,
   "icon": "domain_of_death"
@@ -1984,7 +1984,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "tectonic_shatter",
   "tactical": true,
-  "description": "<bulletlist><bullet>All enemies sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 60% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>All enemies sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 90% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
   "name": "Tectonic Shatter",
   "operation_point_cost": 65,
   "icon": "tectonic_shatter"
@@ -2132,14 +2132,14 @@
   "icon": "lava_burst"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010632212,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "meteor_shower",
   "tactical": true,
-  "description": "<bulletlist><bullet>3 meteors impact next to random enemies when you cast this, as well as at the start of your <turn></turn> Turns.</bullet><bullet>Each meteor deals 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> in a 1-hex radius.</bullet><bullet>Lasts 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>3 meteors impact next to random enemies when you cast this, as well as at the start of your <turn></turn> Turns.</bullet><bullet>Each meteor deals 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> in a 1-hex radius.</bullet><bullet>Lasts 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Meteor Shower",
-  "operation_point_cost": 50,
+  "operation_point_cost": 40,
   "icon": "meteor_shower"
  },
  {
@@ -2321,7 +2321,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "blossom_of_life",
   "tactical": true,
-  "description": "Friendly units in a 2-hex radius gain 3 Regeneration.",
+  "description": "Friendly units in a 2-hex radius:<bulletlist><bullet>Heal +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 2 Regeneration.</bullet></bulletlist>",
   "name": "Blossom of Life",
   "operation_point_cost": 30,
   "icon": "blossom_of_life"
@@ -2769,14 +2769,14 @@
   "icon": "immolate"
  },
  {
-  "casting_cost": "80<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4514010628947,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "totem_of_the_wild",
   "tactical": true,
   "description": "Spawns a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier II Animal unit at the start of each of your <turn></turn> <hyperlink>Turns</hyperlink>. Lasts 3 <turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
   "name": "Totem of the Wild",
-  "operation_point_cost": 35,
+  "operation_point_cost": 30,
   "summoned_units": [
    {
     "slug": "totem_of_the_wild"
@@ -3123,7 +3123,7 @@
   "icon": "suppressing_barrage"
  },
  {
-  "casting_cost": "15<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 4273492489075,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "designate_target",
@@ -3131,7 +3131,7 @@
   "tactical": true,
   "description": "Target enemy gains:<bulletlist><bullet>3 Marked.</bullet><bullet>Distracted.</bullet></bulletlist>",
   "name": "Designate Target",
-  "operation_point_cost": 20,
+  "operation_point_cost": 15,
   "icon": "designate_target"
  },
  {
@@ -4182,14 +4182,14 @@
   "icon": "artisan_armaments"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "30<mana></mana> ",
   "resid": 4273492483307,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "seismic_shock",
   "tactical": true,
   "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Sustain 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 1 Sundered Defense.</bullet><bullet>Are inflicted with Slowed.</bullet></bulletlist><br></br>This spell deals double damage to obstacles.",
   "name": "Seismic Shock",
-  "operation_point_cost": 30,
+  "operation_point_cost": 25,
   "icon": "seismic_shock"
  },
  {

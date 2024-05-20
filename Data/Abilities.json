@@ -198,7 +198,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
     "name": "Electrified",
     "count": 1
    }
@@ -206,7 +206,7 @@
   "description": "Strikes target enemy unit and deal 20% of the damage to up to 2 other enemy units within 2 hexes.",
   "name": "Storm Strikes",
   "slug": "melee_strike_stormbringer",
-  "damage": "6<damagephysical></damagephysical> 6<damagelightning></damagelightning> ",
+  "damage": "7<damagephysical></damagephysical> 7<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -229,7 +229,7 @@
     "count": 1
    }
   ],
-  "description": "Deal damage to enemies in a 2-hex line.",
+  "description": "Deal damage to enemies in a 3-hex line.",
   "name": "Throw Storm Trident",
   "slug": "throw_stormbringer",
   "damage": "14<damagephysical></damagephysical> 14<damagelightning></damagelightning> ",
@@ -241,13 +241,10 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "90%",
+  "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "3",
   "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
@@ -1274,18 +1271,17 @@
   "icon": "legend_medal_sprint"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "name": "Poisoned",
+    "count": 1
    }
   ],
   "description": "Single magical attack at target unit.",
   "name": "Poison Blast",
   "slug": "magic_blast_animist",
-  "damage": "16<damageblight></damageblight> ",
+  "damage": "14<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -1297,6 +1293,14 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_blast_animist"
  },
  {
@@ -1874,8 +1878,8 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Blind for 1 <turn></turn> Turn.",
-    "name": "Blind",
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
     "count": 1
    },
    {
@@ -3663,11 +3667,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "notes": [
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
+  "notes": [],
   "icon": "poisonous_spores_floral_stinger"
  },
  {
@@ -3730,7 +3730,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 2 Regeneration.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 1 Regeneration.</bullet><bullet>Gain 1 Strengthened.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
   "name": "Revitalize",
   "slug": "revitalize_nymph",
   "damage": "",
@@ -4060,18 +4060,17 @@
   "icon": "freezing_blast_white_witch"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Slowed for 2 <turn></turn> Turns.",
+    "name": "Slowed",
+    "count": 1
    }
   ],
   "description": "Single magical attack at target unit.",
   "name": "Frost Blast",
   "slug": "magic_blast_necromancer",
-  "damage": "16<damagefrost></damagefrost> ",
+  "damage": "14<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -4083,6 +4082,14 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_blast_animist"
  },
  {
@@ -4279,7 +4286,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_entwined_protector",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "13<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -8651,12 +8658,11 @@
   "icon": "stunning_flash_spellshield"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "name": "Sundered Resistance",
+    "count": 1
    }
   ],
   "description": "Single magical attack at target unit.",
@@ -8674,6 +8680,14 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_blast_animist"
  },
  {
@@ -8685,7 +8699,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes:<bulletlist><bullet>Heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain +1 Bolstered Resistance.</bullet>",
+  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother",
   "damage": "",
@@ -8698,6 +8712,12 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "soothing_breeze_soother"
+ },
+ {
+  "description": "While this unit is in battle, spells are 10% cheaper to cast.<br></br>Doesn't stack.",
+  "name": "Spell Channeling",
+  "slug": "spell_channeling",
+  "icon": "spell_channeling"
  },
  {
   "modifiers": [
@@ -9142,12 +9162,11 @@
   "icon": "rune_of_retaliation"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
+    "name": "Sundered Defense",
+    "count": 1
    }
   ],
   "description": "Single magical attack at target unit.",
@@ -9165,6 +9184,14 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_blast_animist"
  },
  {
@@ -9193,7 +9220,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit gains:<bulletlist><bullet>2 Bolstered Defense.</bullet><bullet>1 Bolstered Resistance.</bullet></bulletlist>",
+  "description": "Target friendly unit gains:<bulletlist><bullet>1 Bolstered Defense.</bullet><bullet>1 Bolstered Resistance.</bullet></bulletlist>",
   "name": "Grant Defense",
   "slug": "grant_defense_steelshaper",
   "damage": "",
@@ -9971,8 +9998,8 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
-    "name": "Sundered Defense",
+    "description": "Base 60% chance of inflicting Blind for 1 <turn></turn> Turn.",
+    "name": "Blind",
     "count": 1
    }
   ],
@@ -10030,7 +10057,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 4 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "The caster and adjacent friendly units:<bulletlist><bullet>Heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist>",
@@ -12528,7 +12555,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 2 Regeneration.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 1 Regeneration.</bullet><bullet>Gain 1 Strengthened.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
   "name": "Revitalize",
   "slug": "revitalize_revitalize",
   "damage": "",
@@ -12727,7 +12754,7 @@
   "icon": "sundering_curse_warlock"
  },
  {
-  "description": "Adjacent friendly units have:<bulletlist><bullet>+10% damage</bullet></bulletlist>",
+  "description": "Adjacent friendly units have:<bulletlist><bullet>+10% damage</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet></bulletlist>",
   "name": "Feudal Ruler",
   "slug": "feudal_ruler",
   "icon": "feudal_ruler"
@@ -12764,7 +12791,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "All friendly Animals and Plants within 2 hexes become 3 Strengthened.",
+  "description": "All friendly Animals, Plants and Naga Transformations within 2 hexes become 3 Strengthened.",
   "name": "Nature's Avenger",
   "slug": "natures_avenger_natures_avenger",
   "damage": "",

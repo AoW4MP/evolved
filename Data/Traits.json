@@ -33,7 +33,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
-  "point_cost": 7,
+  "point_cost": 6,
   "id": "eagle_mounts",
   "name": "Eagle Mounts",
   "screen_description": "",
@@ -169,7 +169,7 @@
  {
   "lore_description": "<helpcolor>Deal more damage to enemies surrounded by your units.</helpcolor>",
   "biography_description": "They surround and overrun their enemies.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "pack_tactics",
   "name": "Pack Tactics",
   "screen_description": "",
@@ -183,7 +183,7 @@
   "front_end": true,
   "icon": "pack_tactics",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Moving around and settling in Ashland areas becomes easier.</helpcolor>",
@@ -653,7 +653,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1145,7 +1145,7 @@
  {
   "lore_description": "<helpcolor>Units deal more damage when fighting in groups.</helpcolor>",
   "biography_description": "They work together to bring down even the largest of foes.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "overwhelm_tactics",
   "name": "Overwhelm Tactics",
   "screen_description": "",
@@ -1159,7 +1159,7 @@
   "front_end": true,
   "icon": "overwhelm_tactics",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Encourages a slow and steady play style.</helpcolor>",
@@ -1227,7 +1227,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+8 <hyperlink><hp></hp> Hit Points</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1405,7 +1405,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -40% <knowledge></knowledge> Knowledge to unlock."
+    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -30% <knowledge></knowledge> Knowledge to unlock."
    },
    {
     "name": "<caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> cost -30% upkeep."
@@ -2222,13 +2222,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
     "name": "Gain the Barbed Webs ability."
-   },
-   {
-    "name": "Gain the Life Steal passive."
    },
    {
     "name": "Additional units become Cavalry"

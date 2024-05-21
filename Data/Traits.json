@@ -1189,7 +1189,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Magic</hyperlink> attacks deal +15% damage."
+    "name": "<hyperlink>Magic</hyperlink> attacks deal +20% damage."
    }
   ],
   "enabled": true,
@@ -1964,7 +1964,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>."
+    "name": "<hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks."
    }
   ],
   "enabled": true,
@@ -1977,7 +1977,7 @@
  {
   "lore_description": "<helpcolor>Reduce damage from magical attacks.</helpcolor>",
   "biography_description": "They have a natural armor against magical damage.",
-  "point_cost": 5,
+  "point_cost": 4,
   "id": "resistant",
   "name": "Resistant",
   "screen_description": "",
@@ -1991,7 +1991,7 @@
   "front_end": true,
   "icon": "resistant",
   "type": "form",
-  "display_order": 5
+  "display_order": 6
  },
  {
   "biography_description": "They harbor knowledge dating back to the beginning of time.",
@@ -2364,7 +2364,7 @@
  {
   "lore_description": "<helpcolor>Units take less damage from physical attacks.</helpcolor>",
   "biography_description": "They are tough and used to taking a few hits in battle.",
-  "point_cost": 5,
+  "point_cost": 4,
   "id": "tough",
   "name": "Tough",
   "screen_description": "",
@@ -2378,7 +2378,7 @@
   "front_end": true,
   "icon": "tough",
   "type": "form",
-  "display_order": 5
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Armies can fight longer on the world map.</helpcolor>",

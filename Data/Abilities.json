@@ -1993,9 +1993,12 @@
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Apply Marked to the target, then enter Defense Mode.",
+  "description": "Apply Marked to the target.",
   "name": "Take Aim",
   "slug": "take_aim_magelock",
   "damage": "",
@@ -2005,7 +2008,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<freeaction></freeaction>",
   "range": "5",
   "icon": "take_aim_magelock"
  },
@@ -5400,11 +5403,17 @@
   "icon": "mountain_walk"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
+   }
+  ],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_magma_spirit",
-  "damage": "12<damagefire></damagefire> ",
+  "damage": "11<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11243,18 +11252,17 @@
   "icon": "frozen_web_ice_spider_matriarch"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
    }
   ],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_pyromancer",
-  "damage": "10<damagefire></damagefire> ",
+  "damage": "8<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11266,6 +11274,14 @@
   "accuracy": "90%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_bolts_severing_golem"
  },
  {
@@ -11816,18 +11832,17 @@
   "slug": "fire_resistance_8"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
    }
   ],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_lesser_magma_spirit",
-  "damage": "10<damagefire></damagefire> ",
+  "damage": "9<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11839,6 +11854,14 @@
   "accuracy": "90%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_bolts_severing_golem"
  },
  {

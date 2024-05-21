@@ -3514,20 +3514,20 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4273492484987,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "blazing_magic",
+  "id": "fiery_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Gain base 30% chance of inflicting Burning, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Burning.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
-    "requisite": "<unitSupport></unitSupport> Support Unit"
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
-    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    }
   ],
-  "name": "Blazing Magic",
+  "name": "Fiery Arrows",
   "operation_point_cost": 80,
-  "icon": "blazing_magic"
+  "icon": "fiery_arrows"
  },
  {
   "casting_cost": "200<mana></mana> ",

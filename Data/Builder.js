@@ -57,12 +57,12 @@ function fetchJsonFiles(filePaths) {
     return Promise.all(
         filePaths.map(filePath =>
             fetch(filePath)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Network response was not ok: ${response.statusText}`);
-                    }
-                    return response.json();
-                })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                return response.json();
+            })
         )
     );
 }
@@ -934,6 +934,7 @@ function addAbilityslot(a, holder, list, enchant) {
             dam.innerHTML = abilityDam;
 
             abilityDescr = (jsonUnitAbilities[j].description) + "<br>";
+            abilityDescr = abilityDescr.replaceAll("</br>", "");
 
             var abilityIconType = "";
             imag.setAttribute("src", "/evolved/Icons/Abilities/" + abilityIcon + ".png");
@@ -4656,6 +4657,14 @@ function showTome(a, div) {
                     showUnitUnlock(jsonTomes[j].skills[k]);
                 }
 
+                                // stormport for some reason doesnt have an upgrade slug
+
+                                if (jsonTomes[j].skills[k].name == "Stormport") {
+                                    var iDiv = spell_card_template.content.cloneNode(true);
+                                    skillHolder.appendChild(iDiv);
+                                    showStructure("stormport", false);
+                                }                
+
                 if ('upgrade_slug' in jsonTomes[j].skills[k]) {
                     var iDiv = spell_card_template.content.cloneNode(true);
                     skillHolder.appendChild(iDiv);
@@ -5096,6 +5105,7 @@ function showStructure(a, showOrigin) {
                     continue;
                 }
             }
+
             modName = document.getElementById("modname");
             nameString = "";
             nameString = jsonStructureUpgrades[j].name.toUpperCase();
@@ -5850,9 +5860,9 @@ function ConvertSpawnTable(input) {
     bulletList.innerHTML = "<bulletList><span class=\"Test\">" + bulletListName + "</span>";
 
     for (const {
-        entry,
-        percentage
-    } of percentages) {
+            entry,
+            percentage
+        } of percentages) {
         const itemText = entry.replace(/_/g, " "); // Replace underscores with spaces
 
         if (!uniqueEntries.includes(itemText)) {

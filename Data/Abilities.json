@@ -241,10 +241,13 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "3",
   "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
@@ -3087,7 +3090,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "bolt_of_judgment_inquisitor"
@@ -4042,13 +4045,13 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Deal damage to target enemy unit.<bulletlist><bullet>Frozen<br></br>Base 90% chance of inflicting Frozen to the primary target for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.</bullet><bullet>Slowed<br></br>Base 60% chance of inflicting Slowed in a 1-hex radius around the target.</bullet>",
+  "description": "Deals damage to target unit. Adjacent enemy units sustain 50% of the damage.<bulletlist><bullet>Frozen<br></br>Base 90% chance of inflicting Frozen to the target for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.</bullet><bullet>Slowed<br></br>Base 60% chance of inflicting Slowed in a 1-hex radius around the target.</bullet></bulletlist>",
   "name": "Freezing Blast",
   "slug": "freezing_blast_white_witch",
-  "damage": "16<damagefrost></damagefrost> ",
+  "damage": "18<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -4058,8 +4061,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "icon": "freezing_blast_white_witch"
  },
  {
@@ -5405,7 +5408,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Base 30% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -6151,7 +6154,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Up to 3 random enemies and their adjacent allies:<bulletlist><bullet>Sustain 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> damage.</bullet><bullet>Gain 2 Weakened.</bullet><bullet>Gain 2 Sundered Resistance.</bullet></bulletlist>",
+  "description": "Up to 3 random enemies and their adjacent allies:<bulletlist><bullet>Sustain 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> damage.</bullet><bullet>Gain 1 Weakened.</bullet><bullet>Gain 1 Sundered Resistance.</bullet></bulletlist>",
   "name": "Magical Upheaval",
   "slug": "magical_upheaval_progenitor_golem",
   "damage": "",
@@ -6216,7 +6219,7 @@
   "description": "Deal damage to target unit and create <hyperlink>Afflicting Miasma</hyperlink> on their hex.",
   "name": "Miasma Shot",
   "slug": "miasma_shot_afflictor",
-  "damage": "20<damageblight></damageblight> ",
+  "damage": "24<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -9661,7 +9664,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -9691,7 +9694,7 @@
   "icon": "berserkers_rage"
  },
  {
-  "description": "When a base attack triggers a critical hit, it deals:<bulletlist><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for repeating attacks.</bullet><bullet>+8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for non-repeating attacks.</bullet></bulletlist>",
+  "description": "When a base attack triggers a critical hit, it deals:<bulletlist><bullet>+3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for repeating attacks.</bullet><bullet>+6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for non-repeating attacks.</bullet></bulletlist>",
   "name": "Savage Strike",
   "slug": "savage_strike",
   "icon": "savage_strike"
@@ -9704,7 +9707,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -9765,7 +9768,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -9798,7 +9801,7 @@
  {
   "modifiers": [
    {
-    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -9840,7 +9843,7 @@
  {
   "modifiers": [
    {
-    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -9871,7 +9874,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -9904,7 +9907,7 @@
  {
   "modifiers": [
    {
-    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -11254,7 +11257,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Base 30% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -11262,7 +11265,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_pyromancer",
-  "damage": "8<damagefire></damagefire> ",
+  "damage": "9<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11834,7 +11837,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Base 30% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -12814,7 +12817,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "All friendly Animals, Plants and Naga Transformations within 2 hexes become 3 Strengthened.",
+  "description": "All friendly Animals and Plants within 2 hexes become 3 Strengthened.",
   "name": "Nature's Avenger",
   "slug": "natures_avenger_natures_avenger",
   "damage": "",
@@ -13838,13 +13841,13 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Deal damage to target enemy unit.<bulletlist><bullet>Frozen<br></br>Base 90% chance of inflicting Frozen to the primary target for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.</bullet><bullet>Slowed<br></br>Base 60% chance of inflicting Slowed in a 1-hex radius around the target.</bullet>",
+  "description": "Deals damage to target unit. Adjacent enemy units sustain 50% of the damage.<bulletlist><bullet>Frozen<br></br>Base 90% chance of inflicting Frozen to the target for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.</bullet><bullet>Slowed<br></br>Base 60% chance of inflicting Slowed in a 1-hex radius around the target.</bullet></bulletlist>",
   "name": "Freezing Blast",
   "slug": "freezing_blast_freezing_blast",
-  "damage": "16<damagefrost></damagefrost> ",
+  "damage": "18<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -13854,8 +13857,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "icon": "freezing_blast_white_witch"
  },
  {

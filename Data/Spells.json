@@ -1946,7 +1946,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "lightning_torrent",
   "tactical": false,
-  "description": "All units in target enemy army suffer -2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+  "description": "All units in target enemy army suffer -3 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Lightning Torrent",
   "operation_point_cost": 80,
   "icon": "lightning_torrent"
@@ -2969,9 +2969,6 @@
    },
    {
     "requisite": "<unitFey></unitFey> Fey"
-   },
-   {
-    "requisite": "<unitNaga></unitNaga> Naga"
    }
   ],
   "name": "Force of Nature",
@@ -3457,7 +3454,7 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4273492485023,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "lightning_magic",
+  "id": "lightning_focus",
   "tactical": false,
   "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 30% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
@@ -3468,9 +3465,9 @@
     "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    }
   ],
-  "name": "Lightning Magic",
+  "name": "Lightning Focus",
   "operation_point_cost": 80,
-  "icon": "lightning_magic"
+  "icon": "lightning_focus"
  },
  {
   "casting_cost": "80<mana></mana> ",

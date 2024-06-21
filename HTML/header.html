@@ -124,34 +124,54 @@
     </template>
 
     <template id="structure_card_template">
-        <div class="mod_card">
+        <div class="mod_card" id="spell_card">
             <div class="structure_image_holder">
+
                 <div style="
-          display: grid;
-    grid-template-columns: auto auto;
+          display: flex;
     width: auto;
     justify-content: space-between;
-    align-content: center;
+    align-content: start;
     align-items: stretch;
     justify-items: center;">
                     <p class="mod_name" id="modname"></p>
-                    <p style="padding-left: 10px;font-size: 13px" id="modtier"></p>
+                    <p style="padding-left: 10px;font-size: 15px" id="modtier"></p>
+
+
+                    <div style="width: 150px;position: absolute;left: -162px;top: 10px;">
+                        <p style="font-size: 15px" id="originTome">
+                        </p>
+                        <img id="originTomeIcon" height="100px">
+                    </div>
                 </div>
                 <p style="position:absolute;bottom:5px; right:5px;" id="modcost"></p>
-                <div style="width: 150px;position: absolute;left: -162px;top: 10px;">
-                    <p style="font-size: 13px" id="originTome">
-                    </p>
-                    <img id="originTomeIcon" height="100px">
+                <div style="
+          display: flex;
+    grid-template-columns: auto auto;
+    width: auto;
+    justify-content: start;
+    align-content: start;
+    align-items: stretch;
+    justify-items: center;">
+                    <div style="width: 100px;">
+                        <img class="mod_image" id="modicon" src="/evolved/Icons/Text/accuracy.png">
+
+                    </div>
+                    <p id="loreText" style="
+    color: darkgrey;
+    font-size: 14px;
+    max-width: 400px;
+    margin-left: 20px;"></p>
+                    <div>
+                        <div>
+                            <p class="mod_description" id="moddescription">TestText
+                            </p>
+                        </div>
+                        <img class="preview_image" id="structurepreview" src="">
+
+                    </div>
                 </div>
-                <div style="width: 100px; float:left">
-                    <img class="mod_image" id="modicon" src="/evolved/Icons/Text/accuracy.png">
-                </div>
-                <img class="preview_image" id="structurepreview" src="">
-                <div style="float:left">
-                    <p class="mod_description" id="moddescription">By grounding itself, the unit gains Stagger Resistance and +5 <arcResistance></arcResistance> resistance <br> Additionally, this mod grants the unit +1 <armor></armor> <br><br>
-                        <abilityred>This Mod can only be applied to non-Mechanical units that have Land Movement. </abilityred>
-                    </p>
-                </div>
+
                 <div style="clear:both"></div>
                 <div id="affectUnitTypes" style=" float:right; display: grid;grid-template-columns: 200px  200px; font-size: 12px"></div>
             </div>
@@ -159,35 +179,37 @@
     </template>
 
     <template id="spell_card_template">
-        <div class="mod_card">
+        <div class="mod_card" id="spell_card">
 
             <div class="mod_image_holder">
 
                 <div class="spellStatsHighLighter">
                     <div style="display: flex;justify-content: space-between; width:500px">
-                        <p class="mod_name" id="modname">Grounding Harness</p>
+                        <p class="mod_name" id="modname">NameTest</p>
                         <p class="spell_cost" style=" font-size: 12px" id="modcost"></p>
                     </div>
                     <div style="display: flex;justify-content: space-between; width:500px">
-                        <p class="abilityLineSlot" style="padding-left: 10px;font-size: 13px" id="modtier">Tier: I</p>
-                        <p class="abilityLineSlot" style="padding-left: 10px;font-size: 13px" id="modupkeep"></p>
+                        <p class="abilityLineSlot" style="padding-left: 10px;font-size: 15px" id="modtier">Tier: I</p>
+                        <p class="abilityLineSlot" style="padding-left: 10px;font-size: 15px" id="modupkeep"></p>
                     </div>
                 </div>
                 <div style="width: 150px;position: absolute;left: -162px;top: 10px;">
-                    <p style="font-size: 13px" id="originTome"></p>
+                    <p style="font-size: 15px" id="originTome"></p>
                     <img id="originTomeIcon" height="100px">
 
                 </div>
-                <div style="width: 100px; float:left; padding-top: 15px">
-                    <img class="mod_image" id="modicon" src="">
-                </div>
+                <div style="display:flex; justify-content: flex-start">
+                    <div style="width: 100px;  padding-top: 15px">
+                        <img class="mod_image" id="modicon" src="">
+                    </div>
 
-                <div style="float:left">
+                <div>
                     <p class="mod_description" id="moddescription">By grounding itself, the unit gains Stagger Resistance and +5 <arcResistance></arcResistance> resistance <br> Additionally, this mod grants the unit +1 <armor></armor> <br><br>
                         <abilityred>This Mod can only be applied to non-Mechanical units that have Land Movement. </abilityred>
                     </p>
                 </div>
-                <div id="affectUnitTypes" style=" float:right; display: grid;grid-template-columns: 200px  200px; font-size: 12px"></div>
+                </div>
+                <div id="affectUnitTypes" style=" float:right; display: grid;grid-template-columns: 200px  200px; font-size: 15px"></div>
             </div>
         </div>
     </template>
@@ -200,15 +222,15 @@
                 <div class="spellStatsHighLighter">
                     <div style="display: flex;justify-content: space-between; width:500px">
                         <p class="mod_name" id="modname">Grounding Harness</p>
-                        <p class="spell_cost" style=" font-size: 12px" id="modcost"></p>
+                        <p class="spell_cost" style=" font-size: 15px" id="modcost"></p>
                     </div>
                     <div style="display: flex;justify-content: space-between; width:500px">
-                        <p class="spell_tier" style="padding-left: 10px;font-size: 13px" id="spell_tier">Tier: I</p>
-                        <p class="abilityLineSlot" style="padding-left: 10px;font-size: 13px" id="modupkeep"></p>
+                        <p class="spell_tier" style="padding-left: 10px;font-size: 15px" id="spell_tier">Tier: I</p>
+                        <p class="abilityLineSlot" style="padding-left: 10px;font-size: 15px" id="modupkeep"></p>
                     </div>
                 </div>
                 <div style="width: 150px;position: absolute;left: -162px;top: 10px;">
-                    <p style="font-size: 13px" id="originTome"></p>
+                    <p style="font-size: 15px" id="originTome"></p>
                     <img id="originTomeIcon" height="100px">
                 </div>
                 <div style="width: 100px; float:left; padding-top: 15px">
@@ -227,7 +249,7 @@
     <template id="tome_card_template">
         <div class="tome_card">
             <p class="tome_name" id="tomename">Tome of Evocation</p>
-            <p style="text-align: center; font-size: 12px; max-width: 900px" id="tomedescription">By grounding itself, the unit gains Stagger Resistance and +5 <arcResistance></arcResistance> resistance <br> Additionally, this mod grants the unit +1 <armor></armor>
+            <p style="text-align: center; font-size: 15px; max-width: 900px" id="tomedescription">By grounding itself, the unit gains Stagger Resistance and +5 <arcResistance></arcResistance> resistance <br> Additionally, this mod grants the unit +1 <armor></armor>
             </p>
             <div style="width : 150px; float:left">
                 <img class="tome_image" id="tomeicon" src="/evolved/Icons/TomeIcons/barbarian.png">
@@ -270,11 +292,11 @@
             <a href="/evolved/" class="hero-text" style="left: auto;">Age of Wonders 4 Evolved</a>
         </div>
         <div class="hero-text">
-            <img src="/evolved/Icons/Interface/PrimalFury.png" width="400px">
+            <img src="/evolved/Icons/Interface/EldritchRealms.png" width="400px">
         </div>
         <div class="current-version">
 
-            Updated: 11/05/2024</div>
+            Updated: 21/06/2024</div>
     </div>
 </main>
 
@@ -290,9 +312,9 @@
                         <li><a href="/evolved/HTML/BarbarianUnits.html?type=pathfinder"><img src="/evolved/Icons/Text/barbarian.png" width="20px"> Barbarian</a></li>
                         <li><a href="/evolved/HTML/IndustriousUnits.html?type=pioneer"><img src="/evolved/Icons/Text/industrious.png" width="20px"> Industrious</a></li>
                         <li><a href="/evolved/HTML/DarkUnits.html?type=outrider"><img src="/evolved/Icons/Text/dark.png" width="20px"> Dark</a></li>
-                        <li><a href="/evolved/HTML/MysticUnits.html?type=mystic_projection"><img src="/evolved/Icons/Text/mystic.png" width="20px"> Mystic</a></li>
+                        <li><a href="/evolved/HTML/MysticUnits.html?type=mystic_projectionAttunement&"><img src="/evolved/Icons/Text/mystic.png" width="20px"> Mystic</a></li>
                         <li><a href="/evolved/HTML/ReaverUnits.html?type=observer&"><img src="/evolved/Icons/Text/reaver.png" width="20px"> Reaver</a></li>
-                        <li><a href="/evolved/HTML/PrimalUnits.html?type=spirit_tracker"><img src="/evolved/Icons/Text/primal.png" width="20px"> Primal</a></li>
+                        <li><a href="/evolved/HTML/PrimalUnits.html?type=spirit_trackerAsh%20Sabertooth&"><img src="/evolved/Icons/Text/primal.png" width="20px"> Primal</a></li>
 
                     </ul>
                 </li>
@@ -308,6 +330,7 @@
                         <li><a href="/evolved/HTML/DragonDawnTomesUnits.html?type=wyvern_fledgling"><img src="/evolved/Icons/Interface/dual.png" width="20px"> Dragon Dawn</a></li>
                         <li><a href="/evolved/HTML/EmpiresAshesTomeUnits.html?type=afflictor"><img src="/evolved/Icons/Interface/dual3.png" width="20px"> Empires&Ashes</a></li>
                         <li><a href="/evolved/HTML/PrimalFuryTomesUnits.html?type=mistling"><img src="/evolved/Icons/Interface/dual2.png" width="20px"> Primal Fury</a></li>
+                        <li><a href="/evolved/HTML/EldritchRealmsTomesUnits.html?type=tentacle"><img src="/evolved/Icons/Interface/dual4.png" width="20px"> Eldritch Realms</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu"><a class='prett' style="color:burlywood" href='#'><img style="margin-top: -20px; margin-bottom: -10px" src="/evolved/Icons/Interface/WildlifeUnitsIcon.png" width="20px">Types ▸</a>
@@ -324,7 +347,7 @@
                         <li><a href="/evolved/HTML/PlantUnits.html?type=entwined_thrall&"><img src="/evolved/Icons/Abilities/plant.png" width="20px"> Plant</a></li>
                         <li><a href="/evolved/HTML/CelestialUnits.html?type=lightbringer&"><img src="/evolved/Icons/Abilities/celestial.png" width="20px"> Celestial</a></li>
                         <li><a href="/evolved/HTML/ConstructUnits.html?type=observer&"><img src="/evolved/Icons/Abilities/construct.png" width="20px"> Construct</a></li>
-
+                        <li><a href="/evolved/HTML/UmbralDemonsUnits.html?type=mature_splitterling"><img src="/evolved/Icons/Abilities/umbral_demon.png" width="20px"> Umbral Demon</a></li>
                     </ul>
                 </li>
                 <li class="has-submenu"><a class='prett' style="color:burlywood" href='#'><img style="margin-top: -20px; margin-bottom: -10px" src="/evolved/Icons/Interface/WildlifeUnitsIcon.png" width="20px">Other ▸</a>

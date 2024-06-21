@@ -31,6 +31,44 @@
   "display_order": 4
  },
  {
+  "lore_description": "<helpcolor>Units become stronger when they sustain magical damage.</helpcolor>",
+  "biography_description": "They find power through magical pain.",
+  "point_cost": 3,
+  "id": "empowered_by_magic",
+  "name": "Empowered by Magic",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Once per turn, when taking non-<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage, gain Strengthened for 3 <turn></turn> Turns."
+   }
+  ],
+  "enabled": true,
+  "group_name": "",
+  "front_end": true,
+  "icon": "empowered_by_magic",
+  "type": "form",
+  "display_order": 7
+ },
+ {
+  "lore_description": "<helpcolor>Adjacent enemies have a chance to miss their attacks.</helpcolor>",
+  "biography_description": "They communicate through a cacophony of noise that would drive anyone else mad.",
+  "point_cost": 3,
+  "id": "ceaseless_cacophony",
+  "name": "Ceaseless Cacophony",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Adjacent enemies without this trait have a 15% <hyperlink>Fumble</hyperlink> chance."
+   }
+  ],
+  "enabled": true,
+  "group_name": "",
+  "front_end": true,
+  "icon": "ceaseless_cacophony",
+  "type": "form",
+  "display_order": 7
+ },
+ {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
   "point_cost": 6,
@@ -305,6 +343,142 @@
  {
   "affinities": [
    {
+    "name": "-100<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
+   }
+  ],
+  "lore_description": "",
+  "biography_description": "",
+  "point_cost": 0,
+  "id": "umbral_thralls",
+  "name": "Umbral Thralls",
+  "screen_description": "The <hyperlink>Umbral Dwelling</hyperlink> tolerates you. <br></br>Grants the same benefits as <hyperlink>Neutral</hyperlink> and <hyperlink>Open Borders</hyperlink>. <br></br><br></br>If you assign a  and make more sacrifices you may reach an <rs_vassalage></rs_vassalage> <hyperlink>Eldritch Pact</hyperlink>.",
+  "enabled": false,
+  "group_name": "",
+  "front_end": false,
+  "type": "society",
+  "display_order": -1,
+  "DLC": "ELDRITCHREALMS "
+ },
+ {
+  "biography_description": "They have tamed the tunneling Death Beetles.",
+  "lore_description": "<helpcolor>Mounted units are more common and gain a Death Beetle mount.</helpcolor>",
+  "DLC": "ELDRITCHREALMS ",
+  "point_cost": 5,
+  "id": "death_beetle_mounts",
+  "name": "Death Beetle Mounts",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+   },
+   {
+    "name": "Gain the Pestilent Escape ability."
+   },
+   {
+    "name": "Additional units become Cavalry"
+   },
+   {
+    "name": "Ruler starts with a Death Beetle mount."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "MOUNT",
+  "front_end": true,
+  "icon": "death_beetle_mounts",
+  "display_order": 4
+ },
+ {
+  "affinities": [
+   {
+    "name": "10<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
+   },
+   {
+    "name": "1<shadow></shadow> Shadow Affinity"
+   }
+  ],
+  "biography_description": "Their vast knowledge earns them power and respect throughout the realms.",
+  "lore_description": "They know knowledge is power, and power demands respect.",
+  "point_cost": 1,
+  "id": "keepers_of_knowledge__goodact__",
+  "name": "Keepers of Knowledge <goodact></goodact>",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Unlocking a new Research Skill grants +10 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> with all <minorcity></minorcity><hyperlink>Free Cities</hyperlink> to whom you have assigned a <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>."
+   },
+   {
+    "name": "Gain +100 <hyperlink>Empire Relations</hyperlink> with all <minorcity></minorcity><hyperlink>Free Cities</hyperlink> and <hyperlink>Empires</hyperlink> for 15 <turn></turn> <hyperlink>Turns</hyperlink> when unlocking a new <hyperlink>Tome</hyperlink>."
+   },
+   {
+    "name": "Gain +20 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> for each <hyperlink>Open Borders</hyperlink> <hyperlink>Treaty</hyperlink> with another <hyperlink>Empire</hyperlink>."
+   },
+   {
+    "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"
+   }
+  ],
+  "enabled": true,
+  "type": "society",
+  "group_name": "",
+  "front_end": true,
+  "display_order": 1,
+  "starting_bonuses": [
+   {
+    "empire_progression_slug": "all-seeing"
+   }
+  ],
+  "icon": "keepers_of_knowledge__goodact__"
+ },
+ {
+  "biography_description": "They know the shadows are not to be feared, but to be studied and used.",
+  "lore_description": "The shadows whisper, and the disciples listen.",
+  "DLC": "ELDRITCHREALMS ",
+  "point_cost": 1,
+  "id": "umbral_disciples__evilact__",
+  "name": "Umbral Disciples <evilact></evilact>",
+  "incompatible_society_traits": [
+   {
+    "name": "Devotees of Good <goodact></goodact>"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Start with Ritual of the Gloomveil unlocked."
+   },
+   {
+    "name": "Cities may build the <conduit></conduit> Altar of Marching Gloom."
+   },
+   {
+    "name": "Your Ruler gains Tyrant's Retinue."
+   },
+   {
+    "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
+   }
+  ],
+  "enabled": true,
+  "type": "society",
+  "group_name": "",
+  "front_end": true,
+  "display_order": 1,
+  "affinities": [
+   {
+    "name": "-10<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
+   },
+   {
+    "name": "1<shadow></shadow> Shadow Affinity"
+   }
+  ],
+  "starting_bonuses": [
+   {
+    "description": "Start with Umbral Flesh active."
+   }
+  ],
+  "icon": "umbral_disciples__evilact__"
+ },
+ {
+  "affinities": [
+   {
     "name": "1<nature></nature> Nature Affinity"
    }
   ],
@@ -415,7 +589,7 @@
     "name": "Gain +1 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Marauder</hyperlink> or <minorcity></minorcity><hyperlink>Free City</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat."
    },
    {
-    "name": "Gain 2 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Empire</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat.<br></br>This reward increases by +1 for each level of <evilact></evilact>evil <hyperlink>Alignment</hyperlink> of the Faction they belonged to."
+    "name": "Gain +2 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Empire</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat.<br></br>This reward increases by +1 for each level of <evilact></evilact>evil <hyperlink>Alignment</hyperlink> of the Faction they belonged to."
    },
    {
     "name": "Gain +30 <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an <evilact></evilact>evil <hyperlink>Alignment</hyperlink>."
@@ -464,11 +638,6 @@
   "group_name": "",
   "front_end": true,
   "display_order": 4,
-  "starting_bonuses": [
-   {
-    "description": "100<influence></influence> "
-   }
-  ],
   "icon": "hermit_kingdom"
  },
  {
@@ -590,9 +759,6 @@
   "effect_descriptions": [
    {
     "name": "All <hyperlink>Units</hyperlink> gain Attunement: Mana Addicted."
-   },
-   {
-    "name": "Racial Battle Mage Units and Support Units have +1 Rank."
    }
   ],
   "enabled": true,
@@ -653,7 +819,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -748,6 +914,9 @@
    },
    {
     "name": "<hyperlink>Trade</hyperlink> with <minorcity></minorcity><hyperlink>Free Cities</hyperlink> costs you -100% resources. (Cost increases from other sources still apply!)"
+   },
+   {
+    "name": "<whisperingStone></whisperingStone> <hyperlink>Whispering Stones</hyperlink> grant +1 <hyperlink><allegiance></allegiance>Allegiance</hyperlink>."
    }
   ],
   "enabled": true,
@@ -794,9 +963,6 @@
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"
-   },
-   {
-    "name": "Racial Shield Units and Polearm Units have +1 Rank."
    },
    {
     "name": "Gain +1 <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>."
@@ -1237,55 +1403,6 @@
   "type": "form",
   "display_order": 8
  },
-{
-    "lore_description": "WIP",
-    "biography_description": "WIP.",
-    "point_cost": 4,
-    "id": "empowered_by_magic",
-    "name": "Empowered by Magic",
-    "screen_description": "",
-    "effect_descriptions": [
-
-],
-    "enabled": true,
-    "group_name": "",
-    "front_end": true,
-    "icon": "empowered_by_magic",
-    "type": "form",
-    "display_order": 6
-}, {
-    "lore_description": "WIP",
-    "biography_description": "WIP.",
-    "point_cost": 4,
-    "id": "ceaseless_cacophony",
-    "name": "Ceaseless Cacophony",
-    "screen_description": "",
-    "effect_descriptions": [
-
-],
-    "enabled": true,
-    "group_name": "",
-    "front_end": true,
-    "icon": "ceaseless_cacophony",
-    "type": "form",
-    "display_order": 6
-}, {
-    "lore_description": "WIP",
-    "biography_description": "WIP.",
-    "point_cost": 5,
-    "id": "death_beetle_mounts",
-    "name": "Death Beetle Mounts",
-    "screen_description": "",
-    "effect_descriptions": [
-
-],
-    "enabled": true,
-    "group_name": "",
-    "front_end": true,
-    "icon": "death_beetle_mounts",
-    "type": "form",
-    "display_order": 5
-},
  {
   "biography_description": "They are talented spies, sneaking past enemy lines to gain precious information.",
   "lore_description": "They are talented spies, sneaking past enemy lines to gain precious information.",
@@ -1346,13 +1463,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Racial Battle Mage Units and Support Units have +1 Rank."
-   },
-   {
     "name": "Battle Mage Units and Support Units provide +5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> at the start of combat."
    },
    {
-    "name": "Battle Mage Units and Support Units increase the damage of your <hyperlink>Combat Spells</hyperlink> by 5%."
+    "name": "Battle Mage Units and Support Units increase the damage of your <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> by 5%."
    }
   ],
   "enabled": true,
@@ -1388,12 +1502,6 @@
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
-   },
-   {
-    "name": "Units are recruited with +1 Rank when you are at the maximum evil <hyperlink>Alignment</hyperlink>."
-   },
-   {
-    "name": "Racial Shock Units and Shield Units have +1 Rank."
    }
   ],
   "enabled": true,
@@ -1422,7 +1530,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a City."
+    "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a City or <hyperlink>Outpost</hyperlink>."
    },
    {
     "name": "Cities gain +20% <structureprod></structureprod> <hyperlink>Production</hyperlink> per annexed <hyperlink>Ancient Wonders</hyperlink>."
@@ -1458,9 +1566,6 @@
    },
    {
     "name": "<caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> cost -30% upkeep."
-   },
-   {
-    "name": "Racial Shield Units and Polearm Units have +1 Rank."
    }
   ],
   "enabled": true,
@@ -1524,7 +1629,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Coast, River, and Underground Lake provinces yield +3 <gold></gold> Gold, +3 <food></food> Food, and +3 <unitprod></unitprod> Draft."
+    "name": "<hyperlink>Cities</hyperlink> gain +3 <gold></gold> Gold, +3 <food></food> Food, and +3 <unitprod></unitprod> Draft for each province with a Coast, River, and Underground Lake in their <hyperlink>Domain</hyperlink>."
    },
    {
     "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +20% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
@@ -1635,9 +1740,6 @@
   "effect_descriptions": [
    {
     "name": "Gain +75% resources from clearing an <hyperlink>Infestation</hyperlink>, <hyperlink>Ancient Wonder</hyperlink>, or <hyperlink>Resource Node</hyperlink>."
-   },
-   {
-    "name": "Racial Ranged Units and Skirmisher Units have +1 Rank."
    }
   ],
   "enabled": true,
@@ -1676,10 +1778,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Summoning Spells cost -50% <mana></mana> Mana and -25% <caststrategic></caststrategic> <hyperlink>World Map Casting Point</hyperlink> to cast."
-   },
-   {
-    "name": "Summoned Magic Origin units have +1 Rank."
+    "name": "Summoning Spells cost -50% <mana></mana> Mana to cast."
    }
   ],
   "enabled": true,
@@ -1760,7 +1859,7 @@
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
    },
    {
-    "name": "The nearest City owned gains +6 <mana></mana> <hyperlink>Mana</hyperlink> and +6 <food></food> <hyperlink>Food</hyperlink> per tier of units killed or lost after successful combat."
+    "name": "The nearest City owned gains +6 <mana></mana> <hyperlink>Mana</hyperlink> and +6 <food></food> <hyperlink>Food</hyperlink> per tier of non-Magic Origin units killed or lost after successful combat."
    }
   ],
   "enabled": true,
@@ -1863,9 +1962,6 @@
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"
-   },
-   {
-    "name": "Racial Support Units and Polearm Units have +1 Rank."
    }
   ],
   "enabled": true,
@@ -1905,10 +2001,7 @@
     "name": "<hyperlink>Cities</hyperlink> require -20% <food></food> <hyperlink>Food</hyperlink> for gaining a new <population></population> <hyperlink>Population</hyperlink>."
    },
    {
-    "name": "Racial Tier I and II units have +1 Rank."
-   },
-   {
-    "name": "Non-Magic Origin units require -30% <hyperlink>Unit Upkeep</hyperlink>."
+    "name": "Non-Magic Origin units require -20% <hyperlink>Unit Upkeep</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1918,7 +2011,7 @@
   "display_order": 5,
   "starting_bonuses": [
    {
-    "description": "Start with 3 extra Tier I units."
+    "description": "Start with an extra Tier I unit."
    }
   ],
   "icon": "prolific_swarmers"
@@ -2597,53 +2690,5 @@
   "front_end": false,
   "display_order": -1,
   "icon": "mark_of_the_conflux"
-  }, {
-    "affinities": [
-        {
-            "name": "1<shadow></shadow> Shadow Affinity"
-},
-        {
-            "name": "-10<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
-}
-],
-    "biography_description": "WIP.",
-    "lore_description": "WIP.",
-    "point_cost": 1,
-    "id": "umbral_disciples__evilact__",
-    "name": "Umbral Disciples <evilact></evilact>",
-    "screen_description": "",
-    "effect_descriptions": [
-
-],
-    "enabled": true,
-    "type": "society",
-    "group_name": "",
-    "front_end": true,
-    "display_order": 5,
-    "icon": "umbral_disciples__evilact__"
-}, {
-    "affinities": [
-        {
-            "name": "1<shadow></shadow> Shadow Affinity"
-},
-        {
-            "name": "+10<reputation2></reputation2> <hyperlink>Alignment</hyperlink>"
-}
-],
-    "biography_description": "WIP.",
-    "lore_description": "WIP.",
-    "point_cost": 1,
-    "id": "keepers_of_knowledge__goodact__",
-    "name": "Keepers of Knowledge <goodact></goodact>",
-    "screen_description": "",
-    "effect_descriptions": [
-
-],
-    "enabled": true,
-    "type": "society",
-    "group_name": "",
-    "front_end": true,
-    "display_order": 5,
-    "icon": "keepers_of_knowledge__goodact__"
-}
+ }
 ]

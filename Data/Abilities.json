@@ -5603,12 +5603,6 @@
   "icon": "evolve"
  },
  {
-  "description": "This unit is a Slow Learner and receives -20% <hyperlink><xp></xp> Experience</hyperlink> from combat.",
-  "name": "Slow Learner",
-  "slug": "slow_learner",
-  "icon": "slow_learner"
- },
- {
   "modifiers": [
    {
     "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
@@ -5759,7 +5753,7 @@
   "icon": "load_shrapnel_shot_ironclad"
  },
  {
-  "description": "<hyperlink>Unit Upkeep</hyperlink> increased by 50%",
+  "description": "<hyperlink>Unit Upkeep</hyperlink> increased by 25%",
   "name": "High Maintenance",
   "slug": "high_maintenance",
   "icon": "high_maintenance"
@@ -10941,7 +10935,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_phantasm_warrior",
-  "damage": "6<damagephysical></damagephysical> 6<damagelightning></damagelightning> ",
+  "damage": "5<damagephysical></damagephysical> 5<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11888,10 +11882,10 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose 1 positive status effect.</bullet><bullet>Sustain damage. Double damage to Magic Origin units.</bullet></bulletlist>",
+  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose 1 positive status effect.</bullet><bullet>Sustain damage.</bullet></bulletlist>",
   "name": "Star Purge",
   "slug": "star_purge_spellbreaker_attunement",
-  "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> 6<damagefrost></damagefrost> ",
+  "damage": "7<damagelightning></damagelightning> 7<damagefire></damagefire> 7<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -14450,7 +14444,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    },
@@ -14539,7 +14533,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 30% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
     "name": "Bleeding",
     "count": 1
    },
@@ -14643,7 +14637,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 30% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
     "name": "Poisoned",
     "count": 1
    }
@@ -18353,7 +18347,7 @@
     "count": 1
    },
    {
-    "description": "Units killed with this weapon transform into a weakened  until the end of battle.",
+    "description": "Units killed with this weapon transform into a weakened <hyperlink>Ice Spider</hyperlink> until the end of battle.",
     "name": "Shivermist^N",
     "count": 1
    }

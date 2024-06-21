@@ -1776,7 +1776,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "abyssal_flames",
   "tactical": false,
-  "description": "In target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Transforms terrain into Desolate terrain, except Mountain and Ocean terrain.</bullet><bullet>Deals 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to enemies.</bullet></bulletlist>",
+  "description": "In target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Terrain transforms into Desolate terrain, except Mountain and Ocean terrain.</bullet><bullet>Enemy units suffer -2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Abyssal Flames",
   "operation_point_cost": 150,
   "icon": "abyssal_flames"
@@ -1787,7 +1787,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "flash_freeze",
   "tactical": false,
-  "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Arctic terrain.</bullet><bullet>Enemy units suffer -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Is altered to Arctic terrain.</bullet><bullet>Enemies sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Enemies have -5 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
   "name": "Flash Freeze",
   "operation_point_cost": 100,
   "icon": "flash_freeze"
@@ -3193,7 +3193,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "gremlin_ambushers",
   "tactical": false,
-  "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 5 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
+  "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 3 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
   "name": "Gremlin Ambushers",
   "operation_point_cost": 100,
   "icon": "gremlin_ambushers"

@@ -206,7 +206,7 @@ function SetRandomStart(overwriteParameter) {
                     currentFormTraitList.push(randomEntry);
 
 
-                    while (getPoints() < 5) {
+                    while (getPoints() < 10) {
                         var randomEntry = GetRandomEntry(listofChoice[j]);
                         if (getPoints() + randomEntry.point_cost < 11 && !isInArray(currentFormTraitList, randomEntry)) {
                             if (checkCompatibilityTraits(randomEntry) == true) {

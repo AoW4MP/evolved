@@ -1076,7 +1076,7 @@ function SetupButtons(evt, type) {
 
             }
 
-            if (origin.point_cost + (getPoints()) > 5 || checkCompatibilityTraits(origin) == false) {
+            if (origin.point_cost + (getPoints()) > 10 || checkCompatibilityTraits(origin) == false) {
                 originButtonNew.style.color = 'grey';
             } else {
                 originButtonNew.style.color = 'white';

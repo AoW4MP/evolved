@@ -3371,18 +3371,18 @@ function showUnit(a, divid, subcultureCheck, resID) {
                     if (jsonUnits[i].primary_passives[x].slug.indexOf("high_maintenance") != -1) {
 
                         if (jsonUnits[i].upkeep.indexOf("influence") != -1) {
-                            tier.innerHTML = "Tier " + romanize(jsonUnits[i].tier) + ": " + ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.5) + "*";
+                            tier.innerHTML = "Tier " + romanize(jsonUnits[i].tier) + ": " + ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.25) + "*";
                         } else {
-                            tier.innerHTML = "Tier " + romanize(jsonUnits[i].tier) + ": " + ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.5) + ">*";
+                            tier.innerHTML = "Tier " + romanize(jsonUnits[i].tier) + ": " + ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.25) + ">*";
                         }
 
                         var lowUpkeep = true;
 
                         if (summonInfo.length > 0) {
                             if (jsonUnits[i].upkeep.indexOf("influence") != -1) {
-                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.5) + "*";
+                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.25) + "*";
                             } else {
-                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.5) + ">*";
+                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.25) + ">*";
                             }
 
 

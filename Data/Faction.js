@@ -206,7 +206,7 @@ function SetRandomStart(overwriteParameter) {
                     currentFormTraitList.push(randomEntry);
 
 
-                    while (getPoints() < 5) {
+                    while (getPoints() < 10) {
                         var randomEntry = GetRandomEntry(listofChoice[j]);
                         if (getPoints() + randomEntry.point_cost < 6 && !isInArray(currentFormTraitList, randomEntry)) {
                             if (checkCompatibilityTraits(randomEntry) == true) {
@@ -1076,7 +1076,7 @@ function SetupButtons(evt, type) {
 
             }
 
-            if (origin.point_cost + (getPoints()) > 5 || checkCompatibilityTraits(origin) == false) {
+            if (origin.point_cost + (getPoints()) > 10 || checkCompatibilityTraits(origin) == false) {
                 originButtonNew.style.color = 'grey';
             } else {
                 originButtonNew.style.color = 'white';
@@ -2713,7 +2713,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 3) {
                 // 3 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 2)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 3)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -3143,7 +3143,7 @@ function updateSelectedOptions(origin) {
         //         currentFormTraitList.pop();
         //     }
         // } else {
-        if (getPoints() > 5) {
+        if (getPoints() > 10) {
             currentFormTraitList.pop();
         }
         // }

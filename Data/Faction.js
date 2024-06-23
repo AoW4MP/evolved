@@ -21,6 +21,11 @@ var extraOrder, extraChaos, extraNature, extraMaterium, extraShadow, extraAstral
 var currentTomeList = [];
 var currentSignatureSkills = [];
 
+const traitPointsMax = 10
+const affinityT3 = 3
+const affinityT4 = 5
+const affinityT5 = 7
+
 function ChangeShieldCol() {
 
     var shieldElement = document.getElementById("shield");
@@ -2713,7 +2718,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 3) {
                 // 3 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 3)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, affinityT3 - 1)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -2728,7 +2733,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 4) {
                 // 6 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 5)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, affinityT4 - 1)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -2741,7 +2746,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 5) {
                 // 8 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 7)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, affinityT5 - 1)) {
                     // check if we dont already have a t5, we can only have 1
                     if (!checkIfT5(currentTomeList)) {
                         if (!isInArray(currentTomeList, jsonTomes[i])) {
@@ -3137,7 +3142,7 @@ function updateSelectedOptions(origin) {
         //         currentFormTraitList.pop();
         //     }
         // } else {
-        if (getPoints() > 10) {
+        if (getPoints() > traitPointsMax) {
             currentFormTraitList.pop();
         }
         // }

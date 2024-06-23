@@ -2798,22 +2798,16 @@ function GetAffinityMatches(affinityTotal, substringToCount, number) {
             // console.log(match);
         }
 
-        var finalNumber = 0;
+        // var finalNumber = 0;
         for (let index = 0; index < numberMatches.length; index++) {
-            finalNumber += numberMatches[index];
-
+            // finalNumber += numberMatches[index];
+            if (!moreThanNumber && numberMatches[index] > number) {
+                moreThanNumber = true
+            }
         }
-
-
-
-
-
-        moreThanNumber = finalNumber > number;
+        // moreThanNumber = finalNumber > number;
     }
-
-
     return moreThanNumber;
-
 }
 
 function GetAllOrigins() {

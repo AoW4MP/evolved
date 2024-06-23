@@ -19950,7 +19950,11 @@
   "upkeep": "12<gold></gold> ",
   "id": "warlock",
   "name": "Warlock",
-  "primary_passives": [],
+  "primary_passives": [
+   {
+    "slug": "cull_the_weak"
+   }
+  ],
   "abilities": [
    {
     "slug": "magic_bolts_warlock"
@@ -19993,16 +19997,6 @@
   ]
  },
  {
-  "primary_passives": [],
-  "mp": 32,
-  "abilities": [
-   {
-    "slug": "shoot_bow_pursuer"
-   },
-   {
-    "slug": "defense_mode"
-   }
-  ],
   "medal_rewards_5": [
    {
     "slug": "_10_hp__"
@@ -20024,6 +20018,20 @@
   "upkeep": "8<gold></gold> ",
   "id": "pursuer",
   "name": "Pursuer",
+  "primary_passives": [
+   {
+    "slug": "cull_the_weak"
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "shoot_bow_pursuer"
+   },
+   {
+    "slug": "defense_mode"
+   }
+  ],
+  "mp": 32,
   "hp": 55,
   "armor": 0,
   "resistance": 0,
@@ -20033,6 +20041,7 @@
    }
   ],
   "tier": 1,
+  "culture_name": "Dark",
   "secondary_passives": [
    {
     "slug": "land_movement"
@@ -20897,7 +20906,7 @@
    }
   ],
   "mp": 32,
-  "hp": 75,
+  "hp": 70,
   "armor": 5,
   "resistance": 0,
   "medal_rewards_2": [

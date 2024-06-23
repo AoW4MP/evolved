@@ -10931,7 +10931,13 @@
   "icon": "scrying_eye"
  },
  {
-  "notes": [],
+  "modifiers": [
+   {
+    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "name": "Electrified",
+    "count": 1
+   }
+  ],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_phantasm_warrior",
@@ -10947,6 +10953,7 @@
   "accuracy": "100%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
+  "notes": [],
   "icon": "melee_strike_sabertooth"
  },
  {
@@ -11882,7 +11889,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose 1 positive status effect.</bullet><bullet>Sustain damage.</bullet></bulletlist>",
+  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose all positive status effects.</bullet><bullet>Sustain damage.</bullet></bulletlist>",
   "name": "Star Purge",
   "slug": "star_purge_spellbreaker_attunement",
   "damage": "7<damagelightning></damagelightning> 7<damagefire></damagefire> 7<damagefrost></damagefrost> ",
@@ -11911,7 +11918,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    }
@@ -11964,7 +11971,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12022,7 +12029,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    }
@@ -12254,7 +12261,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12285,7 +12292,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12321,7 +12328,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12606,7 +12613,13 @@
   "icon": "dark_stalwart"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 90% chance of inflicting Weakened for 3 <turn></turn> Turns.",
+    "name": "Weakened",
+    "count": 1
+   }
+  ],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Weakening Bolts",
   "slug": "magic_bolts_warlock",
@@ -12676,7 +12689,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_pursuer",
-  "damage": "8<damagephysical></damagephysical> ",
+  "damage": "10<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -13010,7 +13023,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy unit is inflicted with a base 90% chance of becoming Taunted for 3 <turn></turn> Turns. The unit that used the skill enters <hyperlink>Defense Mode</hyperlink>.",
+  "description": "Target enemy unit is inflicted with a base 60% chance of becoming Taunted for 3 <turn></turn> Turns. The unit that used the skill enters <hyperlink>Defense Mode</hyperlink>.",
   "name": "Taunt",
   "slug": "taunt_anvil_guard",
   "damage": "",
@@ -13344,7 +13357,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -13374,7 +13387,7 @@
   "icon": "berserkers_rage"
  },
  {
-  "description": "When a base attack triggers a critical hit, it deals:<bulletlist><bullet>+3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for repeating attacks.</bullet><bullet>+6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for non-repeating attacks.</bullet></bulletlist>",
+  "description": "When a base attack triggers a critical hit, it deals:<bulletlist><bullet>+4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for repeating attacks.</bullet><bullet>+8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> for non-repeating attacks.</bullet></bulletlist>",
   "name": "Savage Strike",
   "slug": "savage_strike",
   "icon": "savage_strike"
@@ -13387,7 +13400,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -13448,7 +13461,7 @@
     "count": 1
    },
    {
-    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -13481,7 +13494,7 @@
  {
   "modifiers": [
    {
-    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -13510,7 +13523,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Base 90% of target unit becoming Stunned. Enter <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "Base 60% of target unit becoming Stunned. Enter <hyperlink>Defense Mode</hyperlink> after use.",
   "name": "Shield Bash",
   "slug": "shield_bash_warrior",
   "damage": "",
@@ -13523,7 +13536,7 @@
  {
   "modifiers": [
    {
-    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -13549,12 +13562,12 @@
  {
   "modifiers": [
    {
-    "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
     "name": "Sundered Defense",
     "count": 1
    },
    {
-    "description": "Deals an additional 6 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 8 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -13587,7 +13600,7 @@
  {
   "modifiers": [
    {
-    "description": "Deals an additional 3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
+    "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",
     "count": 1
    }
@@ -16917,7 +16930,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>Strengthened</bullet><bullet>Hastened</bullet></bulletlist>",
@@ -17309,10 +17322,10 @@
   "icon": "revelers_triumph"
  },
  {
-  "description": "While this unit is the leader of the army, all Tier I units in the army gain:<bulletlist><bullet>+1<defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+5<hyperlink><hp></hp> Hit Point</hyperlink></bullet><bullet>+1<statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>",
-  "name": "Battle Seeker Training",
-  "slug": "battle_seeker_training",
-  "icon": "battle_seeker_training"
+  "description": "Start combat with a <hyperlink>War Hound</hyperlink>.",
+  "name": "Kennel Master",
+  "slug": "kennel_master",
+  "icon": "kennel_master"
  },
  {
   "modifiers": [

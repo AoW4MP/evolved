@@ -6,7 +6,7 @@
   "resid": 5068061409598,
   "id": "throne_of_insidious_whispers",
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet> 3 enemy units have a base 90% chance of suffering Insanity for 3 <turn></turn> <hyperlink>Turns</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet>3 enemy units have a base 90% chance of suffering Insanity for 3 <turn></turn> <hyperlink>Turns</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Throne of Insidious Whispers",
   "icon": "throne_of_insidious_whispers",
   "is_sector_upgrade": false
@@ -1357,7 +1357,7 @@
   "is_sector_upgrade": true
  },
  {
-  "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.<br></br><br></br>Requires City Tier II.",
+  "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 4578435139420,
@@ -1395,7 +1395,7 @@
   "prediction_description": "+10 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435139384,
   "id": "_conduit___summoning_well",
-  "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> and +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Combat Summon Spells</hyperlink> in the domain cost -25% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> and +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Combat Summon Spells</hyperlink> in the domain cost -25% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Summoning Well",
   "icon": "_conduit___summoning_well",
   "is_sector_upgrade": true
@@ -1425,10 +1425,10 @@
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "60<gold></gold> 130<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>-20% <mana></mana> <hyperlink>Mana</hyperlink> Cost to recruit <hyperlink>Tier I</hyperlink>.</bullet><bullet>-20% <gold></gold> <hyperlink>Gold</hyperlink> Cost to recruit <hyperlink>Tier I</hyperlink>.</bullet><bullet>-20% <unitprod></unitprod> <hyperlink>Draft</hyperlink> Cost to recruit <hyperlink>Tier I</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435139298,
   "id": "_forester___mob_camp",
-  "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet><hyperlink>Unit</hyperlink> deployment location.</bullet><bullet>Tier I <hyperlink>Units</hyperlink> are cheaper by 20%.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet><hyperlink>Unit</hyperlink> deployment location.</bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
   "name": "<forester></forester> Mob Camp",
   "icon": "_forester___mob_camp",
   "is_sector_upgrade": true
@@ -1436,14 +1436,14 @@
  {
   "requirement_description": "",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+15 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <structureprod></structureprod> <hyperlink>Production</hyperlink> income</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435139267,
-  "id": "metal_conjurer",
+  "id": "stone_conjurer",
   "description": "",
-  "name": "Metal Conjurer",
-  "icon": "metal_conjurer",
+  "name": "Stone Conjurer",
+  "icon": "stone_conjurer",
   "is_sector_upgrade": false,
-  "boost_requirements": "Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink>"
+  "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
  {
   "requirement_description": "Requires 2: <forester></forester> <hyperlink>Foresters</hyperlink>",
@@ -2408,7 +2408,7 @@
   "prediction_description": "<bulletlist><bullet>+10 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per <researchpost></researchpost> Research Post: </bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Battle Mage Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Fighter Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Mythic Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Polearm Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Ranged Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Shield Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Shock Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Skirmisher Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Support Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "resid": 4282082401316,
   "id": "scholars_guild",
-  "description": "",
+  "description": "<bulletlist><bullet>Grants Quick Learner to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "name": "Scholars Guild",
   "icon": "scholars_guild",
   "is_sector_upgrade": false,
@@ -2456,7 +2456,7 @@
   "prediction_description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <mine></mine> Mine: </bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Battle Mage Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Fighter Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Mythic Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Polearm Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Ranged Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Shield Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Shock Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Skirmisher Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Support Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "resid": 4282082401272,
   "id": "merchants_guild",
-  "description": "",
+  "description": "<bulletlist><bullet>Grants Bargain Price to units produced in this <hyperlink>City</hyperlink>.</bullet>",
   "name": "Merchants' Guild",
   "icon": "merchants_guild",
   "is_sector_upgrade": false,
@@ -2549,7 +2549,7 @@
  {
   "requirement_description": "",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "",
+  "prediction_description": "<bulletlist><bullet>+70 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+20 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income</bullet><bullet>+40 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>+30 <structureprod></structureprod> <hyperlink>Production</hyperlink> income</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4282082400540,
   "id": "lords_manor",
   "description": "<bulletlist><bullet>+100% income from the <hyperlink>Governor</hyperlink>.</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist><br></br>This also applies to the Lord <hyperlink>Hero</hyperlink> skills.",
@@ -2693,7 +2693,7 @@
  },
  {
   "requirement_description": "",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
   "prediction_description": "<bulletlist><bullet>Grants <hyperlink>Wargod's Spirit</hyperlink> to every Friendly <hyperlink>Unit</hyperlink> inside this <hyperlink>Domain</hyperlink>.</bullet><bullet>Grants <hyperlink>Wargod's Aggression</hyperlink> to every <hyperlink>Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "resid": 4041564236468,
   "id": "shrine_of_the_wargod",

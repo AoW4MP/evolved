@@ -8618,7 +8618,7 @@
   "id": "infernal_juggernaut",
   "name": "Infernal Juggernaut",
   "hp": 120,
-  "armor": 4,
+  "armor": 5,
   "resistance": 4,
   "medal_rewards_2": [
    {
@@ -9751,9 +9751,6 @@
  {
   "primary_passives": [
    {
-    "slug": "demolisher"
-   },
-   {
     "slug": "frenzy"
    },
    {
@@ -9784,7 +9781,7 @@
    }
   ],
   "description": "Summon a {GLOBAL.UNITS.WIND_RAGER_UNIT.Hyperlink}, a fast and disruptive {GLOBAL.PROPERTIES.FIGHTER.Hyperlink}",
-  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
+  "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "resid": 4514010632201,
   "medal_rewards_3": [
    {
@@ -9802,19 +9799,19 @@
     "slug": "frost_weakness_3"
    }
   ],
-  "status_resistance": 3,
-  "upkeep": "20<gold></gold> ",
+  "status_resistance": 0,
+  "upkeep": "12<gold></gold> ",
   "id": "wind_rager",
   "name": "Wind Rager",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 4,
+  "hp": 65,
+  "armor": 2,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
    }
   ],
-  "tier": 3,
+  "tier": 2,
   "secondary_passives": [
    {
     "slug": "elemental"
@@ -9824,9 +9821,6 @@
    },
    {
     "slug": "floating"
-   },
-   {
-    "slug": "large_target"
    },
    {
     "slug": "magic_origin"
@@ -10329,7 +10323,7 @@
    }
   ],
   "description": "",
-  "cost": "220<unitprod></unitprod> 140<mana></mana> ",
+  "cost": "140<unitprod></unitprod> 100<mana></mana> ",
   "resid": 4514010630880,
   "medal_rewards_3": [
    {
@@ -10347,19 +10341,19 @@
     "slug": "frost_weakness_2"
    }
   ],
-  "status_resistance": 3,
-  "upkeep": "20<gold></gold> ",
+  "status_resistance": 0,
+  "upkeep": "12<gold></gold> ",
   "id": "gremlin",
   "name": "Gremlin",
-  "hp": 90,
-  "armor": 3,
-  "resistance": 3,
+  "hp": 70,
+  "armor": 2,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
    }
   ],
-  "tier": 3,
+  "tier": 2,
   "secondary_passives": [
    {
     "slug": "desolate_walk"
@@ -12010,6 +12004,9 @@
  },
  {
   "primary_passives": [
+   {
+    "slug": "blight_aura"
+   },
    {
     "slug": "control_loss_immunity"
    },
@@ -16157,9 +16154,6 @@
     "slug": "magic_bolts_lightbringer"
    },
    {
-    "slug": "rebuke_the_wicked_lightbringer"
-   },
-   {
     "slug": "convert_lightbringer"
    },
    {
@@ -16175,7 +16169,7 @@
    }
   ],
   "description": "",
-  "cost": "220<unitprod></unitprod> 140<mana></mana> ",
+  "cost": "140<unitprod></unitprod> 100<mana></mana> ",
   "resid": 4273492484324,
   "medal_rewards_3": [
    {
@@ -16193,19 +16187,19 @@
     "slug": "frost_weakness_2"
    }
   ],
-  "status_resistance": 3,
-  "upkeep": "20<gold></gold> ",
+  "status_resistance": 0,
+  "upkeep": "12<gold></gold> ",
   "id": "lightbringer",
   "name": "Lightbringer",
-  "hp": 75,
-  "armor": 2,
-  "resistance": 2,
+  "hp": 55,
+  "armor": 1,
+  "resistance": 1,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
    }
   ],
-  "tier": 3,
+  "tier": 2,
   "secondary_passives": [
    {
     "slug": "battle_mage_unit"
@@ -19953,6 +19947,9 @@
   "primary_passives": [
    {
     "slug": "cull_the_weak"
+   },
+   {
+    "slug": "magical_mending"
    }
   ],
   "abilities": [

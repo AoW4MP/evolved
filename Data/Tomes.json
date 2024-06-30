@@ -17,7 +17,7 @@
   "icon": "tome_of_corruption",
   "skills": [
    {
-    "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet>3 enemy units have a base 90% chance of suffering Insanity for 3 <turn></turn> <hyperlink>Turns</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet>3 enemy units have a base 90% chance of suffering Insanity for 1 <turn></turn> <hyperlink>Turn</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
     "name": "Throne of Insidious Whispers",
     "tier": 7,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -699,7 +699,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Target unit:<bulletlist><bullet>Gains Zeal until the end of battle.<br></br>If target already has Zeal, gain 2 Strengthened for <turn></turn> Turns.</bullet><bullet>Enemy units in a -hex radius suffer Condemned until the end of battle.</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hexes for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target unit:<bulletlist><bullet>Gains Zeal until the end of battle.<br></br>If target already has Zeal, gain 1 Strengthened for <turn></turn> Turns.</bullet><bullet>Enemy units in a -hex radius suffer Condemned until the end of battle.</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hexes for <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Zealous Ignition",
     "spell_slug": "zealous_ignition",
     "tier": 5,
@@ -1744,7 +1744,7 @@
   "icon": "tome_of_sanctuary",
   "skills": [
    {
-    "description": "<bulletlist><bullet>Adds 12 <hyperlink>Healing Spires</hyperlink> in <hyperlink>Combat</hyperlink> during a <hyperlink>Siege</hyperlink>.</bullet><bullet>Friendly units in the domain heal 12 per turn.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Adds 4 <hyperlink>Healing Spires</hyperlink> in <hyperlink>Combat</hyperlink> during a <hyperlink>Siege</hyperlink>.</bullet><bullet>Friendly units in the domain heal 15 <hyperlink><hp></hp> Hit Points</hyperlink> per turn.</bullet></bulletlist>",
     "name": "Healing Spires",
     "tier": 5,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -2136,7 +2136,7 @@
   "icon": "tome_of_the_cold_dark",
   "skills": [
    {
-    "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Arctic terrain.</bullet><bullet>Enemy units suffer -5 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+    "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Arctic terrain.</bullet><bullet>Enemy units suffer -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
     "name": "Flash Freeze",
     "spell_slug": "flash_freeze",
     "tier": 5,
@@ -3162,7 +3162,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Adds Forest feature to target friendly or unowned province. Turns into Mushroom Forest <hyperlink>Underground</hyperlink>.<br></br>Doesn't work on Mountains, Desolate, Lava or Ice terrain.",
+    "description": "Adds Forest feature to target friendly or unowned province.<br></br>Turns into Mushroom Forest <hyperlink>Underground</hyperlink>.<br></br>Turns into Mangrove Forest when used on Water.<br></br>Doesn't work on Mountains, Desolate, Lava or Ice terrain.",
     "name": "Create Forest",
     "spell_slug": "create_forest",
     "tier": 3,
@@ -3808,7 +3808,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
    },
    {
-    "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 3 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
+    "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 5 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
     "name": "Gremlin Ambushers",
     "spell_slug": "gremlin_ambushers",
     "tier": 8,
@@ -4022,7 +4022,7 @@
   "icon": "tome_of_mayhem",
   "skills": [
    {
-    "description": "Target Unit has:<bulletlist><bullet>% chance of being inflicted with Infectious Insanity for <turn></turn> Turns. </bullet><bullet> If resisted, the target is inflicted with Insanity for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target non-<hyperlink>Hero</hyperlink> unit has:<bulletlist><bullet>% chance of being inflicted with Infectious Insanity for <turn></turn> Turns. </bullet><bullet>If resisted, the target is inflicted with Insanity for <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Infectious Insanity",
     "spell_slug": "infectious_insanity",
     "tier": 4,
@@ -4147,7 +4147,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "All friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "All friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.<br></br>Cannot be used on units already affected by Berserk.",
     "name": "Awaken Instincts",
     "spell_slug": "awaken_instincts",
     "tier": 7,

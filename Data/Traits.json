@@ -673,20 +673,23 @@
   "icon": "reclaimers"
  },
  {
-  "affinities": [
-   {
-    "name": "1<matter></matter> Materium Affinity"
-   }
-  ],
   "biography_description": "They pursue and covet magical artifacts, using such items as inspiration for their magical feats.",
   "lore_description": "They pursue and covet magical artifacts, using such items as inspiration for their magical feats.",
   "point_cost": 1,
   "id": "artifact_hoarders",
   "name": "Artifact Hoarders",
+  "incompatible_society_traits": [
+   {
+    "name": "Fabled Hunters"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain a tier I-II Hero Item after clearing an <hyperlink>Ancient Wonder</hyperlink> or an <hyperlink>Infestation</hyperlink>."
+    "name": "Gain a tier I Hero Item after clearing a <hyperlink>Resource Node</hyperlink>."
+   },
+   {
+    "name": "Gain a tier II-III Hero Item after clearing an <hyperlink>Ancient Wonder</hyperlink> or an <hyperlink>Infestation</hyperlink>."
    },
    {
     "name": "Gain extra <mana></mana> <hyperlink>Mana</hyperlink> with Hero Items via the <hyperlink>Artifact Hoard</hyperlink>."
@@ -697,6 +700,11 @@
   "group_name": "",
   "front_end": true,
   "display_order": 2,
+  "affinities": [
+   {
+    "name": "1<matter></matter> Materium Affinity"
+   }
+  ],
   "starting_bonuses": [
    {
     "description": "Get 2 random hero items."
@@ -819,7 +827,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1368,7 +1376,7 @@
  {
   "lore_description": "<helpcolor>Units are less likely to be affected by negative status effects and shrug them off faster.</helpcolor>",
   "biography_description": "Their natural resilience makes them less likely to be affected by magic.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "resilient",
   "name": "Resilient",
   "screen_description": "",
@@ -1385,7 +1393,7 @@
   "front_end": true,
   "icon": "resilient",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Your units can take a little more damage.</helpcolor>",
@@ -1396,7 +1404,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+8 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1423,7 +1431,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Cities and Provinces have +2 Vision Range."
+    "name": "Cities and Provinces have +4 Vision Range."
    },
    {
     "name": "Scout Units have Universal Camouflage."
@@ -1739,6 +1747,11 @@
   "point_cost": 1,
   "id": "fabled_hunters",
   "name": "Fabled Hunters",
+  "incompatible_society_traits": [
+   {
+    "name": "Artifact Hoarders"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -1749,12 +1762,12 @@
   "type": "society",
   "group_name": "",
   "front_end": true,
+  "display_order": 3,
   "incompatible_cultures": [
    {
     "name": "Mystic"
    }
   ],
-  "display_order": 3,
   "affinities": [
    {
     "name": "1<nature></nature> Nature Affinity"

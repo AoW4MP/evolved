@@ -1176,7 +1176,7 @@
     "count": 1
    },
    {
-    "description": "Base 90% chance of draining all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> from target for 2 <turn></turn> Turns.",
+    "description": "Base 60% chance of draining all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> from target for 2 <turn></turn> Turns.",
     "name": "Disruption",
     "count": 1
    }
@@ -1184,7 +1184,7 @@
   "description": "Unleashes a magical bolt at target enemy. Deals 50% of the damage to adjacent enemies.",
   "name": "Weakening Bolts",
   "slug": "magic_bolts_severing_golem",
-  "damage": "16<damagefrost></damagefrost> ",
+  "damage": "18<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -3125,7 +3125,7 @@
   "icon": "defense_mode_warding"
  },
  {
-  "description": "This unit grants Accelerated Recovery to all other units in the army. This effect stacks.",
+  "description": "This unit grants Accelerated Recovery to all other units in the army.<br></br><br></br>This effect does not stack.",
   "name": "Magical Mending",
   "slug": "magical_mending",
   "icon": "magical_mending"
@@ -6848,7 +6848,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_wind_rager",
-  "damage": "16<damagephysical></damagephysical> ",
+  "damage": "15<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -6874,7 +6874,7 @@
   "description": "Deals damage to all adjacent enemies and displaces them up to 2 hexes.",
   "name": "Whirlwind",
   "slug": "whirlwind_wind_rager",
-  "damage": "24<damagephysical></damagephysical> ",
+  "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -7219,7 +7219,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_gremlin",
-  "damage": "12<damagephysical></damagephysical> 4<damagefire></damagefire> ",
+  "damage": "10<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -7236,10 +7236,10 @@
  },
  {
   "modifiers": [],
-  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>, unless the target has Charge Resistance.</bullet></bulletlist>",
   "name": "Behind You!",
   "slug": "behind_you!_gremlin",
-  "damage": "12<damagephysical></damagephysical> 12<damagefire></damagefire> ",
+  "damage": "10<damagephysical></damagephysical> 10<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -8162,7 +8162,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Putrid Breath",
   "slug": "putrid_breath_bone_dragon",
-  "damage": "18<damageblight></damageblight> ",
+  "damage": "20<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8177,6 +8177,12 @@
    }
   ],
   "icon": "putrid_breath_bone_dragon"
+ },
+ {
+  "description": "At the start of the turn, adjacent enemy units:<bulletlist><bullet>Sustain 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Have a base 60% chance of becoming Decaying.</bullet></bulletlist>",
+  "name": "Blight Aura",
+  "slug": "blight_aura",
+  "icon": "blight_aura"
  },
  {
   "description": "At the end of this unit's turn, adjacent enemy units lose -5 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
@@ -10433,11 +10439,18 @@
   "icon": "divine_beacons_grace_divine_beacon"
  },
  {
-  "modifiers": [],
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "description": "Unleashes a magical bolt at target enemy.",
-  "name": "Sun Bolts",
+  "name": "Spirit Bolts",
   "slug": "magic_bolts_lightbringer",
-  "damage": "6<damagefire></damagefire> 6<damagespirit></damagespirit> ",
+  "damage": "10<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -10449,35 +10462,7 @@
   "accuracy": "90%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
   "icon": "magic_bolts_severing_golem"
- },
- {
-  "notes": [
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
-  "description": "Enemy units in a 1-hex radius become Condemned until the end of battle.",
-  "name": "Rebuke the Wicked",
-  "slug": "rebuke_the_wicked_lightbringer",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Debuff"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
-  "icon": "rebuke_the_wicked_lightbringer"
  },
  {
   "notes": [
@@ -10485,7 +10470,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Base 60% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
+  "description": "Base 90% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 15 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
   "name": "Convert",
   "slug": "convert_lightbringer",
   "damage": "",
@@ -10967,12 +10952,17 @@
     "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
     "name": "Piercing",
     "count": 1
+   },
+   {
+    "description": "Base 30% chance of inflicting Gilded for 1 <turn></turn> Turn.",
+    "name": "Gilded",
+    "count": 1
    }
   ],
-  "description": "Deal damage to units in a 1-hex cone, secondary targets receive 50% of the effects.",
+  "description": "Deal damage to units in a 1-hex cone, secondary targets receive 50% of the damage.",
   "name": "Gilded Cleave",
   "slug": "gilded_cleave_golden_golem",
-  "damage": "22<damagephysical></damagephysical> ",
+  "damage": "18<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11655,7 +11645,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 40% chance of inflicting Insanity for 1 <turn></turn> Turn.",
+    "description": "Base 60% chance of inflicting Insanity for 1 <turn></turn> Turn.",
     "name": "Insanity",
     "count": 1
    }
@@ -12775,7 +12765,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_bastion",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "14<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -12998,11 +12988,11 @@
   "icon": "overdraw_crossbow_arbalest"
  },
  {
-  "modifiers": [],
+  "notes": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_anvil_guard",
-  "damage": "8<damagephysical></damagephysical> ",
+  "damage": "10<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -13014,7 +13004,6 @@
   "accuracy": "100%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
-  "notes": [],
   "icon": "melee_strike_sabertooth"
  },
  {
@@ -15190,7 +15179,7 @@
   "requisites": [],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
-  "range": "99",
+  "range": "4",
   "icon": "mimic_mirror_mimic"
  },
  {
@@ -16357,7 +16346,7 @@
   "icon": "avatar_of_nature"
  },
  {
-  "description": "While army leader, units in the army regenerate +10 <hyperlink><hp></hp> Hit Points</hyperlink>.<br></br><br></br>In addition, after winning combat, units in the army regain 50% <hyperlink>Move Points</hyperlink>.<br></br>This triggers once per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<br></br><br></br>Only one Hero can be this Lord at any time.",
+  "description": "While army leader, units in the army regenerate +10 <hyperlink><hp></hp> Hit Points</hyperlink> in friendly and neutral territory.<br></br><br></br>In addition, after winning combat, units in the army regain 50% <hyperlink>Move Points</hyperlink>.<br></br>This triggers once per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink><br></br><br></br>Only one Hero can be this Lord at any time.",
   "name": "Lord of War",
   "slug": "lord_of_war",
   "icon": "lord_of_war"
@@ -17436,7 +17425,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>2 Regeneration</bullet></bulletlist>",
+  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>1 Regeneration</bullet></bulletlist>",
   "name": "Mass Rejuvenation",
   "slug": "mass_rejuvenation_mass_rejuvenation",
   "damage": "",
@@ -17583,17 +17572,20 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Makes this unit teleport to target hex and grants it 60% <hyperlink>Evasion</hyperlink> for 1 <turn></turn> Turn.",
+  "description": "Makes this unit teleport to target hex and grants it 40% <hyperlink>Evasion</hyperlink> for 1 <turn></turn> Turn.",
   "name": "Blink",
   "slug": "blink_blink",
   "damage": "",
   "requisites": [
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
   "range": "6",
   "icon": "blink_blink"
  },
@@ -17603,7 +17595,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 4 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Enemy units in a 1-hex radius <hyperlink>Fumble</hyperlink> their attacks for 1 <turn></turn> Turn.",
@@ -17616,7 +17608,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<fullaction></fullaction>",
   "range": "6",
   "icon": "visions_of_woe_visions_of_woe"
  },

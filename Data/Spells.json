@@ -368,7 +368,7 @@
   "id": "mass_phantasmal_ritual",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Enemy units in target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Sustain damage equal to 15% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Lose 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> until the end of their next combat.</bullet></bulletlist>",
+  "description": "Enemy units in target and adjacent <hyperlink>Provinces</hyperlink> lose 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> until the end of their next combat.",
   "name": "Mass Phantasmal Ritual",
   "operation_point_cost": 100,
   "icon": "mass_phantasmal_ritual"
@@ -380,7 +380,7 @@
   "id": "phantasmal_ritual",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Target enemy army:<bulletlist><bullet>Sustains damage equal to 20% of its maximum <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Loses 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> until the end of its next combat</bullet></bulletlist>",
+  "description": "Target enemy army loses 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> until the end of its next combat</bulletlist>",
   "name": "Phantasmal Ritual",
   "operation_point_cost": 80,
   "icon": "phantasmal_ritual"
@@ -1209,7 +1209,7 @@
   "id": "zealous_ignition",
   "DLC": "ELDRITCHREALMS ",
   "tactical": true,
-  "description": "Target unit:<bulletlist><bullet>Gains Zeal until the end of battle.<br></br>If target already has Zeal, gain 2 Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Enemy units in a 2-hex radius suffer Condemned until the end of battle.</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hexes for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Gains Zeal until the end of battle.<br></br>If target already has Zeal, gain 1 Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Enemy units in a 2-hex radius suffer Condemned until the end of battle.</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hexes for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Zealous Ignition",
   "operation_point_cost": 30,
   "icon": "zealous_ignition"
@@ -1787,7 +1787,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "flash_freeze",
   "tactical": false,
-  "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Arctic terrain.</bullet><bullet>Enemy units suffer -5 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Arctic terrain.</bullet><bullet>Enemy units suffer -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Flash Freeze",
   "operation_point_cost": 100,
   "icon": "flash_freeze"
@@ -2500,7 +2500,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "cosmic_overdrive",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>+30% damage.</bullet><bullet>Very Fast Movement.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>+20% damage.</bullet><bullet>Very Fast Movement.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "Combat Summon"
@@ -2884,7 +2884,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "meteor_shower",
   "tactical": true,
-  "description": "<bulletlist><bullet>3 meteors impact next to random enemies when you cast this, as well as at the start of your <turn></turn> Turns.</bullet><bullet>Each meteor deals 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> in a 1-hex radius.</bullet><bullet>Lasts 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>2 meteors impact next to random enemies when you cast this, as well as at the start of your <turn></turn> Turns.</bullet><bullet>Each meteor deals 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> in a 1-hex radius.</bullet><bullet>Lasts 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Meteor Shower",
   "operation_point_cost": 40,
   "icon": "meteor_shower"
@@ -3025,14 +3025,14 @@
   "icon": "devolve"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010631828,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "awaken_instincts",
   "tactical": true,
-  "description": "All friendly units in a 1-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "All friendly units in a 1-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.<br></br>Cannot be used on units already affected by Berserk.",
   "name": "Awaken Instincts",
-  "operation_point_cost": 50,
+  "operation_point_cost": 40,
   "icon": "awaken_instincts"
  },
  {
@@ -3193,7 +3193,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "gremlin_ambushers",
   "tactical": false,
-  "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 3 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
+  "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 5 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
   "name": "Gremlin Ambushers",
   "operation_point_cost": 100,
   "icon": "gremlin_ambushers"
@@ -3311,7 +3311,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "infectious_insanity",
   "tactical": true,
-  "description": "Target Unit has:<bulletlist><bullet>90% chance of being inflicted with Infectious Insanity for 2 <turn></turn> Turns. </bullet><bullet> If resisted, the target is inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Target non-<hyperlink>Hero</hyperlink> unit has:<bulletlist><bullet>90% chance of being inflicted with Infectious Insanity for 2 <turn></turn> Turns. </bullet><bullet>If resisted, the target is inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
   "name": "Infectious Insanity",
   "operation_point_cost": 35,
   "icon": "infectious_insanity"
@@ -3557,6 +3557,12 @@
    },
    {
     "slug": "polar_bear"
+   },
+   {
+    "slug": "elephant"
+   },
+   {
+    "slug": "death_beetle"
    }
   ]
  },
@@ -4953,14 +4959,14 @@
   "icon": "artisan_armaments"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "30<mana></mana> ",
   "resid": 4273492483307,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "seismic_shock",
   "tactical": true,
-  "description": "Deals 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to units in a 1-hex radius and inflicts Slowed.<br></br>This spell deals double damage to obstacles.",
+  "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Sustain 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 1 Sundered Defense.</bullet><bullet>Are inflicted with Slowed.</bullet></bulletlist><br></br>This spell deals double damage to obstacles.",
   "name": "Seismic Shock",
-  "operation_point_cost": 30,
+  "operation_point_cost": 25,
   "icon": "seismic_shock"
  },
  {
@@ -5048,7 +5054,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "natures_bounty",
   "tactical": false,
-  "description": "All friendly units in the target Province gain +15 max <hyperlink><hp></hp> Hit Points</hyperlink> and regenerate 15 <hyperlink><hp></hp> Hit Points</hyperlink> for the next 2 <hyperlink>World Map</hyperlink> <turn></turn> Turns.",
+  "description": "All friendly units in the target Province gain +15 max <hyperlink><hp></hp> Hit Points</hyperlink> and regenerate 15 <hyperlink><hp></hp> Hit Points</hyperlink> in neutral and friendly domain for the next 2 <hyperlink>World Map</hyperlink> <turn></turn> Turns.",
   "name": "Nature's Bounty",
   "operation_point_cost": 120,
   "icon": "natures_bounty"
@@ -5140,7 +5146,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "create_forest",
   "tactical": false,
-  "description": "Adds Forest feature to target friendly or unowned province. Turns into Mushroom Forest <hyperlink>Underground</hyperlink>.<br></br>Doesn't work on Mountains, Desolate, Lava or Ice terrain.",
+  "description": "Adds Forest feature to target friendly or unowned province.<br></br>Turns into Mushroom Forest <hyperlink>Underground</hyperlink>.<br></br>Turns into Mangrove Forest when used on Water.<br></br>Doesn't work on Mountains, Desolate, Lava or Ice terrain.",
   "name": "Create Forest",
   "operation_point_cost": 30,
   "icon": "create_forest"

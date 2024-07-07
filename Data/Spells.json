@@ -1090,7 +1090,7 @@
   "icon": "spring_growth"
  },
  {
-  "casting_cost": "240<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5029406704195,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "forced_evolution",
@@ -1098,7 +1098,7 @@
   "tactical": false,
   "description": "Target a friendly <hyperlink>Army</hyperlink>, a random <hyperlink>Unit</hyperlink> in the army with Evolve immediately gains enough ranks to evolve.",
   "name": "Forced Evolution",
-  "operation_point_cost": 240,
+  "operation_point_cost": 200,
   "icon": "forced_evolution"
  },
  {
@@ -1197,7 +1197,7 @@
   "id": "consecrating_firestorm",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Target non-friendly <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink>:<bulletlist><bullet>Has its <hyperlink>Province Improvement</hyperlink> razed.</bullet><bullet>Enemy units in the province sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>For 3 <turn></turn> Turns, when entering combat all enemy units suffer Condemned.</bullet><bullet> Create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
+  "description": "Target non-friendly <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink>:<bulletlist><bullet>Has its <hyperlink>Province Improvement</hyperlink> razed.</bullet><bullet>Enemy units in the province sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>For 3 <turn></turn> Turns, when entering combat, create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
   "name": "Consecrating Firestorm",
   "operation_point_cost": 100,
   "icon": "consecrating_firestorm"
@@ -1355,15 +1355,15 @@
   "icon": "constricting_focus"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5003636900363,
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "conjure_spellward",
   "DLC": "EMPIRESANDASHES ",
   "tactical": false,
-  "description": "Target empty <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink> conjures a Spellward. This structure:<bulletlist><bullet>Functions as a <spelljammer></spelljammer> <hyperlink>Spell Jammer</hyperlink> for this and adjacent provinces.</bullet><bullet>Provides vision in 3-hex radius.</bullet></bulletlist>",
+  "description": "Target empty <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink> conjures a Spellward. This structure:<bulletlist><bullet>Functions as a <spelljammer></spelljammer> <hyperlink>Spell Jammer</hyperlink> for this and adjacent provinces.</bullet><bullet>Provides vision in 4-hex radius.</bullet></bulletlist>",
   "name": "Conjure Spellward",
-  "operation_point_cost": 150,
+  "operation_point_cost": 200,
   "icon": "conjure_spellward"
  },
  {
@@ -1991,7 +1991,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "wrath_of_the_emperor",
   "tactical": false,
-  "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet></bulletlist>",
   "name": "Wrath of the Emperor",
   "operation_point_cost": 120,
   "icon": "wrath_of_the_emperor"
@@ -2731,7 +2731,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
   "id": "tectonic_shatter",
   "tactical": true,
-  "description": "<bulletlist><bullet>All enemies sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 90% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>All enemies sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 60% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
   "name": "Tectonic Shatter",
   "operation_point_cost": 65,
   "icon": "tectonic_shatter"
@@ -3926,7 +3926,7 @@
   "id": "antimagic_tincture",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Have their negative status effects dispelled.</bullet><bullet>Gain 2 Status Protection.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Have their negative status effects dispelled.</bullet><bullet>Gain 1 Status Protection.</bullet></bulletlist>",
   "name": "Antimagic Tincture",
   "operation_point_cost": 15,
   "icon": "antimagic_tincture"
@@ -4263,7 +4263,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "frost_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -4621,7 +4621,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "soulbinders",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Base 30% chance of inflicting Soulbound on base attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+20% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants enchanted units:<bulletlist><bullet>Base 60% chance of inflicting Soulbound on base attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+20% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -5201,7 +5201,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_balor",
   "tactical": false,
-  "description": "Target city loses 1 <population></population> <hyperlink>Population</hyperlink> and spawns a <hyperlink>Balor</hyperlink>, a mythic unit that wreaks havoc on your foes.",
+  "description": "Summons a <hyperlink>Balor</hyperlink>, a Mythic Unit that wreaks havoc on your foes.",
   "name": "Summon Balor",
   "operation_point_cost": 300,
   "icon": "summon_balor",
@@ -5822,7 +5822,7 @@
   "tactical": false,
   "description": "Target owned city converts <warspoils></warspoils> <hyperlink>War Spoils</hyperlink>, gaining +25 <gold></gold> Gold income for 3 <turn></turn> Turns.",
   "name": "Convert War Spoils",
-  "operation_point_cost": 45,
+  "operation_point_cost": 0,
   "icon": "convert_war_spoils"
  }
 ]

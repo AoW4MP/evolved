@@ -441,7 +441,7 @@
     "slug": "umbral_malady_immunity"
    }
   ],
-  "mp": 48,
+  "mp": 40,
   "abilities": [
    {
     "slug": "wrack_umbral_mistress"
@@ -492,7 +492,7 @@
   "id": "umbral_mistress",
   "name": "Umbral Mistress",
   "hp": 110,
-  "armor": 5,
+  "armor": 4,
   "resistance": 5,
   "medal_rewards_2": [
    {
@@ -579,7 +579,7 @@
   "id": "mature_splitterling",
   "name": "Mature Splitterling",
   "hp": 50,
-  "armor": 2,
+  "armor": 1,
   "resistance": 1,
   "medal_rewards_2": [
    {
@@ -749,7 +749,7 @@
   "id": "flesh_abomination",
   "name": "Flesh Abomination",
   "hp": 90,
-  "armor": 5,
+  "armor": 4,
   "resistance": 3,
   "medal_rewards_2": [
    {
@@ -836,7 +836,7 @@
   "id": "fleshling",
   "name": "Fleshling",
   "hp": 20,
-  "armor": 2,
+  "armor": 1,
   "resistance": 0,
   "medal_rewards_2": [
    {
@@ -932,7 +932,7 @@
   "id": "umbral_juggernaut",
   "name": "Umbral Juggernaut",
   "hp": 90,
-  "armor": 5,
+  "armor": 4,
   "resistance": 3,
   "medal_rewards_2": [
    {
@@ -1025,7 +1025,7 @@
   "id": "abductor",
   "name": "Abductor",
   "hp": 100,
-  "armor": 5,
+  "armor": 4,
   "resistance": 3,
   "medal_rewards_2": [
    {
@@ -6923,7 +6923,7 @@
   "id": "willthief",
   "name": "Willthief",
   "hp": 70,
-  "armor": 4,
+  "armor": 3,
   "resistance": 2,
   "medal_rewards_2": [
    {
@@ -7025,7 +7025,7 @@
   "id": "umbral_tyrant",
   "name": "Umbral Tyrant",
   "hp": 140,
-  "armor": 7,
+  "armor": 6,
   "resistance": 5,
   "medal_rewards_2": [
    {
@@ -7115,7 +7115,7 @@
   "id": "splitterling",
   "name": "Splitterling",
   "hp": 35,
-  "armor": 1,
+  "armor": 0,
   "resistance": 1,
   "medal_rewards_2": [
    {
@@ -8516,7 +8516,7 @@
   "id": "direcaster",
   "name": "Direcaster",
   "hp": 95,
-  "armor": 5,
+  "armor": 4,
   "resistance": 3,
   "medal_rewards_2": [
    {
@@ -8594,7 +8594,7 @@
    }
   ],
   "description": "",
-  "cost": "300<unitprod></unitprod> 200<gold></gold> ",
+  "cost": "300<unitprod></unitprod> 200<mana></mana> ",
   "resid": 4660039517438,
   "DLC": "PRIMALFURY ",
   "medal_rewards_3": [
@@ -11602,10 +11602,10 @@
     "slug": "fearless"
    },
    {
-    "slug": "innate_spell_jammer"
+    "slug": "pass_through"
    },
    {
-    "slug": "pass_through"
+    "slug": "spell_devourer"
    }
   ],
   "mp": 32,
@@ -14647,6 +14647,9 @@
  {
   "primary_passives": [
    {
+    "slug": "control_loss_immunity"
+   },
+   {
     "slug": "decaying"
    }
   ],
@@ -14664,7 +14667,7 @@
     "slug": "_10_hp__"
    },
    {
-    "slug": "champion_medal_brawler"
+    "slug": "champion_medal_killing_momentum"
    }
   ],
   "description": "",
@@ -14693,9 +14696,9 @@
   "upkeep": "8<gold></gold> ",
   "id": "decaying_zombie",
   "name": "Decaying Zombie",
-  "hp": 50,
-  "armor": 0,
-  "resistance": 0,
+  "hp": 60,
+  "armor": 1,
+  "resistance": 1,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -14704,13 +14707,13 @@
   "tier": 1,
   "secondary_passives": [
    {
-    "slug": "fighter_unit"
-   },
-   {
     "slug": "land_movement"
    },
    {
     "slug": "magic_origin"
+   },
+   {
+    "slug": "mythic_unit"
    },
    {
     "slug": "undead"
@@ -16425,7 +16428,11 @@
   ]
  },
  {
-  "primary_passives": [],
+  "primary_passives": [
+   {
+    "slug": "control_loss_immunity"
+   }
+  ],
   "mp": 32,
   "abilities": [
    {
@@ -16440,7 +16447,7 @@
     "slug": "_10_hp__"
    },
    {
-    "slug": "champion_medal_brawler"
+    "slug": "champion_medal_killing_momentum"
    }
   ],
   "description": "",
@@ -16469,9 +16476,9 @@
   "upkeep": "8<gold></gold> ",
   "id": "zombie",
   "name": "Zombie",
-  "hp": 50,
-  "armor": 0,
-  "resistance": 0,
+  "hp": 60,
+  "armor": 1,
+  "resistance": 1,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -16480,13 +16487,13 @@
   "tier": 1,
   "secondary_passives": [
    {
-    "slug": "fighter_unit"
-   },
-   {
     "slug": "land_movement"
    },
    {
     "slug": "magic_origin"
+   },
+   {
+    "slug": "mythic_unit"
    },
    {
     "slug": "undead"
@@ -16625,7 +16632,7 @@
    }
   ],
   "description": "",
-  "cost": "140<unitprod></unitprod> 100<mana></mana> ",
+  "cost": "140<unitprod></unitprod> 100<gold></gold> ",
   "resid": 4273492483857,
   "medal_rewards_3": [
    {
@@ -20903,7 +20910,7 @@
    }
   ],
   "mp": 32,
-  "hp": 70,
+  "hp": 75,
   "armor": 5,
   "resistance": 0,
   "medal_rewards_2": [
@@ -22946,7 +22953,7 @@
    }
   ],
   "description": "",
-  "cost": "140<unitprod></unitprod> 100<gold></gold> ",
+  "cost": "110<unitprod></unitprod> 90<gold></gold> ",
   "resid": 4273492478522,
   "medal_rewards_3": [
    {
@@ -22973,6 +22980,9 @@
    },
    {
     "slug": "fighter_unit"
+   },
+   {
+    "slug": "forest_walk"
    },
    {
     "slug": "land_movement"
@@ -24237,7 +24247,7 @@
    }
   ],
   "description": "",
-  "cost": "140<unitprod></unitprod> 100<gold></gold> ",
+  "cost": "110<unitprod></unitprod> 90<gold></gold> ",
   "resid": 4264902529455,
   "medal_rewards_3": [
    {
@@ -24261,6 +24271,9 @@
   "secondary_passives": [
    {
     "slug": "animal"
+   },
+   {
+    "slug": "forest_walk"
    },
    {
     "slug": "land_movement"
@@ -24716,7 +24729,7 @@
    }
   ],
   "description": "",
-  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
+  "cost": "220<unitprod></unitprod> 140<mana></mana> ",
   "resid": 4264902529363,
   "medal_rewards_3": [
    {

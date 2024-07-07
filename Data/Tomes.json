@@ -17,7 +17,7 @@
   "icon": "tome_of_corruption",
   "skills": [
    {
-    "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet>3 enemy units have a base 90% chance of suffering Insanity for 1 <turn></turn> <hyperlink>Turn</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>",
     "name": "Throne of Insidious Whispers",
     "tier": 7,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -71,6 +71,19 @@
   "tier": 0,
   "icon": "eldritch_pact",
   "skills": [
+   {
+    "description": "All <hyperlink>Units</hyperlink> in your <hyperlink>Empire</hyperlink> gain Umbral Malady Immunity.",
+    "name": "Ritual of the Gloomveil",
+    "spell_slug": "ritual_of_the_gloomveil",
+    "tier": 10,
+    "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
+   },
+   {
+    "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet><bullet>Start altering terrain to <hyperlink>Gloom</hyperlink> at 1 <hyperlink>Province</hyperlink> per <turn></turn> Turn.<bulletlist></bullet><bullet>This extends to a radius equal to the city tier.</bullet><bullet>Terrain will gradually revert if the Altar is destroyed.</bullet></bulletlist><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+    "name": "<conduit></conduit> Altar of Marching Gloom",
+    "tier": 3,
+    "type": "<hyperlink>Special Province Improvement</hyperlink>"
+   },
    {
     "description": "Gives the target race blessings of the Umbral Abyss, granting them:<bulletlist><bullet>Umbral Malady Immunity</bullet><bullet>While in <hyperlink>Gloom</hyperlink> terrain units gain:<bulletlist></bullet><bullet>+ <happiness></happiness> <hyperlink>Morale</hyperlink></bullet><bullet>+ <hyperlink><hp></hp> Hit Point</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> on the world map.</bullet></bulletlist><bullet><hyperlink>Cities</hyperlink> of the race:<bulletlist></bullet><bullet>Gain +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income for each province with Gloom terrain.</bullet><bullet>Ignore <happiness></happiness> <hyperlink>City Stability</hyperlink> penalties from Gloom terrain.</bullet></bulletlist><bullet>Hero units gain Gloom Shepherd.</bullet></bulletlist>",
     "name": "Umbral Flesh",
@@ -678,7 +691,7 @@
     "upgrade_slug": "temple_of_the_pyre"
    },
    {
-    "description": "Target non-friendly <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink>:<bulletlist><bullet>Has its <hyperlink>Province Improvement</hyperlink> razed.</bullet><bullet>Enemy units in the province sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>For <turn></turn> Turns, when entering combat all enemy units suffer Condemned.</bullet><bullet> Create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
+    "description": "Target non-friendly <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink>:<bulletlist><bullet>Has its <hyperlink>Province Improvement</hyperlink> razed.</bullet><bullet>Enemy units in the province sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>For <turn></turn> Turns, when entering combat, create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
     "name": "Consecrating Firestorm",
     "spell_slug": "consecrating_firestorm",
     "tier": 6,
@@ -1086,7 +1099,7 @@
     "type": "<hyperlink>Siege Project</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Have their negative status effects dispelled.</bullet><bullet>Gain 2 Status Protection.</bullet></bulletlist>",
+    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Have their negative status effects dispelled.</bullet><bullet>Gain 1 Status Protection.</bullet></bulletlist>",
     "name": "Antimagic Tincture",
     "spell_slug": "antimagic_tincture",
     "tier": 2,
@@ -1594,7 +1607,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
-    "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet></bulletlist>",
     "name": "Wrath of the Emperor",
     "spell_slug": "wrath_of_the_emperor",
     "tier": 9,
@@ -3266,7 +3279,7 @@
   "icon": "tome_of_souls",
   "skills": [
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Base 30% chance of inflicting Soulbound on base attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Grants enchanted units:<bulletlist><bullet>Base 60% chance of inflicting Soulbound on base attacks, increasing the <souls></souls> <hyperlink>Soul</hyperlink> gain when the target is killed.</bullet><bullet>+% damage against units with Soulbound.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Soulbinders",
     "spell_slug": "soulbinders",
     "tier": 2,
@@ -3829,7 +3842,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
    },
    {
-    "description": "Target city loses 1 <population></population> <hyperlink>Population</hyperlink> and spawns a <hyperlink>Balor</hyperlink>, a mythic unit that wreaks havoc on your foes.",
+    "description": "Summons a <hyperlink>Balor</hyperlink>, a Mythic Unit that wreaks havoc on your foes.",
     "name": "Summon Balor",
     "spell_slug": "summon_balor",
     "tier": 8,

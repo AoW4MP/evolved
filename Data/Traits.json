@@ -99,7 +99,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common</helpcolor>",
   "biography_description": "They ride to battle on impressive cavalry.",
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "mount_masters",
   "name": "Mount Masters",
   "screen_description": "",
@@ -116,7 +116,7 @@
   "front_end": true,
   "icon": "mount_masters",
   "type": "form",
-  "display_order": 7
+  "display_order": 8
  },
  {
   "biography_description": "They share a deep kinship with mighty Elephants.",
@@ -796,9 +796,6 @@
   "effect_descriptions": [
    {
     "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +2 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
-   },
-   {
-    "name": "Racial <hyperlink>Unit tier</hyperlink> 3 Units have +1 Rank"
    }
   ],
   "enabled": true,
@@ -827,7 +824,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +10 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2027,7 +2024,7 @@
   "display_order": 5,
   "starting_bonuses": [
    {
-    "description": "Start with an extra Tier I unit."
+    "description": "Start with 3 extra Tier I units."
    }
   ],
   "icon": "prolific_swarmers"

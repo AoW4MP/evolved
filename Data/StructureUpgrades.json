@@ -6,7 +6,7 @@
   "resid": 5068061409598,
   "id": "throne_of_insidious_whispers",
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet>3 enemy units have a base 90% chance of suffering Insanity for 1 <turn></turn> <hyperlink>Turn</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>",
   "name": "Throne of Insidious Whispers",
   "icon": "throne_of_insidious_whispers",
   "is_sector_upgrade": false
@@ -231,7 +231,7 @@
   "prediction_description": "<bulletlist><bullet>Unlock Fortification</bullet><bullet>+30 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet></bulletlist>",
   "resid": 5029406705237,
   "id": "eldritch_walls",
-  "description": "<hyperlink>Wall Structure</hyperlink>",
+  "description": "Only available to <hyperlink>Umbral Dwellings</hyperlink>.",
   "name": "Eldritch Walls",
   "icon": "eldritch_walls",
   "is_sector_upgrade": false
@@ -321,7 +321,7 @@
   "name": "Town Hall IV: Primeval Palace",
   "icon": "town_hall_iv_primeval_palace",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -330,11 +330,11 @@
   "resid": 5016521802574,
   "id": "town_hall_iii_spirit_hall",
   "DLC": "PRIMALFURY ",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Spirit Hall",
   "icon": "town_hall_iii_spirit_hall",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -347,7 +347,7 @@
   "name": "Town Hall II: Clan Lodge",
   "icon": "town_hall_ii_clan_lodge",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -487,7 +487,7 @@
   "name": "Town Hall IV: Ironclad Citadel",
   "icon": "town_hall_iv_ironclad_citadel",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -496,11 +496,11 @@
   "resid": 4986457030800,
   "id": "town_hall_iii_chained_spire",
   "DLC": "EMPIRESANDASHES ",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Chained Spire",
   "icon": "town_hall_iii_chained_spire",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -513,7 +513,7 @@
   "name": "Town Hall II: Steel Hall",
   "icon": "town_hall_ii_steel_hall",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -657,7 +657,7 @@
   "name": "Wizard Tower: Apex",
   "icon": "wizard_tower_apex",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 16 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Can only be built in the <hyperlink>Throne City</hyperlink>.",
@@ -669,7 +669,7 @@
   "name": "Wizard Tower: Level II",
   "icon": "wizard_tower_level_ii",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Can only be built in the <hyperlink>Throne City</hyperlink>.",
@@ -681,7 +681,7 @@
   "name": "Wizard Tower: Level I",
   "icon": "wizard_tower_level_i",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -1357,7 +1357,7 @@
   "is_sector_upgrade": true
  },
  {
-  "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
+  "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.<br></br><br></br>Requires City Tier II.",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 4578435139420,
@@ -1793,11 +1793,11 @@
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138616,
   "id": "town_hall_iii_mystic_spire",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Mystic Spire",
   "icon": "town_hall_iii_mystic_spire",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -1809,7 +1809,7 @@
   "name": "Town Hall IV: Wizard's Auditorium",
   "icon": "town_hall_iv_wizards_auditorium",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -1821,7 +1821,7 @@
   "name": "Town Hall II: Mage's Plaza",
   "icon": "town_hall_ii_mages_plaza",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -1928,7 +1928,7 @@
   "name": "Town Hall IV: Industry Compound",
   "icon": "town_hall_iv_industry_compound",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -1936,11 +1936,11 @@
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138339,
   "id": "town_hall_iii_forge_tower",
-  "description": "<bulletlist><bullet>Buy Now costs 20% less.</bullet><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Buy Now costs 20% less.</bullet><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Forge Tower",
   "icon": "town_hall_iii_forge_tower",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -1952,7 +1952,7 @@
   "name": "Town Hall II: Bulwark",
   "icon": "town_hall_ii_bulwark",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -1975,7 +1975,7 @@
   "name": "Town Hall IV: Black Palace",
   "icon": "town_hall_iv_black_palace",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -1983,11 +1983,11 @@
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138273,
   "id": "town_hall_iii_stronghold",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Stronghold",
   "icon": "town_hall_iii_stronghold",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -1999,7 +1999,7 @@
   "name": "Town Hall II: Dread Spire",
   "icon": "town_hall_ii_dread_spire",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2011,7 +2011,7 @@
   "name": "Town Hall IV: Solar Sanctum",
   "icon": "town_hall_iv_solar_sanctum",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2019,11 +2019,11 @@
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138246,
   "id": "town_hall_iii_pantheon",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Pantheon",
   "icon": "town_hall_iii_pantheon",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -2035,7 +2035,7 @@
   "name": "Town Hall II: Atrium of Light",
   "icon": "town_hall_ii_atrium_of_light",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2058,7 +2058,7 @@
   "name": "Town Hall IV: Warlord's Pavilion",
   "icon": "town_hall_iv_warlords_pavilion",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2066,11 +2066,11 @@
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138048,
   "id": "town_hall_iii_halls_of_war",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Halls of War",
   "icon": "town_hall_iii_halls_of_war",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -2082,7 +2082,7 @@
   "name": "Town Hall II: Communal Tent",
   "icon": "town_hall_ii_communal_tent",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2353,7 +2353,7 @@
   "name": "Town Hall IV: Grand Estate",
   "icon": "town_hall_iv_grand_estate",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2361,11 +2361,11 @@
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4282082401410,
   "id": "town_hall_iii_citadel",
-  "description": "<bulletlist><bullet>Unlocks the  province improvement.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer province improvement.</bullet></bulletlist>",
   "name": "Town Hall III: Citadel",
   "icon": "town_hall_iii_citadel",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
@@ -2377,7 +2377,7 @@
   "name": "Town Hall II: Castle",
   "icon": "town_hall_ii_castle",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 4 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2405,10 +2405,10 @@
  {
   "requirement_description": "Requires 2: <researchpost></researchpost> <hyperlink>Research Posts</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per <researchpost></researchpost> Research Post: </bullet></bulletlist>",
+  "prediction_description": "",
   "resid": 4282082401316,
   "id": "scholars_guild",
-  "description": "<bulletlist><bullet>Grants Quick Learner to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income per <researchpost></researchpost> Research Post</bullet><bullet>Grants Quick Learner to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "name": "Scholars Guild",
   "icon": "scholars_guild",
   "is_sector_upgrade": false,
@@ -2453,10 +2453,10 @@
  {
   "requirement_description": "Requires 2: <mine></mine> <hyperlink>Mines</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <mine></mine> Mine: </bullet></bulletlist>",
+  "prediction_description": "",
   "resid": 4282082401272,
   "id": "merchants_guild",
-  "description": "<bulletlist><bullet>Grants Bargain Price to units produced in this <hyperlink>City</hyperlink>.</bullet>",
+  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <mine></mine> Mine</bullet><bullet>Grants Bargain Price to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "name": "Merchants' Guild",
   "icon": "merchants_guild",
   "is_sector_upgrade": false,
@@ -2501,7 +2501,7 @@
  {
   "requirement_description": "Requires 4: <forester></forester> <hyperlink>Foresters</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+2<medalGold></medalGold> Starting Rank to every <hyperlink>Tier I</hyperlink>.</bullet><bullet>+2<medalGold></medalGold> Starting Rank to every <hyperlink>Tier II</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+2<medalGold></medalGold> Starting Rank to every <hyperlink>Tier I</hyperlink>.</bullet><bullet>+2<medalGold></medalGold> Starting Rank to every <hyperlink>Tier II</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier III</hyperlink>.</bullet></bulletlist>",
   "resid": 4282082401254,
   "id": "smiths_guild",
   "description": "",
@@ -2678,7 +2678,7 @@
   "description": "",
   "name": "Town Hall IV: Grand Estate",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 12 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 16 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2744,7 +2744,7 @@
   "prediction_description": "+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm: ",
   "resid": 4041564233665,
   "id": "farmers_guild",
-  "description": "<bulletlist><bullet>This city produces +30% <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm</bullet><bullet>This <hyperlink>City</hyperlink> produces +30% <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
   "name": "Farmers' Guild",
   "icon": "farmers_guild",
   "is_sector_upgrade": false,
@@ -2771,7 +2771,7 @@
   "description": "",
   "name": "Town Hall III: Citadel",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 8 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",

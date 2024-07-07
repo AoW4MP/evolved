@@ -501,7 +501,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target linked unit is inflicted with Insanity for 3 <turn></turn> Turns.<br></br><br></br>Disables Gratitude and Surrender for this turn.",
+  "description": "Target linked unit is inflicted with Insanity for 2 <turn></turn> Turns.<br></br><br></br>Disables Gratitude and Surrender for this turn.",
   "name": "Fury",
   "slug": "fury_umbral_mistress",
   "damage": "",
@@ -570,7 +570,7 @@
   "icon": "curse_eater"
  },
  {
-  "description": "An Umbral Demon unit with:<bulletlist><bullet>+2 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>-2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>-2 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>Curse Eater</bullet><bullet>Immunity to Umbral Malady</bullet></bulletlist>",
+  "description": "An Umbral Demon unit with:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>-2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>-2 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>Curse Eater</bullet><bullet>Immunity to Umbral Malady</bullet></bulletlist>",
   "name": "Umbral Demon",
   "slug": "umbral_demon",
   "icon": "umbral_demon"
@@ -1173,6 +1173,11 @@
    {
     "description": "Inflict Weakened for 3 <turn></turn> Turns.",
     "name": "Weakened",
+    "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+    "name": "Breaching",
     "count": 1
    },
    {
@@ -1917,7 +1922,7 @@
   "icon": "farsight"
  },
  {
-  "description": "Unit is blessed by the Mire Crocodile:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks, these turn into stacks of Fury of the Mire Crocodile. The unit's base attacks:<bulletlist></bullet><bullet>Gain +3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Inflict Diseased.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Mire Crocodile.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Mire Crocodile:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks, these turn into stacks of Fury of the Mire Crocodile. The unit's base attacks:<bulletlist></bullet><bullet>Gain +3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Inflict Diseased.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Mire Crocodile.</bullet></bulletlist>",
   "name": "Mire Crocodile's Boon",
   "slug": "mire_crocodiles_boon",
   "icon": "mire_crocodiles_boon"
@@ -1980,7 +1985,7 @@
   "icon": "grassland_walk"
  },
  {
-  "description": "Unit is blessed by the Storm Crow:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks these turn into stacks of Fury of the Storm Crow. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Deal 4 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Storm Crow.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Storm Crow:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks these turn into stacks of Fury of the Storm Crow. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Deal 4 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Storm Crow.</bullet></bulletlist>",
   "name": "Storm Crow's Boon",
   "slug": "storm_crows_boon",
   "icon": "storm_crows_boon"
@@ -2019,7 +2024,7 @@
   "icon": "shoot_bow_skeleton_archer"
  },
  {
-  "description": "Unit is blessed by the Glacial Mammoth:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks, these turn into stacks of Fury of the Glacial Mammoth. The unit's base attacks gain:<bulletlist></bullet><bullet>+4 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Frozen.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Glacial Mammoth.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Glacial Mammoth:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks, these turn into stacks of Fury of the Glacial Mammoth. The unit's base attacks gain:<bulletlist></bullet><bullet>+4 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Frozen.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Glacial Mammoth.</bullet></bulletlist>",
   "name": "Glacial Mammoth's Boon",
   "slug": "glacial_mammoths_boon",
   "icon": "glacial_mammoths_boon"
@@ -2058,7 +2063,7 @@
   "icon": "shoot_bow_skeleton_archer"
  },
  {
-  "description": "Unit is blessed by the Ash Sabertooth:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks these turn into stacks of Fury of the Ash Sabertooth. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Deal 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to another unit up to 2 hexes away.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Ash Sabertooth.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Ash Sabertooth:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks these turn into stacks of Fury of the Ash Sabertooth. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Deal 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to another unit up to 2 hexes away.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Ash Sabertooth.</bullet></bulletlist>",
   "name": "Ash Sabertooth's Boon",
   "slug": "ash_sabertooths_boon",
   "icon": "ash_sabertooths_boon"
@@ -2097,7 +2102,7 @@
   "icon": "shoot_bow_skeleton_archer"
  },
  {
-  "description": "Unit is blessed by the Dune Serpent:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks, these turn into stacks of Fury of the Dune Serpent. The unit's base attacks:<bulletlist></bullet><bullet>Gain +4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Inflict Blind for 1 <turn></turn> Turn.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Dune Serpent.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Dune Serpent:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks, these turn into stacks of Fury of the Dune Serpent. The unit's base attacks:<bulletlist></bullet><bullet>Gain +4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Inflict Blind for 1 <turn></turn> Turn.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Dune Serpent.</bullet></bulletlist>",
   "name": "Dune Serpent's Boon",
   "slug": "dune_serpents_boon",
   "icon": "dune_serpents_boon"
@@ -2136,7 +2141,7 @@
   "icon": "shoot_bow_skeleton_archer"
  },
  {
-  "description": "Unit is blessed by the Tunneling Spider:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks these, turn into stacks of Fury of the Tunneling Spider. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Life Steal.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Tunneling Spider.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Tunneling Spider:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks these, turn into stacks of Fury of the Tunneling Spider. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Life Steal.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Tunneling Spider.</bullet></bulletlist>",
   "name": "Tunneling Spider's Boon",
   "slug": "tunneling_spiders_boon",
   "icon": "tunneling_spiders_boon"
@@ -2175,7 +2180,7 @@
   "icon": "shoot_bow_skeleton_archer"
  },
  {
-  "description": "Unit is blessed by the Sylvan Wolf:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 5 stacks, these turn into stacks of Fury of the Sylvan Wolf. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> per friendly unit adjacent to the target.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Sylvan Wolf.</bullet></bulletlist>",
+  "description": "Unit is blessed by the Sylvan Wolf:<bulletlist><bullet>It gains a Rising Fury stack when attacking.</bullet><bullet>At 3 stacks, these turn into stacks of Fury of the Sylvan Wolf. The unit's base attacks gain:<bulletlist></bullet><bullet>+3 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> per friendly unit adjacent to the target.</bullet></bulletlist><bullet>Each attack removes a stack of Fury of the Sylvan Wolf.</bullet></bulletlist>",
   "name": "Sylvan Wolf's Boon",
   "slug": "sylvan_wolfs_boon",
   "icon": "storm_crows_boon"
@@ -3104,7 +3109,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_mire_crocodile",
   "damage": "",
@@ -3218,7 +3223,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_storm_crow",
   "damage": "",
@@ -3302,7 +3307,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_glacial_mammoth",
   "damage": "",
@@ -3386,7 +3391,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_ash_sabertooth",
   "damage": "",
@@ -3470,7 +3475,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_dune_serpent",
   "damage": "",
@@ -3554,7 +3559,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_tunneling_spider",
   "damage": "",
@@ -3638,7 +3643,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_animist_sylvan_wolf",
   "damage": "",
@@ -4757,6 +4762,9 @@
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 0 <turn></turn>"
    }
   ],
   "description": "Link with the target friendly Magic Origin, while active:<bulletlist><bullet>Target gains +2 <hyperlink>Retaliation Attacks</hyperlink>, +30 <hyperlink>Accuracy</hyperlink>, and Frenzy.</bullet></bulletlist>",
@@ -6398,13 +6406,10 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "90%",
+  "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
@@ -6530,11 +6535,14 @@
   "requisites": [
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "range": "6",
   "icon": "phase_phase_beast"
  },
  {
@@ -7446,7 +7454,7 @@
   "icon": "melee_strike_sabertooth"
  },
  {
-  "description": "Attacks deal +10% damage per friendly unit adjacent to the target.",
+  "description": "Attacks deal +15% damage per friendly unit adjacent to the target.",
   "name": "Pack Hunter",
   "slug": "pack_hunter",
   "icon": "pack_hunter"
@@ -7474,12 +7482,7 @@
  {
   "modifiers": [
    {
-    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
-    "name": "Piercing",
-    "count": 1
-   },
-   {
-    "description": "Inflicts -5 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
+    "description": "Base 90% chance of inflicting -10 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
     "name": "Demoralizing Charge Strike",
     "count": 1
    }
@@ -7560,7 +7563,7 @@
   "damage": "",
   "requisites": [],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "icon": "conjure_animal_wildspeaker"
  },
@@ -7581,7 +7584,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_entwined_protector",
-  "damage": "13<damagephysical></damagephysical> ",
+  "damage": "14<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -7821,6 +7824,9 @@
   "requisites": [
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
@@ -7865,7 +7871,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 3 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, target sustains:<bulletlist></bullet><bullet>10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink></bullet><bullet>10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist></bulletlist></bulletlist>",
+  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 2 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, target sustains:<bulletlist></bullet><bullet>10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink></bullet><bullet>10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist></bulletlist></bulletlist>",
   "name": "Devour Mind",
   "slug": "devour_mind_mage_bane",
   "damage": "",
@@ -7876,10 +7882,10 @@
   "icon": "devour_mind_mage_bane"
  },
  {
-  "description": "While this unit is in battle, enemy spells cost +25% <optactical></optactical> <hyperlink> Combat Casting Point</hyperlink>",
-  "name": "Innate Spell Jammer",
-  "slug": "innate_spell_jammer",
-  "icon": "innate_spell_jammer"
+  "description": "While this unit is in battle, enemy spells cost +25% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.",
+  "name": "Spell Devourer",
+  "slug": "spell_devourer",
+  "icon": "spell_devourer"
  },
  {
   "modifiers": [
@@ -8162,7 +8168,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Putrid Breath",
   "slug": "putrid_breath_bone_dragon",
-  "damage": "20<damageblight></damageblight> ",
+  "damage": "26<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8577,6 +8583,9 @@
    },
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
@@ -8641,6 +8650,9 @@
    },
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
@@ -8776,6 +8788,9 @@
    },
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
@@ -9614,7 +9629,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_decaying_zombie",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9903,7 +9918,7 @@
   "description": "Deal damage to all units in a 5-hex line.",
   "name": "Lightning Breath",
   "slug": "lightning_breath_obsidian_dragon",
-  "damage": "28<damagelightning></damagelightning> ",
+  "damage": "32<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -9995,7 +10010,7 @@
   "description": "In a 3-hex cone:<bulletlist><bullet>Enemy units sustain damage.</bullet><bullet>Friendly units heal 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Friendly units have up to 2 of their negative status effects removed.</bullet></bulletlist>",
   "name": "Purifying Breath",
   "slug": "purifying_breath_golden_dragon",
-  "damage": "20<damagespirit></damagespirit> ",
+  "damage": "24<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -10117,7 +10132,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
-  "range": "5",
+  "range": "6",
   "icon": "zephyr_shot_zephyr_archer"
  },
  {
@@ -10528,7 +10543,7 @@
  },
  {
   "modifiers": [],
-  "description": "Target non-Hero enemy unit has a base 60% chance of dying.<bulletlist><bullet>If a non-Undead unit dies this way, it transforms into a <hyperlink>Decaying Zombie</hyperlink> under your control until the end of the battle.</bullet><bullet>If resisted, the unit sustains 45 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
+  "description": "Target non-Hero enemy unit has a base 60% chance of dying.<bulletlist><bullet>If resisted, the unit sustains 45 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
   "name": "Finger of Death",
   "slug": "finger_of_death_reaper",
   "damage": "",
@@ -10616,7 +10631,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_zombie",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10677,11 +10692,14 @@
   "requisites": [
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "range": "6",
   "icon": "phase_phase_beast"
  },
  {
@@ -10802,7 +10820,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
     "name": "Electrified",
     "count": 1
    }
@@ -10828,7 +10846,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Slowed for 2 <turn></turn> Turns.",
+    "description": "Inflicts Slowed for 2 <turn></turn> Turns.",
     "name": "Slowed",
     "count": 1
    }
@@ -10846,8 +10864,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -11519,6 +11537,9 @@
    },
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
@@ -11626,7 +11647,7 @@
   "description": "Deals damage in a 4-hex line that is 3 hexes wide.<br></br>Units that are hit are inflicted with 3 Sundered Defense.",
   "name": "Sunder the Earth",
   "slug": "sunder_the_earth_balor",
-  "damage": "15<damagephysical></damagephysical> 15<damagefire></damagefire> ",
+  "damage": "20<damagephysical></damagephysical> 20<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -12111,7 +12132,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_attunement",
   "damage": "",
@@ -12178,7 +12199,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_potential",
   "damage": "",
@@ -12234,7 +12255,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_summoning",
   "damage": "",
@@ -13458,7 +13479,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_fury",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "10<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -13745,7 +13766,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Cooldown: 4 <turn></turn>"
    }
   ],
   "description": "The caster and adjacent friendly units:<bulletlist><bullet>Heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist>",
@@ -13939,6 +13960,11 @@
  {
   "modifiers": [
    {
+    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+    "name": "Breaching",
+    "count": 1
+   },
+   {
     "description": "Heals a random allied unit within 2 hexes of the target for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
     "name": "Reclaim",
     "count": 1
@@ -13981,8 +14007,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -14172,7 +14198,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Frost Breath",
   "slug": "frost_breath_frost_dragon",
-  "damage": "28<damagefrost></damagefrost> ",
+  "damage": "32<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -14315,6 +14341,9 @@
    },
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
@@ -14377,7 +14406,13 @@
   "icon": "melee_strike_sabertooth"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
+    "name": "Bleeding",
+    "count": 1
+   }
+  ],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_warg",
@@ -15385,12 +15420,15 @@
   "damage": "",
   "requisites": [
    {
+    "requisite": "Teleport"
+   },
+   {
     "requisite": "Movement"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "range": "6",
   "icon": "phase_phase_beast"
  },
  {
@@ -15477,7 +15515,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Fire Breath",
   "slug": "fire_breath_fire_dragon",
-  "damage": "28<damagefire></damagefire> ",
+  "damage": "32<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -15821,7 +15859,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 3 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
   "name": "Spiritual Healing",
   "slug": "spiritual_healing_spiritual_healing",
   "damage": "",
@@ -16482,7 +16520,7 @@
   "requisites": [],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "range": "3",
   "icon": "quick_phase_quick_phase"
  },
  {
@@ -17445,7 +17483,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Enemy units in a 2-hex radius have:<bulletlist><bullet>Base 90% chance of becoming Diseased.</bullet><bullet>Base 90% chance of becoming Poisoned.</bullet></bulletlist>",
@@ -17494,7 +17532,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 1 hex radius gain:<bulletlist><bullet>Rally</bullet><bullet>2 Bolstered Defense</bullet><bullet>2 Bolstered Resistance</bullet></bulletlist>",
+  "description": "Friendly units in a 1 hex radius gain:<bulletlist><bullet>Rally</bullet><bullet>1 Bolstered Defense</bullet><bullet>1 Bolstered Resistance</bullet></bulletlist>",
   "name": "Rallying Blessing",
   "slug": "rallying_blessing_rallying_blessing",
   "damage": "",
@@ -17621,7 +17659,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>Static Charge</bullet><bullet>2 Strengthened</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>Static Charge</bullet><bullet>1 Strengthened</bullet></bulletlist>",
   "name": "Mana Unchained",
   "slug": "mana_unchained_mana_unchained",
   "damage": "",
@@ -17631,7 +17669,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "mana_unchained_mana_unchained"
  },
@@ -17976,7 +18014,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "purging_field_purging_field"
  },
@@ -21162,11 +21200,14 @@
   "requisites": [
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "range": "6",
   "icon": "phase_phase_beast"
  },
  {
@@ -21312,7 +21353,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Fire Breath",
   "slug": "fire_breath_wand_of_fire_breath",
-  "damage": "28<damagefire></damagefire> ",
+  "damage": "32<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -21566,11 +21607,14 @@
   "requisites": [
    {
     "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "range": "6",
   "icon": "phase_phase_beast"
  },
  {

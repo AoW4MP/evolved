@@ -280,7 +280,7 @@
   "icon": "clairvoyance_ritual"
  },
  {
-  "casting_cost": "2<thralls></thralls> ",
+  "casting_cost": "1<thralls></thralls> ",
   "resid": 5046586576378,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "astral_wisp_ritual",
@@ -288,7 +288,7 @@
   "tactical": false,
   "description": "Summons an <hyperlink>Astral Wisp</hyperlink> on target hex.",
   "name": "Astral Wisp Ritual",
-  "operation_point_cost": 80,
+  "operation_point_cost": 60,
   "summoned_units": [
    {
     "slug": "astral_wisp"
@@ -330,7 +330,7 @@
   "icon": "soul_drain_ritual"
  },
  {
-  "casting_cost": "10<thralls></thralls> ",
+  "casting_cost": "5<thralls></thralls> ",
   "resid": 5046586575942,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "mage_bane_ritual",
@@ -338,7 +338,7 @@
   "tactical": false,
   "description": "Summons a <hyperlink>Mage Bane</hyperlink> on target hex.",
   "name": "Mage Bane Ritual",
-  "operation_point_cost": 300,
+  "operation_point_cost": 200,
   "summoned_units": [
    {
     "slug": "mage_bane"
@@ -346,7 +346,7 @@
   ]
  },
  {
-  "casting_cost": "5<thralls></thralls> ",
+  "casting_cost": "3<thralls></thralls> ",
   "resid": 5046586575941,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "astral_siphoner_ritual",
@@ -354,7 +354,7 @@
   "tactical": false,
   "description": "Summons an <hyperlink>Astral Siphoner</hyperlink> on target hex.",
   "name": "Astral Siphoner Ritual",
-  "operation_point_cost": 200,
+  "operation_point_cost": 150,
   "summoned_units": [
    {
     "slug": "astral_siphoner"
@@ -368,7 +368,7 @@
   "id": "mass_phantasmal_ritual",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Enemy units in target and adjacent <hyperlink>Provinces</hyperlink> lose 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> until the end of their next combat.",
+  "description": "Enemy units in target <hyperlink>Province</hyperlink> lose 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Mass Phantasmal Ritual",
   "operation_point_cost": 100,
   "icon": "mass_phantasmal_ritual"
@@ -380,7 +380,7 @@
   "id": "phantasmal_ritual",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Target enemy army loses 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> until the end of its next combat</bulletlist>",
+  "description": "Target enemy army loses 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Phantasmal Ritual",
   "operation_point_cost": 80,
   "icon": "phantasmal_ritual"
@@ -1197,7 +1197,7 @@
   "id": "consecrating_firestorm",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Target non-friendly <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink>:<bulletlist><bullet>Has its <hyperlink>Province Improvement</hyperlink> razed.</bullet><bullet>Enemy units in the province sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>For 3 <turn></turn> Turns, when entering combat, create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
+  "description": "For 3 <turn></turn> Turns in target <hyperlink>Province</hyperlink>:<bulletlist><bullet>When entering combat all enemy units suffer Condemned.</bullet><bullet>When entering combat create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
   "name": "Consecrating Firestorm",
   "operation_point_cost": 100,
   "icon": "consecrating_firestorm"
@@ -1272,14 +1272,14 @@
   "icon": "conjure_summoning_rift"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 5003636901757,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_astral_ward",
   "tactical": true,
   "description": "Summon an <hyperlink>Immobile</hyperlink> <hyperlink>Astral Ward</hyperlink>.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Astral Ward",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "conjure_astral_ward",
   "summoned_units": [
    {
@@ -2901,14 +2901,14 @@
   "icon": "favorable_winds"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010632183,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_wind_rager",
   "tactical": false,
   "description": "Summon a <hyperlink>Wind Rager</hyperlink>, a fast and disruptive Fighter Unit",
   "name": "Summon Wind Rager",
-  "operation_point_cost": 150,
+  "operation_point_cost": 100,
   "icon": "summon_wind_rager",
   "summoned_units": [
    {
@@ -3291,14 +3291,14 @@
   "icon": "mass_hysteria"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010630942,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_gremlin",
   "tactical": false,
   "description": "Summons a <hyperlink>Gremlin</hyperlink> onto the target world hex. This unit is a disruptive and fiendish Skirmisher Unit.",
   "name": "Summon Gremlin",
-  "operation_point_cost": 150,
+  "operation_point_cost": 100,
   "summoned_units": [
    {
     "slug": "gremlin"
@@ -4464,14 +4464,14 @@
   ]
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4273492484345,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_lightbringer",
   "tactical": false,
-  "description": "Summons a <hyperlink>Lightbringer</hyperlink>, a Battle Mage Unit that can Convert other units to your cause or Condemn them.",
+  "description": "Summons a <hyperlink>Lightbringer</hyperlink> Battle Mage Unit that can convert other units to your cause.",
   "name": "Summon Lightbringer",
-  "operation_point_cost": 150,
+  "operation_point_cost": 100,
   "icon": "summon_lightbringer",
   "summoned_units": [
    {
@@ -4763,14 +4763,14 @@
   "icon": "arcane_supercharge"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4273492483786,
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "arcane_restoration",
   "tactical": true,
-  "description": "Heals all friendly Magic Origin units +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Heals all friendly Magic Origin units +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Arcane Restoration",
-  "operation_point_cost": 25,
+  "operation_point_cost": 30,
   "icon": "arcane_restoration"
  },
  {
@@ -4940,6 +4940,9 @@
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
@@ -5221,6 +5224,9 @@
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
@@ -5562,6 +5568,9 @@
     "requisite": "<unitShield></unitShield> Shield Unit"
    },
    {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
    },
    {
@@ -5815,12 +5824,12 @@
   "icon": "ilandras_chosen"
  },
  {
-  "casting_cost": "45<warspoils></warspoils> ",
+  "casting_cost": "50<warspoils></warspoils> ",
   "resid": -8277668028376677552,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "convert_war_spoils",
   "tactical": false,
-  "description": "Target owned city converts <warspoils></warspoils> <hyperlink>War Spoils</hyperlink>, gaining +25 <gold></gold> Gold income for 3 <turn></turn> Turns.",
+  "description": "Target owned city converts <warspoils></warspoils> <hyperlink>War Spoils</hyperlink>, gaining +25 <gold></gold> Gold income for 4 <turn></turn> Turns.",
   "name": "Convert War Spoils",
   "operation_point_cost": 0,
   "icon": "convert_war_spoils"

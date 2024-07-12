@@ -7877,7 +7877,7 @@
   "damage": "",
   "requisites": [],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "devour_mind_mage_bane"
  },
@@ -10215,7 +10215,7 @@
  {
   "modifiers": [
    {
-    "description": "Target gets -3 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
+    "description": "Target gets -4 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
     "name": "Morale Drain",
     "count": 1
    }
@@ -10244,7 +10244,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit with <happiness></happiness> <hyperlink>Morale</hyperlink> of \\\"Low\\\" or worse:<bulletlist><bullet>Has a chance of dying instantly.</bullet><bullet>The lower the target unit's morale is, the more this chance increases.</bullet><bullet>If the unit does not die, it sustains 30 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> instead.</bullet></bulletlist>",
+  "description": "Target non-<hyperlink>Hero</hyperlink> unit with <happiness></happiness> <hyperlink>Morale</hyperlink> of \\\"Low\\\" or worse:<bulletlist><bullet>Has a chance of dying instantly.</bullet><bullet>The lower the target unit's morale is, the more this chance increases.</bullet><bullet>If the unit does not die, it sustains 30 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> instead.</bullet></bulletlist>",
   "name": "Crushing Anguish",
   "slug": "crushing_anguish_corrupt_soul",
   "damage": "",
@@ -10902,10 +10902,10 @@
  },
  {
   "modifiers": [],
-  "description": "Target enemy unit and 1 other within 3 hexes:<bulletlist><bullet>Are dealt damage.</bullet><bullet>Have a base 60% of becoming Stunned.</bullet><bullet>Gain 1 Marked</bullet></bulletlist>",
+  "description": "Target enemy unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 60% of becoming Stunned.</bullet><bullet>Gains 1 Marked</bullet></bulletlist>",
   "name": "Psychic Gaze",
   "slug": "psychic_gaze_watcher",
-  "damage": "22<damagelightning></damagelightning> ",
+  "damage": "36<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -11705,7 +11705,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit gains:<bulletlist><bullet>Rally.</bullet><bullet>Hastened.</bullet><bullet>Regeneration.</bullet></bulletlist>",
+  "description": "This unit and adjacent friendly units gain:<bulletlist><bullet>Rally.</bullet><bullet>Hastened.</bullet><bullet>Regeneration.</bullet></bulletlist>",
   "name": "Song of Revelry",
   "slug": "song_of_revelry_skald",
   "damage": "",
@@ -11900,10 +11900,10 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose all positive status effects.</bullet><bullet>Sustain damage.</bullet></bulletlist>",
+  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose all positive status effects.</bullet><bullet>Sustain damage. Double damage to Magic Origin units.</bullet></bulletlist>",
   "name": "Star Purge",
   "slug": "star_purge_spellbreaker_attunement",
-  "damage": "7<damagelightning></damagelightning> 7<damagefire></damagefire> 7<damagefrost></damagefrost> ",
+  "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> 6<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -16855,7 +16855,7 @@
   "icon": "mending_touch_mending_touch"
  },
  {
-  "description": "While this unit is the leader of the army, Animal and Cavalry units gain:<bulletlist><bullet>Mind Control Immunity</bullet><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
+  "description": "While this unit is the leader of the army, Animal and Cavalry units gain:<bulletlist><bullet>Mind Control Immunity</bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
   "name": "Animal Handler",
   "slug": "animal_handler",
   "icon": "animal_handler"
@@ -17574,7 +17574,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "Gain:<bulletlist><bullet>+30% attack damage for 3 <turn></turn> Turn</bullet><bullet>2 Sundered Defense</bullet><bullet>2 Sundered Resistance</bullet></bulletlist>",
+  "description": "Gain:<bulletlist><bullet>+30% attack damage for 3 <turn></turn> Turn</bullet><bullet>1 Sundered Defense</bullet><bullet>1 Sundered Resistance</bullet></bulletlist>",
   "name": "Reckless Rage",
   "slug": "reckless_rage_reckless_rage",
   "damage": "",
@@ -19486,6 +19486,9 @@
    },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "icon": "fire_magelock_pistol_and_sword"

@@ -13,7 +13,7 @@
     "slug": "boon_stealing"
    }
   ],
-  "tier": 3,
+  "tier": 4,
   "icon": "tome_of_corruption",
   "skills": [
    {
@@ -691,7 +691,7 @@
     "upgrade_slug": "temple_of_the_pyre"
    },
    {
-    "description": "Target non-friendly <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink>:<bulletlist><bullet>Has its <hyperlink>Province Improvement</hyperlink> razed.</bullet><bullet>Enemy units in the province sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>For <turn></turn> Turns, when entering combat, create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
+    "description": "For <turn></turn> Turns in target <hyperlink>Province</hyperlink>:<bulletlist><bullet>When entering combat all enemy units suffer Condemned.</bullet><bullet>When entering combat create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
     "name": "Consecrating Firestorm",
     "spell_slug": "consecrating_firestorm",
     "tier": 6,
@@ -1836,7 +1836,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Summons a <hyperlink>Lightbringer</hyperlink>, a Battle Mage Unit that can Convert other units to your cause or Condemn them.",
+    "description": "Summons a <hyperlink>Lightbringer</hyperlink> Battle Mage Unit that can convert other units to your cause.",
     "name": "Summon Lightbringer",
     "spell_slug": "summon_lightbringer",
     "tier": 4,

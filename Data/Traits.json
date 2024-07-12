@@ -654,7 +654,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain <bindingessence></bindingessence> <hyperlink>Binding Essence</hyperlink> for clearing <hyperlink>Infestation Spawners</hyperlink>, clearing <hyperlink>Ancient Wonders</hyperlink>, <hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink>, and <hyperlink>Pillaging</hyperlink> <hyperlink>Provinces</hyperlink>."
+    "name": "Gain <bindingessence></bindingessence> <hyperlink>Binding Essence</hyperlink> for clearing <hyperlink>Resource Nodes</hyperlink>, clearing <hyperlink>Infestation Spawners</hyperlink>, clearing <hyperlink>Ancient Wonders</hyperlink>, <hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink>, and <hyperlink>Pillaging</hyperlink> <hyperlink>Provinces</hyperlink>."
    }
   ],
   "enabled": true,
@@ -795,7 +795,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +2 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
+    "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +1 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
+   },
+   {
+    "name": "Racial <hyperlink>Unit tier</hyperlink> 3 Units have +1 Rank"
    }
   ],
   "enabled": true,
@@ -824,7 +827,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +10 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1506,10 +1509,13 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +10 <unitprod></unitprod> Draft and +5 <gold></gold> Gold, and your empire gains +5 <influence></influence> Imperium per level of Evil Alignment."
+    "name": "Cities gain +15 <unitprod></unitprod> Draft and your empire gains +5 <influence></influence> Imperium per level of Evil Alignment."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
+   },
+   {
+    "name": "Units are recruited with +1 Rank when you are at the maximum evil <hyperlink>Alignment</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1570,7 +1576,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -30% <knowledge></knowledge> Knowledge to unlock."
+    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -40% <knowledge></knowledge> Knowledge to unlock."
    },
    {
     "name": "<caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> cost -30% upkeep."
@@ -1792,6 +1798,9 @@
   "effect_descriptions": [
    {
     "name": "Summoning Spells cost -50% <mana></mana> Mana to cast."
+   },
+   {
+    "name": "Summoned Magic Origin units have +1 Rank."
    }
   ],
   "enabled": true,
@@ -1823,10 +1832,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+20 <optactical></optactical> Combat Casting Points"
+    "name": "+10 <optactical></optactical> Combat Casting Points"
    },
    {
-    "name": "+20 <caststrategic></caststrategic> World Map Casting Points."
+    "name": "+10 <caststrategic></caststrategic> World Map Casting Points."
    },
    {
     "name": "<hyperlink>Combat Spells</hyperlink> cost -25% <mana></mana> <hyperlink>Mana</hyperlink> and -25% <optactical></optactical> <hyperlink> Combat Casting Point</hyperlink> to cast."
@@ -1971,10 +1980,13 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +10 <happiness></happiness> City Stability and +5 <knowledge></knowledge> Knowledge, and your empire gains +5 <influence></influence> Imperium per level of Good Alignment."
+    "name": "<hyperlink>Cities</hyperlink> gain +10 <gold></gold> Gold and your empire gains +5 <influence></influence> Imperium per level of Good Alignment."
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"
+   },
+   {
+    "name": "Units are recruited with +1 Rank when you are at the maximum good <hyperlink>Alignment</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2014,6 +2026,9 @@
     "name": "<hyperlink>Cities</hyperlink> require -20% <food></food> <hyperlink>Food</hyperlink> for gaining a new <population></population> <hyperlink>Population</hyperlink>."
    },
    {
+    "name": "Racial Tier I units have +1 Rank."
+   },
+   {
     "name": "Non-Magic Origin units require -20% <hyperlink>Unit Upkeep</hyperlink>."
    }
   ],
@@ -2024,7 +2039,7 @@
   "display_order": 5,
   "starting_bonuses": [
    {
-    "description": "Start with 3 extra Tier I units."
+    "description": "Start with an extra Tier I unit."
    }
   ],
   "icon": "prolific_swarmers"

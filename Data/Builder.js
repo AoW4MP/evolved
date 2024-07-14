@@ -5303,7 +5303,6 @@ function showStructure(a, showOrigin) {
             tomeOriginIcon.setAttribute("id", "originTomeIcon" + a.id);
 
             if (a.indexOf("wildlife_sanctuary") != -1) {
-                // unlock warg, razorback, hunter spider, goretustk piglet
                 descriptionDiv.innerHTML += "<br>Unlocks Production of:";
                 var div = document.createElement("DIV");
                 div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "goretusk_piglet" + "\" target=\"_blank\">" + GetUnitTierAndName("goretusk_piglet") + "</a>" + "</bullet>";
@@ -5320,10 +5319,24 @@ function showStructure(a, showOrigin) {
                 var div = document.createElement("DIV");
                 div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "warg" + "\" target=\"_blank\">" + GetUnitTierAndName("warg") + "</a>" + "</bullet>";
                 unitTypesDiv.append(div);
+                var div = document.createElement("DIV");
+                div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "dire_penguin" + "\" target=\"_blank\">" + GetUnitTierAndName("dire_penguin") + "</a>" + "</bullet>";
+                unitTypesDiv.append(div);
+                var div = document.createElement("DIV");
+                div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "brown_bear" + "\" target=\"_blank\">" + GetUnitTierAndName("brown_bear") + "</a>" + "</bullet>";
+                unitTypesDiv.append(div);
+                var div = document.createElement("DIV");
+                div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "polar_bear" + "\" target=\"_blank\">" + GetUnitTierAndName("polar_bear") + "</a>" + "</bullet>";
+                unitTypesDiv.append(div);
+                var div = document.createElement("DIV");
+                div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "death_beetle" + "\" target=\"_blank\">" + GetUnitTierAndName("death_beetle") + "</a>" + "</bullet>";
+                unitTypesDiv.append(div);
+                var div = document.createElement("DIV");
+                div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "elephant" + "\" target=\"_blank\">" + GetUnitTierAndName("elephant") + "</a>" + "</bullet>";
+                unitTypesDiv.append(div);
             }
 
             if (a.indexOf("demon_gate") != -1) {
-                // unlock warg, razorback, hunter spider, goretustk piglet
                 descriptionDiv.innerHTML += "<br>Unlocks Production of:";
                 var div = document.createElement("DIV");
                 div.innerHTML = "<bullet>" + "<a href=\"/evolved/HTML/Units.html?unit=" + "inferno_puppy" + "\" target=\"_blank\">" + GetUnitTierAndName("inferno_puppy") + "</a>" + "</bullet>";

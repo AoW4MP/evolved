@@ -55,14 +55,14 @@ function fetchJsonFiles(filePaths) {
     );
 }
 var jsonSiegeProjects, jsonHeroSkills, jsonHeroItems, jsonFactionCreation2, jsonTomes, jsonUnitAbilities, jsonEmpire, jsonSpells, jsonStructureUpgrades, jsonCombatEnchantments,
-    jsonWorldStructures, jsonEnchantments, jsonSpawnTables, jsonFactionCreation, jsonHeroTraits, jsonBuilderLookUp, jsonExtraAscendedInfo;
+    jsonWorldStructures, jsonEnchantments, jsonSpawnTables, jsonFactionCreation, jsonHeroTraits, jsonBuilderLookUp, jsonExtraAscendedInfo, jsonItemForge;
 
 async function GetAllData() {
 
     const jsonFilePaths = ['/evolved/Data/HeroItems.json', '/evolved/Data/HeroSkills.json', '/evolved/Data/SiegeProjects.json', '/evolved/Data/Units.json', '/evolved/Data/Traits.json',
         '/evolved/Data/Tomes.json', '/evolved/Data/Abilities.json', '/evolved/Data/EmpireProgression.json', '/evolved/Data/Spells.json', '/evolved/Data/StructureUpgrades.json',
         '/evolved/Data/CombatEnchantments.json', '/evolved/Data/WorldStructures.json', '/evolved/Data/EnchantmentTables.json', '/evolved/Data/SpawnTables.json',
-        '/evolved/Data/FactionCreation.json', '/evolved/Data/HeroTraits.json', '/evolved/Data/BuilderLookup.json', '/evolved/Data/AscendedInfo.json'
+        '/evolved/Data/FactionCreation.json', '/evolved/Data/HeroTraits.json', '/evolved/Data/BuilderLookup.json', '/evolved/Data/AscendedInfo.json', '/evolved/Data/ItemForge.json'
     ];
     await fetchJsonFiles(jsonFilePaths)
         .then(dataArray => {
@@ -104,6 +104,8 @@ async function GetAllData() {
                     jsonBuilderLookUp = data;
                 } else if (index == 17) {
                     jsonExtraAscendedInfo = data;
+                } else if (index == 18) {
+                    jsonItemForge = data;
                 }
             });
         })
@@ -1176,6 +1178,7 @@ function getNormalizedHeight(element) {
     const viewportWidth = window.innerHeight;
     return elementWidth / viewportWidth;
 }
+
 function getNormalizedWidth(element) {
     const elementWidth = element.getBoundingClientRect().width;
     const viewportWidth = window.innerWidth;
@@ -3628,6 +3631,7 @@ function createUnitTypeIcon(parent, imgSrc, imgFallbackSrc, link, tooltipText) {
     addTooltipListeners(btn, spa);
     parent.appendChild(btn);
 }
+
 function backtrackUnitOrigins(unitData, name, holder) {
     var holderOrigin = holder.querySelectorAll('div#originHolder')[0];
     holderOrigin.innerHTML = "";
@@ -3674,9 +3678,9 @@ function backtrackUnitOrigins(unitData, name, holder) {
     var x = "";
     for (var x in spells) {
         var tierandnameoftome = backtraceTomeNameAndTier(spells[x].id);
-        var tooltipText = tierandnameoftome != ""
-            ? `Unit mentioned in Spell: <hyperlink>${spells[x].name}</hyperlink> <br>in Tier <hyperlink>${romanize(tierandnameoftome.tier)} - ${showAffinitySymbols(tierandnameoftome)} ${tierandnameoftome.name}</hyperlink>`
-            : `Unit mentioned in Spell: <hyperlink>${spells[x].name}</<hyperlink>`;
+        var tooltipText = tierandnameoftome != "" ?
+            `Unit mentioned in Spell: <hyperlink>${spells[x].name}</hyperlink> <br>in Tier <hyperlink>${romanize(tierandnameoftome.tier)} - ${showAffinitySymbols(tierandnameoftome)} ${tierandnameoftome.name}</hyperlink>` :
+            `Unit mentioned in Spell: <hyperlink>${spells[x].name}</<hyperlink>`;
         const imgSrc = `/evolved/Icons/SpellIcons/${spells[x].id}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?spell=${spells[x].id}`;
@@ -4187,38 +4191,41 @@ function addLevelUpInfo(units, a, holder) {
         }
 
     }
+
+
+
+
+
+    levelText = "<p style=\"  color: #aadb9c;\"> <medal_champion></medal_champion> Champion - " + (xpNeeded * 4) + "<xp></xp></p>";
+    levelup.append(NewLevelUpEntry(levelText));
+    var i = 0;
+    for (i in units.medal_rewards_5) {
+        if (units.medal_rewards_5[i].slug.indexOf("medal") != -1) {
+            levelText = "<p class=\"levelup_medal\">" + "<bullet>" + lookupSlug(units.medal_rewards_5[i].slug);
+
+            var test = NewLevelUpEntry(levelText);
+            var spanText = document.createElement("span");
+
+            spanText.innerHTML = lookupSlugDescription(units.medal_rewards_5[i].slug);
+            addTooltipListeners(test, spanText);
+            levelup.append(test);
+        } else {
+            levelText = "<bullet>" + lookupSlug(units.medal_rewards_5[i].slug) + "</bullet>";
+            levelup.append(NewLevelUpEntry(levelText));
+
+        }
+    }
     if (evolveTarget != undefined) {
-        levelText = "<p style=\"  color: #aadb9c;\"> <medal_champion></medal_champion> Champion - " + (xpNeeded * 4) + "<xp></xp></p>";
+        levelText = "<p style=\"  color: #aadb9c;\"> <medal_legend></medal_legend> Legend - " + (xpNeeded * 10) + "<xp></xp></p>";
         levelup.append(NewLevelUpEntry(levelText));
 
 
-        levelText = "<bullet> Evolves into <hyperlink> <a href=\"/evolved/HTML/Units.html?unit=" + evolveTarget + "\" target=\"_blank\">" + lookupUnit(evolveTarget) + "</a></hyperlink></bullet>";
+        levelText = "<bullet> Evolves into <hyperlink> <a href=\"/aow4db/HTML/Units.html?unit=" + evolveTarget + "\" target=\"_blank\">" + lookupUnit(evolveTarget) + "</a></hyperlink></bullet>";
         levelup.append(NewLevelUpEntry(levelText));
     }
+    if (evolveTarget == undefined) {
 
-    if (evolveTarget === undefined) {
-
-
-        levelText = "<p style=\"  color: #aadb9c;\"> <medal_champion></medal_champion> Champion - " + (xpNeeded * 4) + "<xp></xp></p>";
-        levelup.append(NewLevelUpEntry(levelText));
-        var i = 0;
-        for (i in units.medal_rewards_5) {
-            if (units.medal_rewards_5[i].slug.indexOf("medal") != -1) {
-                levelText = "<p class=\"levelup_medal\">" + "<bullet>" + lookupSlug(units.medal_rewards_5[i].slug);
-
-                var test = NewLevelUpEntry(levelText);
-                var spanText = document.createElement("span");
-
-                spanText.innerHTML = lookupSlugDescription(units.medal_rewards_5[i].slug);
-                addTooltipListeners(test, spanText);
-                levelup.append(test);
-            } else {
-                levelText = "<bullet>" + lookupSlug(units.medal_rewards_5[i].slug) + "</bullet>";
-                levelup.append(NewLevelUpEntry(levelText));
-
-            }
-        }
-
+        
         levelText = "<p style=\"  color: #aadb9c;\"> <medal_legend></medal_legend> Legend - " + (xpNeeded * 10) + "<xp></xp></p>";
         levelup.append(NewLevelUpEntry(levelText));
         for (let i = 0; i < units.medal_rewards_6.length; i++) {
@@ -4240,6 +4247,7 @@ function addLevelUpInfo(units, a, holder) {
 
         }
     }
+
 
     //levelup.innerHTML += levelText;
 
@@ -4846,7 +4854,8 @@ function ShowPossibleEnchantments(evt) {
             if (culture == "mystic") {
                 exclusionList.push(list[i]);
             }
-        } if (list[i].id === "ciphers_of_dissonance") {
+        }
+        if (list[i].id === "ciphers_of_dissonance") {
             if (culture == "mystic") {
                 exclusionList.push(list[i]);
             }

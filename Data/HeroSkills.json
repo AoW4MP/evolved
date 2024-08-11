@@ -189,7 +189,7 @@
   "type": "normal",
   "resid": 5046586575783,
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>Gain +6 <influence></influence> <hyperlink>Imperium</hyperlink> income per <turn></turn> Turn.</bullet><bullet>Gain +15 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>Gain +15 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>"
+  "description": "<bulletlist><bullet>Gain +6 <influence></influence> <hyperlink>Imperium</hyperlink> income per <turn></turn> Turn.</bullet><bullet>Gain +10 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>Gain +10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>"
  },
  {
   "id": "eldritch_influence_i",
@@ -201,7 +201,7 @@
   "type": "normal",
   "resid": 5046586575781,
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>Gain +4 <influence></influence> <hyperlink>Imperium</hyperlink> income per <turn></turn> Turn.</bullet><bullet>Gain +15 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>Gain +15 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>"
+  "description": "<bulletlist><bullet>Gain +4 <influence></influence> <hyperlink>Imperium</hyperlink> income per <turn></turn> Turn.</bullet><bullet>Gain +10 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>Gain +10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>"
  },
  {
   "id": "tentacled_escape",
@@ -894,16 +894,16 @@
   "description": "Gain Spirit Summon: Dormant."
  },
  {
-  "id": "master_summoner",
-  "category_name": "Support",
+  "id": "wisp_familiar",
+  "category_name": "Battle Magic",
   "group_name": "Mystic SubCulture - Astral Summoners - Hero Skill Group",
-  "name": "Master Summoner",
-  "level_name": "<hyperlink>Master Hero Skill</hyperlink>",
-  "icon": "master_summoner_2",
+  "name": "Wisp Familiar",
+  "level_name": "<hyperlink>Adept Hero Skill</hyperlink>",
+  "icon": "wisp_familiar",
   "type": "normal",
   "abilities": [
    {
-    "slug": "master_summoner"
+    "slug": "wisp_familiar"
    }
   ],
   "resid": 5003636902266
@@ -1482,7 +1482,7 @@
   "category_name": "Warfare",
   "group_name": "Hero Skill Group - Severing",
   "name": "Master of Disruption",
-  "level_name": "<hyperlink>Master Hero Skill</hyperlink>",
+  "level_name": "<hyperlink>Expert Hero Skill</hyperlink>",
   "icon": "master_of_disruption_2",
   "type": "normal",
   "abilities": [
@@ -1782,7 +1782,7 @@
   "category_name": "Warfare",
   "group_name": "Hero Skill Group - Great Transformation",
   "name": "Weakening Aura",
-  "level_name": "<hyperlink>Expert Hero Skill</hyperlink>",
+  "level_name": "<hyperlink>Adept Hero Skill</hyperlink>",
   "icon": "weakening_aura_2",
   "type": "normal",
   "abilities": [
@@ -1883,7 +1883,7 @@
   "category_name": "Battle Magic",
   "group_name": "Hero Skill Group - Amplification",
   "name": "Spell Amplification",
-  "level_name": "<hyperlink>Expert Hero Skill</hyperlink>",
+  "level_name": "<hyperlink>Adept Hero Skill</hyperlink>",
   "icon": "spell_amplification_2",
   "type": "normal",
   "abilities": [
@@ -2542,7 +2542,7 @@
   "category_name": "Warfare",
   "group_name": "Hero Skill Group - Subjugation",
   "name": "Terrifying Aura",
-  "level_name": "<hyperlink>Expert Hero Skill</hyperlink>",
+  "level_name": "<hyperlink>Adept Hero Skill</hyperlink>",
   "icon": "terrifying_aura_2",
   "type": "normal",
   "abilities": [
@@ -3723,16 +3723,16 @@
   "resid": 4273492484805
  },
  {
-  "id": "wisp_familiar",
-  "category_name": "Battle Magic",
+  "id": "master_summoner",
+  "category_name": "Support",
   "group_name": "Hero Skill Group - Summoning",
-  "name": "Wisp Familiar",
-  "level_name": "<hyperlink>Adept Hero Skill</hyperlink>",
-  "icon": "wisp_familiar",
+  "name": "Master Summoner",
+  "level_name": "<hyperlink>Expert Hero Skill</hyperlink>",
+  "icon": "master_summoner",
   "type": "normal",
   "abilities": [
    {
-    "slug": "wisp_familiar"
+    "slug": "master_summoner"
    }
   ],
   "resid": 4273492483740
@@ -3783,7 +3783,7 @@
   "icon": "obsidian_weaponry",
   "type": "normal",
   "resid": 4273492483188,
-  "description": "Base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks gain:<bulletlist><bullet>+2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 30% chance of inflicting Bleeding.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks."
+  "description": "Base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks gain:<bulletlist><bullet>+1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Bleeding.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks."
  },
  {
   "abilities": [
@@ -4521,15 +4521,8 @@
   "level_name": "<hyperlink>Novice Hero Skill</hyperlink>",
   "icon": "champion_of_the_people",
   "type": "normal",
-  "abilities": [
-   {
-    "slug": "spur_to_action_champion_of_the_people"
-   },
-   {
-    "slug": "champion_of_the_people"
-   }
-  ],
-  "resid": -8277668028376677473
+  "resid": -8277668028376677473,
+  "description": "While army leader, all non-Hero units in the army gain:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist><br></br>In addition, this unit gains access to the Spur to Action ability."
  },
  {
   "id": "champion_of_the_arcane",
@@ -4539,12 +4532,8 @@
   "level_name": "<hyperlink>Novice Hero Skill</hyperlink>",
   "icon": "champion_of_the_arcane",
   "type": "normal",
-  "abilities": [
-   {
-    "slug": "weaver_champion_of_the_arcane"
-   }
-  ],
-  "resid": -8277668028376677474
+  "resid": -8277668028376677474,
+  "description": "This unit gains:<bulletlist><bullet>+20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>+20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet><bullet>Access to the Weaver ability.</bullet></bulletlist>"
  },
  {
   "id": "champion_of_war",
@@ -4554,12 +4543,8 @@
   "level_name": "<hyperlink>Novice Hero Skill</hyperlink>",
   "icon": "champion_of_war",
   "type": "normal",
-  "abilities": [
-   {
-    "slug": "killing_momentum"
-   }
-  ],
-  "resid": -8277668028376677478
+  "resid": -8277668028376677478,
+  "description": "This unit gains:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Access to the Killing Momentum passive.</bullet></bulletlist>"
  },
  {
   "id": "purging_field",

@@ -501,7 +501,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target linked unit is inflicted with Insanity for 2 <turn></turn> Turns.<br></br><br></br>Disables Gratitude and Surrender for this turn.",
+  "description": "Target linked unit is inflicted with Insanity for 1 <turn></turn> Turn.<br></br><br></br>Disables Gratitude and Surrender for this turn.",
   "name": "Fury",
   "slug": "fury_umbral_mistress",
   "damage": "",
@@ -564,7 +564,7 @@
   "icon": "enchain_mind_umbral_mistress"
  },
  {
-  "description": "At the start of each turn:<bulletlist><bullet>Unit loses one random Negative Status Effect and heals 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> from it.</bullet></bulletlist>",
+  "description": "At the start of each turn:<bulletlist><bullet>Unit loses one random Negative Status Effect and heals 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> from it.</bullet></bulletlist><br></br>Disabled if the unit is Burning.",
   "name": "Curse Eater",
   "slug": "curse_eater",
   "icon": "curse_eater"
@@ -574,12 +574,6 @@
   "name": "Umbral Demon",
   "slug": "umbral_demon",
   "icon": "umbral_demon"
- },
- {
-  "description": "When this unit dies, it creates <hyperlink>Umbral Taint</hyperlink> around it.",
-  "name": "Umbral Dissolution",
-  "slug": "umbral_dissolution",
-  "icon": "umbral_dissolution"
  },
  {
   "description": "This unit is immune to Umbral Malady.",
@@ -819,6 +813,12 @@
   "name": "Splitterling Deathcall",
   "slug": "splitterling_deathcall",
   "icon": "splitterling_deathcall"
+ },
+ {
+  "description": "When this unit dies, it creates <hyperlink>Umbral Taint</hyperlink> around it.",
+  "name": "Umbral Dissolution",
+  "slug": "umbral_dissolution",
+  "icon": "umbral_dissolution"
  },
  {
   "description": "Unit creates <hyperlink>Umbral Taint</hyperlink> as it moves.",
@@ -1151,6 +1151,12 @@
   "icon": "aura_of_disease"
  },
  {
+  "description": "The unit has a -50% modifier to <happiness></happiness> <hyperlink>Morale</hyperlink> changes",
+  "name": "Heartless",
+  "slug": "heartless",
+  "icon": "heartless"
+ },
+ {
   "description": "An undead unit with:<bulletlist><bullet>+2 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>+2 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink></bullet><bullet>-2 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>-2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>Heartless</bullet><bullet>Immunity to:<bulletlist></bullet><bullet>Poisoned</bullet><bullet>Bleeding</bullet><bullet>Diseased</bullet></bulletlist></bulletlist></bulletlist>",
   "name": "Undead",
   "slug": "undead",
@@ -1256,7 +1262,7 @@
   "icon": "juggernaut"
  },
  {
-  "description": "Unit has +4 <defense></defense> <hyperlink>Defense</hyperlink> against <hyperlink>Physical Ranged</hyperlink> attacks.",
+  "description": "Unit has +2 <defense></defense> <hyperlink>Defense</hyperlink> against <hyperlink>Physical Ranged</hyperlink> attacks.",
   "name": "Reinforced",
   "slug": "reinforced",
   "icon": "reinforced"
@@ -3120,7 +3126,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -3234,7 +3240,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -3318,7 +3324,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -3402,7 +3408,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -3486,7 +3492,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -3570,7 +3576,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -3654,7 +3660,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -5233,7 +5239,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "1",
+  "range": "4",
   "icon": "patch_up_overseer"
  },
  {
@@ -5930,7 +5936,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit:<bulletlist><bullet>Heals +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gains 2 Regeneration</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gains 1 Regeneration</bullet></bulletlist>",
   "name": "Nimu Soothing",
   "slug": "nimu_soothing_deep-sea_nimu",
   "damage": "",
@@ -5984,7 +5990,7 @@
  },
  {
   "notes": [],
-  "description": "Link to friendly unit.<br></br>While linked, at the end of each <turn></turn> Turn:<bulletlist><bullet>Friendly unit gains 2 Strengthened.</bullet><bullet>This unit gains Bolstered Defense and Bolstered Resistance.</bullet></bulletlist>",
+  "description": "Link to friendly unit.<br></br>While linked, at the end of each <turn></turn> Turn:<bulletlist><bullet>Friendly unit gains 1 Strengthened.</bullet><bullet>This unit gains Bolstered Defense and Bolstered Resistance.</bullet></bulletlist>",
   "name": "Enhancing Symbiosis",
   "slug": "enhancing_symbiosis_nimu",
   "damage": "",
@@ -6582,7 +6588,7 @@
   "icon": "magic_blast_animist_mire_crocodile"
  },
  {
-  "description": "Makes tactical spells deal +50% damage. This does not stack.",
+  "description": "Makes tactical spells deal +30% damage. This does not stack.",
   "name": "Spell Amplification",
   "slug": "spell_amplification",
   "icon": "spell_amplification"
@@ -6716,14 +6722,14 @@
   "description": "Targets all enemies within 2 hexes.",
   "name": "Seismic Slam",
   "slug": "seismic_slam_earth_titan",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "40<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<fullaction></fullaction>",
   "range": "0",
   "notes": [
    {
@@ -7454,7 +7460,7 @@
   "icon": "melee_strike_sabertooth"
  },
  {
-  "description": "Attacks deal +15% damage per friendly unit adjacent to the target.",
+  "description": "Attacks deal +10% damage per friendly unit adjacent to the target.",
   "name": "Pack Hunter",
   "slug": "pack_hunter",
   "icon": "pack_hunter"
@@ -7506,18 +7512,17 @@
   "icon": "charge_strike_umbral_juggernaut"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
+    "name": "Poisoned",
+    "count": 1
    }
   ],
   "description": "Single magical attack at target unit.",
   "name": "Poison Blast",
   "slug": "magic_blast_wildspeaker",
-  "damage": "16<damageblight></damageblight> ",
+  "damage": "14<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -7529,6 +7534,14 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_blast_animist_mire_crocodile"
  },
  {
@@ -8197,7 +8210,13 @@
   "icon": "terrifying_aura"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
+   }
+  ],
   "description": "A Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_phoenix",
@@ -8219,7 +8238,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Inflicts Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -8227,7 +8246,7 @@
   "description": "Deals damage in a 2-hex radius.",
   "name": "Overheat",
   "slug": "overheat_phoenix",
-  "damage": "20<damagefire></damagefire> ",
+  "damage": "22<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -9391,7 +9410,7 @@
   "icon": "tireless_retaliation"
  },
  {
-  "description": "Unit has +3 <resistance></resistance> <hyperlink>Resistance</hyperlink> against <hyperlink>Magic</hyperlink> attacks.",
+  "description": "Unit has +2 <resistance></resistance> <hyperlink>Resistance</hyperlink> against <hyperlink>Magic</hyperlink> attacks.",
   "name": "Warded",
   "slug": "warded",
   "icon": "warded"
@@ -10362,7 +10381,7 @@
  {
   "modifiers": [
    {
-    "description": "For each friendly Faithful unit in battle (up to 10), this attack gains:<bulletlist><bullet>+1 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink></bullet><bullet>+1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
+    "description": "For each friendly Faithful unit in battle (up to 10), this attack gains:<bulletlist><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink></bullet><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
     "name": "Smiting Prayer",
     "count": 1
    },
@@ -10372,10 +10391,10 @@
     "count": 1
    }
   ],
-  "description": "Blasts target enemy with divine energy.",
+  "description": "Single magical attack at target unit.",
   "name": "Smiting Prayer Blast",
   "slug": "magic_blast_shrine_of_smiting",
-  "damage": "5<damagefire></damagefire> 5<damagespirit></damagespirit> ",
+  "damage": "15<damagefire></damagefire> 15<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -10385,8 +10404,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<repeatingaction></repeatingaction>",
-  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -10397,7 +10416,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Blind for 1 <turn></turn> Turn.",
+    "description": "Inflict Blind for 1 <turn></turn> Turn.",
     "name": "Blind",
     "count": 1
    }
@@ -10405,20 +10424,16 @@
   "description": "Enemy units within a 2-hex radius sustain damage.",
   "name": "Divine Vengeance",
   "slug": "divine_vengeance_shrine_of_smiting",
-  "damage": "24<damagespirit></damagespirit> ",
+  "damage": "20<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
-  "notes": [
-   {
-    "note": "Cooldown: 1 <turn></turn>"
-   }
-  ],
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "0",
+  "notes": [],
   "icon": "divine_vengeance_shrine_of_smiting"
  },
  {
@@ -10934,17 +10949,11 @@
   "icon": "scrying_eye"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.",
-    "name": "Electrified",
-    "count": 1
-   }
-  ],
+  "notes": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_phantasm_warrior",
-  "damage": "5<damagephysical></damagephysical> 5<damagelightning></damagelightning> ",
+  "damage": "6<damagephysical></damagephysical> 4<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10956,7 +10965,6 @@
   "accuracy": "100%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
-  "notes": [],
   "icon": "melee_strike_sabertooth"
  },
  {
@@ -11705,7 +11713,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "This unit and adjacent friendly units gain:<bulletlist><bullet>Rally.</bullet><bullet>Hastened.</bullet><bullet>Regeneration.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>Rally.</bullet><bullet>Hastened.</bullet><bullet>Regeneration.</bullet></bulletlist>",
   "name": "Song of Revelry",
   "slug": "song_of_revelry_skald",
   "damage": "",
@@ -11716,7 +11724,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "0",
+  "range": "3",
   "icon": "song_of_revelry_skald"
  },
  {
@@ -11728,7 +11736,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "This unit and adjacent friendly units gain:<bulletlist><bullet>1 Strengthened.</bullet><bullet>1 Fortune.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>1 Strengthened.</bullet><bullet>1 Fortune.</bullet></bulletlist>",
   "name": "Song of Carnage",
   "slug": "song_of_carnage_skald",
   "damage": "",
@@ -11739,7 +11747,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "0",
+  "range": "3",
   "icon": "song_of_carnage_skald"
  },
  {
@@ -11929,7 +11937,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    }
@@ -11982,7 +11990,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12040,7 +12048,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    }
@@ -12147,7 +12155,7 @@
   "icon": "soothing_breeze_soother_attunement"
  },
  {
-  "description": "While this unit is in battle, spells are 10% cheaper to cast.<br></br>Doesn't stack.",
+  "description": "While this unit is in battle, spells cost 20% less <mana></mana> <hyperlink>Mana</hyperlink> to cast. This effect does not stack.",
   "name": "Spell Channeling",
   "slug": "spell_channeling",
   "icon": "spell_channeling"
@@ -12272,7 +12280,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12303,7 +12311,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -12339,7 +12347,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
@@ -13033,7 +13041,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy unit is inflicted with a base 60% chance of becoming Taunted for 3 <turn></turn> Turns. The unit that used the skill enters <hyperlink>Defense Mode</hyperlink>.",
+  "description": "Target enemy unit is inflicted with a base 90% chance of becoming Taunted for 3 <turn></turn> Turns. The unit that used the skill enters <hyperlink>Defense Mode</hyperlink>.",
   "name": "Taunt",
   "slug": "taunt_anvil_guard",
   "damage": "",
@@ -13479,7 +13487,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_fury",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -13533,7 +13541,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Base 60% of target unit becoming Stunned. Enter <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "Base 90% of target unit becoming Stunned. Enter <hyperlink>Defense Mode</hyperlink> after use.",
   "name": "Shield Bash",
   "slug": "shield_bash_warrior",
   "damage": "",
@@ -13572,7 +13580,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
+    "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
     "name": "Sundered Defense",
     "count": 1
    },
@@ -15024,18 +15032,17 @@
   "icon": "flamestrike_pyromancer"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+    "description": "Base 60% chance of inflicting Distracted for 1 <turn></turn> Turn.",
+    "name": "Distracted",
+    "count": 1
    }
   ],
   "description": "Single magical attack at target unit.",
   "name": "Spirit Blast",
   "slug": "magic_blast_chaplain",
-  "damage": "16<damagespirit></damagespirit> ",
+  "damage": "14<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -15047,6 +15054,14 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_blast_animist_mire_crocodile"
  },
  {
@@ -15870,7 +15885,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "spiritual_healing_animist_mire_crocodile"
  },
  {
@@ -16008,10 +16023,10 @@
   "icon": "pull_constrictor"
  },
  {
-  "description": "Friendly Magic Origins units in this Army and in combat gain: <bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+10% damage</bullet><bullet><hyperlink>Unit Upkeep</hyperlink> -10%</bullet></bulletlist>",
-  "name": "Master Summoner",
-  "slug": "master_summoner",
-  "icon": "master_summoner"
+  "description": "Start combat with an <hyperlink>Astral Wisp</hyperlink>.",
+  "name": "Wisp Familiar",
+  "slug": "wisp_familiar",
+  "icon": "wisp_familiar"
  },
  {
   "notes": [
@@ -17252,10 +17267,10 @@
   "icon": "frost_evocation_frost_evoker"
  },
  {
-  "description": "Start combat with an <hyperlink>Astral Wisp</hyperlink>.",
-  "name": "Wisp Familiar",
-  "slug": "wisp_familiar",
-  "icon": "wisp_familiar"
+  "description": "While army leader, all Magic Origin units gain: <bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+10% damage</bullet><bullet>-10% <hyperlink>Unit Upkeep</hyperlink></bullet></bulletlist>",
+  "name": "Master Summoner",
+  "slug": "master_summoner",
+  "icon": "master_summoner"
  },
  {
   "description": "Start combat with an <hyperlink>Iron Golem Assistant</hyperlink>, a Tier I Fighter Unit.",
@@ -17942,58 +17957,6 @@
    }
   ],
   "icon": "quake_stone_spirit"
- },
- {
-  "notes": [
-   {
-    "note": "Can only be used once per battle."
-   }
-  ],
-  "description": "Target friendly non-Hero unit regains its <hyperlink>Action Points</hyperlink>.",
-  "name": "Spur to Action",
-  "slug": "spur_to_action_champion_of_the_people",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Support"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
-  "range": "4",
-  "icon": "spur_to_action_champion_of_the_people"
- },
- {
-  "description": "While army leader, all non-Hero units in the army gain:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>.",
-  "name": "Champion of the People",
-  "slug": "champion_of_the_people",
-  "icon": "champion_of_the_people"
- },
- {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Can only be used once per battle."
-   },
-   {
-    "note": "Starts on cooldown: 1<turn></turn>"
-   }
-  ],
-  "description": "<bulletlist><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet><bullet>Enter <hyperlink>Defense Mode</hyperlink>.</bullet></bulletlist>",
-  "name": "Weaver",
-  "slug": "weaver_champion_of_the_arcane",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Can't be refreshed"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "0",
-  "icon": "weaver_champion_of_the_arcane"
  },
  {
   "notes": [

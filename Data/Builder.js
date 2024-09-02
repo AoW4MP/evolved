@@ -66,7 +66,8 @@ var jsonSiegeProjects,
     jsonHeroTraits,
     jsonBuilderLookUp,
     jsonExtraAscendedInfo,
-    jsonItemForge;
+    jsonItemForge,
+    jsonCosmicHappenings;
 
 async function GetAllData() {
     const jsonFilePaths = [
@@ -88,7 +89,8 @@ async function GetAllData() {
         "/evolved/Data/HeroTraits.json",
         "/evolved/Data/BuilderLookup.json",
         "/evolved/Data/AscendedInfo.json",
-        "/evolved/Data/ItemForge.json"
+        "/evolved/Data/ItemForge.json",
+        "/evolved/Data/CosmicHappenings.json"
     ];
     await fetchJsonFiles(jsonFilePaths)
         .then((dataArray) => {
@@ -132,6 +134,8 @@ async function GetAllData() {
                     jsonExtraAscendedInfo = data;
                 } else if (index == 18) {
                     jsonItemForge = data;
+                } else if (index == 19) {
+                    jsonCosmicHappenings = data;
                 }
             });
         })
@@ -988,7 +992,7 @@ function addAbilityslot(a, holder, list, enchant) {
                                             abilityRange =
                                                 parseInt(
                                                     parseInt(jsonEnchantments[k].attack[t].range) +
-                                                        parseInt(abilityRange)
+                                                    parseInt(abilityRange)
                                                 ) + "*";
                                         }
                                     }
@@ -1112,8 +1116,8 @@ function addAbilityslot(a, holder, list, enchant) {
             imag.setAttribute(
                 "style",
                 'background-image: url("/evolved/Icons/Interface/' +
-                    abilityIconType +
-                    '.png");background-repeat: no-repeat;background-size: 40px 40px'
+                abilityIconType +
+                '.png");background-repeat: no-repeat;background-size: 40px 40px'
             );
 
             imag.setAttribute("onerror", "this.setAttribute('src','/evolved/Icons/Text/mp.png')");
@@ -1913,7 +1917,7 @@ async function spawnCard(string, divID) {
 
 async function showUnitFromString(string, divID, subcultureCheck, resID) {
     await spawnCard(string, divID);
-    showUnit(string, divID, subcultureCheck, resID);
+    showUnit(string, subcultureCheck, resID);
 }
 
 var ascendingOrder = false;
@@ -2324,6 +2328,15 @@ async function showItemFromList(list, divID) {
     }
 }
 
+async function showCosmicHappeningsWithArgument(argumentType, divID) {
+    var list = [];
+    list = findCosmicHappeningsWithArgument(argumentType);
+    await spawnStructureCards(list, divID);
+    for (var i = 0; i < list.length; i++) {
+        showCosmicHappening(list[i]);
+    }
+}
+
 async function showWorldStructuresWithArgument(overwrite, argumentType, list, divID) {
     await spawnStructureCards(list, divID);
 
@@ -2731,6 +2744,22 @@ function findStructuresWithArgument(income, argumentType, includeprovince) {
     return finalCheckedList;
 }
 
+function findCosmicHappeningsWithArgument(argumentType) {
+    var j = 0;
+
+    var finalCheckedList = [];
+
+    for (j in jsonCosmicHappenings) {
+        if (jsonCosmicHappenings[j].type == argumentType) {
+
+            finalCheckedList.push(jsonCosmicHappenings[j].id);
+        }
+    }
+
+
+    return finalCheckedList;
+}
+
 function checkModRequirements(unit) {
     var j,
         check,
@@ -2796,31 +2825,26 @@ function showSubDiv(event, id) {
     }
 }
 
-function showUnit(a, divid, subcultureCheck, resID) {
+function showUnit(a, subcultureCheck, resID) {
     var hp,
         mp,
         shield,
         armor,
-        descr,
         j,
         k,
         x,
         y,
         z,
         unitNameDiv,
-        unitRole,
-        icon,
         imagelink,
         prodcost,
         tier,
-        research,
-        building,
-        reward,
-        evolveTarget,
         name = "";
     var found = false;
     var keepgoing = true;
     var stopHere = false;
+
+
     for (let i = 0; i < jsonUnits.length; i++) {
         if (a === jsonUnits[i].id) {
             if (subcultureCheck == undefined) {
@@ -2888,7 +2912,6 @@ function showUnit(a, divid, subcultureCheck, resID) {
 
                 if ("DLC" in jsonUnits[i]) {
                     var newDivForMount = AddDLCTag(jsonUnits[i].DLC);
-
                     unitNameDiv.append(newDivForMount);
                 }
 
@@ -5141,124 +5164,187 @@ function showStructure(a, showOrigin) {
     }
 }
 
+function showCosmicHappening(a) {
+    var modName,
+        description,
+
+        j,
+        nameString = "";
+    var found = false;
+
+    for (j in jsonCosmicHappenings) {
+        if (a === jsonCosmicHappenings[j].id) {
+            modName = document.getElementById("modname");
+            nameString = "";
+            nameString = jsonCosmicHappenings[j].name.toUpperCase();
+
+            if (modName == undefined) {
+
+            }
+            modName.innerHTML = nameString;
+
+
+            modName.setAttribute("id", "modname" + a);
+            modName.className = "mod_name";
+
+            descriptionDiv = document.getElementById("moddescription");
+            descriptionDiv.setAttribute("style", "max-width:560px; width:560px");
+            description = jsonCosmicHappenings[j].description;
+            descriptionDiv.innerHTML = description;
+            descriptionDiv.setAttribute("id", "description" + a);
+
+            var imagelink = document.getElementById("modicon");
+            imagelink.setAttribute("id", "img" + a);
+            var categoryLink = jsonCosmicHappenings[j].category.replaceAll(" ", "");
+            categoryLink = categoryLink.replaceAll("of", "Of");
+            imagelink.setAttribute("src", "/evolved/Icons/CosmicHappenings/category_icon_" + categoryLink + ".png");
+
+
+            var preview = document.getElementById("structurepreview");
+            var imagePos = jsonCosmicHappenings[j].image;
+
+
+            preview.setAttribute("id", "img" + a);
+            preview.className = "cosmicHappeningPic";
+            preview.setAttribute("style", 'background-image: url("/evolved/Icons/CosmicHappenings/' + imagePos);
+
+            var extraImage = document.createElement("IMG");
+            extraImage.setAttribute("src", "/evolved/Icons/Interface/RuneCircle.png");
+            extraImage.setAttribute("style", "width:250px; z-index:2");
+
+            var modtier = document.getElementById("modtier");
+            modtier.innerHTML = "Category: " + jsonCosmicHappenings[j].category;
+            modtier.setAttribute("id", "img" + a);
+
+            var modcost = document.getElementById("modcost");
+            var duration = jsonCosmicHappenings[j].duration;
+            if (duration == -1) {
+                duration = "Variable";
+            } else {
+                duration += "<turn></turn>";
+            }
+            modcost.innerHTML = "Duration: " + duration;
+            modcost.setAttribute("id", "img" + a);
+            //imagelink.insertBefore(extraImage);
+            // find combat enchantment
+            found = true;
+        }
+    }
+    if (found === false) {
+        console.log("Couldn't find cosmic happening: " + a);
+    }
+}
+
 function showWorldStructure(a) {
     var modName,
         description,
         cost,
         type,
         tier,
-        j,
         nameString = "";
     var found = false;
-    for (j in jsonWorldStructures) {
-        if (a === jsonWorldStructures[j].id) {
-            modName = document.getElementById("modname");
-            nameString = "";
-            nameString = jsonWorldStructures[j].name.toUpperCase();
+    const structure = jsonWorldStructures.find((structure) => structure.id === a);
+    if (!structure) {
+        console.log("Couldn't find structure world: " + a);
+        return;
+    }
 
-            if (nameString.indexOf("<br>")) {
-                nameString = nameString.replace("<br>", "");
-                nameString = nameString.replace("<br>", "");
-            }
-            modName.innerHTML = nameString;
-            if ("DLC" in jsonWorldStructures[j]) {
-                var newDivForMount = AddDLCTag(jsonWorldStructures[j].DLC);
-                modName.append(newDivForMount);
-            }
-            modName.setAttribute("id", "modname" + a);
-            modName.className = "mod_name";
-            loreDiv = document.getElementById("loreText");
+    modName = document.getElementById("modname");
+    nameString = "";
+    nameString = structure.name.toUpperCase();
 
-            loreDiv.setAttribute("id", "loreText" + a);
-            if ("lore" in jsonWorldStructures[j]) {
-                loreDiv.innerHTML = jsonWorldStructures[j].lore;
-                loreDiv.innerHTML += "<br><br>" + jsonWorldStructures[j].author;
-            }
+    if (nameString.indexOf("<br>")) {
+        nameString = nameString.replace("<br>", "");
+        nameString = nameString.replace("<br>", "");
+    }
+    modName.innerHTML = nameString;
+    if ("DLC" in structure) {
+        var newDivForMount = AddDLCTag(structure.DLC);
+        modName.append(newDivForMount);
+    }
+    modName.setAttribute("id", "modname" + a);
+    modName.className = "mod_name";
+    loreDiv = document.getElementById("loreText");
 
-            descriptionDiv = document.getElementById("moddescription");
-            descriptionDiv.setAttribute("style", "max-width:560px; width:560px");
-            description = "";
+    loreDiv.setAttribute("id", "loreText" + a);
+    if ("lore" in structure) {
+        loreDiv.innerHTML = structure.lore;
+        loreDiv.innerHTML += "<br><br>" + structure.author;
+    }
 
-            if (jsonWorldStructures[j].type.indexOf("wonder") != -1) {
-                description = jsonWorldStructures[j].type + "<br>";
-            } else {
-            }
+    descriptionDiv = document.getElementById("moddescription");
+    descriptionDiv.setAttribute("style", "max-width:560px; width:560px");
+    description = "";
 
-            description += jsonWorldStructures[j].description;
+    if (structure.type.indexOf("wonder") != -1) {
+        description = structure.type + "<br>";
+    } else {
+    }
 
-            if (jsonWorldStructures[j].prediction_description != "") {
-                description += "<br>" + jsonStructureUpgrades[j].prediction_description;
-            }
+    description += structure.description;
 
-            imagelink = document.getElementById("modicon");
+    if (structure.prediction_description != "") {
+        description += "<br>" + structure.prediction_description;
+    }
 
-            if (jsonWorldStructures[j].type.indexOf("wonder") != -1) {
-                imagelink.remove();
-            } else {
-                imagelink.setAttribute("src", "/evolved/Icons/WorldStructures/" + a + ".png");
-                imagelink.setAttribute("id", "modicon" + a);
-                imagelink.setAttribute("style", "background-image: none");
-            }
-            descriptionDiv.innerHTML = "";
-            if (jsonWorldStructures[j].type.indexOf("Ancient") != 1) {
-                descriptionDiv.innerHTML +=
-                    "Combat Enchantments depend on story event choices when entering the Ancient Wonder. <br><br>";
-            }
-            unitTypesDiv = document.getElementById("affectUnitTypes");
+    imagelink = document.getElementById("modicon");
 
-            unitTypesDiv.setAttribute(
-                "style",
-                "float: left;display: grid;grid-template-columns: 200px 200px;font-size: 15px;"
-            );
-            FindCombatEnchantment(a);
+    if (structure.type.indexOf("wonder") != -1) {
+        imagelink.remove();
+    } else {
+        imagelink.setAttribute("src", "/evolved/Icons/WorldStructures/" + a + ".png");
+        imagelink.setAttribute("id", "modicon" + a);
+        imagelink.setAttribute("style", "background-image: none");
+    }
+    descriptionDiv.innerHTML = "";
+    if (structure.type.indexOf("Ancient") != 1) {
+        descriptionDiv.innerHTML +=
+            "Combat Enchantments depend on story event choices when entering the Ancient Wonder. <br><br>";
+    }
+    unitTypesDiv = document.getElementById("affectUnitTypes");
 
-            if ("unit_unlocks" in jsonWorldStructures[j]) {
-                description += "<br>Rally Units:<br>";
-                for (var x = 0; x < jsonWorldStructures[j].unit_unlocks.length; x++) {
-                    var div = document.createElement("DIV");
-                    div.setAttribute("style", "margin-right: 20px;");
-                    div.innerHTML =
-                        '<a href="/evolved/HTML/Units.html?unit=' +
-                        jsonWorldStructures[j].unit_unlocks[x].slug +
-                        '" target="_blank">' +
-                        GetUnitTierAndName(jsonWorldStructures[j].unit_unlocks[x].slug) +
-                        "</a>" +
-                        "</bullet>";
-                    unitTypesDiv.appendChild(div);
-                }
-            }
-            unitTypesDiv.setAttribute("id", "affectUnitTypes" + a);
+    unitTypesDiv.setAttribute("style", "float: left;display: grid;grid-template-columns: 200px 200px;font-size: 15px;");
+    FindCombatEnchantment(a);
 
-            descriptionDiv.innerHTML += description;
-
-            descriptionDiv.setAttribute("id", "modicon" + a);
-
-            preview = document.getElementById("structurepreview");
-            preview.setAttribute("src", "/evolved/Icons/StructurePics/" + a + ".png");
-            preview.setAttribute("id", "structurepreview" + a);
-
-            tier = document.getElementById("modtier");
-
-            tier.setAttribute("id", "modtier" + a);
-            tier.innerHTML = "";
-
-            cost = document.getElementById("modcost");
-
-            var tomeOrigin = document.getElementById("originTome");
-            var tomeOriginIcon = document.getElementById("originTomeIcon");
-            tomeOrigin.setAttribute("id", "originTome" + a);
-            tomeOriginIcon.setAttribute("id", "originTomeIcon" + a);
-
-            cost.setAttribute("id", "modcost" + a);
-            cost.innerHTML = "";
-
-            // find combat enchantment
-            found = true;
+    if ("unit_unlocks" in structure) {
+        description += "<br>Rally Units:<br>";
+        for (var x = 0; x < structure.unit_unlocks.length; x++) {
+            var div = document.createElement("DIV");
+            div.setAttribute("style", "margin-right: 20px;");
+            div.innerHTML =
+                '<a href="/evolved/HTML/Units.html?unit=' +
+                structure.unit_unlocks[x].slug +
+                '" target="_blank">' +
+                GetUnitTierAndName(structure.unit_unlocks[x].slug) +
+                "</a>" +
+                "</bullet>";
+            unitTypesDiv.appendChild(div);
         }
     }
-    if (found === false) {
-        console.log("Couldn't find structure world: " + a);
-    }
+    unitTypesDiv.setAttribute("id", "affectUnitTypes" + a);
+
+    descriptionDiv.innerHTML += description;
+
+    descriptionDiv.setAttribute("id", "modicon" + a);
+
+    preview = document.getElementById("structurepreview");
+    preview.setAttribute("src", "/evolved/Icons/StructurePics/" + a + ".png");
+    preview.setAttribute("id", "structurepreview" + a);
+
+    tier = document.getElementById("modtier");
+
+    tier.setAttribute("id", "modtier" + a);
+    tier.innerHTML = "";
+
+    cost = document.getElementById("modcost");
+
+    var tomeOrigin = document.getElementById("originTome");
+    var tomeOriginIcon = document.getElementById("originTomeIcon");
+    tomeOrigin.setAttribute("id", "originTome" + a);
+    tomeOriginIcon.setAttribute("id", "originTomeIcon" + a);
+
+    cost.setAttribute("id", "modcost" + a);
+    cost.innerHTML = "";
 }
 
 function FindCombatEnchantment(id) {
@@ -6845,8 +6931,8 @@ function backtraceStructureToTomeNameAndTier(structure) {
                         if ("affinities" in jsonTomes[j]) {
                             array.push(
                                 ClearAffinityExtraTags(duplicateTags(jsonTomes[j].affinities)).replaceAll(",", "") +
-                                    "<br> " +
-                                    jsonTomes[j].name
+                                "<br> " +
+                                jsonTomes[j].name
                             );
                         } else {
                             array.push(jsonTomes[j].name);

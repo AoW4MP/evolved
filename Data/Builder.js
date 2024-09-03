@@ -3476,16 +3476,16 @@ function getSummonedUpkeep(tier, lowMaintenance) {
     }
     if (tier === 4) {
         if (lowMaintenance != "") {
-            return ReduceUpkeepPercentage("30<mana></mana> 3<influence></influence>", lowMaintenance);
+            return ReduceUpkeepPercentage("30<mana></mana> 5<influence></influence>", lowMaintenance);
         } else {
-            return "30<mana></mana> 3<influence></influence>";
+            return "30<mana></mana> 5<influence></influence>";
         }
     }
     if (tier === 5) {
         if (lowMaintenance != "") {
-            return ReduceUpkeepPercentage("60<mana></mana> 7<influence></influence>", lowMaintenance);
+            return ReduceUpkeepPercentage("60<mana></mana> 10<influence></influence>", lowMaintenance);
         } else {
-            return "60<mana></mana> 7<influence></influence>";
+            return "60<mana></mana> 10<influence></influence>";
         }
     }
 }

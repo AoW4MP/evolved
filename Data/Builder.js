@@ -1291,6 +1291,8 @@ function GetAbilityBackground(abilityDam) {
             var abilityIconType = "ability_icon_spirit";
         } else if (splitDamageString[0].indexOf("fire") != -1) {
             var abilityIconType = "ability_icon_fire";
+        } else if (splitDamageString[0].indexOf("lightning") != -1) {
+            var abilityIconType = "ability_icon_light";
         } else {
             var abilityIconType = "ability_icon";
         }
@@ -5208,9 +5210,7 @@ function showCosmicHappening(a) {
             preview.className = "cosmicHappeningPic";
             preview.setAttribute("style", 'background-image: url("/evolved/Icons/CosmicHappenings/' + imagePos);
 
-            var extraImage = document.createElement("IMG");
-            extraImage.setAttribute("src", "/evolved/Icons/Interface/RuneCircle.png");
-            extraImage.setAttribute("style", "width:250px; z-index:2");
+            preview.setAttribute("src", "/evolved/Icons/Interface/Runecircle.png");
 
             var modtier = document.getElementById("modtier");
             modtier.innerHTML = "Category: " + jsonCosmicHappenings[j].category;
@@ -5225,7 +5225,7 @@ function showCosmicHappening(a) {
             }
             modcost.innerHTML = "Duration: " + duration;
             modcost.setAttribute("id", "img" + a);
-            //imagelink.insertBefore(extraImage);
+
             // find combat enchantment
             found = true;
         }

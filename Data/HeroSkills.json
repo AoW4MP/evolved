@@ -2299,8 +2299,12 @@
   "level_name": "<hyperlink>Novice Hero Skill</hyperlink>",
   "icon": "cull_the_weak_2",
   "type": "normal",
-  "resid": 4514010630552,
-  "description": "Hero gains the Cull the Weak ability."
+  "abilities": [
+   {
+    "slug": "cull_the_weak"
+   }
+  ],
+  "resid": 4514010630552
  },
  {
   "id": "grim_executioner",
@@ -4581,6 +4585,6 @@
   "icon": "warlord",
   "type": "normal",
   "resid": -8277668028376677931,
-  "description": "This unit gains:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+10% damage</bullet><bullet>+1 Defense</bullet><bullet>+1 Resistance</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+10% damage</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>"
  }
 ]

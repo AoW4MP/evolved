@@ -2239,7 +2239,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -2300,7 +2300,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -2361,7 +2361,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -2422,7 +2422,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -2483,7 +2483,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -2544,7 +2544,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -2605,7 +2605,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -7545,9 +7545,9 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "For 3 <turn></turn> Turns, target friendly Animal unit gains:<bulletlist><bullet>Killing Momentum</bullet><bullet>2 Strengthened.</bullet></bulletlist>",
-  "name": "Unleash the Beast",
-  "slug": "unleash_the_beast_wildspeaker",
+  "description": "Target friendly Animal unit:<bulletlist><bullet>Heals +30 <temphp></temphp> Temporary Hit Points.</bullet><bullet>Has their negative status effects removed.</bullet></bulletlist>",
+  "name": "Soothe Animal",
+  "slug": "soothe_animal_wildspeaker",
   "damage": "",
   "requisites": [
    {
@@ -7556,8 +7556,8 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
-  "icon": "unleash_the_beast_wildspeaker"
+  "range": "4",
+  "icon": "soothe_animal_wildspeaker"
  },
  {
   "notes": [
@@ -8604,7 +8604,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -8671,7 +8671,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -8809,7 +8809,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -11248,10 +11248,20 @@
   "icon": "shoot_crossbow_houndmaster"
  },
  {
-  "description": "At the start of battle, summons a War Hound that inflicts Marked and Sundered Defense with its attack.",
-  "name": "Unleash the Hounds",
-  "slug": "unleash_the_hounds",
-  "icon": "unleash_the_hounds"
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "Summon a loyal War Hound to your side.<br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Call War Hound",
+  "slug": "call_war_hound_houndmaster",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "1",
+  "icon": "call_war_hound_houndmaster"
  },
  {
   "description": "At the start of each <turn></turn> <hyperlink>Turn</hyperlink> summons a random Tier II Animal unit.<br></br>This summon lasts for 3 <turn></turn> Turns.",
@@ -11547,7 +11557,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -12135,7 +12145,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_attunement",
   "damage": "",
@@ -12202,7 +12212,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_potential",
   "damage": "",
@@ -12258,7 +12268,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_summoning",
   "damage": "",
@@ -14351,7 +14361,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "2",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -17727,7 +17737,7 @@
     "note": "Starts on cooldown: 1<turn></turn>"
    }
   ],
-  "description": "<bulletlist><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet><bullet>Enter <hyperlink>Defense Mode</hyperlink>.</bullet></bulletlist>",
+  "description": "Refresh all your ability cooldowns and once-per-combat abilities.",
   "name": "Weaver",
   "slug": "weaver_weaver",
   "damage": "",
@@ -17737,7 +17747,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<freeaction></freeaction>",
   "range": "0",
   "icon": "weaver_weaver"
  },

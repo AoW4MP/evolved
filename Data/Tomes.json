@@ -3487,7 +3487,7 @@
  {
   "passives": [
    {
-    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +10 <food></food> <hyperlink>Food</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +20 <food></food> <hyperlink>Food</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +30 <food></food> <hyperlink>Food</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation2></reputation2>Slightly Evil: +10 <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +20 <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +30 <gold></gold> <hyperlink>Gold</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
+    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +5 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +10 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +20 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation2></reputation2>Slightly Evil: +5 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +10 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +20 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
     "name": "Alignment Agenda",
     "type": ""
    }
@@ -3783,7 +3783,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>After 1 <turn></turn> in battle, 3 enemy non-<hyperlink>Hero</hyperlink> units are Mind-Controlled until the end of combat.</bullet><bullet>The city suffers -50 <happiness></happiness> <hyperlink>City Stability</hyperlink> while it is besieged.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>After 1 <turn></turn> in battle, 3 enemy non-<hyperlink>Hero</hyperlink> units are Final Ultimatum until the end of combat.</bullet><bullet>The city suffers -50 <happiness></happiness> <hyperlink>City Stability</hyperlink> while it is besieged.</bullet></bulletlist>",
     "name": "Incite Rebellion",
     "tier": 9,
     "type": "<hyperlink>Siege Project</hyperlink>"
@@ -4322,7 +4322,7 @@
     "upgrade_slug": "barons_palace"
    },
    {
-    "description": "Target enemy unit that is Tier III or lower:<bulletlist><bullet>Has a base % chance of becoming permanently mind controlled.</bullet><bullet>If resisted, it suffers 40 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.</bullet></bulletlist>",
+    "description": "Target non-Hero unit with <happiness></happiness> <hyperlink>Morale</hyperlink> of \\\"Low\\\" or worse:<bulletlist><bullet>Has a chance of becoming permanently mind controlled.</bullet><bullet>The lower the target unit's <happiness></happiness> <hyperlink>Morale</hyperlink> is, the more this chance increases.</bullet><bullet>If successful, it gains <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If resisted, it suffers 40 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.</bullet></bulletlist>",
     "name": "Final Ultimatum",
     "spell_slug": "final_ultimatum",
     "tier": 5,

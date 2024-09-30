@@ -5770,7 +5770,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "final_ultimatum",
   "tactical": true,
-  "description": "Target enemy unit that is Tier III or lower:<bulletlist><bullet>Has a base 60% chance of becoming permanently mind controlled.</bullet><bullet>If resisted, it suffers 40 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.</bullet></bulletlist>",
+  "description": "Target non-Hero unit with <happiness></happiness> <hyperlink>Morale</hyperlink> of \\\"Low\\\" or worse:<bulletlist><bullet>Has a chance of becoming permanently mind controlled.</bullet><bullet>The lower the target unit's <happiness></happiness> <hyperlink>Morale</hyperlink> is, the more this chance increases.</bullet><bullet>If successful, it gains <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If resisted, it suffers 40 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.</bullet></bulletlist>",
   "name": "Final Ultimatum",
   "operation_point_cost": 30,
   "icon": "final_ultimatum"

@@ -328,6 +328,71 @@
   "display_order": 8
  },
  {
+  "biography_description": "They soar through the sky on majestic Pegasi.",
+  "lore_description": "<helpcolor>Mounted units are more common and gain a Pegasus mount.</helpcolor>",
+  "DLC": "HERALDOFGLORY ",
+  "point_cost": 3,
+  "id": "pegasus_mounts",
+  "name": "Pegasus Mounts",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Gain Flying movement."
+   },
+   {
+    "name": "Additional units become Cavalry"
+   },
+   {
+    "name": "Ruler starts with a Pegasus mount"
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "MOUNT",
+  "front_end": true,
+  "icon": "pegasus_mounts",
+  "display_order": 0
+ },
+ {
+  "affinities": [
+   {
+    "name": "1<chaos></chaos> Chaos Affinity"
+   }
+  ],
+  "biography_description": "Ever on the move, travel is at the heart of their culture.",
+  "lore_description": "They are ever on the move, with travel at the heart of their culture.",
+  "DLC": "HERALDOFGLORY ",
+  "point_cost": 1,
+  "id": "swift_marchers",
+  "name": "Swift Marchers",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "<hyperlink>Forced March</hyperlink> inflicts no damage to your <hyperlink>Units</hyperlink>."
+   },
+   {
+    "name": "<hyperlink.RoutingConcept.HeroConcept>Routed</hyperlink> units are never lost."
+   },
+   {
+    "name": "All units gain Road Walk."
+   }
+  ],
+  "enabled": true,
+  "type": "society",
+  "group_name": "",
+  "front_end": true,
+  "display_order": 5,
+  "starting_bonuses": [
+   {
+    "empire_progression_slug": "forced_march"
+   },
+   {
+    "description": "Start with an extra Scout Unit."
+   }
+  ],
+  "icon": "swift_marchers"
+ },
+ {
   "lore_description": "<helpcolor>Reduces the resistance to magic and status effects of nearby units.</helpcolor>",
   "biography_description": "They have a grisly stench following them.",
   "point_cost": 3,

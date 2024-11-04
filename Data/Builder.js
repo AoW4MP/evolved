@@ -67,7 +67,10 @@ var jsonSiegeProjects,
     jsonBuilderLookUp,
     jsonExtraAscendedInfo,
     jsonItemForge,
-    jsonCosmicHappenings;
+    jsonCosmicHappenings,
+    jsonHeroSkillsBeta,
+    jsonAbilitiesBeta,
+    jsonBuilderHeroLookUp;
 
 async function GetAllData() {
     const jsonFilePaths = [
@@ -90,7 +93,10 @@ async function GetAllData() {
         "/evolved/Data/BuilderLookup.json",
         "/evolved/Data/AscendedInfo.json",
         "/evolved/Data/ItemForge.json",
-        "/evolved/Data/CosmicHappenings.json"
+        "/evolved/Data/CosmicHappenings.json",
+        "/evolved/Data/BuilderLookupHero.json",
+        "/evolved/OpenBetaDeleteLater/HeroSkills.json",
+        "/evolved/OpenBetaDeleteLater/Abilities.json"
     ];
     await fetchJsonFiles(jsonFilePaths)
         .then((dataArray) => {
@@ -136,6 +142,12 @@ async function GetAllData() {
                     jsonItemForge = data;
                 } else if (index == 19) {
                     jsonCosmicHappenings = data;
+                } else if (index == 20) {
+                    jsonBuilderHeroLookUp = data;
+                } else if (index == 21) {
+                    jsonHeroSkillsBeta = data;
+                } else if (index == 22) {
+                    jsonAbilitiesBeta = data;
                 }
             });
         })

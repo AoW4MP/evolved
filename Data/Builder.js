@@ -4382,9 +4382,9 @@ function showTome(a, div) {
                     var affinities = affinitiesdual[i].split(" ");
                     // add a new line for each additional affinity
                     if (i !== 0) {
-                        allAffinity += "<br>"
+                        allAffinity += "<br>";
                     }
-                    // example output: +1 <empirenature></empirenature> Nature Affinity 
+                    // example output: +1 <empirenature></empirenature> Nature Affinity
                     allAffinity += `+${affinities[0]} ${affinities[1]} ${affinities[3]} ${affinities[4]}`;
                 }
                 div.innerHTML = allAffinity;

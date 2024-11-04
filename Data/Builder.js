@@ -5149,6 +5149,16 @@ function showStructure(a, showOrigin) {
                     GetUnitTierAndName("inferno_hound") +
                     "</a>" +
                     "</bullet>";
+                    unitTypesDiv.append(div);
+                    var div = document.createElement("DIV");
+                    div.innerHTML =
+                        "<bullet>" +
+                        '<a href="/evolved/HTML/Units.html?unit=' +
+                        "nightmare" +
+                        '" target="_blank">' +
+                        GetUnitTierAndName("nightmare") +
+                        "</a>" +
+                        "</bullet>";
                 unitTypesDiv.append(div);
                 var div = document.createElement("DIV");
                 div.innerHTML =
@@ -5160,6 +5170,15 @@ function showStructure(a, showOrigin) {
                     "</a>" +
                     "</bullet>";
                 unitTypesDiv.append(div);
+                var div = document.createElement("DIV");
+                div.innerHTML =
+                    "<bullet>" +
+                    '<a href="/evolved/HTML/Units.html?unit=' +
+                    "infernal_juggernaut" +
+                    '" target="_blank">' +
+                    GetUnitTierAndName("infernal_juggernaut") +
+                    "</a>" +
+                    "</bullet>";
             }
 
             var upkeep = document.getElementById("modupkeep");

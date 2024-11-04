@@ -1,5 +1,90 @@
 [
  {
+  "lore_description": "<helpcolor>Units more likely to critically hit.</helpcolor>",
+  "biography_description": "Their happy demeanor makes them fearsome combatants.",
+  "point_cost": 2,
+  "id": "cheerful",
+  "name": "Cheerful",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "<happiness></happiness> <hyperlink>Morale</hyperlink> gain is increased by 50%"
+   }
+  ],
+  "enabled": true,
+  "group_name": "MORALE",
+  "front_end": true,
+  "icon": "cheerful",
+  "type": "form",
+  "display_order": 8
+ },
+ {
+  "lore_description": "<helpcolor>Melee attackers sustain <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</helpcolor>",
+  "biography_description": "Lightning runs through their veins, zapping those who dare to harm them.",
+  "point_cost": 2,
+  "id": "inner_lightning",
+  "name": "Inner Lightning",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+3 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink>."
+   },
+   {
+    "name": "Melee attackers sustain 3 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "group_name": "DAMAGE_RETALIATION",
+  "front_end": true,
+  "icon": "inner_lightning",
+  "type": "form",
+  "display_order": 8
+ },
+ {
+  "lore_description": "<helpcolor>Melee attackers sustain <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</helpcolor>",
+  "biography_description": "Their skin is cold to the touch, causing frostbite to those who get too close.",
+  "point_cost": 2,
+  "id": "inner_frost",
+  "name": "Inner Frost",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+3 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink>."
+   },
+   {
+    "name": "Melee attackers sustain 3 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "group_name": "DAMAGE_RETALIATION",
+  "front_end": true,
+  "icon": "inner_frost",
+  "type": "form",
+  "display_order": 8
+ },
+ {
+  "lore_description": "<helpcolor>Melee attackers sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</helpcolor>",
+  "biography_description": "Their boiling blood scorches anyone who dares to wound them.",
+  "point_cost": 2,
+  "id": "inner_fire",
+  "name": "Inner Fire",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+3 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink>."
+   },
+   {
+    "name": "Melee attackers sustain 3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "group_name": "DAMAGE_RETALIATION",
+  "front_end": true,
+  "icon": "inner_fire",
+  "type": "form",
+  "display_order": 8
+ },
+ {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Raptor mount.</helpcolor>",
   "biography_description": "They have tamed the elusive Swiftfoot Raptors.",
   "point_cost": 5,
@@ -80,7 +165,7 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gain Flying."
+    "name": "Units have Flying."
    },
    {
     "name": "Decreased number of units in formation."
@@ -108,9 +193,6 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
-   },
-   {
     "name": "Additional units become Cavalry"
    }
   ],
@@ -137,10 +219,10 @@
     "name": "Decreased number of units in formation."
    },
    {
-    "name": "Gain the Juggernaut passive."
+    "name": "Gain the Juggernaut ability."
    },
    {
-    "name": "Gain Large Target."
+    "name": "Gains Large Target."
    },
    {
     "name": "Additional units become Cavalry"
@@ -172,10 +254,13 @@
     "name": "+4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink>."
    },
    {
-    "name": "Gain the Juggernaut passive."
+    "name": "Decreased number of units in formation."
    },
    {
-    "name": "Gain Large Target."
+    "name": "Gain the Juggernaut ability."
+   },
+   {
+    "name": "Gains Large Target."
    },
    {
     "name": "Additional units become Cavalry"
@@ -328,16 +413,141 @@
   "display_order": 8
  },
  {
+  "lore_description": "<helpcolor>Reduces the resistance to magic and status effects of nearby units.</helpcolor>",
+  "biography_description": "They have a grisly stench following them.",
+  "point_cost": 4,
+  "id": "hideous_stench",
+  "name": "Hideous Stench",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Adjacent enemies without this trait suffer:<bulletlist><bullet>-2 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet>"
+   }
+  ],
+  "enabled": true,
+  "group_name": "",
+  "front_end": true,
+  "icon": "hideous_stench",
+  "type": "form",
+  "display_order": 6
+ },
+ {
+  "affinities": [
+   {
+    "name": "1<order></order> Order Affinity"
+   }
+  ],
+  "biography_description": "Where the land is infested, they strike with lawful strength.",
+  "lore_description": "They keep the lands safe and restore balance between warring neighbors.",
+  "point_cost": 1,
+  "id": "_pantheon___vigilante_knights",
+  "name": "<Pantheon></Pantheon> Vigilante Knights",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Completing <hyperlink>Bounties</hyperlink> grants +50% <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> and an additional 100 <influence></influence> <hyperlink>Imperium</hyperlink> as rewards."
+   },
+   {
+    "name": "Whenever you have no <hyperlink>Bounties</hyperlink> active, gain a bounty offer targeting a nearby existing <hyperlink>Infestation</hyperlink> that hasn't been targeted before. It will not generate a new bounty if no more Infestations can be found."
+   }
+  ],
+  "enabled": true,
+  "type": "society",
+  "group_name": "",
+  "front_end": false,
+  "display_order": 6,
+  "starting_bonuses": [
+   {
+    "description": "Starting <hyperlink>Units</hyperlink> gain +1 rank."
+   }
+  ],
+  "icon": "_pantheon___vigilante_knights"
+ },
+ {
+  "affinities": [
+   {
+    "name": "1<shadow></shadow> Shadow Affinity"
+   }
+  ],
+  "biography_description": "They elevate their heroes above the masses, empowered through dark elation.",
+  "lore_description": "They believe in the might of their heroes, the chosen few, elevated above the masses.",
+  "point_cost": 1,
+  "id": "_pantheon___cult_of_personality",
+  "name": "<Pantheon></Pantheon> Cult of Personality",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "<hyperlink>Heroes</hyperlink> gain a bonus Skill Point whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
+   },
+   {
+    "name": "<hyperlink>Unit</hyperlink> in an <hyperlink>Army</hyperlink> without a Hero suffer -10 <happiness></happiness> <hyperlink>Morale</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "society",
+  "group_name": "",
+  "front_end": false,
+  "display_order": 1,
+  "starting_bonuses": [
+   {
+    "description": "Start with +1 <unitHero></unitHero> <hyperlink>Hero Cap</hyperlink> and +3 Hero Cap for Pantheon heroes."
+   }
+  ],
+  "icon": "_pantheon___cult_of_personality"
+ },
+ {
+  "biography_description": "It is said that the Umbral Thralls were once a free civilization governed by a benevolent hivemind. Yet through <hyperlink>Urrath's eldritch lashes</hyperlink>, the minds of the Umbral Thralls became enchained, and their hive was twisted into an instrument of enslavement. As will-less drones they serve as unceasing warriors, laborers, or as a harvest of souls to satiate the hunger of the <hyperlink>Umbral Demons</hyperlink>. Their swarm carries the gloom to other realms, so that other free peoples across the <hyperlink>Astral Sea</hyperlink> might share the same terrible fate.",
+  "lore_description": "It is said that the Umbral Thralls were once a free civilization governed by a benevolent hivemind. Yet through <hyperlink>Urrath's eldritch lashes</hyperlink>, the minds of the Umbral Thralls became enchained, and their hive was twisted into an instrument of enslavement. As will-less drones they serve as unceasing warriors, laborers, or as a harvest of souls to satiate the hunger of the <hyperlink>Umbral Demons</hyperlink>. Their swarm carries the gloom to other realms, so that other free peoples across the <hyperlink>Astral Sea</hyperlink> might share the same terrible fate.",
+  "DLC": "ELDRITCHREALMS ",
+  "point_cost": 1,
+  "id": "umbral_thralls",
+  "name": "Umbral Thralls",
+  "incompatible_society_traits": [
+   {
+    "name": "Chosen Uniters <goodact></goodact>"
+   },
+   {
+    "name": "Devotees of Good <goodact></goodact>"
+   },
+   {
+    "name": "Keepers of Knowledge <goodact></goodact>"
+   }
+  ],
+  "screen_description": "These are the Initiates of the Umbral Abyss, who use otherworldly magic that mutates them with extra limbs. Their pact with the abyss makes their flesh twisted and immune to the Umbral Malady.",
+  "effect_descriptions": [
+   {
+    "name": "This race are designated thralls for all <hyperlink>Umbral Dwellings</hyperlink> in the realm and will primarily appear in the <hyperlink>Umbral Abyss</hyperlink>."
+   }
+  ],
+  "enabled": false,
+  "type": "society",
+  "group_name": "",
+  "front_end": false,
+  "display_order": -1,
+  "affinities": [
+   {
+    "name": "-100<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
+   }
+  ],
+  "icon": "umbral_thralls"
+ },
+ {
   "biography_description": "They soar through the sky on majestic Pegasi.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Pegasus mount.</helpcolor>",
   "DLC": "HERALDOFGLORY ",
-  "point_cost": 3,
+  "point_cost": 6,
   "id": "pegasus_mounts",
   "name": "Pegasus Mounts",
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain Flying movement."
+    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+   },
+   {
+    "name": "Units have Flying."
+   },
+   {
+    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -351,7 +561,36 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "pegasus_mounts",
-  "display_order": 0
+  "display_order": 3
+ },
+ {
+  "biography_description": "They have tamed the tunneling Death Beetles.",
+  "lore_description": "<helpcolor>Mounted units are more common and gain a Death Beetle mount.</helpcolor>",
+  "DLC": "ELDRITCHREALMS ",
+  "point_cost": 5,
+  "id": "death_beetle_mounts",
+  "name": "Death Beetle Mounts",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
+   },
+   {
+    "name": "Gain the Pestilent Escape ability."
+   },
+   {
+    "name": "Additional units become Cavalry"
+   },
+   {
+    "name": "Ruler starts with a Death Beetle mount."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "MOUNT",
+  "front_end": true,
+  "icon": "death_beetle_mounts",
+  "display_order": 4
  },
  {
   "affinities": [
@@ -393,90 +632,6 @@
   "icon": "swift_marchers"
  },
  {
-  "lore_description": "<helpcolor>Reduces the resistance to magic and status effects of nearby units.</helpcolor>",
-  "biography_description": "They have a grisly stench following them.",
-  "point_cost": 3,
-  "id": "hideous_stench",
-  "name": "Hideous Stench",
-  "screen_description": "",
-  "effect_descriptions": [
-   {
-    "name": "Adjacent enemies without this trait suffer:<bulletlist><bullet>-2 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet>"
-   }
-  ],
-  "enabled": true,
-  "group_name": "",
-  "front_end": true,
-  "icon": "hideous_stench",
-  "type": "form",
-  "display_order": 7
- },
- {
-  "biography_description": "It is said that the Umbral Thralls were once a free civilization governed by a benevolent hivemind. Yet through <hyperlink>Urrath's eldritch lashes</hyperlink>, the minds of the Umbral Thralls became enchained, and their hive was twisted into an instrument of enslavement. As will-less drones they serve as unceasing warriors, laborers, or as a harvest of souls to satiate the hunger of the <hyperlink>Umbral Demons</hyperlink>. Their swarm carries the gloom to other realms, so that other free peoples across the <hyperlink>Astral Sea</hyperlink> might share the same terrible fate.",
-  "lore_description": "It is said that the Umbral Thralls were once a free civilization governed by a benevolent hivemind. Yet through <hyperlink>Urrath's eldritch lashes</hyperlink>, the minds of the Umbral Thralls became enchained, and their hive was twisted into an instrument of enslavement. As will-less drones they serve as unceasing warriors, laborers, or as a harvest of souls to satiate the hunger of the <hyperlink>Umbral Demons</hyperlink>. Their swarm carries the gloom to other realms, so that other free peoples across the <hyperlink>Astral Sea</hyperlink> might share the same terrible fate.",
-  "DLC": "ELDRITCHREALMS ",
-  "point_cost": 1,
-  "id": "umbral_thralls",
-  "name": "Umbral Thralls",
-  "incompatible_society_traits": [
-   {
-    "name": "Chosen Uniters <goodact></goodact>"
-   },
-   {
-    "name": "Devotees of Good <goodact></goodact>"
-   },
-   {
-    "name": "Keepers of Knowledge <goodact></goodact>"
-   }
-  ],
-  "screen_description": "These are the Initiates of the Umbral Abyss, who use otherworldly magic that mutates them with extra limbs. Their pact with the abyss makes their flesh twisted and immune to the Umbral Malady.",
-  "effect_descriptions": [
-   {
-    "name": "This race are designated thralls for all <hyperlink>Umbral Dwellings</hyperlink> in the realm and will primarily appear in the <hyperlink>Umbral Abyss</hyperlink>."
-   }
-  ],
-  "enabled": false,
-  "type": "society",
-  "group_name": "",
-  "front_end": false,
-  "display_order": -1,
-  "affinities": [
-   {
-    "name": "-100<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
-   }
-  ],
-  "icon": "umbral_thralls"
- },
- {
-  "biography_description": "They have tamed the tunneling Death Beetles.",
-  "lore_description": "<helpcolor>Mounted units are more common and gain a Death Beetle mount.</helpcolor>",
-  "DLC": "ELDRITCHREALMS ",
-  "point_cost": 5,
-  "id": "death_beetle_mounts",
-  "name": "Death Beetle Mounts",
-  "screen_description": "",
-  "effect_descriptions": [
-   {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
-   },
-   {
-    "name": "Gain the Pestilent Escape ability."
-   },
-   {
-    "name": "Additional units become Cavalry"
-   },
-   {
-    "name": "Ruler starts with a Death Beetle mount."
-   }
-  ],
-  "enabled": true,
-  "type": "form",
-  "group_name": "MOUNT",
-  "front_end": true,
-  "icon": "death_beetle_mounts",
-  "display_order": 4
- },
- {
   "biography_description": "Their vast knowledge earns them power and respect throughout the realms.",
   "lore_description": "They know knowledge is power, and power demands respect.",
   "point_cost": 1,
@@ -491,12 +646,6 @@
   "effect_descriptions": [
    {
     "name": "Unlocking a new Research Skill grants +10 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> with all <minorcity></minorcity><hyperlink>Free Cities</hyperlink> to whom you have assigned a <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>."
-   },
-   {
-    "name": "Gain +100 <hyperlink>Empire Relations</hyperlink> with all <minorcity></minorcity><hyperlink>Free Cities</hyperlink> and <hyperlink>Empires</hyperlink> for 15 <turn></turn> <hyperlink>Turns</hyperlink> when unlocking a new <hyperlink>Tome</hyperlink>."
-   },
-   {
-    "name": "Gain +20 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> for each <hyperlink>Open Borders</hyperlink> <hyperlink>Treaty</hyperlink> with another <hyperlink>Empire</hyperlink>."
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"
@@ -664,10 +813,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain +1 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Marauder</hyperlink> or <minorcity></minorcity><hyperlink>Free City</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat."
+    "name": "Gain 1 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Marauder</hyperlink> or <minorcity></minorcity><hyperlink>Free City</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat."
    },
    {
-    "name": "Gain +2 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Empire</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat.<br></br>This reward increases by +1 for each level of <evilact></evilact>evil <hyperlink>Alignment</hyperlink> of the Faction they belonged to."
+    "name": "Gain 2 <influence></influence> <hyperlink>Imperium</hyperlink> for each <hyperlink>Empire</hyperlink> <hyperlink>Unit</hyperlink> killed after successful combat.<br></br>This reward increases by +1 for each level of <evilact></evilact>evil <hyperlink>Alignment</hyperlink> of the Faction they belonged to."
    },
    {
     "name": "Gain +30 <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against players with an <evilact></evilact>evil <hyperlink>Alignment</hyperlink>."
@@ -908,7 +1057,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1593,7 +1742,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Cities gain +15 <unitprod></unitprod> Draft and your empire gains +5 <influence></influence> Imperium per level of Evil Alignment."
+    "name": "Cities gain ++15 <unitprod></unitprod> Draft and your empire gains ++5 <influence></influence> Imperium per level of Evil Alignment."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
@@ -1617,7 +1766,7 @@
   ],
   "starting_bonuses": [
    {
-    "description": "Start with an extra Shock Unit or Shield Unit."
+    "description": "Start with an extra Shield Unit or Polearm Unit."
    }
   ],
   "icon": "scions_of_evil__evilact__"
@@ -1636,7 +1785,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
+    "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a City."
    },
    {
     "name": "Cities gain +20% <structureprod></structureprod> <hyperlink>Production</hyperlink> per annexed <hyperlink>Ancient Wonders</hyperlink>."
@@ -1902,7 +2051,7 @@
   ],
   "starting_bonuses": [
    {
-    "description": "Start with 1 extra Combat Spell unlocked."
+    "description": "Start with 1 extra Spell unlocked."
    }
   ],
   "icon": "gifted_casters"
@@ -1970,7 +2119,7 @@
   "display_order": 5,
   "starting_bonuses": [
    {
-    "empire_progression_slug": "skilled_raiders"
+    "description": "Get 2 random hero items."
    }
   ],
   "icon": "ruthless_raiders__evilact__"
@@ -2183,7 +2332,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks."
+    "name": "Repeating <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>."
+   },
+   {
+    "name": "Non-repeating <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2196,7 +2348,7 @@
  {
   "lore_description": "<helpcolor>Reduce damage from magical attacks.</helpcolor>",
   "biography_description": "They have a natural armor against magical damage.",
-  "point_cost": 4,
+  "point_cost": 5,
   "id": "resistant",
   "name": "Resistant",
   "screen_description": "",
@@ -2210,7 +2362,7 @@
   "front_end": true,
   "icon": "resistant",
   "type": "form",
-  "display_order": 6
+  "display_order": 5
  },
  {
   "affinities": [
@@ -2405,7 +2557,7 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gain the Phase ability."
+    "name": "Gain the Weakening Phase ability."
    },
    {
     "name": "Gain the Inspiring Killer passive."
@@ -2428,15 +2580,18 @@
   "lore_description": "<helpcolor>Mounted units are more common and gain a Spider mount.</helpcolor>",
   "biography_description": "They share a deep kinship with Spiders.",
   "point_cost": 5,
-  "id": "vampire_spider_mounts",
-  "name": "Vampire Spider Mounts",
+  "id": "dread_spider_mounts",
+  "name": "Dread Spider Mounts",
   "screen_description": "",
   "effect_descriptions": [
    {
     "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gain the Barbed Webs ability."
+    "name": "Gains the Web ability."
+   },
+   {
+    "name": "Gain the Swift passive."
    },
    {
     "name": "Additional units become Cavalry"
@@ -2448,7 +2603,7 @@
   "enabled": true,
   "group_name": "MOUNT",
   "front_end": true,
-  "icon": "vampire_spider_mounts",
+  "icon": "dread_spider_mounts",
   "type": "form",
   "display_order": 4
  },
@@ -2575,7 +2730,7 @@
  {
   "lore_description": "<helpcolor>Units take less damage from physical attacks.</helpcolor>",
   "biography_description": "They are tough and used to taking a few hits in battle.",
-  "point_cost": 4,
+  "point_cost": 5,
   "id": "tough",
   "name": "Tough",
   "screen_description": "",
@@ -2589,7 +2744,7 @@
   "front_end": true,
   "icon": "tough",
   "type": "form",
-  "display_order": 6
+  "display_order": 5
  },
  {
   "lore_description": "<helpcolor>Armies can fight longer on the world map.</helpcolor>",

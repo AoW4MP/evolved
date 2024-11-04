@@ -8,16 +8,11 @@
   "DLC": "ELDRITCHREALMS ",
   "lore_author": "Lithyl Nightweaver, Harbinger of Urrath",
   "name": "Tome of Corruption",
-  "hero_skills": [
-   {
-    "slug": "boon_stealing"
-   }
-  ],
-  "tier": 4,
+  "tier": 3,
   "icon": "tome_of_corruption",
   "skills": [
    {
-    "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>+20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>+20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist>",
     "name": "Throne of Insidious Whispers",
     "tier": 7,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -135,11 +130,6 @@
   "DLC": "PRIMALFURY ",
   "lore_author": "Tempest, Master of Storms",
   "name": "Tome of the Stormborne",
-  "hero_skills": [
-   {
-    "slug": "arcing_weapons"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_the_stormborne",
   "skills": [
@@ -196,11 +186,6 @@
   "DLC": "PRIMALFURY ",
   "lore_author": "Zaethyl, Wild Guardian of the First Elves",
   "name": "Tome of Fey Mists",
-  "hero_skills": [
-   {
-    "slug": "fey_blessing"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_fey_mists",
   "skills": [
@@ -263,15 +248,6 @@
   "name": "Primal - Tunneling Spider",
   "hero_skills": [
    {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "spider_primal_communion"
-   },
-   {
     "slug": "avatar_of_the_tunneling_spider"
    }
   ],
@@ -322,15 +298,6 @@
   "lore_author": "",
   "name": "Primal - Glacial Mammoth",
   "hero_skills": [
-   {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "mammoth_primal_communion"
-   },
    {
     "slug": "avatar_of_the_glacial_mammoth"
    }
@@ -383,15 +350,6 @@
   "name": "Primal - Storm Crow",
   "hero_skills": [
    {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "crow_primal_communion"
-   },
-   {
     "slug": "avatar_of_the_storm_crow"
    }
   ],
@@ -442,15 +400,6 @@
   "lore_author": "",
   "name": "Primal - Dune Serpent",
   "hero_skills": [
-   {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "serpent_primal_communion"
-   },
    {
     "slug": "avatar_of_the_dune_serpent"
    }
@@ -503,15 +452,6 @@
   "name": "Primal - Ash Sabertooth",
   "hero_skills": [
    {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "sabertooth_primal_communion"
-   },
-   {
     "slug": "avatar_of_the_ash_sabertooth"
    }
   ],
@@ -563,15 +503,6 @@
   "name": "Primal - Mire Crocodile",
   "hero_skills": [
    {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "crocodile_primal_communion"
-   },
-   {
     "slug": "avatar_of_the_mire_crocodile"
    }
   ],
@@ -579,7 +510,7 @@
   "icon": "primal_mire_crocodile",
   "skills": [
    {
-    "description": "Grant non-Culture units:<bulletlist><bullet>Mire Crocodile's Boon</bullet><bullet>Swamp Walk</bullet><bullet>Status Effect Immunity: Diseased</bullet></bulletlist>",
+    "description": "Grant non-Culture units:<bulletlist><bullet>Mire Crocodile's Boon</bullet><bullet>Swamp Walk</bullet><bullet></bulletlist></bullet>",
     "name": "Crocodile Primal Communion",
     "spell_slug": "crocodile_primal_communion",
     "tier": 3,
@@ -624,15 +555,6 @@
   "hero_skills": [
    {
     "slug": "avatar_of_the_sylvan_wolf"
-   },
-   {
-    "slug": "primal_frenzy"
-   },
-   {
-    "slug": "spiritual_healing"
-   },
-   {
-    "slug": "wolf_primal_communion"
    }
   ],
   "tier": 0,
@@ -667,6 +589,13 @@
   ]
  },
  {
+  "passives": [
+   {
+    "description": "<bulletlist><bullet>All <hyperlink>Burning Ground</hyperlink> becomes <hyperlink>Cleansing Flames</hyperlink></bullet><bullet>Slain enemy units create <hyperlink>Cleansing Flames</hyperlink> for 3 <turn></turn> Turns</bullet></bulletlist>",
+    "name": "Cleansing Flameherald",
+    "type": "<hyperlink>Tome Passive</hyperlink>"
+   }
+  ],
   "affinities": "1 <empireorder></empireorder> Empire Order Affinity, 1 <empirechaos></empirechaos> Empire Chaos Affinity",
   "lore_description": "\\\"Blessed be the light which burns inside the heart of the zealot, who channels the fire within and smites the wicked with wrathful flame. Fear not the scorching heat, for it purifies the corruption that resides within all. Wield the blazing sword, cast an inferno upon your enemies, and behold: where the flame has passed, only the faithful remain.\\\"",
   "gameplay_description": "Utilize the zeal of your troops to bathe the battlefield in cleansing flame that punishes the condemned and blesses the faithful.",
@@ -675,11 +604,6 @@
   "DLC": "ELDRITCHREALMS ",
   "lore_author": "Maliel, Archon Paladin of the Second Order",
   "name": "Tome of the Cleansing Flame",
-  "hero_skills": [
-   {
-    "slug": "cleansing_flameherald"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_the_cleansing_flame",
   "skills": [
@@ -691,7 +615,7 @@
     "upgrade_slug": "temple_of_the_pyre"
    },
    {
-    "description": "For <turn></turn> Turns in target <hyperlink>Province</hyperlink>:<bulletlist><bullet>When entering combat all enemy units suffer Condemned.</bullet><bullet>When entering combat create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
+    "description": "For <turn></turn> Turns in target <hyperlink>Province</hyperlink>:<bulletlist><bullet>When entering combat all enemy units suffer Burning.</bullet><bullet>When entering combat create <hyperlink>Cleansing Flames</hyperlink> on random hexes.</bullet></bulletlist>",
     "name": "Consecrating Firestorm",
     "spell_slug": "consecrating_firestorm",
     "tier": 6,
@@ -746,17 +670,6 @@
   "id": "mystic_school_of_summoning",
   "lore_author": "",
   "name": "Mystic - School of Summoning",
-  "hero_skills": [
-   {
-    "slug": "spirit_summoning"
-   },
-   {
-    "slug": "wisp_familiar"
-   },
-   {
-    "slug": "conjure_astral_ward"
-   }
-  ],
   "tier": 0,
   "icon": "mystic_school_of_summoning",
   "skills": [
@@ -795,17 +708,6 @@
   "id": "mystic_school_of_potential",
   "lore_author": "",
   "name": "Mystic - School of Potential",
-  "hero_skills": [
-   {
-    "slug": "ciphers_of_dissonance"
-   },
-   {
-    "slug": "sage_arcanist"
-   },
-   {
-    "slug": "overcharge_cast"
-   }
-  ],
   "tier": 0,
   "icon": "mystic_school_of_potential",
   "skills": [
@@ -824,7 +726,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>"
    },
    {
-    "description": "Grants non-Mystic Battlemage and Support units:<bulletlist><bullet>Ciphers of Dissonance, which inflicts Dissonance on enemy units.</bullet></bulletlist>",
+    "description": "Grants non-Mystic units:<bulletlist><bullet>Ciphers of Dissonance, which inflicts Dissonance on enemy units.</bullet></bulletlist>",
     "name": "Ciphers of Dissonance",
     "spell_slug": "ciphers_of_dissonance",
     "tier": 3,
@@ -851,17 +753,6 @@
   "id": "mystic_school_of_attunement",
   "lore_author": "",
   "name": "Mystic - School of Attunement",
-  "hero_skills": [
-   {
-    "slug": "overcharge_cast"
-   },
-   {
-    "slug": "resistance_training"
-   },
-   {
-    "slug": "attunement_star_blades"
-   }
-  ],
   "tier": 0,
   "icon": "mystic_school_of_attunement",
   "skills": [
@@ -902,12 +793,7 @@
   "DLC": "ELDRITCHREALMS ",
   "lore_author": "Ra'cheq the Disturbing, High Corruptor",
   "name": "Tome of the Tentacle",
-  "hero_skills": [
-   {
-    "slug": "manifest_tentacle"
-   }
-  ],
-  "tier": 1,
+  "tier": 2,
   "icon": "tome_of_the_tentacle",
   "skills": [
    {
@@ -918,7 +804,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "City gains:<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>When besieged, conjure 3 <hyperlink>Tentacle</hyperlink> units adjacent to enemy units at the start of battle.</bullet></bulletlist>",
+    "description": "City gains:<bulletlist><bullet>+15 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+15 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>When besieged, conjure 3 <hyperlink>Tentacle</hyperlink> units adjacent to enemy units at the start of battle.</bullet></bulletlist>",
     "name": "Tendril Labyrinth",
     "tier": 2,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -956,11 +842,6 @@
   "DLC": "EMPIRESANDASHES ",
   "lore_author": "Nocturne, Greyblood Assassin",
   "name": "Tome of Severing",
-  "hero_skills": [
-   {
-    "slug": "master_of_disruption"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_severing",
   "skills": [
@@ -1017,11 +898,6 @@
   "DLC": "EMPIRESANDASHES ",
   "lore_author": "Alikana Krom, War Puppeteer",
   "name": "Tome of the Construct",
-  "hero_skills": [
-   {
-    "slug": "experienced_warsmith"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_the_construct",
   "skills": [
@@ -1076,11 +952,6 @@
   "DLC": "EMPIRESANDASHES ",
   "lore_author": "Fauster, the Meticulous",
   "name": "Tome of Alchemy",
-  "hero_skills": [
-   {
-    "slug": "mysterious_tonic"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_alchemy",
   "skills": [
@@ -1099,7 +970,7 @@
     "type": "<hyperlink>Siege Project</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Have their negative status effects dispelled.</bullet><bullet>Gain 1 Status Protection.</bullet></bulletlist>",
+    "description": "Target friendly unit:<bulletlist><bullet>Has their negative status effects dispelled.</bullet><bullet>Gains 1 Status Protection.</bullet></bulletlist>",
     "name": "Antimagic Tincture",
     "spell_slug": "antimagic_tincture",
     "tier": 2,
@@ -1142,11 +1013,6 @@
   "DLC": "EMPIRESANDASHES ",
   "lore_author": "Edward Portsmith, Last Dreadnought of the Commonwealth",
   "name": "Tome of the Dreadnought",
-  "hero_skills": [
-   {
-    "slug": "artillerist"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_the_dreadnought",
   "skills": [
@@ -1206,11 +1072,6 @@
   "id": "tome_of_the_goddess_of_nature",
   "lore_author": "Serena, Elven Wizard of Life",
   "name": "Tome of the Goddess of Nature",
-  "hero_skills": [
-   {
-    "slug": "avatar_of_nature"
-   }
-  ],
   "tier": 5,
   "icon": "tome_of_the_goddess_of_nature",
   "skills": [
@@ -1245,14 +1106,6 @@
   "id": "tome_of_the_creator",
   "lore_author": "Mother Mab, Goddess of Goblins",
   "name": "Tome of the Creator",
-  "hero_skills": [
-   {
-    "slug": "ancient_of_earth"
-   },
-   {
-    "slug": "ancient_of_earth"
-   }
-  ],
   "tier": 5,
   "icon": "tome_of_the_creator",
   "skills": [
@@ -1274,7 +1127,7 @@
     "name": "Tectonic Shatter",
     "spell_slug": "tectonic_shatter",
     "tier": 9,
-    "type": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
     "description": "<bulletlist><bullet>Summons an <hyperlink>Earth Titan</hyperlink> onto the target unoccupied hex.</bullet><bullet>All adjacent enemies lose their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
@@ -1293,11 +1146,6 @@
   "id": "tome_of_the_golden_realm",
   "lore_author": "Fangir Rockborne, Master of Earth",
   "name": "Tome of the Golden Realm",
-  "hero_skills": [
-   {
-    "slug": "gilded_magic"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_the_golden_realm",
   "skills": [
@@ -1351,11 +1199,6 @@
   "id": "tome_of_transmutation",
   "lore_author": "Tugrum Hammerhall, Dwarven Master Artificer",
   "name": "Tome of Transmutation",
-  "hero_skills": [
-   {
-    "slug": "adaptive_armor"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_transmutation",
   "skills": [
@@ -1409,20 +1252,15 @@
   "id": "tome_of_terramancy",
   "lore_author": "Mother Mab, Goddess of Goblins",
   "name": "Tome of Terramancy",
-  "hero_skills": [
-   {
-    "slug": "leaden_blows"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_terramancy",
   "skills": [
    {
-    "description": "Summons a <hyperlink>Stone Spirit</hyperlink>, a Tier III Shield Unit unit.",
+    "description": "Summons a <hyperlink>Stone Spirit</hyperlink>, a Tier III Shield Unit.",
     "name": "Summon Stone Spirit",
     "spell_slug": "summon_stone_spirit",
     "tier": 6,
-    "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
     "description": "At the start of combat, towers, battlements and additional wall obstacles are destroyed.",
@@ -1466,11 +1304,6 @@
   "id": "tome_of_winds",
   "lore_author": "Tempest, Master of Storms",
   "name": "Tome of Winds",
-  "hero_skills": [
-   {
-    "slug": "avenging_winds"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_winds",
   "skills": [
@@ -1526,11 +1359,6 @@
   "id": "tome_of_rock",
   "lore_author": "Blint the Underminer, First Protector of the Molemen",
   "name": "Tome of Rock",
-  "hero_skills": [
-   {
-    "slug": "obsidian_weaponry"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_rock",
   "skills": [
@@ -1591,11 +1419,6 @@
   "id": "tome_of_the_god_emperor",
   "lore_author": "Turiel, Exalted Warden of Grexolis",
   "name": "Tome of the God Emperor",
-  "hero_skills": [
-   {
-    "slug": "conjure_dome_of_protection"
-   }
-  ],
   "tier": 5,
   "icon": "tome_of_the_god_emperor",
   "skills": [
@@ -1637,11 +1460,6 @@
   "id": "tome_of_exaltation",
   "lore_author": "Anon, Archon Wizard of Life",
   "name": "Tome of Exaltation",
-  "hero_skills": [
-   {
-    "slug": "exalted_brilliance"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_exaltation",
   "skills": [
@@ -1653,7 +1471,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
    },
    {
-    "description": "City gains +20 <happiness></happiness> <hyperlink>City Stability</hyperlink> and +10 <mana></mana> <hyperlink>Mana</hyperlink>.<br></br>Note: If the city has a governor, its governor bonus is doubled.",
+    "description": "<bulletlist><bullet>City gains:<bulletlist></bullet><bullet>+20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink></bullet></bulletlist><bullet>Income from governors in this city is doubled.</bullet>",
     "name": "Temple of the Exalted",
     "tier": 8,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -1695,11 +1513,6 @@
   "id": "tome_of_supremacy",
   "lore_author": "Inioch, Emperor of the Elven Court",
   "name": "Tome of Supremacy",
-  "hero_skills": [
-   {
-    "slug": "supreme_magic"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_supremacy",
   "skills": [
@@ -1748,23 +1561,18 @@
   "id": "tome_of_sanctuary",
   "lore_author": "Anon, Archon Wizard of Life",
   "name": "Tome of Sanctuary",
-  "hero_skills": [
-   {
-    "slug": "sanctify"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_sanctuary",
   "skills": [
    {
-    "description": "<bulletlist><bullet>Adds 4 <hyperlink>Healing Spires</hyperlink> in <hyperlink>Combat</hyperlink> during a <hyperlink>Siege</hyperlink>.</bullet><bullet>Friendly units in the domain heal 15 <hyperlink><hp></hp> Hit Points</hyperlink> per turn.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Adds 4 <hyperlink>Healing Spires</hyperlink> in <hyperlink>Combat</hyperlink> during a <hyperlink>Siege</hyperlink>.</bullet><bullet>Friendly units in the domain heal +15 <hyperlink><hp></hp> Hit Points</hyperlink> per turn.</bullet></bulletlist>",
     "name": "Healing Spires",
     "tier": 5,
     "type": "<hyperlink>City Structure</hyperlink>",
     "upgrade_slug": "healing_spires"
    },
    {
-    "description": "For enchanted units:<bulletlist><bullet>Grants Faithful, reducing <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>When taking fatal damage for the first time, makes them unable to die or use offensive abilities for <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+    "description": "Enchanted units:<bulletlist><bullet>Gain Faithful, reducing <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>When taking fatal damage for the first time, this unit gains:<bulletlist></bullet><bullet>Steadfast for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Pacified for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist></bulletlist>",
     "name": "Keeper's Mark",
     "spell_slug": "keepers_mark",
     "tier": 5,
@@ -1806,16 +1614,11 @@
   "id": "tome_of_the_beacon",
   "lore_author": "Sola the Pure, Exalted Human",
   "name": "Tome of the Beacon",
-  "hero_skills": [
-   {
-    "slug": "champion_of_the_faithful"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_the_beacon",
   "skills": [
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>+ <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on base attacks for each difference in Unit Tier of the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Grants enchanted units:<bulletlist><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>+ <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on attacks for each Unit Tier of the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Mighty Meek",
     "spell_slug": "mighty_meek",
     "tier": 4,
@@ -1840,7 +1643,7 @@
     "name": "Summon Lightbringer",
     "spell_slug": "summon_lightbringer",
     "tier": 4,
-    "type": "<hyperlink>Unit</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
     "description": "Summons a <hyperlink>Divine Beacon</hyperlink>. Upon casting and at the start of each turn, friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain + <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist><br></br>This summon lasts for <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
@@ -1859,16 +1662,11 @@
   "id": "tome_of_the_inquisition",
   "lore_author": "Shira Snowblood, Godir of the Covenant",
   "name": "Tome of the Inquisition",
-  "hero_skills": [
-   {
-    "slug": "zeal"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_the_inquisition",
   "skills": [
    {
-    "description": "All units in target enemy army gain Despair for  <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+    "description": "All units in target enemy army gain  for  <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
     "name": "Burden of Guilt",
     "spell_slug": "burden_of_guilt",
     "tier": 3,
@@ -1917,11 +1715,6 @@
   "id": "tome_of_zeal",
   "lore_author": "Sola the Pure, Exalted Human",
   "name": "Tome of Zeal",
-  "hero_skills": [
-   {
-    "slug": "condemn"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_zeal",
   "skills": [
@@ -1982,11 +1775,6 @@
   "id": "tome_of_the_eternal_lord",
   "lore_author": "Melenis the Lifeless, Undead Stormlord",
   "name": "Tome of the Eternal Lord",
-  "hero_skills": [
-   {
-    "slug": "eternal_one"
-   }
-  ],
   "tier": 5,
   "icon": "tome_of_the_eternal_lord",
   "skills": [
@@ -2028,11 +1816,6 @@
   "id": "tome_of_oblivion",
   "lore_author": "Meandor, Shadow Lord of the Dark Elves",
   "name": "Tome of Oblivion",
-  "hero_skills": [
-   {
-    "slug": "mind_crush"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_oblivion",
   "skills": [
@@ -2088,11 +1871,6 @@
   "id": "tome_of_the_reaper",
   "lore_author": "Melenis the Lifeless, Undead Stormlord",
   "name": "Tome of the Reaper",
-  "hero_skills": [
-   {
-    "slug": "greater_corpse_consumption"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_the_reaper",
   "skills": [
@@ -2104,7 +1882,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>"
    },
    {
-    "description": "Summons a <hyperlink>Reaper</hyperlink>, a Tier V Mythic Unit unit that can instantly kill units and that empowers your Undead.",
+    "description": "Summons a <hyperlink>Reaper</hyperlink>, a Tier V Mythic Unit unit that can instantly kill units and grows stronger when enemies die.",
     "name": "Summon Reaper",
     "spell_slug": "summon_reaper",
     "tier": 8,
@@ -2140,11 +1918,6 @@
   "id": "tome_of_the_cold_dark",
   "lore_author": "Artica the Cold, Queen of the Frostlings",
   "name": "Tome of the Cold Dark",
-  "hero_skills": [
-   {
-    "slug": "blinding_magic"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_the_cold_dark",
   "skills": [
@@ -2212,19 +1985,15 @@
   "id": "tome_of_the_great_transformation",
   "lore_author": "Nekron, Master of Death",
   "name": "Tome of the Great Transformation",
-  "hero_skills": [
-   {
-    "slug": "weakening_aura"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_the_great_transformation",
   "skills": [
    {
-    "description": "When killing non-racial Tier IV-V units, gain the option to spend <souls></souls> <hyperlink>Souls</hyperlink> to create a <hyperlink>Bone Dragon</hyperlink> after combat.",
-    "name": "Bone Dragon Reanimation",
+    "description": "Sacrifice two Tier III Undead units, using their essence to create a <hyperlink>Bone Dragon</hyperlink>.",
+    "name": "Bone Dragon Ritual",
+    "spell_slug": "bone_dragon_ritual",
     "tier": 5,
-    "type": "<hyperlink>Empire Bonus</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>"
    },
    {
     "description": "Targets a resource node in your domain:<bulletlist><bullet>Node provides +5 <souls></souls> <hyperlink>Soul</hyperlink> income.</bullet><bullet>If you lose the province, the effect stops.</bullet></bulletlist>",
@@ -2278,11 +2047,6 @@
   "id": "tome_of_necromancy",
   "lore_author": "Gloom Hooknail, Dark Lady of the Corrupted Goblins",
   "name": "Tome of Necromancy",
-  "hero_skills": [
-   {
-    "slug": "unholy_leader"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_necromancy",
   "skills": [
@@ -2300,7 +2064,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
    },
    {
-    "description": "Grants base attacks of enchanted units:<bulletlist><bullet>A base % chance of inflicting Decaying, a damage-over-time effect that prevents the unit from gaining health.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+    "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Deal + <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Decaying for <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
     "name": "Necrotic Magic",
     "spell_slug": "necrotic_magic",
     "tier": 3,
@@ -2342,11 +2106,6 @@
   "id": "tome_of_the_doomherald",
   "lore_author": "Arachna Aranea, Spider Queen",
   "name": "Tome of the Doomherald",
-  "hero_skills": [
-   {
-    "slug": "cruel_weaponry"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_the_doomherald",
   "skills": [
@@ -2400,11 +2159,6 @@
   "id": "tome_of_the_arch_mage",
   "lore_author": "High Councilor Gabriel, Keeper of Evermore",
   "name": "Tome of the Arch Mage",
-  "hero_skills": [
-   {
-    "slug": "maximized_magic"
-   }
-  ],
   "tier": 5,
   "icon": "tome_of_the_arch_mage",
   "skills": [
@@ -2446,11 +2200,6 @@
   "id": "tome_of_the_astral_mirror",
   "lore_author": "Enam'ru Enkhanan, Arcane Matriarch",
   "name": "Tome of the Astral Mirror",
-  "hero_skills": [
-   {
-    "slug": "magic_deflection"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_the_astral_mirror",
   "skills": [
@@ -2499,11 +2248,6 @@
   "id": "tome_of_astral_convergence",
   "lore_author": "Merlin the Wanderer",
   "name": "Tome of Astral Convergence",
-  "hero_skills": [
-   {
-    "slug": "arcane_surge"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_astral_convergence",
   "skills": [
@@ -2536,7 +2280,7 @@
     "type": "<hyperlink>Siege Project</hyperlink>"
    },
    {
-    "description": "Target non-occupied hex:<bulletlist><bullet>Summon an <hyperlink>Astral Serpent</hyperlink> or <hyperlink>Astral Siphoner</hyperlink> unit at random that lasts for <turn></turn> Turns.</bullet><bullet>All adjacent units sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, and <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
+    "description": "Target non-occupied hex:<bulletlist><bullet>Conjure an <hyperlink>Astral Serpent</hyperlink> or <hyperlink>Astral Siphoner</hyperlink> unit at random that lasts for <turn></turn> Turns.</bullet><bullet>All adjacent units sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, and <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
     "name": "Explosive Manifestation",
     "spell_slug": "explosive_manifestation",
     "tier": 7,
@@ -2559,11 +2303,6 @@
   "id": "tome_of_summoning",
   "lore_author": "Werlac of Insaldur, Shadowborn Cultist",
   "name": "Tome of Summoning",
-  "hero_skills": [
-   {
-    "slug": "master_summoner"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_summoning",
   "skills": [
@@ -2617,11 +2356,6 @@
   "id": "tome_of_teleportation",
   "lore_author": "Laryssa Mirabilis, Sorceress of the Commonwealth",
   "name": "Tome of Teleportation",
-  "hero_skills": [
-   {
-    "slug": "quick_phase"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_teleportation",
   "skills": [
@@ -2633,14 +2367,14 @@
     "upgrade_slug": "astral_trade_relay"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>The Phase ability, which allows them to teleport in battle.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>The Lesser Phase ability, which allows them to teleport in battle.</bullet></bulletlist><br></br>Does not apply to units that inherently have a Phase.",
     "name": "Phasing Enchantment",
     "spell_slug": "phasing_enchantment",
     "tier": 6,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Makes closest allied unit teleport to within hexes of the target hex and heals this allied unit + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+    "description": "Teleport the closest allied unit within hexes to target empty hex.<br></br>That unit heals + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
     "name": "Emergency Teleportation",
     "spell_slug": "emergency_teleportation",
     "tier": 5,
@@ -2675,11 +2409,6 @@
   "id": "tome_of_scrying",
   "lore_author": "Werlac of Insaldur, Shadowborn Cultist",
   "name": "Tome of Scrying",
-  "hero_skills": [
-   {
-    "slug": "precognition"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_scrying",
   "skills": [
@@ -2728,11 +2457,6 @@
   "id": "tome_of_amplification",
   "lore_author": "Merlin the Wanderer",
   "name": "Tome of Amplification",
-  "hero_skills": [
-   {
-    "slug": "spell_amplification"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_amplification",
   "skills": [
@@ -2758,14 +2482,14 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Target enemy unit:<bulletlist><bullet>Sustains  <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Has a % chance of becoming Electrified</bullet><bullet>This effect passes on to another enemy within  hexes.</bullet><bullet>Passes on up to  times.</bullet></bulletlist>",
+    "description": "Target enemy unit:<bulletlist><bullet>Sustains  <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Is inflicted with Electrified.</bullet><bullet>This effect passes on to another enemy within  hexes.</bullet><bullet>Passes on up to  times.</bullet></bulletlist>",
     "name": "Chain Lightning",
     "spell_slug": "chain_lightning",
     "tier": 6,
     "type": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>"
    },
    {
-    "description": "Conjures an <hyperlink>Amplification Pylon</hyperlink>, a stationary structure that deals damage and increases the damage of your spells by +30%.<br></br>This summon lasts for <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
+    "description": "Conjures an <hyperlink>Amplification Pylon</hyperlink>, a stationary structure that deals damage and increases the damage of your spells by +50%.<br></br>This summon lasts for <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
     "name": "Conjure Amplification Pylon",
     "spell_slug": "conjure_amplification_pylon",
     "tier": 5,
@@ -2793,11 +2517,6 @@
   "id": "tome_of_evocation",
   "lore_author": "Laryssa Mirabilis, Sorceress of the Commonwealth",
   "name": "Tome of Evocation",
-  "hero_skills": [
-   {
-    "slug": "lightning_weapons"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_evocation",
   "skills": [
@@ -2851,11 +2570,6 @@
   "id": "tome_of_warding",
   "lore_author": "Tempest, Master of Storms",
   "name": "Tome of Warding",
-  "hero_skills": [
-   {
-    "slug": "bolstering_support"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_warding",
   "skills": [
@@ -2904,11 +2618,6 @@
   "id": "tome_of_paradise",
   "lore_author": "Birchfoot, Hermit of the Glade",
   "name": "Tome of Paradise",
-  "hero_skills": [
-   {
-    "slug": "inspiring_icon"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_paradise",
   "skills": [
@@ -2941,7 +2650,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target friendly city:<bulletlist><bullet>Starts altering terrain to Forested Grasslands at 1 <hyperlink>Province</hyperlink> per <turn></turn> Turn.</bullet><bullet>The spell extends up to 1 <hyperlink>Province</hyperlink> outside the <hyperlink>Domain</hyperlink>.</bullet><bullet>Terrain will gradually revert if the spell is canceled</bullet></bulletlist><br></br><br></br>While the spell is active, provinces within the domain with either Grasslands or Forests provide:<bulletlist><bullet>+2 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+2 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+2 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist>",
+    "description": "Target friendly city:<bulletlist><bullet>Starts altering terrain to Forest and Grasslands (Fungus Fields and Mushroom Forests when Underground) at 1 <hyperlink>Province</hyperlink> per <turn></turn> Turn.</bullet><bullet>The spell extends up to 1 <hyperlink>Province</hyperlink> outside the <hyperlink>Domain</hyperlink>.</bullet><bullet>Terrain will gradually revert if the spell is canceled.</bullet></bulletlist><br></br><br></br>While the spell is active, provinces within the domain with either Grasslands, Forests, Fungus Fields or Mushroom Forest features provide:<bulletlist><bullet>+2 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+2 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+2 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist>",
     "name": "Enchanted Bloom",
     "spell_slug": "enchanted_bloom",
     "tier": 7,
@@ -2969,11 +2678,6 @@
   "id": "tome_of_roots",
   "lore_author": "Birchfoot, Hermit of the Glade",
   "name": "Tome of Roots",
-  "hero_skills": [
-   {
-    "slug": "poison_weapons"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_roots",
   "skills": [
@@ -3027,11 +2731,6 @@
   "id": "tome_of_fertility",
   "lore_author": "Julia of House Inioch, Druid Queen of the High Elves",
   "name": "Tome of Fertility",
-  "hero_skills": [
-   {
-    "slug": "revitalize"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_fertility",
   "skills": [
@@ -3043,7 +2742,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
    },
    {
-    "description": "Adds grasslands feature to target friendly or unowned province. Works on Desolate terrain. Turns into Fungus Fields <hyperlink>Underground</hyperlink>.<br></br>Doesn't work on Mountains and Ice terrain.",
+    "description": "Turns target friendly or unowned province into Temperate and adds Grasslands feature. Removes Wetlands. Turns into Fungus Fields <hyperlink>Underground</hyperlink>.",
     "name": "Restore the Land",
     "spell_slug": "restore_the_land",
     "tier": 3,
@@ -3085,11 +2784,6 @@
   "id": "tome_of_cycles",
   "lore_author": "Serena, Elven Wizard of Life",
   "name": "Tome of Cycles",
-  "hero_skills": [
-   {
-    "slug": "withering_decay"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_cycles",
   "skills": [
@@ -3138,11 +2832,6 @@
   "id": "tome_of_glades",
   "lore_author": "Birchfoot, Hermit of the Glade",
   "name": "Tome of Glades",
-  "hero_skills": [
-   {
-    "slug": "forest_warden"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_glades",
   "skills": [
@@ -3195,7 +2884,12 @@
   "id": "",
   "lore_author": "",
   "name": "",
-  "icon": ""
+  "icon": "",
+  "hero_skills": [
+   {
+    "slug": ""
+   }
+  ]
  },
  {
   "affinities": "2 <empireshadow></empireshadow> Empire Shadow Affinity",
@@ -3205,11 +2899,6 @@
   "id": "tome_of_cryomancy",
   "lore_author": "Artica the Cold, Queen of the Frostlings",
   "name": "Tome of Cryomancy",
-  "hero_skills": [
-   {
-    "slug": "frost_weapons"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_cryomancy",
   "skills": [
@@ -3270,11 +2959,6 @@
   "id": "tome_of_souls",
   "lore_author": "Nocrom, the Cursed Hand",
   "name": "Tome of Souls",
-  "hero_skills": [
-   {
-    "slug": "soul_collector"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_souls",
   "skills": [
@@ -3286,10 +2970,11 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "When killing non-racial Tier III units, gain the option to spend <souls></souls> <hyperlink>Souls</hyperlink> to create a <hyperlink>Bone Horror</hyperlink> after combat.",
-    "name": "Bone Horror Reanimation",
+    "description": "Sacrifice two Tier I Undead units, using their essence to create a <hyperlink>Bone Horror</hyperlink>.",
+    "name": "Bone Horror Ritual",
+    "spell_slug": "bone_horror_ritual",
     "tier": 1,
-    "type": "<hyperlink>Empire Bonus</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>"
    },
    {
     "description": "Friendly units in a -hex radius:<bulletlist><bullet>Gain 1 Strengthened.</bullet><bullet>Gain + maximum <hyperlink><hp></hp> Hit Points</hyperlink> until the end of battle.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
@@ -3299,7 +2984,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "Restore 25 <hyperlink><hp></hp> Hit Points</hyperlink> of all Undead units in target friendly army.",
+    "description": "Restore 30 <hyperlink><hp></hp> Hit Points</hyperlink> of all Undead units in target friendly army.",
     "name": "Restore Undead Army",
     "spell_slug": "restore_undead_army",
     "tier": 3,
@@ -3322,11 +3007,6 @@
   "id": "tome_of_beasts",
   "lore_author": "Serena, Elven Wizard of Life",
   "name": "Tome of Beasts",
-  "hero_skills": [
-   {
-    "slug": "pack_leader"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_beasts",
   "skills": [
@@ -3338,7 +3018,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "A Support Unit that empowers your Animals and affects hostile Animals.",
+    "description": "A Support Unit that summons and empowers Animals.",
     "name": "Wildspeaker",
     "tier": 2,
     "unit_slug": "wildspeaker",
@@ -3386,17 +3066,6 @@
   "id": "industrious",
   "lore_author": "",
   "name": "Industrious",
-  "hero_skills": [
-   {
-    "slug": "defensive_master"
-   },
-   {
-    "slug": "defense_training"
-   },
-   {
-    "slug": "bolstering"
-   }
-  ],
   "tier": 0,
   "icon": "industrious",
   "skills": [
@@ -3442,17 +3111,6 @@
   "id": "barbarian",
   "lore_author": "",
   "name": "Barbarian",
-  "hero_skills": [
-   {
-    "slug": "brutal_mark"
-   },
-   {
-    "slug": "keen_edge"
-   },
-   {
-    "slug": "bloodlust"
-   }
-  ],
   "tier": 0,
   "icon": "barbarian",
   "skills": [
@@ -3498,17 +3156,6 @@
   "id": "high",
   "lore_author": "",
   "name": "High",
-  "hero_skills": [
-   {
-    "slug": "coordinated_strike"
-   },
-   {
-    "slug": "exposing_light"
-   },
-   {
-    "slug": "twin_awaken"
-   }
-  ],
   "tier": 0,
   "icon": "high",
   "skills": [
@@ -3554,17 +3201,6 @@
   "id": "feudal",
   "lore_author": "",
   "name": "Feudal",
-  "hero_skills": [
-   {
-    "slug": "feudal_ruler"
-   },
-   {
-    "slug": "undying_loyalty"
-   },
-   {
-    "slug": "stand_together"
-   }
-  ],
   "tier": 0,
   "icon": "feudal",
   "skills": [
@@ -3604,17 +3240,6 @@
   "DLC": "EMPIRESANDASHES ",
   "lore_author": "",
   "name": "Reaver",
-  "hero_skills": [
-   {
-    "slug": "mark_target"
-   },
-   {
-    "slug": "skirmisher_discipline"
-   },
-   {
-    "slug": "focused_aggression"
-   }
-  ],
   "tier": 0,
   "icon": "reaver",
   "skills": [
@@ -3655,11 +3280,6 @@
   "DLC": "DRAGONLORDS ",
   "lore_author": "Tempest, Master of Storms",
   "name": "Tome of Dragons",
-  "hero_skills": [
-   {
-    "slug": "fire_bomb"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_dragons",
   "skills": [
@@ -3714,11 +3334,6 @@
   "DLC": "DRAGONLORDS ",
   "lore_author": "Nimue, Siren Goddess",
   "name": "Tome of Evolution",
-  "hero_skills": [
-   {
-    "slug": "shepherd"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_evolution",
   "skills": [
@@ -3767,11 +3382,6 @@
   "id": "tome_of_the_chaos_lord",
   "lore_author": "Karissa the Red, Mistress of Passions",
   "name": "Tome of the Chaos Lord",
-  "hero_skills": [
-   {
-    "slug": "demonic_slaughter"
-   }
-  ],
   "tier": 5,
   "icon": "tome_of_the_chaos_lord",
   "skills": [
@@ -3783,7 +3393,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>After 1 <turn></turn> in battle, 3 enemy non-<hyperlink>Hero</hyperlink> units are Final Ultimatum until the end of combat.</bullet><bullet>The city suffers -50 <happiness></happiness> <hyperlink>City Stability</hyperlink> while it is besieged.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>After 1 <turn></turn> in battle, 3 enemy non-<hyperlink>Hero</hyperlink> units are Mind-Controlled until the end of combat.</bullet><bullet>The city suffers -50 <happiness></happiness> <hyperlink>City Stability</hyperlink> while it is besieged.</bullet></bulletlist>",
     "name": "Incite Rebellion",
     "tier": 9,
     "type": "<hyperlink>Siege Project</hyperlink>"
@@ -3805,11 +3415,6 @@
   "id": "tome_of_the_demon_gate",
   "lore_author": "Kruul Blightlord, Chaos Prince",
   "name": "Tome of the Demon Gate",
-  "hero_skills": [
-   {
-    "slug": "demonic_anthem"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_the_demon_gate",
   "skills": [
@@ -3835,7 +3440,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Turns the target race into demonic beings, which grants them:<bulletlist><bullet>The Fiend unit type.</bullet><bullet>Flying, increasing mobility.</bullet><bullet>Frenzy, increasing damage as they attack.</bullet></bulletlist>",
+    "description": "Turns the target race into demonic beings, which grants them:<bulletlist><bullet>The Infernal Fiend unit type.</bullet><bullet>Flying, increasing mobility.</bullet><bullet>Frenzy, increasing damage as they attack.</bullet></bulletlist>",
     "name": "Demonkin",
     "spell_slug": "demonkin",
     "tier": 9,
@@ -3863,19 +3468,21 @@
   "id": "tome_of_chaos_channeling",
   "lore_author": "Karissa the Red, Mistress of Passions",
   "name": "Tome of Chaos Channeling",
-  "hero_skills": [
-   {
-    "slug": "chaotic_rebuke"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_chaos_channeling",
   "skills": [
    {
-    "description": "Kills a target friendly unit. Enemy units within  hexes sustain  <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and suffer one random debuff per each Tier of the sacrificed unit.",
+    "description": "Summons a <hyperlink>Magma Spirit</hyperlink>, a Tier III Battle Mage Unit.",
+    "name": "Summon Magma Spirit",
+    "spell_slug": "summon_magma_spirit",
+    "tier": 6,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   },
+   {
+    "description": "Target friendly unit explodes and enemy units within  hexes:<bulletlist><bullet>Sustain  <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> plus  <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per Tier of the sacrificed unit.</bullet><bullet>Suffer one random negative status effect per Tier of the sacrificed unit.</bullet>",
     "name": "Sacrificial Slaughter",
     "spell_slug": "sacrificial_slaughter",
-    "tier": 8,
+    "tier": 7,
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
@@ -3916,21 +3523,9 @@
   "id": "tome_of_pandemonium",
   "lore_author": "Karissa the Red, Mistress of Passions",
   "name": "Tome of Pandemonium",
-  "hero_skills": [
-   {
-    "slug": "havoc_magic"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_pandemonium",
   "skills": [
-   {
-    "description": "Target enemy city:<bulletlist><bullet>Loses a border province and the population is lost.</bullet><bullet>Spawns a Brigand Camp on land provinces.</bullet><bullet>Spawns a Pirate Cove on coastal provinces.</bullet></bulletlist>",
-    "name": "Incite Revolution",
-    "spell_slug": "incite_revolution",
-    "tier": 6,
-    "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
-   },
    {
     "description": "Turns the target race into a conduit for chaotic energies, granting them:<bulletlist><bullet>+% damage for each of the target's negative status effects. Stacks up to  times.</bullet></bulletlist>",
     "name": "Vessels of Chaos",
@@ -3953,6 +3548,13 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
+    "description": "Target non-<hyperlink>Hero</hyperlink> unit has:<bulletlist><bullet>% chance of being inflicted with Infectious Insanity for <turn></turn> Turns. </bullet><bullet>If resisted, the target is inflicted with Insanity for <turn></turn> Turns.</bullet></bulletlist>",
+    "name": "Infectious Insanity",
+    "spell_slug": "infectious_insanity",
+    "tier": 6,
+    "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
+   },
+   {
     "description": "Inflicts a random negative status effect on all units in a -hex radius.",
     "name": "Mass Hysteria",
     "spell_slug": "mass_hysteria",
@@ -3969,11 +3571,6 @@
   "id": "tome_of_revelry",
   "lore_author": "Asgera Spinesplitter, War Queen of the Bloodfang Orcs",
   "name": "Tome of Revelry",
-  "hero_skills": [
-   {
-    "slug": "revelers_triumph"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_revelry",
   "skills": [
@@ -3998,7 +3595,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Non-Hero units in target friendly army gain +40% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
+    "description": "Non-Hero units in target friendly army gain +30% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
     "name": "Revels of Carnage",
     "spell_slug": "revels_of_carnage",
     "tier": 3,
@@ -4026,20 +3623,15 @@
   "id": "tome_of_mayhem",
   "lore_author": "Kruul Blightlord, Chaos Prince",
   "name": "Tome of Mayhem",
-  "hero_skills": [
-   {
-    "slug": "mark_of_misfortune"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_mayhem",
   "skills": [
    {
-    "description": "Target non-<hyperlink>Hero</hyperlink> unit has:<bulletlist><bullet>% chance of being inflicted with Infectious Insanity for <turn></turn> Turns. </bullet><bullet>If resisted, the target is inflicted with Insanity for <turn></turn> Turns.</bullet></bulletlist>",
-    "name": "Infectious Insanity",
-    "spell_slug": "infectious_insanity",
+    "description": "Target enemy city:<bulletlist><bullet>Loses a border province and the population is lost.</bullet><bullet>Spawns a Brigand Camp on land provinces.</bullet><bullet>Spawns a Pirate Cove on coastal provinces.</bullet></bulletlist>",
+    "name": "Incite Revolution",
+    "spell_slug": "incite_revolution",
     "tier": 4,
-    "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
    },
    {
     "description": "At the start of the battle, enemy units:<bulletlist><bullet>Are displaced by 4 hexes.</bullet><bullet>Gain Misfortune.</bullet></bulletlist>",
@@ -4074,16 +3666,11 @@
  {
   "affinities": "2 <empirechaos></empirechaos> Empire Chaos Affinity",
   "lore_description": "\\\"Masters of the Horde understand the power of large numbers, of masses riled up into a frenzy. Ultimately, our hounds of war will tear apart the strongest knights and most cunning warlocks. Our enemies' biggest mistake is to underestimate how many thralls we command, and how little we care about their lives.\\\"",
-  "gameplay_description": "Turn your units into large, deadly armies. Specialize in overwhelming your enemies with numbers.",
+  "gameplay_description": "Turn your cheapest units into large, deadly armies. Specialize in summoning and buffing Tier I units.",
   "resid": 4273492482491,
   "id": "tome_of_the_horde",
   "lore_author": "Swarmcaller Trass, Ratkin War-chief",
   "name": "Tome of the Horde",
-  "hero_skills": [
-   {
-    "slug": "kennel_master"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_the_horde",
   "skills": [
@@ -4144,11 +3731,6 @@
   "id": "tome_of_natures_wrath",
   "lore_author": "Serena, Elven Wizard of Life",
   "name": "Tome of Nature's Wrath",
-  "hero_skills": [
-   {
-    "slug": "natures_avenger"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_natures_wrath",
   "skills": [
@@ -4203,17 +3785,6 @@
   "id": "dark",
   "lore_author": "",
   "name": "Dark",
-  "hero_skills": [
-   {
-    "slug": "cull_the_weak"
-   },
-   {
-    "slug": "grim_executioner"
-   },
-   {
-    "slug": "curse_of_vulnerability"
-   }
-  ],
   "tier": 0,
   "icon": "dark",
   "skills": [
@@ -4253,11 +3824,6 @@
   "id": "tome_of_vigor",
   "lore_author": "Zaethyl, Wild Guardian of the First Elves",
   "name": "Tome of Vigor",
-  "hero_skills": [
-   {
-    "slug": "animal_handler"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_vigor",
   "skills": [
@@ -4306,16 +3872,11 @@
   "id": "tome_of_subjugation",
   "lore_author": "Turiel, Exalted Warden of Grexolis",
   "name": "Tome of Subjugation",
-  "hero_skills": [
-   {
-    "slug": "terrifying_aura"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_subjugation",
   "skills": [
    {
-    "description": "This city gains:<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist><br></br>Your <hyperlink>Throne City</hyperlink> gains:<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><br></br><br></br>Can only be built in cities of another race.",
+    "description": "This city gains:<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist><br></br>Your <hyperlink>Throne City</hyperlink> gains:<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+20 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet></bulletlist><br></br><br></br>Can only be built in cities of another race.",
     "name": "Baron's Palace",
     "tier": 6,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -4359,11 +3920,6 @@
   "id": "tome_of_artificing",
   "lore_author": "Edward Portsmith, Last Dreadnought of the Commonwealth",
   "name": "Tome of Artificing",
-  "hero_skills": [
-   {
-    "slug": "golem_assistant"
-   }
-  ],
   "tier": 2,
   "icon": "tome_of_artificing",
   "skills": [
@@ -4416,11 +3972,6 @@
   "id": "tome_of_pyromancy",
   "lore_author": "Yaka, self-proclaimed God of Fire",
   "name": "Tome of Pyromancy",
-  "hero_skills": [
-   {
-    "slug": "searing_weapons"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_pyromancy",
   "skills": [
@@ -4481,11 +4032,6 @@
   "id": "tome_of_enchantment",
   "lore_author": "Edward Portsmith, Last Dreadnought of the Commonwealth",
   "name": "Tome of Enchantment",
-  "hero_skills": [
-   {
-    "slug": "sundering_strikes"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_enchantment",
   "skills": [
@@ -4539,11 +4085,6 @@
   "id": "tome_of_faith",
   "lore_author": "Anon, Archon Wizard of Life",
   "name": "Tome of Faith",
-  "hero_skills": [
-   {
-    "slug": "mending_touch"
-   }
-  ],
   "tier": 1,
   "icon": "tome_of_faith",
   "skills": [
@@ -4604,11 +4145,6 @@
   "id": "tome_of_devastation",
   "lore_author": "Asgera Spinesplitter, War Queen of the Bloodfang Orcs",
   "name": "Tome of Devastation",
-  "hero_skills": [
-   {
-    "slug": "flameburst_weapons"
-   }
-  ],
   "tier": 3,
   "icon": "tome_of_devastation",
   "skills": [
@@ -4683,11 +4219,6 @@
   "id": "tome_of_the_crucible",
   "lore_author": "Yaka, self-proclaimed God of Fire",
   "name": "Tome of the Crucible",
-  "hero_skills": [
-   {
-    "slug": "meteor_strikes"
-   }
-  ],
   "tier": 4,
   "icon": "tome_of_the_crucible",
   "skills": [

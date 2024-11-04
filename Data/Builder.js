@@ -5179,6 +5179,7 @@ function showStructure(a, showOrigin) {
                     GetUnitTierAndName("infernal_juggernaut") +
                     "</a>" +
                     "</bullet>";
+                unitTypesDiv.append(div);
             }
 
             var upkeep = document.getElementById("modupkeep");

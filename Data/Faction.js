@@ -3198,8 +3198,18 @@ function checkCompatibilityTraits(entry) {
             canBeAdded = false;
 
         }
-    } else if (entry.group_name === "TACTICS") {
+    } 
+    else if (entry.group_name === "TACTICS") {
         var hasAdaptionGroup = currentFormTraitList.some(item => item.group_name === 'TACTICS');
+        //console.log(hasAdaptionGroup);
+        // already has adaption or already has primal culture
+        if (hasAdaptionGroup) {
+            canBeAdded = false;
+
+        }
+    }
+    else if (entry.group_name === "DEFENSE") {
+        var hasAdaptionGroup = currentFormTraitList.some(item => item.group_name === 'DEFENSE');
         //console.log(hasAdaptionGroup);
         // already has adaption or already has primal culture
         if (hasAdaptionGroup) {

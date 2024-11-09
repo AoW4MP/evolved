@@ -4,28 +4,28 @@
         "id": "champion",
         "name": "Champion",
         "icon": "champion",
-        "description": "A Ruler risen from the ranks of their people.<br><br><bulletlist><bullet>All cities have +10% <gold></gold> Gold income, +20 <happiness></happiness> City Stability and +20 <unitprod></unitprod> Draft.</bullet><bullet>All non-Hero Units gain +20% <xp></xp> Experience</bullet><bullet>Start with +200 Relations with Free Cities.</bullet></bulletlist><br>Dark culture gains no bonus <happiness></happiness> City Stability but gains double negative <happiness></happiness> City Stability from Overlord's Tower."
+        "description": "<bulletlist>A Ruler risen from the ranks of their people.<bullet>Mortal Champions have access to unique army leadership hero skills.</bullet><bullet>Mortal Champion rulers gain +20% <xp></xp> Experience</bullet><br><bullet>Start with +100 Relations with Free Cities.</bullet><bullet>Mortal Champion rulers start with the Command ability in Combat</bullet></bulletlist>"
     },
     {
         "type": "Ruler Origin",
         "id": "wizard_king",
         "name": "Wizard King",
         "icon": "wizard_king",
-        "description": "A powerful Wizard seeking dominion over a new realm.<br><br><bulletlist><bullet>All cities have +10% <mana></mana> Mana income.</bullet><bullet>+5 <caststrategic></caststrategic> World Map Casting Points and <casttactical></casttactical> Combat Casting Points for every 2 levels the Wizard King has.</bullet><bullet>Wizard Kings have the Overchannel ability in combat.</bullet></bulletlist>"
+        "description": "<bulletlist>A powerful Wizard seeking dominion over a new realm.<bullet>Wizard Kings have access to unique Combat Spell enhancing hero skills.</bullet><bullet>All <conduit></conduit> Conduits grant +2<mana></mana> Mana.</bullet><br><bullet>Wizard Kings start with the Channeling Ritual ability in combat</bullet></bulletlist>"
     },
     {
         "type": "Ruler Origin",
         "id": "dragon_lord",
         "name": "Dragon Lord",
         "icon": "dragon_lord",
-        "description": "A mighty dragon seeking new realms to shape in their vision.<br><br><bulletlist><bullet>Gain extra <gold></gold> Gold and <bindingessence></bindingessence> Binding Essence with <hyperlink>Dragon Hoard</hyperlink>.</bullet><bullet>Dragon Loards have 30 <gold></gold> Gold Unit Upkeep and cannot equip most Hero Items.</bullet><bullet>Dragon Lords have access to powerful Hero Skills and Transformations.</bullet></bulletlist>"
+        "description": "<bulletlist>A mighty dragon seeking new realms to shape in their vision.<bullet>Dragon Lords have access to unique combat Hero Skills.</bullet><bullet>Dragon Lords gain powerful Transformation Hero Signature Skills based on empire Affinities.</bullet><bullet>Gain extra Gold with <hyperlink>Dragon Hoard</hyperlink>.</bullet><bullet>Dragon Lords have 30 <gold></gold> Gold Unit Upkeep and cannot equip most Hero Items.</bullet><br></bulletlist>"
     },
     {
         "type": "Ruler Origin",
         "id": "eldritch_sovereign",
         "name": "Eldritch Sovereign",
         "icon": "eldritch_sovereign",
-        "description": "<bulletlist>An eldritch Ruler with powers beyond mortal comprehension.<bullet>Use <thralls></thralls> Thralls to cast powerful retual Spells.</bullet><bullet>Start with Clairvoyance Ritual and Enthrall Population</bullet><bullet>Eldritch Sovereigns have a 5 <mana></mana> Mana Unit Upkeep and cannot equip Leg and Mount items</bullet><bullet>Eldritch Sovereigns have access to powerful Hero and Signature Skills</bullet></bulletlist>"
+        "description": "<bulletlist>An eldritch Ruler with powers beyond mortal comprehension.<bullet>Eldritch Sovereigns have access to powerful control Hero.</bullet><bullet>Eldritch Sovereigns gain powerful unique Hero Signature Skills.</bullet><bullet>Use <thralls></thralls> Thralls to cast powerful ritual Spells.</bullet><bullet>Start with Clairvoyance Ritual and Enthrall Population</bullet><bullet>Eldritch Sovereigns have a 5 <mana></mana> Mana Unit Upkeep and cannot equip Leg and Mount items</bullet></bulletlist>"
     },
     {
         "type": "Culture",
@@ -33,7 +33,7 @@
         "icon": "feudal",
         "affinity": "<empireorder></empireorder>,<empirenature></empirenature>",
         "name": "Feudal",
-        "description": "A hierarchic society wherin lords, ladies, and knights reign over peasants. All stand together in battle when their fertile realm is threatened.<br><br><bulletlist><bullet>Structures with <food></food> Food income.</bullet><bullet>Units benefit from close formations with Stand Together<bullet>Feudal Lords.</bullet></bulletlist>"
+        "description": "<bulletlist>A hierarchic society wherein lords, ladies, and knights reign over peasants. All stand togetherin in battle when their fertile realm in threatened.<bullet>Structures with <food></food> Food income.</bullet><bullet>Units benefit from close formations with Stand Together</bullet>Feudal Lords passive</bullet></bulletlist>"
     },
     {
         "type": "Culture",
@@ -41,7 +41,7 @@
         "icon": "barbarian",
         "affinity": "<empirechaos></empirechaos>,<empirenature></empirenature>",
         "name": "Barbarian",
-        "description": "A people who thrive on war and aggression. They value strength and prefer to charge head-on into bloody battles.<br><br><bulletlist><bullet>Structures with <food></food> Food and <unitprod></unitprod> Draft income.</bullet><bullet>Units have Savage Strike, dealing extra damage on a Critical Hit.</bullet><bullet>Ritual of Alacrity.</bullet></bulletlist>"
+        "description": "<bulletlist>A people who thrive on war and aggression. They value strength and prefer to charge head-on into bloody battles.<bullet>Structures with <food></food> Food and <draft></draft> Draft income.</bullet><bullet>Melee units have Primal Strike, dealing extra damage ontheir first strike in combat.</bullet><bullet>Ritual of Alacrity passive</bullet></bulletlist>"
     },
     {
         "type": "Culture",
@@ -49,7 +49,7 @@
         "icon": "industrious",
         "affinity": "<empirematter></empirematter>,<empirematter></empirematter>",
         "name": "Industrious",
-        "description": "Master builders who value grand cities and strong armor, preferring a defensive attitude over an aggressive one.<br><br><bulletlist><bullet>Structures with <production></production> Production income.</bullet><bullet>Through Bolstering, units get sturdier as they get hit in battle.</bullet><bullet>Scout Prospecting.</bullet></bulletlist>"
+        "description": "<bulletlist>Master builders who value grand cities and strong armor, preferring a defensive attitude over an aggressive one.<bullet>Structures with <production></production> Production income.</bullet><bullet>Through Bolstering, units get sturdier as they get hit in battle.</bullet><bullet>Scout Prospecting passive</bullet></bulletlist>"
     },
     {
         "type": "Culture",
@@ -57,7 +57,7 @@
         "icon": "high",
         "affinity": "<empireorder></empireorder>,<empireorder></empireorder>",
         "name": "High",
-        "description": "A highly developed society whose members strive for harmony. When threatened, however, they wield their guiding light as a weapon.<br><br><bulletlist><bullet>Structures have <happiness></happiness> City Stability and <knowledge></knowledge> Knowledge income.</bullet><bullet>Units are strengthened with Awakened, revealing their hidden potential.</bullet><bullet>+10 <reputation6></reputation6> Alignment.</bullet><bullet>Alignment Agenda.</bullet></bulletlist>"
+        "description": "<bulletlist>A highly developed society whose members strive for harmony. When threatened, however, they wield their guiding light as a weapon.<bullet>Structures have <happiness></happiness> City Stability and <knowledge></knowledge> Knowledge income.</bullet><bullet>Units are strengthened with Awakened, revealing their hidden potential</bullet><bullet>+10 <reputation6></reputation6> Alignment.<bullet>Alignment Agenda passive</bullet></bulletlist>"
     },
     {
         "type": "Culture",
@@ -65,7 +65,7 @@
         "icon": "dark",
         "affinity": "<empireshadow></empireshadow>,<empireshadow></empireshadow>",
         "name": "Dark",
-        "description": "A dictatorial civilization where the strong and ruthless dominate the weak. They use forbidden magics to maintain control and weaken their enemies.<br><br><bulletlist><bullet>Cities can negate <happiness></happiness> City Stability income penalties.</bullet><bullet>Unique City Structures granting negative <happiness></happiness> City Stability.</bullet><bullet>Units specialize in inflicting negative status effects and exploiting them with Cull the Weak.</bullet><bullet>-10 <reputation2></reputation2> Alignment.</bullet><bullet>Stability Agenda.</bullet></bulletlist>"
+        "description": "<bulletlist>A dictatorial civilization where the strong and ruthless dominate the weak. They use forbidden magics to maintain control and weaken their enemies.<bullet>Cities can negate <happiness></happiness> City Stability income penalties.</bullet><bullet>Unique City Structures granting <research></research> Knowledge and extra income from Prisons and Crypts.</bullet><bullet>Units specialize in inflicting negative status effects and exploiting them with Cull the Weak.</bullet><bullet>-10 <reputation2></reputation2> Alignment.</bulletlist>"
     },
     {
         "type": "Culture",
@@ -108,12 +108,36 @@
     },
     {
         "type": "Culture",
+        "id": "oathsworn_oath_of_strife",
+        "affinity": "<empireorder></empireorder>,<empirechaos></empirechaos>",
+        "name": "Oathsworn - Oath of Strife",
+        "icon": "oathsworn_oath_of_strife",
+        "description": "<bulletlist>Your people follow a path of Strife, seeking to forge their strength in the fires of war:<bullet>Gain grievances against Rulers with an overall better ranking</bullet><bullet>Razing Cities and Pillaging Provinces takes -1 <turn></turn> Turn.</bullet><bullet>Razing Cities and Pillaging Provinces yields <influence></influence> Imperium.</bullet><bullet>Culture units have Warrior's Soul.</bullet><bullet>Become stronger as you gain Devotion to the Oath of Strife.</bullet></bulletlist>"
+    },
+    {
+        "type": "Culture",
+        "id": "oathsworn_oath_of_righteousness",
+        "affinity": "<empireorder></empireorder>,<empireorder></empireorder>",
+        "name": "Oathsworn - Oath of Righteousness",
+        "icon": "oathsworn_oath_of_righteousness",
+        "description": "<bulletlist>Your people follow a path of Righteousness, working to be a positive force for good upon the world:<bullet>Negative <evil></evil> alignment gained is doubled.</bullet><bullet>Culture units have Nobility.</bullet><bullet>Become stronger as you gain Devotion to the Oath of Righteousness.</bullet></bulletlist>"
+    },
+    {
+        "type": "Culture",
+        "id": "oathsworn_oath_of_harmony",
+        "affinity": "<empireorder></empireorder>,<empirenature></empirenature>",
+        "name": "Oathsworn - Oath of Harmony",
+        "icon": "oathsworn_oath_of_harmony",
+        "description": "<bulletlist>Your people follow a path of Harmony, seeking cooperation and to clear the world of threats:<bullet>Gain +100 relations with Free Cities and Rulers</bullet><bullet>When vassalizing a conquered city, they start at Vassalage phase instead of Tributary.</bullet><bullet>Culture units have Harmonize.</bullet><bullet>Become stronger as you gain Devotion to the Oath of Harmony.</bullet></bulletlist>"
+    },
+    {
+        "type": "Culture",
         "id": "reaver",
         "affinity": "<empirematter></empirematter>,<empirechaos></empirechaos>",
         "name": "Reaver",
         "DLC": "EMPIRESANDASHES ",
         "icon": "reaver",
-        "description": "A society of industrial opportunists. Pragmatic and brutal, they combine the material and the arcane, expanding their dominion through conquests and hunts.<br><br><bulletlist><bullet>Structures have <production></production> Production and <mana></mana> Mana income.</bullet><bullet>Units are specialized in focusing down Marked targets with Focused Aggression.</bullet><bullet>-1 <whisperingstone></whisperingstone> Whispering Stone.</bullet><bullet>Total War.</bullet><bullet>War Spoils.</bullet></bulletlist>"
+        "description": "<bulletlist>A society of industrial opportunists. Pragmatic and brutal, they combine the material and the arcane, expanding their dominion through conquests and hunts. <bullet>Structures have <production></production> Production and <mana></mana> Mana income.</bullet><bullet>Units are specialized in focusing down Marked targets with Focused Aggression.</bullet><bullet>-1 <whisperingstone></whisperingstone> Whispering Stone.</bullet><bullet>Total War</bullet><bullet>War Spoils</bullet></bulletlist>"
     },
     {
         "type": "Culture",
@@ -122,7 +146,7 @@
         "name": "Primal - Mire Crocodile",
         "DLC": "PRIMALFURY",
         "icon": "primal_mire_crocodile",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Mire Crocodile, bestowing benefits to your culture: <bullet>Start in Swamp</bullet><bullet>Swamp provinces are Favored Terrain and gain: <bullet>+3 <food></food> Food</bullet></bullet><bullet>Access to the Primal Crocodile summon</bullet><bullet>Units have:<bullet>Status Effect Immunity: Diseased</bullet><bullet>Swamp Walk</bullet><bullet>Mire Crocodile's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Mire Crocodile, bestowing benefits to your culture: <bullet>Start in Swamp</bullet><bullet>Swamp provinces are Favored Terrain and gain: <bullet>+3 <food></food> Food</bullet></bullet><bullet>Access to the Primal Crocodile summon</bullet><bullet>Units have:<bullet>Status Effect Immunity: Diseased</bullet><bullet>Swamp Walk</bullet><bullet>Mire Crocodile's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -136,7 +160,7 @@
         "name": "Primal - Storm Crow",
         "DLC": "PRIMALFURY",
         "icon": "primal_storm_crow",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Storm Crow, bestowing benefits to your culture: <bullet>Start in Grasslands</bullet><bullet>Grassland provinces are Favored Terrain and gain: <bullet>+2 <mana></mana> Mana</bullet></bullet><bullet>Access to the Primal Crow summon</bullet><bullet>Units have:<bullet>Grassland Walk</bullet><bullet>Storm Crow's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Storm Crow, bestowing benefits to your culture: <bullet>Start in Grasslands</bullet><bullet>Grassland provinces are Favored Terrain and gain: <bullet>+2 <mana></mana> Mana</bullet></bullet><bullet>Access to the Primal Crow summon</bullet><bullet>Units have:<bullet>Grassland Walk</bullet><bullet>Storm Crow's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -150,7 +174,7 @@
         "name": "Primal - Glacial Mammoth",
         "DLC": "PRIMALFURY",
         "icon": "primal_glacial_mammoth",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Glacial Mammoth, bestowing benefits to your culture: <bullet>Start in Arctic</bullet><bullet>Able to build Farms on Snow terrain</bullet><bullet>Snow provinces are Favored Terrain and gain: <bullet>+3 <production></production> Production </bullet></bullet><bullet>Access to the Primal Mammoth summon</bullet><bullet>Units have:<bullet>Arctic Walk</bullet><bullet>Glacial Mammoth's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Glacial Mammoth, bestowing benefits to your culture: <bullet>Start in Arctic</bullet><bullet>Able to build Farms on Snow terrain</bullet><bullet>Snow provinces are Favored Terrain and gain: <bullet>+3 <production></production> Production </bullet></bullet><bullet>Access to the Primal Mammoth summon</bullet><bullet>Units have:<bullet>Arctic Walk</bullet><bullet>Glacial Mammoth's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -164,7 +188,7 @@
         "name": "Primal - Dune Serpent",
         "DLC": "PRIMALFURY",
         "icon": "primal_dune_serpent",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Dune Serpent, bestowing benefits to your culture: <bullet>Start in the Desert</bullet><bullet>Able to build Farms on Sand terrain</bullet><bullet>Sand provinces are Favored Terrain and gain: <bullet>+2 <gold></gold> Gold </bullet></bullet><bullet>Access to the Primal Serpent summon</bullet><bullet>Units have:<bullet>Sand Walk</bullet><bullet>Dune Serpent's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Dune Serpent, bestowing benefits to your culture: <bullet>Start in the Desert</bullet><bullet>Able to build Farms on Sand terrain</bullet><bullet>Sand provinces are Favored Terrain and gain: <bullet>+2 <gold></gold> Gold </bullet></bullet><bullet>Access to the Primal Serpent summon</bullet><bullet>Units have:<bullet>Sand Walk</bullet><bullet>Dune Serpent's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -178,7 +202,7 @@
         "name": "Primal - Ash Sabertooth",
         "DLC": "PRIMALFURY",
         "icon": "primal_ash_sabertooth",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Ash Sabertooth, bestowing benefits to your culture: <bullet>Start in Ashlands</bullet><bullet>Able to build Farms on Ashlands terrain</bullet><bullet>Ashland provinces are Favored Terrain and gain: <bullet>+2 <gold></gold> Gold </bullet></bullet><bullet>Access to the Primal Sabertooth summon</bullet><bullet>Units have:<bullet>Desolate Walk</bullet><bullet>Ash Sabertooth's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Ash Sabertooth, bestowing benefits to your culture: <bullet>Start in Ashlands</bullet><bullet>Able to build Farms on Ashlands terrain</bullet><bullet>Ashland provinces are Favored Terrain and gain: <bullet>+3 <gold></gold> Gold </bullet></bullet><bullet>Access to the Primal Sabertooth summon</bullet><bullet>Units have:<bullet>Desolate Walk</bullet><bullet>Ash Sabertooth's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -192,7 +216,7 @@
         "name": "Primal - Tunneling Spider",
         "DLC": "PRIMALFURY",
         "icon": "primal_tunneling_spider",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Tunneling Spider, bestowing benefits to your culture: <bullet>Start in the Underground</bullet><bullet>Able to build Farms on Cavern terrain</bullet><bullet>Mushroom Forest provinces are Favored Terrain and gain: <bullet>+2 <knowledge></knowledge> Knowledge </bullet></bullet><bullet>Access to the Primal Spider summon</bullet><bullet>Units have:<bullet>Cave Walk</bullet><bullet>Tunneling Spider's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Tunneling Spider, bestowing benefits to your culture: <bullet>Start in the Underground</bullet><bullet>Able to build Farms on Cavern terrain</bullet><bullet>Mushroom Forest provinces are Favored Terrain and gain: <bullet>+2 <knowledge></knowledge> Knowledge </bullet></bullet><bullet>Access to the Primal Spider summon</bullet><bullet>Units have:<bullet>Cave Walk</bullet><bullet>Tunneling Spider's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -206,7 +230,7 @@
         "name": "Primal - Sylvan Wolf",
         "DLC": "PRIMALFURY",
         "icon": "primal_sylvan_wolf",
-        "description": "A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment.<br><br><bulletlist><bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist><br><bulletlist>Your people worship the Sylvan Wolf, bestowing benefits to your culture: <bullet>Start in the Forest</bullet><bullet>Forest provinces are Favored Terrain and gain: <bullet>+3 <unitprod></unitprod> Draft </bullet></bullet><bullet>Access to the Primal Wolf summon</bullet><bullet>Units have:<bullet>Forest Walk</bullet><bullet>Sylvan Wolf's Boon</bullet></bullet></bulletlist>",
+        "description": "<bulletlist>A people who worship powerful Animal Spirits and channel their Fury during battle. They receive blessings by altering their environment. <bullet>Structures have <food></food> Food income.</bullet><bullet>Alter privinces into the Primal Animal's Favored Terrain</bullet></bulletlist> <br><br><bulletlist>Your people worship the Sylvan Wolf, bestowing benefits to your culture: <bullet>Start in the Forest</bullet><bullet>Forest provinces are Favored Terrain and gain: <bullet>+3 <draft></draft> Draft </bullet></bullet><bullet>Access to the Primal Wolf summon</bullet><bullet>Units have:<bullet>Forest Walk</bullet><bullet>Sylvan Wolf's Boon</bullet></bullet></bulletlist>",
         "incompatible": [
             {
                 "name": "Adaptation"
@@ -250,6 +274,20 @@
         "name": "Syron",
         "DLC": " ELDRITCHREALMS",
         "description": "Slender, pale beings whose origins lie within the deep dark of the Astral Sea."
+    },
+    {
+        "type": "Skin",
+        "id": "ogrekin",
+        "name": "Ogrekin",
+        "DLC": " WAYSOFWAR",
+        "description": "Imposing beings whose teeth can grow to sizes almost as impressive as their horns."
+    },
+    {
+        "type": "Skin",
+        "id": "simian",
+        "name": "Simian",
+        "DLC": " WAYSOFWAR",
+        "description": "Tailed primates to whom a smile can mean both a sign of friendship or aggression."
     },
     {
         "type": "Skin",
@@ -306,7 +344,7 @@
         "id": "lupine",
         "name": "Lupine",
         "DLC": "PRIMALFURY",
-        "description": "Wolf-like beings who communicate trough barks and howls."
+        "description": "."
     },
     {
         "type": "Skin",
@@ -317,605 +355,51 @@
     },
     {
         "type": "Loadout",
-        "id": "barbarian_axe",
+        "id": "axe_and_shield",
         "name": "Axe and Shield",
         "requirement": "Champion,Barbarian",
-        "abilities": [
-            {
-                "slug": "vigor_i"
-   }
-            ],
         "items": [
             {
                 "slug": "barbarian_axe"
-            }, {
+            },
+            {
                 "slug": "wooden_shield"
-            }, {
-                "slug": "helmet"
-            }, {
-                "slug": "hero_mount"
-   }
-        ]
+            }
+        ],
+        "helmet": true,
+        "mount": true
     },
     {
         "type": "Loadout",
-        "id": "greataxe",
-        "name": "Greataxe",
-        "requirement": "Champion,Barbarian:Primal",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
+        "id": "bladed_mace",
+        "name": "Bladed Mace",
+        "requirement": "Champion,Mystic",
         "items": [
             {
-                "slug": "greataxe"
+                "slug": "mystic_mace"
             }
         ]
     },
     {
         "type": "Loadout",
-        "id": "bow",
-        "name": "Bow",
-        "requirement": "Champion,Barbarian:Feudal:High:Mystic - School of Attunement:Mystic - School of Potential:Mystic - School of Summoning",
-        "abilities": [
-            {
-                "slug": "archery_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "bow"
-            }, {
-                "slug": "hero_mount"
-   }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "staff_of_blight",
-        "name": "Blight Staff",
-        "requirement": "Champion,Barbarian",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
-        "items": [
-            {
-                "slug": "staff_of_blight"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "poison_orb",
+        "id": "blight_orb",
         "name": "Blight Orb",
-        "requirement": "Champion,Barbarian:Primal",
-        "abilities": [
-            {
-                "slug": "magecraft_i"
-   }
-            ],
+        "requirement": "Champion,Barbarian:Primal-mire_crocodile-tunneling_spider",
         "items": [
             {
                 "slug": "poison_orb"
-            }, {
-                "slug": "hero_mount"
             }
-        ]
+        ],
+        "mount": true
     },
     {
         "type": "Loadout",
-        "id": "lance",
-        "name": "Lance",
-        "requirement": "Champion,Feudal:Dark:High",
-        "abilities": [
-            {
-                "slug": "archery_i"
-   }
-            ],
+        "id": "blight_staff",
+        "name": "Blight Staff",
+        "requirement": "Champion,Barbarian",
         "items": [
             {
-                "slug": "lance"
-            }, {
-                "slug": "hero_mount"
-   }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "feudal_longsword",
-        "name": "Sword and Shield",
-        "requirement": "Champion,Feudal:High:Dark:Reaver",
-        "abilities": [
-            {
-                "slug": "vigor_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "feudal_longsword"
-            }, {
-                "slug": "feudal_shield"
-            }, {
-                "slug": "helmet"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "greatsword",
-        "name": "Greatsword",
-        "requirement": "Champion,Feudal",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "greatsword"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "staff_of_spirit",
-        "name": "Spirit Staff",
-        "requirement": "Champion,High:Feudal",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
-        "items": [
-            {
-                "slug": "staff_of_spirit"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "spirit_orb",
-        "name": "Spirit Orb",
-        "requirement": "Champion,High:Feudal",
-        "abilities": [
-            {
-                "slug": "magecraft_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "spirit_orb"
-            }, {
-                "slug": "hero_mount"
-   }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "lightning_orb",
-        "name": "Lightning Orb",
-        "requirement": "Champion,Mystic - School of Attunement:Mystic - School of Potential:Mystic - School of Summoning",
-        "abilities": [
-            {
-                "slug": "magecraft_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "lightning_orb"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "greathammer",
-        "name": "Greathammer",
-        "requirement": "Champion,Industrious",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "greathammer"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "industrious_hammer",
-        "name": "Shield and Hammer",
-        "requirement": "Champion,Industrious",
-        "abilities": [
-            {
-                "slug": "vigor_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "industrious_hammer"
-            }, {
-                "slug": "wooden_shield"
-            }, {
-                "slug": "helmet"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "mystic_mace",
-        "name": "Mace and Shield",
-        "requirement": "Champion,Mystic - School of Attunement:Mystic - School of Potential:Mystic - School of Summoning",
-        "abilities": [
-            {
-                "slug": "vigor_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "mystic_mace"
-            }, {
-                "slug": "wooden_shield"
-            }, {
-                "slug": "helmet"
-            }, {
-                "slug": "hero_mount"
-   }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "mystic_mace",
-        "name": "Bladed Mace",
-        "requirement": "Champion,Mystic - School of Attunement:Mystic - School of Potential:Mystic - School of Summoning",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "mystic_mace"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "staff_of_lightning",
-        "name": "Lightning Staff",
-        "requirement": "Champion,Mystic - School of Attunement:Mystic - School of Potential:Mystic - School of Summoning",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
-        "items": [
-            {
-                "slug": "staff_of_lightning"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "crossbow",
-        "name": "Crossbow",
-        "requirement": "Champion,Industrious",
-        "abilities": [
-            {
-                "slug": "archery_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "crossbow"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "staff_of_fire",
-        "name": "Fire Staff",
-        "requirement": "Champion,Industrious",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
-        "items": [
-            {
-                "slug": "staff_of_fire"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "fire_orb",
-        "name": "Fire Orb",
-        "requirement": "Champion,Industrious",
-        "abilities": [
-            {
-                "slug": "magecraft_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "fire_orb"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "staff_of_frost",
-        "name": "Frost Staff",
-        "requirement": "Champion,Dark",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
-        "items": [
-            {
-                "slug": "staff_of_frost"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "pistol_and_sword",
-        "name": "Pistol and Sword",
-        "requirement": "Champion,Reaver",
-        "abilities": [
-            {
-                "slug": "sprint_sprint"
-   }
-            ],
-        "items": [
-            {
-                "slug": "pistol_and_sword"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "reaver_halberd",
-        "name": "Reaver Halberd",
-        "requirement": "Champion,Reaver",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "reaver_halberd"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "heavy_magelock_rifle",
-        "name": "Heavy Magelock Rifle",
-        "requirement": "Champion,Reaver",
-        "abilities": [
-            {
-                "slug": "archery_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "magelock_rifle"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "frost_orb",
-        "name": "Frost Orb",
-        "requirement": "Champion,Dark",
-        "abilities": [
-            {
-                "slug": "magecraft_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "frost_orb"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "dragon_claw_2",
-        "name": "Astral Dragon",
-        "requirement": "Dragon Lord",
-        "affinity": "<empirearcana></empirearcana>",
-        "description": "Breath and Claws deals <damagelightning></damagelightning> Lightning Damage<br><br>Gain 1 <empirearcana></empirearcana> Affinity"
-    },
-    {
-        "type": "Loadout",
-        "id": "dragon_claw_6",
-        "name": "Chaos Dragon",
-        "requirement": "Dragon Lord",
-        "affinity": "<empirechaos></empirechaos>",
-        "description": "Breath and Claws deals <damagefire></damagefire> Fire Damage<br><br>Gain 1 <empirechaos></empirechaos> Affinity"
-    },
-    {
-        "type": "Loadout",
-        "id": "dragon_claw",
-        "name": "Materium Dragon",
-        "requirement": "Dragon Lord",
-        "affinity": "<empirematter></empirematter>",
-        "description": "Breath and Claws deals <damagephysical></damagephysical> Physical Damage<br><br>Gain 1 <empirematter></empirematter> Affinity"
-    },
-    {
-        "type": "Loadout",
-        "id": "dragon_claw_4",
-        "name": "Nature Dragon",
-        "requirement": "Dragon Lord",
-        "affinity": "<empirenature></empirenature>",
-        "description": "Breath and Claws deals <damageblight></damageblight> Blight Damage<br><br>Gain 1 <empirenature></empirenature> Affinity"
-    },
-    {
-        "type": "Loadout",
-        "id": "dragon_claw_5",
-        "name": "Order Dragon",
-        "requirement": "Dragon Lord",
-        "affinity": "<empireorder></empireorder>",
-        "description": "Breath and Claws deals <damagespirit></damagespirit> Spirit Damage<br><br>Gain 1 <empireorder></empireorder> Affinity"
-    },
-    {
-        "type": "Loadout",
-        "id": "dragon_claw_3",
-        "name": "Shadow Dragon",
-        "requirement": "Dragon Lord",
-        "affinity": "<empireshadow></empireshadow>",
-        "description": "Breath and Claws deals <damagefrost></damagefrost> Frost Damage<br><br>Gain 1 <empireshadow></empireshadow> Affinity"
-    },
-    {
-        "type": "Loadout",
-        "id": "godir_sword",
-        "name": "Godir Sword and Shield",
-        "requirement": "Wizard King",
-        "abilities": [
-            {
-                "slug": "vigor_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "godir_sword"
-            }, {
-                "slug": "godir_shield"
-            }, {
-                "slug": "helmet"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "godir_bow",
-        "name": "Godir Bow",
-        "requirement": "Wizard King",
-        "abilities": [
-            {
-                "slug": "archery_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "godir_bow"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "godir_greataxe",
-        "name": "Godir Greataxe",
-        "requirement": "Wizard King",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "godir_greataxe"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "staff_of_spirit",
-        "name": "(Wizard King)Spirit Staff",
-        "requirement": "Wizard King",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
-        "items": [
-            {
-                "slug": "staff_of_spirit"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "lightning_orb",
-        "name": "(Wizard King)Lightning Orb",
-        "requirement": "Wizard King",
-        "abilities": [
-            {
-                "slug": "magecraft_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "lightning_orb"
-            }, {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "handaxe_and_shield",
-        "name": "Handaxe and Shield",
-        "requirement": "Champion,Primal",
-        "abilities": [
-            {
-                "slug": "vigor_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "handaxe"
-            }, {
-                "slug": "primal_shield"
-            }, {
-                "slug": "helmet"
-            }, {
-                "slug": "hero_mount"
-   }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "spear",
-        "name": "Spear",
-        "requirement": "Champion,Primal",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-   }
-            ],
-        "items": [
-            {
-                "slug": "spear"
+                "slug": "staff_of_blight"
             }
         ]
     },
@@ -924,32 +408,523 @@
         "id": "blowgun",
         "name": "Blowgun",
         "requirement": "Champion,Primal",
-        "abilities": [
-            {
-                "slug": "archery_i"
-   }
-            ],
         "items": [
             {
                 "slug": "blowgun"
-            }, {
-                "slug": "hero_mount"
-   }
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "bow",
+        "name": "Bow",
+        "requirement": "Champion,Feudal:High:Oathsworn:Barbarian:Dark:Mystic",
+        "items": [
+            {
+                "slug": "bow"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "cestus",
+        "name": "Cestus",
+        "requirement": "Champion,Oathsworn",
+        "items": [
+            {
+                "slug": "cestus"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "crossbow",
+        "name": "Crossbow",
+        "requirement": "Champion,Industrious",
+        "items": [
+            {
+                "slug": "crossbow"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "fire_orb",
+        "name": "Fire Orb",
+        "requirement": "Champion,Industrious:Oathsworn-strife:Primal-dune_serpent-ash_sabretooth",
+        "items": [
+            {
+                "slug": "fire_orb"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "fire_staff",
+        "name": "Fire Staff",
+        "requirement": "Champion,Industrious",
+        "items": [
+            {
+                "slug": "staff_of_fire"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "flaming_greatclub",
+        "name": "Flaming Greatclub",
+        "requirement": "Champion,Oathsworn-strife",
+        "items": [
+            {
+                "slug": "flaming_greatclub"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "frost_orb",
+        "name": "Frost Orb",
+        "requirement": "Champion,Dark:Primal-glacial_mammoth",
+        "items": [
+            {
+                "slug": "frost_orb"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "frost_staff",
+        "name": "Frost Staff",
+        "requirement": "Champion,Dark",
+        "items": [
+            {
+                "slug": "staff_of_frost"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "glaive",
+        "name": "Glaive",
+        "requirement": "Champion,Oathsworn",
+        "items": [
+            {
+                "slug": "glaive"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "greataxe",
+        "name": "Greataxe",
+        "requirement": "Champion,Barbarian:Primal",
+        "items": [
+            {
+                "slug": "greataxe"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "greatsword",
+        "name": "Greatsword",
+        "requirement": "Champion,Oathsworn-harmony-righteousness:Feudal",
+        "items": [
+            {
+                "slug": "greatsword"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "handaxe_and_shield",
+        "name": "Handaxe and Shield",
+        "requirement": "Champion,Primal",
+        "items": [
+            {
+                "slug": "handaxe"
+            },
+            {
+                "slug": "primal_shield"
+            }
+        ],
+        "helmet": true,
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "heavy_magelock_rifle",
+        "name": "Heavy Magelock Rifle",
+        "requirement": "Champion,Reaver",
+        "items": [
+            {
+                "slug": "magelock_rifle"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "lance",
+        "name": "Lance",
+        "requirement": "Champion,Dark:High:Feudal",
+        "items": [
+            {
+                "slug": "lance"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "lightning_orb",
+        "name": "Lightning Orb",
+        "requirement": "Champion:Wizard King,Mystic:Primal-storm_crow",
+        "items": [
+            {
+                "slug": "lightning_orb"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "lightning_staff",
+        "name": "Lightning Staff",
+        "requirement": "Champion,Mystic",
+        "items": [
+            {
+                "slug": "staff_of_lightning"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "mace_and_shield",
+        "name": "Mace and Shield",
+        "requirement": "Champion,Mystic",
+        "items": [
+            {
+                "slug": "mystic_mace"
+            },
+            {
+                "slug": "wooden_shield"
+            }
+        ],
+        "helmet": true,
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "pistol_and_sword",
+        "name": "Pistol and Sword",
+        "requirement": "Champion,Reaver",
+        "items": [
+            {
+                "slug": "pistol_and_sword"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "purging_staff",
+        "name": "Purging Staff",
+        "requirement": "Champion,Oathsworn",
+        "items": [
+            {
+                "slug": "purging_staff"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "reaver_halberd",
+        "name": "Reaver Halberd",
+        "requirement": "Champion,Reaver",
+        "items": [
+            {
+                "slug": "reaver_halberd"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "hammer_and_shield",
+        "name": "Hammer and Shield",
+        "requirement": "Champion,Industrious",
+        "items": [
+            {
+                "slug": "industrious_hammer"
+            },
+            {
+                "slug": "wooden_shield"
+            }
+        ],
+        "helmet": true,
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "spear",
+        "name": "Spear",
+        "requirement": "Champion,Primal",
+        "items": [
+            {
+                "slug": "spear"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "spirit_orb",
+        "name": "Spirit Orb",
+        "requirement": "Champion,Feudal:Primal-sylvan_wolf:Oathsworn-harmony-righteousness:High",
+        "items": [
+            {
+                "slug": "spirit_orb"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "spirit_staff",
+        "name": "Spirit Staff",
+        "requirement": "Champion:Wizard King,Feudal:High",
+        "items": [
+            {
+                "slug": "spirit_staff"
+            }
         ]
     },
     {
         "type": "Loadout",
         "id": "staff_of_the_primal_spirit",
-        "name": "Staff of the Primal Spirit",
+        "name": "Staff of Spirit Animal",
         "requirement": "Champion,Primal",
-        "abilities": [
-            {
-                "slug": "restore_restore"
-   }
-            ],
         "items": [
             {
-                "slug": "staff_of_the_mire_crocodile"
+                "slug": "staff_of_the_primal_spirit"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "sword_and_crossbow",
+        "name": "Sword and Crossbow",
+        "requirement": "Champion,Feudal:High:Dark",
+        "items": [
+            {
+                "slug": "sword_and_crossbow"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "sword_and_shield",
+        "name": "Sword and Shield",
+        "requirement": "Champion,Feudal:High:Dark:Reaver:Oathsworn",
+        "items": [
+            {
+                "slug": "sword_and_shield"
+            }
+        ],
+        "mount": true,
+        "helmet": true
+    },
+    {
+        "type": "Loadout",
+        "id": "godir_greataxe",
+        "name": "Godir Greataxe",
+        "requirement": "Wizard King",
+        "items": [
+            {
+                "slug": "godir_greataxe"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "godir_bow",
+        "name": "Godir Bow",
+        "requirement": "Wizard King",
+        "items": [
+            {
+                "slug": "godir_bow"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "godir_sword_and_shield",
+        "name": "Godir Sword and Shield",
+        "requirement": "Wizard King",
+        "items": [
+            {
+                "slug": "godir_sword"
+            },
+            {
+                "slug": "godir_shield"
+            }
+        ],
+        "mount": true,
+        "helmet": true
+    },
+    {
+        "type": "Loadout",
+        "id": "lance_of_glory",
+        "name": "Lance of Glory",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "lance_of_glory"
+            }
+        ],
+        "mount": true
+    },
+    {
+        "type": "Loadout",
+        "id": "astral_dragon",
+        "name": "Astral Dragon",
+        "requirement": "Dragon Lord",
+        "affinity": "<empirearcana></empirearcana>",
+        "description": "Breath and Claws deals <damagelightning></damagelightning> Lightning Damage<br><br>Gain 1 <empirearcana></empirearcana> Affinity"
+    },
+    {
+        "type": "Loadout",
+        "id": "chaos_dragon",
+        "name": "Chaos Dragon",
+        "requirement": "Dragon Lord",
+        "affinity": "<empirechaos></empirechaos>",
+        "description": "Breath and Claws deals <damagefire></damagefire> Fire Damage<br><br>Gain 1 <empirechaos></empirechaos> Affinity"
+    },
+    {
+        "type": "Loadout",
+        "id": "materium_dragon",
+        "name": "Materium Dragon",
+        "requirement": "Dragon Lord",
+        "affinity": "<empirematter></empirematter>",
+        "description": "Breath and Claws deals <damagephysical></damagephysical> Physical Damage<br><br>Gain 1 <empirematter></empirematter> Affinity"
+    },
+    {
+        "type": "Loadout",
+        "id": "nature_dragon",
+        "name": "Nature Dragon",
+        "requirement": "Dragon Lord",
+        "affinity": "<empirenature></empirenature>",
+        "description": "Breath and Claws deals <damageblight></damageblight> Blight Damage<br><br>Gain 1 <empirenature></empirenature> Affinity"
+    },
+    {
+        "type": "Loadout",
+        "id": "order_dragon",
+        "name": "Order Dragon",
+        "requirement": "Dragon Lord",
+        "affinity": "<empireorder></empireorder>",
+        "description": "Breath and Claws deals <damagespirit></damagespirit> Spirit Damage<br><br>Gain 1 <empireorder></empireorder> Affinity"
+    },
+    {
+        "type": "Loadout",
+        "id": "shadow_dragon",
+        "name": "Shadow Dragon",
+        "requirement": "Dragon Lord",
+        "affinity": "<empireshadow></empireshadow>",
+        "description": "Breath and Claws deals <damagefrost></damagefrost> Frost Damage<br><br>Gain 1 <empireshadow></empireshadow> Affinity"
+    },
+    {
+        "type": "Loadout",
+        "id": "relic_of_flesh",
+        "name": "Relic of Flesh",
+        "requirement": "Eldritch Sovereign",
+        "items": [
+            {
+                "slug": "relic_of_flesh"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "relic_of_mind",
+        "name": "Relic of Mind",
+        "requirement": "Eldritch Sovereign",
+        "items": [
+            {
+                "slug": "relic_of_mind"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "relic_of_havoc",
+        "name": "Relic of Havoc",
+        "requirement": "Eldritch Sovereign",
+        "items": [
+            {
+                "slug": "relic_of_havoc"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "relic_of_the_cosmos",
+        "name": "Relic of the Cosmos",
+        "requirement": "Eldritch Sovereign",
+        "items": [
+            {
+                "slug": "relic_of_the_cosmos"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "pantheon_umbral_warriors_greataxe",
+        "name": "<pantheon></pantheon> Umbral Warrior's Greataxe",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "umbral_greataxe"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "pantheon_umbral_direcasters_staff",
+        "name": "<pantheon></pantheon> Umbral Direcaster's Staff",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "umbral_staff"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "pantheon_umbral_demonslayers_bow",
+        "name": "<pantheon></pantheon> Umbral Demonslayer's Bow",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "umbral_bow"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "pantheon_lashers_sword_and_shield",
+        "name": "<pantheon></pantheon> Lasher's Sword and Shield",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "umbral_shield"
+            },
+            {
+                "slug": "umbral_sword"
             }
         ]
     },
@@ -958,101 +933,67 @@
         "id": "pantheon_berserkers_axe",
         "name": "<pantheon></pantheon> Berserker's Axe",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "berserkers_rage"
-   }
-            ],
         "items": [
             {
-                "slug": "greataxe"
+                "slug": "berserkers_greataxe"
             }
         ]
-
     },
     {
         "type": "Loadout",
         "id": "pantheon_cryomancers_staff",
         "name": "<pantheon></pantheon> Cryomancer's Staff",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "freezing_blast_freezing_blast"
-   }
-            ],
         "items": [
             {
-                "slug": "staff_of_frost"
+                "slug": "cryomancers_staff"
             }
         ]
-
     },
     {
         "type": "Loadout",
         "id": "pantheon_druids_staff",
         "name": "<pantheon></pantheon> Druid's Staff",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "sap_strength_sap_strength"
-   }
-            ],
         "items": [
             {
-                "slug": "staff_of_blight"
+                "slug": "druids_staff"
             }
         ]
-
     },
     {
         "type": "Loadout",
         "id": "pantheon_earthshakers_hammer",
         "name": "<pantheon></pantheon> Earthshaker's Hammer",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "quake_quake"
-   }
-            ],
         "items": [
             {
-                "slug": "greathammer"
+                "slug": "earthshakers_hammer"
             }
         ]
-
     },
     {
         "type": "Loadout",
         "id": "pantheon_orb_of_necromancy",
         "name": "<pantheon></pantheon> Orb of Necromancy",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "raise_undead_raise_undead"
-   }
-            ],
         "items": [
             {
-                "slug": "poison_orb"
+                "slug": "orb_of_necromancy"
             }
         ]
-
     },
     {
         "type": "Loadout",
         "id": "pantheon_tyrants_sword_and_shield",
         "name": "<pantheon></pantheon> Tyrant's Sword and Shield",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "intimidating_aura"
-   }
-            ],
         "items": [
             {
                 "slug": "feudal_longsword"
-            }, {
-                "slug": "feudal_shield"
+            },
+            {
+                "slug": "tyrants_shield"
             }
         ]
     },
@@ -1061,33 +1002,45 @@
         "id": "pantheon_veterans_pike",
         "name": "<pantheon></pantheon> Vetaran's Pike",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "watchful"
-   }
-            ],
         "items": [
             {
-                "slug": "pike"
+                "slug": "veterans_pike"
             }
         ]
-
     },
     {
         "type": "Loadout",
         "id": "pantheon_captains_axe_and_shield",
         "name": "<pantheon></pantheon> Captains's Axe and Shield",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "inspiring_presence"
-   }
-            ],
         "items": [
             {
                 "slug": "battleaxe"
-            }, {
-                "slug": "industrious_shield"
+            },
+            {
+                "slug": "captains_shield"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "pantheon_martial_cestus",
+        "name": "<pantheon></pantheon> Martial Cestus",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "martial_cestus"
+            }
+        ]
+    },
+    {
+        "type": "Loadout",
+        "id": "pantheon_slayer_sword",
+        "name": "<pantheon></pantheon> Slayer Sword",
+        "requirement": "Champion:Wizard King",
+        "items": [
+            {
+                "slug": "slayer_sword"
             }
         ]
     },
@@ -1096,14 +1049,9 @@
         "id": "pantheon_crowmasters_bow",
         "name": "<pantheon></pantheon> Crowmaster's Bow",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "crowmaster"
-   }
-            ],
         "items": [
             {
-                "slug": "bow"
+                "slug": "crowmasters_bow"
             }
         ]
     },
@@ -1112,181 +1060,10 @@
         "id": "pantheon_hunters_crossbow",
         "name": "<pantheon></pantheon> Hunters's Crossbow",
         "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "giant_slayer"
-   }
-            ],
         "items": [
             {
-                "slug": "crossbow"
+                "slug": "hunters_crossbow"
             }
         ]
-
-    },
-    {
-        "type": "Loadout",
-        "id": "lance_of_glory",
-        "DLC": "HERALDOFGLORY ",
-        "name": "Lance of Glory",
-        "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "fighting_i"
-            }
-        ],
-        "items": [
-            {
-                "slug": "lance_of_glory"
-            },
-            {
-                "slug": "hero_mount"
-            }
-        ]
-    },
-    {
-        "type": "Loadout",
-        "id": "relic_of_flesh",
-        "name": "Relic of Flesh",
-        "requirement": "Eldritch Sovereign",
-        "abilities": [
-            {
-                "slug": "delirium_delirium"
-   }
-            ],
-        "items": [{
-                "slug": "relic_of_flesh"
-            }
-        ]
-
-
-    },
-    {
-        "type": "Loadout",
-        "id": "relic_of_mind",
-        "name": "Relic of Mind",
-        "requirement": "Eldritch Sovereign",
-        "spells": [
-            {
-                "slug": "eldritch_rituals"
-   }
-            ],
-        "abilities": [
-            {
-                "slug": "eldritch_rituals"
-   }
-            ],
-        "items": [{
-                "slug": "relic_of_mind"
-            }
-        ]
-
-
-    }, {
-        "type": "Loadout",
-        "id": "relic_of_havoc",
-        "name": "Relic of Havoc",
-        "requirement": "Eldritch Sovereign",
-        "abilities": [
-            {
-                "slug": "eldritch_phase_eldritch_phase_i"
-   }
-            ],
-        "items": [{
-                "slug": "relic_of_havoc"
-            }
-        ]
-
-
-    }, {
-        "type": "Loadout",
-        "id": "relic_of_the_cosmos",
-        "name": "Relic of the Cosmos",
-        "requirement": "Eldritch Sovereign",
-
-        "abilities": [
-            {
-                "slug": "astral_wisp_ritual"
-   }
-            ],
-        "spells": [
-            {
-                "slug": "astral_wisp_ritual"
-   }
-            ],
-        "items": [{
-                "slug": "relic_of_the_cosmos"
-            }
-        ]
-
-    }, {
-        "type": "Loadout",
-        "id": "pantheon_umbral_warriors_greataxe",
-        "name": "<pantheon></pantheon> Umbral Warrior's Greataxe",
-        "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "umbral_wake"
-   }, {
-                "slug": "umbral_malady_immunity"
-   }
-            ],
-        "items": [{
-                "slug": "umbral_greataxe"
-            }
-        ]
-
-    }, {
-        "type": "Loadout",
-        "id": "pantheon_umbral_direcasters_staff",
-        "name": "<pantheon></pantheon> Umbral Direcaster's Staff",
-        "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "hysteria_storm_hysteria_storm"
-   }
-            ],
-        "items": [
-            {
-                "slug": "umbral_staff"
-            }
-        ]
-
-    },
-    {
-        "type": "Loadout",
-        "id": "pantheon_umbral_demonslayers_bow",
-        "name": "<pantheon></pantheon> Umbral Demonslayer's Bow",
-        "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "demonslayer"
-   }
-            ],
-
-        "items": [
-            {
-                "slug": "umbral_bow"
-            }
-        ]
-
-    }, {
-        "type": "Loadout",
-        "id": "pantheon_lashers_sword_and_shield",
-        "name": "<pantheon></pantheon> Lasher's Sword and Shield",
-        "requirement": "Champion:Wizard King",
-        "abilities": [
-            {
-                "slug": "pull_pull"
-   }
-            ],
-        "items": [
-            {
-                "slug": "umbral_shield"
-            }, {
-                "slug": "umbral_sword"
-            }
-        ]
-
     }
 ]

@@ -1635,6 +1635,10 @@ HelpText {
     color: grey;
     font-size: 14px;
 }
+yellowText {
+    color: gold;
+    font-size: 14px;
+}
 
 greenText {
     color: palegreen;
@@ -1718,9 +1722,10 @@ research {
 
 .EMPIRESANDASHEStriangle {
     position: absolute;
-    top: -68px;
+
     z-index: 0;
-    right: -168px;
+    top: -19px;
+    right: -18px;
     width: 30px;
     height: 30px;
     border-width: 2px;
@@ -1730,11 +1735,27 @@ research {
     background: linear-gradient(126deg, #bfbf10 70%, #947c08);
 }
 
+.WAYSOFWARtriangle {
+    position: absolute;
+
+    z-index: 0;
+    top: -20px;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #fab5b5;
+    transform: rotate(45deg);
+    background: linear-gradient(126deg, red 100%, #947c08);
+}
+
 .DRAGONLORDStriangle {
     position: absolute;
-    top: -68px;
+    top: -19px;
+    right: -18px;
     z-index: 0;
-    right: -168px;
+
     width: 30px;
     height: 30px;
     border-width: 2px;
@@ -1746,9 +1767,10 @@ research {
 
 .PRIMALFURYtriangle {
     position: absolute;
-    top: -68px;
+
     z-index: 0;
-    right: -168px;
+    top: -19px;
+    right: -18px;
     width: 30px;
     height: 30px;
     border-width: 2px;
@@ -1760,12 +1782,13 @@ research {
 
 .ELDRITCHREALMStriangle {
     position: absolute;
-    top: -68px;
+
     z-index: 0;
-    right: -168px;
+    top: -22px;
+    right: -28px;
     width: 30px;
     height: 30px;
-    border-width: 2px;
+    border-width: 6px;
     border-style: solid;
     border-color: #490d82;
     transform: rotate(45deg);
@@ -1838,7 +1861,12 @@ research {
     display: none;
     overflow: hidden;
 }
-
+renown {
+    max-width: 20px;
+    top: 3px;
+    content: url(/evolved/Icons/Text/renown.png);
+    position: relative;
+}
 influence {
     max-width: 25px;
     top: 3px;
@@ -1961,42 +1989,42 @@ unitSiegecraft {
 unitCivilian {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/Abilities/civilian.png);
+    content: url(/evolved/Icons/UnitIcons/civilian.png);
     position: relative;
 }
 
 unitCavalry {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/Abilities/cavalry.png);
+    content: url(/evolved/Icons/UnitIcons/cavalry.png);
     position: relative;
 }
 
 unitPlant {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/Abilities/plant.png);
+    content: url(/evolved/Icons/UnitIcons/plant.png);
     position: relative;
 }
 
 unitConstruct {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/Abilities/construct.png);
+    content: url(/evolved/Icons/UnitIcons/construct.png);
     position: relative;
 }
 
 unitFey {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/Abilities/fey.png);
+    content: url(/evolved/Icons/UnitIcons/fey.png);
     position: relative;
 }
 
 unitAnimal {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/Abilities/animal.png);
+    content: url(/evolved/Icons/UnitIcons/animal.png);
     position: relative;
 }
 

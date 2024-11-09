@@ -1,69 +1,56 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <meta charset="UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-<link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
-
-<head>
-    <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css">
-    <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <script>
-        $("#body").ready(function() {
-
-            $("#header").load("/evolved/HTML/header.html", function() {
-                CheckData();
+        <script>
+            $("#body").ready(function () {
+                $("#header").load("/evolved/HTML/header.html", function () {
+                    CheckData();
+                });
             });
-        });
 
-        function HandlePage() {
-            unitarray = FindUnitsWithSecondaryPassive("fiend");
-            console.log(unitarray);
+            function HandlePage() {
+                unitarray = FindUnitsWithSecondaryPassive("infernal_fiend");
+                console.log(unitarray);
 
-            if (unitarray.length > 1) {
-                for (i in unitarray) {
-
-                    showUnitsFromList(unitarray[i], "Fiends Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
+                if (unitarray.length > 1) {
+                    for (i in unitarray) {
+                        showUnitsFromList(
+                            unitarray[i],
+                            "Infernal Fiends Tier " + romanize(parseInt(parseInt(i) + 1)) + " "
+                        );
+                    }
+                } else {
+                    SetButtonsAndDivs(unitarray[0], undefined, "unit");
                 }
-            } else {
-                SetButtonsAndDivs(unitarray[0], undefined, "unit");
+
+                SetLevelUpStuff();
+                SetCollapsibleStuff();
             }
+        </script>
 
+        <title>Age of Wonders 4 Database - Infernal Fiends</title>
+    </head>
 
-            SetLevelUpStuff();
-            SetCollapsibleStuff();
-        }
+    <body>
+        <div id="header"></div>
 
-    </script>
-
-
-    <title>Age of Wonders 4 Evolved - Fiend Units</title>
-</head>
-
-<body>
-    <div id="header"></div>
-
-    <div class="textblocktitle">
-        <img src="/evolved/Icons/Abilities/fiend.png" height="20px"> Fiend Wildlife Units <img src="/evolved/Icons/Abilities/fiend.png" height="20px">
-    </div>
-
-
-    <div class="w3-container">
-        <div id="buttonHolder" class="w3-bar w3-black">
-
-        </div>
-        <div id="dataHolder" style="margin-top:-250px">
+        <div class="textblocktitle">
+            <img src="/evolved/Icons/UnitIcons/fiend.png" height="40px" /> Infernal Fiend Wildlife Units
+            <img src="/evolved/Icons/UnitIcons/fiend.png" height="40px" />
         </div>
 
-
-    </div>
-
-
-
-</body>
-
+        <div class="w3-container">
+            <div id="buttonHolder" class="w3-bar w3-black"></div>
+            <div id="dataHolder" style="margin-top: -250px"></div>
+        </div>
+    </body>
 </html>
 <footer>
-    <br>
-    <br>
+    <br />
+    <br />
 </footer>

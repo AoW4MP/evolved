@@ -47,6 +47,7 @@
                         }
 
                         ResetAll();
+
                         //UpdatePage();
 
                         // Trigger functions based on the selected value
@@ -68,7 +69,8 @@
                 if (searchKeyword) {
                     TestLoad(searchKeyword);
                 } else {
-                    UpdatePage();
+                    ResetAll();
+                    // UpdatePage();
                 }
             }
 
@@ -94,9 +96,8 @@
     <body>
         <div id="header"></div>
         <div style="color: white; display: block; margin: 5px; margin-left: auto; margin-right: auto">
+            WIP, no Dragon Affinity support yet, always showing Materium breath
             <div style="display: flex; flex-direction: row; justify-content: center">
-                Tiger Update<br />
-                currently no different breath types for dragon affinities, always showing materium
                 <button class="button-random" onclick="GetQuickLinkHero()">Make Share Link</button>
                 <input type="text" value="" class="inputfield" id="shareLink" style="width: 600px" />
 
@@ -120,7 +121,7 @@
                         value="My Build"
                         class="inputfield"
                         id="buildNameInput"
-                        maxlength="35"
+                        maxlength="60"
                         name="fname" />
                 </div>
             </div>

@@ -992,7 +992,7 @@ function addAbilityslot(a, holder, list, enchant) {
                                             abilityRange =
                                                 parseInt(
                                                     parseInt(jsonEnchantments[k].attack[t].range) +
-                                                    parseInt(abilityRange)
+                                                        parseInt(abilityRange)
                                                 ) + "*";
                                         }
                                     }
@@ -1116,8 +1116,8 @@ function addAbilityslot(a, holder, list, enchant) {
             imag.setAttribute(
                 "style",
                 'background-image: url("/evolved/Icons/Interface/' +
-                abilityIconType +
-                '.png");background-repeat: no-repeat;background-size: 40px 40px'
+                    abilityIconType +
+                    '.png");background-repeat: no-repeat;background-size: 40px 40px'
             );
 
             imag.setAttribute("onerror", "this.setAttribute('src','/evolved/Icons/Text/mp.png')");
@@ -2564,7 +2564,7 @@ function findHeroAmbition() {
 
     for (j in jsonHeroAmbitions) {
         if (!isInArray(finalCheckedList, jsonHeroAmbitions[j])) {
-            if (jsonHeroAmbitions[j].available_to_rulers == true) {
+            if (jsonHeroAmbitions[j].screen_description.indexOf("WIP") == -1) {
                 finalCheckedList.push(jsonHeroAmbitions[j]);
             }
         }
@@ -6386,8 +6386,12 @@ function showHeroTrait(a) {
             descriptionDiv = document.getElementById("moddescription");
 
             descriptionDiv.innerHTML = "";
-
-            descriptionDiv.innerHTML = "<hr>" + thisAmbition.screen_description;
+            if (thisAmbition.available_to_rulers == false) {
+                descriptionDiv.innerHTML =
+                    "<hr>" + "<helpText>Only Available to Heroes</helpText><br><br>" + thisAmbition.screen_description;
+            } else {
+                descriptionDiv.innerHTML = "<hr>" + thisAmbition.screen_description;
+            }
 
             descriptionDiv.setAttribute("id", "moddescription" + a);
             unitTypesDiv = document.getElementById("affectUnitTypes");
@@ -7167,8 +7171,8 @@ function backtraceStructureToTomeNameAndTier(structure) {
                         if ("affinities" in jsonTomes[j]) {
                             array.push(
                                 ClearAffinityExtraTags(duplicateTags(jsonTomes[j].affinities)).replaceAll(",", "") +
-                                "<br> " +
-                                jsonTomes[j].name
+                                    "<br> " +
+                                    jsonTomes[j].name
                             );
                         } else {
                             array.push(jsonTomes[j].name);

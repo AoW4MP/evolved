@@ -170,12 +170,6 @@
   "icon": "animal"
  },
  {
-  "description": "<hyperlink>Unit Upkeep</hyperlink> reduced by -25%",
-  "name": "Low Maintenance",
-  "slug": "low_maintenance",
-  "icon": "low_maintenance"
- },
- {
   "description": "Cheap and swift units that are useful at <hyperlink><flank></flank> Flanking</hyperlink> and targeting lone enemies.<br></br>Skirmisher units gain:<bulletlist><bullet>Swift.</bullet><bullet>Slippery.</bullet></bulletlist>",
   "name": "Skirmisher Unit",
   "slug": "skirmisher_unit",
@@ -1402,7 +1396,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains +5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Flaming Charge Strike",
   "slug": "flaming_charge_strike_warbound_strife",
-  "damage": "24<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -1664,7 +1658,7 @@
   "description": "Unleashes a magical bolt at target enemy. Cannot miss against targets with Seal of Fire.",
   "name": "Seal Bolts",
   "slug": "magic_bolts_sealbearer_strife",
-  "damage": "6<damagefire></damagefire> 6<damagespirit></damagespirit> ",
+  "damage": "8<damagefire></damagefire> 6<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -1885,7 +1879,7 @@
   "description": "Target unit sustains damage and has 1 Positive Status Effect removed.",
   "name": "Purging Blast",
   "slug": "magic_blast_vowkeeper_strife",
-  "damage": "14<damagespirit></damagespirit> ",
+  "damage": "14<damagespirit></damagespirit> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2052,7 +2046,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_honor_blade_strife",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> 2<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2072,7 +2066,7 @@
   "description": "Strike at target unit and enter <hyperlink>Defense Mode</hyperlink>.",
   "name": "Defensive Strike",
   "slug": "defensive_strike_honor_blade_strife",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "26<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2169,7 +2163,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_sworn_guard_strife",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> 2<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2272,7 +2266,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_wayfarer_strife",
-  "damage": "6<damagephysical></damagephysical> 2<damagefire></damagefire> ",
+  "damage": "6<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -2362,6 +2356,12 @@
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
   "icon": "magic_bolts_severing_golem"
+ },
+ {
+  "description": "<hyperlink>Unit Upkeep</hyperlink> reduced by -25%",
+  "name": "Low Maintenance",
+  "slug": "low_maintenance",
+  "icon": "low_maintenance"
  },
  {
   "notes": [
@@ -5724,7 +5724,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Rift Bolts",
   "slug": "magic_bolts_spellweaver_potential",
-  "damage": "6<damagelightning></damagelightning> 6<damagefrost></damagefrost> ",
+  "damage": "7<damagelightning></damagelightning> 7<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8179,18 +8179,11 @@
   "icon": "static_shield"
  },
  {
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
+  "modifiers": [],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Lightning Bolts",
   "slug": "magic_bolts_evoker",
-  "damage": "10<damagelightning></damagelightning> ",
+  "damage": "12<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8202,6 +8195,14 @@
   "accuracy": "90%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "icon": "magic_bolts_severing_golem"
  },
  {
@@ -8447,7 +8448,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_wind_rager",
-  "damage": "15<damagephysical></damagephysical> ",
+  "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -8473,7 +8474,7 @@
   "description": "Deals damage to all adjacent enemies and displaces them up to 2 hexes.",
   "name": "Whirlwind",
   "slug": "whirlwind_wind_rager",
-  "damage": "16<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -8812,7 +8813,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_gremlin",
-  "damage": "10<damagephysical></damagephysical> 4<damagefire></damagefire> ",
+  "damage": "10<damagephysical></damagephysical> 6<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -8829,10 +8830,10 @@
  },
  {
   "modifiers": [],
-  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>, unless the target has Charge Resistance.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Turns 180 degrees.</bullet><bullet>Has their <hyperlink>Defense Mode</hyperlink> canceled and removes <hyperlink>Retaliation Attacks</hyperlink>.</bullet></bulletlist>",
   "name": "Behind You!",
   "slug": "behind_you!_gremlin",
-  "damage": "10<damagephysical></damagephysical> 10<damagefire></damagefire> ",
+  "damage": "12<damagephysical></damagephysical> 12<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -12100,7 +12101,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Spirit Bolts",
   "slug": "magic_bolts_lightbringer",
-  "damage": "12<damagespirit></damagespirit> ",
+  "damage": "14<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -12128,7 +12129,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Base 90% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 15 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
+  "description": "Base 90% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
   "name": "Convert",
   "slug": "convert_lightbringer",
   "damage": "",
@@ -12300,7 +12301,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Cruel Bolts",
   "slug": "magic_bolts_banshee",
-  "damage": "12<damagefrost></damagefrost> ",
+  "damage": "14<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -12528,7 +12529,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Lightning Bolts",
   "slug": "magic_bolts_watcher",
-  "damage": "12<damagelightning></damagelightning> ",
+  "damage": "14<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -13806,6 +13807,12 @@
   "icon": "soothing_breeze_soother_attunement"
  },
  {
+  "description": "While this unit is in battle, spells cost 20% less <mana></mana> <hyperlink>Mana</hyperlink> to cast. This effect does not stack.",
+  "name": "Mana Channeling",
+  "slug": "mana_channeling",
+  "icon": "mana_channeling"
+ },
+ {
   "modifiers": [
    {
     "description": "Base 60% chance of inflicting Sundered Resistance for 3 <turn></turn> Turns.",
@@ -14732,7 +14739,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Spirit Bolts",
   "slug": "magic_bolts_awakener",
-  "damage": "12<damagespirit></damagespirit> ",
+  "damage": "14<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -16618,7 +16625,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_pyromancer",
-  "damage": "8<damagefire></damagefire> ",
+  "damage": "10<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -19213,7 +19220,7 @@
   "icon": "poisonous_undergrowth_poisonous_undergrowth"
  },
  {
-  "description": "While army leader, non-Hero Undead units in army have:<bulletlist><bullet>+10% damage</bullet><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
+  "description": "While army leader, non-Hero Undead units in army have:<bulletlist><bullet>+10% damage</bullet><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>",
   "name": "Unholy Leader",
   "slug": "unholy_leader",
   "icon": "unholy_leader"
@@ -19283,7 +19290,7 @@
   "icon": "controlled_chaos"
  },
  {
-  "description": "While army leader, all Animals in army have:<bulletlist><bullet>Flanker</bullet><bullet>-20% <hyperlink>Unit Upkeep</hyperlink></bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
+  "description": "While army leader, all Animals in army have:<bulletlist><bullet>Flanker</bullet><bullet>-10% <hyperlink>Unit Upkeep</hyperlink></bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
   "name": "Shepherd",
   "slug": "shepherd",
   "icon": "shepherd"

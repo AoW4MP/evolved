@@ -156,7 +156,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
-  "point_cost": 6,
+  "point_cost": 5,
   "id": "eagle_mounts",
   "name": "Eagle Mounts",
   "screen_description": "",
@@ -166,9 +166,6 @@
    },
    {
     "name": "Gain Flying movement."
-   },
-   {
-    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -182,7 +179,7 @@
   "front_end": true,
   "icon": "eagle_mounts",
   "type": "form",
-  "display_order": 3
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common</helpcolor>",
@@ -535,7 +532,7 @@
   "biography_description": "They soar through the sky on majestic Pegasi.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Pegasus mount.</helpcolor>",
   "DLC": "HERALDOFGLORY ",
-  "point_cost": 6,
+  "point_cost": 5,
   "id": "pegasus_mounts",
   "name": "Pegasus Mounts",
   "screen_description": "",
@@ -545,9 +542,6 @@
    },
    {
     "name": "Gain Flying movement."
-   },
-   {
-    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -561,7 +555,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "pegasus_mounts",
-  "display_order": 3
+  "display_order": 4
  },
  {
   "biography_description": "They have tamed the tunneling Death Beetles.",
@@ -932,7 +926,7 @@
   "biography_description": "They soar through the skies on grand blessed dragons.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Blessed Dragon mount.</helpcolor>",
   "DLC": "WAYSOFWAR ",
-  "point_cost": 6,
+  "point_cost": 5,
   "id": "blessed_dragon_mounts",
   "name": "Blessed Dragon Mounts",
   "screen_description": "",
@@ -942,9 +936,6 @@
    },
    {
     "name": "Gain Flying movement."
-   },
-   {
-    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -958,7 +949,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "blessed_dragon_mounts",
-  "display_order": 3
+  "display_order": 4
  },
  {
   "biography_description": "They pursue and covet magical artifacts, using such items as inspiration for their magical feats.",
@@ -2025,11 +2016,6 @@
   "group_name": "",
   "front_end": true,
   "display_order": 3,
-  "incompatible_cultures": [
-   {
-    "name": "Mystic"
-   }
-  ],
   "affinities": [
    {
     "name": "1<nature></nature> Nature Affinity"
@@ -2618,7 +2604,7 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gain the Weakening Phase ability."
+    "name": "Gain the Phase ability."
    },
    {
     "name": "Gain the Inspiring Killer passive."
@@ -2687,7 +2673,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "DAMAGE_RETALIATION",
   "front_end": true,
   "icon": "poisonous",
   "type": "form",

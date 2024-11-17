@@ -357,7 +357,7 @@
   "id": "comet_of_calamity",
   "DLC": "WAYSOFWAR ",
   "tactical": true,
-  "description": "Units in a 2-hex radius:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a 50% base chance of becoming Frozen for 1 <turn></turn> Turn.</bullet><bullet>Gain 2 stacks of Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Units in a 2-hex radius:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a 50% base chance of becoming Frozen for 1 <turn></turn> Turn.</bullet><bullet>Gain 1 stacks of Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Comet of Calamity",
   "operation_point_cost": 40,
   "icon": "comet_of_calamity"
@@ -3066,14 +3066,14 @@
   "icon": "cosmic_overdrive"
  },
  {
-  "casting_cost": "200<mana></mana> ",
+  "casting_cost": "150<mana></mana> ",
   "resid": 4514010633542,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "time_stop",
   "tactical": true,
-  "description": "Target enemy units in a 2-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 3 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 3 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Time Stop",
-  "operation_point_cost": 65,
+  "operation_point_cost": 50,
   "icon": "time_stop"
  },
  {
@@ -3453,14 +3453,14 @@
   "icon": "favorable_winds"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "150<mana></mana> ",
   "resid": 4514010632183,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_wind_rager",
   "tactical": false,
   "description": "Summon a <hyperlink>Wind Rager</hyperlink>, a fast and disruptive Fighter Unit",
   "name": "Summon Wind Rager",
-  "operation_point_cost": 100,
+  "operation_point_cost": 150,
   "icon": "summon_wind_rager",
   "summoned_units": [
    {
@@ -3582,7 +3582,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "awaken_instincts",
   "tactical": true,
-  "description": "All friendly units in a 1-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.<br></br>Cannot be used on units already affected by Berserk.",
+  "description": "All friendly units in a 2-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.<br></br>Cannot be used on units already affected by Berserk.",
   "name": "Awaken Instincts",
   "operation_point_cost": 40,
   "icon": "awaken_instincts"
@@ -3717,14 +3717,14 @@
   "icon": "healing_roots"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4514010631346,
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "incite_revolution",
   "tactical": false,
   "description": "Target enemy city:<bulletlist><bullet>Loses a border province and the population is lost.</bullet><bullet>Spawns a Brigand Camp on land provinces.</bullet><bullet>Spawns a Pirate Cove on coastal provinces.</bullet></bulletlist>",
   "name": "Incite Revolution",
-  "operation_point_cost": 100,
+  "operation_point_cost": 120,
   "icon": "incite_revolution"
  },
  {
@@ -3745,7 +3745,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "gremlin_ambushers",
   "tactical": false,
-  "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 5 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
+  "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 3 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
   "name": "Gremlin Ambushers",
   "operation_point_cost": 100,
   "icon": "gremlin_ambushers"
@@ -3843,14 +3843,14 @@
   "icon": "mass_hysteria"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "150<mana></mana> ",
   "resid": 4514010630942,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_gremlin",
   "tactical": false,
   "description": "Summons a <hyperlink>Gremlin</hyperlink> onto the target world hex. This unit is a disruptive and fiendish Skirmisher Unit.",
   "name": "Summon Gremlin",
-  "operation_point_cost": 100,
+  "operation_point_cost": 150,
   "summoned_units": [
    {
     "slug": "gremlin"
@@ -4758,14 +4758,14 @@
   "icon": "guided_projectiles"
  },
  {
-  "casting_cost": "120<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4273492485152,
   "spellType": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>",
   "id": "blessed_reinforcements",
   "tactical": false,
   "description": "Target vassal free city gains 2 <hyperlink>Blessed Souls</hyperlink> under their control.",
   "name": "Blessed Reinforcements",
-  "operation_point_cost": 120,
+  "operation_point_cost": 45,
   "icon": "blessed_reinforcements"
  },
  {
@@ -5016,14 +5016,14 @@
   ]
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "150<mana></mana> ",
   "resid": 4273492484345,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_lightbringer",
   "tactical": false,
   "description": "Summons a <hyperlink>Lightbringer</hyperlink> Battle Mage Unit that can convert other units to your cause.",
   "name": "Summon Lightbringer",
-  "operation_point_cost": 100,
+  "operation_point_cost": 150,
   "icon": "summon_lightbringer",
   "summoned_units": [
    {

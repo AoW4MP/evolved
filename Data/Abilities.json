@@ -1472,7 +1472,7 @@
  },
  {
   "modifiers": [],
-  "description": "Deals damage to enemies in a 3-hex line.",
+  "description": "Deals damage to enemies in a 2-hex line.",
   "name": "Line Shot",
   "slug": "line_shot_peacebringer_harmony",
   "damage": "20<damagephysical></damagephysical> ",
@@ -2775,7 +2775,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 50% chance of inflicting Frozen for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.",
+    "description": "Base 30% chance of inflicting Frozen for 1 <turn></turn> Turn. If unsuccessful inflicts Slowed.",
     "name": "Frozen",
     "count": 1
    }
@@ -6175,7 +6175,7 @@
  },
  {
   "notes": [],
-  "description": "Up to 3 random enemy units:<bulletlist><bullet>Suffer 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>Suffer 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Gain 2 Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>This then repeats at the start of the caster's turn for the next 3<turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Only one of these combat enchantments can be active at once.",
+  "description": "Up to 3 random enemy units:<bulletlist><bullet>Suffer 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>Suffer 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Gain 1 Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>This then repeats at the start of the caster's turn for the next 3<turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Only one of these combat enchantments can be active at once.",
   "name": "Ghostfire Storm",
   "slug": "ghostfire_storm_calamity_dragon",
   "damage": "",
@@ -6469,7 +6469,7 @@
   "description": "Throws a projectile at target unit.",
   "name": "Throw Shadow Dagger",
   "slug": "throw_shade",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -7997,15 +7997,18 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "notes": [
    {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "icon": "bolt_of_judgment_inquisitor"
@@ -8560,10 +8563,14 @@
     "requisite": "Physical Ranged"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "notes": [],
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   }
+  ],
   "icon": "poisonous_spores_floral_stinger"
  },
  {
@@ -8637,7 +8644,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "revitalize_nymph"
  },
  {
@@ -8935,7 +8942,7 @@
   "description": "Deal damage to target enemy unit.",
   "name": "Freezing Blast",
   "slug": "freezing_blast_white_witch",
-  "damage": "14<damagefrost></damagefrost> ",
+  "damage": "16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -9093,7 +9100,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Demoralizing Charge Strike",
   "slug": "demoralizing_charge_strike_tyrant_knight",
-  "damage": "27<damagephysical></damagephysical> 4<damagespirit></damagespirit> ",
+  "damage": "27<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -13051,7 +13058,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target unit gains:<bulletlist><bullet>1 Marked</bullet><bullet>Sundered Defense</bullet></bulletlist>",
+  "description": "Target unit gains:<bulletlist><bullet>2 Marked</bullet><bullet>Sundered Defense</bullet></bulletlist>",
   "name": "Tracker's Mark",
   "slug": "trackers_mark_glade_runner",
   "damage": "",
@@ -13312,7 +13319,7 @@
   "range": "1",
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "sunder_the_earth_balor"
@@ -13370,7 +13377,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "song_of_revelry_skald"
  },
  {
@@ -13393,7 +13400,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
+  "range": "4",
   "icon": "song_of_carnage_skald"
  },
  {
@@ -14294,7 +14301,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Weakening Bolts",
   "slug": "magic_bolts_warlock",
-  "damage": "10<damagefrost></damagefrost> ",
+  "damage": "12<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -17215,7 +17222,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Fire Bolts",
   "slug": "magic_bolts_lesser_magma_spirit",
-  "damage": "10<damagefire></damagefire> ",
+  "damage": "9<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -18105,10 +18112,10 @@
  {
   "notes": [
    {
-    "note": "Can only be used once per battle."
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "<bulletlist><bullet>+1 hex of movement for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Slippery for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Heal for 15 <temphp></temphp> Temporary Hit Point.</bullet></bulletlist><br></br><br></br>This ability is reusable after each kill.",
+  "description": "<bulletlist><bullet>+1 hex of movement for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Slippery for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Heal for <temphp></temphp> Temporary Hit Point.</bullet></bulletlist>",
   "name": "Second Wind",
   "slug": "second_wind_second_wind",
   "damage": "",
@@ -18198,17 +18205,17 @@
  {
   "modifiers": [
    {
-    "description": "Inflict 2x Sundered Defense for 3 <turn></turn> Turns.",
+    "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
     "name": "Sundered Defense",
     "count": 1
    },
    {
-    "description": "Inflict 2x Sundered Resistance for 3 <turn></turn> Turns.",
+    "description": "Inflict Sundered Resistance for 3 <turn></turn> Turns.",
     "name": "Sundered Resistance",
     "count": 1
    },
    {
-    "description": "Inflict 2x Weakened for 3 <turn></turn> Turns.",
+    "description": "Inflict Weakened for 3 <turn></turn> Turns.",
     "name": "Weakened",
     "count": 1
    }
@@ -18241,7 +18248,7 @@
  {
   "modifiers": [
    {
-    "description": "If the target is slain, this unit gains:<bulletlist><bullet>+20<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>+2 Strengthened</bullet><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet></bulletlist>",
+    "description": "If the target is slain, this unit gains:<bulletlist><bullet>+20<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>+1 Strengthened</bullet><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet></bulletlist>",
     "name": "Devouring Spell",
     "count": 1
    }
@@ -19174,7 +19181,7 @@
   "icon": "incorruptible_spirit"
  },
  {
-  "description": "<bulletlist><bullet>When this Hero unit is killed in battle, after 1 <turn></turn> Turn, it comes back to life with 35% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Can be used any number of times.</bullet><bullet>Does not function if all other units are dead.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>When this Hero unit is killed in battle, after 2 <turn></turn> Turns, it comes back to life with 35% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Can be used any number of times.</bullet><bullet>Does not function if all other units are dead.</bullet></bulletlist>",
   "name": "Eternal One",
   "slug": "eternal_one",
   "icon": "eternal_one"
@@ -19745,9 +19752,9 @@
  },
  {
   "modifiers": [],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "charge_strike_greatsword",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_charge_strike_greatsword",
   "damage": "21<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -19761,7 +19768,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "charge_strike_avenger_righteousness"
+  "icon": "heavy_charge_strike_storm_giant"
  },
  {
   "modifiers": [],
@@ -20287,7 +20294,7 @@
   "description": "Deal damage to target enemy unit.",
   "name": "Freezing Blast",
   "slug": "freezing_blast_cryomancers_staff",
-  "damage": "14<damagefrost></damagefrost> ",
+  "damage": "16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Debuff"
@@ -20389,26 +20396,6 @@
   "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "heavy_charge_strike_berserkers_greataxe",
-  "damage": "21<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "Melee"
-   },
-   {
-    "requisite": "Base"
-   }
-  ],
-  "accuracy": "100%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "1",
-  "notes": [],
-  "icon": "heavy_charge_strike_storm_giant"
- },
- {
-  "modifiers": [],
-  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
-  "name": "Heavy Charge Strike",
-  "slug": "heavy_charge_strike_greatsword",
   "damage": "21<damagephysical></damagephysical> ",
   "requisites": [
    {

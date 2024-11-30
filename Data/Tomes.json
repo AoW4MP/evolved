@@ -2000,7 +2000,7 @@
   "icon": "tome_of_the_inquisition",
   "skills": [
    {
-    "description": "All units in target enemy army gain 50 Remorse for  <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+    "description": "All units in target enemy army gain 3 Remorse for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
     "name": "Burden of Guilt",
     "spell_slug": "burden_of_guilt",
     "tier": 3,
@@ -2344,7 +2344,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>Replaces defensive towers.</bullet><bullet><hyperlink>Necrotic Spire</hyperlink> heal an allied Undead unit within a 6-hex <range></range> +15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and makes it become Strengthened each turn.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Replaces defensive towers.</bullet><bullet><hyperlink>Necrotic Spire</hyperlink> heal an allied Undead unit within a 8-hex <range></range> +15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and makes it become Strengthened each turn.</bullet></bulletlist>",
     "name": "Necrotic Spires",
     "tier": 5,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -3479,7 +3479,7 @@
  {
   "passives": [
    {
-    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +5 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +10 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +20 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation2></reputation2>Slightly Evil: +5 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +10 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +20 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
+    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +10 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +20 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +30 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation2></reputation2>Slightly Evil: +10 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +20 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +30 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
     "name": "Alignment Agenda",
     "type": ""
    }
@@ -3632,7 +3632,7 @@
     "type": "<hyperlink>Siege Project</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Heal for <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
+    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Heal for <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have of their negative status effects removed.</bullet></bulletlist>",
     "name": "Purifying Flame",
     "spell_slug": "purifying_flame",
     "tier": 5,
@@ -4578,7 +4578,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>"
    },
    {
-    "description": "Targets a -hex radius:<bulletlist><bullet>All units sustain  <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>All units have a base 90% chance to be inflicted with Burning.</bullet><bullet>All units have a base 90% chance of becoming Slowed.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
+    "description": "Targets a -hex radius:<bulletlist><bullet>All units sustain  <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>All units are inflicted with Burning.</bullet><bullet>All units are Slowed.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
     "name": "Lava Burst",
     "spell_slug": "lava_burst",
     "tier": 7,

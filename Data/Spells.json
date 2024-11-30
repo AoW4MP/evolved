@@ -437,7 +437,7 @@
   "icon": "grand_protection"
  },
  {
-  "casting_cost": "150<gold></gold> 300<mana></mana> ",
+  "casting_cost": "150<gold></gold> 150<mana></mana> ",
   "resid": 5046586577761,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_prosperity_dragon",
@@ -862,7 +862,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "purging_arrows",
   "tactical": false,
-  "description": "Grants base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>+10% damage against Magic Origin units.</bullet><bullet>Base 60% chance of removing 1 positive status effect from the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Grants base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>+20% damage against Magic Origin units.</bullet><bullet>Base 60% chance of removing 1 positive status effect from the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -2374,6 +2374,9 @@
    },
    {
     "slug": "chaos_eater"
+   },
+   {
+    "slug": "accursed_trickster"
    }
   ]
  },
@@ -3320,7 +3323,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "meteor_arrows",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3425,7 +3428,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "lava_burst",
   "tactical": true,
-  "description": "Targets a 2-hex radius:<bulletlist><bullet>All units sustain 30 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>All units have a base 90% chance to be inflicted with Burning.</bullet><bullet>All units have a base 90% chance of becoming Slowed.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
+  "description": "Targets a 2-hex radius:<bulletlist><bullet>All units sustain 30 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>All units are inflicted with Burning.</bullet><bullet>All units are Slowed.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
   "name": "Lava Burst",
   "operation_point_cost": 40,
   "icon": "lava_burst"
@@ -3553,6 +3556,9 @@
   "summoned_units": [
    {
     "slug": "nymph"
+   },
+   {
+    "slug": "unicorn"
    },
    {
     "slug": "entwined_protector"
@@ -4153,6 +4159,9 @@
     "slug": "polar_bear"
    },
    {
+    "slug": "dire_penguin"
+   },
+   {
     "slug": "carrion_bird"
    },
    {
@@ -4205,9 +4214,6 @@
    },
    {
     "slug": "kraken_spawn"
-   },
-   {
-    "slug": "dire_penguin"
    }
   ]
  },
@@ -4535,7 +4541,7 @@
   "id": "purifying_flame",
   "DLC": "DRAGONLORDS ",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have 2 of their negative status effects removed.</bullet></bulletlist>",
   "name": "Purifying Flame",
   "operation_point_cost": 30,
   "icon": "purifying_flame"
@@ -4579,7 +4585,7 @@
   "id": "draconic_vitality",
   "DLC": "DRAGONLORDS ",
   "tactical": false,
-  "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+6 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet>",
+  "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+4 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet>",
   "name": "Draconic Vitality",
   "operation_point_cost": 150,
   "icon": "draconic_vitality"
@@ -4916,14 +4922,14 @@
   "icon": "resurrect_unit"
  },
  {
-  "casting_cost": "400<mana></mana> ",
+  "casting_cost": "300<mana></mana> ",
   "resid": 4273492484483,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "ascended_warriors",
   "tactical": false,
   "description": "Non-Hero units in target army gain 1 Rank.",
   "name": "Ascended Warriors",
-  "operation_point_cost": 400,
+  "operation_point_cost": 300,
   "icon": "ascended_warriors"
  },
  {
@@ -6399,7 +6405,7 @@
   "tactical": false,
   "description": "Sacrifice two Tier III Undead units, using their essence to create a <hyperlink>Bone Dragon</hyperlink>.",
   "name": "Bone Dragon Ritual",
-  "operation_point_cost": 150,
+  "operation_point_cost": 45,
   "icon": "bone_dragon_ritual",
   "summoned_units": [
    {

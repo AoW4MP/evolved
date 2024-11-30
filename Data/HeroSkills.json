@@ -594,7 +594,7 @@
   "tree_name": "Dragon Lord",
   "tree_pos_y": 150.0,
   "DLC": "DRAGONLORDS ",
-  "description": "The Tail Swipe ability now:<bulletlist><bullet>Inflicts guaranteed 2x Weakened for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>Makes this unit enter <hyperlink>Defense Mode</hyperlink>.</bullet></bulletlist>",
+  "description": "The Tail Swipe ability now:<bulletlist><bullet>Inflicts guaranteed Weakened for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>Makes this unit enter <hyperlink>Defense Mode</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 4273492487179
@@ -3190,9 +3190,6 @@
    },
    {
     "resid": 4273492481328
-   },
-   {
-    "resid": 4995046966123
    }
   ]
  },
@@ -3374,28 +3371,6 @@
  },
  {
   "group_name": "Ritualist - Hero Skill Group",
-  "icon": "hostile_wildgrowth",
-  "type": "normal",
-  "name": "Hostile Wildgrowth",
-  "tree_pos_x": 450,
-  "id": "hostile_wildgrowth",
-  "excluded_skills": [
-   {
-    "resid": 4995046966126
-   }
-  ],
-  "resid": 4995046966126,
-  "tree_name": "Class: Ritualist",
-  "tree_pos_y": 150,
-  "description": "Enemy units in the area of effect of Conjure Wildgrowth:<bulletlist><bullet>Have a base 90% chance of gaining Poisoned</bullet><bullet>Have a base 90% chance of gaining Bleeding</bullet><bullet>Suffer 15 Physical Damage</bullet></bulletlist>",
-  "required_skills": [
-   {
-    "resid": 4995046966100
-   }
-  ]
- },
- {
-  "group_name": "Ritualist - Hero Skill Group",
   "icon": "living_wildgrowth",
   "type": "normal",
   "resid": 4995046966138,
@@ -3459,7 +3434,7 @@
   "tree_pos_x": 350.0,
   "tree_pos_y": 250.0,
   "id": "fortifying_wildgrowth",
-  "description": "Friendly units in the area of effect of Conjure Wildgrowth:<bulletlist><bullet>Gain 2 Bolstered Defense</bullet></bulletlist>",
+  "description": "Friendly units in the area of effect of Conjure Wildgrowth:<bulletlist><bullet>Gain 1 Bolstered Defense</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 4995046966108
@@ -7130,7 +7105,7 @@
   "name": "Cosmic Caster",
   "hero_property": "Astral Property",
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>Chaos Pulse becomes Cosmic Pulse.</bullet><bullet>Gain Savant Channeling.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 20 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "<bulletlist><bullet>Chaos Pulse becomes Cosmic Pulse.</bullet><bullet>Gain Savant Channeling.</bullet></bulletlist><br></br><br></br>Increases unit upkeep by  <mana></mana> <hyperlink>Mana</hyperlink>.",
   "required_skills": [
    {
     "resid": 5046586575303
@@ -7311,7 +7286,7 @@
   "name": "Havoc Caster",
   "hero_property": "Chaos Property",
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>Chaos Pulse becomes Havoc Pulse, increasing the number of triggering effects from 1 to 2.</bullet><bullet>Gain Chaos Channeling</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 20 <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "<bulletlist><bullet>Chaos Pulse becomes Havoc Pulse, increasing the number of triggering effects from 1 to 2.</bullet><bullet>Gain Chaos Channeling</bullet></bulletlist><br></br><br></br>Increases unit upkeep by  <mana></mana> <hyperlink>Mana</hyperlink>.",
   "required_skills": [
    {
     "resid": 5046586575303
@@ -8192,7 +8167,7 @@
   "name": "Madcaster",
   "hero_property": "Astral/Chaos Property",
   "DLC": "ELDRITCHREALMS ",
-  "description": "Gain:<bulletlist><bullet>Chaos Pulse</bullet><bullet>Expert Channeling</bullet></bulletlist><br></br><br></br>Increases unit upkeep by 10 <mana></mana> <hyperlink>Mana</hyperlink>."
+  "description": "Gain:<bulletlist><bullet>Chaos Pulse</bullet><bullet>Expert Channeling</bullet></bulletlist><br></br><br></br>Increases unit upkeep by  <mana></mana> <hyperlink>Mana</hyperlink>."
  },
  {
   "resid": 5046586575294,

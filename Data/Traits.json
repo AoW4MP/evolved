@@ -16,12 +16,12 @@
   "front_end": true,
   "icon": "cheerful",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Melee attackers sustain <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</helpcolor>",
   "biography_description": "Lightning runs through their veins, zapping those who dare to harm them.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "inner_lightning",
   "name": "Inner Lightning",
   "screen_description": "",
@@ -38,12 +38,12 @@
   "front_end": true,
   "icon": "inner_lightning",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Melee attackers sustain <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</helpcolor>",
   "biography_description": "Their skin is cold to the touch, causing frostbite to those who get too close.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "inner_frost",
   "name": "Inner Frost",
   "screen_description": "",
@@ -60,12 +60,12 @@
   "front_end": true,
   "icon": "inner_frost",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Melee attackers sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</helpcolor>",
   "biography_description": "Their boiling blood scorches anyone who dares to wound them.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "inner_fire",
   "name": "Inner Fire",
   "screen_description": "",
@@ -82,7 +82,7 @@
   "front_end": true,
   "icon": "inner_fire",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Raptor mount.</helpcolor>",
@@ -156,7 +156,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "eagle_mounts",
   "name": "Eagle Mounts",
   "screen_description": "",
@@ -179,7 +179,7 @@
   "front_end": true,
   "icon": "eagle_mounts",
   "type": "form",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common</helpcolor>",
@@ -276,7 +276,7 @@
  {
   "lore_description": "<helpcolor>Units can consume plants in order to heal and strengthen themselves.</helpcolor>",
   "biography_description": "They consume plants to revitalize themselves.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "herbivore",
   "name": "Herbivore",
   "screen_description": "",
@@ -290,7 +290,7 @@
   "front_end": true,
   "icon": "herbivore",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Deal more damage to enemies surrounded by your units.</helpcolor>",
@@ -532,7 +532,7 @@
   "biography_description": "They soar through the sky on majestic Pegasi.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Pegasus mount.</helpcolor>",
   "DLC": "HERALDOFGLORY ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "pegasus_mounts",
   "name": "Pegasus Mounts",
   "screen_description": "",
@@ -555,7 +555,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "pegasus_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "biography_description": "They have tamed the tunneling Death Beetles.",
@@ -848,7 +848,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +10% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +10% <food></food> <hyperlink>Food</hyperlink>, +10% <structureprod></structureprod> <hyperlink>Production</hyperlink>, and +20 <happiness></happiness> <hyperlink>City Stability</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +15% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +15% <food></food> <hyperlink>Food</hyperlink>, and +15% <structureprod></structureprod> <hyperlink>Production</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
    },
    {
     "name": "Grievances inflicted by other empires encroaching on your territory are increased by +100%."
@@ -926,7 +926,7 @@
   "biography_description": "They soar through the skies on grand blessed dragons.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Blessed Dragon mount.</helpcolor>",
   "DLC": "WAYSOFWAR ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "blessed_dragon_mounts",
   "name": "Blessed Dragon Mounts",
   "screen_description": "",
@@ -949,24 +949,21 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "blessed_dragon_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
+  "affinities": [
+   {
+    "name": "1<matter></matter> Materium Affinity"
+   }
+  ],
   "biography_description": "They pursue and covet magical artifacts, using such items as inspiration for their magical feats.",
   "lore_description": "They pursue and covet magical artifacts, using such items as inspiration for their magical feats.",
   "point_cost": 1,
   "id": "artifact_hoarders",
   "name": "Artifact Hoarders",
-  "incompatible_society_traits": [
-   {
-    "name": "Fabled Hunters"
-   }
-  ],
   "screen_description": "",
   "effect_descriptions": [
-   {
-    "name": "Gain a tier I Hero Item after clearing a <hyperlink>Resource Node</hyperlink>."
-   },
    {
     "name": "Gain a tier II-III Hero Item after clearing an <hyperlink>Ancient Wonder</hyperlink> or an <hyperlink>Infestation</hyperlink>."
    },
@@ -979,11 +976,6 @@
   "group_name": "",
   "front_end": true,
   "display_order": 2,
-  "affinities": [
-   {
-    "name": "1<matter></matter> Materium Affinity"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Get 2 random hero items."
@@ -1525,7 +1517,7 @@
  {
   "lore_description": "<helpcolor>Units at low health will still deal a lot of damage.</helpcolor>",
   "biography_description": "The more they are pushed to the edge, the harder they will fight.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "tenacious",
   "name": "Tenacious",
   "screen_description": "",
@@ -1539,7 +1531,7 @@
   "front_end": true,
   "icon": "tenacious",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Great for mobile hit and run tactics.</helpcolor>",
@@ -1550,7 +1542,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain the Slippery passive."
+    "name": "Gains +5 Defense and Resistance against Retaliation Attacks and Opportunity Attacks."
    }
   ],
   "enabled": true,
@@ -1794,7 +1786,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Cities gain ++15 <unitprod></unitprod> Draft and your empire gains ++5 <influence></influence> Imperium per level of Evil Alignment."
+    "name": "Cities gain +15 <unitprod></unitprod> Draft and your empire gains +5 <influence></influence> Imperium per level of Evil Alignment."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
@@ -1869,7 +1861,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -30% <knowledge></knowledge> Knowledge to unlock."
+    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -40% <knowledge></knowledge> Knowledge to unlock."
    },
    {
     "name": "<caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> cost -30% upkeep."
@@ -1992,16 +1984,16 @@
   "icon": "adept_settlers"
  },
  {
+  "affinities": [
+   {
+    "name": "1<nature></nature> Nature Affinity"
+   }
+  ],
   "biography_description": "They are legendary hunters, excelling in ranged combat and exploration.",
   "lore_description": "They are legendary hunters, excelling in ranged combat and exploration.",
   "point_cost": 1,
   "id": "fabled_hunters",
   "name": "Fabled Hunters",
-  "incompatible_society_traits": [
-   {
-    "name": "Artifact Hoarders"
-   }
-  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -2016,11 +2008,6 @@
   "group_name": "",
   "front_end": true,
   "display_order": 3,
-  "affinities": [
-   {
-    "name": "1<nature></nature> Nature Affinity"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Start with an extra Ranged Unit."
@@ -2332,7 +2319,7 @@
     "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
-    "name": "Gain the Demoralizing Strike passive."
+    "name": "Gain the Remorseful Strike passive."
    },
    {
     "name": "Gain the Vicious Killer passive."
@@ -2657,7 +2644,7 @@
  {
   "lore_description": "<helpcolor>Melee attackers have a chance of being poisoned.</helpcolor>",
   "biography_description": "They have poison glands which they use to ward off attackers.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "poisonous",
   "name": "Poisonous",
   "screen_description": "",
@@ -2677,7 +2664,7 @@
   "front_end": true,
   "icon": "poisonous",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Units are less likely to rout.</helpcolor>",

@@ -87,7 +87,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Raptor mount.</helpcolor>",
   "biography_description": "They have tamed the elusive Swiftfoot Raptors.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "swiftfoot_raptor_mounts",
   "name": "Swiftfoot Raptor Mounts",
   "screen_description": "",
@@ -113,12 +113,12 @@
   "front_end": true,
   "icon": "swiftfoot_raptor_mounts",
   "type": "form",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Units become stronger when they sustain magical damage.</helpcolor>",
   "biography_description": "They find power through magical pain.",
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "empowered_by_magic",
   "name": "Empowered by Magic",
   "screen_description": "",
@@ -132,12 +132,12 @@
   "front_end": true,
   "icon": "empowered_by_magic",
   "type": "form",
-  "display_order": 7
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Adjacent enemies have a chance to miss their attacks.</helpcolor>",
   "biography_description": "They communicate through a cacophony of noise that would drive anyone else mad.",
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "ceaseless_cacophony",
   "name": "Ceaseless Cacophony",
   "screen_description": "",
@@ -151,12 +151,12 @@
   "front_end": true,
   "icon": "ceaseless_cacophony",
   "type": "form",
-  "display_order": 7
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
-  "point_cost": 6,
+  "point_cost": 7,
   "id": "eagle_mounts",
   "name": "Eagle Mounts",
   "screen_description": "",
@@ -179,12 +179,12 @@
   "front_end": true,
   "icon": "eagle_mounts",
   "type": "form",
-  "display_order": 3
+  "display_order": 2
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common</helpcolor>",
   "biography_description": "They ride to battle on impressive cavalry.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "mount_masters",
   "name": "Mount Masters",
   "screen_description": "",
@@ -198,13 +198,13 @@
   "front_end": true,
   "icon": "mount_masters",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "biography_description": "They share a deep kinship with mighty Elephants.",
   "lore_description": "<helpcolor>Mounted units are more common and gain an Elephant mount </helpcolor>",
   "DLC": "PRIMALFURY ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "elephant_mounts",
   "name": "Elephant Mounts",
   "screen_description": "",
@@ -233,13 +233,13 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "elephant_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "biography_description": "They have tamed the furry Mammoths from the tundra.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Mammoth mount.</helpcolor>",
   "DLC": "PRIMALFURY ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "mammoth_mounts",
   "name": "Mammoth Mounts",
   "screen_description": "",
@@ -271,7 +271,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "mammoth_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Units can consume plants in order to heal and strengthen themselves.</helpcolor>",
@@ -343,7 +343,7 @@
   "biography_description": "They made friends with the Dire Bears.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Dire Bear mount </helpcolor>",
   "DLC": "EMPIRESANDASHES ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "dire_bear_mounts",
   "name": "Dire Bear Mounts",
   "screen_description": "",
@@ -369,7 +369,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "dire_bear_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Units can see further on the World Map</helpcolor>",
@@ -437,8 +437,8 @@
   "biography_description": "Where the land is infested, they strike with lawful strength.",
   "lore_description": "They keep the lands safe and restore balance between warring neighbors.",
   "point_cost": 1,
-  "id": "_pantheon___vigilante_knights",
-  "name": "<Pantheon></Pantheon> Vigilante Knights",
+  "id": "vigilante_knights",
+  "name": "Vigilante Knights",
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -458,7 +458,7 @@
     "description": "Starting <hyperlink>Units</hyperlink> gain +1 rank."
    }
   ],
-  "icon": "_pantheon___vigilante_knights"
+  "icon": "vigilante_knights"
  },
  {
   "affinities": [
@@ -469,15 +469,18 @@
   "biography_description": "They elevate their heroes above the masses, empowered through dark elation.",
   "lore_description": "They believe in the might of their heroes, the chosen few, elevated above the masses.",
   "point_cost": 1,
-  "id": "_pantheon___cult_of_personality",
-  "name": "<Pantheon></Pantheon> Cult of Personality",
+  "id": "cult_of_personality",
+  "name": "Cult of Personality",
   "screen_description": "",
   "effect_descriptions": [
    {
     "name": "<hyperlink>Heroes</hyperlink> gain a bonus Skill Point whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
    },
    {
-    "name": "<hyperlink>Unit</hyperlink> in an <hyperlink>Army</hyperlink> without a Hero suffer -10 <happiness></happiness> <hyperlink>Morale</hyperlink>."
+    "name": "<hyperlink>Heroes</hyperlink> gain +10 <gold></gold> <hyperlink>Gold</hyperlink> <hyperlink>Unit Upkeep</hyperlink> whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
+   },
+   {
+    "name": "In combat, <hyperlink>Units</hyperlink> in an <hyperlink>Army</hyperlink> without a Hero suffer -20 <happiness></happiness> <hyperlink>Morale</hyperlink>."
    }
   ],
   "enabled": true,
@@ -490,7 +493,7 @@
     "description": "Start with +1 <unitHero></unitHero> <hyperlink>Hero Cap</hyperlink> and +3 Hero Cap for Pantheon heroes."
    }
   ],
-  "icon": "_pantheon___cult_of_personality"
+  "icon": "cult_of_personality"
  },
  {
   "biography_description": "It is said that the Umbral Thralls were once a free civilization governed by a benevolent hivemind. Yet through <hyperlink>Urrath's eldritch lashes</hyperlink>, the minds of the Umbral Thralls became enchained, and their hive was twisted into an instrument of enslavement. As will-less drones they serve as unceasing warriors, laborers, or as a harvest of souls to satiate the hunger of the <hyperlink>Umbral Demons</hyperlink>. Their swarm carries the gloom to other realms, so that other free peoples across the <hyperlink>Astral Sea</hyperlink> might share the same terrible fate.",
@@ -532,7 +535,7 @@
   "biography_description": "They soar through the sky on majestic Pegasi.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Pegasus mount.</helpcolor>",
   "DLC": "HERALDOFGLORY ",
-  "point_cost": 6,
+  "point_cost": 7,
   "id": "pegasus_mounts",
   "name": "Pegasus Mounts",
   "screen_description": "",
@@ -555,13 +558,13 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "pegasus_mounts",
-  "display_order": 3
+  "display_order": 2
  },
  {
   "biography_description": "They have tamed the tunneling Death Beetles.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Death Beetle mount.</helpcolor>",
   "DLC": "ELDRITCHREALMS ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "death_beetle_mounts",
   "name": "Death Beetle Mounts",
   "screen_description": "",
@@ -584,7 +587,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "death_beetle_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "affinities": [
@@ -640,6 +643,12 @@
   "effect_descriptions": [
    {
     "name": "Unlocking a new Research Skill grants +10 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> with all <minorcity></minorcity><hyperlink>Free Cities</hyperlink> to whom you have assigned a <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>."
+   },
+   {
+    "name": "Unlocking a new <hyperlink>Tome</hyperlink> grants +100 Relation with all <hyperlink>Empires</hyperlink>."
+   },
+   {
+    "name": "Gain +10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income for each empire you have <hyperlink>Open Borders</hyperlink> with."
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"
@@ -721,8 +730,8 @@
   "biography_description": "Caretakers of the natural order, maintaining a carefully tended biome.",
   "lore_description": "Caretakers of the natural order, maintaining a carefully tended biome.",
   "point_cost": 1,
-  "id": "_pantheon___druidic_terraformers",
-  "name": "<Pantheon></Pantheon> Druidic Terraformers",
+  "id": "druidic_terraformers",
+  "name": "Druidic Terraformers",
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -745,14 +754,14 @@
     "description": "Start with an extra Elemental unit."
    }
   ],
-  "icon": "_pantheon___druidic_terraformers"
+  "icon": "druidic_terraformers"
  },
  {
   "biography_description": "They are merciless, viewing life as another prize to be claimed.",
   "lore_description": "They are merciless; to them, life is a commodity that may be taken by blade or chain.",
   "point_cost": 1,
-  "id": "_pantheon___merciless_slavers__evilact__",
-  "name": "<Pantheon></Pantheon> Merciless Slavers <evilact></evilact>",
+  "id": "merciless_slavers__evilact__",
+  "name": "Merciless Slavers <evilact></evilact>",
   "incompatible_society_traits": [
    {
     "name": "Devotees of Good <goodact></goodact>"
@@ -788,17 +797,17 @@
     "empire_progression_slug": "war_slaves"
    }
   ],
-  "icon": "_pantheon___merciless_slavers__evilact__"
+  "icon": "merciless_slavers__evilact__"
  },
  {
   "biography_description": "They are absolute in their crusade to root out evil.",
   "lore_description": "They are absolute in their dedication to rooting out evil, sparing no mercy for the wicked.",
   "point_cost": 1,
-  "id": "_pantheon___relentless_crusaders__goodact__",
-  "name": "<Pantheon></Pantheon> Relentless Crusaders <goodact></goodact>",
+  "id": "relentless_crusaders__goodact__",
+  "name": "Relentless Crusaders <goodact></goodact>",
   "incompatible_society_traits": [
    {
-    "name": "<Pantheon></Pantheon> Chosen Destroyers <evilact></evilact>"
+    "name": "Chosen Destroyers <evilact></evilact>"
    },
    {
     "name": "Scions of Evil <evilact></evilact>"
@@ -832,7 +841,7 @@
     "name": "10<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
    }
   ],
-  "icon": "_pantheon___relentless_crusaders__goodact__"
+  "icon": "relentless_crusaders__goodact__"
  },
  {
   "affinities": [
@@ -897,7 +906,7 @@
   "biography_description": "They share a deep kinship with the honorable Gracious Judges.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Graceful Judge mount.</helpcolor>",
   "DLC": "WAYSOFWAR ",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "graceful_judge_mounts",
   "name": "Graceful Judge Mounts",
   "screen_description": "",
@@ -920,13 +929,13 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "graceful_judge_mounts",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "biography_description": "They soar through the skies on grand blessed dragons.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Blessed Dragon mount.</helpcolor>",
   "DLC": "WAYSOFWAR ",
-  "point_cost": 6,
+  "point_cost": 7,
   "id": "blessed_dragon_mounts",
   "name": "Blessed Dragon Mounts",
   "screen_description": "",
@@ -949,7 +958,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "blessed_dragon_mounts",
-  "display_order": 3
+  "display_order": 2
  },
  {
   "affinities": [
@@ -991,7 +1000,7 @@
   "name": "<Pantheon></Pantheon> Bannerlords <goodact></goodact>",
   "incompatible_society_traits": [
    {
-    "name": "<Pantheon></Pantheon> Chosen Destroyers <evilact></evilact>"
+    "name": "Chosen Destroyers <evilact></evilact>"
    }
   ],
   "screen_description": "",
@@ -1032,8 +1041,8 @@
   "biography_description": "A people who have embraced magic to a degree few can match, gaining more than most from spells, but becoming dependent on them in turn.",
   "lore_description": "They have embraced magic to a degree few can match, gaining more than most from its prowess... but becoming dependent on its marvel in return.",
   "point_cost": 1,
-  "id": "_pantheon___mana_addicts",
-  "name": "<Pantheon></Pantheon> Mana Addicts",
+  "id": "mana_addicts",
+  "name": "Mana Addicts",
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -1053,7 +1062,7 @@
     "description": "Start with an extra Battle Mage Unit or Support Unit."
    }
   ],
-  "icon": "_pantheon___mana_addicts"
+  "icon": "mana_addicts"
  },
  {
   "affinities": [
@@ -1064,8 +1073,8 @@
   "biography_description": "They hold artisans in high regard. Every mason or thatcher is an artist in their own right, given the time and resources needed to work their art.",
   "lore_description": "They demand perfection of their artisans, taking their time to build marvels like no other.",
   "point_cost": 1,
-  "id": "_pantheon___perfectionist_artisans",
-  "name": "<Pantheon></Pantheon> Perfectionist Artisans",
+  "id": "perfectionist_artisans",
+  "name": "Perfectionist Artisans",
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -1085,7 +1094,7 @@
     "description": "Start with an extra tier 3 <hyperlink>Unit</hyperlink>."
    }
   ],
-  "icon": "_pantheon___perfectionist_artisans"
+  "icon": "perfectionist_artisans"
  },
  {
   "affinities": [
@@ -1096,8 +1105,8 @@
   "biography_description": "They are fascinated by rare materials and spend large parts of their lives collecting and studying them.",
   "lore_description": "They are fascinated by rare materials and spend large parts of their lives collecting and studying them.",
   "point_cost": 1,
-  "id": "_pantheon___talented_collectors",
-  "name": "<Pantheon></Pantheon> Talented Collectors",
+  "id": "talented_collectors",
+  "name": "Talented Collectors",
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -1114,14 +1123,14 @@
     "description": "Start with a <hyperlink>Magic Material</hyperlink> nearby."
    }
   ],
-  "icon": "_pantheon___talented_collectors"
+  "icon": "talented_collectors"
  },
  {
   "biography_description": "They are warmongers and destroyers, choosing violence over diplomacy any time they can.",
   "lore_description": "They are warmongers and destroyers, choosing violence over diplomacy any time they can.",
   "point_cost": 1,
-  "id": "_pantheon___chosen_destroyers__evilact__",
-  "name": "<Pantheon></Pantheon> Chosen Destroyers <evilact></evilact>",
+  "id": "chosen_destroyers__evilact__",
+  "name": "Chosen Destroyers <evilact></evilact>",
   "incompatible_society_traits": [
    {
     "name": "Chosen Uniters <goodact></goodact>"
@@ -1139,10 +1148,10 @@
     "name": "Imperialists"
    },
    {
-    "name": "<Pantheon></Pantheon> Silver Tongued"
+    "name": "Silver Tongued"
    },
    {
-    "name": "<Pantheon></Pantheon> Relentless Crusaders <goodact></goodact>"
+    "name": "Relentless Crusaders <goodact></goodact>"
    },
    {
     "name": "Keepers of Knowledge <goodact></goodact>"
@@ -1179,17 +1188,17 @@
     "name": "-10<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
    }
   ],
-  "icon": "_pantheon___chosen_destroyers__evilact__"
+  "icon": "chosen_destroyers__evilact__"
  },
  {
   "biography_description": "They know when to flatter and when to extort, elevating intrigue itself to a lucrative art.",
   "lore_description": "They know when to flatter and when to extort, elevating intrigue itself to a lucrative art.",
   "point_cost": 1,
-  "id": "_pantheon___silver_tongued",
-  "name": "<Pantheon></Pantheon> Silver Tongued",
+  "id": "silver_tongued",
+  "name": "Silver Tongued",
   "incompatible_society_traits": [
    {
-    "name": "<Pantheon></Pantheon> Chosen Destroyers <evilact></evilact>"
+    "name": "Chosen Destroyers <evilact></evilact>"
    }
   ],
   "screen_description": "",
@@ -1222,7 +1231,7 @@
     "empire_progression_slug": "court_of_whispers"
    }
   ],
-  "icon": "_pantheon___silver_tongued"
+  "icon": "silver_tongued"
  },
  {
   "biography_description": "They believe it is their calling to unite all societies.",
@@ -1517,7 +1526,7 @@
  {
   "lore_description": "<helpcolor>Units at low health will still deal a lot of damage.</helpcolor>",
   "biography_description": "The more they are pushed to the edge, the harder they will fight.",
-  "point_cost": 3,
+  "point_cost": 4,
   "id": "tenacious",
   "name": "Tenacious",
   "screen_description": "",
@@ -1531,7 +1540,7 @@
   "front_end": true,
   "icon": "tenacious",
   "type": "form",
-  "display_order": 7
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Great for mobile hit and run tactics.</helpcolor>",
@@ -1555,7 +1564,7 @@
  {
   "lore_description": "<helpcolor>Units normally only have 32 movement.</helpcolor>",
   "biography_description": "Trained in long distance running, they are exceptionally fast.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "athletics",
   "name": "Athletics",
   "screen_description": "",
@@ -1569,7 +1578,7 @@
   "front_end": true,
   "icon": "athletics",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Units become tougher when standing next to allies.</helpcolor>",
@@ -1861,7 +1870,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -40% <knowledge></knowledge> Knowledge to unlock."
+    "name": "<caststrategic></caststrategic> Unit Enchantment Research cost -30% <knowledge></knowledge> Knowledge to unlock."
    },
    {
     "name": "<caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> cost -30% upkeep."
@@ -2279,7 +2288,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Wolf mount.</helpcolor>",
   "biography_description": "They have made companions of the White Wolves.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "white_wolf_mounts",
   "name": "White Wolf Mounts",
   "screen_description": "",
@@ -2305,12 +2314,12 @@
   "front_end": true,
   "icon": "white_wolf_mounts",
   "type": "form",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Nightmare mount.</helpcolor>",
   "biography_description": "They have tamed the Flaming Horses of the Inferno.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "nightmare_mounts",
   "name": "Nightmare Mounts",
   "screen_description": "",
@@ -2336,12 +2345,12 @@
   "front_end": true,
   "icon": "nightmare_mounts",
   "type": "form",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Great for fighting enemies up close.</helpcolor>",
   "biography_description": "They hone their reflexes and will not let their enemy walk away from a fight unscathed.",
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "ferocious",
   "name": "Ferocious",
   "screen_description": "",
@@ -2355,7 +2364,7 @@
   "front_end": true,
   "icon": "ferocious",
   "type": "form",
-  "display_order": 8
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Increases the damage of melee and ranged units.</helpcolor>",
@@ -2382,7 +2391,7 @@
  {
   "lore_description": "<helpcolor>Reduce damage from magical attacks.</helpcolor>",
   "biography_description": "They have a natural armor against magical damage.",
-  "point_cost": 5,
+  "point_cost": 4,
   "id": "resistant",
   "name": "Resistant",
   "screen_description": "",
@@ -2396,19 +2405,19 @@
   "front_end": true,
   "icon": "resistant",
   "type": "form",
-  "display_order": 5
+  "display_order": 6
  },
  {
-  "affinities": [
-   {
-    "name": "1<arcana></arcana> Astral Affinity"
-   }
-  ],
   "biography_description": "They harbor knowledge dating back to the beginning of time.",
   "lore_description": "They have been around since the start of history, honing their minds in the pursuit of arcane knowledge.",
   "point_cost": 1,
   "id": "ancient_wise_ones",
   "name": "Ancient Wise Ones",
+  "incompatible_society_traits": [
+   {
+    "name": "Gifted Casters"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -2420,6 +2429,11 @@
   "group_name": "",
   "front_end": true,
   "display_order": 4,
+  "affinities": [
+   {
+    "name": "1<arcana></arcana> Astral Affinity"
+   }
+  ],
   "starting_bonuses": [
    {
     "description": "1 random research skill is already unlocked."
@@ -2582,7 +2596,7 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Unicorn mount.</helpcolor>",
   "biography_description": "They share a deep kinship with Unicorns.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "unicorn_mounts",
   "name": "Unicorn Mounts",
   "screen_description": "",
@@ -2608,12 +2622,12 @@
   "front_end": true,
   "icon": "unicorn_mounts",
   "type": "form",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain a Spider mount.</helpcolor>",
   "biography_description": "They share a deep kinship with Spiders.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "dread_spider_mounts",
   "name": "Dread Spider Mounts",
   "screen_description": "",
@@ -2639,7 +2653,7 @@
   "front_end": true,
   "icon": "dread_spider_mounts",
   "type": "form",
-  "display_order": 4
+  "display_order": 3
  },
  {
   "lore_description": "<helpcolor>Melee attackers have a chance of being poisoned.</helpcolor>",
@@ -2764,7 +2778,7 @@
  {
   "lore_description": "<helpcolor>Units take less damage from physical attacks.</helpcolor>",
   "biography_description": "They are tough and used to taking a few hits in battle.",
-  "point_cost": 5,
+  "point_cost": 4,
   "id": "tough",
   "name": "Tough",
   "screen_description": "",
@@ -2778,7 +2792,7 @@
   "front_end": true,
   "icon": "tough",
   "type": "form",
-  "display_order": 5
+  "display_order": 6
  },
  {
   "lore_description": "<helpcolor>Armies can fight longer on the world map.</helpcolor>",

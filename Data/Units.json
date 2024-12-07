@@ -8,9 +8,6 @@
     "slug": "first_strike"
    },
    {
-    "slug": "status_effect_immunity_burning"
-   },
-   {
     "slug": "zeal"
    }
   ],
@@ -43,18 +40,14 @@
     "slug": "_10_hp__"
    }
   ],
-  "resistances": [
-   {
-    "slug": "fire_resistance_6"
-   }
-  ],
+  "resistances": [],
   "status_resistance": 7,
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "pyre_templar",
   "name": "Pyre Templar",
   "hp": 110,
-  "armor": 5,
-  "resistance": 5,
+  "armor": 4,
+  "resistance": 8,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -488,9 +481,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "umbral_mistress",
   "name": "Umbral Mistress",
-  "hp": 110,
-  "armor": 6,
-  "resistance": 5,
+  "hp": 120,
+  "armor": 7,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -1091,9 +1084,9 @@
   "upkeep": "20<gold></gold> ",
   "id": "abductor",
   "name": "Abductor",
-  "hp": 100,
-  "armor": 6,
-  "resistance": 3,
+  "hp": 110,
+  "armor": 7,
+  "resistance": 4,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -1583,9 +1576,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "severing_golem",
   "name": "Severing Golem",
-  "hp": 130,
-  "armor": 4,
-  "resistance": 5,
+  "hp": 140,
+  "armor": 5,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -1676,6 +1669,9 @@
   ],
   "tier": 3,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "floating"
    },
@@ -1879,10 +1875,10 @@
    }
   ],
   "mp": 32,
-  "hp": 65,
+  "hp": 55,
   "description": "",
-  "armor": 2,
-  "resistance": 3,
+  "armor": 1,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -1949,10 +1945,10 @@
    }
   ],
   "mp": 32,
-  "hp": 65,
+  "hp": 55,
   "description": "",
-  "armor": 2,
-  "resistance": 3,
+  "armor": 1,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -2019,10 +2015,10 @@
    }
   ],
   "mp": 32,
-  "hp": 65,
+  "hp": 55,
   "description": "",
-  "armor": 2,
-  "resistance": 3,
+  "armor": 1,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3355,9 +3351,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_crocodile",
   "name": "Primal Crocodile",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 2,
+  "hp": 90,
+  "armor": 4,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3448,9 +3444,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_serpent",
   "name": "Primal Serpent",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 2,
+  "hp": 90,
+  "armor": 4,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3544,9 +3540,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_wolf",
   "name": "Primal Wolf",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 2,
+  "hp": 90,
+  "armor": 4,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3637,9 +3633,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_crow",
   "name": "Primal Crow",
-  "hp": 70,
-  "armor": 2,
-  "resistance": 1,
+  "hp": 80,
+  "armor": 3,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3733,9 +3729,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_sabertooth",
   "name": "Primal Sabertooth",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 2,
+  "hp": 90,
+  "armor": 4,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3826,9 +3822,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_spider",
   "name": "Primal Spider",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 2,
+  "hp": 90,
+  "armor": 4,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3925,9 +3921,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_mammoth",
   "name": "Primal Mammoth",
-  "hp": 90,
-  "armor": 2,
-  "resistance": 2,
+  "hp": 100,
+  "armor": 3,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -7851,6 +7847,9 @@
   "tier": 1,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "land_movement"
    },
    {
@@ -8062,7 +8061,7 @@
   "id": "constrictor",
   "name": "Constrictor",
   "hp": 100,
-  "armor": 5,
+  "armor": 4,
   "resistance": 3,
   "medal_rewards_2": [
    {
@@ -8225,9 +8224,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "prosperity_dragon",
   "name": "Prosperity Dragon",
-  "hp": 140,
-  "armor": 5,
-  "resistance": 6,
+  "hp": 150,
+  "armor": 6,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -8235,6 +8234,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "celestial"
    },
@@ -8336,9 +8338,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "righteous_judge",
   "name": "Righteous Judge",
-  "hp": 130,
-  "armor": 4,
-  "resistance": 5,
+  "hp": 140,
+  "armor": 5,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -8651,9 +8653,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "calamity_dragon",
   "name": "Calamity Dragon",
-  "hp": 140,
-  "armor": 5,
-  "resistance": 6,
+  "hp": 150,
+  "armor": 6,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -8663,6 +8665,9 @@
   "secondary_passives": [
    {
     "slug": "accursed_fiend"
+   },
+   {
+    "slug": "cannot_be_displaced"
    },
    {
     "slug": "dragon"
@@ -9278,9 +9283,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "umbral_tyrant",
   "name": "Umbral Tyrant",
-  "hp": 140,
-  "armor": 8,
-  "resistance": 5,
+  "hp": 150,
+  "armor": 9,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -10148,6 +10153,9 @@
   "tier": 4,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "land_movement"
    },
    {
@@ -10242,9 +10250,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "ironclad",
   "name": "Ironclad",
-  "hp": 100,
-  "armor": 5,
-  "resistance": 3,
+  "hp": 110,
+  "armor": 6,
+  "resistance": 4,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -10252,6 +10260,9 @@
   ],
   "tier": 4,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "construct"
    },
@@ -10422,9 +10433,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "ghost_ship",
   "name": "Ghost Ship",
-  "hp": 150,
-  "armor": 6,
-  "resistance": 5,
+  "hp": 160,
+  "armor": 7,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -11264,6 +11275,9 @@
   "tier": 3,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "tower"
    }
   ],
@@ -11330,9 +11344,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "living_fog",
   "name": "Living Fog",
-  "hp": 120,
-  "armor": 7,
-  "resistance": 4,
+  "hp": 130,
+  "armor": 8,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -11515,6 +11529,9 @@
   "tier": 3,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "tower"
    }
   ],
@@ -11561,7 +11578,7 @@
   ],
   "resistances": [
    {
-    "slug": "lightning_resistance_4"
+    "slug": "lightning_resistance_2"
    }
   ],
   "status_resistance": 0,
@@ -11659,6 +11676,9 @@
   "tier": 2,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "construct"
    },
    {
@@ -11729,6 +11749,9 @@
   "tier": 4,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "land_movement"
    },
    {
@@ -11788,7 +11811,7 @@
    }
   ],
   "description": "Only obeying the command of the absolute masters of the earth, the Earth Titan is an unstoppable force and the embodiment of the earth's rage.",
-  "cost": "400<unitprod></unitprod> 300<gold></gold> ",
+  "cost": "400<unitprod></unitprod> 400<gold></gold> ",
   "resid": 4514010632497,
   "medal_rewards_3": [
    {
@@ -11810,9 +11833,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "earth_titan",
   "name": "Earth Titan",
-  "hp": 150,
-  "armor": 6,
-  "resistance": 4,
+  "hp": 160,
+  "armor": 7,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -11820,6 +11843,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "elemental"
    },
@@ -12903,7 +12929,7 @@
   ],
   "resistances": [
    {
-    "slug": "frost_resistance_4"
+    "slug": "frost_resistance_2"
    }
   ],
   "status_resistance": 0,
@@ -13450,6 +13476,9 @@
   "tier": 3,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "large_target"
    },
    {
@@ -13516,6 +13545,9 @@
   ],
   "tier": 2,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "land_movement"
    },
@@ -13585,6 +13617,9 @@
   "tier": 3,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "large_target"
    },
    {
@@ -13645,6 +13680,9 @@
   ],
   "tier": 3,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "large_target"
    },
@@ -13788,9 +13826,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "lost_wizard",
   "name": "Lost Wizard",
-  "hp": 150,
-  "armor": 6,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 7,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -13880,9 +13918,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "mage_bane",
   "name": "Mage Bane",
-  "hp": 130,
-  "armor": 4,
-  "resistance": 6,
+  "hp": 140,
+  "armor": 5,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -14322,9 +14360,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "bone_dragon",
   "name": "Bone Dragon",
-  "hp": 130,
-  "armor": 6,
-  "resistance": 5,
+  "hp": 140,
+  "armor": 7,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -14332,6 +14370,9 @@
   ],
   "tier": 4,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "dragon"
    },
@@ -14420,9 +14461,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "phoenix",
   "name": "Phoenix",
-  "hp": 120,
-  "armor": 4,
-  "resistance": 5,
+  "hp": 130,
+  "armor": 5,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -15571,7 +15612,7 @@
   "upkeep": "20<gold></gold> ",
   "id": "magma_spirit",
   "name": "Magma Spirit",
-  "hp": 85,
+  "hp": 75,
   "armor": 2,
   "resistance": 3,
   "medal_rewards_2": [
@@ -15833,9 +15874,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "storm_giant",
   "name": "Storm Giant",
-  "hp": 130,
-  "armor": 5,
-  "resistance": 4,
+  "hp": 140,
+  "armor": 6,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -15931,9 +15972,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "fire_giant",
   "name": "Fire Giant",
-  "hp": 130,
-  "armor": 5,
-  "resistance": 4,
+  "hp": 140,
+  "armor": 6,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -16016,9 +16057,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "rock_giant",
   "name": "Rock Giant",
-  "hp": 130,
-  "armor": 5,
-  "resistance": 4,
+  "hp": 140,
+  "armor": 6,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -16423,6 +16464,9 @@
   "tier": 4,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "tower"
    }
   ],
@@ -16585,9 +16629,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "herald_of_war",
   "name": "Herald of War",
-  "hp": 150,
-  "armor": 5,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 6,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -16690,9 +16734,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "progenitor_golem",
   "name": "Progenitor Golem",
-  "hp": 140,
-  "armor": 5,
-  "resistance": 6,
+  "hp": 150,
+  "armor": 6,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -16756,7 +16800,7 @@
    }
   ],
   "resistances": [],
-  "status_resistance": 4,
+  "status_resistance": 2,
   "upkeep": "12<gold></gold> ",
   "id": "afflictor",
   "name": "Afflictor",
@@ -17464,9 +17508,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "obsidian_dragon",
   "name": "Obsidian Dragon",
-  "hp": 150,
-  "armor": 7,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 8,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -17474,6 +17518,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "dragon"
    },
@@ -17575,9 +17622,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "golden_dragon",
   "name": "Golden Dragon",
-  "hp": 150,
-  "armor": 7,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 8,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -17585,6 +17632,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "dragon"
    },
@@ -18011,9 +18061,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "kraken",
   "name": "Kraken",
-  "hp": 120,
-  "armor": 4,
-  "resistance": 4,
+  "hp": 130,
+  "armor": 5,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -18184,9 +18234,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "shrine_of_smiting",
   "name": "Shrine of Smiting",
-  "hp": 130,
-  "armor": 4,
-  "resistance": 6,
+  "hp": 140,
+  "armor": 5,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -18277,6 +18327,9 @@
   "tier": 2,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "land_movement"
    },
    {
@@ -18349,6 +18402,9 @@
   ],
   "tier": 2,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "tower"
    }
@@ -18529,9 +18585,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "reaper",
   "name": "Reaper",
-  "hp": 140,
-  "armor": 6,
-  "resistance": 5,
+  "hp": 150,
+  "armor": 7,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -19316,9 +19372,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "golden_golem",
   "name": "Golden Golem",
-  "hp": 150,
-  "armor": 6,
-  "resistance": 5,
+  "hp": 160,
+  "armor": 7,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -19399,6 +19455,9 @@
   ],
   "tier": 2,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "land_movement"
    },
@@ -19925,6 +19984,9 @@
   "tier": 3,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "land_movement"
    },
    {
@@ -20195,6 +20257,9 @@
     "slug": "slippery"
    },
    {
+    "slug": "status_effect_immunity_frozen"
+   },
+   {
     "slug": "swift"
    }
   ],
@@ -20436,9 +20501,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "balor",
   "name": "Balor",
-  "hp": 150,
-  "armor": 6,
-  "resistance": 5,
+  "hp": 160,
+  "armor": 7,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -24377,9 +24442,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "horned_god",
   "name": "Horned God",
-  "hp": 150,
-  "armor": 4,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 5,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -24387,6 +24452,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "fey"
    },
@@ -24671,9 +24739,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "frost_dragon",
   "name": "Frost Dragon",
-  "hp": 150,
-  "armor": 7,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 8,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -24681,6 +24749,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "dragon"
    },
@@ -25309,7 +25380,7 @@
   ],
   "resistances": [
    {
-    "slug": "blight_resistance_6"
+    "slug": "blight_resistance_3"
    }
   ],
   "status_resistance": 3,
@@ -25392,14 +25463,14 @@
   ],
   "resistances": [
    {
-    "slug": "blight_resistance_2"
+    "slug": "blight_resistance_1"
    }
   ],
   "status_resistance": 0,
   "upkeep": "8<gold></gold> ",
   "id": "vampire_spider_hatchling",
   "name": "Vampire Spider Hatchling",
-  "hp": 50,
+  "hp": 60,
   "armor": 1,
   "resistance": 0,
   "medal_rewards_2": [
@@ -25480,7 +25551,7 @@
   ],
   "resistances": [
    {
-    "slug": "blight_resistance_6"
+    "slug": "blight_resistance_4"
    }
   ],
   "status_resistance": 3,
@@ -25563,14 +25634,14 @@
   ],
   "resistances": [
    {
-    "slug": "blight_resistance_4"
+    "slug": "blight_resistance_2"
    }
   ],
   "status_resistance": 0,
   "upkeep": "8<gold></gold> ",
   "id": "dread_spider_hatchling",
   "name": "Dread Spider Hatchling",
-  "hp": 55,
+  "hp": 60,
   "armor": 1,
   "resistance": 1,
   "medal_rewards_2": [
@@ -25651,7 +25722,7 @@
   ],
   "resistances": [
    {
-    "slug": "blight_resistance_6"
+    "slug": "blight_resistance_4"
    }
   ],
   "status_resistance": 7,
@@ -26020,7 +26091,7 @@
   ],
   "resistances": [
    {
-    "slug": "fire_resistance_4"
+    "slug": "fire_resistance_2"
    }
   ],
   "status_resistance": 0,
@@ -26197,6 +26268,9 @@
   "tier": 1,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "land_movement"
    },
    {
@@ -26268,9 +26342,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "karagh",
   "name": "Karagh",
-  "hp": 150,
-  "armor": 5,
-  "resistance": 4,
+  "hp": 160,
+  "armor": 6,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -26278,6 +26352,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "land_movement"
    },
@@ -26338,9 +26415,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "mirror_mimic",
   "name": "Mirror Mimic",
-  "hp": 110,
-  "armor": 3,
-  "resistance": 4,
+  "hp": 120,
+  "armor": 4,
+  "resistance": 5,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -27051,9 +27128,9 @@
   "upkeep": "60<gold></gold> 10<influence></influence> ",
   "id": "fire_dragon",
   "name": "Fire Dragon",
-  "hp": 150,
-  "armor": 7,
-  "resistance": 6,
+  "hp": 160,
+  "armor": 8,
+  "resistance": 7,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -27061,6 +27138,9 @@
   ],
   "tier": 5,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "dragon"
    },
@@ -27137,9 +27217,9 @@
   "upkeep": "8<gold></gold> ",
   "id": "lesser_magma_spirit",
   "name": "Lesser Magma Spirit",
-  "hp": 50,
+  "hp": 45,
   "armor": 0,
-  "resistance": 3,
+  "resistance": 1,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -27616,6 +27696,9 @@
   "tier": 3,
   "secondary_passives": [
    {
+    "slug": "cannot_be_displaced"
+   },
+   {
     "slug": "large_target"
    },
    {
@@ -27679,6 +27762,9 @@
   ],
   "tier": 2,
   "secondary_passives": [
+   {
+    "slug": "cannot_be_displaced"
+   },
    {
     "slug": "land_movement"
    },

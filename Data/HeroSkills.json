@@ -22,7 +22,7 @@
   "resid": 5046586578081,
   "id": "ascension_blessbringer",
   "group_name": "Pantheon Hero Skills",
-  "icon": "ascension_desecrator",
+  "icon": "ascension_blessbringer",
   "type": "normal",
   "name": "Ascension: Blessbringer",
   "DLC": "WAYSOFWAR "
@@ -36,7 +36,7 @@
   "resid": 5046586578078,
   "id": "ascension_assassin",
   "group_name": "Pantheon Hero Skills",
-  "icon": "ascension_desecrator",
+  "icon": "ascension_assassin",
   "type": "normal",
   "name": "Ascension: Assassin",
   "DLC": "WAYSOFWAR "
@@ -50,7 +50,7 @@
   "resid": 5046586578071,
   "id": "ascension_master",
   "group_name": "Pantheon Hero Skills",
-  "icon": "ascension_desecrator",
+  "icon": "ascension_master",
   "type": "normal",
   "name": "Ascension: Master",
   "DLC": "WAYSOFWAR "
@@ -113,7 +113,7 @@
   "icon": "hysteria_storm",
   "type": "normal",
   "name": "Hysteria Storm",
-  "description": "Enemy unit in a -hex radius have a base % chance of being:<bulletlist><bullet>Displaced up to  hexes.</bullet><bullet>Inflicted with Insanity for  <turn></turn> Turn.</bullet></bulletlist>"
+  "description": "Enemy units in a -hex radius have a base % chance of being:<bulletlist><bullet>Teleported up to  hexes.</bullet><bullet>Inflicted with Insanity for  <turn></turn> Turn.</bullet></bulletlist>"
  },
  {
   "resid": 5003636902378,
@@ -603,19 +603,19 @@
  },
  {
   "group_name": "Dragon Lord - Hero Skill Group",
-  "icon": "exhilarating_roar",
+  "icon": "dragons_roar",
   "type": "normal",
   "abilities": [
    {
-    "slug": "exhilarating_roar_exhilarating_roar"
+    "slug": "dragons_roar_dragons_roar"
    }
   ],
   "resid": 4273492487943,
   "tree_name": "Dragon Lord",
-  "name": "Exhilarating Roar",
+  "name": "Dragon's Roar",
   "tree_pos_x": 250.0,
   "tree_pos_y": 50.0,
-  "id": "exhilarating_roar",
+  "id": "dragons_roar",
   "DLC": "DRAGONLORDS "
  },
  {
@@ -847,6 +847,769 @@
   "description": ""
  },
  {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "sundering_sweep",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "sundering_sweep_sundering_sweep"
+   }
+  ],
+  "resid": 4995046967503,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Sundering Sweep",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 350.0,
+  "id": "sundering_sweep",
+  "required_skills": [
+   {
+    "resid": 4995046967425
+   },
+   {
+    "resid": 4995046967438
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "melee_mage_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "melee_mage"
+   }
+  ],
+  "resid": 4995046967501,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Melee Mage",
+  "tree_pos_x": 750.0,
+  "tree_pos_y": 550.0,
+  "id": "melee_mage",
+  "required_skills": [
+   {
+    "resid": 4995046967497
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "terrifying_aura_2",
+  "type": "normal",
+  "name": "Terrifying Aura",
+  "tree_pos_x": 500.0,
+  "id": "terrifying_aura",
+  "excluded_skills": [
+   {
+    "resid": 4995046967498
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "terrifying_aura"
+   }
+  ],
+  "resid": 4995046967499,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 450.0,
+  "required_skills": [
+   {
+    "resid": 4995046967443
+   },
+   {
+    "resid": 4995046967503
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "weakening_aura_2",
+  "type": "normal",
+  "name": "Weakening Aura",
+  "tree_pos_x": 400.0,
+  "id": "weakening_aura",
+  "excluded_skills": [
+   {
+    "resid": 4995046967499
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "weakening_aura"
+   }
+  ],
+  "resid": 4995046967498,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 450.0,
+  "required_skills": [
+   {
+    "resid": 4995046967432
+   },
+   {
+    "resid": 4995046967503
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "dark_ritual",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "dark_ritual_dark_ritual"
+   }
+  ],
+  "resid": 4995046967497,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Dark Ritual",
+  "tree_pos_x": 750.0,
+  "tree_pos_y": 450.0,
+  "id": "dark_ritual",
+  "required_skills": [
+   {
+    "resid": 4995046967481
+   },
+   {
+    "resid": 4995046967482
+   },
+   {
+    "resid": 4995046967496
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "infested_summons",
+  "type": "normal",
+  "resid": 4995046967496,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Infested Summons",
+  "tree_pos_x": 850.0,
+  "tree_pos_y": 350.0,
+  "id": "infested_summons",
+  "description": "Units summoned by this hero have:<bulletlist><bullet>Aura of Disease</bullet><bullet>Immunity to Diseased</bullet></bulletlist><br></br>The hero gains immunity to Diseased.",
+  "required_skills": [
+   {
+    "resid": 4995046967491
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "wyvern_keeper_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "wyvern_keeper"
+   }
+  ],
+  "resid": 4995046967494,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Wyvern Keeper",
+  "tree_pos_x": 950.0,
+  "tree_pos_y": 250.0,
+  "id": "wyvern_keeper",
+  "required_skills": [
+   {
+    "resid": 4995046967491
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "zombie_keeper_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "zombie_keeper"
+   }
+  ],
+  "resid": 4995046967491,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Zombie Keeper",
+  "tree_pos_x": 850.0,
+  "tree_pos_y": 250.0,
+  "id": "zombie_keeper",
+  "required_skills": [
+   {
+    "resid": 4995046967483
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "raise_undead_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "raise_undead_raise_undead"
+   }
+  ],
+  "resid": 4995046967483,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Raise Undead",
+  "tree_pos_x": 850.0,
+  "tree_pos_y": 150.0,
+  "id": "raise_undead"
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "frost_curse",
+  "type": "normal",
+  "name": "Frost Curse",
+  "tree_pos_x": 750.0,
+  "id": "frost_curse",
+  "excluded_skills": [
+   {
+    "resid": 4995046967481
+   }
+  ],
+  "resid": 4995046967482,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 350.0,
+  "description": "Modify and enhance Curse:<bulletlist><bullet>Curse now deals 30<damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> .</bullet><bullet>Curse gains 120% base chance of inflicting Frozen for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967479
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "mass_curse",
+  "type": "normal",
+  "name": "Mass Curse",
+  "tree_pos_x": 650.0,
+  "id": "mass_curse",
+  "excluded_skills": [
+   {
+    "resid": 4995046967482
+   }
+  ],
+  "resid": 4995046967481,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 350.0,
+  "description": "Modify and enhance Curse:<bulletlist><bullet>Curse now affects all targets in a 1-hex radius.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967476
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "hex_of_disruption",
+  "type": "normal",
+  "resid": 4995046967479,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Hex of Disruption",
+  "tree_pos_x": 750.0,
+  "tree_pos_y": 250.0,
+  "id": "hex_of_disruption",
+  "description": "Debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Disrupted for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967472
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "hex_of_decay",
+  "type": "normal",
+  "resid": 4995046967476,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Hex of Decay",
+  "tree_pos_x": 650.0,
+  "tree_pos_y": 250.0,
+  "id": "hex_of_decay",
+  "description": "Debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Decaying for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967467
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "weakening_magic",
+  "type": "normal",
+  "resid": 4995046967472,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Weakening Magic",
+  "tree_pos_x": 750.0,
+  "tree_pos_y": 150.0,
+  "id": "weakening_magic",
+  "description": "Attacks and debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Weakened for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967455
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "plague_magic",
+  "type": "normal",
+  "resid": 4995046967467,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Plague Magic",
+  "tree_pos_x": 650.0,
+  "tree_pos_y": 150.0,
+  "id": "plague_magic",
+  "description": "Attacks and debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Diseased for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967455
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "curse",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "curse_curse"
+   }
+  ],
+  "resid": 4995046967455,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Curse",
+  "tree_pos_x": 700.0,
+  "tree_pos_y": 50.0,
+  "id": "curse"
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "knight",
+  "type": "normal",
+  "resid": 4995046967454,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Knight",
+  "tree_pos_x": 300.0,
+  "tree_pos_y": 50.0,
+  "id": "knight",
+  "description": "<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+10 maximum <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>"
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "killing_momentum_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "killing_momentum"
+   }
+  ],
+  "resid": 4995046967453,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Killing Momentum",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 750.0,
+  "id": "killing_momentum",
+  "required_skills": [
+   {
+    "resid": 4995046967450
+   },
+   {
+    "resid": 4995046967452
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "warseeker_2",
+  "type": "normal",
+  "name": "Warseeker",
+  "tree_pos_x": 500.0,
+  "id": "warseeker",
+  "excluded_skills": [
+   {
+    "resid": 4995046967450
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "warseeker"
+   }
+  ],
+  "resid": 4995046967452,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 650.0,
+  "required_skills": [
+   {
+    "resid": 4995046967447
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "willbreaker",
+  "type": "normal",
+  "name": "Willbreaker",
+  "tree_pos_x": 400.0,
+  "id": "willbreaker",
+  "excluded_skills": [
+   {
+    "resid": 4995046967452
+   }
+  ],
+  "resid": 4995046967450,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 650.0,
+  "description": "Gain:<bulletlist><bullet>Vicious Killer</bullet><bullet>Willbreaker</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967447
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "unyielding_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "unyielding"
+   }
+  ],
+  "resid": 4995046967447,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Unyielding",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 550.0,
+  "id": "unyielding",
+  "required_skills": [
+   {
+    "resid": 4995046967498
+   },
+   {
+    "resid": 4995046967499
+   },
+   {
+    "resid": 4995046967408
+   },
+   {
+    "resid": 4995046967501
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "vigor",
+  "type": "normal",
+  "resid": 4995046967443,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Vigor",
+  "tree_pos_x": 550.0,
+  "tree_pos_y": 350.0,
+  "id": "vigor",
+  "description": "+15 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
+  "required_skills": [
+   {
+    "resid": 4995046967438
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "vigor_2",
+  "type": "normal",
+  "resid": 4995046967438,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Vigor",
+  "tree_pos_x": 500.0,
+  "tree_pos_y": 250.0,
+  "id": "vigor",
+  "description": "+15 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
+  "required_skills": [
+   {
+    "resid": 4995046967417
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "fighting",
+  "type": "normal",
+  "resid": 4995046967432,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Fighting",
+  "tree_pos_x": 350.0,
+  "tree_pos_y": 350.0,
+  "id": "fighting",
+  "description": "<hyperlink>Melee</hyperlink> attacks gain +10% damage.",
+  "required_skills": [
+   {
+    "resid": 4995046967425
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "fighting_2",
+  "type": "normal",
+  "resid": 4995046967425,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Fighting",
+  "tree_pos_x": 400.0,
+  "tree_pos_y": 250.0,
+  "id": "fighting",
+  "description": "<hyperlink>Melee</hyperlink> attacks gain +10% damage.",
+  "required_skills": [
+   {
+    "resid": 4995046967417
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "second_wind",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "second_wind_second_wind"
+   }
+  ],
+  "resid": 4995046967417,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Second Wind",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 150.0,
+  "id": "second_wind",
+  "required_skills": [
+   {
+    "resid": 4995046967454
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "undying_warrior",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "resurgence"
+   }
+  ],
+  "resid": 4995046967408,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Undying Warrior",
+  "tree_pos_x": 150.0,
+  "tree_pos_y": 550.0,
+  "id": "undying_warrior",
+  "required_skills": [
+   {
+    "resid": 4995046967362
+   },
+   {
+    "resid": 4995046967375
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "execute",
+  "type": "normal",
+  "name": "Execute",
+  "tree_pos_x": 150.0,
+  "id": "execute",
+  "excluded_skills": [
+   {
+    "resid": 4995046967348
+   },
+   {
+    "resid": 4995046967387
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "execute_execute"
+   }
+  ],
+  "resid": 4995046967398,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 350.0,
+  "required_skills": [
+   {
+    "resid": 4995046967333
+   },
+   {
+    "resid": 4995046967317
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "critical_momentum",
+  "type": "normal",
+  "name": "Critical Momentum",
+  "tree_pos_x": 250.0,
+  "id": "critical_momentum",
+  "excluded_skills": [
+   {
+    "resid": 4995046967398
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "critical_momentum"
+   }
+  ],
+  "resid": 4995046967387,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 350.0,
+  "required_skills": [
+   {
+    "resid": 4995046967317
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "berserkers_rage_3",
+  "type": "normal",
+  "name": "Berserker's Rage",
+  "tree_pos_x": 100.0,
+  "id": "berserkers_rage",
+  "excluded_skills": [
+   {
+    "resid": 4995046967362
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "berserkers_rage"
+   }
+  ],
+  "resid": 4995046967375,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 450.0,
+  "required_skills": [
+   {
+    "resid": 4995046967348
+   },
+   {
+    "resid": 4995046967398
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "grim_executioner",
+  "type": "normal",
+  "name": "Grim Executioner",
+  "tree_pos_x": 200.0,
+  "id": "grim_executioner",
+  "excluded_skills": [
+   {
+    "resid": 4995046967375
+   }
+  ],
+  "resid": 4995046967362,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 450.0,
+  "description": "When this unit kills another, it gains 3 Fortune.",
+  "required_skills": [
+   {
+    "resid": 4995046967398
+   },
+   {
+    "resid": 4995046967387
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "reckless_rage",
+  "type": "normal",
+  "name": "Reckless Rage",
+  "tree_pos_x": 50.0,
+  "id": "reckless_rage",
+  "excluded_skills": [
+   {
+    "resid": 4995046967398
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "reckless_rage_reckless_rage"
+   }
+  ],
+  "resid": 4995046967348,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 350.0,
+  "required_skills": [
+   {
+    "resid": 4995046967333
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "sundering_strikes",
+  "type": "normal",
+  "name": "Sundering Strikes",
+  "tree_pos_x": 100.0,
+  "id": "sundering_strikes",
+  "excluded_skills": [
+   {
+    "resid": 4995046967317
+   }
+  ],
+  "resid": 4995046967333,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 250.0,
+  "description": "Makes base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks gain:<bulletlist><bullet>Base 60% chance of inflicting Sundered Defense.</bullet><bullet>Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "required_skills": [
+   {
+    "resid": 4995046967300
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "keen_edge",
+  "type": "normal",
+  "name": "Keen Edge",
+  "tree_pos_x": 200.0,
+  "id": "keen_edge",
+  "excluded_skills": [
+   {
+    "resid": 4995046967333
+   }
+  ],
+  "resid": 4995046967317,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "tree_pos_y": 250.0,
+  "description": "+20% Critical Chance.",
+  "required_skills": [
+   {
+    "resid": 4995046967300
+   }
+  ]
+ },
+ {
+  "group_name": "Death Knight - Skill Group",
+  "icon": "frenzy_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "frenzy"
+   }
+  ],
+  "resid": 4995046967300,
+  "tree_name": "<classDeathknight></classDeathknight> Death Knight",
+  "name": "Frenzy",
+  "tree_pos_x": 150.0,
+  "tree_pos_y": 150.0,
+  "id": "frenzy",
+  "required_skills": [
+   {
+    "resid": 4995046967454
+   }
+  ]
+ },
+ {
   "group_name": "Defender - Hero Skill Group",
   "icon": "reinforced_armor",
   "type": "normal",
@@ -864,7 +1627,7 @@
    }
   ],
   "resid": 5003636903846,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 250.0,
   "required_skills": [
    {
@@ -893,7 +1656,7 @@
    }
   ],
   "resid": 5003636903844,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 250.0,
   "required_skills": [
    {
@@ -914,7 +1677,7 @@
    }
   ],
   "resid": 5003636903822,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Stunning Bash",
   "tree_pos_x": 550.0,
   "tree_pos_y": 350.0,
@@ -941,7 +1704,7 @@
    }
   ],
   "resid": 5003636903814,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 650.0,
   "description": "While in <hyperlink>Defense Mode</hyperlink>, this unit gains Charge Resistance.",
   "required_skills": [
@@ -955,12 +1718,12 @@
   "icon": "graceful_defense",
   "type": "normal",
   "resid": 5003636903809,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Graceful Defense",
   "tree_pos_x": 300.0,
   "tree_pos_y": 550.0,
   "id": "graceful_defense",
-  "description": "Gain +2 Grace on entering <hyperlink>Defense Mode</hyperlink>.",
+  "description": "Gain +1 Grace on entering <hyperlink>Defense Mode</hyperlink>.",
   "required_skills": [
    {
     "resid": 5003636902803
@@ -983,7 +1746,7 @@
    }
   ],
   "resid": 5003636903804,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Bladestorm",
   "tree_pos_x": 100.0,
   "tree_pos_y": 450.0,
@@ -1010,7 +1773,7 @@
    }
   ],
   "resid": 5003636903795,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 350.0,
   "description": "Modify and enhance Pushing Attack:<bulletlist><bullet>Pushing Attack now heals the caster for +20 <temphp></temphp> Temporary Hit Points.</bullet></bulletlist>",
   "required_skills": [
@@ -1032,7 +1795,7 @@
    }
   ],
   "resid": 5003636903785,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 350.0,
   "description": "Modify and enhance Pushing Attack:<bulletlist><bullet>Pushing Attack now displaces and replaces.</bullet><bullet>Pushing Attack now deals 40 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> base.</bullet></bulletlist>",
   "required_skills": [
@@ -1051,7 +1814,7 @@
    }
   ],
   "resid": 5003636903775,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Pushing Attack",
   "tree_pos_x": 100.0,
   "tree_pos_y": 250.0,
@@ -1075,7 +1838,7 @@
    }
   ],
   "resid": 5003636903770,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Taunt",
   "tree_pos_x": 300.0,
   "tree_pos_y": 50.0,
@@ -1086,7 +1849,7 @@
   "icon": "weakening_strikes",
   "type": "normal",
   "resid": 5003636902934,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Weakening Strikes",
   "tree_pos_x": 550.0,
   "tree_pos_y": 550.0,
@@ -1114,7 +1877,7 @@
    }
   ],
   "resid": 5003636902932,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 650.0,
   "description": "When making a <hyperlink>Retaliation Attack</hyperlink> attack this unit gains Regeneration.",
   "required_skills": [
@@ -1136,7 +1899,7 @@
    }
   ],
   "resid": 5003636902931,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 650.0,
   "description": "When making a <hyperlink>Retaliation Attack</hyperlink> attack, this unit gains Strengthened.",
   "required_skills": [
@@ -1149,17 +1912,13 @@
   "group_name": "Defender - Hero Skill Group",
   "icon": "tireless_retaliator",
   "type": "normal",
-  "abilities": [
-   {
-    "slug": "tireless_retaliation"
-   }
-  ],
   "resid": 5003636902916,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Tireless Retaliator",
   "tree_pos_x": 100.0,
   "tree_pos_y": 750.0,
   "id": "tireless_retaliator",
+  "description": "When entering <hyperlink>Defense Mode</hyperlink>, this unit gains Tireless Retaliation until the start of the next turn.",
   "required_skills": [
    {
     "resid": 5003636902931
@@ -1174,7 +1933,7 @@
   "icon": "retaliator",
   "type": "normal",
   "resid": 5003636902912,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Retaliator",
   "tree_pos_x": 100.0,
   "tree_pos_y": 550.0,
@@ -1199,7 +1958,7 @@
    }
   ],
   "resid": 5003636902911,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Rallying Cry",
   "tree_pos_x": 300.0,
   "tree_pos_y": 750.0,
@@ -1217,12 +1976,17 @@
   "group_name": "Defender - Hero Skill Group",
   "icon": "greater_vigor",
   "type": "normal",
-  "resid": 5003636902874,
-  "tree_name": "Class: Defender",
   "name": "Greater Vigor",
   "tree_pos_x": 350.0,
-  "tree_pos_y": 650.0,
   "id": "greater_vigor",
+  "excluded_skills": [
+   {
+    "resid": 5003636902868
+   }
+  ],
+  "resid": 5003636902874,
+  "tree_name": "<classDefender></classDefender> Defender",
+  "tree_pos_y": 650.0,
   "description": "+30 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
   "required_skills": [
    {
@@ -1235,10 +1999,10 @@
  },
  {
   "group_name": "Defender - Hero Skill Group",
-  "icon": "vigor",
+  "icon": "vigor_3",
   "type": "normal",
   "resid": 5003636902872,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Vigor",
   "tree_pos_x": 400.0,
   "tree_pos_y": 550.0,
@@ -1255,15 +2019,15 @@
  },
  {
   "group_name": "Defender - Hero Skill Group",
-  "icon": "fighting",
+  "icon": "fighting_3",
   "type": "normal",
   "resid": 5003636902871,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Fighting",
   "tree_pos_x": 200.0,
   "tree_pos_y": 550.0,
   "id": "fighting",
-  "description": "<hyperlink>Melee</hyperlink> attacks gain +15% damage.",
+  "description": "<hyperlink>Melee</hyperlink> attacks gain +10% damage.",
   "required_skills": [
    {
     "resid": 5003636902803
@@ -1272,15 +2036,20 @@
  },
  {
   "group_name": "Defender - Hero Skill Group",
-  "icon": "fighting_2",
+  "icon": "greater_fighting",
   "type": "normal",
-  "resid": 5003636902868,
-  "tree_name": "Class: Defender",
-  "name": "Fighting",
+  "name": "Greater Fighting",
   "tree_pos_x": 250.0,
+  "id": "greater_fighting",
+  "excluded_skills": [
+   {
+    "resid": 5003636902874
+   }
+  ],
+  "resid": 5003636902868,
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 650.0,
-  "id": "fighting",
-  "description": "<hyperlink>Melee</hyperlink> attacks gain +15% damage.",
+  "description": "<hyperlink>Melee</hyperlink> attacks gain +20% damage.",
   "required_skills": [
    {
     "resid": 5003636902871
@@ -1295,7 +2064,7 @@
   "icon": "resistance",
   "type": "normal",
   "resid": 5003636902849,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Resistance",
   "tree_pos_x": 200.0,
   "tree_pos_y": 250.0,
@@ -1315,7 +2084,7 @@
   "icon": "resistance_2",
   "type": "normal",
   "resid": 5003636902846,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Resistance",
   "tree_pos_x": 350.0,
   "tree_pos_y": 350.0,
@@ -1335,7 +2104,7 @@
   "icon": "greater_resistance",
   "type": "normal",
   "resid": 5003636902843,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Greater Resistance",
   "tree_pos_x": 400.0,
   "tree_pos_y": 450.0,
@@ -1355,7 +2124,7 @@
   "icon": "greater_defense",
   "type": "normal",
   "resid": 5003636902803,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Greater Defense",
   "tree_pos_x": 200.0,
   "tree_pos_y": 450.0,
@@ -1375,7 +2144,7 @@
   "icon": "defense",
   "type": "normal",
   "resid": 5003636902800,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Defense",
   "tree_pos_x": 250.0,
   "tree_pos_y": 350.0,
@@ -1395,7 +2164,7 @@
   "icon": "defense_2",
   "type": "normal",
   "resid": 5003636902797,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Defense",
   "tree_pos_x": 400.0,
   "tree_pos_y": 250.0,
@@ -1423,7 +2192,7 @@
    }
   ],
   "resid": 5003636902787,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 450.0,
   "description": "When entering <hyperlink>Defense Mode</hyperlink>, this unit and all adjacent allies dispel 1 negative status effect.",
   "required_skills": [
@@ -1453,7 +2222,7 @@
    }
   ],
   "resid": 5003636902755,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 150.0,
   "required_skills": [
    {
@@ -1479,7 +2248,7 @@
    }
   ],
   "resid": 5003636902745,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 150.0,
   "required_skills": [
    {
@@ -1492,7 +2261,7 @@
   "icon": "shieldbearer",
   "type": "normal",
   "resid": 5003636902731,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Shieldbearer",
   "tree_pos_x": 550.0,
   "tree_pos_y": 50.0,
@@ -1509,7 +2278,7 @@
    }
   ],
   "resid": 5003636902729,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Frontline Fighter",
   "tree_pos_x": 150.0,
   "tree_pos_y": 150.0,
@@ -1530,7 +2299,7 @@
    }
   ],
   "resid": 5003636902724,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Sentinel",
   "tree_pos_x": 100.0,
   "tree_pos_y": 50.0,
@@ -1546,7 +2315,7 @@
    }
   ],
   "resid": 5003636902723,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Warding Bond",
   "tree_pos_x": 300.0,
   "tree_pos_y": 250.0,
@@ -1565,10 +2334,10 @@
  },
  {
   "group_name": "Defender - Hero Skill Group",
-  "icon": "vigor_2",
+  "icon": "vigor_4",
   "type": "normal",
   "resid": 5003636902719,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Vigor",
   "tree_pos_x": 300.0,
   "tree_pos_y": 150.0,
@@ -1590,7 +2359,7 @@
    }
   ],
   "resid": 4514010633981,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Weakening Aura",
   "tree_pos_x": 300.0,
   "tree_pos_y": 450.0,
@@ -1617,7 +2386,7 @@
    }
   ],
   "resid": 4514010632878,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 450.0,
   "description": "When entering <hyperlink>Defense Mode</hyperlink>, this unit gains Damage Deflection until the start of the next turn.",
   "required_skills": [
@@ -1636,7 +2405,7 @@
    }
   ],
   "resid": 4514010632053,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Adaptive Armor",
   "tree_pos_x": 450.0,
   "tree_pos_y": 350.0,
@@ -1668,7 +2437,7 @@
    }
   ],
   "resid": 4514010630608,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "tree_pos_y": 650.0,
   "required_skills": [
    {
@@ -1681,7 +2450,7 @@
   "icon": "leaden_blows",
   "type": "normal",
   "resid": 4273492483260,
-  "tree_name": "Class: Defender",
+  "tree_name": "<classDefender></classDefender> Defender",
   "name": "Leaden Blows",
   "tree_pos_x": 50.0,
   "tree_pos_y": 150.0,
@@ -1703,7 +2472,7 @@
    }
   ],
   "resid": 5003636904021,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Brutal Parry",
   "tree_pos_x": 500.0,
   "tree_pos_y": 650.0,
@@ -1735,7 +2504,7 @@
    }
   ],
   "resid": 5003636903982,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 650.0,
   "required_skills": [
    {
@@ -1762,7 +2531,7 @@
    }
   ],
   "resid": 5003636903958,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 650.0,
   "description": "Gain:<bulletlist><bullet>Vicious Killer</bullet><bullet>Willbreaker</bullet></bulletlist>",
   "required_skills": [
@@ -1787,7 +2556,7 @@
    }
   ],
   "resid": 5003636903955,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Unyielding",
   "tree_pos_x": 350.0,
   "tree_pos_y": 550.0,
@@ -1803,7 +2572,7 @@
  },
  {
   "group_name": "Warrior - Hero Skill Group",
-  "icon": "cleaving_sweep",
+  "icon": "sundering_sweep",
   "type": "normal",
   "abilities": [
    {
@@ -1811,7 +2580,7 @@
    }
   ],
   "resid": 5003636903936,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Cleaving Sweep",
   "tree_pos_x": 350.0,
   "tree_pos_y": 350.0,
@@ -1830,12 +2599,12 @@
   "icon": "graceful_charge",
   "type": "normal",
   "resid": 5003636903929,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Graceful Charge",
   "tree_pos_x": 200.0,
   "tree_pos_y": 650.0,
   "id": "graceful_charge",
-  "description": "The hero's <hyperlink>Charge</hyperlink> attacks now grant them +2 Grace for 1 <turn></turn> <hyperlink>Turn</hyperlink>.",
+  "description": "The hero's <hyperlink>Charge</hyperlink> attacks now grant them +1 Grace.",
   "required_skills": [
    {
     "resid": 5003636903922
@@ -1850,7 +2619,7 @@
   "icon": "sweeping_charge",
   "type": "normal",
   "resid": 5003636903922,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Sweeping Charge",
   "tree_pos_x": 150.0,
   "tree_pos_y": 550.0,
@@ -1881,7 +2650,7 @@
    }
   ],
   "resid": 5003636903919,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 350.0,
   "description": "The hero's <hyperlink>Charge</hyperlink> attacks now inflict guaranteed 2x Weakened.",
   "required_skills": [
@@ -1906,7 +2675,7 @@
    }
   ],
   "resid": 5003636903862,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 50.0,
   "description": "<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+10 maximum <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>"
  },
@@ -1923,7 +2692,7 @@
    }
   ],
   "resid": 5003636903857,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 50.0,
   "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink> attacks gain +10% damage.</bullet><bullet>+10 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>"
  },
@@ -1940,7 +2709,7 @@
    }
   ],
   "resid": 5003636903684,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 450.0,
   "description": "After using a <hyperlink>Charge</hyperlink> attack, the hero gains +1 <hyperlink>Retaliation Attack</hyperlink>.",
   "required_skills": [
@@ -1965,7 +2734,7 @@
    }
   ],
   "resid": 5003636903679,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 450.0,
   "description": "The hero's <hyperlink>Charge</hyperlink> attacks now inflict Taunted.",
   "required_skills": [
@@ -1987,7 +2756,7 @@
    }
   ],
   "resid": 5003636902942,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Frenzy",
   "tree_pos_x": 500.0,
   "tree_pos_y": 150.0,
@@ -2008,7 +2777,7 @@
    }
   ],
   "resid": 4995046966021,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Killing Momentum",
   "tree_pos_x": 350.0,
   "tree_pos_y": 750.0,
@@ -2027,7 +2796,7 @@
   "icon": "greater_defense_2",
   "type": "normal",
   "resid": 4995046966001,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Greater Defense",
   "tree_pos_x": 250.0,
   "tree_pos_y": 550.0,
@@ -2047,7 +2816,7 @@
   "icon": "greater_vigor_2",
   "type": "normal",
   "resid": 4995046965991,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Greater Vigor",
   "tree_pos_x": 450.0,
   "tree_pos_y": 550.0,
@@ -2064,10 +2833,10 @@
  },
  {
   "group_name": "Warrior - Hero Skill Group",
-  "icon": "vigor_3",
+  "icon": "vigor",
   "type": "normal",
   "resid": 4995046965989,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Vigor",
   "tree_pos_x": 300.0,
   "tree_pos_y": 450.0,
@@ -2084,10 +2853,10 @@
  },
  {
   "group_name": "Warrior - Hero Skill Group",
-  "icon": "vigor_4",
+  "icon": "vigor_2",
   "type": "normal",
   "resid": 4995046965987,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Vigor",
   "tree_pos_x": 400.0,
   "tree_pos_y": 250.0,
@@ -2104,10 +2873,10 @@
  },
  {
   "group_name": "Warrior - Hero Skill Group",
-  "icon": "fighting_3",
+  "icon": "fighting",
   "type": "normal",
   "resid": 4995046965982,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Fighting",
   "tree_pos_x": 400.0,
   "tree_pos_y": 450.0,
@@ -2124,10 +2893,10 @@
  },
  {
   "group_name": "Warrior - Hero Skill Group",
-  "icon": "fighting_4",
+  "icon": "fighting_2",
   "type": "normal",
   "resid": 4995046965974,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Fighting",
   "tree_pos_x": 300.0,
   "tree_pos_y": 250.0,
@@ -2152,7 +2921,7 @@
    }
   ],
   "resid": 4995046965971,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Second Wind",
   "tree_pos_x": 350.0,
   "tree_pos_y": 150.0,
@@ -2176,10 +2945,13 @@
   "excluded_skills": [
    {
     "resid": 5003636903919
+   },
+   {
+    "resid": 4995046965964
    }
   ],
   "resid": 4995046965967,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 350.0,
   "description": "The hero's <hyperlink>Charge</hyperlink> attacks now inflict Immobilized.",
   "required_skills": [
@@ -2200,11 +2972,14 @@
   "id": "distracting_charge",
   "excluded_skills": [
    {
+    "resid": 4995046965967
+   },
+   {
     "resid": 5003636903919
    }
   ],
   "resid": 4995046965964,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 350.0,
   "description": "The hero's <hyperlink>Charge</hyperlink> attacks now inflict Distracted.",
   "required_skills": [
@@ -2226,7 +3001,7 @@
    }
   ],
   "resid": 4995046965961,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 250.0,
   "description": "The hero's <hyperlink>Charge</hyperlink> attacks gain:<bulletlist><bullet>Displace the target unit and moves onto its hex.</bullet><bullet>Inflict Sundered Defense.</bullet></bulletlist>",
   "required_skills": [
@@ -2248,7 +3023,7 @@
    }
   ],
   "resid": 4995046965956,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 250.0,
   "description": "The hero enters <hyperlink>Defense Mode</hyperlink> after a <hyperlink>Charge</hyperlink> attack.",
   "required_skills": [
@@ -2262,7 +3037,7 @@
   "icon": "prepared_charge",
   "type": "normal",
   "resid": 4995046965942,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Prepared Charge",
   "tree_pos_x": 200.0,
   "tree_pos_y": 150.0,
@@ -2283,6 +3058,9 @@
   "id": "reckless_rage",
   "excluded_skills": [
    {
+    "resid": 4995046965911
+   },
+   {
     "resid": 4995046965926
    }
   ],
@@ -2292,7 +3070,7 @@
    }
   ],
   "resid": 4995046965940,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 350.0,
   "required_skills": [
    {
@@ -2324,7 +3102,7 @@
    }
   ],
   "resid": 4995046965926,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 350.0,
   "required_skills": [
    {
@@ -2345,7 +3123,7 @@
    }
   ],
   "resid": 4995046965916,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "name": "Undying Warrior",
   "tree_pos_x": 550.0,
   "tree_pos_y": 550.0,
@@ -2369,12 +3147,19 @@
   "excluded_skills": [
    {
     "resid": 4995046965926
+   },
+   {
+    "resid": 4995046965940
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "critical_momentum"
    }
   ],
   "resid": 4995046965911,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 350.0,
-  "description": "When this hero makes a <hyperlink>Critical Hit</hyperlink> it:<bulletlist><bullet>Heals 10<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink></bullet><bullet>Gains Hastened</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 4514010630464
@@ -2399,7 +3184,7 @@
    }
   ],
   "resid": 4995046965909,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 450.0,
   "required_skills": [
    {
@@ -2423,7 +3208,7 @@
    }
   ],
   "resid": 4514010632240,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 250.0,
   "description": "Makes base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks gain:<bulletlist><bullet>Base 60% chance of inflicting Sundered Defense.</bullet><bullet>Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
@@ -2445,7 +3230,7 @@
    }
   ],
   "resid": 4514010630533,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 450.0,
   "description": "When this unit kills another, it gains 3 Fortune.",
   "required_skills": [
@@ -2470,7 +3255,7 @@
    }
   ],
   "resid": 4514010630464,
-  "tree_name": "Class: Warrior",
+  "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 250.0,
   "description": "+20% Critical Chance.",
   "required_skills": [
@@ -2489,7 +3274,7 @@
    }
   ],
   "resid": 5003636903177,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Temporal Plague",
   "tree_pos_x": 600.0,
   "tree_pos_y": 450.0,
@@ -2516,7 +3301,7 @@
    }
   ],
   "resid": 5003636903166,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 350.0,
   "description": "Modify and enhance Curse:<bulletlist><bullet>Curse now deals 30<damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> .</bullet><bullet>Curse gains 120% base chance of inflicting Frozen for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
@@ -2538,7 +3323,7 @@
    }
   ],
   "resid": 5003636903162,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 350.0,
   "description": "Modify and enhance Curse:<bulletlist><bullet>Curse now affects all targets in a 1-hex radius.</bullet></bulletlist>",
   "required_skills": [
@@ -2552,7 +3337,7 @@
   "icon": "hex_of_disruption",
   "type": "normal",
   "resid": 5003636903158,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Hex of Disruption",
   "tree_pos_x": 650.0,
   "tree_pos_y": 250.0,
@@ -2569,7 +3354,7 @@
   "icon": "hex_of_decay",
   "type": "normal",
   "resid": 5003636903155,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Hex of Decay",
   "tree_pos_x": 550.0,
   "tree_pos_y": 250.0,
@@ -2586,12 +3371,12 @@
   "icon": "weakening_magic",
   "type": "normal",
   "resid": 5003636903149,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Weakening Magic",
   "tree_pos_x": 650.0,
   "tree_pos_y": 150.0,
   "id": "weakening_magic",
-  "description": "<hyperlink>Magic</hyperlink> attacks and debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Weakened for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "Attacks and debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Weakened for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903135
@@ -2603,12 +3388,12 @@
   "icon": "plague_magic",
   "type": "normal",
   "resid": 5003636903146,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Plague Magic",
   "tree_pos_x": 550.0,
   "tree_pos_y": 150.0,
   "id": "plague_magic",
-  "description": "<hyperlink>Magic</hyperlink> attacks and debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Diseased for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "Attacks and debuff abilities:<bulletlist><bullet>Gain 90% base chance of inflicting Diseased for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903135
@@ -2625,7 +3410,7 @@
    }
   ],
   "resid": 5003636903135,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Curse",
   "tree_pos_x": 600.0,
   "tree_pos_y": 50.0,
@@ -2641,7 +3426,7 @@
    }
   ],
   "resid": 5003636903119,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Devouring Spell",
   "tree_pos_x": 150.0,
   "tree_pos_y": 550.0,
@@ -2663,12 +3448,12 @@
   "icon": "arcane_strength",
   "type": "normal",
   "resid": 5003636903113,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Arcane Strength",
   "tree_pos_x": 400.0,
   "tree_pos_y": 650.0,
   "id": "arcane_strength",
-  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Gain +10% damage.</bullet><bullet>Gain +10% <hyperlink>Accuracy</hyperlink>.</bullet><bullet>Ignore up to 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet></bulletlist>",
+  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Gain +20% damage.</bullet><bullet>Ignore up to 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903119
@@ -2683,7 +3468,7 @@
   "icon": "distant_evocation",
   "type": "normal",
   "resid": 5003636903109,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Distant Evocation",
   "tree_pos_x": 400.0,
   "tree_pos_y": 550.0,
@@ -2706,12 +3491,12 @@
   "icon": "magecraft_ii",
   "type": "normal",
   "resid": 5003636903103,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Magecraft II",
   "tree_pos_x": 450.0,
   "tree_pos_y": 350.0,
   "id": "magecraft_ii",
-  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Ignore up to 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Gain +10% <hyperlink>Accuracy</hyperlink>.</bullet></bulletlist>",
+  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Ignore up to 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Gain +10% damage.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903099
@@ -2723,12 +3508,12 @@
   "icon": "magecraft_i",
   "type": "normal",
   "resid": 5003636903099,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Magecraft I",
   "tree_pos_x": 450.0,
   "tree_pos_y": 250.0,
   "id": "magecraft_i",
-  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Ignore up to 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Gain +10% <hyperlink>Accuracy</hyperlink>.</bullet></bulletlist>",
+  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Ignore up to 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Gain +10% damage.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903080
@@ -2740,7 +3525,7 @@
   "icon": "greater_resistance_2",
   "type": "normal",
   "resid": 5003636903098,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Greater Resistance",
   "tree_pos_x": 350.0,
   "tree_pos_y": 350.0,
@@ -2757,7 +3542,7 @@
   "icon": "resistance_3",
   "type": "normal",
   "resid": 5003636903090,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Resistance",
   "tree_pos_x": 350.0,
   "tree_pos_y": 250.0,
@@ -2779,7 +3564,7 @@
    }
   ],
   "resid": 5003636903080,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Channel Power",
   "tree_pos_x": 400.0,
   "tree_pos_y": 150.0,
@@ -2800,7 +3585,7 @@
    }
   ],
   "resid": 5003636903062,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Quick Phase",
   "tree_pos_x": 250.0,
   "tree_pos_y": 450.0,
@@ -2821,7 +3606,7 @@
    }
   ],
   "resid": 5003636903060,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Displacement",
   "tree_pos_x": 250.0,
   "tree_pos_y": 350.0,
@@ -2842,7 +3627,7 @@
    }
   ],
   "resid": 5003636903058,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Precognition",
   "tree_pos_x": 150.0,
   "tree_pos_y": 350.0,
@@ -2855,15 +3640,15 @@
  },
  {
   "group_name": "Mage - Hero Skill Group",
-  "icon": "wildfire",
+  "icon": "wildfire_strikes",
   "type": "normal",
   "resid": 5003636903049,
-  "tree_name": "Class: Mage",
-  "name": "Wildfire",
+  "tree_name": "<classMage></classMage> Mage",
+  "name": "Wildfire Strikes",
   "tree_pos_x": 50.0,
   "tree_pos_y": 450.0,
-  "id": "wildfire",
-  "description": "<hyperlink>Magic</hyperlink> attacks and abilities:<bulletlist><bullet>Slain units explode, inflicting 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and guaranteed Burning for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "id": "wildfire_strikes",
+  "description": "Base attacks gain:<bulletlist><bullet>2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>60% base chance of inflicting Burning on the target and adjacent enemies.</bullet></bulletlist><br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
    {
     "resid": 5003636903032
@@ -2875,7 +3660,7 @@
   "icon": "fan_the_flames",
   "type": "normal",
   "resid": 5003636903032,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Fan the Flames",
   "tree_pos_x": 50.0,
   "tree_pos_y": 350.0,
@@ -2892,7 +3677,7 @@
   "icon": "aethermancy",
   "type": "normal",
   "resid": 5003636903029,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Aethermancy",
   "tree_pos_x": 250.0,
   "tree_pos_y": 250.0,
@@ -2912,7 +3697,7 @@
   "icon": "electromancy",
   "type": "normal",
   "resid": 5003636903026,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Electromancy",
   "tree_pos_x": 150.0,
   "tree_pos_y": 250.0,
@@ -2935,7 +3720,7 @@
   "icon": "pyromancy",
   "type": "normal",
   "resid": 5003636903022,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Pyromancy",
   "tree_pos_x": 50.0,
   "tree_pos_y": 250.0,
@@ -2966,9 +3751,9 @@
    }
   ],
   "resid": 5003636903014,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 150.0,
-  "description": "Modify and enhance Lightning Evocation:<bulletlist><bullet>Lightning Evocation is now a debuff ability.</bullet><bullet>Lightning Evocation inflicts guaranteed Sundered Defense.</bullet><bullet>Lightning Evocation inflicts guaranteed Sundered Resistance.</bullet></bulletlist>",
+  "description": "Modify and enhance Lightning Evocation:<bulletlist><bullet>Lightning Evocation is now also a debuff ability.</bullet><bullet>Lightning Evocation inflicts guaranteed Sundered Defense.</bullet><bullet>Lightning Evocation inflicts guaranteed Sundered Resistance.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636902989
@@ -2980,7 +3765,7 @@
   "icon": "resistance_4",
   "type": "normal",
   "resid": 5003636903002,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Resistance",
   "tree_pos_x": 400.0,
   "tree_pos_y": 50.0,
@@ -3005,7 +3790,7 @@
    }
   ],
   "resid": 5003636902989,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 50.0
  },
  {
@@ -3024,7 +3809,7 @@
    }
   ],
   "resid": 5003636902987,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 150.0,
   "description": "Modify and enhance this hero's Evocation:<bulletlist><bullet>Fire Evocation now deals 30<damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Lightning Evocation now deals 35<damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
@@ -3052,9 +3837,9 @@
    }
   ],
   "resid": 5003636902964,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 150.0,
-  "description": "Modify and enhance Fire Evocation:<bulletlist><bullet>Fire Evocation cascades to adjacent enemy units and is repeated.</bullet><bullet>Fire Evocation inflicts guaranteed Burning.</bullet><bullet>Fire Evocation deals +5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
+  "description": "Modify and enhance Fire Evocation:<bulletlist><bullet>Fire Evocation cascades to adjacent enemy units and is repeated.</bullet><bullet>Fire Evocation inflicts guaranteed Burning.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636902948
@@ -3079,7 +3864,7 @@
    }
   ],
   "resid": 5003636902948,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 50.0
  },
  {
@@ -3087,12 +3872,12 @@
   "icon": "maximized_magic",
   "type": "normal",
   "resid": 4514010632903,
-  "tree_name": "Class: Mage",
+  "tree_name": "<classMage></classMage> Mage",
   "name": "Maximized Magic",
   "tree_pos_x": 150.0,
   "tree_pos_y": 450.0,
   "id": "maximized_magic",
-  "description": "Grants <hyperlink>Magic</hyperlink> attacks:<bulletlist><bullet>+30% <hyperlink>Critical Hit</hyperlink> chance</bullet><bullet>+20% <hyperlink>Accuracy</hyperlink></bullet></bulletlist>",
+  "description": "Grants <hyperlink>Magic</hyperlink> attacks:<bulletlist><bullet>+20% <hyperlink>Critical Hit</hyperlink> chance</bullet><bullet>+20% <hyperlink>Accuracy</hyperlink></bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903058
@@ -3109,7 +3894,7 @@
    }
   ],
   "resid": 5003636902221,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Conjure Astral Ward",
   "tree_pos_x": 550.0,
   "tree_pos_y": 50.0,
@@ -3125,7 +3910,7 @@
    }
   ],
   "resid": 4995046966250,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Battlefield Restoration",
   "tree_pos_x": 450.0,
   "tree_pos_y": 800.0,
@@ -3141,7 +3926,7 @@
   "icon": "support_resistance_iii",
   "type": "normal",
   "resid": 4995046966237,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Support Resistance III",
   "tree_pos_x": 450.0,
   "tree_pos_y": 700.0,
@@ -3158,7 +3943,7 @@
   "icon": "support_resistance_ii",
   "type": "normal",
   "resid": 4995046966224,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Support Resistance II",
   "tree_pos_x": 450.0,
   "tree_pos_y": 600.0,
@@ -3175,7 +3960,7 @@
   "icon": "support_resistance_i",
   "type": "normal",
   "resid": 4995046966196,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Support Resistance I",
   "tree_pos_x": 450.0,
   "tree_pos_y": 500.0,
@@ -3203,7 +3988,7 @@
    }
   ],
   "resid": 4995046966193,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Dark Ritual",
   "tree_pos_x": 750.0,
   "tree_pos_y": 350.0,
@@ -3218,13 +4003,17 @@
   "group_name": "Ritualist - Hero Skill Group",
   "icon": "infested_summons",
   "type": "normal",
+  "abilities": [
+   {
+    "slug": "status_effect_immunity_diseased"
+   }
+  ],
   "resid": 4995046966186,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Infested Summons",
   "tree_pos_x": 750.0,
   "tree_pos_y": 249.0,
   "id": "infested_summons",
-  "description": "Units summoned by this hero have:<bulletlist><bullet>Aura of Disease</bullet><bullet>Immunity to Diseased</bullet></bulletlist><br></br>The hero gains immunity to Diseased.",
   "required_skills": [
    {
     "resid": 4995046966171
@@ -3241,7 +4030,7 @@
    }
   ],
   "resid": 4995046966179,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Wyvern Keeper",
   "tree_pos_x": 650.0,
   "tree_pos_y": 150.0,
@@ -3262,7 +4051,7 @@
    }
   ],
   "resid": 4995046966171,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Zombie Keeper",
   "tree_pos_x": 750.0,
   "tree_pos_y": 150.0,
@@ -3283,7 +4072,7 @@
    }
   ],
   "resid": 4995046966169,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Raise Undead",
   "tree_pos_x": 750.0,
   "tree_pos_y": 50.0,
@@ -3299,7 +4088,7 @@
    }
   ],
   "resid": 4995046966167,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Astral Bond",
   "tree_pos_x": 550.0,
   "tree_pos_y": 350.0,
@@ -3320,7 +4109,7 @@
    }
   ],
   "resid": 4995046966160,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Conjure Greater Spirit",
   "tree_pos_x": 650.0,
   "tree_pos_y": 250.0,
@@ -3341,7 +4130,7 @@
    }
   ],
   "resid": 4995046966153,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Conjure Lesser Spirit",
   "tree_pos_x": 550.0,
   "tree_pos_y": 250.0,
@@ -3357,7 +4146,7 @@
   "icon": "fortified_summons",
   "type": "normal",
   "resid": 4995046966145,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Fortified Summons",
   "tree_pos_x": 550.0,
   "tree_pos_y": 150.0,
@@ -3374,7 +4163,7 @@
   "icon": "living_wildgrowth",
   "type": "normal",
   "resid": 4995046966138,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Living Wildgrowth",
   "tree_pos_x": 450.0,
   "tree_pos_y": 350.0,
@@ -3391,7 +4180,7 @@
   "icon": "enveloping_wildgrowth",
   "type": "normal",
   "resid": 4995046966132,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Enveloping Wildgrowth",
   "tree_pos_x": 450.0,
   "tree_pos_y": 250.0,
@@ -3413,7 +4202,7 @@
    }
   ],
   "resid": 4995046966123,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Swift Wildgrowth",
   "tree_pos_x": 350.0,
   "tree_pos_y": 350.0,
@@ -3429,7 +4218,7 @@
   "icon": "fortifying_wildgrowth",
   "type": "normal",
   "resid": 4995046966115,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Fortifying Wildgrowth",
   "tree_pos_x": 350.0,
   "tree_pos_y": 250.0,
@@ -3454,7 +4243,7 @@
    }
   ],
   "resid": 4995046966108,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "tree_pos_y": 150.0,
   "description": "Friendly units in the area of effect of Conjure Wildgrowth:<bulletlist><bullet>Heal 10<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink></bullet><bullet>Gain Regeneration</bullet></bulletlist>",
   "required_skills": [
@@ -3473,7 +4262,7 @@
    }
   ],
   "resid": 4995046966100,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Conjure Wildgrowth",
   "tree_pos_x": 400.0,
   "tree_pos_y": 50.0,
@@ -3484,7 +4273,7 @@
   "icon": "reclaiming_attacks",
   "type": "normal",
   "resid": 4995046966086,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Reclaiming Attacks",
   "tree_pos_x": 275.0,
   "tree_pos_y": 450.0,
@@ -3512,7 +4301,7 @@
    }
   ],
   "resid": 4995046966083,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Swift Restoration",
   "tree_pos_x": 250.0,
   "tree_pos_y": 250.0,
@@ -3528,7 +4317,7 @@
   "icon": "master_of_healing",
   "type": "normal",
   "resid": 4995046966079,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Master of Healing",
   "tree_pos_x": 200.0,
   "tree_pos_y": 351.0,
@@ -3553,7 +4342,7 @@
    }
   ],
   "resid": 4995046966073,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Overflowing Restoration",
   "tree_pos_x": 150.0,
   "tree_pos_y": 250.0,
@@ -3580,7 +4369,7 @@
    }
   ],
   "resid": 4995046966069,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "tree_pos_y": 150.0,
   "description": "<hyperlink>Support</hyperlink> abilities now also apply Regeneration.",
   "required_skills": [
@@ -3594,7 +4383,7 @@
   "icon": "resurrecting_restoration",
   "type": "normal",
   "resid": 4995046966056,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Resurrecting Restoration",
   "tree_pos_x": 50.0,
   "tree_pos_y": 350.0,
@@ -3611,7 +4400,7 @@
   "icon": "empowered_restoration",
   "type": "normal",
   "resid": 4995046966047,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Empowered Restoration",
   "tree_pos_x": 50.0,
   "tree_pos_y": 250.0,
@@ -3639,7 +4428,7 @@
    }
   ],
   "resid": 4995046966038,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "tree_pos_y": 150.0,
   "description": "<hyperlink>Support</hyperlink> abilities now heal targets for 10<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink> in addition to their regular effects.",
   "required_skills": [
@@ -3658,7 +4447,7 @@
    }
   ],
   "resid": 4995046966028,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Restore",
   "tree_pos_x": 150.0,
   "tree_pos_y": 50.0,
@@ -3680,7 +4469,7 @@
    }
   ],
   "resid": 4514010632701,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "tree_pos_y": 150.0,
   "description": "<hyperlink>Support</hyperlink> abilities grant 1 Bolstered Resistance to affected units.",
   "required_skills": [
@@ -3699,7 +4488,7 @@
    }
   ],
   "resid": 4514010630480,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Undying Loyalty",
   "tree_pos_x": 125.0,
   "tree_pos_y": 450.0,
@@ -3723,7 +4512,7 @@
    }
   ],
   "resid": 4273492481328,
-  "tree_name": "Class: Ritualist",
+  "tree_name": "<classRitualist></classRitualist> Ritualist",
   "name": "Weaver",
   "tree_pos_x": 551.0,
   "tree_pos_y": 450.0,
@@ -3750,7 +4539,7 @@
    }
   ],
   "resid": 4995046966682,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Slip Away",
   "tree_pos_x": 450.0,
   "tree_pos_y": 550.0,
@@ -3769,7 +4558,7 @@
   "icon": "martial_expertise",
   "type": "normal",
   "resid": 4995046966673,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Martial Expertise",
   "tree_pos_x": 451.0,
   "tree_pos_y": 450.0,
@@ -3786,7 +4575,7 @@
   "icon": "defense_3",
   "type": "normal",
   "resid": 4995046966670,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Defense",
   "tree_pos_x": 450.0,
   "tree_pos_y": 350.0,
@@ -3803,7 +4592,7 @@
   "icon": "defense_4",
   "type": "normal",
   "resid": 4995046966666,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Defense",
   "tree_pos_x": 450.0,
   "tree_pos_y": 250.0,
@@ -3814,7 +4603,7 @@
     "resid": 4995046966663
    },
    {
-    "resid": 4995046966560
+    "resid": 4995046966552
    }
   ]
  },
@@ -3823,7 +4612,7 @@
   "icon": "ranger_2",
   "type": "normal",
   "resid": 4995046966663,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Ranger 2",
   "tree_pos_x": 450.0,
   "tree_pos_y": 150.0,
@@ -3840,7 +4629,7 @@
   "icon": "ranger_1",
   "type": "normal",
   "resid": 4995046966658,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Ranger 1",
   "tree_pos_x": 450.0,
   "tree_pos_y": 50.0,
@@ -3857,7 +4646,7 @@
    }
   ],
   "resid": 4995046966648,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Go For The Kill",
   "tree_pos_x": 600.0,
   "tree_pos_y": 650.0,
@@ -3876,7 +4665,7 @@
  },
  {
   "group_name": "Ranger - Hero Skill Group",
-  "icon": "fatal_strikes_2",
+  "icon": "fatal_strikes",
   "type": "normal",
   "name": "Fatal Strikes",
   "tree_pos_x": 700.0,
@@ -3886,14 +4675,10 @@
     "resid": 4995046966636
    }
   ],
-  "abilities": [
-   {
-    "slug": "fatal_strikes"
-   }
-  ],
   "resid": 4995046966643,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 550.0,
+  "description": "<hyperlink>Melee</hyperlink> attacks now do more damage as the target loses health, up to +50%.",
   "required_skills": [
    {
     "resid": 4995046966624
@@ -3921,7 +4706,7 @@
    }
   ],
   "resid": 4995046966636,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 550.0,
   "required_skills": [
    {
@@ -3936,13 +4721,17 @@
   "group_name": "Ranger - Hero Skill Group",
   "icon": "critical_second_wind",
   "type": "normal",
+  "abilities": [
+   {
+    "slug": "critical_second_wind"
+   }
+  ],
   "resid": 4995046966630,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Critical Second Wind",
   "tree_pos_x": 750.0,
   "tree_pos_y": 450.0,
   "id": "critical_second_wind",
-  "description": "When the hero does a <hyperlink>Critical Hit</hyperlink>, it gains Strengthened and heals 10<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "required_skills": [
    {
     "resid": 4995046966618
@@ -3953,13 +4742,17 @@
   "group_name": "Ranger - Hero Skill Group",
   "icon": "knockback_retaliations",
   "type": "normal",
+  "abilities": [
+   {
+    "slug": "knockback_retaliations"
+   }
+  ],
   "resid": 4995046966624,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Knockback Retaliations",
   "tree_pos_x": 650.0,
   "tree_pos_y": 449.0,
   "id": "knockback_retaliations",
-  "description": "Melee retaliation attacks now knock targets back 1 hex.",
   "required_skills": [
    {
     "resid": 4995046966615
@@ -3971,7 +4764,7 @@
   "icon": "exploit_weakness",
   "type": "normal",
   "resid": 4995046966619,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Exploit Weakness",
   "tree_pos_x": 550.0,
   "tree_pos_y": 450.0,
@@ -3988,7 +4781,7 @@
   "icon": "grim_executioner",
   "type": "normal",
   "resid": 4995046966618,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Grim Executioner",
   "tree_pos_x": 750.0,
   "tree_pos_y": 350.0,
@@ -4005,7 +4798,7 @@
   "icon": "evasive_strikes",
   "type": "normal",
   "resid": 4995046966615,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Evasive Strikes",
   "tree_pos_x": 650.0,
   "tree_pos_y": 350.0,
@@ -4022,12 +4815,12 @@
   "icon": "blood_trail",
   "type": "normal",
   "resid": 4995046966605,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Blood Trail",
   "tree_pos_x": 550.0,
   "tree_pos_y": 350.0,
   "id": "blood_trail",
-  "description": "<hyperlink><flank></flank> Flanking</hyperlink> attacks now inflict Bleeding.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "<hyperlink><flank></flank> Flanking</hyperlink> attacks now inflict Bleeding and Marked.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
    {
     "resid": 4995046966569
@@ -4038,13 +4831,17 @@
   "group_name": "Ranger - Hero Skill Group",
   "icon": "critical_skirmisher",
   "type": "normal",
+  "abilities": [
+   {
+    "slug": "critical_skirmisher"
+   }
+  ],
   "resid": 4995046966593,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Critical Skirmisher",
   "tree_pos_x": 750.0,
   "tree_pos_y": 250.0,
   "id": "critical_skirmisher",
-  "description": "When the hero does a <hyperlink>Critical Hit</hyperlink>, subsequent <hyperlink>Critical Hit</hyperlink> will do an additional +10% damage. This effect stacks up to 5 times.",
   "required_skills": [
    {
     "resid": 4995046966568
@@ -4064,12 +4861,12 @@
    }
   ],
   "resid": 4995046966576,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
   "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink> attacks grant Prepared Shot for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet><hyperlink>Physical Ranged</hyperlink> attacks grant Prepared Strike for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
-    "resid": 4995046966560
+    "resid": 4995046966552
    }
   ]
  },
@@ -4086,12 +4883,12 @@
    }
   ],
   "resid": 4995046966569,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
   "description": "<hyperlink><flank></flank> Flanking</hyperlink> attacks now deal +20% more damage.",
   "required_skills": [
    {
-    "resid": 4995046966560
+    "resid": 4995046966552
    }
   ]
  },
@@ -4100,7 +4897,7 @@
   "icon": "keen_edge",
   "type": "normal",
   "resid": 4995046966568,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Keen Edge",
   "tree_pos_x": 750.0,
   "tree_pos_y": 150.0,
@@ -4112,36 +4909,36 @@
   "icon": "skirmisher_training",
   "type": "normal",
   "resid": 4995046966560,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Skirmisher Training",
   "tree_pos_x": 550.0,
-  "tree_pos_y": 150.0,
+  "tree_pos_y": 50.0,
   "id": "skirmisher_training",
-  "description": "The hero gains:<bulletlist><bullet>Slippery</bullet><bullet>Swift</bullet></bulletlist>",
-  "required_skills": [
-   {
-    "resid": 4995046966552
-   }
-  ]
+  "description": "The hero gains:<bulletlist><bullet>Slippery</bullet><bullet>Swift</bullet></bulletlist>"
  },
  {
   "group_name": "Ranger - Hero Skill Group",
   "icon": "melee_training",
   "type": "normal",
   "resid": 4995046966552,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Melee Training",
   "tree_pos_x": 550.0,
-  "tree_pos_y": 50.0,
+  "tree_pos_y": 150.0,
   "id": "melee_training",
-  "description": "<hyperlink>Melee</hyperlink> attacks now inflict Sundered Defense.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks."
+  "description": "<hyperlink>Melee</hyperlink> attacks now inflict Sundered Defense.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "required_skills": [
+   {
+    "resid": 4995046966560
+   }
+  ]
  },
  {
   "group_name": "Ranger - Hero Skill Group",
   "icon": "mastered_focus",
   "type": "normal",
   "resid": 4995046966541,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Mastered Focus",
   "tree_pos_x": 200.0,
   "tree_pos_y": 650.0,
@@ -4169,7 +4966,7 @@
    }
   ],
   "resid": 4995046966531,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 550.0,
   "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +20% <hyperlink>Critical Hit</hyperlink> chance on its <hyperlink>Physical Ranged</hyperlink> attacks until it moves.",
   "required_skills": [
@@ -4191,7 +4988,7 @@
    }
   ],
   "resid": 4995046966521,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 550.0,
   "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +30% accuracy on its <hyperlink>Physical Ranged</hyperlink> attacks until it moves.",
   "required_skills": [
@@ -4205,12 +5002,12 @@
   "icon": "invigorating_takedown",
   "type": "normal",
   "resid": 4995046966513,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Invigorating Takedown",
   "tree_pos_x": 300.0,
   "tree_pos_y": 450.0,
   "id": "invigorating_takedown",
-  "description": "Killing an enemy unit grants the hero 2 Strengthened and 2 Regeneration",
+  "description": "Killing an enemy unit grants the hero 1 Strengthened and 2 Regeneration",
   "required_skills": [
    {
     "resid": 4995046966479
@@ -4225,7 +5022,7 @@
   "icon": "snipers_focus",
   "type": "normal",
   "resid": 4995046966503,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Sniper's Focus",
   "tree_pos_x": 200.0,
   "tree_pos_y": 450.0,
@@ -4248,7 +5045,7 @@
   "icon": "barrage_attacks",
   "type": "normal",
   "resid": 4995046966497,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Barrage Attacks",
   "tree_pos_x": 100.0,
   "tree_pos_y": 450.0,
@@ -4276,7 +5073,7 @@
    }
   ],
   "resid": 4995046966488,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 350.0,
   "description": "Killing an enemy unit resets all ability cooldowns. Can only trigger once per turn.",
   "required_skills": [
@@ -4304,7 +5101,7 @@
    }
   ],
   "resid": 4995046966479,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 350.0,
   "description": "<hyperlink>Physical Ranged</hyperlink> attacks now have a base 60% chance of inflicting Bleeding on all enemies in a 1-hex radius.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
@@ -4329,7 +5126,7 @@
    }
   ],
   "resid": 4995046966470,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 350.0,
   "description": "<hyperlink>Physical Ranged</hyperlink> attacks now have a base 90% chance of inflicting Diseased on all enemies in a 1-hex radius.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
@@ -4346,7 +5143,7 @@
   "icon": "ensnaring_hunter",
   "type": "normal",
   "resid": 4995046966465,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Ensnaring Hunter",
   "tree_pos_x": 350.0,
   "tree_pos_y": 250.0,
@@ -4371,7 +5168,7 @@
    }
   ],
   "resid": 4995046966451,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
   "description": "<hyperlink>Physical Ranged</hyperlink> attacks now do +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each <hyperlink>Unit tier</hyperlink> of the target.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
@@ -4396,7 +5193,7 @@
    }
   ],
   "resid": 4995046966444,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
   "description": "<hyperlink>Physical Ranged</hyperlink> attacks now do +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each unit adjacent to the target.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "required_skills": [
@@ -4410,7 +5207,7 @@
   "icon": "culling_hunter",
   "type": "normal",
   "resid": 4995046966436,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "name": "Culling Hunter",
   "tree_pos_x": 50.0,
   "tree_pos_y": 250.0,
@@ -4435,7 +5232,7 @@
    }
   ],
   "resid": 4995046966427,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 150.0,
   "description": "Snapshot now knocks targets back 1 hex.",
   "required_skills": [
@@ -4457,7 +5254,7 @@
    }
   ],
   "resid": 4995046966422,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 150.0,
   "description": "Snapshot now:<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink></bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink></bullet></bulletlist>",
   "required_skills": [
@@ -4479,7 +5276,7 @@
    }
   ],
   "resid": 4995046966418,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 150.0,
   "description": " True Shot and Scatter Shot now bypass 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink> and <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
   "required_skills": [
@@ -4504,7 +5301,7 @@
    }
   ],
   "resid": 4995046966406,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 150.0,
   "description": "True Shot and Scatter Shot now leave <hyperlink>Afflicting Miasma</hyperlink> and apply Weakened to targets in a 1-hex radius.",
   "required_skills": [
@@ -4537,7 +5334,7 @@
    }
   ],
   "resid": 4995046966390,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 50.0
  },
  {
@@ -4561,7 +5358,7 @@
    }
   ],
   "resid": 4995046966379,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 50.0
  },
  {
@@ -4585,7 +5382,7 @@
    }
   ],
   "resid": 4995046966370,
-  "tree_name": "Class: Ranger",
+  "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 50.0
  },
  {
@@ -7033,6 +7830,839 @@
   "description": "<bulletlist><bullet>Truesight</bullet><bullet>+2 <hyperlink>Vision Range</hyperlink></bullet><bullet>+2 <hyperlink>Sensing Range</hyperlink></bullet></bulletlist>"
  },
  {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "flanking_skirmisher",
+  "type": "normal",
+  "name": "Flanking Skirmisher",
+  "tree_pos_x": 350.0,
+  "id": "flanking_skirmisher",
+  "excluded_skills": [
+   {
+    "resid": 5111011085279
+   }
+  ],
+  "resid": 5111011085305,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 350.0,
+  "description": "<hyperlink><flank></flank> Flanking</hyperlink> attacks now deal +20% more damage.",
+  "required_skills": [
+   {
+    "resid": 5111011085240
+   },
+   {
+    "resid": 5111011085263
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "vigor",
+  "type": "normal",
+  "resid": 5111011085304,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Vigor",
+  "tree_pos_x": 650.0,
+  "tree_pos_y": 450.0,
+  "id": "vigor",
+  "description": "+15 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
+  "required_skills": [
+   {
+    "resid": 5111011085284
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "vigor_2",
+  "type": "normal",
+  "resid": 5111011085303,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Vigor",
+  "tree_pos_x": 650.0,
+  "tree_pos_y": 250.0,
+  "id": "vigor",
+  "description": "+15 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
+  "required_skills": [
+   {
+    "resid": 5111011085264
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "go_for_the_kill",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "go_for_the_kill_go_for_the_kill"
+   }
+  ],
+  "resid": 5111011085289,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Go For The Kill",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 750.0,
+  "id": "go_for_the_kill",
+  "required_skills": [
+   {
+    "resid": 5111011085256
+   },
+   {
+    "resid": 5111011085286
+   },
+   {
+    "resid": 5111011085287
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "adaptive_armor_2",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "adaptive_armor"
+   }
+  ],
+  "resid": 5111011085288,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Adaptive Armor",
+  "tree_pos_x": 250.0,
+  "tree_pos_y": 500.0,
+  "id": "adaptive_armor",
+  "required_skills": [
+   {
+    "resid": 5111011085231
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "fatal_strikes",
+  "type": "normal",
+  "name": "Fatal Strikes",
+  "tree_pos_x": 550.0,
+  "id": "fatal_strikes",
+  "excluded_skills": [
+   {
+    "resid": 5111011085286
+   }
+  ],
+  "resid": 5111011085287,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 650.0,
+  "description": "<hyperlink>Melee</hyperlink> attacks now do more damage as the target loses health, up to +50%.",
+  "required_skills": [
+   {
+    "resid": 5111011085285
+   },
+   {
+    "resid": 5111011085249
+   },
+   {
+    "resid": 5111011085280
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "opening_strikes_2",
+  "type": "normal",
+  "name": "Opening Strikes",
+  "tree_pos_x": 450.0,
+  "id": "opening_strikes",
+  "excluded_skills": [
+   {
+    "resid": 5111011085287
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "opening_strikes"
+   }
+  ],
+  "resid": 5111011085286,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 650.0,
+  "required_skills": [
+   {
+    "resid": 5111011085250
+   },
+   {
+    "resid": 5111011085285
+   },
+   {
+    "resid": 5111011085249
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "critical_second_wind",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "critical_second_wind"
+   }
+  ],
+  "resid": 5111011085285,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Critical Second Wind",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 550.0,
+  "id": "critical_second_wind",
+  "required_skills": [
+   {
+    "resid": 5111011085282
+   },
+   {
+    "resid": 5111011085248
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "knockback_retaliations",
+  "type": "normal",
+  "name": "Knockback Retaliations",
+  "tree_pos_x": 650.0,
+  "id": "knockback_retaliations",
+  "excluded_skills": [
+   {
+    "resid": 5111011085281
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "knockback_retaliations"
+   }
+  ],
+  "resid": 5111011085284,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 350.0,
+  "required_skills": [
+   {
+    "resid": 5111011085262
+   },
+   {
+    "resid": 5111011085303
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "grim_executioner",
+  "type": "normal",
+  "resid": 5111011085282,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Grim Executioner",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 450.0,
+  "id": "grim_executioner",
+  "description": "When this unit kills another, it gains 3 Fortune.",
+  "required_skills": [
+   {
+    "resid": 5111011085305
+   },
+   {
+    "resid": 5111011085279
+   },
+   {
+    "resid": 5111011085281
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "evasive_strikes",
+  "type": "normal",
+  "name": "Evasive Strikes",
+  "tree_pos_x": 550.0,
+  "id": "evasive_strikes",
+  "excluded_skills": [
+   {
+    "resid": 5111011085284
+   }
+  ],
+  "resid": 5111011085281,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 350.0,
+  "description": "<hyperlink>Melee</hyperlink> attacks no longer trigger retaliations.",
+  "required_skills": [
+   {
+    "resid": 5111011085263
+   },
+   {
+    "resid": 5111011085262
+   },
+   {
+    "resid": 5111011085303
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "retaliator",
+  "type": "normal",
+  "resid": 5111011085280,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Retaliator",
+  "tree_pos_x": 650.0,
+  "tree_pos_y": 550.0,
+  "id": "retaliator",
+  "description": "Gain +1 <hyperlink>Retaliation Attack</hyperlink>.",
+  "required_skills": [
+   {
+    "resid": 5111011085248
+   },
+   {
+    "resid": 5111011085304
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "critical_skirmisher",
+  "type": "normal",
+  "name": "Critical Skirmisher",
+  "tree_pos_x": 450.0,
+  "id": "critical_skirmisher",
+  "excluded_skills": [
+   {
+    "resid": 5111011085305
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "critical_skirmisher"
+   }
+  ],
+  "resid": 5111011085279,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 350.0,
+  "required_skills": [
+   {
+    "resid": 5111011085240
+   },
+   {
+    "resid": 5111011085263
+   },
+   {
+    "resid": 5111011085262
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "arcane_skirmisher",
+  "type": "normal",
+  "resid": 5111011085266,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Arcane Skirmisher",
+  "tree_pos_x": 500.0,
+  "tree_pos_y": 50.0,
+  "id": "arcane_skirmisher",
+  "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink> attacks grant Prepared Spell for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet><hyperlink>Magic</hyperlink> attacks grant Prepared Strike for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>"
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "frontline_fighter_2",
+  "type": "normal",
+  "name": "Frontline Fighter",
+  "tree_pos_x": 550.0,
+  "id": "frontline_fighter",
+  "excluded_skills": [
+   {
+    "resid": 5111011085258
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "frontline_fighter"
+   }
+  ],
+  "resid": 5111011085264,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 150.0,
+  "required_skills": [
+   {
+    "resid": 5111011085266
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "keen_edge",
+  "type": "normal",
+  "resid": 5111011085263,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Keen Edge",
+  "tree_pos_x": 450.0,
+  "tree_pos_y": 250.0,
+  "id": "keen_edge",
+  "description": "+20% Critical Chance.",
+  "required_skills": [
+   {
+    "resid": 5111011085258
+   },
+   {
+    "resid": 5111011085264
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "skirmisher_training",
+  "type": "normal",
+  "resid": 5111011085262,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Skirmisher Training",
+  "tree_pos_x": 550.0,
+  "tree_pos_y": 250.0,
+  "id": "skirmisher_training",
+  "description": "The hero gains:<bulletlist><bullet>Slippery</bullet><bullet>Swift</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085258
+   },
+   {
+    "resid": 5111011085264
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "melee_training_2",
+  "type": "normal",
+  "name": "Melee Training",
+  "tree_pos_x": 450.0,
+  "id": "melee_training",
+  "excluded_skills": [
+   {
+    "resid": 5111011085264
+   }
+  ],
+  "resid": 5111011085258,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 150.0,
+  "description": "<hyperlink>Melee</hyperlink> attacks now inflict Sundered Resistance.<br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "required_skills": [
+   {
+    "resid": 5111011085266
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "weaver",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "weaver_weaver"
+   }
+  ],
+  "resid": 5111011085256,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Weaver",
+  "tree_pos_x": 350.0,
+  "tree_pos_y": 650.0,
+  "id": "weaver",
+  "required_skills": [
+   {
+    "resid": 5111011085233
+   },
+   {
+    "resid": 5111011085250
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "spellblade_expertise",
+  "type": "normal",
+  "resid": 5111011085250,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Spellblade Expertise",
+  "tree_pos_x": 350.0,
+  "tree_pos_y": 550.0,
+  "id": "spellblade_expertise",
+  "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink> and <hyperlink>Magic</hyperlink> attacks gain +10% damage.</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+10% <hyperlink>Evasion</hyperlink></bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085288
+   },
+   {
+    "resid": 5111011085244
+   },
+   {
+    "resid": 5111011085282
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "resistance_3",
+  "type": "normal",
+  "resid": 5111011085249,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Resistance",
+  "tree_pos_x": 550.0,
+  "tree_pos_y": 550.0,
+  "id": "resistance",
+  "description": "<bulletlist><bullet>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085248
+   },
+   {
+    "resid": 5111011085282
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "resistance_4",
+  "type": "normal",
+  "resid": 5111011085248,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Resistance",
+  "tree_pos_x": 550.0,
+  "tree_pos_y": 450.0,
+  "id": "resistance",
+  "description": "<bulletlist><bullet>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085279
+   },
+   {
+    "resid": 5111011085281
+   },
+   {
+    "resid": 5111011085284
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "spellblade_ii",
+  "type": "normal",
+  "resid": 5111011085244,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Spellblade II",
+  "tree_pos_x": 350.0,
+  "tree_pos_y": 450.0,
+  "id": "spellblade_ii",
+  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Magic</hyperlink> attacks gain +10% damage.",
+  "required_skills": [
+   {
+    "resid": 5111011085305
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "spellblade_i",
+  "type": "normal",
+  "resid": 5111011085240,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Spellblade I",
+  "tree_pos_x": 350.0,
+  "tree_pos_y": 250.0,
+  "id": "spellblade_i",
+  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Magic</hyperlink> attacks gain +10% damage.",
+  "required_skills": [
+   {
+    "resid": 5111011085258
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "arcfire_burst",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "arcfire_burst_arcfire_burst"
+   }
+  ],
+  "resid": 5111011085233,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Arcfire Burst",
+  "tree_pos_x": 150.0,
+  "tree_pos_y": 550.0,
+  "id": "arcfire_burst",
+  "required_skills": [
+   {
+    "resid": 5111011085231
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "melee_mage_3",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "melee_mage"
+   }
+  ],
+  "resid": 5111011085231,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Melee Mage",
+  "tree_pos_x": 150.0,
+  "tree_pos_y": 450.0,
+  "id": "melee_mage",
+  "required_skills": [
+   {
+    "resid": 5111011085223
+   },
+   {
+    "resid": 5111011085224
+   },
+   {
+    "resid": 5111011085230
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "quick_phase",
+  "type": "normal",
+  "abilities": [
+   {
+    "slug": "quick_phase_quick_phase"
+   }
+  ],
+  "resid": 5111011085230,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Quick Phase",
+  "tree_pos_x": 250.0,
+  "tree_pos_y": 350.0,
+  "id": "quick_phase",
+  "required_skills": [
+   {
+    "resid": 5111011085221
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "spell_penetration",
+  "type": "normal",
+  "resid": 5111011085224,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Spell Penetration",
+  "tree_pos_x": 150.0,
+  "tree_pos_y": 350.0,
+  "id": "spell_penetration",
+  "description": "All attacks ignore 3 <resistance></resistance> <hyperlink>Resistance</hyperlink> and 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
+  "required_skills": [
+   {
+    "resid": 5111011085218
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "wildfire_strikes",
+  "type": "normal",
+  "resid": 5111011085223,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Wildfire Strikes",
+  "tree_pos_x": 50.0,
+  "tree_pos_y": 350.0,
+  "id": "wildfire_strikes",
+  "description": "Base attacks gain:<bulletlist><bullet>2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>60% base chance of inflicting Burning on the target and adjacent enemies.</bullet></bulletlist><br></br><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "required_skills": [
+   {
+    "resid": 5111011085215
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "aethermancy",
+  "type": "normal",
+  "resid": 5111011085221,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Aethermancy",
+  "tree_pos_x": 250.0,
+  "tree_pos_y": 250.0,
+  "id": "aethermancy",
+  "description": "All attacks:<bulletlist><bullet>Gain 60% base chance of inflicting Blind for 1<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085207
+   },
+   {
+    "resid": 5111011085213
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "electromancy",
+  "type": "normal",
+  "resid": 5111011085218,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Electromancy",
+  "tree_pos_x": 150.0,
+  "tree_pos_y": 250.0,
+  "id": "electromancy",
+  "description": "All attacks:<bulletlist><bullet>Gain 90% base chance of inflicting Electrified for 3<turn></turn> <hyperlink>Turn</hyperlink></bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085205
+   },
+   {
+    "resid": 5111011085207
+   },
+   {
+    "resid": 5111011085213
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "pyromancy",
+  "type": "normal",
+  "resid": 5111011085215,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "name": "Pyromancy",
+  "tree_pos_x": 50.0,
+  "tree_pos_y": 250.0,
+  "id": "pyromancy",
+  "description": "All attacks:<bulletlist><bullet>Gain 90% base chance of inflicting Burning for 3<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085205
+   },
+   {
+    "resid": 5111011085207
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "sundering_evocation",
+  "type": "normal",
+  "name": "Sundering Evocation",
+  "tree_pos_x": 250.0,
+  "id": "sundering_evocation",
+  "excluded_skills": [
+   {
+    "resid": 5111011085205
+   },
+   {
+    "resid": 5111011085207
+   }
+  ],
+  "resid": 5111011085213,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 150.0,
+  "description": "Modify and enhance Lightning Evocation:<bulletlist><bullet>Lightning Evocation is now also a debuff ability.</bullet><bullet>Lightning Evocation inflicts guaranteed Sundered Defense.</bullet><bullet>Lightning Evocation inflicts guaranteed Sundered Resistance.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085198
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "devastating_evocation",
+  "type": "normal",
+  "name": "Devastating Evocation",
+  "tree_pos_x": 150.0,
+  "id": "devastating_evocation",
+  "excluded_skills": [
+   {
+    "resid": 5111011085205
+   },
+   {
+    "resid": 5111011085213
+   }
+  ],
+  "resid": 5111011085207,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 150.0,
+  "description": "Modify and enhance this hero's Evocation:<bulletlist><bullet>Fire Evocation now deals 24<damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Lightning Evocation now deals 27<damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085187
+   },
+   {
+    "resid": 5111011085198
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "cascading_evocation",
+  "type": "normal",
+  "name": "Cascading Evocation",
+  "tree_pos_x": 50.0,
+  "id": "cascading_evocation",
+  "excluded_skills": [
+   {
+    "resid": 5111011085213
+   },
+   {
+    "resid": 5111011085207
+   }
+  ],
+  "resid": 5111011085205,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 150.0,
+  "description": "Modify and enhance Fire Evocation:<bulletlist><bullet>Fire Evocation cascades to adjacent enemy units and is repeated.</bullet><bullet>Fire Evocation inflicts guaranteed Burning.</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 5111011085187
+   }
+  ]
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "lightning_evoker",
+  "type": "normal",
+  "name": "Lightning Evoker",
+  "tree_pos_x": 200.0,
+  "id": "lightning_evoker",
+  "excluded_skills": [
+   {
+    "resid": 5111011085187
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "lightning_evocation_lightning_evoker"
+   }
+  ],
+  "resid": 5111011085198,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 50.0
+ },
+ {
+  "group_name": "Spellblade - Hero Skill Group",
+  "icon": "fire_evoker",
+  "type": "normal",
+  "name": "Fire Evoker",
+  "tree_pos_x": 100.0,
+  "id": "fire_evoker",
+  "excluded_skills": [
+   {
+    "resid": 5111011085198
+   }
+  ],
+  "abilities": [
+   {
+    "slug": "fire_evocation_fire_evoker"
+   }
+  ],
+  "resid": 5111011085187,
+  "tree_name": "<classSpellblade></classSpellblade> Spellblade",
+  "tree_pos_y": 50.0
+ },
+ {
   "resid": -8277668028376677473,
   "excluded_skills": [
    {
@@ -7140,7 +8770,12 @@
   "name": "Primal Dragon",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+25 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "abilities": [
@@ -7202,7 +8837,12 @@
   "name": "Stormbreath",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "resid": 4273492487957,
@@ -7212,7 +8852,12 @@
   "name": "Stormbreath",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "resid": 4273492487955,
@@ -7222,7 +8867,12 @@
   "name": "Stormbreath",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "resid": 4273492487953,
@@ -7232,7 +8882,12 @@
   "name": "Stormbreath",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "resid": 4273492487951,
@@ -7242,7 +8897,12 @@
   "name": "Stormbreath",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "resid": 4273492487887,
@@ -7252,7 +8912,12 @@
   "name": "Stormbreath",
   "hero_property": "Astral Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Electrified.</bullet><bullet>Has a base 90% chance of inflicting Blind.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "resid": 4273492487857,
@@ -7321,7 +8986,12 @@
   "name": "Primal Dragon",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+25 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "abilities": [
@@ -7383,7 +9053,12 @@
   "name": "Infernobreath",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Breath attacks deal +30% damage.</bullet><bullet>Always inflicts Ghostfire.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Breath attacks deal +30% damage.</bullet><bullet>Always inflicts Ghostfire.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "resid": 4273492488407,
@@ -7393,7 +9068,12 @@
   "name": "Infernobreath",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "resid": 4273492488405,
@@ -7403,7 +9083,12 @@
   "name": "Infernobreath",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "resid": 4273492488403,
@@ -7413,7 +9098,12 @@
   "name": "Infernobreath",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "resid": 4273492488400,
@@ -7423,7 +9113,12 @@
   "name": "Infernobreath",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "resid": 4273492487889,
@@ -7443,7 +9138,12 @@
   "name": "Infernobreath",
   "hero_property": "Chaos Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts Burning.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "resid": 5003636903574,
@@ -7473,7 +9173,12 @@
   "name": "Primal Dragon",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+25 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "abilities": [
@@ -7535,7 +9240,12 @@
   "name": "Rustbreath",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "resid": 4273492488423,
@@ -7545,7 +9255,12 @@
   "name": "Rustbreath",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "resid": 4273492488421,
@@ -7555,7 +9270,12 @@
   "name": "Rustbreath",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "resid": 4273492488419,
@@ -7565,7 +9285,12 @@
   "name": "Rustbreath",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "resid": 4273492488417,
@@ -7575,7 +9300,12 @@
   "name": "Rustbreath",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "resid": 4273492487891,
@@ -7585,7 +9315,12 @@
   "name": "Rustbreath",
   "hero_property": "Elementum Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed Weakened.</bullet><bullet>Inflicts guaranteed Sundered Defense.</bullet><bullet>Dispels all positive status effects on enemies</bullet></bulletlist>.</bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "resid": 4273492487890,
@@ -7654,7 +9389,12 @@
   "name": "Primal Dragon",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+25 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "abilities": [
@@ -7716,7 +9456,12 @@
   "name": "Lifebreath",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "resid": 4273492488434,
@@ -7726,7 +9471,12 @@
   "name": "Lifebreath",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "resid": 4273492488432,
@@ -7736,7 +9486,12 @@
   "name": "Lifebreath",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "resid": 4273492488430,
@@ -7746,7 +9501,12 @@
   "name": "Lifebreath",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "resid": 4273492488427,
@@ -7756,7 +9516,12 @@
   "name": "Lifebreath",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "resid": 4273492487893,
@@ -7776,7 +9541,12 @@
   "name": "Lifebreath",
   "hero_property": "Nature Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Revives friendly dead units with 30% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "abilities": [
@@ -7835,7 +9605,12 @@
   "name": "Primal Dragon",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+25 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "abilities": [
@@ -7897,7 +9672,12 @@
   "name": "Purebreath",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "resid": 4273492488447,
@@ -7907,7 +9687,12 @@
   "name": "Purebreath",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "resid": 4273492488445,
@@ -7917,7 +9702,12 @@
   "name": "Purebreath",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "resid": 4273492488443,
@@ -7927,7 +9717,12 @@
   "name": "Purebreath",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "resid": 4273492488440,
@@ -7937,7 +9732,12 @@
   "name": "Purebreath",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "resid": 4273492487895,
@@ -7947,7 +9747,12 @@
   "name": "Purebreath",
   "hero_property": "Order Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and removes their negative status effects.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "resid": 4273492487894,
@@ -8011,7 +9816,12 @@
   "name": "Primal Dragon",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+25 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Natural Regeneration</bullet></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "abilities": [
@@ -8097,7 +9907,12 @@
   "name": "Frostbreath",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967547
+   }
+  ]
  },
  {
   "resid": 4273492488458,
@@ -8107,7 +9922,12 @@
   "name": "Frostbreath",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967546
+   }
+  ]
  },
  {
   "resid": 4273492488456,
@@ -8117,7 +9937,12 @@
   "name": "Frostbreath",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967545
+   }
+  ]
  },
  {
   "resid": 4273492488454,
@@ -8127,7 +9952,12 @@
   "name": "Frostbreath",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen.</bullet><bullet>Burning is replaced with Ghostfire.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen.</bullet><bullet>Burning is replaced with Ghostfire.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967544
+   }
+  ]
  },
  {
   "resid": 4273492488451,
@@ -8137,7 +9967,12 @@
   "name": "Frostbreath",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967543
+   }
+  ]
  },
  {
   "resid": 4273492487897,
@@ -8157,7 +9992,12 @@
   "name": "Frostbreath",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+30 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Its breath attack:<bulletlist></bullet><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist></bulletlist>",
+  "required_skills": [
+   {
+    "resid": 4995046967548
+   }
+  ]
  },
  {
   "resid": 5046586575303,

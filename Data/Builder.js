@@ -96,7 +96,7 @@ async function GetAllData() {
         "/evolved/Data/ItemForge.json",
         "/evolved/Data/CosmicHappenings.json",
         "/evolved/Data/BuilderLookupHero.json",
-        "/evolved/Data/Governance.json"
+        "/evolved/Data/Governance.json",
     ];
     await fetchJsonFiles(jsonFilePaths)
         .then((dataArray) => {
@@ -4015,7 +4015,8 @@ function addLevelUpInfo(units, a, holder) {
         }
     }
     if (evolveTarget != undefined) {
-        levelText = '<p style="  color: #aadb9c;"> <medal_legend></medal_legend> Legend - ' + xpNeeded * 4 + "<xp></xp></p>";
+        levelText =
+            '<p style="  color: #aadb9c;"> <medal_legend></medal_legend> Legend - ' + xpNeeded * 4 + "<xp></xp></p>";
         levelup.append(NewLevelUpEntry(levelText));
 
         levelText =

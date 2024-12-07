@@ -172,7 +172,7 @@
   "icon": "umbral_incursion"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 5068061409449,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "corrupted_boon",
@@ -180,7 +180,7 @@
   "tactical": true,
   "description": "Target enemy units in a 1 hex radius:<bulletlist><bullet>Lose all positive status effects.</bullet><bullet>If a lost status effect has any Status Effects Countering, then the unit gains a stack of that negative status effect.<bulletlist></bullet>",
   "name": "Corrupted Boon",
-  "operation_point_cost": 30,
+  "operation_point_cost": 40,
   "icon": "corrupted_boon"
  },
  {
@@ -345,7 +345,7 @@
   "id": "desecrate_land",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Target a <hyperlink>Province</hyperlink>:<bulletlist><bullet>Turns into Ruins and grants <hyperlink>Resource</hyperlink> rewards and <reputation2></reputation2> alignment as if it was <hyperlink>Pillaged</hyperlink>.</bullet><bullet>Alters terrain to Desolate.</bullet></bulletlist>",
+  "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Turns into Ruins and grants <hyperlink>Resource</hyperlink> rewards and <reputation2></reputation2> alignment as if it was <hyperlink>Pillaged</hyperlink>.</bullet><bullet>Alters terrain to Desolate.</bullet></bulletlist>",
   "name": "Desecrate Land",
   "operation_point_cost": 60,
   "icon": "desecrate_land"
@@ -357,7 +357,7 @@
   "id": "comet_of_calamity",
   "DLC": "WAYSOFWAR ",
   "tactical": true,
-  "description": "Units in a 2-hex radius:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a 50% base chance of becoming Frozen for 1 <turn></turn> Turn.</bullet><bullet>Gain 1 stacks of Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Units in a 2-hex radius:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a 50% base chance of becoming Frozen for 1 <turn></turn> Turn.</bullet><bullet>Gain 2 stacks of Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Comet of Calamity",
   "operation_point_cost": 40,
   "icon": "comet_of_calamity"
@@ -369,7 +369,7 @@
   "id": "summon_calamity_dragon",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Non-ruined <hyperlink>Province</hyperlink> owned by target turns to Ruins and Desolate terrain and then summons a <hyperlink>Calamity Dragon</hyperlink>, a Mythic Unit unit with strong offensive capabilities.",
+  "description": "Target owned non-ruined <hyperlink>Province</hyperlink> turns to Ruins and Desolate terrain and then summons a <hyperlink>Calamity Dragon</hyperlink>, a Mythic Unit unit with strong offensive capabilities.",
   "name": "Summon Calamity Dragon",
   "operation_point_cost": 300,
   "summoned_units": [
@@ -431,7 +431,7 @@
   "id": "grand_protection",
   "DLC": "WAYSOFWAR ",
   "tactical": true,
-  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>2 Grace</bullet><bullet>2 Regeneration for 3 <turn></turn> Turns</bullet><bullet>3 Bolstered Defense for 3 <turn></turn> Turns</bullet><bullet>3 Bolstered Resistance for 3 <turn></turn> Turns</bullet></bulletlist>",
+  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>1 Grace</bullet><bullet>1 Regeneration for 3 <turn></turn> Turns</bullet><bullet>2 Bolstered Defense for 3 <turn></turn> Turns</bullet><bullet>2 Bolstered Resistance for 3 <turn></turn> Turns</bullet></bulletlist>",
   "name": "Grand Protection",
   "operation_point_cost": 40,
   "icon": "grand_protection"
@@ -650,14 +650,14 @@
   "icon": "counter_stance"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 5046586576591,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "monstrous_rebirth",
   "tactical": true,
   "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals 60 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
   "name": "Monstrous Rebirth",
-  "operation_point_cost": 30,
+  "operation_point_cost": 40,
   "icon": "monstrous_rebirth"
  },
  {
@@ -1526,7 +1526,7 @@
   "icon": "forced_evolution"
  },
  {
-  "casting_cost": "300<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5029406703789,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "summon_progenitor_golem",
@@ -1534,7 +1534,7 @@
   "tactical": true,
   "description": "Summon a friendly <hyperlink>Progenitor Golem</hyperlink> on the target hex, which lasts for 3 <turn></turn>",
   "name": "Summon Progenitor Golem",
-  "operation_point_cost": 80,
+  "operation_point_cost": 65,
   "summoned_units": [
    {
     "slug": "progenitor_golem"
@@ -1702,7 +1702,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "conjure_summoning_rift",
   "tactical": false,
-  "description": "Conjures a Summoning Rift on the target empty hex. This structure:<bulletlist><bullet>Allows summoning spells to be cast on or adjacent to it.</bullet><bullet>Provides vision in 5-hex radius.</bullet></bulletlist>",
+  "description": "Conjures a Summoning Rift on an empty hex in the target <hyperlink>Province</hyperlink>. This structure:<bulletlist><bullet>Allows summoning spells to be cast on or adjacent to it.</bullet><bullet>Provides vision in 5-hex radius.</bullet></bulletlist>",
   "name": "Conjure Summoning Rift",
   "operation_point_cost": 60,
   "icon": "conjure_summoning_rift"
@@ -1815,7 +1815,7 @@
   "id": "conjure_spellward",
   "DLC": "EMPIRESANDASHES ",
   "tactical": false,
-  "description": "Target empty <hyperlink>Province</hyperlink> that doesn't contain an <hyperlink>Ancient Wonder</hyperlink> conjures a Spellward. This structure:<bulletlist><bullet>Functions as a <spelljammer></spelljammer> <hyperlink>Spell Jammer</hyperlink> for this and adjacent provinces.</bullet><bullet>Provides vision in 4-hex radius.</bullet></bulletlist>",
+  "description": "Conjures a Spellward on an empty hex in the target <hyperlink>Province</hyperlink>. This structure:<bulletlist><bullet>Functions as a <spelljammer></spelljammer> <hyperlink>Spell Jammer</hyperlink> for this and adjacent provinces.</bullet><bullet>Provides vision in 4-hex radius.</bullet></bulletlist>",
   "name": "Conjure Spellward",
   "operation_point_cost": 200,
   "icon": "conjure_spellward"
@@ -2519,14 +2519,14 @@
   "icon": "call_forth_avatar_of_chaos"
  },
  {
-  "casting_cost": "200<mana></mana> ",
+  "casting_cost": "150<mana></mana> ",
   "resid": 4672924418199,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "demonic_onslaught",
   "tactical": true,
   "description": "All attacking units gain Killing Momentum and Hastened for 3 <turn></turn> Turns.",
   "name": "Demonic Onslaught",
-  "operation_point_cost": 65,
+  "operation_point_cost": 50,
   "icon": "demonic_onslaught"
  },
  {
@@ -2557,7 +2557,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "wrath_of_the_emperor",
   "tactical": false,
-  "description": "All units in target enemy army:<bulletlist><bullet>Have -20 <hyperlink><hp></hp> Hit Points</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet><bullet>Become Demoralized for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
   "name": "Wrath of the Emperor",
   "operation_point_cost": 120,
   "icon": "wrath_of_the_emperor"
@@ -3055,7 +3055,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "cosmic_overdrive",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>+20% damage.</bullet><bullet>Very Fast Movement.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>+30% damage.</bullet><bullet>Very Fast Movement.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "Combat Summon"
@@ -3321,20 +3321,26 @@
   "casting_cost": "160<mana></mana> ",
   "resid": 4514010632393,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "meteor_arrows",
+  "id": "meteor_projectiles",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "Base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
     "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    }
   ],
-  "name": "Meteor Arrows",
+  "name": "Meteor Projectiles",
   "operation_point_cost": 160,
-  "icon": "meteor_arrows"
+  "icon": "meteor_projectiles"
  },
  {
   "casting_cost": "100<mana></mana> ",
@@ -3658,14 +3664,14 @@
   "icon": "mark_as_prey"
  },
  {
-  "casting_cost": "15<mana></mana> ",
+  "casting_cost": "30<mana></mana> ",
   "resid": 4514010631724,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "vine_prison",
   "tactical": true,
-  "description": "Summon 6 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Summon 5 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.<br></br><br></br>Cannot be used in Water battles.",
   "name": "Vine Prison",
-  "operation_point_cost": 20,
+  "operation_point_cost": 25,
   "icon": "vine_prison",
   "summoned_units": [
    {
@@ -4478,15 +4484,15 @@
   "icon": "designate_target"
  },
  {
-  "casting_cost": "5<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 4273492488748,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "antimagic_tincture",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Target friendly unit:<bulletlist><bullet>Has their negative status effects dispelled.</bullet><bullet>Gains 2 Status Protection.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Have 1 negative status effects dispelled.</bullet><bullet>Gain 1 Status Protection.</bullet></bulletlist>",
   "name": "Antimagic Tincture",
-  "operation_point_cost": 10,
+  "operation_point_cost": 15,
   "icon": "antimagic_tincture"
  },
  {
@@ -6151,7 +6157,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "empowered_beasts",
   "tactical": false,
-  "description": "Makes enchanted units:<bulletlist><bullet>Deal +10% damage.</bullet><bullet>Gain +10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet><bullet>Decreased number of units in formation.</bullet></bulletlist>",
+  "description": "Makes enchanted units:<bulletlist><bullet>Deal +20% damage.</bullet><bullet>Gain +10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet><bullet>Decreased number of units in formation.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitAnimal></unitAnimal> Animal"

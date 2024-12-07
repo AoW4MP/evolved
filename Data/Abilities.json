@@ -76,22 +76,10 @@
   "icon": "polearm_unit"
  },
  {
-  "description": "Unit is immune to Burning.",
-  "name": "Status Effect Immunity: Burning",
-  "slug": "status_effect_immunity_burning",
-  "icon": "status_effect_immunity_burning"
- },
- {
   "description": "<bulletlist><bullet>Base attacks gain +2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>This damage is doubled against Condemned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "name": "Zeal",
   "slug": "zeal",
   "icon": "zeal"
- },
- {
-  "damage": "<xpCol>6<damagefire></damagefire></xpCol>",
-  "description": "",
-  "name": "<xpCol>Fire Resistance</xpCol>",
-  "slug": "fire_resistance_6"
  },
  {
   "description": "This unit has an extra 10 to its maximum Hit Points.",
@@ -470,7 +458,7 @@
   "description": "Unleashes a magical bolt at target enemy.<bulletlist><bullet>Inflicts -8 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If target is Enchained by this unit, this attack cannot miss.</bullet></bulletlist>",
   "name": "Wrack",
   "slug": "wrack_umbral_mistress",
-  "damage": "8<damageblight></damageblight> 8<damagespirit></damagespirit> 8<damagefrost></damagefrost> ",
+  "damage": "9<damageblight></damageblight> 9<damagespirit></damagespirit> 9<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -614,18 +602,7 @@
   "icon": "charge_strike_avenger_righteousness"
  },
  {
-  "modifiers": [
-   {
-    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
-    "name": "Piercing",
-    "count": 1
-   },
-   {
-    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
-    "name": "Breaching",
-    "count": 1
-   }
-  ],
+  "modifiers": [],
   "description": "Deals damage to target unit.",
   "name": "Helmsplitter",
   "slug": "helmsplitter_avenger_righteousness",
@@ -1243,15 +1220,15 @@
     "count": 1
    },
    {
-    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
-    "name": "Breaching",
+    "description": "Base 90% chance of draining all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> from target for 2 <turn></turn> Turns.",
+    "name": "Disruption",
     "count": 1
    }
   ],
   "description": "Unleashes a magical bolt at target enemy. Deals 50% of the damage to adjacent enemies.",
   "name": "Weakening Bolts",
   "slug": "magic_bolts_severing_golem",
-  "damage": "16<damagefrost></damagefrost> ",
+  "damage": "18<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -1368,6 +1345,12 @@
   "icon": "all-round_awareness"
  },
  {
+  "description": "This unit is immune to effects that would forcefully and physically move it.",
+  "name": "Cannot be Displaced",
+  "slug": "cannot_be_displaced",
+  "icon": "cannot_be_displaced"
+ },
+ {
   "description": "This unit cannot move or use Movement abilities.",
   "name": "Immobilized",
   "slug": "immobilized",
@@ -1396,7 +1379,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains +5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Flaming Charge Strike",
   "slug": "flaming_charge_strike_warbound_strife",
-  "damage": "24<damagephysical></damagephysical> 4<damagefire></damagefire> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -1438,7 +1421,7 @@
   "icon": "paragon_of_righteousness"
  },
  {
-  "description": "Base attacks deal extra damage when the attacker is not <hyperlink>Outnumbered</hyperlink>, based on the culture's <hyperlink>Devotion</hyperlink>:<bulletlist><bullet><devotion3></devotion3> Paragon: +5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion2></devotion2> Devotee: +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion1></devotion1> Adherent: +3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion0></devotion0> Neutral: +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion-1></devotion-1> Oathbreaker: -20% damage regardless of being outnumbered</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
+  "description": "While friendly units do not <hyperlink>Outnumber</hyperlink> enemy units, base attacks deal extra damage:<bulletlist><bullet><devotion3></devotion3> Paragon: +5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion2></devotion2> Devotee: +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion1></devotion1> Adherent: +3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion0></devotion0> Neutral: +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet><devotion-1></devotion-1> Oathbreaker: -20% damage regardless of being outnumbered</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for non-repeating attacks.",
   "name": "Warrior's Soul",
   "slug": "warriors_soul",
   "icon": "warriors_soul"
@@ -1471,22 +1454,6 @@
   "icon": "shoot_bow_peacebringer_harmony"
  },
  {
-  "modifiers": [],
-  "description": "Deals damage to enemies in a 2-hex line.",
-  "name": "Line Shot",
-  "slug": "line_shot_peacebringer_harmony",
-  "damage": "20<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "Physical Ranged"
-   },
-   {
-    "requisite": "Base"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -1495,6 +1462,18 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
+  "description": "Deals damage to enemies in a 3-hex line.",
+  "name": "Line Shot",
+  "slug": "line_shot_peacebringer_harmony",
+  "damage": "24<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Physical Ranged"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
   "icon": "line_shot_peacebringer_harmony"
  },
  {
@@ -1658,7 +1637,7 @@
   "description": "Unleashes a magical bolt at target enemy. Cannot miss against targets with Seal of Fire.",
   "name": "Seal Bolts",
   "slug": "magic_bolts_sealbearer_strife",
-  "damage": "8<damagefire></damagefire> 6<damagespirit></damagespirit> ",
+  "damage": "6<damagefire></damagefire> 6<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -1879,7 +1858,7 @@
   "description": "Target unit sustains damage and has 1 Positive Status Effect removed.",
   "name": "Purging Blast",
   "slug": "magic_blast_vowkeeper_strife",
-  "damage": "14<damagespirit></damagespirit> 4<damagefire></damagefire> ",
+  "damage": "14<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2046,7 +2025,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_honor_blade_strife",
-  "damage": "12<damagephysical></damagephysical> 2<damagefire></damagefire> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2066,7 +2045,7 @@
   "description": "Strike at target unit and enter <hyperlink>Defense Mode</hyperlink>.",
   "name": "Defensive Strike",
   "slug": "defensive_strike_honor_blade_strife",
-  "damage": "26<damagephysical></damagephysical> 4<damagefire></damagefire> ",
+  "damage": "26<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2163,7 +2142,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_sworn_guard_strife",
-  "damage": "12<damagephysical></damagephysical> 2<damagefire></damagefire> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2266,7 +2245,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_wayfarer_strife",
-  "damage": "6<damagephysical></damagephysical> 4<damagefire></damagefire> ",
+  "damage": "6<damagephysical></damagephysical> 2<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -2448,7 +2427,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_primal_crocodile",
-  "damage": "14<damageblight></damageblight> ",
+  "damage": "16<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2510,7 +2489,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_primal_serpent",
-  "damage": "15<damagephysical></damagephysical> ",
+  "damage": "17<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2548,7 +2527,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_primal_wolf",
-  "damage": "13<damagespirit></damagespirit> ",
+  "damage": "15<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2586,7 +2565,7 @@
   "description": "Deal damage to target unit. Adjacent enemy units sustain 50% damage.",
   "name": "Lightning Bolts",
   "slug": "magic_bolts_primal_crow",
-  "damage": "8<damagelightning></damagelightning> ",
+  "damage": "9<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -2637,7 +2616,7 @@
   "description": "Strikes target enemy unit and deals an extra 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to another enemy unit within 2 hexes.",
   "name": "Melee Strike",
   "slug": "melee_strike_primal_sabertooth",
-  "damage": "12<damagefire></damagefire> ",
+  "damage": "14<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2663,7 +2642,7 @@
   "description": "Jump and deal damage to target unit. Deal 50% of the damage to another enemy unit up to 2 hexes away.",
   "name": "Pounce",
   "slug": "pounce_primal_sabertooth",
-  "damage": "14<damagefire></damagefire> ",
+  "damage": "16<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2725,7 +2704,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_primal_spider",
-  "damage": "14<damageblight></damageblight> ",
+  "damage": "16<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2757,7 +2736,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_primal_mammoth",
-  "damage": "21<damagefrost></damagefrost> ",
+  "damage": "24<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2783,7 +2762,7 @@
   "description": "Deal damage to target unit. Adjacent enemy units sustain 50% of the damage.",
   "name": "Glacial Stomp",
   "slug": "stomp_primal_mammoth",
-  "damage": "20<damagefrost></damagefrost> ",
+  "damage": "22<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -5673,7 +5652,7 @@
     "note": "Cooldown: 0 <turn></turn>"
    }
   ],
-  "description": "Link with the target friendly Magic Origin, while active:<bulletlist><bullet>Target gains +2 <hyperlink>Retaliation Attacks</hyperlink>, +30 <hyperlink>Accuracy</hyperlink>, and Frenzy.</bullet></bulletlist>",
+  "description": "Link with the target friendly Magic Origin, while active:<bulletlist><bullet>Target gains +1 <hyperlink>Retaliation Attack</hyperlink>, +30 <hyperlink>Accuracy</hyperlink>, and Frenzy.</bullet></bulletlist>",
   "name": "Astral Bond",
   "slug": "astral_bond_summoner_summoning",
   "damage": "",
@@ -5862,7 +5841,7 @@
   "description": "Damage target unit, adjacent enemies take 50% damage.",
   "name": "Radiant Spike",
   "slug": "magic_spike_prosperity_dragon",
-  "damage": "30<damagespirit></damagespirit> ",
+  "damage": "33<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -5889,7 +5868,7 @@
   "description": "Deal damage to adjacent unit.",
   "name": "Radiant Rebuke",
   "slug": "magic_rebuke_prosperity_dragon",
-  "damage": "20<damagespirit></damagespirit> ",
+  "damage": "22<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -5907,7 +5886,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "description": "All friendly units:<bulletlist><bullet>Gain Grace</bullet><bullet>Loses one random Negative Status Effect</bullet></bulletlist>",
@@ -5992,7 +5971,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_righteous_judge",
-  "damage": "12<damagephysical></damagephysical> 8<damagespirit></damagespirit> ",
+  "damage": "14<damagephysical></damagephysical> 9<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -6012,7 +5991,7 @@
   "description": "Deal damage to the target unit. If the target is Condemned, then damage is doubled, otherwise the target becomes Condemned.",
   "name": "Righteous Judgment",
   "slug": "righteous_judgment_righteous_judge",
-  "damage": "25<damagespirit></damagespirit> ",
+  "damage": "28<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -6151,7 +6130,7 @@
   "description": "Deals damage to target unit.",
   "name": "Ghostfire Spike",
   "slug": "magic_spike_calamity_dragon",
-  "damage": "20<damagefire></damagefire> 20<damagefrost></damagefrost> ",
+  "damage": "22<damagefire></damagefire> 22<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -6175,7 +6154,7 @@
  },
  {
   "notes": [],
-  "description": "Up to 3 random enemy units:<bulletlist><bullet>Suffer 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>Suffer 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Gain 1 Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>This then repeats at the start of the caster's turn for the next 3<turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Only one of these combat enchantments can be active at once.",
+  "description": "Up to 3 random enemy units:<bulletlist><bullet>Suffer 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>Suffer 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Gain 2 Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>This then repeats at the start of the caster's turn for the next 3<turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Only one of these combat enchantments can be active at once.",
   "name": "Ghostfire Storm",
   "slug": "ghostfire_storm_calamity_dragon",
   "damage": "",
@@ -6217,7 +6196,7 @@
   "description": "Deal damage to adjacent unit.",
   "name": "Ghostfire Rebuke",
   "slug": "magic_rebuke_calamity_dragon",
-  "damage": "10<damagefire></damagefire> 10<damagefrost></damagefrost> ",
+  "damage": "11<damagefire></damagefire> 11<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -6243,6 +6222,12 @@
   "name": "Accursed Fiend",
   "slug": "accursed_fiend",
   "icon": "accursed_fiend"
+ },
+ {
+  "description": "Unit is immune to Burning.",
+  "name": "Status Effect Immunity: Burning",
+  "slug": "status_effect_immunity_burning",
+  "icon": "status_effect_immunity_burning"
  },
  {
   "damage": "<xpCol>2<damagefire></damagefire></xpCol>",
@@ -6620,7 +6605,7 @@
   "description": "Single magical attack on target unit. Deals +10% damage per friendly unit with Tyrant's Mark.",
   "name": "Umbral Oppression",
   "slug": "magic_blast_umbral_tyrant",
-  "damage": "10<damageblight></damageblight> 10<damagespirit></damagespirit> 10<damagefrost></damagefrost> ",
+  "damage": "11<damageblight></damageblight> 11<damagespirit></damagespirit> 11<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -7263,7 +7248,7 @@
   "description": "Blast the target with the main gun and knock them back.",
   "name": "Direct Fire",
   "slug": "direct_fire_ironclad",
-  "damage": "20<damagephysical></damagephysical> 20<damagefire></damagefire> ",
+  "damage": "22<damagephysical></damagephysical> 22<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -7290,7 +7275,7 @@
   "description": "Deals damage in a 1-hex radius.",
   "name": "Barrage",
   "slug": "barrage_ironclad",
-  "damage": "8<damagephysical></damagephysical> 8<damagefire></damagefire> ",
+  "damage": "9<damagephysical></damagephysical> 9<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -7412,7 +7397,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Cruel Melee Charge",
   "slug": "charge_strike_ghost_ship",
-  "damage": "17<damagephysical></damagephysical> 17<damagefrost></damagefrost> ",
+  "damage": "19<damagephysical></damagephysical> 19<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -7450,20 +7435,20 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Remorse for 3 <turn></turn> Turns.",
-    "name": "Remorse",
+    "description": "Base 60% chance of inflicting Insanity for 1 <turn></turn> Turn.",
+    "name": "Insanity",
     "count": 1
    },
    {
-    "description": "Base 60% chance of inflicting Insanity for 1 <turn></turn> Turn.",
-    "name": "Insanity",
+    "description": "Inflicts 2 Remorse for 3 <turn></turn> Turns.",
+    "name": "Remorse",
     "count": 1
    }
   ],
   "description": "Deals damage to enemy units within a 2-hex radius.",
   "name": "Wail of the Lost",
   "slug": "wail_of_the_lost_ghost_ship",
-  "damage": "25<damagefrost></damagefrost> ",
+  "damage": "28<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -7743,7 +7728,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Enemy unit in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Displaced up to 3 hexes.</bullet><bullet>Inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to 3 hexes.</bullet><bullet>Inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
   "name": "Hysteria Storm",
   "slug": "hysteria_storm_direcaster",
   "damage": "",
@@ -7834,7 +7819,7 @@
   "icon": "vengeful_flames"
  },
  {
-  "description": "This unit inflicts increased morale penalties when killing an enemy. Affects enemy units up to 3 hexes.",
+  "description": "This unit inflicts double the morale penalties when killing an enemy.",
   "name": "Vicious Killer",
   "slug": "vicious_killer",
   "icon": "vicious_killer"
@@ -8081,7 +8066,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Mind Strike",
   "slug": "mind_strike_living_fog",
-  "damage": "16<damagephysical></damagephysical> ",
+  "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -8239,12 +8224,6 @@
   "icon": "electrifying_arc_evoker"
  },
  {
-  "damage": "<xpCol>4<damagelightning></damagelightning></xpCol>",
-  "description": "",
-  "name": "<xpCol>Lightning Resistance</xpCol>",
-  "slug": "lightning_resistance_4"
- },
- {
   "modifiers": [],
   "description": "Target units in a 1-hex radius are dealt damage.",
   "name": "Detonate and Devastate",
@@ -8285,7 +8264,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_earth_titan",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "33<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -8311,7 +8290,7 @@
   "description": "Targets all enemies within 2 hexes.",
   "name": "Seismic Slam",
   "slug": "seismic_slam_earth_titan",
-  "damage": "40<damagephysical></damagephysical> ",
+  "damage": "44<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9387,7 +9366,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Cosmic Bolts",
   "slug": "magic_bolts_lost_wizard",
-  "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> 6<damagefrost></damagefrost> ",
+  "damage": "7<damagelightning></damagelightning> 7<damagefire></damagefire> 7<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -9467,7 +9446,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_mage_bane",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "11<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9485,10 +9464,10 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 2 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, target sustains:<bulletlist></bullet><bullet>10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink></bullet><bullet>10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist></bulletlist></bulletlist>",
+  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 2 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, the target sustains 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet>",
   "name": "Devour Mind",
   "slug": "devour_mind_mage_bane",
   "damage": "",
@@ -9737,7 +9716,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_bone_dragon",
-  "damage": "16<damagephysical></damagephysical> 10<damageblight></damageblight> ",
+  "damage": "18<damagephysical></damagephysical> 11<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9757,7 +9736,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_bone_dragon",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "33<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9789,7 +9768,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Putrid Breath",
   "slug": "putrid_breath_bone_dragon",
-  "damage": "28<damageblight></damageblight> ",
+  "damage": "31<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -9828,7 +9807,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_phoenix",
-  "damage": "20<damagefire></damagefire> 10<damagephysical></damagephysical> ",
+  "damage": "22<damagefire></damagefire> 11<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9854,7 +9833,7 @@
   "description": "Deals damage in a 2-hex radius.",
   "name": "Overheat",
   "slug": "overheat_phoenix",
-  "damage": "22<damagefire></damagefire> ",
+  "damage": "25<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -10495,7 +10474,7 @@
   "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "heavy_charge_strike_storm_giant",
-  "damage": "17<damagelightning></damagelightning> 10<damagephysical></damagephysical> ",
+  "damage": "19<damagelightning></damagelightning> 11<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10521,7 +10500,7 @@
   "description": "Deals damage to target and up to 2 other units within 4 hexes.",
   "name": "Lightning Strike",
   "slug": "lightning_strike_storm_giant",
-  "damage": "22<damagelightning></damagelightning> ",
+  "damage": "25<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -10551,7 +10530,7 @@
   "description": "Deals damage to target unit. Enemy units in a 3-hex line behind the original target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Tempestuous Smash",
   "slug": "tempestuous_smash_storm_giant",
-  "damage": "14<damagephysical></damagephysical> 14<damagelightning></damagelightning> ",
+  "damage": "16<damagephysical></damagephysical> 16<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10575,7 +10554,7 @@
   "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "heavy_charge_strike_fire_giant",
-  "damage": "17<damagefire></damagefire> 10<damagephysical></damagephysical> ",
+  "damage": "19<damagefire></damagefire> 11<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10617,7 +10596,7 @@
   "description": "Deals damage to target unit. Enemy units within 1 hex of the target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Volcanic Smash",
   "slug": "volcanic_smash_fire_giant",
-  "damage": "14<damagephysical></damagephysical> 14<damagefire></damagefire> ",
+  "damage": "16<damagephysical></damagephysical> 16<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10637,11 +10616,17 @@
   "icon": "volcanic_smash_fire_giant"
  },
  {
+  "damage": "<xpCol>6<damagefire></damagefire></xpCol>",
+  "description": "",
+  "name": "<xpCol>Fire Resistance</xpCol>",
+  "slug": "fire_resistance_6"
+ },
+ {
   "modifiers": [],
   "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "heavy_charge_strike_rock_giant",
-  "damage": "27<damagephysical></damagephysical> ",
+  "damage": "30<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10667,7 +10652,7 @@
   "description": "Deal damage to enemies in a 2-hex line.",
   "name": "Throw Boulder",
   "slug": "throw_boulder_rock_giant",
-  "damage": "24<damagephysical></damagephysical> ",
+  "damage": "27<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -10697,7 +10682,7 @@
   "description": "Deals damage to target unit. Enemy units within 1 hex of the target sustain 50% of the damage.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Earthquake Smash",
   "slug": "earthquake_smash_rock_giant",
-  "damage": "28<damagephysical></damagephysical> ",
+  "damage": "31<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10721,7 +10706,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Lightning Bolts",
   "slug": "magic_bolts_autumn_fairy",
-  "damage": "12<damagelightning></damagelightning> ",
+  "damage": "14<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11008,7 +10993,7 @@
   "description": "Deal damage in a 2-hex line.",
   "name": "Flurry of Swords",
   "slug": "flurry_of_swords_herald_of_war",
-  "damage": "18<damagephysical></damagephysical> ",
+  "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11028,7 +11013,7 @@
   "description": "<bulletlist><bullet>Adjacent units sustain damage.</bullet><bullet>Consume all stacks of Molten Fury.</bullet><bullet>Heal 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> per stack consumed.</bullet></bulletlist>",
   "name": "Molten Whirlwind",
   "slug": "molten_whirlwind_herald_of_war",
-  "damage": "25<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11091,7 +11076,7 @@
   "description": "Unleashes a magical bolt at target enemy. Deals 50% of the damage to adjacent enemies.",
   "name": "Breach Bolt",
   "slug": "magic_bolts_progenitor_golem",
-  "damage": "16<damagelightning></damagelightning> ",
+  "damage": "18<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11265,9 +11250,6 @@
    },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "icon": "harrying_shot_dragoon"
@@ -11368,6 +11350,12 @@
   "name": "Intimidating Aura",
   "slug": "intimidating_aura",
   "icon": "intimidating_aura"
+ },
+ {
+  "damage": "<xpCol>4<damagelightning></damagelightning></xpCol>",
+  "description": "",
+  "name": "<xpCol>Lightning Resistance</xpCol>",
+  "slug": "lightning_resistance_4"
  },
  {
   "modifiers": [
@@ -11526,7 +11514,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_obsidian_dragon",
-  "damage": "17<damagephysical></damagephysical> 11<damagelightning></damagelightning> ",
+  "damage": "19<damagephysical></damagephysical> 13<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11546,7 +11534,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_obsidian_dragon",
-  "damage": "35<damagephysical></damagephysical> ",
+  "damage": "39<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11578,7 +11566,7 @@
   "description": "Deal damage to all units in a 5-hex line.",
   "name": "Lightning Breath",
   "slug": "lightning_breath_obsidian_dragon",
-  "damage": "32<damagelightning></damagelightning> ",
+  "damage": "36<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11623,7 +11611,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_golden_dragon",
-  "damage": "17<damagephysical></damagephysical> 11<damagespirit></damagespirit> ",
+  "damage": "19<damagephysical></damagephysical> 13<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11643,7 +11631,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_golden_dragon",
-  "damage": "35<damagephysical></damagephysical> ",
+  "damage": "39<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11670,7 +11658,7 @@
   "description": "In a 3-hex cone:<bulletlist><bullet>Enemy units sustain damage.</bullet><bullet>Friendly units heal 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Friendly units have up to 2 of their negative status effects removed.</bullet></bulletlist>",
   "name": "Purifying Breath",
   "slug": "purifying_breath_golden_dragon",
-  "damage": "24<damagespirit></damagespirit> ",
+  "damage": "27<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -11935,7 +11923,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_kraken",
-  "damage": "18<damagephysical></damagephysical> ",
+  "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11955,7 +11943,7 @@
   "description": "Deals damage to adjacent enemies. Enemies that are 2 hexes away sustain half of the damage and are pulled toward this unit.",
   "name": "Tentacle Vortex",
   "slug": "tentacle_vortex_kraken",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "29<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -12029,7 +12017,7 @@
   "description": "Single magical attack at target unit.",
   "name": "Smiting Prayer Blast",
   "slug": "magic_blast_shrine_of_smiting",
-  "damage": "15<damagefire></damagefire> 15<damagespirit></damagespirit> ",
+  "damage": "17<damagefire></damagefire> 17<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -12059,7 +12047,7 @@
   "description": "Enemy units within a 2-hex radius sustain damage.",
   "name": "Divine Vengeance",
   "slug": "divine_vengeance_shrine_of_smiting",
-  "damage": "20<damagespirit></damagespirit> ",
+  "damage": "22<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -12136,7 +12124,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Base 90% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
+  "description": "Base 60% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated.<br></br>If unsuccessful, the unit sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.",
   "name": "Convert",
   "slug": "convert_lightbringer",
   "damage": "",
@@ -12177,7 +12165,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_reaper",
-  "damage": "10<damagephysical></damagephysical> 10<damagefrost></damagefrost> ",
+  "damage": "11<damagephysical></damagephysical> 11<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -12631,7 +12619,7 @@
   "description": "Deal damage to units in a 1-hex cone, secondary targets receive 50% of the damage.",
   "name": "Gilded Cleave",
   "slug": "gilded_cleave_golden_golem",
-  "damage": "18<damagephysical></damagephysical> ",
+  "damage": "22<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -13252,7 +13240,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_balor",
-  "damage": "10<damagephysical></damagephysical> 10<damagefire></damagefire> ",
+  "damage": "11<damagephysical></damagephysical> 11<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -13275,10 +13263,10 @@
     "count": 1
    }
   ],
-  "description": "Target non-<hyperlink>Hero</hyperlink> unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Becomes Berserk until the end of battle.</bullet><bullet>Turns into a Tier I Fiend unit under your control upon its death.</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Becomes Berserk until the end of battle.</bullet><bullet>If not a <hyperlink>Hero</hyperlink>, unit turns into a Tier I Infernal Fiend unit under your control upon its death.</bullet></bulletlist>",
   "name": "Chaos Brand",
   "slug": "chaos_brand_balor",
-  "damage": "35<damagefire></damagefire> ",
+  "damage": "39<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -13308,7 +13296,7 @@
   "description": "Deals damage in a 4-hex line that is 3 hexes wide.<br></br>Units that are hit are inflicted with 3 Sundered Defense.",
   "name": "Sunder the Earth",
   "slug": "sunder_the_earth_balor",
-  "damage": "20<damagephysical></damagephysical> 20<damagefire></damagefire> ",
+  "damage": "22<damagephysical></damagephysical> 22<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -15540,7 +15528,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Frost Bolts",
   "slug": "magic_bolts_winter_fairy",
-  "damage": "12<damagefrost></damagefrost> ",
+  "damage": "14<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -15634,7 +15622,7 @@
   "description": "Single magical attack at target unit.<bulletlist><bullet>Poisoned</bullet>\nInflicts Poisoned for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bulletlist>",
   "name": "Reclaiming Bolt",
   "slug": "reclaiming_bolt_horned_god",
-  "damage": "32<damageblight></damageblight> ",
+  "damage": "36<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -15661,7 +15649,7 @@
   "description": "Within a 1-hex radius:<bulletlist><bullet>Deals <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to all units and obstacles.</bullet><bullet>Summons Living Vines onto each unoccupied hex.</bullet></bulletlist>",
   "name": "Wild Eruption",
   "slug": "wild_eruption_horned_god",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "33<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -15812,7 +15800,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_frost_dragon",
-  "damage": "17<damagephysical></damagephysical> 11<damagefrost></damagefrost> ",
+  "damage": "19<damagephysical></damagephysical> 13<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -15832,7 +15820,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_frost_dragon",
-  "damage": "35<damagephysical></damagephysical> ",
+  "damage": "39<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -15859,7 +15847,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Frost Breath",
   "slug": "frost_breath_frost_dragon",
-  "damage": "32<damagefrost></damagefrost> ",
+  "damage": "36<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -16258,6 +16246,12 @@
   "range": "1",
   "notes": [],
   "icon": "melee_strike_sabertooth"
+ },
+ {
+  "damage": "<xpCol>1<damageblight></damageblight></xpCol>",
+  "description": "",
+  "name": "<xpCol>Blight Resistance</xpCol>",
+  "slug": "blight_resistance_1"
  },
  {
   "modifiers": [
@@ -16795,7 +16789,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "charge_strike_karagh",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "33<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -16815,7 +16809,7 @@
   "description": "Enemy units within a 2-hex radius sustain damage and lose -5 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
   "name": "Bone-Shattering Howl",
   "slug": "bone-shattering_howl_karagh",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "33<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -16848,11 +16842,11 @@
   "icon": "terrifying_gorging_karagh"
  },
  {
-  "notes": [],
+  "modifiers": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_mirror_mimic",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "11<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -16864,6 +16858,7 @@
   "accuracy": "100%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
+  "notes": [],
   "icon": "melee_strike_sabertooth"
  },
  {
@@ -17136,7 +17131,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_fire_dragon",
-  "damage": "17<damagephysical></damagephysical> 11<damagefire></damagefire> ",
+  "damage": "19<damagephysical></damagephysical> 13<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17156,7 +17151,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_fire_dragon",
-  "damage": "35<damagephysical></damagephysical> ",
+  "damage": "39<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17183,7 +17178,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Fire Breath",
   "slug": "fire_breath_fire_dragon",
-  "damage": "32<damagefire></damagefire> ",
+  "damage": "36<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -17738,9 +17733,9 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>Strengthened</bullet><bullet>Hastened</bullet></bulletlist>",
-  "name": "Exhilarating Roar",
-  "slug": "exhilarating_roar_exhilarating_roar",
+  "description": "Each unit in a 2-hex radius gains:<bulletlist><bullet>Strengthened if an ally.</bullet><bullet>Weakened if an enemy.</bullet></bulletlist>",
+  "name": "Dragon's Roar",
+  "slug": "dragons_roar_dragons_roar",
   "damage": "",
   "requisites": [
    {
@@ -17750,7 +17745,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "0",
-  "icon": "exhilarating_roar_exhilarating_roar"
+  "icon": "dragons_roar_dragons_roar"
  },
  {
   "notes": [
@@ -17920,6 +17915,227 @@
   "icon": "purging_field_purging_field"
  },
  {
+  "modifiers": [
+   {
+    "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
+    "name": "Sundered Defense",
+    "count": 1
+   },
+   {
+    "description": "Inflict Sundered Resistance for 3 <turn></turn> Turns.",
+    "name": "Sundered Resistance",
+    "count": 1
+   }
+  ],
+  "description": "Deal damage in a 1-hex cone.",
+  "name": "Sundering Sweep",
+  "slug": "sundering_sweep_sundering_sweep",
+  "damage": "14<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   },
+   {
+    "requisite": "Debuff"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "1",
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "icon": "sundering_sweep_sundering_sweep"
+ },
+ {
+  "description": "At the end of the turn inflict Weakened to adjacent enemies.",
+  "name": "Weakening Aura",
+  "slug": "weakening_aura",
+  "icon": "weakening_aura"
+ },
+ {
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "Enemies in a 1-hex radius sustain damage. All corpses in a 1-hex radius turn into <hyperlink>Decaying Zombie</hyperlink> units.",
+  "name": "Dark Ritual",
+  "slug": "dark_ritual_dark_ritual",
+  "damage": "10<damagefrost></damagefrost> ",
+  "requisites": [
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
+  "icon": "dark_ritual_dark_ritual"
+ },
+ {
+  "description": "Summon a <hyperlink>Bone Wyvern</hyperlink> at the start of battle. Doesn't work in water combat.<br></br><br></br>This replaces the skill from Zombie Keeper.",
+  "name": "Wyvern Keeper",
+  "slug": "wyvern_keeper",
+  "icon": "wyvern_keeper"
+ },
+ {
+  "description": "Summon a <hyperlink>Zombie</hyperlink> at the start of battle. Doesn't work in water combat.",
+  "name": "Zombie Keeper",
+  "slug": "zombie_keeper",
+  "icon": "zombie_keeper"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "description": "Target:<bulletlist><bullet>Friendly Undead corpse is revived with 60% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-Undead corpse is raised as a <hyperlink>Zombie</hyperlink>.</bullet></bulletlist>",
+  "name": "Raise Undead",
+  "slug": "raise_undead_raise_undead",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "raise_undead_raise_undead"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
+    "name": "Sundered Defense",
+    "count": 1
+   },
+   {
+    "description": "Inflict Sundered Resistance for 3 <turn></turn> Turns.",
+    "name": "Sundered Resistance",
+    "count": 1
+   },
+   {
+    "description": "Inflict Weakened for 3 <turn></turn> Turns.",
+    "name": "Weakened",
+    "count": 1
+   }
+  ],
+  "description": "Curse target unit",
+  "name": "Curse",
+  "slug": "curse_curse",
+  "damage": "10<damagefrost></damagefrost> ",
+  "requisites": [
+   {
+    "requisite": "Debuff"
+   },
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "1",
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "icon": "curse_curse"
+ },
+ {
+  "description": "Unit regains 1 <hyperlink>Action Point</hyperlink> when killing another unit with a <hyperlink>Magic</hyperlink>, <hyperlink>Melee</hyperlink>, or <hyperlink>Physical Ranged</hyperlink> attack.<br></br><br></br>Works once per <turn></turn> Turn.",
+  "name": "Killing Momentum",
+  "slug": "killing_momentum",
+  "icon": "killing_momentum"
+ },
+ {
+  "description": "When this unit kills:<bulletlist><bullet>Gains Warseeker for 2 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>This effect stacks up to 3 times.</bullet></bulletlist>",
+  "name": "Warseeker",
+  "slug": "warseeker",
+  "icon": "warseeker"
+ },
+ {
+  "description": "At the start of its turn, the unit dispels 1 Negative Status Effect.",
+  "name": "Unyielding",
+  "slug": "unyielding",
+  "icon": "unyielding"
+ },
+ {
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>+1 hex of movement for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Slippery for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Heal for 15 <temphp></temphp> Temporary Hit Point.</bullet></bulletlist><br></br><br></br>This ability is reusable after each kill.",
+  "name": "Second Wind",
+  "slug": "second_wind_second_wind",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Second Wind"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "0",
+  "icon": "second_wind_second_wind"
+ },
+ {
+  "description": "When the unit dies in combat, it is revived at the end of combat if its owner is victorious. Revived units are brought back with 50% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
+  "name": "Resurgence",
+  "slug": "resurgence",
+  "icon": "resurgence"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Slight chance of instantly killing an injured target. This chance increases the lower the target's <hp></hp> Hit Points are.",
+  "name": "Execute",
+  "slug": "execute_execute",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "1",
+  "icon": "execute_execute"
+ },
+ {
+  "description": "When this hero makes a <hyperlink>Critical Hit</hyperlink> it:<bulletlist><bullet>Heals 10<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink></bullet><bullet>Gains Hastened</bullet></bulletlist>",
+  "name": "Critical Momentum",
+  "slug": "critical_momentum",
+  "icon": "critical_momentum"
+ },
+ {
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "Gain:<bulletlist><bullet>+30% attack damage for 3 <turn></turn> Turn</bullet><bullet>1 Sundered Defense</bullet><bullet>1 Sundered Resistance</bullet></bulletlist>",
+  "name": "Reckless Rage",
+  "slug": "reckless_rage_reckless_rage",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "0",
+  "icon": "reckless_rage_reckless_rage"
+ },
+ {
   "notes": [
    {
     "note": "Cooldown: 1 <turn></turn>"
@@ -17942,9 +18158,11 @@
   "icon": "bladestorm"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "description": "Target is pushed back by 1 hex.",
+    "name": "Push Back",
+    "count": 1
    }
   ],
   "description": "Strike the target enemy unit, knocking them back and dealing damage.<br></br>Enter <hyperlink>Defense Mode</hyperlink> after use.",
@@ -17959,6 +18177,11 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
   "icon": "pushing_attack_pushing_attack"
  },
  {
@@ -18011,7 +18234,7 @@
   "icon": "offensive_vanguard"
  },
  {
-  "description": "This and adjacent friendly units gain +1<resistance></resistance> <hyperlink>Resistance</hyperlink> and +2<statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
+  "description": "This and adjacent friendly units gain +1<resistance></resistance> <hyperlink>Resistance</hyperlink> and +1<statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
   "name": "Resistant Vanguard",
   "slug": "resistant_vanguard",
   "icon": "resistant_vanguard"
@@ -18045,12 +18268,6 @@
   "icon": "warding_bond_warding_bond"
  },
  {
-  "description": "At the end of the turn inflict Weakened to adjacent enemies.",
-  "name": "Weakening Aura",
-  "slug": "weakening_aura",
-  "icon": "weakening_aura"
- },
- {
   "description": "Once per <turn></turn> Turn, whenever this unit takes non-<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> it gains:<bulletlist><bullet>Bolstered Resistance</bullet><bullet>Status Protection</bullet></bulletlist>",
   "name": "Adaptive Armor",
   "slug": "adaptive_armor",
@@ -18067,18 +18284,6 @@
   "name": "Brutal Parry",
   "slug": "brutal_parry",
   "icon": "brutal_parry"
- },
- {
-  "description": "When this unit kills:<bulletlist><bullet>Gains Warseeker until the end of combat.</bullet><bullet>This effect stacks up to 3 times.</bullet></bulletlist>",
-  "name": "Warseeker",
-  "slug": "warseeker",
-  "icon": "warseeker"
- },
- {
-  "description": "At the start of its turn, the unit dispels 1 Negative Status Effect.",
-  "name": "Unyielding",
-  "slug": "unyielding",
-  "icon": "unyielding"
  },
  {
   "notes": [
@@ -18102,70 +18307,6 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "icon": "cleaving_sweep_cleaving_sweep"
- },
- {
-  "description": "Unit regains 1 <hyperlink>Action Point</hyperlink> when killing another unit with a <hyperlink>Magic</hyperlink>, <hyperlink>Melee</hyperlink>, or <hyperlink>Physical Ranged</hyperlink> attack.<br></br><br></br>Works once per <turn></turn> Turn.",
-  "name": "Killing Momentum",
-  "slug": "killing_momentum",
-  "icon": "killing_momentum"
- },
- {
-  "notes": [
-   {
-    "note": "Cooldown: 1 <turn></turn>"
-   }
-  ],
-  "description": "<bulletlist><bullet>+1 hex of movement for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Slippery for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Heal for <temphp></temphp> Temporary Hit Point.</bullet></bulletlist>",
-  "name": "Second Wind",
-  "slug": "second_wind_second_wind",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Second Wind"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
-  "range": "0",
-  "icon": "second_wind_second_wind"
- },
- {
-  "notes": [
-   {
-    "note": "Can only be used once per battle."
-   }
-  ],
-  "description": "Gain:<bulletlist><bullet>+30% attack damage for 3 <turn></turn> Turn</bullet><bullet>1 Sundered Defense</bullet><bullet>1 Sundered Resistance</bullet></bulletlist>",
-  "name": "Reckless Rage",
-  "slug": "reckless_rage_reckless_rage",
-  "damage": "",
-  "requisites": [],
-  "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
-  "range": "0",
-  "icon": "reckless_rage_reckless_rage"
- },
- {
-  "notes": [
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
-  "description": "Slight chance of instantly killing an injured target. This chance increases the lower the target's <hp></hp> Hit Points are.",
-  "name": "Execute",
-  "slug": "execute_execute",
-  "damage": "",
-  "requisites": [],
-  "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
-  "range": "1",
-  "icon": "execute_execute"
- },
- {
-  "description": "When the unit dies in combat, it is revived at the end of combat if its owner is victorious. Revived units are brought back with 50% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
-  "name": "Resurgence",
-  "slug": "resurgence",
-  "icon": "resurgence"
  },
  {
   "modifiers": [
@@ -18205,50 +18346,7 @@
  {
   "modifiers": [
    {
-    "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
-    "name": "Sundered Defense",
-    "count": 1
-   },
-   {
-    "description": "Inflict Sundered Resistance for 3 <turn></turn> Turns.",
-    "name": "Sundered Resistance",
-    "count": 1
-   },
-   {
-    "description": "Inflict Weakened for 3 <turn></turn> Turns.",
-    "name": "Weakened",
-    "count": 1
-   }
-  ],
-  "description": "Curse target unit",
-  "name": "Curse",
-  "slug": "curse_curse",
-  "damage": "10<damagefrost></damagefrost> ",
-  "requisites": [
-   {
-    "requisite": "Debuff"
-   },
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "6",
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 1 <turn></turn>"
-   }
-  ],
-  "icon": "curse_curse"
- },
- {
-  "modifiers": [
-   {
-    "description": "If the target is slain, this unit gains:<bulletlist><bullet>+20<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>+1 Strengthened</bullet><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet></bulletlist>",
+    "description": "If the target is slain, this unit gains:<bulletlist><bullet>+20<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>+2 Strengthened</bullet><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet></bulletlist>",
     "name": "Devouring Spell",
     "count": 1
    }
@@ -18262,7 +18360,7 @@
     "requisite": "Magic"
    },
    {
-    "requisite": "Can't be refreshed"
+    "requisite": "Cooldown reset blocked"
    }
   ],
   "accuracy": "Always Hits",
@@ -18338,7 +18436,7 @@
     "count": 1
    }
   ],
-  "description": "Deals damage to target enemy unit and 3 others within 3 hexes.",
+  "description": "Deals damage to target enemy unit and 2 others within 3 hexes.",
   "name": "Lightning Evocation",
   "slug": "lightning_evocation_lightning_evoker",
   "damage": "20<damagelightning></damagelightning> ",
@@ -18432,68 +18530,13 @@
  {
   "notes": [
    {
-    "note": "Can only be used once per battle."
-   }
-  ],
-  "description": "Enemies in a 1-hex radius sustain damage. All corpses in a 1-hex radius turn into <hyperlink>Decaying Zombie</hyperlink> units.",
-  "name": "Dark Ritual",
-  "slug": "dark_ritual_dark_ritual",
-  "damage": "10<damagefrost></damagefrost> ",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
-  "icon": "dark_ritual_dark_ritual"
- },
- {
-  "description": "Summon a <hyperlink>Bone Wyvern</hyperlink> at the start of battle. Doesn't work in water combat.<br></br><br></br>This replaces the skill from Zombie Keeper.",
-  "name": "Wyvern Keeper",
-  "slug": "wyvern_keeper",
-  "icon": "wyvern_keeper"
- },
- {
-  "description": "Summon a <hyperlink>Zombie</hyperlink> at the start of battle. Doesn't work in water combat.",
-  "name": "Zombie Keeper",
-  "slug": "zombie_keeper",
-  "icon": "zombie_keeper"
- },
- {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 3 <turn></turn>"
-   }
-  ],
-  "description": "Target:<bulletlist><bullet>Friendly Undead corpse is revived with 60% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-Undead corpse is raised as a <hyperlink>Zombie</hyperlink>.</bullet></bulletlist>",
-  "name": "Raise Undead",
-  "slug": "raise_undead_raise_undead",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Support"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
-  "icon": "raise_undead_raise_undead"
- },
- {
-  "notes": [
-   {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
     "note": "Cooldown: 0 <turn></turn>"
    }
   ],
-  "description": "Link with the target friendly Magic Origin, while active:<bulletlist><bullet>Target gains +2 <hyperlink>Retaliation Attacks</hyperlink>, +30 <hyperlink>Accuracy</hyperlink>, and Frenzy.</bullet></bulletlist>",
+  "description": "Link with the target friendly Magic Origin, while active:<bulletlist><bullet>Target gains +1 <hyperlink>Retaliation Attack</hyperlink>, +30 <hyperlink>Accuracy</hyperlink>, and Frenzy.</bullet></bulletlist>",
   "name": "Astral Bond",
   "slug": "astral_bond_astral_bond",
   "damage": "",
@@ -18665,7 +18708,7 @@
   "damage": "",
   "requisites": [
    {
-    "requisite": "Can't be refreshed"
+    "requisite": "Cooldown reset blocked"
    }
   ],
   "accuracy": "Always Hits",
@@ -18682,7 +18725,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +50% damage until the end of the current turn.",
+  "description": "Attacks deal +50% damage until the end of the current turn.",
   "name": "Go For The Kill",
   "slug": "go_for_the_kill_go_for_the_kill",
   "damage": "",
@@ -18697,16 +18740,28 @@
   "icon": "go_for_the_kill_go_for_the_kill"
  },
  {
-  "description": "<hyperlink>Melee</hyperlink> attacks now do more damage as the target loses health, up to +50%.",
-  "name": "Fatal Strikes",
-  "slug": "fatal_strikes",
-  "icon": "fatal_strikes"
- },
- {
   "description": "<hyperlink>Melee</hyperlink> attacks now do up to +50% extra damage; this bonus is reduced as the target loses health.",
   "name": "Opening Strikes",
   "slug": "opening_strikes",
   "icon": "opening_strikes"
+ },
+ {
+  "description": "When the hero does a <hyperlink>Critical Hit</hyperlink>, it gains Strengthened and heals 10<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "name": "Critical Second Wind",
+  "slug": "critical_second_wind",
+  "icon": "critical_second_wind"
+ },
+ {
+  "description": "Melee retaliation attacks now knock targets back 1 hex.",
+  "name": "Knockback Retaliations",
+  "slug": "knockback_retaliations",
+  "icon": "knockback_retaliations"
+ },
+ {
+  "description": "When the hero does a <hyperlink>Critical Hit</hyperlink>, subsequent <hyperlink>Critical Hit</hyperlink> will do an additional +10% damage. This effect stacks up to 5 times.",
+  "name": "Critical Skirmisher",
+  "slug": "critical_skirmisher",
+  "icon": "critical_skirmisher"
  },
  {
   "notes": [
@@ -18776,8 +18831,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
   "icon": "scatter_shot_scatter_shot"
  },
  {
@@ -18793,6 +18848,9 @@
   "requisites": [
    {
     "requisite": "Support"
+   },
+   {
+    "requisite": "Cooldown reset blocked"
    }
   ],
   "accuracy": "Always Hits",
@@ -18813,6 +18871,9 @@
   "requisites": [
    {
     "requisite": "Support"
+   },
+   {
+    "requisite": "Cooldown reset blocked"
    }
   ],
   "accuracy": "Always Hits",
@@ -18875,6 +18936,9 @@
   "requisites": [
    {
     "requisite": "Support"
+   },
+   {
+    "requisite": "Cooldown reset blocked"
    }
   ],
   "accuracy": "Always Hits",
@@ -18937,7 +19001,11 @@
   "name": "Channeling Ritual",
   "slug": "channeling_ritual_quickened_ritual",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Cooldown reset blocked"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
   "range": "0",
@@ -18956,7 +19024,11 @@
   "name": "Channeling Ritual",
   "slug": "channeling_ritual_defensive_ritual",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Cooldown reset blocked"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "0",
@@ -18975,7 +19047,11 @@
   "name": "Channeling Ritual",
   "slug": "channeling_ritual_channeling_ritual",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Cooldown reset blocked"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "0",
@@ -19241,7 +19317,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "Summons 2 random T-II animals on target location.",
+  "description": "Summons 2 random Tier II animals on target hex.",
   "name": "Call of the Wild",
   "slug": "call_of_the_wild_call_of_the_wild",
   "damage": "",
@@ -19552,6 +19628,29 @@
   "name": "Order Aura",
   "slug": "order_aura",
   "icon": "order_aura"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "All enemies within 2 hexes of you take:<bulletlist><bullet>15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink></bullet></bulletlist><br></br>Enter defense mode.",
+  "name": "Arcfire Burst",
+  "slug": "arcfire_burst_arcfire_burst",
+  "damage": "15<damagelightning></damagelightning> 15<damagefire></damagefire> ",
+  "requisites": [
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "0",
+  "icon": "arcfire_burst_arcfire_burst"
  },
  {
   "description": "At the start of combat, gain one of these abilities:<bulletlist><bullet>Cosmic Barrage</bullet><bullet>Astral Storm</bullet><bullet>Astral Rift</bullet></bulletlist><br></br>Every 4 <turn></turn> Turns lose the ability and regain another from the list, potentially the same.",
@@ -20639,6 +20738,45 @@
   "modifiers": [],
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
+  "slug": "charge_strike_greatsword",
+  "damage": "23<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "1",
+  "notes": [],
+  "icon": "charge_strike_avenger_righteousness"
+ },
+ {
+  "notes": [],
+  "description": "Strikes target enemy unit.",
+  "name": "Melee Strike",
+  "slug": "melee_strike_pike",
+  "damage": "14<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "1",
+  "icon": "melee_strike_sabertooth"
+ },
+ {
+  "modifiers": [],
+  "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
+  "name": "Charge Strike",
   "slug": "charge_strike_lance",
   "damage": "19<damagephysical></damagephysical> ",
   "requisites": [
@@ -21610,6 +21748,145 @@
   "notes": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
+  "slug": "melee_strike_sword_and_kunai",
+  "damage": "12<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "1",
+  "icon": "melee_strike_sabertooth"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "description": "Deals damage to target unit.",
+  "name": "Dagger Throw",
+  "slug": "dagger_throw_sword_and_kunai",
+  "damage": "22<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Physical Ranged"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "dagger_throw_sword_and_kunai"
+ },
+ {
+  "notes": [],
+  "description": "Strikes target enemy unit.",
+  "name": "Melee Strike",
+  "slug": "melee_strike_javelin",
+  "damage": "12<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "1",
+  "icon": "melee_strike_sabertooth"
+ },
+ {
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "description": "Throws a projectile at target unit.",
+  "name": "Throw",
+  "slug": "throw_javelin",
+  "damage": "16<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Physical Ranged"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "90%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "fey_trick_mistling"
+ },
+ {
+  "notes": [],
+  "description": "Strikes target enemy unit.",
+  "name": "Melee Strike",
+  "slug": "melee_strike_sword_and_net",
+  "damage": "12<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "1",
+  "icon": "melee_strike_sabertooth"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "Base 90% chance of inflicting Immobilized for 1 <turn></turn> Turn.",
+    "name": "Immobilized",
+    "count": 1
+   }
+  ],
+  "description": "Deals damage to target unit.",
+  "name": "Throw Net",
+  "slug": "throw_net_sword_and_net",
+  "damage": "16<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Physical Ranged"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "icon": "throw_net_sword_and_net"
+ },
+ {
+  "notes": [],
+  "description": "Strikes target enemy unit.",
+  "name": "Melee Strike",
   "slug": "melee_strike_sword_and_crossbow",
   "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
@@ -21637,7 +21914,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Crossbow",
   "slug": "shoot_crossbow_sword_and_crossbow",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "18<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -21673,6 +21950,98 @@
    }
   ],
   "icon": "pestilent_escape_death_beetle"
+ },
+ {
+  "modifiers": [],
+  "description": "Strikes target enemy unit.",
+  "name": "Melee Strike",
+  "slug": "melee_strike_sword_and_throwing_daggers",
+  "damage": "14<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "1",
+  "notes": [],
+  "icon": "melee_strike_sabertooth"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "description": "Deals damage to target unit.",
+  "name": "Dagger Throw",
+  "slug": "dagger_throw_sword_and_throwing_daggers",
+  "damage": "22<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Physical Ranged"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "dagger_throw_sword_and_kunai"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
+    "count": 1
+   }
+  ],
+  "description": "Single magical attack at target unit.",
+  "name": "Fire Blast",
+  "slug": "magic_blast_staff_of_fire",
+  "damage": "16<damagefire></damagefire> ",
+  "requisites": [
+   {
+    "requisite": "Base"
+   },
+   {
+    "requisite": "Magic"
+   }
+  ],
+  "accuracy": "90%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "icon": "magic_blast_vowkeeper_harmony"
+ },
+ {
+  "notes": [],
+  "description": "Single Melee Strike.",
+  "name": "Quick Stab",
+  "slug": "quick_stab_staff_of_fire",
+  "damage": "16<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "1",
+  "icon": "quick_stab_peacebringer_harmony"
  },
  {
   "modifiers": [],
@@ -21939,7 +22308,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "Enemy unit in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Displaced up to 3 hexes.</bullet><bullet>Inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to 3 hexes.</bullet><bullet>Inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
   "name": "Hysteria Storm",
   "slug": "hysteria_storm_umbral_staff",
   "damage": "",
@@ -22028,7 +22397,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Can only be used once per battle."
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "description": "Target friendly unit gains a stack of Grace.",
@@ -22081,7 +22450,7 @@
   "description": "Fire Magelock Pistol at target unit.",
   "name": "Fire Magelock",
   "slug": "fire_magelock_pistol_and_sword",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -22172,25 +22541,6 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_glaive",
-  "damage": "14<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "Melee"
-   },
-   {
-    "requisite": "Base"
-   }
-  ],
-  "accuracy": "100%",
-  "actionPoints": "<repeatingaction></repeatingaction>",
-  "range": "1",
-  "icon": "melee_strike_sabertooth"
- },
- {
-  "notes": [],
-  "description": "Strikes target enemy unit.",
-  "name": "Melee Strike",
-  "slug": "melee_strike_pike",
   "damage": "14<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -24753,55 +25103,6 @@
   "description": "Single Melee Strike.",
   "name": "Quick Stab",
   "slug": "quick_stab_staff_of_blight",
-  "damage": "16<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "Melee"
-   }
-  ],
-  "accuracy": "100%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "1",
-  "icon": "quick_stab_peacebringer_harmony"
- },
- {
-  "modifiers": [
-   {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
-    "name": "Burning",
-    "count": 1
-   }
-  ],
-  "description": "Single magical attack at target unit.",
-  "name": "Fire Blast",
-  "slug": "magic_blast_staff_of_fire",
-  "damage": "16<damagefire></damagefire> ",
-  "requisites": [
-   {
-    "requisite": "Base"
-   },
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "90%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
-  "icon": "magic_blast_vowkeeper_harmony"
- },
- {
-  "notes": [],
-  "description": "Single Melee Strike.",
-  "name": "Quick Stab",
-  "slug": "quick_stab_staff_of_fire",
   "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {

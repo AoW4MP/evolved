@@ -925,7 +925,7 @@ function SetupButtons(evt, type) {
                 console.log(currentFormTraitList + " " + origin);
             }
 
-            if (origin.point_cost + getPoints() > 5 ) {
+            if (origin.point_cost + getPoints() > 10 ) {
                 originButtonNew.style.color = "grey";
             } else if (checkCompatibilityTraits(origin) == false) {   originButtonNew.style.color = "red";}else {
                 originButtonNew.style.color = "white";

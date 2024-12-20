@@ -614,7 +614,7 @@
   "icon": "devout_radiance"
  },
  {
-  "casting_cost": "5<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 5046586577269,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "counter_stance",
@@ -622,11 +622,11 @@
   "tactical": true,
   "description": "Friendly units in a 1-hex radius gain, for 1 <turn></turn> Turn:<bulletlist><bullet>First Strike</bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink></bullet><bullet>Defensive Masters</bullet></bulletlist>",
   "name": "Counter Stance",
-  "operation_point_cost": 10,
+  "operation_point_cost": 15,
   "icon": "counter_stance"
  },
  {
-  "casting_cost": "5<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 5046586577268,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "counter_stance",
@@ -634,11 +634,11 @@
   "tactical": true,
   "description": "Friendly units in a 1-hex radius gain, for 1 <turn></turn> Turn:<bulletlist><bullet>First Strike</bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink></bullet><bullet>Defensive Masters</bullet></bulletlist>",
   "name": "Counter Stance",
-  "operation_point_cost": 10,
+  "operation_point_cost": 15,
   "icon": "counter_stance"
  },
  {
-  "casting_cost": "5<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 5046586577259,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "counter_stance",
@@ -646,7 +646,7 @@
   "tactical": true,
   "description": "Friendly units in a 1-hex radius gain, for 1 <turn></turn> Turn:<bulletlist><bullet>First Strike</bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink></bullet><bullet>Defensive Masters</bullet></bulletlist>",
   "name": "Counter Stance",
-  "operation_point_cost": 10,
+  "operation_point_cost": 15,
   "icon": "counter_stance"
  },
  {
@@ -4032,7 +4032,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "soul_overflow",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 1 Strengthened.</bullet><bullet>Gain +20 maximum <hyperlink><hp></hp> Hit Points</hyperlink> until the end of battle.</bullet><bullet>Have 1 of their negative status effects removed.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 1 Strengthened.</bullet><bullet>Gain +20 maximum <hyperlink><hp></hp> Hit Points</hyperlink> until the end of battle.</bullet><bullet>Have 2 of their negative status effects removed.</bullet></bulletlist>",
   "name": "Soul Overflow",
   "operation_point_cost": 20,
   "icon": "soul_overflow"
@@ -4490,7 +4490,7 @@
   "id": "antimagic_tincture",
   "DLC": "EMPIRESANDASHES ",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Have 1 negative status effects dispelled.</bullet><bullet>Gain 1 Status Protection.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Have 2 negative status effects dispelled.</bullet><bullet>Gain 2 Status Protection.</bullet></bulletlist>",
   "name": "Antimagic Tincture",
   "operation_point_cost": 15,
   "icon": "antimagic_tincture"
@@ -4547,7 +4547,7 @@
   "id": "purifying_flame",
   "DLC": "DRAGONLORDS ",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have 2 of their negative status effects removed.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have 2 of their negative status effects removed.</bullet></bulletlist>",
   "name": "Purifying Flame",
   "operation_point_cost": 30,
   "icon": "purifying_flame"
@@ -5390,14 +5390,14 @@
   ]
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "60<mana></mana> ",
   "resid": 4273492483614,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "scry_enemy",
   "tactical": false,
   "description": "All enemies in the target army provide you with vision for 5 <turn></turn> Turns.",
   "name": "Scry Enemy",
-  "operation_point_cost": 30,
+  "operation_point_cost": 60,
   "icon": "scry_enemy"
  },
  {

@@ -82,6 +82,12 @@
   "icon": "zeal"
  },
  {
+  "damage": "<xpCol>3<damagefire></damagefire></xpCol>",
+  "description": "",
+  "name": "<xpCol>Fire Resistance</xpCol>",
+  "slug": "fire_resistance_3"
+ },
+ {
   "description": "This unit has an extra 10 to its maximum Hit Points.",
   "name": "+10<hp></hp>",
   "slug": "_10_hp__",
@@ -458,7 +464,7 @@
   "description": "Unleashes a magical bolt at target enemy.<bulletlist><bullet>Inflicts -8 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If target is Enchained by this unit, this attack cannot miss.</bullet></bulletlist>",
   "name": "Wrack",
   "slug": "wrack_umbral_mistress",
-  "damage": "9<damageblight></damageblight> 9<damagespirit></damagespirit> 9<damagefrost></damagefrost> ",
+  "damage": "8<damageblight></damageblight> 8<damagespirit></damagespirit> 8<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -1379,7 +1385,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains +5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Flaming Charge Strike",
   "slug": "flaming_charge_strike_warbound_strife",
-  "damage": "24<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -1637,7 +1643,7 @@
   "description": "Unleashes a magical bolt at target enemy. Cannot miss against targets with Seal of Fire.",
   "name": "Seal Bolts",
   "slug": "magic_bolts_sealbearer_strife",
-  "damage": "6<damagefire></damagefire> 6<damagespirit></damagespirit> ",
+  "damage": "8<damagefire></damagefire> 6<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -1858,7 +1864,7 @@
   "description": "Target unit sustains damage and has 1 Positive Status Effect removed.",
   "name": "Purging Blast",
   "slug": "magic_blast_vowkeeper_strife",
-  "damage": "14<damagespirit></damagespirit> ",
+  "damage": "14<damagespirit></damagespirit> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2025,7 +2031,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_honor_blade_strife",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> 2<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2045,7 +2051,7 @@
   "description": "Strike at target unit and enter <hyperlink>Defense Mode</hyperlink>.",
   "name": "Defensive Strike",
   "slug": "defensive_strike_honor_blade_strife",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "26<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -2142,7 +2148,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_sworn_guard_strife",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> 2<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2245,7 +2251,7 @@
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Bow",
   "slug": "shoot_bow_wayfarer_strife",
-  "damage": "6<damagephysical></damagephysical> 2<damagefire></damagefire> ",
+  "damage": "6<damagephysical></damagephysical> 4<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -2427,7 +2433,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_primal_crocodile",
-  "damage": "16<damageblight></damageblight> ",
+  "damage": "15<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -2608,7 +2614,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
+    "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -6296,7 +6302,7 @@
   "range": "6",
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "maddening_phantasm_accursed_trickster"
@@ -7926,7 +7932,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<freeaction></freeaction>",
   "range": "0",
   "icon": "embolden_allies_exemplar"
  },
@@ -8878,10 +8884,10 @@
   "icon": "consume_corpse_bone_horror"
  },
  {
-  "description": "When this unit dies, it spawns a Skeleton unit.",
-  "name": "Disassemble",
-  "slug": "disassemble",
-  "icon": "disassemble"
+  "description": "The first time this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reaches 50% or lower, it summons a <hyperlink>Decaying Zombie</hyperlink>.<br></br>Does not function in water battles.",
+  "name": "Corpse Cage",
+  "slug": "corpse_cage",
+  "icon": "corpse_cage"
  },
  {
   "modifiers": [],
@@ -9716,7 +9722,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_bone_dragon",
-  "damage": "18<damagephysical></damagephysical> 11<damageblight></damageblight> ",
+  "damage": "16<damagephysical></damagephysical> 8<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9736,7 +9742,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_bone_dragon",
-  "damage": "33<damagephysical></damagephysical> ",
+  "damage": "30<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -9768,7 +9774,7 @@
   "description": "Deal damage to all units in a 3-hex cone.",
   "name": "Putrid Breath",
   "slug": "putrid_breath_bone_dragon",
-  "damage": "31<damageblight></damageblight> ",
+  "damage": "26<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -10411,12 +10417,6 @@
    }
   ],
   "icon": "explosive_phase_magma_spirit"
- },
- {
-  "damage": "<xpCol>3<damagefire></damagefire></xpCol>",
-  "description": "",
-  "name": "<xpCol>Fire Resistance</xpCol>",
-  "slug": "fire_resistance_3"
  },
  {
   "modifiers": [],
@@ -11329,7 +11329,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_young_obsidian_dragon",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11388,7 +11388,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_young_golden_dragon",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11435,7 +11435,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_young_frost_dragon",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11534,7 +11534,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_obsidian_dragon",
-  "damage": "39<damagephysical></damagephysical> ",
+  "damage": "40<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11631,7 +11631,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_golden_dragon",
-  "damage": "39<damagephysical></damagephysical> ",
+  "damage": "40<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11717,7 +11717,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_young_fire_dragon",
-  "damage": "26<damagephysical></damagephysical> ",
+  "damage": "28<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -12510,8 +12510,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
@@ -13787,7 +13787,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_attunement",
   "damage": "",
@@ -13854,7 +13854,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_potential",
   "damage": "",
@@ -13910,7 +13910,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit and another within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Target friendly unit and two others within 2 hexes heal +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Soothing Breeze",
   "slug": "soothing_breeze_soother_summoning",
   "damage": "",
@@ -15656,8 +15656,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -15820,7 +15820,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_frost_dragon",
-  "damage": "39<damagephysical></damagephysical> ",
+  "damage": "40<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17151,7 +17151,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_fire_dragon",
-  "damage": "39<damagephysical></damagephysical> ",
+  "damage": "40<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17880,7 +17880,7 @@
   "description": "Attacks 3 adjacent units and removes their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.",
   "name": "Tail Swipe",
   "slug": "tail_swipe_tail_swipe",
-  "damage": "35<damagephysical></damagephysical> ",
+  "damage": "36<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -18048,7 +18048,7 @@
   "range": "1",
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "curse_curse"
@@ -18583,7 +18583,11 @@
   "icon": "conjure_lesser_spirit_conjure_lesser_spirit"
  },
  {
-  "notes": [],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
   "description": "Create <hyperlink>Obscuring</hyperlink> flora in a 1-hex radius.",
   "name": "Conjure Wildgrowth (Swift)",
   "slug": "conjure_wildgrowth_(swift)_swift_wildgrowth",
@@ -18633,7 +18637,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Target friendly units in a 1-hex radius:<bulletlist><bullet>Heal +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain Regeneration.</bullet><bullet>Have their negative status effects removed.</bullet></bulletlist>",
@@ -19303,7 +19307,7 @@
   "icon": "poisonous_undergrowth_poisonous_undergrowth"
  },
  {
-  "description": "While army leader, non-Hero Undead units in army have:<bulletlist><bullet>+10% damage</bullet><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>",
+  "description": "While army leader, non-Hero Undead units in army have:<bulletlist><bullet>+10% damage</bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>",
   "name": "Unholy Leader",
   "slug": "unholy_leader",
   "icon": "unholy_leader"

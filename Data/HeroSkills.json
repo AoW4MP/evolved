@@ -2835,15 +2835,15 @@
  },
  {
   "group_name": "Warrior - Hero Skill Group",
-  "icon": "greater_vigor_2",
+  "icon": "vigor_5",
   "type": "normal",
   "resid": 4995046965991,
   "tree_name": "<classWarrior></classWarrior> Warrior",
-  "name": "Greater Vigor",
+  "name": "Vigor",
   "tree_pos_x": 450.0,
   "tree_pos_y": 550.0,
-  "id": "greater_vigor",
-  "description": "+30 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
+  "id": "vigor",
+  "description": "+15 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.",
   "required_skills": [
    {
     "resid": 4995046965982
@@ -3347,7 +3347,7 @@
   "resid": 5003636903162,
   "tree_name": "<classMage></classMage> Mage",
   "tree_pos_y": 350.0,
-  "description": "Modify and enhance Curse:<bulletlist><bullet>Curse now affects all targets in a 1-hex radius.</bullet></bulletlist>",
+  "description": "Modify and enhance Curse:<bulletlist><bullet>Curse now affects all targets in a 1-hex radius.</bullet><bullet>Curse's cooldown is increased by 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5003636903155

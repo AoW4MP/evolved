@@ -925,9 +925,11 @@ function SetupButtons(evt, type) {
                 console.log(currentFormTraitList + " " + origin);
             }
 
-            if (origin.point_cost + getPoints() > 10 ) {
+            if (origin.point_cost + getPoints() > 10) {
                 originButtonNew.style.color = "grey";
-            } else if (checkCompatibilityTraits(origin) == false) {   originButtonNew.style.color = "red";}else {
+            } else if (checkCompatibilityTraits(origin) == false) {
+                originButtonNew.style.color = "red";
+            }else {
                 originButtonNew.style.color = "white";
             }
 
@@ -948,29 +950,25 @@ function SetupButtons(evt, type) {
 
                 SetButtonInfo(originButtonNew, origin, type);
                 // originButtonNew.innerHTML += "<span style=\"color:red\"> Incompatible </span>";
-            } 
-            // show option but with compatible thingie
-            else{
-                // dont show everything for loadouts, too many options
-                if(type != "Loadout"){
-                  
-                
-                // check if its not just already equipped instead
-               
-                originButtonNew.className = "list-button-disabled";
-               // originButtonNew.addEventListener("click", (event) => selectOrigin(origin, type));
-                originWrapper.appendChild(originButtonNew);
-                SetButtonInfo(originButtonNew, origin, type);
-                if (currentSociety1.name === origin.name) {
-                    originButtonNew.className = "list-button-currentequipped";
-                }
-               else if (currentSociety2.name === origin.name) {
-                originButtonNew.className = "list-button-currentequipped";
-                } else{
-                    originButtonNew.innerHTML += "<span style=\"color:red\"> Incompatible </span>";
-                }
             }
-                
+            // show option but with compatible thingie
+            else {
+                // dont show everything for loadouts, too many options
+                if (type != "Loadout") {
+                    // check if its not just already equipped instead
+               
+                    originButtonNew.className = "list-button-disabled";
+                    // originButtonNew.addEventListener("click", (event) => selectOrigin(origin, type));
+                    originWrapper.appendChild(originButtonNew);
+                    SetButtonInfo(originButtonNew, origin, type);
+                    if (currentSociety1.name === origin.name) {
+                        originButtonNew.className = "list-button-currentequipped";
+                    } else if (currentSociety2.name === origin.name) {
+                        originButtonNew.className = "list-button-currentequipped";
+                    } else {
+                        originButtonNew.innerHTML += '<span style="color:red"> Incompatible </span>';
+                    }
+                }
             }
         }
     }
@@ -1459,6 +1457,9 @@ function SetLoadoutPreview(span, origin) {
 }
 
 function labelAndTransformString(input) {
+    if (input == undefined) {
+        return;
+    }
     // Split the input string by comma to separate "Origin" and "Culture"
     const parts = input.split(",");
 
@@ -2715,13 +2716,11 @@ function GetRandomEntry(type) {
     return randomOrigin;
 }
 
-function GetCultureFromID(id){
+function GetCultureFromID(id) {
     for (let index = 0; index < jsonFactionCreation.length; index++) {
-        if(jsonFactionCreation[index].id == id){
+        if (jsonFactionCreation[index].id == id) {
             return jsonFactionCreation[index];
         }
-        
-        
     }
 }
 
@@ -2729,7 +2728,6 @@ function incompatibleCheck(type, origin) {
     var incompatibleWithSetup = false;
 
         // check from culture too
-    
     
     if ("incompatible" in origin) {
         if (type === "Culture") {
@@ -2750,29 +2748,25 @@ function incompatibleCheck(type, origin) {
         }
     }
 
-    if(currentCulture != ""){
-        if('incompatible' in currentCulture){
-              
+    if (currentCulture != "") {
+        if ("incompatible" in currentCulture) {
             for (let index = 0; index < currentCulture.incompatible.length; index++) {
-              //  console.log(currentCulture.incompatible[index].name + " " + origin.name );
-               if(origin.name == currentCulture.incompatible[index].name){
-                {
-                    incompatibleWithSetup = true;
+                //  console.log(currentCulture.incompatible[index].name + " " + origin.name );
+                if (origin.name == currentCulture.incompatible[index].name) {
+                    {
+                        incompatibleWithSetup = true;
+                    }
                 }
-               }
-                
             }
-           
         }
     }
-   
+
     if ("incompatible_society_traits" in origin) {
         if (type === "Society1") {
             var i = "";
              // also check from culture here
-          //  currentCul = GetCultureFromID(currentCulture);
-          
-    
+             //  currentCul = GetCultureFromID(currentCulture);
+
             for (i in origin.incompatible_society_traits) {
                 if (currentSociety2 != "") {
                     if (
@@ -2803,11 +2797,9 @@ function incompatibleCheck(type, origin) {
 
     if (currentSociety1.name === origin.name) {
         incompatibleWithSetup = true;
+    } else if (currentSociety2.name === origin.name) {
+        incompatibleWithSetup = true;
     }
-   else if (currentSociety2.name === origin.name) {
-    incompatibleWithSetup = true;
-    }
-
     
     if (type === "Loadout") {
         // example: Champion:Wizard, Primal-sylvan_wolf:Dark

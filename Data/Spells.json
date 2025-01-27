@@ -316,7 +316,7 @@
   "id": "accursed_armors",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a:<bulletlist></bullet><bullet>30% chance of being inflicted with Ghostfire for 3 <turn></turn> Turns.</bullet><bullet>30% chance of being inflicted with Misfortune for 3 <turn></turn> Turns</bullet></bulletlist><bullet>+2 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
+  "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a:<bulletlist></bullet><bullet>30% chance of being inflicted with Ghostfire for 3 <turn></turn> Turns.</bullet><bullet>30% chance of being inflicted with Misfortune for 3 <turn></turn> Turns</bullet></bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -385,7 +385,7 @@
   "id": "blessed_armors",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Enchanted units gain:<bulletlist><bullet>Inner Grace</bullet><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
+  "description": "Enchanted units gain:<bulletlist><bullet>Inner Grace</bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -971,7 +971,7 @@
   "icon": "downpour"
  },
  {
-  "casting_cost": "80<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 5046586574319,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "lightning_storm",
@@ -979,7 +979,7 @@
   "tactical": true,
   "description": "<bulletlist><bullet>All units become Wet for 3 <turn></turn> Turns</bullet><bullet>Up to 2 random enemy units:<bulletlist></bullet><bullet>Sustain 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Electrified for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist><br></br>This spell repeats at the start of each turn for the next 6 <turn></turn> Turns.",
   "name": "Lightning Storm",
-  "operation_point_cost": 35,
+  "operation_point_cost": 40,
   "icon": "lightning_storm"
  },
  {
@@ -2685,10 +2685,10 @@
  {
   "casting_cost": "45<mana></mana> ",
   "resid": 4514010634776,
-  "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
+  "spellType": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>",
   "id": "fanatical_workforce",
   "tactical": false,
-  "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +45 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -15 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
+  "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +60 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -20 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
   "name": "Fanatical Workforce",
   "operation_point_cost": 45,
   "icon": "fanatical_workforce"
@@ -3080,14 +3080,14 @@
   "icon": "time_stop"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4514010633535,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>",
   "id": "dispelling_wave",
   "tactical": true,
   "description": "<bulletlist><bullet>Dispels all positive status effects on all enemies.</bullet><bullet>Dispels all negative status effects on all allies.</bullet></bulletlist>",
   "name": "Dispelling Wave",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "dispelling_wave"
  },
  {
@@ -3483,7 +3483,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "displacing_winds",
   "tactical": true,
-  "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by 1 hex.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> cancelled.</bullet></bulletlist>",
+  "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by up to 1 hexes.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled.</bullet><bullet>Have their <hyperlink>Retaliation Attack</hyperlink> removed.</bullet></bulletlist>",
   "name": "Displacing Winds",
   "operation_point_cost": 20,
   "icon": "displacing_winds"
@@ -4083,50 +4083,17 @@
   "icon": "immolate"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4514010628947,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "totem_of_the_wild",
   "tactical": true,
-  "description": "Spawns a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier II Animal unit upon casting and at the start of each of your <turn></turn> <hyperlink>Turns</hyperlink>. Lasts 3 <turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Spawns a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier II Animal unit at the start of each of your <turn></turn> <hyperlink>Turns</hyperlink>. Lasts 4 <turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
   "name": "Totem of the Wild",
-  "operation_point_cost": 30,
+  "operation_point_cost": 35,
   "summoned_units": [
    {
     "slug": "totem_of_the_wild"
-   },
-   {
-    "slug": "carrion_bird"
-   },
-   {
-    "slug": "inferno_hound"
-   },
-   {
-    "slug": "warg"
-   },
-   {
-    "slug": "razorback"
-   },
-   {
-    "slug": "hunter_spider"
-   },
-   {
-    "slug": "ice_spider"
-   },
-   {
-    "slug": "scrap_hermit"
-   },
-   {
-    "slug": "brown_bear"
-   },
-   {
-    "slug": "polar_bear"
-   },
-   {
-    "slug": "elephant"
-   },
-   {
-    "slug": "death_beetle"
    }
   ]
  },
@@ -5123,14 +5090,14 @@
   "icon": "greater_reanimation"
  },
  {
-  "casting_cost": "35<souls></souls> ",
+  "casting_cost": "25<souls></souls> ",
   "resid": 4273492484079,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "marked_for_death",
   "tactical": true,
   "description": "Target unit:<bulletlist><bullet>Sustains 15 unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Loses -10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>Has a <hyperlink>Decaying Zombie</hyperlink> spawn adjacent to them.</bullet><bullet>Is afflicted with Visions of Death until the end of combat.</bullet></bulletlist>",
   "name": "Marked for Death",
-  "operation_point_cost": 40,
+  "operation_point_cost": 30,
   "icon": "marked_for_death",
   "summoned_units": [
    {

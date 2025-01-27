@@ -14,10 +14,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "fire_cleave_pyre_templar"
+    "slug": "fire_cleave_unit_property_ability_pyre_templar"
    },
    {
-    "slug": "pyre_cloak_pyre_templar"
+    "slug": "pyre_cloak_ability_pyre_templar"
    },
    {
     "slug": "defense_mode"
@@ -89,10 +89,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_sabertooth"
+    "slug": "melee_strike_(base)_ability_sabertooth"
    },
    {
-    "slug": "pounce_sabertooth"
+    "slug": "pounce_ability_sabertooth"
    },
    {
     "slug": "defense_mode"
@@ -172,13 +172,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_scourge_of_spring"
+    "slug": "melee_strike_(base)_ability_scourge_of_spring"
    },
    {
-    "slug": "phantom_charge_scourge_of_spring"
+    "slug": "phantom_charge_ability_scourge_of_spring"
    },
    {
-    "slug": "captive_glamor_scourge_of_spring"
+    "slug": "captive_glamour_ability_scourge_of_spring"
    },
    {
     "slug": "defense_mode"
@@ -268,10 +268,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_single_strike_mistling"
+    "slug": "misty_strike_ability_mistling"
    },
    {
-    "slug": "fey_trick_mistling"
+    "slug": "fey_trick_ability_mistling"
    },
    {
     "slug": "defense_mode"
@@ -352,13 +352,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_stormbringer"
+    "slug": "melee_strike_(base)_ability_stormbringer"
    },
    {
-    "slug": "throw_stormbringer"
+    "slug": "throw_storm_trident_ability_stormbringer"
    },
    {
     "slug": "defense_mode"
@@ -386,7 +386,7 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "stormbringer",
   "name": "Stormbringer",
-  "hp": 110,
+  "hp": 100,
   "armor": 4,
   "resistance": 4,
   "medal_rewards_2": [
@@ -438,19 +438,19 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "wrack_umbral_mistress"
+    "slug": "wrack_ability_umbral_mistress"
    },
    {
-    "slug": "fury_umbral_mistress"
+    "slug": "fury_ability_umbral_mistress"
    },
    {
-    "slug": "surrender_umbral_mistress"
+    "slug": "surrender_ability_umbral_mistress"
    },
    {
-    "slug": "gratitude_umbral_mistress"
+    "slug": "gratitude_ability_umbral_mistress"
    },
    {
-    "slug": "enchain_mind_umbral_mistress"
+    "slug": "enchain_mind_ability_umbral_mistress"
    },
    {
     "slug": "defense_mode"
@@ -485,9 +485,9 @@
   "upkeep": "30<gold></gold> 5<influence></influence> ",
   "id": "umbral_mistress",
   "name": "Umbral Mistress",
-  "hp": 110,
-  "armor": 5,
-  "resistance": 5,
+  "hp": 120,
+  "armor": 6,
+  "resistance": 6,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -548,10 +548,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_avenger_righteousness"
+    "slug": "melee_charge_strike_(base)_ability_avenger_righteousness"
    },
    {
-    "slug": "helmsplitter_avenger_righteousness"
+    "slug": "helmsplitter_ability_avenger_righteousness"
    },
    {
     "slug": "defense_mode"
@@ -610,7 +610,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_mature_splitterling"
+    "slug": "melee_strike_(base)_ability_mature_splitterling"
    },
    {
     "slug": "defense_mode"
@@ -688,13 +688,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_death_beetle"
+    "slug": "melee_strike_(base)_ability_death_beetle"
    },
    {
-    "slug": "pestilent_escape_death_beetle"
+    "slug": "pestilent_escape_ability_death_beetle"
    },
    {
-    "slug": "deathly_exhaust_death_beetle"
+    "slug": "deathly_exhaust_ability_death_beetle"
    },
    {
     "slug": "defense_mode"
@@ -777,7 +777,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_flesh_abomination"
+    "slug": "melee_strike_(base)_ability_flesh_abomination"
    },
    {
     "slug": "defense_mode"
@@ -864,7 +864,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "flesh_explosion_fleshling"
+    "slug": "flesh_explosion_ability_fleshling"
    },
    {
     "slug": "defense_mode"
@@ -960,7 +960,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_umbral_juggernaut"
+    "slug": "melee_charge_strike_(base)_ability_umbral_juggernaut"
    },
    {
     "slug": "defense_mode"
@@ -1053,7 +1053,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "abduct_abductor"
+    "slug": "abduct_ability_abductor"
    },
    {
     "slug": "defense_mode"
@@ -1143,13 +1143,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_scourge_of_winter"
+    "slug": "melee_strike_(base)_ability_scourge_of_winter"
    },
    {
-    "slug": "phantom_charge_scourge_of_winter"
+    "slug": "phantom_charge_ability_scourge_of_winter"
    },
    {
-    "slug": "captive_glamor_scourge_of_winter"
+    "slug": "captive_glamour_ability_scourge_of_winter"
    },
    {
     "slug": "defense_mode"
@@ -1242,13 +1242,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_scourge_of_autumn"
+    "slug": "melee_strike_(base)_ability_scourge_of_autumn"
    },
    {
-    "slug": "phantom_charge_scourge_of_autumn"
+    "slug": "phantom_charge_ability_scourge_of_autumn"
    },
    {
-    "slug": "captive_glamor_scourge_of_autumn"
+    "slug": "captive_glamour_ability_scourge_of_autumn"
    },
    {
     "slug": "defense_mode"
@@ -1341,13 +1341,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_scourge_of_summer"
+    "slug": "melee_strike_(base)_ability_scourge_of_summer"
    },
    {
-    "slug": "phantom_charge_scourge_of_summer"
+    "slug": "phantom_charge_ability_scourge_of_summer"
    },
    {
-    "slug": "captive_glamor_scourge_of_summer"
+    "slug": "captive_glamour_ability_scourge_of_summer"
    },
    {
     "slug": "defense_mode"
@@ -1434,7 +1434,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_pestilence_crocodile"
+    "slug": "melee_strike_(base)_ability_pestilence_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -1542,13 +1542,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_severing_golem"
+    "slug": "magic_bolts_ability_severing_golem"
    },
    {
-    "slug": "magical_disruption_severing_golem"
+    "slug": "magical_disruption_ability_severing_golem"
    },
    {
-    "slug": "dispelling_field_severing_golem"
+    "slug": "dispelling_field_ability_severing_golem"
    },
    {
     "slug": "defense_mode"
@@ -1638,7 +1638,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "spawn_splitterling_satiated_abductor_tower"
+    "slug": "rift_tower_spawn_splitterling_satiated_abductor_tower"
    },
    {
     "slug": "skip_unit"
@@ -1723,10 +1723,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "flaming_charge_strike_warbound_strife"
+    "slug": "flaming_charge_strike_ability_warbound_strife"
    },
    {
-    "slug": "bulldoze_warbound_strife"
+    "slug": "bulldoze_ability_warbound_strife"
    },
    {
     "slug": "defense_mode"
@@ -1796,13 +1796,13 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_peacebringer_harmony"
+    "slug": "shoot_bow_ability_peacebringer_harmony"
    },
    {
-    "slug": "line_shot_peacebringer_harmony"
+    "slug": "line_shot_ability_peacebringer_harmony"
    },
    {
-    "slug": "quick_stab_peacebringer_harmony"
+    "slug": "quick_stab_ability_peacebringer_harmony"
    },
    {
     "slug": "defense_mode"
@@ -1822,6 +1822,9 @@
   "secondary_passives": [
    {
     "slug": "land_movement"
+   },
+   {
+    "slug": "optional_cavalry"
    },
    {
     "slug": "ranged_unit"
@@ -1869,10 +1872,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_bolts_sealbearer_harmony"
+    "slug": "magic_bolts_ability_sealbearer_harmony"
    },
    {
-    "slug": "resonance_seal_sealbearer_harmony"
+    "slug": "magic_seal_ability_sealbearer_harmony"
    },
    {
     "slug": "defense_mode"
@@ -1939,10 +1942,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_bolts_sealbearer_righteousness"
+    "slug": "magic_bolts_ability_sealbearer_righteousness"
    },
    {
-    "slug": "resonance_seal_sealbearer_righteousness"
+    "slug": "magic_seal_ability_sealbearer_righteousness"
    },
    {
     "slug": "defense_mode"
@@ -2009,10 +2012,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_bolts_sealbearer_strife"
+    "slug": "magic_bolts_ability_sealbearer_strife"
    },
    {
-    "slug": "resonance_seal_sealbearer_strife"
+    "slug": "magic_seal_ability_sealbearer_strife"
    },
    {
     "slug": "defense_mode"
@@ -2079,13 +2082,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_vowkeeper_harmony"
+    "slug": "magic_blast_(single)_ability_vowkeeper_harmony"
    },
    {
-    "slug": "vow_of_healing_vowkeeper_harmony"
+    "slug": "vow_of_healing_ability_vowkeeper_harmony"
    },
    {
-    "slug": "vow_of_purification_vowkeeper_harmony"
+    "slug": "vow_of_purification_ability_vowkeeper_harmony"
    },
    {
     "slug": "defense_mode_warding"
@@ -2155,13 +2158,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_vowkeeper_righteousness"
+    "slug": "magic_blast_(single)_ability_vowkeeper_righteousness"
    },
    {
-    "slug": "vow_of_healing_vowkeeper_righteousness"
+    "slug": "vow_of_healing_ability_vowkeeper_righteousness"
    },
    {
-    "slug": "vow_of_purification_vowkeeper_righteousness"
+    "slug": "vow_of_purification_ability_vowkeeper_righteousness"
    },
    {
     "slug": "defense_mode_warding"
@@ -2231,13 +2234,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_vowkeeper_strife"
+    "slug": "magic_blast_(single)_ability_vowkeeper_strife"
    },
    {
-    "slug": "vow_of_healing_vowkeeper_strife"
+    "slug": "vow_of_healing_ability_vowkeeper_strife"
    },
    {
-    "slug": "vow_of_purification_vowkeeper_strife"
+    "slug": "vow_of_purification_ability_vowkeeper_strife"
    },
    {
     "slug": "defense_mode_warding"
@@ -2310,10 +2313,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_honor_blade_harmony"
+    "slug": "melee_strike_(base)_ability_honor_blade_harmony"
    },
    {
-    "slug": "defensive_strike_honor_blade_harmony"
+    "slug": "defensive_strike_ability_honor_blade_harmony"
    },
    {
     "slug": "defense_mode"
@@ -2386,10 +2389,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_honor_blade_righteousness"
+    "slug": "melee_strike_(base)_ability_honor_blade_righteousness"
    },
    {
-    "slug": "defensive_strike_honor_blade_righteousness"
+    "slug": "defensive_strike_ability_honor_blade_righteousness"
    },
    {
     "slug": "defense_mode"
@@ -2462,10 +2465,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_honor_blade_strife"
+    "slug": "melee_strike_(base)_ability_honor_blade_strife"
    },
    {
-    "slug": "defensive_strike_honor_blade_strife"
+    "slug": "defensive_strike_ability_honor_blade_strife"
    },
    {
     "slug": "defense_mode"
@@ -2541,7 +2544,7 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_sworn_guard_harmony"
+    "slug": "melee_strike_(base)_ability_sworn_guard_harmony"
    },
    {
     "slug": "defense_mode"
@@ -2614,7 +2617,7 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_sworn_guard_righteousness"
+    "slug": "melee_strike_(base)_ability_sworn_guard_righteousness"
    },
    {
     "slug": "defense_mode"
@@ -2687,7 +2690,7 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_sworn_guard_strife"
+    "slug": "melee_strike_(base)_ability_sworn_guard_strife"
    },
    {
     "slug": "defense_mode"
@@ -2760,7 +2763,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_wayfarer_harmony"
+    "slug": "wayfarer_shoot_bow_ability_wayfarer_harmony"
    },
    {
     "slug": "defense_mode"
@@ -2839,7 +2842,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_wayfarer_righteousness"
+    "slug": "wayfarer_shoot_bow_ability_wayfarer_righteousness"
    },
    {
     "slug": "defense_mode"
@@ -2915,7 +2918,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_wayfarer_strife"
+    "slug": "wayfarer_shoot_bow_ability_wayfarer_strife"
    },
    {
     "slug": "defense_mode"
@@ -2970,10 +2973,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_giant_beetle"
+    "slug": "melee_strike_(base)_ability_giant_beetle"
    },
    {
-    "slug": "pestilent_escape_giant_beetle"
+    "slug": "pestilent_escape_ability_giant_beetle"
    },
    {
     "slug": "defense_mode"
@@ -3050,7 +3053,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_skeleton_mage"
+    "slug": "magic_bolts_ability_skeleton_mage"
    },
    {
     "slug": "defense_mode"
@@ -3136,7 +3139,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "shoot_bow_skeleton_archer"
+    "slug": "shoot_bow_ability_skeleton_archer"
    },
    {
     "slug": "defense_mode"
@@ -3225,7 +3228,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_skeleton_warrior"
+    "slug": "melee_strike_(base)_ability_skeleton_warrior"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -3265,7 +3268,7 @@
   "upkeep": "8<gold></gold> ",
   "id": "skeleton_warrior",
   "name": "Skeleton Warrior",
-  "hp": 65,
+  "hp": 60,
   "armor": 5,
   "resistance": 0,
   "medal_rewards_2": [
@@ -3317,10 +3320,10 @@
     "slug": "status_effect_immunity_diseased"
    }
   ],
-  "mp": 40,
+  "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_primal_crocodile"
+    "slug": "melee_strike_(base)_ability_primal_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -3355,9 +3358,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_crocodile",
   "name": "Primal Crocodile",
-  "hp": 90,
-  "armor": 4,
-  "resistance": 3,
+  "hp": 70,
+  "armor": 3,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3416,7 +3419,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_primal_serpent"
+    "slug": "melee_strike_(base)_ability_primal_serpent"
    },
    {
     "slug": "defense_mode"
@@ -3448,9 +3451,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_serpent",
   "name": "Primal Serpent",
-  "hp": 90,
-  "armor": 4,
-  "resistance": 3,
+  "hp": 70,
+  "armor": 3,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3509,7 +3512,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_primal_wolf"
+    "slug": "melee_strike_(base)_ability_primal_wolf"
    },
    {
     "slug": "defense_mode"
@@ -3544,9 +3547,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_wolf",
   "name": "Primal Wolf",
-  "hp": 90,
-  "armor": 4,
-  "resistance": 3,
+  "hp": 70,
+  "armor": 3,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3605,7 +3608,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_bolts_primal_crow"
+    "slug": "magic_bolts_ability_primal_crow"
    },
    {
     "slug": "defense_mode"
@@ -3637,9 +3640,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_crow",
   "name": "Primal Crow",
-  "hp": 80,
-  "armor": 3,
-  "resistance": 2,
+  "hp": 60,
+  "armor": 2,
+  "resistance": 1,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3695,10 +3698,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_primal_sabertooth"
+    "slug": "melee_strike_(base)_ability_primal_sabertooth"
    },
    {
-    "slug": "pounce_primal_sabertooth"
+    "slug": "pounce_ability_primal_sabertooth"
    },
    {
     "slug": "defense_mode"
@@ -3733,9 +3736,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_sabertooth",
   "name": "Primal Sabertooth",
-  "hp": 90,
-  "armor": 4,
-  "resistance": 3,
+  "hp": 70,
+  "armor": 3,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3788,10 +3791,10 @@
     "slug": "trail_of_mists"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_primal_spider"
+    "slug": "melee_strike_(base)_ability_primal_spider"
    },
    {
     "slug": "defense_mode"
@@ -3826,9 +3829,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_spider",
   "name": "Primal Spider",
-  "hp": 90,
-  "armor": 4,
-  "resistance": 3,
+  "hp": 70,
+  "armor": 3,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3887,10 +3890,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_primal_mammoth"
+    "slug": "melee_charge_strike_primal_mammoth_ability_primal_mammoth"
    },
    {
-    "slug": "stomp_primal_mammoth"
+    "slug": "stomp_ability_primal_mammoth"
    },
    {
     "slug": "defense_mode"
@@ -3925,9 +3928,9 @@
   "upkeep": "12<gold></gold> ",
   "id": "primal_mammoth",
   "name": "Primal Mammoth",
-  "hp": 100,
-  "armor": 3,
-  "resistance": 3,
+  "hp": 80,
+  "armor": 2,
+  "resistance": 2,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
@@ -3997,7 +4000,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_mire_crocodile"
+    "slug": "shoot_bow_ability_spirit_tracker_mire_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -4079,7 +4082,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_storm_crow"
+    "slug": "shoot_bow_ability_spirit_tracker_storm_crow"
    },
    {
     "slug": "defense_mode"
@@ -4161,7 +4164,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_glacial_mammoth"
+    "slug": "shoot_bow_ability_spirit_tracker_glacial_mammoth"
    },
    {
     "slug": "defense_mode"
@@ -4243,7 +4246,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_ash_sabertooth"
+    "slug": "shoot_bow_ability_spirit_tracker_ash_sabertooth"
    },
    {
     "slug": "defense_mode"
@@ -4325,7 +4328,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_dune_serpent"
+    "slug": "shoot_bow_ability_spirit_tracker_dune_serpent"
    },
    {
     "slug": "defense_mode"
@@ -4407,7 +4410,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_tunneling_spider"
+    "slug": "shoot_bow_ability_spirit_tracker_tunneling_spider"
    },
    {
     "slug": "defense_mode"
@@ -4489,7 +4492,7 @@
   "cost": "60<unitprod></unitprod> 50<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_bow_spirit_tracker_sylvan_wolf"
+    "slug": "shoot_bow_ability_spirit_tracker_sylvan_wolf"
    },
    {
     "slug": "defense_mode"
@@ -4577,10 +4580,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_mire_crocodile"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_mire_crocodile"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_mire_crocodile"
+    "slug": "primal_lunge_ability_ancestral_warden_mire_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -4656,10 +4659,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_storm_crow"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_storm_crow"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_storm_crow"
+    "slug": "primal_lunge_ability_ancestral_warden_storm_crow"
    },
    {
     "slug": "defense_mode"
@@ -4735,10 +4738,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_glacial_mammoth"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_glacial_mammoth"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_glacial_mammoth"
+    "slug": "primal_lunge_ability_ancestral_warden_glacial_mammoth"
    },
    {
     "slug": "defense_mode"
@@ -4814,10 +4817,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_ash_sabertooth"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_ash_sabertooth"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_ash_sabertooth"
+    "slug": "primal_lunge_ability_ancestral_warden_ash_sabertooth"
    },
    {
     "slug": "defense_mode"
@@ -4893,10 +4896,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_dune_serpent"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_dune_serpent"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_dune_serpent"
+    "slug": "primal_lunge_ability_ancestral_warden_dune_serpent"
    },
    {
     "slug": "defense_mode"
@@ -4972,10 +4975,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_tunneling_spider"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_tunneling_spider"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_tunneling_spider"
+    "slug": "primal_lunge_ability_ancestral_warden_tunneling_spider"
    },
    {
     "slug": "defense_mode"
@@ -5051,10 +5054,10 @@
   "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_ancestral_warden_sylvan_wolf"
+    "slug": "melee_strike_(base)_ability_ancestral_warden_sylvan_wolf"
    },
    {
-    "slug": "primal_lunge_ancestral_warden_sylvan_wolf"
+    "slug": "primal_lunge_ability_ancestral_warden_sylvan_wolf"
    },
    {
     "slug": "defense_mode"
@@ -5127,10 +5130,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_mire_crocodile"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_mire_crocodile"
    },
    {
-    "slug": "cleaving_charge_primal_charger_mire_crocodile"
+    "slug": "cleaving_charge_ability_primal_charger_mire_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -5200,10 +5203,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_storm_crow"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_storm_crow"
    },
    {
-    "slug": "cleaving_charge_primal_charger_storm_crow"
+    "slug": "cleaving_charge_ability_primal_charger_storm_crow"
    },
    {
     "slug": "defense_mode"
@@ -5273,10 +5276,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_glacial_mammoth"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_glacial_mammoth"
    },
    {
-    "slug": "cleaving_charge_primal_charger_glacial_mammoth"
+    "slug": "cleaving_charge_ability_primal_charger_glacial_mammoth"
    },
    {
     "slug": "defense_mode"
@@ -5346,10 +5349,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_ash_sabertooth"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_ash_sabertooth"
    },
    {
-    "slug": "cleaving_charge_primal_charger_ash_sabertooth"
+    "slug": "cleaving_charge_ability_primal_charger_ash_sabertooth"
    },
    {
     "slug": "defense_mode"
@@ -5419,10 +5422,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_dune_serpent"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_dune_serpent"
    },
    {
-    "slug": "cleaving_charge_primal_charger_dune_serpent"
+    "slug": "cleaving_charge_ability_primal_charger_dune_serpent"
    },
    {
     "slug": "defense_mode"
@@ -5492,10 +5495,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_tunneling_spider"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_tunneling_spider"
    },
    {
-    "slug": "cleaving_charge_primal_charger_tunneling_spider"
+    "slug": "cleaving_charge_ability_primal_charger_tunneling_spider"
    },
    {
     "slug": "defense_mode"
@@ -5565,10 +5568,10 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "charge_strike_primal_charger_sylvan_wolf"
+    "slug": "melee_charge_strike_(base)_ability_primal_charger_sylvan_wolf"
    },
    {
-    "slug": "cleaving_charge_primal_charger_sylvan_wolf"
+    "slug": "cleaving_charge_ability_primal_charger_sylvan_wolf"
    },
    {
     "slug": "defense_mode"
@@ -5641,13 +5644,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_mire_crocodile"
+    "slug": "magic_blast_(single)_ability_animist_mire_crocodile"
    },
    {
-    "slug": "summon_primal_crocodile_animist_mire_crocodile"
+    "slug": "summon_totem_animal_ability_animist_mire_crocodile"
    },
    {
-    "slug": "spiritual_healing_animist_mire_crocodile"
+    "slug": "spiritual_healing_ability_animist_mire_crocodile"
    },
    {
     "slug": "defense_mode_warding"
@@ -5720,13 +5723,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_storm_crow"
+    "slug": "magic_blast_(single)_ability_animist_storm_crow"
    },
    {
-    "slug": "summon_primal_crocodile_animist_storm_crow"
+    "slug": "summon_totem_animal_ability_animist_storm_crow"
    },
    {
-    "slug": "spiritual_healing_animist_storm_crow"
+    "slug": "spiritual_healing_ability_animist_storm_crow"
    },
    {
     "slug": "defense_mode_warding"
@@ -5799,13 +5802,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_glacial_mammoth"
+    "slug": "magic_blast_(single)_ability_animist_glacial_mammoth"
    },
    {
-    "slug": "summon_primal_crocodile_animist_glacial_mammoth"
+    "slug": "summon_totem_animal_ability_animist_glacial_mammoth"
    },
    {
-    "slug": "spiritual_healing_animist_glacial_mammoth"
+    "slug": "spiritual_healing_ability_animist_glacial_mammoth"
    },
    {
     "slug": "defense_mode_warding"
@@ -5878,13 +5881,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_ash_sabertooth"
+    "slug": "magic_blast_(single)_ability_animist_ash_sabertooth"
    },
    {
-    "slug": "summon_primal_crocodile_animist_ash_sabertooth"
+    "slug": "summon_totem_animal_ability_animist_ash_sabertooth"
    },
    {
-    "slug": "spiritual_healing_animist_ash_sabertooth"
+    "slug": "spiritual_healing_ability_animist_ash_sabertooth"
    },
    {
     "slug": "defense_mode_warding"
@@ -5957,13 +5960,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_dune_serpent"
+    "slug": "magic_blast_(single)_ability_animist_dune_serpent"
    },
    {
-    "slug": "summon_primal_crocodile_animist_dune_serpent"
+    "slug": "summon_totem_animal_ability_animist_dune_serpent"
    },
    {
-    "slug": "spiritual_healing_animist_dune_serpent"
+    "slug": "spiritual_healing_ability_animist_dune_serpent"
    },
    {
     "slug": "defense_mode_warding"
@@ -6036,13 +6039,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_tunneling_spider"
+    "slug": "magic_blast_(single)_ability_animist_tunneling_spider"
    },
    {
-    "slug": "summon_primal_crocodile_animist_tunneling_spider"
+    "slug": "summon_totem_animal_ability_animist_tunneling_spider"
    },
    {
-    "slug": "spiritual_healing_animist_tunneling_spider"
+    "slug": "spiritual_healing_ability_animist_tunneling_spider"
    },
    {
     "slug": "defense_mode_warding"
@@ -6115,13 +6118,13 @@
   "cost": "120<unitprod></unitprod> 80<gold></gold> ",
   "abilities": [
    {
-    "slug": "magic_blast_animist_sylvan_wolf"
+    "slug": "magic_blast_(single)_ability_animist_sylvan_wolf"
    },
    {
-    "slug": "summon_primal_crocodile_animist_sylvan_wolf"
+    "slug": "summon_totem_animal_ability_animist_sylvan_wolf"
    },
    {
-    "slug": "spiritual_healing_animist_sylvan_wolf"
+    "slug": "spiritual_healing_ability_animist_sylvan_wolf"
    },
    {
     "slug": "defense_mode_warding"
@@ -6197,10 +6200,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_mire_crocodile"
+    "slug": "shoot_blowgun_ability_primal_darter_mire_crocodile"
    },
    {
-    "slug": "disengaging_shot_primal_darter_mire_crocodile"
+    "slug": "disengaging_shot_ability_primal_darter_mire_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -6270,10 +6273,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_storm_crow"
+    "slug": "shoot_blowgun_ability_primal_darter_storm_crow"
    },
    {
-    "slug": "disengaging_shot_primal_darter_storm_crow"
+    "slug": "disengaging_shot_ability_primal_darter_storm_crow"
    },
    {
     "slug": "defense_mode"
@@ -6343,10 +6346,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_glacial_mammoth"
+    "slug": "shoot_blowgun_ability_primal_darter_glacial_mammoth"
    },
    {
-    "slug": "disengaging_shot_primal_darter_glacial_mammoth"
+    "slug": "disengaging_shot_ability_primal_darter_glacial_mammoth"
    },
    {
     "slug": "defense_mode"
@@ -6416,10 +6419,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_ash_sabertooth"
+    "slug": "shoot_blowgun_ability_primal_darter_ash_sabertooth"
    },
    {
-    "slug": "disengaging_shot_primal_darter_ash_sabertooth"
+    "slug": "disengaging_shot_ability_primal_darter_ash_sabertooth"
    },
    {
     "slug": "defense_mode"
@@ -6489,10 +6492,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_dune_serpent"
+    "slug": "shoot_blowgun_ability_primal_darter_dune_serpent"
    },
    {
-    "slug": "disengaging_shot_primal_darter_dune_serpent"
+    "slug": "disengaging_shot_ability_primal_darter_dune_serpent"
    },
    {
     "slug": "defense_mode"
@@ -6562,10 +6565,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_tunneling_spider"
+    "slug": "shoot_blowgun_ability_primal_darter_tunneling_spider"
    },
    {
-    "slug": "disengaging_shot_primal_darter_tunneling_spider"
+    "slug": "disengaging_shot_ability_primal_darter_tunneling_spider"
    },
    {
     "slug": "defense_mode"
@@ -6635,10 +6638,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "shoot_blowgun_primal_darter_sylvan_wolf"
+    "slug": "shoot_blowgun_ability_primal_darter_sylvan_wolf"
    },
    {
-    "slug": "disengaging_shot_primal_darter_sylvan_wolf"
+    "slug": "disengaging_shot_ability_primal_darter_sylvan_wolf"
    },
    {
     "slug": "defense_mode"
@@ -6714,10 +6717,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_mire_crocodile"
+    "slug": "melee_strike_(base)_ability_protector_mire_crocodile"
    },
    {
-    "slug": "primal_renewal_protector_mire_crocodile"
+    "slug": "primal_renewal_ability_protector_mire_crocodile"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -6793,10 +6796,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_storm_crow"
+    "slug": "melee_strike_(base)_ability_protector_storm_crow"
    },
    {
-    "slug": "primal_renewal_protector_storm_crow"
+    "slug": "primal_renewal_ability_protector_storm_crow"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -6872,10 +6875,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_glacial_mammoth"
+    "slug": "melee_strike_(base)_ability_protector_glacial_mammoth"
    },
    {
-    "slug": "primal_renewal_protector_glacial_mammoth"
+    "slug": "primal_renewal_ability_protector_glacial_mammoth"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -6951,10 +6954,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_ash_sabertooth"
+    "slug": "melee_strike_(base)_ability_protector_ash_sabertooth"
    },
    {
-    "slug": "primal_renewal_protector_ash_sabertooth"
+    "slug": "primal_renewal_ability_protector_ash_sabertooth"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -7030,10 +7033,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_dune_serpent"
+    "slug": "melee_strike_(base)_ability_protector_dune_serpent"
    },
    {
-    "slug": "primal_renewal_protector_dune_serpent"
+    "slug": "primal_renewal_ability_protector_dune_serpent"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -7109,10 +7112,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_tunneling_spider"
+    "slug": "melee_strike_(base)_ability_protector_tunneling_spider"
    },
    {
-    "slug": "primal_renewal_protector_tunneling_spider"
+    "slug": "primal_renewal_ability_protector_tunneling_spider"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -7188,10 +7191,10 @@
   "cost": "80<unitprod></unitprod> 60<gold></gold> ",
   "abilities": [
    {
-    "slug": "melee_strike_protector_sylvan_wolf"
+    "slug": "melee_strike_(base)_ability_protector_sylvan_wolf"
    },
    {
-    "slug": "primal_renewal_protector_sylvan_wolf"
+    "slug": "primal_renewal_ability_protector_sylvan_wolf"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -7256,10 +7259,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_mammoth"
+    "slug": "melee_charge_strike_(base)_ability_(elephant_mammoth_only)_mammoth"
    },
    {
-    "slug": "stomp_mammoth"
+    "slug": "stomp_ability_mammoth"
    },
    {
     "slug": "defense_mode"
@@ -7337,10 +7340,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_elephant"
+    "slug": "melee_charge_strike_(base)_ability_(elephant_mammoth_only)_elephant"
    },
    {
-    "slug": "stomp_elephant"
+    "slug": "stomp_ability_elephant"
    },
    {
     "slug": "defense_mode"
@@ -7445,7 +7448,7 @@
   ],
   "abilities": [
    {
-    "slug": "fire_cannon_magelock_cannon"
+    "slug": "fire_magelock_cannon_ability_magelock_cannon"
    },
    {
     "slug": "defense_mode"
@@ -7505,10 +7508,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_bronze_golem"
+    "slug": "melee_strike_(base)_ability_bronze_golem"
    },
    {
-    "slug": "weakening_cleave_bronze_golem"
+    "slug": "weakening_cleave_ability_bronze_golem"
    },
    {
     "slug": "defense_mode"
@@ -7582,10 +7585,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_dire_bear"
+    "slug": "melee_strike_(base)_ability_dire_bear"
    },
    {
-    "slug": "swipe_dire_bear"
+    "slug": "swipe_ability_dire_bear"
    },
    {
     "slug": "defense_mode"
@@ -7659,10 +7662,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_polar_bear"
+    "slug": "melee_strike_(base)_ability_polar_bear"
    },
    {
-    "slug": "swipe_polar_bear"
+    "slug": "swipe_ability_polar_bear"
    },
    {
     "slug": "defense_mode"
@@ -7733,10 +7736,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_brown_bear"
+    "slug": "melee_strike_(base)_ability_brown_bear"
    },
    {
-    "slug": "swipe_brown_bear"
+    "slug": "swipe_ability_brown_bear"
    },
    {
     "slug": "defense_mode"
@@ -7816,7 +7819,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "warding_link_astral_ward"
+    "slug": "warding_link_ability_astral_ward"
    },
    {
     "slug": "defense_mode"
@@ -7893,13 +7896,13 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_summoner_summoning"
+    "slug": "magic_blast_(single)_ability_summoner_summoning"
    },
    {
-    "slug": "astral_bond_summoner_summoning"
+    "slug": "astral_bond_ability_summoner_summoning"
    },
    {
-    "slug": "spirit_summon_dormant_summoner_summoning"
+    "slug": "spirit_summon_dormant_unit_property_ability_summoner_summoning"
    },
    {
     "slug": "defense_mode_warding"
@@ -7968,10 +7971,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_spellweaver_potential"
+    "slug": "magic_bolts_ability_spellweaver_potential"
    },
    {
-    "slug": "weavers_overchannel_spellweaver_potential"
+    "slug": "weavers_overchannel_ability_property_spellweaver_potential"
    },
    {
     "slug": "defense_mode"
@@ -8033,10 +8036,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_constrictor"
+    "slug": "melee_strike_(base)_ability_constrictor"
    },
    {
-    "slug": "pull_constrictor"
+    "slug": "constrictor_pull_ability_constrictor"
    },
    {
     "slug": "defense_mode"
@@ -8101,7 +8104,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_tentacle"
+    "slug": "tentacle_ability_tentacle"
    },
    {
     "slug": "defense_mode"
@@ -8181,16 +8184,16 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_spike_prosperity_dragon"
+    "slug": "magic_spike_ability_prosperity_dragon"
    },
    {
-    "slug": "magic_rebuke_prosperity_dragon"
+    "slug": "magic_rebuke_ability_prosperity_dragon"
    },
    {
-    "slug": "rain_of_prosperity_prosperity_dragon"
+    "slug": "rain_of_prosperity_ability_prosperity_dragon"
    },
    {
-    "slug": "bestow_mask_of_prosperity_prosperity_dragon"
+    "slug": "bestow_mask_of_prosperity_ability_prosperity_dragon"
    },
    {
     "slug": "defense_mode"
@@ -8301,10 +8304,10 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_righteous_judge"
+    "slug": "melee_strike_(base)_ability_righteous_judge"
    },
    {
-    "slug": "righteous_judgment_righteous_judge"
+    "slug": "righteous_judgement_ability_righteous_judge"
    },
    {
     "slug": "defense_mode"
@@ -8406,10 +8409,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_radiant_guardian"
+    "slug": "melee_strike_(base)_ability_radiant_guardian"
    },
    {
-    "slug": "radiant_transposition_radiant_guardian"
+    "slug": "radiant_transposition_ability_radiant_guardian"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -8508,10 +8511,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_blast_blessed_dragon"
+    "slug": "magic_blast_(single)_ability_blessed_dragon"
    },
    {
-    "slug": "graceful_rain_blessed_dragon"
+    "slug": "graceful_rain_ability_blessed_dragon"
    },
    {
     "slug": "defense_mode_warding"
@@ -8610,16 +8613,16 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_spike_calamity_dragon"
+    "slug": "magic_spike_ability_calamity_dragon"
    },
    {
-    "slug": "ghostfire_storm_calamity_dragon"
+    "slug": "ghostfire_storm_ability_calamity_dragon"
    },
    {
-    "slug": "force_mask_of_calamity_calamity_dragon"
+    "slug": "force_mask_of_calamity_ability_calamity_dragon"
    },
    {
-    "slug": "magic_rebuke_calamity_dragon"
+    "slug": "magic_rebuke_ability_calamity_dragon"
    },
    {
     "slug": "defense_mode"
@@ -8718,13 +8721,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_accursed_trickster"
+    "slug": "magic_bolts_ability_accursed_trickster"
    },
    {
-    "slug": "maddening_phantasm_accursed_trickster"
+    "slug": "maddening_phantasm_ability_accursed_trickster"
    },
    {
-    "slug": "tricky_escape_accursed_trickster"
+    "slug": "tricky_escape_ability_accursed_trickster"
    },
    {
     "slug": "defense_mode"
@@ -8820,10 +8823,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_accursed_blade"
+    "slug": "melee_strike_(base)_ability_accursed_blade"
    },
    {
-    "slug": "frozen_flames_accursed_blade"
+    "slug": "frozen_flame_ability_accursed_blade"
    },
    {
     "slug": "defense_mode"
@@ -8913,7 +8916,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_accursed_ogre"
+    "slug": "melee_charge_strike_(base)_ability_accursed_ogre"
    },
    {
     "slug": "defense_mode"
@@ -9000,13 +9003,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_single_strike_shade"
+    "slug": "melee_single_strike_(base)_ability_shade"
    },
    {
-    "slug": "throw_shade"
+    "slug": "throw_(base)_ability_shade"
    },
    {
     "slug": "defense_mode"
@@ -9070,13 +9073,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_monk"
+    "slug": "melee_strike_(base)_ability_monk"
    },
    {
-    "slug": "leap_monk"
+    "slug": "monk_leap_ability_monk"
    },
    {
-    "slug": "meditate_monk"
+    "slug": "monk_meditate_ability_monk"
    },
    {
     "slug": "defense_mode"
@@ -9147,10 +9150,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_willthief"
+    "slug": "melee_strike_(base)_ability_willthief"
    },
    {
-    "slug": "umbral_lash_willthief"
+    "slug": "umbral_lash_ability_willthief"
    },
    {
     "slug": "defense_mode"
@@ -9246,13 +9249,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_umbral_tyrant"
+    "slug": "magic_blast_(single)_ability_umbral_tyrant"
    },
    {
-    "slug": "tyrants_mark_umbral_tyrant"
+    "slug": "tyrants_mark_ability_umbral_tyrant"
    },
    {
-    "slug": "tyrants_assault_umbral_tyrant"
+    "slug": "tyrants_assault_ability_umbral_tyrant"
    },
    {
     "slug": "defense_mode"
@@ -9342,7 +9345,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_splitterling"
+    "slug": "melee_strike_(base)_ability_splitterling"
    },
    {
     "slug": "defense_mode"
@@ -9416,7 +9419,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_crocodile"
+    "slug": "melee_strike_(base)_ability_crocodile"
    },
    {
     "slug": "defense_mode"
@@ -9499,7 +9502,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_roving_furnace"
+    "slug": "melee_charge_strike_(base)_ability_(roving_furnace)_roving_furnace"
    },
    {
     "slug": "defense_mode"
@@ -9595,13 +9598,13 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_overseer"
+    "slug": "marking_blast_(single)_ability_overseer"
    },
    {
-    "slug": "subdue_overseer"
+    "slug": "subdue_ability_overseer"
    },
    {
-    "slug": "patch_up_overseer"
+    "slug": "restoration_ability_overseer"
    },
    {
     "slug": "defense_mode_warding"
@@ -9670,10 +9673,10 @@
   ],
   "abilities": [
    {
-    "slug": "fire_heavy_magelock_magelock"
+    "slug": "fire_heavy_magelocks_ability_magelock"
    },
    {
-    "slug": "take_aim_magelock"
+    "slug": "take_aim_ability_magelock"
    },
    {
     "slug": "defense_mode"
@@ -9748,10 +9751,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_mercenary"
+    "slug": "melee_strike_(base)_ability_mercenary"
    },
    {
-    "slug": "drive_back_mercenary"
+    "slug": "drive_back_ability_mercenary"
    },
    {
     "slug": "defense_mode"
@@ -9823,16 +9826,16 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_harrier"
+    "slug": "melee_strike_(base)_ability_harrier"
    },
    {
-    "slug": "cast_net_harrier"
+    "slug": "cast_net_ability_harrier"
    },
    {
     "slug": "defense_mode"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "hp": 60,
   "armor": 1,
   "resistance": 1,
@@ -9908,7 +9911,7 @@
   ],
   "abilities": [
    {
-    "slug": "mark_observer"
+    "slug": "marking_ability_observer"
    },
    {
     "slug": "defense_mode"
@@ -9965,10 +9968,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_slither"
+    "slug": "melee_strike_(base)_ability_slither"
    },
    {
-    "slug": "venomous_spit_slither"
+    "slug": "venomous_spit_ability_slither"
    },
    {
     "slug": "defense_mode"
@@ -10045,13 +10048,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_slither_hatchling"
+    "slug": "melee_strike_(base)_ability_slither_hatchling"
    },
    {
-    "slug": "venomous_spit_slither_hatchling"
+    "slug": "venomous_spit_ability_slither_hatchling"
    },
    {
     "slug": "defense_mode"
@@ -10124,7 +10127,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "bombard_great_bombard"
+    "slug": "bombard_ability_great_bombard"
    }
   ],
   "medal_rewards_5": [
@@ -10210,19 +10213,19 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "direct_fire_ironclad"
+    "slug": "direct_fire_ability_ironclad"
    },
    {
-    "slug": "barrage_ironclad"
+    "slug": "barrage_ability_ironclad"
    },
    {
-    "slug": "load_sundering_shot_ironclad"
+    "slug": "ammunition_sundering_shot_ability_ironclad"
    },
    {
-    "slug": "load_incendiary_shot_ironclad"
+    "slug": "ammunition_incendiary_shot_ability_ironclad"
    },
    {
-    "slug": "load_shrapnel_shot_ironclad"
+    "slug": "ammunition_shrapnel_shot_ability_ironclad"
    },
    {
     "slug": "defense_mode"
@@ -10303,7 +10306,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_elya"
+    "slug": "magic_bolts_ability_elya"
    },
    {
     "slug": "defense_mode"
@@ -10388,13 +10391,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_ghost_ship"
+    "slug": "melee_charge_strike_(base)_ability_ghost_ship"
    },
    {
-    "slug": "summon_ghost_ghost_ship"
+    "slug": "summon_ghost_ability_ghost_ship"
    },
    {
-    "slug": "wail_of_the_lost_ghost_ship"
+    "slug": "wail_of_the_lost_ability_ghost_ship"
    },
    {
     "slug": "defense_mode"
@@ -10489,13 +10492,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_deep-sea_nimu"
+    "slug": "magic_blast_(single)_ability_deep-sea_nimu"
    },
    {
-    "slug": "nimu_soothing_deep-sea_nimu"
+    "slug": "nimu_soothing_ability_deep-sea_nimu"
    },
    {
-    "slug": "protective_symbiosis_deep-sea_nimu"
+    "slug": "protective_symbiosis_ability_deep-sea_nimu"
    },
    {
     "slug": "defense_mode_warding"
@@ -10571,10 +10574,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_nimu"
+    "slug": "melee_strike_(base)_ability_nimu"
    },
    {
-    "slug": "enhancing_symbiosis_nimu"
+    "slug": "enhancing_symbiosis_ability_nimu"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -10644,10 +10647,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_swamp_troll"
+    "slug": "magic_bolts_ability_swamp_troll"
    },
    {
-    "slug": "plague_spores_swamp_troll"
+    "slug": "plague_spores_ability_swamp_troll"
    },
    {
     "slug": "defense_mode"
@@ -10736,13 +10739,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_direcaster"
+    "slug": "magic_bolts_ability_direcaster"
    },
    {
-    "slug": "curse_of_exile_direcaster"
+    "slug": "curse_of_exile_ability_direcaster"
    },
    {
-    "slug": "hysteria_storm_direcaster"
+    "slug": "hysteria_storm_ability_direcaster"
    },
    {
     "slug": "defense_mode"
@@ -10835,10 +10838,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_infernal_juggernaut"
+    "slug": "melee_charge_strike_(base)_ability_(infernal_elephant_only)_infernal_juggernaut"
    },
    {
-    "slug": "stomp_infernal_juggernaut"
+    "slug": "stomp_ability_infernal_juggernaut"
    },
    {
     "slug": "defense_mode"
@@ -10934,10 +10937,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_single_strike_astral_siphoner"
+    "slug": "melee_single_strike_(base)_ability_astral_siphoner"
    },
    {
-    "slug": "astral_pull_astral_siphoner"
+    "slug": "astral_pull_ability_astral_siphoner"
    },
    {
     "slug": "defense_mode"
@@ -11023,10 +11026,10 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_exemplar"
+    "slug": "melee_strike_(base)_ability_exemplar"
    },
    {
-    "slug": "embolden_allies_exemplar"
+    "slug": "embolden_allies_ability_exemplar"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -11102,13 +11105,13 @@
     "slug": "zeal"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_inquisitor"
+    "slug": "melee_strike_(base)_ability_inquisitor"
    },
    {
-    "slug": "bolt_of_judgment_inquisitor"
+    "slug": "bolt_of_judgement_ability_inquisitor"
    },
    {
     "slug": "defense_mode"
@@ -11172,7 +11175,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_zealot"
+    "slug": "melee_strike_(base)_ability_zealot"
    },
    {
     "slug": "defense_mode"
@@ -11247,7 +11250,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "bolster_undead_necrotic_spire"
+    "slug": "bolster_undead_ability_necrotic_spire"
    }
   ],
   "medal_rewards_5": [
@@ -11317,7 +11320,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "mind_strike_living_fog"
+    "slug": "mind_strike_ability_living_fog"
    },
    {
     "slug": "defense_mode"
@@ -11397,10 +11400,10 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "charge_strike_phase_beast"
+    "slug": "melee_charge_strike_(base)_ability_phase_beast"
    },
    {
-    "slug": "shifting_phase_phase_beast"
+    "slug": "shifting_phase_ability_phase_beast"
    },
    {
     "slug": "defense_mode"
@@ -11498,7 +11501,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "magic_blast_amplification_pylon"
+    "slug": "amplification_pylon_magic_blast_(single)_ability_amplification_pylon"
    },
    {
     "slug": "defense_mode"
@@ -11555,10 +11558,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_evoker"
+    "slug": "magic_bolts_ability_evoker"
    },
    {
-    "slug": "electrifying_arc_evoker"
+    "slug": "electrifying_arc_ability_evoker"
    },
    {
     "slug": "defense_mode"
@@ -11641,7 +11644,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "detonate_and_devastate_devastator_sphere"
+    "slug": "detonate_ability_devastator_sphere"
    },
    {
     "slug": "defense_mode"
@@ -11718,7 +11721,7 @@
   "mp": 24,
   "abilities": [
    {
-    "slug": "earth_tremor_earthshatter_engine"
+    "slug": "earth_tremor_ability_earthshatter_engine"
    },
    {
     "slug": "defense_mode"
@@ -11794,13 +11797,13 @@
     "slug": "status_effect_immunity"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_earth_titan"
+    "slug": "melee_charge_strike_(base)_ability_earth_titan"
    },
    {
-    "slug": "seismic_slam_earth_titan"
+    "slug": "seismic_slam_ability_earth_titan"
    },
    {
     "slug": "defense_mode"
@@ -11854,7 +11857,7 @@
     "slug": "elemental"
    },
    {
-    "slug": "land_movement"
+    "slug": "floating"
    },
    {
     "slug": "large_target"
@@ -11882,10 +11885,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_transmuter"
+    "slug": "magic_bolts_ability_transmuter"
    },
    {
-    "slug": "petrify_transmuter"
+    "slug": "petrify_ability_transmuter"
    },
    {
     "slug": "defense_mode"
@@ -11961,7 +11964,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_copper_golem"
+    "slug": "melee_strike_(base)_ability_copper_golem"
    },
    {
     "slug": "defense_mode"
@@ -12040,10 +12043,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_wind_rager"
+    "slug": "melee_strike_(base)_ability_wind_rager"
    },
    {
-    "slug": "whirlwind_wind_rager"
+    "slug": "whirlwind_ability_wind_rager"
    },
    {
     "slug": "defense_mode"
@@ -12141,10 +12144,10 @@
   "mp": 24,
   "abilities": [
    {
-    "slug": "melee_strike_floral_stinger"
+    "slug": "melee_strike_(base)_ability_floral_stinger"
    },
    {
-    "slug": "poisonous_spores_floral_stinger"
+    "slug": "poisonous_spores_ability_floral_stinger"
    },
    {
     "slug": "defense_mode"
@@ -12227,13 +12230,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_nymph"
+    "slug": "magic_blast_(single)_ability_nymph"
    },
    {
-    "slug": "revitalize_nymph"
+    "slug": "revitalize_ability_nymph"
    },
    {
-    "slug": "seduce_nymph"
+    "slug": "seduce_ability_nymph"
    },
    {
     "slug": "defense_mode_warding"
@@ -12325,7 +12328,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "entangle_living_vine"
+    "slug": "living_vine_entangle_ability_living_vine"
    },
    {
     "slug": "defense_mode"
@@ -12408,10 +12411,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_warbreed"
+    "slug": "melee_charge_strike_(base)_ability_warbreed"
    },
    {
-    "slug": "power_cleave_warbreed"
+    "slug": "power_cleave_ability_warbreed"
    },
    {
     "slug": "defense_mode"
@@ -12484,10 +12487,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_chaos_eater"
+    "slug": "magic_bolts_ability_chaos_eater"
    },
    {
-    "slug": "consume_chaos_chaos_eater"
+    "slug": "consume_chaos_ability_chaos_eater"
    },
    {
     "slug": "defense_mode"
@@ -12582,10 +12585,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_gremlin"
+    "slug": "melee_strike_(base)_ability_gremlin"
    },
    {
-    "slug": "behind_you!_gremlin"
+    "slug": "behind_you!_ability_gremlin"
    },
    {
     "slug": "defense_mode"
@@ -12727,13 +12730,13 @@
     "slug": "reinforced"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_bone_horror"
+    "slug": "melee_charge_strike_(base)_ability_bone_horror"
    },
    {
-    "slug": "consume_corpse_bone_horror"
+    "slug": "consume_corpse_ability_bone_horror"
    },
    {
     "slug": "defense_mode"
@@ -12909,10 +12912,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_white_witch"
+    "slug": "magic_bolts_ability_white_witch"
    },
    {
-    "slug": "freezing_blast_white_witch"
+    "slug": "freezing_blast_ability_white_witch"
    },
    {
     "slug": "defense_mode"
@@ -12979,13 +12982,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_necromancer"
+    "slug": "magic_blast_(single)_ability_necromancer"
    },
    {
-    "slug": "strengthen_undead_necromancer"
+    "slug": "strengthen_undead_ability_necromancer"
    },
    {
-    "slug": "raise_undead_necromancer"
+    "slug": "raise_undead_ability_(necromancer)_necromancer"
    },
    {
     "slug": "defense_mode_warding"
@@ -13052,7 +13055,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_spirit_wolf"
+    "slug": "melee_strike_(base)_ability_spirit_wolf"
    },
    {
     "slug": "defense_mode"
@@ -13135,7 +13138,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_spirit_hawk"
+    "slug": "melee_strike_(base)_ability_spirit_hawk"
    },
    {
     "slug": "defense_mode"
@@ -13212,7 +13215,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "demoralizing_charge_strike_tyrant_knight"
+    "slug": "demoralizing_charge_ability_tyrant_knight"
    },
    {
     "slug": "defense_mode"
@@ -13279,13 +13282,13 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "magic_blast_wildspeaker"
+    "slug": "magic_blast_(single)_ability_wildspeaker"
    },
    {
-    "slug": "soothe_animal_wildspeaker"
+    "slug": "soothe_animal_ability_wildspeaker"
    },
    {
-    "slug": "conjure_animal_wildspeaker"
+    "slug": "conjure_animal_ability_wildspeaker"
    },
    {
     "slug": "defense_mode_warding"
@@ -13352,10 +13355,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_entwined_protector"
+    "slug": "melee_strike_(base)_ability_entwined_protector"
    },
    {
-    "slug": "healing_sap_entwined_protector"
+    "slug": "healing_sap_ability_entwined_protector"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -13370,7 +13373,7 @@
    }
   ],
   "description": "",
-  "cost": "120<unitprod></unitprod> 80<gold></gold> ",
+  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "resid": 4514010628985,
   "medal_rewards_3": [
    {
@@ -13447,7 +13450,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "launch_ballista_tower"
+    "slug": "launch_ability_ballista_tower"
    }
   ],
   "medal_rewards_5": [
@@ -13518,7 +13521,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "great_bolt_bolt_repeater_tower"
+    "slug": "great_bolt_ability_bolt_repeater_tower"
    },
    {
     "slug": "defense_mode"
@@ -13588,7 +13591,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "launch_catapult_tower"
+    "slug": "launch_ability_catapult_tower"
    }
   ],
   "medal_rewards_5": [
@@ -13656,7 +13659,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "launch_trebuchet"
+    "slug": "launch_ability_trebuchet"
    }
   ],
   "medal_rewards_5": [
@@ -13717,7 +13720,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_wyvern_fledgling"
+    "slug": "melee_strike_(base)_ability_wyvern_fledgling"
    },
    {
     "slug": "defense_mode"
@@ -13796,13 +13799,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_lost_wizard"
+    "slug": "magic_bolts_ability_lost_wizard"
    },
    {
-    "slug": "forbidden_tome_lost_wizard"
+    "slug": "forbidden_tome_ability_lost_wizard"
    },
    {
-    "slug": "greater_phase_lost_wizard"
+    "slug": "greater_phase_ability_lost_wizard"
    },
    {
     "slug": "defense_mode"
@@ -13891,10 +13894,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_mage_bane"
+    "slug": "melee_strike_(base)_ability_mage_bane"
    },
    {
-    "slug": "devour_mind_mage_bane"
+    "slug": "devour_mind_ability_mage_bane"
    },
    {
     "slug": "defense_mode"
@@ -13974,10 +13977,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_flow_serpent"
+    "slug": "melee_strike_(base)_ability_flow_serpent"
    },
    {
-    "slug": "astral_pursuit_flow_serpent"
+    "slug": "astral_pursuit_ability_flow_serpent"
    },
    {
     "slug": "defense_mode"
@@ -14047,7 +14050,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "melee_strike_townsman"
+    "slug": "melee_strike_(base)_ability_townsman"
    },
    {
     "slug": "defense_mode"
@@ -14111,13 +14114,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_entwined_scourge"
+    "slug": "magic_bolts_ability_entwined_scourge"
    },
    {
-    "slug": "entwine_entwined_scourge"
+    "slug": "entwine_ability_entwined_scourge"
    },
    {
-    "slug": "sap_strength_entwined_scourge"
+    "slug": "sap_strength_ability_entwined_scourge"
    },
    {
     "slug": "defense_mode"
@@ -14206,13 +14209,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_entwined_thrall"
+    "slug": "melee_strike_(base)_ability_entwined_thrall"
    },
    {
-    "slug": "poison_needle_entwined_thrall"
+    "slug": "poison_needle_ability_entwined_thrall"
    },
    {
     "slug": "defense_mode"
@@ -14321,13 +14324,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_bone_dragon"
+    "slug": "melee_strike_(base)_ability_bone_dragon"
    },
    {
-    "slug": "tail_swipe_bone_dragon"
+    "slug": "tail_swipe_ability_bone_dragon"
    },
    {
-    "slug": "putrid_breath_bone_dragon"
+    "slug": "putrid_breath_dragon_ability_bone_dragon"
    },
    {
     "slug": "defense_mode"
@@ -14428,10 +14431,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_phoenix"
+    "slug": "melee_charge_strike_(base)_ability_phoenix"
    },
    {
-    "slug": "overheat_phoenix"
+    "slug": "overheat_ability_phoenix"
    },
    {
     "slug": "defense_mode"
@@ -14507,10 +14510,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_carrion_bird"
+    "slug": "melee_strike_(base)_ability_carrion_bird"
    },
    {
-    "slug": "carrion_feed_carrion_bird"
+    "slug": "carrion_feed_ability_carrion_bird"
    },
    {
     "slug": "defense_mode"
@@ -14577,10 +14580,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_bolts_thunderbird"
+    "slug": "magic_bolts_ability_thunderbird"
    },
    {
-    "slug": "thunderclap_thunderbird"
+    "slug": "thunderclap_ability_thunderbird"
    },
    {
     "slug": "defense_mode"
@@ -14663,7 +14666,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_bone_wyvern"
+    "slug": "melee_strike_(base)_ability_bone_wyvern"
    },
    {
     "slug": "defense_mode"
@@ -14755,7 +14758,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_magma_spirit"
+    "slug": "melee_strike_(base)_ability_magma_spirit"
    },
    {
     "slug": "defense_mode"
@@ -14822,7 +14825,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_magma_spirit"
+    "slug": "melee_strike_(base)_ability_magma_spirit"
    },
    {
     "slug": "defense_mode"
@@ -14889,7 +14892,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_magma_spirit"
+    "slug": "melee_strike_(base)_ability_magma_spirit"
    },
    {
     "slug": "defense_mode"
@@ -14956,7 +14959,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_"
+    "slug": "melee_strike_(base)_ability_"
    },
    {
     "slug": "defense_mode"
@@ -15023,7 +15026,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_"
+    "slug": "melee_strike_(base)_ability_"
    },
    {
     "slug": "defense_mode"
@@ -15090,7 +15093,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_"
+    "slug": "melee_strike_(base)_ability_"
    },
    {
     "slug": "defense_mode"
@@ -15157,7 +15160,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "shoot_bow_scout_unit"
+    "slug": "shoot_bow_ability_scout_unit"
    },
    {
     "slug": "defense_mode"
@@ -15230,13 +15233,13 @@
     "slug": "troll_natural_regeneration"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_river_troll"
+    "slug": "melee_strike_(base)_ability_river_troll"
    },
    {
-    "slug": "razor_net_river_troll"
+    "slug": "razor_net_ability_river_troll"
    },
    {
     "slug": "defense_mode"
@@ -15303,10 +15306,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_brewer_ogre"
+    "slug": "melee_strike_(base)_ability_brewer_ogre"
    },
    {
-    "slug": "drink!_brewer_ogre"
+    "slug": "drink_ability_brewer_ogre"
    },
    {
     "slug": "defense_mode"
@@ -15383,10 +15386,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_storm_spirit"
+    "slug": "melee_charge_strike_(base)_ability_storm_spirit"
    },
    {
-    "slug": "shocking_phase_storm_spirit"
+    "slug": "shocking_phase_ability_storm_spirit"
    },
    {
     "slug": "defense_mode"
@@ -15472,13 +15475,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_stone_spirit"
+    "slug": "melee_strike_(base)_ability_stone_spirit"
    },
    {
-    "slug": "immobilizing_phase_stone_spirit"
+    "slug": "immobilizing_phase_ability_stone_spirit"
    },
    {
-    "slug": "quake_stone_spirit"
+    "slug": "quake_ability_stone_spirit"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -15576,13 +15579,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_magma_spirit"
+    "slug": "magic_bolts_ability_magma_spirit"
    },
    {
-    "slug": "incinerate_magma_spirit"
+    "slug": "incinerate_ability_magma_spirit"
    },
    {
-    "slug": "explosive_phase_magma_spirit"
+    "slug": "explosive_phase_ability_magma_spirit"
    },
    {
     "slug": "defense_mode"
@@ -15665,7 +15668,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_lesser_storm_spirit"
+    "slug": "melee_charge_strike_(base)_ability_lesser_storm_spirit"
    },
    {
     "slug": "defense_mode"
@@ -15744,7 +15747,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_lesser_stone_spirit"
+    "slug": "melee_strike_(base)_ability_lesser_stone_spirit"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -15841,13 +15844,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "heavy_charge_strike_storm_giant"
+    "slug": "heavy_melee_charge_strike_(giants)_ability_storm_giant"
    },
    {
-    "slug": "lightning_strike_storm_giant"
+    "slug": "lightning_strike_ability_storm_giant"
    },
    {
-    "slug": "tempestuous_smash_storm_giant"
+    "slug": "tempestuous_smash_ability_storm_giant"
    },
    {
     "slug": "defense_mode"
@@ -15939,13 +15942,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "heavy_charge_strike_fire_giant"
+    "slug": "heavy_melee_charge_strike_(giants)_ability_fire_giant"
    },
    {
-    "slug": "conjure_runestone_fire_giant"
+    "slug": "conjure_runestone_ability_fire_giant"
    },
    {
-    "slug": "volcanic_smash_fire_giant"
+    "slug": "volcanic_smash_ability_fire_giant"
    },
    {
     "slug": "defense_mode"
@@ -16031,13 +16034,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "heavy_charge_strike_rock_giant"
+    "slug": "heavy_melee_charge_strike_(giants)_ability_rock_giant"
    },
    {
-    "slug": "throw_boulder_rock_giant"
+    "slug": "throw_boulder_ability_rock_giant"
    },
    {
-    "slug": "earthquake_smash_rock_giant"
+    "slug": "earthquake_smash_ability_rock_giant"
    },
    {
     "slug": "defense_mode"
@@ -16104,10 +16107,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_bolts_autumn_fairy"
+    "slug": "magic_bolts_ability_autumn_fairy"
    },
    {
-    "slug": "blinding_gale_autumn_fairy"
+    "slug": "blinding_gale_ability_autumn_fairy"
    },
    {
     "slug": "defense_mode"
@@ -16187,10 +16190,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_blast_summer_fairy"
+    "slug": "magic_blast_(single)_ability_summer_fairy"
    },
    {
-    "slug": "blooming_life_summer_fairy"
+    "slug": "blooming_life_ability_summer_fairy"
    },
    {
     "slug": "defense_mode_warding"
@@ -16270,10 +16273,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_blast_spring_fairy"
+    "slug": "magic_blast_(single)_ability_spring_fairy"
    },
    {
-    "slug": "budding_strength_spring_fairy"
+    "slug": "budding_strength_ability_spring_fairy"
    },
    {
     "slug": "defense_mode_warding"
@@ -16353,10 +16356,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_butcher_ogre"
+    "slug": "melee_strike_(base)_ability_butcher_ogre"
    },
    {
-    "slug": "butchers_cut_butcher_ogre"
+    "slug": "butchers_cut_ability_butcher_ogre"
    },
    {
     "slug": "defense_mode"
@@ -16438,7 +16441,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "manafuel_ward_krazura_crystal"
+    "slug": "krazura_crystal_establish_link_unit_ability_krazura_crystal"
    }
   ],
   "medal_rewards_5": [
@@ -16500,10 +16503,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_scrap_hermit"
+    "slug": "melee_strike_(base)_ability_scrap_hermit"
    },
    {
-    "slug": "acid_spray_scrap_hermit"
+    "slug": "acid_spray_ability_scrap_hermit"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -16595,10 +16598,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "flurry_of_swords_herald_of_war"
+    "slug": "flurry_of_swords_ability_herald_of_war"
    },
    {
-    "slug": "molten_whirlwind_herald_of_war"
+    "slug": "molten_whirlwind_ability_herald_of_war"
    },
    {
     "slug": "defense_mode"
@@ -16703,13 +16706,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_progenitor_golem"
+    "slug": "magic_bolts_ability_progenitor_golem"
    },
    {
-    "slug": "magical_upheaval_progenitor_golem"
+    "slug": "magical_upheaval_ability_progenitor_golem"
    },
    {
-    "slug": "limited_seal_progenitor_golem"
+    "slug": "limited_seal_ability_progenitor_golem"
    },
    {
     "slug": "defense_mode"
@@ -16780,10 +16783,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "shoot_repeater_crossbow_afflictor"
+    "slug": "shoot_repeater_crossbow_ability_afflictor"
    },
    {
-    "slug": "miasma_shot_afflictor"
+    "slug": "miasma_shot_ability_afflictor"
    },
    {
     "slug": "defense_mode"
@@ -16884,10 +16887,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_dragoon"
+    "slug": "melee_strike_(base)_ability_dragoon"
    },
    {
-    "slug": "harrying_shot_dragoon"
+    "slug": "harrying_shot_ability_dragoon"
    },
    {
     "slug": "defense_mode"
@@ -16938,7 +16941,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_decaying_zombie"
+    "slug": "melee_strike_(base)_ability_decaying_zombie"
    },
    {
     "slug": "defense_mode"
@@ -17030,10 +17033,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_young_obsidian_dragon"
+    "slug": "melee_strike_(base)_ability_young_obsidian_dragon"
    },
    {
-    "slug": "tail_swipe_young_obsidian_dragon"
+    "slug": "tail_swipe_ability_young_obsidian_dragon"
    },
    {
     "slug": "defense_mode"
@@ -17116,10 +17119,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_young_golden_dragon"
+    "slug": "melee_strike_(base)_ability_young_golden_dragon"
    },
    {
-    "slug": "tail_swipe_young_golden_dragon"
+    "slug": "tail_swipe_ability_young_golden_dragon"
    },
    {
     "slug": "defense_mode"
@@ -17202,10 +17205,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_young_frost_dragon"
+    "slug": "melee_strike_(base)_ability_young_frost_dragon"
    },
    {
-    "slug": "tail_swipe_young_frost_dragon"
+    "slug": "tail_swipe_ability_young_frost_dragon"
    },
    {
     "slug": "defense_mode"
@@ -17282,7 +17285,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_obsidian_wyvern"
+    "slug": "melee_strike_(base)_ability_obsidian_wyvern"
    },
    {
     "slug": "defense_mode"
@@ -17366,7 +17369,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_gold_wyvern"
+    "slug": "melee_strike_(base)_ability_gold_wyvern"
    },
    {
     "slug": "defense_mode"
@@ -17474,13 +17477,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_obsidian_dragon"
+    "slug": "melee_strike_(base)_ability_obsidian_dragon"
    },
    {
-    "slug": "tail_swipe_obsidian_dragon"
+    "slug": "tail_swipe_ability_obsidian_dragon"
    },
    {
-    "slug": "lightning_breath_obsidian_dragon"
+    "slug": "lightning_breath_dragon_ability_obsidian_dragon"
    },
    {
     "slug": "defense_mode"
@@ -17588,13 +17591,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_golden_dragon"
+    "slug": "melee_strike_(base)_ability_golden_dragon"
    },
    {
-    "slug": "tail_swipe_golden_dragon"
+    "slug": "tail_swipe_ability_golden_dragon"
    },
    {
-    "slug": "purifying_breath_golden_dragon"
+    "slug": "purifying_breath_dragon_ability_golden_dragon"
    },
    {
     "slug": "defense_mode"
@@ -17684,10 +17687,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_young_fire_dragon"
+    "slug": "melee_strike_(base)_ability_young_fire_dragon"
    },
    {
-    "slug": "tail_swipe_young_fire_dragon"
+    "slug": "tail_swipe_ability_young_fire_dragon"
    },
    {
     "slug": "defense_mode"
@@ -17757,10 +17760,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "shoot_bow_zephyr_archer"
+    "slug": "shoot_bow_ability_zephyr_archer"
    },
    {
-    "slug": "zephyr_shot_zephyr_archer"
+    "slug": "zephyr_shot_ability_zephyr_archer"
    },
    {
     "slug": "defense_mode"
@@ -17833,13 +17836,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_blessed_soul"
+    "slug": "melee_strike_(base)_ability_blessed_soul"
    },
    {
-    "slug": "archons_smite_blessed_soul"
+    "slug": "archons_smite_ability_blessed_soul"
    },
    {
-    "slug": "beacon_of_hope_blessed_soul"
+    "slug": "beacon_of_hope_ability_blessed_soul"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -17931,10 +17934,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_corrupt_soul"
+    "slug": "melee_strike_(base)_ability_corrupt_soul"
    },
    {
-    "slug": "crushing_anguish_corrupt_soul"
+    "slug": "crushing_anguish_ability_corrupt_soul"
    },
    {
     "slug": "defense_mode"
@@ -18035,13 +18038,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_kraken"
+    "slug": "melee_strike_(base)_ability_kraken"
    },
    {
-    "slug": "tentacle_vortex_kraken"
+    "slug": "tentacle_vortex_ability_kraken"
    },
    {
-    "slug": "pull_of_the_deep_kraken"
+    "slug": "pull_of_the_deep_ability_kraken"
    },
    {
     "slug": "defense_mode"
@@ -18111,7 +18114,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_kraken_spawn"
+    "slug": "melee_strike_(base)_ability_kraken_spawn"
    },
    {
     "slug": "defense_mode"
@@ -18198,10 +18201,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_shrine_of_smiting"
+    "slug": "smiting_prayer_blast_ability_shrine_of_smiting"
    },
    {
-    "slug": "divine_vengeance_shrine_of_smiting"
+    "slug": "divine_vengence_ability_shrine_of_smiting"
    },
    {
     "slug": "defense_mode"
@@ -18302,7 +18305,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "provide_sanctuary_healing_spire"
+    "slug": "provide_sanctuary_ability_healing_spire"
    }
   ],
   "medal_rewards_5": [
@@ -18375,7 +18378,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "divine_beacons_grace_divine_beacon"
+    "slug": "divine_beacons_grace_ability_divine_beacon"
    },
    {
     "slug": "defense_mode"
@@ -18442,10 +18445,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_bolts_lightbringer"
+    "slug": "magic_bolts_ability_lightbringer"
    },
    {
-    "slug": "convert_lightbringer"
+    "slug": "convert_ability_lightbringer"
    },
    {
     "slug": "defense_mode"
@@ -18543,13 +18546,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_reaper"
+    "slug": "melee_strike_(base)_ability_reaper"
    },
    {
-    "slug": "finger_of_death_reaper"
+    "slug": "finger_of_death_ability_reaper"
    },
    {
-    "slug": "greater_corpse_consumption_reaper"
+    "slug": "greater_consume_corpse_ability_reaper"
    },
    {
     "slug": "defense_mode"
@@ -18650,7 +18653,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_skeleton_polearm"
+    "slug": "melee_strike_(base)_ability_skeleton_polearm"
    },
    {
     "slug": "defense_mode"
@@ -18690,7 +18693,7 @@
   "upkeep": "8<gold></gold> ",
   "id": "skeleton_polearm",
   "name": "Skeleton Polearm",
-  "hp": 65,
+  "hp": 60,
   "armor": 2,
   "resistance": 1,
   "medal_rewards_2": [
@@ -18733,7 +18736,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_zombie"
+    "slug": "melee_strike_(base)_ability_zombie"
    },
    {
     "slug": "defense_mode"
@@ -18822,13 +18825,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_banshee"
+    "slug": "magic_bolts_ability_banshee"
    },
    {
-    "slug": "weakening_phase_banshee"
+    "slug": "weakening_phase_ability_banshee"
    },
    {
-    "slug": "wail_of_the_banshee_banshee"
+    "slug": "wail_of_the_banshee_ability_banshee"
    },
    {
     "slug": "defense_mode"
@@ -18913,7 +18916,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_dire_penguin"
+    "slug": "melee_strike_(base)_ability_dire_penguin"
    },
    {
     "slug": "defense_mode"
@@ -18986,13 +18989,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_astral_keeper"
+    "slug": "magic_blast_(single)_ability_astral_keeper"
    },
    {
-    "slug": "astral_blessing_astral_keeper"
+    "slug": "astral_blessing_ability_astral_keeper"
    },
    {
-    "slug": "shatter_self_astral_keeper"
+    "slug": "shatter_self_ability_astral_keeper"
    },
    {
     "slug": "defense_mode_warding"
@@ -19069,10 +19072,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_astral_serpent"
+    "slug": "melee_strike_(base)_ability_astral_serpent"
    },
    {
-    "slug": "shattering_refuge_astral_serpent"
+    "slug": "shattering_refuge_ability_astral_serpent"
    },
    {
     "slug": "defense_mode"
@@ -19158,10 +19161,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_watcher"
+    "slug": "magic_bolts_ability_watcher"
    },
    {
-    "slug": "psychic_gaze_watcher"
+    "slug": "psychic_gaze_ability_watcher"
    },
    {
     "slug": "defense_mode"
@@ -19241,7 +19244,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_phantasm_warrior"
+    "slug": "melee_strike_(base)_ability_phantasm_warrior"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -19345,10 +19348,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "gilded_cleave_golden_golem"
+    "slug": "gilded_cleave_ability_golden_golem"
    },
    {
-    "slug": "strike_gold_golden_golem"
+    "slug": "strike_gold_ability_golden_golem"
    },
    {
     "slug": "defense_mode"
@@ -19428,7 +19431,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "great_bolt_bolt_repeater"
+    "slug": "great_bolt_ability_bolt_repeater"
    },
    {
     "slug": "defense_mode"
@@ -19498,7 +19501,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_iron_golem_assistant"
+    "slug": "melee_strike_(base)_ability_iron_golem_assistant"
    },
    {
     "slug": "defense_mode"
@@ -19581,7 +19584,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_iron_golem"
+    "slug": "melee_strike_(base)_ability_iron_golem"
    },
    {
     "slug": "defense_mode_protective_wall"
@@ -19648,7 +19651,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_gargoyle"
+    "slug": "melee_charge_strike_(base)_ability_gargoyle"
    },
    {
     "slug": "defense_mode_turn_to_stone"
@@ -19737,10 +19740,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_caustic_worm"
+    "slug": "melee_charge_strike_(base)_ability_(caustic_worm_only)_caustic_worm"
    },
    {
-    "slug": "caustic_eruption_caustic_worm"
+    "slug": "caustic_eruption_ability_caustic_worm"
    },
    {
     "slug": "defense_mode"
@@ -19809,7 +19812,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_young_caustic_worm"
+    "slug": "melee_charge_strike_(base)_ability_young_caustic_worm"
    },
    {
     "slug": "defense_mode"
@@ -19874,10 +19877,10 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "shoot_crossbow_houndmaster"
+    "slug": "weak_point_shot_ability_houndmaster"
    },
    {
-    "slug": "call_war_hound_houndmaster"
+    "slug": "call_war_hound_ability_houndmaster"
    },
    {
     "slug": "defense_mode"
@@ -20020,16 +20023,16 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_druid_of_the_cycle"
+    "slug": "magic_blast_(single)_ability_druid_of_the_cycle"
    },
    {
-    "slug": "restart_the_cycle_druid_of_the_cycle"
+    "slug": "restart_the_cycle_ability_druid_of_the_cycle"
    },
    {
-    "slug": "cycles_end_druid_of_the_cycle"
+    "slug": "cycles_end_ability_druid_of_the_cycle"
    },
    {
-    "slug": "sacrificial_blight_druid_of_the_cycle"
+    "slug": "sacrificial_blight_ability_druid_of_the_cycle"
    },
    {
     "slug": "defense_mode_warding"
@@ -20109,10 +20112,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "shoot_bow_glade_runner"
+    "slug": "shoot_bow_ability_glade_runner"
    },
    {
-    "slug": "trackers_mark_glade_runner"
+    "slug": "trackers_mark_ability_glade_runner"
    },
    {
     "slug": "defense_mode"
@@ -20179,13 +20182,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_lesser_snow_spirit"
+    "slug": "melee_strike_(base)_ability_lesser_snow_spirit"
    },
    {
-    "slug": "lesser_freezing_burst_lesser_snow_spirit"
+    "slug": "lesser_freezing_burst_ability_lesser_snow_spirit"
    },
    {
     "slug": "defense_mode"
@@ -20270,16 +20273,16 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_snow_spirit"
+    "slug": "melee_strike_(base)_ability_snow_spirit"
    },
    {
-    "slug": "freezing_burst_snow_spirit"
+    "slug": "freezing_burst_ability_snow_spirit"
    },
    {
-    "slug": "freezing_phase_snow_spirit"
+    "slug": "freezing_phase_ability_snow_spirit"
    },
    {
     "slug": "defense_mode"
@@ -20365,7 +20368,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_inferno_puppy"
+    "slug": "melee_strike_(base)_ability_inferno_puppy"
    },
    {
     "slug": "defense_mode"
@@ -20465,13 +20468,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_balor"
+    "slug": "melee_strike_(base)_ability_balor"
    },
    {
-    "slug": "chaos_brand_balor"
+    "slug": "chaos_brand_ability_balor"
    },
    {
-    "slug": "sunder_the_earth_balor"
+    "slug": "sunder_earth_ability_balor"
    },
    {
     "slug": "defense_mode"
@@ -20553,13 +20556,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "heat_of_the_revel_skald"
+    "slug": "heat_of_the_revel_ability_skald"
    },
    {
-    "slug": "song_of_revelry_skald"
+    "slug": "song_of_revelry_ability_skald"
    },
    {
-    "slug": "song_of_carnage_skald"
+    "slug": "song_of_carnage_ability_skald"
    },
    {
     "slug": "defense_mode_warding"
@@ -20639,7 +20642,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "charge_strike_war_hound"
+    "slug": "melee_charge_strike_(base)_ability_war_hound"
    },
    {
     "slug": "defense_mode"
@@ -20709,7 +20712,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "boat_ballista_ballista_warship"
+    "slug": "boat_ballista_ability_ballista_warship"
    },
    {
     "slug": "defense_mode"
@@ -20779,7 +20782,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "charge_strike_ram_warship"
+    "slug": "melee_charge_strike_(base)_ability_(ram_warship_only)_ram_warship"
    },
    {
     "slug": "defense_mode"
@@ -20849,7 +20852,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_astral_wisp"
+    "slug": "magic_bolts_ability_astral_wisp"
    },
    {
     "slug": "defense_mode"
@@ -20936,10 +20939,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_spellbreaker_attunement"
+    "slug": "magic_bolts_ability_spellbreaker_attunement"
    },
    {
-    "slug": "star_purge_spellbreaker_attunement"
+    "slug": "star_purge_ability_spellbreaker_attunement"
    },
    {
     "slug": "defense_mode"
@@ -21011,10 +21014,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_spellshield_attunement"
+    "slug": "melee_strike_(base)_ability_spellshield_attunement"
    },
    {
-    "slug": "stunning_flash_spellshield_attunement"
+    "slug": "stunning_flash_ability_spellshield_attunement"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -21083,10 +21086,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_spellshield_potential"
+    "slug": "melee_strike_(base)_ability_spellshield_potential"
    },
    {
-    "slug": "stunning_flash_spellshield_potential"
+    "slug": "stunning_flash_ability_spellshield_potential"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -21158,10 +21161,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_spellshield_summoning"
+    "slug": "melee_strike_(base)_ability_spellshield_summoning"
    },
    {
-    "slug": "stunning_flash_spellshield_summoning"
+    "slug": "stunning_flash_ability_spellshield_summoning"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -21233,10 +21236,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_soother_attunement"
+    "slug": "magic_blast_(single)_ability_soother_attunement"
    },
    {
-    "slug": "soothing_breeze_soother_attunement"
+    "slug": "soothing_breeze_ability_soother_attunement"
    },
    {
     "slug": "defense_mode_warding"
@@ -21302,10 +21305,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_soother_potential"
+    "slug": "magic_blast_(single)_ability_soother_potential"
    },
    {
-    "slug": "soothing_breeze_soother_potential"
+    "slug": "soothing_breeze_ability_soother_potential"
    },
    {
     "slug": "defense_mode_warding"
@@ -21374,10 +21377,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_soother_summoning"
+    "slug": "magic_blast_(single)_ability_soother_summoning"
    },
    {
-    "slug": "soothing_breeze_soother_summoning"
+    "slug": "soothing_breeze_ability_soother_summoning"
    },
    {
     "slug": "defense_mode_warding"
@@ -21449,7 +21452,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_arcane_guard_attunement"
+    "slug": "melee_strike_(base)_ability_arcane_guard_attunement"
    },
    {
     "slug": "defense_mode"
@@ -21518,7 +21521,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_arcane_guard_potential"
+    "slug": "melee_strike_(base)_ability_arcane_guard_potential"
    },
    {
     "slug": "defense_mode"
@@ -21590,7 +21593,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_arcane_guard_summoning"
+    "slug": "melee_strike_(base)_ability_arcane_guard_summoning"
    },
    {
     "slug": "defense_mode"
@@ -21656,7 +21659,7 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_arcanist_attunement"
+    "slug": "magic_bolts_ability_arcanist_attunement"
    },
    {
     "slug": "defense_mode"
@@ -21718,7 +21721,7 @@
   "primary_passives": [],
   "abilities": [
    {
-    "slug": "magic_bolts_arcanist_potential"
+    "slug": "magic_bolts_ability_arcanist_potential"
    },
    {
     "slug": "defense_mode"
@@ -21784,7 +21787,7 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_arcanist_summoning"
+    "slug": "magic_bolts_ability_arcanist_summoning"
    },
    {
     "slug": "defense_mode"
@@ -21860,7 +21863,7 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_mystic_projection_attunement"
+    "slug": "magic_bolts_ability_mystic_projection_attunement"
    },
    {
     "slug": "defense_mode"
@@ -21936,7 +21939,7 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_mystic_projection_potential"
+    "slug": "magic_bolts_ability_mystic_projection_potential"
    },
    {
     "slug": "defense_mode"
@@ -22015,7 +22018,7 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_mystic_projection_summoning"
+    "slug": "magic_bolts_ability_mystic_projection_summoning"
    },
    {
     "slug": "defense_mode"
@@ -22094,10 +22097,10 @@
   ],
   "abilities": [
    {
-    "slug": "charge_strike_dark_knight"
+    "slug": "melee_charge_strike_(base)_ability_dark_knight"
    },
    {
-    "slug": "dark_surge_dark_knight"
+    "slug": "dark_surge_ability_dark_knight"
    },
    {
     "slug": "defense_mode"
@@ -22174,7 +22177,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_night_guard"
+    "slug": "melee_strike_(base)_ability_night_guard"
    },
    {
     "slug": "defense_mode"
@@ -22239,10 +22242,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_warlock"
+    "slug": "magic_bolts_ability_warlock"
    },
    {
-    "slug": "sundering_curse_warlock"
+    "slug": "sundering_curse_ability_warlock"
    },
    {
     "slug": "defense_mode"
@@ -22307,7 +22310,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_pursuer"
+    "slug": "shoot_bow_ability_pursuer"
    },
    {
     "slug": "defense_mode"
@@ -22375,7 +22378,7 @@
   ],
   "abilities": [
    {
-    "slug": "charge_strike_dark_warrior"
+    "slug": "melee_charge_strike_(base)_ability_dark_warrior"
    },
    {
     "slug": "defense_mode"
@@ -22443,7 +22446,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_outrider"
+    "slug": "shoot_bow_ability_outrider"
    },
    {
     "slug": "defense_mode"
@@ -22526,13 +22529,13 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_bastion"
+    "slug": "melee_strike_(base)_ability_bastion"
    },
    {
-    "slug": "inspiring_defense_bastion"
+    "slug": "inspiring_defense_property_ability_bastion"
    },
    {
-    "slug": "defensive_sweep_bastion"
+    "slug": "defensive_sweep_ability_bastion"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -22612,7 +22615,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_halberdier"
+    "slug": "melee_strike_(base)_ability_halberdier"
    },
    {
     "slug": "defense_mode"
@@ -22677,13 +22680,13 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_steelshaper"
+    "slug": "magic_blast_(single)_ability_steelshaper"
    },
    {
-    "slug": "strength_from_steel_steelshaper"
+    "slug": "strength_of_steel_property_ability_steelshaper"
    },
    {
-    "slug": "grant_defense_steelshaper"
+    "slug": "transfer_defense_property_ability_steelshaper"
    },
    {
     "slug": "defense_mode_warding"
@@ -22748,10 +22751,10 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_crossbow_arbalest"
+    "slug": "shoot_crossbow_ability_arbalest"
    },
    {
-    "slug": "overdraw_crossbow_arbalest"
+    "slug": "overdraw_crossbow_ability_arbalest"
    },
    {
     "slug": "defense_mode"
@@ -22825,10 +22828,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_anvil_guard"
+    "slug": "melee_strike_(base)_ability_anvil_guard"
    },
    {
-    "slug": "taunt_anvil_guard"
+    "slug": "taunt_unit_property_ability_anvil_guard"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -22893,7 +22896,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_crossbow_pioneer"
+    "slug": "shoot_crossbow_ability_pioneer"
    },
    {
     "slug": "defense_mode"
@@ -22964,13 +22967,13 @@
   ],
   "abilities": [
    {
-    "slug": "magic_bolts_awakener"
+    "slug": "magic_bolts_ability_awakener"
    },
    {
-    "slug": "awaken_awakener"
+    "slug": "awaken_ability_awakener"
    },
    {
-    "slug": "exposing_light_awakener"
+    "slug": "exposing_light_ability_awakener"
    },
    {
     "slug": "defense_mode"
@@ -23038,7 +23041,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_dusk_hunter"
+    "slug": "shoot_bow_ability_dusk_hunter"
    },
    {
     "slug": "defense_mode"
@@ -23103,13 +23106,13 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_sun_priest"
+    "slug": "magic_blast_(single)_ability_sun_priest"
    },
    {
-    "slug": "twin_awakening_sun_priest"
+    "slug": "twin_awaken_ability_sun_priest"
    },
    {
-    "slug": "mending_awakening_sun_priest"
+    "slug": "mending_awakening_ability_sun_priest"
    },
    {
     "slug": "defense_mode_warding"
@@ -23177,7 +23180,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_dawn_defender"
+    "slug": "melee_strike_(base)_ability_dawn_defender"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -23251,7 +23254,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_daylight_spear"
+    "slug": "melee_strike_(base)_ability_daylight_spear"
    },
    {
     "slug": "defense_mode"
@@ -23316,7 +23319,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_lightseeker"
+    "slug": "shoot_bow_ability_lightseeker"
    },
    {
     "slug": "defense_mode"
@@ -23390,7 +23393,7 @@
   ],
   "abilities": [
    {
-    "slug": "charge_strike_berserker"
+    "slug": "melee_charge_strike_(base)_ability_berserker"
    },
    {
     "slug": "defense_mode"
@@ -23455,10 +23458,10 @@
   ],
   "abilities": [
    {
-    "slug": "magic_blast_war_shaman"
+    "slug": "magic_blast_(single)_ability_war_shaman"
    },
    {
-    "slug": "invigorate_war_shaman"
+    "slug": "invigorate_ability_war_shaman"
    },
    {
     "slug": "defense_mode_warding"
@@ -23526,7 +23529,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_fury"
+    "slug": "shoot_bow_ability_fury"
    },
    {
     "slug": "defense_mode"
@@ -23597,10 +23600,10 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_warrior"
+    "slug": "melee_strike_(base)_ability_warrior"
    },
    {
-    "slug": "shield_bash_warrior"
+    "slug": "shield_bash_ability_warrior"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -23674,16 +23677,16 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_sunderer"
+    "slug": "melee_strike_(base)_ability_sunderer"
    },
    {
-    "slug": "throw_sunderer"
+    "slug": "throw_(base)_ability_sunderer"
    },
    {
     "slug": "defense_mode"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "hp": 60,
   "armor": 1,
   "resistance": 1,
@@ -23748,7 +23751,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_pathfinder"
+    "slug": "shoot_bow_ability_pathfinder"
    },
    {
     "slug": "defense_mode"
@@ -23828,7 +23831,7 @@
   ],
   "abilities": [
    {
-    "slug": "charge_strike_knight"
+    "slug": "melee_charge_strike_(base)_ability_knight"
    },
    {
     "slug": "defense_mode"
@@ -23902,7 +23905,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_defender"
+    "slug": "melee_strike_(base)_ability_defender"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -23970,13 +23973,13 @@
   ],
   "abilities": [
    {
-    "slug": "banner_smite_bannerman"
+    "slug": "banner_smite_ability_bannerman"
    },
    {
-    "slug": "bulwark_standard_bannerman"
+    "slug": "bulwark_standard_ability_bannerman"
    },
    {
-    "slug": "soothing_standard_bannerman"
+    "slug": "soothing_standard_ability_bannerman"
    },
    {
     "slug": "defense_mode_warding"
@@ -24041,7 +24044,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_archer"
+    "slug": "shoot_bow_ability_archer"
    },
    {
     "slug": "defense_mode"
@@ -24112,7 +24115,7 @@
   ],
   "abilities": [
    {
-    "slug": "shoot_bow_scout"
+    "slug": "shoot_bow_ability_scout"
    },
    {
     "slug": "defense_mode"
@@ -24192,7 +24195,7 @@
   ],
   "abilities": [
    {
-    "slug": "melee_strike_peasant_pikeman"
+    "slug": "melee_strike_(base)_ability_peasant_pikeman"
    },
    {
     "slug": "defense_mode"
@@ -24236,10 +24239,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "magic_bolts_winter_fairy"
+    "slug": "magic_bolts_ability_winter_fairy"
    },
    {
-    "slug": "hindering_blizzard_winter_fairy"
+    "slug": "hindering_blizzard_ability_winter_fairy"
    },
    {
     "slug": "defense_mode"
@@ -24315,7 +24318,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_grimbeak_crow"
+    "slug": "melee_strike_(base)_ability_grimbeak_crow"
    },
    {
     "slug": "defense_mode"
@@ -24403,13 +24406,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "reclaiming_bolt_horned_god"
+    "slug": "reclaiming_bolt_ability_horned_god"
    },
    {
-    "slug": "wild_eruption_horned_god"
+    "slug": "wild_eruption_ability_horned_god"
    },
    {
-    "slug": "animate_flora_horned_god"
+    "slug": "awaken_flora_ability_horned_god"
    },
    {
     "slug": "defense_mode"
@@ -24507,7 +24510,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_fire_wyvern"
+    "slug": "melee_strike_(base)_ability_fire_wyvern"
    },
    {
     "slug": "defense_mode"
@@ -24596,10 +24599,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_frost_wyvern"
+    "slug": "melee_strike_(base)_ability_frost_wyvern"
    },
    {
-    "slug": "freezing_burst_frost_wyvern"
+    "slug": "freezing_burst_ability_frost_wyvern"
    },
    {
     "slug": "defense_mode"
@@ -24706,13 +24709,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_frost_dragon"
+    "slug": "melee_strike_(base)_ability_frost_dragon"
    },
    {
-    "slug": "tail_swipe_frost_dragon"
+    "slug": "tail_swipe_ability_frost_dragon"
    },
    {
-    "slug": "frost_breath_frost_dragon"
+    "slug": "frost_breath_dragon_ability_frost_dragon"
    },
    {
     "slug": "defense_mode"
@@ -24795,7 +24798,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_lesser_tide_spirit"
+    "slug": "melee_strike_(base)_ability_lesser_tide_spirit"
    },
    {
     "slug": "defense_mode"
@@ -24883,13 +24886,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_tide_spirit"
+    "slug": "melee_strike_(base)_ability_tide_spirit"
    },
    {
-    "slug": "tidal_wave_tide_spirit"
+    "slug": "tidal_wave_ability_tide_spirit"
    },
    {
-    "slug": "drenching_phase_tide_spirit"
+    "slug": "drenching_phase_ability_tide_spirit"
    },
    {
     "slug": "defense_mode"
@@ -24978,7 +24981,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_shock_unit"
+    "slug": "melee_charge_strike_(base)_ability_shock_unit"
    },
    {
     "slug": "defense_mode"
@@ -25112,7 +25115,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_inferno_hound"
+    "slug": "melee_strike_(base)_ability_inferno_hound"
    },
    {
     "slug": "defense_mode"
@@ -25198,7 +25201,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_warg"
+    "slug": "melee_strike_(base)_ability_warg"
    },
    {
     "slug": "defense_mode"
@@ -25271,10 +25274,10 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "melee_strike_white_wolf"
+    "slug": "melee_strike_(base)_ability_white_wolf"
    },
    {
-    "slug": "enfeebling_howl_white_wolf"
+    "slug": "enfeebling_howl_ability_white_wolf"
    },
    {
     "slug": "defense_mode"
@@ -25354,16 +25357,16 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_vampire_spider_matriarch"
+    "slug": "melee_strike_(base)_ability_vampire_spider_matriarch"
    },
    {
-    "slug": "barbed_webs_vampire_spider_matriarch"
+    "slug": "barbed_webs_ability_vampire_spider_matriarch"
    },
    {
-    "slug": "spawn_hatchling_vampire_spider_matriarch"
+    "slug": "spawn_hatchling_vampire_ability_vampire_spider_matriarch"
    },
    {
     "slug": "defense_mode"
@@ -25443,10 +25446,10 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_vampire_spider_hatchling"
+    "slug": "melee_strike_(base)_ability_vampire_spider_hatchling"
    },
    {
     "slug": "defense_mode"
@@ -25525,16 +25528,16 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_dread_spider_matriarch"
+    "slug": "melee_strike_(base)_ability_dread_spider_matriarch"
    },
    {
-    "slug": "web_dread_spider_matriarch"
+    "slug": "web_ability_dread_spider_matriarch"
    },
    {
-    "slug": "spawn_hatchling_dread_spider_matriarch"
+    "slug": "spawn_hatchling_dread_ability_dread_spider_matriarch"
    },
    {
     "slug": "defense_mode"
@@ -25614,10 +25617,10 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_dread_spider_hatchling"
+    "slug": "melee_strike_(base)_ability_dread_spider_hatchling"
    },
    {
     "slug": "defense_mode"
@@ -25696,16 +25699,16 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_hunter_spider_matriarch"
+    "slug": "melee_strike_(base)_ability_hunter_spider_matriarch"
    },
    {
-    "slug": "jump_hunter_spider_matriarch"
+    "slug": "jump_ability_hunter_spider_matriarch"
    },
    {
-    "slug": "web_hunter_spider_matriarch"
+    "slug": "web_ability_hunter_spider_matriarch"
    },
    {
     "slug": "defense_mode"
@@ -25791,16 +25794,16 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_hunter_spider"
+    "slug": "melee_strike_(base)_ability_hunter_spider"
    },
    {
-    "slug": "jump_hunter_spider"
+    "slug": "jump_ability_hunter_spider"
    },
    {
-    "slug": "web_hunter_spider"
+    "slug": "web_ability_hunter_spider"
    },
    {
     "slug": "defense_mode"
@@ -25888,13 +25891,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_ice_spider_matriarch"
+    "slug": "melee_strike_(base)_ability_ice_spider_matriarch"
    },
    {
-    "slug": "frozen_web_ice_spider_matriarch"
+    "slug": "frozen_webs_ability_ice_spider_matriarch"
    },
    {
     "slug": "defense_mode"
@@ -25980,13 +25983,13 @@
     "slug": "swift"
    }
   ],
-  "mp": 32,
+  "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_ice_spider"
+    "slug": "melee_strike_(base)_ability_ice_spider"
    },
    {
-    "slug": "frozen_web_ice_spider"
+    "slug": "frozen_webs_ability_ice_spider"
    },
    {
     "slug": "defense_mode"
@@ -26071,10 +26074,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_pyromancer"
+    "slug": "magic_bolts_ability_pyromancer"
    },
    {
-    "slug": "flamestrike_pyromancer"
+    "slug": "flamestrike_ability_pyromancer"
    },
    {
     "slug": "defense_mode"
@@ -26145,13 +26148,13 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_blast_chaplain"
+    "slug": "magic_blast_(single)_ability_chaplain"
    },
    {
-    "slug": "bless_chaplain"
+    "slug": "bless_ability_chaplain"
    },
    {
-    "slug": "healing_prayer_chaplain"
+    "slug": "healing_prayer_ability_chaplain"
    },
    {
     "slug": "defense_mode_warding"
@@ -26236,7 +26239,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "magic_blast_fire_runestone"
+    "slug": "magic_blast_(single)_ability_fire_runestone"
    },
    {
     "slug": "defense_mode"
@@ -26316,13 +26319,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_karagh"
+    "slug": "melee_charge_strike_(base)_ability_karagh"
    },
    {
-    "slug": "bone-shattering_howl_karagh"
+    "slug": "bone_shattering_howl_ability_karagh"
    },
    {
-    "slug": "terrifying_gorging_karagh"
+    "slug": "terrifying_gorging_ability_karagh"
    },
    {
     "slug": "defense_mode"
@@ -26392,10 +26395,10 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_mirror_mimic"
+    "slug": "melee_strike_(base)_ability_mirror_mimic"
    },
    {
-    "slug": "mimic_mirror_mimic"
+    "slug": "mimic_unit_property_ability_mirror_mimic"
    },
    {
     "slug": "defense_mode"
@@ -26465,7 +26468,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "quillshot_razorback"
+    "slug": "quillshot_unit_property_ability_razorback"
    },
    {
     "slug": "defense_mode"
@@ -26531,7 +26534,7 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_goretusk_piglet"
+    "slug": "melee_charge_strike_(base)_ability_goretusk_piglet"
    },
    {
     "slug": "defense_mode"
@@ -26603,10 +26606,10 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "charge_strike_goretusk_matriarch"
+    "slug": "melee_charge_strike_(base)_ability_goretusk_matriarch"
    },
    {
-    "slug": "violent_gorging_goretusk_matriarch"
+    "slug": "violent_gorging_unit_property_ability_goretusk_matriarch"
    },
    {
     "slug": "defense_mode"
@@ -26679,7 +26682,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_stormscale_serpent"
+    "slug": "melee_strike_(base)_ability_stormscale_serpent"
    },
    {
     "slug": "defense_mode"
@@ -26753,7 +26756,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_plague_serpent"
+    "slug": "melee_strike_(base)_ability_plague_serpent"
    },
    {
     "slug": "defense_mode"
@@ -26830,10 +26833,10 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "charge_strike_unicorn"
+    "slug": "melee_charge_strike_(base)_ability_unicorn"
    },
    {
-    "slug": "phase_unicorn"
+    "slug": "phase_unicorn_ability_unicorn"
    },
    {
     "slug": "defense_mode"
@@ -26931,7 +26934,7 @@
   "mp": 48,
   "abilities": [
    {
-    "slug": "charge_strike_nightmare"
+    "slug": "melee_charge_strike_(base)_ability_nightmare"
    },
    {
     "slug": "defense_mode"
@@ -27095,13 +27098,13 @@
   "mp": 40,
   "abilities": [
    {
-    "slug": "melee_strike_fire_dragon"
+    "slug": "melee_strike_(base)_ability_fire_dragon"
    },
    {
-    "slug": "tail_swipe_fire_dragon"
+    "slug": "tail_swipe_ability_fire_dragon"
    },
    {
-    "slug": "fire_breath_fire_dragon"
+    "slug": "fire_breath_dragon_ability_fire_dragon"
    },
    {
     "slug": "defense_mode"
@@ -27187,7 +27190,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "magic_bolts_lesser_magma_spirit"
+    "slug": "magic_bolts_ability_lesser_magma_spirit"
    },
    {
     "slug": "defense_mode"
@@ -27333,7 +27336,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_skirmisher_unit"
+    "slug": "melee_strike_(base)_ability_skirmisher_unit"
    },
    {
     "slug": "defense_mode"
@@ -27400,7 +27403,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_polearm_unit"
+    "slug": "melee_strike_(base)_ability_polearm_unit"
    },
    {
     "slug": "defense_mode"
@@ -27467,7 +27470,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "charge_strike_shock_unit"
+    "slug": "melee_charge_strike_(base)_ability_shock_unit"
    },
    {
     "slug": "defense_mode"
@@ -27598,7 +27601,7 @@
   "mp": 32,
   "abilities": [
    {
-    "slug": "melee_strike_shield_unit"
+    "slug": "melee_strike_(base)_ability_shield_unit"
    },
    {
     "slug": "defense_mode_shield_wall"
@@ -27671,7 +27674,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "launch_onager"
+    "slug": "launch_ability_onager"
    }
   ],
   "medal_rewards_5": [
@@ -27735,7 +27738,7 @@
   "mp": 16,
   "abilities": [
    {
-    "slug": "launch_ballista"
+    "slug": "launch_ability_ballista"
    },
    {
     "slug": "defense_mode"

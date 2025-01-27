@@ -156,16 +156,16 @@
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Eagle mount.</helpcolor>",
   "biography_description": "They soar through the skies on giant eagles.",
-  "point_cost": 7,
+  "point_cost": 8,
   "id": "eagle_mounts",
   "name": "Eagle Mounts",
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "Gain Flying movement."
    },
    {
-    "name": "Gain Flying movement."
+    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -179,7 +179,7 @@
   "front_end": true,
   "icon": "eagle_mounts",
   "type": "form",
-  "display_order": 2
+  "display_order": 1
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common</helpcolor>",
@@ -535,16 +535,16 @@
   "biography_description": "They soar through the sky on majestic Pegasi.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Pegasus mount.</helpcolor>",
   "DLC": "HERALDOFGLORY ",
-  "point_cost": 7,
+  "point_cost": 8,
   "id": "pegasus_mounts",
   "name": "Pegasus Mounts",
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "Gain Flying movement."
    },
    {
-    "name": "Gain Flying movement."
+    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -558,7 +558,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "pegasus_mounts",
-  "display_order": 2
+  "display_order": 1
  },
  {
   "biography_description": "They have tamed the tunneling Death Beetles.",
@@ -619,9 +619,6 @@
   "front_end": true,
   "display_order": 5,
   "starting_bonuses": [
-   {
-    "empire_progression_slug": "forced_march"
-   },
    {
     "description": "Start with an extra Scout Unit."
    }
@@ -868,6 +865,11 @@
   "group_name": "",
   "front_end": true,
   "display_order": 4,
+  "starting_bonuses": [
+   {
+    "description": "100<influence></influence> "
+   }
+  ],
   "icon": "hermit_kingdom"
  },
  {
@@ -935,16 +937,16 @@
   "biography_description": "They soar through the skies on grand blessed dragons.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Blessed Dragon mount.</helpcolor>",
   "DLC": "WAYSOFWAR ",
-  "point_cost": 7,
+  "point_cost": 8,
   "id": "blessed_dragon_mounts",
   "name": "Blessed Dragon Mounts",
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "Gain Flying movement."
    },
    {
-    "name": "Gain Flying movement."
+    "name": "Decreased number of units in formation."
    },
    {
     "name": "Additional units become Cavalry"
@@ -958,7 +960,7 @@
   "group_name": "MOUNT",
   "front_end": true,
   "icon": "blessed_dragon_mounts",
-  "display_order": 2
+  "display_order": 1
  },
  {
   "affinities": [
@@ -1583,7 +1585,7 @@
  {
   "lore_description": "<helpcolor>Units become tougher when standing next to allies.</helpcolor>",
   "biography_description": "They have trained to cover any gaps in their defensive formations.",
-  "point_cost": 4,
+  "point_cost": 3,
   "id": "defensive_tactics",
   "name": "Defensive Tactics",
   "screen_description": "",
@@ -1597,7 +1599,7 @@
   "front_end": true,
   "icon": "defensive_tactics",
   "type": "form",
-  "display_order": 6
+  "display_order": 7
  },
  {
   "lore_description": "<helpcolor>Units deal more damage when fighting in groups.</helpcolor>",
@@ -1738,7 +1740,7 @@
     "description": "Wayfinder Enchantment and Enchanted Crow Companion are already active and cost no upkeep."
    },
    {
-    "description": "Start with 2 extra Scout Units."
+    "description": "Start with an extra Scout Unit."
    }
   ],
   "icon": "devious_watchers"
@@ -1795,7 +1797,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Cities gain +15 <unitprod></unitprod> Draft and your empire gains +5 <influence></influence> Imperium per level of Evil Alignment."
+    "name": "Cities gain +10 <unitprod></unitprod> Draft and your empire gains +5 <influence></influence> Imperium per level of Evil Alignment."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
@@ -1902,10 +1904,13 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Quarries yield +5 <gold></gold> <hyperlink>Gold</hyperlink> and +5 <structureprod></structureprod> <hyperlink>Production</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink> per Quarry in their <hyperlink>Domain</hyperlink>."
    },
    {
-    "name": "Special Province Improvements cost -50% <structureprod></structureprod> Production."
+    "name": "Special Province Improvements cost -25% <structureprod></structureprod> Production."
+   },
+   {
+    "name": "Newly founded cities start with a Workshop built."
    }
   ],
   "enabled": true,
@@ -2006,7 +2011,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain +75% resources from clearing an <hyperlink>Infestation</hyperlink>, <hyperlink>Ancient Wonder</hyperlink>, or <hyperlink>Resource Node</hyperlink>."
+    "name": "Gain +50% resources from clearing an <hyperlink>Infestation</hyperlink>, <hyperlink>Ancient Wonder</hyperlink>, or <hyperlink>Resource Node</hyperlink>."
    },
    {
     "name": "Units regenerate an additional +5 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>."
@@ -2122,7 +2127,7 @@
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
    },
    {
-    "name": "The nearest City owned gains +6 <mana></mana> <hyperlink>Mana</hyperlink> and +6 <food></food> <hyperlink>Food</hyperlink> per tier of non-Magic Origin units killed or lost after successful combat."
+    "name": "The nearest City owned gains +4 <mana></mana> <hyperlink>Mana</hyperlink> and +4 <food></food> <hyperlink>Food</hyperlink> per tier of non-Magic Origin units killed or lost after successful combat."
    }
   ],
   "enabled": true,
@@ -2149,7 +2154,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "The nearest City owned gains +6 <gold></gold> <hyperlink>Gold</hyperlink> and +6 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per tier of units killed after successful combat."
+    "name": "The nearest City owned gains +4 <gold></gold> <hyperlink>Gold</hyperlink> and +4 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per tier of units killed after successful combat."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
@@ -2168,20 +2173,20 @@
   "icon": "ruthless_raiders__evilact__"
  },
  {
+  "affinities": [
+   {
+    "name": "1<order></order> Order Affinity"
+   }
+  ],
   "biography_description": "They are known imperialists, proud of their people and their developed culture.",
   "lore_description": "They are focused on the glory of their empire and the development of their cities.",
   "point_cost": 1,
   "id": "imperialists",
   "name": "Imperialists",
-  "incompatible_society_traits": [
-   {
-    "name": "Adept Settlers"
-   }
-  ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "The <hyperlink>Throne City</hyperlink> and cities that share a border with the Throne City gain +30 <happiness></happiness> <hyperlink>City Stability</hyperlink> and +30 <gold></gold> <hyperlink>Gold</hyperlink> income."
+    "name": "The <hyperlink>Throne City</hyperlink> and cities that share a border with the Throne City gain +20 <happiness></happiness> <hyperlink>City Stability</hyperlink> and +20 <gold></gold> <hyperlink>Gold</hyperlink> income."
    }
   ],
   "enabled": true,
@@ -2189,11 +2194,6 @@
   "group_name": "",
   "front_end": true,
   "display_order": 6,
-  "affinities": [
-   {
-    "name": "1<order></order> Order Affinity"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Capital city starts with +1 <population></population> Population."
@@ -2221,7 +2221,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Cities gain +10 <gold></gold> <hyperlink>Gold</hyperlink> and your empire gains +5 <influence></influence> Imperium per level of Good Alignment."
+    "name": "Cities gain +5 <gold></gold> <hyperlink>Gold</hyperlink> and your empire gains +5 <influence></influence> Imperium per level of Good Alignment."
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>"

@@ -479,7 +479,7 @@
   "name": "Primal - Tunneling Spider",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_tunneling_spider"
+    "slug": "hs_avatar_of_the_lurking_spider"
    }
   ],
   "tier": 0,
@@ -530,7 +530,7 @@
   "name": "Primal - Glacial Mammoth",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_glacial_mammoth"
+    "slug": "hs_avatar_of_the_glacial_mammoth"
    }
   ],
   "tier": 0,
@@ -581,7 +581,7 @@
   "name": "Primal - Storm Crow",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_storm_crow"
+    "slug": "hs_avatar_of_the_storm_crow"
    }
   ],
   "tier": 0,
@@ -632,7 +632,7 @@
   "name": "Primal - Dune Serpent",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_dune_serpent"
+    "slug": "hs_avatar_of_the_sand_serpent"
    }
   ],
   "tier": 0,
@@ -683,7 +683,7 @@
   "name": "Primal - Ash Sabertooth",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_ash_sabertooth"
+    "slug": "hs_avatar_of_the_ash_sabertooth"
    }
   ],
   "tier": 0,
@@ -734,7 +734,7 @@
   "name": "Primal - Mire Crocodile",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_mire_crocodile"
+    "slug": "hs_avatar_of_the_bog_crocodile"
    }
   ],
   "tier": 0,
@@ -785,7 +785,7 @@
   "name": "Primal - Sylvan Wolf",
   "hero_skills": [
    {
-    "slug": "avatar_of_the_sylvan_wolf"
+    "slug": "hs_avatar_of_the_moon_wolf"
    }
   ],
   "tier": 0,
@@ -888,7 +888,7 @@
   "icon": "tome_of_the_cleansing_flame",
   "skills": [
    {
-    "description": "City gains:<bulletlist><bullet>Ignore income and stability penalties from being under <hyperlink>Siege</hyperlink>.</bullet><bullet>At the start of combat in this city's <hyperlink>Domain</hyperlink>, enemy units suffer Condemned.</bullet><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink>.</bullet></bulletlist>",
+    "description": "City gains:<bulletlist><bullet>Ignore income and stability penalties from being under <hyperlink>Siege</hyperlink>.</bullet><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink>.</bullet></bulletlist>",
     "name": "Temple of the Pyre",
     "tier": 5,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -1670,7 +1670,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Units in a -hex radius:<bulletlist><bullet>Sustain  <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by  hex.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> cancelled.</bullet></bulletlist>",
+    "description": "Units in a -hex radius:<bulletlist><bullet>Sustain  <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by up to  hexes.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled.</bullet><bullet>Have their <hyperlink>Retaliation Attack</hyperlink> removed.</bullet></bulletlist>",
     "name": "Displacing Winds",
     "spell_slug": "displacing_winds",
     "tier": 3,
@@ -2067,7 +2067,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +45 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -15 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
+    "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +60 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -20 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
     "name": "Fanatical Workforce",
     "spell_slug": "fanatical_workforce",
     "tier": 2,
@@ -3221,7 +3221,7 @@
   "icon": "",
   "hero_skills": [
    {
-    "slug": ""
+    "slug": "hs_"
    }
   ]
  },
@@ -4108,7 +4108,7 @@
  {
   "passives": [
    {
-    "description": "The <hyperlink>Dark</hyperlink> Culture has a <happiness></happiness> <hyperlink>City Stability</hyperlink> Agenda, which grants bonuses to your <hyperlink>Cities</hyperlink> for the following negative stability levels:<br></br><bulletlist><bullet>Unstable: +15 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Unrest: +30 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Rioting: +45 <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet>",
+    "description": "The <hyperlink>Dark</hyperlink> Culture has a <happiness></happiness> <hyperlink>City Stability</hyperlink> Agenda, which grants bonuses to your <hyperlink>Cities</hyperlink> for the following negative stability levels:<br></br><bulletlist><bullet>Unstable: +15 <structureprod></structureprod> <hyperlink>Production</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Unrest: +30 <structureprod></structureprod> <hyperlink>Production</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Rioting: +45 <structureprod></structureprod> <hyperlink>Production</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet>",
     "name": "Stability Agenda",
     "type": ""
    }
@@ -4162,7 +4162,7 @@
   "icon": "tome_of_vigor",
   "skills": [
    {
-    "description": "Spawns a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier II Animal unit upon casting and at the start of each of your <turn></turn> <hyperlink>Turns</hyperlink>. Lasts <turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
+    "description": "Spawns a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier II Animal unit at the start of each of your <turn></turn> <hyperlink>Turns</hyperlink>. Lasts <turn></turn> <hyperlink>Turns</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
     "name": "Totem of the Wild",
     "spell_slug": "totem_of_the_wild",
     "tier": 5,

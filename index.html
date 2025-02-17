@@ -1,28 +1,28 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
+    <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
 
-<link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+    <head>
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <meta charset="UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="Data/Builder.js"></script>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css">
-    <link rel="stylesheet" type="text/css" href="/evolved/Style/home.style.css">
-    <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            var unitarray = ["scout", "peasant_pikeman", "archer", "bannerman", "defender", "knight"];
 
-    <script>
-        $("#body").ready(function() {
+            // $("#body").ready(function() {
 
-            $("#header").load("/evolved/HTML/header.html", function() {
-                CheckData();
-            });
-        });
+            //  $("#header").load("/evolved/HTML/header.html", function() {
+            //      CheckData();
+            //  });
+            // });
 
-        function HandlePage() {
-            SetLevelUpStuff();
-        }
-
-    </script>
-
+            function HandlePage() {
+                SetButtonsAndDivs(unitarray, undefined, "unit");
+                SetLevelUpStuff();
+            }
+        </script>
 
     <title>Age of Wonders 4 Wiki - Evolved Mod</title>
 </head>

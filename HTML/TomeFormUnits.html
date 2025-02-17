@@ -6,13 +6,10 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+        <script src="/evolved/Data/Builder.js"></script>
+        <script src="/evolved/Data/Faction.js"></script>
+        <script src="/evolved/Data/Search.js"></script>
         <script>
-            $("#body").ready(function () {
-                $("#header").load("/evolved/HTML/header.html", function () {
-                    CheckData();
-                });
-            });
-
             function HandlePage() {
                 unitarray = FindFormUnits();
                 console.log(unitarray);
@@ -33,7 +30,7 @@
             }
         </script>
 
-        <title>Age of Wonders 4 Database - Tome Form Units</title>
+        <title>Age of Wonders 4 Evolved - Tome Form Units</title>
     </head>
 
     <body>

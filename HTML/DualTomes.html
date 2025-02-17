@@ -6,6 +6,9 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+        <script src="/evolved/Data/Builder.js"></script>
+        <script src="/evolved/Data/Faction.js"></script>
+        <script src="/evolved/Data/Search.js"></script>
         <script>
             var tomeArray = [
                 "tome_of_evolution",
@@ -25,19 +28,13 @@
                 "tome_of_calamity"
             ];
 
-            $("#body").ready(function () {
-                $("#header").load("/evolved/HTML/header.html", function () {
-                    CheckData();
-                });
-            });
-
             function HandlePage() {
                 SetButtonsAndDivs(tomeArray, undefined, "tome");
                 SetLevelUpStuff();
             }
         </script>
 
-        <title>Age of Wonders 4 Database - Dual Tomes</title>
+        <title>Age of Wonders 4 Evolved - Dual Tomes</title>
     </head>
 
     <body>

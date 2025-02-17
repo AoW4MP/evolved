@@ -6,6 +6,9 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+        <script src="/evolved/Data/Builder.js"></script>
+        <script src="/evolved/Data/Faction.js"></script>
+        <script src="/evolved/Data/Search.js"></script>
         <script>
             var unitarray = [
                 "monk:tome_of_discipline",
@@ -14,12 +17,6 @@
                 "calamity_dragon:tome_of_calamity"
             ];
 
-            $("#body").ready(function () {
-                $("#header").load("/evolved/HTML/header.html", function () {
-                    CheckData();
-                });
-            });
-
             function HandlePage() {
                 showUnitsWithIcon(unitarray);
                 SetLevelUpStuff();
@@ -27,7 +24,7 @@
             }
         </script>
 
-        <title>Age of Wonders 4 Database - Ways of War Tome Units</title>
+        <title>Age of Wonders 4 Evolved - Ways of War Tome Units</title>
     </head>
 
     <body>

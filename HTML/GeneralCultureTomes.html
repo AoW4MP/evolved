@@ -6,6 +6,9 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+        <script src="/evolved/Data/Builder.js"></script>
+        <script src="/evolved/Data/Faction.js"></script>
+        <script src="/evolved/Data/Search.js"></script>
         <script>
             var tomeArray = [
                 "general_research",
@@ -31,19 +34,13 @@
                 "oathsworn_strife"
             ];
 
-            $("#body").ready(function () {
-                $("#header").load("/evolved/HTML/header.html", function () {
-                    CheckData();
-                });
-            });
-
             function HandlePage() {
                 SetButtonsAndDivs(tomeArray, undefined, "tome");
                 SetLevelUpStuff();
             }
         </script>
 
-        <title>Age of Wonders 4 Database - General & Culture Tomes</title>
+        <title>Age of Wonders 4 Evolved - General & Culture Tomes</title>
     </head>
 
     <body>

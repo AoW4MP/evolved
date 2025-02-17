@@ -1,60 +1,40 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <meta charset="UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="/evolved/Data/Builder.js"></script>
+        <script src="/evolved/Data/Faction.js"></script>
+        <script src="/evolved/Data/Search.js"></script>
+        <script>
+            var unitarray = ["pathfinder", "sunderer", "warrior", "war_shaman", "fury", "berserker"];
 
-<link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+            function HandlePage() {
+                SetButtonsAndDivs(unitarray, undefined, "unit");
+                SetLevelUpStuff();
+            }
+        </script>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css">
-    <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <title>Age of Wonders 4 Evolved - Barbarian Units</title>
+    </head>
 
-    <script>
-        var unitarray = ["pathfinder", "sunderer", "warrior", "war_shaman", "fury", "berserker"];
-        $("#body").ready(function() {
+    <body>
+        <div id="header"></div>
 
-            $("#header").load("/evolved/HTML/header.html", function() {
-                CheckData();
-            });
-        });
-
-        function HandlePage() {
-            SetButtonsAndDivs(unitarray, undefined, "unit");
-            SetLevelUpStuff();
-        }
-
-    </script>
-
-
-    <title>Age of Wonders 4 Evolved - Barbarian Units</title>
-</head>
-
-<body>
-    <div id="header"></div>
-
-    <div class="textblocktitle">
-        <img src="/evolved/Icons/Text/barbarian.png" height="20px"> Barbarian Culture Units <img src="/evolved/Icons/Text/barbarian.png" height="20px">
-    </div>
-
-
-    <div class="w3-container">
-        <div id="buttonHolder" class="w3-bar w3-black">
-
-        </div>
-        <div id="dataHolder" style="margin-top:-250px">
+        <div class="textblocktitle">
+            <img src="/evolved/Icons/Text/barbarian.png" height="40px" /> Barbarian Culture Units
+            <img src="/evolved/Icons/Text/barbarian.png" height="40px" />
         </div>
 
-
-    </div>
-
-
-
-
-
-
-</body>
-
+        <div class="w3-container">
+            <div id="buttonHolder" class="w3-bar w3-black"></div>
+            <div id="dataHolder" style="margin-top: -250px"></div>
+        </div>
+    </body>
 </html>
 <footer>
-    <br>
-    <br>
+    <br />
+    <br />
 </footer>

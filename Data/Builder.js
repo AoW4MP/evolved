@@ -106,6 +106,8 @@ async function GetAllData() {
         "/evolved/Data/CosmicHappenings.json",
         "/evolved/Data/BuilderLookupHero.json",
         "/evolved/Data/Governance.json",
+        "/evolved/BetaStuff/HeroSkills.json",
+        "/evolved/BetaStuff/Abilities.json"
     ];
     await fetchJsonFiles(jsonFilePaths)
         .then((dataArray) => {
@@ -155,6 +157,10 @@ async function GetAllData() {
                     jsonBuilderHeroLookUp = data;
                 } else if (index == 21) {
                     jsonHeroGovernance = data;
+                } else if (index == 22) {
+                    jsonHeroSkillsBeta = data;
+                } else if (index == 23) {
+                    jsonAbilitiesBeta = data;
                 }
             });
         })
@@ -226,7 +232,8 @@ var MountedSpecialList = [
     "houndmaster",
     "spellbreaker",
     "dragoon",
-    "spirit_tracker"
+    "spirit_tracker",
+    "spellshield"
 ];
 
 var extraFormUnitsList = [
@@ -1120,7 +1127,7 @@ function addAbilityslot(a, holder, list, enchant) {
             var abilityIconType = "";
             imag.setAttribute("src", "/evolved/Icons/UnitIcons/" + abilityIcon + ".png");
 
-            var abilityIconType = GetAbilityBackground(abilityDam);
+            abilityIconType = GetAbilityBackground(abilityDam);
 
             imag.setAttribute(
                 "style",
@@ -2785,11 +2792,9 @@ function findCosmicHappeningsWithArgument(argumentType) {
 
     for (j in jsonCosmicHappenings) {
         if (jsonCosmicHappenings[j].type == argumentType) {
-
             finalCheckedList.push(jsonCosmicHappenings[j].id);
         }
     }
-
 
     return finalCheckedList;
 }
@@ -2877,7 +2882,6 @@ function showUnit(a, subcultureCheck, resID) {
     var found = false;
     var keepgoing = true;
     var stopHere = false;
-
 
     for (let i = 0; i < jsonUnits.length; i++) {
         if (a === jsonUnits[i].id) {
@@ -3295,14 +3299,14 @@ function showUnit(a, subcultureCheck, resID) {
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.25) +
+                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.20) +
                                 "*";
                         } else {
                             tier.innerHTML =
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.25) +
+                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.20) +
                                 ">*";
                         }
 
@@ -3310,9 +3314,9 @@ function showUnit(a, subcultureCheck, resID) {
 
                         if (summonInfo.length > 0) {
                             if (jsonUnits[i].upkeep.indexOf("influence") != -1) {
-                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.25) + "*";
+                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.20) + "*";
                             } else {
-                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.25) + ">*";
+                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.20) + ">*";
                             }
                         }
                     }
@@ -4288,9 +4292,9 @@ function showSiegeProject(id, showOrigin) {
                     var newDivForMount = AddDLCTag(jsonSiegeProjects[i].DLC);
 
                     modName.append(newDivForMount);
-                } else {
-                    modName.innerHTML += '<span class="spell_tier" style="color:white;font-size:15px">  Tier -</span>';
                 }
+            } else {
+                modName.innerHTML += '<span class="spell_tier" style="color:white;font-size:15px">  Tier -</span>';
             }
 
             var tomeOrigin = document.getElementById("originTome");
@@ -4434,11 +4438,15 @@ function showTome(a, div) {
                 for (l in jsonTomes[j].passives) {
                     var div = document.createElement("DIV");
                     div.className = "initialBonusText";
+
                     div.innerHTML = "<unit></unit>" + jsonTomes[j].passives[l].name;
+
                     var spa = document.createElement("SPAN");
                     spa.innerHTML = jsonTomes[j].passives[l].type + "<br>";
                     spa.innerHTML += jsonTomes[j].passives[l].description;
+
                     addTooltipListeners(div, spa);
+
                     unitTypesDiv.appendChild(div);
                 }
             }
@@ -4450,15 +4458,19 @@ function showTome(a, div) {
                     div.className = "initialBonusText";
                     var name = GetStructureName(jsonTomes[j].initial_upgrades[l].upgrade_slug);
                     div.innerHTML = name;
+
                     var spa = document.createElement("SPAN");
                     spa.innerHTML =
                         '<span style="color: #deb887 ;text-transform: uppercase">' +
                         name +
                         "</span>" +
                         GetStructureDescription(jsonTomes[j].initial_upgrades[l].upgrade_slug);
+
                     //  div.appendChild(spa);
                     unitTypesDiv.appendChild(div);
+
                     addTooltipListeners(div, spa);
+
                     unitTypesDiv.appendChild(div);
                 }
             }
@@ -5071,6 +5083,7 @@ function showStructure(a, showOrigin) {
             tomeOriginIcon.setAttribute("id", "originTomeIcon" + a.id);
 
             if (a.indexOf("wildlife_sanctuary") != -1) {
+                // unlock warg, razorback, hunter spider, goretustk piglet
                 descriptionDiv.innerHTML += "<br>Unlocks Production of:";
                 var div = document.createElement("DIV");
                 div.innerHTML =
@@ -5122,59 +5135,10 @@ function showStructure(a, showOrigin) {
                     "</a>" +
                     "</bullet>";
                 unitTypesDiv.append(div);
-                var div = document.createElement("DIV");
-                div.innerHTML = 
-                    "<bullet>" +
-                    '<a href=\"/evolved/HTML/Units.html?unit=' +
-                    "dire_penguin" +
-                    '"\" target=\"_blank\">"' +
-                    GetUnitTierAndName("dire_penguin") +
-                    "</a>" +
-                    "</bullet>";
-                unitTypesDiv.append(div);
-                var div = document.createElement("DIV");
-                div.innerHTML = 
-                    "<bullet>" +
-                    '<a href=\"/evolved/HTML/Units.html?unit=' +
-                    "brown_bear" +
-                    '"\" target=\"_blank\">"' +
-                    GetUnitTierAndName("brown_bear") +
-                    "</a>" +
-                    "</bullet>";
-                unitTypesDiv.append(div);
-                var div = document.createElement("DIV");
-                div.innerHTML = 
-                    "<bullet>" +
-                    '<a href=\"/evolved/HTML/Units.html?unit=' +
-                    "polar_bear" +
-                    '"\" target=\"_blank\">"' +
-                    GetUnitTierAndName("polar_bear") +
-                    "</a>" +
-                    "</bullet>";
-                unitTypesDiv.append(div);
-                var div = document.createElement("DIV");
-                div.innerHTML = 
-                    "<bullet>" +
-                    '<a href=\"/evolved/HTML/Units.html?unit=' +
-                    "death_beetle" +
-                    '"\" target=\"_blank\">"' +
-                    GetUnitTierAndName("death_beetle") +
-                    "</a>" +
-                    "</bullet>";
-                unitTypesDiv.append(div);
-                var div = document.createElement("DIV");
-                div.innerHTML = 
-                    "<bullet>" +
-                    '<a href=\"/evolved/HTML/Units.html?unit=' +
-                    "elephant" +
-                    '"\" target=\"_blank\">"' +
-                    GetUnitTierAndName("elephant") +
-                    "</a>" +
-                    "</bullet>";
-                unitTypesDiv.append(div);
             }
 
             if (a.indexOf("demon_gate") != -1) {
+                // unlock warg, razorback, hunter spider, goretustk piglet
                 descriptionDiv.innerHTML += "<br>Unlocks Production of:";
                 var div = document.createElement("DIV");
                 div.innerHTML =
@@ -5205,16 +5169,6 @@ function showStructure(a, showOrigin) {
                     GetUnitTierAndName("inferno_hound") +
                     "</a>" +
                     "</bullet>";
-                    unitTypesDiv.append(div);
-                    var div = document.createElement("DIV");
-                    div.innerHTML =
-                        "<bullet>" +
-                        '<a href="/evolved/HTML/Units.html?unit=' +
-                        "nightmare" +
-                        '" target="_blank">' +
-                        GetUnitTierAndName("nightmare") +
-                        "</a>" +
-                        "</bullet>";
                 unitTypesDiv.append(div);
                 var div = document.createElement("DIV");
                 div.innerHTML =
@@ -5223,16 +5177,6 @@ function showStructure(a, showOrigin) {
                     "chaos_eater" +
                     '" target="_blank">' +
                     GetUnitTierAndName("chaos_eater") +
-                    "</a>" +
-                    "</bullet>";
-                unitTypesDiv.append(div);
-                var div = document.createElement("DIV");
-                div.innerHTML =
-                    "<bullet>" +
-                    '<a href="/evolved/HTML/Units.html?unit=' +
-                    "infernal_juggernaut" +
-                    '" target="_blank">' +
-                    GetUnitTierAndName("infernal_juggernaut") +
                     "</a>" +
                     "</bullet>";
                 unitTypesDiv.append(div);
@@ -5256,7 +5200,6 @@ function showStructure(a, showOrigin) {
 function showCosmicHappening(a) {
     var modName,
         description,
-
         j,
         nameString = "";
     var found = false;
@@ -5268,10 +5211,8 @@ function showCosmicHappening(a) {
             nameString = jsonCosmicHappenings[j].name.toUpperCase();
 
             if (modName == undefined) {
-
             }
             modName.innerHTML = nameString;
-
 
             modName.setAttribute("id", "modname" + a);
             modName.className = "mod_name";
@@ -5288,10 +5229,8 @@ function showCosmicHappening(a) {
             categoryLink = categoryLink.replaceAll("of", "Of");
             imagelink.setAttribute("src", "/evolved/Icons/CosmicHappenings/category_icon_" + categoryLink + ".png");
 
-
             var preview = document.getElementById("structurepreview");
             var imagePos = jsonCosmicHappenings[j].image;
-
 
             preview.setAttribute("id", "img" + a);
             preview.className = "cosmicHappeningPic";
@@ -6213,7 +6152,7 @@ function showItem(a) {
     //type.setAttribute("id", "modtype" + a);
     tier = document.getElementById("spell_tier");
     tier.innerHTML = a.tier;
-    
+
     tier.setAttribute("id", "spell_tier" + a.id);
 
     cost = document.getElementById("modcost");

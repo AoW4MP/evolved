@@ -2497,11 +2497,11 @@
   "icon": "tome_of_the_arch_mage",
   "skills": [
    {
-    "description": "<bulletlist><bullet>Dispels all positive status effects on all enemies.</bullet><bullet>Dispels all negative status effects on all allies.</bullet></bulletlist>",
-    "name": "Dispelling Wave",
-    "spell_slug": "dispelling_wave",
+    "description": "Enemy units become Disrupted for <turn></turn> Turns.",
+    "name": "Disruption Wave",
+    "spell_slug": "disruption_wave",
     "tier": 10,
-    "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
    },
    {
     "description": "Grants enchanted units:<bulletlist><bullet>+% damage.</bullet><bullet>Very Fast Movement.</bullet></bulletlist>",
@@ -3738,6 +3738,13 @@
     "spell_slug": "demonic_onslaught",
     "tier": 9,
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
+   },
+   {
+    "description": "Summons a <hyperlink>Balor</hyperlink>, a Mythic Unit that wreaks havoc on your foes.",
+    "name": "Summon Balor",
+    "spell_slug": "summon_balor",
+    "tier": 8,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    }
   ]
  },
@@ -3753,7 +3760,7 @@
   "icon": "tome_of_the_demon_gate",
   "skills": [
    {
-    "description": "In target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Terrain transforms into Desolate terrain, except Mountain and Ocean terrain.</bullet><bullet>Enemy units suffer -2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+    "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Desolate terrain, except Mountain and Ocean terrain.</bullet><bullet>Enemy units suffer -3 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
     "name": "Abyssal Flames",
     "spell_slug": "abyssal_flames",
     "tier": 8,
@@ -3765,6 +3772,13 @@
     "spell_slug": "gremlin_ambushers",
     "tier": 8,
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
+   },
+   {
+    "description": "Two Fiend units of the same Tier in the target army fight each other. One dies and the other transforms into a Fiend with a Tier one level higher than before.",
+    "name": "Fight for Power",
+    "spell_slug": "fight_for_power",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>"
    },
    {
     "description": "Target one of your <minorcity></minorcity><hyperlink>Free City</hyperlink> <hyperlink>Vassals</hyperlink>:<bulletlist><bullet>Summon 2 random Fiends under your control, one will be Tier III and the other Tier IV.</bullet><bullet>The <hyperlink>Vassal</hyperlink> loses:<bulletlist></bullet><bullet>A <hyperlink>Vassalage Phase</hyperlink> diplomatic stage.</bullet><bullet>1 <population></population> <hyperlink>Population</hyperlink>.</bullet></bulletlist></bulletlist><br></br>Cannot be cast on a <rs_vassalage-3></rs_vassalage-3> <hyperlink>Denying Tributary</hyperlink>.",
@@ -3779,13 +3793,6 @@
     "spell_slug": "demonkin",
     "tier": 9,
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
-   },
-   {
-    "description": "Summons a <hyperlink>Balor</hyperlink>, a Mythic Unit that wreaks havoc on your foes.",
-    "name": "Summon Balor",
-    "spell_slug": "summon_balor",
-    "tier": 8,
-    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    }
   ],
   "initial_upgrades": [

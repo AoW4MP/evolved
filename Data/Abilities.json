@@ -446,10 +446,13 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "3",
   "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
@@ -8103,7 +8106,7 @@
   "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Charge Strike",
   "slug": "melee_charge_strike_(base)_ability_phase_beast",
-  "damage": "27<damagephysical></damagephysical> ",
+  "damage": "13<damagephysical></damagephysical> 13<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -18117,7 +18120,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Can only be used once per battle."
    }
   ],
   "description": "Slight chance of instantly killing an injured target. This chance increases the lower the target's <hp></hp> Hit Points are.",
@@ -18364,7 +18367,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Can only be used once per battle."
    }
   ],
   "description": "Slight chance of instantly killing an injured target. This chance increases the lower the target's <hp></hp> Hit Points are.",

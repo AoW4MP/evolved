@@ -650,14 +650,14 @@
   "icon": "counter_stance"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 5046586576591,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "monstrous_rebirth",
   "tactical": true,
   "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals 60 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
   "name": "Monstrous Rebirth",
-  "operation_point_cost": 40,
+  "operation_point_cost": 30,
   "icon": "monstrous_rebirth"
  },
  {
@@ -712,7 +712,7 @@
   "tactical": false,
   "description": "Summons an <hyperlink>Astral Wisp</hyperlink> on target hex.",
   "name": "Astral Wisp Ritual",
-  "operation_point_cost": 45,
+  "operation_point_cost": 60,
   "summoned_units": [
    {
     "slug": "astral_wisp"
@@ -2333,7 +2333,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "abyssal_flames",
   "tactical": false,
-  "description": "In target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Terrain transforms into Desolate terrain, except Mountain and Ocean terrain.</bullet><bullet>Enemy units suffer -2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Terrain transforms into Desolate terrain, except Mountain and Ocean terrain.</bullet><bullet>Enemy units suffer -3 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Abyssal Flames",
   "operation_point_cost": 150,
   "icon": "abyssal_flames"
@@ -3069,26 +3069,26 @@
   "icon": "cosmic_overdrive"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010633542,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "time_stop",
   "tactical": true,
   "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 3 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Time Stop",
-  "operation_point_cost": 50,
+  "operation_point_cost": 40,
   "icon": "time_stop"
  },
  {
   "casting_cost": "200<mana></mana> ",
   "resid": 4514010633535,
-  "spellType": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>",
-  "id": "dispelling_wave",
+  "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+  "id": "disruption_wave",
   "tactical": true,
-  "description": "<bulletlist><bullet>Dispels all positive status effects on all enemies.</bullet><bullet>Dispels all negative status effects on all allies.</bullet></bulletlist>",
-  "name": "Dispelling Wave",
+  "description": "Enemy units become Disrupted for 2 <turn></turn> Turns.",
+  "name": "Disruption Wave",
   "operation_point_cost": 65,
-  "icon": "dispelling_wave"
+  "icon": "disruption_wave"
  },
  {
   "casting_cost": "120<mana></mana> ",
@@ -3292,14 +3292,14 @@
   "icon": "tectonic_shatter"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010632471,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "call_the_titan_of_the_earth",
   "tactical": true,
   "description": "<bulletlist><bullet>Summons an <hyperlink>Earth Titan</hyperlink> onto the target unoccupied hex.</bullet><bullet>All adjacent enemies lose their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
   "name": "Call the Titan of the Earth",
-  "operation_point_cost": 50,
+  "operation_point_cost": 40,
   "summoned_units": [
    {
     "slug": "earth_titan"
@@ -4126,13 +4126,7 @@
     "slug": "goretusk_piglet"
    },
    {
-    "slug": "grimbeak_crow"
-   },
-   {
     "slug": "polar_bear"
-   },
-   {
-    "slug": "dire_penguin"
    },
    {
     "slug": "carrion_bird"
@@ -4141,13 +4135,7 @@
     "slug": "inferno_puppy"
    },
    {
-    "slug": "scrap_hermit"
-   },
-   {
     "slug": "elephant"
-   },
-   {
-    "slug": "warg"
    },
    {
     "slug": "hunter_spider"
@@ -4156,16 +4144,7 @@
     "slug": "dread_spider_hatchling"
    },
    {
-    "slug": "young_caustic_worm"
-   },
-   {
     "slug": "brown_bear"
-   },
-   {
-    "slug": "giant_beetle"
-   },
-   {
-    "slug": "death_beetle"
    },
    {
     "slug": "slither_hatchling"
@@ -4174,19 +4153,16 @@
     "slug": "wyvern_fledgling"
    },
    {
-    "slug": "razorback"
-   },
-   {
     "slug": "vampire_spider_hatchling"
-   },
-   {
-    "slug": "crocodile"
    },
    {
     "slug": "nimu"
    },
    {
     "slug": "kraken_spawn"
+   },
+   {
+    "slug": "dire_penguin"
    }
   ]
  },
@@ -5726,7 +5702,7 @@
   "tactical": false,
   "description": "Two Fiend units of the same Tier in the target army fight each other. One dies and the other transforms into a Fiend with a Tier one level higher than before.",
   "name": "Fight for Power",
-  "operation_point_cost": 45,
+  "operation_point_cost": 60,
   "icon": "fight_for_power"
  },
  {
@@ -6378,7 +6354,7 @@
   "tactical": false,
   "description": "Sacrifice two Tier III Undead units, using their essence to create a <hyperlink>Bone Dragon</hyperlink>.",
   "name": "Bone Dragon Ritual",
-  "operation_point_cost": 45,
+  "operation_point_cost": 60,
   "icon": "bone_dragon_ritual",
   "summoned_units": [
    {

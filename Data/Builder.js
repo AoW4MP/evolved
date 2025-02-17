@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.insertAdjacentHTML("afterbegin", headerHTML);
             CheckData();
         });
+    // wait for a while and then  HandleExtraTooltips();
+    setTimeout(function () {
+        HandleExtraTooltips();
+    }, 2000);
 });
 
 function CheckBoxTooltips() {
@@ -275,6 +279,150 @@ var incorrectIconOverrideList = [
     "summon_horned_god",
     "summon_corrupt_soul"
 ];
+
+function AddTagIconsForStatusEffects(name) {
+    // if(name == "")
+    var underline = '<span style="text-decoration:underline;color:white;">';
+    var endtag = "</span></span>";
+    const statusEffects = {
+        Poisoned: "poisoned",
+        Bleeding: "bleeding",
+        Burning: "burning",
+        Frozen: "frozen",
+        Berserk: "berserked",
+        Ghostfire: "ghostfire",
+        "Sundered Resistance": "sunderedresistance",
+        "Sundered Defense": "sundereddefense",
+        "Bolstered Resistance": "bolsteredresistance",
+        "Bolstered Defense": "bolstereddefense",
+        Wet: "wet",
+        Strengthened: "strengthened",
+        Weakened: "weakened",
+        Decaying: "decaying",
+        Slowed: "slowed",
+        Immobilized: "immobilized",
+        Blind: "blinded",
+        Diseased: "diseased",
+        Marked: "marked",
+        Stunned: "stunned",
+        Condemned: "condemned",
+        Electrified: "electrified",
+        Regeneration: "regeneration",
+        Distracted: "distracted",
+        Dominated: "dominated",
+        Misfortune: "misfortune",
+        " Fortune": "fortune",
+        " Infectious Insanity": "infectiousinsanity",
+        " Insanity": "insanity",
+        " Gilded": "gilded",
+        " Disrupted": "disrupted",
+        " Demoralized": "demoralized",
+        " Status Protection": "statusprotection",
+        "Static Charge": "staticcharge",
+        Awakened: "awakened",
+        "Hastened ": "hastened",
+        Steadfast: "steadfast",
+        Grace: "grace",
+        "Hyper-Awareness": "hyperawareness"
+    };
+
+    for (const [effect, tag] of Object.entries(statusEffects)) {
+        var tooltipspan = document.createElement("span");
+        tooltipspan.className = "statusEffectHandler";
+        tooltipspan.innerHTML = `${underline}${effect}${endtag}`;
+
+        name = name.replace(effect, `<${tag}></${tag}>${tooltipspan.outerHTML}`);
+    }
+
+    return name;
+}
+
+function lookupStatusEffect(status) {
+    const statusEffectsExp = {
+        Poisoned:
+            "<poisoned></poisoned> Unit sustains 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> each <turn></turn> ",
+        Bleeding:
+            "<bleeding></bleeding> Unit sustains 4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> each <turn></turn>",
+        Burning:
+            "<burning></burning> Unit sustains 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> each <turn></turn>",
+        Frozen: "<frozen></frozen> Unit is unable to act. Countered by <burning></burning> burning",
+        Berserk:
+            "<berserk></berserk><bulletlist>The unit:<bullet>Is uncontrollable and always attacks the closest enemy target.</bullet><bullet> If no enemy is in range, it will attack its allies.</bullet><bullet>Is immune to Morale effects</bullet><bullet>Damage penalties from Casualty are negated.</bullet></bulletlist>",
+        Ghostfire:
+            "<ghostfire></ghostfire> <bullet>Unit sustains 2 Fire Damage and 2 Frost damage each Turn.</bullet><bullet>Replaces and counts as Burning but isn't removed by frozen or wet.</bullet><bullet>Stacks up to 5 times</bullet>",
+        "Sundered Resistance":
+            "<sunderedresistance></sunderedresistance> -1 <resistance></resistance> Resistance.-1 status resistance.",
+        "Sundered Defense": "<sundereddefense></sundereddefense>  -1 <defense></defense> Defense.-1 status resistance.",
+        "Bolstered Resistance": "<bolsteredresistance></bolsteredresistance>  +1 <resistance></resistance> resistance.",
+        "Bolstered Defense": "<bolstereddefense></bolstereddefense>  +1 <defense></defense> Defense.",
+        Wet: "<wet></wet> Unit has:<bulletlist><bullet>-4 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet><bullet>-4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet></bulletlist>Wet <hyperlink>counters</hyperlink> burning",
+        Strengthened:
+            "<strengthened></strengthened> Unit gains +10% damage. <br> Strengthened counters <weakened></weakened> weakened",
+        Weakened:
+            "<weakened></weakened> Unit has -10% damage.<br> Weakened counters <strengthened></strengthened> strengthened",
+        Decaying:
+            "<decaying></decaying> Unit sustains 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> each <turn></turn> and cannot regain <hyperlink><hp></hp> Hit Points</hyperlink>.<br>Decaying counters <regeneration></regeneration> regeneration.",
+        Slowed: "<slowed></slowed> Unit has Slow Movement and one less Retaliation Attack.",
+        Immobilized: "<immobilized></immobilized> This unit cannot move or use Movement abilities.",
+        Blind: "<blind></blind> −50% accuracy for ranged attacks. Cannot make opportunity attacks.",
+        Diseased:
+            "<diseased></diseased> −4 <resistance></resistance> resistance. Has a base 60% chance of spreading to adjacent units at end of turn.",
+        Marked: "<marked></marked> -10% evasion.",
+        Stunned: "<stunned></stunned> Unit is unable to act.",
+        Condemned: "<condemned></condemned> -3 Status Resistance",
+        Electrified:
+            "<electrified></electrified> Unit sustains 4 <damageShock></damageShock> <hyperlink>Shock Damage</hyperlink> each <turn></turn>",
+        Regeneration:
+            "<regeneration></regeneration> +6 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> at the end of the unit's turn.",
+        Distracted:
+            "<distracted></distracted> All attacks targeting this unit are <flank></flank> Flanking attacks. <br> Distracted counters <hyperawareness></hyperawareness> hyper-awareness.",
+        Dominated:
+            "<dominated></dominated> This unit is controlled by the opponent. <br> If the effect lasts until the end of combat, the controller will have the option to spend Mana to keep the unit permanently.",
+        Misfortune: "<misfortune></misfortune> 	+10% fumble chance.",
+        " Fortune": "<fortune></fortune> 	+10% critical chance.",
+        " Infectious Insanity ":
+            "<infectiousinsanity></infectiousinsanity> <bullet>Unit is inflicted with insanity</bullet>. <bullet>Attacks have a base 50% chance of infliction Infectious Insanity.</bullet>",
+        " Insanity":
+            "<insanity></insanity> <bulletlist>This unit: <bullet>Is uncontrollable and always attacks the closest allied target.</bullet><bullet>If no ally is in range, it will atack its enemies</bullet></bulletlist> ",
+        " Gilded":
+            "<gilded></gilded> 	Unit is unable to act. If killed Victor obtains 20 <gold></gold> gold per unit tier.",
+        " Disrupted": "<disrupted></disrupted> This unit's Unit Enchantments are temporarily disabled",
+        " Demoralized":
+            "<demoralized></demoralized> <bullet>-5 <morale></morale>Morale per stack</bullet> <bullet>Stacks up to 5 times</bullet>",
+        " Status Protection": "<statusprotection></statusprotection>+2 status resistance.",
+        "Static Charge":
+            "<staticcharge></staticcharge> Unit's attack gain: <bulletlist><bullet>+2 Lightning Damage</bullet><bullet>Base 30% change of inflicting Electrified for 3 <turn></turn> turns</bullet></bulletlist>",
+        Awakened: "<awakened></awakened> Activates any <hyperlink>Dormant</hyperlink> traits.",
+        "Hastened ": "<hastened></hastened> Unit has Very Fast Movement and one additional Retaliation Attack.",
+        Steadfast: "<steadfast></steadfast> Unit cannot have less than 1 <hp></hp> Hit points.",
+        "Hyper-Awareness":
+            "<hyperawareness></hyperawareness> Unit is immune to <flank></flank> Flanking. <br> Hyper-Awareness counters <distracted></distracted> distracted",
+        Grace: "<grace></grace> <bulletlist>When this unit is attacked: <bullet>Heal for 10 <temphp></temphp> Temporary Hit Points.</bullet> <bullet> Remove one stack of grace</bullet><bulletlist> Stacks up to 3 times."
+    };
+
+    for (const [effect, tag] of Object.entries(statusEffectsExp)) {
+        status = status.replace(effect, tag);
+    }
+
+    return status;
+}
+
+function HandleExtraTooltips(specificDiv) {
+    // Add event listeners after elements exist in the DOM
+    if (specificDiv != undefined) {
+        specificDiv.querySelectorAll(".statusEffectHandler").forEach((el) => {
+            var spantest = document.createElement("span");
+            spantest.innerHTML = lookupStatusEffect(el.innerHTML);
+            addTooltipListeners(el, spantest, "something");
+        });
+    } else {
+        document.querySelectorAll(".statusEffectHandler").forEach((el) => {
+            var spantest = document.createElement("span");
+            spantest.innerHTML = lookupStatusEffect(el.innerHTML);
+            addTooltipListeners(el, spantest, "something");
+        });
+    }
+}
 
 function GetUnitTierAndName(id, subcultureCheck) {
     for (var i = 0; i < jsonUnits.length; i++) {
@@ -888,7 +1036,6 @@ function addUnitTypeIcon(a, holder, origin) {
 function addAbilityslot(a, holder, list, enchant) {
     var abilityName,
         abilityIcon,
-        abilityDescr,
         abilityDam,
         abilityEncht,
         abilityAcc,
@@ -896,8 +1043,6 @@ function addAbilityslot(a, holder, list, enchant) {
         abilityType,
         abilityNote,
         j,
-        splitDamageString,
-        abilityDamType,
         abilityReq,
         abilityMod = "";
 
@@ -925,7 +1070,8 @@ function addAbilityslot(a, holder, list, enchant) {
             if ("modifiers" in jsonUnitAbilities[j]) {
                 for (var l = 0; l < jsonUnitAbilities[j].modifiers.length; l++) {
                     abilityName += '<span style="color:#addd9e;font-size: 20px">&#11049</span>';
-                    abilityMod += "<bullet>" + jsonUnitAbilities[j].modifiers[l].name + "<br>";
+                    abilityMod +=
+                        "<bullet>" + AddTagIconsForStatusEffects(jsonUnitAbilities[j].modifiers[l].name) + "<br>";
                     abilityMod += jsonUnitAbilities[j].modifiers[l].description + "</bullet><br>";
                 }
             }
@@ -1121,9 +1267,6 @@ function addAbilityslot(a, holder, list, enchant) {
             dam.className = "ability_damage";
             dam.innerHTML = abilityDam;
 
-            abilityDescr = jsonUnitAbilities[j].description + "<br>";
-            abilityDescr = abilityDescr.replaceAll("</br>", "");
-
             var abilityIconType = "";
             imag.setAttribute("src", "/evolved/Icons/UnitIcons/" + abilityIcon + ".png");
 
@@ -1217,20 +1360,80 @@ function doubleNumbers(inputString) {
     return result;
 }
 
-function TurnOnTooltip(spa) {
-    // Configuration of the observer: observe changes to child nodes
+function addTooltipListeners(tooltip, span, secondary) {
+    let hoverDiv2 = document.getElementById("hoverDiv2");
+    let hoverDiv = document.getElementById("hoverDiv");
 
-    hoverDiv = document.getElementById("hoverDiv");
-    // console.log('Mouse entered the div');
-    hoverDiv.style.display = "block";
-    if (spa != null) {
-        hoverDiv.innerHTML = spa.innerHTML;
+    console.log(secondary);
+    if (secondary != undefined) {
+        tooltip.addEventListener("mouseenter", function (event) {
+            if (secondary != undefined) {
+                if (tooltip != hoverDiv2) {
+                    console.log("update");
+                    updateHoverDivPosition(event, secondary);
+                }
+            }
+
+            TurnOnTooltip(span, secondary);
+        });
+
+        tooltip.addEventListener("mouseleave", function () {
+            TurnOffTooltip(secondary);
+        });
+    } else {
+        tooltip.addEventListener("mouseenter", function (event) {
+            if (tooltip != hoverDiv) {
+                updateHoverDivPosition(event, secondary);
+            }
+
+            TurnOnTooltip(span, secondary);
+        });
+
+        tooltip.addEventListener("mouseleave", function () {
+            TurnOffTooltip(secondary);
+        });
     }
 }
 
-function TurnOffTooltip() {
+function removeToolTipListeners(tooltip) {
+    tooltip.removeEventListener("mouseenter", tooltip);
+
+    tooltip.removeEventListener("mouseleave", tooltip);
+}
+
+function TurnOnTooltip(spa, secondary) {
+    // Configuration of the observer: observe changes to child nodes
+    let hoverDiv2 = document.getElementById("hoverDiv2");
+    let hoverDiv = document.getElementById("hoverDiv");
+    if (secondary != undefined) {
+        if (spa != null) {
+            hoverDiv2.innerHTML = spa.innerHTML;
+        }
+        hoverDiv2.show();
+    } else {
+        if (spa != null) {
+            hoverDiv.innerHTML = spa.innerHTML;
+            HandleExtraTooltips(hoverDiv);
+        }
+        hoverDiv.show();
+    }
+}
+
+function TurnOffTooltip(secondary) {
+    hoverDiv2 = document.getElementById("hoverDiv2");
     hoverDiv = document.getElementById("hoverDiv");
-    hoverDiv.style.display = "none";
+    if (secondary != undefined) {
+        // hoverDiv2.style.display = "none";
+        hoverDiv2.close();
+    } else {
+        if (hoverDiv2.open) {
+            console.log("dialog is open ");
+        } else {
+            hoverDiv.close();
+        }
+
+        //hoverDiv.style.display = "none";
+    }
 }
 
 function getNormalizedPosition(event) {
@@ -1251,10 +1454,16 @@ function getNormalizedPosition(event) {
     };
 }
 
-function updateHoverDivPosition(event) {
+function updateHoverDivPosition(event, secondary) {
     const settings = getUserSettings();
 
     var offset = 2;
+    let hoverDiv = null;
+    if (secondary != undefined) {
+        hoverDiv = document.getElementById("hoverDiv2");
+    } else {
+        hoverDiv = document.getElementById("hoverDiv");
+    }
     if (settings.tooltipselectable) {
         hoverDiv.setAttribute("Style", "pointer-events: all;");
     } else {
@@ -1435,7 +1644,11 @@ function GetAbilityToolTip(
     spa.append(abilityHighlighter);
 
     // block 2, descrp
-    spa.innerHTML += "<hr> " + ability.description + "<br>";
+    var abilityDescr = ability.description;
+
+    abilityDescr = abilityDescr.replaceAll("</br>", "");
+    abilityDescr = AddTagIconsForStatusEffects(abilityDescr);
+    spa.innerHTML += "<hr> " + abilityDescr; // + "<br>";
 
     // modifiers
     if (abilityMod != "") {
@@ -1475,6 +1688,9 @@ function GetAbilityToolTip(
             }
             if (abilityReq[i].requisite == "Summoning") {
                 newReq.setAttribute("style", "background-color:#422631");
+            }
+            if (abilityReq[i].requisite == "Base") {
+                newReq.setAttribute("style", "background-color:#5d5d5c");
             }
             newReq.className = "requisiteSlot";
             reqs.appendChild(newReq);
@@ -1641,7 +1857,7 @@ function CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr) {
     abilityDescr = abilityDescr.replaceAll("<br></br>", "<br>");
 
     spa.innerHTML =
-        '<div class="abilityHighLighter"><img style="float:left; height:30px; width:30px" src="/evolved/Icons/UnitIcons/' +
+        '<div class="abilityHighLighter"><img style="float:left; position:relative; top:-7px; height:30px; width:30px" src="/evolved/Icons/UnitIcons/' +
         abilityIcon +
         '.png"><p style="color: #d7c297;>' +
         '<span style="font-size=20px;">' +
@@ -3453,25 +3669,6 @@ function showUnit(a, subcultureCheck, resID) {
     if (found === false) {
         console.log("Couldn't find unit: " + a + i);
     }
-}
-
-function addTooltipListeners(tooltip, span) {
-    tooltip.addEventListener("mouseenter", function (event) {
-        TurnOnTooltip(span);
-        if (tooltip != hoverDiv) {
-            updateHoverDivPosition(event);
-        }
-    });
-
-    tooltip.addEventListener("mouseleave", function () {
-        TurnOffTooltip();
-    });
-}
-
-function removeToolTipListeners(tooltip) {
-    tooltip.removeEventListener("mouseenter", tooltip);
-
-    tooltip.removeEventListener("mouseleave", tooltip);
 }
 
 function canBeSummoned(id) {
@@ -5713,6 +5910,7 @@ function showSpell(a, showOrigin) {
             upkeep.setAttribute("id", "modupkeep" + a);
 
             description += jsonSpells[j].description.replaceAll("<bulletlist></bullet>", "<bulletlist>");
+            description = AddTagIconsForStatusEffects(description);
             description = description.replaceAll("</bullet></bulletlist>", "</bullet></bullet></bulletlist>");
             description = description.replaceAll("<br></br>", "<br>");
 

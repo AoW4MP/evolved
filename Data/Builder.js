@@ -3,7 +3,7 @@ var sorting = searchParams.get("sort");
 var currentView = "";
 
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/aow4db/HTML/header.html")
+    fetch("/evolved/HTML/header.html")
         .then((response) => response.text())
         .then((headerHTML) => {
             document.body.insertAdjacentHTML("afterbegin", headerHTML);

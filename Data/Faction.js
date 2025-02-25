@@ -199,7 +199,7 @@ function SetRandomStart(overwriteParameter) {
 
                     while (getPoints() < 10) {
                         randomEntry = GetRandomEntry(listofChoice[j]);
-                        if (getPoints() + randomEntry.point_cost < 11 && !isInArray(currentFormTraitList, randomEntry)) {
+                        if (getPoints() + randomEntry.point_cost < 10 && !isInArray(currentFormTraitList, randomEntry)) {
                             if (checkCompatibilityTraits(randomEntry) == true) {
                                 currentFormTraitList.push(randomEntry);
                             }

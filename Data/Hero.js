@@ -191,7 +191,7 @@ function LookupCode(code) {
         if (originSplitForDragon[1] != undefined) {
             // a saved splitorigin
             rulerDragonOrigin = originSplitForDragon[1];
-            
+
             var dropdownOriginDragon = (document.getElementById("actionDropdownOriginDragon").value =
                 rulerDragonOrigin);
         } else {
@@ -200,11 +200,12 @@ function LookupCode(code) {
     } else {
         rulerOrigin = origin;
     }
+
     var dropdownOrigin = (document.getElementById("actionDropdownOrigin").value = rulerOrigin);
 
     // 1 = currentClass
     var rclass = splitcode[1];
-    
+
     rulerClass = rclass;
     var dropdownClass = (document.getElementById("actionDropdownClass").value = rulerClass);
 
@@ -439,15 +440,19 @@ function resizeParentToFitChildren(parent) {
     const children = Array.from(parent.children); // Get all child elements
     let maxWidth = 0;
     let maxHeight = 0;
+
     children.forEach((child) => {
         const childRect = child.getBoundingClientRect(); // Get the child's position and size relative to the viewport
         const parentRect = parent.getBoundingClientRect(); // Get the parent's position and size
+
         // Calculate the child's position relative to the parent
         const childRight = childRect.right - parentRect.left;
         const childBottom = childRect.bottom - parentRect.top;
+
         maxWidth = Math.max(maxWidth, childRight);
         maxHeight = Math.max(maxHeight, childBottom);
     });
+
     // Apply the calculated dimensions to the parent
     parent.style.width = maxWidth + "px";
     parent.style.height = maxHeight + "px";
@@ -728,16 +733,19 @@ function BuildChoicesPanel(choiceslist, originButton, slot, evt) {
 
     var panel = document.getElementById("choicesPanel");
     panel.innerHTML = "";
-    for (i = 0; i < choiceslist.length; i++) {
-        let choiceNode = document.createElement("BUTTON");
-        let thisSkill = ReturnHeroSkillItself(null, choiceslist[i].resid);
+    choiceslist.forEach((choice) => {
+        const choiceNode = document.createElement("BUTTON");
+        const thisSkill = ReturnHeroSkillItself(null, choice.resid);
+
         choiceNode.innerHTML = thisSkill.name;
         SetSkillData(choiceNode, thisSkill);
-        choiceNode.addEventListener("click", function () {
+
+        choiceNode.addEventListener("click", () => {
             ClearAndSetSignature(thisSkill, originButton, slot);
         });
+
         panel.appendChild(choiceNode);
-    }
+    });
 }
 
 function ClearAndSetSignature(chosenSkill, origin, slot) {
@@ -1185,20 +1193,19 @@ function activateNode(newNode3, nodeData, isSig) {
 
     // block the excluded skill visually
     if ("excluded_skills" in nodeData) {
-        for (let i = 0; i < nodeData.excluded_skills.length; i++) {
-            const requiredNodeElement = document.getElementById(nodeData.excluded_skills[i].resid);
+        nodeData.excluded_skills.forEach((skill) => {
+            const requiredNodeElement = document.getElementById(skill.resid);
             requiredNodeElement.classList.add("blocked");
 
-            // Revert the connection lines color
-            document.querySelectorAll(`.dotted-line`).forEach((line) => {
+            document.querySelectorAll(".dotted-line").forEach((line) => {
                 if (
                     line.dataset.source === nodeData.resid.toString() ||
                     line.dataset.target === nodeData.resid.toString()
                 ) {
-                    line.style.backgroundColor = "red"; // Revert line color
+                    line.style.backgroundColor = "red";
                 }
             });
-        }
+        });
     }
 }
 
@@ -1323,70 +1330,7 @@ function GetSkillData(a) {
             let abilityName = thisSkill.name;
 
             //   description = jsonUnit[j].description;
-
-            if ("accuracy" in thisSkill) {
-                let abilityReq = "";
-                if (thisSkill.requisites === undefined) {
-                } else {
-                    abilityReq = thisSkill.requisites;
-                }
-
-                let abilityMod = "";
-
-                var k = 0;
-                for (k in thisSkill.modifiers) {
-                    abilityName += "&#11049";
-                    var name = thisSkill.modifiers[k].name.replace("^N", "");
-                    name = name.replace("^n", "");
-                    abilityMod += "<bullet>" + name + "<br>";
-                    abilityMod += thisSkill.modifiers[k].description + "</bullet><br>";
-                }
-
-                // add notes
-
-                abilityNote = "";
-                var Cooldown = "";
-                var Once = "";
-
-                for (let k = 0; k < thisSkill.notes.length; k++) {
-                    if (thisSkill.notes[k] === undefined) {
-                    } else {
-                        if (thisSkill.notes[k].note.indexOf("Cooldown") != -1) {
-                            Cooldown = thisSkill.notes[k].note;
-                        } else if (thisSkill.notes[k].note.indexOf("once per") != -1) {
-                            Once = thisSkill.notes[k].note;
-                        } else {
-                            abilityNote += "<br>" + thisSkill.notes[k].note;
-                        }
-                    }
-                }
-
-                var abilityEncht = "";
-                abilityRange = thisSkill.range + "<range></range>";
-                abilityAcc = thisSkill.accuracy + "<accuracy></accuracy>";
-
-                var abilityIconType = GetAbilityBackground(thisSkill.damage);
-                spa = GetAbilityToolTip(
-                    thisSkill,
-                    thisSkill.damage,
-                    abilityName,
-                    abilityIconType,
-                    abilityAcc,
-                    abilityRange,
-                    abilityMod,
-                    abilityEncht,
-                    abilityNote,
-                    abilityReq,
-                    Cooldown,
-                    Once
-                );
-            } else {
-                spa = CreatePassiveSlotToolTip(thisSkill.icon, thisSkill.name, thisSkill.description);
-            }
-
-            spa.className = "itemAbility";
-
-            spa.setAttribute("style", "width: 450px");
+            spa = GetAbilityInfo(thisSkill);
 
             return spa;
         }

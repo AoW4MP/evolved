@@ -3422,7 +3422,7 @@ function showUnit(a, subcultureCheck, resID) {
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                getSummonedUpkeep(jsonUnits[i].tier, 0.75);
+                                getSummonedUpkeep(jsonUnits[i].tier, 0.8);
                         } else if (faithfulUpkeep === true) {
                             tier.innerHTML =
                                 "Tier " +
@@ -3527,20 +3527,20 @@ function showUnit(a, subcultureCheck, resID) {
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 0.75) +
+                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 0.8) +
                                 "*";
                         } else {
                             tier.innerHTML =
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 0.75) +
+                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 0.8) +
                                 ">*";
                         }
                         let lowUpkeep = true;
 
                         if (summonInfo.length > 0) {
-                            tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 0.75) + "*";
+                            tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 0.8) + "*";
                         }
                     }
 
@@ -3550,14 +3550,14 @@ function showUnit(a, subcultureCheck, resID) {
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.5) +
+                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.2) +
                                 "*";
                         } else {
                             tier.innerHTML =
                                 "Tier " +
                                 romanize(jsonUnits[i].tier) +
                                 ": " +
-                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.5) +
+                                ReduceUpkeepPercentage(jsonUnits[i].upkeep, 1.2) +
                                 ">*";
                         }
 
@@ -3565,9 +3565,9 @@ function showUnit(a, subcultureCheck, resID) {
 
                         if (summonInfo.length > 0) {
                             if (jsonUnits[i].upkeep.indexOf("influence") != -1) {
-                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.5) + "*";
+                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.2) + "*";
                             } else {
-                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.5) + ">*";
+                                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(jsonUnits[i].tier, 1.2) + ">*";
                             }
                         }
                     }

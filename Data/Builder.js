@@ -3,6 +3,7 @@ var sorting = searchParams.get("sort");
 var currentView = "";
 
 var checkboxTooltip = document.getElementById("tooltipCheckbox");
+var showBetaTooltip = document.getElementById("showBetaCheckbox");
 
 var altHeld = false;
 
@@ -25,6 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
         HandleExtraTooltips();
     }, 2000);
 });
+
+function SwitchToBeta() {
+    updateUserSettings({
+        tooltipselectable: checkboxTooltip.checked,
+        showBeta: showBetaTooltip.checked
+    });
+    location.reload();
+}
 function CheckBoxTooltips() {
     //checkboxTooltip = document.getElementById("tooltipCheckbox");
     let hoverDiv = document.getElementById("hoverDiv");
@@ -37,7 +46,8 @@ function CheckBoxTooltips() {
         removeToolTipListeners(hoverDiv2);
     }
     updateUserSettings({
-        tooltipselectable: checkboxTooltip.checked
+        tooltipselectable: checkboxTooltip.checked,
+        showBeta: showBetaTooltip.checked
     });
 }
 
@@ -94,12 +104,11 @@ var jsonSiegeProjects,
     jsonExtraAscendedInfo,
     jsonItemForge,
     jsonCosmicHappenings,
-    jsonHeroSkillsBeta,
-    jsonAbilitiesBeta,
     jsonBuilderHeroLookUp,
-    jsonHeroGovernance;
+    jsonHeroGovernance,
+    jsonStatusEffects;
 
-async function GetAllData() {
+async function GetAllData(beta) {
     const jsonFilePaths = [
         "/evolved/Data/HeroItems.json",
         "/evolved/Data/HeroSkills.json",
@@ -123,10 +132,40 @@ async function GetAllData() {
         "/evolved/Data/CosmicHappenings.json",
         "/evolved/Data/BuilderLookupHero.json",
         "/evolved/Data/Governance.json",
-        "/evolved/BetaStuff/HeroSkills.json",
-        "/evolved/BetaStuff/Abilities.json"
+        "/evolved/Data/StatusEffects.json"
     ];
-    await fetchJsonFiles(jsonFilePaths)
+
+    const jsonFilePathsBeta = [
+        "/evolved/BetaStuff/HeroItems.json",
+        "/evolved/BetaStuff/HeroSkills.json",
+        "/evolved/BetaStuff/SiegeProjects.json",
+        "/evolved/BetaStuff/Units.json",
+        "/evolved/BetaStuff/Traits.json",
+        "/evolved/BetaStuff/Tomes.json",
+        "/evolved/BetaStuff/Abilities.json",
+        "/evolved/BetaStuff/EmpireProgression.json",
+        "/evolved/BetaStuff/Spells.json",
+        "/evolved/BetaStuff/StructureUpgrades.json",
+        "/evolved/Data/CombatEnchantments.json",
+        "/evolved/Data/WorldStructures.json",
+        "/evolved/Data/EnchantmentTables.json",
+        "/evolved/Data/SpawnTables.json",
+        "/evolved/Data/FactionCreation.json",
+        "/evolved/BetaStuff/Destinies.json",
+        "/evolved/Data/BuilderLookup.json",
+        "/evolved/Data/AscendedInfo.json",
+        "/evolved/Data/ItemForge.json",
+        "/evolved/Data/CosmicHappenings.json",
+        "/evolved/Data/BuilderLookupHero.json",
+        "/evolved/BetaStuff/Governance.json",
+        "/evolved/BetaStuff/StatusEffects.json"
+    ];
+
+    var filesToFetch = jsonFilePaths;
+    if (beta) {
+        filesToFetch = jsonFilePathsBeta;
+    }
+    await fetchJsonFiles(filesToFetch)
         .then((dataArray) => {
             dataArray.forEach((data, index) => {
                 // console.log(`Data from ${jsonFilePaths[index]}:`, data);
@@ -175,9 +214,7 @@ async function GetAllData() {
                 } else if (index == 21) {
                     jsonHeroGovernance = data;
                 } else if (index == 22) {
-                    jsonHeroSkillsBeta = data;
-                } else if (index == 23) {
-                    jsonAbilitiesBeta = data;
+                    jsonStatusEffects = data;
                 }
             });
         })
@@ -187,19 +224,19 @@ async function GetAllData() {
 }
 async function CheckData() {
     if (jsonSiegeProjects === undefined) {
-        await GetAllData();
-        // Example usage
-
         const storedSettings = getUserSettings();
         if (storedSettings === null) {
             setUserSettings({
                 tooltipselectable: false,
-                fontSize: "16px"
+                fontSize: "16px",
+                showBeta: false
             });
         } else {
-          
             checkboxTooltip = document.getElementById("tooltipCheckbox");
             checkboxTooltip.checked = storedSettings.tooltipselectable;
+
+            showBetaTooltip = document.getElementById("showBetaCheckbox");
+            showBetaTooltip.checked = storedSettings.showBeta;
             let hoverDiv = document.getElementById("hoverDiv");
             let hoverDiv2 = document.getElementById("hoverDiv2");
             if (checkboxTooltip.checked === true) {
@@ -210,15 +247,15 @@ async function CheckData() {
                 removeToolTipListeners(hoverDiv2);
             }
             CheckBoxTooltips();
-            /*  let checkboxTooltip = document.getElementById("tooltipCheckbox");
-            checkboxTooltip.checked = storedSettings.tooltipselectable;
-
-            if (checkboxTooltip.checked === true) {
-                addTooltipListeners(hoverDiv, null);
-            } else {
-                removeToolTipListeners(hoverDiv);
-            }*/
         }
+
+        if (storedSettings.showBeta) {
+            await GetAllData("beta");
+        } else {
+            await GetAllData();
+        }
+
+        // Example usage
 
         HandlePage();
     }
@@ -291,7 +328,8 @@ var extraFormUnitsList = [
     "shade",
     "tyrant_knight",
     "wildspeaker",
-    "houndmaster"
+    "houndmaster",
+    "geomancer"
 ];
 
 var incorrectIconOverrideList = [
@@ -308,127 +346,56 @@ var incorrectIconOverrideList = [
 
 function AddTagIconsForStatusEffects(name) {
     // if(name == "")
-    let underline = '<span style="text-decoration:underline;color:white;">';
-    let endtag = "</span></span>";
-    const statusEffects = {
-        Poisoned: "poisoned",
-        Bleeding: "bleeding",
-        Burning: "burning",
-        Frozen: "frozen",
-        Berserk: "berserked",
-        Ghostfire: "ghostfire",
-        "Sundered Resistance": "sunderedresistance",
-        "Sundered Defense": "sundereddefense",
-        "Bolstered Resistance": "bolsteredresistance",
-        "Bolstered Defense": "bolstereddefense",
-        Wet: "wet",
-        Strengthened: "strengthened",
-        Weakened: "weakened",
-        Decaying: "decaying",
-        Slowed: "slowed",
-        Immobilized: "immobilized",
-        Blind: "blinded",
-        Diseased: "diseased",
-        Marked: "marked",
-        Stunned: "stunned",
-        Condemned: "condemned",
-        Electrified: "electrified",
-        Regeneration: "regeneration",
-        Distracted: "distracted",
-        Dominated: "dominated",
-        Misfortune: "misfortune",
-        " Fortune": "fortune",
-        " Infectious Insanity": "infectiousinsanity",
-        " Insanity": "insanity",
-        " Gilded": "gilded",
-        " Disrupted": "disrupted",
-        " Demoralized": "demoralized",
-        " Status Protection": "statusprotection",
-        "Static Charge": "staticcharge",
-        Awakened: "awakened",
-        "Hastened ": "hastened",
-        Steadfast: "steadfast",
-        Grace: "grace",
-        "Hyper-Awareness": "hyperawareness"
-    };
+    let underline = '<span style="color:white; text-decoration:underline">';
+    let endtag = "</span>";
 
-    for (const [effect, tag] of Object.entries(statusEffects)) {
-        let tooltipspan = document.createElement("span");
-        tooltipspan.className = "statusEffectHandler";
-        tooltipspan.innerHTML = `${underline}${effect}${endtag}`;
-
-        name = name.replace(effect, `<${tag}></${tag}>${tooltipspan.outerHTML}`);
+    for (let i = 0; i < jsonUnitAbilities.length; i++) {
+        if (name.indexOf(jsonUnitAbilities[i].name) != -1) {
+            // found a mention of an ability
+            // double check if its a status effect
+            for (let j = 0; j < jsonStatusEffects.length; j++) {
+                if (jsonUnitAbilities[i].slug == jsonStatusEffects[j].slug) {
+                    // found the right status effect.
+                    let tooltipspan = document.createElement("span");
+                    tooltipspan.className = "statusEffectHandler";
+                    let effect = jsonUnitAbilities[i].name;
+                    let tag = jsonUnitAbilities[i].slug;
+                    tooltipspan.innerHTML = `${effect}`;
+                    name = name.replace(effect, `${underline}<${tag}></${tag}>${tooltipspan.outerHTML}${endtag}`);
+                }
+            }
+        }
     }
 
     return name;
 }
 
 function lookupStatusEffect(status) {
-    const statusEffectsExp = {
-        Poisoned:
-            "<poisoned></poisoned> Unit sustains 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> each <turn></turn> ",
-        Bleeding:
-            "<bleeding></bleeding> Unit sustains 4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> each <turn></turn>",
-        Burning:
-            "<burning></burning> Unit sustains 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> each <turn></turn>",
-        Frozen: "<frozen></frozen> Unit is unable to act. Countered by <burning></burning> burning",
-        Berserk:
-            "<berserk></berserk><bulletlist>The unit:<bullet>Is uncontrollable and always attacks the closest enemy target.</bullet><bullet> If no enemy is in range, it will attack its allies.</bullet><bullet>Is immune to Morale effects</bullet><bullet>Damage penalties from Casualty are negated.</bullet></bulletlist>",
-        Ghostfire:
-            "<ghostfire></ghostfire> <bullet>Unit sustains 2 Fire Damage and 2 Frost damage each Turn.</bullet><bullet>Replaces and counts as Burning but isn't removed by frozen or wet.</bullet><bullet>Stacks up to 5 times</bullet>",
-        "Sundered Resistance":
-            "<sunderedresistance></sunderedresistance> -1 <resistance></resistance> Resistance.-1 status resistance.",
-        "Sundered Defense": "<sundereddefense></sundereddefense>  -1 <defense></defense> Defense.-1 status resistance.",
-        "Bolstered Resistance": "<bolsteredresistance></bolsteredresistance>  +1 <resistance></resistance> resistance.",
-        "Bolstered Defense": "<bolstereddefense></bolstereddefense>  +1 <defense></defense> Defense.",
-        Wet: "<wet></wet> Unit has:<bulletlist><bullet>-4 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet><bullet>-4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet></bulletlist>Wet <hyperlink>counters</hyperlink> burning",
-        Strengthened:
-            "<strengthened></strengthened> Unit gains +10% damage. <br> Strengthened counters <weakened></weakened> weakened",
-        Weakened:
-            "<weakened></weakened> Unit has -10% damage.<br> Weakened counters <strengthened></strengthened> strengthened",
-        Decaying:
-            "<decaying></decaying> Unit sustains 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> each <turn></turn> and cannot regain <hyperlink><hp></hp> Hit Points</hyperlink>.<br>Decaying counters <regeneration></regeneration> regeneration.",
-        Slowed: "<slowed></slowed> Unit has Slow Movement and one less Retaliation Attack.",
-        Immobilized: "<immobilized></immobilized> This unit cannot move or use Movement abilities.",
-        Blind: "<blind></blind> −50% accuracy for ranged attacks. Cannot make opportunity attacks.",
-        Diseased:
-            "<diseased></diseased> −4 <resistance></resistance> resistance. Has a base 60% chance of spreading to adjacent units at end of turn.",
-        Marked: "<marked></marked> -10% evasion.",
-        Stunned: "<stunned></stunned> Unit is unable to act.",
-        Condemned: "<condemned></condemned> -3 Status Resistance",
-        Electrified:
-            "<electrified></electrified> Unit sustains 4 <damageShock></damageShock> <hyperlink>Shock Damage</hyperlink> each <turn></turn>",
-        Regeneration:
-            "<regeneration></regeneration> +6 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> at the end of the unit's turn.",
-        Distracted:
-            "<distracted></distracted> All attacks targeting this unit are <flank></flank> Flanking attacks. <br> Distracted counters <hyperawareness></hyperawareness> hyper-awareness.",
-        Dominated:
-            "<dominated></dominated> This unit is controlled by the opponent. <br> If the effect lasts until the end of combat, the controller will have the option to spend Mana to keep the unit permanently.",
-        Misfortune: "<misfortune></misfortune> 	+10% fumble chance.",
-        Fortune: "<fortune></fortune> 	+10% critical chance.",
-        "Infectious Insanity ":
-            "<infectiousinsanity></infectiousinsanity> <bullet>Unit is inflicted with insanity</bullet>. <bullet>Attacks have a base 50% chance of infliction Infectious Insanity.</bullet>",
-        Insanity:
-            "<insanity></insanity> <bulletlist>This unit: <bullet>Is uncontrollable and always attacks the closest allied target.</bullet><bullet>If no ally is in range, it will atack its enemies</bullet></bulletlist> ",
-        Gilded: "<gilded></gilded> 	Unit is unable to act. If killed Victor obtains 20 <gold></gold> gold per unit tier.",
-        Disrupted: "<disrupted></disrupted> This unit's Unit Enchantments are temporarily disabled",
-        Demoralized:
-            "<demoralized></demoralized> <bullet>-5 <morale></morale>Morale per stack</bullet> <bullet>Stacks up to 5 times</bullet>",
-        "Status Protection": "<statusprotection></statusprotection>+2 status resistance.",
-        "Static Charge":
-            "<staticcharge></staticcharge> Unit's attack gain: <bulletlist><bullet>+2 Lightning Damage</bullet><bullet>Base 30% change of inflicting Electrified for 3 <turn></turn> turns</bullet></bulletlist>",
-        Awakened: "<awakened></awakened> Activates any <hyperlink>Dormant</hyperlink> traits.",
-        Hastened: "<hastened></hastened> Unit has Very Fast Movement and one additional Retaliation Attack.",
-        Steadfast: "<steadfast></steadfast> Unit cannot have less than 1 <hp></hp> Hit points.",
-        "Hyper-Awareness":
-            "<hyperawareness></hyperawareness> Unit is immune to <flank></flank> Flanking. <br> Hyper-Awareness counters <distracted></distracted> distracted",
-        Grace: "<grace></grace> <bulletlist>When this unit is attacked: <bullet>Heal for 10 <temphp></temphp> Temporary Hit Points.</bullet> <bullet> Remove one stack of grace</bullet><bulletlist> Stacks up to 3 times."
-    };
+    for (let i = 0; i < jsonUnitAbilities.length; i++) {
+        if (status.indexOf(jsonUnitAbilities[i].name) != -1) {
+            // found a mention of an ability
+            // double check if its a status effect
+            for (let j = 0; j < jsonStatusEffects.length; j++) {
+                if (jsonUnitAbilities[i].slug == jsonStatusEffects[j].slug) {
+                    // found the right status effect.
 
-    for (const [effect, tag] of Object.entries(statusEffectsExp)) {
-        status = status.replace(effect, tag);
+                    let effect = jsonUnitAbilities[i].name;
+                    let tag = jsonUnitAbilities[i].description;
+                    let image = document.createElement("IMG");
+                    image.setAttribute("src", "/evolved/Icons/UnitIcons/" + jsonUnitAbilities[i].icon + ".png");
+                    image.setAttribute("width", "30");
+                    image.setAttribute("height", "30");
+
+                    tag.replaceAll("<br><br>", "<br>");
+
+                    let effectplusColor = '<span style="color:white; text-decoration:underline">' + effect + "</span>";
+
+                    status = status.replace(effect, image.outerHTML + effectplusColor + "<br>" + tag);
+                    return status;
+                }
+            }
+        }
     }
-
     return status;
 }
 
@@ -1049,7 +1016,7 @@ function addUnitTypeIcon(a, holder, origin) {
     }
 }
 
-function addAbilityslot(a, holder, list, enchant) {
+function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     let abilityName,
         abilityIcon,
         abilityDam,
@@ -1097,16 +1064,12 @@ function addAbilityslot(a, holder, list, enchant) {
             for (m in abilityReq) {
                 combinedReq += abilityReq[m].requisite + ",";
             }
-
             abilityEncht = "";
-            let k = "";
-            let p = "";
-            let t = "";
-
-            for (p = 0; p < list.length; p++) {
+            // enchantment handling
+            for (let p = 0; p < list.length; p++) {
                 let foundEnchantment = false;
 
-                for (k = 0; k < jsonEnchantments.length; k++) {
+                for (let k = 0; k < jsonEnchantments.length; k++) {
                     if (jsonEnchantments[k].id === list[p].id) {
                         foundEnchantment = true;
                         if ("damage" in jsonEnchantments[k]) {
@@ -1262,6 +1225,16 @@ function addAbilityslot(a, holder, list, enchant) {
                 }
             }
 
+            if (uniqueMedal != undefined) {
+                abilityName += " <champion></champion>";
+                // add note about the levelup change
+                var levelUp = lookupSlugDescription(uniqueMedal);
+                abilityMod +=
+                    '<span style="color:yellow"><medal_champion></medal_champion> Champion Medal ' +
+                    levelUp +
+                    "</span><br>";
+            }
+
             //  abilityDam = jsonUnitAbilities[j].damage;
             abilityRange = abilityRange + "<range></range>";
             abilityAcc = jsonUnitAbilities[j].accuracy + "<accuracy></accuracy>";
@@ -1349,7 +1322,6 @@ function addAbilityslot(a, holder, list, enchant) {
             }
 
             holder.append(btn);
-            // tex.appendChild(spa);
             btn.ability = jsonUnitAbilities[j];
             btn.appendChild(imag);
             let divider = document.createElement("div");
@@ -1357,8 +1329,6 @@ function addAbilityslot(a, holder, list, enchant) {
             divider.append(tex);
             divider.append(dam);
             btn.append(divider);
-
-            //btn.tooltipData = span;
 
             addTooltipListeners(tex, spa);
         }
@@ -1905,7 +1875,7 @@ function CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr) {
         "</p>" +
         "</div>" +
         "<hr>" +
-        abilityDescr;
+        AddTagIconsForStatusEffects(abilityDescr);
 
     // abilityHighlighter.appendChild(spa);
 
@@ -3365,7 +3335,15 @@ function showUnit(a, subcultureCheck, resID) {
                 unitTabHolder.innerHTML = "";
 
                 for (k in jsonUnits[i].abilities) {
-                    addAbilityslot(jsonUnits[i].abilities[k].slug, unitTabHolder, activeEnchantList);
+                    // check if its got a unique medal
+
+                    addAbilityslot(
+                        jsonUnits[i].abilities[k].slug,
+                        unitTabHolder,
+                        activeEnchantList,
+                        null,
+                        uniqueMedalInUnit(jsonUnits[i], jsonUnits[i].abilities[k])
+                    );
                 }
 
                 if (jsonUnits[i].status_resistance != "0") {
@@ -3729,6 +3707,20 @@ function canBeSummoned(id) {
     return summonInf;
 }
 
+function uniqueMedalInUnit(unitdata, currentability) {
+    for (let i = 0; i < unitdata.medal_rewards_5.length; i++) {
+        // there is a champion upgrade
+        if (unitdata.medal_rewards_5[i].slug.indexOf("champion") != -1) {
+            var splitName = unitdata.medal_rewards_5[i].slug.replace("champion_", "");
+            console.log(splitName);
+            if (currentability.slug.indexOf(splitName) != -1) {
+                return unitdata.medal_rewards_5[i].slug;
+            }
+        }
+    }
+    return null;
+}
+
 function getSummonedUpkeep(tier, lowMaintenance) {
     if (tier === 1) {
         if (lowMaintenance != "") {
@@ -3905,7 +3897,7 @@ function backtrackUnitOrigins(unitData, name, holder) {
 
     let evolve = CheckIfEvolveTarget(unitData.id);
     if (evolve != "") {
-        const tooltipText = `Evolved from Unit <hyperlink>${evolve.name}</<hyperlink>`;
+        const tooltipText = `Evolved/Promoted from Unit <hyperlink>${evolve.name}</<hyperlink>`;
         const imgSrc = `/evolved/Icons/UnitIcons/evolve.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Units.html?unit=${evolve.id}`;
@@ -4249,7 +4241,7 @@ function addLevelUpInfo(units, a, holder) {
 
     for (let i = 0; i < units.medal_rewards_5.length; i++) {
         console.log("here");
-        if (units.medal_rewards_5[i].slug.indexOf("medal") != -1) {
+        if (units.medal_rewards_5[i].slug.indexOf("champion_") != -1) {
             levelText = '<p class="levelup_medal">' + "<bullet>" + lookupSlug(units.medal_rewards_5[i].slug);
 
             let test = NewLevelUpEntry(levelText);
@@ -4269,7 +4261,7 @@ function addLevelUpInfo(units, a, holder) {
         levelup.append(NewLevelUpEntry(levelText));
 
         levelText =
-            '<bullet> Evolves into <hyperlink> <a href="/evolved/HTML/Units.html?unit=' +
+            '<bullet> Evolves/Promotes into <hyperlink> <a href="/evolved/HTML/Units.html?unit=' +
             evolveTarget +
             '" target="_blank">' +
             lookupUnit(evolveTarget) +
@@ -6319,6 +6311,9 @@ function showTraitSetup(currentTrait) {
         } else if (currentTrait.DLC == "WAYSOFWAR ") {
             imag.setAttribute("src", "/evolved/Icons/Text/waysofwar.png");
             spa.innerHTML = "Part of the Ways of War DLC";
+        } else if (currentTrait.DLC == "GIANTKINGS ") {
+            imag.setAttribute("src", "/evolved/Icons/Text/GKLogo.png");
+            spa.innerHTML = "Part of the Ways of War DLC";
         }
 
         newDivForMount.appendChild(imag);
@@ -6793,6 +6788,11 @@ function AddDLCTag(dlcname) {
     if (dlcname == "HERALDOFGLORY ") {
         imag.setAttribute("src", "/evolved/Icons/Text/heraldofglory.png");
         spa.innerHTML = "Part of the Herald of Glory DLC";
+    }
+    if (dlcname == "GIANTKINGS ") {
+        imag.setAttribute("src", "/evolved/Icons/Text/GKLogo.png");
+
+        spa.innerHTML = "Part of the Giant Kings DLC";
     }
     newDivForMount.appendChild(imag);
 

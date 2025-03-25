@@ -90,7 +90,12 @@
         "icon": "barbarian",
         "affinity": "<empirechaos></empirechaos>,<empirenature></empirenature>",
         "name": "Barbarian",
-        "description": "<bulletlist>A people who thrive on war and aggression. They value strength and prefer to charge head-on into bloody battles.<bullet>Structures with <food></food> Food and <unitprod></unitprod> Draft income.</bullet><bullet>Melee units have Primal Strike, dealing extra damage ontheir first strike in combat.</bullet><bullet>Ritual of Alacrity passive</bullet></bulletlist>"
+        "description": "<bulletlist>A people who thrive on war and aggression. They value strength and prefer to charge head-on into bloody battles.<bullet>Structures with <food></food> Food and <unitprod></unitprod> Draft income.</bullet><bullet>Melee units have Primal Strike, dealing extra damage ontheir first strike in combat.</bullet><bullet>Ritual of Alacrity passive</bullet></bulletlist>",
+        "incompatible": [
+            {
+                "name": "Swift Marchers"
+            }
+        ]
     },
     {
         "type": "Culture",
@@ -98,8 +103,12 @@
         "icon": "industrious",
         "affinity": "<empirematter></empirematter>,<empirematter></empirematter>",
         "name": "Industrious",
-        "description": "<bulletlist>Master builders who value grand cities and strong armor, preferring a defensive attitude over an aggressive one.<bullet>Structures with <production></production> Production income.</bullet><bullet>Through Bolstering, units get sturdier as they get hit in battle.</bullet><bullet>Scout Prospecting passive</bullet></bulletlist>"
-    },
+        "description": "<bulletlist>Master builders who value grand cities and strong armor, preferring a defensive attitude over an aggressive one.<bullet>Structures with <production></production> Production income.</bullet><bullet>Through Bolstering, units get sturdier as they get hit in battle.</bullet><bullet>Scout Prospecting passive</bullet></bulletlist>",
+        "incompatible": [
+            {
+                "name": "Swift Marchers"
+            }
+        ]    },
     {
         "type": "Culture",
         "id": "high",

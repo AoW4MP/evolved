@@ -1,25 +1,23 @@
 <!doctype html>
 <html lang="en">
-    <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
-
     <head>
+        <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="Data/Builder.js"></script>
+
+        <script src="/evolved/Data/Builder.js"></script>
+        <script src="/evolved/Data/Faction.js"></script>
+        <script src="/evolved/Data/Search.js"></script>
 
         <!-- <script>
-            var unitarray = ["scout", "peasant_pikeman", "archer", "bannerman", "defender", "knight"];
-
-            // $("#body").ready(function() {
-
-            //  $("#header").load("/evolved/HTML/header.html", function() {
-            //      CheckData();
-            //  });
-            // });
+            var unitarray = ["scout", "militia", "archer", "defender", "aspirant_knight", "bannerman", "longbow", "knight"];
+              var unitarray2 = ["scout", "militia", "archer", "defender", "aspirant_knight", "bannerman", "liege_guard", "knight"];
 
             function HandlePage() {
-                SetButtonsAndDivs(unitarray, undefined, "unit");
+                SetButtonsAndDivs(unitarray, "buttonHolder1", "unit", "dataHolder1", "Monarchy");
+                SetButtonsAndDivs(unitarray2, "buttonHolder2", "unit", "dataHolder2", "Aristocracy");
+
                 SetLevelUpStuff();
             }
         </script> -->

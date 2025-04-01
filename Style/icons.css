@@ -4,16 +4,18 @@ decaying,
 weakened,
 wet,
 berserked,
-bolstereddefense,
-bolsteredresistance,
-sundereddefense,
-sunderedresistance,
+berserk,
+bolstered_defense,
+bolstered_resistance,
+sundered_defense,
+sundered_resistance,
 burning,
 frozen,
 bleeding,
 ghostfire,
 poisoned,
 blinded,
+blind,
 immobilized,
 slowed,
 diseased,
@@ -27,17 +29,19 @@ dominated,
 fortune,
 misfortune,
 insanity,
-infectiousinsanity,
+infectious_insanity,
 gilded,
 disrupted,
 demoralized,
-staticcharge,
-statusprotection,
+static_charge,
+status_protection,
 awakened,
 hastened,
 steadfast,
 grace,
-hyperawareness {
+hyperawareness,
+constricted,
+watchful {
     max-width: 30px;
     top: 7px;
     position: relative;
@@ -57,20 +61,21 @@ weakened {
 wet {
     content: url(/evolved/Icons/StatusEffects/wet.png);
 }
-berserked {
+berserked,
+berserk {
     content: url(/evolved/Icons/StatusEffects/berserk.png);
 }
 
-bolstereddefense {
+bolstered_defense {
     content: url(/evolved/Icons/StatusEffects/bolstereddefense.png);
 }
-sunderedresistance {
+sundered_resistance {
     content: url(/evolved/Icons/StatusEffects/sunderedresistance.png);
 }
-sundereddefense {
+sundered_defense {
     content: url(/evolved/Icons/StatusEffects/sundereddefense.png);
 }
-bolsteredresistance {
+bolstered_resistance {
     content: url(/evolved/Icons/StatusEffects/bolsteredresistance.png);
 }
 bleeding {
@@ -89,7 +94,8 @@ ghostfire {
 poisoned {
     content: url(/evolved/Icons/StatusEffects/poisoned.png);
 }
-blinded {
+blinded,
+blind {
     content: url(/evolved/Icons/StatusEffects/blinded.png);
 }
 
@@ -133,7 +139,7 @@ fortune {
 insanity {
     content: url(/evolved/Icons/StatusEffects/insanity.png);
 }
-infectiousinsanity {
+infectious_insanity {
     content: url(/evolved/Icons/StatusEffects/infectiousinsanity.png);
 }
 gilded {
@@ -148,7 +154,7 @@ demoralized {
 staticcharge {
     content: url(/evolved/Icons/StatusEffects/staticcharge.png);
 }
-statusprotection {
+status_protection {
     content: url(/evolved/Icons/StatusEffects/statusprotection.png);
 }
 awakened {
@@ -168,8 +174,47 @@ hyperawareness {
 grace {
     content: url(/evolved/Icons/StatusEffects/grace.png);
 }
+constricted {
+    content: url(/evolved/Icons/StatusEffects/constricted.png);
+}
+watchful {
+    content: url(/evolved/Icons/UnitIcons/watchful.png);
+}
 
 /* ///////////////////////////////////// status effect tags */
+
+classWarrior,
+classDeathKnight,
+classRitualist,
+classMage,
+classDefender,
+classSpellblade {
+    max-width: 20px;
+    top: 7px;
+    position: relative;
+    margin-top: -10px;
+}
+
+classWarrior {
+    content: url(/evolved/Icons/Text/warrior.png);
+}
+classDeathKnight {
+    content: url(/evolved/Icons/Text/death_knight.png);
+}
+classRitualist {
+    content: url(/evolved/Icons/Text/ritualist.png);
+}
+classMage {
+    content: url(/evolved/Icons/Text/mage.png);
+}
+classSpellblade {
+    content: url(/evolved/Icons/Text/spellblade.png);
+}
+classDefender {
+    content: url(/evolved/Icons/Text/defender.png);
+}
+
+/* //////////////////////////////////////classes */
 renown {
     max-width: 20px;
     top: 3px;
@@ -828,6 +873,8 @@ medalgold {
     content: url(/evolved/Icons/Text/medal_champion.png);
     position: relative;
 }
+
+/*small*/
 
 champion {
     max-width: 12px;

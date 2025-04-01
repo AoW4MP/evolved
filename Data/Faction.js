@@ -366,6 +366,7 @@ function selectOrigin(origin, type) {
                 }
                 currentClass = newBit;
             }
+            // change ranger to warrior for dragon lord
             if (origin.name == "Dragon Lord" && currentClass.id == "ranger") {
                 for (let index = 0; index < jsonFactionCreation.length; index++) {
                     if (jsonFactionCreation[index].id === "warrior") {
@@ -1712,7 +1713,7 @@ function SetTomePreview(span, origin) {
                     slug = origin.skills[index].name.replaceAll(" ", "_").toLowerCase();
                 }
                 span.innerHTML +=
-                '<bullet> <img width="20px" src="/evolved/Icons/SiegeProjectIcons/' +
+                    '<bullet> <img width="20px" src="/evolved/Icons/SiegeProjectIcons/' +
                     slug +
                     '.png">' +
                     GetSiegeProjectName(slug) +
@@ -2336,7 +2337,7 @@ function ShowSiegeProjectsOverview(list) {
                 var text = document.createElement("div");
                 text.innerHTML = jsonSiegeProjects[i].name;
                 var smallIcon = document.createElement("img");
-                smallIcon.setAttribute("src", "/evolved/Icons/SiegeIcons/" + jsonSiegeProjects[i].id + ".png");
+                smallIcon.setAttribute("src", "/evolved/Icons/SiegeProjectIcons/" + jsonSiegeProjects[i].id + ".png");
                 smallIcon.setAttribute("width", "20px");
                 spell.appendChild(smallIcon);
                 spell.appendChild(text);
@@ -3118,13 +3119,6 @@ function checkCompatibilityTraits(entry) {
         }
     } else if (entry.group_name === "TACTICS") {
         var hasAdaptionGroup = currentFormTraitList.some((item) => item.group_name === "TACTICS");
-        //console.log(hasAdaptionGroup);
-        // already has adaption or already has primal culture
-        if (hasAdaptionGroup) {
-            canBeAdded = false;
-        }
-    } else if (entry.group_name === "DEFENSE") {
-        var hasAdaptionGroup = currentFormTraitList.some((item) => item.group_name === "DEFENSE");
         //console.log(hasAdaptionGroup);
         // already has adaption or already has primal culture
         if (hasAdaptionGroup) {

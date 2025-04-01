@@ -162,9 +162,9 @@ async function GetAllData(beta) {
     ];
 
     var filesToFetch = jsonFilePaths;
-    // if (beta) {
-    //     filesToFetch = jsonFilePathsBeta;
-    // }
+    //if (beta) {
+    //    filesToFetch = jsonFilePathsBeta;
+    //}
     await fetchJsonFiles(filesToFetch)
         .then((dataArray) => {
             dataArray.forEach((data, index) => {
@@ -295,6 +295,7 @@ var oathswornCultureUnits = [
     "avenger",
     "warbound"
 ];
+
 var MountedSpecialList = [
     "pioneer",
     "pathfinder",
@@ -1250,7 +1251,7 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
                 // add note about the levelup change
                 var levelUp = lookupSlugDescription(uniqueMedal);
                 abilityMod +=
-                '<br><span style="color:yellow"><medal_champion></medal_champion> Champion Medal ' +
+                    '<br><span style="color:yellow"><medal_champion></medal_champion> Champion Medal ' +
                     levelUp +
                     "</span><br>";
             }
@@ -3741,9 +3742,9 @@ function uniqueMedalInUnit(unitdata, currentability) {
         if (unitdata.medal_rewards_5[i].slug.indexOf("champion") != -1) {
             var splitName = unitdata.medal_rewards_5[i].slug.replace("champion_", "");
             // split ability slug before ability to prevent errors with same unitname e.g. transmute/transmuter
- 
+
             var splitAbility = currentability.slug.split("ability");
- 
+
             if (splitAbility)
                 if (splitAbility[0].indexOf(splitName) != -1) {
                     return unitdata.medal_rewards_5[i].slug;
@@ -5343,11 +5344,10 @@ function showStructure(a, showOrigin) {
 
             if (a.indexOf("wildlife_sanctuary") != -1) {
                 let listOfWildlife = [
-                    "brown_bear",
-                    "hunter_spider",
+                    "dread_spider_hatchling",
+                    "vampire_spider_hatchling",
                     "ice_spider",
-                    "razorback",
-                    "warg"
+                    "hunter_spider"
                 ];
                 // unlock warg, razorback, hunter spider, goretustk piglet
                 descriptionDiv.innerHTML += "<br>Unlocks Production of:";
@@ -5532,8 +5532,8 @@ function showWorldStructure(a) {
 
     if (structure.type.indexOf("Ancient") != 1) {
         console.log(structure.type);
-         //descriptionDiv.innerHTML +=
-         //   "Combat Enchantments depend on story event choices when entering the Ancient Wonder. <br><br>";
+        //descriptionDiv.innerHTML +=
+        //   "Combat Enchantments depend on story event choices when entering the Ancient Wonder. <br><br>";
     }
     unitTypesDiv = document.getElementById("affectUnitTypes");
 
@@ -6239,11 +6239,11 @@ function showItem(a) {
 
     modName = document.getElementById("modname");
     console.log(a.id);
-     if (a.id.indexOf("pantheon") != -1) {
-         modName.innerHTML = "<pantheon></pantheon>" + a.name.toUpperCase();
-     } else {
-         modName.innerHTML = a.name.toUpperCase();
-     }
+    if (a.id.indexOf("pantheon") != -1) {
+        modName.innerHTML = "<pantheon></pantheon>" + a.name.toUpperCase();
+    } else {
+        modName.innerHTML = a.name.toUpperCase();
+    }
 
     modName.setAttribute("id", "modname" + a.id);
     descriptionDiv = document.getElementById("moddescription");
@@ -6313,18 +6313,18 @@ function showItem(a) {
 
     cost = document.getElementById("modcost");
     cost.innerHTML = a.slot + "<br>";
-     // add classes
-     if ("hero_classes" in a) {
-         for (let i = 0; i < a.hero_classes.length; i++) {
-             cost.innerHTML += a.hero_classes[i].name + " , ";
-         }
-     }
-     cost.innerHTML += "<br>";
-     if ("hero_types" in a) {
-         for (let i = 0; i < a.hero_types.length; i++) {
-             cost.innerHTML += a.hero_types[i].name + " , ";
-         }
-     }
+    // add classes
+    if ("hero_classes" in a) {
+        for (let i = 0; i < a.hero_classes.length; i++) {
+            cost.innerHTML += a.hero_classes[i].name + " , ";
+        }
+    }
+    cost.innerHTML += "<br>";
+    if ("hero_types" in a) {
+        for (let i = 0; i < a.hero_types.length; i++) {
+            cost.innerHTML += a.hero_types[i].name + " , ";
+        }
+    }
 
     cost.setAttribute("id", "modcost" + a.id);
 
@@ -6718,7 +6718,7 @@ function showSkill(a, checkInAbilities, icon_slug, category, level, group_name) 
         tier = document.getElementById("modtier");
     }
     tier.innerHTML = "";
-    
+
     if (category != undefined) {
         tier.innerHTML += "<br>" + category + " - " + level;
         tier.innerHTML += "<br>" + group_name;
@@ -6802,7 +6802,7 @@ function showSkill(a, checkInAbilities, icon_slug, category, level, group_name) 
     for (let j = 0; j < jsonExtraAscendedInfo.length; j++) {
         if (jsonExtraAscendedInfo[j].id == a.id) {
             descriptionDiv.innerHTML +=
-                 "One of Following Tomes Researched : <br>" + jsonExtraAscendedInfo[j].description;
+                "One of Following Tomes Researched : <br>" + jsonExtraAscendedInfo[j].description;
             if ("extraspell" in jsonExtraAscendedInfo[j]) {
                 let iDiv = spell_card_template.content.cloneNode(true);
                 // Access the root element in the DocumentFragment

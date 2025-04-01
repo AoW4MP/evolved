@@ -5,42 +5,38 @@
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
         <script src="/evolved/Data/Builder.js"></script>
         <script src="/evolved/Data/Faction.js"></script>
         <script src="/evolved/Data/Search.js"></script>
         <script>
-            var tomeArray = [
-                "tome_of_zeal",
-                "tome_of_faith",
-                "tome_of_the_beacon",
-                "tome_of_the_inquisition",
-                "tome_of_sanctuary",
-                "tome_of_subjugation",
-                "tome_of_exaltation",
-                "tome_of_supremacy",
-                "tome_of_the_god_emperor",
-                "tome_of_discipline",
-                "tome_of_the_construct",
-                "tome_of_the_cleansing_flame",
-                "tome_of_prosperity"
+            var unitarray = [
+                "clay_charger:tome_of_the_dungeon_depths",
+                "clay_arbalest:tome_of_the_dungeon_depths",
+                "clay_defender:tome_of_the_dungeon_depths",
+                "geomancer:tome_of_geomancy"
             ];
 
             function HandlePage() {
-                SetButtonsAndDivs(tomeArray, undefined, "tome");
+                showUnitsWithIcon(unitarray);
                 SetLevelUpStuff();
+                SetCollapsibleStuff();
             }
         </script>
 
-        <title>Age of Wonders 4 Evolved - Order Tomes</title>
+        <title>Age of Wonders 4 Database - Giant Kings Tome Units</title>
     </head>
 
     <body>
         <div id="header"></div>
 
-        <div class="textblocktitle"><empireorder></empireorder>Order Tomes</div>
+        <div class="textblocktitle">
+            <img src="/evolved/Icons/Text/GKLogo.png" height="40px" /> Giant Kings Tome Units
+            <img src="/evolved/Icons/Text/GKLogo.png" height="40px" />
+        </div>
 
         <div class="w3-container">
-            <div class="w3-bar w3-black" id="buttonHolder"></div>
+            <div class="w3-bar w3-black" id="buttonHolder" style="width: 240px"></div>
             <div id="dataHolder"></div>
         </div>
     </body>

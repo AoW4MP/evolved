@@ -660,7 +660,16 @@
         "slug": "goretusk_piglet"
       },
       {
+        "slug": "grimbeak_crow"
+      },
+      {
         "slug": "polar_bear"
+      },
+      {
+        "slug": "razorback"
+      },
+      {
+        "slug": "warg"
       },
       {
         "slug": "hunter_spider"
@@ -675,10 +684,10 @@
         "slug": "brown_bear"
       },
       {
-        "slug": "carrion_bird"
+        "slug": "inferno_hound"
       },
       {
-        "slug": "elephant"
+        "slug": "carrion_bird"
       },
       {
         "slug": "inferno_puppy"
@@ -688,6 +697,12 @@
       },
       {
         "slug": "kraken_spawn"
+      },
+      {
+        "slug": "dire_penguin"
+      },
+      {
+        "slug": "young_caustic_worm"
       }
     ]
   },
@@ -709,13 +724,46 @@
         "slug": "white_wolf"
       },
       {
+        "slug": "thunderbird"
+      },
+      {
+        "slug": "goretusk_matriarch"
+      },
+      {
+        "slug": "frost_wyvern"
+      },
+      {
         "slug": "dire_bear"
       },
       {
         "slug": "hunter_spider_matriarch"
       },
       {
+        "slug": "dread_spider_matriarch"
+      },
+      {
+        "slug": "spirit_wolf"
+      },
+      {
+        "slug": "unicorn"
+      },
+      {
+        "slug": "caustic_worm"
+      },
+      {
+        "slug": "vampire_spider_matriarch"
+      },
+      {
+        "slug": "nightmare"
+      },
+      {
         "slug": "phoenix"
+      },
+      {
+        "slug": "fire_wyvern"
+      },
+      {
+        "slug": "deep-sea_nimu"
       },
       {
         "slug": "kraken"
@@ -737,13 +785,13 @@
     "casting_cost": "600<mana></mana> ",
     "resid": 4986457031578,
     "spellType": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>",
-    "id": "naga_transformation",
+    "id": "naga_form",
     "DLC": "PRIMALFURY ",
     "tactical": false,
     "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Amphibious</bullet><bullet>Slip Away</bullet><bullet>Immunity to Electrified</bullet><bullet>+2 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink></bullet><bullet>+2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet></bulletlist></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
-    "name": "Naga Transformation",
+    "name": "Naga Form",
     "operation_point_cost": 600,
-    "icon": "naga_transformation"
+    "icon": "naga_form"
   },
   {
     "casting_cost": "30<mana></mana> ",
@@ -960,11 +1008,11 @@
   {
     "casting_cost": "45<mana></mana> ",
     "resid": 4801773439296,
-    "upkeep": "20<gold></gold> ",
+    "upkeep": "30<gold></gold> ",
     "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>",
     "id": "soul_collection",
     "tactical": false,
-    "description": "<bulletlist><bullet>Gain +10 <souls></souls> <hyperlink>Souls</hyperlink> income.</bullet><bullet>Costs 20 <gold></gold> <hyperlink>Gold</hyperlink> upkeep.<bulletlist></bullet>",
+    "description": "<bulletlist><bullet>Gain +10 <souls></souls> <hyperlink>Souls</hyperlink> income.</bullet><bullet>Costs 30 <gold></gold> <hyperlink>Gold</hyperlink> upkeep.<bulletlist></bullet>",
     "name": "Soul Collection",
     "operation_point_cost": 45,
     "icon": "soul_collection"
@@ -3597,7 +3645,7 @@
     "description": "Turns the target race into angelic beings, granting them:<bulletlist><bullet>The Celestial unit type.</bullet><bullet>Flying Movement, which increases mobility.</bullet><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet></bulletlist>",
     "name": "Angelize",
     "operation_point_cost": 600,
-    "icon": "angelic_transformation"
+    "icon": "angelize"
   },
   {
     "casting_cost": "80<mana></mana> ",
@@ -4671,12 +4719,12 @@
     "casting_cost": "150<mana></mana> ",
     "resid": 4264902530971,
     "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
-    "id": "summon_astral_reflection",
+    "id": "summon_astral_reflections",
     "tactical": true,
     "description": "Summons 2 Astral Reflections of the target friendly unit onto unoccupied adjacent hexes.<br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
-    "name": "Summon Astral Reflection",
+    "name": "Summon Astral Reflections",
     "operation_point_cost": 50,
-    "icon": "summon_astral_reflection"
+    "icon": "summon_astral_reflections"
   },
   {
     "casting_cost": "70<mana></mana> ",

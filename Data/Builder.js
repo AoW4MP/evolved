@@ -530,7 +530,7 @@ function GetSpellTierAndName(id) {
 
 function ShowUnitFromLink() {
     let unitID = searchParams.get("unit");
-    document.title = "Age of Wonders 4 Database - " + GetUnitTierAndName(unitID).split(">")[2];
+    document.title = "Age of Wonders 4 Evolved - " + GetUnitTierAndName(unitID).split(">")[2];
     showUnitFromString(unitID, "dataHolder");
 }
 
@@ -538,41 +538,41 @@ function ShowSpellFromLink() {
     let SkillID = searchParams.get("skill");
     if (SkillID != undefined) {
         console.log("here");
-        document.title = "Age of Wonders 4 Database - " + "Hero Skill";
+        document.title = "Age of Wonders 4 Evolved - " + "Hero Skill";
         showHeroSkillFromString(SkillID, "dataHolder");
         return;
     }
     let spellID = searchParams.get("spell");
     if (spellID != undefined) {
-        document.title = "Age of Wonders 4 Database - " + GetSpellTierAndName(spellID).split(">")[2];
+        document.title = "Age of Wonders 4 Evolved - " + GetSpellTierAndName(spellID).split(">")[2];
         showSpellFromString(spellID, "dataHolder");
         return;
     }
 
     let SiegeID = searchParams.get("siege");
     if (SiegeID != undefined) {
-        document.title = "Age of Wonders 4 Database - " + "Siege Project";
+        document.title = "Age of Wonders 4 Evolved - " + "Siege Project";
         showSiegeProjectFromString(SiegeID, "dataHolder");
         return;
     }
 
     let WonderID = searchParams.get("wonder");
     if (WonderID != undefined) {
-        document.title = "Age of Wonders 4 Database - " + "Wonder";
+        document.title = "Age of Wonders 4 Evolved - " + "Wonder";
         showWorldStructureFromString(WonderID, "dataHolder");
         return;
     }
 
     let TomeID = searchParams.get("tome");
     if (TomeID != undefined) {
-        document.title = "Age of Wonders 4 Database - " + "Tome";
+        document.title = "Age of Wonders 4 Evolved - " + "Tome";
         showTomeFromString(TomeID, "dataHolder");
         return;
     }
 
     let StrucID = searchParams.get("structure");
     if (StrucID != undefined) {
-        document.title = "Age of Wonders 4 Database - " + "Structure";
+        document.title = "Age of Wonders 4 Evolved - " + "Structure";
         showStructureFromString(StrucID, "dataHolder");
         return;
     }

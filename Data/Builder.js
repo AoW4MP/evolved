@@ -555,6 +555,12 @@ function ShowSpellFromLink() {
         showSiegeProjectFromString(SiegeID, "dataHolder");
         return;
     }
+    let GovID = searchParams.get("governance");
+     if (GovID != undefined) {
+         document.title = "Age of Wonders 4 Database - " + "Governance";
+         showHeroGovernanceFromString(GovID, "dataHolder");
+         return;
+     }
 
     let WonderID = searchParams.get("wonder");
     if (WonderID != undefined) {
@@ -2698,6 +2704,11 @@ async function showSiegeProjectFromString(string, divID) {
     showSiegeProject(string, true);
 }
 
+async function showHeroGovernanceFromString(string, divID) {
+    await spawnSpellCardSingle(string, divID);
+    showHeroGov(string, true);
+}
+
 async function showWorldStructureFromString(string, divID) {
     await spawnStructureCardSingle(string, divID);
     showWorldStructure(string);
@@ -3888,7 +3899,13 @@ function backtrackUnitOrigins(unitData, name, holder) {
 
     let wonder = CheckIfInAncientWonder(unitData.id);
     if (wonder != "") {
-        const tooltipText = `Rally Unit unlocked from <hyperlink>${wonder.type}</<hyperlink> : <hyperlink>${wonder.name}</<hyperlink>`;
+        // if landmark different text:
+        let tooltipText = "";
+        if (wonder.type == "Landmark") {
+            tooltipText = `Unit unlocked from <landmark></landmark> <hyperlink>${wonder.type}</<hyperlink> : <hyperlink>${wonder.name}</<hyperlink>`;
+        } else {
+            tooltipText = `Rally Unit unlocked from <hyperlink>${wonder.type}</<hyperlink> : <hyperlink>${wonder.name}</<hyperlink>`;
+        }
         const imgSrc = `/evolved/Icons/StructurePics/${wonder.id}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?wonder=${wonder.id}`;
@@ -3925,6 +3942,16 @@ function backtrackUnitOrigins(unitData, name, holder) {
                 : `/evolved/Icons/HeroSkillIcons/${heroSkill[1].icon}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?skill=${heroSkill[1].id}`;
+        createUnitTypeIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
+    }
+
+
+    let governance = CheckIfFromGovernance(name);
+    if (governance != "") {
+        const tooltipText = `Unit mentioned in Governance <hyperlink>${governance.name}</hyperlink>`;
+        const imgSrc = `/aow4db/Icons/GovernanceIcons/${governance.icon}.png`;
+        const imgFallbackSrc = `/aow4db/Icons/Text/mp.png`;
+        const link = `/aow4db/HTML/Spells.html?governance=${governance.id}`;
         createUnitTypeIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
     }
 
@@ -4059,6 +4086,17 @@ function CheckIfFromHeroSkill(unitName) {
     }
 
     return resultslist;
+}
+
+function CheckIfFromGovernance(unitName) {
+    let governance = "";
+    let i = 0;
+    for (i in jsonHeroGovernance) {
+        if (jsonHeroGovernance[i].screen_description.indexOf(">" + unitName) != -1) {
+            governance = jsonHeroGovernance[i];
+        }
+    }
+    return governance;
 }
 
 function CheckIfInSiege(unitName) {
@@ -5962,6 +6000,7 @@ function showSpell(a, showOrigin) {
                 a === "summon_greater_animal" ||
                 a === "awaken_the_forest" ||
                 a === "demonic_summoning" ||
+                a === "summon_elemental" ||
                 a === "raise_undead_army"
             ) {
                 // extra info

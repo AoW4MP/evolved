@@ -1387,13 +1387,17 @@ function addTooltipListeners(tooltip, span, secondary) {
             //  FillToolTip(span, secondary);
 
             hoverDiv2.style.visibility = "hidden"; // make it invisible
+            hoverDiv2.inert = true;
             hoverDiv2.show();
+            hoverDiv2.inert = false;
             if (tooltip != hoverDiv2) {
                 updateHoverDivPosition(event, secondary);
             }
             hoverDiv2.close(); // close and reset visiblity
             hoverDiv2.style.visibility = "";
+            hoverDiv2.inert = true;
             hoverDiv2.show();
+            hoverDiv2.inert = false;
         });
 
         tooltip.addEventListener("mouseleave", function () {
@@ -1407,13 +1411,17 @@ function addTooltipListeners(tooltip, span, secondary) {
             TurnOnTooltip(span, secondary);
             // hoverDiv.show();
             hoverDiv.style.visibility = "hidden";
+            hoverDiv2.inert = true;
             hoverDiv.show();
+            hoverDiv2.inert = false;
             if (tooltip != hoverDiv) {
                 updateHoverDivPosition(event, secondary);
             }
             hoverDiv.close();
             hoverDiv.style.visibility = "";
+            hoverDiv2.inert = true;
             hoverDiv.show();
+            hoverDiv2.inert = false;
         });
 
         tooltip.addEventListener("mouseleave", function () {
@@ -3905,6 +3913,9 @@ function backtrackUnitOrigins(unitData, name, holder) {
             tooltipText = `Unit unlocked from <landmark></landmark> <hyperlink>${wonder.type}</<hyperlink> : <hyperlink>${wonder.name}</<hyperlink>`;
         } else {
             tooltipText = `Rally Unit unlocked from <hyperlink>${wonder.type}</<hyperlink> : <hyperlink>${wonder.name}</<hyperlink>`;
+        }
+        if ("other_unlock" in wonder) {
+            tooltipText = `Unit available in <hyperlink>${wonder.type}</<hyperlink> : <hyperlink>${wonder.name}</<hyperlink>`;
         }
         const imgSrc = `/evolved/Icons/StructurePics/${wonder.id}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;

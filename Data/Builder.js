@@ -3960,9 +3960,9 @@ function backtrackUnitOrigins(unitData, name, holder) {
     let governance = CheckIfFromGovernance(name);
     if (governance != "") {
         const tooltipText = `Unit mentioned in Governance <hyperlink>${governance.name}</hyperlink>`;
-        const imgSrc = `/aow4db/Icons/GovernanceIcons/${governance.icon}.png`;
-        const imgFallbackSrc = `/aow4db/Icons/Text/mp.png`;
-        const link = `/aow4db/HTML/Spells.html?governance=${governance.id}`;
+        const imgSrc = `/evolved/Icons/GovernanceIcons/${governance.icon}.png`;
+        const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
+        const link = `/evolved/HTML/Spells.html?governance=${governance.id}`;
         createUnitTypeIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
     }
 

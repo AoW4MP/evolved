@@ -1772,7 +1772,7 @@ function SetTomePreview(span, origin) {
             // province Improvement
             else if (origin.skills[index].type.indexOf("Province") != -1) {
                 span.innerHTML +=
-                    '<bullet> <img width="20px" src="/aow4db/Icons/UpgradeIcons/' +
+                    '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
                     origin.skills[index].upgrade_slug +
                     '.png">' +
                     GetStructureName(origin.skills[index].upgrade_slug) +

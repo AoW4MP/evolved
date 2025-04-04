@@ -556,11 +556,11 @@ function ShowSpellFromLink() {
         return;
     }
     let GovID = searchParams.get("governance");
-     if (GovID != undefined) {
-         document.title = "Age of Wonders 4 Database - " + "Governance";
-         showHeroGovernanceFromString(GovID, "dataHolder");
-         return;
-     }
+    if (GovID != undefined) {
+        document.title = "Age of Wonders 4 Evolved - " + "Governance";
+        showHeroGovernanceFromString(GovID, "dataHolder");
+        return;
+    }
 
     let WonderID = searchParams.get("wonder");
     if (WonderID != undefined) {
@@ -1411,17 +1411,17 @@ function addTooltipListeners(tooltip, span, secondary) {
             TurnOnTooltip(span, secondary);
             // hoverDiv.show();
             hoverDiv.style.visibility = "hidden";
-            hoverDiv2.inert = true;
+            hoverDiv.inert = true;
             hoverDiv.show();
-            hoverDiv2.inert = false;
+            hoverDiv.inert = false;
             if (tooltip != hoverDiv) {
                 updateHoverDivPosition(event, secondary);
             }
             hoverDiv.close();
             hoverDiv.style.visibility = "";
-            hoverDiv2.inert = true;
+            hoverDiv.inert = true;
             hoverDiv.show();
-            hoverDiv2.inert = false;
+            hoverDiv.inert = false;
         });
 
         tooltip.addEventListener("mouseleave", function () {
@@ -3956,7 +3956,6 @@ function backtrackUnitOrigins(unitData, name, holder) {
         createUnitTypeIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
     }
 
-
     let governance = CheckIfFromGovernance(name);
     if (governance != "") {
         const tooltipText = `Unit mentioned in Governance <hyperlink>${governance.name}</hyperlink>`;
@@ -5560,7 +5559,6 @@ function showWorldStructure(a) {
 
     description += structure.description;
 
-
     if ("prediction_description" in structure) {
         if (structure.prediction_description != "") {
             description += "<br>" + structure.prediction_description;
@@ -5593,7 +5591,6 @@ function showWorldStructure(a) {
     FindCombatEnchantment(a);
 
     if ("unit_unlocks" in structure) {
-
         if ("other_unlock" in structure) {
             description += "<br>Unit Reward:<br>";
         } else {
@@ -6027,7 +6024,7 @@ function showSpell(a, showOrigin) {
 
                 info = document.createElement("DIV");
                 info.innerHTML =
-                '<button type="button" class="collapsible"  onclick="SetUpSpawnTable()">SPAWN CHANCES (manually added data, error prone)</button>';
+                    '<button type="button" class="collapsible"  onclick="SetUpSpawnTable()">SPAWN CHANCES (manually added data, error prone)</button>';
                 let collapsibleC = document.createElement("DIV");
                 collapsibleC.classList = "content";
 

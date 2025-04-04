@@ -2322,7 +2322,7 @@
  {
   "requirement_description": "",
   "cost": "800<structureprod></structureprod> 800<gold></gold> ",
-  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435138280,
   "id": "town_hall_iv_black_palace",
   "description": "",
@@ -3040,7 +3040,7 @@
   "prediction_description": "<bulletlist><bullet>Unlock <hyperlink>Crucible Battlements in Combat</hyperlink></bullet><bullet>Grants <hyperlink>Crucible Battlements</hyperlink> to every <hyperlink>Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "resid": 4041564236812,
   "id": "crucible_battlements",
-  "description": "<hyperlink>Battlement Structure</hyperlink><br></br><bulletlist><bullet>Battlements grant <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks:<bulletlist></bullet><bullet>Deals +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet><bullet>Ignore <hyperlink>Obscured</hyperlink> on targets.</bullet><bullet>+1 <range></range> Range</bullet></bulletlist><bullet>Units produced in the City gain +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> on their attacks.</bullet></bulletlist>",
+  "description": "<hyperlink>Battlement Structure</hyperlink><br></br><bulletlist><bullet>Battlements grant <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks:<bulletlist></bullet><bullet>Deals +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet><bullet>Ignore <hyperlink>Obscured</hyperlink> on targets.</bullet><bullet>+1 <range></range> Range</bullet></bulletlist><bullet>Units produced in the City gain +1 {GLOBAL.FireDamageConcept.Hyperlink on their attacks.</bullet></bulletlist>",
   "name": "Crucible Battlements",
   "icon": "crucible_battlements",
   "is_sector_upgrade": false

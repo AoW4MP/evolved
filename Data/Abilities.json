@@ -1265,7 +1265,7 @@
     "note": "Cooldown: 4 <turn></turn>"
    }
   ],
-  "description": "Revive target friendly non-Lithorine unit as a Lithorine of its Tier.",
+  "description": "Revive target non-Lithorine non-Hero unit as a Lithorine of its Tier.<br></br><br></br>If victorious in combat, units revived can be kept for a <mana></mana> <hyperlink>Mana</hyperlink> cost.",
   "name": "Crystallize Essence",
   "slug": "crystallize_essence_ability_council_prolocutor",
   "damage": "",
@@ -11897,7 +11897,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 2 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, the target sustains 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet>",
+  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 3 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, the target sustains 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet>",
   "name": "Devour Mind",
   "slug": "devour_mind_ability_mage_bane",
   "damage": "",
@@ -25396,7 +25396,7 @@
   "description": "Fire Heavy Magelock at target enemy unit.",
   "name": "Fire Heavy Magelock",
   "slug": "fire_heavy_magelocks_(item_forge)_ability_the_magekiller_tier_iv",
-  "damage": "",
+  "damage": "36<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -25436,6 +25436,52 @@
   "actionPoints": "<fullactioncontinue></fullactioncontinue>",
   "range": "0",
   "icon": "take_aim_ability_the_magekiller_tier_iv"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+    "name": "Breaching",
+    "count": 1
+   },
+   {
+    "description": "Deals +40% damage against Battle Mage Units, Support Units, and <hyperlink>Wizard Kings</hyperlink>.",
+    "name": "The Magekiller^n",
+    "count": 1
+   }
+  ],
+  "description": "Quickly fire Heavy Magelock at target enemy unit, with reduced accuracy and effectiveness.",
+  "name": "Snapshot Heavy Magelock",
+  "slug": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_the_magekiller_tier_iv",
+  "damage": "24<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Physical Ranged"
+   },
+   {
+    "requisite": "Base"
+   },
+   {
+    "requisite": "Single Shot"
+   }
+  ],
+  "accuracy": "80%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "icon": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_the_magekiller_tier_iv"
  },
  {
   "modifiers": [],
@@ -25579,7 +25625,7 @@
   "modifiers": [],
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Crystal Bolts",
-  "slug": "magic_hero_bolts_(crystal)__ability_lithorite_orb_tier_ii",
+  "slug": "magic_hero_bolts_(crystal)__ability_empowered_lithorite_orb_tier_ii",
   "damage": "7<damagephysical></damagephysical> 7<damagelightning></damagelightning> ",
   "requisites": [
    {
@@ -25606,7 +25652,7 @@
   "notes": [],
   "description": "Single Melee Strike.",
   "name": "Quick Stab",
-  "slug": "quick_stab_ability_lithorite_orb_tier_ii",
+  "slug": "quick_stab_ability_empowered_lithorite_orb_tier_ii",
   "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -25637,7 +25683,7 @@
   ],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
-  "slug": "melee_strike_(base)_ability_goldseekers_pickaxe_tier_ii",
+  "slug": "melee_strike_(base)_ability_empowered_goldseekers_pickaxe_tier_ii",
   "damage": "14<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -25657,7 +25703,7 @@
   "modifiers": [],
   "description": "Fires ranged projectiles at target enemy unit.",
   "name": "Shoot Greatbow",
-  "slug": "greatbow_ability_titans_greatbow_tier_ii",
+  "slug": "greatbow_ability_empowered_titans_greatbow_tier_ii",
   "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -25684,7 +25730,7 @@
   "notes": [],
   "description": "Single Melee Strike.",
   "name": "Quick Stab",
-  "slug": "quick_stab_ability_titans_greatbow_tier_ii",
+  "slug": "quick_stab_ability_empowered_titans_greatbow_tier_ii",
   "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -25709,7 +25755,7 @@
   ],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
-  "slug": "melee_strike_(base)_ability_shatterblades_tier_ii",
+  "slug": "melee_strike_(base)_ability_empowered_shatterblades_tier_ii",
   "damage": "7<damagephysical></damagephysical> 7<damagelightning></damagelightning> ",
   "requisites": [
    {
@@ -25735,7 +25781,7 @@
   ],
   "description": "Deals damage to target unit.",
   "name": "Throw Shatterblade",
-  "slug": "throw_dagger_ability_shatterblades_tier_ii",
+  "slug": "throw_dagger_ability_empowered_shatterblades_tier_ii",
   "damage": "12<damagephysical></damagephysical> 12<damagelightning></damagelightning> ",
   "requisites": [
    {
@@ -25756,7 +25802,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "icon": "throw_dagger_ability_shatterblades_tier_ii"
+  "icon": "throw_dagger_ability_empowered_shatterblades_tier_ii"
  },
  {
   "notes": [
@@ -25944,7 +25990,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Crystal Bolts",
   "slug": "magic_hero_bolts_(crystal)__ability_eternal_lithorite_orb_item_tier_iv",
-  "damage": "6<damagephysical></damagephysical> 6<damagelightning></damagelightning> ",
+  "damage": "9<damagephysical></damagephysical> 9<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -26103,7 +26149,7 @@
   "description": "Deal damage to target unit and another enemy within 3 hexes.",
   "name": "Throw Seeking Shatterblade",
   "slug": "throw_dagger_ability_eternal_shatterblades_tier_iv",
-  "damage": "15<damagephysical></damagephysical> 15<damagelightning></damagelightning> ",
+  "damage": "12<damagephysical></damagephysical> 12<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -26123,7 +26169,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "icon": "throw_dagger_ability_shatterblades_tier_ii"
+  "icon": "throw_dagger_ability_empowered_shatterblades_tier_ii"
  },
  {
   "modifiers": [
@@ -26388,7 +26434,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "icon": "throw_dagger_ability_shatterblades_tier_ii"
+  "icon": "throw_dagger_ability_empowered_shatterblades_tier_ii"
  },
  {
   "notes": [
@@ -28252,7 +28298,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "icon": "throw_dagger_ability_shatterblades_tier_ii"
+  "icon": "throw_dagger_ability_empowered_shatterblades_tier_ii"
  },
  {
   "modifiers": [
@@ -28372,7 +28418,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "icon": "throw_dagger_ability_shatterblades_tier_ii"
+  "icon": "throw_dagger_ability_empowered_shatterblades_tier_ii"
  },
  {
   "notes": [],
@@ -28839,7 +28885,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "icon": "throw_dagger_ability_shatterblades_tier_ii"
+  "icon": "throw_dagger_ability_empowered_shatterblades_tier_ii"
  },
  {
   "modifiers": [
@@ -30671,7 +30717,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "icon": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_equipment_item_magelock_base"
+  "icon": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_the_magekiller_tier_iv"
  },
  {
   "notes": [
@@ -34858,7 +34904,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "icon": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_equipment_item_magelock_base"
+  "icon": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_the_magekiller_tier_iv"
  },
  {
   "modifiers": [],

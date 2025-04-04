@@ -825,12 +825,12 @@ function SetTomePathInfo(button, origin) {
     newDivButton.appendChild(affinityText);
     newDivButton.appendChild(buttonText);
     if ("DLC" in origin) {
-         let DLCTAG = document.createElement("div");
-         DLCTAG.style = "    position: absolute;right: 0;top: 4px;";
-         let dlcTag = origin.DLC.replaceAll(" ", "");
-         DLCTAG.innerHTML = "<" + dlcTag + "></" + dlcTag + ">";
-         newDivButton.appendChild(DLCTAG);
-     }
+        let DLCTAG = document.createElement("div");
+        DLCTAG.style = "    position: absolute;right: 0;top: 4px;";
+        let dlcTag = origin.DLC.replaceAll(" ", "");
+        DLCTAG.innerHTML = "<" + dlcTag + "></" + dlcTag + ">";
+        newDivButton.appendChild(DLCTAG);
+    }
 
     button.append(newDivButton);
 

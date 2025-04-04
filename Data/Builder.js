@@ -5560,8 +5560,11 @@ function showWorldStructure(a) {
 
     description += structure.description;
 
-    if (structure.prediction_description != "") {
-        description += "<br>" + structure.prediction_description;
+
+    if ("prediction_description" in structure) {
+        if (structure.prediction_description != "") {
+            description += "<br>" + structure.prediction_description;
+        }
     }
 
     imagelink = document.getElementById("modicon");
@@ -5590,7 +5593,13 @@ function showWorldStructure(a) {
     FindCombatEnchantment(a);
 
     if ("unit_unlocks" in structure) {
-        description += "<br>Rally Units:<br>";
+
+        if ("other_unlock" in structure) {
+            description += "<br>Unit Reward:<br>";
+        } else {
+            description += "<br>Rally Units:<br>";
+        }
+
         for (let x = 0; x < structure.unit_unlocks.length; x++) {
             let div = document.createElement("DIV");
             div.setAttribute("style", "margin-right: 20px;");
@@ -6018,7 +6027,7 @@ function showSpell(a, showOrigin) {
 
                 info = document.createElement("DIV");
                 info.innerHTML =
-                    '<button type="button" class="collapsible"  onclick="SetUpSpawnTable()">Spawn Chances</button>';
+                '<button type="button" class="collapsible"  onclick="SetUpSpawnTable()">SPAWN CHANCES (manually added data, error prone)</button>';
                 let collapsibleC = document.createElement("DIV");
                 collapsibleC.classList = "content";
 

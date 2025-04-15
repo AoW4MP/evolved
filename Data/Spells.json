@@ -433,7 +433,7 @@
   "id": "dungeon_hazard",
   "DLC": "GIANTKINGS ",
   "tactical": false,
-  "description": "Target enemy army:<bulletlist><bullet>Sustains 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>, doubled if cast on a Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>Becomes Slowed for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "All units in target enemy army suffer -2 <defense></defense> <hyperlink>Defense</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.",
   "name": "Dungeon Hazard",
   "operation_point_cost": 80,
   "icon": "dungeon_hazard"
@@ -585,7 +585,7 @@
   "icon": "accursed_armors"
  },
  {
-  "casting_cost": "60<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 5046586577917,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "desecrate_land",
@@ -593,7 +593,7 @@
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains a <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are granted its rewards and lose <reputation2></reputation2> <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The province loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Desecrate Land",
-  "operation_point_cost": 60,
+  "operation_point_cost": 80,
   "icon": "desecrate_land"
  },
  {
@@ -1032,7 +1032,7 @@
   ]
  },
  {
-  "casting_cost": "6<thralls></thralls> ",
+  "casting_cost": "4<thralls></thralls> ",
   "resid": 5046586575940,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "mass_phantasmal_ritual",
@@ -1040,11 +1040,11 @@
   "tactical": false,
   "description": "Enemy units in target <hyperlink>Province</hyperlink> lose 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Mass Phantasmal Ritual",
-  "operation_point_cost": 150,
+  "operation_point_cost": 120,
   "icon": "mass_phantasmal_ritual"
  },
  {
-  "casting_cost": "3<thralls></thralls> ",
+  "casting_cost": "2<thralls></thralls> ",
   "resid": 5046586575939,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "phantasmal_ritual",
@@ -1052,7 +1052,7 @@
   "tactical": false,
   "description": "Target enemy army loses 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
   "name": "Phantasmal Ritual",
-  "operation_point_cost": 100,
+  "operation_point_cost": 60,
   "icon": "phantasmal_ritual"
  },
  {
@@ -2213,19 +2213,52 @@
     "slug": "white_wolf"
    },
    {
-    "slug": "hunter_spider_matriarch"
+    "slug": "thunderbird"
+   },
+   {
+    "slug": "goretusk_matriarch"
+   },
+   {
+    "slug": "frost_wyvern"
    },
    {
     "slug": "dire_bear"
    },
    {
+    "slug": "hunter_spider_matriarch"
+   },
+   {
+    "slug": "dread_spider_matriarch"
+   },
+   {
+    "slug": "spirit_wolf"
+   },
+   {
+    "slug": "unicorn"
+   },
+   {
+    "slug": "caustic_worm"
+   },
+   {
+    "slug": "vampire_spider_matriarch"
+   },
+   {
+    "slug": "nightmare"
+   },
+   {
     "slug": "phoenix"
    },
    {
-    "slug": "infernal_juggernaut"
+    "slug": "fire_wyvern"
+   },
+   {
+    "slug": "deep-sea_nimu"
    },
    {
     "slug": "kraken"
+   },
+   {
+    "slug": "infernal_juggernaut"
    }
   ]
  },
@@ -2360,7 +2393,7 @@
   ]
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4995046965556,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "pall_of_gloom",
@@ -2368,7 +2401,7 @@
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Gloom</hyperlink></bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Swamp</hyperlink>, and <hyperlink>Dungeon</hyperlink>.</bullet><bullet>Enemy <hyperlink>Units</hyperlink>suffer 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Pall of Gloom",
-  "operation_point_cost": 150,
+  "operation_point_cost": 120,
   "icon": "pall_of_gloom"
  },
  {
@@ -2622,25 +2655,25 @@
   "icon": "recall_ruler"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4801773437750,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "abyssal_flames",
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Gains <hyperlink>Ashlands</hyperlink>.Loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Abyssal Flames",
-  "operation_point_cost": 150,
+  "operation_point_cost": 120,
   "icon": "abyssal_flames"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4801773437731,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "flash_freeze",
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> in the Province suffer: -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>The province gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>The province loses <hyperlink>Chasm</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Flash Freeze",
-  "operation_point_cost": 100,
+  "operation_point_cost": 120,
   "icon": "flash_freeze"
  },
  {
@@ -2851,7 +2884,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "wrath_of_the_emperor",
   "tactical": false,
-  "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
+  "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Gains 3 Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
   "name": "Wrath of the Emperor",
   "operation_point_cost": 120,
   "icon": "wrath_of_the_emperor"
@@ -2879,14 +2912,14 @@
   "icon": "mass_revive"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4514010634948,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "condemn_army",
   "tactical": false,
   "description": "All units in target enemy army:<bulletlist><bullet>Become Condemned for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet><bullet>Suffer -2 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet>",
   "name": "Condemn Army",
-  "operation_point_cost": 100,
+  "operation_point_cost": 80,
   "icon": "condemn_army"
  },
  {
@@ -3208,14 +3241,14 @@
   "icon": "sleep_of_oblivion"
  },
  {
-  "casting_cost": "120<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4514010634138,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "ritual_of_somnia",
   "tactical": false,
   "description": "In the target enemy army:<bulletlist><bullet>At the start of each battle, all units have a base 90% chance of becoming Stunned for 2 <turn></turn> Turns.</bullet><bullet>Lasts 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Ritual of Somnia",
-  "operation_point_cost": 120,
+  "operation_point_cost": 80,
   "icon": "ritual_of_somnia"
  },
  {
@@ -3640,14 +3673,14 @@
   "icon": "meteor_projectiles"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4514010632371,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "pyroclastic_eruption",
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it will be <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You will not gain its rewards or lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>Enemy <hyperlink>Units</hyperlink>in the province sustain 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>The province gains <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The province loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Pyroclastic Eruption",
-  "operation_point_cost": 150,
+  "operation_point_cost": 120,
   "icon": "pyroclastic_eruption"
  },
  {
@@ -3847,14 +3880,14 @@
   "icon": "melt_armor"
  },
  {
-  "casting_cost": "400<mana></mana> ",
+  "casting_cost": "300<mana></mana> ",
   "resid": 4514010631848,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "awaken_the_forest",
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink> with <hyperlink>Forest</hyperlink>:<bulletlist><bullet>Loses <hyperlink>Forest</hyperlink>.</bullet><bullet>An <hyperlink>Army</hyperlink> of Animals and Plants is summoned under your control.</bullet></bulletlist>",
   "name": "Awaken the Forest",
-  "operation_point_cost": 400,
+  "operation_point_cost": 300,
   "icon": "awaken_the_forest",
   "summoned_units": [
    {
@@ -4909,14 +4942,14 @@
   "icon": "rapid_evolution_enchantment"
  },
  {
-  "casting_cost": "400<mana></mana> ",
+  "casting_cost": "300<mana></mana> ",
   "resid": 4273492486695,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "golden_horde",
   "tactical": false,
   "description": "<bulletlist><bullet>Summons a full army of random Tier III units that can be produced in a city on the target hex.</bullet><bullet>If cast within an enemy <hyperlink>Province</hyperlink>, instantly pillages it.</bullet></bulletlist>",
   "name": "Golden Horde",
-  "operation_point_cost": 400,
+  "operation_point_cost": 300,
   "icon": "golden_horde"
  },
  {
@@ -4994,7 +5027,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "enchanted_bloom",
   "tactical": false,
-  "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 1 <hyperlink>Province</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +2 <food></food> <hyperlink>Food</hyperlink>, +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> and +2 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist>",
+  "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +2 <food></food> <hyperlink>Food</hyperlink>, +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> and +2 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist>",
   "name": "Enchanted Bloom",
   "operation_point_cost": 150,
   "icon": "enchanted_bloom"
@@ -5815,14 +5848,14 @@
   "icon": "crushing_earth"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4273492483299,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "earth_shatter",
   "tactical": false,
   "description": "Target habitable or uninhabitable <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> in the province sustain 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Loses <hyperlink>Mountain</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Diggable Earth</hyperlink>.</bullet></bulletlist>",
   "name": "Earth Shatter",
-  "operation_point_cost": 150,
+  "operation_point_cost": 120,
   "icon": "earth_shatter",
   "summoned_units": [
    {

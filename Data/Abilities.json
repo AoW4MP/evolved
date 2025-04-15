@@ -1751,9 +1751,6 @@
   "requisites": [
    {
     "requisite": "Melee"
-   },
-   {
-    "requisite": "Base"
    }
   ],
   "accuracy": "Always Hits",
@@ -2184,30 +2181,19 @@
   "icon": "magic_bolts_ability_pyremoth"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 90% chance of draining all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> from target for 2 <turn></turn> Turns.",
-    "name": "Disruption",
-    "count": 1
-   }
-  ],
-  "description": "Deals damage in a 1-hex radius.",
-  "name": "Magical Disruption",
-  "slug": "magical_disruption_ability_severing_golem",
-  "damage": "33<damagefrost></damagefrost> ",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
+  "description": "Up to 5 random enemies:<bulletlist><bullet>Sustain 30 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Disrupted.</bullet>",
+  "name": "Magical Disruption",
+  "slug": "magical_disruption_ability_severing_golem",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "0",
   "icon": "magical_disruption_ability_severing_golem"
  },
  {
@@ -17167,7 +17153,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_bastion",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17399,11 +17385,11 @@
   "icon": "overdraw_crossbow_ability_arbalest"
  },
  {
-  "notes": [],
+  "modifiers": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_anvil_guard",
-  "damage": "10<damagephysical></damagephysical> ",
+  "damage": "8<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17415,6 +17401,7 @@
   "accuracy": "100%",
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
+  "notes": [],
   "icon": "melee_strike_(base)_ability_sabertooth"
  },
  {
@@ -22749,7 +22736,7 @@
   "description": "Deal damage to target unit.",
   "name": "Hurl Ice Boulder",
   "slug": "hurl_ice_boulder_ability_hs_hurl_ice",
-  "damage": "30<damagefrost></damagefrost> ",
+  "damage": "25<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -22766,7 +22753,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "hurl_ice_boulder_ability_hs_hurl_ice"
@@ -23087,7 +23074,7 @@
   "description": "Deal damage to target unit.",
   "name": "Hurl Lightning",
   "slug": "hurl_lightning_ability_hs_hurl_lightning",
-  "damage": "30<damagelightning></damagelightning> ",
+  "damage": "25<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Single Shot"
@@ -23104,7 +23091,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "hurl_lightning_ability_hs_hurl_lightning"
@@ -23220,7 +23207,7 @@
   "description": "Deal damage to target unit.",
   "name": "Hurl Boulder",
   "slug": "hurl_boulder_ability_hs_hurl_boulder",
-  "damage": "30<damagephysical></damagephysical> ",
+  "damage": "25<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -23237,7 +23224,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "hurl_boulder_ability_hs_hurl_boulder"
@@ -23273,7 +23260,7 @@
   "description": "Deal damage to target unit.",
   "name": "Hurl Flame",
   "slug": "hurl_flame_ability_hs_hurl_flame",
-  "damage": "30<damagefire></damagefire> ",
+  "damage": "25<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Single Shot"
@@ -23290,7 +23277,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "hurl_flame_ability_hs_hurl_flame"
@@ -23506,13 +23493,13 @@
   "icon": "hs_mage_fire_evoker_ability_hs_mage_fire_evoker"
  },
  {
-  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>Killing a unit deals 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy units within 2 hexes.</bullet></bulletlist>",
+  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>Killing a unit deals 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy units within 2 hexes.</bullet></bulletlist>",
   "name": "Grand Cascading Rune",
   "slug": "grand_cascading_rune",
   "icon": "grand_cascading_rune"
  },
  {
-  "description": "This unit reflects 20% of the damage sustained by <hyperlink>Melee</hyperlink> attacks.",
+  "description": "This unit reflects 25% of the damage sustained by <hyperlink>Melee</hyperlink> attacks.",
   "name": "Reflecting Rune",
   "slug": "reflecting_rune",
   "icon": "reflecting_rune"
@@ -23572,13 +23559,13 @@
   "icon": "chaos_dedication"
  },
  {
-  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>+15% damage on base attacks.</bullet><bullet>A base 90% chance of applying Bleeding for 3 <turn></turn> Turns on base attacks, Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.</bullet></bulletlist>",
+  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>+10% damage on base attacks.</bullet><bullet>A base 90% chance of applying Bleeding for 3 <turn></turn> Turns on base attacks, Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.</bullet></bulletlist>",
   "name": "Grand Brawn Rune",
   "slug": "grand_brawn_rune",
   "icon": "grand_brawn_rune"
  },
  {
-  "description": "Unit deals +15% damage.",
+  "description": "Unit deals +10% damage.",
   "name": "Damage Rune",
   "slug": "damage_rune",
   "icon": "damage_rune"
@@ -23613,7 +23600,11 @@
   "accuracy": "100%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
-  "notes": [],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
   "icon": "mighty_stomp_ability_giant_signature_materium_rune_2"
  },
  {
@@ -23635,7 +23626,7 @@
   "icon": "grand_life_rune"
  },
  {
-  "description": "Unit gains +20 <hyperlink><hp></hp> Hit Points</hyperlink>.<br></br><br></br>Increases unit upkeep by <mana></mana> <hyperlink>Mana</hyperlink>.",
+  "description": "Unit gains +15 <hyperlink><hp></hp> Hit Points</hyperlink>.<br></br><br></br>Increases unit upkeep by <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "Vitality Rune",
   "slug": "vitality_rune",
   "icon": "hs_defender_vigor_i"
@@ -23742,7 +23733,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_equipment_item_bone_obelisk_base",
   "damage": "20<damagephysical></damagephysical> ",
@@ -23786,7 +23777,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_equipment_item_bone_warhammer_base",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -23802,7 +23793,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_equipment_item_bone_giant_axe_base_",
   "damage": "24<damagephysical></damagephysical> ",
@@ -25810,7 +25801,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_giant_king_bone_weapons_magic_obelisk_tier_i",
   "damage": "20<damagephysical></damagephysical> ",
@@ -25854,7 +25845,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_giant_king_bone_weapons_warhammer_tier_i",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -25870,7 +25861,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_giant_king_bone_weapons_giant_axe_tier_i",
   "damage": "24<damagephysical></damagephysical> ",
@@ -25897,7 +25888,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_giant_king_frost_magic_obelisk_tier_i",
   "damage": "10<damagephysical></damagephysical> 10<damagefrost></damagefrost> ",
@@ -25941,7 +25932,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_giant_king_frost_warhammer_tier_i",
-  "damage": "7<damagephysical></damagephysical> 7<damagefrost></damagefrost> ",
+  "damage": "6<damagephysical></damagephysical> 6<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -25957,7 +25948,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_giant_king_frost_giant_axe_tier_i",
   "damage": "12<damagephysical></damagephysical> 12<damagefrost></damagefrost> ",
@@ -26442,7 +26433,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_equipment_item_obelisk_base",
   "damage": "20<damagephysical></damagephysical> ",
@@ -26486,7 +26477,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_equipment_item_warhammer_base",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -26502,7 +26493,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_equipment_item_giant_axe_base",
   "damage": "24<damagephysical></damagephysical> ",
@@ -26683,7 +26674,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_giant_king_fire_magic_obelisk_tier_i",
   "damage": "10<damagephysical></damagephysical> 10<damagefire></damagefire> ",
@@ -26727,7 +26718,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_giant_king_fire_warhammer_tier_i",
-  "damage": "7<damagephysical></damagephysical> 7<damagefire></damagefire> ",
+  "damage": "6<damagephysical></damagephysical> 6<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -26743,7 +26734,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_giant_king_fire_giant_axe_tier_i",
   "damage": "12<damagephysical></damagephysical> 12<damagefire></damagefire> ",
@@ -26770,7 +26761,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_giant_king_stone_magic_obelisk_tier_i",
   "damage": "20<damagephysical></damagephysical> ",
@@ -26814,7 +26805,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_giant_king_stone_warhammer_tier_i",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "12<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -26830,7 +26821,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_giant_king_stone_giant_axe_tier_i",
   "damage": "24<damagephysical></damagephysical> ",
@@ -26857,7 +26848,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 75% of the damage.",
+  "description": "Deal damage to target unit. Adjacent enemy units to the target sustain 50% of the damage.",
   "name": "Obelisk Crash",
   "slug": "obelisk_obelisk_crash_ability_giant_king_storm_magic_obelisk_tier_i",
   "damage": "10<damagephysical></damagephysical> 10<damagelightning></damagelightning> ",
@@ -26901,7 +26892,7 @@
   "description": "Strike at enemy targets in a 1-hex cone.",
   "name": "Swiping Melee Strike",
   "slug": "warhammer_melee_single_strike_ability_giant_king_storm_warhammer_tier_i",
-  "damage": "7<damagephysical></damagephysical> 7<damagelightning></damagelightning> ",
+  "damage": "6<damagephysical></damagephysical> 6<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -26917,7 +26908,7 @@
  },
  {
   "modifiers": [],
-  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "description": "A Heavy Charge attack that hits enemy units in a 2-hex line:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "giant_axe_heavy_melee_charge_ability_giant_king_storm_giant_axe_tier_i",
   "damage": "12<damagephysical></damagephysical> 12<damagelightning></damagelightning> ",
@@ -28038,30 +28029,19 @@
   "icon": "melee_strike_(base)_ability_sabertooth"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 90% chance of draining all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> from target for 2 <turn></turn> Turns.",
-    "name": "Disruption",
-    "count": 1
-   }
-  ],
-  "description": "Deals damage in a 1-hex radius.",
-  "name": "Magical Disruption",
-  "slug": "magical_disruption_ability_severing_golem_mount_item_tier_iv",
-  "damage": "30<damagefrost></damagefrost> ",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
+  "description": "Up to 5 random enemies:<bulletlist><bullet>Sustain 30 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Disrupted.</bullet>",
+  "name": "Magical Disruption",
+  "slug": "magical_disruption_ability_severing_golem_mount_item_tier_iv",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "0",
   "icon": "magical_disruption_ability_severing_golem"
  },
  {
@@ -28201,9 +28181,9 @@
    }
   ],
   "description": "Fires ranged projectiles at target enemy unit.",
-  "name": "Shoot Bow",
-  "slug": "shoot_bow_(item_forge)_ability_equipment_item_titan_greatbow_base",
-  "damage": "12<damagephysical></damagephysical> ",
+  "name": "Shoot Greatbow",
+  "slug": "greatbow_ability_equipment_item_titan_greatbow_base",
+  "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -28212,9 +28192,9 @@
     "requisite": "Base"
    }
   ],
-  "accuracy": "90%",
+  "accuracy": "70%",
   "actionPoints": "<repeatingaction></repeatingaction>",
-  "range": "4",
+  "range": "5",
   "icon": "shoot_bow_ability_animated_lava_bow"
  },
  {
@@ -36133,7 +36113,7 @@
   "icon": "blind"
  },
  {
-  "description": "This unit has: <Bulletlist><bullet>+50 damage on attacks.</bullet><bullet>A 30% chance of suffering Stunned for 2 <turn></turn> Turns after completing an attack action.</bullet></bulletlist>",
+  "description": "This unit has: <Bulletlist><bullet>+50 damage on attacks.</bullet><bullet>A 30% chance of suffering Stunned for 1 <turn></turn> Turn after completing an attack action.</bullet></bulletlist>",
   "name": "Overcharged",
   "slug": "overcharged",
   "icon": "overcharged"
@@ -36313,19 +36293,25 @@
   "icon": "ley_line_focus"
  },
  {
-  "description": "When this expires, this unit will transform into a greater Animal or Dragon unit.",
-  "name": "Marked for Evolution",
-  "slug": "marked_for_evolution",
-  "icon": "marked_for_evolution"
+  "description": "Due to the consequences of a narrative event, this unit has +2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink>. This effect can stack.",
+  "name": "Increased Lightning Resistance",
+  "slug": "increased_lightning_resistance",
+  "icon": "increased_lightning_resistance"
  },
  {
-  "description": "When a Red Dragon has Draconic Rage, all attacking units have a 90% chance to suffer Burning every turn.<br></br><br></br>When a Blue Dragon has Draconic Rage, all attacking units have a 60% chance to get Frozen every turn.",
-  "name": "Draconic Catalyst",
-  "slug": "draconic_catalyst",
-  "icon": "draconic_catalyst"
+  "description": "Attacks:<bulletlist><bullet>Gain +3 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Deal 4 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist><br></br>Each attack removes a stack of this effect.",
+  "name": "Fury of the Storm Crow",
+  "slug": "fury_of_the_storm_crow",
+  "icon": "fury_of_the_storm_crow"
  },
  {
-  "description": "This unit is Slowed.",
+  "description": "When this unit dies, it becomes a <hyperlink>Decaying Zombie</hyperlink> under the opponent's control until the end of combat.<br></br><br></br>Doesn't trigger in water combat.",
+  "name": "Necro Hex",
+  "slug": "necro_hex",
+  "icon": "necro_hex"
+ },
+ {
+  "description": "At the start of combat, this unit becomes Slowed for 3 <turn></turn> Turn.",
   "name": "Dungeon Hazard",
   "slug": "dungeon_hazard",
   "icon": "dungeon_hazard"
@@ -36438,24 +36424,6 @@
   "slug": "eldritch_rituals"
  },
  {
-  "description": "Due to the consequences of a narrative event, this unit has +2 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink>. This effect can stack.",
-  "name": "Increased Lightning Resistance",
-  "slug": "increased_lightning_resistance",
-  "icon": "increased_lightning_resistance"
- },
- {
-  "description": "Attacks:<bulletlist><bullet>Gain +3 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Deal 4 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist><br></br>Each attack removes a stack of this effect.",
-  "name": "Fury of the Storm Crow",
-  "slug": "fury_of_the_storm_crow",
-  "icon": "fury_of_the_storm_crow"
- },
- {
-  "description": "When this unit dies, it becomes a <hyperlink>Decaying Zombie</hyperlink> under the opponent's control until the end of combat.<br></br><br></br>Doesn't trigger in water combat.",
-  "name": "Necro Hex",
-  "slug": "necro_hex",
-  "icon": "necro_hex"
- },
- {
   "description": "<bulletlist><bullet>Unit suffers from Insanity, becoming uncontrollable.</bullet><bullet>Unit sustains 5 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> each <turn></turn>.</bullet></bulletlist>",
   "name": "Madness",
   "slug": "madness",
@@ -36496,6 +36464,12 @@
   "name": "Quicksilver Basin",
   "slug": "quicksilver_basin",
   "icon": "soothing_shrine"
+ },
+ {
+  "description": "When this expires, this unit will transform into a greater Animal or Dragon unit.",
+  "name": "Marked for Evolution",
+  "slug": "marked_for_evolution",
+  "icon": "marked_for_evolution"
  },
  {
   "description": "The hero has -1 <order></order> Order <hyperlink>Affinity</hyperlink>. This effect can stack.",
@@ -36939,6 +36913,12 @@
   "name": "Distracted",
   "slug": "distracted",
   "icon": "distracted"
+ },
+ {
+  "description": "When a Red Dragon has Draconic Rage, all attacking units have a 90% chance to suffer Burning every turn.<br></br><br></br>When a Blue Dragon has Draconic Rage, all attacking units have a 60% chance to get Frozen every turn.",
+  "name": "Draconic Catalyst",
+  "slug": "draconic_catalyst",
+  "icon": "draconic_catalyst"
  },
  {
   "description": "When this expires, the unit will become Stunned.",

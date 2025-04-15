@@ -2156,10 +2156,10 @@
  {
   "requirement_description": "",
   "cost": "800<structureprod></structureprod> 800<gold></gold> ",
-  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <optactical></optactical> Combat Casting Point</bullet><bullet>+10 <caststrategic></caststrategic> World Map Casting Point</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435138608,
   "id": "town_hall_iv_wizards_auditorium",
-  "description": "10 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink> and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.",
+  "description": "",
   "name": "Town Hall IV: Wizard's Auditorium",
   "icon": "town_hall_iv_wizards_auditorium",
   "is_sector_upgrade": false,
@@ -2274,7 +2274,7 @@
  },
  {
   "requirement_description": "",
-  "cost": "660<structureprod></structureprod> 660<gold></gold> ",
+  "cost": "800<structureprod></structureprod> 800<gold></gold> ",
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435138360,
   "id": "town_hall_iv_industry_compound",
@@ -2286,7 +2286,7 @@
  },
  {
   "requirement_description": "",
-  "cost": "320<structureprod></structureprod> 320<gold></gold> ",
+  "cost": "400<structureprod></structureprod> 400<gold></gold> ",
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138339,
   "id": "town_hall_iii_forge_tower",
@@ -2298,7 +2298,7 @@
  },
  {
   "requirement_description": "Requires 3 <population></population> <hyperlink>Population</hyperlink> to unlock",
-  "cost": "160<structureprod></structureprod> 160<gold></gold> ",
+  "cost": "200<structureprod></structureprod> 200<gold></gold> ",
   "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138331,
   "id": "town_hall_ii_bulwark",
@@ -3040,7 +3040,7 @@
   "prediction_description": "<bulletlist><bullet>Unlock <hyperlink>Crucible Battlements in Combat</hyperlink></bullet><bullet>Grants <hyperlink>Crucible Battlements</hyperlink> to every <hyperlink>Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "resid": 4041564236812,
   "id": "crucible_battlements",
-  "description": "<hyperlink>Battlement Structure</hyperlink><br></br><bulletlist><bullet>Battlements grant <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks:<bulletlist></bullet><bullet>Deals +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet><bullet>Ignore <hyperlink>Obscured</hyperlink> on targets.</bullet><bullet>+1 <range></range> Range</bullet></bulletlist><bullet>Units produced in the City gain +1 {GLOBAL.FireDamageConcept.Hyperlink on their attacks.</bullet></bulletlist>",
+  "description": "<hyperlink>Battlement Structure</hyperlink><br></br><bulletlist><bullet>Battlements grant <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks:<bulletlist></bullet><bullet>Deals +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet><bullet>Ignore <hyperlink>Obscured</hyperlink> on targets.</bullet><bullet>+1 <range></range> Range</bullet></bulletlist><bullet>Units produced in the City gain +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> on their attacks.</bullet></bulletlist>",
   "name": "Crucible Battlements",
   "icon": "crucible_battlements",
   "is_sector_upgrade": false

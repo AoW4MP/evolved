@@ -72,12 +72,12 @@
  {
   "category": "Nature Empire Skill",
   "id": "wild_expansion",
-  "required_xp": 400,
-  "description": "Completing a <hyperlink>Province Annexation</hyperlink> summons a <hyperlink>Unit tier</hyperlink> IV Animal <hyperlink>Unit</hyperlink> under your control, depending on the province.",
+  "required_xp": 160,
+  "description": "Completing a <hyperlink>Province Annexation</hyperlink> summons an Animal <hyperlink>Unit</hyperlink> under your control, depending on the province.",
   "name": "Wild Expansion",
   "icon": "wild_expansion",
-  "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "required_level": 6,
+  "cost": "225<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -266,7 +266,7 @@
   "category": "Chaos Empire Skill",
   "id": "reign_of_destruction",
   "required_xp": 400,
-  "description": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> takes -1 <turn></turn> <hyperlink>Turn</hyperlink> less.<br></br><hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> yields +50 <gold></gold> <hyperlink>Gold</hyperlink> per <population></population> <hyperlink>Population</hyperlink>.<br></br><hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> grants a <hyperlink>Herald of War</hyperlink>.",
+  "description": "<hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> takes -2 <turn></turn> <hyperlink>Turns</hyperlink> less.<br></br><hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> yields +50 <gold></gold> <hyperlink>Gold</hyperlink> per <population></population> <hyperlink>Population</hyperlink>.<br></br><hyperlink>Razing</hyperlink> <hyperlink>Cities</hyperlink> grants a <hyperlink>Herald of War</hyperlink>.",
   "name": "Reign of Destruction",
   "icon": "reign_of_destruction",
   "required_level": 10,
@@ -995,12 +995,12 @@
  {
   "category": "Chaos Empire Skill",
   "id": "destined_conquerors",
-  "required_xp": 200,
-  "description": "Gain +20 <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against all other <hyperlink>Empires</hyperlink>. These cannot be traded or lost.<br></br>Your <hyperlink>Empire</hyperlink> gains +30 <gold></gold> <hyperlink>Gold</hyperlink> and +30 <mana></mana> <hyperlink>Mana</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
+  "required_xp": 300,
+  "description": "+30 <casusBelli></casusBelli> <hyperlink>Grievances</hyperlink> against all other <hyperlink>Empires</hyperlink>. These cannot be traded or lost.<br></br>Gain +50 <gold></gold> <hyperlink>Gold</hyperlink> and +50 <mana></mana> <hyperlink>Mana</hyperlink> per active <rs_war></rs_war> <hyperlink>War</hyperlink> you are involved in.",
   "name": "Destined Conquerors",
   "icon": "destined_conquerors",
-  "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "required_level": 9,
+  "cost": "350<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1017,12 +1017,12 @@
  {
   "category": "Chaos Empire Skill",
   "id": "tireless_marchers",
-  "required_xp": 300,
+  "required_xp": 200,
   "description": "<hyperlink>Forced March</hyperlink> costs -75% less <mana></mana> <hyperlink>Mana</hyperlink> and inflicts -75% less damage to your <hyperlink>Units</hyperlink>.",
   "name": "Tireless Marchers",
   "icon": "tireless_marchers",
-  "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "required_level": 7,
+  "cost": "250<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1057,5 +1057,16 @@
   "required_level": 3,
   "cost": "150<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
+ },
+ {
+  "category": "Nature Rite",
+  "id": "primordial_call",
+  "required_xp": 400,
+  "description": "Immediately summon a Tier V Animal <hyperlink>Unit</hyperlink> at your <hyperlink>Throne City</hyperlink>.",
+  "name": "Primordial Call",
+  "icon": "primordial_call",
+  "required_level": 10,
+  "cost": "400<influence></influence> ",
+  "required_affinity": "<nature></nature>"
  }
 ]

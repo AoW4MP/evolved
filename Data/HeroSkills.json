@@ -7545,7 +7545,7 @@
   "tree_name": "Giant Kings",
   "tree_pos_y": 250.0,
   "DLC": "GIANTKINGS ",
-  "description": "Hurl Boulder gains +10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.",
+  "description": "Hurl Ice Boulder gains +10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 5046586583042
@@ -9050,7 +9050,7 @@
   "tree_name": "Giant Kings",
   "tree_pos_y": 250.0,
   "DLC": "GIANTKINGS ",
-  "description": "Hurl Lightning gains +10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.",
+  "description": "Hurl Lightning gains +10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 5046586583040
@@ -9454,7 +9454,7 @@
   "tree_name": "Giant Kings",
   "tree_pos_y": 250.0,
   "DLC": "GIANTKINGS ",
-  "description": "Hurl Boulder gains +10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.",
+  "description": "Hurl Boulder gains +10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 5046586578646
@@ -9869,7 +9869,7 @@
   "tree_name": "Giant Kings",
   "tree_pos_y": 250.0,
   "DLC": "GIANTKINGS ",
-  "description": "Hurl Boulder gains +10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.",
+  "description": "Hurl Flame gains +10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 5046586583041
@@ -10713,6 +10713,57 @@
   "tree_pos_y": 50.0
  },
  {
+  "resid": -8277668028376677473,
+  "excluded_skills": [
+   {
+    "resid": -8277668028376677478
+   },
+   {
+    "resid": -8277668028376677474
+   }
+  ],
+  "id": "hs_champion_of_the_people",
+  "group_name": "Champion - Hero Skill Group",
+  "icon": "hs_champion_of_the_people",
+  "type": "normal",
+  "name": "Champion of the People",
+  "description": "While army leader, all non-Hero units in the army gain:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist><br></br>In addition, this unit gains access to the Spur to Action ability."
+ },
+ {
+  "resid": -8277668028376677474,
+  "excluded_skills": [
+   {
+    "resid": -8277668028376677478
+   },
+   {
+    "resid": -8277668028376677473
+   }
+  ],
+  "id": "hs_champion_of_the_arcane",
+  "group_name": "Champion - Hero Skill Group",
+  "icon": "hs_champion_of_the_arcane",
+  "type": "normal",
+  "name": "Champion of the Arcane",
+  "description": "This unit gains:<bulletlist><bullet>+20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>+20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet><bullet>Access to the Weaver ability.</bullet></bulletlist>"
+ },
+ {
+  "resid": -8277668028376677478,
+  "excluded_skills": [
+   {
+    "resid": -8277668028376677474
+   },
+   {
+    "resid": -8277668028376677473
+   }
+  ],
+  "id": "hs_champion_of_war",
+  "group_name": "Champion - Hero Skill Group",
+  "icon": "hs_champion_of_war_2",
+  "type": "normal",
+  "name": "Champion of War",
+  "description": "This unit gains:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>Access to the Killing Momentum passive.</bullet></bulletlist>"
+ },
+ {
   "abilities": [
    {
     "slug": "grand_cascading_rune"
@@ -10762,7 +10813,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "resid": 5046586582872,
@@ -10772,7 +10823,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "resid": 5046586582871,
@@ -10782,7 +10833,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "abilities": [
@@ -10820,7 +10871,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "abilities": [

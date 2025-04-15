@@ -622,6 +622,11 @@
   "icon": "subterranean_society"
  },
  {
+  "affinities": [
+   {
+    "name": "1<chaos></chaos> Chaos Affinity"
+   }
+  ],
   "biography_description": "Ever on the move, travel is at the heart of their culture.",
   "lore_description": "They are ever on the move, with travel at the heart of their culture.",
   "DLC": "HERALDOFGLORY ",
@@ -644,20 +649,7 @@
   "type": "society",
   "group_name": "",
   "front_end": true,
-  "incompatible_cultures": [
-   {
-    "name": "Barbarian"
-   },
-   {
-    "name": "Industrious"
-   }
-  ],
   "display_order": 5,
-  "affinities": [
-   {
-    "name": "1<chaos></chaos> Chaos Affinity"
-   }
-  ],
   "starting_bonuses": [
    {
     "empire_progression_slug": "forced_march"
@@ -1155,7 +1147,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +7 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1597,7 +1589,7 @@
  {
   "lore_description": "<helpcolor>Units normally only have 32 movement.</helpcolor>",
   "biography_description": "Trained in long distance running, they are exceptionally fast.",
-  "point_cost": 5,
+  "point_cost": 6,
   "id": "athletics",
   "name": "Athletics",
   "screen_description": "",
@@ -1611,7 +1603,7 @@
   "front_end": true,
   "icon": "athletics",
   "type": "form",
-  "display_order": 5
+  "display_order": 4
  },
  {
   "lore_description": "<helpcolor>Units become tougher when standing next to allies.</helpcolor>",
@@ -2311,7 +2303,7 @@
   "display_order": 5,
   "starting_bonuses": [
    {
-    "description": "Start with an extra Tier I unit."
+    "description": "Start with 2 extra Tier I units."
    }
   ],
   "icon": "prolific_swarmers"

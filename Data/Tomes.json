@@ -124,7 +124,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Target enemy army:<bulletlist><bullet>Sustains 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>, doubled if cast on a Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>Becomes Slowed for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet></bulletlist>",
+    "description": "All units in target enemy army suffer -2 <defense></defense> <hyperlink>Defense</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.",
     "name": "Dungeon Hazard",
     "spell_slug": "dungeon_hazard",
     "tier": 3,
@@ -1989,7 +1989,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
-    "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
+    "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Gains 3 Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
     "name": "Wrath of the Emperor",
     "spell_slug": "wrath_of_the_emperor",
     "tier": 9,
@@ -3209,7 +3209,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 1 <hyperlink>Province</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +2 <food></food> <hyperlink>Food</hyperlink>, +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> and +2 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist>",
+    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +2 <food></food> <hyperlink>Food</hyperlink>, +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> and +2 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist>",
     "name": "Enchanted Bloom",
     "spell_slug": "enchanted_bloom",
     "tier": 7,
@@ -4513,6 +4513,7 @@
    {
     "description": "<bulletlist>At the start of the battle, gain 2 <hyperlink>Bolt Repeater</hyperlink> units on the attacker's side until the end of battle.<bullet> <hyperlink>Bolt Repeaters</hyperlink> are immobile Siegecraft <hyperlink>Units</hyperlink> with long range area of effect attacks that are repeating, unlike <hyperlink>Onagers</hyperlink>.</bullet><bullet>Only one type of Siegecraft unit can be brought into <hyperlink>Combat</hyperlink>. If multiple <hyperlink>Siege Projects</hyperlink> would bring them, only the strongest of them will appear.</bullet></bulletlist>",
     "name": "Construct Bolt Repeaters",
+    "siege_project_slug": "construct_bolt_repeaters",
     "tier": 3,
     "type": "<hyperlink>Siege Project</hyperlink>"
    }

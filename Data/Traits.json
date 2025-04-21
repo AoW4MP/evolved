@@ -889,7 +889,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +15% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +15% <food></food> <hyperlink>Food</hyperlink>, and +15% <structureprod></structureprod> <hyperlink>Production</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +10% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +10% <food></food> <hyperlink>Food</hyperlink>, +10% <structureprod></structureprod> <hyperlink>Production</hyperlink>, and +10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
    },
    {
     "name": "Grievances inflicted by other empires encroaching on your territory are increased by +100%."
@@ -1115,7 +1115,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +1 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
+    "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +2 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
    },
    {
     "name": "Racial <hyperlink>Unit tier</hyperlink> 3 Units have +1 Rank"
@@ -1931,9 +1931,6 @@
    },
    {
     "name": "Special Province Improvements cost -25% <structureprod></structureprod> Production."
-   },
-   {
-    "name": "Newly founded cities start with a Workshop built."
    }
   ],
   "enabled": true,
@@ -1984,23 +1981,20 @@
   "icon": "experienced_seafarers"
  },
  {
+  "affinities": [
+   {
+    "name": "1<nature></nature> Nature Affinity"
+   }
+  ],
   "biography_description": "They are pioneers and settlers, founding cities wherever they go.",
   "lore_description": "They are pioneers and settlers, founding cities wherever they go.",
   "point_cost": 1,
   "id": "adept_settlers",
   "name": "Adept Settlers",
-  "incompatible_society_traits": [
-   {
-    "name": "Imperialists"
-   }
-  ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Founding cities costs -25% less <influence></influence> <hyperlink>Imperium</hyperlink>."
-   },
-   {
-    "name": "Newly founded cities gain +1 <population></population> <hyperlink>Population</hyperlink> and start with a Store House built."
+    "name": "Newly founded cities gain +1 <population></population> <hyperlink>Population</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2008,14 +2002,9 @@
   "group_name": "",
   "front_end": true,
   "display_order": 3,
-  "affinities": [
-   {
-    "name": "1<nature></nature> Nature Affinity"
-   }
-  ],
   "starting_bonuses": [
    {
-    "empire_progression_slug": "expanded_governance"
+    "structure_upgrade_slug": "store_house"
    }
   ],
   "icon": "adept_settlers"
@@ -2147,10 +2136,10 @@
     "name": "Units gain the Corpse Eating ability."
    },
    {
-    "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
+    "name": "The nearest City owned gains +5 <mana></mana> <hyperlink>Mana</hyperlink> and +5 <food></food> <hyperlink>Food</hyperlink> per tier of non-Magic Origin units killed or lost after successful combat."
    },
    {
-    "name": "The nearest City owned gains +4 <mana></mana> <hyperlink>Mana</hyperlink> and +4 <food></food> <hyperlink>Food</hyperlink> per tier of non-Magic Origin units killed or lost after successful combat."
+    "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"
    }
   ],
   "enabled": true,
@@ -2177,7 +2166,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "The nearest City owned gains +4 <gold></gold> <hyperlink>Gold</hyperlink> and +4 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per tier of units killed after successful combat."
+    "name": "The nearest City owned gains +5 <gold></gold> <hyperlink>Gold</hyperlink> and +5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per tier of units killed after successful combat."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>"

@@ -15600,6 +15600,9 @@
     "slug": "demolisher"
    },
    {
+    "slug": "frenzy"
+   },
+   {
     "slug": "wind_barrier"
    },
    {
@@ -15610,6 +15613,9 @@
   "abilities": [
    {
     "slug": "melee_strike_(base)_ability_wind_rager"
+   },
+   {
+    "slug": "blinding_phase_ability_wind_rager"
    },
    {
     "slug": "whirlwind_ability_wind_rager"
@@ -15627,7 +15633,7 @@
    }
   ],
   "description": "Summon a {GLOBAL.UNITS.WIND_RAGER_UNIT.Hyperlink}, a fast and disruptive {GLOBAL.PROPERTIES.FIGHTER.Hyperlink}",
-  "cost": "80<unitprod></unitprod> 60<gold></gold> ",
+  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "resid": 4514010632201,
   "medal_rewards_3": [
    {
@@ -16166,7 +16172,7 @@
    }
   ],
   "description": "",
-  "cost": "120<unitprod></unitprod> 80<mana></mana> ",
+  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "resid": 4514010630880,
   "medal_rewards_3": [
    {
@@ -24088,6 +24094,9 @@
     "slug": "fearless"
    },
    {
+    "slug": "frenzy"
+   },
+   {
     "slug": "siege_breaker"
    },
    {
@@ -26394,7 +26403,7 @@
   ],
   "mp": 32,
   "hp": 50,
-  "armor": 1,
+  "armor": 2,
   "resistance": 1,
   "medal_rewards_2": [
    {
@@ -27152,6 +27161,9 @@
   "id": "fury",
   "name": "Fury",
   "primary_passives": [
+   {
+    "slug": "frenzy"
+   },
    {
     "slug": "savage_strike"
    }

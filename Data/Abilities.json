@@ -10389,7 +10389,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_zealot",
-  "damage": "10<damagephysical></damagephysical> 2<damagespirit></damagespirit> ",
+  "damage": "11<damagephysical></damagephysical> 2<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -10802,7 +10802,13 @@
   "icon": "melee_strike_(base)_ability_sabertooth"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Gains a stack of Strengthened when landing a hit.",
+    "name": "Frenzy",
+    "count": 1
+   }
+  ],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_wind_rager",
@@ -10822,7 +10828,54 @@
   "icon": "melee_strike_(base)_ability_sabertooth"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 30% chance of inflicting Blind for 1 <turn></turn> Turn.",
+    "name": "Blind",
+    "count": 1
+   },
+   {
+    "description": "Gains a stack of Strengthened when landing a hit.",
+    "name": "Frenzy",
+    "count": 1
+   }
+  ],
+  "description": "This unit teleports to target hex and deals damage to adjacent enemy units.",
+  "name": "Blinding Phase",
+  "slug": "blinding_phase_ability_wind_rager",
+  "damage": "8<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Magic"
+   },
+   {
+    "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   },
+   {
+    "note": "Starts on cooldown: 1<turn></turn>"
+   }
+  ],
+  "icon": "blinding_phase_ability_wind_rager"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "Gains a stack of Strengthened when landing a hit.",
+    "name": "Frenzy",
+    "count": 1
+   }
+  ],
   "description": "Deals damage to all adjacent enemies and displaces them up to 2 hexes.",
   "name": "Whirlwind",
   "slug": "whirlwind_ability_wind_rager",
@@ -11590,7 +11643,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_entwined_protector",
-  "damage": "14<damagephysical></damagephysical> ",
+  "damage": "13<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -15886,6 +15939,11 @@
     "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
+   },
+   {
+    "description": "Gains a stack of Strengthened when landing a hit.",
+    "name": "Frenzy",
+    "count": 1
    }
   ],
   "description": "Strikes target enemy unit.",
@@ -15940,7 +15998,13 @@
   "icon": "chaos_brand_ability_balor"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Gains a stack of Strengthened when landing a hit.",
+    "name": "Frenzy",
+    "count": 1
+   }
+  ],
   "description": "Deals damage in a 4-hex line that is 3 hexes wide.<br></br>Units that are hit are inflicted with 3 Sundered Defense.",
   "name": "Sunder the Earth",
   "slug": "sunder_earth_ability_balor",
@@ -17854,6 +17918,11 @@
  },
  {
   "modifiers": [
+   {
+    "description": "Gains a stack of Strengthened when landing a hit.",
+    "name": "Frenzy",
+    "count": 1
+   },
    {
     "description": "Deals an additional 4 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on a critical hit.",
     "name": "Savage Strike",

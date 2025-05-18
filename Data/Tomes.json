@@ -1295,7 +1295,7 @@
   "icon": "tome_of_the_tentacle",
   "skills": [
    {
-    "description": "Target friendly unit gains Retaliating Growths for <turn></turn> Turns.",
+    "description": "Friendly units in a -hex radius gain Retaliating Growths for <turn></turn> Turns.",
     "name": "Retaliating Growths",
     "spell_slug": "retaliating_growths",
     "tier": 2,
@@ -1365,7 +1365,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Target friendly unit:<bulletlist><bullet>Heals <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has negative status effect dispelled.</bullet></bulletlist>",
+    "description": "Target friendly unit:<bulletlist><bullet>Heals <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has their negative status effects removed.</bullet></bulletlist>",
     "name": "Mantra of Purification",
     "spell_slug": "mantra_of_purification",
     "tier": 1,
@@ -3312,7 +3312,7 @@
     "name": "Blossom of Life",
     "spell_slug": "blossom_of_life",
     "tier": 4,
-    "type": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
     "description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet><bullet>+1 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",

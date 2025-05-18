@@ -4433,7 +4433,7 @@
   "mp": 32,
   "hp": 70,
   "description": "",
-  "armor": 2,
+  "armor": 3,
   "resistance": 2,
   "medal_rewards_2": [
    {
@@ -4509,7 +4509,7 @@
   "mp": 32,
   "hp": 70,
   "description": "",
-  "armor": 2,
+  "armor": 3,
   "resistance": 2,
   "medal_rewards_2": [
    {
@@ -4585,7 +4585,7 @@
   "mp": 32,
   "hp": 70,
   "description": "",
-  "armor": 2,
+  "armor": 3,
   "resistance": 2,
   "medal_rewards_2": [
    {
@@ -10667,18 +10667,18 @@
   ],
   "resistances": [],
   "status_resistance": 0,
-  "upkeep": "8<gold></gold> ",
+  "upkeep": "12<gold></gold> ",
   "id": "tentacle",
   "name": "Tentacle",
-  "hp": 50,
-  "armor": 0,
-  "resistance": 0,
+  "hp": 60,
+  "armor": 1,
+  "resistance": 1,
   "medal_rewards_2": [
    {
     "slug": "_10_hp__"
    }
   ],
-  "tier": 1,
+  "tier": 2,
   "secondary_passives": [
    {
     "slug": "amphibious"
@@ -14874,6 +14874,9 @@
     "slug": "fearless"
    },
    {
+    "slug": "fleeting"
+   },
+   {
     "slug": "pass_through"
    },
    {
@@ -15928,7 +15931,7 @@
   "upkeep": "8<gold></gold> ",
   "id": "living_vine",
   "name": "Living Vine",
-  "hp": 10,
+  "hp": 20,
   "armor": 0,
   "resistance": 0,
   "medal_rewards_2": [
@@ -15943,9 +15946,6 @@
    },
    {
     "slug": "forest_walk"
-   },
-   {
-    "slug": "magic_origin"
    },
    {
     "slug": "plant"
@@ -16172,7 +16172,7 @@
    }
   ],
   "description": "",
-  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
+  "cost": "220<unitprod></unitprod> 140<mana></mana> ",
   "resid": 4514010630880,
   "medal_rewards_3": [
    {
@@ -24088,6 +24088,9 @@
     "slug": "control_loss_immunity"
    },
    {
+    "slug": "death_explosion"
+   },
+   {
     "slug": "demolisher"
    },
    {
@@ -28537,7 +28540,7 @@
     "slug": "melee_strike_(base)_ability_frost_wyvern"
    },
    {
-    "slug": "wyvern_burst_ability_frost_wyvern"
+    "slug": "freezing_burst_ability_frost_wyvern"
    },
    {
     "slug": "defense_mode"
@@ -29071,7 +29074,7 @@
    }
   ],
   "description": "",
-  "cost": "120<unitprod></unitprod> 80<mana></mana> ",
+  "cost": "220<unitprod></unitprod> 140<mana></mana> ",
   "resid": 4273492478523,
   "medal_rewards_3": [
    {

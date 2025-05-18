@@ -889,7 +889,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +10% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +10% <food></food> <hyperlink>Food</hyperlink>, +10% <structureprod></structureprod> <hyperlink>Production</hyperlink>, and +10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +15% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +15% <food></food> <hyperlink>Food</hyperlink>, +15% <structureprod></structureprod> <hyperlink>Production</hyperlink>, and +10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
    },
    {
     "name": "Grievances inflicted by other empires encroaching on your territory are increased by +100%."
@@ -1188,7 +1188,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Razing cities grant a permanent +40 <gold></gold> <hyperlink>Gold</hyperlink>, +40 <mana></mana> <hyperlink>Mana</hyperlink>, and +40 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income for every 3 <population></population> <hyperlink>Population</hyperlink> of the city that was razed."
+    "name": "Razing cities grant a permanent +30 <gold></gold> <hyperlink>Gold</hyperlink>, +30 <mana></mana> <hyperlink>Mana</hyperlink>, and +30 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income for every 3 <population></population> <hyperlink>Population</hyperlink> of the city that was razed."
    },
    {
     "name": "Can not obtain new <hyperlink>Cities</hyperlink> and conquered cities can only be razed."
@@ -1962,10 +1962,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +3 <gold></gold> Gold, +3 <food></food> Food, and +3 <unitprod></unitprod> Draft for each province with a Coast, River, and Water in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +2 <gold></gold> Gold, +2 <food></food> Food, and +2 <unitprod></unitprod> Draft for each province with a Coast, River, and Water in their <hyperlink>Domain</hyperlink>."
    },
    {
-    "name": "Embarked units:<bulletlist><bullet>Are unaffected by the Embarked penalty.</bullet><bullet>Gain +20% <hyperlink><xp></xp> Experience</hyperlink></bullet></bulletlist>"
+    "name": "Embarked units:<bulletlist><bullet>Deal +20% damage</bullet><bullet>Gain +20% <hyperlink><xp></xp> Experience</hyperlink> from combat</bullet></bulletlist>"
    }
   ],
   "enabled": true,
@@ -1995,6 +1995,9 @@
   "effect_descriptions": [
    {
     "name": "Newly founded cities gain +1 <population></population> <hyperlink>Population</hyperlink>."
+   },
+   {
+    "name": "<hyperlink>City Cap</hyperlink> is increased by +1 <citytier></citytier>."
    }
   ],
   "enabled": true,

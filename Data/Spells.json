@@ -2046,15 +2046,15 @@
   "icon": "ciphers_of_dissonance"
  },
  {
-  "casting_cost": "10<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 5003636901340,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "retaliating_growths",
   "DLC": "ELDRITCHREALMS ",
   "tactical": true,
-  "description": "Target friendly unit gains Retaliating Growths for 2 <turn></turn> Turns.",
+  "description": "Friendly units in a 1-hex radius gain Retaliating Growths for 1 <turn></turn> Turn.",
   "name": "Retaliating Growths",
-  "operation_point_cost": 15,
+  "operation_point_cost": 20,
   "icon": "retaliating_growths"
  },
  {
@@ -2371,7 +2371,7 @@
   "id": "mantra_of_purification",
   "DLC": "WAYSOFWAR ",
   "tactical": true,
-  "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has 2 negative status effect dispelled.</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has their negative status effects removed.</bullet></bulletlist>",
   "name": "Mantra of Purification",
   "operation_point_cost": 10,
   "icon": "mantra_of_purification"
@@ -3068,7 +3068,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "condemnation",
   "tactical": true,
-  "description": "Target enemy unit:<bulletlist><bullet>Sustains 25 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Condemned until the end of battle.</bullet></bulletlist>",
+  "description": "Target enemy unit:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Condemned until the end of battle.</bullet></bulletlist>",
   "name": "Condemnation",
   "operation_point_cost": 10,
   "icon": "condemnation"
@@ -3204,14 +3204,14 @@
   "icon": "fog_of_insanity"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4514010634173,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "devouring_void",
   "tactical": true,
   "description": "<bulletlist><bullet>Conjures a <hyperlink>Devouring Void</hyperlink> in a 1-hex radius.</bullet><bullet>Each turn, the radius increases by 1 hex.</bullet><bullet>Lasts for 2 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Devouring Void",
-  "operation_point_cost": 40,
+  "operation_point_cost": 35,
   "icon": "devouring_void"
  },
  {
@@ -3959,7 +3959,7 @@
  {
   "casting_cost": "45<mana></mana> ",
   "resid": 4514010631803,
-  "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
+  "spellType": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>",
   "id": "blossom_of_life",
   "tactical": true,
   "description": "Friendly units in a 2-hex radius:<bulletlist><bullet>Heal +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 3 Regeneration.</bullet></bulletlist>",
@@ -4323,7 +4323,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "ice_coffin",
   "tactical": true,
-  "description": "Target enemy:<bulletlist><bullet>Sustains 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist>",
+  "description": "Target enemy:<bulletlist><bullet>Sustains 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful inflicts Slowed.</bullet></bulletlist>",
   "name": "Ice Coffin",
   "operation_point_cost": 15,
   "icon": "ice_coffin"
@@ -4701,14 +4701,14 @@
   "icon": "blight_blades"
  },
  {
-  "casting_cost": "5<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 4286377362416,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "ignite",
   "tactical": true,
   "description": "Target enemy unit:<bulletlist><bullet>Sustains 25 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Is inflicted with Burning.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
   "name": "Ignite",
-  "operation_point_cost": 10,
+  "operation_point_cost": 15,
   "icon": "ignite"
  },
  {
@@ -6065,39 +6065,7 @@
   "description": "Two Fiend units of the same Tier in the target army fight each other. One dies and the other transforms into a Fiend with a Tier one level higher than before.",
   "name": "Fight for Power",
   "operation_point_cost": 45,
-  "icon": "fight_for_power",
-  "summoned_units": [
-   {
-    "slug": "gremlin"
-   },
-   {
-    "slug": "nightmare"
-   },
-   {
-    "slug": "inferno_hound"
-   },
-   {
-    "slug": "chaos_eater"
-   },
-   {
-    "slug": "infernal_juggernaut"
-   },
-   {
-    "slug": "balor"
-   },
-   {
-    "slug": "accursed_ogre"
-   },
-   {
-    "slug": "accursed_blade"
-   },
-   {
-    "slug": "accursed_trickster"
-   },
-   {
-    "slug": "calamity_dragon"
-   }
-  ]
+  "icon": "fight_for_power"
  },
  {
   "casting_cost": "300<mana></mana> ",
@@ -6314,14 +6282,14 @@
   "icon": "ice_shackles"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4273492478730,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "unleash_beast",
   "tactical": true,
   "description": "Target friendly Animal or Cavalry unit and two others within 2 hexes gain Killing Momentum for 3 <turn></turn> <hyperlink>Turns</hyperlink>.",
   "name": "Unleash Beast",
-  "operation_point_cost": 30,
+  "operation_point_cost": 40,
   "icon": "unleash_beast"
  },
  {

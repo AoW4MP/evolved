@@ -487,7 +487,7 @@
   "display_order": 1,
   "starting_bonuses": [
    {
-    "description": "Start with +1 <unitHero></unitHero> <hyperlink>Hero Cap</hyperlink> and +3 Hero Cap for Pantheon heroes."
+    "description": "Start with +3 Hero Cap for Pantheon heroes."
    }
   ],
   "icon": "cult_of_personality"
@@ -889,7 +889,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +15% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +15% <food></food> <hyperlink>Food</hyperlink>, +15% <structureprod></structureprod> <hyperlink>Production</hyperlink>, and +10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +10% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>, +10% <food></food> <hyperlink>Food</hyperlink>, +10% <structureprod></structureprod> <hyperlink>Production</hyperlink>, and +10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income when their <hyperlink>Domain</hyperlink> does not border the <hyperlink>Domain</hyperlink> of any other <hyperlink>City</hyperlink> or <hyperlink>Outpost</hyperlink>."
    },
    {
     "name": "Grievances inflicted by other empires encroaching on your territory are increased by +100%."
@@ -1690,7 +1690,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+2 Status Resistance."
+    "name": "+3 Status Resistance."
    },
    {
     "name": "Negative status effects last -1 <turn></turn> Turn, with a minimum of 1."
@@ -2406,7 +2406,7 @@
  {
   "lore_description": "<helpcolor>Reduce damage from magical attacks and spells.</helpcolor>",
   "biography_description": "They have a natural armor against magical damage.",
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "resistant",
   "name": "Resistant",
   "screen_description": "",
@@ -2420,7 +2420,7 @@
   "front_end": true,
   "icon": "resistant",
   "type": "form",
-  "display_order": 7
+  "display_order": 8
  },
  {
   "biography_description": "They harbor knowledge dating back to the beginning of time.",
@@ -2793,7 +2793,7 @@
  {
   "lore_description": "<helpcolor>Units take less damage from melee attacks.</helpcolor>",
   "biography_description": "They are tough and used to taking a few hits in battle.",
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "tough",
   "name": "Tough",
   "screen_description": "",
@@ -2807,7 +2807,7 @@
   "front_end": true,
   "icon": "tough",
   "type": "form",
-  "display_order": 7
+  "display_order": 8
  },
  {
   "lore_description": "<helpcolor>Armies can fight longer on the world map.</helpcolor>",

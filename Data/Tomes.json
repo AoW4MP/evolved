@@ -1776,7 +1776,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target owned city converts their <mana></mana> Mana income, gaining <gold></gold> Gold, <structureprod></structureprod> Production, and <food></food> Food income equal to 50% of the <mana></mana> Mana income.",
+    "description": "Target owned city converts their <mana></mana> Mana income, gaining <gold></gold> Gold, <structureprod></structureprod> Production, and <food></food> Food income equal to 75% of the <mana></mana> Mana income.",
     "name": "Transmute Resources",
     "spell_slug": "transmute_resources",
     "tier": 5,
@@ -2434,7 +2434,7 @@
   "icon": "tome_of_the_reaper",
   "skills": [
    {
-    "description": "Target friendly City:<bulletlist><bullet>Has -50% <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
+    "description": "Target friendly City:<bulletlist><bullet>No longer gains any <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
     "name": "Harvest Population",
     "spell_slug": "harvest_population",
     "tier": 7,
@@ -4301,7 +4301,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "All friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.<br></br>Cannot be used on units already affected by Berserk.",
+    "description": "All friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.",
     "name": "Awaken Instincts",
     "spell_slug": "awaken_instincts",
     "tier": 7,

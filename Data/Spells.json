@@ -966,7 +966,7 @@
   ]
  },
  {
-  "casting_cost": "6<thralls></thralls> ",
+  "casting_cost": "4<thralls></thralls> ",
   "resid": 5046586576371,
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "dark_knowledge_ritual",
@@ -1863,14 +1863,14 @@
   ]
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 5003636904512,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "monarchs_decree",
   "tactical": true,
   "description": "For 2 <turn></turn> Turns, all friendly units gain the benefit from For the Monarch as though the Monarch were present.",
   "name": "Monarch's Decree",
-  "operation_point_cost": 25,
+  "operation_point_cost": 15,
   "icon": "monarchs_decree"
  },
  {
@@ -2333,7 +2333,7 @@
   "id": "empowered_strikes",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>Third attack in a turn has a 60% base chance of inflicting Stunned for 1<turn></turn> Turn</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>Third attack in a turn has a 60% base chance of inflicting Stunned for 1<turn></turn> Turn</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -2708,14 +2708,14 @@
   ]
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "120<mana></mana> ",
   "resid": 4801773436968,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "destructive_regrowth",
   "tactical": false,
   "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
   "name": "Destructive Regrowth",
-  "operation_point_cost": 100,
+  "operation_point_cost": 120,
   "icon": "destructive_regrowth"
  },
  {
@@ -3642,7 +3642,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "transmute_resources",
   "tactical": false,
-  "description": "Target owned city converts their <mana></mana> Mana income, gaining <gold></gold> Gold, <structureprod></structureprod> Production, and <food></food> Food income equal to 50% of the <mana></mana> Mana income.",
+  "description": "Target owned city converts their <mana></mana> Mana income, gaining <gold></gold> Gold, <structureprod></structureprod> Production, and <food></food> Food income equal to 75% of the <mana></mana> Mana income.",
   "name": "Transmute Resources",
   "operation_point_cost": 100,
   "icon": "transmute_resources"
@@ -3653,7 +3653,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "meteor_projectiles",
   "tactical": false,
-  "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +3 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -3924,7 +3924,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>",
   "id": "awaken_instincts",
   "tactical": true,
-  "description": "All friendly units in a 2-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.<br></br>Cannot be used on units already affected by Berserk.",
+  "description": "All friendly units in a 2-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used on units with Control Loss Immunity.",
   "name": "Awaken Instincts",
   "operation_point_cost": 50,
   "icon": "awaken_instincts"
@@ -3994,14 +3994,14 @@
   "icon": "mark_as_prey"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4514010631724,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "vine_prison",
   "tactical": true,
-  "description": "Summon 5 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Summon 3 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.<br></br><br></br>Cannot be used in Water battles.",
   "name": "Vine Prison",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "vine_prison",
   "summoned_units": [
    {
@@ -4118,14 +4118,14 @@
   "icon": "infernal_focus"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "45<mana></mana> ",
   "resid": 4514010631246,
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "fan_the_inferno",
   "tactical": true,
   "description": "All enemy units:<bulletlist><bullet>Sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Are inflicted with Burning.</bullet></bulletlist>",
   "name": "Fan the Inferno",
-  "operation_point_cost": 40,
+  "operation_point_cost": 30,
   "icon": "fan_the_inferno"
  },
  {
@@ -4579,14 +4579,14 @@
   "icon": "hold_the_line"
  },
  {
-  "casting_cost": "20<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4479650891096,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "call_to_glory",
   "tactical": true,
   "description": "For 3 <turn></turn> <hyperlink>Turns</hyperlink> all friendly units gain:<bulletlist><bullet>+5 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of your <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Call to Glory",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "call_to_glory"
  },
  {
@@ -4595,7 +4595,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
   "id": "harvest_population",
   "tactical": false,
-  "description": "Target friendly City:<bulletlist><bullet>Has -50% <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
+  "description": "Target friendly City:<bulletlist><bullet>No longer gains any <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
   "name": "Harvest Population",
   "operation_point_cost": 45,
   "icon": "harvest_population"
@@ -5228,14 +5228,14 @@
   "icon": "resurrect_unit"
  },
  {
-  "casting_cost": "300<mana></mana> ",
+  "casting_cost": "240<mana></mana> ",
   "resid": 4273492484483,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "ascended_warriors",
   "tactical": false,
   "description": "Non-Hero units in target army gain 1 Rank.",
   "name": "Ascended Warriors",
-  "operation_point_cost": 300,
+  "operation_point_cost": 240,
   "icon": "ascended_warriors"
  },
  {
@@ -6018,7 +6018,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "create_forest",
   "tactical": false,
-  "description": "Target friendly or unowned <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Forest</hyperlink> if it is on the Surface or <hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet><bullet>Gains <hyperlink>Mangrove Forest</hyperlink> if it contains Water.</bullet></bulletlist>",
+  "description": "Target friendly or unowned <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Forest</hyperlink> if it is on the Surface or <hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet></bulletlist>",
   "name": "Create Forest",
   "operation_point_cost": 30,
   "icon": "create_forest"

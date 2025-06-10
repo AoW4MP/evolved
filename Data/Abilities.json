@@ -8204,7 +8204,7 @@
  },
  {
   "notes": [],
-  "description": "Link to target friendly unit:<bulletlist><bullet>Damage sustained by the linked unit is transferred to this unit with a 35% reduction.</bullet><bullet>At the start of each turn, this unit and the linked unit gain Grace.</bullet></bulletlist><br></br>While active, gain Recall Mask of Prosperity.",
+  "description": "Link to target friendly unit:<bulletlist><bullet>Damage sustained by the linked unit is transferred to this unit with a 30% reduction.</bullet><bullet>At the start of each turn, this unit and the linked unit gain Grace.</bullet></bulletlist><br></br>While active, gain Recall Mask of Prosperity.",
   "name": "Bestow Mask of Prosperity",
   "slug": "bestow_mask_of_prosperity_ability_prosperity_dragon",
   "damage": "",
@@ -12160,7 +12160,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_entwined_thrall",
-  "damage": "12<damagephysical></damagephysical> ",
+  "damage": "8<damagephysical></damagephysical> 4<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -15861,7 +15861,7 @@
   "description": "Deals damage to target unit.",
   "name": "Freezing Burst",
   "slug": "freezing_burst_ability_snow_spirit",
-  "damage": "12<damagephysical></damagephysical> 12<damagefrost></damagefrost> ",
+  "damage": "10<damagephysical></damagephysical> 10<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -18745,7 +18745,7 @@
   ],
   "description": "Deals damage to target unit.",
   "name": "Freezing Burst",
-  "slug": "freezing_burst_ability_frost_wyvern",
+  "slug": "wyvern_freezing_burst_ability_frost_wyvern",
   "damage": "12<damagephysical></damagephysical> 12<damagefrost></damagefrost> ",
   "requisites": [
    {
@@ -18772,7 +18772,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "icon": "freezing_burst_ability_snow_spirit"
+  "icon": "wyvern_freezing_burst_ability_frost_wyvern"
  },
  {
   "modifiers": [
@@ -21480,7 +21480,7 @@
  {
   "notes": [
    {
-    "note": "Can only be used once per battle."
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "description": "Damage sustained by the target friendly unit is transferred to this unit with a 50% reduction.",
@@ -21653,7 +21653,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
+  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -35270,7 +35270,7 @@
   ],
   "description": "Summons a random Tier III Spider.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Summon Spider Monarch",
-  "slug": "spider_monarchs_leg_ability_desiccated_spider_monarchs_leg_item_tier_iv",
+  "slug": "spider_monarchs_leg_ability_desiccated_spider_monarchs_leg_item_tier_4",
   "damage": "",
   "requisites": [
    {
@@ -35280,7 +35280,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "1",
-  "icon": "spider_monarchs_leg_ability_desiccated_spider_monarchs_leg_item_tier_iv"
+  "icon": "spider_monarchs_leg_ability_desiccated_spider_monarchs_leg_item_tier_4"
  },
  {
   "notes": [

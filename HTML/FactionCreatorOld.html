@@ -1,71 +1,432 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-<link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
 
-<head>
-    <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css">
-    <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/icons.css" />
 
-    <script>
-        $("#body").ready(function() {
+        <meta charset="UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-            $("#header").load("/evolved/HTML/header.html", function() {
-                GetAllStartingTomes();
+        <style>
+            .build-link {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                margin-bottom: 10px;
+            }
+            .list-entry:hover {
+                text-decoration: none;
+                background-color: #1f1f1f;
+            }
+            .list-main {
+                display: flex;
+                align-items: center;
+            }
+            .list-entry {
+                height: 90px;
+                max-height: 300px;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                border-width: 10px;
+                border-style: solid;
+                border-image: url(/evolved/Icons/9slicetooltip.png);
+                border-image-slice: 10 10 10 10;
+                background-color: black;
+            }
 
+            .sideList {
+                display: contents;
+            }
 
+            .subEntry {
+                display: grid;
+            }
+
+            .tagEntry {
+                display: grid;
+                padding: 15px;
+            }
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box;
+            }
+        </style>
+
+        <script>
+            $("#body").ready(function () {
+                $("#header").load("/evolved/HTML/header.html", function () {
+                    CheckData();
+                });
             });
 
+            function HandlePage() {
+                readBuilds();
+            }
+        </script>
 
+        <title>Age of Wonders 4 Evolved - Faction Creator</title>
+    </head>
 
-        });
+    <body>
+        <div id="header"></div>
 
-    </script>
+        <div class="tome_name">Faction Builds List</div>
 
+        <div id="filters">
+            <label for="cultureFilter">Culture:</label>
+            <select id="cultureFilter">
+                <option value="all">All</option>
+                <!-- Filled dynamically -->
+            </select>
 
-    <title>Age of Wonders 4 Evolved - Faction Creator</title>
-</head>
+            <label for="originFilter">Ruler Origin:</label>
+            <select id="originFilter">
+                <option value="all">All</option>
+                <!-- Filled dynamically -->
+            </select>
+            <label for="classFilter">Class:</label>
+            <select id="classFilter">
+                <option value="all">All</option>
+                <!-- Filled dynamically -->
+            </select>
 
-<body>
-    <div id="header"></div>
+            <label for="tagFilter">Tag:</label>
+            <select id="tagFilter">
+                <option value="all">All</option>
+                <!-- Filled dynamically -->
+            </select>
+        </div>
 
-    <div class="textblocktitle">
-        Faction Creator by EricDB
+        <div style="height: auto; color: white; text-align: center" id="list">Loading...</div>
 
-    </div>
+        <div id="hiddentooltips" style="display: none"></div>
 
-    <div class="wrap">
-        <iframe frameborder="0" src="https://itch.io/embed-upload/7830637?color=00bdc9" allowfullscreen="" width="1920" height="1160"><a href="https://ericdb.itch.io/wonderapp">Play WonderApp on itch.io</a></iframe>
-    </div>
+        <script>
+            let allBuilds = [];
+            function readBuilds() {
+                fetch(
+                    "https://script.google.com/macros/s/AKfycbz5r36EOFcrtfu2Y3CN8DdgDkJDiq6NHf7Y6JEv1IkngOG4we3F5uFU6o5aYFSnm5M4/exec?action=read"
+                )
+                    .then((res) => res.json())
+                    .then((builds) => {
+                        const listDiv = document.getElementById("list");
+                        listDiv.innerHTML = ""; // Clear old entries if needed
 
+                        allBuilds = builds;
+                        populateFilters(builds); // Build the dropdowns
+                        renderBuilds(builds);
+                    });
+            }
 
+            function renderBuilds(builds) {
+                const listDiv = document.getElementById("list");
+                listDiv.innerHTML = ""; // Clear existing
+                builds.forEach(CreateListEntry);
+            }
 
+            function parseBuildCode(code) {
+                // Parse only what's needed for filtering
+                let culture, origin, classO;
+                try {
+                    const split = code.split(",");
+                    culture = getItemFromCode(split[4]); // culture
+                    origin = getItemFromCode(split[5]); // origin
+                    classO = getItemFromCode(split[9]); // origin
+                } catch (e) {}
 
+                return {
+                    culture,
+                    origin,
+                    classO
+                };
+            }
 
-</body>
+            function getItemFromCode(codeSegment) {
+                const id = jsonBuilderLookUp[hexToDecimal(codeSegment)]?.id;
+                return jsonFactionCreation.find((x) => x.id === id);
+            }
 
-<style>
-    .wrap {
-        width: 1920px;
-        height: 1160px;
-        overflow: hidden;
-        margin-left: auto;
-        position: relative;
-        margin-right: auto;
-    }
+            function populateFilters(builds) {
+                const cultureSet = new Set();
+                const originSet = new Set();
+                const classSet = new Set();
+                const tagSet = new Set();
+                tagSet.add("Roleplay");
+                tagSet.add("Theme");
+                tagSet.add("PVP");
+                tagSet.add("Casual");
 
-    iframe {
-        width: 100%;
-        height: 100%;
-        transform: scale(0.75);
-        transform-origin: 0 0;
-    }
+                builds.forEach((build) => {
+                    const code = (build.url || build.URL || build.BuildURL)?.split("=")[1];
 
-</style>
+                    const data = parseBuildCode(code); // You’ll need to expose `currentCulture`, etc.
 
+                    if (data.culture) cultureSet.add(data.culture.name);
+                    if (data.origin) originSet.add(data.origin.name);
+                    if (data.classO) classSet.add(data.classO.name);
+                });
+
+                populateSelect("cultureFilter", cultureSet);
+                populateSelect("originFilter", originSet);
+                populateSelect("tagFilter", tagSet);
+                populateSelect("classFilter", classSet);
+            }
+
+            document.getElementById("cultureFilter").addEventListener("change", filterBuilds);
+            document.getElementById("originFilter").addEventListener("change", filterBuilds);
+            document.getElementById("tagFilter").addEventListener("change", filterBuilds);
+            document.getElementById("classFilter").addEventListener("change", filterBuilds);
+
+            function filterBuilds() {
+                const culture = document.getElementById("cultureFilter").value;
+                const origin = document.getElementById("originFilter").value;
+                const tag = document.getElementById("tagFilter").value;
+                const classO = document.getElementById("classFilter").value;
+
+                const filtered = allBuilds.filter((build) => {
+                    const code = (build.url || build.URL || build.BuildURL)?.split("=")[1];
+                    const data = parseBuildCode(code);
+                    const tags = build.Tags || "Roleplay, Theme";
+
+                    return (
+                        (culture === "all" || data.culture?.name === culture) &&
+                        (origin === "all" || data.origin?.name === origin) &&
+                        (classO === "all" || data.classO?.name === classO) &&
+                        (tag === "all" || tags?.indexOf(tag) != -1)
+                    );
+                });
+
+                renderBuilds(filtered);
+            }
+
+            function populateSelect(id, items) {
+                const select = document.getElementById(id);
+                items.forEach((item) => {
+                    const option = document.createElement("option");
+                    option.value = item;
+                    option.textContent = item;
+                    select.appendChild(option);
+                });
+            }
+
+            function CreateListEntry(build) {
+                const listDiv = document.getElementById("list");
+
+                const linkUrl = build.BuildURL || "LinkError";
+                const buildName = build.BuildName || "Unnamed";
+                const author = build.author || "Anonymous";
+
+                const tags = build.Tags || "Roleplay, Theme";
+                const parsedLink = linkUrl?.split("=")[1] || "Error";
+
+                // Use ReadBackBuildData to get a display DOM element
+                const entryContent = ReadBackBuildData(parsedLink, tags, buildName);
+
+                // Wrap it in a clickable link
+                const linkWrapper = document.createElement("a");
+                linkWrapper.href = linkUrl;
+
+                linkWrapper.rel = "noopener noreferrer"; // Security best practice
+                linkWrapper.className = "build-link";
+
+                linkWrapper.appendChild(entryContent);
+                listDiv.appendChild(linkWrapper);
+            }
+
+            function ReadBackBuildData(code, tags, buildName) {
+                const splitTags = tags.split(",");
+                const splitcode = code.split(",");
+                const newDiv = document.createElement("div");
+                newDiv.className = "list-entry";
+
+                // Helpers
+                const findById = (id, arr) => arr.find((item) => item.id === id);
+                const findByName = (name, arr) => arr.find((item) => item.name === name);
+                const getIdFromCode = (hex) => jsonBuilderLookUp[hexToDecimal(hex)]?.id;
+
+                // Form traits
+                let currentFormTraitList = [];
+                if (splitcode[0] !== "F") {
+                    const traitCodes = splitcode[0].split(":");
+                    currentFormTraitList = traitCodes
+                        .map((hex) => getIdFromCode(hex))
+                        .map((id) => findById(id, jsonFactionCreation2))
+                        .filter(Boolean);
+                }
+
+                // Society 1 & 2
+                const currentSociety1 = findById(getIdFromCode(splitcode[1]), jsonFactionCreation2);
+                const currentSociety2 = findById(getIdFromCode(splitcode[2]), jsonFactionCreation2);
+
+                // Form, Culture, Origin
+                const currentForm = findById(getIdFromCode(splitcode[3]), jsonFactionCreation);
+                const currentCulture = findById(getIdFromCode(splitcode[4]), jsonFactionCreation);
+                const currentOrigin = findById(getIdFromCode(splitcode[5]), jsonFactionCreation);
+
+                // Loadout / Class (legacy fallback)
+                let TempReplacementForClass = "";
+                let currentSubType = null;
+                if (splitcode[6] !== "s") {
+                    const subtype = findById(getIdFromCode(splitcode[6]), jsonFactionCreation);
+                    if (subtype?.name.includes("Dragon") || subtype?.name.includes("Giant")) {
+                        currentSubType = subtype;
+                    }
+                    TempReplacementForClass = GetClassFromWeaponId(subtype?.id);
+                }
+
+                // Tomes
+                const tomeCodes = splitcode[7]?.split(":") || [];
+                const currentTomeList = tomeCodes
+                    .map((hex) => getIdFromCode(hex))
+                    .map((id) => findById(id, jsonTomes))
+                    .filter(Boolean);
+                const currentTome = currentTomeList[0];
+
+                // Class
+                let currentClass = null;
+                if (splitcode[9] !== "s") {
+                    currentClass = findById(getIdFromCode(splitcode[9]), jsonFactionCreation);
+                } else if (TempReplacementForClass) {
+                    currentClass = findByName(TempReplacementForClass, jsonFactionCreation);
+                }
+
+                // Ascension
+                let currentAscension = null;
+                const ascenCode = splitcode[10];
+                if (ascenCode && ascenCode !== "a") {
+                    currentAscension = findById(getIdFromCode(ascenCode), jsonHeroSkills);
+                }
+
+                // Helpers to create UI components
+                const createEntry = (name, id, path, size) => {
+                    if (!name || !id) return null;
+                    const div = document.createElement("div");
+                    div.className = "subEntry";
+
+                    const img = document.createElement("img");
+                    img.src = `/evolved/Icons/${path}/${id}.png`;
+                    img.width = size;
+                    img.height = size;
+                    img.style.position = "relative";
+
+                    const nameSpan = document.createElement("span");
+                    nameSpan.innerHTML = name;
+                    addTooltipListeners(div, nameSpan);
+                    div.appendChild(img);
+                    return div;
+                };
+
+                // Helpers to create UI components
+                const createName = (name) => {
+                    if (!name) return null;
+                    const div = document.createElement("div");
+                    div.className = "subEntry";
+
+                    div.innerHTML = name;
+                    return div;
+                };
+
+                const createTomeList = (tomes, source, size) => {
+                    const container = document.createElement("div");
+                    container.className = "sideList";
+                    tomes.forEach((tome) => {
+                        container.appendChild(createEntry(tome.name, tome.id, source, size));
+                    });
+                    return container;
+                };
+
+                const createTagsList = (tags) => {
+                    const container = document.createElement("div");
+                    container.className = "tagEntry";
+                    tags.forEach((tag) => {
+                        const div = document.createElement("div");
+                        div.innerHTML = tag;
+                        container.appendChild(div);
+                    });
+                    return container;
+                };
+
+                const newDivMain = document.createElement("div");
+                newDivMain.className = "list-main";
+                newDivMain.style.width = "200px";
+                newDiv.appendChild(newDivMain);
+
+                // Assemble display
+                if (currentOrigin)
+                    newDivMain.appendChild(createEntry(currentOrigin.name, currentOrigin.id, "FactionCreation", 60));
+                if (currentSubType)
+                    newDivMain.appendChild(createEntry(currentSubType.name, currentSubType.id, "FactionCreation", 40));
+                if (currentClass) newDivMain.appendChild(createEntry(currentClass.name, currentClass.id, "Text", 40));
+
+                const newDivForm = document.createElement("div");
+                newDivForm.className = "list-main";
+                newDivForm.style.width = "200px";
+                newDiv.appendChild(newDivForm);
+                if (currentForm)
+                    newDivForm.appendChild(createEntry(currentForm.name, currentForm.id, "FactionCreation", 40));
+                if (currentFormTraitList.length)
+                    newDivForm.appendChild(createTomeList(currentFormTraitList, "FactionCreation", 30));
+                const newDivName = document.createElement("div");
+                newDivName.className = "list-main";
+
+                newDiv.appendChild(newDivName);
+                const generatedName = `${currentCulture.name || "Unknown"} ${currentClass.name || "Adventurer"} of ${currentOrigin.name || "Unknown"}`;
+
+                newDivName.appendChild(createName(generatedName));
+                newDivName.style.width = "400px";
+
+                const newDivCult = document.createElement("div");
+                newDivCult.className = "list-main";
+                newDivCult.style.width = "200px";
+
+                newDiv.appendChild(newDivCult);
+                if (currentCulture)
+                    newDivCult.appendChild(createEntry(currentCulture.name, currentCulture.id, "FactionCreation", 40));
+                if (currentSociety1)
+                    newDivCult.appendChild(
+                        createEntry(currentSociety1.name, currentSociety1.id, "FactionCreation", 30)
+                    );
+                if (currentSociety2)
+                    newDivCult.appendChild(
+                        createEntry(currentSociety2.name, currentSociety2.id, "FactionCreation", 30)
+                    );
+
+                // tomes part
+
+                const newDivTomes = document.createElement("div");
+                newDivTomes.className = "list-main";
+
+                newDiv.appendChild(newDivTomes);
+                if (currentTomeList.length) newDivTomes.appendChild(createTomeList(currentTomeList, "TomeIcons", 30));
+
+                if (currentAscension) {
+                    const ascDiv = document.createElement("div");
+                    ascDiv.className = "subEntry";
+                    ascDiv.innerHTML = currentAscension.name;
+                    newDivMain.appendChild(ascDiv);
+                }
+                newDivTomes.style.width = "500px";
+
+                if (splitTags.length) newDiv.appendChild(createTagsList(splitTags));
+
+                return newDiv;
+            }
+        </script>
+    </body>
 </html>
-<footer>
-    <br>
-    <br>
-</footer>
+<footer><br /><br /></footer>

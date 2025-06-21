@@ -1,361 +1,47 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>Add commentMore actions
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CC3NE8PT7K');
-</script>
         <link rel="shortcut icon" href="/evolved/favicon.ico" />
         <script src="/evolved/Data/Builder.js"></script>
         <script src="/evolved/Data/Faction.js"></script>
         <script src="/evolved/Data/Search.js"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="/evolved/Style/icons.css" />
-
-        <template id="unit_card_template">
-            <div class="unit_card" id="unitCard">
-                <div class="unit_image_holder">
-                    <div class="productionCost">
-                        <p id="productioncost">8 Gold</p>
-                    </div>
-                    <div class="medals">
-                        <button type="button" class="collapsibleLevelup">
-                            <img src="/evolved/Icons/Text/xp.png" height="20 " style="top: 4px; position: relative" />
-                            MEDALS
-                        </button>
-                        <div class="contentLevelup">
-                            <div id="levelup">Level Up Info goes here</div>
-                        </div>
-                        <div class="unit_stat_icon"></div>
-                    </div>
-
-                    <div class="unit_image_holder">
-                        <img
-                            class="unit_preview_vid"
-                            width="400"
-                            height="516"
-                            id="vid"
-                            src="/evolved/Icons/Text/empty.png" />
-                        <div class="shadow"></div>
-
-                        <div
-                            class="unit_types"
-                            id="originHolder"
-                            style="position: absolute; top: 150px; width: 10px; height: auto; left: -5px"></div>
-
-                        <button
-                            type="button"
-                            id="enchantButton"
-                            class="collapsibleLevelup"
-                            style="
-                                position: absolute;
-                                top: -3px;
-                                left: 133px;
-                                right: 131px;
-                                max-height: 400px;
-                                width: 150px;
-                            ">
-                            <img
-                                src="/evolved/Icons/Text/strategiccombatpoints.png"
-                                height="20 "
-                                style="top: 4px; position: relative" />ENCHANT
-                        </button>
-                        <div
-                            class="contentLevelup"
-                            style="
-                                position: absolute;
-                                top: 37px;
-                                left: 133px;
-                                right: 131px;
-                                max-height: 400px;
-                                padding: 0px;
-                                border-width: 0px;
-                                overflow-y: scroll;
-                                width: 150px;
-                            ">
-                            <div id="enchantHolder"></div>
-                        </div>
-                        <div
-                            class="unit_types"
-                            id="activeEnchants"
-                            style="position: absolute; top: 67px; width: 80px; height: auto; right: -54px"></div>
-                    </div>
-                </div>
-                <div class="unit_name">
-                    <p>
-                        <img
-                            id="unit_role"
-                            style="margin-right: 5px; position: relative; top: 5px; text-transform: uppercase"
-                            src="/evolved/Icons/Text/shield_unit.png"
-                            height="25 " />
-                        <span id="unitstring"> </span>
-                    </p>
-                </div>
-
-                <div class="unit_ability_holder">
-                    <div style="text-align: center; width: 100%; height: 20px; display: inline-block">
-                        <div style="position: relative; height: 20px; display: inline-block">
-                            <p id="tier">Tier I</p>
-                        </div>
-                    </div>
-                    <div class="unit_stats">
-                        <br />
-                        <p class="stat_num" id="hp">60</p>
-                        <div class="unit_stat_icon" id="hp_tt">
-                            <img class="unit_stat_icon" src="/evolved/Icons/Text/health.png" width="25 " height="25 " />
-                        </div>
-                        <p class="stat_num" id="armor">3</p>
-                        <div class="unit_stat_icon" id="armor_tt">
-                            <img class="unit_stat_icon" src="/evolved/Icons/Text/armor.png" width="20 " height="25 " />
-                        </div>
-                        <p class="stat_num" id="resistence">2</p>
-                        <div class="unit_stat_icon" id="resistence_tt">
-                            <img
-                                class="unit_stat_icon"
-                                src="/evolved/Icons/Text/resistance.png"
-                                width="20 "
-                                height="25 " />
-                        </div>
-
-                        <p class="stat_num" id="mp">MP</p>
-                        <div class="unit_stat_icon" id="mp_tt">
-                            <img class="unit_stat_icon" src="/evolved/Icons/Text/mp.png" width="25 " height="25 " />
-                        </div>
-
-                        <p class="stat_num" id="crit">Crit</p>
-                        <div class="unit_stat_icon" id="crit_tt">
-                            <img
-                                class="unit_stat_icon"
-                                src="/evolved/Icons/Text/critical.png"
-                                width="25 "
-                                height="25 " />
-                        </div>
-                        <br />
-                    </div>
-                    <div class="unit_types" id="resistanceholder"></div>
-                    <div class="unit_types" id="unitstat"></div>
-                    <div id="unitabholder"></div>
-                </div>
-            </div>
-        </template>
-
-        <template id="structure_card_template">
-            <div class="mod_card" id="spell_card">
-                <div class="structure_image_holder">
-                    <div
-                        style="
-                            display: flex;
-
-                            width: auto;
-                            justify-content: space-between;
-                            align-content: start;
-                            align-items: stretch;
-                            justify-items: center;
-                        ">
-                        <p class="mod_name" id="modname"></p>
-
-                        <p style="padding-left: 10px; font-size: 15px" id="modtier"></p>
-
-                        <div style="width: 150px; position: absolute; left: -162px; top: 10px">
-                            <p style="font-size: 15px" id="originTome"></p>
-                            <img id="originTomeIcon" height="100px" src="/evolved/Icons/Interface/empty.png" />
-                        </div>
-                    </div>
-                    <p style="position: absolute; bottom: 5px; right: 5px" id="modcost"></p>
-                    <div
-                        style="
-                            display: flex;
-                            grid-template-columns: auto auto;
-                            width: auto;
-                            justify-content: start;
-                            align-content: start;
-                            align-items: stretch;
-                            justify-items: center;
-                        ">
-                        <div style="width: 100px">
-                            <img class="mod_image" id="modicon" src="/evolved/Icons/Text/accuracy.png" />
-                        </div>
-                        <p
-                            id="loreText"
-                            style="color: darkgrey; font-size: 14px; max-width: 400px; margin-left: 20px"></p>
-                        <div>
-                            <div>
-                                <p class="mod_description" id="moddescription">TestText</p>
-                            </div>
-                            <img class="preview_image" id="structurepreview" src="/evolved/Icons/Interface/empty.png" />
-                        </div>
-                    </div>
-
-                    <div style="clear: both"></div>
-                    <div
-                        id="affectUnitTypes"
-                        style="float: right; display: grid; grid-template-columns: 200px 200px; font-size: 12px"></div>
-                </div>
-            </div>
-        </template>
-
-        <template id="spell_card_template">
-            <div class="mod_card" id="spell_card">
-                <div class="mod_image_holder">
-                    <div class="spellStatsHighLighter">
-                        <div style="display: flex; justify-content: space-between; width: 500px">
-                            <p class="mod_name" id="modname">NameTest</p>
-                            <p class="spell_cost" style="font-size: 12px" id="modcost"></p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; width: 500px">
-                            <p class="abilityLineSlot" style="padding-left: 10px; font-size: 15px" id="modtier">
-                                Tier: I
-                            </p>
-                            <p class="abilityLineSlot" style="padding-left: 10px; font-size: 15px" id="modupkeep"></p>
-                        </div>
-                    </div>
-                    <div style="width: 150px; position: absolute; left: -162px; top: 10px">
-                        <p style="font-size: 15px" id="originTome"></p>
-                        <img id="originTomeIcon" height="100px" src="/evolved/Icons/Interface/empty.png" />
-                    </div>
-                    <div style="display: flex; justify-content: flex-start">
-                        <div style="width: 100px; padding-top: 15px">
-                            <img class="mod_image" id="modicon" src="/evolved/Icons/Interface/empty.png" />
-                        </div>
-
-                        <div>
-                            <p class="mod_description" id="moddescription">Mod Description</p>
-                        </div>
-                    </div>
-                    <div
-                        id="affectUnitTypes"
-                        style="float: right; display: grid; grid-template-columns: 200px 200px; font-size: 15px"></div>
-                </div>
-            </div>
-        </template>
-
-        <template id="skill_card_template">
-            <div class="mod_card">
-                <div class="mod_image_holder">
-                    <div class="spellStatsHighLighter">
-                        <div style="display: flex; justify-content: space-between; width: 500px">
-                            <p class="mod_name" id="modname">Grounding Harness</p>
-                            <p class="spell_cost" style="font-size: 12px" id="modcost"></p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; width: 500px">
-                            <p class="spell_tier" style="padding-left: 10px; font-size: 13px" id="spell_tier">
-                                Tier: I
-                            </p>
-                            <p class="abilityLineSlot" style="padding-left: 10px; font-size: 13px" id="modupkeep"></p>
-                        </div>
-                    </div>
-                    <div style="width: 150px; position: absolute; left: -162px; top: 10px">
-                        <p style="font-size: 13px" id="originTome"></p>
-                        <img id="originTomeIcon" height="100px" src="/evolved/Icons/Interface/empty.png" />
-                    </div>
-                    <div style="width: 100px; float: left; padding-top: 15px">
-                        <img class="mod_image" id="modicon" src="/evolved/Icons/Interface/empty.png" />
-                    </div>
-                    <div style="position: relative; left: -98px; float: left">
-                        <p class="mod_description" id="moddescription">Mod Description</p>
-                    </div>
-                    <div
-                        id="affectUnitTypes"
-                        style="float: right; display: grid; grid-template-columns: 200px 200px; font-size: 12px"></div>
-                </div>
-            </div>
-        </template>
-
-        <template id="item_card_template">
-            <div class="mod_card">
-                <div class="mod_image_holder">
-                    <div class="spellStatsHighLighter">
-                        <div style="display: flex; justify-content: space-between; width: 500px">
-                            <p class="mod_name" id="modname" style="padding-left: 0px">Grounding Harness</p>
-                        </div>
-                        <div
-                            style="display: flex; flex-direction: column; justify-content: space-between; width: 500px">
-                            <p class="spell_tier" style="font-size: 15px" id="spell_tier">Tier: I</p>
-                            <p class="spell_cost" style="font-size: 15px" id="modcost"></p>
-                            <p class="abilityLineSlot" style="padding-left: 10px; font-size: 15px" id="modupkeep"></p>
-                        </div>
-                    </div>
-                    <div style="width: 150px; position: absolute; left: 428px; top: -39px">
-                        <p style="font-size: 15px" id="originTome"></p>
-                        <img
-                            id="originTomeIcon"
-                            src="/evolved/Icons/Interface/empty.png"
-                            height="130px"
-                            style="
-                                background-image: url(/evolved/Icons/Interface/ItemBG.png);
-                                background-size: 95px;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                            " />
-                    </div>
-                    <div style="width: 100px; float: left; padding-top: 15px">
-                        <img class="mod_image" id="modicon" src="/evolved/Icons/Interface/empty.png" />
-                    </div>
-                    <div style="position: relative; left: -98px; float: left">
-                        <p class="mod_description" id="moddescription">Mod Description</p>
-                    </div>
-                    <div
-                        id="affectUnitTypes"
-                        style="float: right; display: grid; grid-template-columns: 200px 200px; font-size: 15px"></div>
-                </div>
-            </div>
-        </template>
-
-        <template id="tome_card_template">
-            <div class="tome_card">
-                <p class="tome_name" id="tomename">Tome of Evocation</p>
-                <p style="text-align: center; font-size: 15px; max-width: 900px" id="tomedescription">
-                    Mod Descripiton
-                </p>
-                <div style="width: 150px; float: left">
-                    <img class="tome_image" id="tomeicon" src="/evolved/Icons/TomeIcons/barbarian.png" />
-                </div>
-                <div
-                    style="
-                        display: grid;
-                        grid-template-columns: 500px 500px;
-                        width: auto;
-                        justify-content: start;
-                        align-content: center;
-                        align-items: stretch;
-                        justify-items: center;
-                    ">
-                    <div style="float: left">
-                        <p class="tome_description" id="tomeloredescription">Lore Description</p>
-                    </div>
-
-                    <div class="InitialBonus">
-                        <span class="initialBonusHeaderText">INITIAL BONUS</span>
-                        <div
-                            id="initialBonusList"
-                            style="display: grid; grid-template-columns: 200px; font-size: 15px"></div>
-                    </div>
-                </div>
-            </div>
-            <div style="clear: both"></div>
-            <div
-                id="tome_unlocks"
-                style="display: grid; grid-template-columns: auto auto; justify-content: center; width: auto"></div>
-        </template>
-
         <meta charset="UTF-8" />
-
         <title>Age of Wonders 4 Evolved</title>
     </head>
-
     <body>
-        <div style="color: white; font-size: 14px; z-index: 10; position: relative">
+        <div style="color: white; font-size: 14px; z-index: 10; position: relative; width: fit-content">
             Settings<br />
-            Selectable Tooltips: <input type="checkbox" id="tooltipCheckbox" onclick="CheckBoxTooltips()" />
+            Selectable Tooltips: <input type="checkbox" id="tooltipCheckbox" onclick="CheckBoxTooltips()" /><br>
+              Highlight Numbers: <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
+            <select id="languageSelect" onchange="SwitchToBeta()" style="display: none">
+                <option value="EN">English</option>
+                <option value="DE">Deutsch</option>
+                <option value="JA">Japanese</option>
+                <option value="KO">Korean</option>
+                <option value="PL">Polish</option>
+                <option value="ES">Spanish</option>
+                <option value="RU">Russian</option>
+                <option value="CN">Chinese</option>
+                <option value="FR">French</option>
+            </select>
         </div>
-
+        <div style="color: white; font-size: 15px; position: absolute; right: 10px; top: 5px; z-index: 1">
+            Other Evolved:<br /><br />
+            <a class="prett" href="https://minionsart.github.io/aow3db/" target="_blank"
+                ><img
+                    style="margin-top: -20px; margin-bottom: -10px"
+                    src="/evolved/Icons/Interface/aow3icon.png"
+                    width="35px" />AOW3</a
+            >
+            <br /><br />
+            <a class="prett" href="https://minionsart.github.io/aowp/" target="_blank"
+                ><img
+                    style="margin-top: -20px; margin-bottom: -10px"
+                    src="/evolved/Icons/Interface/aowpficon.png"
+                    width="35px" />AOW-Planetfall</a
+            >
+        </div>
         <div class="header-img">
             <div class="hero-text">Age of Wonders 4 Evolved</div>
 
@@ -366,74 +52,80 @@
                     Switch To Ogre Beta Dataset:<input type="checkbox" id="showBetaCheckbox" onclick="SwitchToBeta()" />
                     <br />(may have page/image issues)(only changes exported data)
                 </div>
-                <div class="current-version">Updated: 10th of June 2025</div>
+                <div class="current-version">Updated: 15 APRIL 2025</div>
             </div>
             <ul id="menu">
                 <li>
-                    <a class="prett"
+                    <a class="prett" id="menu-units"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/TomeUnitsIcon.png"
-                            width="40px" />Units</a
-                    >
+                            width="40px" />Units
+                    </a>
                     <ul class="menus">
                         <li class="has-submenu">
-                            <a class="prett" style="color: burlywood"
+                            <a class="prett" style="color: burlywood" id="submenu-culture"
                                 ><img
                                     style="margin-top: -20px; margin-bottom: -10px"
                                     src="/evolved/Icons/Interface/CultureUnitsIcon.png"
-                                    width="20px" />Culture ▸</a
-                            >
+                                    width="20px" />Culture ▸
+                            </a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="/evolved/HTML/FeudalUnits.html?type=scoutMonarchy"
-                                        ><img src="/evolved/Icons/Text/feudal.png" width="20px" /> Feudal</a
-                                    >
+                                    <a id="culture-feudal" href="/evolved/HTML/FeudalUnits.html?type=scoutMonarchy"
+                                        ><img src="/evolved/Icons/Text/feudal.png" width="20px" /> Feudal
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/HighUnits.html?type=lightseeker"
-                                        ><img src="/evolved/Icons/Text/high.png" width="20px" /> High</a
-                                    >
+                                    <a id="culture-high" href="/evolved/HTML/HighUnits.html?type=lightseeker"
+                                        ><img src="/evolved/Icons/Text/high.png" width="20px" /> High
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/BarbarianUnits.html?type=pathfinder"
-                                        ><img src="/evolved/Icons/Text/barbarian.png" width="20px" /> Barbarian</a
-                                    >
+                                    <a id="culture-barbarian" href="/evolved/HTML/BarbarianUnits.html?type=pathfinder"
+                                        ><img src="/evolved/Icons/Text/barbarian.png" width="20px" /> Barbarian
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/IndustriousUnits.html?type=pioneer"
+                                    <a id="culture-industrious" href="/evolved/HTML/IndustriousUnits.html?type=pioneer"
                                         ><img src="/evolved/Icons/Text/industrious.png" width="20px" /> Industrious</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/DarkUnits.html?type=outrider"
+                                    <a id="culture-dark" href="/evolved/HTML/DarkUnits.html?type=outrider"
                                         ><img src="/evolved/Icons/Text/dark.png" width="20px" /> Dark</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/MysticUnits.html?type=mystic_projectionAttunement&"
+                                    <a
+                                        id="culture-mystic"
+                                        href="/evolved/HTML/MysticUnits.html?type=mystic_projectionAttunement&"
                                         ><img src="/evolved/Icons/Text/mystic.png" width="20px" /> Mystic</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ReaverUnits.html?type=observer&"
+                                    <a id="culture-reaver" href="/evolved/HTML/ReaverUnits.html?type=observer&"
                                         ><img src="/evolved/Icons/Text/reaver.png" width="20px" /> Reaver</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/PrimalUnits.html?type=spirit_trackerAsh%20Sabertooth&"
+                                    <a
+                                        id="culture-primal"
+                                        href="/evolved/HTML/PrimalUnits.html?type=spirit_trackerAsh%20Sabertooth&"
                                         ><img src="/evolved/Icons/Text/primal.png" width="20px" /> Primal</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/OathswornUnits.html?type=wayfarerHarmony"
+                                    <a
+                                        id="culture-oathsworn"
+                                        href="/evolved/HTML/OathswornUnits.html?type=wayfarerHarmony"
                                         ><img src="/evolved/Icons/Text/oathsworn.png" width="20px" /> Oathsworn</a
                                     >
                                 </li>
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a class="prett" style="color: burlywood"
+                            <a class="prett" style="color: burlywood" id="submenu-tomesU"
                                 ><img
                                     style="margin-top: -20px; margin-bottom: -10px"
                                     src="/evolved/Icons/Interface/TomeUnitsIcon.png"
@@ -441,70 +133,78 @@
                             >
                             <ul class="submenu">
                                 <li>
-                                    <a href="/evolved/HTML/AstralTomesUnits.html?type=phantasm_warrior&"
+                                    <a
+                                        id="tomesU-astral"
+                                        href="/evolved/HTML/AstralTomesUnits.html?type=phantasm_warrior&"
                                         ><img src="/evolved/Icons/Text/astral.png" width="20px" /> Astral</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/NatureTomesUnits.html?type=wildspeaker&"
+                                    <a id="tomesU-nature" href="/evolved/HTML/NatureTomesUnits.html?type=wildspeaker&"
                                         ><img src="/evolved/Icons/Text/nature.png" width="20px" /> Nature</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ShadowTomesUnits.html?type=bone_horror&"
+                                    <a id="tomesU-shadow" href="/evolved/HTML/ShadowTomesUnits.html?type=bone_horror&"
                                         ><img src="/evolved/Icons/Text/shadow.png" width="20px" /> Shadow</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/OrderTomesUnits.html?type=chaplain&"
+                                    <a id="tomesU-order" href="/evolved/HTML/OrderTomesUnits.html?type=chaplain&"
                                         ><img src="/evolved/Icons/Text/order.png" width="20px" /> Order</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ChaosTomesUnits.html?type=lesser_magma_spirit&"
+                                    <a
+                                        id="tomesU-chaos"
+                                        href="/evolved/HTML/ChaosTomesUnits.html?type=lesser_magma_spirit&"
                                         ><img src="/evolved/Icons/Text/chaos.png" width="20px" /> Chaos</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/MateriumTomesUnits.html?type=copper_golem&"
+                                    <a
+                                        id="tomesU-materium"
+                                        href="/evolved/HTML/MateriumTomesUnits.html?type=copper_golem&"
                                         ><img src="/evolved/Icons/Text/materium.png" width="20px" /> Materium</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/DragonDawnTomesUnits.html?type=wyvern_fledgling"
+                                    <a
+                                        id="tomesU-dd"
+                                        href="/evolved/HTML/DragonDawnTomesUnits.html?type=wyvern_fledgling"
                                         ><img src="/evolved/Icons/Text/DragonDawn.png" width="20px" /> Dragon Dawn</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/EmpiresAshesTomeUnits.html?type=afflictor"
+                                    <a id="tomesU-ea" href="/evolved/HTML/EmpiresAshesTomeUnits.html?type=afflictor"
                                         ><img src="/evolved/Icons/Text/empireAshes.png" width="20px" /> Empires& Ashes</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/PrimalFuryTomesUnits.html?type=mistling"
+                                    <a id="tomesU-pf" href="/evolved/HTML/PrimalFuryTomesUnits.html?type=mistling"
                                         ><img src="/evolved/Icons/Text/PrimalFury.png" width="20px" /> Primal Fury</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/EldritchRealmsTomesUnits.html?type=tentacle"
+                                    <a id="tomesU-er" href="/evolved/HTML/EldritchRealmsTomesUnits.html?type=tentacle"
                                         ><img src="/evolved/Icons/Text/EldritchRealms.png" width="20px" /> Eldritch
                                         Realms</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/WaysOfWarTomeUnits.html?type=monk&"
+                                    <a id="tomesU-ww" href="/evolved/HTML/WaysOfWarTomeUnits.html?type=monk&"
                                         ><img src="/evolved/Icons/Text/waysofwar.png" width="20px" /> Ways of War</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/GiantKingsTomeUnits.html?type=clay_charger&"
+                                    <a id="tomesU-gk" href="/evolved/HTML/GiantKingsTomeUnits.html?type=clay_charger&"
                                         ><img src="/evolved/Icons/Text/GKLogo.png" width="20px" /> Giant Kings</a
                                     >
                                 </li>
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a class="prett" style="color: burlywood"
+                            <a id="submenu-types" class="prett" style="color: burlywood"
                                 ><img
                                     style="margin-top: -20px; margin-bottom: -10px"
                                     src="/evolved/Icons/Interface/WildlifeUnitsIcon.png"
@@ -512,75 +212,79 @@
                             >
                             <ul class="submenu">
                                 <li>
-                                    <a href="/evolved/HTML/FeyUnits.html?type=spring_fairy"
+                                    <a id="types-fey" href="/evolved/HTML/FeyUnits.html?type=spring_fairy"
                                         ><img src="/evolved/Icons/UnitIcons/fey.png" width="20px" /> Fey</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/AnimalUnits.html?type=young_caustic_worm&"
+                                    <a id="types-animal" href="/evolved/HTML/AnimalUnits.html?type=young_caustic_worm&"
                                         ><img src="/evolved/Icons/UnitIcons/animal.png" width="20px" /> Animal</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/FiendUnits.html?type=inferno_puppy&"
+                                    <a id="types-infernal-fiend" href="/evolved/HTML/FiendUnits.html?type=inferno_puppy&"
                                         ><img src="/evolved/Icons/UnitIcons/fiend.png" width="20px" /> Infernal Fiend</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/DragonUnits.html?type=bone_wyvern&"
+                                    <a id="types-dragons" href="/evolved/HTML/DragonUnits.html?type=bone_wyvern&"
                                         ><img src="/evolved/Icons/UnitIcons/dragon.png" width="20px" /> Dragons</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/DemiGiantUnits.html?type=butcher_ogre&"
+                                    <a id="types-demi" href="/evolved/HTML/DemiGiantUnits.html?type=butcher_ogre&"
                                         ><img src="/evolved/Icons/UnitIcons/large_target.png" width="20px" />
                                         Demi/Giants</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ElementalUnits.html?type=lesser_snow_spirit&"
+                                    <a
+                                        id="types-elemental"
+                                        href="/evolved/HTML/ElementalUnits.html?type=lesser_snow_spirit&"
                                         ><img src="/evolved/Icons/UnitIcons/elemental.png" width="20px" /> Elemental</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/UndeadUnits.html?type=skeleton_mage&"
+                                    <a id="types-undead" href="/evolved/HTML/UndeadUnits.html?type=skeleton_mage&"
                                         ><img src="/evolved/Icons/UnitIcons/undead.png" width="20px" /> Undead</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/EtherealUnits.html?type=astral_wisp&"
+                                    <a id="types-ethereal" href="/evolved/HTML/EtherealUnits.html?type=astral_wisp&"
                                         ><img src="/evolved/Icons/UnitIcons/ethereal.png" width="20px" /> Ethereal</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/PlantUnits.html?type=entwined_thrall&"
+                                    <a id="types-plant" href="/evolved/HTML/PlantUnits.html?type=entwined_thrall&"
                                         ><img src="/evolved/Icons/UnitIcons/plant.png" width="20px" /> Plant</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/CelestialUnits.html?type=lightbringer&"
+                                    <a id="types-celestial" href="/evolved/HTML/CelestialUnits.html?type=lightbringer&"
                                         ><img src="/evolved/Icons/UnitIcons/celestial.png" width="20px" /> Celestial</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ConstructUnits.html?type=observer&"
+                                    <a id="types-construct" href="/evolved/HTML/ConstructUnits.html?type=observer&"
                                         ><img src="/evolved/Icons/UnitIcons/construct.png" width="20px" /> Construct</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/UmbralDemonsUnits.html?type=mature_splitterling"
+                                    <a
+                                        id="types-umbral"
+                                        href="/evolved/HTML/UmbralDemonsUnits.html?type=mature_splitterling"
                                         ><img src="/evolved/Icons/UnitIcons/umbral_demon.png" width="20px" /> Umbral
                                         Demon</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/AccursedFiends.html"
+                                    <a id="types-accursed" href="/evolved/HTML/AccursedFiends.html"
                                         ><img src="/evolved/Icons/UnitIcons/accursed_fiend.png" width="20px" /> Accursed
                                         Fiend</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/TomeFormUnits.html"
+                                    <a id="types-tome" href="/evolved/HTML/TomeFormUnits.html"
                                         ><img src="/evolved/Icons/FactionCreation/elfkin.png" width="20px" /> Tome
                                         Form</a
                                     >
@@ -588,7 +292,7 @@
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a class="prett" style="color: burlywood"
+                            <a id="submenu-class" class="prett" style="color: burlywood"
                                 ><img
                                     style="margin-top: -20px; margin-bottom: -10px"
                                     src="/evolved/Icons/UnitIcons/shock_unit.png"
@@ -596,61 +300,65 @@
                             </a>
                             <ul class="submenu">
                                 <li>
-                                    <a href="/evolved/HTML/ScoutUnits.html?type=wayfarerHarmony&"
+                                    <a id="class-scout" href="/evolved/HTML/ScoutUnits.html?type=wayfarerHarmony&"
                                         ><img src="/evolved/Icons/UnitIcons/scout_unit.png" width="20px" /> Scout</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/SkirmisherUnits.html?type=harrier&"
+                                    <a id="class-skirmisher" href="/evolved/HTML/SkirmisherUnits.html?type=harrier&"
                                         ><img src="/evolved/Icons/UnitIcons/skirmisher_unit.png" width="20px" />
                                         Skirmisher</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/FighterUnits.html?type=animated_frost_sword&"
+                                    <a
+                                        id="class-fighter"
+                                        href="/evolved/HTML/FighterUnits.html?type=animated_frost_sword&"
                                         ><img src="/evolved/Icons/UnitIcons/fighter_unit.png" width="20px" /> Fighter</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/RangedUnits.html?type=skeleton_archer&"
+                                    <a id="class-ranged" href="/evolved/HTML/RangedUnits.html?type=skeleton_archer&"
                                         ><img src="/evolved/Icons/UnitIcons/ranged_unit.png" width="20px" /> Ranged</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/PolearmUnits.html?type=sworn_guardHarmony&"
+                                    <a id="class-polearm" href="/evolved/HTML/PolearmUnits.html?type=sworn_guardHarmony&"
                                         ><img src="/evolved/Icons/UnitIcons/polearm_unit.png" width="20px" /> Polearm</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ShockUnits.html?type=lesser_storm_spirit&"
+                                    <a id="class-shock" href="/evolved/HTML/ShockUnits.html?type=lesser_storm_spirit&"
                                         ><img src="/evolved/Icons/UnitIcons/shock_unit.png" width="20px" /> Shock</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/ShieldUnits.html?type=skeleton_warrior&"
+                                    <a id="class-shield" href="/evolved/HTML/ShieldUnits.html?type=skeleton_warrior&"
                                         ><img src="/evolved/Icons/UnitIcons/shield_unit.png" width="20px" /> Shield</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/BattleMageUnits.html?type=skeleton_mage&"
+                                    <a
+                                        id="class-battlemage"
+                                        href="/evolved/HTML/BattleMageUnits.html?type=skeleton_mage&"
                                         ><img src="/evolved/Icons/UnitIcons/battle_mage_unit.png" width="20px" />
                                         Battlemage</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/SupportUnits.html?type=lithorine_core&"
+                                    <a id="class-support" href="/evolved/HTML/SupportUnits.html?type=lithorine_core&"
                                         ><img src="/evolved/Icons/UnitIcons/support_unit.png" width="20px" /> Support</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/MythicUnits.html?type=primal_crocodile&"
+                                    <a id="class-mythic" href="/evolved/HTML/MythicUnits.html?type=primal_crocodile&"
                                         ><img src="/evolved/Icons/UnitIcons/mythic_unit.png" width="20px" /> Mythic</a
                                     >
                                 </li>
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a class="prett" style="color: burlywood"
+                            <a id="submenu-other" class="prett" style="color: burlywood"
                                 ><img
                                     style="margin-top: -20px; margin-bottom: -10px"
                                     src="/evolved/Icons/UnitIcons/tower.png"
@@ -658,13 +366,13 @@
                             >
                             <ul class="submenu">
                                 <li>
-                                    <a href="/evolved/HTML/SiegeCraftUnits.html?type=ballista&"
+                                    <a id="other-siegecraft" href="/evolved/HTML/SiegeCraftUnits.html?type=ballista&"
                                         ><img src=" /evolved/Icons/UnitIcons/siegecraft.png" width="20px" />
                                         Siegecraft</a
                                     >
                                 </li>
                                 <li>
-                                    <a href="/evolved/HTML/TowerUnits.html?type=fire_runestone&"
+                                    <a id="other-towers" href="/evolved/HTML/TowerUnits.html?type=fire_runestone&"
                                         ><img src=" /evolved/Icons/UnitIcons/tower.png" width="20px" /> Towers</a
                                     >
                                 </li>
@@ -673,7 +381,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-tomes" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/TomesIcon.png"
@@ -681,42 +389,44 @@
                     >
                     <ul class="menus">
                         <li>
-                            <a href="/evolved/HTML/AstralTomes.html?type=tome_of_evocation&"
+                            <a id="tomes-astral" href="/evolved/HTML/AstralTomes.html?type=tome_of_evocation&"
                                 ><img src="/evolved/Icons/Text/astral.png" width="20px" /> Astral</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/NatureTomes.html?type=tome_of_roots&"
+                            <a id="tomes-nature" href="/evolved/HTML/NatureTomes.html?type=tome_of_roots&"
                                 ><img src="/evolved/Icons/Text/nature.png" width="20px" /> Nature</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/ShadowTomes.html?type=tome_of_necromancy&"
+                            <a id="tomes-shadow" href="/evolved/HTML/ShadowTomes.html?type=tome_of_necromancy&"
                                 ><img src="/evolved/Icons/Text/shadow.png" width="20px" /> Shadow</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/OrderTomes.html?type=tome_of_zeal&"
+                            <a id="tomes-order" href="/evolved/HTML/OrderTomes.html?type=tome_of_zeal&"
                                 ><img src="/evolved/Icons/Text/order.png" width="20px" /> Order</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/ChaosTomes.html?type=tome_of_pyromancy&"
+                            <a id="tomes-chaos" href="/evolved/HTML/ChaosTomes.html?type=tome_of_pyromancy&"
                                 ><img src="/evolved/Icons/Text/chaos.png" width="20px" /> Chaos</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/MateriumTomes.html?type=tome_of_rock&.html"
+                            <a id="tomes-materium" href="/evolved/HTML/MateriumTomes.html?type=tome_of_rock&.html"
                                 ><img src="/evolved/Icons/Text/materium.png" width="20px" /> Materium</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/DualTomes.html?type=tome_of_evolution&.html"
+                            <a id="tomes-dual" href="/evolved/HTML/DualTomes.html?type=tome_of_evolution&.html"
                                 ><img src="/evolved/Icons/Interface/dual.png" width="20px" /> Dual</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/GeneralCultureTomes.html?type=general_research&.html"
+                            <a
+                                id="tomes-general"
+                                href="/evolved/HTML/GeneralCultureTomes.html?type=general_research&.html"
                                 ><img src="/evolved/Icons/Text/population.png" width="20px" /> General& Culture</a
                             >
                         </li>
@@ -724,7 +434,7 @@
                 </li>
 
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-spells" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/SpellsIcon.png"
@@ -733,36 +443,43 @@
                     <ul class="menus">
                         <li>
                             <a
+                                id="spells-transform"
                                 href="/evolved/HTML/TransformationSpells.html?type=Minor%20Race%20Transformations&sort=name:true"
                                 ><img src="/evolved/Icons/SpellIcons/angelic_transformation.png" width="20px" />
                                 Transformations</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/CombatSpells.html?type=Healing%20Spells&sort=name:true"
+                            <a
+                                id="spells-combat"
+                                href="/evolved/HTML/CombatSpells.html?type=Healing%20Spells&sort=name:true"
                                 ><img src="/evolved/Icons/Text/tacticalcombatpoints.png" width="20px" /> Combat Spells</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/EnchantmentSpells.html?type=Generic%20Research&sort=name:true"
+                            <a
+                                id="spells-enchant"
+                                href="/evolved/HTML/EnchantmentSpells.html?type=Generic%20Research&sort=name:true"
                                 ><img src="/evolved/Icons/SpellIcons/adaptive_armor.png" width="20px" /> Enchantments</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/StrategicSpells.html?type=Summon%20Spells&sort=name:true"
+                            <a
+                                id="spells-strategic"
+                                href="/evolved/HTML/StrategicSpells.html?type=Summon%20Spells&sort=name:true"
                                 ><img src="/evolved/Icons/Text/strategiccombatpoints.png" width="20px" /> Strategic
                                 Spells</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/SiegeProjects.html?&sort=name:true"
+                            <a id="spells-siege" href="/evolved/HTML/SiegeProjects.html?&sort=name:true"
                                 ><img src="/evolved/Icons/Text/siegehealth.png" width="20px" /> Siege Projects</a
                             >
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-world" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/StructuresIcon.png"
@@ -770,33 +487,33 @@
                     >
                     <ul class="menus">
                         <li>
-                            <a href="/evolved/HTML/CityTreesNew.html"
+                            <a id="world-city" href="/evolved/HTML/CityTreesNew.html"
                                 ><img src="/evolved/Icons/UpgradeIcons/throne.png" width="20px" /> City Tree</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/ProvinceImprovements.html?type=Foresters&"
+                            <a id="world-province" href="/evolved/HTML/ProvinceImprovements.html?type=Foresters&"
                                 ><img src="/evolved/Icons/Text/mine.png" width="15px" /> Province Impr.</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/MagicMaterials.html"
+                            <a id="world-magic" href="/evolved/HTML/MagicMaterials.html"
                                 ><img src="/evolved/Icons/WorldStructures/arcanium_ore.png" width="20px" /> Magic
                                 Materials</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/AncientWonders.html?type=Bronze&"
+                            <a id="world-ancient" href="/evolved/HTML/AncientWonders.html?type=Bronze&"
                                 ><img src="/evolved/Icons/Text/goldWonder.png" width="20px" /> Ancient Wonders</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/Landmarks.html"
+                            <a id="world-landmarks" href="/evolved/HTML/Landmarks.html"
                                 ><img src="/evolved/Icons/Text/landmark.png" width="20px" /> Landmarks</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/CosmicHappenings.html?type=Minor&"
+                            <a id="world-cosmic" href="/evolved/HTML/CosmicHappenings.html?type=Minor&"
                                 ><img src="/evolved/Icons/CosmicHappenings/category_icon_Asteroid.png" width="20px" />
                                 Cosmic Happenings</a
                             >
@@ -804,7 +521,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-hero" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/HeroIcon.png"
@@ -812,37 +529,39 @@
                     >
                     <ul class="menus">
                         <li>
-                            <a href="/evolved/HTML/HeroEquipment.html?type=Primary%20Weapon&sort=tier:true"
+                            <a
+                                id="hero-equipment"
+                                href="/evolved/HTML/HeroEquipment.html?type=Primary%20Weapon&sort=tier:true"
                                 ><img src="/evolved/Icons/Interface/EquipmentIcon.png" width="20px" />Equipment</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/HeroSkills.html"
+                            <a id="hero-ascension" href="/evolved/HTML/HeroSkills.html"
                                 ><img src="/evolved/Icons/UnitIcons/ascended_alchemist.png" width="20px" /> Ascension
                                 Skills</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/HeroAmbitions.html"
+                            <a id="hero-ambition" href="/evolved/HTML/HeroAmbitions.html"
                                 ><img src="/evolved/Icons/AmbitionIcons/challenger.png" width="20px" /> Ambitions</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/HeroGovernance.html"
+                            <a id="hero-governance" href="/evolved/HTML/HeroGovernance.html"
                                 ><img src="/evolved/Icons/GovernanceIcons/agricultural_governor.png" width="20px" />
                                 Governance</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/HeroBuilder.html"
-                                ><img src="/evolved/Icons/UnitIcons/adaptive_armor.png" width="20px" />Skill Trees</a
+                            <a id="hero-skill" href="/evolved/HTML/HeroSkillsList.html"
+                                ><img src="/evolved/Icons/UnitIcons/adaptive_armor.png" width="20px" />Skill List</a
                             >
                         </li>
                     </ul>
                 </li>
 
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-empire" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/EmpireIcon.png"
@@ -850,18 +569,18 @@
                     >
                     <ul class="menus">
                         <li>
-                            <a href="/evolved/HTML/EmpireTree.html"
+                            <a id="empire-tree" href="/evolved/HTML/EmpireTree.html"
                                 ><img src="/evolved/Icons/Interface/EmpireIcon.png" width="20px" /> Empire Tree</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/DestinyTraits.html"
+                            <a id="empire-destiny" href="/evolved/HTML/DestinyTraits.html"
                                 ><img src="/evolved/Icons/EmpireProgressionIcons/mark_of_the_butcher.png" width="20px" />
                                 Destiny Traits</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/FactionCreation.html"
+                            <a id="empire-faction" href="/evolved/HTML/FactionCreation.html"
                                 ><img src="/evolved/Icons/FactionCreation/adaptable.png" width="20px" />Faction Traits</a
                             >
                         </li>
@@ -869,7 +588,7 @@
                 </li>
 
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-abilities" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/ability_icon_fire.png"
@@ -877,18 +596,18 @@
                     >
                     <ul class="menus">
                         <li>
-                            <a href="/evolved/HTML/Abilities.html"
+                            <a id="abilities-active" href="/evolved/HTML/Abilities.html"
                                 ><img src="/evolved/Icons/UnitIcons/acid_spray_scrap_hermit.png" width="20px" />Active
                                 Abilities</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/Passives.html"
+                            <a id="abilities-passive" href="/evolved/HTML/Passives.html"
                                 ><img src="/evolved/Icons/UnitIcons/accursed_body.png" width="20px" />Passives</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/StatusEffects.html"
+                            <a id="abilities-status" href="/evolved/HTML/StatusEffects.html"
                                 ><img src="/evolved/Icons/UnitIcons/wet.png" width="20px" />Status Effects</a
                             >
                         </li>
@@ -896,7 +615,7 @@
                 </li>
 
                 <li>
-                    <a class="prett" style="color: burlywood"
+                    <a id="menu-builder" class="prett" style="color: burlywood"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/Info.png"
@@ -904,13 +623,13 @@
                     >
                     <ul class="menus">
                         <li>
-                            <a href="/evolved/HTML/FactionCreator.html"
+                            <a id="builder-faction" href="/evolved/HTML/FactionCreator.html"
                                 ><img src="/evolved/Icons/FactionCreation/fabled_hunters.png" width="20px" />Faction
                                 Builder</a
                             >
                         </li>
                         <li>
-                            <a href="/evolved/HTML/HeroBuilder.html"
+                            <a id="builder-hero" href="/evolved/HTML/HeroBuilder.html"
                                 ><img src="/evolved/Icons/UnitIcons/adaptive_armor.png" width="20px" />Hero Builder</a
                             >
                         </li>
@@ -918,7 +637,7 @@
                 </li>
 
                 <li>
-                    <a class="prett" style="color: coral" href="/evolved/HTML/Search.html"
+                    <a id="menu-search" class="prett" style="color: coral" href="/evolved/HTML/Search.html"
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/search.png"

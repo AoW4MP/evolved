@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
     <head>
+                 <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CC3NE8PT7K');
+</script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
         <meta charset="UTF-8" />
@@ -206,7 +215,7 @@
 
                         action.innerHTML = abilityDescr;
                         action.className = "list_types";
-                        action.setAttribute("style", "color:white; width:1000px");
+                        action.setAttribute("style", "color:#bbcdf6; width:1000px");
 
                         // let spa = CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr);
 
@@ -357,8 +366,8 @@
             </div>
         </div>
 
-        <div class="w3-container">
-            <div class="w3-bar w3-black" id="buttonHolder"></div>
+        <div class="w3-container" style="  justify-content: center;">
+            <div class="w3-bar w3-black"  id="buttonHolder"></div>
             <div class="list_abilityslotfilter">
                 <button style="width: 250px" class="sortingButton" id="name-button" onclick="sortDivsList('name')">
                     Name

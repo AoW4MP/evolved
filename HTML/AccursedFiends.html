@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <meta charset="UTF-8" />
@@ -10,6 +21,8 @@
         <script src="/evolved/Data/Search.js"></script>
         <script>
             function HandlePage() {
+                // get fiend name localized
+
                 unitarray = FindUnitsWithSecondaryPassive("accursed_fiend");
                 console.log(unitarray);
 
@@ -26,15 +39,15 @@
             }
         </script>
 
-        <title>Age of Wonders 4 Evolved - Animal Units</title>
+        <title>Age of Wonders 4 Evolved - Accursed Fiend Units</title>
     </head>
 
     <body>
         <div id="header"></div>
 
         <div class="textblocktitle">
-            <img src="/evolved/Icons/UnitIcons/animal.png" height="40px" /> Animal Units
-            <img src="/evolved/Icons/UnitIcons/animal.png" height="40px" />
+            <img src="/evolved/Icons/UnitIcons/accursed_fiend.png" height="40px" /> Accursed Fiend Units
+            <img src="/evolved/Icons/UnitIcons/accursed_fiend.png" height="40px" />
         </div>
 
         <div class="w3-container">

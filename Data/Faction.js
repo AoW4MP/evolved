@@ -130,7 +130,7 @@ function SetRandomStart(overwriteParameter) {
                     currentFormTraitList = [];
                     currentFormTraitList.push(randomEntry);
 
-                    while (getPoints() < 5) {
+                    while (getPoints() < 10) {
                         randomEntry = GetRandomEntry(listofChoice[j]);
                         if (getPoints() + randomEntry.point_cost < 6 && !isInArray(currentFormTraitList, randomEntry)) {
                             if (checkCompatibilityTraits(randomEntry) == true) {
@@ -933,7 +933,7 @@ function SetupButtons(evt, type) {
                 console.log(currentFormTraitList + " " + origin);
             }
 
-            if (origin.point_cost + getPoints() > 5) {
+            if (origin.point_cost + getPoints() > 10) {
                 originButtonNew.style.color = "grey";
             } else if (checkCompatibilityTraits(origin) == false) {
                 originButtonNew.style.color = "red";
@@ -2939,7 +2939,7 @@ function updateSelectedOptions(origin) {
         //         currentFormTraitList.pop();
         //     }
         // } else {
-        if (getPoints() > 5) {
+        if (getPoints() > 10) {
             currentFormTraitList.pop();
         }
         // }

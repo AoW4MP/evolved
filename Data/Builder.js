@@ -359,7 +359,7 @@ function AddTagIconsForStatusEffects(name) {
 
         if (
             name.includes(abilityName) &&
-            jsonUnitAbilitiesLocalized[i].slug !== "0000041b000013b4" // skip that specific one
+            jsonUnitAbilitiesLocalized[i].slug !== "_1_<<m{global.retaliationconcept.hyperlink}>>" // skip that specific one
         ) {
             let tooltipspan = document.createElement("span");
             tooltipspan.className = "statusEffectHandler";

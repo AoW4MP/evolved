@@ -1,13 +1,13 @@
 [
  {
-  "requirement_description": "Requires  Lava improvement provinces to unlock.<br></br><br></br>Only 1 Guild allowed per City.",
+  "requirement_description": "Requires 4 Lava improvement provinces to unlock.<br></br><br></br>Only 1 Guild allowed per City.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per Lava: </bullet><bullet>+5 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per Lava: </bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Battle Mage Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Fighter Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Mythic Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Polearm Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Ranged Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Shield Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Shock Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Skirmisher Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Molten Armor</hyperlink> to every <hyperlink>Support Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per Lava: </bullet><bullet>+3 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per Lava: </bullet></bulletlist>",
   "resid": 5222680232542,
   "id": "volcanologists_guild",
-  "description": "Per Lava province:<bulletlist><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+5 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet><bullet>Grants Molten Armor to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "description": "Per Lava province:<bulletlist><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet></bulletlist>",
   "name": "Volcanologists' Guild",
-  "icon": "volcanologists_guild",
+  "icon": "000004C000000266",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -19,7 +19,7 @@
   "id": "obsidian_weaponsmith",
   "description": "",
   "name": "Obsidian Weaponsmith",
-  "icon": "obsidian_weaponsmith",
+  "icon": "000004C00000025B",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -31,7 +31,7 @@
   "id": "basalt_excavation",
   "description": "",
   "name": "Basalt Excavation",
-  "icon": "basalt_excavation",
+  "icon": "000004C000000256",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -43,7 +43,7 @@
   "id": "mineral_extractor",
   "description": "",
   "name": "Mineral Extractor",
-  "icon": "mineral_extractor",
+  "icon": "000004C00000024C",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -56,7 +56,7 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "<bulletlist><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>20 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink></bullet><bullet>20 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink></bullet></bulletlist><br></br>At the start of combat in this city's domain: <bulletlist><bullet> 3 enemy units have a base 90% chance of suffering Insanity for 1 <turn></turn> <hyperlink>Turn</hyperlink>. If unsuccessful, are Stunned for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist><br></br><br></br>Can only be built in the <hyperlink>Throne City</hyperlink>.",
   "name": "Throne of Insidious Whispers",
-  "icon": "throne_of_insidious_whispers",
+  "icon": "0000049C00000090",
   "is_sector_upgrade": false
  },
  {
@@ -68,7 +68,7 @@
   "DLC": "GIANTKINGS ",
   "description": "City gains different resources based on the terrain features of the city core's location:<bulletlist><bullet>+40 <food></food> <hyperlink>Food</hyperlink> if in Grasslands, Swamp or Fungus Fields.</bullet><bullet>+30 <structureprod></structureprod> <hyperlink>Production</hyperlink> if in Forest, Mushroom Forest, Rocky or Mountains.</bullet><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink> if in Ashlands.</bullet><bullet>+20 <mana></mana> <hyperlink>Mana</hyperlink> if in Snow, Ice or Sand.</bullet>",
   "name": "Hall of Geomantic Resonance",
-  "icon": "hall_of_geomantic_resonance",
+  "icon": "0000049700001A5E",
   "is_sector_upgrade": false
  },
  {
@@ -80,7 +80,7 @@
   "DLC": "GIANTKINGS ",
   "description": "<bulletlist><bullet>+1 <garrison></garrison><hyperlink>Fortification Health</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>+3 <happiness></happiness> <hyperlink>City Stability</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>A <hyperlink>Clay Arbalest</hyperlink>, <hyperlink>Clay Charger</hyperlink>, or a <hyperlink>Clay Defender</hyperlink> joins combat on your side when fighting in this city's domain (does not function in water or lava).</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Silent Barracks",
-  "icon": "_quarry___silent_barracks",
+  "icon": "000004BB00000039",
   "is_sector_upgrade": true
  },
  {
@@ -92,7 +92,7 @@
   "DLC": "GIANTKINGS ",
   "description": "<bulletlist><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>Allows the drafting of the <hyperlink>Clay Arbalest</hyperlink>, <hyperlink>Clay Charger</hyperlink>, and <hyperlink>Clay Defender</hyperlink> units.</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Clay Forge",
-  "icon": "_quarry___clay_forge",
+  "icon": "000004BB00000038",
   "is_sector_upgrade": true
  },
  {
@@ -104,7 +104,7 @@
   "DLC": "GIANTKINGS ",
   "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>+1 <bindingessence></bindingessence> <hyperlink>Binding Essence</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink></bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink></bullet></bulletlist>",
   "name": "<mine></mine> Underground Vault",
-  "icon": "_mine___underground_vault",
+  "icon": "000004BB00000037",
   "is_sector_upgrade": true
  },
  {
@@ -116,7 +116,7 @@
   "DLC": "GIANTKINGS ",
   "description": "<bulletlist><bullet>+5 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> </bullet><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, a <hyperlink>Province</hyperlink> in the <hyperlink>City</hyperlink>'s <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gains <hyperlink>Dungeon</hyperlink>.</bullet></bulletlist><bullet>Gain +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Dungeoneering Conclave",
-  "icon": "_researchpost___dungeoneering_conclave",
+  "icon": "00000497000019B4",
   "is_sector_upgrade": true
  },
  {
@@ -128,31 +128,31 @@
   "DLC": "GIANTKINGS ",
   "description": "<bulletlist><bullet>15 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>15 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet><bullet>10 <influence></influence> <hyperlink>Imperium</hyperlink></bullet></bulletlist>",
   "name": "Eternal Embassy",
-  "icon": "eternal_embassy",
+  "icon": "00000497000015AF",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
+  "cost": "280<gold></gold> 750<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 5046586577862,
   "id": "_conduit___accursed_shrine",
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>When placed, alter terrain into Desolate.</bullet><bullet>Per adjacent Ruin province gain:<bulletlist></bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet></bulletlist><bullet>Allows the drafting of <hyperlink>Accursed Ogre</hyperlink>, <hyperlink>Accursed Blade</hyperlink>, and <hyperlink>Accursed Trickster</hyperlink></bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Accursed Shrine",
-  "icon": "_conduit___accursed_shrine",
+  "icon": "00000497000013C7",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
+  "cost": "280<gold></gold> 750<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 5046586577809,
   "id": "_conduit___shrine_of_prosperity",
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>+3 <happiness></happiness> <hyperlink>City Stability</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink> or <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>+7 <food></food> <hyperlink>Food</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink> or <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>10% of <food></food> <hyperlink>Food</hyperlink> income in the city is converted to <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>Allows the drafting of <hyperlink>Blessed Dragon</hyperlink>, <hyperlink>Radiant Guardian</hyperlink>, and <hyperlink>Righteous Judge</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Shrine of Prosperity",
-  "icon": "_conduit___shrine_of_prosperity",
+  "icon": "0000049700001392",
   "is_sector_upgrade": true
  },
  {
@@ -164,7 +164,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>Per<farm></farm> <hyperlink>Farm</hyperlink> and <forester></forester> <hyperlink>Forester</hyperlink> in the domain:<bulletlist></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet></bulletlist></bulletlist>",
   "name": "Garden of Affluence",
-  "icon": "garden_of_affluence",
+  "icon": "0000049700001355",
   "is_sector_upgrade": false
  },
  {
@@ -176,43 +176,43 @@
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income.</bullet><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> for each non-owned city that shares a border with this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "name": "Shade Network",
-  "icon": "shade_network",
+  "icon": "0000048B0000023D",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "<bulletlist><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+7 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Unit</hyperlink>.</bullet></bulletlist>",
   "resid": 5046586577200,
   "id": "_conduit___school_of_mastery",
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>+7 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>Units produced in this city start with +1 <medalGold></medalGold> Starting Rank.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> School of Mastery",
-  "icon": "_conduit___school_of_mastery",
+  "icon": "0000049700001131",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "<bulletlist><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+7 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet></bulletlist>",
   "resid": 5046586577192,
   "id": "_conduit___school_of_discipline",
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>+7 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> School of Discipline",
-  "icon": "_conduit___school_of_discipline",
+  "icon": "0000049700001129",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "<bulletlist><bullet>+7 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>+7 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income</bullet></bulletlist>",
   "resid": 5046586577185,
   "id": "_conduit___school_of_contemplation",
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>+7 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+7 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> School of Contemplation",
-  "icon": "_conduit___school_of_contemplation",
+  "icon": "0000049700001122",
   "is_sector_upgrade": true
  },
  {
@@ -224,7 +224,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "Adds a <hyperlink>Warbound</hyperlink> unit to all fights in this domain.",
   "name": "Paragon Quarters",
-  "icon": "paragon_quarters",
+  "icon": "0000049700000FEC",
   "is_sector_upgrade": false
  },
  {
@@ -236,7 +236,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "Adds an <hyperlink>Avenger</hyperlink> unit to all fights in this domain.",
   "name": "Paragon Quarters",
-  "icon": "paragon_quarters",
+  "icon": "0000049700000FEC",
   "is_sector_upgrade": false
  },
  {
@@ -248,7 +248,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "Adds a <hyperlink>Peacebringer</hyperlink> unit to all fights in this domain.",
   "name": "Paragon Quarters",
-  "icon": "paragon_quarters",
+  "icon": "0000049700000FEC",
   "is_sector_upgrade": false
  },
  {
@@ -260,7 +260,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "",
   "name": "Hall of Devotion",
-  "icon": "hall_of_devotion",
+  "icon": "0000049700000FE1",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -273,7 +273,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "",
   "name": "Training Hall",
-  "icon": "training_hall",
+  "icon": "0000049700000FDC",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -286,7 +286,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "",
   "name": "Town Hall IV: Palace of Vows",
-  "icon": "town_hall_iv_palace_of_vows",
+  "icon": "0000049700000FD5",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -299,7 +299,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Steel Bastion",
-  "icon": "town_hall_iii_steel_bastion",
+  "icon": "0000049700000FCE",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -312,7 +312,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Oath Square",
-  "icon": "town_hall_ii_oath_square",
+  "icon": "0000049700000FC7",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -324,7 +324,7 @@
   "id": "_conduit___excavated_ley_line",
   "description": "<bulletlist><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink>.</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+5 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>.</bullet><bullet>+4 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Excavated Ley Line",
-  "icon": "_conduit___excavated_ley_line",
+  "icon": "0000049700000E9D",
   "is_sector_upgrade": true
  },
  {
@@ -336,7 +336,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>Provinces in this city's domain become Misty.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Feywater Pond",
-  "icon": "_conduit___feywater_pond",
+  "icon": "00000497000007D3",
   "is_sector_upgrade": true
  },
  {
@@ -348,7 +348,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with a Tunneling Spider Den and Underground Provinces within a radius equal to the city tier:<bulletlist><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces gains <hyperlink>Mushroom Forest</hyperlink></bullet></bulletlist>",
   "name": "Tunneling Spider Temple",
-  "icon": "tunneling_spider_temple",
+  "icon": "00000497000008C7",
   "is_sector_upgrade": false
  },
  {
@@ -360,7 +360,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with a Glacial Mammoth Den and Provinces within a radius equal to the city tier:<bulletlist><bullet>Grant +5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink></bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces loses <hyperlink>Chasm</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Glacial Mammoth Temple",
-  "icon": "glacial_mammoth_temple",
+  "icon": "00000497000008C6",
   "is_sector_upgrade": false
  },
  {
@@ -372,7 +372,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with a Storm Crow Den and Surface Provinces within a radius equal to the city tier:<bulletlist><bullet>Grant +5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces gains <hyperlink>Grassland</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, and <hyperlink>Gloom</hyperlink></bullet></bulletlist>",
   "name": "Storm Crow Temple",
-  "icon": "storm_crow_temple",
+  "icon": "00000497000008C5",
   "is_sector_upgrade": false
  },
  {
@@ -384,7 +384,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with a Dune Serpent Den and Surface Provinces within a radius equal to the city tier:<bulletlist><bullet>Grant +5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces gains <hyperlink>Sand</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the provinces loses <hyperlink>River</hyperlink>, <hyperlink>Chasm</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Dune Serpent Temple",
-  "icon": "dune_serpent_temple",
+  "icon": "00000497000008C4",
   "is_sector_upgrade": false
  },
  {
@@ -396,7 +396,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with an Ash Sabertooth Den and Provinces within a radius equal to the city tier:<bulletlist><bullet>Grant +5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces gains <hyperlink>Ashlands</hyperlink></bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Ash Sabertooth Temple",
-  "icon": "ash_sabertooth_temple",
+  "icon": "00000497000008C3",
   "is_sector_upgrade": false
  },
  {
@@ -408,7 +408,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with a Mire Crocodile Den and Provinces within a radius equal to the city tier:<bulletlist><bullet>Grant +5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the provinces gains <hyperlink>Swamp</hyperlink></bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the provinces loses <hyperlink>Chasm</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Mire Crocodile Temple",
-  "icon": "mire_crocodile_temple",
+  "icon": "00000497000008C1",
   "is_sector_upgrade": false
  },
  {
@@ -420,7 +420,7 @@
   "DLC": "PRIMALFURY ",
   "description": "Annexed <hyperlink>Provinces</hyperlink> with a Sylvan Wolf Den and Surface Provinces within a radius equal to the city tier:<bulletlist><bullet>Grant +5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per <turn></turn> <hyperlink>Turn</hyperlink>, one of the Provinces gains <hyperlink>Forest</hyperlink>.</bullet></bulletlist>",
   "name": "Sylvan Wolf Temple",
-  "icon": "sylvan_wolf_temple",
+  "icon": "00000497000008C2",
   "is_sector_upgrade": false
  },
  {
@@ -432,7 +432,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>+12 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>For each Stormport built in your empire, gain:<bulletlist></bullet><bullet>+4 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet></bulletlist></bulletlist><br></br>Requires a Coastal <hyperlink>Province Improvement</hyperlink> in order to build.",
   "name": "Stormport",
-  "icon": "stormport",
+  "icon": "00000497000005A0",
   "is_sector_upgrade": false
  },
  {
@@ -444,7 +444,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>+4 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent Mushroom Forest <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Tunneling Megalith",
-  "icon": "_conduit___tunneling_megalith",
+  "icon": "0000049700000385",
   "is_sector_upgrade": true
  },
  {
@@ -456,7 +456,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>+6 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent Snow <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Glacial Megalith",
-  "icon": "_conduit___glacial_megalith",
+  "icon": "0000049700000382",
   "is_sector_upgrade": true
  },
  {
@@ -466,9 +466,9 @@
   "resid": 5046586573694,
   "id": "_conduit___storm_megalith",
   "DLC": "PRIMALFURY ",
-  "description": "<bulletlist><bullet>+6 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent Grassland <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+4 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent Grassland <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Storm Megalith",
-  "icon": "_conduit___storm_megalith",
+  "icon": "000004970000037F",
   "is_sector_upgrade": true
  },
  {
@@ -478,9 +478,9 @@
   "resid": 5046586573691,
   "id": "_conduit___dune_megalith",
   "DLC": "PRIMALFURY ",
-  "description": "<bulletlist><bullet>+6 <gold></gold> <hyperlink>Gold</hyperlink> per adjacent Sand <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+4 <gold></gold> <hyperlink>Gold</hyperlink> per adjacent Sand <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Dune Megalith",
-  "icon": "_conduit___dune_megalith",
+  "icon": "000004970000037C",
   "is_sector_upgrade": true
  },
  {
@@ -492,7 +492,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>+6 <gold></gold> <hyperlink>Gold</hyperlink> per adjacent Ashland <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Ash Megalith",
-  "icon": "_conduit___ash_megalith",
+  "icon": "0000049700000378",
   "is_sector_upgrade": true
  },
  {
@@ -504,7 +504,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>+6 <food></food> <hyperlink>Food</hyperlink> per adjacent Swamp <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Mire Megalith",
-  "icon": "_conduit___mire_megalith",
+  "icon": "0000049700000372",
   "is_sector_upgrade": true
  },
  {
@@ -516,7 +516,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>+6 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent Forest <hyperlink>Province</hyperlink></bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Sylvan Megalith",
-  "icon": "_conduit___sylvan_megalith",
+  "icon": "0000049700000366",
   "is_sector_upgrade": true
  },
  {
@@ -528,7 +528,7 @@
   "DLC": "GIANTKINGS ",
   "description": "<hyperlink>Support Structure</hyperlink>",
   "name": "Volatile Runes",
-  "icon": "volatile_runes",
+  "icon": "0000049300000B50",
   "is_sector_upgrade": false
  },
  {
@@ -540,7 +540,7 @@
   "DLC": "GIANTKINGS ",
   "description": "<hyperlink>Wall Structure</hyperlink>",
   "name": "Lithorite Walls",
-  "icon": "lithorite_walls",
+  "icon": "0000049300000B4B",
   "is_sector_upgrade": false
  },
  {
@@ -551,7 +551,7 @@
   "id": "satiated_abductor_towers",
   "description": "",
   "name": "Satiated Abductor Towers",
-  "icon": "satiated_abductor_towers",
+  "icon": "000004930000065F",
   "is_sector_upgrade": false
  },
  {
@@ -562,7 +562,7 @@
   "id": "eldritch_walls",
   "description": "<hyperlink>Wall Structure</hyperlink><br></br><br></br>Cannot suffer additional breaches through <hyperlink>Siege Project</hyperlink>",
   "name": "Eldritch Walls",
-  "icon": "eldritch_walls",
+  "icon": "0000049300000656",
   "is_sector_upgrade": false
  },
  {
@@ -574,7 +574,7 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "Allows this Sanctuary Outpost to annex an additional <hyperlink>Province</hyperlink>. Can only be done up to 2 times.",
   "name": "Sanctuary Expansion",
-  "icon": "sanctuary_expansion",
+  "icon": "000004930000068C",
   "is_sector_upgrade": false
  },
  {
@@ -586,7 +586,7 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "Allows this Sanctuary Outpost to annex an additional <hyperlink>Province</hyperlink>. Can only be done up to 2 times.",
   "name": "Sanctuary Expansion",
-  "icon": "sanctuary_expansion",
+  "icon": "000004930000068C",
   "is_sector_upgrade": false
  },
  {
@@ -598,19 +598,19 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "Allows this Sanctuary Outpost to annex an additional <hyperlink>Province</hyperlink>. Can only be done up to 2 times.",
   "name": "Sanctuary Expansion",
-  "icon": "sanctuary_expansion",
+  "icon": "000004930000068C",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
   "prediction_description": "+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm: ",
   "resid": 5016521802596,
   "id": "shrine_to_the_spirits",
   "DLC": "PRIMALFURY ",
   "description": "",
   "name": "Shrine to the Spirits",
-  "icon": "shrine_to_the_spirits",
+  "icon": "0000049000000365",
   "is_sector_upgrade": false
  },
  {
@@ -622,7 +622,7 @@
   "DLC": "PRIMALFURY ",
   "description": "",
   "name": "Stonestele",
-  "icon": "stonestele",
+  "icon": "0000049000000361",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -635,7 +635,7 @@
   "DLC": "PRIMALFURY ",
   "description": "",
   "name": "Woodcarver's Workshop",
-  "icon": "woodcarvers_workshop",
+  "icon": "000004900000035C",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -648,7 +648,7 @@
   "DLC": "PRIMALFURY ",
   "description": "",
   "name": "Town Hall IV: Primeval Palace",
-  "icon": "town_hall_iv_primeval_palace",
+  "icon": "0000049000000356",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -661,7 +661,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Spirit Hall",
-  "icon": "town_hall_iii_spirit_hall",
+  "icon": "0000049000000350",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -674,7 +674,7 @@
   "DLC": "PRIMALFURY ",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Clan Lodge",
-  "icon": "town_hall_ii_clan_lodge",
+  "icon": "000004900000034A",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -686,7 +686,7 @@
   "id": "lords_manor",
   "description": "For each level of Renown the Governor has, the city gains:<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>+5 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
   "name": "Lord's Manor",
-  "icon": "lords_manor",
+  "icon": "0000048D00001278",
   "is_sector_upgrade": false
  },
  {
@@ -697,7 +697,7 @@
   "id": "serf_quarters",
   "description": "",
   "name": "Serf Quarters",
-  "icon": "serf_quarters",
+  "icon": "0000048D00001272",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -709,7 +709,7 @@
   "id": "house_hunting_grounds",
   "description": "",
   "name": "House Hunting Grounds",
-  "icon": "house_hunting_grounds",
+  "icon": "0000048D0000126D",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -721,7 +721,7 @@
   "id": "summoners_cistern",
   "description": "",
   "name": "Summoners' Cistern",
-  "icon": "summoners_cistern",
+  "icon": "0000048D000009FC",
   "is_sector_upgrade": false
  },
  {
@@ -732,7 +732,7 @@
   "id": "academy_of_potential",
   "description": "Contributes +1 <hyperlink>Arcane Inspiration</hyperlink> to a random spell each <turn></turn> Turn.",
   "name": "Academy of Potential",
-  "icon": "academy_of_potential",
+  "icon": "0000048D00000926",
   "is_sector_upgrade": false
  },
  {
@@ -744,7 +744,7 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "<bulletlist><bullet>+15 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Units produced in this city gain Faithful.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
   "name": "<forester></forester>Pyreshrine",
-  "icon": "_forester__pyreshrine",
+  "icon": "0000048D0000089E",
   "is_sector_upgrade": true
  },
  {
@@ -756,7 +756,7 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "<hyperlink>Support Structure</hyperlink><br></br><bulletlist><bullet>This City ignores income and stability penalties from being under <hyperlink>Siege</hyperlink></bullet></bulletlist>",
   "name": "Temple of the Pyre",
-  "icon": "temple_of_the_pyre",
+  "icon": "0000048D00000895",
   "is_sector_upgrade": false
  },
  {
@@ -767,7 +767,7 @@
   "id": "_conduit___astral_manalith",
   "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Astral Manalith",
-  "icon": "_conduit___astral_manalith",
+  "icon": "0000048D000006EE",
   "is_sector_upgrade": true
  },
  {
@@ -778,19 +778,19 @@
   "id": "_researchpost___spell_arcanist_library",
   "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Spell Arcanist Library",
-  "icon": "_researchpost___spell_arcanist_library",
+  "icon": "0000048D000006E5",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>Unlock <hyperlink>Tendril Labyrinth</hyperlink></bullet><bullet>+15 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+15 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
+  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "prediction_description": "<bulletlist><bullet>Unlock <hyperlink>Tendril Labyrinth</hyperlink></bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
   "resid": 5003636901354,
   "id": "tendril_labyrinth",
   "DLC": "ELDRITCHREALMS ",
   "description": "",
   "name": "Tendril Labyrinth",
-  "icon": "tendril_labyrinth",
+  "icon": "0000048D000005A8",
   "is_sector_upgrade": false
  },
  {
@@ -802,7 +802,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "<bulletlist><bullet>+10 <gold></gold> Gold. </bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>, <forester></forester> <hyperlink>Forester</hyperlink>, or <mine></mine> <hyperlink>Mine</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Reaver Manufactorum",
-  "icon": "_mine___reaver_manufactorum",
+  "icon": "000003E300007396",
   "is_sector_upgrade": true
  },
  {
@@ -813,7 +813,7 @@
   "id": "_mine___transmutation_circle",
   "description": "<bulletlist><bullet>Once built, can replicate the effects and income of a <hyperlink>Magic Material</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Transmutation Circle",
-  "icon": "_mine___transmutation_circle",
+  "icon": "0000048D0000010E",
   "is_sector_upgrade": true
  },
  {
@@ -825,7 +825,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "",
   "name": "Material Refinery",
-  "icon": "material_refinery",
+  "icon": "0000048D0000009A",
   "is_sector_upgrade": false
  },
  {
@@ -837,7 +837,7 @@
   "DLC": "WAYSOFWAR ",
   "description": "<bulletlist><bullet>10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>10 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>Per adjacent <farm></farm> <hyperlink>Farm</hyperlink>:<bulletlist></bullet><bullet>2 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>3 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink></bullet></bulletlist>",
   "name": "<conduit></conduit> Monastery",
-  "icon": "_conduit___monastery",
+  "icon": "0000048B000003FC",
   "is_sector_upgrade": true
  },
  {
@@ -849,7 +849,7 @@
   "DLC": "ELDRITCHREALMS ",
   "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 1 <hyperlink>Province</hyperlink> within a radius equal to the City Tier:<bulletlist></bullet><bullet>Gains <hyperlink>Gloom</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, and <hyperlink>Ashlands</hyperlink>.</bullet></bulletlist><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Altar of Marching Gloom",
-  "icon": "_conduit___altar_of_marching_gloom",
+  "icon": "0000048B0000016C",
   "is_sector_upgrade": true
  },
  {
@@ -861,7 +861,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "",
   "name": "Town Hall IV: Ironclad Citadel",
-  "icon": "town_hall_iv_ironclad_citadel",
+  "icon": "0000048900000098",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -874,7 +874,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Chained Spire",
-  "icon": "town_hall_iii_chained_spire",
+  "icon": "0000048900000092",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -887,20 +887,20 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Steel Hall",
-  "icon": "town_hall_ii_steel_hall",
+  "icon": "000004890000008C",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
   "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+5 <gold></gold> <hyperlink>Gold</hyperlink> income per Special Province Improvement: </bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink> income per Special Province Improvement: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+2 <gold></gold> <hyperlink>Gold</hyperlink> income per Special Province Improvement: </bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> income per Special Province Improvement: </bullet></bulletlist>",
   "resid": 4986457030787,
   "id": "extraction_nexus",
   "DLC": "EMPIRESANDASHES ",
   "description": "",
   "name": "Extraction Nexus",
-  "icon": "extraction_nexus",
+  "icon": "0000048900000084",
   "is_sector_upgrade": false
  },
  {
@@ -912,7 +912,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "",
   "name": "Lodestone Foundry",
-  "icon": "lodestone_foundry",
+  "icon": "0000048900000080",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -925,7 +925,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "",
   "name": "Mana Forge",
-  "icon": "mana_forge",
+  "icon": "000004890000007B",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -938,7 +938,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "<bulletlist><bullet>+10 <structureprod></structureprod> <hyperlink>Production</hyperlink>.</bullet><bullet>+3 <food></food> Food per adjacent <farm></farm> <hyperlink>Farm</hyperlink>.</bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink> or <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>. </bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>+3 <gold></gold> Gold per adjacent <mine></mine> <hyperlink>Mine</hyperlink>.</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Worker Construct Nexus",
-  "icon": "_quarry___worker_construct_nexus",
+  "icon": "0000046A000001CA",
   "is_sector_upgrade": true
  },
  {
@@ -950,7 +950,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "<bulletlist><bullet>+20 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink> or <mine></mine> <hyperlink>Mine</hyperlink> <hyperlink>Province</hyperlink>.</bullet><bullet>Construct Units produced in the owner city gain +2<medalGold></medalGold> Ranks.</bullet></bulletlist>",
   "name": "<quarry></quarry> War Foundry",
-  "icon": "_quarry___war_foundry",
+  "icon": "0000046A000000FF",
   "is_sector_upgrade": true
  },
  {
@@ -961,7 +961,7 @@
   "id": "wizard_tower_item_forge",
   "description": "Unlocks the <hyperlink>Item Forge</hyperlink>, allowing you to create custom Hero Items using <bindingessence></bindingessence> <hyperlink>Binding Essence</hyperlink>.",
   "name": "Wizard Tower: Item Forge",
-  "icon": "wizard_tower_item_forge",
+  "icon": "0000045E00000EC3",
   "is_sector_upgrade": false
  },
  {
@@ -972,7 +972,7 @@
   "id": "heros_quarters",
   "description": "",
   "name": "Hero's Quarters",
-  "icon": "heros_quarters",
+  "icon": "0000045E000009D6",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -984,7 +984,7 @@
   "id": "heros_inn",
   "description": "",
   "name": "Hero's Inn",
-  "icon": "heros_inn",
+  "icon": "0000045E000009D1",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -996,7 +996,7 @@
   "id": "heros_forum",
   "description": "",
   "name": "Hero's Forum",
-  "icon": "heros_forum",
+  "icon": "0000045E000009CC",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -1008,7 +1008,7 @@
   "id": "heros_lodge",
   "description": "",
   "name": "Hero's Lodge",
-  "icon": "heros_lodge",
+  "icon": "0000045E000009C7",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -1020,7 +1020,7 @@
   "id": "_mine___bazaar_of_wonders",
   "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+5 <gold></gold> <hyperlink>Gold</hyperlink> per unique adjacent <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Bazaar of Wonders",
-  "icon": "_mine___bazaar_of_wonders",
+  "icon": "0000045E000002BE",
   "is_sector_upgrade": true
  },
  {
@@ -1031,9 +1031,9 @@
   "id": "wizard_tower_apex",
   "description": "<bulletlist><bullet>+1<medalGold></medalGold> Starting Rank to every Tier 1, Tier 2, and Tier 3 Magic Origin unit.</bullet><bullet>Unlocks Summoning Tier IV and V Units.</bullet></bulletlist>",
   "name": "Wizard Tower: Apex",
-  "icon": "wizard_tower_apex",
+  "icon": "0000045A0000051E",
   "is_sector_upgrade": false,
-  "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
+  "boost_requirements": "Have 16 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Can only be built in the <hyperlink>Throne City</hyperlink>.",
@@ -1043,19 +1043,19 @@
   "id": "wizard_tower_level_ii",
   "description": "<bulletlist><bullet>+1<medalGold></medalGold> Starting Rank to every Tier 1 and Tier 2 Magic Origin unit.</bullet><bullet>Unlocks Summoning Tier III Units.</bullet></bulletlist>",
   "name": "Wizard Tower: Level II",
-  "icon": "wizard_tower_level_ii",
+  "icon": "0000045A000004F1",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "Can only be built in the <hyperlink>Throne City</hyperlink>.",
-  "cost": "200<structureprod></structureprod> 150<gold></gold> 150<mana></mana> ",
+  "cost": "300<structureprod></structureprod> 150<gold></gold> 150<mana></mana> ",
   "prediction_description": "<bulletlist><bullet>+5 <influence></influence> <hyperlink>Imperium</hyperlink> income</bullet><bullet>+3 <hyperlink>Vision Range</hyperlink></bullet></bulletlist>",
   "resid": 4784593568990,
   "id": "wizard_tower_level_i",
   "description": "<bulletlist><bullet>+1<medalGold></medalGold> Starting Rank to every Tier 1 Magic Origin unit.</bullet><bullet>Unlocks Summoning Tier II Units.</bullet></bulletlist>",
   "name": "Wizard Tower: Level I",
-  "icon": "wizard_tower_level_i",
+  "icon": "0000045A000004E0",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -1067,7 +1067,7 @@
   "id": "_teleporter___teleporter",
   "description": "",
   "name": "<teleporter></teleporter> Teleporter",
-  "icon": "_teleporter___teleporter",
+  "icon": "0000045A000004B3",
   "is_sector_upgrade": false
  },
  {
@@ -1078,7 +1078,7 @@
   "id": "watch_tower",
   "description": "Builds a Watch Tower in this outpost, granting the outpost +4 <hyperlink>Vision Range</hyperlink> and +4 <hyperlink>Sensing Range</hyperlink>.",
   "name": "Watch Tower",
-  "icon": "watch_tower",
+  "icon": "0000045A000004AA",
   "is_sector_upgrade": false
  },
  {
@@ -1089,7 +1089,7 @@
   "id": "beacon_of_unity_ruins",
   "description": "Ruined Beacon of Unity",
   "name": "Beacon of Unity Ruins",
-  "icon": "beacon_of_unity_ruins",
+  "icon": "00000437000001B1",
   "is_sector_upgrade": true
  },
  {
@@ -1100,7 +1100,7 @@
   "id": "_magicvictory___heart_of_shadow",
   "description": "<bulletlist><bullet>+1 <shadow></shadow> <hyperlink>Shadow Affinity</hyperlink>.</bullet><bullet>Shadow <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Shadow <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> inflict 2 Status Vulnerability.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Heart of Shadow",
-  "icon": "_magicvictory___heart_of_shadow",
+  "icon": "0000045E000007FE",
   "is_sector_upgrade": true
  },
  {
@@ -1111,7 +1111,7 @@
   "id": "_magicvictory___root_of_shadow",
   "description": "<bulletlist><bullet>+1 <shadow></shadow> <hyperlink>Shadow Affinity</hyperlink>.</bullet><bullet>Shadow <hyperlink>Spells</hyperlink> are 20% cheaper to cast.</bullet><bullet>Shadow Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Evasion.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Root of Shadow",
-  "icon": "_magicvictory___root_of_shadow",
+  "icon": "0000045E000007FD",
   "is_sector_upgrade": true
  },
  {
@@ -1122,7 +1122,7 @@
   "id": "_magicvictory___seed_of_shadow",
   "description": "<bulletlist><bullet>+1 <shadow></shadow> <hyperlink>Shadow Affinity</hyperlink>.</bullet><bullet>Shadow research costs -20% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Seed of Shadow",
-  "icon": "_magicvictory___seed_of_shadow",
+  "icon": "0000045E000007FC",
   "is_sector_upgrade": true
  },
  {
@@ -1133,7 +1133,7 @@
   "id": "_magicvictory___heart_of_order",
   "description": "<bulletlist><bullet>+1 <order></order> <hyperlink>Order Affinity</hyperlink>.</bullet><bullet>Order <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Order <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> also remove all positive status effects.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Heart of Order",
-  "icon": "_magicvictory___heart_of_order",
+  "icon": "0000045E000007FB",
   "is_sector_upgrade": true
  },
  {
@@ -1144,7 +1144,7 @@
   "id": "_magicvictory___root_of_order",
   "description": "<bulletlist><bullet>+1 <order></order> <hyperlink>Order Affinity</hyperlink></bullet><bullet>Order <hyperlink>Spells</hyperlink> are 20% cheaper to cast.</bullet><bullet>Order Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Fortune.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Root of Order",
-  "icon": "_magicvictory___root_of_order",
+  "icon": "0000045E000007FA",
   "is_sector_upgrade": true
  },
  {
@@ -1155,7 +1155,7 @@
   "id": "_magicvictory___seed_of_order",
   "description": "<bulletlist><bullet>+1 <order></order> <hyperlink>Order Affinity</hyperlink>.</bullet><bullet>Order research costs -20% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Seed of Order",
-  "icon": "_magicvictory___seed_of_order",
+  "icon": "0000045E000007F9",
   "is_sector_upgrade": true
  },
  {
@@ -1166,7 +1166,7 @@
   "id": "_magicvictory___heart_of_nature",
   "description": "<bulletlist><bullet>+1 <nature></nature> <hyperlink>Nature Affinity</hyperlink>.</bullet><bullet>Nature <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +20 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Nature <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> inflict 2 Weakened.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Heart of Nature",
-  "icon": "_magicvictory___heart_of_nature",
+  "icon": "0000045E000007F8",
   "is_sector_upgrade": true
  },
  {
@@ -1177,7 +1177,7 @@
   "id": "_magicvictory___root_of_nature",
   "description": "<bulletlist><bullet>+1 <nature></nature> <hyperlink>Nature Affinity</hyperlink>.</bullet><bullet>Nature <hyperlink>Spells</hyperlink> are 20% cheaper to cast.</bullet><bullet>Nature Buff and Healing <hyperlink>Spells</hyperlink> heal +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Root of Nature",
-  "icon": "_magicvictory___root_of_nature",
+  "icon": "0000045E000007F7",
   "is_sector_upgrade": true
  },
  {
@@ -1188,7 +1188,7 @@
   "id": "_magicvictory___seed_of_nature",
   "description": "<bulletlist><bullet>+1 <nature></nature> <hyperlink>Nature Affinity</hyperlink></bullet><bullet>Nature research costs -20% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Seed of Nature",
-  "icon": "_magicvictory___seed_of_nature",
+  "icon": "0000045E000007F6",
   "is_sector_upgrade": true
  },
  {
@@ -1199,7 +1199,7 @@
   "id": "_magicvictory___heart_of_materium",
   "description": "<bulletlist><bullet>+1 <matter></matter> <hyperlink>Materium Affinity</hyperlink>.</bullet><bullet>Materium <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Materium <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> inflict 2 Sundered Defense.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Heart of Materium",
-  "icon": "_magicvictory___heart_of_materium",
+  "icon": "0000045E000007F5",
   "is_sector_upgrade": true
  },
  {
@@ -1210,7 +1210,7 @@
   "id": "_magicvictory___root_of_materium",
   "description": "<bulletlist><bullet>+1 <matter></matter> <hyperlink>Materium Affinity</hyperlink>.</bullet><bullet>Materium <hyperlink>Spells</hyperlink> are 20% cheaper to cast.</bullet><bullet>Materium Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Bolstered Defense.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Root of Materium",
-  "icon": "_magicvictory___root_of_materium",
+  "icon": "0000045E000007F4",
   "is_sector_upgrade": true
  },
  {
@@ -1221,7 +1221,7 @@
   "id": "_magicvictory___seed_of_materium",
   "description": "<bulletlist><bullet>+1 <matter></matter> <hyperlink>Materium Affinity</hyperlink>.</bullet><bullet>Materium research cost -20% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Seed of Materium",
-  "icon": "_magicvictory___seed_of_materium",
+  "icon": "0000045E000007F3",
   "is_sector_upgrade": true
  },
  {
@@ -1232,7 +1232,7 @@
   "id": "_magicvictory___heart_of_chaos",
   "description": "<bulletlist><bullet>+1 <chaos></chaos> <hyperlink>Chaos Affinity</hyperlink>.</bullet><bullet>Chaos <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Chaos <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> inflict 2 Misfortune.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Heart of Chaos",
-  "icon": "_magicvictory___heart_of_chaos",
+  "icon": "0000045E000007F2",
   "is_sector_upgrade": true
  },
  {
@@ -1243,7 +1243,7 @@
   "id": "_magicvictory___root_of_chaos",
   "description": "<bulletlist><bullet>+1 <chaos></chaos> <hyperlink>Chaos Affinity</hyperlink>.</bullet><bullet>Chaos <hyperlink>Spells</hyperlink> are 20% cheaper to cast.</bullet><bullet>Chaos Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Strengthened.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Root of Chaos",
-  "icon": "_magicvictory___root_of_chaos",
+  "icon": "0000045E000007F1",
   "is_sector_upgrade": true
  },
  {
@@ -1254,7 +1254,7 @@
   "id": "_magicvictory___seed_of_chaos",
   "description": "<bulletlist><bullet>+1 <chaos></chaos> <hyperlink>Chaos Affinity</hyperlink>.</bullet><bullet>Chaos research cost -20% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Seed of Chaos",
-  "icon": "_magicvictory___seed_of_chaos",
+  "icon": "0000045E000007F0",
   "is_sector_upgrade": true
  },
  {
@@ -1265,7 +1265,7 @@
   "id": "_magicvictory___heart_of_astral",
   "description": "<bulletlist><bullet>+1 <arcana></arcana> <hyperlink>Astral Affinity</hyperlink>.</bullet><bullet>Astral <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Astral <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> inflict 2 Sundered Resistance.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Heart of Astral",
-  "icon": "_magicvictory___heart_of_astral",
+  "icon": "0000045E000007EF",
   "is_sector_upgrade": true
  },
  {
@@ -1276,7 +1276,7 @@
   "id": "_magicvictory___root_of_astral",
   "description": "<bulletlist><bullet>+1 <arcana></arcana> <hyperlink>Astral Affinity</hyperlink>.</bullet><bullet>Astral <hyperlink>Spells</hyperlink> are 20% cheaper to cast.</bullet><bullet>Astral Buff and Healing <hyperlink>Spells</hyperlink> grant 2 Bolstered Resistance.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Root of Astral",
-  "icon": "_magicvictory___root_of_astral",
+  "icon": "0000045E000007EE",
   "is_sector_upgrade": true
  },
  {
@@ -1287,7 +1287,7 @@
   "id": "_magicvictory___seed_of_astral",
   "description": "<bulletlist><bullet>+1 <arcana></arcana> <hyperlink>Astral Affinity</hyperlink></bullet><bullet>Astral research cost -20% <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>Required for the <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>Once built, will reveal its location to all other <hyperlink>Empires</hyperlink>.</bullet></bulletlist>",
   "name": "<magicvictory></magicvictory> Seed of Astral",
-  "icon": "_magicvictory___seed_of_astral",
+  "icon": "0000045E000007ED",
   "is_sector_upgrade": true
  },
  {
@@ -1298,7 +1298,7 @@
   "id": "magic_ruins",
   "description": "Ruins of a Magic Victory structure",
   "name": "Magic Ruins",
-  "icon": "magic_ruins",
+  "icon": "0000043700000396",
   "is_sector_upgrade": true
  },
  {
@@ -1309,42 +1309,42 @@
   "id": "_expansionvictory___beacon_of_unity",
   "description": "A <hyperlink>Special Province Improvement</hyperlink> that is built as part of the Expansion Victory. Once three Beacons have been built, an option to Light the Beacons will appear. Lighting the Beacons will start a <turn></turn> <hyperlink>Turn</hyperlink> timer counting down to victory.",
   "name": "<expansionvictory></expansionvictory> Beacon of Unity",
-  "icon": "beacon_of_unity_ruins",
+  "icon": "00000437000001B1",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>-20 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>+20 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> income per hero in the <hyperlink>Crypt</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435140196,
   "id": "ritual_mausoleum",
   "description": "",
   "name": "Ritual Mausoleum",
-  "icon": "ritual_mausoleum",
+  "icon": "0000042A00000A66",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 2 <hyperlink><farms></farms> Farm</hyperlink></bullet><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
  {
   "requirement_description": "",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+5 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+5 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income</bullet><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet><bullet>+2 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per hero in the <hyperlink>Prison</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435140191,
   "id": "interrogation_dungeon",
   "description": "",
   "name": "Interrogation Dungeon",
-  "icon": "interrogation_dungeon",
+  "icon": "0000042A00000A61",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
   "prediction_description": "+15 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435140064,
   "id": "_conduit___sanctuary",
   "description": "<bulletlist><bullet>+15 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Pillaging <hyperlink>Province Improvements</hyperlink> in this domain takes +2 <turn></turn> and yields -30% resources.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Sanctuary",
-  "icon": "_conduit___sanctuary",
+  "icon": "0000042A000009E1",
   "is_sector_upgrade": true
  },
  {
@@ -1355,7 +1355,7 @@
   "id": "_quarry___circle_of_zealotry",
   "description": "<bulletlist><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per positive or negative level of alignment.</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> per adjacent <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>Unit deployment location.</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Circle of Zealotry",
-  "icon": "_quarry___circle_of_zealotry",
+  "icon": "0000042A000009D5",
   "is_sector_upgrade": true
  },
  {
@@ -1366,7 +1366,7 @@
   "id": "wizard_tower_arcane_observatory",
   "description": "+6 Vision Range and True Sight to this City.",
   "name": "Wizard Tower: Arcane Observatory",
-  "icon": "wizard_tower_arcane_observatory",
+  "icon": "0000042A00000958",
   "is_sector_upgrade": false
  },
  {
@@ -1377,7 +1377,7 @@
   "id": "wizard_tower_teleportation_circle",
   "description": "Grants Teleportation Circle <hyperlink>Spell</hyperlink>, allowing friendly <hyperlink>Armies</hyperlink> to be teleported back to the <hyperlink>Throne City</hyperlink>.",
   "name": "Wizard Tower: Teleportation Circle",
-  "icon": "wizard_tower_teleportation_circle",
+  "icon": "0000042A00000955",
   "is_sector_upgrade": false
  },
  {
@@ -1388,7 +1388,7 @@
   "id": "shadow_bolstering_matrix",
   "description": "Shadow Buff and Healing <hyperlink>Spells</hyperlink> grant 3 stacks of Evasion.",
   "name": "Shadow Bolstering Matrix",
-  "icon": "shadow_bolstering_matrix",
+  "icon": "0000042A00000952",
   "is_sector_upgrade": false
  },
  {
@@ -1399,7 +1399,7 @@
   "id": "materium_bolstering_matrix",
   "description": "Materium Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Bolstered Defense.",
   "name": "Materium Bolstering Matrix",
-  "icon": "materium_bolstering_matrix",
+  "icon": "0000042A0000094F",
   "is_sector_upgrade": false
  },
  {
@@ -1410,7 +1410,7 @@
   "id": "astral_bolstering_matrix",
   "description": "Astral Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Bolstered Resistance.",
   "name": "Astral Bolstering Matrix",
-  "icon": "astral_bolstering_matrix",
+  "icon": "0000042A0000094C",
   "is_sector_upgrade": false
  },
  {
@@ -1419,9 +1419,9 @@
   "prediction_description": "",
   "resid": 4578435139911,
   "id": "nature_bolstering_matrix",
-  "description": "Nature Buff and Healing <hyperlink>Spells</hyperlink> heal for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Nature Buff and Healing <hyperlink>Spells</hyperlink> heal for +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Nature Bolstering Matrix",
-  "icon": "nature_bolstering_matrix",
+  "icon": "0000042A00000949",
   "is_sector_upgrade": false
  },
  {
@@ -1432,7 +1432,7 @@
   "id": "chaos_bolstering_matrix",
   "description": "Chaos Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Strengthened.",
   "name": "Chaos Bolstering Matrix",
-  "icon": "chaos_bolstering_matrix",
+  "icon": "0000042A00000946",
   "is_sector_upgrade": false
  },
  {
@@ -1443,7 +1443,7 @@
   "id": "order_bolstering_matrix",
   "description": "Order Buff and Healing <hyperlink>Spells</hyperlink> grant 3 Fortune.",
   "name": "Order Bolstering Matrix",
-  "icon": "order_bolstering_matrix",
+  "icon": "0000042A00000943",
   "is_sector_upgrade": false
  },
  {
@@ -1454,7 +1454,7 @@
   "id": "shadow_amplifier_lens",
   "description": "Shadow <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and Shadow <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> also inflict Status Vulnerability.",
   "name": "Shadow Amplifier Lens",
-  "icon": "shadow_amplifier_lens",
+  "icon": "0000042A0000093D",
   "is_sector_upgrade": false
  },
  {
@@ -1465,7 +1465,7 @@
   "id": "materium_amplifier_lens",
   "description": "Materium <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and Materium <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> also inflict Sundered Defense.",
   "name": "Materium Amplifier Lens",
-  "icon": "materium_amplifier_lens",
+  "icon": "0000042A0000093A",
   "is_sector_upgrade": false
  },
  {
@@ -1476,7 +1476,7 @@
   "id": "astral_amplifier_lens",
   "description": "Astral <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> and Astral <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> also inflict Sundered Resistance.",
   "name": "Astral Amplifier Lens",
-  "icon": "astral_amplifier_lens",
+  "icon": "0000042A00000937",
   "is_sector_upgrade": false
  },
  {
@@ -1487,7 +1487,7 @@
   "id": "nature_amplifier_lens",
   "description": "Nature <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and Nature <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> also inflict Weakened.",
   "name": "Nature Amplifier Lens",
-  "icon": "nature_amplifier_lens",
+  "icon": "0000042A00000934",
   "is_sector_upgrade": false
  },
  {
@@ -1498,7 +1498,7 @@
   "id": "chaos_amplifier_lens",
   "description": "Chaos <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and Chaos <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> also inflict Misfortune.",
   "name": "Chaos Amplifier Lens",
-  "icon": "chaos_amplifier_lens",
+  "icon": "0000042A00000931",
   "is_sector_upgrade": false
  },
  {
@@ -1509,7 +1509,18 @@
   "id": "order_amplifier_lens",
   "description": "Order <casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> deal +10 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> and Order <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> remove all positive status effects from their targets.",
   "name": "Order Amplifier Lens",
-  "icon": "order_amplifier_lens",
+  "icon": "0000042A0000092E",
+  "is_sector_upgrade": false
+ },
+ {
+  "requirement_description": "",
+  "cost": "200<structureprod></structureprod> 100<gold></gold> 100<mana></mana> ",
+  "prediction_description": "-1<hyperlink><turn></turn> Turn</hyperlink>(s) to respawn Ruler.",
+  "resid": 4578435139881,
+  "id": "wizard_tower_room_of_recall",
+  "description": "<bulletlist><bullet>Gain access to the Recall Ruler spell, which allows your <hyperlink>Ruler</hyperlink> and their army to be teleported back to your <hyperlink>Throne City</hyperlink>.</bullet></bulletlist>",
+  "name": "Wizard Tower: Room of Recall",
+  "icon": "0000042A0000092B",
   "is_sector_upgrade": false
  },
  {
@@ -1520,7 +1531,7 @@
   "id": "shadow_focus_crystal",
   "description": "Shadow <hyperlink>Spells</hyperlink> are 10% cheaper.",
   "name": "Shadow Focus Crystal",
-  "icon": "shadow_focus_crystal",
+  "icon": "0000042A00000928",
   "is_sector_upgrade": false
  },
  {
@@ -1531,7 +1542,7 @@
   "id": "materium_focus_crystal",
   "description": "Materium <hyperlink>Spells</hyperlink> are 10% cheaper.",
   "name": "Materium Focus Crystal",
-  "icon": "materium_focus_crystal",
+  "icon": "0000042A00000925",
   "is_sector_upgrade": false
  },
  {
@@ -1542,7 +1553,7 @@
   "id": "astral_focus_crystal",
   "description": "Astral <hyperlink>Spells</hyperlink> are 10% cheaper.",
   "name": "Astral Focus Crystal",
-  "icon": "astral_focus_crystal",
+  "icon": "0000042A00000922",
   "is_sector_upgrade": false
  },
  {
@@ -1553,7 +1564,7 @@
   "id": "nature_focus_crystal",
   "description": "Nature <hyperlink>Spells</hyperlink> are 10% cheaper.",
   "name": "Nature Focus Crystal",
-  "icon": "nature_focus_crystal",
+  "icon": "0000042A0000091F",
   "is_sector_upgrade": false
  },
  {
@@ -1564,7 +1575,7 @@
   "id": "chaos_focus_crystal",
   "description": "Chaos <hyperlink>Spells</hyperlink> are 10% cheaper.",
   "name": "Chaos Focus Crystal",
-  "icon": "chaos_focus_crystal",
+  "icon": "0000042A0000091C",
   "is_sector_upgrade": false
  },
  {
@@ -1575,7 +1586,7 @@
   "id": "order_focus_crystal",
   "description": "Order <hyperlink>Spells</hyperlink> are 10% cheaper.",
   "name": "Order Focus Crystal",
-  "icon": "order_focus_crystal",
+  "icon": "0000042A00000919",
   "is_sector_upgrade": false
  },
  {
@@ -1586,7 +1597,7 @@
   "id": "wizard_tower_channeling_chamber",
   "description": "",
   "name": "Wizard Tower: Channeling Chamber",
-  "icon": "wizard_tower_channeling_chamber",
+  "icon": "0000042A0000090E",
   "is_sector_upgrade": false
  },
  {
@@ -1597,7 +1608,7 @@
   "id": "wizard_tower_crypts",
   "description": "<bulletlist><bullet><hyperlink>Heroes</hyperlink> in the <hyperlink>Crypt</hyperlink> can be resurrected.</bullet></bulletlist>",
   "name": "Wizard Tower: Crypts",
-  "icon": "wizard_tower_crypts",
+  "icon": "0000042A0000090A",
   "is_sector_upgrade": false
  },
  {
@@ -1608,7 +1619,7 @@
   "id": "wizard_tower_prison_cells",
   "description": "<bulletlist><bullet><hyperlink>Heroes</hyperlink> in the <hyperlink>Prison</hyperlink> can be converted.</bullet><bullet><hyperlink>Heroes</hyperlink> in the <hyperlink>Prison</hyperlink> can be executed.</bullet></bulletlist>",
   "name": "Wizard Tower: Prison Cells",
-  "icon": "wizard_tower_prison_cells",
+  "icon": "0000042A00000905",
   "is_sector_upgrade": false
  },
  {
@@ -1619,18 +1630,18 @@
   "id": "wizard_tower_foundation",
   "description": "",
   "name": "Wizard Tower: Foundation",
-  "icon": "wizard_tower_foundation",
+  "icon": "0000042A000008FA",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>-1<hyperlink><turn></turn> Turn</hyperlink>(s) to respawn Ruler.</bullet><bullet>+10 <influence></influence> <hyperlink>Imperium</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>-1<hyperlink><turn></turn> Turn</hyperlink>(s) to respawn Ruler.</bullet><bullet>+6 <influence></influence> <hyperlink>Imperium</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435139666,
   "id": "_conduit___rulers_statue",
-  "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>Allied <hyperlink>Empires</hyperlink> and <minorcity></minorcity><hyperlink>Free Cities</hyperlink> with a <rs_vassalage3></rs_vassalage3> <hyperlink>Supreme Vassalage</hyperlink> grant 5 <influence></influence> <hyperlink>Imperium</hyperlink>.</bullet><bullet><hyperlink>Ruler</hyperlink> respawns 1 <turn></turn> <hyperlink>Turn</hyperlink> faster.</bullet><bullet><hyperlink>Spells</hyperlink> can be cast even if the <hyperlink>Ruler</hyperlink> is in the void.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Can only be built once in your <hyperlink>Throne City</hyperlink>.</bullet><bullet>Allied <hyperlink>Empires</hyperlink> and <minorcity></minorcity><hyperlink>Free Cities</hyperlink> with a <rs_vassalage3></rs_vassalage3> <hyperlink>Supreme Vassalage</hyperlink> grant 3 <influence></influence> <hyperlink>Imperium</hyperlink>.</bullet><bullet><hyperlink>Ruler</hyperlink> respawns 1 <turn></turn> <hyperlink>Turn</hyperlink> faster.</bullet><bullet><hyperlink>Spells</hyperlink> can be cast even if the <hyperlink>Ruler</hyperlink> is in the void.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Ruler's Statue",
-  "icon": "_conduit___rulers_statue",
+  "icon": "0000042A00000853",
   "is_sector_upgrade": true
  },
  {
@@ -1639,9 +1650,9 @@
   "prediction_description": "",
   "resid": 4578435139655,
   "id": "_mine___tithe_collector",
-  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink> or <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+2 <gold></gold> <hyperlink>Gold</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink> or <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Tithe Collector",
-  "icon": "_mine___tithe_collector",
+  "icon": "0000042A00000848",
   "is_sector_upgrade": true
  },
  {
@@ -1652,18 +1663,18 @@
   "id": "_researchpost___abbey",
   "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink>.</bullet><bullet>Grants Status Protection at the start of the next <hyperlink>Combat</hyperlink> to all friendly <hyperlink>Units</hyperlink> on this hex. 3 <turn></turn> <hyperlink>Turn</hyperlink> cooldown.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Abbey",
-  "icon": "_researchpost___abbey",
+  "icon": "0000042A0000083C",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "",
   "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+20 <astralechoes></astralechoes> <hyperlink>Astral Echos</hyperlink> income</bullet><bullet>Grants <hyperlink>All-Seers Blessing</hyperlink> to every <hyperlink>Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <astralechoes></astralechoes> <hyperlink>Astral Echos</hyperlink> income</bullet><bullet>Grants <hyperlink>All-Seers Blessing</hyperlink> to every <hyperlink>Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
   "resid": 4578435139535,
   "id": "altar_of_the_all-seers",
   "description": "",
   "name": "Altar of the All-Seers",
-  "icon": "altar_of_the_all-seers",
+  "icon": "0000042A000007D0",
   "is_sector_upgrade": false
  },
  {
@@ -1674,7 +1685,7 @@
   "id": "_conduit___doomdepth_trench",
   "description": "<bulletlist><bullet>-5 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> and <knowledge></knowledge><hyperlink>Knowledge</hyperlink> for each <hyperlink>Alignment</hyperlink> level below Neutral.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Doomdepth Trench",
-  "icon": "_conduit___doomdepth_trench",
+  "icon": "0000042A000007AB",
   "is_sector_upgrade": true
  },
  {
@@ -1683,9 +1694,9 @@
   "prediction_description": "+10 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income",
   "resid": 4578435139487,
   "id": "_researchpost___frostspire",
-  "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent Snow or Ice <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent Snow or Ice <hyperlink>Province</hyperlink>.</bullet><bullet>Visiting units gain Icetouch until the end of the next battle, giving their physical attacks a base 30% chance of inflicting Frozen.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Frostspire",
-  "icon": "_researchpost___frostspire",
+  "icon": "0000042A000007A0",
   "is_sector_upgrade": true
  },
  {
@@ -1696,18 +1707,18 @@
   "id": "_researchpost___school_of_cryomancy",
   "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent Snow or Ice <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> School of Cryomancy",
-  "icon": "_researchpost___school_of_cryomancy",
+  "icon": "0000042A00000794",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 4578435139458,
   "id": "_researchpost___soulwell",
   "description": "<bulletlist><bullet>+5 <souls></souls> <hyperlink>Souls</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <researchpost></researchpost> <hyperlink>Research Post</hyperlink> or <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Soulwell",
-  "icon": "_researchpost___soulwell",
+  "icon": "0000042A00000783",
   "is_sector_upgrade": true
  },
  {
@@ -1716,9 +1727,9 @@
   "prediction_description": "-10 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435139420,
   "id": "_conduit___spell_jammer",
-  "description": "<bulletlist></bullet>Enemies cannot target <hyperlink>World Map Spells</hyperlink> in this <hyperlink>Domain</hyperlink>.<bullet>-10<mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Enemies cannot target <hyperlink>World Map Spells</hyperlink> in this <hyperlink>Domain</hyperlink>.</bullet><bullet>Enemy <hyperlink>Spells</hyperlink> cost +100% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> in <hyperlink>Combat</hyperlink> in <hyperlink>Domain</hyperlink>.</bullet><bullet>-10<mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Spell Jammer",
-  "icon": "_conduit___spell_jammer",
+  "icon": "0000042A0000075D",
   "is_sector_upgrade": true
  },
  {
@@ -1729,7 +1740,7 @@
   "id": "_teleporter___chrono_gate",
   "description": "<bulletlist><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>Grants Evasion to visiting <hyperlink>Armies</hyperlink> until their next combat.</bullet><bullet>Functions as a <teleporter></teleporter> <hyperlink>Teleporter</hyperlink>.</bullet></bulletlist>",
   "name": "<teleporter></teleporter> Chrono Gate",
-  "icon": "_teleporter___chrono_gate",
+  "icon": "0000042A00000756",
   "is_sector_upgrade": true
  },
  {
@@ -1740,7 +1751,7 @@
   "id": "_teleporter___demon_gate",
   "description": "<bulletlist><bullet>Unlocks the production of various Infernal Fiend <hyperlink>Units</hyperlink>.</bullet><bullet><hyperlink>Unit</hyperlink> deployment location.</bullet><bullet>Functions as a <teleporter></teleporter> <hyperlink>Teleporter</hyperlink>.</bullet></bulletlist>",
   "name": "<teleporter></teleporter> Demon Gate",
-  "icon": "_teleporter___demon_gate",
+  "icon": "0000042A00000745",
   "is_sector_upgrade": true
  },
  {
@@ -1749,9 +1760,9 @@
   "prediction_description": "+10 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435139384,
   "id": "_conduit___summoning_well",
-  "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> and +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Combat Summon Spells</hyperlink> in the domain cost -25% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink> and +2 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Combat Summon Spells</hyperlink> in the domain cost -50% less mana.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Summoning Well",
-  "icon": "_conduit___summoning_well",
+  "icon": "0000042A00000739",
   "is_sector_upgrade": true
  },
  {
@@ -1762,29 +1773,29 @@
   "id": "_conduit___resonance_fields",
   "description": "<bulletlist><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+5 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>.</bullet><bullet>+5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Resonance Fields",
-  "icon": "_conduit___resonance_fields",
+  "icon": "0000042A00000725",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "+10 <mana></mana> <hyperlink>Mana</hyperlink> income",
   "resid": 4578435139351,
   "id": "_conduit___channeling_tower",
   "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Channeling Tower",
-  "icon": "_conduit___channeling_tower",
+  "icon": "0000042A00000718",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "60<gold></gold> 130<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>-20% <mana></mana> <hyperlink>Mana</hyperlink> Cost to recruit <hyperlink>Tier I</hyperlink>.</bullet><bullet>-20% <gold></gold> <hyperlink>Gold</hyperlink> Cost to recruit <hyperlink>Tier I</hyperlink>.</bullet><bullet>-20% <unitprod></unitprod> <hyperlink>Draft</hyperlink> Cost to recruit <hyperlink>Tier I</hyperlink>.</bullet></bulletlist>",
   "resid": 4578435139298,
   "id": "_forester___mob_camp",
-  "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet><hyperlink>Unit</hyperlink> deployment location.</bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet><hyperlink>Unit</hyperlink> deployment location.</bullet><bullet>Tier I <hyperlink>Units</hyperlink> are cheaper by 20%.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
   "name": "<forester></forester> Mob Camp",
-  "icon": "_forester___mob_camp",
+  "icon": "0000042A000006E3",
   "is_sector_upgrade": true
  },
  {
@@ -1795,7 +1806,7 @@
   "id": "stone_conjurer",
   "description": "",
   "name": "Stone Conjurer",
-  "icon": "stone_conjurer",
+  "icon": "0000042A000006C6",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -1807,7 +1818,7 @@
   "id": "wood_conjurer",
   "description": "",
   "name": "Wood Conjurer",
-  "icon": "wood_conjurer",
+  "icon": "0000042A000006C1",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -1819,7 +1830,7 @@
   "id": "evocators_abode",
   "description": "",
   "name": "Evocator's Abode",
-  "icon": "evocators_abode",
+  "icon": "0000042A000006BB",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -1831,7 +1842,7 @@
   "id": "workers_farmstead",
   "description": "",
   "name": "Worker's Farmstead",
-  "icon": "workers_farmstead",
+  "icon": "0000042A000006B6",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -1843,7 +1854,7 @@
   "id": "grand_mill",
   "description": "",
   "name": "Grand Mill",
-  "icon": "grand_mill",
+  "icon": "0000042A000006B1",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -1855,7 +1866,7 @@
   "id": "underground_laboratory",
   "description": "",
   "name": "Underground Laboratory",
-  "icon": "underground_laboratory",
+  "icon": "0000042A000006AC",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -1867,7 +1878,7 @@
   "id": "experimentation_chambers",
   "description": "",
   "name": "Experimentation Chambers",
-  "icon": "experimentation_chambers",
+  "icon": "0000042A000006A7",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -1879,7 +1890,7 @@
   "id": "lightforge",
   "description": "",
   "name": "Lightforge",
-  "icon": "lightforge",
+  "icon": "0000042A00000695",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -1891,7 +1902,7 @@
   "id": "artisan_workshop",
   "description": "",
   "name": "Artisan Workshop",
-  "icon": "artisan_workshop",
+  "icon": "0000042A00000686",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -1903,7 +1914,7 @@
   "id": "ancestral_seer_hall",
   "description": "",
   "name": "Ancestral Seer Hall",
-  "icon": "ancestral_seer_hall",
+  "icon": "0000042A00000681",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -1915,7 +1926,7 @@
   "id": "battle_ritual_site",
   "description": "",
   "name": "Battle Ritual Site",
-  "icon": "battle_ritual_site",
+  "icon": "0000042A0000067C",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -1927,7 +1938,7 @@
   "id": "royal_smith",
   "description": "",
   "name": "Royal Smith",
-  "icon": "royal_smith",
+  "icon": "0000042A00000677",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -1939,7 +1950,7 @@
   "id": "militia_barracks",
   "description": "",
   "name": "Militia Barracks",
-  "icon": "militia_barracks",
+  "icon": "0000042A00000670",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -1951,7 +1962,7 @@
   "id": "_mine___great_foundry",
   "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>Per adjacent <mine></mine> <hyperlink>Mine</hyperlink>:<bulletlist></bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet></bulletlist><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet><bullet>Allows for the drafting of <hyperlink>Magma Spirit</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Great Foundry",
-  "icon": "_mine___great_foundry",
+  "icon": "0000042A0000065F",
   "is_sector_upgrade": true
  },
  {
@@ -1962,7 +1973,7 @@
   "id": "_mine___golem_mine",
   "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet><bullet>Spawns an Iron Golem on the owner's side for <hyperlink>Combat</hyperlink> in this <hyperlink>Domain</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Golem Mine",
-  "icon": "_mine___golem_mine",
+  "icon": "0000042A0000061D",
   "is_sector_upgrade": true
  },
  {
@@ -1973,7 +1984,7 @@
   "id": "_quarry___runecarvers_camp",
   "description": "<bulletlist><bullet>+15 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet><bullet><hyperlink>Unit</hyperlink> deployment location.</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Runecarver's Camp",
-  "icon": "_quarry___runecarvers_camp",
+  "icon": "0000042A00000612",
   "is_sector_upgrade": true
  },
  {
@@ -1984,7 +1995,7 @@
   "id": "_quarry___central_quarry",
   "description": "<bulletlist><bullet>+15 <structureprod></structureprod> <hyperlink>Production</hyperlink>.</bullet><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Central Quarry",
-  "icon": "_quarry___central_quarry",
+  "icon": "0000042A00000607",
   "is_sector_upgrade": true
  },
  {
@@ -1995,7 +2006,7 @@
   "id": "_farm___bountiful_fields",
   "description": "<bulletlist><bullet>+10<food></food> <hyperlink>Food</hyperlink> income.</bullet><bullet>Per adjacent <hyperlink>Province</hyperlink> with Grasslands or Fungal Fields:<bulletlist></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet></bulletlist><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
   "name": "<farm></farm> Bountiful Fields",
-  "icon": "_farm___bountiful_fields",
+  "icon": "0000042A000005EF",
   "is_sector_upgrade": true
  },
  {
@@ -2006,18 +2017,18 @@
   "id": "_farm___garden_of_bliss",
   "description": "<bulletlist><bullet>+15 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>+7 <food></food> <hyperlink>Food</hyperlink> per adjacent Grasslands <hyperlink>Province</hyperlink>.</bullet><bullet>Convert 10% of <food></food> <hyperlink>Food</hyperlink> income into <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
   "name": "<farm></farm> Garden of Bliss",
-  "icon": "_farm___garden_of_bliss",
+  "icon": "0000042A000005D7",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "+15 <food></food> <hyperlink>Food</hyperlink> income",
+  "prediction_description": "+10 <food></food> <hyperlink>Food</hyperlink> income",
   "resid": 4578435139010,
   "id": "_farm___sacred_meadow",
-  "description": "<bulletlist><bullet>+15 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+5 <happiness></happiness> <hyperlink>City Stability</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet>Grants Encouraged at start of next <hyperlink>Combat</hyperlink> to friendly <hyperlink>Units</hyperlink> on this hex, 5 <turn></turn> <hyperlink>Turn</hyperlink> cooldown.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+5 <happiness></happiness> <hyperlink>City Stability</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet><bullet>Grants Encouraged at start of next <hyperlink>Combat</hyperlink> to friendly <hyperlink>Units</hyperlink> on this hex, 5 <turn></turn> <hyperlink>Turn</hyperlink> cooldown.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
   "name": "<farm></farm> Sacred Meadow",
-  "icon": "_farm___sacred_meadow",
+  "icon": "0000042A000005C3",
   "is_sector_upgrade": true
  },
  {
@@ -2028,7 +2039,7 @@
   "id": "_forester___wildlife_sanctuary",
   "description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <hyperlink>Province</hyperlink> with Forest.</bullet><bullet>Unlocks the production of various Animal <hyperlink>Units</hyperlink>.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
   "name": "<forester></forester> Wildlife Sanctuary",
-  "icon": "_forester___wildlife_sanctuary",
+  "icon": "0000042A000005BA",
   "is_sector_upgrade": true
  },
  {
@@ -2037,9 +2048,9 @@
   "prediction_description": "Grants <hyperlink>Herbalist in Domain</hyperlink> to every Owned <hyperlink>Unit</hyperlink> inside this <hyperlink>Domain</hyperlink>.",
   "resid": 4578435138946,
   "id": "_conduit___herbalist",
-  "description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per adjacent <hyperlink>Province</hyperlink> with Forest or Swamp:<bulletlist></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet></bulletlist><bullet>Friendly <hyperlink>Armies</hyperlink> in this City's <hyperlink>Domain</hyperlink> regenerate an additional +5 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>Per adjacent <hyperlink>Province</hyperlink> with Forest or Swamp:<bulletlist></bullet><bullet>+2 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet></bulletlist><bullet>Friendly <hyperlink>Armies</hyperlink> in this City's <hyperlink>Domain</hyperlink> regenerate an additional +5 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Herbalist",
-  "icon": "_conduit___herbalist",
+  "icon": "0000042A00000583",
   "is_sector_upgrade": true
  },
  {
@@ -2050,7 +2061,7 @@
   "id": "_teleporter___teleporter",
   "description": "A <hyperlink>Province Improvement</hyperlink> which enables an <hyperlink>Army</hyperlink> to teleport from one teleporter to another.<br></br><br></br>-10 <mana></mana> <hyperlink>Mana</hyperlink>.",
   "name": "<teleporter></teleporter> Teleporter",
-  "icon": "_teleporter___teleporter_2",
+  "icon": "0000045E00000675",
   "is_sector_upgrade": true
  },
  {
@@ -2061,7 +2072,7 @@
   "id": "_forester___ritual_pyre",
   "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> per adjacent <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
   "name": "<forester></forester> Ritual Pyre",
-  "icon": "_forester___ritual_pyre",
+  "icon": "0000042A0000051C",
   "is_sector_upgrade": true
  },
  {
@@ -2072,7 +2083,7 @@
   "id": "_farms___carnival_of_flesh",
   "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Per adjacent <farm></farm> <hyperlink>Farm</hyperlink>:<bulletlist></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist></bulletlist>",
   "name": "<farms></farms> Carnival of Flesh",
-  "icon": "_farms___carnival_of_flesh",
+  "icon": "0000042A000004FC",
   "is_sector_upgrade": true
  },
  {
@@ -2083,7 +2094,7 @@
   "id": "_researchpost___sunshrine",
   "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>Friendly <hyperlink>Units</hyperlink> in this <hyperlink>Domain</hyperlink> are Encouraged.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Sunshrine",
-  "icon": "_researchpost___sunshrine",
+  "icon": "0000042A000004E1",
   "is_sector_upgrade": true
  },
  {
@@ -2094,7 +2105,7 @@
   "id": "_mine___dark_forge",
   "description": "<bulletlist><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.</bullet><bullet>+7 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink> or <mine></mine> <hyperlink>Mine</hyperlink>.</bullet><bullet>Unit deployment location.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Dark Forge",
-  "icon": "_mine___dark_forge",
+  "icon": "0000042A000004DF",
   "is_sector_upgrade": true
  },
  {
@@ -2105,7 +2116,7 @@
   "id": "_conduit___mystic_abbey",
   "description": "<bulletlist><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Mystic Abbey",
-  "icon": "_conduit___mystic_abbey",
+  "icon": "0000042A000004D8",
   "is_sector_upgrade": true
  },
  {
@@ -2116,7 +2127,7 @@
   "id": "_quarry___builders_quarters",
   "description": "<bulletlist><bullet>+15 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>+5 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet><bullet>Counts as a <quarry></quarry> <hyperlink>Quarry</hyperlink>.</bullet></bulletlist>",
   "name": "<quarry></quarry> Builder's Quarters",
-  "icon": "_quarry___builders_quarters",
+  "icon": "0000042A000004DB",
   "is_sector_upgrade": true
  },
  {
@@ -2127,7 +2138,7 @@
   "id": "_forester___forest_of_stakes",
   "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink> income.</bullet><bullet>+7 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <forester></forester> <hyperlink>Forester</hyperlink>.</bullet><bullet>Enemy <hyperlink>Units</hyperlink> in this <hyperlink>Domain</hyperlink> get Demoralized.</bullet><bullet>Counts as a <forester></forester> <hyperlink>Forester</hyperlink>.</bullet></bulletlist>",
   "name": "<forester></forester> Forest of Stakes",
-  "icon": "_forester___forest_of_stakes",
+  "icon": "0000042A000004C5",
   "is_sector_upgrade": true
  },
  {
@@ -2138,7 +2149,7 @@
   "id": "_farm___farmstead",
   "description": "<bulletlist><bullet>+15 <food></food> <hyperlink>Food</hyperlink> income.</bullet><bullet>+5 <food></food> <hyperlink>Food</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
   "name": "<farm></farm> Farmstead",
-  "icon": "_farm___farmstead",
+  "icon": "0000042A000004BC",
   "is_sector_upgrade": true
  },
  {
@@ -2149,19 +2160,19 @@
   "id": "town_hall_iii_mystic_spire",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Mystic Spire",
-  "icon": "town_hall_iii_mystic_spire",
+  "icon": "0000042A00000436",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
   "cost": "800<structureprod></structureprod> 800<gold></gold> ",
-  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <optactical></optactical> Combat Casting Point</bullet><bullet>+10 <caststrategic></caststrategic> World Map Casting Point</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435138608,
   "id": "town_hall_iv_wizards_auditorium",
-  "description": "",
+  "description": "10 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink> and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.",
   "name": "Town Hall IV: Wizard's Auditorium",
-  "icon": "town_hall_iv_wizards_auditorium",
+  "icon": "0000042A0000042E",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2173,7 +2184,7 @@
   "id": "town_hall_ii_mages_plaza",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Mage's Plaza",
-  "icon": "town_hall_ii_mages_plaza",
+  "icon": "0000042A0000043E",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2185,7 +2196,7 @@
   "id": "granary",
   "description": "",
   "name": "Granary",
-  "icon": "granary",
+  "icon": "0000042A000003C9",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2197,7 +2208,7 @@
   "id": "arcane_institute",
   "description": "",
   "name": "Arcane Institute",
-  "icon": "arcane_institute",
+  "icon": "0000042A000003BF",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2209,7 +2220,7 @@
   "id": "shrine",
   "description": "",
   "name": "Shrine",
-  "icon": "shrine",
+  "icon": "0000042A000003BB",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -2221,7 +2232,7 @@
   "id": "market",
   "description": "",
   "name": "Market",
-  "icon": "market",
+  "icon": "0000042A000003B5",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -2233,7 +2244,7 @@
   "id": "stonemason",
   "description": "",
   "name": "Stonemason",
-  "icon": "stonemason",
+  "icon": "0000042A000003B2",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -2245,31 +2256,31 @@
   "id": "woodworker",
   "description": "",
   "name": "Woodworker",
-  "icon": "woodworker",
+  "icon": "0000042A000003AD",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><forester></forester> Forester</hyperlink>"
  },
  {
   "requirement_description": "Requires 2: Water provinces to unlock",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "+20 <food></food> <hyperlink>Food</hyperlink> income",
+  "prediction_description": "+15 <food></food> <hyperlink>Food</hyperlink> income",
   "resid": 4578435138463,
   "id": "fishmonger",
   "description": "",
   "name": "Fishmonger",
-  "icon": "fishmonger",
+  "icon": "0000042A000003A8",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><forester></forester> Forester</hyperlink>"
  },
  {
   "requirement_description": "",
-  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "<bulletlist><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138371,
   "id": "bastions_barricade",
   "description": "Grants 2 <hyperlink>Bastions</hyperlink> on the defender's side when fighting a defensive <hyperlink>Siege</hyperlink>.",
   "name": "Bastion's Barricade",
-  "icon": "bastions_barricade",
+  "icon": "0000042A00000344",
   "is_sector_upgrade": false
  },
  {
@@ -2280,7 +2291,7 @@
   "id": "town_hall_iv_industry_compound",
   "description": "Production Conversions convert an additional 10%.",
   "name": "Town Hall IV: Industry Compound",
-  "icon": "town_hall_iv_industry_compound",
+  "icon": "0000042A00000340",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2292,7 +2303,7 @@
   "id": "town_hall_iii_forge_tower",
   "description": "<bulletlist><bullet>Hurry Production costs 20% less.</bullet><bullet>Hurry Recruitment costs 20% less.</bullet></bulletlist><bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Forge Tower",
-  "icon": "town_hall_iii_forge_tower",
+  "icon": "0000042A00000325",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2304,30 +2315,30 @@
   "id": "town_hall_ii_bulwark",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Bulwark",
-  "icon": "town_hall_ii_bulwark",
+  "icon": "0000042A0000031D",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
  {
   "requirement_description": "",
-  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
+  "cost": "280<gold></gold> 750<structureprod></structureprod> ",
+  "prediction_description": "<bulletlist><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138297,
   "id": "overlords_tower",
   "description": "Prevents <hyperlink>Provinces</hyperlink> breaking off due to low <happiness></happiness> <hyperlink>City Stability</hyperlink>.",
   "name": "Overlord's Tower",
-  "icon": "overlords_tower",
+  "icon": "0000042A000002FA",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "",
   "cost": "800<structureprod></structureprod> 800<gold></gold> ",
-  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+1 Province Annex Range</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+2 <happiness></happiness> <hyperlink>City Stability</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet></bulletlist>",
   "resid": 4578435138280,
   "id": "town_hall_iv_black_palace",
   "description": "",
   "name": "Town Hall IV: Black Palace",
-  "icon": "town_hall_iv_black_palace",
+  "icon": "0000042A000002EB",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2339,7 +2350,7 @@
   "id": "town_hall_iii_stronghold",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Stronghold",
-  "icon": "town_hall_iii_stronghold",
+  "icon": "0000042A000002E3",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2351,7 +2362,7 @@
   "id": "town_hall_ii_dread_spire",
   "description": "<bulletlist><bullet>Negative <happiness></happiness> <hyperlink>City Stability</hyperlink> states give no economic penalties.</bullet><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Dread Spire",
-  "icon": "town_hall_ii_dread_spire",
+  "icon": "0000042A000002DC",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2363,7 +2374,7 @@
   "id": "town_hall_iv_solar_sanctum",
   "description": "",
   "name": "Town Hall IV: Solar Sanctum",
-  "icon": "town_hall_iv_solar_sanctum",
+  "icon": "0000042A000002D0",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2375,7 +2386,7 @@
   "id": "town_hall_iii_pantheon",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Pantheon",
-  "icon": "town_hall_iii_pantheon",
+  "icon": "0000042A000002C8",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2387,7 +2398,7 @@
   "id": "town_hall_ii_atrium_of_light",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Atrium of Light",
-  "icon": "town_hall_ii_atrium_of_light",
+  "icon": "0000042A000002C1",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2399,7 +2410,7 @@
   "id": "solar_nexus",
   "description": "",
   "name": "Solar Nexus",
-  "icon": "solar_nexus",
+  "icon": "0000042A000002D8",
   "is_sector_upgrade": false
  },
  {
@@ -2410,7 +2421,7 @@
   "id": "town_hall_iv_warlords_pavilion",
   "description": "",
   "name": "Town Hall IV: Warlord's Pavilion",
-  "icon": "town_hall_iv_warlords_pavilion",
+  "icon": "0000042A0000020A",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2422,7 +2433,7 @@
   "id": "town_hall_iii_halls_of_war",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Halls of War",
-  "icon": "town_hall_iii_halls_of_war",
+  "icon": "0000042A00000202",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2434,7 +2445,7 @@
   "id": "town_hall_ii_communal_tent",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Communal Tent",
-  "icon": "town_hall_ii_communal_tent",
+  "icon": "0000042A000001FB",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2446,7 +2457,7 @@
   "id": "bathhouse",
   "description": "",
   "name": "Bathhouse",
-  "icon": "bathhouse",
+  "icon": "0000042A00000053",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet><bullet>Build 2 <hyperlink><farms></farms> Farm</hyperlink></bullet></bulletlist>"
  },
@@ -2458,7 +2469,7 @@
   "id": "tavern",
   "description": "",
   "name": "Tavern",
-  "icon": "tavern",
+  "icon": "0000042A0000004D",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -2470,18 +2481,18 @@
   "id": "monument_of_supremacy",
   "description": "+5 <happiness></happiness> <hyperlink>City Stability</hyperlink> per Monument of Supremacy in your empire.",
   "name": "Monument of Supremacy",
-  "icon": "monument_of_supremacy",
+  "icon": "0000041B00001999",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+20 <mana></mana> <hyperlink>Mana</hyperlink> income</bullet><bullet>+10 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet></bulletlist>",
   "resid": 4514010634900,
   "id": "barons_palace",
-  "description": "This city gains:<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist><br></br>Your <hyperlink>Throne City</hyperlink> gains:<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+20 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet></bulletlist><br></br><br></br>Can only be built in cities of another race.",
+  "description": "This city gains:<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist><br></br>Your <hyperlink>Throne City</hyperlink> gains:<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><br></br><br></br>Can only be built in cities of another race.",
   "name": "Baron's Palace",
-  "icon": "barons_palace",
+  "icon": "000003E1000012CE",
   "is_sector_upgrade": false
  },
  {
@@ -2492,7 +2503,7 @@
   "id": "tribunal",
   "description": "",
   "name": "Tribunal",
-  "icon": "tribunal",
+  "icon": "0000041B0000194F",
   "is_sector_upgrade": false
  },
  {
@@ -2503,7 +2514,7 @@
   "id": "necrotic_spires",
   "description": "<hyperlink>Tower Structure</hyperlink><br></br><bulletlist><bullet>Adds 4 <hyperlink>Necrotic Spires</hyperlink> in <hyperlink>Combat</hyperlink> during a <hyperlink>Siege</hyperlink>.</bullet><bullet>Friendly Undead units in the domain heal +12 <hyperlink><hp></hp> Hit Points</hyperlink> per turn.</bullet></bulletlist>",
   "name": "Necrotic Spires",
-  "icon": "necrotic_spires",
+  "icon": "0000041B00001708",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><conduit></conduit> Conduit</hyperlink>"
  },
@@ -2515,7 +2526,7 @@
   "id": "astral_trade_relay",
   "description": "<bulletlist><bulletlist><bullet>+15 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>+2 <gold></gold> <hyperlink>Gold</hyperlink> income for each Astral Trade Relay built in your empire.</bullet></bulletlist></bulletlist>",
   "name": "Astral Trade Relay",
-  "icon": "astral_trade_relay",
+  "icon": "0000041B00001276",
   "is_sector_upgrade": false
  },
  {
@@ -2526,7 +2537,7 @@
   "id": "temple_of_fertility",
   "description": "",
   "name": "Temple of Fertility",
-  "icon": "temple_of_fertility",
+  "icon": "0000041B00000D74",
   "is_sector_upgrade": false
  },
  {
@@ -2537,7 +2548,7 @@
   "id": "beacon_of_valor",
   "description": "<hyperlink>Support Structure</hyperlink><br></br><br></br>City gains +40 <unitprod></unitprod> <hyperlink>Draft</hyperlink> additional income while under <hyperlink>Siege</hyperlink>.",
   "name": "Beacon of Valor",
-  "icon": "beacon_of_valor",
+  "icon": "000004150000046A",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><conduit></conduit> Conduit</hyperlink></bullet><bullet>Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2549,7 +2560,7 @@
   "id": "ballista_towers",
   "description": "<hyperlink>Tower Structure</hyperlink>",
   "name": "Ballista Towers",
-  "icon": "ballista_towers",
+  "icon": "000004150000045C",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2561,7 +2572,7 @@
   "id": "stone_walls",
   "description": "<hyperlink>Wall Structure</hyperlink>",
   "name": "Stone Walls",
-  "icon": "stone_walls",
+  "icon": "000004150000045A",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -2573,7 +2584,7 @@
   "id": "archer_battlements",
   "description": "<hyperlink>Battlement Structure</hyperlink>",
   "name": "Archer Battlements",
-  "icon": "archer_battlements",
+  "icon": "0000041500000453",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2585,7 +2596,7 @@
   "id": "workshop",
   "description": "",
   "name": "Workshop",
-  "icon": "workshop",
+  "icon": "00000415000001DD",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -2597,7 +2608,7 @@
   "id": "catapult_towers",
   "description": "<hyperlink>Tower Structure</hyperlink>",
   "name": "Catapult Towers",
-  "icon": "catapult_towers",
+  "icon": "000003FE000008E4",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2609,7 +2620,7 @@
   "id": "caltrop_stash",
   "description": "<hyperlink>Support Structure</hyperlink>",
   "name": "Caltrop Stash",
-  "icon": "caltrop_stash",
+  "icon": "000003FE000008DF",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet><bullet>Build 1 <hyperlink><mine></mine> Mine</hyperlink></bullet></bulletlist>"
  },
@@ -2621,7 +2632,7 @@
   "id": "arcane_battlements",
   "description": "<hyperlink>Battlement Structure</hyperlink>",
   "name": "Arcane Battlements",
-  "icon": "arcane_battlements",
+  "icon": "000003FE000008D8",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><conduit></conduit> Conduit</hyperlink></bullet><bullet>Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2633,7 +2644,7 @@
   "id": "palisade_walls",
   "description": "<hyperlink>Wall Structure</hyperlink>",
   "name": "Palisade Walls",
-  "icon": "palisade_walls",
+  "icon": "000003FE000008D1",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2645,7 +2656,7 @@
   "id": "academy",
   "description": "",
   "name": "Academy",
-  "icon": "academy",
+  "icon": "000003AD00001BA8",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 1 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
@@ -2657,19 +2668,19 @@
   "id": "library",
   "description": "",
   "name": "Library",
-  "icon": "library",
+  "icon": "000003E500001870",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
  {
-  "requirement_description": "Requires 4 <fishery></fishery> <hyperlink>Fisheries</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
+  "requirement_description": "Requires 4: Water provinces to unlock",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+3 <food></food> <hyperlink>Food</hyperlink> income per Coast: </bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per Coast: </bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per Coast: </bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> income per Coast: </bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> income per Coast: </bullet><bullet>+3 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per Coast: </bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink> income per Water: </bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per Water: </bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per Water: </bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> income per Water: </bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink> income per Water: </bullet><bullet>+3 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per Water: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+3 <food></food> <hyperlink>Food</hyperlink> income per Coast: </bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per Coast: </bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per Coast: </bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> income per Coast: </bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink> income per Water: </bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per Water: </bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per Water: </bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink> income per Water: </bullet></bulletlist>",
   "resid": 4282082401545,
   "id": "seafarers_guild",
-  "description": "Per Coast or Underground Lake province:<bulletlist><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink></bullet><bullet>Doubles the base resources from Coastal <hyperlink>Province Improvements</hyperlink>.</bullet></bulletlist>",
+  "description": "Per Coast or Water province:<bulletlist><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist>",
   "name": "Seafarers' Guild",
-  "icon": "seafarers_guild",
+  "icon": "000003E500001D0C",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2681,7 +2692,7 @@
   "id": "grand_wharf",
   "description": "",
   "name": "Grand Wharf",
-  "icon": "grand_wharf",
+  "icon": "000003E500001D00",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2693,7 +2704,7 @@
   "id": "shipyard",
   "description": "",
   "name": "Shipyard",
-  "icon": "shipyard",
+  "icon": "000003E500001CF3",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2705,7 +2716,7 @@
   "id": "town_hall_iv_grand_estate",
   "description": "",
   "name": "Town Hall IV: Grand Estate",
-  "icon": "town_hall_iv_grand_estate",
+  "icon": "000003E500001C88",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 15 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2717,7 +2728,7 @@
   "id": "town_hall_iii_citadel",
   "description": "<bulletlist><bullet>Unlocks the <conduit></conduit> Spell Jammer.</bullet></bulletlist>",
   "name": "Town Hall III: Citadel",
-  "icon": "town_hall_iii_citadel",
+  "icon": "000003E500001C84",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 10 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2729,7 +2740,7 @@
   "id": "town_hall_ii_castle",
   "description": "<bulletlist><bullet>Unlocks <hyperlink>Special Province Improvements</hyperlink>.</bullet></bulletlist>",
   "name": "Town Hall II: Castle",
-  "icon": "town_hall_ii_castle",
+  "icon": "000003E500001C7F",
   "is_sector_upgrade": false,
   "boost_requirements": "Have 5 <population></population> <hyperlink>Population</hyperlink>"
  },
@@ -2741,7 +2752,7 @@
   "id": "town_hall_ii_castle",
   "description": "",
   "name": "Town Hall II: Castle",
-  "icon": "town_hall_ii_castle_2",
+  "icon": "000003E500001C7A",
   "is_sector_upgrade": false
  },
  {
@@ -2752,31 +2763,31 @@
   "id": "foragers_market",
   "description": "",
   "name": "Forager's Market",
-  "icon": "foragers_market",
+  "icon": "000003E500001BD7",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><hut></hut> Hut</hyperlink>"
  },
  {
   "requirement_description": "Requires 2: <researchpost></researchpost> <hyperlink>Research Posts</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per <researchpost></researchpost> Research Post: </bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Battle Mage Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Fighter Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Mythic Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Polearm Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Ranged Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Shield Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Shock Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Skirmisher Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Quick Learner</hyperlink> to every <hyperlink>Support Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "+10 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income per <researchpost></researchpost> Research Post: ",
   "resid": 4282082401316,
   "id": "scholars_guild",
-  "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> income per <researchpost></researchpost> Research Post</bullet><bullet>Grants Quick Learner to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "description": "",
   "name": "Scholars Guild",
-  "icon": "scholars_guild",
+  "icon": "000003E500001C26",
   "is_sector_upgrade": false,
   "boost_requirements": "<bulletlist><bullet>Build 2 <hyperlink><forester></forester> Forester</hyperlink></bullet><bullet>Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink></bullet></bulletlist>"
  },
  {
   "requirement_description": "Requires 2: <conduit></conduit> <hyperlink>Conduits</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+20 <caststrategic></caststrategic> World Map Casting Point</bullet><bullet>+20 <optactical></optactical> Combat Casting Point</bullet><bullet>+10 <mana></mana> <hyperlink>Mana</hyperlink> income per <conduit></conduit> Conduit: </bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Support Unit</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Battle Mage Unit</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "+10 <mana></mana> <hyperlink>Mana</hyperlink> income per <conduit></conduit> Conduit: ",
   "resid": 4282082401309,
   "id": "mages_guild",
   "description": "",
   "name": "Mages' Guild",
-  "icon": "mages_guild",
+  "icon": "000003E500001C1F",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -2788,7 +2799,7 @@
   "id": "monolith",
   "description": "",
   "name": "Monolith",
-  "icon": "monolith",
+  "icon": "000003E500001C16",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -2800,19 +2811,19 @@
   "id": "mana_obelisk",
   "description": "",
   "name": "Mana Obelisk",
-  "icon": "mana_obelisk",
+  "icon": "000003E500001C10",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
  {
   "requirement_description": "Requires 2: <mine></mine> <hyperlink>Mines</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <mine></mine> Mine: </bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Battle Mage Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Fighter Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Mythic Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Polearm Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Ranged Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Shield Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Shock Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Skirmisher Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Bargain Price</hyperlink> to every <hyperlink>Support Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <mine></mine> Mine: ",
   "resid": 4282082401272,
   "id": "merchants_guild",
-  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <mine></mine> Mine</bullet><bullet>Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink> to recruit.</bullet><bullet>Grants Bargain Price to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "description": "",
   "name": "Merchants' Guild",
-  "icon": "merchants_guild",
+  "icon": "000003E500001BF9",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -2824,19 +2835,19 @@
   "id": "mint",
   "description": "",
   "name": "Mint",
-  "icon": "mint",
+  "icon": "000003E500001BF5",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><farms></farms> Farm</hyperlink>"
  },
  {
   "requirement_description": "Requires 4: <quarry></quarry> <hyperlink>Quarry</hyperlink> to unlock<br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet><bullet>+2 <bindingfragments></bindingfragments> <hyperlink>Binding Fragments</hyperlink> income</bullet><bullet>+10 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per <quarry></quarry> Quarry: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet><bullet>+10 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per <quarry></quarry> Quarry: </bullet></bulletlist>",
   "resid": 4282082401262,
   "id": "workers_guild",
-  "description": "<bulletlist><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet><bullet>+10 <structureprod></structureprod> <hyperlink>Production</hyperlink> income per <quarry></quarry> Quarry</bullet><bullet>+2 <bindingfragments></bindingfragments><hyperlink>Binding Fragments</hyperlink> income per Structure built.</bullet></bulletlist>",
+  "description": "",
   "name": "Workers' Guild",
-  "icon": "workers_guild",
+  "icon": "000003E500001BF0",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><farms></farms> Farm</hyperlink>"
  },
@@ -2848,19 +2859,19 @@
   "id": "masonic_hall",
   "description": "",
   "name": "Masonic Hall",
-  "icon": "masonic_hall",
+  "icon": "000003E500001BEC",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><farms></farms> Farm</hyperlink>"
  },
  {
   "requirement_description": "Requires 4: <forester></forester> <hyperlink>Foresters</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <forester></forester> Forester: </bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Battle Mage Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Shock Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Mythic Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Fighter Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Skirmisher Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Ranged Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Shield Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Support Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>Grants <hyperlink>Reinforced Armor</hyperlink> to every <hyperlink>Polearm Unit</hyperlink> produced in this <hyperlink>City</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier III</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier II</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier I</hyperlink>.</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <forester></forester> Forester: </bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier I</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier II</hyperlink>.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every <hyperlink>Tier III</hyperlink>.</bullet></bulletlist>",
   "resid": 4282082401254,
   "id": "smiths_guild",
-  "description": "<bulletlist><bullet>+5 <food></food> <hyperlink>Food</hyperlink> income per <forester></forester> Forester</bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <forester></forester> Forester</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every Tier I.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every Tier II.</bullet><bullet>+1<medalGold></medalGold> Starting Rank to every Tier III.</bullet><bullet>Grants Reinforced Armor to units produced in this <hyperlink>City</hyperlink>.</bullet></bulletlist>",
+  "description": "",
   "name": "Smiths' Guild",
-  "icon": "smiths_guild",
+  "icon": "000003E500001BE8",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -2872,7 +2883,7 @@
   "id": "foresters_guild",
   "description": "",
   "name": "Forester's Guild",
-  "icon": "foresters_guild",
+  "icon": "000003E500001BE3",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2884,7 +2895,7 @@
   "id": "estate_hall",
   "description": "",
   "name": "Estate Hall",
-  "icon": "estate_hall",
+  "icon": "000003E500001BDE",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2896,7 +2907,7 @@
   "id": "store_house",
   "description": "",
   "name": "Store House",
-  "icon": "foragers_market",
+  "icon": "000003E500001BD7",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -2908,7 +2919,7 @@
   "id": "retainers_estate",
   "description": "While this city shares a border with the Throne City or is the Throne City gain:<bulletlist><bullet>+20 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
   "name": "Retainer's Estate",
-  "icon": "retainers_estate",
+  "icon": "000003E50000191F",
   "is_sector_upgrade": false
  },
  {
@@ -2920,7 +2931,7 @@
   "DLC": "EMPIRESANDASHES ",
   "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+3 <knowledge></knowledge><hyperlink>Knowledge</hyperlink> per adjacent unique <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Alchemist's Lab",
-  "icon": "_researchpost___alchemists_lab",
+  "icon": "000003E3000071D8",
   "is_sector_upgrade": true
  },
  {
@@ -2930,9 +2941,9 @@
   "resid": 4273492487110,
   "id": "_researchpost___wyvern_eyrie",
   "DLC": "DRAGONLORDS ",
-  "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink> <hyperlink>Province</hyperlink>.</bullet><bullet>Unlocks the production of various Wyvern <hyperlink>Units</hyperlink>. Alignment influences which Wyverns can be drafted.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per adjacent <farm></farm> <hyperlink>Farm</hyperlink> <hyperlink>Province</hyperlink>.</bullet><bullet>Unlocks the production of various Wyvern <hyperlink>Units</hyperlink>. Alignment influences which Wyverns can be drafted.</bullet><bullet>Counts as a <researchpost></researchpost> <hyperlink>Research Post</hyperlink>.</bullet></bulletlist>",
   "name": "<researchpost></researchpost> Wyvern Eyrie",
-  "icon": "_researchpost___wyvern_eyrie",
+  "icon": "000003E300006BCD",
   "is_sector_upgrade": true
  },
  {
@@ -2943,7 +2954,7 @@
   "id": "temple_of_the_exalted",
   "description": "",
   "name": "Temple of the Exalted",
-  "icon": "temple_of_the_exalted",
+  "icon": "0000041B000019BB",
   "is_sector_upgrade": false
  },
  {
@@ -2954,7 +2965,7 @@
   "id": "healing_spires",
   "description": "<hyperlink>Tower Structure</hyperlink><br></br><bulletlist><bullet>Adds 4 <hyperlink>Healing Spires</hyperlink> in <hyperlink>Combat</hyperlink> during a <hyperlink>Siege</hyperlink>.</bullet><bullet>Friendly units in the domain heal +12 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Healing Spires",
-  "icon": "healing_spires",
+  "icon": "0000041B00001987",
   "is_sector_upgrade": false
  },
  {
@@ -2965,7 +2976,7 @@
   "id": "convent",
   "description": "For each <happiness></happiness> <hyperlink>City Stability</hyperlink> level above <hyperlink>Unstable</hyperlink> the city gains:<bulletlist><bullet>+5 <knowledge></knowledge><hyperlink>Knowledge</hyperlink>.</bullet><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet></bulletlist>",
   "name": "Convent",
-  "icon": "convent",
+  "icon": "000003E3000060CD",
   "is_sector_upgrade": false
  },
  {
@@ -2976,18 +2987,18 @@
   "id": "tower_of_true_sight",
   "description": "The domain gains +6 vision and True Sight, making it possible to spot invisible or camouflaged enemies.",
   "name": "Tower of True Sight",
-  "icon": "tower_of_true_sight",
+  "icon": "0000041B0000125D",
   "is_sector_upgrade": false
  },
  {
   "requirement_description": "",
   "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>: </bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>: </bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>: </bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>: </bullet></bulletlist>",
   "resid": 4273492483521,
   "id": "reagent_refinery",
   "description": "",
   "name": "Reagent Refinery",
-  "icon": "reagent_refinery",
+  "icon": "000003E300005D46",
   "is_sector_upgrade": false
  },
  {
@@ -2998,7 +3009,7 @@
   "id": "luxury_markets",
   "description": "Buy Now is 25% cheaper and can be used 2 times per World Map <turn></turn> Turn.",
   "name": "Luxury Markets",
-  "icon": "luxury_markets",
+  "icon": "000003E300005D3E",
   "is_sector_upgrade": false
  },
  {
@@ -3009,7 +3020,7 @@
   "id": "artisan_fortification",
   "description": "A <hyperlink>Tower Structure</hyperlink> that grants the city <hyperlink>Bolt Repeater</hyperlink> Towers during siege combat.",
   "name": "Artisan Fortification",
-  "icon": "artisan_fortification",
+  "icon": "000003E300005D07",
   "is_sector_upgrade": false
  },
  {
@@ -3020,7 +3031,7 @@
   "id": "throne_of_mirrors",
   "description": "<bulletlist><bullet>When this city is besieged, grants the defender an Astral Reflection of their <hyperlink>Ruler</hyperlink> if they are not present themselves.</bullet><bullet>Your Ruler gains 2 <hyperlink><xp></xp> Experience</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> per owned City with this city structure built.</bullet></bulletlist>",
   "name": "Throne of Mirrors",
-  "icon": "throne_of_mirrors",
+  "icon": "0000041B000012C1",
   "is_sector_upgrade": false
  },
  {
@@ -3042,7 +3053,7 @@
   "id": "crucible_battlements",
   "description": "<hyperlink>Battlement Structure</hyperlink><br></br><bulletlist><bullet>Battlements grant <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks:<bulletlist></bullet><bullet>Deals +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sets affected hexes <hyperlink>On Fire</hyperlink>.</bullet><bullet>Ignore <hyperlink>Obscured</hyperlink> on targets.</bullet><bullet>+1 <range></range> Range</bullet></bulletlist><bullet>Units produced in the City gain +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> on their attacks.</bullet></bulletlist>",
   "name": "Crucible Battlements",
-  "icon": "crucible_battlements",
+  "icon": "000003AD00002B95",
   "is_sector_upgrade": false
  },
  {
@@ -3053,7 +3064,7 @@
   "id": "shrine_of_the_wargod",
   "description": "<bulletlist><bullet>Units built in this <hyperlink>City</hyperlink> gain +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> on base non-<hyperlink>Magic</hyperlink> attacks. This effect <hyperlink>is increased</hyperlink> for Single Shot attacks.</bullet><bullet>During combat in this city's <hyperlink>Domain</hyperlink> all friendly units gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist>",
   "name": "Shrine of the Wargod",
-  "icon": "shrine_of_the_wargod",
+  "icon": "000003AD00002AB6",
   "is_sector_upgrade": false
  },
  {
@@ -3064,7 +3075,7 @@
   "id": "blacksmith",
   "description": "",
   "name": "Blacksmith",
-  "icon": "blacksmith",
+  "icon": "000003AD000023A6",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 2 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -3076,7 +3087,7 @@
   "id": "heros_quarters",
   "description": "",
   "name": "Hero's Quarters",
-  "icon": "heros_quarters_2",
+  "icon": "000003AD000023A1",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
@@ -3088,19 +3099,19 @@
   "id": "armory",
   "description": "",
   "name": "Armory",
-  "icon": "armory",
+  "icon": "000003AD000020A2",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 3 <hyperlink><quarry></quarry> Quarry</hyperlink>"
  },
  {
   "requirement_description": "Requires 4: <farm></farm> <hyperlink>Farms</hyperlink><br></br><br></br>Only 1 Guild allowed per city.",
   "cost": "280<gold></gold> 750<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+2 <influence></influence> <hyperlink>Imperium</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>: </bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm: </bullet></bulletlist>",
+  "prediction_description": "+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm: ",
   "resid": 4041564233665,
   "id": "farmers_guild",
-  "description": "<bulletlist><bullet>+2 <influence></influence> <hyperlink>Imperium</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>.</bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm</bullet><bullet>This <hyperlink>City</hyperlink> produces +30% <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>This city produces +30% <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
   "name": "Farmers' Guild",
-  "icon": "farmers_guild",
+  "icon": "000003E500001BDF",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 4 <hyperlink><forester></forester> Forester</hyperlink>"
  },
@@ -3112,7 +3123,7 @@
   "id": "vendor",
   "description": "",
   "name": "Vendor",
-  "icon": "vendor",
+  "icon": "000003AD00001D43",
   "is_sector_upgrade": false,
   "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
  },

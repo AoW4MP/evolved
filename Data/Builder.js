@@ -359,7 +359,7 @@ function AddTagIconsForStatusEffects(name) {
 
         if (
             name.includes(abilityName) &&
-            jsonUnitAbilitiesLocalized[i].slug !== "0000041b000013b4" // skip that specific one
+            jsonUnitAbilitiesLocalized[i].slug !== "_1_<<m{global.retaliationconcept.hyperlink}>>" // skip that specific one
         ) {
             let tooltipspan = document.createElement("span");
             tooltipspan.className = "statusEffectHandler";
@@ -2084,24 +2084,24 @@ function addResistanceSlot(a, resistance, holder) {
             imag.setAttribute("width", "25");
             imag.setAttribute("height", "25");
 
-            if (a.indexOf("Frost") !== -1) {
+            if (a.indexOf("frost") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/frost_resistance.png");
                 spa.innerHTML += "<defensefrost></defensefrost>";
             }
-            if (a.indexOf("Blight") !== -1) {
+            if (a.indexOf("blight") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/blight_resistance.png");
                 spa.innerHTML += "<defenseblight></defenseblight>";
             }
-            if (a.indexOf("Fire") !== -1) {
+            if (a.indexOf("fire") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/fire_resistance.png");
                 spa.innerHTML += "<defensefire></defensefire>";
             }
-            if (a.indexOf("Spirit") !== -1) {
+            if (a.indexOf("spirit") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/spirit_resistance.png");
                 spa.innerHTML += "<defensespirit></defensespirit>";
             }
 
-            if (a.indexOf("Shock") !== -1) {
+            if (a.indexOf("shock") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/lightning_resistance.png");
                 spa.innerHTML += "<defenselightning></defenselightning>";
             }
@@ -3444,7 +3444,7 @@ function showUnit(unitID, subcultureCheck, resID) {
     for (y in unitEN.secondary_passives) {
         if (unitEN.secondary_passives[y].icon == "findMgicOrinIcon") {
             if (lowUpkeep === true) {
-                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.75);
+                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.8);
             } else if (faithfulUpkeep === true) {
                 tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.9);
             } else {
@@ -3536,34 +3536,34 @@ function showUnit(unitID, subcultureCheck, resID) {
         if (unitEN.primary_passives[x].icon == "findlowmaintenanceicon") {
             if (unitEN.upkeep.indexOf("influence") != -1) {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + "*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.8) + "*";
             } else {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + ">*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.8) + ">*";
             }
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
-                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.75) + "*";
+                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.8) + "*";
             }
         }
 
         if (unitEN.primary_passives[x].slug.indexOf("high_maintenance") != -1) {
             if (unitEN.upkeep.indexOf("influence") != -1) {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + "*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.2) + "*";
             } else {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + ">*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.2) + ">*";
             }
 
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + "*";
+                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.2) + "*";
                 } else {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + ">*";
+                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.2) + ">*";
                 }
             }
         }
@@ -4177,7 +4177,7 @@ function addLevelUpInfo(units, a, holder) {
         {
             name: "Legend",
             icon: "medal_legend",
-            xp: evolveTarget ? 6 : 10,
+            xp: evolveTarget ? 4 : 10,
             rewards: evolveTarget ? [] : units.medal_rewards_6
         }
     ];

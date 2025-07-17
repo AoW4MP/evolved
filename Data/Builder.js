@@ -9,6 +9,12 @@ var languageSelect = document.getElementById("languageSelect");
 
 var altHeld = false;
 
+const patchDates = [
+    // date ranges of patches
+    { name: "Ogre 1.2.1", from: new Date("2025-05-13"), to: new Date("2025-08-01") },
+    { name: "Ogre 1.2", from: new Date("2025-04-26"), to: new Date("2025-05-13") }
+];
+
 // Toggle ALT mode on each key press
 document.addEventListener("keydown", function (event) {
     if (event.key === "Alt") {
@@ -41,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000);
 });
 
+function OverwriteEditKey() {
+    localStorage.setItem("editKey", document.getElementById("overwriteKey").value);
+}
+
 function SwitchToBeta() {
     updateUserSettings({
         tooltipselectable: checkboxTooltip.checked,
@@ -72,6 +82,24 @@ function setUserSettings(settings) {
     localStorage.setItem("userSettings", JSON.stringify(settings));
 }
 
+function downloadEditKeyFile() {
+    const text =
+        "Age of Wonders 4 Evolved (minionsart.github.io/evolved)\nYour Build Edit Key : " + getOrCreateUserEditKey(); // Replace with your dynamic content
+    const filename = "evolved_EditKey.txt";
+
+    const blob = new Blob([text], { type: "text/plain" });
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+}
+
 // Update user settings
 function updateUserSettings(updatedSettings) {
     const currentSettings = getUserSettings();
@@ -83,9 +111,19 @@ function updateUserSettings(updatedSettings) {
         setUserSettings(newSettings);
     }
 }
+
+function getOrCreateUserEditKey() {
+    let editKey = localStorage.getItem("editKey");
+    if (!editKey) {
+        editKey = crypto.randomUUID(); // Or custom hash if you want
+        localStorage.setItem("editKey", editKey);
+    }
+    return editKey;
+}
 // Get user settings
 function getUserSettings() {
     const storedSettings = localStorage.getItem("userSettings");
+
     return storedSettings ? JSON.parse(storedSettings) : null;
 }
 
@@ -103,8 +141,14 @@ function fetchJsonFiles(filePaths) {
 }
 var jsonSiegeProjects;
 
-async function GetAllData(selectedLang = "EN") {
-    const basePathEN = `/evolved/Data/EN/`;
+async function GetAllData(selectedLang) {
+    var basePathEN;
+    if(selectedLang == "Beta"){
+            basePathEN = `/evolved/Data/Beta/`;
+    }else{
+            basePathEN = `/evolved/Data/EN/`;
+    }
+  //  const basePathEN = `/evolved/Data/EN/`;
     const basePathLocal = `/evolved/Data/${selectedLang}/`;
 
     const fileNamesGeneric = [
@@ -112,7 +156,8 @@ async function GetAllData(selectedLang = "EN") {
         "SpawnTables.json",
         "BuilderLookup.json",
         "AscendedInfo.json",
-        "BuilderLookupHero.json"
+        "BuilderLookupHero.json",
+        "ItemForge.json"
     ];
     const fileNames = [
         "HeroItems.json",
@@ -154,7 +199,8 @@ async function GetAllData(selectedLang = "EN") {
             "jsonSpawnTables",
             "jsonBuilderLookUp",
             "jsonExtraAscendedInfo",
-            "jsonBuilderHeroLookUp"
+            "jsonBuilderHeroLookUp",
+            "jsonItemForge"
         ];
         const targets = [
             "jsonHeroItems",
@@ -232,11 +278,11 @@ async function CheckData() {
         }
         CheckBoxTooltips();
 
-        // if (storedSettings.showBeta) {
-        //     await GetAllData("Beta");
-        // } else {
+         if (storedSettings.showBeta) {
+             await GetAllData("Beta");
+         } else {
         await GetAllData(storedSettings.language);
-        //}
+        }
 
         HandlePage();
         Localize();
@@ -359,7 +405,7 @@ function AddTagIconsForStatusEffects(name) {
 
         if (
             name.includes(abilityName) &&
-            jsonUnitAbilitiesLocalized[i].slug !== "_1_<<m{global.retaliationconcept.hyperlink}>>" // skip that specific one
+            jsonUnitAbilitiesLocalized[i].slug !== "0000041b000013b4" // skip that specific one
         ) {
             let tooltipspan = document.createElement("span");
             tooltipspan.className = "statusEffectHandler";
@@ -367,9 +413,12 @@ function AddTagIconsForStatusEffects(name) {
             tooltipspan.innerHTML = abilityName;
 
             // Use a regex with word boundaries to avoid partial matches (optional)
-            let pattern = new RegExp(`\\b${abilityName}\\b`);
+            if(abilityName.indexOf("%")== -1 && abilityName.indexOf("+")== -1){
+                  let pattern = new RegExp(`\\b${abilityName}\\b`);
             name = name.replace(pattern, `${underline}<${tag}></${tag}>${tooltipspan.outerHTML}${endtag}`);
-        }
+      
+            }
+            }
     }
 
     // also check for numbers isolate settings
@@ -463,9 +512,13 @@ function GetUnitTierAndName(id, subcultureCheck) {
         }
 
         // Skip deprecated units
-        if (unit.primary_passives.length > 0 && unit.primary_passives[0].slug === "000003e300005fe2") {
+        // Skip deprecated units
+        if (depCheckResID(unit.resid) == true) {
             continue;
         }
+        //if (unit.primary_passives.length > 0 && unit.primary_passives[0].slug === "000003e300005fe2") {
+        //     continue;
+        // }
 
         // Check if subculture matches if provided
         if (subcultureCheck !== undefined && "sub_culture_name" in unit && unit.sub_culture_name !== subcultureCheck) {
@@ -2084,24 +2137,24 @@ function addResistanceSlot(a, resistance, holder) {
             imag.setAttribute("width", "25");
             imag.setAttribute("height", "25");
 
-            if (a.indexOf("frost") !== -1) {
+            if (a.indexOf("Frost") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/frost_resistance.png");
                 spa.innerHTML += "<defensefrost></defensefrost>";
             }
-            if (a.indexOf("blight") !== -1) {
+            if (a.indexOf("Blight") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/blight_resistance.png");
                 spa.innerHTML += "<defenseblight></defenseblight>";
             }
-            if (a.indexOf("fire") !== -1) {
+            if (a.indexOf("Fire") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/fire_resistance.png");
                 spa.innerHTML += "<defensefire></defensefire>";
             }
-            if (a.indexOf("spirit") !== -1) {
+            if (a.indexOf("Spirit") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/spirit_resistance.png");
                 spa.innerHTML += "<defensespirit></defensespirit>";
             }
 
-            if (a.indexOf("shock") !== -1) {
+            if (a.indexOf("Shock") !== -1) {
                 imag.setAttribute("src", "/evolved/Icons/Text/lightning_resistance.png");
                 spa.innerHTML += "<defenselightning></defenselightning>";
             }
@@ -2803,7 +2856,7 @@ function findItemsWithArgument(argumentType) {
     let finalCheckedList = [];
 
     for (let j = 0; j < jsonHeroItems.length; j++) {
-        if (jsonHeroItems[j].slot.indexOf(argumentType) !== -1 && jsonHeroItems[j].tier != undefined) {
+        if (jsonHeroItems[j].slot.indexOf(argumentType) !== -1 && "tier" in jsonHeroItems[j]) {
             finalCheckedList.push(jsonHeroItems[j]);
         }
     }
@@ -3160,7 +3213,10 @@ function showSubDiv(event, id) {
 
 function showUnit(unitID, subcultureCheck, resID) {
     let unitEN = jsonUnits.find(
-        (entry) => entry.id === unitID && (subcultureCheck === undefined || entry.sub_culture_name === subcultureCheck)
+        (entry) =>
+            entry.id === unitID &&
+            (subcultureCheck === undefined || entry.sub_culture_name === subcultureCheck) &&
+            depCheckResID(entry.resid) == false
     );
 
     if (!unitEN) {
@@ -3179,12 +3235,11 @@ function showUnit(unitID, subcultureCheck, resID) {
         return;
     }
 
-    // Skip deprecated units
-    const isDeprecated = unitEN.primary_passives?.length > 0 && unitEN.primary_passives[0].slug === "deprecated_unit!";
+    // const isDeprecated = unitEN.primary_passives?.length > 0 && unitEN.primary_passives[0].slug === "deprecated_unit!";
 
-    if (isDeprecated) {
-        return;
-    }
+    // if (isDeprecated) {
+    //     return;
+    // }
 
     let unitLoc = jsonUnitsLocalized.find((entry) => entry.resid === unitEN.resid);
     // console.log(unitLoc.name);
@@ -3444,7 +3499,7 @@ function showUnit(unitID, subcultureCheck, resID) {
     for (y in unitEN.secondary_passives) {
         if (unitEN.secondary_passives[y].icon == "findMgicOrinIcon") {
             if (lowUpkeep === true) {
-                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.8);
+                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.75);
             } else if (faithfulUpkeep === true) {
                 tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.9);
             } else {
@@ -3536,34 +3591,34 @@ function showUnit(unitID, subcultureCheck, resID) {
         if (unitEN.primary_passives[x].icon == "findlowmaintenanceicon") {
             if (unitEN.upkeep.indexOf("influence") != -1) {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.8) + "*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + "*";
             } else {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.8) + ">*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + ">*";
             }
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
-                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.8) + "*";
+                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.75) + "*";
             }
         }
 
         if (unitEN.primary_passives[x].slug.indexOf("high_maintenance") != -1) {
             if (unitEN.upkeep.indexOf("influence") != -1) {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.2) + "*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + "*";
             } else {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.2) + ">*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + ">*";
             }
 
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.2) + "*";
+                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + "*";
                 } else {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.2) + ">*";
+                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + ">*";
                 }
             }
         }
@@ -4170,9 +4225,9 @@ function addLevelUpInfo(units, a, holder) {
     const evolveTarget = units.evolve_target;
 
     const medals = [
-        { name: "Soldier", icon: "medal_soldier", xp: 1, rewards: [] },
-        { name: "Veteran", icon: "medal_veteran", xp: 2, rewards: units.medal_rewards_2 },
-        { name: "Elite", icon: "medal_elite", xp: 3, rewards: units.medal_rewards_3 },
+        { name: "Soldier", icon: "medal_soldier", xp: 1, rewards: units.medal_rewards_2 },
+        { name: "Veteran", icon: "medal_veteran", xp: 2, rewards: units.medal_rewards_3 },
+        { name: "Elite", icon: "medal_elite", xp: 3, rewards: units.medal_rewards_4 },
         { name: "Champion", icon: "medal_champion", xp: 4, rewards: units.medal_rewards_5 },
         {
             name: "Legend",
@@ -6166,31 +6221,31 @@ function showItem(a) {
         descriptionDiv.innerHTML += itemLoc.description + "<br>";
     }
 
+    const abilityMap = {};
+    jsonUnitAbilitiesLocalized.forEach((a) => (abilityMap[a.slug] = a));
+
     let lookup;
     if ("ability_slugs" in itemLoc) {
-        l = 0;
-        for (l in itemLoc.ability_slugs) {
+       
+        for (let l = 0; l < itemLoc.ability_slugs.length; l++) {
             lookup = itemLoc.ability_slugs[l].slug;
 
             let spa = document.createElement("SPA");
-            j = 0;
-            for (j in jsonUnitAbilitiesLocalized) {
-                if (jsonUnitAbilitiesLocalized[j].slug.indexOf(lookup) != -1) {
-                    //let abilityName = jsonUnitAbilities[j].name;
+          
 
-                    //   description = jsonUnitAbilities[j].description;
+            const ability = abilityMap[lookup];
+            if (ability) {
+               
+                let spa = GetAbilityInfo(ability);
+                spa.className = "itemAbility";
 
-                    let spa = GetAbilityInfo(jsonUnitAbilitiesLocalized[j]);
-                    spa.className = "itemAbility";
+                spa.setAttribute("style", "width: 450px");
 
-                    spa.setAttribute("style", "width: 450px");
+                found = true;
 
-                    found = true;
+                descriptionDiv.append(spa);
 
-                    descriptionDiv.append(spa);
-
-                    break;
-                }
+                break;
             }
         }
     }
@@ -6205,8 +6260,8 @@ function showItem(a) {
     unitTypesDiv.setAttribute("id", "affectUnitTypes" + a.id);
 
     let div = document.createElement("DIV");
-    i = 0;
-    for (i in itemLoc.disabled_slots) {
+
+    for (let i = 0; i < itemLoc.disabled_slots.length; i++) {
         let div = document.createElement("DIV");
         div.innerHTML = "&#11049" + itemLoc.disabled_slots[i].slot_name;
         unitTypesDiv.appendChild(div);
@@ -6591,10 +6646,7 @@ function showHeroGov(a, check) {
             cost.setAttribute("id", "modcost" + newID);
 
             imagelink = document.getElementById("modicon");
-            imagelink.setAttribute(
-                "src",
-                "/evolved/Icons/GovernanceIcons/" + thisGovernance.icon.toLowerCase() + ".png"
-            );
+            imagelink.setAttribute("src", "/evolved/Icons/GovernanceIcons/" + thisGovernance.icon + ".png");
             imagelink.setAttribute("style", "background-image:none");
             imagelink.setAttribute("id", "modicon" + newID);
 
@@ -6776,37 +6828,38 @@ function showSkill(a, checkInAbilities, icon_slug, category, level, group_name) 
 
 function AddDLCTag(dlcname) {
     let newDivForMount = document.createElement("DIV");
+    dlcname = dlcname.replaceAll(" ", "");
     newDivForMount.className = "mountToolTip";
 
     imag = document.createElement("IMG");
     imag.setAttribute("height", "25px");
 
     spa = document.createElement("SPAN");
-    if (dlcname == "DRAGONLORDS ") {
+    if (dlcname == "DRAGONLORDS") {
         imag.setAttribute("src", "/evolved/Icons/Text/DragonDawn.png");
         spa.innerHTML = "Part of the Dragon Dawn DLC";
     }
-    if (dlcname == "EMPIRESANDASHES ") {
+    if (dlcname == "EMPIRESANDASHES") {
         imag.setAttribute("src", "/evolved/Icons/Text/EmpiresAshes.png");
         spa.innerHTML = "Part of the Empires & Ashes DLC";
     }
-    if (dlcname == "PRIMALFURY ") {
+    if (dlcname == "PRIMALFURY") {
         imag.setAttribute("src", "/evolved/Icons/Text/PrimalFury.png");
         spa.innerHTML = "Part of the Primal Fury DLC";
     }
-    if (dlcname == "ELDRITCHREALMS ") {
+    if (dlcname == "ELDRITCHREALMS") {
         imag.setAttribute("src", "/evolved/Icons/Text/EldritchRealms.png");
         spa.innerHTML = "Part of the Eldritch Realms DLC";
     }
-    if (dlcname == "WAYSOFWAR ") {
+    if (dlcname == "WAYSOFWAR") {
         imag.setAttribute("src", "/evolved/Icons/Text/waysofwar.png");
         spa.innerHTML = "Part of the Ways of War DLC";
     }
-    if (dlcname == "HERALDOFGLORY ") {
+    if (dlcname == "HERALDOFGLORY") {
         imag.setAttribute("src", "/evolved/Icons/Text/heraldofglory.png");
         spa.innerHTML = "Part of the Herald of Glory DLC";
     }
-    if (dlcname == "GIANTKINGS ") {
+    if (dlcname == "GIANTKINGS") {
         imag.setAttribute("src", "/evolved/Icons/Text/GKLogo.png");
 
         spa.innerHTML = "Part of the Giant Kings DLC";
@@ -7133,6 +7186,29 @@ function addTypesList(a) {
             return jsonUnitAbilities[j].name + "<br>";
         }
     }
+}
+
+function CopyField() {
+    var copyText = document.getElementById("YourKey");
+
+    // Select the text field
+    // For mobile devices
+    console.log("Key  " + copyText);
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.innerText);
+}
+
+function ShowLoad() {
+    var loadButtons = document.getElementById("loadkey");
+    loadButtons.style.display = "block";
+}
+
+function HideKey() {
+    document.getElementById("YourKey").style.display = "none";
+}
+function RevealKey() {
+    document.getElementById("YourKey").style.display = "block";
 }
 
 function Localize() {

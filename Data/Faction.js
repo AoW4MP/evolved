@@ -19,6 +19,8 @@ var currentHighlights = "";
 
 var extraOrder, extraChaos, extraNature, extraMaterium, extraShadow, extraAstral;
 
+var buildTags = ["Roleplay", "Theme", "PVP", "Casual"];
+
 var listOfPantheonTraits = [
     "talented_collectors",
     "subterranean_society",
@@ -130,9 +132,9 @@ function SetRandomStart(overwriteParameter) {
                     currentFormTraitList = [];
                     currentFormTraitList.push(randomEntry);
 
-                    while (getPoints() < 10) {
+                    while (getPoints() < 5) {
                         randomEntry = GetRandomEntry(listofChoice[j]);
-                        if (getPoints() + randomEntry.point_cost < 11 && !isInArray(currentFormTraitList, randomEntry)) {
+                        if (getPoints() + randomEntry.point_cost < 6 && !isInArray(currentFormTraitList, randomEntry)) {
                             if (checkCompatibilityTraits(randomEntry) == true) {
                                 currentFormTraitList.push(randomEntry);
                             }
@@ -597,7 +599,7 @@ function SetSkillPathInfoSmall(buttonHolder, origin) {
 
     // newDivButton.append(spa);
 
-    addTooltipListeners(newDivButton, spa);
+    addTooltipListeners(image, spa);
 }
 function SetTomePathInfoSmall(buttonHolder, origin) {
     const image = document.createElement("img");
@@ -825,7 +827,7 @@ function SetSkillPathInfo(button, origin) {
 
     //  newDivButton.append(spa);
 
-    addTooltipListeners(newDivButton, spa);
+    addTooltipListeners(image, spa);
 }
 
 function SetupButtons(evt, type) {
@@ -933,7 +935,7 @@ function SetupButtons(evt, type) {
                 console.log(currentFormTraitList + " " + origin);
             }
 
-            if (origin.point_cost + getPoints() > 10) {
+            if (origin.point_cost + getPoints() > 5) {
                 originButtonNew.style.color = "grey";
             } else if (checkCompatibilityTraits(origin) == false) {
                 originButtonNew.style.color = "red";
@@ -1134,8 +1136,6 @@ function RecalculateStats(fromload) {
 
     var result = GetAffinityTotalFromList(list, currentTomeList, currentSubType);
 
-
-
     // add all extra input tags
     document.getElementById("extraOrder").innerHTML = "<empireorderBig></empireorderBig>" + extraOrder;
     document.getElementById("extraOrder").style = "text-align:center";
@@ -1150,11 +1150,7 @@ function RecalculateStats(fromload) {
     document.getElementById("extraAstral").innerHTML = "<empirearcanaBig></empirearcanaBig>" + extraAstral;
     document.getElementById("extraAstral").style = "text-align:center";
 
-
-
     const affinitySummary = document.getElementById("currentAffinity");
-
-
 
     currentAffinityTotal = result;
 
@@ -1250,7 +1246,7 @@ function SetButtonInfo(button, origin, type, color) {
     }
 
     const tooltip = createTooltip(origin, type);
-    addTooltipListeners(button, tooltip);
+    addTooltipListeners(image, tooltip);
 }
 
 function createImage(type, origin) {
@@ -1267,7 +1263,7 @@ function createImage(type, origin) {
             setImage(`/evolved/Icons/TomeIcons/${origin.id}.png`);
             break;
         case "FormTrait":
-            setImage(getFactionIconPath(origin.id), 22, 22);
+            setImage('/evolved/Icons/TraitIcons/' + origin.icon + '.png');
             break;
         case "Culture":
         case "Origin":
@@ -1294,6 +1290,8 @@ function createImage(type, origin) {
 
     return image;
 }
+
+
 
 function getFactionIconPath(id) {
     const cleanId = id.startsWith("_") ? id.split("_").slice(1).join("_") : id;
@@ -1730,10 +1728,28 @@ function SetTomePreview(span, origin) {
 function SetFullPreview(span, origin) {
     span.innerHTML =
         '<p style="color: #d7c297;>' + '<span style="font-size=20px;">' + origin.name.toUpperCase() + "</p>";
+    
+    // if("biography_description" in origin){
+       
+    //     span.innerHTML += "<br>" + origin.biography_description + "<br>";
+       
+   // }
+     if("lore_description" in origin){
+       
+         span.innerHTML += "" + origin.lore_description + "<br>";
+       
+    }
 
-    span.innerHTML += "<bulletlist>";
+    span.innerHTML +=  '<br><p style="color: #d7c297;>' + '<span style="font-size=20px;">' + "<bulletlist>EFFECTS: " + "</span></p>";
     for (i = 0; i < origin.effect_descriptions.length; i++) {
         span.innerHTML += "<bullet>" + origin.effect_descriptions[i].name + "</bullet>";
+    }
+   
+    if("incompatible_society_traits" in origin){
+        span.innerHTML += "<br>Incompatible with:" ;
+         for (i = 0; i < origin.incompatible_society_traits.length; i++) {
+         span.innerHTML += "<bullet>" + origin.incompatible_society_traits[i].name + "</bullet>";
+         }
     }
     span.innerHTML += "</bulletlist>";
 }
@@ -1989,7 +2005,7 @@ function CreateSpellIcon(listEntry, colorEntry) {
 
     newSpan.innerHTML = "<p>From: " + colorEntry.name + "<br></p>";
     span.prepend(newSpan);
-    addTooltipListeners(spell, span);
+    addTooltipListeners(smallIcon, span);
     return spell;
 }
 
@@ -2939,7 +2955,7 @@ function updateSelectedOptions(origin) {
         //         currentFormTraitList.pop();
         //     }
         // } else {
-        if (getPoints() > 10) {
+        if (getPoints() > 5) {
             currentFormTraitList.pop();
         }
         // }
@@ -2969,37 +2985,48 @@ function updateSelectedOptions(origin) {
 // }
 
 function checkCompatibilityTraits(entry) {
-    var canBeAdded = true;
-    if (entry.group_name === "ADAPTATION") {
-        var hasAdaptionGroup = currentFormTraitList.some((item) => item.group_name === "ADAPTATION");
-        //console.log(hasAdaptionGroup);
-        // already has adaption or already has primal culture
-        if (hasAdaptionGroup || currentCulture.name.indexOf("Primal") != -1) {
-            canBeAdded = false;
-        }
-    } else if (entry.group_name === "MOUNT") {
-        var hasAdaptionGroup = currentFormTraitList.some((item) => item.group_name === "MOUNT");
-        //console.log(hasAdaptionGroup);
-        // already has adaption or already has primal culture
-        if (hasAdaptionGroup) {
-            canBeAdded = false;
-        }
-    } else if (entry.group_name === "DAMAGE_RETALIATION") {
-        var hasAdaptionGroup = currentFormTraitList.some((item) => item.group_name === "DAMAGE_RETALIATION");
-        //console.log(hasAdaptionGroup);
-        // already has adaption or already has primal culture
-        if (hasAdaptionGroup) {
-            canBeAdded = false;
-        }
-    } else if (entry.group_name === "TACTICS") {
-        var hasAdaptionGroup = currentFormTraitList.some((item) => item.group_name === "TACTICS");
-        //console.log(hasAdaptionGroup);
-        // already has adaption or already has primal culture
-        if (hasAdaptionGroup) {
-            canBeAdded = false;
+    const exclusiveGroups = ["Adaptations", "Mounts", "DAMAGE_RETALIATION", "TACTICS", "Flaws"];
+
+    // Check if only one of each exclusive group can exist
+    if (exclusiveGroups.includes(entry.group_name)) {
+        const hasSameGroup = currentFormTraitList.some(item => item.group_name === entry.group_name);
+
+        const isBlockedByPrimal = entry.group_name === "Adaptations" && currentCulture.name.includes("Primal");
+
+        if (hasSameGroup || isBlockedByPrimal) {
+            return false;
         }
     }
-    return canBeAdded;
+
+    // Normalize to array of names
+    const currentTraitNames = currentFormTraitList.map(item => item.name);
+
+    // --- Forward check: entry conflicts with something already selected
+    if (Array.isArray(entry.incompatible_society_traits)) {
+        const incompatibleNames = entry.incompatible_society_traits.map(i => 
+            typeof i === "string" ? i : i.name
+        );
+
+        const hasIncompatible = incompatibleNames.some(name => currentTraitNames.includes(name));
+        if (hasIncompatible) {
+            return false;
+        }
+    }
+
+    // --- Reverse check: something already selected conflicts with entry
+    for (const trait of currentFormTraitList) {
+        if (Array.isArray(trait.incompatible_society_traits)) {
+            const incompatibleNames = trait.incompatible_society_traits.map(i =>
+                typeof i === "string" ? i : i.name
+            );
+
+            if (incompatibleNames.includes(entry.name)) {
+                return false;
+            }
+        }
+    }
+
+    return true;
 }
 
 function toggleArrayEntry(array, entry) {
@@ -3111,13 +3138,13 @@ function GenerateQuickLink() {
     if (name == "Ruler Name") {
         code += "," + "n";
     } else {
-        var modName = name.replace(" ", "%20");
+        var modName = name.replaceAll(" ", "%20");
         code += "," + modName;
     }
     if (raceName == "Race Name") {
         code += ":" + "r";
     } else {
-        var modRaceName = raceName.replace(" ", "%20");
+        var modRaceName = raceName.replaceAll(" ", "%20");
         code += ":" + modRaceName;
     }
 
@@ -3369,5 +3396,60 @@ function hexToDecimal(hex) {
 }
 
 function RebuildFromParam(code) {
+    console.log(code);
     reversLookUp(code);
+    spinner.style.display = "block"; // Show the spinner
+    fetch(
+        "https://script.google.com/macros/s/AKfycbz5r36EOFcrtfu2Y3CN8DdgDkJDiq6NHf7Y6JEv1IkngOG4we3F5uFU6o5aYFSnm5M4/exec",
+        {
+            method: "POST",
+            body: new URLSearchParams({
+                action: "incrementView",
+                buildId: window.location.href.split("?")[0] + "?u=" + code.replaceAll(" ", "%20")
+            })
+        }
+    )
+        .then((res) => res.json()) // Parse the JSON from response
+        .then((builds) => {
+            if (builds[0] != undefined) {
+                FillInBuildDetails(builds[0]);
+            }
+        })
+        .finally(() => {
+            spinner.style.display = "none"; // Hide spinner after fetch is done
+        });
+
+    if (window.location.href.indexOf("&edit")) {
+        // save current url for overwriting
+        document.getElementById("oldURL").innerHTML = window.location.href.split("?")[0] + "?u=" + code;
+        // show edit button
+        var editButton = document.getElementById("overwriteButton");
+        editButton.style.display = "block";
+        //   alert("Editing");
+    }
+
+    // check if build code is here
+
+    // if (build.editKey === getOrCreateUserEditKey()) {
+}
+
+function FillInBuildDetails(build) {
+    console.log(build);
+    var nameBuild = document.getElementById("buildName");
+    nameBuild.value = build.BuildName;
+    var notesBlock = document.getElementById("notesDisplay");
+    console.log(build.Notes);
+    var convertedNotes = convertBracketsToHTML(build.Notes);
+    console.log(convertedNotes);
+    convertedNotes = convertNamesToHTML(convertedNotes);
+    console.log(convertedNotes);
+    notesBlock.innerHTML = convertedNotes;
+    if (build.Tags != "") {
+        const tagArray = new Set(build.Tags.split(",").map((tag) => tag.trim()));
+        updateTagList(tagArray);
+    }
+
+    rawNotes = build.Notes;
+
+    // const tagArray = Array.from(selectedTags);
 }

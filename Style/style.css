@@ -149,7 +149,25 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-image: url(/evolved/Icons/9slicetooltip%20-%20Copy.png);
-    z-index: 999; /* keeps it above other elements */
+    z-index: 999;
+    /* keeps it above other elements */
+}
+
+.spinner {
+    border: 6px solid #00f5cf;
+    border-top: 6px solid #0a363f;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #myCenteredButton {
@@ -513,9 +531,12 @@ p {
     height: 250px;
     float: right;
     background-size: contain;
-    mask-image: url(/evolved/Icons/Interface/CosmicHappeningPortal.png); /* The image with alpha channel that will act as a mask */
-    mask-size: cover; /* Adjust the mask size to fit the element */
-    -webkit-mask-image: url(/evolved/Icons/Interface/CosmicHappeningPortal.png); /* Ensures compatibility with WebKit browsers */
+    mask-image: url(/evolved/Icons/Interface/CosmicHappeningPortal.png);
+    /* The image with alpha channel that will act as a mask */
+    mask-size: cover;
+    /* Adjust the mask size to fit the element */
+    -webkit-mask-image: url(/evolved/Icons/Interface/CosmicHappeningPortal.png);
+    /* Ensures compatibility with WebKit browsers */
     -webkit-mask-size: cover;
 }
 
@@ -744,6 +765,14 @@ tab {
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.generic-center {
+    height: auto;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
 }
 
 .unit_elite_skill {
@@ -1012,9 +1041,9 @@ tab {
 
 .spellStatsHighLighter {
     margin-top: -15px;
-    padding-bottom: 12px;
-
-    padding-top: 7px;
+    margin-bottom: -20px;
+    padding-bottom: 8px;
+    padding-top: 10px;
     position: relative;
     border-top: 1px solid rgb(47 134 162 / 20%);
     border-bottom: 1px solid rgb(11 13 2 / 20%);
@@ -1243,6 +1272,23 @@ hr {
     border-image-slice: 10 10 10 10;
 }
 
+.dlc-toggle {
+    background-color: #4b1d63;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    height: 30px;
+    border-width: 5px;
+    border-style: solid;
+    border-image: url(/evolved/Icons/9slicetooltip.png);
+    border-image-slice: 10 10 10 10;
+}
+.dlc-toggle.enabled {
+    background-color: #210a2a;
+    color: #dd69fc;
+}
+
 .button-random:active {
     background-color: black;
 }
@@ -1458,6 +1504,7 @@ HelpText {
     color: grey;
     font-size: 14px;
 }
+
 yellowText {
     color: gold;
     font-size: 14px;
@@ -1531,6 +1578,7 @@ silver {
     transform: rotate(45deg);
     background: linear-gradient(126deg, green 100%, #947c08);
 }
+
 .DRAGONLORDStriangle {
     position: absolute;
     top: -19px;
@@ -1591,11 +1639,12 @@ silver {
     position: absolute;
     z-index: -1;
 }
+
 .mid-text {
     text-align: center;
     position: relative;
 
-    font-size: 14px;
+    font-size: 17px;
     top: -30%;
     margin: -15px;
     text-shadow: 2px 2px 5px black;
@@ -1606,12 +1655,13 @@ silver {
         2px 2px 5px black,
         -2px -2px 5px black,
         1px 1px 0 #000;
-    color: whitesmoke;
+    color: #ffee64;
     opacity: 2;
 }
 
 .hero-text {
     text-align: center;
+    width: fit-content;
     position: relative;
     font-family: "Decorative", sans-serif;
     font-size: 35px;
@@ -1631,12 +1681,14 @@ silver {
 }
 
 .current-version {
+   
     text-align: left;
-    position: absolute;
+    width: fit-content;
+    position: relative;
     font-family: "Regular", sans-serif;
     font-size: 14px;
-    top: 58%;
-    left: 1%;
+    top: -35%;
+    /* left: 1%; */
     color: whitesmoke;
     opacity: 2;
 }
@@ -1658,6 +1710,8 @@ silver {
     display: none;
     overflow: hidden;
 }
+
 span.number-highlight {
-    color: #f3d451; /* Example: gold color */
+    color: #f3d451;
+    /* Example: gold color */
 }

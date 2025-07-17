@@ -12,86 +12,15 @@
          <script src="/evolved/Data/Builder.js"></script>
         <script src="/evolved/Data/Faction.js"></script>
         <script src="/evolved/Data/Search.js"></script>
+      <script src="/evolved/Data/Forge.js"></script>
         <script>
-        var CurrentType = "";
-       
+      
 
         function HandlePage() {
-
+            GenerateAllIconTypes();
         }
 
 
-        function showItemType(event, type) {
-            CurrentType = type.toLowerCase();
-            SetIcons(type);
-            ClearSelections();
-
-        }
-
-        function showInfusionType(event, infusionType) {
-            var list = new Array();
-            for (i in jsonItemForge) {
-                for (j in jsonItemForge[i].allowed_types) {
-                    if (jsonItemForge[i].allowed_types[j].type == CurrentType && jsonItemForge[i].category == infusionType) {
-                        list.push(jsonItemForge[i]);
-                    }
-                }
-            }
-
-            ShowItemForgeResults(list);
-        }
-
-        function ShowItemForgeResults(list) {
-            // get the selectionsholder
-            var selectionsHolder = document.getElementById("SelectionsHolder");
-            ClearSelections();
-            for (i in list) {
-                var newEntry = document.createElement("BUTTON");
-                newEntry.className = "list-button";
-                newEntry.innerHTML = list[i].name + " Cost: " + list[i].point_cost;
-                newEntry.addEventListener('click', TryToAddToItem(list[i]));
-                selectionsHolder.append(newEntry);
-            }
-        }
-
-        function TryToAddToItem(item) {
-            // check if points works
-            ClearResults();
-            var resultsHolder = document.getElementById("ResultsHolder");
-            var newEntry = document.createElement("BUTTON");
-            newEntry.className = "list-button";
-            newEntry.innerHTML = item.name + " Cost: " + item.point_cost;
-
-            resultsHolder.append(newEntry);
-
-
-        }
-
-        function ClearResults() {
-            var resultsHolder = document.getElementById("ResultsHolder");
-            resultsHolder.innerHTML = "";
-        }
-
-        function ClearSelections() {
-
-            var selectionsHolder = document.getElementById("SelectionsHolder");
-            selectionsHolder.innerHTML = "";
-        }
-
-        function SetIcons(id) {
-            var thisNameAll = document.querySelectorAll('.subCultureName');
-
-            for (let index = 0; index < thisNameAll.length; index++) {
-                thisNameAll[index].style.color = "grey";
-
-            }
-            var thisName = document.getElementById('subCultureName' + id);
-            if (thisName == null) {
-                return;
-            }
-            thisName.style.color = "white";
-
-        }
 
     </script>
 
@@ -108,47 +37,32 @@
 
 
     <div class="w3-container">
-        <div class="subcultureHolder">
-            <button onclick="showItemType(event,'Primary')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_attunement.png width="50px">
-                <span class="subCultureName" id="subCultureNamePrimary">Primary</span>
-            </button>
-            <button onclick="showItemType(event,'Trinket')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_potential.png width="50px">
-                <span class="subCultureName" id="subCultureNameTrinket">Trinket</span>
-            </button>
+      
+           
 
 
         </div>
-        <div style="display: flex">
+        <div class="itemforgeBG" >
             <div id="Selections" class="backdrop">Options
                 <div id="SelectionsHolder" class="selections"></div>
             </div>
 
             <div>Infusions
+                <div class="grid" id="itemTypeHolder"></div>
                 <div class="infusionsHolder">
-                    <button onclick="showInfusionType(event,'damage')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_attunement.png width="100px">
+                    <button onclick="showInfusionType('damage')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_attunement.png width="100px">
                         <span class="subCultureName" id="subCultureNameAttunement">Damage</span>
                     </button>
-                    <div>Points 0/5</div>
-                    <button onclick="showInfusionType(event,'ability')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_potential.png width="100px">
+                    <div id="points">Points 0/5</div><div><input type="checkbox" onchange="swapPointMax(this)">+1 Giant</div> 
+                    <button onclick="showInfusionType('ability')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_potential.png width="100px">
                         <span class="subCultureName" id="subCultureNamePotential">Ability</span>
                     </button>
                 </div>
                 <div class="infusionsHolder">
-                    <button onclick="showInfusionType(event,'passive1')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_attunement.png width="50px">
+                    <button onclick="showInfusionType('passive')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_attunement.png width="50px">
                         <span class="subCultureName" id="subCultureNameAttunement1">Passive</span>
                     </button>
-                    <button onclick="showInfusionType(event,'passive2')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_potential.png width="50px">
-                        <span class="subCultureName" id="subCultureNamePotential1">Passive</span>
-                    </button>
-                    <button onclick="showInfusionType(event,'passive3')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_attunement.png width="50px">
-                        <span class="subCultureName" id="subCultureNameAttunement2">Passive</span>
-                    </button>
-                    <button onclick="showInfusionType(event,'passive4')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_potential.png width="50px">
-                        <span class="subCultureName" id="subCultureNamePotential3">Passive</span>
-                    </button>
-                    <button onclick="showInfusionType(event,'passive5')" class="subscultureButton"><img src=/evolved/Icons/FactionCreation/mystic_school_of_potential.png width="50px">
-                        <span class="subCultureName" id="subCultureNamePotential4">Passive</span>
-                    </button>
+                  
 
                 </div>
             </div>
@@ -159,8 +73,7 @@
 
 
 
-        </div>
-
+        
     </div>
 
 
@@ -171,9 +84,22 @@
 
 </html>
 <style>
+    
+    .grid{
+       
+    display: grid
+;
+    grid: 80px / 80px 80px 80px 80px 80px 80px;
+    grid-gap: 10px;
+    padding: 10px;
+    }
     .backdrop {
         color: white;
-        background-color: darkgreen;
+      
+    border-style: solid;
+    border-image: url(/evolved/Icons/9slice.png);
+    border-image-slice: 30 fill;
+    border-image-repeat: stretch;
     }
 
     .infusionsHolder {
@@ -183,12 +109,32 @@
         justify-content: space-between;
 
     }
+    
+    .itemforgeBG{
+        display: flex;
+        background-image: url(/evolved/Icons/ItemForge/ItemForgeBG.png);
+    }
+    .itemSelectionButton{
+        
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    }
+    
+    .itemSelectionButton:hover{
+        filter: brightness(2);
+    }
 
     .selections {
         color: white;
         width: 400px;
         min-width: 400px;
         min-height: 1000px;
+    }
+    .itemSlotName{
+        position: relative;
+        top: -40px;
+        color: white;
     }
 
     .list-button {
@@ -205,6 +151,10 @@
         position: relative;
         display: flex;
         justify-content: normal;
+    }
+    .list-button:disabled{
+        color:red;
+    }
 
 </style>
 <footer>

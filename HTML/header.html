@@ -9,50 +9,72 @@
         <meta charset="UTF-8" />
         <title>Age of Wonders 4 Evolved</title>
     </head>
+
     <body>
-        <div style="color: white; font-size: 14px; z-index: 10; position: relative; width: fit-content">
-            Settings<br />
-            Selectable Tooltips: <input type="checkbox" id="tooltipCheckbox" onclick="CheckBoxTooltips()" /><br>
-              Highlight Numbers: <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
-            <select id="languageSelect" onchange="SwitchToBeta()" style="display: none">
-                <option value="EN">English</option>
-                <option value="DE">Deutsch</option>
-                <option value="JA">Japanese</option>
-                <option value="KO">Korean</option>
-                <option value="PL">Polish</option>
-                <option value="ES">Spanish</option>
-                <option value="RU">Russian</option>
-                <option value="CN">Chinese</option>
-                <option value="FR">French</option>
-            </select>
-        </div>
-        <div style="color: white; font-size: 15px; position: absolute; right: 10px; top: 5px; z-index: 1">
-            Other Databases:<br /><br />
-            <a class="prett" href="https://minionsart.github.io/aow3db/" target="_blank"
-                ><img
-                    style="margin-top: -20px; margin-bottom: -10px"
-                    src="/evolved/Icons/Interface/aow3icon.png"
-                    width="35px" />AOW3</a
-            >
-            <br /><br />
-            <a class="prett" href="https://minionsart.github.io/aowp/" target="_blank"
-                ><img
-                    style="margin-top: -20px; margin-bottom: -10px"
-                    src="/evolved/Icons/Interface/aowpficon.png"
-                    width="35px" />AOW-Planetfall</a
-            >
+        <div class="topbar">
+            <div style="display: flex">
+                <div class="dropdown">
+                    <div class="dropdown-title">Settings ▼</div>
+                    <div class="dropdown-content">
+                        <label>
+                            Selectable Tooltips:
+                            <input type="checkbox" id="tooltipCheckbox" onclick="CheckBoxTooltips()" />
+                        </label>
+                        <br />
+                        <label>
+                            Highlight Numbers:
+                            <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
+                        </label>
+                        <br />
+                        <label style="display: none">
+                            Language:
+                            <select id="languageSelect" onchange="SwitchToBeta()">
+                                <option value="EN">English</option>
+                                <option value="DE">Deutsch</option>
+                                <option value="JA">Japanese</option>
+                                <option value="KO">Korean</option>
+                                <option value="PL">Polish</option>
+                                <option value="ES">Spanish</option>
+                                <option value="RU">Russian</option>
+                                <option value="CN">Chinese</option>
+                                <option value="FR">French</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="donate">
+                    <a class="prett" href="/evolved/HTML/Donate.html">
+                        Donate<img src="/evolved/Icons/Text/health.png" width="20px" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-title">Other Databases ▼</div>
+                <div class="dropdown-content">
+                    <a class="prett" href="https://minionsart.github.io/aow3db/" target="_blank">
+                        <img src="/evolved/Icons/Interface/aow3icon.png" width="20px" /> AoW III
+                    </a>
+                    <a class="prett" href="https://minionsart.github.io/aowp/" target="_blank">
+                        <img src="/evolved/Icons/Interface/aowpficon.png" width="20px" /> AoW Planetfall
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="header-img">
+            <div id="topButtonContainer" style="display: none">
+                <div id="myCenteredButton"><a href="/evolved/HTML/Donate.html">Donate</a></div>
+            </div>
+
             <div class="hero-text">Age of Wonders 4 Evolved</div>
+            <div class="mid-text" style="display: block; margin: 15px">
+                Switch To Griffon Beta Dataset:<input type="checkbox" id="showBetaCheckbox" onclick="SwitchToBeta()" />
+                <br /><i>(only changes exported dataset, images can break)</i>
+            </div>
+            <div class="current-version">Updated: 17th of July, 2025</div>
 
-            <div class="mid-text">
-                <img src="/evolved/Icons/Interface/giant_kings.png" width="400px" />
-
-                <div class="mid-text" style="display: none">
-                    Switch To Ogre Beta Dataset:<input type="checkbox" id="showBetaCheckbox" onclick="SwitchToBeta()" />
-                    <br />(may have page/image issues)(only changes exported data)
-                </div>
-                <div class="current-version">Updated: 15 APRIL 2025</div>
+            <div class="hero-text" style="display:none">
+                <img src="/evolved/Icons/Interface/giant_kings.png" width="442px" />
             </div>
             <ul id="menu">
                 <li>
@@ -619,7 +641,7 @@
                         ><img
                             style="margin-top: -20px; margin-bottom: -10px"
                             src="/evolved/Icons/Interface/Info.png"
-                            width="40px" />Faction/Hero Planners</a
+                            width="40px" />Builds/Planners</a
                     >
                     <ul class="menus">
                         <li>
@@ -631,6 +653,11 @@
                         <li>
                             <a id="builder-hero" href="/evolved/HTML/HeroBuilder.html"
                                 ><img src="/evolved/Icons/UnitIcons/adaptive_armor.png" width="20px" />Hero Builder</a
+                            >
+                        </li>
+                        <li>
+                            <a id="build-list" href="/evolved/HTML/FactionList.html"
+                                ><img src="/evolved/Icons/UnitIcons/000003BD00002EA7.png" width="20px" />Builds List</a
                             >
                         </li>
                     </ul>
@@ -650,4 +677,63 @@
         <dialog id="hoverDiv" class="tooltiptextnew"></dialog>
         <dialog id="hoverDiv2" class="tooltiptextnew"></dialog>
     </body>
+
+    <style>
+        .topbar {
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .donate {
+            margin-left: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-title {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: white;
+            min-width: 150px;
+            padding: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+        }
+
+        .dropdown-content img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .dropdown-content select,
+        .dropdown-content input {
+            margin: 4px 0;
+        }
+    </style>
 </html>

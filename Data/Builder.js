@@ -3591,34 +3591,34 @@ function showUnit(unitID, subcultureCheck, resID) {
         if (unitEN.primary_passives[x].icon == "findlowmaintenanceicon") {
             if (unitEN.upkeep.indexOf("influence") != -1) {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + "*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.8) + "*";
             } else {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + ">*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.8) + ">*";
             }
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
-                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.75) + "*";
+                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.8) + "*";
             }
         }
 
         if (unitEN.primary_passives[x].slug.indexOf("high_maintenance") != -1) {
             if (unitEN.upkeep.indexOf("influence") != -1) {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + "*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.20) + "*";
             } else {
                 tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + ">*";
+                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.20) + ">*";
             }
 
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + "*";
+                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.20) + "*";
                 } else {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + ">*";
+                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.20) + ">*";
                 }
             }
         }

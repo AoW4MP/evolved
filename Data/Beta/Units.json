@@ -6540,6 +6540,9 @@
   ],
   "medal_rewards_5": [
    {
+    "slug": "0000035700000332"
+   },
+   {
     "slug": "0000048b00000c6e"
    },
    {
@@ -9385,6 +9388,12 @@
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002dc"
    },
    {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002dc"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002dc"
+   },
+   {
     "slug": "000003e300004c97"
    }
   ],
@@ -9471,6 +9480,12 @@
   "abilities": [
    {
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002df"
+   },
+   {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002df"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002df"
    },
    {
     "slug": "000003e300004c97"
@@ -9561,6 +9576,12 @@
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002e1"
    },
    {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002e1"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002e1"
+   },
+   {
     "slug": "000003e300004c97"
    }
   ],
@@ -9647,6 +9668,12 @@
   "abilities": [
    {
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002dd"
+   },
+   {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002dd"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002dd"
    },
    {
     "slug": "000003e300004c97"
@@ -9737,6 +9764,12 @@
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002de"
    },
    {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002de"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002de"
+   },
+   {
     "slug": "000003e300004c97"
    }
   ],
@@ -9825,6 +9858,12 @@
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002e0"
    },
    {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002e0"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002e0"
+   },
+   {
     "slug": "000003e300004c97"
    }
   ],
@@ -9911,6 +9950,12 @@
   "abilities": [
    {
     "slug": "magic_blast_(single)_ability_000004900000031D_00000497000002db"
+   },
+   {
+    "slug": "summon_totem_animal_ability_000004900000031D_00000497000002db"
+   },
+   {
+    "slug": "spiritual_healing_ability_000004900000031D_00000497000002db"
    },
    {
     "slug": "000003e300004c97"
@@ -24437,7 +24482,7 @@
   "upkeep": "8<gold></gold> ",
   "id": "decaying_zombie",
   "name": "Decaying Zombie",
-  "hp": 50,
+  "hp": 60,
   "armor": 0,
   "resistance": 0,
   "medal_rewards_2": [
@@ -26390,6 +26435,9 @@
   ],
   "medal_rewards_5": [
    {
+    "slug": "0000035700000332"
+   },
+   {
     "slug": "0000048b00000c6e"
    },
    {
@@ -26520,7 +26568,7 @@
   "upkeep": "8<gold></gold> ",
   "id": "zombie",
   "name": "Zombie",
-  "hp": 50,
+  "hp": 60,
   "armor": 0,
   "resistance": 0,
   "medal_rewards_2": [
@@ -26587,7 +26635,7 @@
     "slug": "magic_bolts_ability_000003E300005F60"
    },
    {
-    "slug": "weakening_phase_ability_000003E300005F60"
+    "slug": "phase_ability_000003E300005F60"
    },
    {
     "slug": "wail_of_the_banshee_ability_000003E300005F60"
@@ -26605,7 +26653,7 @@
    }
   ],
   "description": "",
-  "cost": "220<unitprod></unitprod> 50<souls></souls> ",
+  "cost": "220<unitprod></unitprod> 140<gold></gold> ",
   "resid": 4273492483936,
   "medal_rewards_3": [
    {
@@ -27824,14 +27872,15 @@
   "evolve_target": "caustic_worm"
  },
  {
-  "primary_passives": [],
+  "primary_passives": [
+   {
+    "slug": "000003e3000064a5"
+   }
+  ],
   "mp": 48,
   "abilities": [
    {
     "slug": "weak_point_shot_ability_000003E300005C2B"
-   },
-   {
-    "slug": "call_war_hound_ability_000003E300005C2B"
    },
    {
     "slug": "0000034500000469"
@@ -35791,7 +35840,7 @@
     "slug": "bone_shattering_howl_ability_000003E300004447"
    },
    {
-    "slug": "terrifying_gorging_ability_000003E300004447"
+    "slug": "terrifying_gorging_ability_(monster_version)_000003E300004447"
    },
    {
     "slug": "0000034500000469"

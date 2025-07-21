@@ -10,7 +10,7 @@
   "description": "Single magical attack at target unit.",
   "name": "Condemning Blast",
   "slug": "magic_blast_(single)_ability_000004C0000004F3",
-  "damage": "30<damagespirit></damagespirit> ",
+  "damage": "20<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -198,7 +198,7 @@
   "description": "Single magical attack at target unit.",
   "name": "Condemning Blast",
   "slug": "magic_blast_(single)_ability_000004C0000004EB",
-  "damage": "16<damagespirit></damagespirit> ",
+  "damage": "12<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -5517,6 +5517,52 @@
   "icon": "000003E600000566"
  },
  {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Crocodile</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Mire Crocodile.</bullet><bullet>Consumes any remaining stacks of Fury of the Mire Crocodile on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Crocodile",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002dc",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002dc",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
+ },
+ {
   "description": "Spiritual Healing:<bulletlist><bullet>Heals an additional 10<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Cooldown reduced by 1<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Champion Spiritual Healing",
   "slug": "0000048b00000c04",
@@ -5559,6 +5605,52 @@
   "icon": "000003E600000566"
  },
  {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Crow</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Storm Crow.</bullet><bullet>Consumes any remaining stacks of Fury of the Storm Crow on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Crow",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002df",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002df",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
+ },
+ {
   "modifiers": [
    {
     "description": "Gain 2 stacks of Rising Fury on use.",
@@ -5593,6 +5685,52 @@
    }
   ],
   "icon": "000003E600000566"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Mammoth</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Glacial Mammoth.</bullet><bullet>Consumes any remaining stacks of Fury of the Glacial Mammoth on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Mammoth",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002e1",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002e1",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
  },
  {
   "modifiers": [
@@ -5631,6 +5769,52 @@
   "icon": "000003E600000566"
  },
  {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Sabertooth</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Ash Sabertooth.</bullet><bullet>Consumes any remaining stacks of Fury of the Ash Sabertooth on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Sabertooth",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002dd",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002dd",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
+ },
+ {
   "modifiers": [
    {
     "description": "Gain 2 stacks of Rising Fury on use.",
@@ -5665,6 +5849,52 @@
    }
   ],
   "icon": "000003E600000566"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Serpent</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Dune Serpent.</bullet><bullet>Consumes any remaining stacks of Fury of the Dune Serpent on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Serpent",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002de",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002de",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
  },
  {
   "modifiers": [
@@ -5703,6 +5933,52 @@
   "icon": "000003E600000566"
  },
  {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Spider</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Tunneling Spider.</bullet><bullet>Consumes any remaining stacks of Fury of the Tunneling Spider on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Spider",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002e0",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002e0",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
+ },
+ {
   "modifiers": [
    {
     "description": "Gain 2 stacks of Rising Fury on use.",
@@ -5737,6 +6013,52 @@
    }
   ],
   "icon": "000003E600000566"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "<bulletlist><bullet>Summon a <hyperlink>Primal Wolf</hyperlink> onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains Frenzy.</bullet><bullet>Requires at least 1 stack of Fury of the Sylvan Wolf.</bullet><bullet>Consumes any remaining stacks of Fury of the Sylvan Wolf on use.</bullet></bulletlist></bulletlist><br></br><br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Summon Primal Wolf",
+  "slug": "summon_totem_animal_ability_000004900000031D_00000497000002db",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "1",
+  "icon": "0000049700000197"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 1 stacks of Rising Fury if it has a Primal Animal Boon.</bullet></bulletlist>",
+  "name": "Spiritual Healing",
+  "slug": "spiritual_healing_ability_000004900000031D_00000497000002db",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
+  "icon": "00000497000001C3"
  },
  {
   "modifiers": [
@@ -13813,7 +14135,7 @@
   "description": "Deal damage to target unit and create <hyperlink>Afflicting Miasma</hyperlink> on their hex.",
   "name": "Miasma Shot",
   "slug": "miasma_shot_ability_000003E30000721B",
-  "damage": "24<damageblight></damageblight> ",
+  "damage": "20<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -14829,7 +15151,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Condemned until the end of battle.",
+    "description": "Base 60% chance of inflicting Condemned until the end of battle.",
     "name": "Condemned",
     "count": 1
    }
@@ -14865,7 +15187,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Base 90% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated, if unsuccessful, the unit sustains 30 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.<br></br><br></br>The unit enters <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "Base 60% chance of making target non-<hyperlink>Hero</hyperlink> enemy unit become Dominated for 3 <turn></turn> Turns, if unsuccessful, the unit sustains 30 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.<br></br><br></br>This unit enters <hyperlink>Defense Mode</hyperlink> after use.",
   "name": "Convert",
   "slug": "convert_ability_000003E3000060E4",
   "damage": "",
@@ -15065,9 +15387,9 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "This unit teleports to target hex and applies Weakened to adjacent enemies.",
-  "name": "Weakening Phase",
-  "slug": "weakening_phase_ability_000003E300005F60",
+  "description": "Caster moves to target hex. Leaves 1 <hyperlink>Action Point</hyperlink>.",
+  "name": "Phase",
+  "slug": "phase_ability_000003E300005F60",
   "damage": "",
   "requisites": [
    {
@@ -15078,9 +15400,9 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "3",
-  "icon": "8D1FD0C9000004B1"
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "range": "6",
+  "icon": "000003E3000045B1"
  },
  {
   "modifiers": [],
@@ -15674,20 +15996,10 @@
   "icon": "000003E300006607"
  },
  {
-  "notes": [
-   {
-    "note": "Can only be used once per battle."
-   }
-  ],
-  "description": "Summon a loyal War Hound to your side.<br></br>This summon lasts for 3 <turn></turn> Turns.",
-  "name": "Call War Hound",
-  "slug": "call_war_hound_ability_000003E300005C2B",
-  "damage": "",
-  "requisites": [],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "1",
-  "icon": "8D1FD0C900000436"
+  "description": "At the start of battle, summons a War Hound that inflicts Marked and Sundered Defense with its attack.<br></br><br></br>Doesn't work in water combat.",
+  "name": "Unleash the Hounds",
+  "slug": "000003e3000064a5",
+  "icon": "000003E3000064A6"
  },
  {
   "description": "At the start of each <turn></turn> <hyperlink>Turn</hyperlink>, summons a random Tier I or II Animal unit.<br></br>This summon lasts for 3 <turn></turn> Turns.",
@@ -19981,13 +20293,13 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Has a base 90% chance of consuming the target Tier I, II, or III enemy unit.<bulletlist><bullet>If successful, heals this unit +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If resisted, deals 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> instead.</bullet></bulletlist><br></br>When this unit is killed, the last unit that was consumed is brought back.",
+  "description": "Has a base 90% chance of consuming target non-<hyperlink>Hero</hyperlink> enemy unit.<bulletlist><bullet>If successful, heals this unit +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If resisted, deals 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> instead.</bullet></bulletlist><br></br>When this unit is killed, the last unit that was consumed is brought back.",
   "name": "Terrifying Gorging",
-  "slug": "terrifying_gorging_ability_000003E300004447",
+  "slug": "terrifying_gorging_ability_(monster_version)_000003E300004447",
   "damage": "",
   "requisites": [],
   "accuracy": "100%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<fullaction></fullaction>",
   "range": "1",
   "icon": "000003E300004435"
  },
@@ -20328,7 +20640,7 @@
  {
   "modifiers": [
    {
-    "description": "Inflicts Burning for 3 <turn></turn> Turns.",
+    "description": "Inflicts 3 stacks of Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
     "count": 1
    }
@@ -20943,13 +21255,13 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Has a base 90% chance of consuming the target Tier I, II, or III enemy unit.<bulletlist><bullet>If successful, heals this unit +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If resisted, deals 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> instead.</bullet></bulletlist><br></br>When this unit is killed, the last unit that was consumed is brought back.",
+  "description": "Has a base 90% chance of consuming target non-<hyperlink>Hero</hyperlink> enemy unit.<bulletlist><bullet>If successful, heals this unit +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If resisted, deals 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> instead.</bullet></bulletlist><br></br>When this unit is killed, the last unit that was consumed is brought back.",
   "name": "Terrifying Gorging",
-  "slug": "terrifying_gorging_ability_000003BD00002895",
+  "slug": "terrifying_gorging_ability_(monster_version)_000003BD00002895",
   "damage": "",
   "requisites": [],
   "accuracy": "100%",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<fullaction></fullaction>",
   "range": "1",
   "icon": "000003E300004435"
  },
@@ -21382,8 +21694,8 @@
   "icon": "000004C00000065E"
  },
  {
-  "description": "Summon a <hyperlink>Bone Wyvern</hyperlink> at the start of battle. Doesn't work in water combat.<br></br><br></br>This replaces the skill from Soul Keeper.",
-  "name": "Bone Wyvern",
+  "description": "Summon a <hyperlink>Bone Wyvern</hyperlink> at the start of battle.",
+  "name": "Bone Wyvern Keeper",
   "slug": "000004c000000653",
   "icon": "000004C000000652"
  },
@@ -21851,7 +22163,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "The caster:<bulletlist><bullet>Refreshes all ability cooldowns</bullet><bullet>Enters <hyperlink>Defense Mode</hyperlink></bullet><bullet>Gains Elemental Focus</bullet></bulletlist>",
+  "description": "The caster:<bulletlist><bullet>Refreshes all ability cooldowns</bullet><bullet>Gains Elemental Focus</bullet></bulletlist>",
   "name": "Ritual of Elements",
   "slug": "hs_mage_ritual_of_elements_ability_000003BD00002895",
   "damage": "",
@@ -21861,7 +22173,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
   "range": "0",
   "icon": "000004C000000870"
  },
@@ -22284,7 +22596,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Create <hyperlink>Obscuring</hyperlink> flora in a 1-hex radius.<br></br>Create Mist in a 1-hex radius for 3 <turn></turn> <hyperlink>Turns</hyperlink>.",
+  "description": "Create <hyperlink>Obscuring</hyperlink> flora in a 1-hex radius.<br></br>Create Mist in a 1-hex radius for 3 <turn></turn> <hyperlink>Turns</hyperlink>.<br></br>Enter <hyperlink>Defense Mode</hyperlink> after use",
   "name": "Protective Wildgrowth",
   "slug": "hs_ritualist_protective_wildgrowth_ability_000003BD00002895",
   "damage": "",
@@ -22397,9 +22709,9 @@
  },
  {
   "modifiers": [],
-  "description": "Fire a ranged attack at an enemy that cannot miss.",
-  "name": "True Shot",
-  "slug": "hs_ranger_power_shot_ability_000003BD00002895",
+  "description": "Fire a ranged attack at the target unit.",
+  "name": "Sniper Shot",
+  "slug": "hs_ranger_sniper_shot_ability_000003BD00002895",
   "damage": "40<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -22412,10 +22724,13 @@
     "requisite": "Single Shot"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<fullaction></fullaction>",
   "range": "6",
   "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
@@ -22680,7 +22995,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target all adjacent enemies:<bulletlist><bullet>Remove all <hyperlink>Negative Status Effects</hyperlink>.</bullet><bullet>Deals 12 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> for each <hyperlink>Negative Status Effect</hyperlink> removed, up to 5 times.</bullet></bulletlist>",
+  "description": "Target all adjacent enemies:<bulletlist><bullet>Deals 12 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> for each <hyperlink>Negative Status Effect</hyperlink> on each target, up to 5 times.</bullet></bulletlist><br></br>Enter <hyperlink>Defense Mode</hyperlink> after use",
   "name": "Amplify Chaos",
   "slug": "hs_amplify_chaos_ability_000003BD00002895",
   "damage": "",
@@ -23913,7 +24228,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<freeaction></freeaction>",
   "range": "3",
   "icon": "000004C000000BB4"
  },
@@ -23962,7 +24277,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
   "range": "3",
   "icon": "000004C000000B54"
  },
@@ -23973,15 +24288,14 @@
   "icon": "0000049700000704"
  },
  {
-  "notes": [
+  "modifiers": [
    {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 1 <turn></turn>"
+    "description": "Inflicts 2 stacks of Decaying for 3 <turn></turn>.",
+    "name": "Decaying",
+    "count": 1
    }
   ],
-  "description": "Target enemy units in a 1-hex radius suffer:<bulletlist><bullet>10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Base 90% chance of suffering 1 Decaying.</bullet></bulletlist>",
+  "description": "Target enemy units in a 1-hex radius suffer:<bulletlist><bullet>10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Curse",
   "slug": "hs_warlock_curse_ability_000003BD00002895",
   "damage": "",
@@ -23993,6 +24307,14 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "6",
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
   "icon": "000004C000000789"
  },
  {
@@ -27354,7 +27676,7 @@
   "icon": "0000049700000D14"
  },
  {
-  "description": "When this unit dies, adjacent enemy units suffer 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and 1x Decaying.",
+  "description": "When this unit dies, adjacent enemy units suffer 15 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and 2x Decaying.",
   "name": "Decaying Dissolution",
   "slug": "000004c000000be2",
   "icon": "0000048D0000191F"

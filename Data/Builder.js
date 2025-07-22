@@ -4232,7 +4232,7 @@ function addLevelUpInfo(units, a, holder) {
         {
             name: "Legend",
             icon: "medal_legend",
-            xp: evolveTarget ? 4 : 10,
+            xp: evolveTarget ? 6 : 10,
             rewards: evolveTarget ? [] : units.medal_rewards_6
         }
     ];

@@ -23,6 +23,9 @@
     "slug": "light_heal_ability_000004C0000004F3"
    },
    {
+    "slug": "brilliant_phase_ability_000004C0000004F3"
+   },
+   {
     "slug": "000003e300004c97"
    }
   ],
@@ -12566,7 +12569,7 @@
   "mp": 32,
   "hp": 80,
   "armor": 2,
-  "resistance": 2,
+  "resistance": 4,
   "medal_rewards_2": [
    {
     "slug": "0000048b00000c6e"
@@ -17863,7 +17866,7 @@
     "slug": "melee_charge_strike_(base)_ability_0000041B00001492"
    },
    {
-    "slug": "phase_ability-_no_cooldown_0000041B00001492"
+    "slug": "shifting_phase_ability_0000041B00001492"
    },
    {
     "slug": "0000034500000469"
@@ -17895,7 +17898,7 @@
   "id": "phase_beast",
   "name": "Phase Beast",
   "hp": 100,
-  "armor": 5,
+  "armor": 6,
   "resistance": 4,
   "medal_rewards_2": [
    {
@@ -19481,7 +19484,7 @@
   "name": "Bone Horror",
   "hp": 90,
   "armor": 3,
-  "resistance": 2,
+  "resistance": 3,
   "medal_rewards_2": [
    {
     "slug": "0000048b00000c6e"
@@ -19864,7 +19867,7 @@
   "upkeep": "20<gold></gold> ",
   "id": "spirit_wolf",
   "name": "Spirit Wolf",
-  "hp": 80,
+  "hp": 90,
   "armor": 5,
   "resistance": 3,
   "medal_rewards_2": [
@@ -20124,6 +20127,9 @@
    }
   ],
   "medal_rewards_5": [
+   {
+    "slug": "0000048b00000c58"
+   },
    {
     "slug": "0000048b00000c6e"
    }
@@ -26635,7 +26641,7 @@
     "slug": "magic_bolts_ability_000003E300005F60"
    },
    {
-    "slug": "phase_ability_000003E300005F60"
+    "slug": "weakening_phase_ability_000003E300005F60"
    },
    {
     "slug": "wail_of_the_banshee_ability_000003E300005F60"
@@ -26955,7 +26961,7 @@
   "upkeep": "20<gold></gold> ",
   "id": "astral_serpent",
   "name": "Astral Serpent",
-  "hp": 80,
+  "hp": 90,
   "armor": 4,
   "resistance": 4,
   "medal_rewards_2": [
@@ -27872,15 +27878,14 @@
   "evolve_target": "caustic_worm"
  },
  {
-  "primary_passives": [
-   {
-    "slug": "000003e3000064a5"
-   }
-  ],
+  "primary_passives": [],
   "mp": 48,
   "abilities": [
    {
     "slug": "weak_point_shot_ability_000003E300005C2B"
+   },
+   {
+    "slug": "call_war_hound_ability_000003E300005C2B"
    },
    {
     "slug": "0000034500000469"

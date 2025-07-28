@@ -56,6 +56,42 @@
   "icon": "000004C0000004F5"
  },
  {
+  "modifiers": [
+   {
+    "description": "Inflict Blind for 1 <turn></turn> Turn.",
+    "name": "Blind",
+    "count": 1
+   }
+  ],
+  "description": "Deals damage and applies Blind to units in a 1-hex radius. The unit then teleports to target hex.",
+  "name": "Brilliant Phase",
+  "slug": "brilliant_phase_ability_000004C0000004F3",
+  "damage": "10<damagespirit></damagespirit> ",
+  "requisites": [
+   {
+    "requisite": "Magic"
+   },
+   {
+    "requisite": "Movement"
+   },
+   {
+    "requisite": "Teleport"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   },
+   {
+    "note": "Starts on cooldown: 1<turn></turn>"
+   }
+  ],
+  "icon": "000004C0000004F9"
+ },
+ {
   "description": "Ends its turn and goes into a defensive mode:<bulletlist><bullet>Extends its <hyperlink>Zone of Control</hyperlink> to all adjacent hexes.</bullet><bullet>+2 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>Immune to <hyperlink><flank></flank> Flanking</hyperlink>.</bullet><bullet>All adjacent friendly units gain +3 <resistance></resistance> <hyperlink>Resistance</hyperlink> and +3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>",
   "name": "Defense Mode: Warding",
   "slug": "000003e300004c97",
@@ -229,7 +265,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has 2 Negative Status Effects removed.</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has 1 Negative Status Effects removed.</bullet></bulletlist>",
   "name": "Lesser Heal",
   "slug": "lesser_heal_ability_000004C0000004EB",
   "damage": "",
@@ -10744,10 +10780,14 @@
   "icon": "000003EB0000040D"
  },
  {
-  "notes": [],
-  "description": "Caster moves to target hex. Leaves 1 <hyperlink>Action Point</hyperlink>.",
-  "name": "Phase",
-  "slug": "phase_ability-_no_cooldown_0000041B00001492",
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "This unit teleports to target hex and becomes distorted, gaining 40% Evasion for 1 <turn></turn> <hyperlink>Turn</hyperlink>.",
+  "name": "Shifting Phase",
+  "slug": "shifting_phase_ability_0000041B00001492",
   "damage": "",
   "requisites": [
    {
@@ -10758,9 +10798,9 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
-  "icon": "000003E3000045B1"
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
+  "icon": "8D1FD0C9000004B5"
  },
  {
   "description": "Upon sustaining damage, this unit teleports to a location away from its enemies within 3 hexes.<br></br>Works once per turn.",
@@ -11923,6 +11963,12 @@
   "icon": "0000041B000003BA"
  },
  {
+  "description": "Conjure Animal:<bulletlist><bullet>Now summons a Tier II animal.</bullet></bulletlist>",
+  "name": "Champion Conjure Animal",
+  "slug": "0000048b00000c58",
+  "icon": "000003E30000627B"
+ },
+ {
   "modifiers": [
    {
     "description": "Base 60% chance of inflicting Poisoned for 3 <turn></turn> Turns.",
@@ -11933,7 +11979,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_0000041B00000379",
-  "damage": "13<damagephysical></damagephysical> ",
+  "damage": "8<damagephysical></damagephysical> 4<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -11976,7 +12022,7 @@
  },
  {
   "modifiers": [],
-  "description": "Launches a massive projectile. Unit has to reload the next turn.",
+  "description": "Deals damage to a target over a long range.",
   "name": "Ballista",
   "slug": "launch_ability_00000415000003EE",
   "damage": "30<damagephysical></damagephysical> ",
@@ -12051,7 +12097,7 @@
  },
  {
   "modifiers": [],
-  "description": "Launches a massive projectile. Unit has to reload the next turn.",
+  "description": "Deals damage to a target over a long range.",
   "name": "Catapult",
   "slug": "launch_ability_000003FE00000787",
   "damage": "20<damagephysical></damagephysical> ",
@@ -12081,7 +12127,7 @@
  },
  {
   "modifiers": [],
-  "description": "Launches a massive projectile. Unit has to reload the next turn.",
+  "description": "Deals damage to targets in a 1-hex radius over a long range.",
   "name": "Trebuchet",
   "slug": "launch_ability_000003FE000000EB",
   "damage": "20<damagephysical></damagephysical> ",
@@ -15387,9 +15433,9 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Caster moves to target hex. Leaves 1 <hyperlink>Action Point</hyperlink>.",
-  "name": "Phase",
-  "slug": "phase_ability_000003E300005F60",
+  "description": "This unit teleports to target hex and applies Weakened to adjacent enemies.",
+  "name": "Weakening Phase",
+  "slug": "weakening_phase_ability_000003E300005F60",
   "damage": "",
   "requisites": [
    {
@@ -15400,9 +15446,9 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
-  "icon": "000003E3000045B1"
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
+  "icon": "8D1FD0C9000004B1"
  },
  {
   "modifiers": [],
@@ -15996,10 +16042,20 @@
   "icon": "000003E300006607"
  },
  {
-  "description": "At the start of battle, summons a War Hound that inflicts Marked and Sundered Defense with its attack.<br></br><br></br>Doesn't work in water combat.",
-  "name": "Unleash the Hounds",
-  "slug": "000003e3000064a5",
-  "icon": "000003E3000064A6"
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "description": "Summon a loyal War Hound to your side.<br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Call War Hound",
+  "slug": "call_war_hound_ability_000003E300005C2B",
+  "damage": "",
+  "requisites": [],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "1",
+  "icon": "8D1FD0C900000436"
  },
  {
   "description": "At the start of each <turn></turn> <hyperlink>Turn</hyperlink>, summons a random Tier I or II Animal unit.<br></br>This summon lasts for 3 <turn></turn> Turns.",
@@ -20785,7 +20841,7 @@
  },
  {
   "modifiers": [],
-  "description": "Launches a massive projectile. Unit has to reload the next turn.",
+  "description": "Deals damage to a target over a long range.",
   "name": "Catapult",
   "slug": "launch_ability_000003AD00002BFF",
   "damage": "20<damagephysical></damagephysical> ",
@@ -20815,7 +20871,7 @@
  },
  {
   "modifiers": [],
-  "description": "Launches a massive projectile. Unit has to reload the next turn.",
+  "description": "Deals damage to a target over a long range.",
   "name": "Ballista",
   "slug": "launch_ability_000003AD00002BFD",
   "damage": "30<damagephysical></damagephysical> ",
@@ -21740,14 +21796,18 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Can only be used once per battle."
    }
   ],
-  "description": "<bulletlist><bullet>+1 hex of movement for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Slippery for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Heal for <temphp></temphp> Temporary Hit Point.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+1 hex of movement for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Slippery for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Heal for 15 <temphp></temphp> Temporary Hit Point.</bullet></bulletlist><br></br><br></br>This ability is reusable after each kill.",
   "name": "Second Wind",
   "slug": "hs_warrior_second_wind_ability_000003BD00002895",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Second Wind"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
   "range": "0",
@@ -22163,7 +22223,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "The caster:<bulletlist><bullet>Refreshes all ability cooldowns</bullet><bullet>Gains Elemental Focus</bullet></bulletlist>",
+  "description": "The caster:<bulletlist><bullet>Refreshes all ability cooldowns.</bullet><bullet>Gains Elemental Focus.</bullet></bulletlist>",
   "name": "Ritual of Elements",
   "slug": "hs_mage_ritual_of_elements_ability_000003BD00002895",
   "damage": "",
@@ -22430,7 +22490,7 @@
   "icon": "000004C000000ACD"
  },
  {
-  "description": "Attacks gain:<bulletlist><bullet>60% chance to inflict Life Seed for 3<turn></turn> <hyperlink>Turns</hyperlink></bullet></bulletlist><br></br><hyperlink>Debuff</hyperlink> abilities gain:<bulletlist><bullet>Inflict Life Seed for 3<turn></turn> <hyperlink>Turns</hyperlink></bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Attacks gain:<bulletlist><bullet>60% chance of inflicting Life Seed for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist><br></br><hyperlink>Debuff</hyperlink> abilities gain:<bulletlist><bullet>Inflict Life Seed for 3<turn></turn> <hyperlink>Turns</hyperlink></bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "name": "Lifeseeder",
   "slug": "000004c0000006fd",
   "icon": "000004C000000AD4"
@@ -22510,7 +22570,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>have 1 <hyperlink>Negative Status Effect</hyperlink> removed</bullet></bulletlist>",
+  "description": "Target friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have 1 <hyperlink>Negative Status Effect</hyperlink> removed.</bullet></bulletlist>",
   "name": "Rejuvenate",
   "slug": "hs_ritualist_rejuvinate_ability_000003BD00002895",
   "damage": "",
@@ -22596,7 +22656,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Create <hyperlink>Obscuring</hyperlink> flora in a 1-hex radius.<br></br>Create Mist in a 1-hex radius for 3 <turn></turn> <hyperlink>Turns</hyperlink>.<br></br>Enter <hyperlink>Defense Mode</hyperlink> after use",
+  "description": "Create <hyperlink>Obscuring</hyperlink> flora in a 1-hex radius.<br></br>Create Mist in a 1-hex radius for 3 <turn></turn> <hyperlink>Turns</hyperlink>.<br></br>Enter <hyperlink>Defense Mode</hyperlink> after use.",
   "name": "Protective Wildgrowth",
   "slug": "hs_ritualist_protective_wildgrowth_ability_000003BD00002895",
   "damage": "",
@@ -22616,7 +22676,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit:<bulletlist><bullet>Heals for 30<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals for 30<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
   "name": "Restore",
   "slug": "hs_ritualist_restore_ability_000003BD00002895",
   "damage": "",
@@ -22745,7 +22805,7 @@
   "description": "Deals damage in a 1-hex radius.",
   "name": "Scatter Shot",
   "slug": "hs_ranger_scatter_shot_ability_000003BD00002895",
-  "damage": "18<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -24147,7 +24207,7 @@
   "requisites": [],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
-  "range": "12",
+  "range": "8",
   "icon": "000004C000000AFE"
  },
  {
@@ -24251,7 +24311,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "actionPoints": "<freeaction></freeaction>",
   "range": "4",
   "icon": "000004C000000591"
  },

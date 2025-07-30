@@ -21788,6 +21788,49 @@
   "icon": "0000041B00001BC8"
  },
  {
+  "modifiers": [
+   {
+    "description": "Inflict 2x Sundered Defense for 3 <turn></turn> Turns.",
+    "name": "Sundered Defense",
+    "count": 1
+   },
+   {
+    "description": "Inflict 2x Sundered Resistance for 3 <turn></turn> Turns.",
+    "name": "Sundered Resistance",
+    "count": 1
+   },
+   {
+    "description": "Inflict 2x Weakened for 3 <turn></turn> Turns.",
+    "name": "Weakened",
+    "count": 1
+   }
+  ],
+  "description": "Curse target unit",
+  "name": "Curse",
+  "slug": "hs_death_knight_curse_ability_000003BD00002895",
+  "damage": "10<damagefrost></damagefrost> ",
+  "requisites": [
+   {
+    "requisite": "Debuff"
+   },
+   {
+    "requisite": "Magic"
+   },
+   {
+    "requisite": "Single Shot"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<freeaction></freeaction>",
+  "range": "1",
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "icon": "000004C000000789"
+ },
+ {
   "description": "When this unit kills an enemy:<bulletlist><bullet>Gains Warseeker for 2 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>This effect stacks up to 3 times.</bullet></bulletlist>",
   "name": "Warseeker",
   "slug": "0000048d00001032",

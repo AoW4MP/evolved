@@ -100,7 +100,7 @@
    {
     "screen_description": "Governed city has 40+ Fortification Health",
     "type": "major",
-    "reward_renown": 100,
+    "reward_renown": 150,
     "repeatable": false,
     "reward_properties": [
      {
@@ -173,7 +173,7 @@
    {
     "screen_description": "Pillage a province",
     "type": "minor",
-    "reward_renown": 25,
+    "reward_renown": 30,
     "repeatable": true,
     "reward_properties": []
    }
@@ -219,7 +219,7 @@
     "reward_properties": [
      {
       "name": "Trainer",
-      "screen_description": "While army leader, all non-Hero units in army gain:<bulletlist><bullet>+50% <hyperlink><xp></xp> Experience</hyperlink>.</bullet></bulletlist>",
+      "screen_description": "While army leader, all non-Hero units in army gain:<bulletlist><bullet>+30% <hyperlink><xp></xp> Experience</hyperlink>.</bullet></bulletlist>",
       "icon": "000003E100001EC5"
      }
     ]
@@ -227,7 +227,7 @@
    {
     "screen_description": "Rank up units in this Hero's army",
     "type": "minor",
-    "reward_renown": 5,
+    "reward_renown": 6,
     "repeatable": true,
     "reward_properties": []
    }
@@ -268,7 +268,7 @@
    {
     "screen_description": "Personally slay an undead or fiend unit of Tier 4+ in combat. Combat summons do not count.",
     "type": "major",
-    "reward_renown": 150,
+    "reward_renown": 200,
     "repeatable": false,
     "reward_properties": [
      {
@@ -281,7 +281,7 @@
    {
     "screen_description": "Personally slay an undead or fiend unit in combat. Combat summons do not count.",
     "type": "minor",
-    "reward_renown": 35,
+    "reward_renown": 25,
     "repeatable": true,
     "reward_properties": []
    }
@@ -333,7 +333,7 @@
     "reward_properties": [
      {
       "name": "Druid",
-      "screen_description": "While army leader, Animal, Plant and Elemental units in army have:<bulletlist><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>-20% <hyperlink>Unit Upkeep</hyperlink></bullet></bulletlist>",
+      "screen_description": "While army leader, Animal, Plant and Elemental units in army have:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>-10% base <hyperlink>Unit Upkeep</hyperlink></bullet></bulletlist>",
       "icon": "000003E100001EC5"
      }
     ]
@@ -371,7 +371,7 @@
    {
     "screen_description": "Win a naval battle",
     "type": "minor",
-    "reward_renown": 35,
+    "reward_renown": 20,
     "repeatable": true,
     "reward_properties": []
    }
@@ -401,7 +401,7 @@
    {
     "screen_description": "Win a battle against an army with more power",
     "type": "minor",
-    "reward_renown": 35,
+    "reward_renown": 40,
     "repeatable": true,
     "reward_properties": []
    }
@@ -423,7 +423,7 @@
     "reward_properties": [
      {
       "name": "Siege Master",
-      "screen_description": "Grants Siege Breaker to all units in the army.",
+      "screen_description": "While army leader, grants Siege Breaker to all units in the army.",
       "icon": "000003FE000008C5"
      }
     ]
@@ -431,7 +431,7 @@
    {
     "screen_description": "Win a battle against a free city",
     "type": "minor",
-    "reward_renown": 35,
+    "reward_renown": 50,
     "repeatable": true,
     "reward_properties": []
    }
@@ -448,7 +448,7 @@
    {
     "screen_description": "Clear an underground infestation",
     "type": "major",
-    "reward_renown": 150,
+    "reward_renown": 100,
     "repeatable": false,
     "reward_properties": [
      {
@@ -508,12 +508,12 @@
    {
     "screen_description": "Clear a Gold level infestation",
     "type": "major",
-    "reward_renown": 150,
+    "reward_renown": 200,
     "repeatable": false,
     "reward_properties": [
      {
       "name": "Pragmatic Leader",
-      "screen_description": "While army leader, all units in the army gain:<bulletlist><bullet>Cold Blooded</bullet><bullet>-20% <hyperlink>Unit Upkeep</hyperlink></bullet></bulletlist>",
+      "screen_description": "While army leader, all units in the army gain:<bulletlist><bullet>Cold Blooded</bullet><bullet>-20% base <hyperlink>Unit Upkeep</hyperlink></bullet></bulletlist>",
       "icon": "000003E100001EC5"
      }
     ]
@@ -551,7 +551,7 @@
    {
     "screen_description": "Have an item equipped for 3 turns",
     "type": "minor",
-    "reward_renown": 2,
+    "reward_renown": 4,
     "repeatable": true,
     "reward_properties": []
    }
@@ -568,7 +568,7 @@
    {
     "screen_description": "Explore a Golden Ancient Wonder",
     "type": "major",
-    "reward_renown": 100,
+    "reward_renown": 200,
     "repeatable": false,
     "reward_properties": [
      {
@@ -609,7 +609,7 @@
     ]
    },
    {
-    "screen_description": "Governed City maintains positive stability for 5 turns",
+    "screen_description": "Governed City maintains positive stability for 3 turns",
     "type": "minor",
     "reward_renown": 40,
     "repeatable": true,

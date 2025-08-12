@@ -222,7 +222,7 @@ classDeathKnight,
 classRitualist,
 classMage,
 classDefender,
-classSpellblade {
+classSpellblade,classRanger,classWarlock,classBattlesaint {
     max-width: 20px;
     top: 7px;
     position: relative;
@@ -252,6 +252,15 @@ classSpellblade {
 classDefender {
     content: url(/evolved/Icons/Text/defender.png);
 }
+classRanger {
+    content: url(/evolved/Icons/Text/ranger.png);
+}
+classWarlock {
+    content: url(/evolved/Icons/Text/warlock.png);
+}
+classBattlesaint {
+    content: url(/evolved/Icons/Text/battlesaint.png);
+}
 
 /* //////////////////////////////////////classes */
 
@@ -261,8 +270,7 @@ ELDRITCHREALMS,
 WAYSOFWAR,
 HERALDOFGLORY,
 PRIMALFURY,
-EMPIRESANDASHES,
-ARCHONPROPHECY {
+EMPIRESANDASHES,ARCHONPROPHECY {
     max-width: 20px;
     top: 7px;
     position: relative;

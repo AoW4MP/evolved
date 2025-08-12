@@ -8,8 +8,8 @@ let currentSelectedSkillsArray = [];
 var currentsignatureSelectionsArray = [];
 var currentSkillPoints = 24;
 
-const exclusionListElementalistDisplines = [5222680233915,5222680233899,5222680233884,5222680233875 ];
-const exclusionListElementalistFinalSkills = [5222680234221,5222680234241,5222680234248,5222680234256 ];
+ const exclusionListElementalistDisplines = [5222680233915,5222680233899,5222680233884,5222680233875 ];
+      const exclusionListElementalistFinalSkills = [5222680234221,5222680234241,5222680234248,5222680234256 ];
 
 var signature1 = "";
 var signature2 = "";
@@ -1147,22 +1147,22 @@ function BuildSkillTreeEntry(currentSkill, row, holder, treespace, extraOffset, 
     if (!("required_skills" in currentSkill)) {
         newNode.classList.add("selectable");
     }
-
+ 
     // Create connection lines for each linkto
     if ("required_skills" in currentSkill) {
         currentSkill.required_skills.forEach((link) => {
             // Find the prerequisite node based on the name
             let targetNode = jsonHeroSkills.find((node) => node.resid === link.resid);
-
             // elementalist skills withering blizzard and the other elemental end points, incorrect lines
             // discipline lines to exclude array
+            
           
 
             if (targetNode) {
                   if(exclusionListElementalistDisplines.includes(targetNode.resid) && exclusionListElementalistFinalSkills.includes(currentSkill.resid)){
                 targetNode = null;
                 console.log("here");
-                        return;
+                      return;
             }
                 let connectionLine = document.createElement("DIV");
                 var extra = row * 200;
@@ -1274,6 +1274,9 @@ function toggleNodeSelection(nodeData, nodeElement, isSig) {
                     }
                 }
             }
+            
+         
+            
 
             activateNode(nodeElement, nodeData, isSig);
 
@@ -1285,17 +1288,33 @@ function toggleNodeSelection(nodeData, nodeElement, isSig) {
                         otherNode.required_skills &&
                         otherNode.required_skills.some((req) => String(req.resid) === String(nodeData.resid))
                     ) {
+                        
+                      
+                    
                         // Get the corresponding DOM element for this other node
                         const relatedNode = document.getElementById(otherNode.resid);
                         if (relatedNode) {
-                                                        
+                            
                             // check if its not the special elementalist nodes
                             // 
                             if(exclusionListElementalistDisplines.includes(nodeData.resid) && exclusionListElementalistFinalSkills.includes(otherNode.resid) ){
                                 console.log("found special");
                                 return;
                             }
-                            // check if its not already activated
+                            // check if final skills have the right node 5222680234186 = elemental mastery
+                            const  elemental_Mastery = 5222680234186;
+                             if(nodeData.resid == elemental_Mastery && exclusionListElementalistFinalSkills.includes(otherNode.resid) ){
+                                console.log("found special");
+                                 // get the required node data
+                                
+                                   const secondRelatedNode = document.getElementById( otherNode.required_skills[1].resid);
+                                 if(!secondRelatedNode.classList.contains("activated")){
+                                       return;
+                                 }
+                              
+                            }
+                            // 
+                            // chec kif its not already activated
                             if (!relatedNode.classList.contains("activated")) {
                                 // Change the color of the related node to blue
                                 relatedNode.classList.remove("activated");

@@ -18,6 +18,7 @@
         <link rel="stylesheet" type="text/css" href="/evolved/Style/icons.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+         <script src="/evolved/Data/Init.js"></script>
 
         <style>
             button {
@@ -202,6 +203,8 @@
                 display: flex;
                 justify-content: space-between;
             }
+            
+           
 
             .list-button-small:hover,
             .list-button:hover,
@@ -375,12 +378,7 @@
             const namePrefixes = ["Arcane", "Feral", "Divine", "Cursed", "Mystic"];
             const nameTypes = ["Warlord", "Summoner", "Champion", "Sorcerer", "Guardian"];
 
-            $("#body").ready(function () {
-                $("#header").load("/evolved/HTML/header.html", function () {
-                    CheckData();
-                });
-            });
-
+          
             function HandlePage() {
                 
                 // hide build submitter

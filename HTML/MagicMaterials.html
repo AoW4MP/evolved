@@ -17,9 +17,7 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-        <script src="/evolved/Data/Builder.js"></script>
-        <script src="/evolved/Data/Faction.js"></script>
-        <script src="/evolved/Data/Search.js"></script>
+         <script src="/evolved/Data/Init.js"></script>
         <script>
             var oreArray = ["arcanium_ore", "focus_crystals", "fireforge_stone"];
             var liquidArray = ["archon_blood", "astral_dew", "tranquility_pool"];
@@ -27,10 +25,10 @@
             var voidArray = ["void_stones"];
 
             function HandlePage() {
-                showWorldStructuresWithArgument("Void Stones", "void_stones", voidArray, "Void Stones");
-                showWorldStructuresWithArgument("Ores", "ore", oreArray, "Ores");
-                showWorldStructuresWithArgument("Liquids", "liquid", liquidArray, "Liquids");
-                showWorldStructuresWithArgument("Plants", "plant", plantArray, "Plants");
+                showWorldStructuresWithArgument("Void Stones", undefined, voidArray, "Void Stones");
+                showWorldStructuresWithArgument("Ores", undefined, oreArray, "Ores");
+                showWorldStructuresWithArgument("Liquids", undefined, liquidArray, "Liquids");
+                showWorldStructuresWithArgument("Plants", undefined, plantArray, "Plants");
                 SetLevelUpStuff();
             }
         </script>

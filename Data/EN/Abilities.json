@@ -15,7 +15,7 @@
   "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "heavy_melee_charge_strike_(giants)_ability_000004C000000519",
-  "damage": "9<damagephysical></damagephysical> 9<damagespirit></damagespirit> 9<damagefrost></damagefrost> ",
+  "damage": "11<damagephysical></damagephysical> 11<damagespirit></damagespirit> 11<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -280,10 +280,10 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit:<bulletlist><bullet>Heals for 60 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has all Negative Status Effects removed.</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals for 50 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has all Negative Status Effects removed.</bullet></bulletlist>",
   "name": "Heal",
   "slug": "light_heal_ability_000004C0000004F3",
   "damage": "",
@@ -340,7 +340,7 @@
   "icon": "000003E300004C9D"
  },
  {
-  "description": "Celestial unit with:<bulletlist><bullet>+2 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>-4 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink>.</bullet><bullet>-4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>Inspiring Killer</bullet><bullet>Control Loss Immunity</bullet></bulletlist>",
+  "description": "Celestial unit with:<bulletlist><bullet>+4 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>-4 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink>.</bullet><bullet>-4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>Inspiring Killer</bullet><bullet>Control Loss Immunity</bullet></bulletlist>",
   "name": "Celestial",
   "slug": "000003e3000059af",
   "icon": "000003E3000059B0"
@@ -382,10 +382,10 @@
   "slug": "Fire_resistance_2"
  },
  {
-  "damage": "<xpCol>6<damagespirit></damagespirit></xpCol>",
+  "damage": "<xpCol>8<damagespirit></damagespirit></xpCol>",
   "description": "",
   "name": "<xpCol>Spirit Resistance</xpCol>",
-  "slug": "Spirit_resistance_6"
+  "slug": "Spirit_resistance_8"
  },
  {
   "damage": "<fireCol>4<damageblight></damageblight></fireCol>",
@@ -400,7 +400,7 @@
   "slug": "Frost_weakness_4"
  },
  {
-  "description": "Heal:<bulletlist><bullet>Heals an additional 40<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist>",
+  "description": "Heal:<bulletlist><bullet>Heals an additional 30<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist>",
   "name": "Champion Heal",
   "slug": "0000048b00000c61",
   "icon": "000003E30000627B"
@@ -543,10 +543,10 @@
   "icon": "00000357000001A5"
  },
  {
-  "damage": "<xpCol>2<damagespirit></damagespirit></xpCol>",
+  "damage": "<xpCol>4<damagespirit></damagespirit></xpCol>",
   "description": "",
   "name": "<xpCol>Spirit Resistance</xpCol>",
-  "slug": "Spirit_resistance_2"
+  "slug": "Spirit_resistance_4"
  },
  {
   "description": "Purifying Blast:<bulletlist><bullet>Gains +5 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Adjacent units have all their <hyperlink>Positive Status Effects</hyperlink> removed.</bullet></bulletlist>",
@@ -559,7 +559,7 @@
   "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
   "name": "Heavy Charge Strike",
   "slug": "heavy_melee_charge_strike_(giants)_ability_000004C0000004AB",
-  "damage": "9<damagephysical></damagephysical> 9<damagefire></damagefire> 9<damagespirit></damagespirit> ",
+  "damage": "11<damagephysical></damagephysical> 11<damagefire></damagefire> 11<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -693,12 +693,6 @@
   "name": "Polearm Unit",
   "slug": "0000039f000016f2",
   "icon": "0000039F000016EB"
- },
- {
-  "description": "Unit is immune to Burning.",
-  "name": "Status Effect Immunity: Burning",
-  "slug": "0000041b00000cbc",
-  "icon": "0000049700000866"
  },
  {
   "damage": "<xpCol>4<damagefire></damagefire></xpCol>",
@@ -905,12 +899,6 @@
   "icon": "000004930000074F"
  },
  {
-  "damage": "<xpCol>4<damagespirit></damagespirit></xpCol>",
-  "description": "",
-  "name": "<xpCol>Spirit Resistance</xpCol>",
-  "slug": "Spirit_resistance_4"
- },
- {
   "modifiers": [],
   "description": "Strikes target enemy unit and then teleports back 3 hexes.",
   "name": "Misty Strike",
@@ -1011,7 +999,7 @@
   "description": "Deal damage to enemies in a 3-hex line.",
   "name": "Throw Storm Trident",
   "slug": "throw_storm_trident_ability_000004A200000019",
-  "damage": "12<damagephysical></damagephysical> 12<damagelightning></damagelightning> ",
+  "damage": "14<damagephysical></damagephysical> 14<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -1306,7 +1294,7 @@
   "description": "Deals damage to target.",
   "name": "Throw Ice Boulder",
   "slug": "throw_boulder_ability_0000049700002A6F",
-  "damage": "27<damagefrost></damagefrost> ",
+  "damage": "30<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -1339,7 +1327,7 @@
   "description": "Deals damage in a 1-hex radius.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Blizzard Smash",
   "slug": "earthquake_smash_ability_0000049700002A6F",
-  "damage": "16<damagephysical></damagephysical> 16<damagefrost></damagefrost> ",
+  "damage": "17<damagephysical></damagephysical> 17<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -1440,6 +1428,12 @@
   "name": "Reinforced",
   "slug": "000003e3000071f0",
   "icon": "000003E3000071F2"
+ },
+ {
+  "damage": "<xpCol>2<damagespirit></damagespirit></xpCol>",
+  "description": "",
+  "name": "<xpCol>Spirit Resistance</xpCol>",
+  "slug": "Spirit_resistance_2"
  },
  {
   "damage": "<xpCol>5<damagefrost></damagefrost></xpCol>",
@@ -1816,6 +1810,12 @@
    }
   ],
   "icon": "0000049700002495"
+ },
+ {
+  "description": "Unit is immune to Burning.",
+  "name": "Status Effect Immunity: Burning",
+  "slug": "0000041b00000cbc",
+  "icon": "0000049700000866"
  },
  {
   "damage": "<xpCol>6<damagefire></damagefire></xpCol>",
@@ -2708,8 +2708,13 @@
     "count": 1
    },
    {
-    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
-    "name": "Breaching",
+    "description": "Base 90% chance of draining all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink> from target for 2 <turn></turn> Turns.",
+    "name": "Disruption",
+    "count": 1
+   },
+   {
+    "description": "Base 90% chance of removing 1 <hyperlink>Positive Status Effect</hyperlink>.",
+    "name": "Dispel",
     "count": 1
    }
   ],
@@ -2760,7 +2765,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "<bulletlist><bullet>Adjacent friendly units have one of their negative status effects dispelled.</bullet><bullet>For each unit that had a status dispelled this way this unit gains:<bulletlist></bullet><bullet>Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Status Protection for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>Each friendly unit within 2 hexes has one of their <hyperlink>Negative Status Effects</hyperlink> dispelled.</bullet><bullet>For each unit that had a status dispelled this way this unit gains:<bulletlist></bullet><bullet>Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Status Protection for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist>",
   "name": "Dispelling Field",
   "slug": "dispelling_field_ability_0000049700000035",
   "damage": "",
@@ -2851,7 +2856,7 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Target non-Hero enemy unit has a base 120% chance of becoming Dominated.<br></br><br></br>If resisted, enemy unit:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> and 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>Gains 2 Status Vulnerability for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>Gains 3 Remorse for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
@@ -2896,7 +2901,7 @@
   "range": "1",
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "icon": "000004C000000512"
@@ -4936,7 +4941,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Caster moves to target hex. Leaves 1 <hyperlink>Action Point</hyperlink>.",
+  "description": "Caster moves to target hex.",
   "name": "Phase",
   "slug": "phase_ability_0000049000001403",
   "damage": "",
@@ -4949,8 +4954,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
   "icon": "000003E3000045B1"
  },
  {
@@ -5194,6 +5199,9 @@
   "notes": [
    {
     "note": "Cooldown: 2 <turn></turn>"
+   },
+   {
+    "note": "Starts on cooldown: 1<turn></turn>"
    }
   ],
   "description": "Move 4 hexes forward. Enemies in the way sustain damage.",
@@ -6093,7 +6101,7 @@
   "description": "Unleashes a magical bolt at target enemy.",
   "name": "Death Bolts",
   "slug": "magic_bolts_ability_0000049000000453",
-  "damage": "6<damageblight></damageblight> 6<damagefrost></damagefrost> ",
+  "damage": "5<damageblight></damageblight> 5<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Magic"
@@ -12821,7 +12829,7 @@
   "icon": "0000049700000397"
  },
  {
-  "description": "A Fiend unit with:<bulletlist><bullet>+2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>-4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>-4 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>+20% <hyperlink><crit></crit>Critical Hit Chance</hyperlink></bullet><bullet>Desolate Walk</bullet><bullet>Lava Walk</bullet></bulletlist>",
+  "description": "A Fiend unit with:<bulletlist><bullet>+4 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>-4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet><bullet>-4 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>+20% <hyperlink><crit></crit>Critical Hit Chance</hyperlink></bullet><bullet>Desolate Walk</bullet><bullet>Lava Walk</bullet></bulletlist>",
   "name": "Infernal Fiend",
   "slug": "000003fe000000c2",
   "icon": "000003FE000000C3"
@@ -13543,7 +13551,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 30% chance of inflicting Blind for 1 <turn></turn> Turn.",
+    "description": "Base 60% chance of inflicting Blind for 1 <turn></turn> Turn.",
     "name": "Blind",
     "count": 1
    },
@@ -13738,7 +13746,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 2 Regeneration.</bullet><bullet>Have their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
+  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain Strengthened.</bullet><bullet>Have their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
   "name": "Revitalize",
   "slug": "revitalize_ability_0000041B00000E5F",
   "damage": "",
@@ -13761,7 +13769,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Grants a base 60% chance of making target enemy unit become Dominated for 3 <turn></turn> Turns.<br></br>If unsuccessful, the unit is Distracted instead.",
+  "description": "Grants a base 90% chance of making target enemy unit become Dominated for 3 <turn></turn> Turns.<br></br>If unsuccessful, the unit is Distracted instead.",
   "name": "Seduce",
   "slug": "seduce_ability_0000041B00000E5F",
   "damage": "",
@@ -13776,7 +13784,7 @@
   "icon": "0000041B00000E69"
  },
  {
-  "description": "Revitalize:<bulletlist><bullet>Gives an additional 2 Regeneration.</bullet><bullet>Reduced cooldown by 1<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "Revitalize:<bulletlist><bullet>Heals an additional 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gives an additional 1 Strengthened.</bullet><bullet>Reduced cooldown by 1<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Champion Revitalize",
   "slug": "0000048b00000c7f",
   "icon": "000003E30000627B"
@@ -14834,7 +14842,7 @@
   "description": "Target non-Ethereal, non-<hyperlink>Hero</hyperlink> enemy unit:<bulletlist><bullet>Sustains damage</bullet><bullet>Has a base 120% chance of becoming Entwined for 2 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Entwine",
   "slug": "entwine_ability_000003EC0000217D",
-  "damage": "18<damageblight></damageblight> ",
+  "damage": "22<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -14853,11 +14861,11 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "6",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
   "notes": [
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "icon": "000003E3000051F4"
@@ -15842,7 +15850,13 @@
   "icon": "000003EB00000542"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Base 90% chance of inflicting Electrified for 3 <turn></turn> Turns.",
+    "name": "Electrified",
+    "count": 1
+   }
+  ],
   "description": "Deals damage to target and up to 2 other units within 4 hexes.",
   "name": "Lightning Strike",
   "slug": "lightning_strike_ability_000003EC00000DB3",
@@ -15853,7 +15867,7 @@
    }
   ],
   "accuracy": "90%",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "6",
   "notes": [
    {
@@ -15876,7 +15890,7 @@
   "description": "Deals damage in 4-hex line.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Tempestuous Smash",
   "slug": "tempestuous_smash_ability_000003EC00000DB3",
-  "damage": "16<damagephysical></damagephysical> 16<damagelightning></damagelightning> ",
+  "damage": "17<damagephysical></damagephysical> 17<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -15933,7 +15947,7 @@
   "damage": "",
   "requisites": [],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<freeaction></freeaction>",
   "range": "4",
   "icon": "000003E300004515"
  },
@@ -15948,7 +15962,7 @@
   "description": "Deals damage in a 1-hex radius.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Volcanic Smash",
   "slug": "volcanic_smash_ability_000003EC00000DA1",
-  "damage": "16<damagephysical></damagephysical> 16<damagefire></damagefire> ",
+  "damage": "17<damagephysical></damagephysical> 17<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -16004,7 +16018,7 @@
   "description": "Deals damage to target.",
   "name": "Throw Boulder",
   "slug": "throw_boulder_ability_000003EC00000DA0",
-  "damage": "27<damagephysical></damagephysical> ",
+  "damage": "30<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -16037,7 +16051,7 @@
   "description": "Deals damage in a 1-hex radius.<bulletlist><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Earthquake Smash",
   "slug": "earthquake_smash_ability_000003EC00000DA0",
-  "damage": "32<damagephysical></damagephysical> ",
+  "damage": "35<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -17548,6 +17562,12 @@
   "icon": "0000049700002D55"
  },
  {
+  "damage": "<xpCol>6<damagespirit></damagespirit></xpCol>",
+  "description": "",
+  "name": "<xpCol>Spirit Resistance</xpCol>",
+  "slug": "Spirit_resistance_6"
+ },
+ {
   "description": "+1 <hyperlink><range></range>Range</hyperlink> on base attacks.",
   "name": "Champion Medal: Extra Range",
   "slug": "0000049700002d58",
@@ -18119,13 +18139,13 @@
     "count": 1
    },
    {
-    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
-    "name": "Piercing",
+    "description": "Base 60% chance of inflicting Gilded for 1 <turn></turn> Turn.",
+    "name": "Gilded",
     "count": 1
    },
    {
-    "description": "Base 30% chance of inflicting Gilded for 1 <turn></turn> Turn.",
-    "name": "Gilded",
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
     "count": 1
    }
   ],
@@ -21437,7 +21457,7 @@
     "count": 1
    },
    {
-    "description": "Heals a random allied unit within 1 hexes of the target for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+    "description": "Heals an allied unit adjacent to the target +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
     "name": "Reclaim",
     "count": 1
    }
@@ -21522,10 +21542,10 @@
   "icon": "0000041B00000EC9"
  },
  {
-  "description": "Friendly Animal and Plant units are Fearless.",
+  "description": "While in the army, Plant, Animal, Fey, Naga Transformation, and Dragon units gain Led by Shepherd.<br></br>Units with Shepherd of the Wilds do not receive Led by Shepherd.",
   "name": "Shepherd of the Wilds",
-  "slug": "0000041b00000eb2",
-  "icon": "0000041B00000EC7"
+  "slug": "8d1fd0c900000598",
+  "icon": "8D1FD0C90000059E"
  },
  {
   "modifiers": [
@@ -22601,7 +22621,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit:<bulletlist><bullet>Heals +45 <temphp></temphp> Temporary Hit Points.</bullet><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals +35 <temphp></temphp> Temporary Hit Points.</bullet><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
   "name": "Healing Prayer",
   "slug": "healing_prayer_ability_000003E300004830",
   "damage": "",
@@ -22616,7 +22636,7 @@
   "icon": "0000041B00001C5E"
  },
  {
-  "description": "Healing Prayer:<bulletlist><bullet>Heals an additional 20<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Puts the unit into <hyperlink>Defense Mode</hyperlink> after use.</bullet></bulletlist>",
+  "description": "Healing Prayer:<bulletlist><bullet>Heals an additional 15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Puts the unit into <hyperlink>Defense Mode</hyperlink> after use.</bullet></bulletlist>",
   "name": "Champion Healing Prayer",
   "slug": "0000048b00000c66",
   "icon": "000003E30000627B"
@@ -22626,7 +22646,7 @@
   "description": "Single magical attack at target unit.",
   "name": "Fire Blast",
   "slug": "magic_blast_(single)_ability_000003E300004519",
-  "damage": "16<damagefire></damagefire> ",
+  "damage": "20<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "Base"
@@ -22976,7 +22996,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Caster moves to target hex. Leaves 1 <hyperlink>Action Point</hyperlink>.",
+  "description": "Caster moves to target hex.",
   "name": "Phase",
   "slug": "phase_ability_000003E100001160",
   "damage": "",
@@ -22989,8 +23009,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
   "icon": "000003E3000045B1"
  },
  {
@@ -23878,29 +23898,6 @@
   "icon": "000003E300004287"
  },
  {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Can only be used once per battle."
-   }
-  ],
-  "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Lose all positive status effects.</bullet></bulletlist>",
-  "name": "Purging Field",
-  "slug": "hs_purging_field_ability_000003BD00002895",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Support"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
-  "icon": "8D1FD0C9000002D2"
- },
- {
   "description": "Unit's base <hyperlink>Magic</hyperlink> attacks have:<bulletlist><bullet>A base 60% chance of inflicting a random <hyperlink>Negative Status Effect</hyperlink>.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "name": "Havoc Magic",
   "slug": "0000048b000007bf",
@@ -24200,7 +24197,7 @@
   ],
   "description": "Target:<bulletlist><bullet>Friendly Undead corpse is revived with 60% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-Undead corpse is raised as a <hyperlink>Zombie</hyperlink>.</bullet></bulletlist>",
   "name": "Raise Undead",
-  "slug": "hs_warlock_raise_undead_ability_000003BD00002895",
+  "slug": "hs_death_knight_raise_undead_ability_000003BD00002895",
   "damage": "",
   "requisites": [
    {
@@ -24211,9 +24208,9 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
   "range": "4",
-  "icon": "0000041B00001BC8"
+  "icon": "8D1FD0C90000058C"
  },
  {
   "modifiers": [
@@ -25782,7 +25779,7 @@
   "icon": "000003E300006A4B"
  },
  {
-  "description": "While army leader, non-Hero Undead units in army have:<bulletlist><bullet>+10% damage</bullet><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+2 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>+2 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet></bulletlist>",
+  "description": "While army leader, non-Hero Undead units in army have:<bulletlist><bullet>+10% damage</bullet><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink></bullet></bulletlist>",
   "name": "Unholy Leader",
   "slug": "000003e300006a37",
   "icon": "000004A600000A8A"
@@ -26492,7 +26489,7 @@
     "note": "Starts on cooldown: 1<turn></turn>"
    }
   ],
-  "description": "<bulletlist><bullet>Refresh all your ability cooldowns and once-per-combat abilities.</bullet><bullet>Enter <hyperlink>Defense Mode</hyperlink>.</bullet></bulletlist>",
+  "description": "Refresh all your ability cooldowns and once-per-combat abilities.",
   "name": "Weaver",
   "slug": "hs_ritualist_weaver_ability_000003BD00002895",
   "damage": "",
@@ -26502,7 +26499,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
   "range": "0",
   "icon": "000003E300005533"
  },
@@ -26626,6 +26623,32 @@
    }
   ],
   "icon": "0000048D00000C27"
+ },
+ {
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "description": "Target:<bulletlist><bullet>Friendly Undead corpse is revived with 60% of its total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-Undead corpse is raised as a <hyperlink>Zombie</hyperlink>.</bullet></bulletlist>",
+  "name": "Raise Undead",
+  "slug": "hs_warlock_raise_undead_ability_000003BD00002895",
+  "damage": "",
+  "requisites": [
+   {
+    "requisite": "Support"
+   },
+   {
+    "requisite": "Summoning"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "0000041B00001BC8"
  },
  {
   "description": "Whenever a friendly unit dies, this unit gains Grace.",
@@ -27140,7 +27163,7 @@
   "description": "At the end of its turn, this unit gains +1 Fervor.",
   "name": "Cleric",
   "slug": "000004c000000979",
-  "icon": "000004C000000978"
+  "icon": "000004C000000941"
  },
  {
   "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>Killing a unit deals 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy units within 2 hexes.</bullet></bulletlist>",
@@ -27191,7 +27214,7 @@
   "icon": "0000048D00000AB0"
  },
  {
-  "description": "While army leader, all non-hero units in the army:<bulletlist><bullet>Gain a stack of Strengthened and Fortune for 3 <turn></turn> Turns when it uses an attack ability.</bullet></bulletlist>",
+  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>Gain a stack of Strengthened and Fortune for 3 <turn></turn> Turns when it uses an attack ability.</bullet></bulletlist>",
   "name": "Grand Fury Rune",
   "slug": "00000497000027bf",
   "icon": "0000049700001863"
@@ -27203,7 +27226,7 @@
   "icon": "0000049700001852"
  },
  {
-  "description": "Unit:<bulletlist><bullet>Has Very Fast Movement</bullet><bullet>Gains a stack of Strengthened and Fortune for 3 <turn></turn> Turns when it uses an attack ability.</bullet>",
+  "description": "When this unit uses an attack ability:<bulletlist><bullet>Gain Strengthened for 3 <turn></turn> Turns</bullet><bullet>Gain Fortune for 3 <turn></turn> Turns</bullet><bullet>Gain Hastened for 3 <turn></turn> Turns</bullet>",
   "name": "Fury Rune",
   "slug": "00000497000027bd",
   "icon": "000004970000185F"
@@ -27227,13 +27250,13 @@
   "icon": "0000048D00000A92"
  },
  {
-  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>+10% damage on base attacks.</bullet><bullet>A base 90% chance of applying Bleeding for 3 <turn></turn> Turns on base attacks, Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.</bullet></bulletlist>",
+  "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>+15% damage on base attacks.</bullet><bullet>A base 90% chance of applying Bleeding for 3 <turn></turn> Turns on base attacks, Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.</bullet></bulletlist>",
   "name": "Grand Brawn Rune",
   "slug": "00000497000027c3",
   "icon": "0000049700001873"
  },
  {
-  "description": "Unit deals +10% damage.",
+  "description": "Unit deals +15% damage.",
   "name": "Damage Rune",
   "slug": "0000049700001875",
   "icon": "000004970000186B"
@@ -28057,8 +28080,13 @@
  {
   "modifiers": [
    {
-    "description": "Damage can not be reduced by <defense></defense> <hyperlink>Defense</hyperlink> or <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
-    "name": "Unblockable Damage",
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+    "name": "Breaching",
     "count": 1
    }
   ],
@@ -28093,8 +28121,13 @@
  {
   "modifiers": [
    {
-    "description": "Damage can not be reduced by <defense></defense> <hyperlink>Defense</hyperlink> or <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
-    "name": "Unblockable Damage",
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
+    "name": "Breaching",
     "count": 1
    }
   ],
@@ -28794,7 +28827,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "<bulletlist><bullet>Adjacent friendly units have one of their negative status effects dispelled.</bullet><bullet>For each unit that had a status dispelled this way this unit gains:<bulletlist></bullet><bullet>Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Status Protection for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>Each friendly unit within 2 hexes has one of their <hyperlink>Negative Status Effects</hyperlink> dispelled.</bullet><bullet>For each unit that had a status dispelled this way this unit gains:<bulletlist></bullet><bullet>Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Status Protection for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist>",
   "name": "Dispelling Field",
   "slug": "dispelling_field_ability_000003BD00002895",
   "damage": "",
@@ -29511,11 +29544,7 @@
   "name": "Polymorph",
   "slug": "wand_of_polymorph_ability_000003BD00002895",
   "damage": "",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
+  "requisites": [],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
@@ -29531,11 +29560,7 @@
   "name": "Provoke",
   "slug": "wand_of_provocation_ability_000003BD00002895",
   "damage": "",
-  "requisites": [
-   {
-    "requisite": "Magic"
-   }
-  ],
+  "requisites": [],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "2",
@@ -29918,7 +29943,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Caster moves to target hex. Leaves 1 <hyperlink>Action Point</hyperlink>.",
+  "description": "Caster moves to target hex.",
   "name": "Phase",
   "slug": "phase_ability_000003BD00002895",
   "damage": "",
@@ -29931,8 +29956,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "6",
+  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "range": "3",
   "icon": "000003E3000045B1"
  },
  {
@@ -29962,7 +29987,7 @@
   "icon": "000003E3000057F8"
  },
  {
-  "description": "Grants:<bulletlist><bullet>Very Fast Movement.</bullet><bullet>Swift.</bullet><bullet>Immunity to becoming Slowed and Immobilized.</bullet></bulletlist>",
+  "description": "Grants:<bulletlist><bullet>Fast Movement.</bullet><bullet>Swift.</bullet><bullet>Immunity to becoming Slowed and Immobilized.</bullet></bulletlist>",
   "name": "Boots of Freedom",
   "slug": "0000045e0000066e",
   "icon": "0000045E0000066F"
@@ -30974,7 +30999,7 @@
   "icon": "000003E1000013AA"
  },
  {
-  "description": "Unit has Very Fast Movement.",
+  "description": "Unit has Fast Movement.",
   "name": "Quickening Ritual",
   "slug": "0000049700000c54",
   "icon": "0000049700000C0C"
@@ -31490,7 +31515,7 @@
   "icon": "0000041B000004C3"
  },
  {
-  "description": "Unit has:<bulletlist><bullet>Very Fast Movement</bullet><bullet>An additional <hyperlink>Retaliation Attack</hyperlink></bullet></bulletlist><br></br><br></br>Hastened <hyperlink>counters</hyperlink> Slowed",
+  "description": "Unit has:<bulletlist><bullet>Fast Movement.</bullet><bullet>An additional <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist><br></br><br></br>Hastened <hyperlink>counters</hyperlink> Slowed.",
   "name": "Hastened",
   "slug": "0000045e000002ed",
   "icon": "000003E10000138E"

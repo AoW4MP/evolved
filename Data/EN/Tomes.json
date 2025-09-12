@@ -56,6 +56,13 @@
   ]
  },
  {
+  "passives": [
+   {
+    "description": "Gain <souls></souls> Souls when enemies die in battle.<br></br><br></br>Unlocks the ability to animate <hyperlink>City Ruin</hyperlink> and to animate <hyperlink>Heroes</hyperlink> in your crypt as your undead servants.",
+    "name": "Soul Harvest",
+    "type": "<hyperlink>Tome Passive</hyperlink>"
+   }
+  ],
   "affinities": "1 <empireorder></empireorder> Empire Order Affinity, 1 <empireshadow></empireshadow> Empire Shadow Affinity",
   "lore_description": "\\\"We, who perished for the light, whilst they bask in its glory. We, who are forsaken, whilst they are beloved. We shall build our necropolises, from the bones of their failures. From the darkness of exile, we shall plot their demise.\\\"",
   "gameplay_description": "Raise an army of corrupted and undead Archons and use their knowledge to make your undead come back again and again, while protecting them from those who would use the powers of light and fire.",
@@ -96,7 +103,7 @@
     "upgrade_slug": "chamber_of_the_rite"
    },
    {
-    "description": "Summon a <hyperlink>Fallen Angel</hyperlink> Battle Mage Unit, that causes decay and corruption.",
+    "description": "Summon a <hyperlink>Fallen Angel</hyperlink> Mythic Unit, that causes decay and corruption.",
     "name": "Summon Fallen Angel",
     "spell_slug": "summon_fallen_angel",
     "tier": 8,
@@ -236,7 +243,7 @@
     "upgrade_slug": "house_of_charity"
    },
    {
-    "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for <turn></turn> Turns.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for <turn></turn> Turns.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for <turn></turn> Turns.</bullet></bulletlist><br></br>Cannot be used on a unit more than once per battle.",
     "name": "Heroic Stand",
     "spell_slug": "heroic_stand",
     "tier": 3,
@@ -2948,7 +2955,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Target friendly <hyperlink>Zombie</hyperlink> or Skeleton unit explodes, all enemies in a -hex radius:<bulletlist><bullet>Sustain <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain Decaying for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target friendly <hyperlink>Zombie</hyperlink> or Skeleton unit explodes, all enemies in a -hex radius:<bulletlist><bullet>Sustain <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain 2 Decaying for <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Rotting Explosion",
     "spell_slug": "rotting_explosion",
     "tier": 3,
@@ -3230,7 +3237,7 @@
     "upgrade_slug": "astral_trade_relay"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist><br></br>Does not apply to units that inherently have a Phase.",
     "name": "Phasing Enchantment",
     "spell_slug": "phasing_enchantment",
     "tier": 6,
@@ -3297,7 +3304,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target Enemies in a -hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>3 Sundered Resistance.</bullet></bulletlist>",
+    "description": "Target Enemies in a -hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>2 Sundered Resistance.</bullet></bulletlist>",
     "name": "Mental Mark",
     "spell_slug": "mental_mark",
     "tier": 3,
@@ -4632,7 +4639,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<<></<>ullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
+    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
     "name": "Destructive Regrowth",
     "spell_slug": "destructive_regrowth",
     "tier": 7,

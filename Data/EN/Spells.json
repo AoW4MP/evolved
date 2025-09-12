@@ -373,7 +373,7 @@
   "tactical": false,
   "description": "Summon a <hyperlink>Fallen Angel</hyperlink> Battle Mage Unit, that causes decay and corruption.",
   "name": "Summon Fallen Angel",
-  "operation_point_cost": 200,
+  "operation_point_cost": 300,
   "summoned_units": [
    {
     "slug": "fallen_angel"
@@ -529,7 +529,7 @@
   "id": "heroic_stand",
   "DLC": "ARCHONPROPHECY ",
   "tactical": true,
-  "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for 1 <turn></turn> Turn.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for 1 <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for 1 <turn></turn> Turn.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for 1 <turn></turn> Turn.</bullet></bulletlist><br></br>Cannot be used on a unit more than once per battle.",
   "name": "Heroic Stand",
   "operation_point_cost": 20,
   "icon": "0000049700002AAB"
@@ -851,7 +851,7 @@
   "id": "accursed_projectiles",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Deal +1 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Inflict Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Deal +2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Inflict Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -1281,7 +1281,7 @@
   ]
  },
  {
-  "casting_cost": "4<thralls></thralls> ",
+  "casting_cost": "6<thralls></thralls> ",
   "resid": 5046586576371,
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "dark_knowledge_ritual",
@@ -1371,15 +1371,15 @@
   "icon": "0000049700000C16"
  },
  {
-  "casting_cost": "3<thralls></thralls> ",
+  "casting_cost": "2<thralls></thralls> ",
   "resid": 5046586575938,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
   "id": "quickening_ritual",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Units in target friendly army gain Very Fast Movement for 2 <hyperlink>World Map</hyperlink> <turn></turn> Turns",
+  "description": "Units in target friendly army gain Fast Movement for 2 <hyperlink>World Map</hyperlink> <turn></turn> Turns",
   "name": "Quickening Ritual",
-  "operation_point_cost": 150,
+  "operation_point_cost": 120,
   "icon": "0000049700000C0C"
  },
  {
@@ -3206,7 +3206,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "destructive_regrowth",
   "tactical": false,
-  "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<<></<>ullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
+  "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
   "name": "Destructive Regrowth",
   "operation_point_cost": 120,
   "icon": "000003E30000522E"
@@ -3875,13 +3875,7 @@
   "description": "Grants enchanted units:<bulletlist><bullet>+20% damage.</bullet><bullet>Fast Movement.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
-    "requisite": "Combat Summon"
-   },
-   {
     "requisite": "<unitEthereal></unitEthereal> Ethereal"
-   },
-   {
-    "requisite": "Magic Origin"
    }
   ],
   "name": "Cosmic Overdrive",
@@ -3916,7 +3910,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "phasing_enchantment",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist><br></br>Does not apply to units that inherently have a Phase.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -5261,6 +5255,9 @@
   "description": "Grants enchanted units:<bulletlist><bullet>Fire Bomb , a <hyperlink>Magic</hyperlink> attack that deals damage in an area.</bullet><bullet>The damage of the attack increases with the <hyperlink>unit's tier</hyperlink>.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
     "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    }
   ],
@@ -6011,7 +6008,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
   "id": "arcane_restoration",
   "tactical": true,
-  "description": "Heals all friendly Magic Origin units +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+  "description": "Heals all friendly Magic Origin units +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
   "name": "Arcane Restoration",
   "operation_point_cost": 25,
   "icon": "0000041B00001283"
@@ -6043,14 +6040,14 @@
   ]
  },
  {
-  "casting_cost": "20<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4273492483621,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "mental_mark",
   "tactical": true,
-  "description": "Target Enemies in a 1-hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>3 Sundered Resistance.</bullet></bulletlist>",
+  "description": "Target Enemies in a 1-hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>2 Sundered Resistance.</bullet></bulletlist>",
   "name": "Mental Mark",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "0000041B00001251"
  },
  {

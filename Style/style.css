@@ -1332,6 +1332,9 @@ hr {
     margin-left: 0;
     font-weight: lighter;
 }
+.tooltiptextnew.wide {
+    max-width: 500px;
+}
 
 hyperlink {
     color: beige;
@@ -1729,4 +1732,20 @@ silver {
 span.number-highlight {
     color: #f3d451;
     /* Example: gold color */
+}
+
+/* Basic spoiler style */
+.spoiler {
+  background-color: #2a2551;     /* hidden background */
+  color: transparent;         /* text hidden */
+  border-radius: 4px;
+  padding: 2px 4px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* When revealed */
+.spoiler.revealed {
+  color: inherit;             /* normal text color */
+  background-color: transparent;
 }

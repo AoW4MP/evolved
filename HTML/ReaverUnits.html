@@ -15,13 +15,11 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-        <script src="/evolved/Data/Builder.js"></script>
-        <script src="/evolved/Data/Faction.js"></script>
-        <script src="/evolved/Data/Search.js"></script>
+       <script src="/evolved/Data/Init.js"></script>
         <script>
-            var unitarray = ["observer", "mercenary", "harrier", "overseer", "magelock", "dragoon", "magelock_cannon"];
-
+           
             function HandlePage() {
+                const unitarray = GetCultureUnitsOf("Reaver");
                 SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
             }

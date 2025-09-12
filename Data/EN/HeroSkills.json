@@ -880,28 +880,6 @@
   "DLC": "DRAGONLORDS "
  },
  {
-  "abilities": [
-   {
-    "slug": "hs_purging_field_ability_000003BD00002895"
-   }
-  ],
-  "resid": -8277668028376677683,
-  "id": "hs_purging_field",
-  "group_name": "Generic Hero Skills",
-  "icon": "8D1FD0C9000002CE",
-  "type": "normal",
-  "name": "Purging Field"
- },
- {
-  "resid": -8277668028376677703,
-  "id": "hs_breaching_magic",
-  "group_name": "Generic Hero Skills",
-  "icon": "8D1FD0C9000002BA",
-  "type": "normal",
-  "name": "Breaching Magic",
-  "description": "<hyperlink>Magic</hyperlink> attacks ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>."
- },
- {
   "resid": 4514010631478,
   "id": "hs_",
   "group_name": "Hero Skill Group -",
@@ -1330,7 +1308,7 @@
   "type": "normal",
   "abilities": [
    {
-    "slug": "hs_warlock_raise_undead_ability_000003BD00002895"
+    "slug": "hs_death_knight_raise_undead_ability_000003BD00002895"
    }
   ],
   "resid": 4995046967483,
@@ -12096,7 +12074,7 @@
   "tree_name": "<classBattlesaint></classBattlesaint> Battlesaint",
   "tree_pos_y": 750.0,
   "DLC": "ARCHONPROPHECY ",
-  "description": "<hyperlink>Support</hyperlink> abilities grant:<bulletlist><bullet>+ Regeneration to affected units.</bullet></bulletlist>",
+  "description": "<hyperlink>Support</hyperlink> abilities grant:<bulletlist><bullet>+1 Regeneration to affected units.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5222680234425
@@ -14322,7 +14300,7 @@
   "name": "Shadow Transformation",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Undead unit type</bullet><bullet>All attacks gain </bullet><bullet>All attacks gain 90% base chance of inflicting Soulbound</bullet>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Undead unit type</bullet><bullet>Life Steal</bullet><bullet>All attacks gain 90% base chance of inflicting Soulbound</bullet>"
  },
  {
   "abilities": [

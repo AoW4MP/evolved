@@ -16,9 +16,8 @@
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="/evolved/Data/Builder.js"></script>
-        <script src="/evolved/Data/Faction.js"></script>
-        <script src="/evolved/Data/Search.js"></script>
+        <script src="/evolved/Data/Init.js"></script>
+      
         <script>
             function HandlePage() {
                 // get fiend name localized
@@ -28,7 +27,7 @@
 
                 if (unitarray.length > 1) {
                     for (i in unitarray) {
-                        showUnitsFromList(unitarray[i], "Animals Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
+                        showUnitsFromList(unitarray[i], "Accursed Fiends Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
                     }
                 } else {
                     SetButtonsAndDivs(unitarray[0], undefined, "unit");

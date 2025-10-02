@@ -270,7 +270,7 @@ ELDRITCHREALMS,
 WAYSOFWAR,
 HERALDOFGLORY,
 PRIMALFURY,
-EMPIRESANDASHES,ARCHONPROPHECY {
+EMPIRESANDASHES,ARCHONPROPHECY, COSMICWANDERER {
     max-width: 20px;
     top: 7px;
     position: relative;
@@ -296,6 +296,11 @@ PRIMALFURY {
 HERALDOFGLORY {
     content: url(/evolved/Icons/Text/herald_of_glory.png);
 }
+
+COSMICWANDERER {
+    content: url(/evolved/Icons/Text/CosmicWanderer.png);
+}
+
 
 ELDRITCHREALMS {
     content: url(/evolved/Icons/Text/EldritchRealms.png);
@@ -1067,6 +1072,14 @@ gold {
     top: 3px;
     left: 3px;
     content: url(/evolved/Icons/Text/gold.png);
+    position: relative;
+}
+
+whisperingstone {
+    max-height: 20px;
+    top: 3px;
+    left: 3px;
+    content: url(/evolved/Icons/Text/whisperingstone.png);
     position: relative;
 }
 

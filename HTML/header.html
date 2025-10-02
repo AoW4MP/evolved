@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <link rel="shortcut icon" href="/evolved/favicon.ico" />
-         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
-         <link rel="stylesheet" type="text/css" href="/evolved/Style/icons.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/icons.css" />
         <title>Age of Wonders 4 Evolved</title>
     </head>
 
@@ -23,56 +23,57 @@
                             <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
                         </label>
                         <br />
-                        <label style="display: none">
-                            Language:
-                            <select id="languageSelect" onchange="SwitchToBeta()">
-                                <option value="EN">English</option>
-                                <option value="DE">Deutsch</option>
-                                <option value="JA">Japanese</option>
-                                <option value="KO">Korean</option>
-                                <option value="PL">Polish</option>
-                                <option value="ES">Spanish</option>
-                                <option value="RU">Russian</option>
-                                <option value="CN">Chinese</option>
-                                <option value="FR">French</option>
-                            </select>
-                        </label>
                     </div>
                 </div>
-                <div class="donate">
-                    <a class="prett" href="/evolved/HTML/Donate.html">
-                        Donate<img src="/evolved/Icons/Text/health.png" width="20px" />
-                    </a>
-                </div>
+            </div>
+            <label style="display: block; position: relative; left: -86px">
+                WIP
+                <select id="languageSelect" class="button-random" onchange="SwitchToBeta()">
+                    <option value="EN">English</option>
+                    <option value="DE">Deutsch</option>
+                    <option value="ES">Español</option>
+                    <option value="FR">Français</option>
+                    <option value="JA">日本語</option>
+                    <option value="KO">한국어</option>
+                    <option value="PL">Polski</option>
+                    <option value="RU">Pусский</option>
+                    <option value="ZH">中文</option>
+                </select>
+            </label>
+            <div class="donate" >
+                <a class="prett" href="/evolved/HTML/Donate.html">
+                    Donate<img src="/evolved/Icons/Text/health.png" width="20px" />
+                </a>
             </div>
 
             <div class="dropdown">
                 <div class="dropdown-title">Other Databases ▼</div>
                 <div class="dropdown-content">
                     <a class="prett" href="https://minionsart.github.io/aow3db/" target="_blank">
-                        <img src="/evolved/Icons/Interface/aow3icon.png" width="20px" /> AoW III
+                        <img src="/evolved/Icons/Interface/aow3icon.png" width="20px" /> AOW3
                     </a>
                     <a class="prett" href="https://minionsart.github.io/aowp/" target="_blank">
-                        <img src="/evolved/Icons/Interface/aowpficon.png" width="20px" /> AoW Planetfall
+                        <img src="/evolved/Icons/Interface/aowpficon.png" width="20px" /> AOW Planetfall
                     </a>
                 </div>
             </div>
         </div>
         <div class="header-img">
-          
             <div id="topButtonContainer" style="display: none">
                 <div id="myCenteredButton"><a href="/evolved/HTML/Donate.html">Donate</a></div>
             </div>
 
             <div class="hero-text">Age of Wonders 4 Evolved</div>
-            <div class="mid-text" style="display: none; margin: 15px; ">
+            <div class="mid-text" style="display: none; margin: 15px">
                 Switch To Griffon Beta Dataset:<input type="checkbox" id="showBetaCheckbox" onclick="SwitchToBeta()" />
                 <br /><i>(only changes exported dataset, images can break)</i>
             </div>
-            <div class="current-version">Updated: 12th of September, 2025</div>
+            <div class="current-version">Updated: 30 SEPT 2025 (WISP PATCH)</div>
 
-            <div class="hero-text" style="display:block">
-                <img src="/evolved/Icons/Interface/archon_prophecy.png" width="442px" />
+            <div class="hero-text" style="display: block">
+                <img style="
+    position: relative;
+    top: -21px;" src="/evolved/Icons/Interface/archon_prophecy.png" width="442px" />
             </div>
             <ul id="menu">
                 <li>
@@ -142,10 +143,8 @@
                                         ><img src="/evolved/Icons/Text/oathsworn.png" width="20px" /> Oathsworn</a
                                     >
                                 </li>
-                                 <li>
-                                    <a
-                                        id="culture-architect"
-                                        href="/evolved/HTML/ArchitectUnits.html?type=surveyor&"
+                                <li>
+                                    <a id="culture-architect" href="/evolved/HTML/ArchitectUnits.html?type=surveyor&"
                                         ><img src="/evolved/Icons/Text/architect.png" width="20px" /> Architect</a
                                     >
                                 </li>
@@ -177,7 +176,9 @@
                                     >
                                 </li>
                                 <li>
-                                    <a id="tomesU-order" href="/evolved/HTML/OrderTomesUnits.html?type=lesser_light_spirit&"
+                                    <a
+                                        id="tomesU-order"
+                                        href="/evolved/HTML/OrderTomesUnits.html?type=lesser_light_spirit&"
                                         ><img src="/evolved/Icons/Text/order.png" width="20px" /> Order</a
                                     >
                                 </li>
@@ -230,7 +231,8 @@
                                 </li>
                                 <li>
                                     <a id="tomesU-ap" href="/evolved/HTML/ArchonProphecyTomeUnits.html"
-                                        ><img src="/evolved/Icons/Text/ArchonProphecy.png" width="20px" /> Archon Prophecy</a
+                                        ><img src="/evolved/Icons/Text/ArchonProphecy.png" width="20px" /> Archon
+                                        Prophecy</a
                                     >
                                 </li>
                             </ul>
@@ -691,11 +693,15 @@
     <style>
         .topbar {
             color: white;
-            padding: 10px 20px;
+           
             font-size: 14px;
+            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            flex-wrap: nowrap;
+            z-index: 30;
+            flex-direction: row;
         }
 
         .dropdown {
@@ -704,9 +710,21 @@
         }
 
         .donate {
-            margin-left: 20px;
-            position: relative;
-            display: inline-block;
+          
+    right: -152px;
+    position: relative;
+    display: inline-block;
+    background-color: #4b1d63;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    /* height: 30px; */
+    border-width: 5px;
+    border-style: solid;
+    border-image: url(/evolved/Icons/9slicetooltip.png);
+    border-image-slice: 10 10 10 10;
         }
 
         .dropdown-title {

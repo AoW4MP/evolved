@@ -1,10 +1,8 @@
-
 searchParams = new URLSearchParams(window.location.search);
 searchKeyword = searchParams.get("u");
 var ListOfSubcultureHolders = ["Architect", "Primal", "Mystic", "Oathsworn", "Feudal"];
 
 var ListOfSubsocietyHolders = ["Vision of Promise", "Vision of Ruin", "Vision of Destiny"];
-
 
 var currentOrigin = "";
 var currentTome = "";
@@ -89,8 +87,6 @@ function addOrSubtract(extraAffinity, add) {
 }
 
 function SetRandomStart(overwriteParameter) {
-    
-  
     if (searchKeyword != undefined && !overwriteParameter) {
         // console.log("Found" + searchKeyword);
         RebuildFromParam(searchKeyword);
@@ -114,9 +110,9 @@ function SetRandomStart(overwriteParameter) {
         listofChoice.push("Society2");
         listofChoice.push("Class");
         listofChoice.push("SubType");
-          listofChoice.push("SubCulture");
-          listofChoice.push("SubSociety1");
-          listofChoice.push("SubSociety2");
+        listofChoice.push("SubCulture");
+        listofChoice.push("SubSociety1");
+        listofChoice.push("SubSociety2");
 
         var j = "";
         for (j = 0; j < listofChoice.length; j++) {
@@ -185,19 +181,19 @@ function SetRandomStart(overwriteParameter) {
                     currentSignatureSkills.push(currentSig);
 
                     break;
-                    
+
                 case "SubCulture":
-                    if(origin != ""){
+                    if (origin != "") {
                         currentSubCulture = randomEntry;
                     }
                     break;
                 case "SubSociety1":
-                     if(origin != ""){
+                    if (origin != "") {
                         currentSubSociety1 = randomEntry;
                     }
                     break;
-                     case "SubSociety2":
-                     if(origin != ""){
+                case "SubSociety2":
+                    if (origin != "") {
                         currentSubSociety2 = randomEntry;
                     }
                     break;
@@ -367,25 +363,25 @@ function selectOrigin(origin, type) {
             break;
         case "Culture":
             currentCulture = origin;
-               if (!ListOfSubcultureHolders.includes(origin.name)) {
+            if (!ListOfSubcultureHolders.includes(origin.name)) {
                 currentSubCulture = "";
             } else {
                 let newBit;
                 // load default class
                 for (let index = 0; index < jsonFactionCreation.length; index++) {
-                    if(jsonFactionCreation[index].type == "SubCulture" && jsonFactionCreation[index].requirement == origin.name){
-                           newBit = jsonFactionCreation[index];
-                            continue;
-                        }
+                    if (
+                        jsonFactionCreation[index].type == "SubCulture" &&
+                        jsonFactionCreation[index].requirement == origin.name
+                    ) {
+                        newBit = jsonFactionCreation[index];
+                        continue;
                     }
-                   
-                         
-                    
-                
+                }
+
                 console.log(newBit.name);
                 currentSubCulture = newBit;
             }
-             selectOrigin(currentSubCulture, "SubCulture");
+            selectOrigin(currentSubCulture, "SubCulture");
             // subculture
             break;
         case "Form":
@@ -393,48 +389,48 @@ function selectOrigin(origin, type) {
             break;
         case "Society1":
             currentSociety1 = origin;
-         
+
             if (!ListOfSubsocietyHolders.includes(origin.name)) {
                 currentSubSociety1 = "";
             } else {
                 let newBit;
                 // load default class
                 for (let index = 0; index < jsonFactionCreation.length; index++) {
-                    if(jsonFactionCreation[index].type == "SubSociety" && jsonFactionCreation[index].requirement == origin.name){
-                           newBit = jsonFactionCreation[index];
-                            continue;
-                        }
+                    if (
+                        jsonFactionCreation[index].type == "SubSociety" &&
+                        jsonFactionCreation[index].requirement == origin.name
+                    ) {
+                        newBit = jsonFactionCreation[index];
+                        continue;
                     }
-                   
-                         
-                    
-                
+                }
+
                 console.log(newBit.name);
-                 currentSubSociety1 = newBit;
+                currentSubSociety1 = newBit;
             }
-               selectOrigin(currentSubSociety1, "SubSociety1");
+            selectOrigin(currentSubSociety1, "SubSociety1");
             break;
         case "Society2":
             currentSociety2 = origin;
-             if (!ListOfSubsocietyHolders.includes(origin.name)) {
+            if (!ListOfSubsocietyHolders.includes(origin.name)) {
                 currentSubSociety2 = "";
             } else {
                 let newBit;
                 // load default class
                 for (let index = 0; index < jsonFactionCreation.length; index++) {
-                    if(jsonFactionCreation[index].type == "SubSociety" && jsonFactionCreation[index].requirement == origin.name){
-                           newBit = jsonFactionCreation[index];
-                            continue;
-                        }
+                    if (
+                        jsonFactionCreation[index].type == "SubSociety" &&
+                        jsonFactionCreation[index].requirement == origin.name
+                    ) {
+                        newBit = jsonFactionCreation[index];
+                        continue;
                     }
-                   
-                         
-                    
-                
+                }
+
                 console.log(newBit.name);
-                 currentSubSociety2 = newBit;
+                currentSubSociety2 = newBit;
             }
-              selectOrigin(currentSubSociety2, "SubSociety2");
+            selectOrigin(currentSubSociety2, "SubSociety2");
             break;
         case "SubType":
             currentSubType = origin;
@@ -450,13 +446,13 @@ function selectOrigin(origin, type) {
             // selectSkillPath(origin);
             break;
         case "SubCulture":
-currentSubCulture = origin;
+            currentSubCulture = origin;
             break;
-            
+
         case "SubSociety1":
             currentSubSociety1 = origin;
             break;
-                case "SubSociety2":
+        case "SubSociety2":
             currentSubSociety2 = origin;
             break;
     }
@@ -630,7 +626,6 @@ function selectTomePath(origin, fromLoad) {
 
     toggleOriginButtons();
 }
-
 
 function SetSkillPathInfoSmall(buttonHolder, origin) {
     const image = document.createElement("img");
@@ -935,15 +930,15 @@ function SetupButtons(evt, type) {
             list = GetAllSubTypes();
 
             break;
-              case "SubCulture":
+        case "SubCulture":
             list = GetAllSubCultureSetups();
 
             break;
-              case "SubSociety1":
+        case "SubSociety1":
             list = GetAllSubProphecySetups(1);
 
             break;
-              case "SubSociety2":
+        case "SubSociety2":
             list = GetAllSubProphecySetups(2);
 
             break;
@@ -973,7 +968,7 @@ function SetupButtons(evt, type) {
         case "TomePath":
             list = GetNextSetOfTomes();
             break;
-      /*  case "Signature":
+        /*  case "Signature":
             list = GetAllSignatureSkills();
             if (currentSignatureSkills.length == 4) {
                 console.log("more than 4");
@@ -1149,18 +1144,18 @@ function GetAffinityTotalFromList(list, tomeList, subType, subCulture, subSociet
             input += subType.affinity + ",";
         }
     }
-    
+
     if (subCulture && subCulture != "") {
         if ("affinity" in subCulture) {
             input += subCulture.affinity + ",";
         }
     }
-      if (subSociety1 && subSociety1 != "") {
+    if (subSociety1 && subSociety1 != "") {
         if ("affinity" in subSociety1) {
             input += subSociety1.affinity + ",";
         }
     }
-      if (subSociety2 && subSociety2 != "") {
+    if (subSociety2 && subSociety2 != "") {
         if ("affinity" in subSociety2) {
             input += subSociety2.affinity + ",";
         }
@@ -1223,7 +1218,14 @@ function GetAffinityTotalFromList(list, tomeList, subType, subCulture, subSociet
 function RecalculateStats(fromload) {
     var list = GetCurrentChoiceList();
 
-    var result = GetAffinityTotalFromList(list, currentTomeList, currentSubType, currentSubCulture, currentSubSociety1, currentSubSociety2);
+    var result = GetAffinityTotalFromList(
+        list,
+        currentTomeList,
+        currentSubType,
+        currentSubCulture,
+        currentSubSociety1,
+        currentSubSociety2
+    );
 
     // add all extra input tags
     document.getElementById("extraOrder").innerHTML = "<empireorderBig></empireorderBig>" + extraOrder;
@@ -1322,25 +1324,17 @@ function SetButtonInfo(button, origin, type, color) {
     button.innerHTML = "";
 
     if (type === "SubType" && !["Dragon Lord", "Giant King"].includes(currentOrigin.name)) return;
-    
-     if (type === "SubCulture" && !ListOfSubcultureHolders.includes(currentCulture.name)) return;
-    
-      if (type === "SubSociety1" && !ListOfSubsocietyHolders.includes(currentSociety1.name)) return;
-    
-      if (type === "SubSociety2" && !ListOfSubsocietyHolders.includes(currentSociety2.name)) return;
-    
-   
+
+    if (type === "SubCulture" && !ListOfSubcultureHolders.includes(currentCulture.name)) return;
+
+    if (type === "SubSociety1" && !ListOfSubsocietyHolders.includes(currentSociety1.name)) return;
+
+    if (type === "SubSociety2" && !ListOfSubsocietyHolders.includes(currentSociety2.name)) return;
 
     const image = createImage(type, origin);
-    const isSymbol = type === "Symbol";
 
-    if (!isSymbol) {
-        const buttonText = createButtonText(origin, type);
-        button.append(image, buttonText);
-    } else {
-        button.appendChild(image);
-        return;
-    }
+    const buttonText = createButtonText(origin, type);
+    button.append(image, buttonText);
 
     const tooltip = createTooltip(origin, type);
     addTooltipListeners(image, tooltip);
@@ -1359,17 +1353,16 @@ function createImage(type, origin) {
         case "Tome":
             setImage(`/evolved/Icons/TomeIcons/${origin.id}.png`);
             break;
-               case "Society1":
+        case "Society1":
         case "Society2":
         case "FormTrait":
-            
-            setImage('/evolved/Icons/TraitIcons/' + origin.icon + '.png');
+            setImage("/evolved/Icons/TraitIcons/" + origin.icon + ".png");
             break;
         case "Culture":
         case "Origin":
         case "Form":
-              case "SubCulture":
-               
+        case "SubCulture":
+
         case "SubType":
             setImage(getFactionIconPath(origin.id));
             break;
@@ -1391,37 +1384,49 @@ function createImage(type, origin) {
     return image;
 }
 
-
-
 function getFactionIconPath(id) {
     const cleanId = id.startsWith("_") ? id.split("_").slice(1).join("_") : id;
     return `/evolved/Icons/TraitIcons/${cleanId}.png`;
 }
 
-function findOriginLoc(origin, type) {
-    var newOrigin = origin;
+function findOriginLocName(origin, type) {
+    let newOrigin = "";
     switch (type) {
         case "Origin":
         case "Culture":
-        case "Form":
-            // not translated
-            newOrigin = jsonFactionCreationLocalized.find((entry) => entry.id === origin.id);
+              case "Class":
+              case "SubCulture":
+        case "SubType":
+        case "Form": 
+           
+            if("extraLookup" in origin){
+                  const valueLookup = findBy(jsonExtraFactionCreationFromPOLocalized, "id", origin.extraLookup);
+                if("extraLookup2" in origin){
+                  const valueLookup2 = findBy(jsonExtraFactionCreationFromPOLocalized, "id", origin.extraLookup2);
+             
+                newOrigin = valueLookup2.hyperlink  || valueLookup2.name || valueLookup2.title;
+            } else{
+                console.log(valueLookup);
+                 newOrigin = valueLookup.hyperlink || valueLookup.name;
+            }
+               
+            }
             break;
 
         case "Tome":
-            newOrigin = jsonTomesLocalized.find((entry) => entry.resid === origin.resid);
-            newOrigin = jsonTomesLocalized.find((entry) => entry.resid === origin.resid);
+            newOrigin = jsonTomesLocalized.find((entry) => entry.resid === origin.resid).name;
+            //newOrigin = jsonTomes.find((entry) => entry.resid === origin.resid);
             break;
 
         case "FormTrait":
         case "Society1":
         case "Society2":
-            newOrigin = jsonFactionCreation2Localized.find((entry) => entry.icon === origin.icon);
+            newOrigin = jsonFactionCreation2Localized.find((entry) => entry.icon === origin.icon).name;
 
             break;
 
         case "Ascension":
-            newOrigin = jsonHeroSkillsLocalized.find((entry) => entry.resid === origin.resid);
+            newOrigin = jsonHeroSkillsLocalized.find((entry) => entry.resid === origin.resid).name;
             break;
         case "Signature":
         case "Loadout":
@@ -1432,20 +1437,18 @@ function findOriginLoc(origin, type) {
 function createButtonText(origin, type) {
     const span = document.createElement("span");
 
-    var originLoc = findOriginLoc(origin, type);
+    const originLoc = findOriginLocName(origin, type);
+   
 
     if ("point_cost" in origin && type === "FormTrait") {
         span.innerHTML += `${origin.point_cost}: `;
     }
-    
-    if(type == "SubSociety1" || type == "SubSociety2"){
-          span.innerHTML +=  origin.name.split(":")[1];
-    } else{
-          span.innerHTML += type === "Loadout" ? origin.name : ` ${originLoc.name}`;
-    }
 
-  
-    
+    if (type == "SubSociety1" || type == "SubSociety2") {
+        span.innerHTML += origin.name.split(":")[1];
+    } else {
+        span.innerHTML +=  originLoc;
+    }
 
     if ("affinity" in origin) {
         span.innerHTML += ` ${ClearAffinityExtraTags(origin.affinity).replaceAll(",", "")}`;
@@ -1483,16 +1486,19 @@ function createButtonText(origin, type) {
 }
 function createTooltip(origin, type) {
     const tooltip = document.createElement("span");
+   
     tooltip.style = "margin-left:113px";
-    tooltip.innerHTML = `<p style="color: #d7c297;"><span style="font-size:20px;"> ${origin.name.toUpperCase()}</p>`;
+   
+         tooltip.innerHTML = `<p style="color: #d7c297;"><span style="font-size:20px;"> ${origin.name.toUpperCase()}</p>`;
 
-    var originLoc = findOriginLoc(origin, type);
+    
+   
+    var originLoc =  origin;//findOriginLoc(origin, type);
     switch (type) {
-        case "Origin":
-        case "Culture":
-        case "Form":
-        case "Society1":
+        /* case "Society1":
         case "Society2":
+            
+           origin =  findBy(jsonFactionCreation2Localized, "icon", origin.icon);
             if (origin.effect_descriptions) {
                 tooltip.innerHTML += `<br><br><span class="mod_name">EFFECTS: </span><bulletlist>`;
                 for (const e of originLoc.effect_descriptions) {
@@ -1513,7 +1519,22 @@ function createTooltip(origin, type) {
                 tooltip.innerHTML += "</bulletlist>";
             }
 
-            if (origin.incompatible_society_traits || origin.incompatible) {
+           
+            break;*/
+        case "Society1":
+        case "Society2":
+        case "Origin":
+        case "Culture":
+        case "Class":
+        case "SubCulture":
+        case "SubType":
+        case "Form":
+        case "FormTrait":
+            const el = spell_card_template.content.firstElementChild.cloneNode(true);
+
+            tooltip.innerHTML = el.firstElementChild.innerHTML;
+            showTrait(origin.id, tooltip);
+            if ((origin.incompatible_society_traits || origin.incompatible) && type == "Culture") {
                 tooltip.innerHTML += `<br><br><span class="mod_name">INCOMPATIBLE WITH: </span><bulletlist>`;
                 const incompatibles = originLoc.incompatible_society_traits || originLoc.incompatible;
                 for (const i of incompatibles) {
@@ -1527,9 +1548,9 @@ function createTooltip(origin, type) {
             SetTomePreview(tooltip, originLoc);
             break;
 
-        case "FormTrait":
+        /* case "FormTrait":
             SetFullPreview(tooltip, originLoc);
-            break;
+            break;*/
 
         case "Signature":
         case "Ascension":
@@ -1553,8 +1574,8 @@ function SetSkillPreview(span, origin) {
 
     if ("abilities" in origin) {
         for (let index = 0; index < origin.abilities.length; index++) {
-            for (let i = 0; i < jsonUnitAbilities.length; i++) {
-                const test = jsonUnitAbilities[i];
+            for (let i = 0; i < jsonUnitAbilitiesLocalized.length; i++) {
+                const test = jsonUnitAbilitiesLocalized[i];
                 if (origin.abilities[index].slug == test.slug) {
                     span.innerHTML += "<br>" + GetAbilityInfo(test).innerHTML;
                 }
@@ -1565,47 +1586,6 @@ function SetSkillPreview(span, origin) {
     }
 }
 
-function SetLoadoutPreview(span, origin) {
-    span.className = "abilityHighLighter";
-    span.innerHTML =
-        '<p style="color: #d7c297;>' + '<span style="font-size=20px;">' + origin.name.toUpperCase() + "</p>  <br>";
-
-    if ("description" in origin) {
-        span.innerHTML +=
-            '<p <p class ="abilityHighLighter" style="color: #d797b2;>' +
-            '<span style="font-size=20px;">' +
-            origin.name.toUpperCase() +
-            "</p>" +
-            "<br>";
-        span.innerHTML += origin.description;
-    }
-    if ("items" in origin) {
-        for (let index = 0; index < origin.items.length; index++) {
-            for (let i = 0; i < jsonHeroItems.length; i++) {
-                const test = jsonHeroItems[i];
-                if (origin.items[index].slug == test.id) {
-                    span.innerHTML +=
-                        '<p class ="abilityHighLighter" style="color: #97d7a2;>' +
-                        '<span style="font-size=20px;"> ITEM: <img style="margin-top:-10px" src="/evolved/Icons/UnitIcons/' +
-                        test.icon +
-                        ".png\" height='30px'>" +
-                        test.name.toUpperCase() +
-                        "</p>" +
-                        "<br>";
-                    break;
-                }
-            }
-            if (origin.items[index].slug == "hero_mount") {
-                span.innerHTML +=
-                    '<p class ="abilityHighLighter" style="color: #97d7a2;>' +
-                    '<span style="font-size=20px;"> ITEM: <img style="margin-top:-10px" src="/evolved/Icons/UnitIcons/white_horse.png" height=\'30px\'>HERO MOUNT</p>' +
-                    "<br>";
-            }
-        }
-    }
-
-    span.innerHTML += labelAndTransformString(origin.requirement);
-}
 
 function labelAndTransformString(input) {
     if (input == undefined) {
@@ -1722,9 +1702,12 @@ function GetClassFromWeaponId(id) {
 }
 
 function SetTomePreview(span, origin) {
+    // get loc version?
+    const locOrigin = findBy(jsonTomesLocalized, "resid", origin.resid);
+
     span.innerHTML =
-        '<p style="color: #d7c297;>' + '<span style="font-size=20px;">' + origin.name.toUpperCase() + "</p>";
-    span.innerHTML += origin.gameplay_description + "<br>";
+        '<p style="color: #d7c297;>' + '<span style="font-size=20px;">' + locOrigin.name.toUpperCase() + "</p>";
+    span.innerHTML += locOrigin.gameplay_description + "<br>";
     // if ("hero_skills" in origin) {
     //   span.innerHTML += '<p style="color: #97d7a2;>' + '<span style="font-size=20px;">Hero Skills:<br></p>';
 
@@ -1732,25 +1715,26 @@ function SetTomePreview(span, origin) {
     //   span.innerHTML += "<bullet> " + GetHeroSkillName(origin.hero_skills[index].slug) + "</bullet>";
     //}
     //}
-    if ("passives" in origin) {
+    if ("passives" in locOrigin) {
         span.innerHTML += '<p style="color: #97d7a2;>' + '<span style="font-size=20px;">Passives:<br></p>';
-        for (let index = 0; index < origin.passives.length; index++) {
-            span.innerHTML += "<bullet>" + origin.passives[index].name + "</bullet>";
+        for (let index = 0; index < locOrigin.passives.length; index++) {
+            span.innerHTML += "<bullet>" + locOrigin.passives[index].name + "</bullet>";
         }
     }
-    if ("initial_upgrades" in origin) {
+    if ("initial_upgrades" in locOrigin) {
         span.innerHTML += '<p  style="color: #97d7a2;>' + '<span style="font-size=20px;">Initial Upgrades:<br></p>';
 
-        for (let index = 0; index < origin.initial_upgrades.length; index++) {
+        for (let index = 0; index < locOrigin.initial_upgrades.length; index++) {
+            const struc = GetStructure(locOrigin.initial_upgrades[index].upgrade_slug);
             span.innerHTML +=
                 '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
-                origin.initial_upgrades[index].upgrade_slug +
+                struc.icon +
                 '.png">' +
-                GetStructureName(origin.initial_upgrades[index].upgrade_slug) +
+                struc.name +
                 "</bullet>";
         }
     }
-    if ("skills" in origin) {
+    if ("skills" in locOrigin) {
         span.innerHTML += '<p  style="color: #97d7a2;>' + '<span style="font-size=20px;">Skills:<br></p>';
 
         for (let index = 0; index < origin.skills.length; index++) {
@@ -1761,17 +1745,19 @@ function SetTomePreview(span, origin) {
             ) {
                 // can be summon as well
                 if ("spell_slug" in origin.skills[index]) {
+                    const spell = findBy(jsonSpellsLocalized, "id", locOrigin.skills[index].spell_slug);
                     span.innerHTML +=
                         '<bullet> <img width="20px" src="/evolved/Icons/SpellIcons/' +
-                        origin.skills[index].spell_slug +
-                        '.png">' + 
-                        findBy(jsonSpells, 'id', origin.skills[index].spell_slug).name+
+                        spell.icon +
+                        '.png">' +
+                        spell.name +
                         "</bullet>";
                 } else {
                     span.innerHTML +=
                         '<bullet> <img width="20px" src="/evolved/Icons/SpellIcons/' +
                         origin.skills[index].unit_slug +
-                        '.png">' + findBy(jsonUnits, 'id', origin.skills[index].unit_slug).name +
+                        '.png">' +
+                        findBy(jsonUnitsLocalized, "id", locOrigin.skills[index].unit_slug).name +
                         "</bullet>";
                 }
             }
@@ -1779,39 +1765,41 @@ function SetTomePreview(span, origin) {
             else if (origin.skills[index].type.indexOf("Siege") != -1) {
                 var slug = "";
                 if ("siege_project_slug" in origin.skills[index]) {
-                    slug = origin.skills[index].siege_project_slug;
+                    slug = locOrigin.skills[index].siege_project_slug;
                 } else {
-                    slug = origin.skills[index].name.replaceAll(" ", "_").toLowerCase();
+                    slug = locOrigin.skills[index].name.replaceAll(" ", "_").toLowerCase();
                 }
-                
-                
+
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/SiegeProjectIcons/' +
                     slug +
-                    '.png">' +findBy(jsonSiegeProjects, 'id', slug).name +
+                    '.png">' +
+                    findBy(jsonSiegeProjectsLocalized, "id", slug).name +
                     "</bullet>";
             }
             // city structure
             else if (origin.skills[index].type.indexOf("Structure") != -1) {
+                const struc = GetStructure(locOrigin.skills[index].upgrade_slug);
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
-                    origin.skills[index].upgrade_slug +
+                    struc.icon +
                     '.png">' +
-                    GetStructureName(origin.skills[index].upgrade_slug) +
+                    struc.name +
                     "</bullet>";
             }
             // province Improvement
             else if (origin.skills[index].type.indexOf("Province") != -1) {
+                const struc = GetStructure(locOrigin.skills[index].upgrade_slug);
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
-                    origin.skills[index].upgrade_slug +
+                    struc.icon +
                     '.png">' +
-                    GetStructureName(origin.skills[index].upgrade_slug) +
+                    struc.name +
                     "</bullet>";
             }
             // empire upgrades
             else if (origin.skills[index].type.indexOf("Empire") != -1) {
-                var imageLinkName = origin.skills[index].name.replaceAll(" ", "_").toLowerCase();
+                var imageLinkName = locOrigin.skills[index].name.replaceAll(" ", "_").toLowerCase();
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/SpellIcons/' +
                     imageLinkName +
@@ -1821,11 +1809,12 @@ function SetTomePreview(span, origin) {
             }
             // normal spell
             else {
+                const spell = findBy(jsonSpellsLocalized, "id", locOrigin.skills[index].spell_slug);
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/SpellIcons/' +
-                    origin.skills[index].spell_slug +
+                    spell.icon +
                     '.png">' +
-                     findBy(jsonSpells, 'id', origin.skills[index].spell_slug).name +
+                    spell.name +
                     "</bullet>";
             }
             //
@@ -1836,28 +1825,27 @@ function SetTomePreview(span, origin) {
 function SetFullPreview(span, origin) {
     span.innerHTML =
         '<p style="color: #d7c297;>' + '<span style="font-size=20px;">' + origin.name.toUpperCase() + "</p>";
-    
+
     // if("biography_description" in origin){
-       
+
     //     span.innerHTML += "<br>" + origin.biography_description + "<br>";
-       
-   // }
-     if("lore_description" in origin){
-       
-         span.innerHTML += "" + origin.lore_description + "<br>";
-       
+
+    // }
+    if ("lore_description" in origin) {
+        span.innerHTML += "" + origin.lore_description + "<br>";
     }
 
-    span.innerHTML +=  '<br><p style="color: #d7c297;>' + '<span style="font-size=20px;">' + "<bulletlist>EFFECTS: " + "</span></p>";
+    span.innerHTML +=
+        '<br><p style="color: #d7c297;>' + '<span style="font-size=20px;">' + "<bulletlist>EFFECTS: " + "</span></p>";
     for (i = 0; i < origin.effect_descriptions.length; i++) {
         span.innerHTML += "<bullet>" + origin.effect_descriptions[i].name + "</bullet>";
     }
-   
-    if("incompatible_society_traits" in origin){
-        span.innerHTML += "<br>Incompatible with:" ;
-         for (i = 0; i < origin.incompatible_society_traits.length; i++) {
-         span.innerHTML += "<bullet>" + origin.incompatible_society_traits[i].name + "</bullet>";
-         }
+
+    if ("incompatible_society_traits" in origin) {
+        span.innerHTML += "<br>Incompatible with:";
+        for (i = 0; i < origin.incompatible_society_traits.length; i++) {
+            span.innerHTML += "<bullet>" + origin.incompatible_society_traits[i].name + "</bullet>";
+        }
     }
     span.innerHTML += "</bulletlist>";
 }
@@ -1870,11 +1858,9 @@ function GetAllStartingTomes() {
             listOfAllTier1Tomes.push(jsonTomes[i]);
         }
     }
-     
+
     // if beta, add new tomes just for now
-    
-   
-   
+
     // alert(listOfAllTier1Tomes);
     return listOfAllTier1Tomes;
 }
@@ -1925,33 +1911,32 @@ function CollectAllPartsForOverview(fromload) {
 
                 if (ExtraTomelist[index].skills[i].type == "<hyperlink>Empire Bonus</hyperlink>") {
                     listOfAllCurrentPassivesSlugs.push(ExtraTomelist[index].skills[i], ExtraTomelist[index]);
-                  
                 }
             }
         }
         if ("initial_upgrades" in ExtraTomelist[index]) {
-    // Deduplicate by 'upgrade_slug'
-    const uniqueUpgrades = [];
+            // Deduplicate by 'upgrade_slug'
+            const uniqueUpgrades = [];
 
-    const seenSlugs = new Set();
+            const seenSlugs = new Set();
 
-    for (let j = 0; j < ExtraTomelist[index].initial_upgrades.length; j++) {
-        const upgrade = ExtraTomelist[index].initial_upgrades[j];
-        if (!seenSlugs.has(upgrade.upgrade_slug)) {
-            seenSlugs.add(upgrade.upgrade_slug);
-            uniqueUpgrades.push(upgrade);
+            for (let j = 0; j < ExtraTomelist[index].initial_upgrades.length; j++) {
+                const upgrade = ExtraTomelist[index].initial_upgrades[j];
+                if (!seenSlugs.has(upgrade.upgrade_slug)) {
+                    seenSlugs.add(upgrade.upgrade_slug);
+                    uniqueUpgrades.push(upgrade);
+                }
+            }
+
+            // Now push only upgrades not already in the list
+            for (let i = 0; i < uniqueUpgrades.length; i++) {
+                const upgrade = uniqueUpgrades[i];
+
+                if (!isInArray(listOfAllCurrentSPISlugs, upgrade.upgrade_slug, ExtraTomelist[index])) {
+                    listOfAllCurrentSPISlugs.push(upgrade.upgrade_slug, ExtraTomelist[index]);
+                }
+            }
         }
-    }
-
-    // Now push only upgrades not already in the list
-    for (let i = 0; i < uniqueUpgrades.length; i++) {
-        const upgrade = uniqueUpgrades[i];
-
-        if (!isInArray(listOfAllCurrentSPISlugs, upgrade.upgrade_slug, ExtraTomelist[index])) {
-            listOfAllCurrentSPISlugs.push(upgrade.upgrade_slug, ExtraTomelist[index]);
-        }
-    }
-}
         /*if ("hero_skills" in ExtraTomelist[index]) {
             for (let l = 0; l < ExtraTomelist[index].hero_skills.length; l++) {
                 if (!isInArray(listOfAllCurrentHeroSkillsSlugs, ExtraTomelist[index].hero_skills[l])) {
@@ -1964,7 +1949,7 @@ function CollectAllPartsForOverview(fromload) {
                 listOfAllCurrentPassivesSlugs.push(ExtraTomelist[index].passives[q], ExtraTomelist[index]);
             }
         }
-          console.log(listOfAllCurrentPassivesSlugs);
+        console.log(listOfAllCurrentPassivesSlugs);
     }
     ShowPassivesOverview(listOfAllCurrentPassivesSlugs);
     ShowUnitsOverview(listOfAllCurrentUnitSlugs);
@@ -2106,6 +2091,8 @@ function applyTextColor(element, colors) {
 }
 
 function CreateSpellIcon(listEntry, colorEntry) {
+    
+  
     // var Color = ["green", "blue"];
     var spell = document.createElement("button");
     if ("affinities" in colorEntry) {
@@ -2119,11 +2106,13 @@ function CreateSpellIcon(listEntry, colorEntry) {
     text.innerHTML = " " + listEntry.name;
     tier.innerHTML = romanize(listEntry.tier) + " ";
     //tier.setAttribute("style", " top: 50%;left: 50%;");
-    
+
     // get spell already
+
+    var spellData = jsonSpells.find((entry) => entry.id == listEntry.spell_slug);
+      const listEntryLoc = findBy(jsonSpellsLocalized, "resid", spellData.resid);
     
-     var spellData = jsonSpellsLocalized.find((entry) => entry.id == listEntry.spell_slug);
-    
+     text.innerHTML = " " + listEntryLoc.name;
 
     var smallIcon = document.createElement("img");
     let iconLink = spellData.icon || spellData.id;
@@ -2133,18 +2122,17 @@ function CreateSpellIcon(listEntry, colorEntry) {
     spell.appendChild(tier);
     spell.appendChild(smallIcon);
     spell.appendChild(text);
-   
-     const fragment = spell_card_template.content.cloneNode(true);
-    const iDiv = fragment.firstElementChild; 
-    
 
-  document.getElementById("hiddentooltips").appendChild(iDiv);
-    var toolTip = showSpell(listEntry.spell_slug, false, iDiv).firstElementChild ;
+    const fragment = spell_card_template.content.cloneNode(true);
+    const iDiv = fragment.firstElementChild;
 
-   var newSpan = document.createElement("div");
+    document.getElementById("hiddentooltips").appendChild(iDiv);
+    var toolTip = showSpell(listEntry.spell_slug, false, iDiv).firstElementChild;
+
+    var newSpan = document.createElement("div");
 
     newSpan.innerHTML = "<br>From: " + colorEntry.name;
-    toolTip.append(newSpan) ;
+    toolTip.append(newSpan);
     addTooltipListeners(smallIcon, toolTip);
     document.getElementById("hoverDiv").classList.add("wide");
 
@@ -2178,6 +2166,8 @@ function GetColors(affinity) {
 }
 
 function CreateUnitIcon(listEntry, colorEntry) {
+    
+   const listEntryLoc = findBy(jsonUnitsLocalized, "resid", listEntry.resid);
     var spell = document.createElement("button");
     if (colorEntry != null) {
         var Color = GetColors(colorEntry.affinities);
@@ -2186,15 +2176,14 @@ function CreateUnitIcon(listEntry, colorEntry) {
     spell.className = "overview_list_entry";
     var text = document.createElement("div");
     text.innerHTML =
-        romanize(listEntry.tier) + " " + getUnitTypeTag(listEntry.secondary_passives) + " " + listEntry.name;
-   
+        romanize(listEntry.tier) + " " + getUnitTypeTag(listEntry.secondary_passives) + " " + listEntryLoc.name;
 
     // document.getElementById("hiddentooltips").appendChild(iDiv);
     var allAbilities = document.createElement("span");
 
     var emptyList = [];
     allAbilities.innerHTML +=
-        '<span style="font-size: 16px;text-align:center"> ' + listEntry.name.toUpperCase() + " <br></span> ";
+        '<span style="font-size: 16px;text-align:center"> ' + listEntryLoc.name.toUpperCase() + " <br></span> ";
     allAbilities.innerHTML +=
         '<span style="font-size: 20px ;display:flex" ><img  src="/evolved/Icons/Text/health.png" width="25 " height="25 ">' +
         listEntry.hp +
@@ -2218,8 +2207,6 @@ function CreateUnitIcon(listEntry, colorEntry) {
             addPassiveslot(listEntry.primary_passives[index].slug, allAbilities, emptyList);
         }
     }
-    
-    
 
     var newSpan = document.createElement("div");
     if (colorEntry != null) {
@@ -2284,12 +2271,13 @@ function ShowUpgradesOverview(list) {
     for (let index = 0; index < list.length; index += 2) {
         for (let i = 0; i < jsonStructureUpgrades.length; i++) {
             if (jsonStructureUpgrades[i].id == list[index].upgrade_slug) {
+                 const loc = findBy(jsonStructureUpgradesLocalized, "resid", jsonStructureUpgrades[i].resid);
                 var spell = document.createElement("button");
                 var Color = GetColors(list[index + 1].affinities);
                 applyTextColor(spell, Color);
                 spell.className = "overview_list_entry";
                 var text = document.createElement("div");
-                text.innerHTML = " " + list[index].name;
+                text.innerHTML = " " + loc.name;
                 var smallIcon = document.createElement("img");
                 smallIcon.setAttribute("src", "/evolved/Icons/UpgradeIcons/" + jsonStructureUpgrades[i].id + ".png");
                 smallIcon.setAttribute("width", "20px");
@@ -2451,6 +2439,9 @@ function ShowSPIOverview(list) {
 
         for (let i = 0; i < jsonStructureUpgrades.length; i++) {
             if (jsonStructureUpgrades[i].id == structureId) {
+                // get loc name
+                const loc = findBy(jsonStructureUpgradesLocalized, "resid", jsonStructureUpgrades[i].resid);
+                console.log(loc);
                 const spell = document.createElement("button");
 
                 const Color = GetColors(list[index + 1].affinities);
@@ -2458,7 +2449,7 @@ function ShowSPIOverview(list) {
                 spell.className = "overview_list_entry";
 
                 const text = document.createElement("div");
-                text.innerHTML = jsonStructureUpgrades[i].name;
+               text.innerHTML = loc.name;
 
                 const smallIcon = document.createElement("img");
                 smallIcon.setAttribute("src", "/evolved/Icons/UpgradeIcons/" + jsonStructureUpgrades[i].icon + ".png");
@@ -2468,14 +2459,14 @@ function ShowSPIOverview(list) {
                 spell.appendChild(text);
                 section.append(spell);
 
-                const name = GetStructureName(structureId);
+                const name = loc.name;
                 const spa = document.createElement("SPAN");
 
                 spa.innerHTML =
                     '<span style="color: #deb887 ;text-transform: uppercase">' +
                     name +
                     "</span>" +
-                    GetStructureDescription(structureId);
+                    GetStructure(loc.id).description;
 
                 const newSpan = document.createElement("div");
                 if (list[index + 1] != null) {
@@ -2491,7 +2482,6 @@ function ShowSPIOverview(list) {
 
     container.appendChild(section);
 }
-
 
 function ShowSiegeProjectsOverview(list) {
     var container = document.getElementById("mainoverview");
@@ -2516,13 +2506,14 @@ function ShowSiegeProjectsOverview(list) {
             }
 
             if (jsonSiegeProjects[i].id == slug) {
+                const loc = findBy(jsonSiegeProjectsLocalized, "resid", jsonSiegeProjects[i].resid);
                 var spell = document.createElement("button");
 
                 var Color = GetColors(list[index + 1].affinities);
                 applyTextColor(spell, Color);
                 spell.className = "overview_list_entry";
                 var text = document.createElement("div");
-                text.innerHTML = jsonSiegeProjects[i].name;
+                text.innerHTML = loc.name;
                 var smallIcon = document.createElement("img");
                 smallIcon.setAttribute("src", "/evolved/Icons/SiegeProjectIcons/" + jsonSiegeProjects[i].id + ".png");
                 smallIcon.setAttribute("width", "20px");
@@ -2530,7 +2521,7 @@ function ShowSiegeProjectsOverview(list) {
                 spell.appendChild(text);
                 section.append(spell);
 
-                var name = findBy(jsonSiegeProjects, 'id', slug).name;
+                var name =loc.name;
 
                 var spa = document.createElement("SPAN");
                 spa.innerHTML =
@@ -2538,13 +2529,13 @@ function ShowSiegeProjectsOverview(list) {
                     name +
                     "<br>" +
                     "</span>" +
-                    jsonSiegeProjects[i].description;
+                    loc.description;
 
                 //  div.appendChild(spa);
 
                 var newSpan = document.createElement("div");
                 if (list[index + 1] != null) {
-                    newSpan.innerHTML = "<br>From: " + list[index + 1].name ;
+                    newSpan.innerHTML = "<br>From: " + list[index + 1].name;
                     spa.append(newSpan);
                 }
 
@@ -2601,7 +2592,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 3) {
                 // 3 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 2)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 2) || checkEmpireOfCosmos(1)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -2609,12 +2600,12 @@ function GetNextSetOfTomes() {
             }
         }
     }
-    if (currentTomeList.length > 5) {
+    if (currentTomeList.length > 5 ) {
         // allow tier 4 tomes
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 4) {
                 // 6 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 5)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 5) || checkEmpireOfCosmos(2)) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -2627,7 +2618,7 @@ function GetNextSetOfTomes() {
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 5) {
                 // 8 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 7)) {
+                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 7) || checkEmpireOfCosmos(3)) {
                     // check if we dont already have a t5, we can only have 1
                     if (!checkIfT5(currentTomeList)) {
                         if (!isInArray(currentTomeList, jsonTomes[i])) {
@@ -2640,6 +2631,42 @@ function GetNextSetOfTomes() {
     }
 
     return listOfNextTomes;
+}
+
+function checkEmpireOfCosmos(tierCheck){
+    // no empire of cosmos here
+    if(currentSociety1.id != "empire_of_the_cosmos" && currentSociety2.id != "empire_of_the_cosmos" ){
+        console.log("no empire");
+        return false;
+    }
+    
+     if( hasAllAffinitiesForEmpireOfCosmos(tierCheck)){
+         return true;
+     } else{
+         return false;
+     }
+    
+}
+    
+    function hasAllAffinitiesForEmpireOfCosmos(number) {
+  const html = document.getElementById("currentAffinity").innerHTML;
+
+  // List of affinity tags
+  const affinities = [
+    "empirematter",
+    "empirearcana",
+    "empirechaos",
+    "empirenature",
+    "empireorder",
+    "empireshadow"
+  ];
+
+  // Check if each affinity has a number >= 1 after it
+  return affinities.every(affinity => {
+    const regex = new RegExp(`<${affinity}big></${affinity}big>\\s*(\\d+)`);
+    const match = html.match(regex);
+    return match && parseInt(match[1], 10) >= number;
+  });
 }
 
 function GetAffinityMatches(affinityTotal, substringToCount, number) {
@@ -2781,47 +2808,44 @@ function GetAllSubTypes() {
     return listOfAllSubTypes;
 }
 
-function GetAllSubCultureSetups(){
-     var listOfAllSubCultTypes = [];
+function GetAllSubCultureSetups() {
+    var listOfAllSubCultTypes = [];
 
     // list of subcultures for architect
-    
-       for (i = 0; i < jsonFactionCreation.length; i++) {
+
+    for (i = 0; i < jsonFactionCreation.length; i++) {
         if (jsonFactionCreation[i].type === "SubCulture") {
             if (jsonFactionCreation[i].requirement == currentCulture.name) {
                 listOfAllSubCultTypes.push(jsonFactionCreation[i]);
             }
         }
     }
-  
+
     listOfAllSubCultTypes.sort((a, b) => a.id - b.id);
     return listOfAllSubCultTypes;
-    
 }
 
-function GetAllSubProphecySetups(entry){
-     var listOfAllSubTypes = [];
+function GetAllSubProphecySetups(entry) {
+    var listOfAllSubTypes = [];
 
     // list of subcultures for architect
-    
-       for (i = 0; i < jsonFactionCreation.length; i++) {
+
+    for (i = 0; i < jsonFactionCreation.length; i++) {
         if (jsonFactionCreation[i].type === "SubSociety") {
-            if(entry == 1){
-                 if (jsonFactionCreation[i].requirement == currentSociety1.name ) {
-                listOfAllSubTypes.push(jsonFactionCreation[i]);
+            if (entry == 1) {
+                if (jsonFactionCreation[i].requirement == currentSociety1.name) {
+                    listOfAllSubTypes.push(jsonFactionCreation[i]);
+                }
             }
+            if (entry == 2) {
+                if (jsonFactionCreation[i].requirement == currentSociety2.name) {
+                    listOfAllSubTypes.push(jsonFactionCreation[i]);
+                }
             }
-           if(entry == 2){
-                   if (jsonFactionCreation[i].requirement == currentSociety2.name ) {
-                listOfAllSubTypes.push(jsonFactionCreation[i]);
-            }
-           
         }
     }
-        }
     listOfAllSubTypes.sort((a, b) => a.id - b.id);
     return listOfAllSubTypes;
-    
 }
 function GetAllClasses() {
     var listofallClasses = [];
@@ -2889,7 +2913,7 @@ function GetRandomEntry(type) {
             //   randomOrigin = list[Math.floor(Math.random() * list.length)];
             //}
             break;
-             case "SubCulture":
+        case "SubCulture":
             var list = GetAllSubCultureSetups(currentOrigin);
 
             randomOrigin = list[Math.floor(Math.random() * list.length)];
@@ -2900,8 +2924,8 @@ function GetRandomEntry(type) {
             //   randomOrigin = list[Math.floor(Math.random() * list.length)];
             //}
             break;
-            
-                case "SubSociety1":
+
+        case "SubSociety1":
             var list = GetAllSubProphecySetups(1);
 
             randomOrigin = list[Math.floor(Math.random() * list.length)];
@@ -2912,7 +2936,7 @@ function GetRandomEntry(type) {
             //   randomOrigin = list[Math.floor(Math.random() * list.length)];
             //}
             break;
-                 case "SubSociety2":
+        case "SubSociety2":
             var list = GetAllSubProphecySetups(2);
 
             randomOrigin = list[Math.floor(Math.random() * list.length)];
@@ -2992,7 +3016,7 @@ function incompatibleCheck(type, origin) {
             let i = "";
             // also check from culture here
             //  currentCul = GetCultureFromID(currentCulture);
-           
+
             for (i in origin.incompatible_society_traits) {
                 if (currentSociety2 != "") {
                     if (
@@ -3007,7 +3031,7 @@ function incompatibleCheck(type, origin) {
         }
         if (type === "Society2") {
             var i = "";
-          
+
             for (i in origin.incompatible) {
                 if (currentSociety1 != "") {
                     if (
@@ -3021,21 +3045,20 @@ function incompatibleCheck(type, origin) {
             }
         }
     }
-    
-     if(currentSociety1 != ""){
-             // only one vision
-            if(currentSociety1.name.indexOf("Vision of") != -1 && origin.name.indexOf("Vision of") != -1){
-                incompatibleWithSetup = true;
-            }
-     }
-    
-     if(currentSociety2 != ""){
-             // only one vision
-            if(currentSociety2.name.indexOf("Vision of") != -1 && origin.name.indexOf("Vision of") != -1){
-                incompatibleWithSetup = true;
-            }
-     }
-        
+
+    if (currentSociety1 != "") {
+        // only one vision
+        if (currentSociety1.name.indexOf("Vision of") != -1 && origin.name.indexOf("Vision of") != -1) {
+            incompatibleWithSetup = true;
+        }
+    }
+
+    if (currentSociety2 != "") {
+        // only one vision
+        if (currentSociety2.name.indexOf("Vision of") != -1 && origin.name.indexOf("Vision of") != -1) {
+            incompatibleWithSetup = true;
+        }
+    }
 
     if (currentSociety1.name === origin.name) {
         incompatibleWithSetup = true;
@@ -3141,7 +3164,7 @@ function checkCompatibilityTraits(entry) {
 
     // Check if only one of each exclusive group can exist
     if (exclusiveGroups.includes(entry.group_name)) {
-        const hasSameGroup = currentFormTraitList.some(item => item.group_name === entry.group_name);
+        const hasSameGroup = currentFormTraitList.some((item) => item.group_name === entry.group_name);
 
         const isBlockedByPrimal = entry.group_name === "Adaptations" && currentCulture.name.includes("Primal");
 
@@ -3151,15 +3174,13 @@ function checkCompatibilityTraits(entry) {
     }
 
     // Normalize to array of names
-    const currentTraitNames = currentFormTraitList.map(item => item.name);
+    const currentTraitNames = currentFormTraitList.map((item) => item.name);
 
     // --- Forward check: entry conflicts with something already selected
     if (Array.isArray(entry.incompatible_society_traits)) {
-        const incompatibleNames = entry.incompatible_society_traits.map(i => 
-            typeof i === "string" ? i : i.name
-        );
+        const incompatibleNames = entry.incompatible_society_traits.map((i) => (typeof i === "string" ? i : i.name));
 
-        const hasIncompatible = incompatibleNames.some(name => currentTraitNames.includes(name));
+        const hasIncompatible = incompatibleNames.some((name) => currentTraitNames.includes(name));
         if (hasIncompatible) {
             return false;
         }
@@ -3168,7 +3189,7 @@ function checkCompatibilityTraits(entry) {
     // --- Reverse check: something already selected conflicts with entry
     for (const trait of currentFormTraitList) {
         if (Array.isArray(trait.incompatible_society_traits)) {
-            const incompatibleNames = trait.incompatible_society_traits.map(i =>
+            const incompatibleNames = trait.incompatible_society_traits.map((i) =>
                 typeof i === "string" ? i : i.name
             );
 
@@ -3223,22 +3244,21 @@ function GenerateQuickLink() {
     // 1
     var number = decimalToHex(LookUpTableData(currentSociety1.id));
     code += "," + number;
-    
+
     // attach subsociety1 to it
-      if(currentSubSociety1 != ""){
-         var extraNummer = decimalToHex(LookUpTableData(currentSubSociety1.id));
-         code += ":" + extraNummer;
+    if (currentSubSociety1 != "") {
+        var extraNummer = decimalToHex(LookUpTableData(currentSubSociety1.id));
+        code += ":" + extraNummer;
     }
-    
-    
+
     //2
     var number = decimalToHex(LookUpTableData(currentSociety2.id));
     code += "," + number;
-    
-     // attach subsociety2 to it
-      if(currentSubSociety2 != ""){
-         var extraNummer = decimalToHex(LookUpTableData(currentSubSociety2.id));
-         code += ":" + extraNummer;
+
+    // attach subsociety2 to it
+    if (currentSubSociety2 != "") {
+        var extraNummer = decimalToHex(LookUpTableData(currentSubSociety2.id));
+        code += ":" + extraNummer;
     }
     //3
     var number = decimalToHex(LookUpTableData(currentForm.id));
@@ -3247,9 +3267,9 @@ function GenerateQuickLink() {
     var number = decimalToHex(LookUpTableData(currentCulture.id));
     code += "," + number;
     // attach subculture to it
-    if(currentSubCulture != ""){
-         var extraNummer = decimalToHex(LookUpTableData(currentSubCulture.id));
-         code += ":" + extraNummer;
+    if (currentSubCulture != "") {
+        var extraNummer = decimalToHex(LookUpTableData(currentSubCulture.id));
+        code += ":" + extraNummer;
     }
     //5
     var number = decimalToHex(LookUpTableData(currentOrigin.id));
@@ -3369,7 +3389,7 @@ function reversLookUp(code) {
 
     // 1 = currentsociety1
     var lookUp = splitcode[1];
-     var currentSocietySplit = lookUp.split(":");
+    var currentSocietySplit = lookUp.split(":");
     var numbernew = jsonBuilderLookUp[hexToDecimal(currentSocietySplit[0])].id;
 
     for (let index = 0; index < jsonFactionCreation2.length; index++) {
@@ -3380,28 +3400,26 @@ function reversLookUp(code) {
     currentSociety1 = newBit;
     var originButton = document.getElementById("originButtonSociety1");
     SetButtonInfo(originButton, currentSociety1, "Society1");
-    
+
     // sub society1
-    if(currentSocietySplit[1] != undefined){
+    if (currentSocietySplit[1] != undefined) {
         // sub society here
-       
-         var subsoc1 = jsonBuilderLookUp[hexToDecimal(currentSocietySplit[1])].id;
-        
-         for (let index = 0; index < jsonFactionCreation.length; index++) {
-        if (jsonFactionCreation[index].id === subsoc1) {
-            var newBit = jsonFactionCreation[index];
+
+        var subsoc1 = jsonBuilderLookUp[hexToDecimal(currentSocietySplit[1])].id;
+
+        for (let index = 0; index < jsonFactionCreation.length; index++) {
+            if (jsonFactionCreation[index].id === subsoc1) {
+                var newBit = jsonFactionCreation[index];
+            }
+            currentSubSociety1 = newBit;
+            var originButton = document.getElementById("originButtonSubSociety1");
+            SetButtonInfo(originButton, currentSubSociety1, "SubSociety1");
         }
-              currentSubSociety1 = newBit;
-    var originButton = document.getElementById("originButtonSubSociety1");
-    SetButtonInfo(originButton, currentSubSociety1, "SubSociety1");
-    }
-   
-        
     }
 
     // 2 = currentsociety2
     var lookUp2 = splitcode[2];
-  var currentSocietySplit2 = lookUp2.split(":");
+    var currentSocietySplit2 = lookUp2.split(":");
     var numbernew = jsonBuilderLookUp[hexToDecimal(currentSocietySplit2[0])].id;
 
     for (let index = 0; index < jsonFactionCreation2.length; index++) {
@@ -3412,23 +3430,21 @@ function reversLookUp(code) {
     currentSociety2 = newBit;
     var originButton = document.getElementById("originButtonSociety2");
     SetButtonInfo(originButton, currentSociety2, "Society2");
-    
-     // sub society
-    if(currentSocietySplit[1] != undefined){
+
+    // sub society
+    if (currentSocietySplit[1] != undefined) {
         // sub society here
-       
-         var subsoc1 = jsonBuilderLookUp[hexToDecimal(currentSocietySplit[1])].id;
-        
-         for (let index = 0; index < jsonFactionCreation.length; index++) {
-        if (jsonFactionCreation[index].id === subsoc1) {
-            var newBit = jsonFactionCreation[index];
+
+        var subsoc1 = jsonBuilderLookUp[hexToDecimal(currentSocietySplit[1])].id;
+
+        for (let index = 0; index < jsonFactionCreation.length; index++) {
+            if (jsonFactionCreation[index].id === subsoc1) {
+                var newBit = jsonFactionCreation[index];
+            }
+            currentSubSociety2 = newBit;
+            var originButton = document.getElementById("originButtonSubSociety2");
+            SetButtonInfo(originButton, currentSubSociety2, "SubSociety2");
         }
-              currentSubSociety2 = newBit;
-    var originButton = document.getElementById("originButtonSubSociety2");
-    SetButtonInfo(originButton, currentSubSociety2, "SubSociety2");
-    }
-   
-        
     }
 
     // 3 = form
@@ -3447,7 +3463,7 @@ function reversLookUp(code) {
 
     // 4 = culture
     var lookUp = splitcode[4];
-    // check for subculture 
+    // check for subculture
     var currentCultureSplit = lookUp.split(":");
     var numbernew = jsonBuilderLookUp[hexToDecimal(currentCultureSplit[0])].id;
 
@@ -3456,47 +3472,41 @@ function reversLookUp(code) {
             var newBit = jsonFactionCreation[index];
         }
     }
-    
-   
+
     currentCulture = newBit;
-    
-     // backwards compatible
-    if(newBit.type == "SubCulture"){
-       
+
+    // backwards compatible
+    if (newBit.type == "SubCulture") {
         currentSubCulture = newBit;
-       
-        
-        
+
         for (let index = 0; index < jsonFactionCreation.length; index++) {
-        if (jsonFactionCreation[index].name === currentSubCulture.requirement) {
-            var newBit = jsonFactionCreation[index];
+            if (jsonFactionCreation[index].name === currentSubCulture.requirement) {
+                var newBit = jsonFactionCreation[index];
+            }
         }
-    }
         currentCulture = newBit;
-        
-          var originButton = document.getElementById("originButtonSubCulture");
-    SetButtonInfo(originButton, currentSubCulture, "SubCulture");
+
+        var originButton = document.getElementById("originButtonSubCulture");
+        SetButtonInfo(originButton, currentSubCulture, "SubCulture");
     }
-    
+
     var originButton = document.getElementById("originButtonCulture");
     SetButtonInfo(originButton, currentCulture, "Culture");
-    
+
     // subculture
-    if(currentCultureSplit[1] != undefined){
+    if (currentCultureSplit[1] != undefined) {
         // subculture here
-       console.log("here");
-         var subcultureNo = jsonBuilderLookUp[hexToDecimal(currentCultureSplit[1])].id;
-        
-         for (let index = 0; index < jsonFactionCreation.length; index++) {
-        if (jsonFactionCreation[index].id === subcultureNo) {
-            var newBit = jsonFactionCreation[index];
+        console.log("here");
+        var subcultureNo = jsonBuilderLookUp[hexToDecimal(currentCultureSplit[1])].id;
+
+        for (let index = 0; index < jsonFactionCreation.length; index++) {
+            if (jsonFactionCreation[index].id === subcultureNo) {
+                var newBit = jsonFactionCreation[index];
+            }
+            currentSubCulture = newBit;
+            var originButton = document.getElementById("originButtonSubCulture");
+            SetButtonInfo(originButton, currentSubCulture, "SubCulture");
         }
-              currentSubCulture = newBit;
-    var originButton = document.getElementById("originButtonSubCulture");
-    SetButtonInfo(originButton, currentSubCulture, "SubCulture");
-    }
-   
-        
     }
 
     // 5 = origin

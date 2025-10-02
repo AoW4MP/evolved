@@ -1,10 +1,268 @@
 [
  {
-  "lore_description": "<helpcolor>Воины имеют повышенную вероятность критического удара.</helpcolor>",
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный воин-<hyperlink>астральный огонёк</hyperlink> в начале игры."
+   }
+  ],
+  "affinities": [
+   {
+    "name": "1<arcana></arcana> Приверженность астралу"
+   }
+  ],
+  "biography_description": "Говорят, что их империя находится в резонансе с источниками магии и самим космосом.",
+  "lore_description": "Знание Астрального моря и источников волшебства делает эту империю грозной силой.",
+  "DLC": "COSMICWANDERER ",
+  "point_cost": 1,
+  "id": "Космическая_империя",
+  "name": "Космическая империя",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "1 оч. каждой из <hyperlink>приверженности</hyperlink> дают:<bulletlist><bullet>+20 к <mana></mana> <hyperlink>мане</hyperlink>;</bullet><bullet>Книги III ранга доступны без требований к приверженностям.</bullet></bulletlist>"
+   },
+   {
+    "name": "2 оч. каждой из <hyperlink>приверженности</hyperlink> дают:<bulletlist><bullet>+20 к <knowledge></knowledge> <hyperlink>знаниям</hyperlink>;</bullet><bullet>Книги IV ранга доступны без требований к приверженностям.</bullet></bulletlist>"
+   },
+   {
+    "name": "3 оч. каждой из <hyperlink>приверженности</hyperlink> дают:<bulletlist><bullet>+20 к <influence></influence> <hyperlink>авторитету</hyperlink>;</bullet><bullet>Книги V ранга доступны без требований к приверженностям.</bullet></bulletlist>"
+   }
+  ],
+  "enabled": true,
+  "front_end": true,
+  "type": "society",
+  "display_order": 4,
+  "icon": "0000049700003313"
+ },
+ {
+  "biography_description": "Кто-то называет это трусостью, но для них это просто инстинкт самосохранения.",
+  "lore_description": "<helpcolor>Воины чаще обращаются в бегство.</helpcolor>",
+  "point_cost": -1,
+  "id": "Трусливость",
+  "name": "Трусливость",
+  "incompatible_society_traits": [
+   {
+    "name": "Жизнерадостный"
+   },
+   {
+    "name": "Хладнокровие"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Боевой дух снижается на 25% быстрее и восстанавливается на 25% медленнее."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Недостатки",
+  "front_end": true,
+  "display_order": 0,
+  "icon": "0000049700002D42"
+ },
+ {
+  "biography_description": "Им мешает непомерная гордыня, из-за которой они просто не умеют действовать сообща.",
+  "lore_description": "<helpcolor>Воины с большей вероятностью будут промахиваться и наносить уменьшенный урон, если стоят рядом с дружественными воинами.</helpcolor>",
+  "point_cost": -1,
+  "id": "Разобщённость",
+  "name": "Разобщённость",
+  "incompatible_society_traits": [
+   {
+    "name": "Оборонительная тактика"
+   },
+   {
+    "name": "Тактика подавления"
+   },
+   {
+    "name": "Тактика стаи"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "10% шанс <hyperlink>неудачной атаки</hyperlink>, если воин стоит рядом с другим дружественным воином."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Недостатки",
+  "front_end": true,
+  "display_order": 0,
+  "icon": "0000049700002D2D"
+ },
+ {
+  "biography_description": "Всадники парят в небесах верхом на благородных грифонах.",
+  "lore_description": "<helpcolor>Чаще используются всадники. В роли ездовых животных применяются грифоны.</helpcolor>",
+  "DLC": "ARCHONPROPHECY ",
+  "point_cost": 3,
+  "id": "Верхом_на_грифоне",
+  "name": "Верхом на грифоне",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Получает способность «Летающий»."
+   },
+   {
+    "name": "В <hyperlink>кавалерии</hyperlink> служит больше воинов."
+   },
+   {
+    "name": "Правитель начинает верхом на грифоне."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Ездовые животные",
+  "front_end": true,
+  "icon": "0000049700002D23",
+  "display_order": 0
+ },
+ {
+  "biography_description": "Они плохо держат удар.",
+  "lore_description": "<helpcolor>Воины получают больше физического урона.</helpcolor>",
+  "point_cost": -1,
+  "id": "Немощность",
+  "name": "Немощность",
+  "incompatible_society_traits": [
+   {
+    "name": "Твёрдость"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "-1 от <defense></defense> <hyperlink>защиты</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Недостатки",
+  "front_end": true,
+  "display_order": 0,
+  "icon": "0000049700002C84"
+ },
+ {
+  "biography_description": "Они от природы беззащитны перед магией.",
+  "lore_description": "<helpcolor>Воины получают больше магического урона.</helpcolor>",
+  "point_cost": -1,
+  "id": "Уязвимость_к_магии",
+  "name": "Уязвимость к магии",
+  "incompatible_society_traits": [
+   {
+    "name": "Стойкость"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "-1 от <resistance></resistance> <hyperlink>сопротивления</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Недостатки",
+  "front_end": true,
+  "display_order": 0,
+  "icon": "0000049700002C82"
+ },
+ {
+  "biography_description": "По легендам, этот народ был проклят, и с тех самых пор он страдает от бессилия.",
+  "lore_description": "<helpcolor>Воины медленнее восстанавливают здоровье.</helpcolor>",
+  "point_cost": -1,
+  "id": "Хрупкое_телосложение",
+  "name": "Хрупкое телосложение",
+  "incompatible_society_traits": [
+   {
+    "name": "Быстрое восстановление"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Восстановление здоровья на <hyperlink>глобальной карте</hyperlink> замедляется на 50%"
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Недостатки",
+  "front_end": true,
+  "display_order": 0,
+  "icon": "0000049700002C7D"
+ },
+ {
+  "biography_description": "В пылу битвы они забывают обо всём, зачастую подвергая себя опасности.",
+  "lore_description": "<helpcolor>Защитная позиция менее эффективна.</helpcolor>",
+  "point_cost": -1,
+  "id": "Беспечность",
+  "name": "Беспечность",
+  "incompatible_society_traits": [
+   {
+    "name": "Оплот"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Защитная позиция даёт на -1 меньше <defense></defense> <hyperlink>защиты</hyperlink> и на -1 меньше <resistance></resistance> <hyperlink>сопротивления</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Недостатки",
+  "front_end": true,
+  "display_order": 0,
+  "icon": "0000049700002C79"
+ },
+ {
+  "biography_description": "От их божественных тел исходит священный свет, который испепеляет врагов, словно очистительный огонь.",
+  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageSpirit></damageSpirit> <hyperlink>урон магией духа</hyperlink>.</helpcolor>",
+  "point_cost": 2,
+  "id": "Внутренний_свет",
+  "name": "Внутренний свет",
+  "incompatible_society_traits": [
+   {
+    "name": "Внутренний огонь"
+   },
+   {
+    "name": "Внутренний холод"
+   },
+   {
+    "name": "Внутренний заряд"
+   },
+   {
+    "name": "Яд"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+3 к <defensespirit></defensespirit> <hyperlink>сопротивлению магии духа</hyperlink>."
+   },
+   {
+    "name": "При атаке в ближнем бою противник получает 3 ед. <damageSpirit></damageSpirit> <hyperlink>урона магией духа</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "0000049700002C73"
+ },
+ {
   "biography_description": "Благодаря весёлому нраву из них получаются опасные и несгибаемые бойцы.",
+  "lore_description": "<helpcolor>Воины имеют повышенную вероятность критического удара.</helpcolor>",
   "point_cost": 1,
   "id": "Жизнерадостный",
   "name": "Жизнерадостный",
+  "incompatible_society_traits": [
+   {
+    "name": "Хладнокровие"
+   },
+   {
+    "name": "Трусливость"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -12,18 +270,32 @@
    }
   ],
   "enabled": true,
-  "group_name": "MORALE",
-  "front_end": true,
-  "icon": "000004970000120D",
   "type": "form",
-  "display_order": 5
+  "group_name": "Преимущества",
+  "front_end": true,
+  "display_order": 5,
+  "icon": "000004970000120D"
  },
  {
-  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageLightning></damageLightning> <hyperlink>электрический урон</hyperlink>.</helpcolor>",
   "biography_description": "Вместо крови в их жилах энергия молнии, и горе тем, кто осмелится ранить их!",
+  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageLightning></damageLightning> <hyperlink>электрический урон</hyperlink>.</helpcolor>",
   "point_cost": 2,
   "id": "Внутренний_заряд",
   "name": "Внутренний заряд",
+  "incompatible_society_traits": [
+   {
+    "name": "Внутренний огонь"
+   },
+   {
+    "name": "Внутренний холод"
+   },
+   {
+    "name": "Внутренний свет"
+   },
+   {
+    "name": "Яд"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -34,18 +306,32 @@
    }
   ],
   "enabled": true,
-  "group_name": "DAMAGE_RETALIATION",
-  "front_end": true,
-  "icon": "00000497000011FC",
   "type": "form",
-  "display_order": 4
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "00000497000011FC"
  },
  {
-  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageFrost></damageFrost> <hyperlink>урон от холода</hyperlink>.</helpcolor>",
   "biography_description": "Их кожа обжигающе холодна, и тот, кто подойдёт слишком близко, рискует получить обморожение.",
+  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageFrost></damageFrost> <hyperlink>урон от холода</hyperlink>.</helpcolor>",
   "point_cost": 2,
   "id": "Внутренний_холод",
   "name": "Внутренний холод",
+  "incompatible_society_traits": [
+   {
+    "name": "Внутренний огонь"
+   },
+   {
+    "name": "Внутренний заряд"
+   },
+   {
+    "name": "Внутренний свет"
+   },
+   {
+    "name": "Яд"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -56,18 +342,32 @@
    }
   ],
   "enabled": true,
-  "group_name": "DAMAGE_RETALIATION",
-  "front_end": true,
-  "icon": "00000497000011FA",
   "type": "form",
-  "display_order": 4
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "00000497000011FA"
  },
  {
-  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageFire></damageFire> <hyperlink>урон от огня</hyperlink>.</helpcolor>",
   "biography_description": "Их огненная кровь обжигает любого, кто рискнет нанести им раны.",
+  "lore_description": "<helpcolor>При атаке в ближнем бою противник получает <damageFire></damageFire> <hyperlink>урон от огня</hyperlink>.</helpcolor>",
   "point_cost": 2,
   "id": "Внутренний_огонь",
   "name": "Внутренний огонь",
+  "incompatible_society_traits": [
+   {
+    "name": "Внутренний холод"
+   },
+   {
+    "name": "Внутренний заряд"
+   },
+   {
+    "name": "Внутренний свет"
+   },
+   {
+    "name": "Яд"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -78,11 +378,11 @@
    }
   ],
   "enabled": true,
-  "group_name": "DAMAGE_RETALIATION",
-  "front_end": true,
-  "icon": "00000497000011F8",
   "type": "form",
-  "display_order": 4
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "00000497000011F8"
  },
  {
   "lore_description": "<helpcolor>Чаще используются всадники. В роли ездовых животных применяются рапторы.</helpcolor>",
@@ -109,7 +409,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "0000049700000D4D",
   "type": "form",
@@ -124,11 +424,11 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Один раз за ход, когда этому воину наносится урон (кроме <damagePhysical></damagePhysical> <hyperlink>физического</hyperlink>), он получает эффект «Дополнительная сила» на 3 <turn></turn> х."
+    "name": "Один раз за ход, когда этому воину наносится урон (кроме <damagePhysical></damagePhysical> <hyperlink>физического</hyperlink>), он получает эффект «Дополнительная сила» на 3 <turn></turn> <hyperlink>х.</hyperlink>"
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000049700000C93",
   "type": "form",
@@ -147,7 +447,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000049700000C8A",
   "type": "form",
@@ -172,7 +472,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000004970000086B",
   "type": "form",
@@ -191,7 +491,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "00000497000007E7",
   "type": "form",
@@ -224,7 +524,7 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000004970000069E",
   "display_order": 0
@@ -259,7 +559,7 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "0000049700000697",
   "display_order": 0
@@ -277,18 +577,29 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "0000049700000688",
   "type": "form",
   "display_order": 4
  },
  {
-  "lore_description": "<helpcolor>Враги, окружённые вашими воинами, получают больше урона.</helpcolor>",
   "biography_description": "Они окружают противника и задавливают его численностью.",
+  "lore_description": "<helpcolor>Враги, окружённые вашими воинами, получают больше урона.</helpcolor>",
   "point_cost": 2,
   "id": "Тактика_стаи",
   "name": "Тактика стаи",
+  "incompatible_society_traits": [
+   {
+    "name": "Оборонительная тактика"
+   },
+   {
+    "name": "Тактика подавления"
+   },
+   {
+    "name": "Разобщённость"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -296,11 +607,11 @@
    }
   ],
   "enabled": true,
-  "group_name": "TACTICS",
-  "front_end": true,
-  "icon": "000004970000067E",
   "type": "form",
-  "display_order": 3
+  "group_name": "Нападение",
+  "front_end": true,
+  "display_order": 3,
+  "icon": "000004970000067E"
  },
  {
   "lore_description": "<helpcolor>Им намного легче передвигаться по пепелищу и жить в пустошах.</helpcolor>",
@@ -327,7 +638,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "ADAPTATION",
+  "group_name": "Адаптации",
   "front_end": true,
   "icon": "000004970000066B",
   "type": "form",
@@ -338,8 +649,8 @@
   "lore_description": "<helpcolor>Чаще используются всадники. В роли ездовых животных применяются лютые медведи.</helpcolor>",
   "DLC": "EMPIRESANDASHES ",
   "point_cost": 3,
-  "id": "Верхом_на_лютом_медведе",
-  "name": "Верхом на лютом медведе",
+  "id": "Ездовой_лютый_медведь",
+  "name": "Ездовой лютый медведь",
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -357,7 +668,7 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000004970000007D",
   "display_order": 0
@@ -375,7 +686,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Преимущества",
   "front_end": true,
   "icon": "0000049700000075",
   "type": "form",
@@ -394,7 +705,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Преимущества",
   "front_end": true,
   "icon": "0000049700000072",
   "type": "form",
@@ -413,13 +724,41 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000049700000066",
   "type": "form",
   "display_order": 1
  },
  {
+  "affinities": [
+   {
+    "name": "1<arcana></arcana> Приверженность астралу"
+   }
+  ],
+  "lore_description": "Они изучают ночное небо и получают благословение звёзд, когда действуют в соответствии с их волей.",
+  "biography_description": "Они всегда обращаются за советом к звёздам и выполняют их волю.",
+  "point_cost": 1,
+  "id": "Звёздные_прорицатели",
+  "name": "Звёздные прорицатели",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Каждый 10-й <turn></turn> <hyperlink>ход</hyperlink>:<bulletlist><bullet>Ваши <hyperlink>воины</hyperlink> получают способность «Звёзды сошлись».</bullet><bullet>Воины (кроме героев), нанятые, поднятые или призванные на ходу, кратном 10, навсегда получают способность «Рождённый под счастливой звёздой».</bullet><bullet><hyperlink>Городские сооружения</hyperlink> и <hyperlink>особые улучшения провинции</hyperlink>, строительство которых закончилось на ходу, кратном 10, приносят 100 к <knowledge></knowledge> <hyperlink>знаниям</hyperlink>.</bullet></bulletlist>"
+   }
+  ],
+  "enabled": true,
+  "front_end": false,
+  "icon": "0000049300000DA0",
+  "type": "society",
+  "display_order": 4
+ },
+ {
+  "starting_bonuses": [
+   {
+    "description": "Начальные <hyperlink>воины</hyperlink> получают +1 к уровню."
+   }
+  ],
   "affinities": [
    {
     "name": "1<order></order> Приверженность порядку"
@@ -440,18 +779,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 6,
-  "starting_bonuses": [
-   {
-    "description": "Начальные <hyperlink>воины</hyperlink> получают +1 к уровню."
-   }
-  ],
   "icon": "00000493000008F8"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Начальный <unitHero></unitHero> <hyperlink>предел героев</hyperlink> равен +1, а для героев из пантеона — +3."
+   }
+  ],
   "affinities": [
    {
     "name": "1<shadow></shadow> Приверженность тени"
@@ -475,18 +813,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 1,
-  "starting_bonuses": [
-   {
-    "description": "Начальный <unitHero></unitHero> <hyperlink>предел героев</hyperlink> равен +1, а для героев из пантеона — +3."
-   }
-  ],
   "icon": "00000493000008F4"
  },
  {
+  "affinities": [
+   {
+    "name": "-100<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   }
+  ],
   "biography_description": "По легенде, некогда Рабы мрака были свободным народом, а правил ими благой коллективный разум. Увы, со временем <hyperlink>тёмные щупальца Уррата</hyperlink> захватили их сознание, а улей превратился в инструмент порабощения. Лишённые воли, они стали покорными солдатами, работниками и источниками душ для вечно голодных <hyperlink>демонов мрака</hyperlink>. Теперь рой Рабов мрака несёт тьму в иные миры, чтобы все свободные народы <hyperlink>Астрального моря</hyperlink> разделили их трагическую судьбу.",
   "lore_description": "По легенде, некогда Рабы мрака были свободным народом, а правил ими благой коллективный разум. Увы, со временем <hyperlink>тёмные щупальца Уррата</hyperlink> захватили их сознание, а улей превратился в инструмент порабощения. Лишённые воли, они стали покорными солдатами, работниками и источниками душ для вечно голодных <hyperlink>демонов мрака</hyperlink>. Теперь рой Рабов мрака несёт тьму в иные миры, чтобы все свободные народы <hyperlink>Астрального моря</hyperlink> разделили их трагическую судьбу.",
   "DLC": "ELDRITCHREALMS ",
@@ -511,16 +848,65 @@
    }
   ],
   "enabled": false,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": -1,
-  "affinities": [
+  "icon": "0000049300000774"
+ },
+ {
+  "biography_description": "Всадники парят в небесах верхом на небесных грифонах.",
+  "lore_description": "<helpcolor>Чаще используются всадники. В роли ездовых животных применяются небесные грифоны.</helpcolor>",
+  "DLC": "ARCHONPROPHECY ",
+  "point_cost": 3,
+  "id": "Верхом_на_небесном_грифоне",
+  "name": "Верхом на небесном грифоне",
+  "screen_description": "",
+  "effect_descriptions": [
    {
-    "name": "-100<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+    "name": "Получает способность «Летающий»."
+   },
+   {
+    "name": "В <hyperlink>кавалерии</hyperlink> служит больше воинов."
+   },
+   {
+    "name": "Правитель начинает верхом на небесном грифоне."
    }
   ],
-  "icon": "0000049300000774"
+  "enabled": true,
+  "type": "form",
+  "group_name": "Ездовые животные",
+  "front_end": true,
+  "icon": "0000049000002980",
+  "display_order": 0
+ },
+ {
+  "biography_description": "Солдаты и боевые животные обучены искусству войны на колесницах.",
+  "lore_description": "<helpcolor>Чаще используются всадники. Вместо ездовых животных применяются колесницы.</helpcolor>",
+  "DLC": "ARCHONPROPHECY ",
+  "point_cost": 3,
+  "id": "Колесницы",
+  "name": "Колесницы",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "+5 ед. <hyperlink><hp></hp> здоровья</hyperlink>."
+   },
+   {
+    "name": "Количество бойцов в отряде сокращается до одного, что обеспечивает невосприимчивость к <hyperlink>потерям</hyperlink>."
+   },
+   {
+    "name": "В <hyperlink>кавалерии</hyperlink> служит больше воинов."
+   },
+   {
+    "name": "Правитель начинает на колеснице."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Ездовые животные",
+  "front_end": true,
+  "icon": "000004900000292D",
+  "display_order": 0
  },
  {
   "biography_description": "Они парят в небесах верхом на величественных пегасах.",
@@ -543,7 +929,7 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000004900000095F",
   "display_order": 0
@@ -572,12 +958,92 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "0000049000000917",
   "display_order": 0
  },
  {
+  "lore_description": "Им суждено принести в мир великие перемены.",
+  "biography_description": "Им суждено принести в мир разрушительные перемены.",
+  "point_cost": 1,
+  "id": "Видение_разрушения",
+  "name": "Видение разрушения",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Явившись в этот мир, вы должны интерпретировать видение разрушения:<bulletlist><bullet><chaos></chaos> <hyperlink>Приверженность хаосу</hyperlink>: мир будет охвачен войной.</bullet><bullet><arcana></arcana> <hyperlink>Приверженность астралу</hyperlink>: в мире будет господствовать волшебство.</bullet><bullet><shadow></shadow> <hyperlink>Приверженность тени</hyperlink>: в мире будет править смерть.</bullet></bulletlist>"
+   },
+   {
+    "name": "После завершения сработает мощный эффект, действующий по всему миру."
+   },
+   {
+    "name": "+1 к <hyperlink>приверженности</hyperlink> в зависимости от выбранной интерпретации."
+   }
+  ],
+  "enabled": true,
+  "front_end": true,
+  "icon": "0000048D000017DC",
+  "type": "society",
+  "display_order": 1,
+  "DLC": "ARCHONPROPHECY "
+ },
+ {
+  "lore_description": "Отмеченных знаком приверженности ожидает великая судьба.",
+  "biography_description": "Отмеченные знаком приверженности, они уже ступили на путь, который сами пока не осознают.",
+  "point_cost": 1,
+  "id": "Видение_судьбы",
+  "name": "Видение судьбы",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Явившись в этот мир, вы должны интерпретировать видение будущего, которое суждено вашему народу:<bulletlist><bullet><order></order> <hyperlink>Приверженность порядку</hyperlink>: миротворцы.</bullet><bullet><chaos></chaos> <hyperlink>Приверженность хаосу</hyperlink>: завоеватели.</bullet><bullet><arcana></arcana> <hyperlink>Приверженность астралу</hyperlink>: учёные.</bullet><bullet><matter></matter> <hyperlink>Приверженность материи</hyperlink>: ремесленники.</bullet><bullet><nature></nature> <hyperlink>Приверженность природе</hyperlink>: культиваторы.</bullet><bullet><shadow></shadow> <hyperlink>Приверженность тени</hyperlink>: несущие смерть.</bullet></bulletlist>"
+   },
+   {
+    "name": "По завершении ваши воины получат постоянные улучшения."
+   },
+   {
+    "name": "+2 к <hyperlink>приверженности</hyperlink> в зависимости от выбранной интерпретации."
+   }
+  ],
+  "enabled": true,
+  "front_end": true,
+  "icon": "0000048D000017D8",
+  "type": "society",
+  "display_order": 1,
+  "DLC": "ARCHONPROPHECY "
+ },
+ {
+  "lore_description": "Пророчество приведёт их в новый дом.",
+  "biography_description": "Им суждено поселиться в земле обетованной.",
+  "point_cost": 1,
+  "id": "Видение,_наполненное_обещаниями",
+  "name": "Видение, наполненное обещаниями",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Явившись в этот мир, вы должны интерпретировать обещание, данное вам в видении:<bulletlist><bullet><order></order> <hyperlink>Приверженность порядку</hyperlink>: вашему народу обещана страна, которую нужно отвоевать.</bullet><bullet><matter></matter> <hyperlink>Приверженность материи</hyperlink>: вашему народу обещан дом, который нужно построить.</bullet><bullet><nature></nature> <hyperlink>Приверженность природе</hyperlink>: вашему народу обещана страна, которую нужно освободить от чудовища.</bullet></bulletlist>"
+   },
+   {
+    "name": "По завершении вы получите сильный тронный город."
+   },
+   {
+    "name": "+1 к <hyperlink>приверженности</hyperlink> в зависимости от выбранной интерпретации."
+   }
+  ],
+  "enabled": true,
+  "front_end": true,
+  "icon": "0000048D0000149B",
+  "type": "society",
+  "display_order": 1,
+  "DLC": "ARCHONPROPHECY "
+ },
+ {
+  "starting_bonuses": [
+   {
+    "empire_progression_slug": "Раскопки"
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -601,18 +1067,20 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "empire_progression_slug": "Раскопки"
-   }
-  ],
   "icon": "0000048D00001282"
  },
  {
+  "starting_bonuses": [
+   {
+    "empire_progression_slug": "Ускоренный_марш"
+   },
+   {
+    "description": "Дополнительный разведчик в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<chaos></chaos> Приверженность хаосу"
@@ -637,21 +1105,20 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 5,
-  "starting_bonuses": [
-   {
-    "empire_progression_slug": "Ускоренный_марш"
-   },
-   {
-    "description": "Дополнительный разведчик в начале игры."
-   }
-  ],
   "icon": "0000048D00000ED9"
  },
  {
+  "affinities": [
+   {
+    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   },
+   {
+    "name": "1<shadow></shadow> Приверженность тени"
+   }
+  ],
   "biography_description": "Обширные познания обеспечили им власть и почитание во множестве миров.",
   "lore_description": "Они понимают, что знания — это сила, а всякая сила вызывает уважение.",
   "point_cost": 1,
@@ -671,25 +1138,16 @@
     "name": "Открывая новую <hyperlink>книгу</hyperlink>, вы получаете +100 к отношениям со всеми <hyperlink>империями</hyperlink>."
    },
    {
-    "name": "Даёт +10 к очкам <knowledge></knowledge> <hyperlink>знания</hyperlink> за каждую империю, с которой у вас заключён <hyperlink>договор об открытых границах</hyperlink>"
+    "name": "Даёт +10 очк. к <knowledge></knowledge> <hyperlink>знаниям</hyperlink> за каждую империю, с которой у вас заключён <hyperlink>договор об открытых границах</hyperlink>"
    },
    {
-    "name": "+10 <goodact></goodact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "+10<goodact></goodact> очк. <hyperlink>мировоззрения</hyperlink>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 1,
-  "affinities": [
-   {
-    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   },
-   {
-    "name": "1<shadow></shadow> Приверженность тени"
-   }
-  ],
   "starting_bonuses": [
    {
     "empire_progression_slug": "Всевидение"
@@ -698,6 +1156,14 @@
   "icon": "0000048D000009BB"
  },
  {
+  "affinities": [
+   {
+    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   },
+   {
+    "name": "1<shadow></shadow> Приверженность тени"
+   }
+  ],
   "biography_description": "Они знают, что тени не нужно бояться — её следует изучать и использовать.",
   "lore_description": "Тени шепчут, и послушники внемлют их голосам.",
   "DLC": "ELDRITCHREALMS ",
@@ -721,22 +1187,13 @@
     "name": "Ваш правитель получает эффект «Приспешники тирана»."
    },
    {
-    "name": "-10 <evilact></evilact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "-10<evilact></evilact> очк. <hyperlink>мировоззрения</hyperlink>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 1,
-  "affinities": [
-   {
-    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   },
-   {
-    "name": "1<shadow></shadow> Приверженность тени"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Трансформация «Мрачная плоть» в начале игры."
@@ -745,6 +1202,11 @@
   "icon": "0000048D000009B4"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный воин-элементаль в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<nature></nature> Приверженность природе"
@@ -768,18 +1230,20 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 3,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный воин-элементаль в начале игры."
-   }
-  ],
   "icon": "0000048D00000320"
  },
  {
+  "affinities": [
+   {
+    "name": "1<chaos></chaos> Приверженность хаосу"
+   },
+   {
+    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   }
+  ],
   "biography_description": "Они не знают жалости, а чужая жизнь для них — лишь трофей.",
   "lore_description": "Они распоряжаются чужими жизнями, как товаром, который можно заковать в цепи, а можно и убить.",
   "point_cost": 1,
@@ -796,22 +1260,13 @@
     "name": "Если вы побеждаете в <hyperlink>сражении</hyperlink>, то <hyperlink>обратившиеся в бегство</hyperlink> <hyperlink>воины</hyperlink> оказываются <hyperlink>захвачены в плен</hyperlink>."
    },
    {
-    "name": "-10 <evilact></evilact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "-10<evilact></evilact> очк. <hyperlink>мировоззрения</hyperlink>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 5,
-  "affinities": [
-   {
-    "name": "1<chaos></chaos> Приверженность хаосу"
-   },
-   {
-    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   }
-  ],
   "starting_bonuses": [
    {
     "empire_progression_slug": "Захват_рабов"
@@ -820,6 +1275,14 @@
   "icon": "0000048D000001D7"
  },
  {
+  "affinities": [
+   {
+    "name": "1<order></order> Приверженность порядку"
+   },
+   {
+    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   }
+  ],
   "biography_description": "Они неустанно истребляют зло.",
   "lore_description": "Они полностью посвятили себя уничтожению зла и никогда не щадят нечестивцев.",
   "point_cost": 1,
@@ -842,25 +1305,21 @@
     "name": "Даёт +30 <casusBelli></casusBelli> <hyperlink>поводов к войне</hyperlink> против игроков со <evilact></evilact> злым <hyperlink>мировоззрением</hyperlink>."
    },
    {
-    "name": "+10 <goodact></goodact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "+10<goodact></goodact> очк. <hyperlink>мировоззрения</hyperlink>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 6,
-  "affinities": [
-   {
-    "name": "1<order></order> Приверженность порядку"
-   },
-   {
-    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   }
-  ],
   "icon": "0000048D00000196"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "100<influence></influence> "
+   }
+  ],
   "affinities": [
    {
     "name": "1<arcana></arcana> Приверженность астралу"
@@ -874,25 +1333,27 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Города</hyperlink> получают +15% к <knowledge></knowledge> <hyperlink>знанию</hyperlink>, +15% к <food></food> <hyperlink>пище</hyperlink>, +15% к <structureprod></structureprod> <hyperlink>производству</hyperlink> и +20 к <happiness></happiness> <hyperlink> стабильности города</hyperlink>, если их <hyperlink>владения</hyperlink> не граничат с <hyperlink>владениями</hyperlink> других <hyperlink>городов</hyperlink> или <hyperlink>форпостов</hyperlink>."
+    "name": "<hyperlink>Города</hyperlink> получают +15% к <knowledge></knowledge> <hyperlink>знаниям</hyperlink>, +15% к <food></food> <hyperlink>пище</hyperlink>, +15% к <structureprod></structureprod> <hyperlink>производству</hyperlink> и +20 к <happiness></happiness> <hyperlink> стабильности города</hyperlink>, если их <hyperlink>владения</hyperlink> не граничат с <hyperlink>владениями</hyperlink> других <hyperlink>городов</hyperlink> или <hyperlink>форпостов</hyperlink>."
    },
    {
     "name": "Поводы к войне с другими империями, покушающимися на вашу территорию, возрастают на +100%."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 4,
-  "starting_bonuses": [
-   {
-    "description": "100<influence></influence> "
-   }
-  ],
   "icon": "0000048D0000018E"
  },
  {
+  "starting_bonuses": [
+   {
+    "structure_upgrade_slug": "Башня_мага_кузница_предметов"
+   },
+   {
+    "description": "200<bindingessence></bindingessence> "
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -906,22 +1367,13 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Даёт <hyperlink><bindingessence></bindingessence> связующую квинтэссенцию и <bindingfragments></bindingfragments> фрагменты</hyperlink> за уничтожение <hyperlink>логовов</hyperlink>, захват <hyperlink>древних чуд</hyperlink>, <hyperlink>разрушение</hyperlink> <hyperlink>городов</hyperlink> и <hyperlink>грабёж</hyperlink> <hyperlink>провинций</hyperlink>."
+    "name": "Даёт <hyperlink><bindingessence></bindingessence> связующую квинтэссенцию и <bindingfragments></bindingfragments> фрагменты</hyperlink> за уничтожение <hyperlink>логов</hyperlink>, захват <hyperlink>древних чудес</hyperlink>, <hyperlink>разрушение</hyperlink> <hyperlink>городов</hyperlink> и <hyperlink>грабёж</hyperlink> <hyperlink>провинций</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "structure_upgrade_slug": "Башня_мага_кузница_предметов"
-   },
-   {
-    "description": "200<bindingessence></bindingessence> "
-   }
-  ],
   "icon": "0000048D00000179"
  },
  {
@@ -948,7 +1400,7 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "0000048900001153",
   "display_order": 0
@@ -974,12 +1426,17 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000004890000110B",
   "display_order": 0
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Даёт случайно выбранные предметы для героев (2)."
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -1000,18 +1457,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "description": "Даёт случайно выбранные предметы для героев (2)."
-   }
-  ],
   "icon": "0000045E00000910"
  },
  {
+  "affinities": [
+   {
+    "name": "1<order></order> Приверженность порядку"
+   }
+  ],
   "biography_description": "Они ценят своих вассалов и стараются поддерживать хорошие отношения с ними.",
   "lore_description": "Они ценят своих вассалов и стараются поддерживать хорошие отношения с ними. Во время войны они всегда готовы прийти на помощь.",
   "point_cost": 1,
@@ -1029,15 +1485,9 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 6,
-  "affinities": [
-   {
-    "name": "1<order></order> Приверженность порядку"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "В начале игры известно местоположение ближайшего <minorcity></minorcity><hyperlink>свободного города</hyperlink>, <hyperlink><allegiance></allegiance>благосклонность</hyperlink> этого города увеличена на +25."
@@ -1046,6 +1496,11 @@
   "icon": "0000045A0000048C"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный боевой маг или воин поддержки в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<arcana></arcana> Приверженность астралу"
@@ -1066,18 +1521,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 4,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный боевой маг или воин поддержки в начале игры."
-   }
-  ],
   "icon": "0000045A00000481"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный <hyperlink>воин</hyperlink> ранга 3 в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -1091,25 +1545,24 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Городские сооружения стоят на 100% больше очков <structureprod></structureprod> производство, при этом они помимо своего обычного эффекта дают +1 к <happiness></happiness> стабильность города и +5 к <gold></gold> золото."
+    "name": "Городские сооружения стоят на 100% больше очков <structureprod></structureprod> производство, при этом они помимо своего обычного эффекта дают +1 к <happiness></happiness> стабильность города и +5 к <gold></gold> золоту."
    },
    {
     "name": "Воины <hyperlink>ранга воина</hyperlink> 3 этого народа получают +1 к уровню."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный <hyperlink>воин</hyperlink> ранга 3 в начале игры."
-   }
-  ],
   "icon": "0000045A0000047B"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Расположенный поблизости <hyperlink>магический материал</hyperlink> в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<nature></nature> Приверженность природе"
@@ -1123,22 +1576,24 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Города</hyperlink> получают +5 к <gold></gold> <hyperlink>золоту</hyperlink>, <mana></mana> <hyperlink>мане</hyperlink>, <knowledge></knowledge> <hyperlink>знанию</hyperlink>, <food></food> <hyperlink>пище</hyperlink>, очкам <structureprod></structureprod> <hyperlink>производству</hyperlink> и <unitprod></unitprod> <hyperlink>на́йму</hyperlink> за каждый <hyperlink>магический материал</hyperlink> в пределах своих <hyperlink>владений</hyperlink>."
+    "name": "<hyperlink>Города</hyperlink> получают +5 к <gold></gold> <hyperlink>золоту</hyperlink>, <mana></mana> <hyperlink>мане</hyperlink>, <knowledge></knowledge> <hyperlink>знаниям</hyperlink>, <food></food> <hyperlink>пище</hyperlink>, очкам <structureprod></structureprod> <hyperlink>производству</hyperlink> и <unitprod></unitprod> <hyperlink>на́йму</hyperlink> за каждый <hyperlink>магический материал</hyperlink> в пределах своих <hyperlink>владений</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 3,
-  "starting_bonuses": [
-   {
-    "description": "Расположенный поблизости <hyperlink>магический материал</hyperlink> в начале игры."
-   }
-  ],
   "icon": "0000045A00000474"
  },
  {
+  "affinities": [
+   {
+    "name": "1<chaos></chaos> Приверженность хаосу"
+   },
+   {
+    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   }
+  ],
   "biography_description": "Воинственные разрушители, которые всегда предпочитают дипломатии насилие.",
   "lore_description": "Воинственные разрушители, которые всегда предпочитают дипломатии насилие.",
   "point_cost": 1,
@@ -1173,25 +1628,21 @@
     "name": "Получают -300 к <hyperlink>отношениям</hyperlink> со всеми <minorcity></minorcity><hyperlink>свободными городами</hyperlink> и -300 к <hyperlink>отношениям</hyperlink> со всеми прочими <hyperlink>империями</hyperlink>."
    },
    {
-    "name": "-10 <evilact></evilact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "-10<evilact></evilact> очк. <hyperlink>мировоззрения</hyperlink>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 5,
-  "affinities": [
-   {
-    "name": "1<chaos></chaos> Приверженность хаосу"
-   },
-   {
-    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   }
-  ],
   "icon": "0000045A00000454"
  },
  {
+  "affinities": [
+   {
+    "name": "1<shadow></shadow> Приверженность тени"
+   }
+  ],
   "biography_description": "Они всегда умеют подобрать нужные слова, будь то лесть или угроза. Этот народ превратил интриги в форму искусства.",
   "lore_description": "Они всегда умеют подобрать нужные слова, будь то лесть или угроза. Этот народ превратил интриги в форму искусства.",
   "point_cost": 1,
@@ -1212,15 +1663,9 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": false,
+  "type": "society",
   "display_order": 1,
-  "affinities": [
-   {
-    "name": "1<shadow></shadow> Приверженность тени"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Дополнительный разведчик в начале игры."
@@ -1232,6 +1677,14 @@
   "icon": "0000045A00000451"
  },
  {
+  "affinities": [
+   {
+    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   },
+   {
+    "name": "1<order></order> Приверженность порядку"
+   }
+  ],
   "biography_description": "Они верят, что их судьба — объединить все страны и народы.",
   "lore_description": "Этот народ стремится к мирному сотрудничеству, однако в случае необходимости сможет постоять за себя.",
   "point_cost": 1,
@@ -1248,7 +1701,7 @@
     "name": "Получают +30% к доходам от <hyperlink>вассалов</hyperlink>."
    },
    {
-    "name": "+10 <goodact></goodact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "+10<goodact></goodact> очк. <hyperlink>мировоззрения</hyperlink>"
    },
    {
     "name": "<hyperlink>Воины</hyperlink>, призванные при <hyperlink>сборе сеньоров</hyperlink>, получают +1 к уровню при найме."
@@ -1258,18 +1711,9 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 6,
-  "affinities": [
-   {
-    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   },
-   {
-    "name": "1<order></order> Приверженность порядку"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Дополнительный воин со щитом или воин с пикой в начале игры."
@@ -1283,19 +1727,18 @@
     "name": "1<nature></nature> Приверженность природе"
    }
   ],
-  "biography_description": "",
   "lore_description": "",
+  "biography_description": "",
   "point_cost": 1,
   "id": "",
   "name": "",
   "screen_description": "",
   "effect_descriptions": [],
   "enabled": false,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003FE000002B1"
+  "icon": "000003FE000002B1",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -1303,19 +1746,18 @@
     "name": "1<order></order> Приверженность порядку"
    }
   ],
-  "biography_description": "",
   "lore_description": "",
+  "biography_description": "",
   "point_cost": 1,
   "id": "",
   "name": "",
   "screen_description": "",
   "effect_descriptions": [],
   "enabled": false,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003FE000002B1"
+  "icon": "000003FE000002B1",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -1323,8 +1765,8 @@
     "name": "2<shadow></shadow> Приверженность тени"
    }
   ],
-  "biography_description": "Это общество посвятило себя изучению тайн прошлого. Выходцы из него часто бывают успешными исследователями древних сооружений, но, живя обычной жизнью, они сразу лишаются покоя.",
   "lore_description": "Этот народ посвятил себя изучению тайн прошлого. Выходцы из него часто бывают успешными исследователями древних сооружений, но, живя обычной жизнью, они сразу лишаются покоя.",
+  "biography_description": "Это общество посвятило себя изучению тайн прошлого. Выходцы из него часто бывают успешными исследователями древних сооружений, но, живя обычной жизнью, они сразу лишаются покоя.",
   "point_cost": 1,
   "id": "Знак_совы",
   "name": "Знак совы",
@@ -1334,18 +1776,17 @@
     "name": "<xpCol>+2</xpCol> к <shadow></shadow> <hyperlink>приверженности тени</hyperlink>"
    },
    {
-    "name": "<hyperlink>Города</hyperlink> этого народа получают <xpCol>+15</xpCol> к <knowledge></knowledge> <hyperlink>знанию</hyperlink> за освобождённые <hyperlink>древние чуда</hyperlink> в своих <hyperlink>владений</hyperlink>."
+    "name": "<hyperlink>Города</hyperlink> этого народа получают <xpCol>+15</xpCol> к <knowledge></knowledge> <hyperlink>знаниям</hyperlink> за освобождённые <hyperlink>древние чудеса</hyperlink> в своих <hyperlink>владений</hyperlink>."
    },
    {
-    "name": "<hyperlink>Города</hyperlink> этого народа получают <fireCol>-20</fireCol> к <happiness></happiness> <hyperlink> стабильности города</hyperlink>, если в их <hyperlink>владениях</hyperlink> нет освобождённых <hyperlink>древних чуд</hyperlink>."
+    "name": "<hyperlink>Города</hyperlink> этого народа получают <fireCol>-20</fireCol> к <happiness></happiness> <hyperlink> стабильности города</hyperlink>, если в их <hyperlink>владениях</hyperlink> нет освобождённых <hyperlink>древних чудес</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001362"
+  "icon": "000003DF00001362",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -1353,8 +1794,8 @@
     "name": "2<matter></matter> Приверженность материи"
    }
   ],
-  "biography_description": "Этот народ движим жаждой накопления, они ценят золото превыше всего на свете.",
   "lore_description": "Этот народ движим жаждой накопления, они ценят золото превыше всего на свете.",
+  "biography_description": "Этот народ движим жаждой накопления, они ценят золото превыше всего на свете.",
   "point_cost": 1,
   "id": "Знак_сокровища",
   "name": "Знак сокровища",
@@ -1371,11 +1812,10 @@
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001361"
+  "icon": "000003DF00001361",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -1383,8 +1823,8 @@
     "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
    }
   ],
-  "biography_description": "Это общество процветает в мире и гармонии.",
   "lore_description": "Этот народ процветает в мире и гармонии.",
+  "biography_description": "Это общество процветает в мире и гармонии.",
   "point_cost": 1,
   "id": "Знак_голубя",
   "name": "Знак голубя",
@@ -1401,11 +1841,10 @@
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001360"
+  "icon": "000003DF00001360",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "lore_description": "<helpcolor>Им намного легче передвигаться по пескам и жить в болотах.</helpcolor>",
@@ -1429,7 +1868,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "ADAPTATION",
+  "group_name": "Адаптации",
   "front_end": true,
   "icon": "0000041B00001D31",
   "type": "form",
@@ -1457,7 +1896,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "ADAPTATION",
+  "group_name": "Адаптации",
   "front_end": true,
   "icon": "0000041B00001D2E",
   "type": "form",
@@ -1485,7 +1924,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "ADAPTATION",
+  "group_name": "Адаптации",
   "front_end": true,
   "icon": "0000041B00001D2B",
   "type": "form",
@@ -1522,7 +1961,7 @@
   ],
   "enabled": true,
   "type": "form",
-  "group_name": "ADAPTATION",
+  "group_name": "Адаптации",
   "front_end": true,
   "display_order": 6,
   "icon": "0000041B00001D27"
@@ -1540,7 +1979,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "0000041B00001D02",
   "type": "form",
@@ -1559,7 +1998,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "0000041B00001CFF",
   "type": "form",
@@ -1578,56 +2017,83 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Преимущества",
   "front_end": true,
   "icon": "0000041B00001CF4",
   "type": "form",
   "display_order": 1
  },
  {
-  "lore_description": "<helpcolor>Воины лучше сражаются в обороне, когда стоят рядом с союзниками.</helpcolor>",
   "biography_description": "Они не допустят появления ни единой бреши в защитном построении.",
+  "lore_description": "<helpcolor>Воины лучше сражаются в обороне, когда стоят рядом с союзниками.</helpcolor>",
   "point_cost": 2,
   "id": "Оборонительная_тактика",
   "name": "Оборонительная тактика",
+  "incompatible_society_traits": [
+   {
+    "name": "Тактика подавления"
+   },
+   {
+    "name": "Тактика стаи"
+   },
+   {
+    "name": "Разобщённость"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+1 к защита, +1 к сопротивление и +10% к уклонение, если воин стоит рядом с дружественным воином, также владеющим оборонительной тактикой. Эффект не складывается."
+    "name": "+1 к защите, +1 к сопротивлению и +10% к уклонению, если воин стоит рядом с дружественным воином, также владеющим оборонительной тактикой. Эффект не складывается."
    }
   ],
   "enabled": true,
-  "group_name": "TACTICS",
-  "front_end": true,
-  "icon": "0000041B00001CEE",
   "type": "form",
-  "display_order": 3
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 3,
+  "icon": "0000041B00001CEE"
  },
  {
-  "lore_description": "<helpcolor>Воины наносят больше урона, когда сражаются в группе.</helpcolor>",
   "biography_description": "Вместе они способны побеждать даже самых мощных врагов.",
+  "lore_description": "<helpcolor>Воины наносят больше урона, когда сражаются в группе.</helpcolor>",
   "point_cost": 2,
   "id": "Тактика_подавления",
   "name": "Тактика подавления",
+  "incompatible_society_traits": [
+   {
+    "name": "Оборонительная тактика"
+   },
+   {
+    "name": "Тактика стаи"
+   },
+   {
+    "name": "Разобщённость"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+20% вероятность <hyperlink>критического удара</hyperlink>, если воин стоит рядом с дружественным воином, также владеющим тактикой подавления. Эффект не складывается."
+    "name": "Даёт +20% <crit></crit>шанс критического удара, если воин стоит рядом с дружественным воином, также владеющим тактикой подавления. Эффект не суммируется."
    }
   ],
   "enabled": true,
-  "group_name": "TACTICS",
-  "front_end": true,
-  "icon": "0000041B00001CE7",
   "type": "form",
-  "display_order": 3
+  "group_name": "Нападение",
+  "front_end": true,
+  "display_order": 3,
+  "icon": "0000041B00001CE7"
  },
  {
-  "lore_description": "<helpcolor>Подходят для неторопливой и методичной стратегии.</helpcolor>",
   "biography_description": "Лучшая защита в их понимании — это прочные щиты и непоколебимое упорство.",
+  "lore_description": "<helpcolor>Подходят для неторопливой и методичной стратегии.</helpcolor>",
   "point_cost": 2,
   "id": "Оплот",
   "name": "Оплот",
+  "incompatible_society_traits": [
+   {
+    "name": "Беспечность"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -1635,11 +2101,11 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
-  "front_end": true,
-  "icon": "0000041B00001CD0",
   "type": "form",
-  "display_order": 4
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "0000041B00001CD0"
  },
  {
   "lore_description": "<helpcolor>Хорошо впишутся в армию боевых магов.</helpcolor>",
@@ -1654,14 +2120,14 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000041B00001CC8",
   "type": "form",
   "display_order": 4
  },
  {
-  "lore_description": "<helpcolor>Воины в меньшей степени подвержены отрицательным эффектам и быстрее избавляются от них.</helpcolor>",
+  "lore_description": "<helpcolor>Воины в меньшей степени подвержены <hyperlink>отрицательным эффектам</hyperlink> и быстрее избавляются от них.</helpcolor>",
   "biography_description": "Врождённая стойкость делает их менее уязвимыми для волшебства.",
   "point_cost": 2,
   "id": "Жизнестойкость",
@@ -1672,11 +2138,11 @@
     "name": "+2 к сопротивление эффектам."
    },
    {
-    "name": "-1 <turn></turn> х. к продолжительности действия негативных эффектов (но не менее 1)."
+    "name": "-1 <turn></turn> х. к продолжительности действия <hyperlink>отрицательных эффектов</hyperlink> (но не менее 1)."
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "0000041B00001D3B",
   "type": "form",
@@ -1695,13 +2161,21 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "0000041B00001CBF",
   "type": "form",
   "display_order": 5
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Заклинание «Чары странника» действует постоянно и не требует содержания."
+   },
+   {
+    "description": "Дополнительный разведчик в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<shadow></shadow> Приверженность тени"
@@ -1715,7 +2189,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Города и провинция получают ++2 к радиус обзора."
+    "name": "Города и провинция получают +2 к <hyperlink>радиусу обзора</hyperlink>."
    },
    {
     "name": "Разведчикы получают способность «Универсальный камуфляж»."
@@ -1725,21 +2199,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 1,
-  "starting_bonuses": [
-   {
-    "description": "Заклинание «Чары странника» действует постоянно и не требует содержания."
-   },
-   {
-    "description": "Дополнительный разведчик в начале игры."
-   }
-  ],
   "icon": "000003FC000004C5"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный боевой маг или воин поддержки в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<shadow></shadow> Приверженность тени"
@@ -1760,18 +2230,20 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 1,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный боевой маг или воин поддержки в начале игры."
-   }
-  ],
   "icon": "000003FC000004BE"
  },
  {
+  "affinities": [
+   {
+    "name": "1<shadow></shadow> Приверженность тени"
+   },
+   {
+    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   }
+  ],
   "biography_description": "Этому народу чужды милосердие и сострадание. Единственное, к чему, по их мнению, следует стремиться, — это знания и власть.",
   "lore_description": "Этот народ алчет знаний и власти и не боится обращать их во зло.",
   "point_cost": 1,
@@ -1794,25 +2266,16 @@
     "name": "Города получают +10 к очкам <unitprod></unitprod> <hyperlink>на́йма</hyperlink>, а империя — +5 к <influence></influence> <hyperlink>авторитету</hyperlink> за каждый уровень злого <hyperlink>мировоззрения</hyperlink>."
    },
    {
-    "name": "-10 <evilact></evilact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "-10<evilact></evilact> очк. <hyperlink>мировоззрения</hyperlink>"
    },
    {
     "name": "Наём воинов стоит на 20% меньше <gold></gold> <hyperlink>золота</hyperlink> и очков <unitprod></unitprod> <hyperlink>на́йма</hyperlink> при максимальном уровне злого <evilact></evilact> <hyperlink>мировоззрения</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 1,
-  "affinities": [
-   {
-    "name": "1<shadow></shadow> Приверженность тени"
-   },
-   {
-    "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Дополнительный ударный воин или воин со щитом в начале игры."
@@ -1821,6 +2284,11 @@
   "icon": "000003FC000004C0"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Освобождённые древние чудеса поблизости (1)."
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -1834,25 +2302,24 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Древнее чудо не требуют <population></population> население для присоединения к городу."
+    "name": "<hyperlink>Древние чудеса</hyperlink> не требуют <population></population> население для присоединения к городу."
    },
    {
     "name": "Города получают +20% к <structureprod></structureprod> <hyperlink>производству</hyperlink> за каждое присоединённое <hyperlink>древнее чудо</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "description": "Освобождённые древние чудеса поблизости (1)."
-   }
-  ],
   "icon": "000003FC000004C6"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный воин со щитом или воин с пикой в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -1866,25 +2333,27 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Исследования <caststrategic></caststrategic> чары для воинов стоит -40% ед. <knowledge></knowledge> знания."
+    "name": "Исследования <caststrategic></caststrategic> <hyperlink>чар для воинов</hyperlink> стоит -40% ед. <knowledge></knowledge> знания."
    },
    {
-    "name": "Поддержание <caststrategic></caststrategic> <hyperlink>чаров для воинов</hyperlink> обходится на 30% дешевле."
+    "name": "Поддержание <caststrategic></caststrategic> <hyperlink>чар для воинов</hyperlink> обходится на 30% дешевле."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный воин со щитом или воин с пикой в начале игры."
-   }
-  ],
   "icon": "000003FC000004C2"
  },
  {
+  "starting_bonuses": [
+   {
+    "structure_upgrade_slug": "Цех"
+   },
+   {
+    "structure_upgrade_slug": "Лавка"
+   }
+  ],
   "affinities": [
    {
     "name": "1<matter></matter> Приверженность материи"
@@ -1905,21 +2374,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 2,
-  "starting_bonuses": [
-   {
-    "structure_upgrade_slug": "Цех"
-   },
-   {
-    "structure_upgrade_slug": "Лавка"
-   }
-  ],
   "icon": "000003FC000004BA"
  },
  {
+  "starting_bonuses": [
+   {
+    "empire_progression_slug": "Простое_мореходство"
+   }
+  ],
   "affinities": [
    {
     "name": "1<nature></nature> Приверженность природе"
@@ -1933,25 +2398,24 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Города</hyperlink> получают +2 к <gold></gold> золото, +2 к <food></food> пища и +2 к очкам <unitprod></unitprod> наём за каждую водную, речную или прибрежную провинцию в своих <hyperlink>владениях</hyperlink>."
+    "name": "<hyperlink>Города</hyperlink> получают +2 к <gold></gold> золоту, +2 к <food></food> пище и +2 к очкам <unitprod></unitprod> на́йма за каждую водную, речную или прибрежную провинцию в своих <hyperlink>владениях</hyperlink>."
    },
    {
     "name": "Воины со <hyperlink>штрафом за погрузку</hyperlink>:<bulletlist><bullet>наносят на 20% больше урона;</bullet><bullet>получают на 20% больше <hyperlink><xp></xp> опыта</hyperlink>.</bullet></bulletlist>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 3,
-  "starting_bonuses": [
-   {
-    "empire_progression_slug": "Простое_мореходство"
-   }
-  ],
   "icon": "000003FC000004B7"
  },
  {
+  "starting_bonuses": [
+   {
+    "empire_progression_slug": "Расширенная_бюрократия"
+   }
+  ],
   "affinities": [
    {
     "name": "1<nature></nature> Приверженность природе"
@@ -1972,18 +2436,17 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 3,
-  "starting_bonuses": [
-   {
-    "empire_progression_slug": "Расширенная_бюрократия"
-   }
-  ],
   "icon": "000003FC000004BB"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный стрелок в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<nature></nature> Приверженность природе"
@@ -1997,25 +2460,24 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Получают на +75% больше ресурсов за уничтожение <hyperlink>вторжений</hyperlink>, освобождение <hyperlink>древних чуд</hyperlink> и захват <hyperlink>источников ресурсов</hyperlink>."
+    "name": "Получают на +75% больше ресурсов за уничтожение <hyperlink>вторжений</hyperlink>, освобождение <hyperlink>древних чудес</hyperlink> и захват <hyperlink>источников ресурсов</hyperlink>."
    },
    {
-    "name": "Воины дополнительно восстанавливают +5 ед. <hyperlink><hp></hp> здоровья</hyperlink> каждый <turn></turn> <hyperlink>ход</hyperlink>."
+    "name": "Воины дополнительно восстанавливают +5 ед. <hyperlink>здоровья</hyperlink> каждый <turn></turn> <hyperlink>ход</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 3,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный стрелок в начале игры."
-   }
-  ],
   "icon": "000003FC000004B8"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный воин <hyperlink>магического происхождения</hyperlink> в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<arcana></arcana> Приверженность астралу"
@@ -2029,25 +2491,24 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Стоимость заклинаний призыва снижается на -50% ед. <mana></mana> мана."
+    "name": "Стоимость заклинаний призыва снижается на -50% ед. <mana></mana> маны."
    },
    {
     "name": "Воины <hyperlink>магического происхождения</hyperlink> получают на 20% больше <hyperlink><xp></xp> опыта</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 4,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный воин <hyperlink>магического происхождения</hyperlink> в начале игры."
-   }
-  ],
   "icon": "000003FC000004BC"
  },
  {
+  "affinities": [
+   {
+    "name": "1<arcana></arcana> Приверженность астралу"
+   }
+  ],
   "biography_description": "Этот народ обладает врождённым талантом к магии.",
   "lore_description": "Они обладают врождённым талантом к магии. Любую проблему, по их мнению, можно решить с помощью волшебства.",
   "point_cost": 1,
@@ -2061,25 +2522,19 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+10 к <optactical></optactical> очки боевых заклинаний."
+    "name": "+10 к <optactical></optactical> <hyperlink>очкам боевых заклинаний</hyperlink>."
    },
    {
-    "name": "+10 к <caststrategic></caststrategic> очки глобальных заклинаний."
+    "name": "+10 к <caststrategic></caststrategic> <hyperlink>очкам глобальных заклинаний</hyperlink>."
    },
    {
-    "name": "Использование <hyperlink>боевояых заклинаний</hyperlink> стоит на -20% меньше <mana></mana> <hyperlink>маны</hyperlink>."
+    "name": "Использование <hyperlink>боевых заклинаний</hyperlink> стоит на -20% меньше <mana></mana> <hyperlink>маны</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 4,
-  "affinities": [
-   {
-    "name": "1<arcana></arcana> Приверженность астралу"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "В начале игры доступны дополнительные заклинание (1)."
@@ -2096,8 +2551,8 @@
     "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
    }
   ],
-  "biography_description": "Они приносят представителей своего народа в жертву, чтобы получить благословение богов.",
   "lore_description": "С одной стороны, они свято почитают жизнь, а с другой — не могут устоять перед славным пиром.",
+  "biography_description": "Они приносят представителей своего народа в жертву, чтобы получить благословение богов.",
   "point_cost": 1,
   "id": "Идейные_каннибалы_evilact__",
   "name": "Идейные каннибалы<evilact></evilact>",
@@ -2107,20 +2562,24 @@
     "name": "Воины получают способность «Поедание трупов»."
    },
    {
-    "name": "-10 <evilact></evilact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "-10<evilact></evilact> очк. <hyperlink>мировоззрения</hyperlink>"
    },
    {
     "name": "После каждой победы в бою ближайший к месту битвы город этого народа получает +3 к <mana></mana> <hyperlink>мане</hyperlink> и +3 к <food></food> <hyperlink>пище</hyperlink> за каждый ранг погибших в бою воинов (кроме воинов <hyperlink>магического происхождения</hyperlink>)."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
-  "display_order": 5,
-  "icon": "000003FC000004C1"
+  "icon": "000003FC000004C1",
+  "type": "society",
+  "display_order": 5
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Даёт случайно выбранные предметы для героев (2)."
+   }
+  ],
   "affinities": [
    {
     "name": "1<chaos></chaos> Приверженность хаосу"
@@ -2140,29 +2599,28 @@
     "name": "После каждой победы в бою ближайший к месту битвы город этого народа получает +3 к <gold></gold> <hyperlink>золоту</hyperlink> и +3 к <unitprod></unitprod> <hyperlink>на́йму</hyperlink> за каждый ранг убитых в бою воинов."
    },
    {
-    "name": "-10 <evilact></evilact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "-10<evilact></evilact> очк. <hyperlink>мировоззрения</hyperlink>"
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 5,
-  "starting_bonuses": [
-   {
-    "description": "Даёт случайно выбранные предметы для героев (2)."
-   }
-  ],
   "icon": "000003FC000004C4"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "В столице в начале игры на 1 ед. <population></population> <hyperlink>населения</hyperlink> больше."
+   }
+  ],
   "affinities": [
    {
     "name": "1<order></order> Приверженность порядку"
    }
   ],
   "biography_description": "Этот народ известен своей склонностью к империализму. Его представители гордятся своим происхождением и высокой культурой.",
-  "lore_description": "Они жаждут славы для своей страны и стремится к развитию городов.",
+  "lore_description": "Они жаждут славы для своей страны и стремятся к развитию городов.",
   "point_cost": 1,
   "id": "Империалисты",
   "name": "Империалисты",
@@ -2173,18 +2631,20 @@
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 6,
-  "starting_bonuses": [
-   {
-    "description": "В столице в начале игры на 1 ед. <population></population> <hyperlink>населения</hyperlink> больше."
-   }
-  ],
   "icon": "000003FC000004B6"
  },
  {
+  "affinities": [
+   {
+    "name": "1<order></order> Приверженность порядку"
+   },
+   {
+    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
+   }
+  ],
   "biography_description": "Им свойственны чистота намерений, сострадание и абсолютная преданность идеалам добра.",
   "lore_description": "Им свойственны чистота намерений, сострадание и абсолютная преданность идеалам добра.",
   "point_cost": 1,
@@ -2204,28 +2664,19 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Города получают +10 к <gold></gold> <hyperlink>золоту</hyperlink>, а империя — +5 к <influence></influence> авторитет за каждый уровень доброго мировоззрение."
+    "name": "Города получают +10 к <gold></gold> <hyperlink>золоту</hyperlink>, а империя — +5 к <influence></influence> <hyperlink>авторитету</hyperlink> за каждый уровень доброго мировоззрения."
    },
    {
-    "name": "+10 <goodact></goodact> к <hyperlink>мировоззрению</hyperlink>"
+    "name": "+10<goodact></goodact> очк. <hyperlink>мировоззрения</hyperlink>"
    },
    {
     "name": "Воины получают +2 ед. <hyperlink><xp></xp> опыта</hyperlink> за <turn></turn> <hyperlink>ход</hyperlink> при максимальном уровне доброго <goodact></goodact> <hyperlink>мировоззрения</hyperlink>."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 6,
-  "affinities": [
-   {
-    "name": "1<order></order> Приверженность порядку"
-   },
-   {
-    "name": "10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Дополнительный воин поддержки или воин с пикой в начале игры."
@@ -2234,6 +2685,11 @@
   "icon": "000003FC000004B5"
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Дополнительный воин ранга I в начале игры."
+   }
+  ],
   "affinities": [
    {
     "name": "1<chaos></chaos> Приверженность хаосу"
@@ -2253,19 +2709,13 @@
     "name": "Воины ранга I этого народа получают уровень +1."
    },
    {
-    "name": "Воины требуют на 20% меньше <hyperlink>содержания</hyperlink> (кроме воинов <hyperlink>магического происхождения</hyperlink>)."
+    "name": "Базовая стоимость <hyperlink>содержания воинов</hyperlink> снижается на 20% (кроме воинов <hyperlink>магического происхождения</hyperlink>)."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 5,
-  "starting_bonuses": [
-   {
-    "description": "Дополнительный воин ранга I в начале игры."
-   }
-  ],
   "icon": "000003FC000004BF"
  },
  {
@@ -2293,7 +2743,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "0000041B00001637",
   "type": "form",
@@ -2324,7 +2774,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "0000041B0000162E",
   "type": "form",
@@ -2343,7 +2793,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000041B0000074C",
   "type": "form",
@@ -2365,7 +2815,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000041B0000073C",
   "type": "form",
@@ -2384,13 +2834,18 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "0000041B0000072D",
   "type": "form",
   "display_order": 4
  },
  {
+  "affinities": [
+   {
+    "name": "1<arcana></arcana> Приверженность астралу"
+   }
+  ],
   "biography_description": "С древнейших времён они бережно хранят древние знания.",
   "lore_description": "Эти создания появились, когда мир был юн. В погоне за магическими знаниями они на протяжении долгих эпох совершенствовали свой разум.",
   "point_cost": 1,
@@ -2404,19 +2859,13 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Когда открывается доступ к новой книги, изучение одного случайно выбранного навыка из этой книги будет стоить -60% ед. <knowledge></knowledge> знания."
+    "name": "Когда открывается доступ к новой <hyperlink>книге</hyperlink>, изучение одного случайно выбранного навыка из этой <hyperlink>книги</hyperlink> будет стоить -60% ед. <knowledge></knowledge> знания."
    }
   ],
   "enabled": true,
-  "type": "society",
-  "group_name": "",
   "front_end": true,
+  "type": "society",
   "display_order": 4,
-  "affinities": [
-   {
-    "name": "1<arcana></arcana> Приверженность астралу"
-   }
-  ],
   "starting_bonuses": [
    {
     "description": "Сразу доступно до 1 случайно выбранных навыков."
@@ -2433,11 +2882,10 @@
   "lore_description": "",
   "biography_description": "Они с готовностью поедают тела своих сородичей, не говоря уже о других вкусных гуманоидах.",
   "point_cost": 0,
-  "id": "~_cannibals",
-  "name": "~ Cannibals",
-  "screen_description": "~ - Small Food <food></food> reward after tactical combat.<abilityred>Non-Functional</abilityred><br></br>- -1 <order></order> <abilityblue>Order</abilityblue>.",
+  "id": "cannibals",
+  "name": "Cannibals",
+  "screen_description": "- Small Food <food></food> reward after tactical combat.<abilityred>Non-Functional</abilityred><br></br>- -1 <order></order> <abilityblue>Order</abilityblue>.",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2450,13 +2898,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ At one point these creatures grew to be hideously mutated, making them a horror for others to behold.",
+  "biography_description": "At one point these creatures grew to be hideously mutated, making them a horror for others to behold.",
   "point_cost": -1,
-  "id": "~_malformed",
-  "name": "~ Malformed",
-  "screen_description": "~ - Units have <abilityblue>Cause Fear</abiliytblue> <br></br>- -2 <abilityblue>Charisma</abilityblue>",
+  "id": "malformed",
+  "name": "Malformed",
+  "screen_description": "- Units have <abilityblue>Cause Fear</abiliytblue> <br></br>- -2 <abilityblue>Charisma</abilityblue>",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2469,13 +2916,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ Their bodies regenerate fast which sometimes allows them to regrow entire limbs.",
+  "biography_description": "Their bodies regenerate fast which sometimes allows them to regrow entire limbs.",
   "point_cost": 1,
-  "id": "~_regenerating",
-  "name": "~ Regenerating",
-  "screen_description": "~ - Units gain <abilityblue>Regeneration</abilityblue>",
+  "id": "regenerating",
+  "name": "Regenerating",
+  "screen_description": "- Units gain <abilityblue>Regeneration</abilityblue>",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2488,13 +2934,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ They share a strong bond with spiders, although no-one really knows how or why.",
+  "biography_description": "They share a strong bond with spiders, although no-one really knows how or why.",
   "point_cost": 1,
-  "id": "~_spider_worshippers",
-  "name": "~ Spider Worshippers",
-  "screen_description": "~ - Unlocks the <abilityblue>Spider mount</abilityblue><br></br>- Unlocks the <abilityblue>Spider Riders</abilityblue> unit",
+  "id": "spider_worshippers",
+  "name": "Spider Worshippers",
+  "screen_description": "- Unlocks the <abilityblue>Spider mount</abilityblue><br></br>- Unlocks the <abilityblue>Spider Riders</abilityblue> unit",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2507,13 +2952,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ Their bards only sing gloomy songs and even their parties are depressing, for they believe an inevitable doom awaits them.",
+  "biography_description": "Their bards only sing gloomy songs and even their parties are depressing, for they believe an inevitable doom awaits them.",
   "point_cost": 1,
-  "id": "~_doomed",
-  "name": "~ Doomed",
-  "screen_description": "~ - No happiness events in cities.<abilityred>Non-Functional</abilityred><br></br>- Other races have -100 Relation with Doomed races.<br></br>- +1 <chaos></chaos> <abilityblue>Chaos</abilityblue>.",
+  "id": "doomed",
+  "name": "Doomed",
+  "screen_description": "- No happiness events in cities.<abilityred>Non-Functional</abilityred><br></br>- Other races have -100 Relation with Doomed races.<br></br>- +1 <chaos></chaos> <abilityblue>Chaos</abilityblue>.",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2526,13 +2970,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ They are blessed by unnatural luck and love to play games of chance.",
+  "biography_description": "They are blessed by unnatural luck and love to play games of chance.",
   "point_cost": 1,
-  "id": "~_lucky_ones",
-  "name": "~ Lucky Ones",
-  "screen_description": "~ - +5% <abilityblue>Crit chance</abiliytblue><br></br>+5% rewards from clearing <abilityblue>Exploration Sites</abilityblue> and <abilityblue>pick-ups</abilityblue><br></br>- <abilityblue>Cities</abilityblue> have an increased chance of <abilityblue>Happiness events</abilitytblue><br></br>- +1 <chaos></chaos> <abilityblue>Chaos</abilityblue>",
+  "id": "lucky_ones",
+  "name": "Lucky Ones",
+  "screen_description": "- +5% <abilityblue>Crit chance</abiliytblue><br></br>+5% rewards from clearing <abilityblue>Exploration Sites</abilityblue> and <abilityblue>pick-ups</abilityblue><br></br>- <abilityblue>Cities</abilityblue> have an increased chance of <abilityblue>Happiness events</abilitytblue><br></br>- +1 <chaos></chaos> <abilityblue>Chaos</abilityblue>",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2545,13 +2988,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ They reproduce fast and are despised by other races for the blight and disease they spread.",
+  "biography_description": "They reproduce fast and are despised by other races for the blight and disease they spread.",
   "point_cost": -1,
-  "id": "~_verminous",
-  "name": "~ Verminous",
-  "screen_description": "~ - +20% Food <food></food> income<br></br>- <abilityblue>Cities</abilityblue> have an increased chance of <abilityred>Unhappiness events</abilityred><br></br>- -1 <abilityblue>Courage</abilityblue><br></br>- -1 <abilityblue>Charisma</abilityblue>",
+  "id": "verminous",
+  "name": "Verminous",
+  "screen_description": "- +20% Food <food></food> income<br></br>- <abilityblue>Cities</abilityblue> have an increased chance of <abilityred>Unhappiness events</abilityred><br></br>- -1 <abilityblue>Courage</abilityblue><br></br>- -1 <abilityblue>Charisma</abilityblue>",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2564,13 +3006,12 @@
    }
   ],
   "lore_description": "",
-  "biography_description": "~ They believe themselves to be Chosen, wanting to show others the the way to their true greatness. These others generally disagree.",
+  "biography_description": "They believe themselves to be Chosen, wanting to show others the the way to their true greatness. These others generally disagree.",
   "point_cost": 0,
-  "id": "~_chosen",
-  "name": "~ Chosen",
-  "screen_description": "~ - +1 <order></order> <abilityblue>Order</abilityblue>",
+  "id": "chosen",
+  "name": "Chosen",
+  "screen_description": "- +1 <order></order> <abilityblue>Order</abilityblue>",
   "enabled": false,
-  "group_name": "",
   "front_end": false,
   "icon": "000003FE000002B1",
   "type": "society",
@@ -2598,7 +3039,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000003EB00000599",
   "type": "form",
@@ -2629,18 +3070,32 @@
    }
   ],
   "enabled": true,
-  "group_name": "MOUNT",
+  "group_name": "Ездовые животные",
   "front_end": true,
   "icon": "000003EB00000597",
   "type": "form",
   "display_order": 0
  },
  {
-  "lore_description": "<helpcolor>Враги, атакующие в ближнем бою, могут быть отравлены.</helpcolor>",
   "biography_description": "Обладают ядовитыми железами, помогающими отгонять противника.",
+  "lore_description": "<helpcolor>Враги, атакующие в ближнем бою, могут быть отравлены.</helpcolor>",
   "point_cost": 2,
   "id": "Яд",
   "name": "Яд",
+  "incompatible_society_traits": [
+   {
+    "name": "Внутренний огонь"
+   },
+   {
+    "name": "Внутренний холод"
+   },
+   {
+    "name": "Внутренний заряд"
+   },
+   {
+    "name": "Внутренний свет"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -2654,18 +3109,26 @@
    }
   ],
   "enabled": true,
-  "group_name": "DAMAGE_RETALIATION",
-  "front_end": true,
-  "icon": "000003E300007147",
   "type": "form",
-  "display_order": 4
+  "group_name": "Защита",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "000003E300007147"
  },
  {
-  "lore_description": "<helpcolor>Воины реже обращаются в бегство.</helpcolor>",
   "biography_description": "Некоторые считают их бессердечными. Сами они предпочитают определение «практичные».",
+  "lore_description": "<helpcolor>Воины реже обращаются в бегство.</helpcolor>",
   "point_cost": 1,
   "id": "Хладнокровие",
   "name": "Хладнокровие",
+  "incompatible_society_traits": [
+   {
+    "name": "Жизнерадостный"
+   },
+   {
+    "name": "Трусливость"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -2673,11 +3136,11 @@
    }
   ],
   "enabled": true,
-  "group_name": "MORALE",
-  "front_end": true,
-  "icon": "000003E100001497",
   "type": "form",
-  "display_order": 5
+  "group_name": "Преимущества",
+  "front_end": true,
+  "display_order": 5,
+  "icon": "000003E100001497"
  },
  {
   "lore_description": "<helpcolor>Воины быстрее становятся сильными, побеждая в бою.</helpcolor>",
@@ -2692,7 +3155,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Преимущества",
   "front_end": true,
   "icon": "000003E10000148A",
   "type": "form",
@@ -2711,7 +3174,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "000003E10000146F",
   "type": "form",
@@ -2730,7 +3193,7 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "000003E100001469",
   "type": "form",
@@ -2745,11 +3208,11 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+20% к <hyperlink>точности</hyperlink> <hyperlink>стрельбы</hyperlink> и <hyperlink>магических</hyperlink> атак."
+    "name": "+20% к <hyperlink><accuracy></accuracy> точности</hyperlink> <hyperlink>стрельбы</hyperlink> и <hyperlink>магических</hyperlink> атак."
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Нападение",
   "front_end": true,
   "icon": "0000041B00001CBE",
   "type": "form",
@@ -2768,30 +3231,35 @@
    }
   ],
   "enabled": true,
-  "group_name": "",
+  "group_name": "Защита",
   "front_end": true,
   "icon": "000003E10000145F",
   "type": "form",
   "display_order": 4
  },
  {
-  "lore_description": "<helpcolor>Армии на карте мира могут выдержать больше сражений.</helpcolor>",
   "biography_description": "Сила их крови позволяет быстрее восстанавливаться после ранений.",
+  "lore_description": "<helpcolor>Армии на карте мира могут выдержать больше сражений.</helpcolor>",
   "point_cost": 2,
   "id": "Быстрое_восстановление",
   "name": "Быстрое восстановление",
+  "incompatible_society_traits": [
+   {
+    "name": "Хрупкое телосложение"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Воины дополнительно восстанавливают +10 ед. <hyperlink><hp></hp> здоровья</hyperlink> каждый <turn></turn> <hyperlink>ход</hyperlink> на <hyperlink>глобальной карте</hyperlink>."
+    "name": "Воины дополнительно восстанавливают +10 ед. <hyperlink>здоровья</hyperlink> каждый <turn></turn> <hyperlink>ход</hyperlink> на <hyperlink>глобальной карте</hyperlink>."
    }
   ],
   "enabled": true,
-  "group_name": "",
-  "front_end": true,
-  "icon": "000003E100001454",
   "type": "form",
-  "display_order": 4
+  "group_name": "Преимущества",
+  "front_end": true,
+  "display_order": 4,
+  "icon": "000003E100001454"
  },
  {
   "affinities": [
@@ -2799,8 +3267,8 @@
     "name": "-10<reputation4></reputation4> <hyperlink>Мировоззрение</hyperlink>"
    }
   ],
-  "biography_description": "Непрерывные войны ожесточили этот народ, любой конфликт они превращают в бойню.",
   "lore_description": "Непрерывные войны ожесточили этот народ, любой конфликт они превращают в бойню.",
+  "biography_description": "Непрерывные войны ожесточили этот народ, любой конфликт они превращают в бойню.",
   "point_cost": 1,
   "id": "Знак_мясника",
   "name": "Знак мясника",
@@ -2817,11 +3285,10 @@
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001367"
+  "icon": "000003DF00001367",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -2829,8 +3296,8 @@
     "name": "2<nature></nature> Приверженность природе"
    }
   ],
-  "biography_description": "Это общество живёт в тесной связи с животными своего мира.",
   "lore_description": "Этот народ создал тесную связь с животными своего мира.",
+  "biography_description": "Это общество живёт в тесной связи с животными своего мира.",
   "point_cost": 1,
   "id": "Знак_выдры",
   "name": "Знак выдры",
@@ -2847,11 +3314,10 @@
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001366"
+  "icon": "000003DF00001366",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -2859,8 +3325,8 @@
     "name": "2<chaos></chaos> Приверженность хаосу"
    }
   ],
-  "biography_description": "В этом обществе обожают войну, соседние державы они воспринимают лишь как объект для завоевания.",
   "lore_description": "Этот народ обожает войну, а в соседних державах видит лишь объект для завоевания.",
+  "biography_description": "В этом обществе обожают войну, соседние державы они воспринимают лишь как объект для завоевания.",
   "point_cost": 1,
   "id": "Знак_меча",
   "name": "Знак меча",
@@ -2873,15 +3339,14 @@
     "name": "<hyperlink>Города</hyperlink> этого народа приносят <xpCol>+10%</xpCol> к <unitprod></unitprod> <hyperlink>на́йму</hyperlink> за каждую <rs_war></rs_war> <hyperlink>войну</hyperlink>, которую ведёт их <hyperlink>правитель</hyperlink>."
    },
    {
-    "name": "<hyperlink>Города</hyperlink> этого народа теряют <fireCol>-10 от <happiness></happiness> <hyperlink> стабильности города</hyperlink></fireCol> за каждую <hyperlink>империю</hyperlink> или <hyperlink>правителього свободногоа городу</hyperlink>, с которыми их <hyperlink>правитель</hyperlink> имеет дипломатический статус от нейтрального и выше (не считая <hyperlink>вассалов</hyperlink>)."
+    "name": "<hyperlink>Города</hyperlink> этого народа теряют <fireCol>-10 от <happiness></happiness> <hyperlink> стабильности города</hyperlink></fireCol> за каждую <hyperlink>империю</hyperlink> или <hyperlink>правителя свободного города</hyperlink>, с которыми их <hyperlink>правитель</hyperlink> имеет дипломатический статус от нейтрального и выше (не считая <hyperlink>вассалов</hyperlink>)."
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001364"
+  "icon": "000003DF00001364",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -2889,8 +3354,8 @@
     "name": "2<order></order> Приверженность порядку"
    }
   ],
-  "biography_description": "Представители этого народа обитают в высоких башнях и пренебрежительно смотрят на жителей трущоб.",
   "lore_description": "Представители этого народа обитают в высоких башнях и пренебрежительно смотрят на жителей трущоб.",
+  "biography_description": "Представители этого народа обитают в высоких башнях и пренебрежительно смотрят на жителей трущоб.",
   "point_cost": 1,
   "id": "Знак_башни",
   "name": "Знак башни",
@@ -2907,11 +3372,10 @@
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001365"
+  "icon": "000003DF00001365",
+  "type": "destiny",
+  "display_order": -1
  },
  {
   "affinities": [
@@ -2919,8 +3383,8 @@
     "name": "2<arcana></arcana> Приверженность астралу"
    }
   ],
-  "biography_description": "Магия — норма жизни для этого народа, они применяют ману во всех областях деятельности.",
   "lore_description": "Магия — норма жизни для этого народа, они применяют ману во всех областях деятельности.",
+  "biography_description": "Магия — норма жизни для этого народа, они применяют ману во всех областях деятельности.",
   "point_cost": 1,
   "id": "Знак_средоточия",
   "name": "Знак средоточия",
@@ -2937,10 +3401,9 @@
    }
   ],
   "enabled": true,
-  "type": "destiny",
-  "group_name": "",
   "front_end": false,
-  "display_order": -1,
-  "icon": "000003DF00001363"
+  "icon": "000003DF00001363",
+  "type": "destiny",
+  "display_order": -1
  }
 ]

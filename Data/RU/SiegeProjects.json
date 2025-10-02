@@ -1,10 +1,21 @@
 [
  {
+  "resid": 5046586583803,
+  "cost": "70<mana></mana> ",
+  "id": "Пророчество_о_падении",
+  "DLC": "ARCHONPROPHECY ",
+  "description": "В начале боя:<bulletlist><bullet>дружественные воины получают:<bulletlist></bullet><bullet>способность «Предвидение»;</bullet><bullet>+10% к <hyperlink><crit></crit>шансу критического удара</hyperlink> до конца боя.</bullet></bulletlist><bullet>Вражеские воины получают:<bulletlist></bullet><bullet>+10% к вероятности <hyperlink>неудачной атаки</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "name": "Пророчество о падении",
+  "siege_health_damage": 0,
+  "needs_research_to_unlock": true,
+  "icon": "0000049700002AF8"
+ },
+ {
   "resid": 5046586577873,
   "cost": "100<gold></gold> 150<mana></mana> ",
   "id": "Ритуал_погибели",
   "DLC": "WAYSOFWAR ",
-  "description": "<bulletlist><bullet>В начале каждого <turn></turn> <hyperlink>хода</hyperlink> во время осады случайно выбранное <hyperlink>улучшение провинции</hyperlink> осаждённого города будет подвергнуто <hyperlink>разграблению</hyperlink>, при этом вы получите награду.</bullet><bullet>В начале боя:<bulletlist></bullet><bullet>все воины обороняющейся стороны получают один уровень эффекта «Призрачный огонь» на 3 <turn></turn> х.;</bullet><bullet>на стороне нападающих появляются <hyperlink>проклятыи огры</hyperlink> (до 2).</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>В начале каждого <turn></turn> <hyperlink>хода</hyperlink> во время осады случайно выбранное <hyperlink>улучшение провинции</hyperlink> осаждённого города будет подвергнуто <hyperlink>разграблению</hyperlink>, при этом вы получите награду.</bullet><bullet>В начале боя:<bulletlist></bullet><bullet>все воины обороняющейся стороны получают один уровень эффекта «Призрачный огонь» на 3 <turn></turn> х.;</bullet><bullet>на стороне нападающих появляются <hyperlink>проклятые огры</hyperlink> (до 2).</bullet></bulletlist></bulletlist>",
   "name": "Ритуал погибели",
   "siege_health_damage": 0,
   "needs_research_to_unlock": true,
@@ -76,7 +87,7 @@
   "resid": 4514010631183,
   "cost": "50<mana></mana> ",
   "id": "Спустить_боевых_гончих",
-  "description": "<bulletlist><bullet>К сражению на стороне атакующих присоединяются <hyperlink>боеваи гончаи</hyperlink> (6). После окончания боя они пропадают.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>К сражению на стороне атакующих присоединяются <hyperlink>боеваи гончие</hyperlink> (6). После окончания боя они пропадают.</bullet></bulletlist>",
   "name": "Спустить боевых гончих",
   "siege_health_damage": 0,
   "needs_research_to_unlock": true,
@@ -95,9 +106,9 @@
  {
   "resid": 4488240825322,
   "cost": "",
-  "id": "Отряд_налётчиков",
-  "description": "<bulletlist><bullet>После пробития стен вы получите по 75 <gold></gold> <hyperlink>Золото</hyperlink> за каждый ранг осаждённого города.</bullet></bulletlist>",
-  "name": "Отряд налётчиков",
+  "id": "Отряд_налётчиков__reputation2__",
+  "description": "<bulletlist><bullet>После пробития стен вы получите по 50 <gold></gold> <hyperlink>Золото</hyperlink> за каждый ранг осаждённого города.</bullet><bullet>После пробития стен ваше <hyperlink>мировоззрение</hyperlink> изменится на -5 <reputation2></reputation2>.</bullet></bulletlist>",
+  "name": "Отряд налётчиков <reputation2></reputation2>",
   "siege_health_damage": 0,
   "needs_research_to_unlock": false,
   "icon": "00000415000003EB"
@@ -238,7 +249,7 @@
   "resid": 4273492480573,
   "cost": "100<gold></gold> 100<mana></mana> ",
   "id": "Ритуал_дрожащей_земли",
-  "description": "<bulletlist><bullet>Каждые 2 в бою под случайным вражеским воином происходит землетрясение:<bulletlist></bullet><bullet>нелетающие и непарящие вражеские воины в радиусе 2 кл. получают 10 <damagePhysical></damagePhysical> <hyperlink>Физический урон</hyperlink>;</bullet><bullet>к нелетающим и непарящим вражеским воинам в радиусе 2 кл. с базовой вероятностью 90% на 3 <turn></turn> <hyperlink>Ходы</hyperlink> применяется эффект «Скорость снижена»;</bullet><bullet>все препятствия в радиусе 2 кл., включая стены, башни и укрепления, будут уничтожены.</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>Каждые 2 <turn></turn> <hyperlink>Ходы</hyperlink> в бою под случайным вражеским воином происходит землетрясение:<bulletlist></bullet><bullet>нелетающие и непарящие вражеские воины в радиусе 2 кл. получают 10 <damagePhysical></damagePhysical> <hyperlink>Физический урон</hyperlink>;</bullet><bullet>к нелетающим и непарящим вражеским воинам в радиусе 2 кл. с базовой вероятностью 90% на 3 <turn></turn> <hyperlink>Ходы</hyperlink> применяется эффект «Скорость снижена»;</bullet><bullet>все препятствия в радиусе 2 кл., включая стены, башни и укрепления, будут уничтожены.</bullet></bulletlist></bulletlist>",
   "name": "Ритуал дрожащей земли",
   "siege_health_damage": 3,
   "needs_research_to_unlock": true,

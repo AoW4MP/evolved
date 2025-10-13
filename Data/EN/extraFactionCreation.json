@@ -96,14 +96,14 @@
   },
   {
     "id": "CULTURE_FEUDAL@SUBCULTURE@ARISTOCRACY",
-    "description": "Your cities form powerful Houses, able to field efficient armies when led by their Liege Lords:<bulletlist><bullet>Each city has a <hyperlink>Feudal House</hyperlink> led by its governor, who becomes the House's <hyperlink>Liege lord</hyperlink>.<bullet></bullet>Units produced in Feudal cities become part of that city's <hyperlink>Feudal House</hyperlink>, gaining <hyperlink><xp></xp> Experience</hyperlink> as their Liege Lord gains <renown></renown> <hyperlink>Renown</hyperlink>.<bullet></bullet>Certain units can promote into higher Tier units on attaining Legendary Rank.</bullet></bulletlist>",
+    "description": "Your cities form powerful Houses, able to field efficient armies when led by their Liege Lords:<bulletlist><bullet>Each city has a <hyperlink>Feudal House</hyperlink> led by its governor, who becomes the House's <hyperlink>Liege lord</hyperlink>.</bullet><bullet>Units produced in Feudal cities become part of that city's <hyperlink>Feudal House</hyperlink>, gaining <hyperlink><xp></xp> Experience</hyperlink> as their Liege Lord gains <renown></renown> <hyperlink>Renown</hyperlink>.</bullet><bullet>Certain units can promote into higher Tier units on attaining Legendary Rank.</bullet></bulletlist>",
     "lorename": "Aristocracy^n",
     "name": "Aristocracy",
     "tome_name": "Feudal - Aristocracy"
   },
   {
     "id": "CULTURE_FEUDAL@SUBCULTURE@MONARCHY",
-    "description": "Your people are loyal to the absolute rule of their Monarch, gaining power from the presence of their ruler:<bulletlist><bullet>The Ruler gains <hyperlink>Feudal monarchs dominion</hyperlink>.</bullet><bullet>Units gain <hyperlink>For the monarch</hyperlink>.<bullet></bullet>Certain units can promote into higher Tier units on attaining Legendary Rank.</bullet></bulletlist>",
+    "description": "Your people are loyal to the absolute rule of their Monarch, gaining power from the presence of their ruler:<bulletlist><bullet>The Ruler gains <hyperlink>Feudal monarchs dominion</hyperlink>.</bullet><bullet>Units gain <hyperlink>For the monarch</hyperlink>.</bullet><bullet>Certain units can promote into higher Tier units on attaining Legendary Rank.</bullet></bulletlist>",
     "lorename": "Monarchy^n",
     "name": "Monarchy",
     "tome_name": "Feudal - Monarchy"
@@ -6325,7 +6325,7 @@
     "id": "DLC@WAYSOFWAR@CULTURE_OATHSWORN",
     "bio": "Driven by a strong sense of devotion, they proudly follow the rules of their oaths.",
     "DLC": "WAYSOFWAR",
-    "fpg_description": "<bulletlist><bullet></bullet>Has higher <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.<bullet></bullet>Swear <hyperlink>Devotion</hyperlink> to an oath that guides their people.",
+    "fpg_description": "<bulletlist></bullet><bullet>Has higher <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.</bullet><bullet>Swear <hyperlink>Devotion</hyperlink> to an oath that guides their people.</bulletlist>",
     "hero_female_title_01": "Oathwarden",
     "hero_title_01": "Oathwarden",
     "lore": "<br><helpcolor>A society that functions through a strong sense of devotion, rewarding its rulers for their dedication to their chosen oath.</helpcolor>",
@@ -8280,7 +8280,7 @@
   },
   {
     "id": "DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@BRAVERY",
-    "description": "Your people follow a path of Strife, seeking to forge their strength in the fires of war:<bulletlist><bullet></bullet>Gain grievances against <hyperlink>Ruler</hyperlink> with an overall better ranking.<bullet></bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> takes -1 <turn></turn> <hyperlink>Turn</hyperlink>.<bullet></bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> yields <influence></influence> <hyperlink>Imperium</hyperlink>.<bullet></bullet>Culture units have <hyperlink>Warriors soul</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Strife</hyperlink>.",
+    "description": "Your people follow a path of Strife, seeking to forge their strength in the fires of war:<bulletlist><bullet>Gain grievances against <hyperlink>Ruler</hyperlink> with an overall better ranking.</bullet><bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> takes -1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> yields <influence></influence> <hyperlink>Imperium</hyperlink>.</bullet><bullet>Culture units have <hyperlink>Warriors soul</hyperlink>.</bullet><bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Strife</hyperlink>.</bullet>",
     "DLC": "WAYSOFWAR",
     "lorename": "Sworn^f",
     "name": "Strife"
@@ -8323,7 +8323,7 @@
   },
   {
     "id": "DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@WISDOM",
-    "description": "Your people follow a path of Harmony, seeking cooperation and to clear the world of threats:<bulletlist><bullet></bullet>Gain +100 <goodrelation></goodrelation> relations with <minorcity></minorcity> <hyperlink>Free City</hyperlink> and <hyperlink>Ruler</hyperlink>.<bullet></bullet>When vassalizing a conquered city, they start at <rs_vassalage0></rs_vassalage0> <hyperlink>Vassalage</hyperlink> phase instead of at <hyperlink>Pactofvassalagelvl-1concept</hyperlink>.<bullet></bullet>Culture units have <hyperlink>Harmonize</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Harmony</hyperlink>.",
+    "description": "Your people follow a path of Harmony, seeking cooperation and to clear the world of threats:<bulletlist><bullet>Gain +100 <goodrelation></goodrelation> relations with <minorcity></minorcity> <hyperlink>Free City</hyperlink> and <hyperlink>Ruler</hyperlink>.</bullet><bullet>When vassalizing a conquered city, they start at <rs_vassalage0></rs_vassalage0> <hyperlink>Vassalage</hyperlink> phase instead of at <hyperlink>Pactofvassalagelvl-1concept</hyperlink>.</bullet><bullet>Culture units have <hyperlink>Harmonize</hyperlink>.</bullet><bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Harmony</hyperlink>.</bullet>",
     "DLC": "WAYSOFWAR",
     "lorename": "Sworn^f",
     "name": "Harmony"

@@ -1652,7 +1652,7 @@
     "description": "Friendly units in a 1-hex radius for 1 <turn></turn> <hyperlink>Turn</hyperlink> gain:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>, +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>An additional +1 <defense></defense> <hyperlink>Defense</hyperlink>, +1 <resistance></resistance> <hyperlink>Resistance</hyperlink> per stack of <hyperlink>Affinity incarnate unit property</hyperlink>.</bullet></bulletlist>",
     "DLC": "ARCHONPROPHECY",
     "name": "Resilient Incarnation",
-    "property_description": "Per stack:[bulletlist]<bullet></bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>, +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>"
+    "property_description": "Per stack:<bulletlist><bullet></bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>, +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>"
   },
   {
     "id": "DLC@ARCHONPROPHECY@CULTURE_ARCHITECT@STARTING_AFFINITY@ASTRAL",
@@ -4807,7 +4807,7 @@
     "crocodile_name": "Summon Primal Crocodile",
     "DLC": "PRIMALFURY",
     "crow_name": "Summon Primal Crow",
-    "description": "<bulletlist><bullet>Summon a 73 onto target hex.[bulletlist]</bullet><bullet>When summoned on favored terrain gains <hyperlink>Frenzy</hyperlink>.</bullet><bullet>Requires at least <amount></amount> stack of <FURY></FURY>.</bullet><bullet>Consumes any remaining stacks of <FURY></FURY> on use.</bullet></bulletlist>[/bulletlist]<br><LOC.CONCEPT@SUMMON_LIVE_SHARED></LOC.CONCEPT@SUMMON_LIVE_SHARED>",
+    "description": "<bulletlist><bullet>Summon a 73 onto target hex.<bulletlist></bullet><bullet>When summoned on favored terrain gains <hyperlink>Frenzy</hyperlink>.</bullet><bullet>Requires at least <amount></amount> stack of <FURY></FURY>.</bullet><bullet>Consumes any remaining stacks of <FURY></FURY> on use.</bullet></bulletlist></bulletlist><br><LOC.CONCEPT@SUMMON_LIVE_SHARED></LOC.CONCEPT@SUMMON_LIVE_SHARED>",
     "error_message": "Requires <amount></amount> or more Fury stacks.",
     "mammoth_name": "Summon Primal Mammoth",
     "name": "Summon 73",
@@ -5112,7 +5112,7 @@
   },
   {
     "id": "DLC@PRIMALFURY@CULTURE_PRIMAL@FAVORED_TERRAIN",
-    "description": "The Primal culture gains various bonuses from its favored terrain:[bulletlist]<bullet></bullet>Their Primal Animal gains <hyperlink>Frenzy</hyperlink> in their favored terrain.<bullet></bullet>Extra income is earned from provinces in favored terrain.<bullet></bullet>The Spirit Temple structure can alter provinces into favored terrain.",
+    "description": "The Primal culture gains various bonuses from its favored terrain:<bulletlist><bullet></bullet>Their Primal Animal gains <hyperlink>Frenzy</hyperlink> in their favored terrain.<bullet></bullet>Extra income is earned from provinces in favored terrain.<bullet></bullet>The Spirit Temple structure can alter provinces into favored terrain.",
     "DLC": "PRIMALFURY",
     "hyperlink": "<hyperlink>Favored Terrain</hyperlink>",
     "name": "Favored Terrain"
@@ -5910,7 +5910,7 @@
   },
   {
     "id": "DLC@PRIMALFURY@CULTURE_PRIMAL@PRIMAL",
-    "fpg_description": "[bulletlist]<bullet></bullet>Has higher <food></food> <hyperlink>Food</hyperlink> income.<bullet></bullet>Alter provinces into the Primal Animal's <hyperlink>Favored Terrain</hyperlink>.",
+    "fpg_description": "<bulletlist><bullet></bullet>Has higher <food></food> <hyperlink>Food</hyperlink> income.<bullet></bullet>Alter provinces into the Primal Animal's <hyperlink>Favored Terrain</hyperlink>.",
     "DLC": "PRIMALFURY",
     "name": "Primal",
     "tome_description": "This research is available to rulers with the <hyperlink>Primal</hyperlink> culture. They specialize in spiritual communion and empowerment."
@@ -6274,49 +6274,49 @@
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@CROCODILE",
-    "description": "Your people worship the Mire Crocodile, bestowing benefits to your culture:<bulletlist><bullet>Start in the Swamp.</bullet><bullet>Swamp provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal crocodile</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Disease immunity</hyperlink></bullet><bullet><hyperlink>Swamp walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group crocodile</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Mire Crocodile, bestowing benefits to your culture:<bulletlist><bullet>Start in the Swamp.</bullet><bullet>Swamp provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal crocodile</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Disease immunity</hyperlink></bullet><bullet><hyperlink>Swamp walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group crocodile</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "Deep-Maw^F",
     "name": "Mire Crocodile"
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@CROW",
-    "description": "Your people worship the Storm Crow, bestowing benefits to your culture:<bulletlist><bullet>Start in the Grasslands.</bullet><bullet>Grassland provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+2 <mana></mana> <hyperlink>Mana</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal crow</hyperlink> summon.<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Grassland walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group crow</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Storm Crow, bestowing benefits to your culture:<bulletlist><bullet>Start in the Grasslands.</bullet><bullet>Grassland provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+3 <mana></mana> <hyperlink>Mana</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal crow</hyperlink> summon.<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Grassland walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group crow</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "High-Squall^M",
     "name": "Storm Crow"
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@MAMMOTH",
-    "description": "Your people worship the Glacial Mammoth, bestowing benefits to your culture:<bulletlist><bullet>Start in the Arctic.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Snow terrain.</bullet><bullet>Snow provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal mammoth</hyperlink> summon.<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Arctic walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group mammoth</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Glacial Mammoth, bestowing benefits to your culture:<bulletlist><bullet>Start in the Arctic.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Snow terrain.</bullet><bullet>Snow provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+3 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal mammoth</hyperlink> summon.<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Arctic walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group mammoth</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "Loom-Frost^F",
     "name": "Glacial Mammoth"
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@SABERTOOTH",
-    "description": "Your people worship the Ash Sabertooth, bestowing benefits to your culture:<bulletlist><bullet>Start in the Ashlands.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Ashlands terrain.</bullet><bullet>Cities ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Lava and Chasm terrain in their <hyperlink>Domain</hyperlink>.</bullet><bullet>Ashland provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal sabertooth</hyperlink> summon.<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Desolate walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group sabertooth</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Ash Sabertooth, bestowing benefits to your culture:<bulletlist><bullet>Start in the Ashlands.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Ashlands terrain.</bullet><bullet>Cities ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Lava and Chasm terrain in their <hyperlink>Domain</hyperlink>.</bullet><bullet>Ashland provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal sabertooth</hyperlink> summon.<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Desolate walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group sabertooth</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "Fell-Fang^M",
     "name": "Ash Sabertooth"
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@SERPENT",
-    "description": "Your people worship the Dune Serpent, bestowing benefits to your culture:<bulletlist><bullet>Start in the Desert.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Sand terrain.</bullet><bullet>Sand provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+2 <gold></gold> <hyperlink>Gold</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal serpent</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Sand walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group serpent</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Dune Serpent, bestowing benefits to your culture:<bulletlist><bullet>Start in the Desert.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Sand terrain.</bullet><bullet>Sand provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal serpent</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Sand walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group serpent</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "Earth-Coil^F",
     "name": "Dune Serpent"
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@SPIDER",
-    "description": "Your people worship the Tunneling Spider, bestowing benefits on your culture:<bulletlist><bullet>Start in the Underground.</bullet><bullet><hyperlink>Underground</hyperlink> Cities gain +1 Province Annex Range.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Cavern terrain.</bullet><bullet>Cities ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Lava and Chasm terrain in their <hyperlink>Domain</hyperlink>.</bullet><bullet>Mushroom Forest provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+2 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal spider</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Cave walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group spider</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Tunneling Spider, bestowing benefits on your culture:<bulletlist><bullet>Start in the Underground.</bullet><bullet><hyperlink>Underground</hyperlink> Cities gain +1 Province Annex Range.</bullet><bullet>Able to build <farm></farm> <hyperlink>Farm</hyperlink> on Cavern terrain.</bullet><bullet>Cities ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Lava and Chasm terrain in their <hyperlink>Domain</hyperlink>.</bullet><bullet>Mushroom Forest provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+2 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal spider</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Cave walk</hyperlink></bullet><bullet><hyperlink>Primal fury mod group spider</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "Under-Atter^F",
     "name": "Tunneling Spider"
   },
   {
     "id": "DLC@PRIMALFURY@SUBCULTURE_PRIMAL@WOLF",
-    "description": "Your people worship the Sylvan Wolf, bestowing benefits to your culture:<bulletlist><bullet>Start in the Forest.</bullet><bullet>Forest provinces are <hyperlink>Favored Terrain</hyperlink> and gain:[bulletlist]</bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal wolf</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Expedited forest</hyperlink></bullet><bullet><hyperlink>Primal fury mod group wolf</hyperlink></bullet></bulletlist>[/bulletlist]",
+    "description": "Your people worship the Sylvan Wolf, bestowing benefits to your culture:<bulletlist><bullet>Start in the Forest.</bullet><bullet>Forest provinces are <hyperlink>Favored Terrain</hyperlink> and gain:<bulletlist></bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><bullet></bullet>Access to the <hyperlink>Primal wolf</hyperlink> summon<bullet></bullet>Units have:<bulletlist><bullet><hyperlink>Expedited forest</hyperlink></bullet><bullet><hyperlink>Primal fury mod group wolf</hyperlink></bullet></bulletlist></bulletlist>",
     "DLC": "PRIMALFURY",
     "lorename": "Oath-Mother^F",
     "name": "Sylvan Wolf"
@@ -6325,7 +6325,7 @@
     "id": "DLC@WAYSOFWAR@CULTURE_OATHSWORN",
     "bio": "Driven by a strong sense of devotion, they proudly follow the rules of their oaths.",
     "DLC": "WAYSOFWAR",
-    "fpg_description": "[bulletlist]<bullet></bullet>Has higher <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.<bullet></bullet>Swear <hyperlink>Devotion</hyperlink> to an oath that guides their people.",
+    "fpg_description": "<bulletlist><bullet></bullet>Has higher <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.<bullet></bullet>Swear <hyperlink>Devotion</hyperlink> to an oath that guides their people.",
     "hero_female_title_01": "Oathwarden",
     "hero_title_01": "Oathwarden",
     "lore": "<br><helpcolor>A society that functions through a strong sense of devotion, rewarding its rulers for their dedication to their chosen oath.</helpcolor>",
@@ -7727,7 +7727,7 @@
     "description": "Friendly units in a <COUNTER_STANCE_TARGETER>AREA>Radius></COUNTER_STANCE_TARGETER>AREA>Radius>-hex radius gain, for <FIRST_STRIKE_EFFECT_DESCRIPTION>NumTurns></FIRST_STRIKE_EFFECT_DESCRIPTION>NumTurns> <turn></turn> <hyperlink>Turn</hyperlink>:<bulletlist><bullet><hyperlink>First strike</hyperlink></bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink></bullet><bullet><hyperlink>Defensive masters</hyperlink></bullet></bulletlist>",
     "DLC": "WAYSOFWAR",
     "name": "Counter Stance",
-    "prop_description": "Unit has:<bulletlist><bullet><hyperlink>First strike</hyperlink></bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet><hyperlink>Defensive masters</hyperlink></bullet></bulletlist>.[/bulletlist]"
+    "prop_description": "Unit has:<bulletlist><bullet><hyperlink>First strike</hyperlink></bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet><hyperlink>Defensive masters</hyperlink></bullet></bulletlist>.</bulletlist>"
   },
   {
     "id": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL2",
@@ -8280,7 +8280,7 @@
   },
   {
     "id": "DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@BRAVERY",
-    "description": "Your people follow a path of Strife, seeking to forge their strength in the fires of war:[bulletlist]<bullet></bullet>Gain grievances against <hyperlink>Ruler</hyperlink> with an overall better ranking.<bullet></bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> takes -1 <turn></turn> <hyperlink>Turn</hyperlink>.<bullet></bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> yields <influence></influence> <hyperlink>Imperium</hyperlink>.<bullet></bullet>Culture units have <hyperlink>Warriors soul</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Strife</hyperlink>.",
+    "description": "Your people follow a path of Strife, seeking to forge their strength in the fires of war:<bulletlist><bullet></bullet>Gain grievances against <hyperlink>Ruler</hyperlink> with an overall better ranking.<bullet></bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> takes -1 <turn></turn> <hyperlink>Turn</hyperlink>.<bullet></bullet><hyperlink>Razing</hyperlink> <hyperlink>City</hyperlink> and <hyperlink>Pillaging</hyperlink> <hyperlink>Province</hyperlink> yields <influence></influence> <hyperlink>Imperium</hyperlink>.<bullet></bullet>Culture units have <hyperlink>Warriors soul</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Strife</hyperlink>.",
     "DLC": "WAYSOFWAR",
     "lorename": "Sworn^f",
     "name": "Strife"
@@ -8290,7 +8290,7 @@
     "adherent_tooltip_description": "<bullet></bullet><hyperlink>Harmonize</hyperlink>: Heal <amount></amount> <hyperlink>{LOC.CONCEPT@TEMPORARY_HITPOINTS@NAME}</hyperlink>",
     "DLC": "WAYSOFWAR",
     "devotee_tooltip_description": "<bullet></bullet><hyperlink>Harmonize</hyperlink>: Heal <amount></amount> <hyperlink>{LOC.CONCEPT@TEMPORARY_HITPOINTS@NAME}</hyperlink>",
-    "devotion_description": "<bulletlist><bullet>Gain <hyperlink>Devotion</hyperlink> by:[bulletlist]</bullet><bullet>Having a <hyperlink>City</hyperlink> or <hyperlink>Vassal</hyperlink> of another Race +<GLOBAL.FromVassalage></GLOBAL.FromVassalage> <devotedact></devotedact>.</bullet><bullet>Clearing an <hyperlink>Infestation</hyperlink> or <hyperlink>Ancient Wonder</hyperlink> +<GLOBAL.ClearInfestation></GLOBAL.ClearInfestation> <devotedact></devotedact>.</bullet><bullet>Making a <hyperlink>Truce</hyperlink> +<GLOBAL.MakeTruce></GLOBAL.MakeTruce> <devotedact></devotedact>.</bullet><bullet>Forgiving a <casusBelli></casusBelli> <hyperlink>Grievance</hyperlink> +<GLOBAL.ForgiveGrievence></GLOBAL.ForgiveGrievence> <devotedact></devotedact>.</bullet></bulletlist><bullet></bullet>Lose <hyperlink>Devotion</hyperlink> by:<bulletlist><bullet>Starting a <rs_war></rs_war> <hyperlink>War</hyperlink> -<GLOBAL.HarmonyEnterWar></GLOBAL.HarmonyEnterWar> <undevotedact></undevotedact>.</bullet><bullet><hyperlink>Razing</hyperlink> or <hyperlink>Migrating</hyperlink> a hostile <hyperlink>City</hyperlink> -<GLOBAL.AbsorbRazeCity></GLOBAL.AbsorbRazeCity> <undevotedact></undevotedact>.</bullet><bullet>Fabricating a <casusBelli></casusBelli> <hyperlink>Grievance</hyperlink> -<GLOBAL.HarmonyFabricateGrievence></GLOBAL.HarmonyFabricateGrievence> <undevotedact></undevotedact>.</bullet></bulletlist>[/bulletlist]",
+    "devotion_description": "<bulletlist><bullet>Gain <hyperlink>Devotion</hyperlink> by:<bulletlist></bullet><bullet>Having a <hyperlink>City</hyperlink> or <hyperlink>Vassal</hyperlink> of another Race +<GLOBAL.FromVassalage></GLOBAL.FromVassalage> <devotedact></devotedact>.</bullet><bullet>Clearing an <hyperlink>Infestation</hyperlink> or <hyperlink>Ancient Wonder</hyperlink> +<GLOBAL.ClearInfestation></GLOBAL.ClearInfestation> <devotedact></devotedact>.</bullet><bullet>Making a <hyperlink>Truce</hyperlink> +<GLOBAL.MakeTruce></GLOBAL.MakeTruce> <devotedact></devotedact>.</bullet><bullet>Forgiving a <casusBelli></casusBelli> <hyperlink>Grievance</hyperlink> +<GLOBAL.ForgiveGrievence></GLOBAL.ForgiveGrievence> <devotedact></devotedact>.</bullet></bulletlist><bullet></bullet>Lose <hyperlink>Devotion</hyperlink> by:<bulletlist><bullet>Starting a <rs_war></rs_war> <hyperlink>War</hyperlink> -<GLOBAL.HarmonyEnterWar></GLOBAL.HarmonyEnterWar> <undevotedact></undevotedact>.</bullet><bullet><hyperlink>Razing</hyperlink> or <hyperlink>Migrating</hyperlink> a hostile <hyperlink>City</hyperlink> -<GLOBAL.AbsorbRazeCity></GLOBAL.AbsorbRazeCity> <undevotedact></undevotedact>.</bullet><bullet>Fabricating a <casusBelli></casusBelli> <hyperlink>Grievance</hyperlink> -<GLOBAL.HarmonyFabricateGrievence></GLOBAL.HarmonyFabricateGrievence> <undevotedact></undevotedact>.</bullet></bulletlist></bulletlist>",
     "devotion_tooltip_description": "<LOC.DLC@WAYSOFWAR@DIPLOMACY@CONCEPT_OATH_HARMONY@NAME></LOC.DLC@WAYSOFWAR@DIPLOMACY@CONCEPT_OATH_HARMONY@NAME><LOC.DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@HARMONY@DEVOTION_DESCRIPTION></LOC.DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@HARMONY@DEVOTION_DESCRIPTION>",
     "neutral_tooltip_description": "<bullet></bullet><hyperlink>Harmonize</hyperlink>: Heal <amount></amount> <hyperlink>{LOC.CONCEPT@TEMPORARY_HITPOINTS@NAME}</hyperlink>",
     "oathbreaker_tooltip_description": "<bullet></bullet><hyperlink>Harmonize</hyperlink>: Gain <amount></amount> <hyperlink>Weakened</hyperlink> for <duration></duration> <turn></turn> <hyperlink>Turn</hyperlink>",
@@ -8300,9 +8300,9 @@
     "id": "DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@RIGHTEOUSNESS",
     "adherent_tooltip_description": "<bullet></bullet><hyperlink>Nobility</hyperlink>: +<amount></amount> <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>",
     "DLC": "WAYSOFWAR",
-    "description": "Your people follow a path of Righteousness, working to be a positive force for good upon the world:[bulletlist]<bullet></bullet>Negative <reputation2></reputation2> alignment gained is doubled.<bullet></bullet>Culture units have <hyperlink>Nobility</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Righteousness</hyperlink>.",
+    "description": "Your people follow a path of Righteousness, working to be a positive force for good upon the world:<bulletlist><bullet></bullet>Negative <reputation2></reputation2> alignment gained is doubled.<bullet></bullet>Culture units have <hyperlink>Nobility</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Righteousness</hyperlink>.",
     "devotee_tooltip_description": "<bullet></bullet><hyperlink>Nobility</hyperlink>: +<amount></amount> <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>",
-    "devotion_description": "<bulletlist><bullet>Gain <hyperlink>Devotion</hyperlink> by:[bulletlist]</bullet><bullet>Having good alignment, +<GLOBAL.goodDevotion></GLOBAL.goodDevotion> <devotedact></devotedact> per <reputation6></reputation6> point.</bullet></bulletlist><bullet></bullet>Lose <hyperlink>Devotion</hyperlink> by:<bulletlist><bullet>Having evil alignment, -<GLOBAL.devotionevil></GLOBAL.devotionevil> <undevotedact></undevotedact> per <reputation2></reputation2> point.</bullet></bulletlist>[/bulletlist]",
+    "devotion_description": "<bulletlist><bullet>Gain <hyperlink>Devotion</hyperlink> by:<bulletlist></bullet><bullet>Having good alignment, +<GLOBAL.goodDevotion></GLOBAL.goodDevotion> <devotedact></devotedact> per <reputation6></reputation6> point.</bullet></bulletlist><bullet></bullet>Lose <hyperlink>Devotion</hyperlink> by:<bulletlist><bullet>Having evil alignment, -<GLOBAL.devotionevil></GLOBAL.devotionevil> <undevotedact></undevotedact> per <reputation2></reputation2> point.</bullet></bulletlist></bulletlist>",
     "devotion_tooltip_description": "<LOC.DLC@WAYSOFWAR@DIPLOMACY@CONCEPT_OATH_RIGHTEOUESNESS@NAME></LOC.DLC@WAYSOFWAR@DIPLOMACY@CONCEPT_OATH_RIGHTEOUESNESS@NAME><LOC.DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@RIGHTEOUSNESS@DEVOTION_DESCRIPTION></LOC.DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@RIGHTEOUSNESS@DEVOTION_DESCRIPTION>",
     "lorename": "Sworn^f",
     "name": "Righteousness",
@@ -8315,7 +8315,7 @@
     "adherent_tooltip_description": "<bullet></bullet><hyperlink>Warriors soul</hyperlink>: +<amount></amount> <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>",
     "DLC": "WAYSOFWAR",
     "devotee_tooltip_description": "<bullet></bullet><hyperlink>Warriors soul</hyperlink>: +<amount></amount> <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>",
-    "devotion_description": "<bulletlist><bullet>Gain <hyperlink>Devotion</hyperlink> by:[bulletlist]</bullet><bullet>Entering <rs_war></rs_war> <hyperlink>War</hyperlink> +<GLOBAL.StrifeEnterWar></GLOBAL.StrifeEnterWar> <devotedact></devotedact>.</bullet><bullet><hyperlink>Razing</hyperlink> a <hyperlink>City</hyperlink> +<GLOBAL.StrifeRazeCity></GLOBAL.StrifeRazeCity> <devotedact></devotedact>.</bullet><bullet>Not letting units rout in events +<GLOBAL.StrifeNoRoutEvent></GLOBAL.StrifeNoRoutEvent> <devotedact></devotedact>.</bullet><bullet>Winning in combat:[bulletlist]</bullet><bullet>With lower army power +<GLOBAL.StrifeBattleWonWeaker></GLOBAL.StrifeBattleWonWeaker> <devotedact></devotedact>.</bullet><bullet>With higher army power +<GLOBAL.StrifeBattleWonStronger></GLOBAL.StrifeBattleWonStronger> <devotedact></devotedact>.</bullet></bulletlist>[/bulletlist]<bullet></bullet>Lose <hyperlink>Devotion</hyperlink> by:<bulletlist><bullet>Entering a <hyperlink>Truce</hyperlink> -<GLOBAL.StrifeMadeTruce></GLOBAL.StrifeMadeTruce> <undevotedact></undevotedact>, <rs_defensivepact></rs_defensivepact> <hyperlink>Defensive Pact</hyperlink> -<GLOBAL.StrifeMadeCoop></GLOBAL.StrifeMadeCoop> <undevotedact></undevotedact>, or <rs_alliance></rs_alliance> <hyperlink>Alliance</hyperlink> -<GLOBAL.StrifeMadePeace></GLOBAL.StrifeMadePeace> <undevotedact></undevotedact>.</bullet><bullet>Making a <rs_vassalage></rs_vassalage> <hyperlink>Pact of Vassalage</hyperlink> -<GLOBAL.StrifeMadeVassal></GLOBAL.StrifeMadeVassal> <undevotedact></undevotedact>.</bullet><bullet>Losing an owned <hyperlink>City</hyperlink> -<GLOBAL.StrifeOwnCityLost></GLOBAL.StrifeOwnCityLost> <undevotedact></undevotedact>.</bullet></bulletlist>[/bulletlist]",
+    "devotion_description": "<bulletlist><bullet>Gain <hyperlink>Devotion</hyperlink> by:<bulletlist></bullet><bullet>Entering <rs_war></rs_war> <hyperlink>War</hyperlink> +<GLOBAL.StrifeEnterWar></GLOBAL.StrifeEnterWar> <devotedact></devotedact>.</bullet><bullet><hyperlink>Razing</hyperlink> a <hyperlink>City</hyperlink> +<GLOBAL.StrifeRazeCity></GLOBAL.StrifeRazeCity> <devotedact></devotedact>.</bullet><bullet>Not letting units rout in events +<GLOBAL.StrifeNoRoutEvent></GLOBAL.StrifeNoRoutEvent> <devotedact></devotedact>.</bullet><bullet>Winning in combat:<bulletlist></bullet><bullet>With lower army power +<GLOBAL.StrifeBattleWonWeaker></GLOBAL.StrifeBattleWonWeaker> <devotedact></devotedact>.</bullet><bullet>With higher army power +<GLOBAL.StrifeBattleWonStronger></GLOBAL.StrifeBattleWonStronger> <devotedact></devotedact>.</bullet></bulletlist></bulletlist><bullet></bullet>Lose <hyperlink>Devotion</hyperlink> by:<bulletlist><bullet>Entering a <hyperlink>Truce</hyperlink> -<GLOBAL.StrifeMadeTruce></GLOBAL.StrifeMadeTruce> <undevotedact></undevotedact>, <rs_defensivepact></rs_defensivepact> <hyperlink>Defensive Pact</hyperlink> -<GLOBAL.StrifeMadeCoop></GLOBAL.StrifeMadeCoop> <undevotedact></undevotedact>, or <rs_alliance></rs_alliance> <hyperlink>Alliance</hyperlink> -<GLOBAL.StrifeMadePeace></GLOBAL.StrifeMadePeace> <undevotedact></undevotedact>.</bullet><bullet>Making a <rs_vassalage></rs_vassalage> <hyperlink>Pact of Vassalage</hyperlink> -<GLOBAL.StrifeMadeVassal></GLOBAL.StrifeMadeVassal> <undevotedact></undevotedact>.</bullet><bullet>Losing an owned <hyperlink>City</hyperlink> -<GLOBAL.StrifeOwnCityLost></GLOBAL.StrifeOwnCityLost> <undevotedact></undevotedact>.</bullet></bulletlist></bulletlist>",
     "devotion_tooltip_description": "<LOC.DLC@WAYSOFWAR@DIPLOMACY@CONCEPT_OATH_STRIFE@NAME></LOC.DLC@WAYSOFWAR@DIPLOMACY@CONCEPT_OATH_STRIFE@NAME><LOC.DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@STRIFE@DEVOTION_DESCRIPTION></LOC.DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@STRIFE@DEVOTION_DESCRIPTION>",
     "neutral_tooltip_description": "<bullet></bullet><hyperlink>Warriors soul</hyperlink>: +<amount></amount> <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>",
     "oathbreaker_tooltip_description": "<bullet></bullet><hyperlink>Warriors soul</hyperlink>: -<amount></amount>% damage even if not <hyperlink>Outnumbered</hyperlink>.",
@@ -8323,7 +8323,7 @@
   },
   {
     "id": "DLC@WAYSOFWAR@SUBCULTURE_OATHSWORN@WISDOM",
-    "description": "Your people follow a path of Harmony, seeking cooperation and to clear the world of threats:[bulletlist]<bullet></bullet>Gain +100 <goodrelation></goodrelation> relations with <minorcity></minorcity> <hyperlink>Free City</hyperlink> and <hyperlink>Ruler</hyperlink>.<bullet></bullet>When vassalizing a conquered city, they start at <rs_vassalage0></rs_vassalage0> <hyperlink>Vassalage</hyperlink> phase instead of at <hyperlink>Pactofvassalagelvl-1concept</hyperlink>.<bullet></bullet>Culture units have <hyperlink>Harmonize</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Harmony</hyperlink>.",
+    "description": "Your people follow a path of Harmony, seeking cooperation and to clear the world of threats:<bulletlist><bullet></bullet>Gain +100 <goodrelation></goodrelation> relations with <minorcity></minorcity> <hyperlink>Free City</hyperlink> and <hyperlink>Ruler</hyperlink>.<bullet></bullet>When vassalizing a conquered city, they start at <rs_vassalage0></rs_vassalage0> <hyperlink>Vassalage</hyperlink> phase instead of at <hyperlink>Pactofvassalagelvl-1concept</hyperlink>.<bullet></bullet>Culture units have <hyperlink>Harmonize</hyperlink>.<bullet></bullet>Become stronger as you gain <hyperlink>Devotion</hyperlink> to the <hyperlink>Oath of Harmony</hyperlink>.",
     "DLC": "WAYSOFWAR",
     "lorename": "Sworn^f",
     "name": "Harmony"

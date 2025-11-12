@@ -1,5 +1,31 @@
 [
  {
+  "biography_description": "They darken the sky, mounted on their shrieking bats.",
+  "lore_description": "<helpcolor>Mounted units are more common and gain a Shrieking Bat mount.</helpcolor>",
+  "DLC": "THRONESOFBLOOD ",
+  "point_cost": 3,
+  "id": "shrieking_bat_mounts",
+  "name": "Shrieking Bat Mounts",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Gain Flying movement."
+   },
+   {
+    "name": "Additional units become Cavalry"
+   },
+   {
+    "name": "Ruler starts with a Shrieking Bat mount."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Mounts",
+  "front_end": true,
+  "icon": "000004C5000008FD",
+  "display_order": 0
+ },
+ {
   "starting_bonuses": [
    {
     "description": "Start with an extra <hyperlink>Astral Wisp</hyperlink> unit."
@@ -513,7 +539,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+15 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+20 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
     "name": "Decreased number of units in formation."
@@ -548,7 +574,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+15 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
     "name": "+4 <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink>."
@@ -732,7 +758,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Adjacent enemies without this trait suffer:<bulletlist><bullet>-2 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet>"
+    "name": "Adjacent enemies without this trait suffer:<bulletlist><bullet>-2 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet></bulletlist>"
    }
   ],
   "enabled": true,
@@ -741,6 +767,54 @@
   "icon": "0000049700000066",
   "type": "form",
   "display_order": 6
+ },
+ {
+  "affinities": [
+   {
+    "name": "1<nature></nature> Nature Affinity"
+   },
+   {
+    "name": "-10<reputation4></reputation4> <hyperlink>Alignment</hyperlink>"
+   }
+  ],
+  "biography_description": "",
+  "lore_description": "They believe themselves to be at the top of the food chain. To be weak is to be prey.",
+  "point_cost": 1,
+  "id": "apex_predators__evilact__",
+  "name": "Apex Predators <evilact></evilact>",
+  "incompatible_society_traits": [
+   {
+    "name": "Devotees of Good <goodact></goodact>"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Gain 50 <food></food> <hyperlink>Food</hyperlink> on successfully <hyperlink>Pillaging</hyperlink> a <hyperlink>Province Improvement</hyperlink>."
+   },
+   {
+    "name": "Gain 50 <food></food> <hyperlink>Food</hyperlink> on successfully <hyperlink>Razing</hyperlink> a conquered <hyperlink>City</hyperlink> per <hyperlink>Province Improvement</hyperlink> it has."
+   },
+   {
+    "name": "Gain 30 <food></food> <hyperlink>Food</hyperlink> on successfully <hyperlink>Migrating</hyperlink> a conquered <hyperlink>City</hyperlink> per <population></population> <hyperlink>Population</hyperlink>. But the City loses additional <population></population> Population afterward."
+   },
+   {
+    "name": "<hyperlink>Vassals</hyperlink> grant +10 <food></food> <hyperlink>Food</hyperlink> income per <population></population> <hyperlink>Population</hyperlink>."
+   },
+   {
+    "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "front_end": false,
+  "type": "society",
+  "display_order": 3,
+  "starting_bonuses": [
+   {
+    "description": "Starting <hyperlink>Units</hyperlink> gain +1 rank."
+   }
+  ],
+  "icon": "0000049300000F66"
  },
  {
   "affinities": [
@@ -819,9 +893,6 @@
    },
    {
     "name": "<hyperlink>Heroes</hyperlink> gain +10 <gold></gold> <hyperlink>Gold</hyperlink> <hyperlink>Unit Upkeep</hyperlink> whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
-   },
-   {
-    "name": "In combat, <hyperlink>Units</hyperlink> in an <hyperlink>Army</hyperlink> without a Hero suffer -20 <happiness></happiness> <hyperlink>Morale</hyperlink>."
    }
   ],
   "enabled": true,
@@ -1059,7 +1130,7 @@
  {
   "starting_bonuses": [
    {
-    "empire_progression_slug": "excavation"
+    "empire_progression_slug": "road_building"
    }
   ],
   "affinities": [
@@ -1578,7 +1649,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +2 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
+    "name": "City Structures cost 50% more <structureprod></structureprod> Production but grant +1 <happiness></happiness> City Stability and +5 <gold></gold> Gold in addition to their normal effects."
    },
    {
     "name": "Racial <hyperlink>Unit tier</hyperlink> 3 Units have +1 Rank"
@@ -2038,7 +2109,7 @@
   "display_order": 8
  },
  {
-  "lore_description": "<helpcolor>Units normally only have 32 movement.</helpcolor>",
+  "lore_description": "<helpcolor>Units move faster in combat and on the world map.</helpcolor>",
   "biography_description": "Trained in long distance running, they are exceptionally fast.",
   "point_cost": 6,
   "id": "athletics",
@@ -2168,7 +2239,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+3 Status Resistance."
+    "name": "+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>."
    },
    {
     "name": "<hyperlink>Negative Status Effects</hyperlink> last -1 <turn></turn> Turn, with a minimum of 1."
@@ -2454,6 +2525,9 @@
  {
   "starting_bonuses": [
    {
+    "empire_progression_slug": "expanded_governance"
+   },
+   {
     "structure_upgrade_slug": "store_house"
    }
   ],
@@ -2470,10 +2544,10 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Newly founded cities gain +1 <population></population> <hyperlink>Population</hyperlink>."
+    "name": "Founding cities costs -25% less <influence></influence> <hyperlink>Imperium</hyperlink>."
    },
    {
-    "name": "<hyperlink>City Cap</hyperlink> is increased by +1 <citytier></citytier>."
+    "name": "Newly founded cities gain +1 <population></population> <hyperlink>Population</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2504,7 +2578,7 @@
     "name": "Gain +50% resources from clearing an <hyperlink>Infestation</hyperlink>, <hyperlink>Ancient Wonder</hyperlink>, or <hyperlink>Resource Node</hyperlink>."
    },
    {
-    "name": "Units regenerate an additional +5 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>."
+    "name": "Units <hyperlink>regenerate</hyperlink> an additional +5 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2606,7 +2680,7 @@
     "name": "Units gain the Corpse Eating ability."
    },
    {
-    "name": "The nearest City owned gains +5 <mana></mana> <hyperlink>Mana</hyperlink> and +5 <food></food> <hyperlink>Food</hyperlink> per tier of non-Magic Origin units killed or lost after successful combat."
+    "name": "The nearest City owned gains <mana></mana> <hyperlink>Mana</hyperlink> and <food></food> <hyperlink>Food</hyperlink> per tier of non-Construct units killed or lost after successful combat."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>."
@@ -3286,7 +3360,7 @@
  },
  {
   "biography_description": "Their blood is strong, which allows them to recuperate from wounds faster than others.",
-  "lore_description": "<helpcolor>Armies can fight longer on the world map.</helpcolor>",
+  "lore_description": "<helpcolor>Armies recover faster from battles on the world map.</helpcolor>",
   "point_cost": 3,
   "id": "fast_recuperation",
   "name": "Fast Recuperation",
@@ -3298,7 +3372,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Regenerate an additional +10 <hyperlink><hp></hp> Hit Points</hyperlink> per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>."
+    "name": "<hyperlink>Regenerate</hyperlink> an additional +10 <hyperlink><hp></hp> Hit Points</hyperlink> per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>."
    }
   ],
   "enabled": true,

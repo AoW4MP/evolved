@@ -231,12 +231,7 @@
                 "id": "town_hall_i_town_center"
             }]
     },
-    {
-        "id": "town_hall_ii_castle",
-        "connectTo": [ {
-                "id": "town_hall_i_town_center"
-            }]
-    },
+   
     {
         "id": "palisade_walls",
         "connectTo": [ {
@@ -248,21 +243,21 @@
         "connectTo": [ {
                 "id": "palisade_walls"
             },{
-                "id": "town_hall_iii_citadel"
+                "id": "town_hall_iii"
             }]
     }, {
         "id": "caltrop_stash",
         "connectTo": [ {
                 "id": "palisade_walls"
             },{
-                "id": "town_hall_ii_castle"
+                "id": "town_hall_ii"
             }]
     },{
         "id": "arcane_battlements",
         "connectTo": [ {
                 "id": "palisade_walls"
             },{
-                "id": "town_hall_ii_castle"
+                "id": "town_hall_ii"
             }]
     },
     {
@@ -270,7 +265,7 @@
         "connectTo": [ {
                 "id": "palisade_walls"
             },{
-                "id": "town_hall_ii_castle"
+                "id": "town_hall_ii"
             }]
     },{
         "id": "ballista_towers",
@@ -295,7 +290,7 @@
         "connectTo": [ {
                 "id": "ballista_towers"
             },{
-                "id": "town_hall_iv_grand_estate"
+                "id": "town_hall_iv"
             }]
     }, {
         "id": "beacon_of_valor",
@@ -303,10 +298,81 @@
                 "id": "ballista_towers"
             }]
     },
+     {
+        "id": "vampire_castle_foundation",
+        "connectTo": [ {
+                "id": "town_hall_ii"
+            }]
+    }, 
+     {
+        "id": "vampire_castle_chambers",
+        "connectTo": [ {
+                "id": "vampire_castle_foundation"
+            }]
+    },  {
+        "id": "vampire_castle_deep_crypts",
+        "connectTo": [ {
+                "id": "vampire_castle_foundation"
+            }]
+    }, 
+     {
+        "id": "vampire_castle_abattoir",
+        "connectTo": [ {
+                "id": "vampire_castle_foundation"
+            }]
+    }, 
+     {
+        "id": "vampire_castle_soul_forge",
+        "connectTo": [ {
+                "id": "vampire_castle_foundation"
+            }]
+    }, 
+     {
+        "id": "vampire_castle_grand_halls",
+        "connectTo": [ {
+                "id": "vampire_castle_chambers"
+            }]
+    }, 
+      {
+        "id": "vampire_castle_laboratory",
+        "connectTo": [ {
+                "id": "vampire_castle_chambers"
+            }]
+    }, 
+      {
+        "id": "vampire_castle_room_of_recall",
+        "connectTo": [ {
+                "id": "vampire_castle_chambers"
+            }]
+    }, 
+      {
+        "id": "vampire_castle_throne_of_blood",
+        "connectTo": [ {
+                "id": "vampire_castle_grand_halls"
+            }]
+    }, 
+    {
+        "id": "vampire_castle_ritual_chamber",
+        "connectTo": [ {
+                "id": "vampire_castle_grand_halls"
+            }]
+    }, 
+    {
+        "id": "vampire_castle_stygian_observers",
+        "connectTo": [ {
+                "id": "vampire_castle_throne_of_blood"
+            }]
+    }, 
+      {
+        "id": "vampire_castle_teleportation_circle",
+        "connectTo": [ {
+                "id": "vampire_castle_throne_of_blood"
+            }]
+    }, 
     {
         "id": "wizard_tower_foundation",
         "connectTo": [ {
-                "id": "town_hall_ii_castle"
+                "id": "town_hall_ii"
             }]
     }, {
         "id": "wizard_tower_prison_cells",
@@ -366,6 +432,8 @@
         
         "connectTo": [ {
                 "id": "wizard_tower_level_ii"
+            },{
+                "id": "vampire_castle_grand_halls"
             }]
     },
     {
@@ -373,13 +441,15 @@
         
         "connectTo": [ {
                 "id": "wizard_tower_apex"
+            },{
+                "id": "vampire_castle_throne_of_blood"
             }]
     },
      {
         "id": "tavern",
         
         "connectTo": [ {
-                "id": "town_hall_ii_castle"
+                "id": "town_hall_ii"
             }]
     }, {
         "id": "bathhouse",
@@ -451,6 +521,61 @@
         
         "connectTo": [ {
                 "id": "town_hall_iii_ascended_gardens"
+            }]
+    },
+    {
+        "id": "wizard_tower_chambers",
+        "connectTo": [ {
+                "id": "wizard_tower_foundation"
+            }]
+    },{
+        "id": "wizard_tower_item_forge",
+        "connectTo": [ {
+                "id": "wizard_tower_chambers"
+            }]
+    }, {
+        "id": "wizard_tower_high_halls",
+        "connectTo": [ {
+                "id": "wizard_tower_chambers"
+            }]
+    } ,{
+        "id": "wizard_tower_room_of_recall",
+        "connectTo": [ {
+                "id": "wizard_tower_chambers"
+            }]
+    },{
+        "id": "wizard_tower_apex",
+        "connectTo": [ {
+                "id": "wizard_tower_high_halls"
+            }]
+    },{
+        "id": "wizard_tower_channeling_chamber",
+        "connectTo": [ {
+                "id": "wizard_tower_high_halls"
+            }]
+    }, {
+        "id": "*bolstering_matrix",
+        
+        "connectTo": [ {
+                "id": "wizard_tower_high_halls"
+            }]
+    },
+     {
+        "id": "town_hall_ii",
+        "connectTo": [ {
+                "id": "town_hall_i_town_center"
+            }]
+    }
+    ,
+     {
+        "id": "town_hall_iii",
+        "connectTo": [ {
+                "id": "town_hall_ii"
+            }]
+    }, {
+        "id": "town_hall_iv",
+        "connectTo": [ {
+                "id": "town_hall_iii"
             }]
     }
 ]

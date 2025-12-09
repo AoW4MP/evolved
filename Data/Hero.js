@@ -593,7 +593,7 @@ function SetSkillData(nodeElement, skill, rulerSubType, choice) {
     }
 
     if (skillLoc.description == undefined) {
-        spa.innerHTML += GetSkillData(skillLoc, rulerSubType).innerHTML;
+        spa.innerHTML += GetSkillData(skillLoc, rulerSubType);
     } else {
         var description = skillLoc.description;
         description = description.replaceAll("<bulletlist></bullet>", "<bulletlist>");
@@ -667,7 +667,7 @@ function GetAllAvailableSignatureSkills(slot) {
     var listOfSkills = [];
     for (var s = 0; s < jsonHeroSkills.length; s++) {
         if (jsonHeroSkills[s].type == "signature") {
-            if (rulerOrigin == "Champion" || rulerOrigin == "Wizard") {
+            if ((rulerOrigin == "Champion" || rulerOrigin == "Wizard") && jsonHeroSkills[s].DLC == undefined) {
                 if (slot === 1 && jsonHeroSkills[s].name.indexOf("Initiate") != -1) {
                     listOfSkills.push(jsonHeroSkills[s]);
                 }
@@ -1020,8 +1020,9 @@ function GetSignatureSkillUnlocks(currentSig) {
     for (let i = 0; i < jsonHeroSkills.length; i++) {
         // hardcode some of these because theyre not hooked up properly
         // mind devourer - ancient one not exported
-
-        if (currentSig.resid == 5046586575333) {
+// ev ancient one not exported
+        // mind devourer || roseblood noble || bloodsomething
+        if (currentSig.resid == 5046586575333 || currentSig.resid == 5046586586510 || currentSig.resid == 5046586586483) {
             // ancient one : +30% damage +20 hp, same as ancient of earth but different name
             if (jsonHeroSkills[i].resid == 4514010632504) {
                 // change name to Ancient One
@@ -1679,18 +1680,20 @@ function ReturnHeroSkillItself(lookup, resid) {
 }
 
 function GetSkillData(a, subtype) {
+    var spa = "";
     if ("abilities" in a) {
         var l = 0;
-        var spa = "";
+        
         for (l in a.abilities) {
             let lookup = a.abilities[l].slug;
             let thisSkill = ReturnSkillItself(lookup, subtype);
             let abilityName = thisSkill.name;
 
             //   description = jsonUnit[j].description;
-            spa = GetAbilityInfo(thisSkill);
+            spa += GetAbilityInfo(thisSkill).innerHTML + "<br>";
 
-            return spa;
+            
         }
     }
+    return spa;
 }

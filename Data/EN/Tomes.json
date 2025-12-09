@@ -82,7 +82,7 @@
     "upgrade_slug": "crimson_court"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Coagulate</bullet><bullet>At the start of combat, for each friendly non-summon Tier I and Tier II unit:<bulletlist></bullet><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+5% healing received in combat.</bullet></bulletlist></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>Coagulate</bullet><bullet>At the start of combat, for each friendly non-summon Tier I, Tier II, and Tier III unit:<bulletlist></bullet><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+5% healing received in combat.</bullet></bulletlist></bulletlist>",
     "name": "Mantle of the Blood Noble",
     "spell_slug": "mantle_of_the_blood_noble",
     "tier": 7,
@@ -131,7 +131,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Inflict Torment until the end of combat.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base % chance of inflicting Torment until the end of combat.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Tormenting Projectiles",
     "spell_slug": "tormenting_projectiles",
     "tier": 5,
@@ -628,7 +628,7 @@
   "icon": "00000497000013A1",
   "skills": [
    {
-    "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a:<bulletlist></bullet><bullet>% chance of being inflicted with Ghostfire for <turn></turn> Turns.</bullet><bullet>% chance of being inflicted with Misfortune for <turn></turn> Turns</bullet></bulletlist><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
+    "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a % chance of being inflicted with Misfortune for <turn></turn> Turns</bullet><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
     "name": "Accursed Armors",
     "spell_slug": "accursed_armors",
     "tier": 7,
@@ -2216,7 +2216,7 @@
   "icon": "000003E300005D2F",
   "skills": [
    {
-    "description": "<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
     "name": "Reagent Refinery",
     "tier": 8,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -3150,7 +3150,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
    },
    {
-    "description": "Grants attacks of enchanted units:<bulletlist><bullet>A base % chance of inflicting Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base % chance of inflicting Decaying.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Necrotic Projectiles",
     "spell_slug": "necrotic_projectiles",
     "tier": 2,
@@ -3614,7 +3614,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal + <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>Deal + <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Electrified for <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Lightning Focus",
     "spell_slug": "lightning_focus",
     "tier": 1,
@@ -3667,7 +3667,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Target friendly unit and another within hexes gain a shield:<bulletlist><bullet>Has a base % chance of inflicting Stunned on attackers.</bullet><bullet>Lasts for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target friendly unit and another within hexes gain Static Shield for <turn></turn> Turns.",
     "name": "Static Shield",
     "spell_slug": "static_shield",
     "tier": 3,
@@ -3874,7 +3874,7 @@
   "icon": "0000041B00000D52",
   "skills": [
    {
-    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain a base % chance of inflicting Life Seed for <turn></turn> Turns.</bullet><bullet>Deal +% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base % chance of inflicting Life Seed for <turn></turn> Turns.</bullet><bullet>Deal +% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Blooming Projectiles",
     "spell_slug": "blooming_projectiles",
     "tier": 6,
@@ -3909,7 +3909,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Inflict Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "Base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Inflict Decaying.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Blades of Decay",
     "spell_slug": "blades_of_decay",
     "tier": 6,
@@ -4162,7 +4162,7 @@
   "icon": "0000041B000000E5",
   "skills": [
    {
-    "description": "All friendly units lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
+    "description": "Friendly units in a 2-hex radius: lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
     "name": "Steelfury Chant",
     "spell_slug": "steelfury_chant",
     "tier": 2,
@@ -4864,13 +4864,6 @@
   ]
  },
  {
-  "passives": [
-   {
-    "description": "The <hyperlink>Dark</hyperlink> Culture has a <happiness></happiness> <hyperlink>City Stability</hyperlink> Agenda, which grants bonuses to your <hyperlink>Cities</hyperlink> for the following negative stability levels:<br></br><bulletlist><bullet>Unstable: +15 <structureprod></structureprod> <hyperlink>Production</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Unrest: +30 <structureprod></structureprod> <hyperlink>Production</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Rioting: +45 <structureprod></structureprod> <hyperlink>Production</hyperlink> and <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet>",
-    "name": "Stability Agenda",
-    "type": ""
-   }
-  ],
   "lore_description": "",
   "gameplay_description": "This research is available to Rulers with the <hyperlink>Dark</hyperlink> culture.",
   "resid": 4273492480198,
@@ -5249,7 +5242,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "Grants attacks of enchanted units:<bulletlist><bullet>Demolisher, which allows them to destroy <hyperlink>Fortified</hyperlink> obstacles.</bullet><bullet>A base % chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+ <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Demolisher.</bullet><bullet>A base % chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Focus of Devastation",
     "spell_slug": "focus_of_devastation",
     "tier": 6,
@@ -5316,7 +5309,7 @@
   "icon": "000003AD00002B83",
   "skills": [
    {
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal + <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Have a base % chance of inflicting Sundered Defense on each target hit for <turn></turn> Turns.</bullet><bullet>Gain Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Meteor Projectiles",
     "spell_slug": "meteor_projectiles",
     "tier": 8,

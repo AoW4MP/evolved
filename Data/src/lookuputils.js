@@ -4,6 +4,12 @@ function findBy(array, key, value, { all = false } = {}) {
     : array.find(item => item[key] === value);   // first match
 }
 
+function findByFuzzy(array, key, value, { all = false } = {}) {
+  return all
+    ? array.filter(item => item[key].includes(value))  // all matches
+    : array.find(item => item[key].includes(value));   // first match
+}
+
 function maybeHighlight(text) {
   return getUserSettings().isolateNumber ? highlightNumbersInDiv(text) : text;
 }
@@ -352,8 +358,10 @@ function doubleNumbers(inputString) {
 
 function ConvertSpawnTable(input, subtractName) {
   
-    const bulletListName = input.category.split(subtractName + "_")[1]; // Get the first entry as the bullet list name
-
+    let bulletListName = input.category.split(subtractName + "_")[1]; // Get the first entry as the bullet list name
+ if(bulletListName == undefined){
+                    bulletListName = "Default";
+                }
     // Calculate the percentages for each entry
     const entryCounts = {};
     for (const entry of input.items) {

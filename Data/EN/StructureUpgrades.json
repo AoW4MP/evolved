@@ -1645,10 +1645,10 @@
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "+10 <gold></gold> <hyperlink>Gold</hyperlink> income",
+  "prediction_description": "+15 <gold></gold> <hyperlink>Gold</hyperlink> income",
   "resid": 4801773437629,
   "id": "_mine___bazaar_of_wonders",
-  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+5 <gold></gold> <hyperlink>Gold</hyperlink> per unique adjacent <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+15 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+5 <gold></gold> <hyperlink>Gold</hyperlink> per unique adjacent <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Bazaar of Wonders",
   "icon": "0000045E000002BE",
   "is_sector_upgrade": true
@@ -2491,26 +2491,26 @@
  {
   "requirement_description": "",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+30 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+40 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435139242,
   "id": "shadowtrade_quarter",
   "description": "",
   "name": "Shadowtrade Quarter",
   "icon": "0000042A000006AC",
   "is_sector_upgrade": false,
-  "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
+  "boost_requirements": "Build 3 <hyperlink><farms></farms> Farm</hyperlink>"
  },
  {
   "requirement_description": "",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-5 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "prediction_description": "<bulletlist><bullet>+30 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435139237,
   "id": "collector",
   "description": "",
   "name": "Collector",
   "icon": "0000042A000006A7",
   "is_sector_upgrade": false,
-  "boost_requirements": "Build 1 <hyperlink><farms></farms> Farm</hyperlink>"
+  "boost_requirements": "Build 2 <hyperlink><farms></farms> Farm</hyperlink>"
  },
  {
   "requirement_description": "",
@@ -2590,7 +2590,7 @@
   "prediction_description": "",
   "resid": 4578435139166,
   "id": "_mine___great_foundry",
-  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>Per adjacent <mine></mine> <hyperlink>Mine</hyperlink>:<bulletlist></bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet></bulletlist><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet><bullet>Allows for the drafting of <hyperlink>Magma Spirit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>Per adjacent <mine></mine> <hyperlink>Mine</hyperlink>:<bulletlist></bullet><bullet>+5 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>+5 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet></bulletlist><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet><bullet>Allows for the drafting of <hyperlink>Magma Spirit</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Great Foundry",
   "icon": "0000042A0000065F",
   "is_sector_upgrade": true
@@ -2708,10 +2708,10 @@
  {
   "requirement_description": "Must be built on an acquired <hyperlink>Province</hyperlink>.",
   "cost": "100<gold></gold> 250<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435138813,
   "id": "_farms___carnival_of_flesh",
-  "description": "<bulletlist><bullet>+7 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+7 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Per adjacent <farm></farm> <hyperlink>Farm</hyperlink>:<bulletlist></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Per adjacent <farm></farm> <hyperlink>Farm</hyperlink>:<bulletlist></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>+3 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist></bulletlist>",
   "name": "<farms></farms> Carnival of Flesh",
   "icon": "0000042A000004FC",
   "is_sector_upgrade": true
@@ -3623,7 +3623,7 @@
  {
   "requirement_description": "",
   "cost": "170<gold></gold> 450<structureprod></structureprod> ",
-  "prediction_description": "<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>:</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>:</bullet></bulletlist>",
+  "prediction_description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>:</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <hyperlink>Magic Material</hyperlink> inside <hyperlink>Domain</hyperlink>:</bullet></bulletlist>",
   "resid": 4273492483521,
   "id": "reagent_refinery",
   "description": "",

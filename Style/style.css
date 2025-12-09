@@ -1265,6 +1265,20 @@ hr {
     border-image-slice: 10 10 10 10;
 }
 
+.button-event {
+   
+    background-color: #35260d;
+    color: #b8ac55;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    /* height: 30px; */
+    padding: 3px;
+    margin: 5px;
+    font-size: 15px;
+  
+}
+
 .button-random {
     background-color: #4b1d63;
     color: #fff;
@@ -1346,6 +1360,9 @@ hyperlink {
     color: beige;
 }
 
+eventColor{
+     color: #a965ca;
+}
 helpcolor {
     color: lightgrey;
 }
@@ -1679,6 +1696,24 @@ silver {
     z-index: -1;
 }
 
+.eventBodySegment{
+    padding: 10px;
+      font-size:15px;
+}
+
+.eventTitleSegment{
+    padding: 10px;
+    color: white;
+      font-size:18px;
+      font-family: "Decorative", sans-serif;
+}
+
+.eventLoreSegment{
+    padding: 10px;
+    color: aquamarine;
+    font-size:15px;
+}
+
 .mid-text {
     text-align: center;
     position: relative;
@@ -1704,6 +1739,7 @@ silver {
     position: relative;
     font-family: "Decorative", sans-serif;
     font-size: 35px;
+   
    
     left: 50%;
     transform: translate(-50%, -30%);

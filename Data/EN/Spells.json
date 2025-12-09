@@ -254,7 +254,7 @@
   "id": "sanguine_focus",
   "DLC": "THRONESOFBLOOD ",
   "tactical": false,
-  "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Bleeding for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -290,11 +290,8 @@
   "id": "mantle_of_the_blood_noble",
   "DLC": "THRONESOFBLOOD ",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Coagulate</bullet><bullet>At the start of combat, for each friendly non-summon Tier I and Tier II unit:<bulletlist></bullet><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+5% healing received in combat.</bullet></bulletlist></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>Coagulate</bullet><bullet>At the start of combat, for each friendly non-summon Tier I, Tier II, and Tier III unit:<bulletlist></bullet><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+5% healing received in combat.</bullet></bulletlist></bulletlist>",
   "enchantment_requisites": [
-   {
-    "requisite": "Tier III"
-   },
    {
     "requisite": "Tier IV"
    },
@@ -349,7 +346,7 @@
   "id": "tormenting_projectiles",
   "DLC": "THRONESOFBLOOD ",
   "tactical": false,
-  "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Inflict Torment until the end of combat.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base 90% chance of inflicting Torment until the end of combat.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -423,7 +420,7 @@
   "id": "blood_drinking_blades",
   "DLC": "THRONESOFBLOOD ",
   "tactical": false,
-  "description": "Base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>When striking units with Bleeding, heal for 2 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>When striking units with Bleeding, heal for 2 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -452,7 +449,7 @@
   "id": "vivisection_ritual",
   "DLC": "THRONESOFBLOOD ",
   "tactical": false,
-  "description": "Target enemy army sustains 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage. Then gain +150 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
+  "description": "All units in target enemy army gain 1 for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>. You then gain +150 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
   "name": "Vivisection Ritual",
   "operation_point_cost": 150,
   "icon": "0000049700002FEB"
@@ -499,7 +496,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blooming_projectiles",
   "tactical": false,
-  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain a base 60% chance of inflicting Life Seed for 3 <turn></turn> Turns.</bullet><bullet>Deal +10% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base 60% chance of inflicting Life Seed for 3 <turn></turn> Turns.</bullet><bullet>Deal +10% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -749,7 +746,13 @@
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
     "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    }
   ],
   "name": "Fated Projectiles",
@@ -1123,7 +1126,7 @@
   "id": "accursed_armors",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a:<bulletlist></bullet><bullet>30% chance of being inflicted with Ghostfire for 3 <turn></turn> Turns.</bullet><bullet>30% chance of being inflicted with Misfortune for 3 <turn></turn> Turns</bullet></bulletlist><bullet>+2 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
+  "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a 60% chance of being inflicted with Misfortune for 3 <turn></turn> Turns</bullet><bullet>+2 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -3079,6 +3082,9 @@
    },
    {
     "slug": "inferno_hound"
+   },
+   {
+    "slug": "obsidian_wyvern"
    }
   ]
  },
@@ -3532,6 +3538,9 @@
   "operation_point_cost": 150,
   "icon": "000003E300005A9C",
   "summoned_units": [
+   {
+    "slug": "skald"
+   },
    {
     "slug": "nightmare"
    },
@@ -4495,7 +4504,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "meteor_projectiles",
   "tactical": false,
-  "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Have a base 60% chance of inflicting Sundered Defense on each target hit for 3 <turn></turn> Turns.</bullet><bullet>Gain Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -4612,14 +4621,14 @@
   "icon": "000003AD00002B8B"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 4514010632212,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "meteor_shower",
   "tactical": true,
   "description": "Up to 2 random enemy units and enemies adjacent to those:<bulletlist><bullet>Sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet></bulletlist><br></br>This spell repeats at the start of each turn for the next 5 <turn></turn> Turns.",
   "name": "Meteor Shower",
-  "operation_point_cost": 50,
+  "operation_point_cost": 40,
   "icon": "000003AD00002B90"
  },
  {
@@ -5245,6 +5254,12 @@
     "slug": "sabertooth"
    },
    {
+    "slug": "slither"
+   },
+   {
+    "slug": "gold_wyvern"
+   },
+   {
     "slug": "hunter_spider_matriarch"
    },
    {
@@ -5273,6 +5288,9 @@
    },
    {
     "slug": "inferno_hound"
+   },
+   {
+    "slug": "obsidian_wyvern"
    },
    {
     "slug": "vampire_spider_matriarch"
@@ -6002,7 +6020,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "lightning_focus",
   "tactical": false,
-  "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base 30% chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>Deal +2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Electrified for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -6325,7 +6343,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "necrotic_projectiles",
   "tactical": false,
-  "description": "Grants attacks of enchanted units:<bulletlist><bullet>A base 90% chance of inflicting Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base 90% chance of inflicting Decaying.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -6625,7 +6643,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "static_shield",
   "tactical": true,
-  "description": "Target friendly unit and another within 3 hexes gain a shield:<bulletlist><bullet>Has a base 60% chance of inflicting Stunned on attackers.</bullet><bullet>Lasts for 2 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Target friendly unit and another within 3 hexes gain Static Shield for 2 <turn></turn> Turns.",
   "name": "Static Shield",
   "operation_point_cost": 15,
   "icon": "0000041B0000120C"
@@ -6836,7 +6854,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blades_of_decay",
   "tactical": false,
-  "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Inflict Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Inflict Decaying.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -7178,7 +7196,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "focus_of_devastation",
   "tactical": false,
-  "description": "Grants attacks of enchanted units:<bulletlist><bullet>Demolisher, which allows them to destroy <hyperlink>Fortified</hyperlink> obstacles.</bullet><bullet>A base 60% chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Demolisher.</bullet><bullet>A base 60% chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -7492,14 +7510,14 @@
   "icon": "0000041300000D0E"
  },
  {
-  "casting_cost": "20<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4264902530326,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "steelfury_chant",
   "tactical": true,
-  "description": "All friendly units lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
+  "description": "Friendly units in a 2-hex radius: lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
   "name": "Steelfury Chant",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "0000041B00000115"
  },
  {

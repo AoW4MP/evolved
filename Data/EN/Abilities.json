@@ -629,10 +629,13 @@
  {
   "notes": [
    {
-    "note": "Can only be used once per battle."
+    "note": "Cooldown: 4 <turn></turn>"
+   },
+   {
+    "note": "Starts on cooldown"
    }
   ],
-  "description": "Target friendly Tier III or Tier IV unit gains Blood of the Exarch until the end of combat.",
+  "description": "Target friendly Tier III or higher unit gains Blood of the Exarch until the end of combat.<br></br><br></br>Cannot affect <hyperlink>Heroes</hyperlink> or other Blood Exarchs.",
   "name": "Grant Blood of the Exarch",
   "slug": "gift_blood_of_the_exarch_ability_000004C500000B10",
   "damage": "",
@@ -648,7 +651,7 @@
  },
  {
   "modifiers": [],
-  "description": "Target non-<hyperlink>Hero</hyperlink> enemy unit sustains damage and is pulled to an adjacent hex.",
+  "description": "Target unit sustains damage and has a base 90% chance of being pulled to an adjacent hex.",
   "name": "Blood Pull",
   "slug": "blood_pull_ability_000004C500000B10",
   "damage": "11<damagephysical></damagephysical> ",
@@ -659,10 +662,10 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<leaveoneaction></leaveoneaction>",
-  "range": "3",
+  "range": "4",
   "notes": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "000004970000340F"
@@ -9920,6 +9923,11 @@
  {
   "modifiers": [
    {
+    "description": "+40% damage to Cavalry and Large Target units.",
+    "name": "Polearm",
+    "count": 1
+   },
+   {
     "description": "Inflict Weakened for 3 <turn></turn> Turns.",
     "name": "Weakened",
     "count": 1
@@ -9928,10 +9936,13 @@
   "description": "Deal damage to units in a 1-hex cone.",
   "name": "Weakening Cleave",
   "slug": "weakening_cleave_ability_000004900000004C",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "24<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
    }
   ],
   "accuracy": "100%",
@@ -14524,10 +14535,14 @@
     "requisite": "Single Shot"
    }
   ],
-  "accuracy": "Always Hits",
+  "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "notes": [],
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   }
+  ],
   "icon": "0000041B00000EE1"
  },
  {
@@ -14655,9 +14670,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "melee_charge_strike_(base)_ability_0000041B00000BB2",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_melee_charge_strike_(giants)_ability_0000041B00000BB2",
   "damage": "27<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -14674,7 +14689,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "000003EB0000040D"
+  "icon": "000003EB00000542"
  },
  {
   "modifiers": [
@@ -18963,42 +18978,6 @@
  {
   "modifiers": [
    {
-    "description": "+40% damage to Cavalry and Large Target units.",
-    "name": "Polearm",
-    "count": 1
-   },
-   {
-    "description": "Base 60% chance of inflicting Gilded for 1 <turn></turn> Turn.",
-    "name": "Gilded",
-    "count": 1
-   },
-   {
-    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
-    "name": "Piercing",
-    "count": 1
-   }
-  ],
-  "description": "Deal damage to units in a 1-hex cone, secondary targets receive 50% of the effects.",
-  "name": "Gilded Cleave",
-  "slug": "gilded_cleave_ability_000003E300005DA3",
-  "damage": "22<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "Melee"
-   },
-   {
-    "requisite": "Base"
-   }
-  ],
-  "accuracy": "100%",
-  "actionPoints": "<repeatingaction></repeatingaction>",
-  "range": "1",
-  "notes": [],
-  "icon": "000003E3000072E3"
- },
- {
-  "modifiers": [
-   {
     "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
     "name": "Piercing",
     "count": 1
@@ -21154,6 +21133,9 @@
    },
    {
     "requisite": "Base"
+   },
+   {
+    "requisite": "Single Shot"
    }
   ],
   "accuracy": "100%",
@@ -22541,12 +22523,6 @@
    }
   ],
   "icon": "0000041B00000EC9"
- },
- {
-  "description": "While in the army, Plant, Animal, Fey, Naga Transformation, and Dragon units gain Led by Shepherd.<br></br>Units with Shepherd of the Wilds do not receive Led by Shepherd.",
-  "name": "Shepherd of the Wilds",
-  "slug": "8d1fd0c900000598",
-  "icon": "8D1FD0C90000059E"
  },
  {
   "modifiers": [
@@ -25737,7 +25713,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Can only be used once per battle."
    }
   ],
   "description": "The caster:<bulletlist><bullet>Refreshes all ability cooldowns.</bullet><bullet>Gains Elemental Focus.</bullet></bulletlist>",
@@ -25750,7 +25726,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<leaveoneaction></leaveoneaction>",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
   "range": "0",
   "icon": "000004C000000870"
  },
@@ -27307,7 +27283,11 @@
   "name": "Overcharge Cast",
   "slug": "overcharge_cast_ability_property_000003BD00002895",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "Can't be refreshed"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<freeaction></freeaction>",
   "range": "0",
@@ -27960,7 +27940,7 @@
   "icon": "000004C000000BEF"
  },
  {
-  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +1<hyperlink><range></range>Range</hyperlink> on its <hyperlink>Magic</hyperlink> attacks and abilities until it moves.",
+  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +1 <hyperlink><range></range>Range</hyperlink> on its attacks and abilities until it moves.",
   "name": "Ritualized Focus",
   "slug": "000004c000000b86",
   "icon": "000004C000000B84"
@@ -28509,7 +28489,7 @@
   "icon": "000004970000352D"
  },
  {
-  "description": "Damage increases as <hyperlink><hp></hp> Hit Points</hyperlink> are lowered, up to 50%.",
+  "description": "Damage increases as <hyperlink><hp></hp> Hit Points</hyperlink> are lowered, up to 50% at 1 <hyperlink><hp></hp> Hit Point</hyperlink>.",
   "name": "Vampiric Rage",
   "slug": "0000049700003527",
   "icon": "0000049700003524"
@@ -28581,6 +28561,9 @@
    },
    {
     "requisite": "Debuff"
+   },
+   {
+    "requisite": "Base"
    },
    {
     "requisite": "Single Shot"
@@ -28809,7 +28792,7 @@
   "icon": "0000048D00000A82"
  },
  {
-  "description": "At the start of combat, conjure a <hyperlink>Rose Knight</hyperlink>.",
+  "description": "At the start of combat, conjure a <hyperlink>Rose Knight</hyperlink>.<br></br><br></br>Does not work in water battles.",
   "name": "Rose Knight Guardian",
   "slug": "00000497000035a6",
   "icon": "00000497000035A7"
@@ -28953,6 +28936,9 @@
    },
    {
     "requisite": "Debuff"
+   },
+   {
+    "requisite": "Base"
    }
   ],
   "accuracy": "90%",
@@ -28992,7 +28978,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 5 <turn></turn>"
+    "note": "Can only be used once per battle."
    }
   ],
   "description": "Conjure 4 corpses of Tier I Thorned Skeleton units in a 1-hex radius.<br></br>For the next 4 <turn></turn> Turns, resurrect one random corpse on the battlefield under your control until the end of combat.",
@@ -29045,7 +29031,7 @@
   "range": "4",
   "notes": [
    {
-    "note": "Cooldown: 1 <turn></turn>"
+    "note": "Cooldown: 2 <turn></turn>"
    }
   ],
   "icon": "0000049700003038"
@@ -32491,8 +32477,8 @@
   "icon": "0000048D00001A0A"
  },
  {
-  "description": "+1<hyperlink><range></range>Range</hyperlink> until unit moves.",
-  "name": "Sniper's Focus",
+  "description": "+1 <hyperlink><range></range>Range</hyperlink> on abilities until the unit moves.",
+  "name": "Ritualized Focus",
   "slug": "000004c000000b8b",
   "icon": "000004C000000B85"
  },
@@ -32826,7 +32812,7 @@
   "icon": "0000049700003114"
  },
  {
-  "description": "<bulletlist><bullet>Unit sustains 4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> each <turn></turn>.</bullet><bullet>Replaces and counts as Bleeding, but ignores Status Effect Immunity: Bleeding.</bullet><bullet>Stacks up to 5 times.</bullet></bulletlist><br></br>On unit death, it spawns a <hyperlink>Blood Maggot</hyperlink> under the opponent's control until end of combat.</bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>Unit sustains 4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> each <turn></turn>.</bullet><bullet>Replaces and counts as Bleeding, but ignores Status Effect Immunity: Bleeding.</bullet><bullet>Stacks up to 5 times.</bullet></bulletlist><bulletlist><br></br>On unit death, it spawns a <hyperlink>Blood Maggot</hyperlink> under the opponent's control until end of combat.</bulletlist>",
   "name": "Blood Parasite",
   "slug": "0000049700002ef4",
   "icon": "0000049700002EF5"
@@ -33695,7 +33681,7 @@
   "icon": "0000041B000005E4"
  },
  {
-  "description": "Melee attackers have a base 60% chance of becoming Stunned.",
+  "description": "Attackers have a base 60% chance of becoming Stunned.",
   "name": "Static Shield",
   "slug": "0000048b00000ca4",
   "icon": "0000049700002E01"
@@ -33867,6 +33853,12 @@
   "name": "Fatigued",
   "slug": "000003df000013d2",
   "icon": "0000047400000008"
+ },
+ {
+  "description": "<bulletlist><bullet>Unit sustains 4 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> each <turn></turn>.</bullet><bullet>Stacks up to 5 times.<br></br>Cannot affect Ethereal or Undead units.</bullet></bulletlist>",
+  "name": "Bleeding",
+  "slug": "000003bd00002cff",
+  "icon": "000003BD00002CFC"
  },
  {
   "description": "-3 <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink>",

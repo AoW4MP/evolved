@@ -489,7 +489,7 @@
   "description": "Deal damage to target enemy.",
   "name": "Tormenting Lash",
   "slug": "whip_ability_000004C500000B15",
-  "damage": "18<damagephysical></damagephysical> 18<damagefrost></damagefrost> ",
+  "damage": "20<damagephysical></damagephysical> 20<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"
@@ -582,6 +582,11 @@
  {
   "modifiers": [
    {
+    "description": "+40% damage to Cavalry and Large Target units.",
+    "name": "Polearm",
+    "count": 1
+   },
+   {
     "description": "Base 90% chance of inflicting Blood Parasite for 3 <turn></turn> Turns.",
     "name": "Blood Parasite",
     "count": 1
@@ -607,8 +612,8 @@
  },
  {
   "modifiers": [],
-  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Damage increases by 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each unit tier of the target below V.</bullet><bullet>Heal for 50% of the damage dealt to the target.</bullet><bullet>If this ability kills the target, reset the cooldown on Grant Blood of the Exarch.</bullet></bulletlist>",
-  "name": "Siphon Lesser",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Heal for 50% of the damage dealt to the target.</bullet><bullet>If this ability kills the target, reset the cooldown on Grant Blood of the Exarch.</bullet><bullet>Ignore <defense></defense> <hyperlink>Defense</hyperlink> and <resistance></resistance> <hyperlink>Resistance</hyperlink> against units suffering from Bleeding or Blood Parasite.</bullet></bulletlist>",
+  "name": "Blood Siphon",
   "slug": "siphon_lesser_ability_000004C500000B10",
   "damage": "33<damagephysical></damagephysical> ",
   "requisites": [
@@ -651,7 +656,7 @@
  },
  {
   "modifiers": [],
-  "description": "Target unit sustains damage and has a base 90% chance of being pulled to an adjacent hex.",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage and has a base 90% chance of being pulled to an adjacent hex.</bullet><bullet>Always succeeds against units suffering from Bleeding or Blood Parasite.</bullet></bulletlist>",
   "name": "Blood Pull",
   "slug": "blood_pull_ability_000004C500000B10",
   "damage": "11<damagephysical></damagephysical> ",
@@ -683,6 +688,12 @@
   "icon": "0000038700000022"
  },
  {
+  "description": "Unit cannot rout due to low morale.",
+  "name": "Fearless",
+  "slug": "000003e3000065d9",
+  "icon": "000003E3000065DD"
+ },
+ {
   "description": "A large unit that:<bulletlist><bullet>Is 20% easier to hit with <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks.</bullet><bullet>Is immune to most displacement effects.</bullet><bullet>Has Demolisher.</bullet></bulletlist>",
   "name": "Large Target",
   "slug": "000003450000052c",
@@ -699,6 +710,12 @@
   "name": "Oppressing Aura",
   "slug": "0000049700003422",
   "icon": "0000049700003423"
+ },
+ {
+  "description": "Unit has:<bulletlist><bullet><hyperlink>First Strike</hyperlink></bullet><bullet>Charge Resistance</bullet><bullet>+40% damage against Cavalry and Large Target units.</bullet></bulletlist>",
+  "name": "Polearm Weapon",
+  "slug": "8d1fd0c9000005c0",
+  "icon": "0000039F000016EB"
  },
  {
   "modifiers": [
@@ -1559,12 +1576,6 @@
   "actionPoints": "<leaveoneaction></leaveoneaction>",
   "range": "4",
   "icon": "00000497000006C5"
- },
- {
-  "description": "Unit cannot rout due to low morale.",
-  "name": "Fearless",
-  "slug": "000003e3000065d9",
-  "icon": "000003E3000065DD"
  },
  {
   "description": "A Fey unit with:<bulletlist><bullet>+4 <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>-4 <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink></bullet><bullet>Fey Guile</bullet><bullet>The ability to ignore:<bulletlist></bullet><bullet>Vision penalties from Misty.</bullet><bullet><hyperlink><accuracy></accuracy> Accuracy</hyperlink> penalties from Clinging Mist.</bullet></bulletlist></bulletlist>",
@@ -15528,7 +15539,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_000003EC0000228A",
-  "damage": "11<damagephysical></damagephysical> ",
+  "damage": "13<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Melee"
@@ -15549,7 +15560,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "Target enemy unit has a base 100% chance of:<bulletlist><bullet>Gaining Insanity for 3 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, the target sustains 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet>",
+  "description": "Target enemy unit has a base 120% chance of:<bulletlist><bullet>Gaining Insanity for 3 <turn></turn> Turns.<bulletlist></bullet><bullet>If successful, attacker gains a stack of Absorbed Mind until the end of the battle.</bullet><bullet>If unsuccessful, the target sustains 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> that ignores <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet>",
   "name": "Devour Mind",
   "slug": "devour_mind_ability_000003EC0000228A",
   "damage": "",
@@ -18974,6 +18985,42 @@
   "actionPoints": "<repeatingaction></repeatingaction>",
   "range": "1",
   "icon": "000003BD000020C9"
+ },
+ {
+  "modifiers": [
+   {
+    "description": "+40% damage to Cavalry and Large Target units.",
+    "name": "Polearm",
+    "count": 1
+   },
+   {
+    "description": "Base 60% chance of inflicting Gilded for 1 <turn></turn> Turn.",
+    "name": "Gilded",
+    "count": 1
+   },
+   {
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
+    "count": 1
+   }
+  ],
+  "description": "Deal damage to units in a 1-hex cone, secondary targets receive 50% of the effects.",
+  "name": "Gilded Cleave",
+  "slug": "gilded_cleave_ability_000003E300005DA3",
+  "damage": "22<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "Melee"
+   },
+   {
+    "requisite": "Base"
+   }
+  ],
+  "accuracy": "100%",
+  "actionPoints": "<repeatingaction></repeatingaction>",
+  "range": "1",
+  "notes": [],
+  "icon": "000003E3000072E3"
  },
  {
   "modifiers": [
@@ -25606,13 +25653,10 @@
   "requisites": [
    {
     "requisite": "Magic"
-   },
-   {
-    "requisite": "Debuff"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "notes": [
    {
@@ -25643,7 +25687,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "000004C000000C64"
  },
@@ -25666,7 +25710,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "000004CF00000049"
  },
@@ -25687,7 +25731,7 @@
   ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "1",
+  "range": "4",
   "icon": "000004C000000C2A"
  },
  {
@@ -25922,7 +25966,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "All friendly units gain:<bulletlist><bullet>Hastened for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>+1 Strengthened for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+  "description": "All friendly units gain:<bulletlist><bullet>Hastened for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
   "name": "Rite of Fury",
   "slug": "hs_ritualist_rite_of_fury_ability_000003BD00002895",
   "damage": "",
@@ -25942,7 +25986,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "All friendly units gain:<bulletlist><bullet>+1 Bolstered Defense for 3 <turn></turn> Turns.</bullet><bullet>+1 Bolstered Resistance for 3 <turn></turn> Turns</bullet><bullet>+1 Grace.</bullet></bulletlist>",
+  "description": "All friendly units gain:<bulletlist><bullet>+1 Bolstered Defense for 3 <turn></turn> Turns.</bullet><bullet>+1 Bolstered Resistance for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Rite of Vigil",
   "slug": "hs_ritualist_rite_of_vigil_ability_000003BD00002895",
   "damage": "",
@@ -26200,7 +26244,7 @@
  {
   "notes": [
    {
-    "note": "Can only be used once per battle."
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Attacks deal +50% damage until the end of the current turn.",
@@ -27741,32 +27785,6 @@
   "icon": "0000049700002E87"
  },
  {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Can only be used once per battle."
-   },
-   {
-    "note": "Starts on cooldown: 1<turn></turn>"
-   }
-  ],
-  "description": "Refresh all your ability cooldowns and once-per-combat abilities.",
-  "name": "Weaver",
-  "slug": "hs_ritualist_weaver_ability_000003BD00002895",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "Can't be refreshed"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
-  "range": "0",
-  "icon": "000003E300005533"
- },
- {
   "modifiers": [
    {
     "description": "Inflicts Burning for 3 <turn></turn> Turns.",
@@ -28483,7 +28501,7 @@
   "icon": "0000049700003538"
  },
  {
-  "description": "On kill:<bulletlist><bullet>Active cooldowns are reduced by 1 <turn></turn> Turn.</bullet><bullet>Gain +10 <hyperlink><hp></hp> Hit Points</hyperlink> for the fight.</bullet></bulletlist><br></br>Triggers once per turn.",
+  "description": "Killing an enemy reduces active cooldowns by 1 <turn></turn> Turn. Can only trigger once per turn.",
   "name": "Reaper",
   "slug": "0000049700003533",
   "icon": "000004970000352D"
@@ -30122,13 +30140,13 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "description": "Deal damage to target enemy.",
   "name": "Whip Lash",
   "slug": "whip_ability_000003BD00002895",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "30<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "Physical Ranged"

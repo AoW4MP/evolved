@@ -5863,7 +5863,7 @@ function GetFreecityLines(thisFreeCityPart, typesDiv){
                 let div = document.createElement("DIV");
                 div.setAttribute("style", "margin-right: 20px;");
                 div.innerHTML =
-                    '<a href="/aow4db/HTML/Units.html?unit=' +
+                    '<a href="/evolved/HTML/Units.html?unit=' +
                     unit +
                     '" target="_blank">' +
                     GetUnitTierAndName(unit) +
@@ -5880,7 +5880,7 @@ function GetFreecityLines(thisFreeCityPart, typesDiv){
                   let div = document.createElement("DIV");
                 div.setAttribute("style", "margin-right: 20px;");
                 div.innerHTML =
-                    '<a href="/aow4db/HTML/Spells.html?spell=' +
+                    '<a href="/evolved/HTML/Spells.html?spell=' +
                     unit +
                     '" target="_blank">' +
                     GetSpellTierAndName(unit) +
@@ -5896,7 +5896,7 @@ function GetFreecityLines(thisFreeCityPart, typesDiv){
                   let div = document.createElement("DIV");
                 div.setAttribute("style", "margin-right: 20px;");
                 div.innerHTML =
-                    '<a href="/aow4db/HTML/Spells.html?spell=' +
+                    '<a href="/evolved/HTML/Spells.html?spell=' +
                     unit +
                     '" target="_blank">' +
                     GetSpellTierAndName(unit) +
@@ -5912,7 +5912,7 @@ function GetFreecityLines(thisFreeCityPart, typesDiv){
                   let div = document.createElement("DIV");
                 div.setAttribute("style", "margin-right: 20px;");
                 div.innerHTML =
-                    '<a href="/aow4db/HTML/Spells.html?spell=' +
+                    '<a href="/evolved/HTML/Spells.html?spell=' +
                     unit +
                     '" target="_blank">' +
                     GetSpellTierAndName(unit) +
@@ -5928,7 +5928,7 @@ function GetFreecityLines(thisFreeCityPart, typesDiv){
                   let div = document.createElement("DIV");
                 div.setAttribute("style", "margin-right: 20px;");
                 div.innerHTML =
-                    '<a href="/aow4db/HTML/Spells.html?structure=' +
+                    '<a href="/evolved/HTML/Spells.html?structure=' +
                     unit +
                     '" target="_blank">' +
                     GetStructureTierAndName(unit) +

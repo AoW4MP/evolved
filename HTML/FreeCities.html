@@ -10,23 +10,19 @@
 
   gtag('config', 'G-CC3NE8PT7K');
 </script>
-        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="/aow4db/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/aow4db/Style/style.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-       <script src="/evolved/Data/Init.js"></script>
+         <script src="/aow4db/Data/Init.js"></script>
         <script>
             function HandlePage() {
-                showSpellsWithArgument("", "Summon Spell", "<summonspell></summonspell> Summon Spells");
-                showSpellsWithArgument("", "Terraforming", "<terraforming></terraforming> Terraforming Spells");
-                showSpellsWithArgument("", "Enemy Army", "<armyspell></armyspell> Enemy Army Spells");
-                showSpellsWithArgument("", "World", "<worldspell></worldspell> World Spells");
-                showSpellsWithArgument("", "City", "<cityspell></cityspell> City Spells");
-                showSpellsWithArgument("", "Victory", "<worldspell></worldspell> Victory Spells");
-                // showSpellsWithArgument("", "Strategic Spell", "Strategic Spells");
-                showSpellsWithArgument("", "Friendly Army", "<armyspell></armyspell> Friendly Army Spells");
+                showFreeCityUpgradeSets();
+
                 SetLevelUpStuff();
                 SetCollapsibleStuff();
+
                 $("#filterInput").on("change input", function () {
                     ShowAllDivsWithFilters("mod_card");
                     SetLevelUpStuff();
@@ -34,13 +30,13 @@
             }
         </script>
 
-        <title>Age of Wonders 4 Evolved - Strategic Spells</title>
+        <title>Age of Wonders 4 Database - Free City Sets</title>
     </head>
 
     <body>
         <div id="header"></div>
 
-        <div class="textblocktitle">Strategic Spells</div>
+        <div class="textblocktitle">Free City Upgrade Sets</div>
         <div style="height: auto; color: white; text-align: center">
             <br />
             Filter<br />
@@ -50,8 +46,6 @@
         </div>
         <div style="display: table; margin: 5px; margin-left: auto; margin-right: auto">
             <button class="sortingButton" id="name-button" onclick="sortDivs('name')">Name</button>
-            <button class="sortingButton" id="tier-button" onclick="sortDivs('tier')">Tier</button>
-            <button class="sortingButton" id="cost-button" onclick="sortDivs('cost')">Cost</button>
         </div>
 
         <div class="w3-container">

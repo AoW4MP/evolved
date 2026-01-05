@@ -41,18 +41,49 @@ function buildAbilityTagCache() {
     }
 }
 
+function extractHyperlinks(text) {
+    const links = [];
+    let index = 0;
+
+    text = text.replace(
+        /<hyperlink>(.*?)<\/hyperlink>/g,
+        (_, inner) => {
+            const token = `__HYPERLINK_${index}__`;
+            links.push({ token, inner });
+            index++;
+            return token;
+        }
+    );
+
+    return { text, links };
+}
+
 // main function
 function AddTagIconsForStatusEffects(text) {
     if (!text) return text;
     text = cleanTranslation(text);
     if (!abilityTagCache) buildAbilityTagCache();
 
-    // simple replace loop — only checks keys that actually exist
+    // 1. Extract hyperlinks
+    const extracted = extractHyperlinks(text);
+    text = extracted.text;
+
+    // 2. Replace plain-text abilities ONLY
     for (const [abilityName, replacement] of abilityTagCache.entries()) {
-        if (text.includes(abilityName)) {
-            let pattern = new RegExp(`\\b${abilityName}\\b`);
-            text = text.replace(pattern, replacement);
+        const escaped = abilityName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const pattern = new RegExp(`\\b${escaped}\\b`, "g");
+        text = text.replace(pattern, replacement);
+    }
+
+    // 3. Restore hyperlinks, selectively replacing full matches
+    for (const link of extracted.links) {
+        let restored = `<hyperlink>${link.inner}</hyperlink>`;
+
+        if (abilityTagCache.has(link.inner)) {
+            restored = abilityTagCache.get(link.inner);
         }
+
+        text = text.replace(link.token, restored);
     }
 
     if (getUserSettings().isolateNumber) {
@@ -60,12 +91,12 @@ function AddTagIconsForStatusEffects(text) {
     }
 
     text = text.replaceAll("<bulletlist></bullet>", "<bulletlist>");
-
     text = text.replaceAll("</bullet></bulletlist>", "</bullet></bullet></bulletlist>");
     text = text.replaceAll("<br></br>", "<br>");
 
     return text;
 }
+
 
 /*function AddTagIconsForStatusEffects(name) {
     // if(name == "")
@@ -3239,7 +3270,16 @@ function backtrackUnitOrigins(unitData, name, holder) {
         const imgSrc = `/evolved/Icons/SpellIcons/${spells[x].id}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?spell=${spells[x].id}`;
+        const miniIcon = document.createElement("div");
+            miniIcon.className = "MiniIconCheck";
+        if(spells[x].tactical == true){
+            miniIcon.innerHTML = "<casttactical></casttactical>";
+        }else{
+            miniIcon.innerHTML = "<caststrategic></caststrategic>";
+        }
+     
         createFoundUnitInHereIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
+         holderOrigin.appendChild(miniIcon);
     }
 
     let siege = CheckIfInSiege(name);
@@ -3257,7 +3297,11 @@ function backtrackUnitOrigins(unitData, name, holder) {
         const imgSrc = `/evolved/Icons/UpgradeIcons/${struc[x].icon}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?structure=${struc[x].id}`;
+        const miniIcon = document.createElement("div");
+        miniIcon.className = "MiniIconCheck";
+        miniIcon.innerHTML = "<structure></structure>";
         createFoundUnitInHereIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
+        holderOrigin.appendChild(miniIcon);
     }
 
     let traitFound = CheckIfInTraits(unitData.id);
@@ -3273,9 +3317,14 @@ function backtrackUnitOrigins(unitData, name, holder) {
     for (let x = 0; x < wonder.length; x++) {
         // if landmark different text:
         let tooltipText = "";
+        const miniIcon = document.createElement("div");
+         miniIcon.className = "MiniIconCheck";
+        
         if (wonder[x].type == "Landmark") {
+            miniIcon.innerHTML = "<landmark></landmark>";
             tooltipText = `Unit unlocked from <landmark></landmark> <hyperlink>${wonder[x].type}</<hyperlink> : <hyperlink>${wonder[x].name}</<hyperlink>`;
         } else {
+            miniIcon.innerHTML = "<rally></rally>";
             tooltipText = `Rally Unit unlocked from <hyperlink>${wonder[x].type}</<hyperlink> : <hyperlink>${wonder[x].name}</<hyperlink>`;
         }
         if ("other_unlock" in wonder[x]) {
@@ -3285,6 +3334,7 @@ function backtrackUnitOrigins(unitData, name, holder) {
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?wonder=${wonder[x].id}`;
         createFoundUnitInHereIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText, wonder[x]);
+        holderOrigin.appendChild(miniIcon);
     }
 
     let tree = CheckIfInEmpireTree(name);
@@ -4687,10 +4737,10 @@ function showWorldStructure(a, divOrigin) {
     );
 
     if ("unit_unlocks" in structure) {
-        if ("other_unlock" in structure) {
-            description += "<br>Unit Reward:<br>";
+        if ("other_unlock" in structure || structure.type == "Landmark") {
+            description += "<br>Unit Unlock:<br>";
         } else {
-            description += "<br>Rally Units:<br>";
+            description += "<br><hyperlink><rally></rally>Rally Units:</hyperlink><br>";
         }
 
         for (let x = 0; x < structure.unit_unlocks.length; x++) {

@@ -3410,9 +3410,9 @@ function backtrackUnitOrigins(unitData, name, holder) {
         tooltipText += "<bullet>" + lookup.name +  "</bullet>";
         
     }
-        const imgSrc = `/aow4db/Icons/Text/free_city.png`;
-        const imgFallbackSrc = `/aow4db/Icons/Text/mp.png`;
-        const link = `/aow4db/HTML/FreeCities.html`;
+        const imgSrc = `/evolved/Icons/Text/free_city.png`;
+        const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
+        const link = `/evolved/HTML/FreeCities.html`;
           const miniIcon = document.createElement("div");
         miniIcon.className = "MiniIconCheck";
           miniIcon.innerHTML = "<rally></rally>";

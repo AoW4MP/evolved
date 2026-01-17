@@ -871,11 +871,6 @@
   "icon": "00000493000008F8"
  },
  {
-  "starting_bonuses": [
-   {
-    "description": "Start with +3 Hero Cap for Pantheon heroes."
-   }
-  ],
   "affinities": [
    {
     "name": "1<shadow></shadow> Shadow Affinity"
@@ -886,19 +881,32 @@
   "point_cost": 1,
   "id": "cult_of_personality",
   "name": "Cult of Personality",
+  "incompatible_society_traits": [
+   {
+    "name": "Hermit Kingdom"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
     "name": "<hyperlink>Heroes</hyperlink> gain a bonus Skill Point whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
    },
    {
-    "name": "<hyperlink>Heroes</hyperlink> gain +10 <gold></gold> <hyperlink>Gold</hyperlink> <hyperlink>Unit Upkeep</hyperlink> whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
+    "name": "<hyperlink>Heroes</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink> <hyperlink>Unit Upkeep</hyperlink> whenever they gain a <renown></renown> <hyperlink>Renown</hyperlink> Level."
    }
   ],
   "enabled": true,
   "front_end": false,
   "type": "society",
   "display_order": 1,
+  "starting_bonuses": [
+   {
+    "description": "Start with +3 Hero Cap for Pantheon heroes."
+   },
+   {
+    "description": "100<influence></influence> "
+   }
+  ],
   "icon": "00000493000008F4"
  },
  {
@@ -2986,7 +2994,7 @@
   "display_order": 4,
   "starting_bonuses": [
    {
-    "description": "1 random research skill is already unlocked."
+    "description": "Start with an extra Battle Mage Unit or Support Unit."
    }
   ],
   "icon": "000003FC000004AD"

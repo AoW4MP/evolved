@@ -15470,7 +15470,7 @@
   ],
   "accuracy": "90%",
   "actionPoints": "<repeatingaction></repeatingaction>",
-  "range": "6",
+  "range": "4",
   "notes": [
    {
     "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
@@ -15488,6 +15488,9 @@
    },
    {
     "note": "Cooldown: 0 <turn></turn>"
+   },
+   {
+    "note": "Starts on cooldown: 1<turn></turn>"
    }
   ],
   "description": "Unit gains a forgotten spell, which can then be used as a single action until the end of the turn.",
@@ -15571,7 +15574,7 @@
   "icon": "000003E3000056E3"
  },
  {
-  "description": "While this unit is in battle enemy <hyperlink>Spell</hyperlink> cost is increased by 50% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.",
+  "description": "While this unit is in battle enemy <hyperlink>Spell</hyperlink> cost is increased by 25% <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.",
   "name": "Spell Devourer",
   "slug": "8d1fd0c900000110",
   "icon": "8D1FD0C90000010F"
@@ -33063,7 +33066,7 @@
   "icon": "0000049700000146"
  },
  {
-  "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink>, <hyperlink>Physical Ranged</hyperlink>, and <hyperlink>Magic</hyperlink> attacks targeting this unit suffer -10% <hyperlink><accuracy></accuracy> Accuracy</hyperlink>.</bullet><bullet>Can stack up to 3 times.</bullet></bulletlist><br></br><br></br>Clinging Mist <hyperlink>counters</hyperlink> Marked",
+  "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink>, <hyperlink>Physical Ranged</hyperlink>, and <hyperlink>Magic</hyperlink> attacks targeting this unit suffer -15% <hyperlink><accuracy></accuracy> Accuracy</hyperlink>.</bullet><bullet>Can stack up to 3 times.</bullet></bulletlist><br></br><br></br>Clinging Mist <hyperlink>counters</hyperlink> Marked",
   "name": "Clinging Mist",
   "slug": "0000049700000553",
   "icon": "0000049700000554"

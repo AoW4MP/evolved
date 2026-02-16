@@ -26,7 +26,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Create a Treacherous Reflection of target enemy unit.<br></br><br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
+    "description": "Create a Treacherous Reflection of target enemy unit. This summons lasts for <turn></turn> Turns<br></br><br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
     "name": "Treacherous Reflection",
     "spell_slug": "treacherous_reflection",
     "tier": 7,
@@ -52,6 +52,170 @@
     "spell_slug": "gloom_strider",
     "tier": 7,
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
+   }
+  ]
+ },
+ {
+  "affinities": "1 <empirechaos></empirechaos> Empire Chaos Affinity, 1 <empireshadow></empireshadow> Empire Shadow Affinity",
+  "lore_description": "\\\"Blood carries greater power than mortals may think. Does the blood of the Archons not carry their essence? Do we not use blood as payment for our magic? Blood is where the soul resides! And so, we drink, to fill the void within. For the Gift of the Old Blood demands souls to sacrifice... And we have long spent our own.\\\"",
+  "gameplay_description": "Embrace a forgotten and corrupt magic that empowers your high tier units and has your faction embrace an ancient form of undeath, gaining the power to spread Blood Parasites onto your enemies.",
+  "resid": 5046586586087,
+  "id": "tome_of_the_crimson_reign",
+  "DLC": "THRONESOFBLOOD ",
+  "lore_author": "The Blood Emperor Eternal",
+  "name": "Tome of the Crimson Reign",
+  "tier": 4,
+  "icon": "00000497000033E8",
+  "skills": [
+   {
+    "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The Undead unit type.</bullet><bullet>Lifedrinker.</bullet><bullet>Base attacks have a base % chance of inflicting Blood Parasite for <turn></turn> Turns. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
+    "name": "Gift of the Old Blood",
+    "spell_slug": "gift_of_the_old_blood",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
+   },
+   {
+    "description": "<bulletlist><bullet>Tier III, IV, and V units you own gain:<bulletlist></bullet><bullet>+5 <hyperlink><hp></hp> Hit Point</hyperlink> regeneration on the world map.</bullet><bullet>Gain 10 <hyperlink><xp></xp> Experience</hyperlink> per turn on the world map.</bullet></bulletlist><bullet>Gain <hyperlink>Crimson Court Magistrate</hyperlink>, letting you gain mana from Vassal and when Migrating, Razing, or Pillaging.</bullet></bulletlist>",
+    "name": "Crimson Court",
+    "tier": 7,
+    "type": "<hyperlink>City Structure</hyperlink>",
+    "upgrade_slug": "crimson_court"
+   },
+   {
+    "description": "Grants enchanted units:<bulletlist><bullet>Coagulate</bullet><bullet>At the start of combat, for each friendly non-summon Tier I, Tier II, and Tier III unit:<bulletlist></bullet><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+5% healing received in combat.</bullet></bulletlist></bulletlist>",
+    "name": "Mantle of the Blood Noble",
+    "spell_slug": "mantle_of_the_blood_noble",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "When cast and for the next <turn></turn> Turns:<bulletlist><bullet>Up to enemy units:<bulletlist></bullet><bullet>Sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base % chance of gaining Blood Parasite for <turn></turn> Turns.</bullet></bulletlist><bullet>Up to friendly units:<bulletlist></bullet><bullet>Heal for <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain Fortune for <turn></turn> Turns.</bullet></bulletlist></bulletlist>",
+    "name": "Tears of the Crimson Sovereign",
+    "spell_slug": "tears_of_the_crimson_sovereign",
+    "tier": 6,
+    "type": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>"
+   },
+   {
+    "description": "Summon a <hyperlink>Blood Exarch</hyperlink> Mythic Unit with powerful support and offensive abilities that devastate low tier units.",
+    "name": "Summon Blood Exarch",
+    "spell_slug": "summon_blood_exarch",
+    "tier": 8,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   }
+  ]
+ },
+ {
+  "affinities": "2 <empireshadow></empireshadow> Empire Shadow Affinity",
+  "lore_description": "\\\"Make their bodies tremble with torment. For every inch they move, they will pay with grunts of agony. Let suffering drip like honey across their pulsing skin. Make them bow, make them beg, make them plead to their bringer of pain... And save some torment for yourself, for suffering is best inflicted when enjoyed first hand.\\\"",
+  "gameplay_description": "Torment your enemies by turning their very actions against them and make your units empowered by pain.",
+  "resid": 5046586585847,
+  "id": "tome_of_torment",
+  "DLC": "THRONESOFBLOOD ",
+  "lore_author": "Princess Consort Mavelith, the Grave Archdam",
+  "name": "Tome of Torment",
+  "tier": 3,
+  "icon": "00000497000032F8",
+  "skills": [
+   {
+    "description": "<bulletlist><bullet>+5 <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>+10 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet><casttactical></casttactical> <hyperlink>Damage Spells</hyperlink> and <casttactical></casttactical> <hyperlink>Debuff Spells</hyperlink> apply an extra 5 <happiness></happiness> <hyperlink>Morale</hyperlink> loss.</bullet></bulletlist><br></br><br></br>Can only be built in the <hyperlink>Throne City</hyperlink>.",
+    "name": "Lens of Anguish",
+    "tier": 7,
+    "type": "<hyperlink>City Structure</hyperlink>",
+    "upgrade_slug": "lens_of_anguish"
+   },
+   {
+    "description": "Enemy units in a -hex radius:<bulletlist><bullet>Sustain <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Have a base % chance of gaining stacks of Torment until end of combat. On failure, inflict 1 stack of Torment instead.</bullet></bulletlist>",
+    "name": "Agonize",
+    "spell_slug": "agonize",
+    "tier": 5,
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base % chance of inflicting Torment until the end of combat.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Tormenting Projectiles",
+    "spell_slug": "tormenting_projectiles",
+    "tier": 5,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Mythic Unit that torments their enemies and can easily flank them and drain their vitality.",
+    "name": "Pain Bringer",
+    "tier": 6,
+    "unit_slug": "pain_bringer",
+    "type": "<hyperlink>Unit</hyperlink>"
+   },
+   {
+    "description": "Target race embraces pain and when hit by an attack gain:<bulletlist><bullet> <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>A random positive status effect.</bullet></bulletlist>",
+    "name": "Painbound",
+    "spell_slug": "painbound",
+    "tier": 6,
+    "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_conduit___basilica_of_lamentation"
+   }
+  ]
+ },
+ {
+  "affinities": "1 <empirechaos></empirechaos> Empire Chaos Affinity, 1 <empireshadow></empireshadow> Empire Shadow Affinity",
+  "lore_description": "\\\"Forbidden rites in a forgotten tongue, burned scrolls of a kingdom raised on blood and sacrifice. These are the memories of the one we now call the Deathless God. His tenets—now He whispers them in my mind, as words to be carved into our flesh. For every gift He bestows demands a price. And that price is blood.\\\"",
+  "gameplay_description": "Perform forbidden and dangerous rites on your units to bleed your enemies and strengthen your allies.",
+  "resid": 5046586585730,
+  "id": "tome_of_the_blood_rite",
+  "DLC": "THRONESOFBLOOD ",
+  "lore_author": "Ymbria, the Bleeding Priestess",
+  "name": "Tome of the Blood Rite",
+  "tier": 1,
+  "icon": "0000049700003283",
+  "skills": [
+   {
+    "description": "Carve profane sigils onto the flesh of your race, granting them:<bulletlist><bullet>+ <hyperlink><hp></hp> Hit Point</hyperlink> regeneration on the <hyperlink>World Map</hyperlink>.</bullet><bullet>Attack and <hyperlink>Debuff</hyperlink> abilities:<bulletlist></bullet><bullet>Ignore <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> per stack of Bleeding on the target.</bullet></bulletlist></bulletlist>",
+    "name": "Flesh Carved Runes",
+    "spell_slug": "flesh_carved_runes",
+    "tier": 2,
+    "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
+   },
+   {
+    "description": "Target friendly unit sustains unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all enemy units within hexes:<bulletlist><bullet>Sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 2 Bleeding for <turn></turn> Turns.</bullet></bulletlist>",
+    "name": "Rite of Bloodletting",
+    "spell_slug": "rite_of_bloodletting",
+    "tier": 1,
+    "type": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>"
+   },
+   {
+    "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+ <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Bleeding for <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Sanguine Focus",
+    "spell_slug": "sanguine_focus",
+    "tier": 2,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "A Battle Mage Unit that inflicts a Blood Parasite on its enemies and can empower themselves at the cost of their lives.",
+    "name": "Blood Cultist",
+    "tier": 2,
+    "unit_slug": "blood_cultist",
+    "type": "<hyperlink>Unit</hyperlink>"
+   },
+   {
+    "description": "Base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>When striking units with Bleeding, heal for <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Blood Drinking Blades",
+    "spell_slug": "blood_drinking_blades",
+    "tier": 2,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Target friendly unit sustains unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all adjacent friendly units gain:<bulletlist><bullet>Strengthened for <turn></turn> Turns.</bullet><bullet>Life Steal for <turn></turn> Turns.</bullet></bulletlist>",
+    "name": "Rite of Life Leeching",
+    "spell_slug": "rite_of_life_leeching",
+    "tier": 1,
+    "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_conduit___blood_altar"
    }
   ]
  },
@@ -82,14 +246,14 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
    },
    {
-    "description": "For 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn, target enemy army gains:<bulletlist><bullet>2 Demoralized.</bullet><bullet>When attacked, conjure 3 Skeletons with Unholy Champion on the attacker side.</bullet></bulletlist>",
+    "description": "Target enemy army gains Revenant Whispers for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn, Conjuring 3 Skeletons with Unholy Champion on the attacker's side at the start of combat.",
     "name": "Revenant Whispers",
     "spell_slug": "revenant_whispers",
     "tier": 7,
     "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>+ <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>+ <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>Vicious Killer</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>+ <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink></bullet><bullet>+ <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>Vicious Killer</bullet></bulletlist>",
     "name": "Undead Resentment",
     "spell_slug": "undead_resentment",
     "tier": 7,
@@ -207,7 +371,7 @@
     "name": "Battle Divination",
     "spell_slug": "battle_divination",
     "tier": 5,
-    "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>"
    },
    {
     "description": "A Support Unit that can foresee the future and use that knowledge to strengthen and protect other units.",
@@ -243,14 +407,14 @@
     "upgrade_slug": "house_of_charity"
    },
    {
-    "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for <turn></turn> Turns.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for <turn></turn> Turns.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Can only affect a unit once per battle.",
     "name": "Heroic Stand",
     "spell_slug": "heroic_stand",
     "tier": 3,
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "Gives target race strength in moments of weakness, giving them:<bulletlist><bullet>+ <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet><bullet>When this unit drops below % of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>:<bulletlist></bullet><bullet>Ignores % of its <hyperlink>Casualties</hyperlink>.</bullet><bullet>Gains + <defense></defense> <hyperlink>Defense</hyperlink>.</bullet><bullet>Gains + <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist></bulletlist>",
+    "description": "Gives target race strength in moments of weakness, giving them:<bulletlist><bullet>+ <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink></bullet><bullet>When this unit drops below % of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>:<bulletlist></bullet><bullet>Ignores % of its <hyperlink>Casualties</hyperlink>.</bullet><bullet>Gains + <defense></defense> <hyperlink>Defense</hyperlink>.</bullet><bullet>Gains + <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist></bulletlist>",
     "name": "Virtuous Spirit",
     "spell_slug": "virtuous_spirit",
     "tier": 3,
@@ -341,7 +505,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Target enemy army:<bulletlist><bullet>Sustains 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>, doubled if cast on a Dungeon <hyperlink>Province</hyperlink>.</bullet><bullet>For 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn, at the start of combat units in this army become Slowed for 3 <turn></turn> Turn.</bullet></bulletlist>",
+    "description": "All units in target enemy army suffer -2 <defense></defense> <hyperlink>Defense</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.",
     "name": "Dungeon Hazard",
     "spell_slug": "dungeon_hazard",
     "tier": 3,
@@ -464,7 +628,7 @@
   "icon": "00000497000013A1",
   "skills": [
    {
-    "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a:<bulletlist></bullet><bullet>% chance of being inflicted with Ghostfire for <turn></turn> Turns.</bullet><bullet>% chance of being inflicted with Misfortune for <turn></turn> Turns</bullet></bulletlist><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
+    "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a % chance of being inflicted with Misfortune for <turn></turn> Turns</bullet><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
     "name": "Accursed Armors",
     "spell_slug": "accursed_armors",
     "tier": 7,
@@ -722,7 +886,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target unit has a base % chance of:<bulletlist><bullet>Being immediately removed from combat.</bullet><bullet>Appearing at a random location in the Umbral Abyss after battle.</bullet><bullet>If unsuccessful, inflicts Stunned for <turn></turn> Turn instead.</bullet></bulletlist><br></br><br></br>Cannot be used in Water Combat.",
+    "description": "Target non-<hyperlink>Hero</hyperlink> unit has a base % chance of:<bulletlist><bullet>Being immediately removed from combat.</bullet><bullet>Appearing at a random location in the Umbral Abyss after battle.</bullet><bullet>If unsuccessful, inflicts Stunned for <turn></turn> Turn instead.</bullet></bulletlist><br></br><br></br>Cannot be used in Water Combat.",
     "name": "Umbral Exile",
     "spell_slug": "umbral_exile",
     "tier": 3,
@@ -790,14 +954,14 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Amphibious</bullet><bullet>Slip Away</bullet><bullet>Immunity to Electrified</bullet><bullet>+ <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink></bullet><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
+    "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Amphibious</bullet><bullet>Slip Away</bullet><bullet>Immunity to Electrified</bullet><bullet>+ <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
     "name": "Naga Transformation",
     "spell_slug": "naga_transformation",
     "tier": 7,
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
    },
    {
-    "description": "Offensive Skirmisher Unit whose attacks arc to other enemy units.",
+    "description": "Offensive Magic Fighter Unit whose attacks arc to other enemy units.",
     "name": "Stormbringer",
     "tier": 7,
     "unit_slug": "stormbringer",
@@ -846,7 +1010,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Summons a <hyperlink>Mistling</hyperlink>, a Skirmisher Unit with attacks that inflict random <hyperlink>Negative Status Effects</hyperlink>.",
+    "description": "Summons a <hyperlink>Mistling</hyperlink>, a Magic Fighter Unit with attacks that inflict random <hyperlink>Negative Status Effects</hyperlink>.",
     "name": "Summon Mistling",
     "spell_slug": "summon_mistling",
     "tier": 3,
@@ -1250,7 +1414,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Ignore % of the target's <defense></defense> <hyperlink>Defense</hyperlink> and <resistance></resistance> <hyperlink>Resistance</hyperlink> against targets that are Blind.</bullet></bulletlist>",
+    "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Ignore % of the target's <defense></defense> <hyperlink>Defense</hyperlink> against targets that are Blind.</bullet></bulletlist>",
     "name": "Shadow Blades",
     "spell_slug": "shadow_blades",
     "tier": 4,
@@ -1449,14 +1613,14 @@
   "icon": "0000048D000007B9",
   "skills": [
    {
-    "description": "City gains:<bulletlist><bullet>Ignore income and stability penalties from being under <hyperlink>Siege</hyperlink>.</bullet><bullet>At the start of combat in this city's <hyperlink>Domain</hyperlink>, enemy units suffer Condemned.</bullet><bullet>+10 <garrison></garrison><hyperlink>Fortification Health</hyperlink>.</bullet></bulletlist>",
+    "description": "City gains:<bulletlist><bullet>Ignore income and stability penalties from being under <hyperlink>Siege</hyperlink>.</bullet><bullet>At the start of combat in this city's <hyperlink>Domain</hyperlink>, enemy units suffer Condemned.</bullet></bulletlist>",
     "name": "Temple of the Pyre",
     "tier": 5,
     "type": "<hyperlink>City Structure</hyperlink>",
     "upgrade_slug": "temple_of_the_pyre"
    },
    {
-    "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units sustain 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>The province gains Consecrating Firestorm for <turn></turn> Turns</bullet><bullet>If it has an enemy owned <hyperlink>Province Improvement</hyperlink>, it is <hyperlink>Pillaged</hyperlink>.</bullet></bulletlist>",
+    "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>The province gains Consecrating Firestorm for <turn></turn> Turns</bullet><bullet>If it has an enemy owned <hyperlink>Province Improvement</hyperlink>, it is <hyperlink>Pillaged</hyperlink>.</bullet></bulletlist>",
     "name": "Consecrating Firestorm",
     "spell_slug": "consecrating_firestorm",
     "tier": 6,
@@ -1605,7 +1769,7 @@
   "icon": "0000048D00000613",
   "skills": [
    {
-    "description": "Target unit gains:<bulletlist><bullet>2 Bolstered Defense for <turn></turn> Turns.</bullet><bullet>2 Bolstered Resistance for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target unit gains:<bulletlist><bullet>3 Bolstered Defense for <turn></turn> Turns.</bullet><bullet>3 Bolstered Resistance for <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Magic Shield",
     "spell_slug": "magic_shield",
     "tier": 2,
@@ -1715,7 +1879,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Target friendly unit:<bulletlist><bullet>Heals <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has <hyperlink>Negative Status Effect</hyperlink> dispelled.</bullet></bulletlist>",
+    "description": "Target friendly unit:<bulletlist><bullet>Heals <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has their negative status effects removed.</bullet></bulletlist>",
     "name": "Mantra of Purification",
     "spell_slug": "mantra_of_purification",
     "tier": 1,
@@ -1926,7 +2090,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Warded increasing their <resistance></resistance> <hyperlink>Resistance</hyperlink> against magic attacks.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>+ <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
     "name": "Warding Metals",
     "spell_slug": "warding_metals",
     "tier": 4,
@@ -2018,7 +2182,7 @@
     "type": "<hyperlink>Siege Project</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Natural Regeneration</bullet><bullet>+ <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>Natural Regeneration</bullet><bullet>+ <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist>",
     "name": "Shaper's Touch",
     "spell_slug": "shapers_touch",
     "tier": 10,
@@ -2052,7 +2216,7 @@
   "icon": "000003E300005D2F",
   "skills": [
    {
-    "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+10 <food></food> <hyperlink>Food</hyperlink> per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income.</bullet><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink> income per <hyperlink>Magic Material</hyperlink> in the <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
     "name": "Reagent Refinery",
     "tier": 8,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -2105,7 +2269,7 @@
   "icon": "0000041B00000F73",
   "skills": [
    {
-    "description": "Transmutes the target race's skin into steel, granting them:<bulletlist><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet><bullet>+ <defenseblight></defenseblight> <hyperlink>Blight Resistance</hyperlink>.</bullet><bullet> <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink>.</bullet></bulletlist>",
+    "description": "Transmutes the target race's skin into steel, granting them:<bulletlist><bullet>+ <defensephysical></defensephysical> <hyperlink>Physical Protection</hyperlink>.</bullet><bullet>+ <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet> <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist>",
     "name": "Steel Skin",
     "spell_slug": "steel_skin",
     "tier": 6,
@@ -2133,7 +2297,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Once per <turn></turn> Turn, whenever enchanted units are hit with non-<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>, they gain:<bulletlist><bullet>Bolstered Resistance, increasing their resistance to magical damage.</bullet><bullet>Status Protection, reducing the chance that the unit will be affected by <hyperlink>Negative Status Effects</hyperlink>.</bullet></bulletlist>",
+    "description": "Once per <turn></turn> Turn, whenever enchanted units are damaged by <hyperlink>Magic</hyperlink> attacks or spells, they gain:<bulletlist><bullet>Bolstered Resistance, increasing their resistance to magical damage.</bullet><bullet>Status Protection, reducing the chance that the unit will be affected by <hyperlink>Negative Status Effects</hyperlink>.</bullet></bulletlist>",
     "name": "Adaptive Armor",
     "spell_slug": "adaptive_armor",
     "tier": 6,
@@ -2178,21 +2342,21 @@
     "type": "<hyperlink>Siege Project</hyperlink>"
    },
    {
-    "description": "In target habitable or uninhabitable <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> sustain 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>The province loses any <hyperlink>Mountain</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Diggable Earth</hyperlink>.</bullet><bullet>Summon a <hyperlink>Stone Spirit</hyperlink></bullet></bulletlist>",
+    "description": "Target habitable or uninhabitable <hyperlink>Province</hyperlink>:<bulletlist><bullet>Loses <hyperlink>Mountain</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Diggable Earth</hyperlink>.</bullet><bullet>Summons a Stone Spirit.</bullet></bulletlist>",
     "name": "Earth Shatter",
     "spell_slug": "earth_shatter",
     "tier": 5,
     "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
    },
    {
-    "description": "Deals <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to units in a -hex radius and inflicts Slowed.<br></br>This spell deals double damage to obstacles.",
+    "description": "Target enemies in a -hex radius:<bulletlist><bullet>Sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 1 Sundered Defense.</bullet><bullet>Are inflicted with Slowed.</bullet></bulletlist><br></br>This spell deals double damage to obstacles.",
     "name": "Seismic Shock",
     "spell_slug": "seismic_shock",
     "tier": 5,
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target enemy unit:<bulletlist><bullet>Sustains <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Suffers 4 Sundered Defense for <turn></turn> Turns.</bullet><bullet>Has a base % chance of becoming Stunned for <turn></turn> Turn.</bullet></bulletlist>",
+    "description": "Target enemy unit:<bulletlist><bullet>Sustains <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Suffers 3 Sundered Defense for <turn></turn> Turns.</bullet><bullet>Has a base % chance of becoming Stunned for <turn></turn> Turn.</bullet></bulletlist>",
     "name": "Crushing Earth",
     "spell_slug": "crushing_earth",
     "tier": 5,
@@ -2245,9 +2409,9 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Pulls the closest enemy within hexes to target empty hex. They have a base % chance of becoming Stunned for <turn></turn> Turns.",
-    "name": "Abducting Cyclone",
-    "spell_slug": "abducting_cyclone",
+    "description": "Units in a -hex radius:<bulletlist><bullet>Sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by up to hexes.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled.</bullet><bullet>Have their <hyperlink>Retaliation Attack</hyperlink> removed.</bullet></bulletlist>",
+    "name": "Displacing Winds",
+    "spell_slug": "displacing_winds",
     "tier": 3,
     "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
    },
@@ -2332,14 +2496,14 @@
   "icon": "0000041B000019C3",
   "skills": [
    {
-    "description": "Targets all friendly dead units with Faithful or Zeal. They come back to life with % of their total <hyperlink><hp></hp> Hit Points</hyperlink>.<br></br><br></br>Cannot be used in Water battles.",
+    "description": "<bulletlist><bullet>Brings all dead friendly units with Faithful or Zeal back to life with % of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All revived units gain 3 Bolstered Defense and 3 Bolstered Resistance.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
     "name": "Mass Revive",
     "spell_slug": "mass_revive",
     "tier": 10,
-    "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
-    "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
+    "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Gains 3 Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
     "name": "Wrath of the Emperor",
     "spell_slug": "wrath_of_the_emperor",
     "tier": 9,
@@ -2401,7 +2565,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
    },
    {
-    "description": "Non-Hero units in target army gain 1 Rank.",
+    "description": "Non-Hero units in target army gain 1 Rank.<br></br><br></br>Cannot promote units above Legendary rank.",
     "name": "Ascended Warriors",
     "spell_slug": "ascended_warriors",
     "tier": 7,
@@ -2440,7 +2604,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Target enemy army:<bulletlist><bullet>Takes 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink></bullet><bullet>Becomes Condemned for 5 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "All units in target enemy army:<bulletlist><bullet>Become Condemned for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet><bullet>Suffer -2 <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet>",
     "name": "Condemn Army",
     "spell_slug": "condemn_army",
     "tier": 7,
@@ -2509,7 +2673,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Gives the target race divine protection, granting them:<bulletlist><bullet>+ <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet><bullet>+ <defensespirit></defensespirit> <hyperlink>Spirit Resistance</hyperlink></bullet></bulletlist>",
+    "description": "Gives the target race divine protection, granting them:<bulletlist><bullet>+ <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet><bullet>+ <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink></bullet></bulletlist>",
     "name": "Anointed People",
     "spell_slug": "anointed_people",
     "tier": 5,
@@ -2545,7 +2709,7 @@
     "name": "Summon Blessed Soul",
     "spell_slug": "summon_blessed_soul",
     "tier": 3,
-    "type": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
     "description": "Units recruited through <hyperlink>Rally of the Lieges</hyperlink> from the target <hyperlink>Vassal</hyperlink> have Faithful.<br></br>Target Vassal city grants the player +15 <mana></mana> <hyperlink>Mana</hyperlink> each <turn></turn> Turn.",
@@ -2589,7 +2753,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Loses 50% of its Move Points on the <hyperlink>World Map</hyperlink>.</bullet></bulletlist>",
+    "description": "All units in target enemy army gain 3 Remorse for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
     "name": "Burden of Guilt",
     "spell_slug": "burden_of_guilt",
     "tier": 3,
@@ -2656,7 +2820,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +60 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -20 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
+    "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +45 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -15 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
     "name": "Fanatical Workforce",
     "spell_slug": "fanatical_workforce",
     "tier": 2,
@@ -2716,7 +2880,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Summons a full army stack of low-Tier Undead units onto a target world hex.",
+    "description": "Summons a full army of mid-Tier Undead units onto target world hex.",
     "name": "Raise Undead Army",
     "spell_slug": "raise_undead_army",
     "tier": 9,
@@ -2834,6 +2998,18 @@
   ]
  },
  {
+  "passives": [
+   {
+    "description": "<hyperlink>Provinces</hyperlink> with Snow give +2 <happiness></happiness> <hyperlink>City Stability</hyperlink>.",
+    "name": "Snow Preference",
+    "type": "<hyperlink>Tome Passive</hyperlink>"
+   },
+   {
+    "description": "Able to build <farm></farm> <hyperlink>Farms</hyperlink> on Snow terrain.<br></br><br></br><farm></farm> <hyperlink>Farms</hyperlink> on Snow terrain gain +5 <food></food> <hyperlink>Food</hyperlink> if your race has Arctic Adaptation.",
+    "name": "Arctic Farming",
+    "type": "<hyperlink>Tome Passive</hyperlink>"
+   }
+  ],
   "affinities": "2 <empireshadow></empireshadow> Empire Shadow Affinity",
   "lore_description": "\\\"Light brings both warmth and hope. Snuff it out and you plunge your foes into cold, everlasting night! Rob them of comfort, shatter their hope, leave them with numb limbs and blinded eyes. Darkness will sap your enemies' will to fight, to win, to live!\\\"",
   "gameplay_description": "Spread Arctic terrain throughout the world and envelop your units with its power, so they may be empowered by its presence.",
@@ -2845,7 +3021,7 @@
   "icon": "0000041B00001714",
   "skills": [
    {
-    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> in the Province suffer:<bulletlist></bullet><bullet>20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>-5 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>The province loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
+    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> in the Province suffer: -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>The province gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>The province loses <hyperlink>Chasm</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
     "name": "Flash Freeze",
     "spell_slug": "flash_freeze",
     "tier": 5,
@@ -2866,18 +3042,25 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>"
    },
    {
-    "description": "Makes winter run through the target race's veins, granting them:<bulletlist><bullet> <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink>.</bullet><bullet>Immunity to Frozen.</bullet><bullet>+ <happiness></happiness> <hyperlink>Morale</hyperlink> while on cold terrain.</bullet><bullet>Arctic Walk, which allows them to traverse cold terrain faster.</bullet></bulletlist>",
+    "description": "Makes winter run through the target race's veins, granting them:<bulletlist><bullet> <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>Immunity to Frozen.</bullet><bullet>+ <happiness></happiness> <hyperlink>Morale</hyperlink> while on cold terrain.</bullet><bullet>Arctic Walk, which allows them to traverse cold terrain faster.</bullet></bulletlist>",
     "name": "Frostling Transformation",
     "spell_slug": "frostling_transformation",
     "tier": 6,
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Summon a <hyperlink>Snow Spirit</hyperlink>, a Skirmisher Unit with attacks that inflict Frozen.",
+    "description": "Summon a <hyperlink>Snow Spirit</hyperlink>, a Magic Fighter Unit with attacks that inflict Frozen.",
     "name": "Summon Snow Spirit",
     "spell_slug": "summon_snow_spirit",
     "tier": 5,
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   },
+   {
+    "description": "All units in target enemy army suffer -2 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+    "name": "Blizzard",
+    "spell_slug": "blizzard",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
    }
   ],
   "initial_upgrades": [
@@ -2972,14 +3155,14 @@
     "type": "<hyperlink>Empire Bonus</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>Gain +10 <souls></souls> <hyperlink>Souls</hyperlink> income.</bullet><bullet>Costs 30 <gold></gold> <hyperlink>Gold</hyperlink> upkeep.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Gain +10 <souls></souls> <hyperlink>Souls</hyperlink> income.</bullet><bullet>Costs 20 <gold></gold> <hyperlink>Gold</hyperlink> upkeep.</bullet></bulletlist>",
     "name": "Soul Collection",
     "spell_slug": "soul_collection",
     "tier": 1,
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
    },
    {
-    "description": "Grants attacks of enchanted units:<bulletlist><bullet>A base % chance of inflicting Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base % chance of inflicting Decaying.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Necrotic Projectiles",
     "spell_slug": "necrotic_projectiles",
     "tier": 2,
@@ -2988,7 +3171,7 @@
    {
     "description": "<hyperlink>Necromancer</hyperlink> strengthen the Undead and create them from corpses.",
     "name": "Necromancer",
-    "tier": 2,
+    "tier": 4,
     "unit_slug": "necromancer",
     "type": "<hyperlink>Unit</hyperlink>"
    },
@@ -3003,7 +3186,7 @@
     "description": "Target enemy unit:<bulletlist><bullet>Sustains <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink></bullet><bullet>Gains 2 stacks of Decaying for <turn></turn> Turns.</bullet><bullet>When it dies, it becomes a <hyperlink>Decaying Zombie</hyperlink> under your control until the end of combat.</bullet></bulletlist>",
     "name": "Necrotize",
     "spell_slug": "necrotize",
-    "tier": 1,
+    "tier": 2,
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    }
   ],
@@ -3119,7 +3302,7 @@
   "icon": "0000041B000012AC",
   "skills": [
    {
-    "description": "<bulletlist><bullet>When a fight occurs in the city's domain, the player gains an Astral Reflection of their <hyperlink>Ruler</hyperlink> if they are not present themselves.</bullet><bullet>Your Ruler gains 2 <hyperlink><xp></xp> Experience</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> per owned City with this city structure built.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>When a fight occurs in the city's domain, the player gains an Astral Reflection of their <hyperlink>Ruler</hyperlink> if they are not present themselves.</bullet><bullet>Your Ruler gains 10 <hyperlink><xp></xp> Experience</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> per owned City with this city structure built.</bullet></bulletlist>",
     "name": "Throne of Mirrors",
     "tier": 8,
     "type": "<hyperlink>City Structure</hyperlink>",
@@ -3133,7 +3316,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Summons an Astral Reflection of target friendly unit onto an unoccupied adjacent hex.<br></br><br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
+    "description": "Summons an Astral Reflection of target friendly unit onto an unoccupied adjacent hex. This summon lasts for <turn></turn> Turns.<br></br><br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
     "name": "Summon Astral Reflection",
     "spell_slug": "summon_astral_reflection",
     "tier": 7,
@@ -3275,7 +3458,7 @@
     "upgrade_slug": "astral_trade_relay"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist><br></br>Does not apply to units that inherently have a Phase.",
     "name": "Phasing Enchantment",
     "spell_slug": "phasing_enchantment",
     "tier": 6,
@@ -3342,7 +3525,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target Enemies in a -hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>3 Sundered Resistance.</bullet></bulletlist>",
+    "description": "Target Enemies in a -hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>2 Sundered Resistance.</bullet></bulletlist>",
     "name": "Mental Mark",
     "spell_slug": "mental_mark",
     "tier": 3,
@@ -3383,7 +3566,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Frenzy, which increases damage dealt when they attack.</bullet><bullet>+<hyperlink><range></range>Range</hyperlink> on base attacks.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet>Frenzy, which increases damage dealt when they attack.</bullet><bullet>+<hyperlink><range></range>Range</hyperlink> on ranged base attacks.</bullet></bulletlist>",
     "name": "Frenzying Focus",
     "spell_slug": "frenzying_focus",
     "tier": 5,
@@ -3429,7 +3612,7 @@
   "icon": "0000041B00001214",
   "skills": [
    {
-    "description": "In target enemy army:<bulletlist><bullet>All units sustain 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>All units suffer -1 <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "All units in target enemy army suffer -2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
     "name": "Lightning Torrent",
     "spell_slug": "lightning_torrent",
     "tier": 3,
@@ -3443,7 +3626,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal + <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Electrified, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>Deal + <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Electrified for <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Lightning Focus",
     "spell_slug": "lightning_focus",
     "tier": 1,
@@ -3489,14 +3672,14 @@
   "icon": "0000041B000011FB",
   "skills": [
    {
-    "description": "Inscribes magical wards onto the target race, granting:<bulletlist><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Resistance</hyperlink></bullet><bullet>+ <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink></bullet><bullet>+ <defensefrost></defensefrost> <hyperlink>Frost Resistance</hyperlink></bullet></bulletlist>",
+    "description": "Inscribes magical wards onto the target race, granting:<bulletlist><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet><bullet>+ <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>+ <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink></bullet></bulletlist>",
     "name": "Magical Wards",
     "spell_slug": "magical_wards",
     "tier": 3,
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Target friendly unit and another within hexes gain a shield:<bulletlist><bullet>Has a base % chance of inflicting Stunned on attackers.</bullet><bullet>Lasts for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target friendly unit and another within hexes gain Static Shield for <turn></turn> Turns.",
     "name": "Static Shield",
     "spell_slug": "static_shield",
     "tier": 3,
@@ -3551,7 +3734,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
-    "description": "Target friendly city gains:<bulletlist><bullet>Plant units drafted in the city or summoned within the city's domain gain +1 <medalGold></medalGold> rank.</bullet><bullet>Enemy units in the domain have their max <hyperlink>Move Points</hyperlink> reduced to 32.</bullet><bullet>Spawns a Living Vine next to an enemy each turn during battle in the domain.</bullet></bulletlist>",
+    "description": "Target friendly city gains:<bulletlist><bullet>Plant units drafted in the city or summoned within the city's domain gain +1 <medalGold></medalGold> rank.</bullet><bullet>Enemy units in the domain have their max <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> reduced to 32.</bullet><bullet>Spawns a Living Vine next to an enemy each turn during battle in the domain.</bullet></bulletlist>",
     "name": "Fortress of Vines",
     "spell_slug": "fortress_of_vines",
     "tier": 8,
@@ -3565,7 +3748,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 1 <hyperlink>Province</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +2 <food></food> <hyperlink>Food</hyperlink>, +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> and +2 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist></bulletlist>",
+    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +2 <food></food> <hyperlink>Food</hyperlink>, +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> and +2 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist></bulletlist>",
     "name": "Enchanted Bloom",
     "spell_slug": "enchanted_bloom",
     "tier": 7,
@@ -3664,11 +3847,11 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius gain 3 Regeneration.",
+    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Heal + <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 3 Regeneration.</bullet></bulletlist>",
     "name": "Blossom of Life",
     "spell_slug": "blossom_of_life",
     "tier": 4,
-    "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
     "description": "<bulletlist><bullet>+10 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet><bullet>+2 <unitprod></unitprod> <hyperlink>Draft</hyperlink> per <population></population> <hyperlink>Population</hyperlink></bullet></bulletlist>",
@@ -3703,7 +3886,7 @@
   "icon": "0000041B00000D52",
   "skills": [
    {
-    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain a base % chance of inflicting Life Seed for <turn></turn> Turns.</bullet><bullet>Deal +% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Have a base % chance of inflicting Life Seed for <turn></turn> Turns.</bullet><bullet>Deal +% damage against Decaying units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Blooming Projectiles",
     "spell_slug": "blooming_projectiles",
     "tier": 6,
@@ -3738,7 +3921,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Inflict Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "Base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Inflict Decaying.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Blades of Decay",
     "spell_slug": "blades_of_decay",
     "tier": 6,
@@ -3786,7 +3969,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Target friendly or unowned <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Forest</hyperlink> if it is on the Surface or <hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet></bulletlist>",
+    "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Forest</hyperlink> on the Surface</bullet><bullet>Gain <hyperlink>Mushroom Forest</hyperlink> in the Underground.</bullet></bulletlist>",
     "name": "Create Forest",
     "spell_slug": "create_forest",
     "tier": 3,
@@ -3825,14 +4008,7 @@
   "icon": "0000041B000006BE",
   "skills": [
    {
-    "description": "All units in target enemy army:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 World Map <turn></turn> Turns.</bullet></bulletlist>",
-    "name": "Blizzard",
-    "spell_slug": "blizzard",
-    "tier": 3,
-    "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>"
-   },
-   {
-    "description": "Summons a <hyperlink>Lesser Snow Spirit</hyperlink>, a Skirmisher Unit with attacks that inflict Frozen.",
+    "description": "Summons a <hyperlink>Lesser Snow Spirit</hyperlink>, a Magic Fighter Unit with attacks that inflict Frozen.",
     "name": "Summon Lesser Snow Spirit",
     "spell_slug": "summon_lesser_snow_spirit",
     "tier": 2,
@@ -3998,7 +4174,7 @@
   "icon": "0000041B000000E5",
   "skills": [
    {
-    "description": "All friendly units lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
+    "description": "Friendly units in a 2-hex radius: Lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
     "name": "Steelfury Chant",
     "spell_slug": "steelfury_chant",
     "tier": 2,
@@ -4028,7 +4204,7 @@
  {
   "passives": [
    {
-    "description": "Units standing on the center of this city or outpost restore 50% <hyperlink><hp></hp> Hit Points</hyperlink>, 100% <hyperlink>Move Points</hyperlink>, and remove Exhausted from <hyperlink>Forced March</hyperlink>. The city or outpost has a 3 <turn></turn> <hyperlink>Turn</hyperlink> cooldown before it can use this again.",
+    "description": "Units standing on the center of this city or outpost restore 50% <hyperlink><hp></hp> Hit Points</hyperlink>, 100% <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink>, and remove Exhausted from <hyperlink>Forced March</hyperlink>. The city or outpost has a 3 <turn></turn> <hyperlink>Turn</hyperlink> cooldown before it can use this again.",
     "name": "Ritual of Alacrity",
     "type": ""
    }
@@ -4073,7 +4249,7 @@
  {
   "passives": [
    {
-    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<bulletlist><bullet><reputation8></reputation8> Pure Good: 25 <happiness></happiness> <hyperlink>City Stability</hyperlink> in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation4></reputation4> Neutral: 10 <food></food> <hyperlink>Food</hyperlink> and 10 <structureprod></structureprod> <hyperlink>Production</hyperlink> per <happiness></happiness> <hyperlink>City Stability</hyperlink> level above Neutral in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0> Pure Evil: <hyperlink>Units</hyperlink> start <hyperlink>Combat</hyperlink> in an Awakened state.</bullet></bulletlist>",
+    "description": "The <hyperlink>High</hyperlink> Culture has an <hyperlink>Alignment</hyperlink> Agenda, which grants bonuses for the following alignment levels:<br></br><bulletlist><bullet><reputation6></reputation6>Slightly Good: +10 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation7></reputation7>Very Good: +20 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation8></reputation8>Pure Good: +30 <food></food> <hyperlink>Food</hyperlink> and <structureprod></structureprod> <hyperlink>Production</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation2></reputation2>Slightly Evil: +10 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation1></reputation1>Very Evil: +20 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet><bullet><reputation0></reputation0>Pure Evil: +30 <gold></gold> <hyperlink>Gold</hyperlink> and <mana></mana> <hyperlink>Mana</hyperlink> income in all <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
     "name": "Alignment Agenda",
     "type": ""
    }
@@ -4102,7 +4278,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
-    "description": "Grants non-High units:<bulletlist><bullet>Dormant: Guardian if a Polearm Unit.</bullet><bullet>Dormant: Shield of Light if a Shield Unit.</bullet><bullet>Dormant: Seeking Arrows if a Ranged Unit.</bullet><bullet>Dormant: Radiant Light if a Battle Mage Unit.</bullet><bullet>The Awaken ability and Dormant: Radiant Light if a Support Unit.</bullet></bulletlist>",
+    "description": "Grants non-High units:<bulletlist><bullet>Dormant: Guardian if a Polearm Unit or Fighter Unit.</bullet><bullet>Dormant: Shield of Light if a Shield Unit, Shock Unit, or Mythic Unit.</bullet><bullet>Dormant: Seeking Arrows if a Ranged Unit or Skirmisher Unit.</bullet><bullet>Dormant: Radiant Light if a Battle Mage Unit or Magic Fighter Unit.</bullet><bullet>The Awaken ability and Dormant: Radiant Light if a Support Unit.</bullet></bulletlist>",
     "name": "Dormant Enchantment",
     "spell_slug": "dormant_enchantment",
     "tier": 3,
@@ -4179,7 +4355,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target enemy gains:<bulletlist><bullet>2 Marked.</bullet><bullet>Distracted.</bullet></bulletlist>",
+    "description": "Target enemy gains:<bulletlist><bullet>3 Marked.</bullet><bullet>Distracted.</bullet></bulletlist>",
     "name": "Designate Target",
     "spell_slug": "designate_target",
     "tier": 2,
@@ -4205,14 +4381,20 @@
   "icon": "000003E300006B83",
   "skills": [
    {
-    "description": "Turn target race into Draconians, which grants them:<bulletlist><bullet>Dragon unit type.</bullet><bullet>Natural Regeneration, which makes the unit regain health faster.</bullet></bulletlist>",
+    "description": "Non-Racial Dragon units can be ranked up rapidly by exchanging <gold></gold> <hyperlink>Gold</hyperlink> to gain <hyperlink><xp></xp> Experience</hyperlink>.",
+    "name": "Dragon Infusion",
+    "tier": 5,
+    "type": "<hyperlink>Empire Bonus</hyperlink>"
+   },
+   {
+    "description": "Turn target race into Draconians, which grants them:<bulletlist><bullet>Dragon unit type.</bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Natural Regeneration, which makes the unit regain health faster.</bullet></bulletlist>",
     "name": "Draconian Transformation",
     "spell_slug": "draconian_transformation",
     "tier": 5,
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>At the start of combat:<bulletlist></bullet><bullet>Units defending the city take 26 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Units defending the city have a base 90% of suffering Burning.</bullet><bullet>Random positions are <hyperlink>On Fire</hyperlink>.</bullet><bullet>Most <hyperlink>Battlement Structure</hyperlink> obstacles are <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
+    "description": "<bulletlist><bullet>At the start of combat:<bulletlist></bullet><bullet>Units defending the city take 26 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Units defending the city have a base 120% of suffering Burning.</bullet><bullet>Random positions are <hyperlink>On Fire</hyperlink>.</bullet><bullet>Most <hyperlink>Battlement Structure</hyperlink> obstacles are <hyperlink>On Fire</hyperlink>.</bullet></bulletlist></bulletlist>",
     "name": "Dragon Attack",
     "siege_project_slug": "dragon_attack",
     "tier": 5,
@@ -4226,23 +4408,22 @@
     "type": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Fire Bomb , a <hyperlink>Magic</hyperlink> attack that deals damage in an area.</bullet><bullet>The damage of the attack increases with the <hyperlink>unit's tier</hyperlink>.</bullet></bulletlist>",
-    "name": "Flamer Focus",
-    "spell_slug": "flamer_focus",
+    "description": "Grants enchanted units:<bulletlist><bullet>Breath Attack.</bullet><bullet>The damage type is determined by your empire's Dominant Affinity and increases with the <hyperlink>unit's tier</hyperlink>.</bullet></bulletlist>",
+    "name": "Dragonbreath Focus",
+    "spell_slug": "dragonbreath_focus",
     "tier": 4,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Grants access to <hyperlink>Young Fire Dragons</hyperlink> and <hyperlink>Young Frost Dragons</hyperlink>, which are Fighter Units that grow into adult Dragons.<br></br><reputation1></reputation1> <hyperlink>Alignment</hyperlink> or lower unlocks <hyperlink>Young Obsidian Dragons</hyperlink>.<br></br><reputation7></reputation7> <hyperlink>Alignment</hyperlink> or higher unlocks <hyperlink>Young Golden Dragons</hyperlink>.",
-    "name": "Young Dragon",
+    "description": "Choose a Tier III Young Dragon to add to your army:<bulletlist><bullet><hyperlink>Young Fire Dragon</hyperlink></bullet><bullet><hyperlink>Young Frost Dragon</hyperlink> </bullet><bullet><hyperlink>Young Obsidian Dragon</hyperlink></bullet><bullet><hyperlink>Young Golden Dragon</hyperlink></bullet></bulletlist><br></br>These units may Evolve into Adult Dragons.",
+    "name": "Call young Dragon",
     "tier": 6,
-    "unit_slug": "young_fire_dragon",
-    "type": "<hyperlink>Unit</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    }
   ],
   "initial_upgrades": [
    {
-    "upgrade_slug": "_researchpost___wyvern_eyrie"
+    "upgrade_slug": "_mine___wyvern_eyrie"
    }
   ]
  },
@@ -4273,14 +4454,14 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target unit:<bulletlist><bullet>Heals for <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains Strengthened.</bullet></bulletlist><br></br>Units with Evolve:<bulletlist><bullet>Have the effect doubled.</bullet><bullet>Gain Resurgence until the end of combat.</bullet></bulletlist>",
+    "description": "Target unit:<bulletlist><bullet>Heals for <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 2 stacks of Strengthened.</bullet></bulletlist><br></br>Units with Evolve:<bulletlist><bullet>Gain Resurgence until the end of combat.</bullet></bulletlist>",
     "name": "Youthful Rejuvenation",
     "spell_slug": "youthful_rejuvenation",
     "tier": 1,
     "type": "<casttactical></casttactical> <hyperlink>Healing/Buff Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>+% <hyperlink><xp></xp> Experience</hyperlink> from combat.</bullet><bullet>Slip Away healing them once per battle if their <hyperlink><hp></hp> Hit Points</hyperlink> would be reduced to zero.</bullet></bulletlist>",
+    "description": "Grants enchanted units:<bulletlist><bullet> <hyperlink><xp></xp> Experience</hyperlink> per <turn></turn> Turn.</bullet><bullet>Slip Away healing them once per battle if their <hyperlink><hp></hp> Hit Points</hyperlink> would be reduced to zero.</bullet></bulletlist>",
     "name": "Rapid Evolution Enchantment",
     "spell_slug": "rapid_evolution_enchantment",
     "tier": 2,
@@ -4327,11 +4508,11 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "Target city loses 2 <population></population> <hyperlink>Population</hyperlink> and spawns a <hyperlink>Balor</hyperlink>, a mythic unit that wreaks havoc on your foes.",
-    "name": "Summon Balor",
-    "spell_slug": "summon_balor",
+    "description": "Whenever another unit dies in battle, enchanted unit gains:<bulletlist><bullet>Infernal Might for <turn></turn> Turns.</bullet><bullet>+ <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist><br></br>Does not trigger on the death of Combat Summons, Tower, and Siegecraft units.",
+    "name": "Demonic Siphon",
+    "spell_slug": "demonic_siphon",
     "tier": 8,
-    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    }
   ]
  },
@@ -4347,14 +4528,14 @@
   "icon": "000003E3000059FE",
   "skills": [
    {
-    "description": "Target <hyperlink>Province</hyperlink> and adjacent Provinces:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> suffer 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>The provinces gain <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The provinces lose <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
-    "name": "Abyssal Flames",
-    "spell_slug": "abyssal_flames",
-    "tier": 8,
-    "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
+    "description": "Target friendly unit explodes and enemy units within hexes:<bulletlist><bullet>Sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> plus <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per Tier of the sacrificed unit.</bullet><bullet>Suffer one random <hyperlink>Negative Status Effect</hyperlink> per Tier of the sacrificed unit.</bullet></bulletlist>",
+    "name": "Sacrificial Slaughter",
+    "spell_slug": "sacrificial_slaughter",
+    "tier": 7,
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 5 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
+    "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 3 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
     "name": "Gremlin Ambushers",
     "spell_slug": "gremlin_ambushers",
     "tier": 8,
@@ -4380,6 +4561,13 @@
     "spell_slug": "demonkin",
     "tier": 9,
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
+   },
+   {
+    "description": "Summons a <hyperlink>Balor</hyperlink>, a Mythic Unit that wreaks havoc on your foes.",
+    "name": "Summon Balor",
+    "spell_slug": "summon_balor",
+    "tier": 8,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    }
   ],
   "initial_upgrades": [
@@ -4400,28 +4588,21 @@
   "icon": "000003E3000059F5",
   "skills": [
    {
-    "description": "Summons a <hyperlink>Magma Spirit</hyperlink>, a Tier III Battle Mage Unit.",
-    "name": "Summon Magma Spirit",
-    "spell_slug": "summon_magma_spirit",
-    "tier": 6,
-    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
-   },
-   {
-    "description": "Target friendly unit explodes and enemy units within hexes:<bulletlist><bullet>Sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> plus <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per Tier of the sacrificed unit.</bullet><bullet>Suffer one random <hyperlink>Negative Status Effect</hyperlink> per Tier of the sacrificed unit.</bullet></bulletlist>",
-    "name": "Sacrificial Slaughter",
-    "spell_slug": "sacrificial_slaughter",
+    "description": "Enchanted units gain:<bulletlist><bullet>The Fire Bomb ability, which deals magical damage in an area.</bullet><bullet>The damage of this ability increases with the unit's tier.</bullet></bulletlist>",
+    "name": "Flamer Focus",
+    "spell_slug": "flamer_focus",
     "tier": 7,
-    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
-   },
-   {
-    "description": "Whenever another unit dies in battle, grants enchanted units:<bulletlist><bullet>Infernal Might for <turn></turn> Turns.</bullet><bullet>+ <happiness></happiness> <hyperlink>Morale</hyperlink>.<br></br>Does not trigger on the death of Combat Summons, Tower, and Siegecraft units.</bullet></bulletlist>",
-    "name": "Infernal Focus",
-    "spell_slug": "infernal_focus",
-    "tier": 8,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Makes the target race the embodiment of fire, granting them:<bulletlist><bullet> <defensefire></defensefire> <hyperlink>Fire Resistance</hyperlink>.</bullet><bullet>Vengeful Flames, which damages <hyperlink>Melee</hyperlink> attackers.</bullet><bullet>Fiery Wake, which ignites flammable terrain such as <hyperlink>Flora Obstacles</hyperlink>.</bullet><bullet>Immunity to Burning.</bullet><bullet>Lava Walk.</bullet><bullet><hyperlink>Cities</hyperlink> of this race ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Chasm and Lava in their <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
+    "description": "Summons a non-Fiend Tier V Mythic Unit with Fire and Burning-related abilities on target hex.",
+    "name": "Summon Flame Incarnate",
+    "spell_slug": "summon_flame_incarnate",
+    "tier": 8,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   },
+   {
+    "description": "Makes the target race the embodiment of fire, granting them:<bulletlist><bullet> <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink>.</bullet><bullet>Vengeful Flames, which damages <hyperlink>Melee</hyperlink> attackers.</bullet><bullet>Fiery Wake, which ignites flammable terrain such as <hyperlink>Flora Obstacles</hyperlink>.</bullet><bullet>Immunity to Burning.</bullet><bullet>Lava Walk.</bullet><bullet><hyperlink>Cities</hyperlink> of this race ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Chasm and Lava in their <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
     "name": "Scion of Flame",
     "spell_slug": "scion_of_flame",
     "tier": 7,
@@ -4435,7 +4616,14 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>Summons a full army of random non-Scout Tier I units that can be produced in a city on the target hex.</bullet><bullet>If cast within an enemy <hyperlink>Province</hyperlink>, instantly pillages it.</bullet></bulletlist>",
+    "description": "Target <hyperlink>Province</hyperlink> and adjacent Provinces:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> suffer 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>The provinces gain <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The provinces lose <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Summon a <hyperlink>Magma Spirit</hyperlink> on the targeted hex.</bullet></bulletlist>",
+    "name": "Abyssal Flames",
+    "spell_slug": "abyssal_flames",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
+   },
+   {
+    "description": "<bulletlist><bullet>Summons a full army of random Tier III units that can be produced in a city on the target hex.</bullet><bullet>If cast within an enemy <hyperlink>Province</hyperlink>, instantly pillages it.</bullet></bulletlist>",
     "name": "Golden Horde",
     "spell_slug": "golden_horde",
     "tier": 7,
@@ -4476,7 +4664,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "Target Unit has:<bulletlist><bullet>% chance of being inflicted with Infectious Insanity for <turn></turn> Turns. </bullet><bullet> If resisted, the target is inflicted with Insanity for <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "Target non-<hyperlink>Hero</hyperlink> unit has:<bulletlist><bullet>% chance of being inflicted with Infectious Insanity for <turn></turn> Turns. </bullet><bullet>If resisted, the target is inflicted with Insanity for <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Infectious Insanity",
     "spell_slug": "infectious_insanity",
     "tier": 6,
@@ -4523,7 +4711,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Units in target friendly army gain +30% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
+    "description": "Non-Hero units in target friendly army gain +30% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
     "name": "Revels of Carnage",
     "spell_slug": "revels_of_carnage",
     "tier": 3,
@@ -4576,7 +4764,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
    },
    {
-    "description": "Summons a <hyperlink>Gremlin</hyperlink> onto the target world hex. This unit is a disruptive and fiendish Skirmisher Unit.",
+    "description": "Summons a <hyperlink>Gremlin</hyperlink> onto the target world hex. This unit is a disruptive and fiendish Magic Fighter Unit.",
     "name": "Summon Gremlin",
     "spell_slug": "summon_gremlin",
     "tier": 3,
@@ -4594,7 +4782,7 @@
  {
   "affinities": "2 <empirechaos></empirechaos> Empire Chaos Affinity",
   "lore_description": "\\\"Masters of the Horde understand the power of large numbers, of masses riled up into a frenzy. Ultimately, our hounds of war will tear apart the strongest knights and most cunning warlocks. Our enemies' biggest mistake is to underestimate how many thralls we command, and how little we care about their lives.\\\"",
-  "gameplay_description": "Turn your cheapest units into large, deadly armies. Specialize in summoning and buffing Tier I units.",
+  "gameplay_description": "Turn your cheapest units into large, deadly armies. Specialize in summoning and buffing low tier units.",
   "resid": 4273492482491,
   "id": "tome_of_the_horde",
   "lore_author": "Swarmcaller Trass, Ratkin War-chief",
@@ -4631,7 +4819,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "All friendly Tier I units become 1 Strengthened.",
+    "description": "All friendly units in a -hex radius become 1 Strengthened.",
     "name": "Fury of the Horde",
     "spell_slug": "fury_of_the_horde",
     "tier": 1,
@@ -4642,7 +4830,7 @@
     "name": "Houndmaster",
     "tier": 1,
     "unit_slug": "houndmaster",
-    "type": "Unit Unlock"
+    "type": "<hyperlink>Unit</hyperlink>"
    }
   ],
   "initial_upgrades": [
@@ -4684,7 +4872,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    },
    {
-    "description": "On Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units sustain 20 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
+    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
     "name": "Destructive Regrowth",
     "spell_slug": "destructive_regrowth",
     "tier": 7,
@@ -4797,14 +4985,14 @@
   "icon": "000003E1000012B1",
   "skills": [
    {
-    "description": "This city gains:<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+20 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><br></br>Your <hyperlink>Throne City</hyperlink> gains:<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+20 <food></food> <hyperlink>Food</hyperlink></bullet><bullet>+5 <influence></influence> <hyperlink>Imperium</hyperlink></bullet></bulletlist><br></br><br></br>Can only be built in cities of another race.",
+    "description": "This city gains:<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+20 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet></bulletlist><br></br>Your <hyperlink>Throne City</hyperlink> gains:<bulletlist><bullet>+20 <gold></gold> <hyperlink>Gold</hyperlink></bullet><bullet>+20 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+5 <influence></influence> <hyperlink>Imperium</hyperlink></bullet></bulletlist><br></br><br></br>Can only be built in cities of another race.",
     "name": "Baron's Palace",
     "tier": 6,
     "type": "<hyperlink>City Structure</hyperlink>",
     "upgrade_slug": "barons_palace"
    },
    {
-    "description": "Target <hyperlink>Routing</hyperlink> non-Hero enemy unit:<bulletlist><bullet>Has a base % chance of becoming permanently mind controlled.</bullet><bullet>If successful, it gains + <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If resisted, the unit dies instead.</bullet></bulletlist>",
+    "description": "Target non-Hero unit with <happiness></happiness> <hyperlink>Morale</hyperlink> of \\\"Low\\\" or worse:<bulletlist><bullet>Has a chance of becoming permanently mind controlled.</bullet><bullet>The lower the target unit's <happiness></happiness> <hyperlink>Morale</hyperlink> is, the more this chance increases.</bullet><bullet>If successful, it gains <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If resisted, it suffers 40 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.</bullet></bulletlist>",
     "name": "Final Ultimatum",
     "spell_slug": "final_ultimatum",
     "tier": 5,
@@ -4898,9 +5086,9 @@
   "icon": "000003AD00002BB1",
   "skills": [
    {
-    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+ <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet> <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Burning.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
-    "name": "Fiery Arrows",
-    "spell_slug": "fiery_arrows",
+    "description": "Base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+ <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Burning.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Fiery Projectiles",
+    "spell_slug": "fiery_projectiles",
     "tier": 2,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
@@ -5071,6 +5259,13 @@
   "icon": "000003BD00002DF8",
   "skills": [
    {
+    "description": "In a -hex radius:<bulletlist><bullet>Enemy units sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Enemy units gain 2 Burning for <turn></turn> Turns.</bullet><bullet>Hexes are set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
+    "name": "Flame Volley",
+    "spell_slug": "",
+    "tier": 5,
+    "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
+   },
+   {
     "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br><br></br>Cannot be used in Water Combat.",
     "name": "Monstrous Rebirth",
     "spell_slug": "monstrous_rebirth",
@@ -5078,7 +5273,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "Grants attacks of enchanted units:<bulletlist><bullet>Demolisher, which allows them to destroy <hyperlink>Fortified</hyperlink> obstacles.</bullet><bullet>A base % chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "<hyperlink>Magic</hyperlink> attacks of enchanted units gain:<bulletlist><bullet>+ <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>A base % chance of canceling <hyperlink>Defense Modes</hyperlink>.</bullet><bullet>Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Focus of Devastation",
     "spell_slug": "focus_of_devastation",
     "tier": 6,
@@ -5125,7 +5320,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>Very Fast Movement</bullet></bulletlist>",
+    "description": "When enchanted units rout in combat:<bulletlist><bullet>They never die.</bullet><bullet>They return <turn></turn> <hyperlink>Turns</hyperlink> sooner.</bullet></bulletlist>",
     "name": "Wayfinder Enchantment",
     "spell_slug": "wayfinder_enchantment",
     "tier": 1,
@@ -5145,7 +5340,7 @@
   "icon": "000003AD00002B83",
   "skills": [
    {
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal + <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "Makes base <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to the target and adjacent enemies.</bullet><bullet>Have a base % chance of inflicting Sundered Defense on each target hit for <turn></turn> Turns.</bullet><bullet>Gain Demolisher, making them able to destroy reinforced obstacles.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Meteor Projectiles",
     "spell_slug": "meteor_projectiles",
     "tier": 8,
@@ -5173,7 +5368,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it will be <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You will not gain its rewards or lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> in the province sustain 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>The province gains <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The province loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
+    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it will be <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You will not gain its rewards or lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The province loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
     "name": "Pyroclastic Eruption",
     "spell_slug": "pyroclastic_eruption",
     "tier": 7,

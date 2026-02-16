@@ -270,7 +270,7 @@ ELDRITCHREALMS,
 WAYSOFWAR,
 HERALDOFGLORY,
 PRIMALFURY,
-EMPIRESANDASHES,ARCHONPROPHECY, COSMICWANDERER, THRONESOFBLOOD {
+EMPIRESANDASHES,ARCHONPROPHECY, COSMICWANDERER, THRONESOFBLOOD, RISEFROMRUIN {
     max-width: 20px;
     top: 7px;
     position: relative;
@@ -302,6 +302,9 @@ COSMICWANDERER {
 }
 THRONESOFBLOOD {
       content: url(/evolved/Icons/Text/ThronesOfBlood.png);
+}
+RISEFROMRUIN {
+      content: url(/evolved/Icons/Text/mp.png);
 }
 
 ELDRITCHREALMS {
@@ -400,6 +403,13 @@ unitFighter {
     position: relative;
 }
 
+unitMagicFighter {
+    max-height: 20px;
+    top: 3px;
+    content: url(/evolved/Icons/Text/magic_fighter_unit.png);
+    position: relative;
+}
+
 unitScout {
     max-height: 20px;
     top: 3px;
@@ -445,42 +455,42 @@ unitSiegecraft {
 unitCivilian {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/UnitIcons/civilian.png);
+    content: url(/evolved/Icons/Interface/Header/civilian.png);
     position: relative;
 }
 
 unitCavalry {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/UnitIcons/cavalry.png);
+    content: url(/evolved/Icons/Interface/Header/cavalry.png);
     position: relative;
 }
 
 unitPlant {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/UnitIcons/plant.png);
+    content: url(/evolved/Icons/Interface/Header/plant.png);
     position: relative;
 }
 
 unitConstruct {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/UnitIcons/construct.png);
+    content: url(/evolved/Icons/Interface/Header/construct.png);
     position: relative;
 }
 
 unitFey {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/UnitIcons/fey.png);
+    content: url(/evolved/Icons/Interface/Header/fey.png);
     position: relative;
 }
 
 unitAnimal {
     max-height: 20px;
     top: 3px;
-    content: url(/evolved/Icons/UnitIcons/animal.png);
+    content: url(/evolved/Icons/Interface/Header/animal.png);
     position: relative;
 }
 
@@ -796,21 +806,18 @@ magicvictory {
     content: url(/evolved/Icons/Text/magicvictory.png);
     position: relative;
 }
-
 landmark {
     max-height: 20px;
     top: 3px;
     content: url(/evolved/Icons/Text/Landmark_small.png);
     position: relative;
 }
-
 ancientwonder {
     max-height: 20px;
     top: 3px;
     content: url(/evolved/Icons/Text/ancientwonder.png);
     position: relative;
 }
-
 quest {
     max-height: 20px;
     top: 3px;
@@ -1278,6 +1285,13 @@ defenseblight {
     position: relative;
 }
 
+defensephysical {
+    max-height: 15px;
+    top: 3px;
+    content: url(/evolved/Icons/Text/physical_resistance.png);
+    position: relative;
+}
+
 statuseffectresistance {
     max-height: 15px;
     top: 3px;
@@ -1433,3 +1447,4 @@ summonspell {
     position: relative;
     top:3px;
 }
+

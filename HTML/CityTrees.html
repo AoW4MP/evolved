@@ -409,7 +409,7 @@
                         const skill = tome.skills[k];
                         if ("upgrade_slug" in skill && ListOfCityBuildings.includes(skill.upgrade_slug)) {
                             TomeBuildings.push({
-                                tomeId: tome.id, // Tome ID
+                                tomeId: tome, // Tome ID
                                 buildingId: skill.upgrade_slug // Building ID
                             });
                         }
@@ -521,21 +521,21 @@
                     "town_hall_iii:town_hall_iii_citadel",
                     "town_hall_iv:town_hall_iv_grand_estate"
                 ],
-                feudal_monarchy: ["workshop:militia_barracks", "blacksmith:royal_smith", "iii_unlock:lords_manor"],
+                feudal_monarchy: ["workshop:militia_barracks", "blacksmith:royal_smith", "iii_unlock_2:retainers_estate"],
                 feudal_aristocracy: [
                     "store_house:house_hunting_grounds",
                     "granary:serf_quarters",
-                    "iii_unlock_2:retainers_estate"
+                    "iii_unlock:lords_manor"
                 ],
                 dark: [
                     "town_hall_ii:town_hall_ii_dread_spire",
                     "town_hall_iii:town_hall_iii_stronghold",
-                    "iii_unlock:overlords_tower",
+                
                     "town_hall_iv:town_hall_iv_black_palace"
                 ],
 
-                dark_cult_of_tyranny: ["market:collector", "mint:shadowtrade_quarter"],
-                dark_cult_of_death: ["mana_obelisk:grave_obelisk", "monolith:crypt-temple"],
+                dark_cult_of_tyranny: ["market:collector", "mint:shadowtrade_quarter", "iii_unlock:overlords_tower"],
+                dark_cult_of_death: ["mana_obelisk:grave_obelisk", "monolith:crypt-temple", "iii_unlock_2:soulvault"],
                 barbarian: [
                     "library:battle_ritual_site",
                     "arcane_institute:ancestral_seer_hall",
@@ -867,7 +867,13 @@
                 var newNodeBackground = document.createElement("DIV");
 
                 var img = document.createElement("IMG");
-                img.setAttribute("src", "/evolved/Icons/UpgradeIcons/" + structureInfo.icon + ".png");
+                // different palce when its the 4 I added here
+                if(extraBuildings.includes(structureInfo)){
+                     img.setAttribute("src", "/evolved/Icons/ExtraIcons/" + structureInfo.icon + ".png");
+                }else{
+                     img.setAttribute("src", "/evolved/Icons/UpgradeIcons/" + structureInfo.icon + ".png");
+                }
+          
                 img.setAttribute("height", "60px");
                 img.className = "structureNodeIcon";
                 newNode.setAttribute("id", structureInfo.id);
@@ -943,7 +949,7 @@
                 }
 
                 if (tomeID) {
-                    newNodeBackground.style.backgroundImage = 'url("/evolved/Icons/TomeIcons/' + tomeID + '.png")';
+                    newNodeBackground.style.backgroundImage = 'url("/evolved/Icons/TomeIcons/' + tomeID.icon + '.png")';
                     newNodeBackground.style.backgroundRepeat = "no-repeat";
                     newNodeBackground.style.backgroundPositionX = "140px";
                     newNodeBackground.style.backgroundSize = "80px";

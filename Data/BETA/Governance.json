@@ -1,5 +1,29 @@
 [
  {
+  "id": "elder_vampire_governor",
+  "name": "Elder Vampire Governor",
+  "level_data": [
+   {
+    "effect_description": "Each <population></population> <hyperlink>Population</hyperlink> grants +1<food></food> <hyperlink>Food</hyperlink>, +1<unitprod></unitprod> <hyperlink>Draft</hyperlink>, and +1<knowledge></knowledge> Knowledge.",
+    "level": 1
+   },
+   {
+    "effect_description": "Acquiring new <population></population> <hyperlink>Population</hyperlink> and <thralls></thralls> <hyperlink>Thralls</hyperlink> requires -20% less <food></food> <hyperlink>Food</hyperlink>.",
+    "level": 2
+   },
+   {
+    "effect_description": "Each <mine></mine> <hyperlink>Mine</hyperlink> grants +2<influence></influence> <hyperlink>Imperium</hyperlink>.",
+    "level": 3
+   },
+   {
+    "effect_description": "Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink>, <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <souls></souls> <hyperlink>Souls</hyperlink> to recruit.",
+    "level": 4
+   }
+  ],
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <population></population> <hyperlink>Population</hyperlink> grants +1<food></food> <hyperlink>Food</hyperlink>, +1<unitprod></unitprod> <hyperlink>Draft</hyperlink>, and +1<knowledge></knowledge> Knowledge.</bullet><bullet><white>Renown level 2</white><br></br>Acquiring new <population></population> <hyperlink>Population</hyperlink> and <thralls></thralls> <hyperlink>Thralls</hyperlink> requires -20% less <food></food> <hyperlink>Food</hyperlink></bullet><bullet><white>Renown level 3</white><br></br>Each <mine></mine> <hyperlink>Mine</hyperlink> grants +2<influence></influence> <hyperlink>Imperium</hyperlink></bullet><bullet><white>Renown level 4</white><br></br>Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink>, <unitprod></unitprod> <hyperlink>Draft</hyperlink> and <souls></souls> <hyperlink>Souls</hyperlink> to recruit.</bullet></bulletlist>",
+  "icon": "0000049700002E2D"
+ },
+ {
   "id": "giant_king_governor",
   "name": "Giant King Governor",
   "level_data": [
@@ -116,7 +140,7 @@
     "level": 4
    }
   ],
-  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <forester></forester> <hyperlink>Forester</hyperlink> grants +2<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Each <forester></forester> <hyperlink>Forester</hyperlink> grants +2<unitprod></unitprod> <hyperlink>Draft</hyperlink>.<br></br>May recruit <hyperlink>Butcher Ogres</hyperlink> and <hyperlink>Brewer Ogres</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Each province with rivers grant 2 <food></food> <hyperlink>Food</hyperlink> income.<br></br>May recruit <hyperlink>River Trolls</hyperlink>.</bullet><bullet><white>Renown level 4</white><br></br>Each <forester></forester> <hyperlink>Forester</hyperlink> grants +2<mana></mana> <hyperlink>Mana</hyperlink>.<br></br>May recruit <hyperlink>Swamp Trolls</hyperlink>.</bullet></bulletlist>",
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <forester></forester> <hyperlink>Forester</hyperlink> grants +3<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Each <forester></forester> <hyperlink>Forester</hyperlink> grants +5<unitprod></unitprod> <hyperlink>Draft</hyperlink>.<br></br>May recruit <hyperlink>Butcher Ogres</hyperlink> and <hyperlink>Brewer Ogres</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Each province with rivers grant 5 <food></food> <hyperlink>Food</hyperlink> income.<br></br>May recruit <hyperlink>River Trolls</hyperlink>.</bullet><bullet><white>Renown level 4</white><br></br>Each <forester></forester> <hyperlink>Forester</hyperlink> grants +5<mana></mana> <hyperlink>Mana</hyperlink>.<br></br>May recruit <hyperlink>Swamp Trolls</hyperlink>.</bullet></bulletlist>",
   "icon": "0000048D000013FB"
  },
  {
@@ -172,7 +196,7 @@
   "name": "Wizard Governor",
   "level_data": [
    {
-    "effect_description": "Each <hyperlink>Special Province Improvement</hyperlink> grants +5<mana></mana> Mana<br></br>+5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink><br></br>+5 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>",
+    "effect_description": "Each <hyperlink>Special Province Improvement</hyperlink> grants +5<knowledge></knowledge> Knowledge<br></br>+5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink><br></br>+5 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>",
     "level": 1
    },
    {
@@ -188,7 +212,7 @@
     "level": 4
    }
   ],
-  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +5<mana></mana> Mana.</bullet><bullet><white>Renown level 2</white><br></br>Each <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink> grants +5<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Each <population></population> <hyperlink>Population</hyperlink> grants +2<knowledge></knowledge> Knowledge.</bullet><bullet><white>Renown level 4</white><br></br>+10% more <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet></bulletlist><br></br>In addition each renown level grants +5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> and +5 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>.",
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +5<knowledge></knowledge> Knowledge.</bullet><bullet><white>Renown level 2</white><br></br>Each <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink> grants +5 <happiness></happiness> <hyperlink>City Stability</hyperlink>.<br></br><hyperlink>Dark</hyperlink> culture gains negative <happiness></happiness> <hyperlink>City Stability</hyperlink> instead.</bullet><bullet><white>Renown level 3</white><br></br>Each <population></population> <hyperlink>Population</hyperlink> grants +2<knowledge></knowledge> Knowledge.</bullet><bullet><white>Renown level 4</white><br></br>+10% more <mana></mana> <hyperlink>Mana</hyperlink> income.</bullet></bulletlist><br></br>In addition each renown level grants +5 <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink> and +5 <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>.",
   "icon": "0000048D00000DDD"
  },
  {
@@ -252,15 +276,15 @@
     "level": 2
    },
    {
-    "effect_description": "Each <hyperlink>Special Province Improvement</hyperlink> grants +5<knowledge></knowledge> Knowledge",
+    "effect_description": "Each <hyperlink>Special Province Improvement</hyperlink> grants +2<mana></mana> Mana and +2<gold></gold> Gold",
     "level": 3
    },
    {
-    "effect_description": "Each <hyperlink>Special Province Improvement</hyperlink> grants +2<mana></mana> Mana and +2<gold></gold> Gold",
+    "effect_description": "Each <hyperlink>Special Province Improvement</hyperlink> grants +3<knowledge></knowledge> Knowledge",
     "level": 4
    }
   ],
-  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> costs -20% less <gold></gold> <hyperlink>Gold</hyperlink> and -20% less <structureprod></structureprod> <hyperlink>Production</hyperlink> to build.</bullet><bullet><white>Renown level 2</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +5<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +5<knowledge></knowledge> Knowledge.</bullet><bullet><white>Renown level 4</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +2<mana></mana> Mana and +2<gold></gold> Gold.</bullet></bulletlist>",
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> costs -20% less <gold></gold> <hyperlink>Gold</hyperlink> and -20% less <structureprod></structureprod> <hyperlink>Production</hyperlink> to build.</bullet><bullet><white>Renown level 2</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +5<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +2<mana></mana> Mana and +2<gold></gold> Gold.</bullet><bullet><white>Renown level 4</white><br></br>Each <hyperlink>Special Province Improvement</hyperlink> grants +3<knowledge></knowledge> Knowledge.</bullet></bulletlist>",
   "icon": "0000048D00000B31"
  },
  {
@@ -272,19 +296,19 @@
     "level": 1
    },
    {
-    "effect_description": "Provinces in the domain take 2 <turn></turn> <hyperlink>Turns</hyperlink> longer to Pillage.",
+    "effect_description": "Coast or Water provinces grant +3<mana></mana> Mana",
     "level": 2
    },
    {
-    "effect_description": "Coast or Water provinces grant +2<mana></mana> Mana",
+    "effect_description": "Coast or Water provinces grant +3<gold></gold> Gold",
     "level": 3
    },
    {
-    "effect_description": "Coast or Water provinces grant +3<gold></gold> Gold",
+    "effect_description": "Coast or Underground Lake provinces grant +3<knowledge></knowledge> Knowledge",
     "level": 4
    }
   ],
-  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Coast or Water provinces grant +5<food></food> <hyperlink>Food</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Provinces in the domain take 2 <turn></turn> <hyperlink>Turns</hyperlink> longer to Pillage.</bullet><bullet><white>Renown level 3</white><br></br>Coast or Underground Lake provinces grant +2<mana></mana> Mana.</bullet><bullet><white>Renown level 4</white><br></br>Coast or Underground Lake provinces grant +3<gold></gold> Gold.</bullet></bulletlist>",
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Coast or Underground Lake provinces grant +5<food></food> <hyperlink>Food</hyperlink></bullet><bullet><white>Renown level 2</white><br></br>Coast or Underground Lake provinces grant +3<mana></mana> Mana</bullet><bullet><white>Renown level 3</white><br></br>Coast or Underground Lake provinces grant +3<gold></gold> Gold</bullet><bullet><white>Renown level 4</white><br></br>Coast or Underground Lake provinces grant +3<knowledge></knowledge> Knowledge</bullet></bulletlist>",
   "icon": "0000048D00000B28"
  },
  {
@@ -372,15 +396,15 @@
     "level": 2
    },
    {
-    "effect_description": "Each <population></population> <hyperlink>Population</hyperlink> grants +1<gold></gold> Gold, +1<mana></mana> Mana, and +1<knowledge></knowledge> Knowledge",
+    "effect_description": "Acquiring new <population></population> <hyperlink>Population</hyperlink> requires -30% less <food></food> <hyperlink>Food</hyperlink>",
     "level": 3
    },
    {
-    "effect_description": "Acquiring new <population></population> <hyperlink>Population</hyperlink> requires -30% less <food></food> <hyperlink>Food</hyperlink>",
+    "effect_description": "Each <population></population> <hyperlink>Population</hyperlink> grants +1<gold></gold> Gold, +1<mana></mana> Mana, and +1<knowledge></knowledge> Knowledge",
     "level": 4
    }
   ],
-  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <farm></farm> <hyperlink>Farm</hyperlink> grants +5<food></food> <hyperlink>Food</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Each <farm></farm> <hyperlink>Farm</hyperlink> grants +5<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Each <population></population> <hyperlink>Population</hyperlink> grants +1<gold></gold> Gold, +1<mana></mana> Mana, and +1<knowledge></knowledge> Knowledge.</bullet><bullet><white>Renown level 4</white><br></br>Acquiring new <population></population> <hyperlink>Population</hyperlink> requires -30% less <food></food> <hyperlink>Food</hyperlink>.</bullet></bulletlist>",
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>Each <farm></farm> <hyperlink>Farm</hyperlink> grants +5<food></food> <hyperlink>Food</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Each <farm></farm> <hyperlink>Farm</hyperlink> grants +5<happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet><white>Renown level 3</white><br></br>Acquiring new <population></population> <hyperlink>Population</hyperlink> requires -30% less <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet><white>Renown level 4</white><br></br>Each <population></population> <hyperlink>Population</hyperlink> grants +1<gold></gold> Gold, +1<mana></mana> Mana, and +1<knowledge></knowledge> Knowledge.</bullet></bulletlist>",
   "icon": "0000048D00000B0B"
  },
  {
@@ -416,11 +440,11 @@
     "level": 1
    },
    {
-    "effect_description": "Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink> to recruit",
+    "effect_description": "Tier I and II <hyperlink>Units</hyperlink> are recruited at +1<medalGold></medalGold> Rank",
     "level": 2
    },
    {
-    "effect_description": "Tier I and II <hyperlink>Units</hyperlink> are recruited at +1<medalGold></medalGold> Rank",
+    "effect_description": "Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink> to recruit",
     "level": 3
    },
    {
@@ -428,7 +452,7 @@
     "level": 4
    }
   ],
-  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>+30<unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink> to recruit.</bullet><bullet><white>Renown level 3</white><br></br>Tier I and II <hyperlink>Units</hyperlink> are recruited at +1<medalGold></medalGold> Rank.</bullet><bullet><white>Renown level 4</white><br></br>Tier III, IV and V <hyperlink>Units</hyperlink> are recruited at +1<medalGold></medalGold> Rank.</bullet></bulletlist>",
+  "screen_description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br></br>+30<unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet><white>Renown level 2</white><br></br>Tier I and II <hyperlink>Units</hyperlink> are recruited at +1<medalGold></medalGold> Rank.</bullet><bullet><white>Renown level 3</white><br></br>Units cost -20% less <gold></gold> <hyperlink>Gold</hyperlink> to recruit.</bullet><bullet><white>Renown level 4</white><br></br>Tier III, IV and V <hyperlink>Units</hyperlink> are recruited at +1<medalGold></medalGold> Rank.</bullet></bulletlist>",
   "icon": "0000048D00000B03"
  }
 ]

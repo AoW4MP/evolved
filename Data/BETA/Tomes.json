@@ -4418,6 +4418,7 @@
     "description": "Choose a Tier III Young Dragon to add to your army:<bulletlist><bullet><hyperlink>Young Fire Dragon</hyperlink></bullet><bullet><hyperlink>Young Frost Dragon</hyperlink> </bullet><bullet><hyperlink>Young Obsidian Dragon</hyperlink></bullet><bullet><hyperlink>Young Golden Dragon</hyperlink></bullet></bulletlist><br></br>These units may Evolve into Adult Dragons.",
     "name": "Call young Dragon",
     "tier": 6,
+    "spell_slug" : "summon_young_dragon",
     "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
    }
   ],
@@ -5261,7 +5262,7 @@
    {
     "description": "In a -hex radius:<bulletlist><bullet>Enemy units sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Enemy units gain 2 Burning for <turn></turn> Turns.</bullet><bullet>Hexes are set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
     "name": "Flame Volley",
-    "spell_slug": "",
+    "spell_slug": "flame_volley",
     "tier": 5,
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },

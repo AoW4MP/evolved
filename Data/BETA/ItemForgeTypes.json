@@ -1,30 +1,5 @@
 [
  {
-  "resid": 5291399710004,
-  "id": "equipment_item_1h_skirmisher_sword_nomad_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Sword",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.OneHanded.Sword"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.OneHandedFlavor.SwordFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5291399710003
- },
- {
   "resid": 5257039971040,
   "id": "lost_souls_equipment_item_miscimmortality_stone_type",
   "slot": "Miscellaneous",
@@ -49,10 +24,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -101,10 +76,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -157,7 +132,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Obelisk <ItemTypeWeapon.GiantKingWeapons.Obelisk>"
+     "condition": "Contains ItemTypeWeapon.GiantKingWeapons.Obelisk "
     }
    ]
   },
@@ -188,7 +163,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Warhammer <ItemTypeWeapon.GiantKingWeapons.Warhammer>"
+     "condition": "Contains ItemTypeWeapon.GiantKingWeapons.Warhammer "
     }
    ]
   },
@@ -219,7 +194,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains GiantAxe <ItemTypeWeapon.GiantKingWeapons.GiantAxe>"
+     "condition": "Contains ItemTypeWeapon.GiantKingWeapons.GiantAxe "
     }
    ]
   },
@@ -247,7 +222,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Warclaw <ItemTypeWeapon.DragonClaw.Warclaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
     }
    ]
   },
@@ -275,7 +250,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ArmoredClaw <ItemTypeWeapon.DragonClaw.ArmoredClaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw.ArmoredClaw "
     }
    ]
   },
@@ -303,7 +278,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Warclaw <ItemTypeWeapon.DragonClaw.Warclaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
     }
    ]
   },
@@ -331,7 +306,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ArmoredClaw <ItemTypeWeapon.DragonClaw.ArmoredClaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw.ArmoredClaw "
     }
    ]
   },
@@ -355,7 +330,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -379,7 +354,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -403,13 +378,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -433,7 +408,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -457,13 +432,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -487,10 +462,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Cestus <ItemTypeWeapon.OneHanded.Cestus>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded.Cestus "
     },
     {
-     "condition": "Contains OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -515,10 +490,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -543,7 +518,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -568,7 +543,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -593,13 +568,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -624,7 +599,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -652,7 +627,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -680,7 +655,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -708,7 +683,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -736,7 +711,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -764,7 +739,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -792,7 +767,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -820,10 +795,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -853,10 +828,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -886,10 +861,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -919,10 +894,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -952,10 +927,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -985,10 +960,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1018,10 +993,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1051,10 +1026,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1084,10 +1059,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1117,10 +1092,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1150,10 +1125,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1183,10 +1158,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -1219,10 +1194,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -1255,10 +1230,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -1285,10 +1260,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -1313,10 +1288,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -1341,10 +1316,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -1369,10 +1344,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -1397,10 +1372,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -1425,10 +1400,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -1462,7 +1437,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains EldritchRelic <ItemTypeWeapon.EldritchRelic>"
+     "condition": "Contains ItemTypeWeapon.EldritchRelic "
     }
    ]
   },
@@ -1496,7 +1471,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains EldritchRelic <ItemTypeWeapon.EldritchRelic>"
+     "condition": "Contains ItemTypeWeapon.EldritchRelic "
     }
    ]
   },
@@ -1530,7 +1505,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains EldritchRelic <ItemTypeWeapon.EldritchRelic>"
+     "condition": "Contains ItemTypeWeapon.EldritchRelic "
     }
    ]
   },
@@ -1564,7 +1539,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains EldritchRelic <ItemTypeWeapon.EldritchRelic>"
+     "condition": "Contains ItemTypeWeapon.EldritchRelic "
     }
    ]
   },
@@ -1592,7 +1567,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains DragonClaw <ItemTypeWeapon.DragonClaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw "
     }
    ]
   },
@@ -1620,7 +1595,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains DragonClaw <ItemTypeWeapon.DragonClaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw "
     }
    ]
   },
@@ -1648,7 +1623,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains DragonClaw <ItemTypeWeapon.DragonClaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw "
     }
    ]
   },
@@ -1676,7 +1651,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains DragonClaw <ItemTypeWeapon.DragonClaw>"
+     "condition": "Contains ItemTypeWeapon.DragonClaw "
     }
    ]
   },
@@ -1701,7 +1676,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -1726,10 +1701,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -1757,7 +1732,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -1782,13 +1757,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -1813,7 +1788,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -1837,7 +1812,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -1862,39 +1837,14 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
   "base_hero_item_resid": 5111011082299
- },
- {
-  "resid": 5046586587526,
-  "id": "equipment_item_fractured_orb_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Magical Orb",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.Magic.MagicalOrb"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.MagicFlavor.MagicalOrbFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5046586587525
  },
  {
   "resid": 5046586586321,
@@ -1924,18 +1874,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -1960,7 +1910,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -1985,13 +1935,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -2016,7 +1966,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -2041,7 +1991,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     }
    ]
   },
@@ -2066,10 +2016,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -2094,7 +2044,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -2119,7 +2069,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -2144,7 +2094,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     }
    ]
   },
@@ -2175,7 +2125,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Obelisk <ItemTypeWeapon.GiantKingWeapons.Obelisk>"
+     "condition": "Contains ItemTypeWeapon.GiantKingWeapons.Obelisk "
     }
    ]
   },
@@ -2206,7 +2156,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Warhammer <ItemTypeWeapon.GiantKingWeapons.Warhammer>"
+     "condition": "Contains ItemTypeWeapon.GiantKingWeapons.Warhammer "
     }
    ]
   },
@@ -2237,7 +2187,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains GiantAxe <ItemTypeWeapon.GiantKingWeapons.GiantAxe>"
+     "condition": "Contains ItemTypeWeapon.GiantKingWeapons.GiantAxe "
     }
    ]
   },
@@ -2262,7 +2212,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -2287,13 +2237,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -2321,7 +2271,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -2346,7 +2296,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -2371,10 +2321,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -2399,7 +2349,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -2424,13 +2374,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -2454,10 +2404,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Cestus <ItemTypeWeapon.OneHanded.Cestus>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded.Cestus "
     },
     {
-     "condition": "Contains OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -2482,7 +2432,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -2506,7 +2456,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -2536,10 +2486,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -2574,18 +2524,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -2609,7 +2559,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -2633,7 +2583,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     }
    ]
   },
@@ -2657,7 +2607,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     }
    ]
   },
@@ -2681,7 +2631,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -2705,7 +2655,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatbow <ItemTypeWeapon.RangedPhysical.Greatbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Greatbow "
     }
    ]
   },
@@ -2732,7 +2682,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -2759,18 +2709,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -2798,18 +2748,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -2836,18 +2786,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -2874,18 +2824,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -2918,18 +2868,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -2962,18 +2912,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -3006,18 +2956,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -3041,7 +2991,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -3065,7 +3015,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -3092,18 +3042,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -3131,260 +3081,22 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
   "base_hero_item_resid": 5003636907844
- },
- {
-  "resid": 5003636907832,
-  "id": "equipment_item_shield_nomad_type",
-  "slot": "Secondary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Passive <hyperlink>Infusions</hyperlink> that increase survivability and reflect damage to attackers.<br></br><br></br>Grants Shield Defense and Defense Mode: Defense Mode: Shield Wall.",
-  "name": "Shield",
-  "tags": [
-   {
-    "tag": "ItemTypeArmor.Shield"
-   },
-   {
-    "tag": "ItemTypeArmorFlavor.ShieldFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
-    },
-    {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907831
- },
- {
-  "resid": 5003636907827,
-  "id": "equipment_item_1h_sword_nomad_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Sword",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.OneHanded.Sword"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.OneHandedFlavor.SwordFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907826
- },
- {
-  "resid": 5003636907825,
-  "id": "equipment_item_nomad_staff_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive and support capabilities.<br></br><br></br>Grants Defense Mode: Warding.",
-  "name": "Staff",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.Magic.Staff"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.MagicFlavor.StaffFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907824
- },
- {
-  "resid": 5003636907823,
-  "id": "equipment_item_crossbow_and_sword_nomad_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Sword and Crossbow",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Crossbow"
-   },
-   {
-    "tag": "ItemTypeWeapon.MeleeRanged"
-   },
-   {
-    "tag": "ItemTypeWeapon.MeleeRanged.SwordCrossbow"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.MeleeRangedFlavor.SwordCrossbowFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "All of the following must be True",
-   "children": [
-    {
-     "condition": "One or More of the following must be True",
-     "children": [
-      {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
-      },
-      {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
-      },
-      {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
-      }
-     ]
-    },
-    {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907822
- },
- {
-  "resid": 5003636907821,
-  "id": "equipment_item_nomad_bow_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Bow",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Bow"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.RangedPhysicalFlavor.BowFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907820
- },
- {
-  "resid": 5003636907819,
-  "id": "equipment_item_nomad_halberd_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.<br></br><br></br>Grants <hyperlink>First Strike</hyperlink>, Charge Resistance, Cavalry Slayer, and Giant Slayer.",
-  "name": "Halberd",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.Polearm.Halberd"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.PolearmFlavor.HalberdFlavor"
-   },
-   {
-    "tag": "ItemForge.SpecificLogic.AvoidPolearmStacking"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "All of the following must be True",
-   "children": [
-    {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907818
- },
- {
-  "resid": 5003636907815,
-  "id": "equipment_item_2h_ke-nan_bardiche_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Bardiche",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greataxe"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.TwoHandedHeavyFlavor.GreataxeFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
-    },
-    {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
-    },
-    {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907814
- },
- {
-  "resid": 5003636907813,
-  "id": "equipment_item_2h_bardiche_type",
-  "slot": "Primary",
-  "DLC": "RISEFROMRUIN ",
-  "description": "Can be infused with Damage, Ability, and Passive <hyperlink>Infusions</hyperlink>, which increase the offensive capabilities of the item.",
-  "name": "Bardiche",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greataxe"
-   },
-   {
-    "tag": "ItemTypeWeaponFlavor.TwoHandedHeavyFlavor.GreataxeFlavor"
-   }
-  ],
-  "upgrade_tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
-    },
-    {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
-    },
-    {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
-    }
-   ]
-  },
-  "base_hero_item_resid": 5003636907812
  },
  {
   "resid": 4995046968537,
@@ -3405,7 +3117,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -3430,7 +3142,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -3455,7 +3167,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -3480,7 +3192,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     }
    ]
   },
@@ -3505,7 +3217,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -3530,13 +3242,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -3561,7 +3273,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -3586,10 +3298,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -3622,18 +3334,18 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains inherited MeleeRanged <ItemTypeWeapon.MeleeRanged>"
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
       },
       {
-       "condition": "Contains inherited PhysicalRanged <HeroSkillArchetype.PhysicalRanged>"
+       "condition": "Contains inherited HeroSkillArchetype.PhysicalRanged "
       },
       {
-       "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+       "condition": "Contains inherited ItemTypeWeapon.OneHanded "
       }
      ]
     },
     {
-     "condition": "Does not contain NotDualWeapon <ItemForge.SpecificLogic.NotDualWeapon>"
+     "condition": "Does not contain ItemForge.SpecificLogic.NotDualWeapon "
     }
    ]
   },
@@ -3658,7 +3370,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -3686,7 +3398,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -3711,7 +3423,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -3738,7 +3450,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3765,7 +3477,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3792,7 +3504,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3819,7 +3531,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3846,7 +3558,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3873,7 +3585,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3900,7 +3612,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3930,7 +3642,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3960,7 +3672,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -3987,7 +3699,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4017,7 +3729,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4044,7 +3756,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4071,7 +3783,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4098,7 +3810,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4125,7 +3837,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4152,7 +3864,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4179,7 +3891,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4206,7 +3918,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -4236,10 +3948,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4271,10 +3983,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4306,10 +4018,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4341,10 +4053,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4376,10 +4088,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4411,10 +4123,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4446,10 +4158,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4481,10 +4193,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4516,10 +4228,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4551,10 +4263,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4586,10 +4298,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4621,10 +4333,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4656,10 +4368,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4691,10 +4403,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -4726,10 +4438,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4761,10 +4473,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4796,10 +4508,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4831,10 +4543,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4866,10 +4578,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4901,10 +4613,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4936,10 +4648,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -4971,10 +4683,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -5000,7 +4712,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5024,7 +4736,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5048,7 +4760,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5072,7 +4784,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5096,7 +4808,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5120,7 +4832,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5144,7 +4856,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5168,7 +4880,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5192,7 +4904,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5216,7 +4928,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -5243,7 +4955,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Magelock <ItemTypeWeapon.RangedPhysical.Magelock>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Magelock "
     }
    ]
   },
@@ -5267,7 +4979,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -5291,7 +5003,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -5315,7 +5027,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -5339,7 +5051,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -5363,7 +5075,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5387,7 +5099,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5411,7 +5123,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5435,7 +5147,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5459,7 +5171,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5483,7 +5195,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5507,7 +5219,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Bow <ItemTypeWeapon.RangedPhysical.Bow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Bow "
     }
    ]
   },
@@ -5534,7 +5246,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5561,7 +5273,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5588,7 +5300,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5615,7 +5327,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5642,7 +5354,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5669,7 +5381,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5696,7 +5408,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5723,7 +5435,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5750,7 +5462,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5777,7 +5489,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -5801,7 +5513,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -5825,7 +5537,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -5849,7 +5561,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -5873,7 +5585,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -5897,13 +5609,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -5927,13 +5639,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -5957,13 +5669,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -5987,13 +5699,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -6017,13 +5729,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -6047,13 +5759,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -6077,13 +5789,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -6107,13 +5819,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -6137,13 +5849,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -6167,7 +5879,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -6191,7 +5903,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -6215,7 +5927,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -6239,7 +5951,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -6263,7 +5975,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -6287,7 +5999,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -6311,10 +6023,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6338,10 +6050,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6365,10 +6077,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6392,10 +6104,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6419,10 +6131,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6446,10 +6158,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6473,10 +6185,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6500,10 +6212,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6527,10 +6239,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6554,10 +6266,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6581,10 +6293,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6608,10 +6320,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6635,10 +6347,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -6662,10 +6374,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6689,10 +6401,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6716,10 +6428,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6743,10 +6455,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6770,10 +6482,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6797,10 +6509,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6824,10 +6536,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6851,10 +6563,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -6878,10 +6590,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -6905,10 +6617,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -6932,10 +6644,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -6959,10 +6671,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -6986,10 +6698,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -7013,10 +6725,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -7040,10 +6752,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -7067,10 +6779,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -7094,10 +6806,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -7121,10 +6833,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7148,10 +6860,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7175,10 +6887,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7202,10 +6914,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7229,10 +6941,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7256,10 +6968,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7283,10 +6995,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7310,10 +7022,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7337,10 +7049,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7364,10 +7076,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7391,10 +7103,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7418,10 +7130,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7445,10 +7157,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbBlightFrost <ItemForge.Orbs.OrbBlightFrost>"
+     "condition": "Contains ItemForge.Orbs.OrbBlightFrost "
     }
    ]
   },
@@ -7472,10 +7184,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbFireSpirit <ItemForge.Orbs.OrbFireSpirit>"
+     "condition": "Contains ItemForge.Orbs.OrbFireSpirit "
     }
    ]
   },
@@ -7499,10 +7211,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbFireLightning <ItemForge.Orbs.OrbFireLightning>"
+     "condition": "Contains ItemForge.Orbs.OrbFireLightning "
     }
    ]
   },
@@ -7526,7 +7238,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -7550,7 +7262,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -7574,7 +7286,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },
@@ -7598,10 +7310,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Shield <ItemTypeArmor.Shield>"
+     "condition": "Contains ItemTypeArmor.Shield "
     },
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     }
    ]
   },
@@ -7631,10 +7343,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains Wand <ItemTypeMisc.Wand>"
+       "condition": "Contains ItemTypeMisc.Wand "
       },
       {
-       "condition": "Contains Instrument <ItemTypeMisc.Instrument>"
+       "condition": "Contains ItemTypeMisc.Instrument "
       }
      ]
     }
@@ -7663,7 +7375,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Ring <ItemTypeJewelry.Ring>"
+     "condition": "Contains ItemTypeJewelry.Ring "
     }
    ]
   },
@@ -7693,10 +7405,10 @@
      "condition": "One or More of the following must be True",
      "children": [
       {
-       "condition": "Contains OtherItem <ItemTypeMisc.OtherItem>"
+       "condition": "Contains ItemTypeMisc.OtherItem "
       },
       {
-       "condition": "Contains Amulet <ItemTypeJewelry.Amulet>"
+       "condition": "Contains ItemTypeJewelry.Amulet "
       }
      ]
     }
@@ -7722,10 +7434,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Legs <ItemTypeArmor.Legs>"
+     "condition": "Contains inherited ItemTypeArmor.Legs "
     }
    ]
   },
@@ -7749,10 +7461,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Torso <ItemTypeArmor.Torso>"
+     "condition": "Contains inherited ItemTypeArmor.Torso "
     }
    ]
   },
@@ -7776,10 +7488,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains ItemTypeArmor <ItemTypeArmor>"
+     "condition": "Contains ItemTypeArmor "
     },
     {
-     "condition": "Contains inherited Head <ItemTypeArmor.Head>"
+     "condition": "Contains inherited ItemTypeArmor.Head "
     }
    ]
   },
@@ -7803,10 +7515,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbFrost <ItemForge.Orbs.OrbFrost>"
+     "condition": "Contains ItemForge.Orbs.OrbFrost "
     }
    ]
   },
@@ -7830,10 +7542,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbSpirit <ItemForge.Orbs.OrbSpirit>"
+     "condition": "Contains ItemForge.Orbs.OrbSpirit "
     }
    ]
   },
@@ -7857,10 +7569,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbBlight <ItemForge.Orbs.OrbBlight>"
+     "condition": "Contains ItemForge.Orbs.OrbBlight "
     }
    ]
   },
@@ -7884,10 +7596,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbFire <ItemForge.Orbs.OrbFire>"
+     "condition": "Contains ItemForge.Orbs.OrbFire "
     }
    ]
   },
@@ -7911,7 +7623,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Staff <ItemTypeWeapon.Magic.Staff>"
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
     }
    ]
   },
@@ -7935,10 +7647,10 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains MagicalOrb <ItemTypeWeapon.Magic.MagicalOrb>"
+     "condition": "Contains ItemTypeWeapon.Magic.MagicalOrb "
     },
     {
-     "condition": "Contains OrbLightning <ItemForge.Orbs.OrbLightning>"
+     "condition": "Contains ItemForge.Orbs.OrbLightning "
     }
    ]
   },
@@ -7962,7 +7674,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Crossbow <ItemTypeWeapon.RangedPhysical.Crossbow>"
+     "condition": "Contains ItemTypeWeapon.RangedPhysical.Crossbow "
     }
    ]
   },
@@ -7986,7 +7698,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Lance <ItemTypeWeapon.TwoHandedHeavy.Lance>"
+     "condition": "Contains inherited ItemTypeWeapon.TwoHandedHeavy.Lance "
     }
    ]
   },
@@ -8010,13 +7722,13 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains Greatsword <ItemTypeWeapon.TwoHandedHeavy.Greatsword>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greatsword "
     },
     {
-     "condition": "Contains Greathammer <ItemTypeWeapon.TwoHandedHeavy.Greathammer>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greathammer "
     },
     {
-     "condition": "Contains Greataxe <ItemTypeWeapon.TwoHandedHeavy.Greataxe>"
+     "condition": "Contains ItemTypeWeapon.TwoHandedHeavy.Greataxe "
     }
    ]
   },
@@ -8043,7 +7755,7 @@
    "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited Polearm <ItemTypeWeapon.Polearm>"
+     "condition": "Contains inherited ItemTypeWeapon.Polearm "
     }
    ]
   },
@@ -8067,7 +7779,7 @@
    "condition": "One or More of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited OneHanded <ItemTypeWeapon.OneHanded>"
+     "condition": "Contains inherited ItemTypeWeapon.OneHanded "
     }
    ]
   },

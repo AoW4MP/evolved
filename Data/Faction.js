@@ -1,6 +1,6 @@
 searchParams = new URLSearchParams(window.location.search);
 searchKeyword = searchParams.get("u");
-var ListOfSubcultureHolders = ["Architect", "Primal", "Mystic", "Oathsworn", "Feudal", "Dark"];
+var ListOfSubcultureHolders = ["Architect", "Primal", "Mystic", "Oathsworn", "Feudal", "Dark", "Nomad"];
 
 var ListOfSubsocietyHolders = ["Vision of Promise", "Vision of Ruin", "Vision of Destiny"];
 
@@ -88,7 +88,11 @@ function addOrSubtract(extraAffinity, add) {
     return extraAffinity;
 }
 
+const extraTomesForTheorycrafting = [];
+
 function SetRandomStart(overwriteParameter) {
+    jsonTomes.push(...extraTomesForTheorycrafting);
+    jsonTomesLocalized.push(...extraTomesForTheorycrafting);
     if (searchKeyword != undefined && !overwriteParameter) {
         // console.log("Found" + searchKeyword);
         RebuildFromParam(searchKeyword);
@@ -1778,9 +1782,12 @@ function SetTomePreview(span, origin) {
                 // can be summon as well
                 if ("spell_slug" in origin.skills[index]) {
                     const spell = findBy(jsonSpellsLocalized, "id", locOrigin.skills[index].spell_slug);
+                    let iconLink = "";
+                    if ("icon" in spell) {
+                        iconLink = spell.icon;
+                    }
 
-                    let iconLink = spell.icon;
-                    if (spell.icon == undefined || incorrectIconOverrideList.includes(spell.spell_slug)) {
+                    if (iconLink == undefined || incorrectIconOverrideList.includes(spell.spell_slug)) {
                         iconLink = spell.id;
                         span.innerHTML +=
                             '<bullet> <img width="20px" src="/evolved/Icons/SummonIcons/' +
@@ -1855,24 +1862,33 @@ function SetTomePreview(span, origin) {
             }
             // normal spell
             else {
+                // call young dragon failing? loc will fail here
+                 if (locOrigin.skills[index].name == "Call young Dragon"){
+                     locOrigin.skills[index].spell_slug = "call_young_dragon";
+                 }
+                console.log( locOrigin.skills[index].name);
                 const spell = findBy(jsonSpellsLocalized, "id", locOrigin.skills[index].spell_slug);
-                let iconLink = spell.icon;
-                    if (spell.icon == undefined || incorrectIconOverrideList.includes(spell.spell_slug)) {
-                        iconLink = spell.id;
-                        span.innerHTML +=
-                            '<bullet> <img width="20px" src="/evolved/Icons/SummonIcons/' +
-                            iconLink +
-                            '.png">' +
-                            spell.name +
-                            "</bullet>";
-                    } else {
-                        span.innerHTML +=
-                            '<bullet> <img width="20px" src="/evolved/Icons/SpellIcons/' +
-                            iconLink +
-                            '.png">' +
-                            spell.name +
-                            "</bullet>";
-                    }
+                let iconLink = "";
+                if ("icon" in spell) {
+                    iconLink = spell.icon;
+                }
+
+                if (iconLink == undefined || incorrectIconOverrideList.includes(spell.spell_slug)) {
+                    iconLink = spell.id;
+                    span.innerHTML +=
+                        '<bullet> <img width="20px" src="/evolved/Icons/SummonIcons/' +
+                        iconLink +
+                        '.png">' +
+                        spell.name +
+                        "</bullet>";
+                } else {
+                    span.innerHTML +=
+                        '<bullet> <img width="20px" src="/evolved/Icons/SpellIcons/' +
+                        iconLink +
+                        '.png">' +
+                        spell.name +
+                        "</bullet>";
+                }
             }
             //
         }
@@ -2173,16 +2189,16 @@ function CreateSpellIcon(listEntry, colorEntry) {
     text.innerHTML = " " + listEntryLoc.name;
 
     var smallIcon = document.createElement("img");
-   
+
     let imageSRC;
-        let imageLinkName;
-        if (spellData.icon != undefined && !incorrectIconOverrideList.includes(spellData.id)) {
-            imageLinkName = spellData.icon;
-            imageSRC = "/evolved/Icons/SpellIcons/" + imageLinkName + ".png";
-        } else {
-            imageLinkName = spellData.id;
-            imageSRC = "/evolved/Icons/SummonIcons/" + imageLinkName + ".png";
-        }
+    let imageLinkName;
+    if (spellData.icon != undefined && !incorrectIconOverrideList.includes(spellData.id)) {
+        imageLinkName = spellData.icon;
+        imageSRC = "/evolved/Icons/SpellIcons/" + imageLinkName + ".png";
+    } else {
+        imageLinkName = spellData.id;
+        imageSRC = "/evolved/Icons/SummonIcons/" + imageLinkName + ".png";
+    }
     smallIcon.setAttribute("src", imageSRC);
     smallIcon.setAttribute("width", "25px");
     smallIcon.setAttribute("height", "25px");

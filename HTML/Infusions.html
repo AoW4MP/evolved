@@ -12,152 +12,61 @@
                 CheckLengths(jsonItemForgeUpgrades);
 
                 $("#filterInput").on("change input", function () {
-                    ShowAllDivsWithFilters("list_abilityslot");
+                    ShowAllDivsWithFilters("list_abilityslot", "flex");
                     SetLevelUpStuff();
                 });
             }
 
-            function ShowInfusion(infusion) {
-                var abilityName,
-                    abilityIcon,
-                    abilityDescr,
-                    abilityDam,
-                    abilityAcc,
-                    abilityRange,
-                    abilityType,
-                    abilityNote,
-                    j,
-                    splitDamageString,
-                    abilityDamType,
-                    abilityReq,
-                    abilityMod = "";
-
-                abilityName = infusion.name;
-                abilityIcon = infusion.icon;
-
-                var tooltipName = document.createElement("SPAN");
-                var btn = document.createElement("DIV");
-
-                btn.className = "list_abilityslot";
-
-                // if (n === true) {
-                //   btn.style.backgroundColor = "rgb(73, 0, 80)";
-                //}
-                var imag = document.createElement("IMG");
-                imag.className = "unit_ability_icon";
-                //  var spa = document.createElement("SPAN");
-
-                abilityDescr = infusion.description;
-                
-               
-
-                var abilityIconType = "";
-                imag.setAttribute("src", "/evolved/Icons/UnitIcons/" + abilityIcon + ".png");
-
-                var abilityIconType = GetAbilityBackground(abilityDam);
-
-                imag.setAttribute(
-                    "style",
-                    'background-image: url("/evolved/Icons/Interface/' +
-                        abilityIconType +
-                        '.png");background-repeat: no-repeat;background-size: 40px 40px'
-                );
-
-                imag.setAttribute("onerror", "this.setAttribute('src','/evolved/Icons/Text/mp.png')");
-                imag.setAttribute("width", "40");
-                imag.setAttribute("height", "40");
-
-                var action = document.createElement("DIV");
-
-               
-                
-                 if('abilities' in infusion){
-                    for(ability of infusion.abilities){
-                        const found = findBy(jsonUnitAbilities, "slug", ability.slug );
-                          
-                        if(found){
-                           var spa = GetAbilityInfo(found);
-                            console.log(spa);
-                           action.appendChild(spa);
-                            
-                        }
-                   
-                    }
-                       
-                } else{
-                     action.innerHTML = abilityName + "<hr>" + abilityDescr;
-                  action.innerHTML = AddTagIconsForStatusEffects(action.innerHTML);
-                }
-                // check if it mentions stacks
-
-                action.className = "list_types";
-                action.setAttribute("style", "color:white; width:1000px");
-
-                var stacks = document.createElement("DIV");
-
-                stacks.innerHTML = "";
-                stacks.className = "list_stacks";
-
-               if ("unlock_requirements" in infusion) {
-                    for (test of infusion.unlock_requirements) {
-                        stacks.innerHTML = test.num_required + " " + test.token_name;
-                    }
-                }
-
-                stacks.setAttribute("style", "color:white; width:300px");
-
-                var counter = document.createElement("DIV");
-
-                counter.innerHTML = "";
-                counter.className = "list_counter";
-                
-                if ("tag_filter" in infusion) {
-                    
-                        counter.innerHTML += infusion.tag_filter.condition + "<br>";
-                         for (test2 of infusion.tag_filter.children) {
-                        counter.innerHTML += test2.condition + "<br>";
-                        
-                    
-                    }
-                }
-                // let nextTwoChars = splitStacks[1].trim().match(/^\d+/)?.[0] || "";
-                
-                counter.setAttribute("style", "color:white; width:300px");
-
-                // let spa = CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr);
-
-                // findSource(a);
-
-                // abilityName += '<br><span style="font-size:10px">' + cleanName + " </span>";
-                var tex = document.createElement("DIV");
-                tex.className = "tooltip";
-  if ("tags" in infusion) {
-                    for (test of infusion.tags) {
-                        tex.innerHTML += test.tag + "<br>";
-                    }
-                }
-                
-              
-                tex.setAttribute("style", "color:white; width:250px");
-
-                // spa.className = "tooltiptext";
-              
-                counter.innerHTML = AddTagIconsForStatusEffects(counter.innerHTML);
-                document.getElementById("dataHolder").append(btn);
-                //  tex.appendChild(spa);
-
-                btn.appendChild(imag);
-                btn.append(tex);
-                btn.append(action);
-                btn.append(stacks);
-                btn.append(counter);
-                //addTooltipListeners(tex, spa);
-            }
+          
             async function CheckLengths(list) {
                 // let card = await spawnSpellCards(list);
+                const holder = document.getElementById("dataHolder");
                 for (let i = 0; i < list.length; i++) {
-                    ShowInfusion(list[i]);
+                    // skip damage for now
+                    if(list[i].name.indexOf(" Damage") != -1){
+                        continue;
+                    }
+                   holder.appendChild(showInfusionListEntrySmall(list[i]));
                 }
+            }
+            
+            function sortDivsList(sortType) {
+                const currentbutton = document.getElementById(`${sortType}-button`);
+                const ascendingOrder = !currentbutton.classList.contains("activeDown");
+
+                document.querySelectorAll(".sortingButton").forEach((btn) => (btn.className = "sortingButton"));
+                currentbutton.classList.add(ascendingOrder ? "activeDown" : "activeUp");
+
+                const container = document.getElementById(currentView || "dataHolder");
+                const elements = Array.from(container.querySelectorAll(".list_abilityslot"));
+
+                const selectorMap = {
+                    range: (el) => el.querySelector(".list_range")?.innerHTML,
+                    accuracy: (el) => el.querySelector(".list_accuracy")?.innerHTML,
+                    damage: (el) => el.querySelector(".ability_damage")?.innerHTML,
+                    action: (el) => el.querySelector(".list_action")?.innerHTML,
+                    type: (el) => el.querySelector(".list_types")?.innerHTML,
+                    default: (el) => el.querySelector(".tooltip")?.innerHTML
+                };
+
+                const selector = selectorMap[sortType] || selectorMap.default;
+                const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+
+                elements
+                    .sort((a, b) => {
+                        let valA = selector(a);
+                        let valB = selector(b);
+
+                        if (sortType === "tier") {
+                            valA = deromanize(valA.split("Tier ")[1]);
+                            valB = deromanize(valB.split("Tier ")[1]);
+                        }
+
+                        return collator.compare(ascendingOrder ? valA : valB, ascendingOrder ? valB : valA);
+                    })
+                    .forEach((el) => container.appendChild(el));
+
+                sorting = `${sortType}:${ascendingOrder}`;
             }
         </script>
 
@@ -176,15 +85,41 @@
             </div>
         </div>
 
-        <div class="w3-container">
+       <div class="w3-container" style="  justify-content: center;">
             <div class="w3-bar w3-black" id="buttonHolder"></div>
+           <div class="list_abilityslotfilter">
+                <button style="width: 300px" class="sortingButton" id="name-button" onclick="sortDivsList('name')">
+                    Name
+                </button>
+                <button style="width: 80px" class="sortingButton" id="range-button" onclick="sortDivsList('range')">
+                    Range <range></range>
+                </button>
+                <button
+                    style="width: 150px"
+                    class="sortingButton"
+                    id="accuracy-button"
+                    onclick="sortDivsList('accuracy')">
+                    Acc.<br />
+                    <accuracy></accuracy>
+                </button>
+                <button style="width: 150px" class="sortingButton" id="damage-button" onclick="sortDivsList('damage')">
+                    Damage<br />
+                    <damageblight></damageblight>
+                </button>
+                <button style="width: 100px" class="sortingButton" id="action-button" onclick="sortDivsList('action')">
+                    Action <repeatingAction></repeatingAction>
+                </button>
+                <button style="width: 200px" class="sortingButton" id="type-button" onclick="sortDivsList('type')">
+                    Type
+                </button>
+            </div>
 
             <div id="dataHolder" class="divContainer">
-                <div id="spell" class="mod_card"></div>
             </div>
         </div>
     </body>
 </html>
+
 <footer>
     <br />
     <br />

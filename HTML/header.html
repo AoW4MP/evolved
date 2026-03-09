@@ -27,8 +27,8 @@
                 </div>
             </div>
             <label style="display: block; position: relative; left: -86px">
-                WIP
-                <select id="languageSelect" class="button-random" onchange="SwitchToBeta()">
+                (Languages Broken ATM)
+                <select id="languageSelect" style="display:none" class="button-random" onchange="SwitchToBeta()">
                     <option value="EN">English</option>
                     <option value="DE">Deutsch</option>
                     <option value="ES">Español</option>
@@ -64,16 +64,16 @@
             </div>
 
             <a href="/evolved/" style=" text-decoration: none;"><div class="hero-text">Age of Wonders 4 Evolved</div></a>
-            <div class="mid-text" style="display: block; margin: 15px">
+            <div class="mid-text" style="display: none; margin: 15px">
                 Switch To Scorpion Beta Dataset:<input type="checkbox" id="showBetaCheckbox" onclick="SwitchToBeta()" />
                 <br /><i>(only changes exported dataset, images can break, english only)</i>
             </div>
-            <div class="current-version">Updated: 16 February 2026</div>
+            <div class="current-version">Updated: 9th of March, 2026</div>
 
             <div class="hero-text" style="display: block">
                 <img style="
-    position: relative;display:none;
-    top: -21px;" src="/evolved/Icons/Text/ThroneOfBloodLogo.png" width="442px" />
+    position: relative;display:block;
+    top: 0px;" src="/evolved/Icons/Text/RiseFromRuinLogo.png" width="442px" />
             </div>
             <ul id="menu">
                 <li>
@@ -146,6 +146,11 @@
                                 <li>
                                     <a id="culture-architect" href="/evolved/HTML/ArchitectUnits.html?type=surveyor&"
                                         ><img src="/evolved/Icons/Interface/Header/architect.png" width="20px" /> Architect</a
+                                    >
+                                </li>
+                                 <li>
+                                    <a id="culture-nomad" href="/evolved/HTML/NomadUnits.html?type=duneriderConquerors&"
+                                        ><img src="/evolved/Icons/Interface/Header/nomad.png" width="20px" /> Nomad</a
                                     >
                                 </li>
                             </ul>
@@ -238,6 +243,11 @@
                                  <li>
                                     <a id="tomesU-tob" href="/evolved/HTML/ThronesOfBloodUnits.html"
                                         ><img src="/evolved/Icons/Text/ThronesOfBlood.png" width="20px" /> Thrones of Blood</a
+                                    >
+                                </li>
+                                   <li>
+                                    <a id="tomesU-rfr" href="/evolved/HTML/RiseFromRuinTomeUnits.html"
+                                        ><img src="/evolved/Icons/Text/RiseFromRuin.png" width="20px" /> Rise From Ruin</a
                                     >
                                 </li>
                             </ul>

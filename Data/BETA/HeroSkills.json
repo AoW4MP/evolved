@@ -1350,7 +1350,7 @@
   "type": "normal",
   "abilities": [
    {
-    "slug": "hs_death_knight_raise_undead_ability_hs_death_knight_raise_undead"
+    "slug": "hs_warlock_raise_undead_ability_hs_death_knight_raise_undead"
    }
   ],
   "resid": 4995046967483,
@@ -4419,7 +4419,7 @@
   "resid": 5222680235172,
   "tree_name": "<classRitualist></classRitualist> Ritualist",
   "tree_pos_y": 450.0,
-  "description": "<hyperlink>Support</hyperlink> abilities grant:<bulletlist><bullet>+1 Status Protection for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+  "description": "<hyperlink>Support</hyperlink> abilities grant:<bulletlist><bullet>+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5222680233749
@@ -5813,7 +5813,7 @@
   "tree_pos_x": 300.0,
   "tree_pos_y": 450.0,
   "id": "hs_ranger_kill_shot",
-  "description": "Killing an enemy unit reduces active cooldowns by <turn></turn> Turn.<br>/Can only trigger once per turn.",
+  "description": "Killing an enemy unit resets all ability cooldowns. Can only trigger once per turn.",
   "required_skills": [
    {
     "resid": 4995046966479
@@ -7336,6 +7336,9 @@
    },
    {
     "resid": 5003636902596
+   },
+   {
+    "resid": 5046586585229
    }
   ]
  },
@@ -11040,7 +11043,7 @@
   "tree_pos_y": 150.0,
   "id": "hs_stunning_drain",
   "DLC": "THRONESOFBLOOD ",
-  "description": "<hyperlink>Blood Drain</hyperlink> abilities gain a base 90% chance of inflicting Stunned for 1 <turn></turn> Turn.",
+  "description": "<hyperlink>Blood Drain</hyperlink> abilities gain a base 60% chance of inflicting Stunned for 1 <turn></turn> Turn.",
   "required_skills": [
    {
     "resid": 5046586584708
@@ -11738,7 +11741,7 @@
   "tree_pos_x": 150.0,
   "tree_pos_y": 350.0,
   "id": "hs_spellblade_spell_penetration",
-  "description": "All attacks ignore 3 <resistance></resistance> <hyperlink>Resistance</hyperlink> and 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
+  "description": "All attacks ignore 1 <resistance></resistance> <hyperlink>Resistance</hyperlink> and 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
   "required_skills": [
    {
     "resid": 5111011085218
@@ -12085,7 +12088,7 @@
   "tree_pos_x": 250.0,
   "tree_pos_y": 450.0,
   "id": "hs_warlock_tuned_magic",
-  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Ignore 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet></bulletlist>",
+  "description": "Magic attacks ignore 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
   "required_skills": [
    {
     "resid": 5222680233313
@@ -13649,7 +13652,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "resid": 5046586582872,
@@ -13659,7 +13662,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "resid": 5046586582871,
@@ -13669,7 +13672,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "abilities": [
@@ -13707,7 +13710,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "abilities": [
@@ -15351,7 +15354,7 @@
   "name": "Elite March",
   "hero_property": "Shadow Property",
   "DLC": "THRONESOFBLOOD ",
-  "description": "Gravemarch now conjures the bodies of Tier 3 and Tier 4 Undead units.",
+  "description": "Gravemarch now conjures the bodies of Tier 3 and Tier 4 Undead units and has its cooldown reduced by 2.",
   "required_skills": [
    {
     "resid": 5046586585229
@@ -15546,7 +15549,7 @@
   "name": "Shadow Transformation",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Undead unit type</bullet><bullet>Life Steal</bullet><bullet>All attacks gain 90% base chance of inflicting Soulbound</bullet>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Undead unit type</bullet><bullet>Life Steal</bullet><bullet>Slain units transform into <hyperlink>Decaying Zombies</hyperlink>, except in water battles.</bullet></bulletlist>"
  },
  {
   "abilities": [

@@ -332,6 +332,9 @@
    },
    {
     "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
   "name": "Flamer Focus",
@@ -417,15 +420,15 @@
   "icon": "0000049700003778"
  },
  {
-  "casting_cost": "15<mana></mana> ",
+  "casting_cost": "20<mana></mana> ",
   "resid": 5046586587025,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "commanders_call",
   "DLC": "RISEFROMRUIN ",
   "tactical": true,
-  "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gain 10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist>",
+  "description": "Friendly units in a 2-hex radius:<bulletlist><bullet>Heal 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gain 10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist>",
   "name": "Commander's Call",
-  "operation_point_cost": 20,
+  "operation_point_cost": 25,
   "icon": "0000049700003787"
  },
  {
@@ -522,7 +525,7 @@
   "id": "sandstorm",
   "DLC": "RISEFROMRUIN ",
   "tactical": true,
-  "description": "Conjure a <hyperlink>Sandstorm</hyperlink> in a 3-hex radius that lasts for 3 <turn></turn> Turns.",
+  "description": "Conjure a <hyperlink>Sandstorm</hyperlink> in a 2-hex radius that lasts for 3 <turn></turn> Turns.",
   "name": "Sandstorm",
   "operation_point_cost": 25,
   "icon": "0000049700003666"
@@ -569,15 +572,15 @@
   "icon": "0000049700003662"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 5046586586753,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "desertification",
   "DLC": "RISEFROMRUIN ",
   "tactical": false,
-  "description": "Target and adjacent <hyperlink>Provinces</hyperlink> on the surface gain <hyperlink>Sand</hyperlink>.",
+  "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Sand</hyperlink>.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Desertification",
-  "operation_point_cost": 45,
+  "operation_point_cost": 80,
   "icon": "000004970000365E"
  },
  {
@@ -741,7 +744,7 @@
   "icon": "0000049700003296"
  },
  {
-  "casting_cost": "15<mana></mana> ",
+  "casting_cost": "20<mana></mana> ",
   "resid": 5046586585790,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "rite_of_life_leeching",
@@ -749,7 +752,7 @@
   "tactical": true,
   "description": "Target friendly unit sustains 5 unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all friendly units in a 2-hex radius gain:<bulletlist><bullet>Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Life Steal for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Rite of Life Leeching",
-  "operation_point_cost": 20,
+  "operation_point_cost": 25,
   "icon": "0000049700003286"
  },
  {
@@ -3207,7 +3210,7 @@
   ]
  },
  {
-  "casting_cost": "10<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 5003636905483,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "resilient_incarnation",
@@ -3215,7 +3218,7 @@
   "tactical": true,
   "description": "Friendly units in a 1-hex radius for 1 <turn></turn> Turn gain:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>, +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>An additional +1 <defense></defense> <hyperlink>Defense</hyperlink>, +1 <resistance></resistance> <hyperlink>Resistance</hyperlink> per stack of Affinity Incarnate.</bullet></bulletlist>",
   "name": "Resilient Incarnation",
-  "operation_point_cost": 15,
+  "operation_point_cost": 20,
   "icon": "0000048D000015C1"
  },
  {

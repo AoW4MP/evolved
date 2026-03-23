@@ -791,11 +791,6 @@
   "display_order": 6
  },
  {
-  "starting_bonuses": [
-   {
-    "description": "Transformation Ascetics"
-   }
-  ],
   "affinities": [
    {
     "name": "1<order></order> Order Affinity"
@@ -806,6 +801,11 @@
   "point_cost": 1,
   "id": "transformation_ascetics",
   "name": "Transformation Ascetics",
+  "incompatible_society_traits": [
+   {
+    "name": "Runesmiths"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -816,6 +816,11 @@
   "front_end": false,
   "type": "society",
   "display_order": 6,
+  "starting_bonuses": [
+   {
+    "description": "Transformation Ascetics"
+   }
+  ],
   "icon": "0000049300001214"
  },
  {
@@ -2840,7 +2845,7 @@
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>."
    },
    {
-    "name": "Units gain +10 <hyperlink><xp></xp> Experience</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> while you are at the maximum good <goodact></goodact> <hyperlink>Alignment</hyperlink>."
+    "name": "Units gain +15 <hyperlink><xp></xp> Experience</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> while you are at the maximum good <goodact></goodact> <hyperlink>Alignment</hyperlink>."
    }
   ],
   "enabled": true,

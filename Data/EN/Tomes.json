@@ -130,7 +130,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>All friendly units gain Siege Breaker while sieging.</bullet><bullet>During battle:<bulletlist></bullet><bullet>All friendly units gain +15% <hyperlink>Critical Hit</hyperlink> chance in battle.</bullet><bullet>Random hexes are set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist><bullet>If victorious, Razing and Migrating this city requires 1 less <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>At the start of combat random hexes are set <hyperlink>On Fire</hyperlink>.</bullet><bullet>During battle all friendly units gain +15% <hyperlink>Critical Hit</hyperlink> chance.</bullet><bullet>If victorious, Razing and Migrating this city requires 1 less <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Conqueror's Edict",
     "siege_project_slug": "conquerors_edict",
     "tier": 5,
@@ -210,7 +210,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "Target and adjacent <hyperlink>Provinces</hyperlink> on the surface gain <hyperlink>Sand</hyperlink>.",
+    "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Sand</hyperlink>.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
     "name": "Desertification",
     "spell_slug": "desertification",
     "tier": 3,
@@ -1104,20 +1104,20 @@
     "description": "Target province:<bulletlist><bullet>Alters terrain to Swamp, if land.</bullet><bullet>Becomes Downpouring for <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used underground.",
     "name": "Downpour",
     "spell_slug": "downpour",
-    "tier": 7,
+    "tier": 5,
     "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
    },
    {
     "description": "<bulletlist><bullet>All units become Wet for <turn></turn> Turns</bullet><bullet>Up to random enemy units:<bulletlist></bullet><bullet>Sustain <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a base % chance of becoming Electrified for <turn></turn> Turns.</bullet></bulletlist></bulletlist><br></br>This spell repeats at the start of each turn for the next <turn></turn> Turns.",
     "name": "Lightning Storm",
     "spell_slug": "lightning_storm",
-    "tier": 7,
+    "tier": 5,
     "type": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>"
    },
    {
     "description": "<bulletlist><bullet>+12 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>For each Stormport built in your empire, gain:<bulletlist></bullet><bullet>+4 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>+3 <gold></gold> <hyperlink>Gold</hyperlink></bullet></bulletlist></bulletlist><br></br>Requires a Coastal <hyperlink>Province Improvement</hyperlink> in order to build.",
     "name": "Stormport",
-    "tier": 7,
+    "tier": 5,
     "type": "<hyperlink>City Structure</hyperlink>",
     "upgrade_slug": "stormport"
    },
@@ -1125,20 +1125,20 @@
     "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Coastal <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet></bulletlist>",
     "name": "Bounty of the Sea",
     "spell_slug": "bounty_of_the_sea",
-    "tier": 6,
+    "tier": 5,
     "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>"
    },
    {
     "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Amphibious</bullet><bullet>Slip Away</bullet><bullet>+ <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet>+ <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
     "name": "Naga Transformation",
     "spell_slug": "naga_transformation",
-    "tier": 7,
+    "tier": 6,
     "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
    },
    {
     "description": "Offensive Magic Fighter Unit whose attacks arc to other enemy units.",
     "name": "Stormbringer",
-    "tier": 7,
+    "tier": 6,
     "unit_slug": "stormbringer",
     "type": "<hyperlink>Unit</hyperlink>"
    }
@@ -3126,13 +3126,6 @@
     "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
    },
    {
-    "description": "Grants enchanted units:<bulletlist><bullet>The Curse of the Reaper ability, which has a chance to instantly kill the target.</bullet></bulletlist>",
-    "name": "True Death Magic",
-    "spell_slug": "true_death_magic",
-    "tier": 9,
-    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
-   },
-   {
     "description": "Summons a full army of mid-Tier Undead units onto target world hex.",
     "name": "Raise Undead Army",
     "spell_slug": "raise_undead_army",
@@ -3214,6 +3207,13 @@
   "tier": 4,
   "icon": "0000041B0000172D",
   "skills": [
+   {
+    "description": "Grants enchanted units:<bulletlist><bullet>The Curse of the Reaper ability, which has a chance to instantly kill the target.</bullet></bulletlist>",
+    "name": "True Death Magic",
+    "spell_slug": "true_death_magic",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
    {
     "description": "Target friendly City:<bulletlist><bullet>No longer gains any <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
     "name": "Harvest Population",

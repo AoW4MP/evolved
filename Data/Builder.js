@@ -198,6 +198,7 @@ function GetUnitTierAndName(id, subcultureCheck) {
             continue;
         }
         let unitLoc = jsonUnitsLocalized.find((entry) => entry.resid === unit.resid);
+
         // Prepare the unit's name
         let name = unitLoc.name;
 
@@ -205,6 +206,10 @@ function GetUnitTierAndName(id, subcultureCheck) {
         if (MountedSpecialList.includes(id) || CheckIfOptionalCavalry(id)) {
             name += " <mountSpecial></mountSpecial>";
         }
+
+        /* if('DLC' in unit){
+              name += " <" + unit.DLC + "></" + unit.DLC + ">";
+        }*/
 
         // Add subculture tags if available
         if ("sub_culture_name" in unit) {
@@ -853,13 +858,11 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
         abilityReq,
         abilityMod = "";
 
-   
-
     const abilityEn = jsonUnitAbilities.find((entry) => entry.slug === a);
-     const abilityLoc = jsonUnitAbilitiesLocalized.find((entry) => entry.slug === abilityEn.slug);
-    
-     console.log(abilityEn);
-     console.log(abilityLoc);
+    const abilityLoc = jsonUnitAbilitiesLocalized.find((entry) => entry.slug === abilityEn.slug);
+
+    console.log(abilityEn);
+    console.log(abilityLoc);
     abilityDam = "";
     if ("damage" in abilityLoc) {
         abilityDam = abilityLoc.damage;
@@ -1139,7 +1142,7 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
         btn.append(imageExtra);
     }
 
-    if (Melee != "" ) {
+    if (Melee != "") {
         imageExtra = document.createElement("IMG");
         imageExtra.setAttribute("src", "/evolved/Icons/Text/armor_small.png");
         imageExtra.setAttribute("style", " position: absolute; height: 15px; left: 30px;bottom: 5px;");
@@ -1424,7 +1427,7 @@ function addPassiveslot(a, div, enchant) {
         if (a === jsonUnitAbilitiesLocalized[j].slug) {
             abilityName = jsonUnitAbilitiesLocalized[j].name;
             abilityIcon = jsonUnitAbilitiesLocalized[j].icon;
-            
+
             abilityDescr = jsonUnitAbilitiesLocalized[j].description;
 
             let btn = document.createElement("DIV");
@@ -1615,50 +1618,45 @@ function addResistanceSlot(a, resistance, defense, holder) {
             if (a.indexOf("weakness") !== -1) {
                 split = a.split("weakness_");
                 num = "-" + split[1];
-            }
-            else if (a.indexOf("resistance") !== -1) {
+            } else if (a.indexOf("resistance") !== -1) {
                 split = a.split("resistance_");
                 num = split[1];
-            }
-
-            else  {
+            } else {
                 split = a.split("resistance_");
                 num = "x";
             }
 
             const damageRedText = findBy(jsonAllFromPOLocalized, "id", "INTERFACE@TEXT");
 
-           
-                spa.innerHTML +=
-                    "<br><br>" +
-                    damageRedText.damage_reduction +
-                    ": <br> " +
-                    firstPart +
-                    ' <span style="color:white;">' +
-                    GetDamageReductionPercentage(defense, num) +
-                    '</span> ( From <span style="color:white;">' +
-                    defense +
-                    "</span> <defense> </defense>";
-                if (num != undefined) {
-                    if (num > 0) {
-                        spa.innerHTML += "+";
-                    }
-                    spa.innerHTML += num;
+            spa.innerHTML +=
+                "<br><br>" +
+                damageRedText.damage_reduction +
+                ": <br> " +
+                firstPart +
+                ' <span style="color:white;">' +
+                GetDamageReductionPercentage(defense, num) +
+                '</span> ( From <span style="color:white;">' +
+                defense +
+                "</span> <defense> </defense>";
+            if (num != undefined) {
+                if (num > 0) {
+                    spa.innerHTML += "+";
                 }
-                spa.innerHTML +=
-                    "<br>" +
-                    firstPart +
-                    GetDamageReductionPercentage(resistance, num) +
-                    '</span> ( From <span style="color:white;">' +
-                    resistance +
-                    "</span> <resistance> </resistance>";
-                if (num != undefined) {
-                    if (num > 0) {
-                        spa.innerHTML += "+";
-                    }
-                    spa.innerHTML += num;
+                spa.innerHTML += num;
+            }
+            spa.innerHTML +=
+                "<br>" +
+                firstPart +
+                GetDamageReductionPercentage(resistance, num) +
+                '</span> ( From <span style="color:white;">' +
+                resistance +
+                "</span> <resistance> </resistance>";
+            if (num != undefined) {
+                if (num > 0) {
+                    spa.innerHTML += "+";
                 }
-            
+                spa.innerHTML += num;
+            }
 
             imag.setAttribute("width", "25");
             imag.setAttribute("height", "25");
@@ -1692,13 +1690,10 @@ function addResistanceSlot(a, resistance, defense, holder) {
             if (a.indexOf("weakness") !== -1) {
                 split = a.split("weakness_");
                 abilityDam = '<p class="resistanceNumber" style="color:red;">-' + split[1];
-            }
-            else if (a.indexOf("resistance") !== -1) {
+            } else if (a.indexOf("resistance") !== -1) {
                 split = a.split("resistance_");
                 abilityDam = '<p class="resistanceNumber" style="color:lawngreen;">' + split[1];
-            }
-
-            else  {
+            } else {
                 split = a.split("resistance_");
                 abilityDam = '<p class="resistanceNumber">IMM';
             }
@@ -2393,8 +2388,8 @@ function findSpellsWithArgument(argumentaffinity, argumentType) {
                         jsonTomes[i].name.toUpperCase().indexOf("High".toUpperCase()) !== -1 ||
                         jsonTomes[i].name.toUpperCase().indexOf("Industrious".toUpperCase()) !== -1 ||
                         jsonTomes[i].name.toUpperCase().indexOf("Reaver".toUpperCase()) !== -1 ||
-                        jsonTomes[i].name.toUpperCase().indexOf("Oathsworn".toUpperCase()) !== -1||
-                        jsonTomes[i].name.toUpperCase().indexOf("Architect".toUpperCase()) !== -1||
+                        jsonTomes[i].name.toUpperCase().indexOf("Oathsworn".toUpperCase()) !== -1 ||
+                        jsonTomes[i].name.toUpperCase().indexOf("Architect".toUpperCase()) !== -1 ||
                         jsonTomes[i].name.toUpperCase().indexOf("Nomad".toUpperCase()) !== -1
                     ) {
                         for (k in jsonTomes[i].skills) {
@@ -3044,8 +3039,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     function createResistanceEntry(type, label, baseResistance, additionalValue, typeOfDef) {
         // Handle immunity special case
         if (additionalValue === "immune") {
-          
-           return `${label} : <span style="color:gold;">IMMUNE</span><br>`;
+            return `${label} : <span style="color:gold;">IMMUNE</span><br>`;
             //return `${label}: Immune<br>`;
         }
 
@@ -3825,11 +3819,8 @@ function addLevelUpInfo(units, a, holder) {
         5: 100
     };
 
-   
-
     // Add medal sections
     let xpNeeded = xpByTier[units.tier] || 0;
-   
 
     const evolveTarget = units.evolve_target;
 
@@ -4842,7 +4833,6 @@ function showWorldStructure(a, divOrigin) {
         if ("events" in structure) {
             // events are here
             for (var i in structure.events) {
-                
                 eventDiv.appendChild(CreateAncientWonderEventSetup(structure.events[i].name, structure));
             }
         }
@@ -5017,7 +5007,38 @@ const weapons = [
     "Obelisk"
 ];
 const armor = ["Shield", "Head", "Armor", "Legs", "Ring", "Wand", "Amulet"];
-function showInfusionListEntrySmall(infusion) {
+
+const pantheonList = [
+    "umbral_staff_equipment_upgrade",
+    "umbral_greataxe_equipment_upgrade_(umbral_wake)",
+    "umbral_greataxe_equipment_upgrade_(umbral_immunity)",
+     "lashers_sword_equipment_upgrade","crowmasters_bow_equipment_upgrade",
+    "captains_shield_equipment_upgrade",
+    "earthshaker_hammer_equipment_upgrade",
+    "staff_of_necromancy_equipment_upgrade",
+    "cryomancers_staff_equipment_upgrade",
+    "druids_staff_equipment_upgrade",
+    "berserkers_greataxe_equipment_upgrade",
+    "tyrants_shield_equipment_upgrade",
+    "innate_spell_jammer_infusion_equipment_upgrade",
+    "inner_grace_infusion_equipment_upgrade",
+    "mirror_veil_infusion_equipment_upgrade",
+    "overcharge_cast_infusion_equipment_upgrade",
+    "greater_farsight_infusion_equipment_upgrade",
+    "pierce_shot_infusion_equipment_upgrade",
+    "pull_shot_infusion_euipment_upgrade",
+    "inspiring_presence_infusion_equipment_upgrade",
+    "wail_of_the_banshee_infusion_equipment_upgrade",
+    "summon_spirit_hawk_infusion_equipment_upgrade",
+    "defense_mode_nullify_infusion_equipment_upgrade",
+    "subdue_infusion_equipment_upgrade",
+    "equipment_upgrade_defense_mode_protective_wall",
+    "bless_infusion_equipment_upgrade",
+"fearless_infusion_equipment_upgrade"
+    
+    
+];
+function showInfusionListEntrySmall(infusion, selectedTreeFilter, selectedSubTreeFilter, selectedMMTreeFilter) {
     const div = document.createElement("div");
     div.className = "list_abilityslot";
     div.setAttribute("style", "font-size:15px: color:white");
@@ -5032,27 +5053,60 @@ function showInfusionListEntrySmall(infusion) {
     name.innerHTML = infusion.name;
     name.className = "tooltip";
     name.setAttribute("style", "width:250px;");
-
+    const type = document.createElement("div");
+    type.setAttribute("style", "width:50px;");
     if ("abilities" in infusion) {
         for (const slug of infusion.abilities) {
             const ab = findBy(jsonUnitAbilitiesLocalized, "slug", slug.slug);
             const spa = GetAbilityInfo(ab);
             addTooltipListeners(name, spa);
         }
+        type.innerHTML = "Active";
+    } else if (infusion.name.indexOf(" Damage") != -1) {
+        const spa = document.createElement("span");
+        spa.innerHTML = infusion.description;
+        addTooltipListeners(name, spa);
+        type.innerHTML = "Damage";
     } else {
         const spa = document.createElement("span");
         spa.innerHTML = infusion.description;
         addTooltipListeners(name, spa);
+        type.innerHTML = "Passive";
     }
+
+    // Main tree filter
+    // if (selectedTreeFilter !== "all" && !treeName.includes(selectedTreeFilter.toLowerCase())) return;
+
+    // Sub-type filter
+    if (selectedSubTreeFilter !== "all" && type.innerHTML.toLocaleLowerCase() !== selectedSubTreeFilter.toLowerCase())
+        return;
 
     const requirements = document.createElement("div");
     requirements.setAttribute("style", "width:100px; color:white");
+    if (pantheonList.includes(infusion.id)) {
+        requirements.innerHTML += "<pantheon></pantheon>"; // + unlocks.token_name ;
+    }
     if ("unlock_requirements" in infusion) {
         for (const unlocks of infusion.unlock_requirements) {
             const nameClean = unlocks.token_name.toLowerCase().replaceAll(" ", "_");
             requirements.innerHTML += unlocks.num_required + " <" + nameClean + "></" + nameClean + ">"; // + unlocks.token_name ;
         }
+    } else if (infusion.name.indexOf("Rune of ") != -1) {
+        requirements.innerHTML += "GiantKing"; // + unlocks.token_name ;
+    } else if (!pantheonList.includes(infusion.id)) {
+        // always onlocked
+        requirements.innerHTML += "Always"; // + unlocks.token_name ;
     }
+
+    // console.log(requirements.innerHTML + selectedMMTreeFilter);
+    // Sub-type filter
+    if (
+        selectedMMTreeFilter !== "all" &&
+        requirements.innerHTML.toLowerCase().indexOf(selectedMMTreeFilter.toLowerCase().replaceAll(" ", "_")) == -1
+    ) {
+        return;
+    }
+
     // point cost
     const points = document.createElement("div");
     points.innerHTML = "";
@@ -5117,22 +5171,34 @@ function showInfusionListEntrySmall(infusion) {
 
         rule.appendChild(weaponHolder);
     }
-    renderRule(infusion.tag_filter, rule);
+
+    const textBased = document.createElement("div");
+    renderRule(infusion.tag_filter, rule, textBased);
+    // console.log(textBased);
+    if (
+        selectedTreeFilter !== "all" &&
+        textBased.innerHTML.toLowerCase().indexOf(selectedTreeFilter.toLowerCase()) == -1
+    ) {
+        return;
+    }
 
     div.appendChild(icon);
+    div.appendChild(type);
+
     div.appendChild(name);
     div.appendChild(points);
     div.appendChild(requirements);
     div.appendChild(slot);
+    //div.appendChild(textBased);
     return div;
 }
 
-function renderRule(node, weaponHolder) {
+function renderRule(node, weaponHolder, textBased) {
     const parsed = parseCondition(node.condition);
 
     if (parsed.type === "all" || parsed.type === "any") {
         node.children.forEach((child) => {
-            renderRule(child, weaponHolder);
+            renderRule(child, weaponHolder, textBased);
         });
     }
 
@@ -5146,15 +5212,28 @@ function renderRule(node, weaponHolder) {
     if (name == "Instrument") {
         name = "Amulet";
     }
-    if (weapons.includes(name) || armor.includes(name)) {
-        const test = weaponHolder.querySelector("#" + name);
-        test.innerHTML = "✔";
+    for (const entry of weapons) {
+        if (name.indexOf(entry) != -1) {
+            const test = weaponHolder.querySelector("#" + entry);
+            test.innerHTML = "✔";
+        }
+    }
+    for (const entry of armor) {
+        if (name.indexOf(entry) != -1) {
+            const test = weaponHolder.querySelector("#" + entry);
+            test.innerHTML = "✔";
+        }
+    }
+    /* if (weapons.includes(name) || armor.includes(name)) {
+      
     } else {
         console.log("Couldnt find: " + name);
-    }
-    text.textContent = parsed.text.replaceAll("inherited ", "");
+    }*/
+    text.textContent = name;
+
     //text.setAttribute('style', "display:none");
-    weaponHolder.appendChild(text);
+    textBased.appendChild(text);
+
     //  rule.appendChild(icon);
     // rule.appendChild(text);
 
@@ -5195,11 +5274,10 @@ function CreateAncientWonderEventSetup(eventHandle, structure) {
     divHolder.appendChild(div);
 
     if ("nameOverrides" in structure) {
-      
         // names
         const overrides = findBy(jsonAllFromPOLocalized, "id", structure.nameOverrides);
         console.log(overrides);
-       
+
         const rightSites = getEventStructureNameByPrefix(overrides, eventHandle);
 
         for (var i in rightSites) {

@@ -1121,8 +1121,9 @@ function GetCurrentChoiceList() {
 
 function GetAffinityTotalFromList(list, tomeList, subType, subCulture, subSociety1, subSociety2) {
     var input = "";
+    console.log(list);
     for (i = 0; i < list.length; i++) {
-        if (list[i] != "") {
+        if (list[i] != "" && list[i] != undefined) {
             if ("affinity" in list[i]) {
                 input += list[i].affinity + ",";
             }
@@ -1770,7 +1771,7 @@ function SetTomePreview(span, origin) {
                 "</bullet>";
         }
     }
-    if ("skills" in locOrigin) {
+    if ("skills" in origin) {
         span.innerHTML += '<p  style="color: #97d7a2;>' + '<span style="font-size=20px;">Skills:<br></p>';
 
         for (let index = 0; index < origin.skills.length; index++) {
@@ -1816,16 +1817,19 @@ function SetTomePreview(span, origin) {
             else if (origin.skills[index].type.indexOf("Siege") != -1) {
                 var slug = "";
                 if ("siege_project_slug" in origin.skills[index]) {
-                    slug = locOrigin.skills[index].siege_project_slug;
+                    slug = origin.skills[index].siege_project_slug;
                 } else {
-                    slug = locOrigin.skills[index].name.replaceAll(" ", "_").toLowerCase();
+                    slug = origin.skills[index].name.replaceAll(" ", "_").toLowerCase();
                 }
-
-                const siege = findBy(jsonSiegeProjectsLocalized, "id", slug);
-
+                const siegeEN = findBy(jsonSiegeProjects, "id", slug);
+                const siege = findBy(jsonSiegeProjectsLocalized, "resid", siegeEN.resid);
+                let iconLink = "";
+                if ("icon" in siege) {
+                    iconLink = siege.icon;
+                }
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/SiegeProjectIcons/' +
-                    siege.icon +
+                    iconLink +
                     '.png">' +
                     siege.name +
                     "</bullet>";
@@ -1833,9 +1837,13 @@ function SetTomePreview(span, origin) {
             // city structure
             else if (origin.skills[index].type.indexOf("Structure") != -1) {
                 const struc = GetStructure(locOrigin.skills[index].upgrade_slug);
+                let iconLink = "";
+                if ("icon" in struc) {
+                    iconLink = struc.icon;
+                }
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
-                    struc.icon +
+                    iconLink +
                     '.png">' +
                     struc.name +
                     "</bullet>";
@@ -1843,16 +1851,21 @@ function SetTomePreview(span, origin) {
             // province Improvement
             else if (origin.skills[index].type.indexOf("Province") != -1) {
                 const struc = GetStructure(locOrigin.skills[index].upgrade_slug);
+                let iconLink = "";
+                if ("icon" in struc) {
+                    iconLink = struc.icon;
+                }
+
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
-                    struc.icon +
+                    iconLink +
                     '.png">' +
                     struc.name +
                     "</bullet>";
             }
             // empire upgrades
             else if (origin.skills[index].type.indexOf("Empire") != -1) {
-                var imageLinkName = locOrigin.skills[index].name.replaceAll(" ", "_").toLowerCase();
+                var imageLinkName = origin.skills[index].name.replaceAll(" ", "_").toLowerCase();
                 span.innerHTML +=
                     '<bullet> <img width="20px" src="/evolved/Icons/ExtraIcons/' +
                     imageLinkName +
@@ -1863,11 +1876,12 @@ function SetTomePreview(span, origin) {
             // normal spell
             else {
                 // call young dragon failing? loc will fail here
-                 if (locOrigin.skills[index].name == "Call young Dragon"){
-                     locOrigin.skills[index].spell_slug = "call_young_dragon";
-                 }
-                console.log( locOrigin.skills[index].name);
-                const spell = findBy(jsonSpellsLocalized, "id", locOrigin.skills[index].spell_slug);
+                if (origin.skills[index].name == "Call young Dragon") {
+                    origin.skills[index].spell_slug = "call_young_dragon";
+                }
+                console.log(origin.skills[index].name);
+                const spellEN = findBy(jsonSpells, "id", origin.skills[index].spell_slug);
+                const spell = findBy(jsonSpellsLocalized, "resid", spellEN.resid);
                 let iconLink = "";
                 if ("icon" in spell) {
                     iconLink = spell.icon;
@@ -2269,12 +2283,14 @@ function CreateUnitIcon(listEntry, colorEntry) {
     allAbilities.innerHTML +=
         '<span style="font-size: 20px ;display:flex" ><img  src="/evolved/Icons/Text/health.png" width="25 " height="25 ">' +
         listEntry.hp +
-        '<img src="/evolved/Icons/Text/mp.png" width="25 " height="25 ">' +
-        listEntry.mp +
-        '<img src="/evolved/Icons/Text/resistance.png" width="25 " height="25 ">' +
-        listEntry.resistance +
         '<img  src="/evolved/Icons/Text/armor.png" width="25 " height="25 ">' +
         listEntry.armor +
+        '<img src="/evolved/Icons/Text/resistance.png" width="25 " height="25 ">' +
+        listEntry.resistance +
+        '<img src="/evolved/Icons/Text/mp.png" width="25 " height="25 ">' +
+        listEntry.mp +
+        '<img src="/evolved/Icons/Text/combat_speed.png" width="25 " height="25 ">' +
+        listEntry.combat_speed +
         "</span><hr>";
     if ("secondary_passives" in listEntry) {
         for (let index = 0; index < listEntry.secondary_passives.length; index++) {

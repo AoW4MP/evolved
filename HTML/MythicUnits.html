@@ -18,7 +18,8 @@
         <script>
             function HandlePage() {
                 unitarray = FindUnitsWithSecondaryPassive("mythic_unit");
-
+                console.log(unitarray);
+                
                 if (unitarray.length > 1) {
                     for (i in unitarray) {
                         showUnitsFromList(unitarray[i], "Mythic Tier " + romanize(parseInt(parseInt(i) + 2)) + " ");

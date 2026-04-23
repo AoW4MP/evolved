@@ -339,6 +339,8 @@ async function CheckData() {
 
         jsonUnitAbilitiesLocalized.forEach((a) => (abilityMap[a.slug] = a));
         jsonUnitAbilitiesLocalized.forEach((a) => (abilityNameMap[a.name] = a));
+        
+        // maps
         HandlePage();
         if (languageSelect.value != "EN") {
             LocalizeUI();
@@ -346,9 +348,39 @@ async function CheckData() {
     }
 }
 
+const lookupMaps = new Map(); // cache of maps per "array+key" combo
+
+function buildLookupMap(array, key) {
+    const mapKey = array === jsonUnits ? "jsonUnits:" + key :
+                   array === jsonUnitAbilities ? "jsonUnitAbilities:" + key :
+                   array === jsonUnitAbilitiesLocalized ? "jsonUnitAbilitiesLocalized:" + key :
+                   array === jsonSpells ? "jsonSpells:" + key :
+                   array === jsonSpellsLocalized ? "jsonSpellsLocalized:" + key :
+                   array === jsonTomes ? "jsonTomes:" + key :
+                   array === jsonTomesLocalized ? "jsonTomesLocalized:" + key :
+                   array === jsonHeroSkills ? "jsonHeroSkills:" + key :
+                   array === jsonAllFromPOLocalized ? "jsonAllFromPOLocalized:" + key :
+                   null;
+
+    if (!mapKey) return null; // not a static array we track
+
+    if (!lookupMaps.has(mapKey)) {
+        const map = new Map();
+        for (const entry of array) {
+            if (entry[key] !== undefined) {
+                map.set(entry[key], entry);
+            }
+        }
+        lookupMaps.set(mapKey, map);
+    }
+    return lookupMaps.get(mapKey);
+}
+
 const patchDates = [
     // date ranges of patches
-      { name: "Scorpion 1.1", from: new Date("2026-03-12"), to: new Date("2026-11-29") },
+      { name: "Scorpion 1.2.1", from: new Date("2026-04-01"), to: new Date("2026-11-29") },
+     { name: "Scorpion 1.2", from: new Date("2026-03-24"), to: new Date("2026-03-31") },
+      { name: "Scorpion 1.1", from: new Date("2026-03-12"), to: new Date("2026-03-23") },
      { name: "Scorpion 1.0", from: new Date("2026-03-09"), to: new Date("2026-03-11") },
      { name: "Gargoyle 1.2.2", from: new Date("2025-12-09"), to: new Date("2026-03-08") },
       { name: "Gargoyle 1.2.1", from: new Date("2025-11-26"), to: new Date("2025-12-08") },

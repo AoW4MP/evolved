@@ -387,7 +387,7 @@
    }
   ],
   "accuracy": "100%",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [
    {
@@ -1838,7 +1838,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 0 <turn></turn>"
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "description": "Teleport to target hex.",
@@ -5487,7 +5487,7 @@
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_00000490000028DE",
-  "damage": "10<damagephysical></damagephysical> 3<damagespirit></damagespirit> ",
+  "damage": "10<damagephysical></damagephysical> 4<damagespirit></damagespirit> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
@@ -16977,11 +16977,18 @@
   "icon": "0000048D0000100F"
  },
  {
-  "modifiers": [],
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
   "description": "Single magical attack at target unit.",
   "name": "Blight Blast",
   "slug": "magic_blast_(single)_ability_0000041B000003A5",
-  "damage": "14<damageblight></damageblight> ",
+  "damage": "16<damageblight></damageblight> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Base</hyperlink>"
@@ -16996,14 +17003,6 @@
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
   "icon": "000003E600000566"
  },
  {
@@ -17273,7 +17272,7 @@
   "description": "Deals damage to target unit.",
   "name": "Lesser Burst",
   "slug": "wyvern_burst_ability_000003EC00002919",
-  "damage": "15<damagefire></damagefire> 1<damagephysical></damagephysical> ",
+  "damage": "16<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Single Shot</hyperlink>"
@@ -20242,12 +20241,6 @@
   "description": "",
   "name": "<xpCol>Spirit Protection</xpCol>",
   "slug": "Spirit_resistance_6"
- },
- {
-  "description": "+1 <hyperlink><range></range>Range</hyperlink> on base attacks.",
-  "name": "Champion Medal: Extra Range",
-  "slug": "0000049700002d58",
-  "icon": "000003E30000627B"
  },
  {
   "notes": [],
@@ -27116,7 +27109,7 @@
   "icon": "000004C000000652"
  },
  {
-  "description": "Summon a <hyperlink>Zombie</hyperlink> at the start of battle. Doesn't work in water combat.",
+  "description": "Summon a <hyperlink>Decaying Zombie</hyperlink> at the start of battle. Doesn't work in water combat.",
   "name": "Soul Keeper",
   "slug": "000004c000000beb",
   "icon": "000004C00000064C"
@@ -29165,7 +29158,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 4 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Target enemy unit has a base 90% chance of:<bulletlist><bullet>Losing -30 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>Becoming Stunned for 1 <turn></turn> Turn.</bullet></bulletlist><br></br>If unsuccessful, target loses -15 <happiness></happiness> <hyperlink>Morale</hyperlink> instead.",
@@ -29185,7 +29178,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 4 <turn></turn>"
+    "note": "Cooldown: 3 <turn></turn>"
    }
   ],
   "description": "Target enemy unit has a base 90% chance of being inflicted with:<bulletlist><bullet>Insanity for 1 <turn></turn> Turn.</bullet><bullet>5 Sundered Defense for 3 <turn></turn> Turns.</bullet><bullet>5 Sundered Resistance for 3 <turn></turn> Turns.</bullet></bulletlist>",
@@ -30182,7 +30175,7 @@
   "icon": "000004C00000065E"
  },
  {
-  "description": "Summon a <hyperlink>Zombie</hyperlink> at the start of battle. Doesn't work in water combat.",
+  "description": "Summon a <hyperlink>Decaying Zombie</hyperlink> at the start of battle. Doesn't work in water combat.",
   "name": "Soul Keeper",
   "slug": "000004c00000064d",
   "icon": "000004C00000064C"
@@ -48927,52 +48920,6 @@
   "icon": "0000041B00000E69"
  },
  {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
-  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>3 Rally</bullet><bullet>2 Regeneration</bullet></bulletlist>",
-  "name": "Song of Revelry",
-  "slug": "song_of_revelry_ability_equipment_upgrade_active_staff_song_of_revelry",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "<hyperlink>Support</hyperlink>"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
-  "icon": "000003E300005A5A"
- },
- {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
-  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>2 Strengthened</bullet><bullet>2 Fortune</bullet></bulletlist>",
-  "name": "Song of Carnage",
-  "slug": "song_of_carnage_ability_equipment_upgrade_active_staff_song_of_carnage",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "<hyperlink>Support</hyperlink>"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
-  "icon": "000003E300005A62"
- },
- {
   "modifiers": [
    {
     "description": "Base 90% chance of inflicting Burning for 3 <turn></turn> Turns.",
@@ -49355,52 +49302,6 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "3",
   "icon": "0000041B00000E69"
- },
- {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
-  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>3 Rally</bullet><bullet>2 Regeneration</bullet></bulletlist>",
-  "name": "Song of Revelry",
-  "slug": "song_of_revelry_ability_equipment_upgrade_active_wand_song_of_revelry",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "<hyperlink>Support</hyperlink>"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
-  "icon": "000003E300005A5A"
- },
- {
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
-   {
-    "note": "Cooldown: 2 <turn></turn>"
-   }
-  ],
-  "description": "Friendly units in a 1-hex radius gain:<bulletlist><bullet>2 Strengthened</bullet><bullet>2 Fortune</bullet></bulletlist>",
-  "name": "Song of Carnage",
-  "slug": "song_of_carnage_ability_equipment_upgrade_active_wand_song_of_carnage",
-  "damage": "",
-  "requisites": [
-   {
-    "requisite": "<hyperlink>Support</hyperlink>"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
-  "icon": "000003E300005A62"
  },
  {
   "modifiers": [

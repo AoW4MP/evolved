@@ -673,7 +673,7 @@
   "id": "agonize",
   "DLC": "THRONESOFBLOOD ",
   "tactical": true,
-  "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 40 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Have a base 90% chance of gaining 3 stacks of Torment until end of combat. On failure, inflict 1 stack of Torment instead.</bullet></bulletlist>",
+  "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 30 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Have a base 90% chance of gaining 3 stacks of Torment until end of combat. On failure, inflict 1 stack of Torment instead.</bullet></bulletlist>",
   "name": "Agonize",
   "operation_point_cost": 35,
   "icon": "0000049700003366"
@@ -817,7 +817,7 @@
   "tactical": false,
   "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Sunless</hyperlink>.</bullet><bullet>Enemy armies sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Desecration Ritual",
-  "operation_point_cost": 275,
+  "operation_point_cost": 150,
   "icon": "0000049700002E5B"
  },
  {
@@ -1840,7 +1840,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "monstrous_rebirth",
   "tactical": true,
-  "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals 60 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br><br></br>Cannot be used in Water Combat.",
+  "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals all of its <hyperlink><hp></hp> Hit Points</hyperlink> as <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br><br></br>Cannot be used in Water Combat.",
   "name": "Monstrous Rebirth",
   "operation_point_cost": 30,
   "icon": "0000049700000ECB"
@@ -3677,22 +3677,10 @@
     "slug": "kraken"
    },
    {
-    "slug": "mammoth"
-   },
-   {
-    "slug": "sabertooth"
-   },
-   {
-    "slug": "death_beetle"
-   },
-   {
     "slug": "infernal_juggernaut"
    },
    {
-    "slug": "inferno_hound"
-   },
-   {
-    "slug": "obsidian_wyvern"
+    "slug": "sand_worm"
    }
   ]
  },
@@ -5891,14 +5879,14 @@
   "icon": "0000041B000005E4"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4514010629343,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "call_greater_animal",
   "tactical": false,
-  "description": "<bulletlist><bullet>Choose a Tier III or Tier IV Animal unit to add to your army.</bullet><bullet>The available Animals depend on the type of terrain the spell is cast on.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Choose a Tier IV Animal to add to your army.</bullet><bullet>The available Animals depend on the type of terrain this spell is cast on.</bullet></bulletlist>",
   "name": "Call Greater Animal",
-  "operation_point_cost": 150,
+  "operation_point_cost": 200,
   "icon": "000003E300004AF7",
   "summoned_units": [
    {
@@ -5908,91 +5896,25 @@
     "slug": "white_wolf"
    },
    {
-    "slug": "thunderbird"
-   },
-   {
-    "slug": "goretusk_matriarch"
-   },
-   {
-    "slug": "frost_wyvern"
-   },
-   {
     "slug": "dire_bear"
-   },
-   {
-    "slug": "mammoth"
-   },
-   {
-    "slug": "sabertooth"
-   },
-   {
-    "slug": "slither"
-   },
-   {
-    "slug": "gold_wyvern"
    },
    {
     "slug": "hunter_spider_matriarch"
    },
    {
-    "slug": "dread_spider_matriarch"
-   },
-   {
-    "slug": "spirit_wolf"
-   },
-   {
-    "slug": "unicorn"
-   },
-   {
-    "slug": "pestilence_crocodile"
-   },
-   {
-    "slug": "death_beetle"
-   },
-   {
-    "slug": "caustic_worm"
-   },
-   {
-    "slug": "nightmare"
-   },
-   {
-    "slug": "fire_wyvern"
+    "slug": "phoenix"
    },
    {
     "slug": "infernal_juggernaut"
    },
    {
-    "slug": "inferno_hound"
-   },
-   {
-    "slug": "obsidian_wyvern"
-   },
-   {
-    "slug": "vampire_spider_matriarch"
-   },
-   {
-    "slug": "phoenix"
-   },
-   {
-    "slug": "sand_scorpion"
-   },
-   {
     "slug": "sand_worm"
-   },
-   {
-    "slug": "deep-sea_nimu"
    },
    {
     "slug": "kraken"
    },
    {
     "slug": "fractured_worm"
-   },
-   {
-    "slug": "fractured_scorpion"
-   },
-   {
-    "slug": "fractured_unicorn"
    }
   ]
  },
@@ -8307,7 +8229,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "steelfury_chant",
   "tactical": true,
-  "description": "Friendly units in a 2-hex radius: Lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
+  "description": "All friendly units lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
   "name": "Steelfury Chant",
   "operation_point_cost": 20,
   "icon": "0000041B00000115"
@@ -8417,6 +8339,21 @@
   "name": "Ilandra's Chosen",
   "operation_point_cost": 300,
   "icon": "000003DF000016E0"
+ },
+ {
+  "casting_cost": "2<thralls></thralls> ",
+  "resid": -8277668028376676878,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+  "id": "astral_keeper_ritual",
+  "tactical": false,
+  "description": "Summons an <hyperlink>Astral Keeper</hyperlink> on target hex.",
+  "name": "Astral Keeper Ritual",
+  "operation_point_cost": 100,
+  "summoned_units": [
+   {
+    "slug": "astral_keeper"
+   }
+  ]
  },
  {
   "casting_cost": "200<mana></mana> ",

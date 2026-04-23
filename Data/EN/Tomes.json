@@ -4428,7 +4428,7 @@
   "icon": "0000041B000000E5",
   "skills": [
    {
-    "description": "Friendly units in a 2-hex radius: Lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
+    "description": "All friendly units lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
     "name": "Steelfury Chant",
     "spell_slug": "steelfury_chant",
     "tier": 2,
@@ -5212,7 +5212,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>"
    },
    {
-    "description": "<bulletlist><bullet>Choose a Tier III or Tier IV Animal unit to add to your army.</bullet><bullet>The available Animals depend on the type of terrain the spell is cast on.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Choose a Tier IV Animal to add to your army.</bullet><bullet>The available Animals depend on the type of terrain this spell is cast on.</bullet></bulletlist>",
     "name": "Call Greater Animal",
     "spell_slug": "call_greater_animal",
     "tier": 5,
@@ -5520,7 +5520,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br><br></br>Cannot be used in Water Combat.",
+    "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals all of its <hyperlink><hp></hp> Hit Points</hyperlink> as <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br><br></br>Cannot be used in Water Combat.",
     "name": "Monstrous Rebirth",
     "spell_slug": "monstrous_rebirth",
     "tier": 5,

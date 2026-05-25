@@ -1,7 +1,8 @@
 searchParams = new URLSearchParams(window.location.search);
 searchKeyword = searchParams.get("u");
-var ListOfSubcultureHolders = ["Architect", "Primal", "Mystic", "Oathsworn", "Feudal", "Dark", "Nomad"];
 
+var ListOfSubcultureHolders = ["Architect", "Primal", "Mystic", "Oathsworn", "Feudal", "Dark", "Nomad"];
+var ListOfSubcultureHoldersBeta = ["Architect", "Primal", "Mystic", "Oathsworn", "Feudal", "Dark", "Nomad", "Reaver"];
 var ListOfSubsocietyHolders = ["Vision of Promise", "Vision of Ruin", "Vision of Destiny"];
 
 var currentOrigin = "";
@@ -51,6 +52,9 @@ var listOfPantheonTraits = [
 
 var currentTomeList = [];
 var currentSignatureSkills = [];
+// Tracks which tome index was clicked to open the add-tome popup, so the new tome
+// is inserted right after it instead of appended to the end. -1 means append (used during load).
+var tomeInsertionIndex = -1;
 
 function AddExtra(type, add) {
     if (type === "order") {
@@ -88,7 +92,85 @@ function addOrSubtract(extraAffinity, add) {
     return extraAffinity;
 }
 
-const extraTomesForTheorycrafting = [];
+const extraTomesForTheorycrafting = [{
+  "affinities": "1 <empirearcana></empirearcana> Empire Astral Affinity, 1 <empirenature></empirenature> Empire Nature Affinity",
+  "lore_description": "",
+  "gameplay_description": "For theorycrafting",
+  "resid": 3,
+  "id": "tome_of_the_sprite",
+  "DLC": "SECRETSOFTHEARCHMAGES ",
+  "lore_author": "",
+  "name": "Tome of the Sprite",
+  "tier": 1,
+  "icon": "tome_of_the_sprite",
+  "skills": [
+  ]
+ },{
+  "affinities": "1 <empirearcana></empirearcana> Empire Astral Affinity, 1 <empireorder></empireorder> Empire Order Affinity",
+  "lore_description": "",
+  "gameplay_description": "For theorycrafting",
+  "resid": 4,
+  "id": "tome_of_abjuration",
+  "DLC": "SECRETSOFTHEARCHMAGES ",
+  "lore_author": "",
+  "name": "Tome of Abjuration",
+  "tier": 1,
+  "icon": "tome_of_abjuration",
+  "skills": [
+  ]
+ },{
+  "affinities": "2 <empirechaos></empirechaos> Empire Chaos Affinity",
+  "lore_description": "",
+  "gameplay_description": "For theorycrafting",
+  "resid": 2,
+  "id": "tome_of_gluttony",
+  "DLC": "SECRETSOFTHEARCHMAGES ",
+  "lore_author": "",
+  "name": "Tome of Gluttony",
+  "tier": 1,
+  "icon": "tome_of_gluttony",
+  "skills": [
+  ]
+ },{
+  "affinities": "2 <empirechaos></empirechaos> Empire Chaos Affinity",
+  "lore_description": "",
+  "gameplay_description": "For theorycrafting",
+  "resid": 2,
+  "id": "tome_of_burning_passion",
+  "DLC": "SECRETSOFTHEARCHMAGES ",
+  "lore_author": "",
+  "name": "Tome of Burning Passion",
+  "tier": 2,
+  "icon": "tome_of_burning_passion",
+  "skills": [
+  ]
+ },{
+  "affinities": "1 <empirenature></empirenature> Empire Nature Affinity,1 <empireshadow></empireshadow> Empire Shadow Affinity",
+  "lore_description": "",
+  "gameplay_description": "For theorycrafting",
+  "resid": 9,
+  "id": "tome_of_the_weaver",
+  "DLC": "SECRETSOFTHEARCHMAGES ",
+  "lore_author": "",
+  "name": "Tome of the Weaver",
+  "tier": 3,
+  "icon": "tome_of_the_weaver",
+  "skills": [
+  ]
+ },{
+  "affinities": "1 <empirearcana></empirearcana> Empire Astral Affinity,1 <empireshadow></empireshadow> Empire Shadow Affinity,1 <empirechaos></empirechaos> Empire Chaos Affinity 1 <empirenature></empirenature> Empire Nature Affinity,1 <empirematter></empirematter> Empire Materium Affinity,1 <empireorder></empireorder> Empire Order Affinity",
+  "lore_description": "",
+  "gameplay_description": "For theorycrafting",
+  "resid": 1,
+  "id": "tome_of_the_cosmos",
+  "DLC": "SECRETSOFTHEARCHMAGES ",
+  "lore_author": "",
+  "name": "Tome of the Cosmos",
+  "tier": 5,
+  "icon": "tome_of_the_cosmos",
+  "skills": [
+  ]
+ }];
 
 function SetRandomStart(overwriteParameter) {
     jsonTomes.push(...extraTomesForTheorycrafting);
@@ -301,8 +383,8 @@ function selectOrigin(origin, type) {
         case "Tome":
             currentTome = origin;
             currentTomeList[0] = origin;
-            // update tome path
-            ClearTomePath();
+            // update tome path without clearing — invalid tomes will be flagged by GetInvalidTomeIndices
+            // ClearTomePath();
             selectTomePath(undefined, false);
 
             break;
@@ -374,24 +456,46 @@ function selectOrigin(origin, type) {
             break;
         case "Culture":
             currentCulture = origin;
-            if (!ListOfSubcultureHolders.includes(origin.name)) {
-                currentSubCulture = "";
-            } else {
-                let newBit;
-                // load default class
-                for (let index = 0; index < jsonFactionCreation.length; index++) {
-                    if (
-                        jsonFactionCreation[index].type == "SubCulture" &&
-                        jsonFactionCreation[index].requirement == origin.name
-                    ) {
-                        newBit = jsonFactionCreation[index];
-                        continue;
+            if (showBetaTooltip.checked) {
+                if (!ListOfSubcultureHoldersBeta.includes(origin.name)) {
+                    currentSubCulture = "";
+                } else {
+                    let newBit;
+                    // load default class
+                    for (let index = 0; index < jsonFactionCreation.length; index++) {
+                        if (
+                            jsonFactionCreation[index].type == "SubCulture" &&
+                            jsonFactionCreation[index].requirement == origin.name
+                        ) {
+                            newBit = jsonFactionCreation[index];
+                            continue;
+                        }
                     }
-                }
 
-                // console.log(newBit.name);
-                currentSubCulture = newBit;
+                    // console.log(newBit.name);
+                    currentSubCulture = newBit;
+                }
+            } else {
+                if (!ListOfSubcultureHolders.includes(origin.name)) {
+                    currentSubCulture = "";
+                } else {
+                    let newBit;
+                    // load default class
+                    for (let index = 0; index < jsonFactionCreation.length; index++) {
+                        if (
+                            jsonFactionCreation[index].type == "SubCulture" &&
+                            jsonFactionCreation[index].requirement == origin.name
+                        ) {
+                            newBit = jsonFactionCreation[index];
+                            continue;
+                        }
+                    }
+
+                    // console.log(newBit.name);
+                    currentSubCulture = newBit;
+                }
             }
+
             selectOrigin(currentSubCulture, "SubCulture");
             // subculture
             break;
@@ -445,6 +549,7 @@ function selectOrigin(origin, type) {
             break;
         case "SubType":
             currentSubType = origin;
+            selectTomePath(undefined, false);
             break;
         case "Ascension":
             currentAscension = origin;
@@ -461,13 +566,16 @@ function selectOrigin(origin, type) {
             break;
         case "SubCulture":
             currentSubCulture = origin;
+            selectTomePath(undefined, false);
             break;
 
         case "SubSociety1":
             currentSubSociety1 = origin;
+            selectTomePath(undefined, false);
             break;
         case "SubSociety2":
             currentSubSociety2 = origin;
+            selectTomePath(undefined, false);
             break;
     }
 
@@ -503,13 +611,16 @@ function SelectSymbol(origin) {
 
 function ClearAscensionSkill() {
     var ascensionHolder = document.getElementById("originButtonAscension");
-    ascensionHolder.innerHTML = "+";
+
+    ascensionHolder.innerHTML =
+        "<img class='padded-image' src='/evolved/Icons/Interface/addsymbol.png' height='20px' />";
     currentAscension = "";
 }
 
 function ClearAmbition() {
     var ascensionHolder = document.getElementById("originButtonAmbition");
-    ascensionHolder.innerHTML = "+";
+    ascensionHolder.innerHTML =
+        "<img class='padded-image' src='/evolved/Icons/Interface/addsymbol.png' height='20px' />";
     currentAmbition = "";
 }
 
@@ -589,13 +700,11 @@ function SetTomePathOptions(evt) {
     var originWrapper = document.getElementById("originWrapperOptions");
     originWrapper.setAttribute("style", "grid-template-columns: repeat(7, 2fr);");
     originWrapper.innerHTML = "";
-    var list = [];
 
-    // assign current selection
+    // Get tomes valid at the insertion point, excluding any already in the full path.
+    var fullTomeList = currentTomeList;
+    var list = GetNextSetOfTomes(tomeInsertionIndex + 1).filter((t) => !isInArray(fullTomeList, t));
 
-    list = GetNextSetOfTomes();
-
-    // console.log("Clicked");
     // List of origin options
 
     // Create origin buttons dynamically from the list
@@ -634,11 +743,28 @@ function selectTomePath(origin, fromLoad) {
 
     if (origin != undefined) {
         currentTomeList.push(origin);
+        // If a tome was clicked to open the popup, insert after it instead
+        if (tomeInsertionIndex >= 0) {
+            currentTomeList.pop();
+            currentTomeList.splice(tomeInsertionIndex + 1, 0, origin);
+        }
+        tomeInsertionIndex = -1;
     }
 
+    var invalidIndices = GetInvalidTomeIndices();
+
     for (var i = 0; i < currentTomeList.length; i++) {
-        SetTomePathInfoSmall(originButton, currentTomeList[i]);
+        SetTomePathInfoSmall(originButton, currentTomeList[i], i, invalidIndices.has(i));
     }
+
+    var addSlot = document.createElement("div");
+    addSlot.className = "tome-add-slot";
+    addSlot.innerHTML = "<img src='/evolved/Icons/Interface/addsymbol.png' height='20px' />";
+    addSlot.addEventListener("click", function (event) {
+        tomeInsertionIndex = currentTomeList.length - 1;
+        SetTomePathOptions(event);
+    });
+    originButton.appendChild(addSlot);
 
     RecalculateStats(fromLoad);
     // swap current known origin
@@ -695,7 +821,7 @@ function SetSkillPathInfoSmall(buttonHolder, origin) {
 
     addTooltipListeners(image, spa);
 }
-function SetTomePathInfoSmall(buttonHolder, origin) {
+function SetTomePathInfoSmall(buttonHolder, origin, index, isInvalid) {
     const image = document.createElement("img");
     image.setAttribute("width", "60");
     image.setAttribute("height", "60");
@@ -731,6 +857,24 @@ function SetTomePathInfoSmall(buttonHolder, origin) {
         newDivButton.appendChild(DLCTAG);
     }
 
+    if (index > 0) {
+        let removeBtn = document.createElement("div");
+        removeBtn.innerHTML = "<img src='/evolved/Icons/Interface/CloseX.png' height='15px' />";
+        removeBtn.className = "tome-remove-btn";
+        removeBtn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            RemoveTomeAtIndex(index);
+        });
+        newDivButton.appendChild(removeBtn);
+    }
+
+    if (isInvalid) {
+        let warningIcon = document.createElement("div");
+        warningIcon.innerHTML = "!";
+        warningIcon.className = "tome-warning-icon";
+        newDivButton.appendChild(warningIcon);
+    }
+
     buttonHolder.append(newDivButton);
 
     // create mouseover
@@ -742,9 +886,50 @@ function SetTomePathInfoSmall(buttonHolder, origin) {
 
     SetTomePreview(spa, origin);
 
-    newDivButton.className = "tome-button-small";
+    // If the tome is invalid, append a warning to the tooltip describing the reason.
+    if (isInvalid && currentTomeList.indexOf(origin) !== currentTomeList.lastIndexOf(origin)) {
+        spa.innerHTML += '<p style="color:#e05252;margin-top:8px;font-weight:bold;">Already in the tome path</p>';
+    } else if (isInvalid && origin.tier >= 2) {
+        var req = tomeRequirements[origin.tier];
+        var partialList = currentTomeList.slice(0, index);
+        var partialAffinity = GetAffinityTotalFromList(
+            GetCurrentChoiceList(),
+            partialList,
+            currentSubType,
+            currentSubCulture,
+            currentSubSociety1,
+            currentSubSociety2
+        );
+        var tomeCountOk = partialList.length >= req.minTomes;
+        var affinityOk =
+            req.minAffinity === 0 || GetAffinityMatches(partialAffinity, origin.affinities, req.minAffinity - 1);
 
-    newDivButton.addEventListener("click", (event) => SetTomePathOptions(event));
+        var warnHtml = '<p style="color:#e05252;margin-top:8px;font-weight:bold;">Requirements not met!</p>';
+        if (!tomeCountOk) {
+            warnHtml += '<p style="color:#e05252;">Needs ' + req.minTomes + " tomes before this one</p>";
+        }
+        if (!affinityOk && "affinities" in origin) {
+            var affinityIcons = origin.affinities
+                .split(", ")
+                .map(function (p) {
+                    var match = p.match(/<\w+><\/\w+>/);
+                    return match ? match[0] : "";
+                })
+                .filter(function (p) {
+                    return p !== "";
+                });
+            warnHtml += '<p style="color:#e05252;">Needs ' + req.minAffinity + "+ " + affinityIcons.join(" ") + "</p>";
+        }
+        spa.innerHTML += warnHtml;
+    }
+
+    newDivButton.className = "tome-button-small";
+    if (isInvalid) newDivButton.classList.add("tome-invalid");
+
+    newDivButton.addEventListener("click", (event) => {
+        tomeInsertionIndex = index;
+        SetTomePathOptions(event);
+    });
 
     // newDivButton.append(spa);
 
@@ -764,18 +949,11 @@ function RemoveLastSkill() {
     toggleOriginButtons();
 }
 
-function RemoveLastTomePath() {
-    if (currentTomeList.length > 1) {
-        currentTomeList.pop();
-    }
-
-    selectTomePath();
-
-    RecalculateStats(false);
-    // swap current known origin
-    // draw all tomes
-
-    toggleOriginButtons();
+// Removes a path tome by index and re-renders the tome path. Index 0 (starting tome) is protected.
+function RemoveTomeAtIndex(index) {
+    if (index <= 0 || index >= currentTomeList.length) return;
+    currentTomeList.splice(index, 1);
+    selectTomePath(undefined, false);
 }
 
 function ClearTomePath() {
@@ -1125,7 +1303,17 @@ function GetAffinityTotalFromList(list, tomeList, subType, subCulture, subSociet
     for (i = 0; i < list.length; i++) {
         if (list[i] != "" && list[i] != undefined) {
             if ("affinity" in list[i]) {
-                input += list[i].affinity + ",";
+                // beta
+                if (showBetaTooltip.checked) {
+                    if (list[i].id == "reaver") {
+                        input += "<empirematter></empirematter>" + ",";
+                    }else{
+                         input += list[i].affinity + ",";
+                    }
+                    
+                } else {
+                    input += list[i].affinity + ",";
+                }
             }
             if ("affinities" in list[i]) {
                 if (list[i].affinities.length > 0) {
@@ -1235,6 +1423,18 @@ function GetAffinityTotalFromList(list, tomeList, subType, subCulture, subSociet
     return result;
 }
 
+// Converts the raw affinity string (from GetAffinityTotalFromList) to the Big-tag HTML
+// format used by the #currentAffinity display element and checkEmpireOfCosmos().
+function affinityToDisplayHtml(affinityStr) {
+    return affinityStr
+        .replace("<empireshadow></empireshadow> ", "<empireshadowBig></empireshadowBig>")
+        .replace("<empirechaos></empirechaos> ", "<empirechaosBig></empirechaosBig>")
+        .replace("<empirenature></empirenature> ", "<empirenatureBig></empirenatureBig>")
+        .replace("<empirearcana></empirearcana> ", "<empirearcanaBig></empirearcanaBig>")
+        .replace("<empirematter></empirematter> ", "<empirematterBig></empirematterBig>")
+        .replace("<empireorder></empireorder> ", "<empireorderBig></empireorderBig>");
+}
+
 function RecalculateStats(fromload) {
     var list = GetCurrentChoiceList();
 
@@ -1264,14 +1464,7 @@ function RecalculateStats(fromload) {
     const affinitySummary = document.getElementById("currentAffinity");
 
     currentAffinityTotal = result;
-
-    result = result.replace("<empireshadow></empireshadow> ", "<empireshadowBig></empireshadowBig>");
-    result = result.replace("<empirechaos></empirechaos> ", "<empirechaosBig></empirechaosBig>");
-    result = result.replace("<empirenature></empirenature> ", "<empirenatureBig></empirenatureBig>");
-    result = result.replace("<empirearcana></empirearcana> ", "<empirearcanaBig></empirearcanaBig>");
-    result = result.replace("<empirematter></empirematter> ", "<empirematterBig></empirematterBig>");
-    result = result.replace("<empireorder></empireorder> ", "<empireorderBig></empireorderBig>");
-    affinitySummary.innerHTML = result;
+    affinitySummary.innerHTML = affinityToDisplayHtml(result);
 
     CollectAllPartsForOverview(fromload);
 }
@@ -1342,8 +1535,11 @@ function SetButtonInfo(button, origin, type, color) {
     button.innerHTML = "";
 
     if (type === "SubType" && !["Dragon Lord", "Giant King", "Elder Vampire"].includes(currentOrigin.name)) return;
-
-    if (type === "SubCulture" && !ListOfSubcultureHolders.includes(currentCulture.name)) return;
+    if (showBetaTooltip.checked) {
+        if (type === "SubCulture" && !ListOfSubcultureHoldersBeta.includes(currentCulture.name)) return;
+    } else {
+        if (type === "SubCulture" && !ListOfSubcultureHolders.includes(currentCulture.name)) return;
+    }
 
     if (type === "SubSociety1" && !ListOfSubsocietyHolders.includes(currentSociety1.name)) return;
 
@@ -1406,6 +1602,7 @@ function createImage(type, origin) {
 }
 
 function getFactionIconPath(id) {
+    console.log(id);
     const cleanId = id.startsWith("_") ? id.split("_").slice(1).join("_") : id;
     return `/evolved/Icons/FactionCreation/${cleanId}.png`;
 }
@@ -1479,7 +1676,15 @@ function createButtonText(origin, type) {
     }
 
     if ("affinity" in origin) {
-        span.innerHTML += ` ${ClearAffinityExtraTags(origin.affinity).replaceAll(",", "")}`;
+        if (showBetaTooltip.checked) {
+            if (origin.id == "reaver") {
+                span.innerHTML += "<empirematter></empirematter>";
+            } else {
+                span.innerHTML += ` ${ClearAffinityExtraTags(origin.affinity).replaceAll(",", "")}`;
+            }
+        } else {
+            span.innerHTML += ` ${ClearAffinityExtraTags(origin.affinity).replaceAll(",", "")}`;
+        }
     }
 
     if ("affinities" in origin) {
@@ -2663,7 +2868,37 @@ function addUniqueEntry(jsonEntries, jsonEntriesToAdd, newEntry) {
         jsonEntriesToAdd.push(newEntry);
     }
 }
-function GetNextSetOfTomes() {
+
+// Source of truth for tier unlock requirements.
+const tomeRequirements = {
+    2: { minTomes: 2, minAffinity: 0 },
+    3: { minTomes: 4, minAffinity: 3 },
+    4: { minTomes: 6, minAffinity: 6 },
+    5: { minTomes: 8, minAffinity: 8 }
+};
+
+// If pathLength is provided, simulates the path up to that index.
+// Used to show which tomes are valid when inserting a new one in the middle of the list.
+function GetNextSetOfTomes(pathLength) {
+    var savedTomeList, savedAffinityTotal, affinitySummary, savedAffinityHtml;
+    if (pathLength !== undefined) {
+        savedTomeList = currentTomeList;
+        savedAffinityTotal = currentAffinityTotal;
+        affinitySummary = document.getElementById("currentAffinity");
+        savedAffinityHtml = affinitySummary.innerHTML;
+
+        currentTomeList = savedTomeList.slice(0, pathLength);
+        currentAffinityTotal = GetAffinityTotalFromList(
+            GetCurrentChoiceList(),
+            currentTomeList,
+            currentSubType,
+            currentSubCulture,
+            currentSubSociety1,
+            currentSubSociety2
+        );
+        affinitySummary.innerHTML = affinityToDisplayHtml(currentAffinityTotal);
+    }
+
     var listOfNextTomes = [];
 
     for (i = 0; i < jsonTomes.length; i++) {
@@ -2675,7 +2910,7 @@ function GetNextSetOfTomes() {
         }
     }
 
-    if (currentTomeList.length > 1) {
+    if (currentTomeList.length >= tomeRequirements[2].minTomes) {
         // allow tier 2 tomes
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 2) {
@@ -2685,12 +2920,19 @@ function GetNextSetOfTomes() {
             }
         }
     }
-    if (currentTomeList.length > 3) {
+    if (currentTomeList.length >= tomeRequirements[3].minTomes) {
         // allow tier 3 tomes
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 3) {
                 // 3 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 2) || checkEmpireOfCosmos(1)) {
+                if (
+                    GetAffinityMatches(
+                        currentAffinityTotal,
+                        jsonTomes[i].affinities,
+                        tomeRequirements[3].minAffinity - 1
+                    ) ||
+                    checkEmpireOfCosmos(1)
+                ) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -2698,12 +2940,19 @@ function GetNextSetOfTomes() {
             }
         }
     }
-    if (currentTomeList.length > 5) {
+    if (currentTomeList.length >= tomeRequirements[4].minTomes) {
         // allow tier 4 tomes
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 4) {
                 // 6 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 5) || checkEmpireOfCosmos(2)) {
+                if (
+                    GetAffinityMatches(
+                        currentAffinityTotal,
+                        jsonTomes[i].affinities,
+                        tomeRequirements[4].minAffinity - 1
+                    ) ||
+                    checkEmpireOfCosmos(2)
+                ) {
                     if (!isInArray(currentTomeList, jsonTomes[i])) {
                         listOfNextTomes.push(jsonTomes[i]);
                     }
@@ -2711,12 +2960,30 @@ function GetNextSetOfTomes() {
             }
         }
     }
-    if (currentTomeList.length > 7) {
+    if (currentTomeList.length >= tomeRequirements[5].minTomes) {
         // allow tier 5 tomes
         for (i = 0; i < jsonTomes.length; i++) {
             if (jsonTomes[i].tier === 5) {
-                // 8 affinity
-                if (GetAffinityMatches(currentAffinityTotal, jsonTomes[i].affinities, 7) || checkEmpireOfCosmos(3)) {
+                // tome of cosmos exception
+                if(jsonTomes[i].id == "tome_of_the_cosmos"){
+                    // requirement 2 of each OR 6 in 3
+                    if(tomeOfCosmosCheck()){
+                        if (!checkIfT5(currentTomeList)) {
+                        if (!isInArray(currentTomeList, jsonTomes[i])) {
+                            listOfNextTomes.push(jsonTomes[i]);
+                        }
+                    }
+                    }
+                }else{
+                     // 8 affinity
+                if (
+                    GetAffinityMatches(
+                        currentAffinityTotal,
+                        jsonTomes[i].affinities,
+                        tomeRequirements[5].minAffinity - 1
+                    ) ||
+                    checkEmpireOfCosmos(3)
+                ) {
                     // check if we dont already have a t5, we can only have 1
                     if (!checkIfT5(currentTomeList)) {
                         if (!isInArray(currentTomeList, jsonTomes[i])) {
@@ -2724,13 +2991,56 @@ function GetNextSetOfTomes() {
                         }
                     }
                 }
+                }
+               
             }
         }
+    }
+
+    if (pathLength !== undefined) {
+        currentTomeList = savedTomeList;
+        currentAffinityTotal = savedAffinityTotal;
+        affinitySummary.innerHTML = savedAffinityHtml;
     }
 
     return listOfNextTomes;
 }
 
+function tomeOfCosmosCheck(){
+    // no empire of cosmos here
+   
+    if (hasAllAffinitiesForEmpireOfCosmos(2) || hasAtleastThreeCosmos(6)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function hasAtleastThreeCosmos(number) {
+    const html = document.getElementById("currentAffinity").innerHTML;
+
+    const affinities = [
+        "empirematter",
+        "empirearcana",
+        "empirechaos",
+        "empirenature",
+        "empireorder",
+        "empireshadow"
+    ];
+
+    let count = 0;
+
+    for (const affinity of affinities) {
+        const regex = new RegExp(`<${affinity}big></${affinity}big>\\s*(\\d+)`);
+        const match = html.match(regex);
+
+        if (match && parseInt(match[1], 10) >= number) {
+            count++;
+        }
+    }
+
+    return count >= 3;
+}
 function checkEmpireOfCosmos(tierCheck) {
     // no empire of cosmos here
     if (currentSociety1.id != "empire_of_the_cosmos" && currentSociety2.id != "empire_of_the_cosmos") {
@@ -2756,6 +3066,18 @@ function hasAllAffinitiesForEmpireOfCosmos(number) {
         const match = html.match(regex);
         return match && parseInt(match[1], 10) >= number;
     });
+}
+
+// Returns the indices in currentTomeList of tomes whose requirements are no longer satisfied (e.g. after a mid-path removal or a change in ruler or culture).
+// Uses GetNextSetOfTomes() by simulating the path state as it would be just before each tome was added.
+function GetInvalidTomeIndices() {
+    var invalid = new Set();
+    for (var i = 1; i < currentTomeList.length; i++) {
+        if (GetNextSetOfTomes(i).indexOf(currentTomeList[i]) < 0) {
+            invalid.add(i);
+        }
+    }
+    return invalid;
 }
 
 function GetAffinityMatches(affinityTotal, substringToCount, number) {
@@ -3018,9 +3340,16 @@ function GetRandomEntry(type) {
             var list = GetAllSubCultureSetups(currentOrigin);
 
             randomOrigin = list[Math.floor(Math.random() * list.length)];
-            if (!ListOfSubcultureHolders.includes(currentCulture.name)) {
+            if(showBetaTooltip.checked){
+                   if (!ListOfSubcultureHoldersBeta.includes(currentCulture.name)) {
                 randomOrigin = "";
             }
+            }else{
+                   if (!ListOfSubcultureHolders.includes(currentCulture.name)) {
+                randomOrigin = "";
+            }
+            }
+         
             // while (incompatibleCheck("Loadout", randomOrigin) === true) {
             //   randomOrigin = list[Math.floor(Math.random() * list.length)];
             //}

@@ -44,6 +44,48 @@
  {
   "abilities": [
    {
+    "slug": "0000049700003867"
+   }
+  ],
+  "resid": 5046586587246,
+  "id": "warlord_commands_hero_skill_normal",
+  "group_name": "Pantheon Hero Skills",
+  "icon": "000004970000386F",
+  "type": "normal",
+  "name": "Ascension: Warlord Commands",
+  "DLC": "RISEFROMRUIN "
+ },
+ {
+  "abilities": [
+   {
+    "slug": "scouring_sandstorm_ability_scouring_sandstorm_hero_skill_normal"
+   }
+  ],
+  "resid": 5046586587224,
+  "id": "scouring_sandstorm_hero_skill_normal",
+  "group_name": "Pantheon Hero Skills",
+  "icon": "0000049700003859",
+  "type": "normal",
+  "name": "Ascension: Scouring Sandstorm",
+  "DLC": "RISEFROMRUIN "
+ },
+ {
+  "abilities": [
+   {
+    "slug": "0000049700003851"
+   }
+  ],
+  "resid": 5046586587215,
+  "id": "extended_command_unit_hero_skill_normal",
+  "group_name": "Pantheon Hero Skills",
+  "icon": "0000049700003850",
+  "type": "normal",
+  "name": "Ascension: Extended Command Unit",
+  "DLC": "RISEFROMRUIN "
+ },
+ {
+  "abilities": [
+   {
     "slug": "00000497000034f4"
    }
   ],
@@ -609,7 +651,7 @@
   "group_name": "Pantheon Hero Skills",
   "icon": "0000048D00000369",
   "type": "normal",
-  "name": "Watchful",
+  "name": "Vigilant",
   "description": "Unit has + <hyperlink>Retaliation Attack</hyperlink>."
  },
  {
@@ -636,7 +678,7 @@
   "group_name": "Pantheon Hero Skills",
   "icon": "0000048D000001EF",
   "type": "normal",
-  "name": "Watchful",
+  "name": "Vigilant",
   "description": "Unit has + <hyperlink>Retaliation Attack</hyperlink>."
  },
  {
@@ -655,7 +697,7 @@
   "icon": "000003E100001FC3",
   "type": "normal",
   "name": "Berserker's Rage",
-  "description": "When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach % or lower, it becomes Berserk (for <turn></turn>):<bulletlist><bullet>Berserk</bullet><bullet>Steadfast</bullet></bulletlist>"
+  "description": "When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach % or lower, it gains for <turn></turn> Turns:<bulletlist><bullet>Berserk</bullet><bullet>Steadfast</bullet></bulletlist>"
  },
  {
   "resid": 4264902531963,
@@ -1329,7 +1371,7 @@
   "type": "normal",
   "abilities": [
    {
-    "slug": "000004c000000beb"
+    "slug": "000004c00000064d"
    }
   ],
   "resid": 4995046967491,
@@ -1350,7 +1392,7 @@
   "type": "normal",
   "abilities": [
    {
-    "slug": "hs_warlock_raise_undead_ability_hs_death_knight_raise_undead"
+    "slug": "hs_death_knight_raise_undead_ability_hs_death_knight_raise_undead"
    }
   ],
   "resid": 4995046967483,
@@ -1868,7 +1910,7 @@
   "resid": 4995046967333,
   "tree_name": "<classDeathknight></classDeathknight> Death Knight",
   "tree_pos_y": 250.0,
-  "description": "Makes base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks gain:<bulletlist><bullet>Base 60% chance of inflicting Sundered Defense.</bullet><bullet>Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> and <hyperlink>Missile</hyperlink> attacks gain:<bulletlist><bullet>Base 60% chance of inflicting Sundered Defense.</bullet><bullet>Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046967300
@@ -3563,7 +3605,7 @@
   "resid": 4514010632240,
   "tree_name": "<classWarrior></classWarrior> Warrior",
   "tree_pos_y": 250.0,
-  "description": "Makes base <hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks gain:<bulletlist><bullet>Base 60% chance of inflicting Sundered Defense.</bullet><bullet>Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> and <hyperlink>Missile</hyperlink> attacks gain:<bulletlist><bullet>Base 60% chance of inflicting Sundered Defense.</bullet><bullet>Demolisher.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 5003636902942
@@ -4419,7 +4461,7 @@
   "resid": 5222680235172,
   "tree_name": "<classRitualist></classRitualist> Ritualist",
   "tree_pos_y": 450.0,
-  "description": "<hyperlink>Support</hyperlink> abilities grant:<bulletlist><bullet>+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+  "description": "<hyperlink>Support</hyperlink> abilities grant:<bulletlist><bullet>+1 Status Protection for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5222680233749
@@ -5372,7 +5414,7 @@
   "tree_pos_x": 450.0,
   "tree_pos_y": 550.0,
   "id": "hs_ranger_martial_expertise",
-  "description": "The hero gains:<bulletlist><bullet><hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks deal +10% damage</bullet><bullet>+1<defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+10% <hyperlink>Evasion</hyperlink></bullet></bulletlist>",
+  "description": "The hero gains:<bulletlist><bullet><hyperlink>Melee</hyperlink> and <hyperlink>Missile</hyperlink> attacks deal +10% damage</bullet><bullet>+1<defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+10% <hyperlink>Evasion</hyperlink></bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 4995046966682
@@ -5426,7 +5468,7 @@
   "tree_pos_x": 450.0,
   "tree_pos_y": 350.0,
   "id": "hs_ranger_ranger_2",
-  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks now deal +10% damage.",
+  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Missile</hyperlink> attacks now deal +10% damage.",
   "required_skills": [
    {
     "resid": 4995046966670
@@ -5443,7 +5485,7 @@
   "tree_pos_x": 450.0,
   "tree_pos_y": 50.0,
   "id": "hs_ranger_ranger_1",
-  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Physical Ranged</hyperlink> attacks now deal +10% damage."
+  "description": "<hyperlink>Melee</hyperlink> and <hyperlink>Missile</hyperlink> attacks now deal +10% damage."
  },
  {
   "group_name": "Ranger - Hero Skill Group",
@@ -5732,7 +5774,7 @@
   "tree_pos_x": 551.0,
   "tree_pos_y": 150.0,
   "id": "hs_ranger_versatile_skirmisher",
-  "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink> attacks grant Prepared Shot for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet><hyperlink>Physical Ranged</hyperlink> attacks grant Prepared Strike for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet><hyperlink>Melee</hyperlink> attacks grant Prepared Shot for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet><hyperlink>Missile</hyperlink> attacks grant Prepared Strike for 2<turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 4995046966560
@@ -5749,7 +5791,7 @@
   "tree_pos_x": 200.0,
   "tree_pos_y": 650.0,
   "id": "hs_ranger_mastered_focus",
-  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +20% damage on its <hyperlink>Physical Ranged</hyperlink> attacks until it moves.",
+  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +20% damage on its <hyperlink>Missile</hyperlink> attacks until it moves.",
   "required_skills": [
    {
     "resid": 4995046966521
@@ -5774,7 +5816,7 @@
   "resid": 4995046966531,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 550.0,
-  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +20% <hyperlink><crit></crit>Critical Hit Chance</hyperlink> on its <hyperlink>Physical Ranged</hyperlink> attacks until it moves.",
+  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +20% <hyperlink><crit></crit>Critical Hit Chance</hyperlink> on its <hyperlink>Missile</hyperlink> attacks until it moves.",
   "required_skills": [
    {
     "resid": 4995046966503
@@ -5796,7 +5838,7 @@
   "resid": 4995046966521,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 550.0,
-  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +30% <hyperlink><accuracy></accuracy> Accuracy</hyperlink> on its <hyperlink>Physical Ranged</hyperlink> attacks until it moves.",
+  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +30% <hyperlink><accuracy></accuracy> Accuracy</hyperlink> on its <hyperlink>Missile</hyperlink> attacks until it moves.",
   "required_skills": [
    {
     "resid": 4995046966503
@@ -5813,7 +5855,7 @@
   "tree_pos_x": 300.0,
   "tree_pos_y": 450.0,
   "id": "hs_ranger_kill_shot",
-  "description": "Killing an enemy unit resets all ability cooldowns. Can only trigger once per turn.",
+  "description": "Killing an enemy unit reduces active cooldowns by 1 <turn></turn> Turn.<br></br>Can only trigger once per turn.",
   "required_skills": [
    {
     "resid": 4995046966479
@@ -5833,7 +5875,7 @@
   "tree_pos_x": 200.0,
   "tree_pos_y": 450.0,
   "id": "hs_ranger_snipers_focus",
-  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +1<hyperlink><range></range>Range</hyperlink> on its <hyperlink>Physical Ranged</hyperlink> attacks until it moves.",
+  "description": "If this hero is not <hyperlink>Engaged in Melee</hyperlink> when its turn starts, then it gains +1<hyperlink><range></range>Range</hyperlink> on its <hyperlink>Missile</hyperlink> attacks until it moves.",
   "required_skills": [
    {
     "resid": 4995046966470
@@ -5856,7 +5898,7 @@
   "tree_pos_x": 100.0,
   "tree_pos_y": 450.0,
   "id": "hs_ranger_barrage_attacks",
-  "description": "The third <hyperlink>Physical Ranged</hyperlink> attack in a turn does an additional 15<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to the target and adjacent enemies.",
+  "description": "The third <hyperlink>Missile</hyperlink> attack in a turn does an additional 15<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to the target and adjacent enemies.",
   "required_skills": [
    {
     "resid": 4995046966470
@@ -5909,7 +5951,7 @@
   "resid": 4995046966479,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 350.0,
-  "description": "<hyperlink>Physical Ranged</hyperlink> attacks now have a base 90% chance of inflicting Bleeding on all enemies in a 1-hex radius.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Missile</hyperlink> attacks now have a base 90% chance of inflicting Bleeding on all enemies in a 1-hex radius.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046966451
@@ -5934,7 +5976,7 @@
   "resid": 4995046966470,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 350.0,
-  "description": "<hyperlink>Physical Ranged</hyperlink> attacks now have a base 90% chance of inflicting Diseased on all enemies in a 1-hex radius.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Missile</hyperlink> attacks now have a base 90% chance of inflicting Diseased on all enemies in a 1-hex radius.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046966436
@@ -5954,7 +5996,7 @@
   "tree_pos_x": 350.0,
   "tree_pos_y": 250.0,
   "id": "hs_ranger_ensnaring_hunter",
-  "description": "<hyperlink>Physical Ranged</hyperlink> attacks now have a base 90% chance of inflicting Immobilized.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Missile</hyperlink> attacks now have a base 90% chance of inflicting Immobilized.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046966427
@@ -5976,7 +6018,7 @@
   "resid": 4995046966451,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
-  "description": "<hyperlink>Physical Ranged</hyperlink> attacks now do +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each <hyperlink>Unit tier</hyperlink> of the target.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Missile</hyperlink> attacks now do +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each <hyperlink>Unit tier</hyperlink> of the target.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046966422
@@ -6004,7 +6046,7 @@
   "resid": 4995046966444,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
-  "description": "<hyperlink>Physical Ranged</hyperlink> attacks now do +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each unit adjacent to the target.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Missile</hyperlink> attacks now do +1<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> for each unit adjacent to the target.<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046966418
@@ -6029,7 +6071,7 @@
   "resid": 4995046966436,
   "tree_name": "<classRanger></classRanger> Ranger",
   "tree_pos_y": 250.0,
-  "description": "<hyperlink>Physical Ranged</hyperlink> attacks now do +2<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> per <hyperlink>Negative Status Effect</hyperlink> on the target (maximum +5).<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "<hyperlink>Missile</hyperlink> attacks now do +2<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> per <hyperlink>Negative Status Effect</hyperlink> on the target (maximum +5).<br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "required_skills": [
    {
     "resid": 4995046966406
@@ -6084,22 +6126,14 @@
   "group_name": "Ranger - Hero Skill Group",
   "icon": "0000048B00000493",
   "type": "normal",
-  "name": "Piercing Shot",
-  "tree_pos_x": 150.0,
-  "id": "hs_ranger_piercing_shot",
-  "excluded_skills": [
-   {
-    "resid": 4995046966406
-   }
-  ],
   "resid": 4995046966418,
   "tree_name": "<classRanger></classRanger> Ranger",
+  "name": "Piercing Shot",
+  "tree_pos_x": 150.0,
   "tree_pos_y": 150.0,
-  "description": " Sniper Shot and Scatter Shot now bypass 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+  "id": "hs_ranger_piercing_shot",
+  "description": " Sniper Shot and now bypasses 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
   "required_skills": [
-   {
-    "resid": 4995046966370
-   },
    {
     "resid": 4995046966379
    }
@@ -6109,24 +6143,16 @@
   "group_name": "Ranger - Hero Skill Group",
   "icon": "0000048B00000487",
   "type": "normal",
-  "name": "Miasma Shot",
-  "tree_pos_x": 50.0,
-  "id": "hs_ranger_afflicting_shot",
-  "excluded_skills": [
-   {
-    "resid": 4995046966418
-   }
-  ],
   "resid": 4995046966406,
   "tree_name": "<classRanger></classRanger> Ranger",
+  "name": "Miasma Shot",
+  "tree_pos_x": 50.0,
   "tree_pos_y": 150.0,
-  "description": "Sniper Shot and Scatter Shot now leave <hyperlink>Afflicting Miasma</hyperlink> and apply Weakened to targets in a 1-hex radius.",
+  "id": "hs_ranger_afflicting_shot",
+  "description": "Scatter Shot now leaves <hyperlink>Afflicting Miasma</hyperlink> and applies Weakened to targets in a 1-hex radius.",
   "required_skills": [
    {
     "resid": 4995046966370
-   },
-   {
-    "resid": 4995046966379
    }
   ]
  },
@@ -7336,9 +7362,6 @@
    },
    {
     "resid": 5003636902596
-   },
-   {
-    "resid": 5046586585229
    }
   ]
  },
@@ -8729,11 +8752,11 @@
  },
  {
   "group_name": "Eldritch Sovereign - Hero Skill Group",
-  "icon": "0000049700000DF8",
+  "icon": "0000049700000C2C",
   "type": "normal",
   "resid": 5046586576375,
   "tree_name": "Eldritch Sovereign",
-  "name": "Astral Wisp Ritual",
+  "name": "Astral Keeper Ritual",
   "tree_pos_x": 150.0,
   "tree_pos_y": 50.0,
   "id": "hs_astral_wisp_ritual",
@@ -8845,7 +8868,7 @@
   "tree_pos_y": 250.0,
   "id": "hs_quickening_ritual",
   "DLC": "ELDRITCHREALMS ",
-  "description": "<bulletlist><bullet>Gain 20% evasion against <hyperlink>Physical Ranged</hyperlink> and <hyperlink>Magic</hyperlink> attacks.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Gain 20% evasion against <hyperlink>Missile</hyperlink> and <hyperlink>Magic</hyperlink> attacks.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5046586583198
@@ -11043,7 +11066,7 @@
   "tree_pos_y": 150.0,
   "id": "hs_stunning_drain",
   "DLC": "THRONESOFBLOOD ",
-  "description": "<hyperlink>Blood Drain</hyperlink> abilities gain a base 60% chance of inflicting Stunned for 1 <turn></turn> Turn.",
+  "description": "<hyperlink>Blood Drain</hyperlink> abilities gain a base 90% chance of inflicting Stunned for 1 <turn></turn> Turn.",
   "required_skills": [
    {
     "resid": 5046586584708
@@ -11741,7 +11764,7 @@
   "tree_pos_x": 150.0,
   "tree_pos_y": 350.0,
   "id": "hs_spellblade_spell_penetration",
-  "description": "All attacks ignore 1 <resistance></resistance> <hyperlink>Resistance</hyperlink> and 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
+  "description": "All attacks ignore 3 <resistance></resistance> <hyperlink>Resistance</hyperlink> and 3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
   "required_skills": [
    {
     "resid": 5111011085218
@@ -12088,7 +12111,7 @@
   "tree_pos_x": 250.0,
   "tree_pos_y": 450.0,
   "id": "hs_warlock_tuned_magic",
-  "description": "Magic attacks ignore 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.",
+  "description": "<hyperlink>Magic</hyperlink> attacks and <hyperlink>Debuff</hyperlink> abilities:<bulletlist><bullet>Ignore 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet></bulletlist>",
   "required_skills": [
    {
     "resid": 5222680233313
@@ -13652,7 +13675,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "resid": 5046586582872,
@@ -13662,7 +13685,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "resid": 5046586582871,
@@ -13672,7 +13695,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "abilities": [
@@ -13710,7 +13733,7 @@
   "name": "Cascading Rune",
   "hero_property": "Astral Property",
   "DLC": "GIANTKINGS ",
-  "description": "Killing a unit deals 15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
+  "description": "Killing a unit deals 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> to up to 2 other enemy unit within 2 hexes."
  },
  {
   "abilities": [
@@ -15354,7 +15377,7 @@
   "name": "Elite March",
   "hero_property": "Shadow Property",
   "DLC": "THRONESOFBLOOD ",
-  "description": "Gravemarch now conjures the bodies of Tier 3 and Tier 4 Undead units and has its cooldown reduced by 2.",
+  "description": "Gravemarch now conjures the bodies of Tier 3 and Tier 4 Undead units.",
   "required_skills": [
    {
     "resid": 5046586585229
@@ -15549,7 +15572,7 @@
   "name": "Shadow Transformation",
   "hero_property": "Shadow Property",
   "DLC": "DRAGONLORDS ",
-  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Undead unit type</bullet><bullet>Life Steal</bullet><bullet>Slain units transform into <hyperlink>Decaying Zombies</hyperlink>, except in water battles.</bullet></bulletlist>"
+  "description": "This unit gains:<bulletlist><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink><br></br>+1 <defense></defense> <hyperlink>Defense</hyperlink><br></br>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Undead unit type</bullet><bullet>Life Steal</bullet><bullet>All attacks gain 90% base chance of inflicting Soulbound</bullet>"
  },
  {
   "abilities": [

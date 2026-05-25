@@ -3719,7 +3719,7 @@
    ]
   },
   "resid": 5111011083044,
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "equipment_upgrade_passive_support_regeneration",
   "description": "<hyperlink>Support</hyperlink> abilities also provide +1 Regeneration.",
   "name": "Support - Regeneration",
@@ -4448,8 +4448,131 @@
   "icon": "0000045E00001089",
   "unlock_requirements": [
    {
-    "num_required": 1,
+    "num_required": 2,
     "token_name": "Arcanium Ore"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains inherited ItemTypeWeapon "
+    }
+   ]
+  },
+  "resid": 5111011082991,
+  "point_cost": 3,
+  "id": "equipment_upgrade_passive_infecting",
+  "description": "Units killed with this weapon come back as <hyperlink>Decaying Zombies</hyperlink> under your control until the end of battle. Does not trigger in water combat.",
+  "name": "Infecting",
+  "tags": [
+   {
+    "tag": "ItemTypeWeapon.OneHanded"
+   },
+   {
+    "tag": "ItemTypeWeapon.Polearm"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Bow"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Crossbow"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Staff"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.MagicalOrb"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Magelock"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greatsword"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greataxe"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greathammer"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Lance"
+   },
+   {
+    "tag": "ItemPassive.RaiseZombieOnKill"
+   },
+   {
+    "tag": "ItemTypeWeapon.DragonClaw"
+   },
+   {
+    "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Greatbow"
+   },
+   {
+    "tag": "ItemTypeWeapon.OneHanded"
+   },
+   {
+    "tag": "ItemTypeWeapon.Polearm"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Bow"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Crossbow"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Staff"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.MagicalOrb"
+   },
+   {
+    "tag": "ItemTypeWeapon.RangedPhysical.Magelock"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greatsword"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greataxe"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greathammer"
+   },
+   {
+    "tag": "ItemTypeWeapon.TwoHandedHeavy.Lance"
+   },
+   {
+    "tag": "ItemTypeWeapon.DragonClaw"
+   },
+   {
+    "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.DragonClaw.Warclaw"
+   },
+   {
+    "tag": "ItemTypeWeapon.DragonClaw.ArmoredClaw"
+   },
+   {
+    "tag": "ItemTypeWeapon.GiantKingWeapons.Warhammer"
+   },
+   {
+    "tag": "ItemTypeWeapon.GiantKingWeapons.GiantAxe"
+   },
+   {
+    "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   }
+  ],
+  "icon": "000004A600000334",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Archon Blood"
    }
   ]
  },
@@ -7141,7 +7264,7 @@
   "resid": 5111011082276,
   "point_cost": 3,
   "id": "equipment_upgrade_passive_army_recuperation",
-  "description": "While army leader, all units in the army heal +10 <hyperlink><hp></hp> Hit Points</hyperlink> every <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<br></br><br></br>Does not stack.",
+  "description": "All units in the army heal +5 <hyperlink><hp></hp> Hit Points</hyperlink> every <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<br></br><br></br>Does not stack.",
   "name": "Army Recuperation",
   "tags": [
    {
@@ -8258,7 +8381,7 @@
    ]
   },
   "resid": 5046586585944,
-  "point_cost": 2,
+  "point_cost": 1,
   "id": "equipment_upgrade_active_staff_cosmic_rescue",
   "DLC": "COSMICWANDERER ",
   "description": "",
@@ -8305,7 +8428,7 @@
    ]
   },
   "resid": 5046586585943,
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_wand_cosmic_rescue",
   "DLC": "COSMICWANDERER ",
   "description": "",
@@ -8744,7 +8867,7 @@
    ]
   },
   "resid": 5046586582549,
-  "point_cost": 4,
+  "point_cost": 2,
   "id": "equipment_upgrade_passive_rune_of_command_frost",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army have 1 <hyperlink>Negative Status Effect</hyperlink> dispelled at the start of the turn in combat.",
@@ -10053,7 +10176,7 @@
    ]
   },
   "resid": 5046586578890,
-  "point_cost": 4,
+  "point_cost": 2,
   "id": "equipment_upgrade_passive_rune_of_command_fire",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army have a +10% <hyperlink><crit></crit>Critical Hit Chance</hyperlink>.",
@@ -10097,7 +10220,7 @@
    ]
   },
   "resid": 5046586578883,
-  "point_cost": 4,
+  "point_cost": 2,
   "id": "equipment_upgrade_passive_rune_of_command_rock",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army deal +10% damage.",
@@ -10141,7 +10264,7 @@
    ]
   },
   "resid": 5046586578873,
-  "point_cost": 4,
+  "point_cost": 2,
   "id": "equipment_upgrade_passive_rune_of_command_storm",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army gain +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
@@ -11596,6 +11719,57 @@
  {
   "abilities": [
    {
+    "slug": "000003e3000056ea"
+   }
+  ],
+  "tag_filter": {
+   "condition": "All of the following must be True",
+   "children": [
+    {
+     "condition": "One or More of the following must be True",
+     "children": [
+      {
+       "condition": "Contains ItemTypeMisc.OtherItem "
+      },
+      {
+       "condition": "Contains ItemTypeJewelry.Amulet "
+      }
+     ]
+    }
+   ]
+  },
+  "resid": 5029406707124,
+  "point_cost": 4,
+  "id": "innate_spell_jammer_infusion_equipment_upgrade",
+  "description": "",
+  "name": "Innate Spell Jammer",
+  "tags": [
+   {
+    "tag": "ItemTypeJewelry.Amulet"
+   },
+   {
+    "tag": "ItemTypeMisc.OtherItem"
+   }
+  ],
+  "icon": "000003E3000056EB",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Astral Dew"
+   },
+   {
+    "num_required": 1,
+    "token_name": "Silvertongue Fruit"
+   },
+   {
+    "num_required": 1,
+    "token_name": "Tranquility Pool"
+   }
+  ]
+ },
+ {
+  "abilities": [
+   {
     "slug": "bless_infusion_version_ability_bless_infusion_equipment_upgrade"
    }
   ],
@@ -11619,7 +11793,7 @@
    ]
   },
   "resid": 5029406707122,
-  "point_cost": 2,
+  "point_cost": 1,
   "id": "bless_infusion_equipment_upgrade",
   "description": "",
   "name": "Bless",
@@ -12619,6 +12793,76 @@
  {
   "abilities": [
    {
+    "slug": "song_of_revelry_ability_equipment_upgrade_active_staff_song_of_revelry"
+   }
+  ],
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
+    }
+   ]
+  },
+  "resid": 4995046968794,
+  "point_cost": 2,
+  "id": "equipment_upgrade_active_staff_song_of_revelry",
+  "description": "",
+  "name": "Song of Revelry",
+  "tags": [
+   {
+    "tag": "ItemAbility.SongOfRevelry"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Staff"
+   }
+  ],
+  "icon": "000003E300005A5A",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Fireforge Stone"
+   }
+  ]
+ },
+ {
+  "abilities": [
+   {
+    "slug": "song_of_carnage_ability_equipment_upgrade_active_staff_song_of_carnage"
+   }
+  ],
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
+    }
+   ]
+  },
+  "resid": 4995046968793,
+  "point_cost": 2,
+  "id": "equipment_upgrade_active_staff_song_of_carnage",
+  "description": "",
+  "name": "Song of Carnage",
+  "tags": [
+   {
+    "tag": "ItemAbility.SongOfCarnage"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Staff"
+   }
+  ],
+  "icon": "000003E300005A62",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Fireforge Stone"
+   }
+  ]
+ },
+ {
+  "abilities": [
+   {
     "slug": "flamestrike_ability_equipment_upgrade_active_staff_flame_strike"
    }
   ],
@@ -13221,6 +13465,104 @@
  {
   "abilities": [
    {
+    "slug": "song_of_revelry_ability_equipment_upgrade_active_wand_song_of_revelry"
+   }
+  ],
+  "tag_filter": {
+   "condition": "All of the following must be True",
+   "children": [
+    {
+     "condition": "One or More of the following must be True",
+     "children": [
+      {
+       "condition": "Contains ItemTypeMisc.Wand "
+      },
+      {
+       "condition": "Contains ItemTypeMisc.Instrument "
+      }
+     ]
+    },
+    {
+     "condition": "Does not contain ItemForge.Exclusivities.ExclusiveSingleUpgrade "
+    }
+   ]
+  },
+  "resid": 4995046968760,
+  "point_cost": 3,
+  "id": "equipment_upgrade_active_wand_song_of_revelry",
+  "description": "",
+  "name": "Song of Revelry",
+  "tags": [
+   {
+    "tag": "ItemForge.Exclusivities.ExclusiveSingleUpgrade"
+   },
+   {
+    "tag": "ItemTypeMisc.Wand"
+   },
+   {
+    "tag": "ItemAbility.SongOfRevelry"
+   }
+  ],
+  "icon": "000003E300005A5A",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Fireforge Stone"
+   }
+  ]
+ },
+ {
+  "abilities": [
+   {
+    "slug": "song_of_carnage_ability_equipment_upgrade_active_wand_song_of_carnage"
+   }
+  ],
+  "tag_filter": {
+   "condition": "All of the following must be True",
+   "children": [
+    {
+     "condition": "One or More of the following must be True",
+     "children": [
+      {
+       "condition": "Contains ItemTypeMisc.Wand "
+      },
+      {
+       "condition": "Contains ItemTypeMisc.Instrument "
+      }
+     ]
+    },
+    {
+     "condition": "Does not contain ItemForge.Exclusivities.ExclusiveSingleUpgrade "
+    }
+   ]
+  },
+  "resid": 4995046968759,
+  "point_cost": 3,
+  "id": "equipment_upgrade_active_wand_song_of_carnage",
+  "description": "",
+  "name": "Song of Carnage",
+  "tags": [
+   {
+    "tag": "ItemForge.Exclusivities.ExclusiveSingleUpgrade"
+   },
+   {
+    "tag": "ItemTypeMisc.Wand"
+   },
+   {
+    "tag": "ItemAbility.SongOfCarnage"
+   }
+  ],
+  "icon": "000003E300005A62",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Fireforge Stone"
+   }
+  ]
+ },
+ {
+  "abilities": [
+   {
     "slug": "flamestrike_ability_equipment_upgrade_active_wand_flame_strike"
    }
   ],
@@ -13293,7 +13635,7 @@
    ]
   },
   "resid": 4995046968757,
-  "point_cost": 2,
+  "point_cost": 1,
   "id": "equipment_upgrade_active_wand_trackers_mark",
   "description": "",
   "name": "Tracker's Mark",
@@ -15198,7 +15540,7 @@
   "icon": "000003E300004815",
   "unlock_requirements": [
    {
-    "num_required": 1,
+    "num_required": 3,
     "token_name": "Astral Dew"
    }
   ]
@@ -15868,7 +16210,7 @@
   "resid": 4801773440379,
   "point_cost": 2,
   "id": "equipment_upgrade_passive_army_siege_breaker",
-  "description": "While army leader, grants Siege Breaker to all units in the army.",
+  "description": "Grants Siege Breaker to all units in the army.",
   "name": "Siege Master",
   "tags": [
    {
@@ -15917,7 +16259,7 @@
   "resid": 4801773440378,
   "point_cost": 2,
   "id": "equipment_upgrade_passive_army_maintanance",
-  "description": "While army leader, units in the army cost -20% <hyperlink>Unit Upkeep</hyperlink>.<br></br><br></br>Does not stack.",
+  "description": "Units in the army cost -10% base <hyperlink>Unit Upkeep</hyperlink>.",
   "name": "Army Maintenance",
   "tags": [
    {
@@ -15985,7 +16327,7 @@
   "icon": "0000045E00001063",
   "unlock_requirements": [
    {
-    "num_required": 2,
+    "num_required": 1,
     "token_name": "Astral Dew"
    }
   ]
@@ -17627,7 +17969,7 @@
   "unlock_requirements": [
    {
     "num_required": 2,
-    "token_name": "Archon Blood"
+    "token_name": "Tranquility Pool"
    }
   ]
  },
@@ -17752,13 +18094,7 @@
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
    }
   ],
-  "icon": "0000045E00001031",
-  "unlock_requirements": [
-   {
-    "num_required": 2,
-    "token_name": "Rainbow Clover"
-   }
-  ]
+  "icon": "0000045E00001031"
  },
  {
   "abilities": [
@@ -17968,7 +18304,7 @@
   "icon": "000003E300005801",
   "unlock_requirements": [
    {
-    "num_required": 2,
+    "num_required": 3,
     "token_name": "Silvertongue Fruit"
    }
   ]
@@ -18058,7 +18394,7 @@
    ]
   },
   "resid": 4801773440030,
-  "point_cost": 2,
+  "point_cost": 1,
   "id": "equipment_upgrade_active_staff_raise_undead",
   "description": "",
   "name": "Raise Undead",
@@ -18093,7 +18429,7 @@
    ]
   },
   "resid": 4801773440029,
-  "point_cost": 2,
+  "point_cost": 1,
   "id": "equipment_upgrade_active_staff_awaken_flora",
   "description": "",
   "name": "Animate Flora",
@@ -18701,13 +19037,7 @@
     "tag": "ItemStrength.Weak"
    }
   ],
-  "icon": "0000045E00001063",
-  "unlock_requirements": [
-   {
-    "num_required": 1,
-    "token_name": "Astral Dew"
-   }
-  ]
+  "icon": "0000045E00001063"
  },
  {
   "abilities": [
@@ -22948,7 +23278,7 @@
   "icon": "000003E300005801",
   "unlock_requirements": [
    {
-    "num_required": 2,
+    "num_required": 3,
     "token_name": "Silvertongue Fruit"
    }
   ]
@@ -23126,7 +23456,7 @@
    ]
   },
   "resid": 4801773439801,
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_wand_raise_undead",
   "description": "",
   "name": "Raise Undead",
@@ -23325,7 +23655,7 @@
    ]
   },
   "resid": 4801773439791,
-  "point_cost": 2,
+  "point_cost": 1,
   "id": "equipment_upgrade_active_wand_heal_single",
   "description": "",
   "name": "Heal",
@@ -25410,9 +25740,9 @@
   },
   "resid": 4801773439659,
   "point_cost": 3,
-  "id": "equipment_upgrade_defense_hp__30",
+  "id": "equipment_upgrade_defense_hp__15",
   "description": "<bulletlist><bullet>Hit Points represent the amount of damage a <hyperlink>Unit</hyperlink> can sustain before it dies.</bullet><bullet>Most units will take <hyperlink>Casualties</hyperlink> as their Hit Points drop.</bullet></bulletlist>",
-  "name": "+30 Hit Points",
+  "name": "+15 Hit Points",
   "tags": [
    {
     "tag": "ItemTypeArmor"
@@ -25478,9 +25808,9 @@
   },
   "resid": 4801773439658,
   "point_cost": 2,
-  "id": "equipment_upgrade_defense_hp__20",
+  "id": "equipment_upgrade_defense_hp__10",
   "description": "<bulletlist><bullet>Hit Points represent the amount of damage a <hyperlink>Unit</hyperlink> can sustain before it dies.</bullet><bullet>Most units will take <hyperlink>Casualties</hyperlink> as their Hit Points drop.</bullet></bulletlist>",
-  "name": "+20 Hit Points",
+  "name": "+10 Hit Points",
   "tags": [
    {
     "tag": "ItemTypeArmor"
@@ -25546,9 +25876,9 @@
   },
   "resid": 4801773439629,
   "point_cost": 1,
-  "id": "equipment_upgrade_defense_hp__10",
+  "id": "equipment_upgrade_defense_hp__5",
   "description": "<bulletlist><bullet>Hit Points represent the amount of damage a <hyperlink>Unit</hyperlink> can sustain before it dies.</bullet><bullet>Most units will take <hyperlink>Casualties</hyperlink> as their Hit Points drop.</bullet></bulletlist>",
-  "name": "+10 Hit Points",
+  "name": "+5 Hit Points",
   "tags": [
    {
     "tag": "ItemTypeArmor"

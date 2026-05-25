@@ -151,16 +151,19 @@ const dlcMap = {
     }, RISEFROMRUIN: {
         src: "/evolved/Icons/Text/RiseFromRuin.png",
         text: "Part of the Rise From Ruin DLC"
+    }, SECRETSOFTHEARCHMAGES: {
+        src: "/evolved/Icons/Text/SecretsOfTheArchmages.png",
+        text: "Part of the Secrets of the Archmages DLC"
     }
 };
 
 async function GetAllData(selectedLang) {
     let basePathEN = `/evolved/Data/EN/`;
 
-    /*if (selectedLang == "BETA") {
+    if (selectedLang == "BETA") {
         basePathEN = `/evolved/Data/BETA/`;
     }
-    */
+    
 
     const basePathGen = `/evolved/Data/GEN/`;
     // }
@@ -182,7 +185,9 @@ async function GetAllData(selectedLang) {
         "CosmicHappenings.json",
         "CityTree.json",
         "all_spawnsets_strategic.json",
-        "FreeCities.json"
+        "FreeCities.json",
+        "DestinyTraits.json",
+        "Relics.json"
         
     ];
     const fileNames = [
@@ -235,7 +240,9 @@ async function GetAllData(selectedLang) {
             "jsonCosmicHappenings",
             "jsonCityTreeNodes",
             "jsonSpawnSetsStrat",
-            "jsonFreeCities"
+            "jsonFreeCities",
+              "jsonDestinyTriggers",
+            "jsonRelics"
             
         ];
         const targets = [
@@ -328,11 +335,11 @@ async function CheckData() {
         }
         CheckBoxTooltips();
 
-        /*  if (storedSettings.showBeta) {
+     if (storedSettings.showBeta) {
              await GetAllData("BETA");
-       } else {*/
+       } else {
         await GetAllData(storedSettings.language);
-      //  }
+       }
 
 //await GetAllData("EN");
         AddExtraData();
@@ -349,6 +356,7 @@ async function CheckData() {
 }
 
 const lookupMaps = new Map(); // cache of maps per "array+key" combo
+
 
 function buildLookupMap(array, key) {
     const mapKey = array === jsonUnits ? "jsonUnits:" + key :

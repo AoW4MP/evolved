@@ -2428,6 +2428,12 @@
   "icon": "000003EB000004C5"
  },
  {
+  "description": "Unit is immune to Blind.",
+  "name": "Status Effect Immunity: Blinded",
+  "slug": "0000049700003539",
+  "icon": "000004970000353B"
+ },
+ {
   "description": "<bulletlist><bullet>Attacks gain +2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Deal +10% damage against Condemned units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "name": "Zeal",
   "slug": "0000041b000019e0",
@@ -3324,7 +3330,7 @@
   "description": "In a 2-hex cone:<bulletlist><bullet>Units sustain damage.</bullet><bullet>Units gain 2 Burning for 3 <turn></turn> Turns.</bullet><bullet>Hexes are set <hyperlink>On Fire</hyperlink></bullet></bulletlist><br></br>Deals double damage to obstacles.",
   "name": "Infernal Ray",
   "slug": "infernal_ray_ability_0000049700003753",
-  "damage": "15<damagefire></damagefire> ",
+  "damage": "20<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Magic</hyperlink>"
@@ -8898,10 +8904,28 @@
   "icon": "0000048B00000B95"
  },
  {
+  "description": "A spider unit with:<bulletlist><bullet>Swift</bullet><bullet>Immunity to:<bulletlist></bullet><bullet>Slowed</bullet><bullet>Immobilized</bullet></bulletlist></bulletlist>",
+  "name": "Spider",
+  "slug": "000004150000025b",
+  "icon": "000004150000025C"
+ },
+ {
   "description": "Unit gains Frenzy when in a province with Mushroom Forest terrain.",
   "name": "Spider Primal Connection",
   "slug": "00000497000003b1",
   "icon": "00000497000003A4"
+ },
+ {
+  "description": "Unit is immune to Immobilized.",
+  "name": "Status Effect Immunity: Immobilized",
+  "slug": "0000048b000005df",
+  "icon": "0000048B000005DE"
+ },
+ {
+  "description": "Unit is immune to Slowed.",
+  "name": "Status Effect Immunity: Slowed",
+  "slug": "0000048b000005dd",
+  "icon": "0000048B000005DB"
  },
  {
   "modifiers": [
@@ -11677,15 +11701,11 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "5",
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
+  "notes": [],
   "icon": "0000048D0000007C"
  },
  {
-  "description": "This unit's attacks gain:<bulletlist><bullet>Ranged or Magic attacks: +10% damage per stack of Marked on the target.</bullet><bullet>Melee attacks: 90% chance of inflicting Marked.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.</bullet></bulletlist>",
+  "description": "This unit's attacks gain:<bulletlist><bullet>Ranged or Magic attacks: +10% damage per stack of Marked on the target.</bullet><bullet>Melee attacks inflict Marked.<br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.</bullet></bulletlist>",
   "name": "Focused Aggression",
   "slug": "0000048d0000090a",
   "icon": "000003E30000723A"
@@ -11713,11 +11733,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "5",
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
+  "notes": [],
   "icon": "0000048D0000007C"
  },
  {
@@ -11749,11 +11765,6 @@
  {
   "modifiers": [
    {
-    "description": "+40% damage to Cavalry and Large Target units.",
-    "name": "Polearm",
-    "count": 1
-   },
-   {
     "description": "Inflict Weakened for 3 <turn></turn> Turns.",
     "name": "Weakened",
     "count": 1
@@ -11766,9 +11777,6 @@
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
    }
   ],
   "accuracy": "100%",
@@ -11822,9 +11830,6 @@
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
    }
   ],
   "accuracy": "100%",
@@ -11884,9 +11889,6 @@
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
    }
   ],
   "accuracy": "100%",
@@ -11940,9 +11942,6 @@
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
    }
   ],
   "accuracy": "100%",
@@ -11978,11 +11977,7 @@
   "accuracy": "Always Hits",
   "actionPoints": "<fullaction></fullaction>",
   "range": "5",
-  "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
+  "notes": [],
   "icon": "0000048D0000007C"
  },
  {
@@ -12159,11 +12154,6 @@
    {
     "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
     "name": "Piercing",
-    "count": 1
-   },
-   {
-    "description": "Ignore 50% of the target's <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
-    "name": "Breaching",
     "count": 1
    },
    {
@@ -13104,7 +13094,7 @@
  {
   "modifiers": [
    {
-    "description": "<bulletlist><bullet>Base 90% chance of inflicting Constricted for 1 <turn></turn> Turn.</bullet><bullet>90% chance against Marked or Slowed units.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Base 60% chance of inflicting Constricted for 1 <turn></turn> Turn.</bullet><bullet>90% chance against Marked or Slowed units.</bullet></bulletlist>",
     "name": "Constricting",
     "count": 1
    }
@@ -14381,7 +14371,7 @@
   "description": "Throws a projectile at target unit.",
   "name": "Throw Shadow Dagger",
   "slug": "throw_(base)_ability_000004890000119C",
-  "damage": "24<damagephysical></damagephysical> ",
+  "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Missile</hyperlink>"
@@ -14407,7 +14397,7 @@
   "icon": "000003BD000020E7"
  },
  {
-  "description": "When this unit's <hyperlink><hp></hp> Hit Points</hyperlink> drop below 30%:<bulletlist><bullet>Inflict Blind on all adjacent enemy units.</bullet><bullet>Teleport up to 5 hexes away from enemies.</bullet></bulletlist>",
+  "description": "When this unit's <hyperlink><hp></hp> Hit Points</hyperlink> drop below 30%:<bulletlist><bullet>Inflict Blind on all adjacent enemy units.</bullet><bullet>Teleport up to 5 hexes in a random direction.</bullet></bulletlist>",
   "name": "Shadowed Escape",
   "slug": "0000048b00000205",
   "icon": "0000048B00000209"
@@ -14926,7 +14916,7 @@
     "count": 1
    },
    {
-    "description": "90% chance of inflicting Marked",
+    "description": "Inflict Marked for 3 <turn></turn> Turns.",
     "name": "Focused Aggression",
     "count": 1
    }
@@ -14957,12 +14947,12 @@
     "count": 1
    },
    {
-    "description": "120% chance of inflicting Marked",
+    "description": "Inflict 2 Marked for 3 <turn></turn> Turns.",
     "name": "Focused Aggression",
     "count": 1
    }
   ],
-  "description": "Deal damage to target, push them back and move onto their hex. Enter <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "Deal damage to target, push them back and move onto their hex.<br></br>Enter <hyperlink>Defense Mode</hyperlink> after use.",
   "name": "Drive Back",
   "slug": "drive_back_ability_00000489000000A2_0000048d00001f64",
   "damage": "10<damagephysical></damagephysical> 10<damagefire></damagefire> ",
@@ -15018,7 +15008,7 @@
     "count": 1
    }
   ],
-  "description": "Deal damage to target, push them back and move onto their hex. Enter <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "Deal damage to target, push them back and move onto their hex.<br></br>Enter <hyperlink>Defense Mode</hyperlink> after use.",
   "name": "Drive Back",
   "slug": "drive_back_ability_00000489000000A2_0000048d00001f6f",
   "damage": "10<damagephysical></damagephysical> 10<damagespirit></damagespirit> ",
@@ -15043,7 +15033,7 @@
  {
   "modifiers": [
    {
-    "description": "90% chance of inflicting Marked",
+    "description": "Inflict Marked for 3 <turn></turn> Turns.",
     "name": "Focused Aggression",
     "count": 1
    }
@@ -18184,14 +18174,14 @@
   "description": "Deals damage to enemy units in a 2-hex radius.",
   "name": "Overheat",
   "slug": "overheat_ability_000003EC00001891",
-  "damage": "30<damagefire></damagefire> ",
+  "damage": "24<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Magic</hyperlink>"
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "0",
   "notes": [
    {
@@ -18823,7 +18813,7 @@
   "description": "Deals damage in a 1-hex radius.",
   "name": "Incinerate",
   "slug": "incinerate_ability_000003EC00000DE5",
-  "damage": "25<damagefire></damagefire> ",
+  "damage": "22<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Magic</hyperlink>"
@@ -19703,7 +19693,7 @@
  {
   "modifiers": [
    {
-    "description": "90% chance of inflicting Marked",
+    "description": "Inflict Marked for 3 <turn></turn> Turns.",
     "name": "Focused Aggression",
     "count": 1
    }
@@ -19768,6 +19758,9 @@
    },
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 1 <turn></turn>"
    }
   ],
   "icon": "000003E300007267"
@@ -20234,7 +20227,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 60% chance of inflicting Blind for 1 <turn></turn> Turn.",
+    "description": "Base 90% chance of inflicting Blind for 1 <turn></turn> Turn.",
     "name": "Blind",
     "count": 1
    }
@@ -21230,10 +21223,10 @@
     "count": 1
    }
   ],
-  "description": "<bulletlist><bullet>Deal damage to enemy units in a 1-hex cone.</bullet><bullet>When hitting a Gilded target:<bulletlist></bullet><bullet>Heal 5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Deal +20% damage.</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>Deal damage to enemy units in a 1-hex cone.</bullet><bullet>When hitting a Gilded target:<bulletlist></bullet><bullet>Heal 5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist></bulletlist>",
   "name": "Golden Cleave",
   "slug": "golden_cleave_ability_000003E300005DA3",
-  "damage": "20<damagephysical></damagephysical> ",
+  "damage": "22<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
@@ -21734,7 +21727,7 @@
   "description": "Deals damage to target unit.",
   "name": "Freezing Burst",
   "slug": "freezing_burst_ability_000003E300005B27",
-  "damage": "15<damagefrost></damagefrost> ",
+  "damage": "5<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Single Shot</hyperlink>"
@@ -21835,7 +21828,7 @@
   "description": "Deals damage to target unit.",
   "name": "Freezing Burst",
   "slug": "freezing_burst_ability_000003E300005B26",
-  "damage": "20<damagefrost></damagefrost> ",
+  "damage": "22<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Single Shot</hyperlink>"
@@ -21961,7 +21954,7 @@
     "count": 1
    }
   ],
-  "description": "Deals damage in a 4-hex line that is 3 hexes wide.<br></br>Units that are hit are inflicted with 3 Sundered Defense.",
+  "description": "Deals damage in a 4-hex line that is 3 hexes wide.<br></br>Units that are hit are inflicted with 2 Sundered Defense.",
   "name": "Sunder the Earth",
   "slug": "sunder_earth_ability_000003E300005AB0",
   "damage": "22<damagephysical></damagephysical> 22<damagefire></damagefire> ",
@@ -25245,13 +25238,7 @@
   "icon": "000003BD000020C9"
  },
  {
-  "modifiers": [
-   {
-    "description": "Base 30% chance of inflicting Immobilized for 1 <turn></turn> Turn.",
-    "name": "Immobilized",
-    "count": 1
-   }
-  ],
+  "modifiers": [],
   "description": "Strikes target enemy unit.",
   "name": "Melee Strike",
   "slug": "melee_strike_(base)_ability_000003E300004A35",
@@ -25378,24 +25365,6 @@
   "actionPoints": "<fullaction></fullaction>",
   "range": "1",
   "icon": "000003E3000049B4"
- },
- {
-  "description": "A spider unit with:<bulletlist><bullet>Swift</bullet><bullet>Immunity to:<bulletlist></bullet><bullet>Slowed</bullet><bullet>Immobilized</bullet></bulletlist></bulletlist>",
-  "name": "Spider",
-  "slug": "000004150000025b",
-  "icon": "000004150000025C"
- },
- {
-  "description": "Unit is immune to Immobilized.",
-  "name": "Status Effect Immunity: Immobilized",
-  "slug": "0000048b000005df",
-  "icon": "0000048B000005DE"
- },
- {
-  "description": "Unit is immune to Slowed.",
-  "name": "Status Effect Immunity: Slowed",
-  "slug": "0000048b000005dd",
-  "icon": "0000048B000005DB"
  },
  {
   "modifiers": [
@@ -27798,7 +27767,7 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
-  "description": "The caster and adjacent friendly units gain:<bulletlist><bullet>Rally for 3<turn></turn> Turn.</bullet><bullet>+2 Bolstered Defense for 3<turn></turn> Turn.</bullet><bullet>+2 Bolstered Resistance for 3<turn></turn> Turn.</bullet><bullet>Vigilant.</bullet><bullet></bulletlist>This unit then enters <hyperlink>Defense Mode</hyperlink>.</bullet>",
+  "description": "The caster and friendly units with a 2-hex radius gain:<bulletlist><bullet>Rally for 3<turn></turn> Turn.</bullet><bullet>+2 Bolstered Defense for 3<turn></turn> Turn.</bullet><bullet>+2 Bolstered Resistance for 3<turn></turn> Turn.</bullet><bullet>Vigilant.</bullet><bullet></bulletlist>This unit then enters <hyperlink>Defense Mode</hyperlink>.</bullet>",
   "name": "Rallying Cry",
   "slug": "hs_defender_rallying_cry_ability_hs_defender_rallying_cry",
   "damage": "",
@@ -29445,7 +29414,7 @@
  },
  {
   "description": "While army leader, all Animals in army have:<bulletlist><bullet>Flanker</bullet><bullet>-20% base <hyperlink>Unit Upkeep</hyperlink></bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
-  "name": "Shepherd",
+  "name": "Pack Leader",
   "slug": "000003e300006b75",
   "icon": "000003E300006EFD"
  },
@@ -30805,7 +30774,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullaction></fullaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "000004C000000AC1"
  },
@@ -30894,7 +30863,7 @@
   "icon": "000004C00000097D"
  },
  {
-  "description": "<hyperlink>Support</hyperlink> abilities grant +1 Fervor.<br></br>Entering <hyperlink>Defense Mode</hyperlink> grants +3 Fervor.",
+  "description": "<hyperlink>Support</hyperlink> abilities grant +1 Fervor.<br></br>Entering <hyperlink>Defense Mode</hyperlink> grants +2 Fervor.",
   "name": "Fervorous Disciple",
   "slug": "000004c00000093f",
   "icon": "000004C000000978"
@@ -38783,9 +38752,6 @@
   "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
    {
-    "requisite": "<hyperlink>Magic</hyperlink>"
-   },
-   {
     "requisite": "<hyperlink>Base</hyperlink>"
    },
    {
@@ -38930,9 +38896,6 @@
   "slug": "blast_shot_(item_forge)_unit_property_ability_breachgun_and_axe_tier_i",
   "damage": "20<damagephysical></damagephysical> ",
   "requisites": [
-   {
-    "requisite": "<hyperlink>Magic</hyperlink>"
-   },
    {
     "requisite": "<hyperlink>Base</hyperlink>"
    },
@@ -40559,7 +40522,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to hexes.</bullet><bullet>Inflicted with Insanity for <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to 3 hexes.</bullet><bullet>Inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
   "name": "Hysteria Storm",
   "slug": "hysteria_storm_ability_(weakened)_umbral_staff_item_tier_i",
   "damage": "",
@@ -45690,7 +45653,7 @@
  {
   "modifiers": [
    {
-    "description": "Ignore up to 5 <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
     "name": "Piercing",
     "count": 1
    },
@@ -45851,7 +45814,7 @@
  {
   "modifiers": [
    {
-    "description": "Ignore up to 5 <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
     "name": "Piercing",
     "count": 1
    }
@@ -45935,8 +45898,8 @@
  {
   "modifiers": [
    {
-    "description": "Ignore up to 5 <defense></defense> <hyperlink>Defense</hyperlink>",
-    "name": "Armor Bypass",
+    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
+    "name": "Piercing",
     "count": 1
    },
    {
@@ -48212,7 +48175,13 @@
   "icon": "000004A600000BDD"
  },
  {
-  "description": "This unit has +1 <defense></defense> <hyperlink>Defense</hyperlink> and +1 <resistance></resistance> <hyperlink>Resistance</hyperlink> until the end of its next combat.",
+  "description": "+1 <hyperlink><hp></hp> Hit Point</hyperlink> and +1% damage. Stacks up to 50 times.",
+  "name": "Slaughter Empowerment",
+  "slug": "000003e1000019a1",
+  "icon": "0000049700000F1B"
+ },
+ {
+  "description": "<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>+1 <resistance></resistance> <hyperlink>Resistance</hyperlink></bullet></bulletlist>",
   "name": "Rite of Stoic Defense",
   "slug": "0000048b000010ba",
   "icon": "0000048B000010BF"
@@ -48847,7 +48816,7 @@
   "icon": "0000048D00000166"
  },
  {
-  "description": "Next attack:<bulletlist><bullet>Inflicts 2x Sundered Defense.</bullet><bullet>Ignores 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink></bullet></bulletlist>",
+  "description": "Next attack:<bulletlist><bullet>Inflicts Sundered Defense.</bullet><bullet>Ignores 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink></bullet></bulletlist>",
   "name": "Ammunition: Sundering Shot",
   "slug": "00000497000000cc",
   "icon": "0000048D00000144"
@@ -49033,13 +49002,13 @@
   "icon": "0000042A000004CD"
  },
  {
-  "description": "<bulletlist><bullet>-1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Stacks up to 10 times.</bullet></bulletlist><br></br><br></br>Sundered Resistance <hyperlink>counters</hyperlink> Bolstered Resistance.",
+  "description": "<bulletlist><bullet>-1<resistance></resistance> <hyperlink>Resistance</hyperlink></bullet><bullet>Stacks up to 5 times.</bullet></bulletlist><br></br><br></br>Sundered Resistance <hyperlink>counters</hyperlink> Bolstered Resistance.",
   "name": "Sundered Resistance",
   "slug": "000003e100001403",
   "icon": "000003E100001407"
  },
  {
-  "description": "<bulletlist><bullet>-1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>Stacks up to 10 times.</bullet></bulletlist><br></br><br></br>Sundered Defense <hyperlink>counters</hyperlink> Bolstered Defense.",
+  "description": "<bulletlist><bullet>-1 <defense></defense> <hyperlink>Defense</hyperlink></bullet><bullet>Stacks up to 5 times.</bullet></bulletlist><br></br><br></br>Sundered Defense <hyperlink>counters</hyperlink> Bolstered Defense.",
   "name": "Sundered Defense",
   "slug": "000003e1000013d3",
   "icon": "000003E1000013D0"
@@ -49491,7 +49460,7 @@
     "note": "Can only be used once per battle."
    }
   ],
-  "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to hexes.</bullet><bullet>Inflicted with Insanity for <turn></turn> Turn.</bullet></bulletlist>",
+  "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to 3 hexes.</bullet><bullet>Inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
   "name": "Hysteria Storm",
   "slug": "hysteria_storm_ability_(weakened)_umbral_staff_equipment_upgrade",
   "damage": "",
@@ -51474,12 +51443,12 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 4 <turn></turn>"
    }
   ],
   "description": "Target <hyperlink>Flora Obstacle</hyperlink> transforms into a <hyperlink>Floral Stinger</hyperlink> unit under your control.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Animate Flora",
-  "slug": "awaken_flora_ability_equipment_upgrade_active_staff_awaken_flora",
+  "slug": "awaken_flora_ability_item_forge_equipment_upgrade_active_staff_awaken_flora",
   "damage": "",
   "requisites": [
    {
@@ -51490,7 +51459,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "0000041B00000EC9"
  },
@@ -51944,12 +51913,12 @@
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    },
    {
-    "note": "Cooldown: 2 <turn></turn>"
+    "note": "Cooldown: 4 <turn></turn>"
    }
   ],
   "description": "Target <hyperlink>Flora Obstacle</hyperlink> transforms into a <hyperlink>Floral Stinger</hyperlink> unit under your control.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Animate Flora",
-  "slug": "awaken_flora_ability_equipment_upgrade_active_wand_awaken_flora",
+  "slug": "awaken_flora_ability_item_forge_equipment_upgrade_active_wand_awaken_flora",
   "damage": "",
   "requisites": [
    {
@@ -51960,7 +51929,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
   "icon": "0000041B00000EC9"
  },

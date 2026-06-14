@@ -572,7 +572,7 @@
   "id": "dunestalkers",
   "DLC": "RISEFROMRUIN ",
   "tactical": false,
-  "description": "Target race becomes one with the desert, granting them:<bulletlist><bullet>Sand Walk</bullet><bullet>Sand Camouflage</bullet><bullet>When on <hyperlink>Sand</hyperlink> terrain gain:<bulletlist></bullet><bullet>Very Fast Movement in combat.</bullet><bullet>+20% <hyperlink><flank></flank> Flanking</hyperlink> damage.</bullet></bulletlist></bulletlist>",
+  "description": "Target race becomes one with the desert, granting them:<bulletlist><bullet>Sand Walk</bullet><bullet>Sand Camouflage</bullet><bullet>When on <hyperlink>Sand</hyperlink> terrain gain:<bulletlist></bullet><bullet>Fast Movement in combat.</bullet><bullet>+20% <hyperlink><flank></flank> Flanking</hyperlink> damage.</bullet></bulletlist></bulletlist>",
   "name": "Dunestalkers",
   "operation_point_cost": 250,
   "icon": "0000049700003662"
@@ -740,11 +740,11 @@
  {
   "casting_cost": "10<mana></mana> ",
   "resid": 5046586585798,
-  "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
+  "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "rite_of_bloodletting",
   "DLC": "THRONESOFBLOOD ",
   "tactical": true,
-  "description": "Target friendly unit sustains 5 unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all enemy units within 2 hexes:<bulletlist><bullet>Sustain 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 2 Bleeding for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Target friendly unit sustains 5 unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all enemy units within 2 hexes:<bulletlist><bullet>Sustain 12 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 2 Bleeding for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Rite of Bloodletting",
   "operation_point_cost": 15,
   "icon": "0000049700003296"
@@ -1486,7 +1486,7 @@
   "id": "accursed_armors",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a 60% chance of being inflicted with Misfortune for 3 <turn></turn> Turns</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
+  "description": "Enchanted units gain:<bulletlist><bullet>When a melee range attack hits, the attacker has a 60% chance of being inflicted with Misfortune for 3 <turn></turn> Turns.</bullet><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -1607,7 +1607,7 @@
   "id": "grand_protection",
   "DLC": "WAYSOFWAR ",
   "tactical": true,
-  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>2 Grace</bullet><bullet>2 Regeneration for 3 <turn></turn> Turns</bullet><bullet>2 Bolstered Defense for 3 <turn></turn> Turns</bullet><bullet>2 Bolstered Resistance for 3 <turn></turn> Turns</bullet></bulletlist>",
+  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>2 Grace</bullet><bullet>2 Bolstered Defense for 3 <turn></turn> Turns</bullet><bullet>2 Bolstered Resistance for 3 <turn></turn> Turns</bullet></bulletlist>",
   "name": "Grand Protection",
   "operation_point_cost": 40,
   "icon": "0000049700001351"
@@ -2056,7 +2056,7 @@
   "casting_cost": "70<mana></mana> ",
   "resid": 5046586574960,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "purging_arrows",
+  "id": "purging_imbuement",
   "tactical": false,
   "description": "Grants attacks of enchanted units:<bulletlist><bullet>+20% damage against Magic Origin units.</bullet><bullet>Base 60% chance of removing 1 <hyperlink>Positive Status Effect</hyperlink> from the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
@@ -2064,10 +2064,19 @@
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
     "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
-  "name": "Purging Arrows",
+  "name": "Purging Imbuement",
   "operation_point_cost": 70,
   "icon": "000003BD00002E9C"
  },
@@ -2731,6 +2740,7 @@
   "resid": 5029406704846,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "winter_sorrow",
+  "DLC": "ELDRITCHREALMS ",
   "tactical": true,
   "description": "Enemy units suffer 5 stack(s) of Demoralized whenever they kill another unit.",
   "name": "Winter Sorrow",
@@ -2742,6 +2752,7 @@
   "resid": 5029406704841,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "autumn_storm",
+  "DLC": "ELDRITCHREALMS ",
   "tactical": true,
   "description": "All enemy units suffer Wet until the end of battle.<br></br><br></br>In addition, after 5 <turn></turn> <hyperlink>Turns</hyperlink>, all enemy units that are Wet suffer 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> and have a 60%% chance of suffering Stunned.",
   "name": "Autumn Storm",
@@ -2753,6 +2764,7 @@
   "resid": 5029406704837,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "summer_heat",
+  "DLC": "ELDRITCHREALMS ",
   "tactical": true,
   "description": "At the start of the owner's turn, enemy units adjacent to owner's units have 90% chance of suffering Burning and suffer 5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> for each stack of Burning they have.",
   "name": "Summer Heat",
@@ -2764,6 +2776,7 @@
   "resid": 5029406704833,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "spring_growth",
+  "DLC": "ELDRITCHREALMS ",
   "tactical": true,
   "description": "Each time the owner's units suffer damage, they gain 1 stack(s) of Regeneration.",
   "name": "Spring Growth",
@@ -3286,7 +3299,7 @@
   ]
  },
  {
-  "casting_cost": "15<mana></mana> ",
+  "casting_cost": "10<mana></mana> ",
   "resid": 5003636905483,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "resilient_incarnation",
@@ -3294,7 +3307,7 @@
   "tactical": true,
   "description": "Target friendly unit gains +1 <defense></defense> <hyperlink>Defense</hyperlink> and <resistance></resistance> <hyperlink>Resistance</hyperlink> per stack of Affinity Incarnate for 1 <turn></turn> Turn.",
   "name": "Resilient Incarnation",
-  "operation_point_cost": 20,
+  "operation_point_cost": 15,
   "icon": "0000048D000015C1"
  },
  {
@@ -3572,7 +3585,7 @@
   "id": "constricting_focus",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain base 60% chance of inflicting Constricted for 1 <turn></turn> Turn.</bullet><bullet>Chance increased to 90% against Marked or Slowed units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>Gain base 30% chance of inflicting Constricted for 1 <turn></turn> Turn.</bullet><bullet>Chance increased to 60% against Marked or Slowed units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -3740,7 +3753,7 @@
   "id": "shadow_weapons",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal +3<damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> when <hyperlink><flank></flank> Flanking</hyperlink>.</bullet><bullet>Always flank Blind units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>+20% damage against targets that are Blind.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -3926,13 +3939,16 @@
   "casting_cost": "180<mana></mana> ",
   "resid": 4853313045078,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "disrupting_blades",
+  "id": "disrupting_weapons",
   "DLC": "EMPIRESANDASHES ",
   "tactical": false,
   "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>A base 60% chance of inflicting Disrupted for 2 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
@@ -3942,9 +3958,15 @@
    },
    {
     "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
-  "name": "Disrupting Blades",
+  "name": "Disrupting Weapons",
   "operation_point_cost": 180,
   "icon": "0000046A0000021B"
  },
@@ -3959,6 +3981,9 @@
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
    }
   ],
   "name": "Null Shield",
@@ -4353,14 +4378,14 @@
   "icon": "0000044000000079"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4672924418199,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "demonic_onslaught",
   "tactical": true,
   "description": "All attacking units gain Killing Momentum and Hastened for 3 <turn></turn> Turns.",
   "name": "Demonic Onslaught",
-  "operation_point_cost": 50,
+  "operation_point_cost": 65,
   "icon": "0000044000000071"
  },
  {
@@ -4435,7 +4460,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "supreme_magic",
   "tactical": false,
-  "description": "For enchanted units:<bulletlist><bullet>Grants Zeal, which makes attacks deal extra <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Makes killing a unit cause it to explode, dealing 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist>",
+  "description": "For enchanted units:<bulletlist><bullet>Grants Zeal, which makes attacks deal extra <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Attacks ignore 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Killing a unit causes it to explode, dealing 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -4562,14 +4587,14 @@
   "icon": "0000041B0000193D"
  },
  {
-  "casting_cost": "30<mana></mana> ",
+  "casting_cost": "15<mana></mana> ",
   "resid": 4514010634749,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "inspiring_chant",
   "tactical": true,
-  "description": "Friendly units in a 2-hex radius:<bulletlist><bullet>Gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>Become 2 Strengthened if they have Zeal.</bullet></bulletlist>",
+  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>Strengthened for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Inspiring Chant",
-  "operation_point_cost": 25,
+  "operation_point_cost": 20,
   "icon": "0000041B00001939"
  },
  {
@@ -4801,7 +4826,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Enchantment</hyperlink>",
   "id": "withering_mist",
   "tactical": true,
-  "description": "Each turn, for 3 <turn></turn> Turns, all enemies:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Blind for 1 <turn></turn> Turn.</bullet><bullet>Have a base 90% chance of becoming Weakened for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "description": "Each turn, for 3 <turn></turn> Turns, all enemies:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a base 120% chance of becoming Blind for 1 <turn></turn> Turn.</bullet><bullet>Have a base 120% chance of becoming Weakened for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Withering Mist",
   "operation_point_cost": 40,
   "icon": "0000041B00001719"
@@ -4887,7 +4912,7 @@
   "icon": "0000041B00001560"
  },
  {
-  "casting_cost": "180<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4514010633544,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "cosmic_overdrive",
@@ -4908,29 +4933,29 @@
    }
   ],
   "name": "Cosmic Overdrive",
-  "operation_point_cost": 180,
+  "operation_point_cost": 200,
   "icon": "0000041B000012D2"
  },
  {
-  "casting_cost": "200<mana></mana> ",
+  "casting_cost": "150<mana></mana> ",
   "resid": 4514010633542,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "time_stop",
   "tactical": true,
   "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 5 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Time Stop",
-  "operation_point_cost": 65,
+  "operation_point_cost": 50,
   "icon": "0000041B000012CE"
  },
  {
-  "casting_cost": "300<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4514010633535,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>",
   "id": "disruption_wave",
   "tactical": true,
-  "description": "<bulletlist><bullet>Enemy units have a base 120% chance of becoming Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Dispels 2 <hyperlink>Positive Status Effects</hyperlink> from enemies.</bullet><bullet>Dispels 2 <hyperlink>Negative Status Effects</hyperlink> from allies.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Enemy units have a base 120% chance of becoming Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Dispels 3 <hyperlink>Positive Status Effects</hyperlink> from enemies.</bullet><bullet>Dispels 3 <hyperlink>Negative Status Effects</hyperlink> from allies.</bullet></bulletlist>",
   "name": "Disruption Wave",
-  "operation_point_cost": 80,
+  "operation_point_cost": 65,
   "icon": "0000041B000012D6"
  },
  {
@@ -5402,7 +5427,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "melt_armor",
   "tactical": true,
-  "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Gain 3 Sundered Defense.</bullet><bullet>Sustain 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
+  "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Gain 2 Sundered Defense.</bullet><bullet>Sustain 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Melt Armor",
   "operation_point_cost": 30,
   "icon": "0000041B00000F80"
@@ -5569,18 +5594,27 @@
   "casting_cost": "90<mana></mana> ",
   "resid": 4514010631717,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "poison_arrows",
+  "id": "poison_imbuement",
   "tactical": false,
-  "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
     "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
-  "name": "Poison Arrows",
+  "name": "Poison Imbuement",
   "operation_point_cost": 90,
   "icon": "0000041B00000DA7"
  },
@@ -5630,7 +5664,7 @@
   "icon": "000003E300005AA4"
  },
  {
-  "casting_cost": "160<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4514010631267,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "demonic_siphon",
@@ -5651,7 +5685,7 @@
    }
   ],
   "name": "Demonic Siphon",
-  "operation_point_cost": 160,
+  "operation_point_cost": 200,
   "icon": "0000041B00000C3E"
  },
  {
@@ -6473,7 +6507,7 @@
   "id": "draconic_vitality",
   "DLC": "DRAGONLORDS ",
   "tactical": false,
-  "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Point</hyperlink> regeneration per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>+3 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet><bullet>+3 <hyperlink><hp></hp> Hit Points</hyperlink> per Hero Level, up to Level 10.</bullet></bulletlist>",
+  "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Point</hyperlink> regeneration per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>+2 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet><bullet>+2 <hyperlink><hp></hp> Hit Points</hyperlink> per Hero Level, up to Level 10.</bullet></bulletlist>",
   "name": "Draconic Vitality",
   "operation_point_cost": 150,
   "icon": "000003E300006B3C"
@@ -6612,7 +6646,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "enchanted_bloom",
   "tactical": false,
-  "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 1 <hyperlink>Province</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +5 <food></food> <hyperlink>Food</hyperlink>, +5 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist></bulletlist>",
+  "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +5 <food></food> <hyperlink>Food</hyperlink>, +5 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist></bulletlist>",
   "name": "Enchanted Bloom",
   "operation_point_cost": 150,
   "icon": "0000041B00000DBF"
@@ -6702,18 +6736,27 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4273492485010,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "frost_arrows",
+  "id": "frost_imbuement",
   "tactical": false,
-  "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>+1 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
     "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
-  "name": "Frost Arrows",
+  "name": "Frost Imbuement",
   "operation_point_cost": 80,
   "icon": "000003E30000638F"
  },
@@ -7656,7 +7699,7 @@
   "tactical": false,
   "description": "Two Fiend units of the same Tier in the target army fight each other. One dies and the other transforms into a Fiend with a Tier one level higher than before.",
   "name": "Fight for Power",
-  "operation_point_cost": 45,
+  "operation_point_cost": 90,
   "icon": "000003E300005AA0"
  },
  {

@@ -203,7 +203,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target race becomes one with the desert, granting them:<bulletlist><bullet>Sand Walk</bullet><bullet>Sand Camouflage</bullet><bullet>When on <hyperlink>Sand</hyperlink> terrain gain:<bulletlist></bullet><bullet>Very Fast Movement in combat.</bullet><bullet>+20% <hyperlink><flank></flank> Flanking</hyperlink> damage.</bullet></bulletlist></bulletlist>",
+    "description": "Target race becomes one with the desert, granting them:<bulletlist><bullet>Sand Walk</bullet><bullet>Sand Camouflage</bullet><bullet>When on <hyperlink>Sand</hyperlink> terrain gain:<bulletlist></bullet><bullet>Fast Movement in combat.</bullet><bullet>+20% <hyperlink><flank></flank> Flanking</hyperlink> damage.</bullet></bulletlist></bulletlist>",
     "name": "Dunestalkers",
     "spell_slug": "dunestalkers",
     "tier": 3,
@@ -357,7 +357,7 @@
     "name": "Rite of Bloodletting",
     "spell_slug": "rite_of_bloodletting",
     "tier": 1,
-    "type": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>"
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
     "description": "Attacks of enchanted units gain:<bulletlist><bullet>+ <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Bleeding for <turn></turn> Turns.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
@@ -803,7 +803,7 @@
   "icon": "00000497000013A1",
   "skills": [
    {
-    "description": "Enchanted units gain:<bulletlist><bullet>When a <hyperlink>Melee</hyperlink> attack hits, the attacker has a % chance of being inflicted with Misfortune for <turn></turn> Turns</bullet><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
+    "description": "Enchanted units gain:<bulletlist><bullet>When a melee range attack hits, the attacker has a % chance of being inflicted with Misfortune for <turn></turn> Turns.</bullet><bullet>+ <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
     "name": "Accursed Armors",
     "spell_slug": "accursed_armors",
     "tier": 7,
@@ -884,7 +884,7 @@
     "upgrade_slug": "garden_of_affluence"
    },
    {
-    "description": "Friendly units in a -hex radius gain:<bulletlist><bullet>2 Grace</bullet><bullet>2 Regeneration for <turn></turn> Turns</bullet><bullet>3 Bolstered Defense for <turn></turn> Turns</bullet><bullet>3 Bolstered Resistance for <turn></turn> Turns</bullet></bulletlist>",
+    "description": "Friendly units in a -hex radius gain:<bulletlist><bullet>2 Grace</bullet><bullet>2 Bolstered Defense for <turn></turn> Turns</bullet><bullet>2 Bolstered Resistance for <turn></turn> Turns</bullet></bulletlist>",
     "name": "Grand Protection",
     "spell_slug": "grand_protection",
     "tier": 6,
@@ -1589,7 +1589,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal +<damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> when <hyperlink><flank></flank> Flanking</hyperlink>.</bullet><bullet>Always flank Blind units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+ <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>+% damage against targets that are Blind.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Shadow Weapons",
     "spell_slug": "shadow_weapons",
     "tier": 4,
@@ -2115,7 +2115,7 @@
     "upgrade_slug": "tendril_labyrinth"
    },
    {
-    "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain base % chance of inflicting Constricted for <turn></turn> Turns.</bullet><bullet>Chance increased to 90% against Marked or Slowed units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "description": "Base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal + <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>Gain base % chance of inflicting Constricted for <turn></turn> Turns.</bullet><bullet>Chance increased to 60% against Marked or Slowed units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
     "name": "Constricting Focus",
     "spell_slug": "constricting_focus",
     "tier": 2,
@@ -2219,8 +2219,8 @@
    },
    {
     "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>A base % chance of inflicting Disrupted for <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
-    "name": "Disrupting Blades",
-    "spell_slug": "disrupting_blades",
+    "name": "Disrupting Weapons",
+    "spell_slug": "disrupting_weapons",
     "tier": 8,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
@@ -2575,7 +2575,7 @@
     "type": "<hyperlink>Unit</hyperlink>"
    },
    {
-    "description": "Target enemies in a -hex radius:<bulletlist><bullet>Gain 3 Sundered Defense.</bullet><bullet>Sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
+    "description": "Target enemies in a -hex radius:<bulletlist><bullet>Gain 2 Sundered Defense.</bullet><bullet>Sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
     "name": "Melt Armor",
     "spell_slug": "melt_armor",
     "tier": 5,
@@ -2889,7 +2889,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>"
    },
    {
-    "description": "For enchanted units:<bulletlist><bullet>Grants Zeal, which makes attacks deal extra <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Makes killing a unit cause it to explode, dealing <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist>",
+    "description": "For enchanted units:<bulletlist><bullet>Grants Zeal, which makes attacks deal extra <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Attacks ignore <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Killing a unit causes it to explode, dealing <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist>",
     "name": "Supreme Magic",
     "spell_slug": "supreme_magic",
     "tier": 8,
@@ -3105,7 +3105,7 @@
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
    {
-    "description": "Friendly units in a -hex radius:<bulletlist><bullet>Gain + <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>Become 2 Strengthened if they have Zeal.</bullet></bulletlist>",
+    "description": "Friendly units in a -hex radius gain:<bulletlist><bullet> <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>Strengthened for <turn></turn> Turns.</bullet></bulletlist>",
     "name": "Inspiring Chant",
     "spell_slug": "inspiring_chant",
     "tier": 2,
@@ -4026,7 +4026,7 @@
     "type": "<casttactical></casttactical> <hyperlink>Buff/Debuff Spell</hyperlink>"
    },
    {
-    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 1 <hyperlink>Province</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +5 <food></food> <hyperlink>Food</hyperlink>, +5 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist></bulletlist>",
+    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +5 <food></food> <hyperlink>Food</hyperlink>, +5 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist></bulletlist>",
     "name": "Enchanted Bloom",
     "spell_slug": "enchanted_bloom",
     "tier": 7,
@@ -4073,8 +4073,8 @@
    },
    {
     "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal + <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain base % chance of inflicting Poisoned, a damage-over-time effect.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
-    "name": "Poison Arrows",
-    "spell_slug": "poison_arrows",
+    "name": "Poison Imbuement",
+    "spell_slug": "poison_imbuement",
     "tier": 2,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },
@@ -4329,8 +4329,8 @@
    },
    {
     "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>+ <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
-    "name": "Frost Arrows",
-    "spell_slug": "frost_arrows",
+    "name": "Frost Imbuement",
+    "spell_slug": "frost_imbuement",
     "tier": 2,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    }
@@ -5460,8 +5460,8 @@
    },
    {
     "description": "Grants attacks of enchanted units:<bulletlist><bullet>+% damage against Magic Origin units.</bullet><bullet>Base % chance of removing 1 <hyperlink>Positive Status Effect</hyperlink> from the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
-    "name": "Purging Arrows",
-    "spell_slug": "purging_arrows",
+    "name": "Purging Imbuement",
+    "spell_slug": "purging_imbuement",
     "tier": 2,
     "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
    },

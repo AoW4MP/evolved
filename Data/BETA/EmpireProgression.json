@@ -7,17 +7,17 @@
   "name": "Cosmic Affinity",
   "icon": "0000048B00001304",
   "required_level": 11,
-  "cost": "225<influence></influence> "
+  "cost": "250<influence></influence> "
  },
  {
   "category": "General Empire Skill",
   "id": "focused_affinity",
   "required_xp": 600,
-  "description": "Gain +50 Affinity Points per <turn></turn> <hyperlink>Turn</hyperlink> in the branch of your highest <hyperlink>Affinity</hyperlink>.",
+  "description": "Gain +30 Affinity Points per <turn></turn> <hyperlink>Turn</hyperlink> in the branch of your highest <hyperlink>Affinity</hyperlink>.",
   "name": "Focused Affinity",
   "icon": "0000048B00001302",
   "required_level": 11,
-  "cost": "225<influence></influence> "
+  "cost": "250<influence></influence> "
  },
  {
   "category": "Shadow Empire Skill",
@@ -27,7 +27,7 @@
   "name": "Eyes Everywhere",
   "icon": "0000048B000012F9",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -38,7 +38,7 @@
   "name": "Death Casting",
   "icon": "0000048B000012F3",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -49,7 +49,7 @@
   "name": "Exalted by Shadows",
   "icon": "0000048B000012E9",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -60,7 +60,7 @@
   "name": "Headhunters",
   "icon": "0000048B000012E5",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -71,7 +71,7 @@
   "name": "Unnatural Recovery",
   "icon": "0000048B000012DC",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -85,7 +85,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B000012DA",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -96,7 +96,7 @@
   "name": "Dark Vigor",
   "icon": "0000048B000012D3",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -107,7 +107,7 @@
   "name": "Feeding on Fear",
   "icon": "0000048B000012D0",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -118,7 +118,7 @@
   "name": "Court of Whispers",
   "icon": "0000048B000012CC",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -179,7 +179,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B000012B3",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<shadow></shadow>"
  },
  {
@@ -256,7 +256,7 @@
   "name": "Order of Knightly Oaths",
   "icon": "0000048B0000125D",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -270,7 +270,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B0000125B",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -281,7 +281,7 @@
   "name": "Absolute Loyalty",
   "icon": "0000048B0000124F",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -292,7 +292,7 @@
   "name": "Utopian Society",
   "icon": "0000048B00001249",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -303,7 +303,7 @@
   "name": "Call to Arms",
   "icon": "0000048B00001240",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -314,7 +314,7 @@
   "name": "Lead by Example",
   "icon": "0000048B0000123C",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -325,21 +325,21 @@
   "name": "Blessings and Wards",
   "icon": "0000048B00001239",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
   "repeat_cooldown_increase": 50,
   "category": "Order Repeatable Rite",
-  "id": "rite_of_allegiance",
+  "id": "rite_of_wealth",
   "cooldown": 200,
   "required_xp": 200,
   "description": "Instantly gain 2000 <gold></gold> <hyperlink>Gold</hyperlink>.",
-  "name": "Rite of Allegiance",
+  "name": "Rite of Wealth",
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00001237",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -350,7 +350,7 @@
   "name": "Benevolent Conquerors",
   "icon": "0000048B00001231",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -361,7 +361,7 @@
   "name": "Bonds of Brotherhood",
   "icon": "0000048B0000122E",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<order></order>"
  },
  {
@@ -390,7 +390,7 @@
   "category": "Order Empire Skill",
   "id": "dutiful_watch",
   "required_xp": 100,
-  "description": "<bulletlist><bullet><hyperlink>Cities</hyperlink> gain +1 <happiness></happiness> <hyperlink>City Stability</hyperlink> per <hyperlink>Unit tier</hyperlink> of each friendly <hyperlink>Unit</hyperlink> inside the City. (<hyperlink>Heroes</hyperlink> count as Tier 5).</bullet><bullet>Friendly Units inside your Cities gain +5 <hyperlink><xp></xp> Experience</hyperlink> Per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet><hyperlink>Cities</hyperlink> gain +1 <happiness></happiness> <hyperlink>City Stability</hyperlink> per <hyperlink>Unit tier</hyperlink> of each friendly <hyperlink>Unit</hyperlink> inside the City. (<hyperlink>Heroes</hyperlink> count as Tier 5).</bullet><bullet>Friendly Units inside your Cities gain +10 <hyperlink><xp></xp> Experience</hyperlink> Per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Dutiful Watch",
   "icon": "0000048B0000121F",
   "required_level": 4,
@@ -426,7 +426,7 @@
   "category": "Order Empire Skill",
   "id": "spiritual_conviction",
   "required_xp": 60,
-  "description": "gain +10 <mana></mana> <hyperlink>Mana</hyperlink> for each <happiness></happiness> <hyperlink>City Stability</hyperlink> above Neutral.",
+  "description": "<hyperlink>Cities</hyperlink> gain +10 <mana></mana> <hyperlink>Mana</hyperlink> for each <happiness></happiness> <hyperlink>City Stability</hyperlink> above Neutral.",
   "name": "Spiritual Conviction",
   "icon": "0000048B000011FE",
   "required_level": 3,
@@ -485,7 +485,7 @@
   "name": "Quickening",
   "icon": "0000048B000011BB",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -496,7 +496,7 @@
   "name": "Astral Absorption",
   "icon": "0000048B000011B8",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -507,7 +507,7 @@
   "name": "Teleportation Mastery",
   "icon": "0000048B000011B1",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -518,7 +518,7 @@
   "name": "Tower of Enlightenment",
   "icon": "0000048B000011AE",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -529,7 +529,7 @@
   "name": "Ingredient Experimentation",
   "icon": "0000048B000011A6",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -543,7 +543,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B000011A0",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -554,7 +554,7 @@
   "name": "Extravagant Studies",
   "icon": "0000048B0000119B",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -565,7 +565,7 @@
   "name": "Alchemical Applications",
   "icon": "0000048B00001198",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -576,7 +576,7 @@
   "name": "Enchantment Attunement",
   "icon": "0000048B00001185",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -590,7 +590,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00001183",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<arcana></arcana>"
  },
  {
@@ -714,7 +714,7 @@
   "name": "Competitive Markets",
   "icon": "0000048B00001149",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -725,7 +725,7 @@
   "name": "Wasteless Process",
   "icon": "0000048B00001146",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -736,7 +736,7 @@
   "name": "Innovator Specialists",
   "icon": "0000048B0000113A",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -747,18 +747,18 @@
   "name": "Formula Archives",
   "icon": "0000048B00001137",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
   "category": "Materium Empire Skill",
   "id": "logistical_centers",
   "required_xp": 300,
-  "description": "Provinces adjacent to your <hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> grant +100% income.",
+  "description": "Provinces adjacent to your <hyperlink>Cities</hyperlink> grant +100% income.",
   "name": "Logistical Centers",
   "icon": "0000048B000010B4",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -772,7 +772,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B000010B2",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -783,7 +783,7 @@
   "name": "Metropolitan Society",
   "icon": "0000048B000010AB",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -797,7 +797,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B000010A9",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -808,7 +808,7 @@
   "name": "Efficient Allocation",
   "icon": "0000048B0000109F",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -819,7 +819,7 @@
   "name": "Consolidated Industry",
   "icon": "0000048B0000109B",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<matter></matter>"
  },
  {
@@ -928,7 +928,7 @@
   "category": "Materium Empire Skill",
   "id": "metropolitan_plans",
   "required_xp": 15,
-  "description": "Skills that unlock <caststrategic></caststrategic> <hyperlink>City Spells</hyperlink> and <hyperlink>City Structures</hyperlink> cost -50% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
+  "description": "Skills that unlock <caststrategic></caststrategic> <hyperlink>City Spells</hyperlink> and <hyperlink>City Structures</hyperlink> cost -30% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
   "name": "Metropolitan Plans",
   "icon": "0000048B0000106F",
   "required_level": 1,
@@ -943,7 +943,7 @@
   "name": "Tireless Armies",
   "icon": "0000048B00001057",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -957,7 +957,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00001055",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -968,7 +968,7 @@
   "name": "Monstrous Elites",
   "icon": "0000048B00001037",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -979,7 +979,7 @@
   "name": "Endless Hordes",
   "icon": "0000048B0000102F",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -990,7 +990,7 @@
   "name": "First Blood Initiation",
   "icon": "0000048B00001012",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1001,7 +1001,7 @@
   "name": "Lawless Lands",
   "icon": "0000048B0000100C",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1012,7 +1012,7 @@
   "name": "Despoilers",
   "icon": "0000048B00000FF5",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1023,7 +1023,7 @@
   "name": "Conquerors",
   "icon": "0000048B00000FF2",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1034,7 +1034,7 @@
   "name": "Destiny of War",
   "icon": "0000048B00000FEC",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1048,7 +1048,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00000FEA",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<chaos></chaos>"
  },
  {
@@ -1077,7 +1077,7 @@
   "category": "Chaos Empire Skill",
   "id": "chaotic_inspiration",
   "required_xp": 100,
-  "description": "Whenever a new <hyperlink>Research</hyperlink> Skill is being researched, the <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> cost of another random Skill is reduced by -25%.",
+  "description": "Whenever a new <hyperlink>Research</hyperlink> Skill is being researched, the <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> cost of another random Skill is reduced by -15%.",
   "name": "Chaotic Inspiration",
   "icon": "0000048B00000FDC",
   "required_level": 4,
@@ -1124,7 +1124,7 @@
   "category": "Chaos Empire Skill",
   "id": "specialized_troops",
   "required_xp": 40,
-  "description": "<hyperlink>Research</hyperlink> skills that unlock <hyperlink>Units</hyperlink> cost -40% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
+  "description": "<hyperlink>Research</hyperlink> skills that unlock <hyperlink>Units</hyperlink> cost -30% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
   "name": "Specialized Troops",
   "icon": "0000048B00000FC4",
   "required_level": 2,
@@ -1172,7 +1172,7 @@
   "name": "Druidic Empire",
   "icon": "0000048B00000FB5",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1183,7 +1183,7 @@
   "name": "Complete Harmony",
   "icon": "0000048B00000FB3",
   "required_level": 10,
-  "cost": "400<influence></influence> ",
+  "cost": "500<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1194,7 +1194,7 @@
   "name": "Rangers",
   "icon": "0000048B00000FAD",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1208,7 +1208,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00000FAA",
   "required_level": 9,
-  "cost": "350<influence></influence> ",
+  "cost": "400<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1219,7 +1219,7 @@
   "name": "Plowshares To Swords",
   "icon": "0000048B00000FA6",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1233,7 +1233,7 @@
   "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00000FA4",
   "required_level": 8,
-  "cost": "300<influence></influence> ",
+  "cost": "350<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1244,7 +1244,7 @@
   "name": "Spiritual Grounds",
   "icon": "0000048B00000F9B",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1255,14 +1255,14 @@
   "name": "Sacred Waters",
   "icon": "0000048B00000F99",
   "required_level": 7,
-  "cost": "250<influence></influence> ",
+  "cost": "300<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
-  "category": "Repeatable Nature Rite",
+  "category": "Nature Empire Skill",
   "id": "lasting_boons",
   "required_xp": 120,
-  "description": "<hyperlink>Positive Status Effects</hyperlink> on your<hyperlink>Units</hyperlink> which last at least 2 <turn></turn> <hyperlink>Turns</hyperlink>, last an additional 1 <turn></turn> <hyperlink>Turn</hyperlink>.",
+  "description": "<hyperlink>Positive Status Effects</hyperlink> on your <hyperlink>Units</hyperlink> which last at least 2 <turn></turn> <hyperlink>Turns</hyperlink>, last an additional 1 <turn></turn> <hyperlink>Turn</hyperlink>.",
   "name": "Lasting Boons",
   "icon": "0000048B00000F94",
   "required_level": 5,
@@ -1270,14 +1270,14 @@
   "required_affinity": "<nature></nature>"
  },
  {
-  "repeat_cooldown_increase": 0,
+  "repeat_cooldown_increase": 50,
   "category": "Repeatable Nature Rite",
   "id": "rite_of_expansive_growth",
-  "cooldown": 0,
+  "cooldown": 160,
   "required_xp": 160,
   "description": "Increase the <hyperlink>City Cap</hyperlink> by +1<citytier></citytier>.",
   "name": "Rite of Expansive Growth",
-  "repeat_cost_increase": "300<influence></influence> ",
+  "repeat_cost_increase": "50<influence></influence> ",
   "icon": "0000048B00000F8E",
   "required_level": 6,
   "cost": "200<influence></influence> ",
@@ -1291,7 +1291,7 @@
   "name": "Expansive Reach",
   "icon": "0000048B00000F8A",
   "required_level": 6,
-  "cost": "225<influence></influence> ",
+  "cost": "250<influence></influence> ",
   "required_affinity": "<nature></nature>"
  },
  {
@@ -1516,11 +1516,14 @@
   "cost": "150<influence></influence> "
  },
  {
-  "category": "General Rite",
+  "repeat_cooldown_increase": 50,
+  "category": "Repeatable General Rite",
   "id": "rite_of_the_last_stand",
+  "cooldown": 120,
   "required_xp": 120,
   "description": "Each city in your Empire loses -1 <population></population> <hyperlink>Population</hyperlink>, but immediately summons 3 <hyperlink>Tier</hyperlink> I <hyperlink>Units</hyperlink>.",
   "name": "Rite of the Last Stand",
+  "repeat_cost_increase": "50<influence></influence> ",
   "icon": "000003E100001DB0",
   "required_level": 5,
   "cost": "175<influence></influence> "
@@ -1553,7 +1556,7 @@
   "name": "Teleporter Infrastructure",
   "icon": "000003E100001A16",
   "required_level": 10,
-  "cost": "300<influence></influence> "
+  "cost": "350<influence></influence> "
  },
  {
   "category": "General Empire Skill",

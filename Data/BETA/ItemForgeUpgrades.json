@@ -18661,7 +18661,7 @@
  {
   "abilities": [
    {
-    "slug": "awaken_flora_ability_equipment_upgrade_active_staff_awaken_flora"
+    "slug": "awaken_flora_ability_item_forge_equipment_upgrade_active_staff_awaken_flora"
    }
   ],
   "tag_filter": {
@@ -20396,16 +20396,24 @@
  },
  {
   "tag_filter": {
-   "condition": "One or More of the following must be True",
+   "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited ItemTypeWeapon.RangedPhysical "
+     "condition": "One or More of the following must be True",
+     "children": [
+      {
+       "condition": "Contains inherited ItemTypeWeapon.RangedPhysical "
+      },
+      {
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
+      },
+      {
+       "condition": "Contains inherited ItemTypeWeapon.Magic "
+      }
+     ]
     },
     {
-     "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
-    },
-    {
-     "condition": "Contains inherited ItemTypeWeapon.Magic "
+     "condition": "Does not contain inherited ItemTypeWeapon.MeleeRanged.Breachgun "
     }
    ]
   },
@@ -23753,7 +23761,7 @@
  {
   "abilities": [
    {
-    "slug": "awaken_flora_ability_equipment_upgrade_active_wand_awaken_flora"
+    "slug": "awaken_flora_ability_item_forge_equipment_upgrade_active_wand_awaken_flora"
    }
   ],
   "tag_filter": {

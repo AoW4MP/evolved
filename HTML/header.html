@@ -22,6 +22,10 @@
                             Highlight Numbers:
                             <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
                         </label>
+                          <label>
+                            Show Secret Spells:
+                            <input type="checkbox" id="showSecretSpellsCheckbox" onclick="CheckBoxTooltips()" />
+                        </label>
                         <br />
                     </div>
                 </div>
@@ -64,16 +68,16 @@
             </div>
 
             <a href="/evolved/" style=" text-decoration: none;"><div class="hero-text">Age of Wonders 4 Evolved</div></a>
-            <div class="mid-text" style="display: block; margin: 15px">
+            <div class="mid-text" style="display: none; margin: 15px">
                 Switch To Sprite Beta Dataset:<input type="checkbox" id="showBetaCheckbox" onclick="SwitchToBeta()" />
                 <br /><i>(only changes exported dataset, images can break, english only)</i>
             </div>
-            <div class="current-version">Updated: 25th of May, 2026</div>
+            <div class="current-version">Updated: June 16th, 2026</div>
 
-            <div class="hero-text" style="display: block">
+            <div class="hero-text" >
                 <img style="
-    position: relative;display:none;
-    top: 0px;" src="/evolved/Icons/Text/RiseFromRuinLogo.png" width="442px" />
+    position: relative;display:block;
+    top: 0px;" src="/evolved/Icons/Text/SotaLogo.png" width="250px" />
             </div>
             <ul id="menu">
                 <li>
@@ -248,6 +252,10 @@
                                    <li>
                                     <a id="tomesU-rfr" href="/evolved/HTML/RiseFromRuinTomeUnits.html"
                                         ><img src="/evolved/Icons/Text/RiseFromRuin.png" width="20px" /> Rise From Ruin</a
+                                    >
+                                </li>  <li>
+                                    <a id="tomesU-sota" href="/evolved/HTML/SecretsOfTheArchmagesTomeUnits.html"
+                                        ><img src="/evolved/Icons/Text/SotaLogo.png" width="20px" /> Secrets of the Archmages</a
                                     >
                                 </li>
                             </ul>
@@ -522,7 +530,7 @@
                         <li>
                             <a
                                 id="spells-strategic"
-                                href="/evolved/HTML/StrategicSpells.html?type=Summon%20Spells&sort=name:true"
+                                href="/evolved/HTML/StrategicSpells.html?type=<summonspell></summonspell>%20Summon%20Spells&sort=name:true"
                                 ><img src="/evolved/Icons/Interface/Header/strategiccombatpoints.png" width="20px" /> Strategic
                                 Spells</a
                             >
@@ -635,6 +643,11 @@
                     >
                     <ul class="menus">
                         <li>
+                            <a id="empire-pantheon" href="/evolved/HTML/PantheonTree.html"
+                                ><img src="/evolved/Icons/Interface/Header/Info.png" width="20px" /> Pantheon Tree</a
+                            >
+                        </li>
+                        <li>
                             <a id="empire-tree" href="/evolved/HTML/EmpireTree.html"
                                 ><img src="/evolved/Icons/Interface/Header/EmpireIcon.png" width="20px" /> Empire Tree</a
                             >
@@ -651,8 +664,8 @@
                             >
                         </li>
                         <li>
-                            <a id="empire-relics" href="/evolved/HTML/Relics.html"
-                                ><img src="/evolved/Icons/Interface/Header/adaptable.png" width="20px" />Relics</a
+                            <a id="empire-relics" href="/evolved/HTML/Artifacts.html?type=Giants&"
+                                ><img src="/evolved/Icons/RelicIcons/blue_scroll.png" width="20px" />Artifacts/Secret Spells</a
                             >
                         </li>
                     </ul>

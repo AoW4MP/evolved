@@ -13,7 +13,7 @@
   "category": "General Empire Skill",
   "id": "focused_affinity",
   "required_xp": 600,
-  "description": "Gain +30 Affinity Points per <turn></turn> <hyperlink>Turn</hyperlink> in the branch of your highest <hyperlink>Affinity</hyperlink>.",
+  "description": "Gain +50 Affinity Points per <turn></turn> <hyperlink>Turn</hyperlink> in the branch of your highest <hyperlink>Affinity</hyperlink>.",
   "name": "Focused Affinity",
   "icon": "0000048B00001302",
   "required_level": 11,
@@ -390,7 +390,7 @@
   "category": "Order Empire Skill",
   "id": "dutiful_watch",
   "required_xp": 100,
-  "description": "<bulletlist><bullet><hyperlink>Cities</hyperlink> gain +1 <happiness></happiness> <hyperlink>City Stability</hyperlink> per <hyperlink>Unit tier</hyperlink> of each friendly <hyperlink>Unit</hyperlink> inside the City. (<hyperlink>Heroes</hyperlink> count as Tier 5).</bullet><bullet>Friendly Units inside your Cities gain +10 <hyperlink><xp></xp> Experience</hyperlink> Per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet><hyperlink>Cities</hyperlink> gain +1 <happiness></happiness> <hyperlink>City Stability</hyperlink> per <hyperlink>Unit tier</hyperlink> of each friendly <hyperlink>Unit</hyperlink> inside the City. (<hyperlink>Heroes</hyperlink> count as Tier 5).</bullet><bullet>Friendly Units inside your Cities gain +5 <hyperlink><xp></xp> Experience</hyperlink> Per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Dutiful Watch",
   "icon": "0000048B0000121F",
   "required_level": 4,
@@ -928,7 +928,7 @@
   "category": "Materium Empire Skill",
   "id": "metropolitan_plans",
   "required_xp": 15,
-  "description": "Skills that unlock <caststrategic></caststrategic> <hyperlink>City Spells</hyperlink> and <hyperlink>City Structures</hyperlink> cost -30% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
+  "description": "Skills that unlock <caststrategic></caststrategic> <hyperlink>City Spells</hyperlink> and <hyperlink>City Structures</hyperlink> cost -50% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
   "name": "Metropolitan Plans",
   "icon": "0000048B0000106F",
   "required_level": 1,
@@ -1077,7 +1077,7 @@
   "category": "Chaos Empire Skill",
   "id": "chaotic_inspiration",
   "required_xp": 100,
-  "description": "Whenever a new <hyperlink>Research</hyperlink> Skill is being researched, the <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> cost of another random Skill is reduced by -15%.",
+  "description": "Whenever a new <hyperlink>Research</hyperlink> Skill is being researched, the <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> cost of another random Skill is reduced by -25%.",
   "name": "Chaotic Inspiration",
   "icon": "0000048B00000FDC",
   "required_level": 4,
@@ -1124,7 +1124,7 @@
   "category": "Chaos Empire Skill",
   "id": "specialized_troops",
   "required_xp": 40,
-  "description": "<hyperlink>Research</hyperlink> skills that unlock <hyperlink>Units</hyperlink> cost -30% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
+  "description": "<hyperlink>Research</hyperlink> skills that unlock <hyperlink>Units</hyperlink> cost -40% <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
   "name": "Specialized Troops",
   "icon": "0000048B00000FC4",
   "required_level": 2,
@@ -1556,7 +1556,7 @@
   "name": "Teleporter Infrastructure",
   "icon": "000003E100001A16",
   "required_level": 10,
-  "cost": "350<influence></influence> "
+  "cost": "200<influence></influence> "
  },
  {
   "category": "General Empire Skill",
@@ -1575,16 +1575,5 @@
   "name": "Advanced Seafaring",
   "icon": "000003E1000019AA",
   "cost": "175<influence></influence> "
- },
- {
-  "category": "Nature Rite",
-  "id": "primordial_call",
-  "required_xp": 500,
-  "description": "Immediately summon a Tier V Animal <hyperlink>Unit</hyperlink> at your <hyperlink>Throne City</hyperlink>.",
-  "name": "Primordial Call",
-  "icon": "8D1FD0C90000052A",
-  "required_level": 10,
-  "cost": "400<influence></influence> ",
-  "required_affinity": "<nature></nature>"
  }
 ]

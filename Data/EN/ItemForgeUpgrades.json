@@ -1102,7 +1102,7 @@
   "resid": 5111011084620,
   "point_cost": 1,
   "id": "berserkers_greataxe_equipment_upgrade",
-  "description": "When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach 33% or lower, it becomes Berserk (for 1 <turn></turn>):<bulletlist><bullet>Berserk</bullet><bullet>Steadfast</bullet></bulletlist>",
+  "description": "When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach 33% or lower, it gains for 1 <turn></turn> Turn:<bulletlist><bullet>Berserk</bullet><bullet>Steadfast</bullet></bulletlist>",
   "name": "Berserker's Rage",
   "tags": [
    {
@@ -1257,6 +1257,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A6000007F9",
@@ -1479,6 +1482,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A6000007F7",
@@ -1654,6 +1660,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A6000007F5",
@@ -1685,6 +1694,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -1748,6 +1760,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A6000007F4",
@@ -3719,7 +3734,7 @@
    ]
   },
   "resid": 5111011083044,
-  "point_cost": 3,
+  "point_cost": 2,
   "id": "equipment_upgrade_passive_support_regeneration",
   "description": "<hyperlink>Support</hyperlink> abilities also provide +1 Regeneration.",
   "name": "Support - Regeneration",
@@ -3948,6 +3963,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A6000003A1",
@@ -4083,6 +4101,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A6000003A1",
@@ -4210,7 +4231,7 @@
   "resid": 5111011083012,
   "point_cost": 5,
   "id": "equipment_upgrade_passive_undying",
-  "description": "This unit will revive with 50% of its total <hyperlink><hp></hp> Hit Points</hyperlink> after 2<turn></turn>. Can only be triggered once per battle.",
+  "description": "When killed, this unit will revive with 50% of its total <hyperlink><hp></hp> Hit Points</hyperlink>:<bulletlist><bullet>After 2 <hyperlink>Combat</hyperlink> <turn></turn> Turns.</bullet><bullet>If side is victorious in battle.</bullet></bulletlist><br></br>Can only be triggered once per battle.",
   "name": "Undying",
   "tags": [
    {
@@ -4254,7 +4275,7 @@
   "resid": 5111011083011,
   "point_cost": 3,
   "id": "equipment_upgrade_passive_berserking",
-  "description": "When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach 33% or lower, it becomes Berserk (for 1 <turn></turn>):<bulletlist><bullet>Berserk</bullet><bullet>Steadfast</bullet></bulletlist>",
+  "description": "When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach 33% or lower, it gains for 1 <turn></turn> Turn:<bulletlist><bullet>Berserk</bullet><bullet>Steadfast</bullet></bulletlist>",
   "name": "Berserker's Rage",
   "tags": [
    {
@@ -4448,131 +4469,8 @@
   "icon": "0000045E00001089",
   "unlock_requirements": [
    {
-    "num_required": 2,
-    "token_name": "Arcanium Ore"
-   }
-  ]
- },
- {
-  "tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains inherited ItemTypeWeapon "
-    }
-   ]
-  },
-  "resid": 5111011082991,
-  "point_cost": 3,
-  "id": "equipment_upgrade_passive_infecting",
-  "description": "Units killed with this weapon come back as <hyperlink>Decaying Zombies</hyperlink> under your control until the end of battle. Does not trigger in water combat.",
-  "name": "Infecting",
-  "tags": [
-   {
-    "tag": "ItemTypeWeapon.OneHanded"
-   },
-   {
-    "tag": "ItemTypeWeapon.Polearm"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Bow"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Crossbow"
-   },
-   {
-    "tag": "ItemTypeWeapon.Magic.Staff"
-   },
-   {
-    "tag": "ItemTypeWeapon.Magic.MagicalOrb"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Magelock"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greatsword"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greataxe"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greathammer"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Lance"
-   },
-   {
-    "tag": "ItemPassive.RaiseZombieOnKill"
-   },
-   {
-    "tag": "ItemTypeWeapon.DragonClaw"
-   },
-   {
-    "tag": "ItemTypeWeapon.EldritchRelic"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Greatbow"
-   },
-   {
-    "tag": "ItemTypeWeapon.OneHanded"
-   },
-   {
-    "tag": "ItemTypeWeapon.Polearm"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Bow"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Crossbow"
-   },
-   {
-    "tag": "ItemTypeWeapon.Magic.Staff"
-   },
-   {
-    "tag": "ItemTypeWeapon.Magic.MagicalOrb"
-   },
-   {
-    "tag": "ItemTypeWeapon.RangedPhysical.Magelock"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greatsword"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greataxe"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Greathammer"
-   },
-   {
-    "tag": "ItemTypeWeapon.TwoHandedHeavy.Lance"
-   },
-   {
-    "tag": "ItemTypeWeapon.DragonClaw"
-   },
-   {
-    "tag": "ItemTypeWeapon.EldritchRelic"
-   },
-   {
-    "tag": "ItemTypeWeapon.DragonClaw.Warclaw"
-   },
-   {
-    "tag": "ItemTypeWeapon.DragonClaw.ArmoredClaw"
-   },
-   {
-    "tag": "ItemTypeWeapon.GiantKingWeapons.Warhammer"
-   },
-   {
-    "tag": "ItemTypeWeapon.GiantKingWeapons.GiantAxe"
-   },
-   {
-    "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
-   }
-  ],
-  "icon": "000004A600000334",
-  "unlock_requirements": [
-   {
     "num_required": 1,
-    "token_name": "Archon Blood"
+    "token_name": "Arcanium Ore"
    }
   ]
  },
@@ -4695,6 +4593,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A600000333",
@@ -4824,6 +4725,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A600000332",
@@ -4953,6 +4857,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A600000330",
@@ -5085,6 +4992,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A60000032F",
@@ -5125,6 +5035,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.EldritchRelic "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -5195,6 +5108,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001088",
@@ -5226,6 +5142,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5288,6 +5207,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001087",
@@ -5319,6 +5241,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5381,6 +5306,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001086",
@@ -5412,6 +5340,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5474,6 +5405,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001085",
@@ -5505,6 +5439,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5567,6 +5504,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001084",
@@ -5598,6 +5538,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5660,6 +5603,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001083",
@@ -5696,6 +5642,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5758,6 +5707,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001082",
@@ -5789,6 +5741,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5851,6 +5806,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001081",
@@ -5882,6 +5840,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -5944,6 +5905,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001080",
@@ -5975,6 +5939,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6037,6 +6004,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000107F",
@@ -6068,6 +6038,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6130,6 +6103,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000107E",
@@ -6161,6 +6137,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6223,6 +6202,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000107D",
@@ -6263,6 +6245,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.EldritchRelic "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -6333,6 +6318,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000107C",
@@ -6364,6 +6352,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6426,6 +6417,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000107B",
@@ -6457,6 +6451,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6510,6 +6507,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000107A",
@@ -6541,6 +6541,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6603,6 +6606,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001079",
@@ -6634,6 +6640,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6696,6 +6705,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001078",
@@ -6727,6 +6739,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6789,6 +6804,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001077",
@@ -6832,6 +6850,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -6905,6 +6926,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001076",
@@ -6936,6 +6960,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -6995,6 +7022,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001075",
@@ -7038,6 +7068,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -7111,6 +7144,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001074"
@@ -7264,7 +7300,7 @@
   "resid": 5111011082276,
   "point_cost": 3,
   "id": "equipment_upgrade_passive_army_recuperation",
-  "description": "All units in the army heal +5 <hyperlink><hp></hp> Hit Points</hyperlink> every <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<br></br><br></br>Does not stack.",
+  "description": "All units in the army heal +10 <hyperlink><hp></hp> Hit Points</hyperlink> every <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.<br></br><br></br>Does not stack.",
   "name": "Army Recuperation",
   "tags": [
    {
@@ -7280,7 +7316,7 @@
   "icon": "0000045E000010F0",
   "unlock_requirements": [
    {
-    "num_required": 1,
+    "num_required": 2,
     "token_name": "Rainbow Clover"
    }
   ]
@@ -7362,6 +7398,355 @@
     "token_name": "Astral Dew"
    }
   ]
+ },
+ {
+  "abilities": [
+   {
+    "slug": "magic_shield_infusion_ability_magic_shield_infusion_equipment_upgrade"
+   }
+  ],
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Staff "
+    },
+    {
+     "condition": "One or More of the following must be True",
+     "children": [
+      {
+       "condition": "Contains ItemTypeMisc.Instrument "
+      },
+      {
+       "condition": "Contains ItemTypeMisc.Wand "
+      }
+     ]
+    }
+   ]
+  },
+  "resid": 5046586589549,
+  "point_cost": 2,
+  "id": "magic_shield_infusion_equipment_upgrade",
+  "description": "",
+  "name": "Magic Shield",
+  "tags": [
+   {
+    "tag": "ItemTypeWeapon.Magic.Staff"
+   },
+   {
+    "tag": "ItemTypeMisc.Wand"
+   }
+  ],
+  "icon": "0000049700004180",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Focus Crystals"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589139,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_fire_lightning_frost",
+  "description": "Change damage to mixed <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, and <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.<br></br><br></br>+3 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Cosmic Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Frost"
+   },
+   {
+    "tag": "ItemTheme.Magical.Lightning"
+   },
+   {
+    "tag": "ItemTheme.Magical.Fire"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "000004A60000083A"
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589138,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_frost_blight",
+  "description": "Change damage to mixed <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Death Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Frost"
+   },
+   {
+    "tag": "ItemTheme.Magical.Blight"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D19",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Archon Blood"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589137,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_fire_spirit",
+  "description": "Change damage to mixed <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Radiant Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Fire"
+   },
+   {
+    "tag": "ItemTheme.Magical.Spirit"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D1A",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Rainbow Clover"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589136,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_fire_lightning",
+  "description": "Change damage to mixed <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Arcfire Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Fire"
+   },
+   {
+    "tag": "ItemTheme.Magical.Lightning"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D1B",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Fireforge Stone"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589135,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_spirit",
+  "description": "Change damage to <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Spirit Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Spirit"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D18",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Rainbow Clover"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589134,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_blight",
+  "description": "Change damage to <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Blight Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Blight"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D13",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Silvertongue Fruit"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589133,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_frost",
+  "description": "Change damage to <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Frost Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Frost"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D15",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Archon Blood"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589132,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_lightning",
+  "description": "Change damage to <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Lightning Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Lightning"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D16",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Astral Dew"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589131,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_fire",
+  "description": "Change damage to <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Fire Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Magical.Fire"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D14",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Fireforge Stone"
+   }
+  ]
+ },
+ {
+  "tag_filter": {
+   "condition": "One or More of the following must be True",
+   "children": [
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
+    }
+   ]
+  },
+  "resid": 5046586589130,
+  "point_cost": 1,
+  "id": "equipment_upgrade__damage_channel_grimoire_physical",
+  "description": "Change damage to <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.<br></br><br></br>+4 damage per <hyperlink>Item Tier</hyperlink>.",
+  "name": "Physical Damage",
+  "tags": [
+   {
+    "tag": "ItemTheme.Physical"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
+   }
+  ],
+  "icon": "0000045E00000D17"
  },
  {
   "tag_filter": {
@@ -7510,6 +7895,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -7584,6 +7972,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000049700003498",
@@ -7842,6 +8233,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -7913,6 +8307,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004970000362A",
@@ -8165,6 +8562,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -8236,6 +8636,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004970000347D",
@@ -8381,7 +8784,7 @@
    ]
   },
   "resid": 5046586585944,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_staff_cosmic_rescue",
   "DLC": "COSMICWANDERER ",
   "description": "",
@@ -8428,7 +8831,7 @@
    ]
   },
   "resid": 5046586585943,
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "equipment_upgrade_active_wand_cosmic_rescue",
   "DLC": "COSMICWANDERER ",
   "description": "",
@@ -8867,7 +9270,7 @@
    ]
   },
   "resid": 5046586582549,
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "equipment_upgrade_passive_rune_of_command_frost",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army have 1 <hyperlink>Negative Status Effect</hyperlink> dispelled at the start of the turn in combat.",
@@ -8990,6 +9393,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -9040,6 +9446,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000049700002606"
@@ -10176,7 +10585,7 @@
    ]
   },
   "resid": 5046586578890,
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "equipment_upgrade_passive_rune_of_command_fire",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army have a +10% <hyperlink><crit></crit>Critical Hit Chance</hyperlink>.",
@@ -10220,7 +10629,7 @@
    ]
   },
   "resid": 5046586578883,
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "equipment_upgrade_passive_rune_of_command_rock",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army deal +10% damage.",
@@ -10264,7 +10673,7 @@
    ]
   },
   "resid": 5046586578873,
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "equipment_upgrade_passive_rune_of_command_storm",
   "DLC": "GIANTKINGS ",
   "description": "While army leader, all non-hero units in army gain +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.",
@@ -10510,6 +10919,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.EldritchRelic "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -10587,6 +10999,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004970000179B"
@@ -10717,6 +11132,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -10764,6 +11182,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000049700001792"
@@ -10882,6 +11303,9 @@
     },
     {
      "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+    },
+    {
+     "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
     }
    ]
   },
@@ -10924,6 +11348,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000049700001781"
@@ -11719,57 +12146,6 @@
  {
   "abilities": [
    {
-    "slug": "000003e3000056ea"
-   }
-  ],
-  "tag_filter": {
-   "condition": "All of the following must be True",
-   "children": [
-    {
-     "condition": "One or More of the following must be True",
-     "children": [
-      {
-       "condition": "Contains ItemTypeMisc.OtherItem "
-      },
-      {
-       "condition": "Contains ItemTypeJewelry.Amulet "
-      }
-     ]
-    }
-   ]
-  },
-  "resid": 5029406707124,
-  "point_cost": 4,
-  "id": "innate_spell_jammer_infusion_equipment_upgrade",
-  "description": "",
-  "name": "Innate Spell Jammer",
-  "tags": [
-   {
-    "tag": "ItemTypeJewelry.Amulet"
-   },
-   {
-    "tag": "ItemTypeMisc.OtherItem"
-   }
-  ],
-  "icon": "000003E3000056EB",
-  "unlock_requirements": [
-   {
-    "num_required": 1,
-    "token_name": "Astral Dew"
-   },
-   {
-    "num_required": 1,
-    "token_name": "Silvertongue Fruit"
-   },
-   {
-    "num_required": 1,
-    "token_name": "Tranquility Pool"
-   }
-  ]
- },
- {
-  "abilities": [
-   {
     "slug": "bless_infusion_version_ability_bless_infusion_equipment_upgrade"
    }
   ],
@@ -11793,7 +12169,7 @@
    ]
   },
   "resid": 5029406707122,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "bless_infusion_equipment_upgrade",
   "description": "",
   "name": "Bless",
@@ -12364,6 +12740,9 @@
       },
       {
        "condition": "Contains ItemTypeWeapon.DragonClaw.Warclaw "
+      },
+      {
+       "condition": "Contains ItemTypeWeapon.Magic.Grimoire "
       }
      ]
     },
@@ -12437,6 +12816,9 @@
    },
    {
     "tag": "ItemTypeWeapon.EldritchRelic"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000048B00000E46",
@@ -12793,76 +13175,6 @@
  {
   "abilities": [
    {
-    "slug": "song_of_revelry_ability_equipment_upgrade_active_staff_song_of_revelry"
-   }
-  ],
-  "tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains ItemTypeWeapon.Magic.Staff "
-    }
-   ]
-  },
-  "resid": 4995046968794,
-  "point_cost": 2,
-  "id": "equipment_upgrade_active_staff_song_of_revelry",
-  "description": "",
-  "name": "Song of Revelry",
-  "tags": [
-   {
-    "tag": "ItemAbility.SongOfRevelry"
-   },
-   {
-    "tag": "ItemTypeWeapon.Magic.Staff"
-   }
-  ],
-  "icon": "000003E300005A5A",
-  "unlock_requirements": [
-   {
-    "num_required": 2,
-    "token_name": "Fireforge Stone"
-   }
-  ]
- },
- {
-  "abilities": [
-   {
-    "slug": "song_of_carnage_ability_equipment_upgrade_active_staff_song_of_carnage"
-   }
-  ],
-  "tag_filter": {
-   "condition": "One or More of the following must be True",
-   "children": [
-    {
-     "condition": "Contains ItemTypeWeapon.Magic.Staff "
-    }
-   ]
-  },
-  "resid": 4995046968793,
-  "point_cost": 2,
-  "id": "equipment_upgrade_active_staff_song_of_carnage",
-  "description": "",
-  "name": "Song of Carnage",
-  "tags": [
-   {
-    "tag": "ItemAbility.SongOfCarnage"
-   },
-   {
-    "tag": "ItemTypeWeapon.Magic.Staff"
-   }
-  ],
-  "icon": "000003E300005A62",
-  "unlock_requirements": [
-   {
-    "num_required": 2,
-    "token_name": "Fireforge Stone"
-   }
-  ]
- },
- {
-  "abilities": [
-   {
     "slug": "flamestrike_ability_equipment_upgrade_active_staff_flame_strike"
    }
   ],
@@ -12933,7 +13245,7 @@
  {
   "abilities": [
    {
-    "slug": "sundering_curse_ability_not_base_equipment_upgrade_active_staff_sundering_curse"
+    "slug": "sundering_curse_ability_no_base_equipment_upgrade_active_staff_sundering_curse"
    }
   ],
   "tag_filter": {
@@ -13145,7 +13457,7 @@
    ]
   },
   "resid": 4995046968783,
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "equipment_upgrade_active_wand_stunning_flash",
   "description": "",
   "name": "Stunning Flash",
@@ -13194,7 +13506,7 @@
    ]
   },
   "resid": 4995046968782,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_wand_grant_defense",
   "description": "",
   "name": "Grant Defense",
@@ -13465,104 +13777,6 @@
  {
   "abilities": [
    {
-    "slug": "song_of_revelry_ability_equipment_upgrade_active_wand_song_of_revelry"
-   }
-  ],
-  "tag_filter": {
-   "condition": "All of the following must be True",
-   "children": [
-    {
-     "condition": "One or More of the following must be True",
-     "children": [
-      {
-       "condition": "Contains ItemTypeMisc.Wand "
-      },
-      {
-       "condition": "Contains ItemTypeMisc.Instrument "
-      }
-     ]
-    },
-    {
-     "condition": "Does not contain ItemForge.Exclusivities.ExclusiveSingleUpgrade "
-    }
-   ]
-  },
-  "resid": 4995046968760,
-  "point_cost": 3,
-  "id": "equipment_upgrade_active_wand_song_of_revelry",
-  "description": "",
-  "name": "Song of Revelry",
-  "tags": [
-   {
-    "tag": "ItemForge.Exclusivities.ExclusiveSingleUpgrade"
-   },
-   {
-    "tag": "ItemTypeMisc.Wand"
-   },
-   {
-    "tag": "ItemAbility.SongOfRevelry"
-   }
-  ],
-  "icon": "000003E300005A5A",
-  "unlock_requirements": [
-   {
-    "num_required": 2,
-    "token_name": "Fireforge Stone"
-   }
-  ]
- },
- {
-  "abilities": [
-   {
-    "slug": "song_of_carnage_ability_equipment_upgrade_active_wand_song_of_carnage"
-   }
-  ],
-  "tag_filter": {
-   "condition": "All of the following must be True",
-   "children": [
-    {
-     "condition": "One or More of the following must be True",
-     "children": [
-      {
-       "condition": "Contains ItemTypeMisc.Wand "
-      },
-      {
-       "condition": "Contains ItemTypeMisc.Instrument "
-      }
-     ]
-    },
-    {
-     "condition": "Does not contain ItemForge.Exclusivities.ExclusiveSingleUpgrade "
-    }
-   ]
-  },
-  "resid": 4995046968759,
-  "point_cost": 3,
-  "id": "equipment_upgrade_active_wand_song_of_carnage",
-  "description": "",
-  "name": "Song of Carnage",
-  "tags": [
-   {
-    "tag": "ItemForge.Exclusivities.ExclusiveSingleUpgrade"
-   },
-   {
-    "tag": "ItemTypeMisc.Wand"
-   },
-   {
-    "tag": "ItemAbility.SongOfCarnage"
-   }
-  ],
-  "icon": "000003E300005A62",
-  "unlock_requirements": [
-   {
-    "num_required": 2,
-    "token_name": "Fireforge Stone"
-   }
-  ]
- },
- {
-  "abilities": [
-   {
     "slug": "flamestrike_ability_equipment_upgrade_active_wand_flame_strike"
    }
   ],
@@ -13635,7 +13849,7 @@
    ]
   },
   "resid": 4995046968757,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_wand_trackers_mark",
   "description": "",
   "name": "Tracker's Mark",
@@ -13661,7 +13875,7 @@
  {
   "abilities": [
    {
-    "slug": "sundering_curse_ability_not_base_equipment_upgrade_active_wand_sundering_curse"
+    "slug": "sundering_curse_ability_no_base_equipment_upgrade_active_wand_sundering_curse"
    }
   ],
   "tag_filter": {
@@ -13733,7 +13947,7 @@
    ]
   },
   "resid": 4995046968755,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_wand_poison_darts",
   "description": "",
   "name": "Poison Darts",
@@ -15540,7 +15754,7 @@
   "icon": "000003E300004815",
   "unlock_requirements": [
    {
-    "num_required": 3,
+    "num_required": 1,
     "token_name": "Astral Dew"
    }
   ]
@@ -16275,7 +16489,7 @@
   "icon": "000004A600000019",
   "unlock_requirements": [
    {
-    "num_required": 2,
+    "num_required": 1,
     "token_name": "Silvertongue Fruit"
    }
   ]
@@ -16327,7 +16541,7 @@
   "icon": "0000045E00001063",
   "unlock_requirements": [
    {
-    "num_required": 1,
+    "num_required": 2,
     "token_name": "Astral Dew"
    }
   ]
@@ -17189,6 +17403,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000108E",
@@ -17318,6 +17535,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000108C",
@@ -17447,6 +17667,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000106B",
@@ -17576,6 +17799,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001069",
@@ -17705,6 +17931,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001068",
@@ -17834,6 +18063,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001065",
@@ -17963,13 +18195,16 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001064",
   "unlock_requirements": [
    {
     "num_required": 2,
-    "token_name": "Tranquility Pool"
+    "token_name": "Archon Blood"
    }
   ]
  },
@@ -18092,9 +18327,18 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
-  "icon": "0000045E00001031"
+  "icon": "0000045E00001031",
+  "unlock_requirements": [
+   {
+    "num_required": 2,
+    "token_name": "Rainbow Clover"
+   }
+  ]
  },
  {
   "abilities": [
@@ -18304,7 +18548,7 @@
   "icon": "000003E300005801",
   "unlock_requirements": [
    {
-    "num_required": 3,
+    "num_required": 2,
     "token_name": "Silvertongue Fruit"
    }
   ]
@@ -18394,7 +18638,7 @@
    ]
   },
   "resid": 4801773440030,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_staff_raise_undead",
   "description": "",
   "name": "Raise Undead",
@@ -18417,7 +18661,7 @@
  {
   "abilities": [
    {
-    "slug": "awaken_flora_ability_equipment_upgrade_active_staff_awaken_flora"
+    "slug": "awaken_flora_ability_item_forge_equipment_upgrade_active_staff_awaken_flora"
    }
   ],
   "tag_filter": {
@@ -18429,7 +18673,7 @@
    ]
   },
   "resid": 4801773440029,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_staff_awaken_flora",
   "description": "",
   "name": "Animate Flora",
@@ -19037,7 +19281,13 @@
     "tag": "ItemStrength.Weak"
    }
   ],
-  "icon": "0000045E00001063"
+  "icon": "0000045E00001063",
+  "unlock_requirements": [
+   {
+    "num_required": 1,
+    "token_name": "Astral Dew"
+   }
+  ]
  },
  {
   "abilities": [
@@ -19694,6 +19944,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001071",
@@ -19823,6 +20076,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E00001070",
@@ -19957,6 +20213,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "0000045E0000109E",
@@ -20137,16 +20396,24 @@
  },
  {
   "tag_filter": {
-   "condition": "One or More of the following must be True",
+   "condition": "All of the following must be True",
    "children": [
     {
-     "condition": "Contains inherited ItemTypeWeapon.RangedPhysical "
+     "condition": "One or More of the following must be True",
+     "children": [
+      {
+       "condition": "Contains inherited ItemTypeWeapon.RangedPhysical "
+      },
+      {
+       "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
+      },
+      {
+       "condition": "Contains inherited ItemTypeWeapon.Magic "
+      }
+     ]
     },
     {
-     "condition": "Contains inherited ItemTypeWeapon.MeleeRanged "
-    },
-    {
-     "condition": "Contains inherited ItemTypeWeapon.Magic "
+     "condition": "Does not contain inherited ItemTypeWeapon.MeleeRanged.Breachgun "
     }
    ]
   },
@@ -20428,6 +20695,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A60000039F",
@@ -20560,6 +20830,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A60000039F",
@@ -20692,6 +20965,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000004A60000039F"
@@ -22976,6 +23252,9 @@
    },
    {
     "tag": "ItemTypeWeapon.GiantKingWeapons.Obelisk"
+   },
+   {
+    "tag": "ItemTypeWeapon.Magic.Grimoire"
    }
   ],
   "icon": "000003E300004EFF",
@@ -23278,7 +23557,7 @@
   "icon": "000003E300005801",
   "unlock_requirements": [
    {
-    "num_required": 3,
+    "num_required": 2,
     "token_name": "Silvertongue Fruit"
    }
   ]
@@ -23456,7 +23735,7 @@
    ]
   },
   "resid": 4801773439801,
-  "point_cost": 2,
+  "point_cost": 3,
   "id": "equipment_upgrade_active_wand_raise_undead",
   "description": "",
   "name": "Raise Undead",
@@ -23482,7 +23761,7 @@
  {
   "abilities": [
    {
-    "slug": "awaken_flora_ability_equipment_upgrade_active_wand_awaken_flora"
+    "slug": "awaken_flora_ability_item_forge_equipment_upgrade_active_wand_awaken_flora"
    }
   ],
   "tag_filter": {
@@ -23655,7 +23934,7 @@
    ]
   },
   "resid": 4801773439791,
-  "point_cost": 1,
+  "point_cost": 2,
   "id": "equipment_upgrade_active_wand_heal_single",
   "description": "",
   "name": "Heal",

@@ -1972,7 +1972,7 @@ function SetTomePreview(span, origin) {
                 console.log(origin.skills[index].name);
                 const spellEN = findBy(jsonSpells, "id", origin.skills[index].spell_slug);
                 const spell = findBy(jsonSpellsLocalized, "resid", spellEN.resid);
-                let iconLink = "";
+                let iconLink = undefined;
                 if ("icon" in spell) {
                     iconLink = spell.icon;
                 }
@@ -2293,7 +2293,7 @@ function CreateSpellIcon(listEntry, colorEntry) {
     var smallIcon = document.createElement("img");
 
     let imageSRC;
-    let imageLinkName;
+    let imageLinkName = spellData.id;
     if (spellData.icon != undefined && !incorrectIconOverrideList.includes(spellData.id)) {
         imageLinkName = spellData.icon;
         imageSRC = "/evolved/Icons/SpellIcons/" + imageLinkName + ".png";

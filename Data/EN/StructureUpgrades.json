@@ -124,7 +124,7 @@
  },
  {
   "requirement_description": "Must be built on an annexed <hyperlink>Province</hyperlink>.<br></br><br></br>Requires City Tier II.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 5046586588081,
   "id": "_forester___spiders_nest",
@@ -148,7 +148,7 @@
  },
  {
   "requirement_description": "Must be built on an annexed <hyperlink>Province</hyperlink>.<br></br><br></br>Requires City Tier II.",
-  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
+  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
   "prediction_description": "",
   "resid": 5046586587876,
   "id": "_quarry___house_of_passion",
@@ -165,19 +165,19 @@
   "resid": 5046586587784,
   "id": "_farm___hungering_maw",
   "DLC": "SECRETSOFTHEARCHMAGES ",
-  "description": "<bulletlist><bullet>10% of <food></food> <hyperlink>Food</hyperlink> is converted to <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>When victorious in battle, this city gains 50 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>10% of <food></food> <hyperlink>Food</hyperlink> is converted to <mana></mana> <hyperlink>Mana</hyperlink>.</bullet><bullet>When victorious in battle, this city gains 25 <food></food> <hyperlink>Food</hyperlink>.</bullet><bullet>Counts as a <farm></farm> <hyperlink>Farm</hyperlink>.</bullet></bulletlist>",
   "name": "<farm></farm> Hungering Maw",
   "icon": "0000049700003A89",
   "is_sector_upgrade": true
  },
  {
   "requirement_description": "Must be built on an annexed <hyperlink>Province</hyperlink>.<br></br><br></br>Requires City Tier II.",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "60<gold></gold> 130<structureprod></structureprod> ",
   "prediction_description": "+1 <garrison></garrison><hyperlink>Fortification Health</hyperlink>",
   "resid": 5046586587639,
   "id": "_conduit___glyph_tower",
   "DLC": "SECRETSOFTHEARCHMAGES ",
-  "description": "<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>Per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink>:<bulletlist></bullet><bullet>+3 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+1 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet></bulletlist><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink></bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+10 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>Per adjacent <conduit></conduit> <hyperlink>Conduit</hyperlink> or <researchpost></researchpost> <hyperlink>Research Post</hyperlink>:<bulletlist></bullet><bullet>+3 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet><bullet>+1 <garrison></garrison><hyperlink>Fortification Health</hyperlink></bullet></bulletlist><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink></bullet></bulletlist>",
   "name": "<conduit></conduit> Glyph Tower",
   "icon": "00000497000039F8",
   "is_sector_upgrade": true
@@ -213,7 +213,7 @@
   "resid": 5046586586798,
   "id": "_mine___grand_bazaar",
   "DLC": "RISEFROMRUIN ",
-  "description": "<bulletlist><bullet>+10 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Per adjacent <hyperlink>Province</hyperlink> with <hyperlink>Sand</hyperlink>:<bulletlist></bullet><bullet>+2 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet></bulletlist><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+7 <gold></gold> <hyperlink>Gold</hyperlink> income.</bullet><bullet>Per adjacent <hyperlink>Province</hyperlink> with <hyperlink>Sand</hyperlink>:<bulletlist></bullet><bullet>+2 <gold></gold> <hyperlink>Gold</hyperlink>.</bullet><bullet>+3 <food></food> <hyperlink>Food</hyperlink>.</bullet></bulletlist><bullet>Counts as a <mine></mine> <hyperlink>Mine</hyperlink>.</bullet></bulletlist>",
   "name": "<mine></mine> Grand Bazaar",
   "icon": "00000497000036AF",
   "is_sector_upgrade": true
@@ -881,7 +881,7 @@
   "resid": 5046586573697,
   "id": "_conduit___glacial_megalith",
   "DLC": "PRIMALFURY ",
-  "description": "<bulletlist><bullet>+6 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent Snow <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+4 <structureprod></structureprod> <hyperlink>Production</hyperlink> per adjacent Snow <hyperlink>Province</hyperlink>.</bullet><bullet>Counts as a <conduit></conduit> <hyperlink>Conduit</hyperlink>.</bullet></bulletlist>",
   "name": "<conduit></conduit> Glacial Megalith",
   "icon": "0000049700000382",
   "is_sector_upgrade": true
@@ -1107,7 +1107,7 @@
  },
  {
   "requirement_description": "",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
   "prediction_description": "+10 <food></food> <hyperlink>Food</hyperlink> income per <farms></farms> Farm:",
   "resid": 5016521802596,
   "id": "shrine_to_the_spirits",
@@ -2799,7 +2799,7 @@
  },
  {
   "requirement_description": "",
-  "cost": "100<gold></gold> 250<structureprod></structureprod> ",
+  "cost": "170<gold></gold> 450<structureprod></structureprod> ",
   "prediction_description": "<bulletlist><bullet>+40 <gold></gold> <hyperlink>Gold</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink> income</bullet></bulletlist>",
   "resid": 4578435139242,
   "id": "shadowtrade_quarter",

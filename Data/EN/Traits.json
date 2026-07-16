@@ -186,7 +186,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "+5 <hyperlink><hp></hp> Hit Points</hyperlink>."
+    "name": "+10 <hyperlink><hp></hp> Hit Points</hyperlink>."
    },
    {
     "name": "Gains the Web ability."
@@ -2752,11 +2752,6 @@
   "icon": "000003FC000004C6"
  },
  {
-  "starting_bonuses": [
-   {
-    "description": "Start with an extra Shield Unit or Polearm Unit."
-   }
-  ],
   "affinities": [
    {
     "name": "1<matter></matter> Materium Affinity"
@@ -2767,6 +2762,11 @@
   "point_cost": 1,
   "id": "runesmiths",
   "name": "Runesmiths",
+  "incompatible_society_traits": [
+   {
+    "name": "Ancient Wise Ones"
+   }
+  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -2780,6 +2780,11 @@
   "front_end": true,
   "type": "society",
   "display_order": 2,
+  "starting_bonuses": [
+   {
+    "description": "Start with an extra Shield Unit or Polearm Unit."
+   }
+  ],
   "icon": "000003FC000004C2"
  },
  {
@@ -2850,7 +2855,7 @@
  {
   "starting_bonuses": [
    {
-    "empire_progression_slug": "expanded_governance"
+    "empire_progression_slug": "rite_of_expansive_growth"
    },
    {
     "structure_upgrade_slug": "store_house"
@@ -3297,6 +3302,9 @@
   "incompatible_society_traits": [
    {
     "name": "Gifted Casters"
+   },
+   {
+    "name": "Runesmiths"
    }
   ],
   "screen_description": "",
@@ -3311,7 +3319,7 @@
   "display_order": 4,
   "starting_bonuses": [
    {
-    "description": "Start with an extra Battle Mage Unit or Support Unit."
+    "description": "1 random research skill is already unlocked."
    }
   ],
   "icon": "000003FC000004AD"

@@ -964,6 +964,12 @@
   "icon": "000003E300005580"
  },
  {
+  "description": "Unit is immune to Burning.",
+  "name": "Status Effect Immunity: Burning",
+  "slug": "0000041b00000cbc",
+  "icon": "0000049700000866"
+ },
+ {
   "description": "When a attacker hits at melee range, the attacker sustains 5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.",
   "name": "Vengeful Flames",
   "slug": "0000041b00000ab8",
@@ -1606,7 +1612,7 @@
     "count": 1
    }
   ],
-  "description": "Units in an 8-hex long and 1-hex wide line sustain damage. This ability deals damage according to the affinity points its controller has:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> per <arcana></arcana> <hyperlink>Astral Affinity</hyperlink></bullet><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per <chaos></chaos> <hyperlink>Chaos Affinity</hyperlink></bullet><bullet>+2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> per <matter></matter> <hyperlink>Materium Affinity</hyperlink></bullet><bullet>+2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> per <nature></nature> <hyperlink>Nature Affinity</hyperlink></bullet><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> per <order></order> <hyperlink>Order Affinity</hyperlink></bullet><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> per <shadow></shadow> <hyperlink>Shadow Affinity</hyperlink></bullet></bulletlist>",
+  "description": "Units in an 8-hex long and 3-hex wide line sustain damage. This ability deals damage according to the affinity points its controller has:<bulletlist><bullet>+2 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> per <arcana></arcana> <hyperlink>Astral Affinity</hyperlink></bullet><bullet>+2 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per <chaos></chaos> <hyperlink>Chaos Affinity</hyperlink></bullet><bullet>+2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> per <matter></matter> <hyperlink>Materium Affinity</hyperlink></bullet><bullet>+2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> per <nature></nature> <hyperlink>Nature Affinity</hyperlink></bullet><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> per <order></order> <hyperlink>Order Affinity</hyperlink></bullet><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> per <shadow></shadow> <hyperlink>Shadow Affinity</hyperlink></bullet></bulletlist>",
   "name": "Cosmos Beam",
   "slug": "cosmos_beam_ability_000004C500000F71",
   "damage": "",
@@ -3295,12 +3301,6 @@
   "icon": "0000048D00000864"
  },
  {
-  "description": "Unit is immune to Burning.",
-  "name": "Status Effect Immunity: Burning",
-  "slug": "0000041b00000cbc",
-  "icon": "0000049700000866"
- },
- {
   "modifiers": [
    {
     "description": "Base 90% chance of inflicting Bleeding for 3 <turn></turn> Turns.",
@@ -3882,11 +3882,7 @@
   "icon": "000003E600000566"
  },
  {
-  "notes": [
-   {
-    "note": "Cooldown: 1 <turn></turn>"
-   }
-  ],
+  "modifiers": [],
   "description": "<bulletlist><bullet>Target friendly unit:<bulletlist></bullet><bullet>Heals 70 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has its Negative Status Effects removed.</bullet></bulletlist><bullet>Then an enemy unit within 2 hexes:<bulletlist></bullet><bullet>Sustains 15 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 120% chance of becoming Immobilized for 1 <turn></turn> Turn.</bullet></bulletlist></bulletlist>",
   "name": "Webbed Transfusion",
   "slug": "webbed_transfusion_ability_0000049700003BB8",
@@ -3899,6 +3895,11 @@
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "4",
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
   "icon": "0000049700003BBA"
  },
  {
@@ -4165,7 +4166,13 @@
   "icon": "0000041B00001911"
  },
  {
-  "modifiers": [],
+  "modifiers": [
+   {
+    "description": "Attacks heal 5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+    "name": "Life Steal",
+    "count": 1
+   }
+  ],
   "description": "Strikes target enemy unit.",
   "name": "Magic Strike",
   "slug": "magic_strike_(base)_ability_0000049700003A44",
@@ -4189,6 +4196,11 @@
    {
     "description": "Base 60% chance of inflicting Burning for 3 <turn></turn> Turns.",
     "name": "Burning",
+    "count": 1
+   },
+   {
+    "description": "Attacks heal 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
+    "name": "Life Steal",
     "count": 1
    }
   ],
@@ -4250,9 +4262,9 @@
     "count": 1
    }
   ],
-  "description": "A Charge attack:<bulletlist><bullet>Gains 20% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
-  "name": "Charge Strike",
-  "slug": "melee_charge_strike_(base)_ability_00000497000037E3",
+  "description": "A Heavy Charge attack:<bulletlist><bullet>Gains 30% damage per hex traveled, up to 3 hexes.</bullet><bullet>Cancels <hyperlink>Defense Mode</hyperlink>.</bullet><bullet>Removes <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Heavy Charges ignore Charge Resistance.</bullet></bulletlist>",
+  "name": "Heavy Charge Strike",
+  "slug": "heavy_melee_charge_strike_(giants)_ability_00000497000037E3",
   "damage": "27<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -4269,7 +4281,7 @@
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "1",
   "notes": [],
-  "icon": "000003EB0000040D"
+  "icon": "000003EB00000542"
  },
  {
   "modifiers": [
@@ -8682,22 +8694,6 @@
   "icon": "000003BD000020CE"
  },
  {
-  "modifiers": [],
-  "description": "Deals damage to enemies in a 3-hex line.",
-  "name": "Line Shot",
-  "slug": "line_shot_ability_0000049000000E8D_0000049700000fb2",
-  "damage": "24<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "<hyperlink>Missile</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
-   }
-  ],
-  "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "3",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -8706,6 +8702,18 @@
     "note": "Cooldown: 2 <turn></turn>"
    }
   ],
+  "description": "Deals damage to enemies in a 3-hex line.",
+  "name": "Line Shot",
+  "slug": "line_shot_ability_0000049000000E8D_0000049700000fb2",
+  "damage": "24<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Missile</hyperlink>"
+   }
+  ],
+  "accuracy": "Always Hits",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "3",
   "icon": "0000049700001085"
  },
  {
@@ -9302,7 +9310,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
     "name": "Sundered Defense",
     "count": 1
    },
@@ -9333,7 +9341,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
     "name": "Sundered Defense",
     "count": 1
    },
@@ -9364,7 +9372,7 @@
  {
   "modifiers": [
    {
-    "description": "Base 90% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
+    "description": "Base 60% chance of inflicting Sundered Defense for 3 <turn></turn> Turns.",
     "name": "Sundered Defense",
     "count": 1
    },
@@ -22681,7 +22689,7 @@
   "description": "Deals damage to target unit.",
   "name": "Freezing Burst",
   "slug": "freezing_burst_ability_000003E300005B27",
-  "damage": "5<damagefrost></damagefrost> ",
+  "damage": "15<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Single Shot</hyperlink>"
@@ -27586,7 +27594,8 @@
  {
   "description": "<bulletlist><bullet>When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach 60% or lower, conjure a Tier II Spider.</bullet><bullet>When this unit's total <hyperlink><hp></hp> Hit Points</hyperlink> reach 30% or lower, conjure a Tier II Spider.</bullet></bulletlist><br></br>This summon lasts for 3 <turn></turn> Turns.<br></br><br></br>Additionally allows for the drafting of Tier I and Tier II Spiders in cities.",
   "name": "Living Spider Nest",
-  "slug": "0000049700003f5d"
+  "slug": "0000049700003f5d",
+  "icon": "0000049700003F59"
  },
  {
   "description": "At the start of combat conjure a <hyperlink>Morning Sprite</hyperlink> or an <hyperlink>Evening Sprite</hyperlink> that stays until the end of combat.",
@@ -28743,9 +28752,6 @@
  },
  {
   "notes": [
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   },
    {
     "note": "Cooldown: 2 <turn></turn>"
    }
@@ -30255,7 +30261,11 @@
   "name": "Conjure Dome of Protection",
   "slug": "hs_dome_of_protection_ability_hs_dome_of_protection",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "0",
@@ -30313,7 +30323,11 @@
   "name": "Poisonous Undergrowth",
   "slug": "hs_poisonous_undergrowth_ability_hs_poisonous_undergrowth",
   "damage": "",
-  "requisites": [],
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
   "accuracy": "Always Hits",
   "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "5",
@@ -31468,7 +31482,7 @@
     "count": 1
    }
   ],
-  "description": "Deals damage to target unit.",
+  "description": "Deals damage to target unit, ignoring Resistance.",
   "name": "Claim Soul",
   "slug": "hs_warlock_claim_soul_ability_hs_warlock_claim_soul",
   "damage": "30<damageblight></damageblight> ",
@@ -49001,7 +49015,7 @@
   "icon": "0000049700003D54"
  },
  {
-  "description": "The death of another has granted this unit:<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+2% <hyperlink><crit></crit>Critical Hit Chance</hyperlink></bullet></bulletlist><br></br>Stacks up to 10 times.",
+  "description": "The death of another has granted this unit:<bulletlist><bullet>+3 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+2% <hyperlink><crit></crit>Critical Hit Chance</hyperlink></bullet></bulletlist><br></br>Stacks up to 10 times.",
   "name": "Mortal Blessing",
   "slug": "0000048d00001a0f",
   "icon": "0000048D00001A0A"
@@ -49384,7 +49398,7 @@
   "icon": "000003E300005AA8"
  },
  {
-  "description": "<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Deals +5% damage.</bullet><bullet>Stacks up to 5 times.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Deals +2% damage.</bullet><bullet>Stacks up to 5 times.</bullet></bulletlist>",
   "name": "Demonic Satiation",
   "slug": "0000049700003a67",
   "icon": "0000049700003A6C"
@@ -49712,6 +49726,18 @@
   "icon": "0000049700000554"
  },
  {
+  "description": "Grants +80% <hyperlink><accuracy></accuracy> Accuracy</hyperlink>.",
+  "name": "Aimed",
+  "slug": "0000048d000008fb",
+  "icon": "000004A6000008AB"
+ },
+ {
+  "description": "This unit has:<bulletlist><bullet>+10 Maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>+20% healing received in <hyperlink>Combat</hyperlink>.</bullet></bulletlist>",
+  "name": "Well Supplied",
+  "slug": "000004930000181e",
+  "icon": "000004930000181F"
+ },
+ {
   "description": "This unit was resurrected and transformed into a <hyperlink>Blessed Soul</hyperlink>. It will rout when this effect expires.",
   "name": "Mercifully Returned",
   "slug": "000004930000174c",
@@ -49884,12 +49910,6 @@
   "name": "Damage Deflection",
   "slug": "0000041b0000161c",
   "icon": "000003E300005F0B"
- },
- {
-  "description": "Grants +80% <hyperlink><accuracy></accuracy> Accuracy</hyperlink>.",
-  "name": "Aimed",
-  "slug": "0000048d000008fb",
-  "icon": "000004A6000008AB"
  },
  {
   "description": "Summon a <hyperlink>Lesser Snow Spirit</hyperlink> onto the target hex.<br></br>This summon lasts for 3 <turn></turn> Turns.<br></br>Spirit Summons have a shared 3 <turn></turn> Turns cooldown.",

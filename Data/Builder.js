@@ -6879,9 +6879,9 @@ function backtraceTomeOriginAndTier(spell, showorigin, modCard) {
             const wrap = tomeOriginName.innerHTML;
             tomeOriginName.innerHTML = '<a href="/evolved/HTML/Artifacts.html">' + wrap + "</a>";
 
-            return artifactSpells.id;
+            return " ," + artifactSpells.id;
         } else {
-            return artifactSpells.id;
+             return " ," + artifactSpells.id;
         }
     }
     let worldStructureSpells = findParentByNested(jsonWorldStructures, "spell_unlocks", "id", spell.id);
@@ -6910,9 +6910,9 @@ function backtraceTomeOriginAndTier(spell, showorigin, modCard) {
             }
           
 
-            return worldStructureSpells.id;
+            return " ," + worldStructureSpells.id;
         } else {
-            return worldStructureSpells.id;
+             return " ," + worldStructureSpells.id;
         }
     }
     

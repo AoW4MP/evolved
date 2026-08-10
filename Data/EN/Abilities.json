@@ -199,7 +199,7 @@
  },
  {
   "modifiers": [],
-  "description": "In a 4-hex long 3-hex wide line:<bulletlist><bullet>Units sustain damage.</bullet><bullet>Units gain 3 Sundered Resistance.</bullet><bullet>Create <hyperlink>Mist</hyperlink>.</bullet></bulletlist>",
+  "description": "In a 4-hex long 3-hex wide line:<bulletlist><bullet>Units sustain damage.</bullet><bullet>Units gain 2 Sundered Resistance.</bullet><bullet>Create <hyperlink>Mist</hyperlink>.</bullet></bulletlist>",
   "name": "Rending Mist",
   "slug": "rending_mist_ability_000004E0000000C1",
   "damage": "22<damagelightning></damagelightning> 22<damagefrost></damagefrost> ",
@@ -367,7 +367,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<freeaction></freeaction>",
+  "actionPoints": "<singleuseaction></singleuseaction>",
   "range": "0",
   "notes": [
    {
@@ -4109,7 +4109,7 @@
  },
  {
   "notes": [],
-  "description": "Target enemy unit has a base 120% chance of becoming Taunted for 2 <turn></turn> Turns.",
+  "description": "Target enemy unit has a base 90% chance of becoming Taunted for 2 <turn></turn> Turns.",
   "name": "Taunt",
   "slug": "orb_of_desire_taunt_unit_property_ability_0000049700003AFB",
   "damage": "",
@@ -22209,7 +22209,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Enemy units in a 2-hex radius have a 60% chance of becoming Gilded for 1 <turn></turn> Turn.<br></br><br></br>Enter <hyperlink>Defense Mode</hyperlink>.",
+  "description": "Enemy units in a 2-hex radius have a 90% chance of becoming Gilded for 1 <turn></turn> Turn.<br></br><br></br>Enter <hyperlink>Defense Mode</hyperlink>.",
   "name": "Gilded Emanation",
   "slug": "gilded_emanation_ability_000003E300005DA3",
   "damage": "",

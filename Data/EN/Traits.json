@@ -157,6 +157,9 @@
     "name": "+4 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink>."
    },
    {
+    "name": "Decreased number of units in formation."
+   },
+   {
     "name": "Gain the Juggernaut ability."
    },
    {
@@ -1663,15 +1666,12 @@
   "incompatible_society_traits": [
    {
     "name": "Devotees of Good <goodact></goodact>"
-   },
-   {
-    "name": "<Pantheon></Pantheon> Bannerlords <goodact></goodact>"
    }
   ],
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": " discount on recruiting Dominated and <hyperlink>Captured</hyperlink> <hyperlink>Units</hyperlink>."
+    "name": "-25% discount on recruiting Dominated and <hyperlink>Captured</hyperlink> <hyperlink>Units</hyperlink>."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>."
@@ -2263,7 +2263,7 @@
     "name": "<hyperlink>Cities</hyperlink> of this race gain <xpCol>+2</xpCol> <happiness></happiness> <hyperlink>City Stability</hyperlink> for each <population></population> <hyperlink>Population</hyperlink>."
    },
    {
-    "name": "<hyperlink>Units</hyperlink> of this race earn <fireCol>-25%</fireCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
+    "name": "<hyperlink>Units</hyperlink> of this race earn <fireCol>-50%</fireCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
    }
   ],
   "enabled": true,
@@ -3732,7 +3732,7 @@
     "name": "<xpCol>-10</xpCol><reputation0></reputation0> <hyperlink>Alignment</hyperlink>"
    },
    {
-    "name": "<hyperlink>Units</hyperlink> of this race earn <xpCol>+25%</xpCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
+    "name": "<hyperlink>Units</hyperlink> of this race earn <xpCol>+50%</xpCol> <hyperlink><xp></xp> Experience</hyperlink> in combat."
    },
    {
     "name": "<hyperlink>Cities</hyperlink> of this race lose <fireCol>-2</fireCol> <happiness></happiness> <hyperlink>City Stability</hyperlink> for each <population></population> <hyperlink>Population</hyperlink>."

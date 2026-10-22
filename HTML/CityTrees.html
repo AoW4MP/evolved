@@ -62,6 +62,15 @@
                 affinity: "rgb(170, 90, 160)"
             };
             const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII"];
+            // tome cards are coloured by the tome's affinity, as written in the dump (<empirenature> ...)
+            const AFFINITY_COLORS = {
+                arcana: "rgb(40, 110, 160)",
+                chaos: "rgb(150, 40, 30)",
+                matter: "rgb(150, 100, 40)",
+                nature: "rgb(50, 130, 50)",
+                order: "rgb(170, 150, 50)",
+                shadow: "rgb(100, 40, 140)"
+            };
 
             let treeLinks = null;
             const structureByResid = new Map();
@@ -379,6 +388,11 @@
                 if (s.tome && tomeByResid.has(String(s.tome))) {
                     const tome = tomeByResid.get(String(s.tome));
                     box.append(Badge("/evolved/Icons/TomeIcons/" + tome.icon + ".png"));
+                    // one or two affinities colour the banner; tomes of every affinity stay neutral
+                    const affinities = [...new Set([...(tome.affinities || "").matchAll(/<empire(\w+)>/g)].map((m) => m[1]))];
+                    const colors = affinities.length <= 2 ? affinities.map((a) => AFFINITY_COLORS[a]).filter((c) => c) : [];
+                    box.querySelector(".structureNodeTitle").style.backgroundImage =
+                        "linear-gradient(to right, rgb(0,0,0,0), " + (colors.length ? colors : ["rgb(120, 120, 120)"]).join(", ") + ", rgb(0,0,0,0))";
                     tip.innerHTML += "<br>" + tome.name;
                 }
                 addTooltipListeners(node, tip);

@@ -52,7 +52,14 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
 - `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.
-- `HTML/CityTrees.html`: the Trade Route tree is always shown instead of only with the beta checkbox.
+### City Tree
+
+`HTML/CityTrees.html` is Evolved's own page, replacing upstream's (same URL and menu link):
+
+- The links between buildings come from `Data/GEN/CityTreeLinks.json`, which `citytree.py` in aow4_diff_tools generates from the live game plus the mod.
+  It holds only resids, keys and text ids; names, icons, costs and texts come from `Data/EN/StructureUpgrades.json`, `Tomes.json` and `all.json`.
+- One culture and sub-culture at a time, with toggles for the Elder Vampire's castle and tome buildings.
+- Upstream's `HTML/CityTest.html`, `HTML/CityTreesNew.html` and `Data/GEN/CityTree.json` are deleted, as is the `CityTree.json` / `jsonCityTreeNodes` pair in `Data/src/dataloader.js`.
 
 ## Game data
 
@@ -60,6 +67,8 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` has spells upstream lacks, such as Astral Keeper Ritual, Summon Frost Giant, Bone Horror Ritual and Bone Dragon Ritual.
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
+
+After copying a new dump into `Data/EN`, run `python citytree.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json`.
 
 ## Syncing with upstream
 
@@ -72,3 +81,5 @@ When syncing, any data conflict is resolved in favour of the local dump. Non-con
    Then check that no `aow4db` references remain, commit to `main`, and update the "Last synced" commit above.
    Upstream changes to the deleted language folders arrive as "deleted by us" conflicts: keep them deleted (`git rm -r -q Data/DE Data/ES Data/FR Data/JA Data/KO Data/PL Data/RU Data/ZH`).
    A brand-new upstream language folder would arrive without a conflict, so check `Data/` for one.
+   `HTML/CityTrees.html` is the one file to keep whole: discard upstream's changes to it (`git checkout --ours HTML/CityTrees.html`).
+   Keep `HTML/CityTest.html`, `HTML/CityTreesNew.html` and `Data/GEN/CityTree.json` deleted, and don't let `CityTree.json` back into `dataloader.js`.

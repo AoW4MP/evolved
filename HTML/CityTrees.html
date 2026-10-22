@@ -558,17 +558,20 @@
                         if (!parent) continue;
                         const a = parent.firstElementChild.getBoundingClientRect();
                         const b = node.firstElementChild.getBoundingClientRect();
-                        const y2 = b.top + b.height / 2 - origin.top;
+                        // whole pixels, so lines that share a stretch overlap exactly instead of looking thicker
+                        const px = (v) => Math.round(v);
+                        const y1 = px(a.top + a.height / 2 - origin.top);
+                        const y2 = px(b.top + b.height / 2 - origin.top);
+                        const x2 = px(b.left - origin.left);
                         let d;
                         if (b.left > a.right) {
-                            const x1 = a.right - origin.left;
-                            const y1 = a.top + a.height / 2 - origin.top;
-                            const mid = (x1 + b.left - origin.left) / 2;
-                            d = `M ${x1},${y1} H ${mid} V ${y2} H ${b.left - origin.left}`;
+                            const x1 = px(a.right - origin.left);
+                            const mid = px((x1 + x2) / 2);
+                            d = `M ${x1},${y1} H ${mid} V ${y2} H ${x2}`;
                         } else {
                             // same column, further down: run down the left side
-                            const x = a.left - origin.left - 8;
-                            d = `M ${a.left - origin.left},${a.top + a.height / 2 - origin.top} H ${x} V ${y2} H ${b.left - origin.left}`;
+                            const x1 = px(a.left - origin.left);
+                            d = `M ${x1},${y1} H ${x1 - 4} V ${y2} H ${x2}`;
                         }
                         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
                         path.setAttribute("d", d);
@@ -646,9 +649,10 @@
         left: 0;
         pointer-events: none;
         fill: none;
-        stroke: #d7c297;
-        stroke-opacity: 0.8;
+        /* solid and crisp: several lines sharing a stretch draw it once, not darker and thicker */
+        stroke: #ad9c7a;
         stroke-width: 2;
+        shape-rendering: crispEdges;
         z-index: 1;
     }
     .ct-tome-group {

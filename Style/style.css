@@ -295,6 +295,15 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+    /* the header's corners (Settings, Donate, Other Database, the "Updated" date) line up with it too */
+    .topbar {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header-img .current-version {
+        left: max(1%, calc(50% - 800px));
+    }
     #menu > li {
         float: none;
     }

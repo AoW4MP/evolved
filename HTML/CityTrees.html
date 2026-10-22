@@ -619,8 +619,13 @@
     .ct-page {
         padding: 0 16px;
     }
+    /* one block as wide as its widest section, centred: wide screens keep the tree under the
+       title, narrow ones shrink it and each section scrolls sideways on its own */
     #cityTree {
         min-width: 0;
+        width: max-content;
+        max-width: 100%;
+        margin: 0 auto;
     }
     .ct-controls {
         display: flex;
@@ -785,6 +790,9 @@
         height: 43px;
     }
     @media (max-width: 800px) {
+        #cityTree {
+            width: auto;
+        }
         .ct-tome-list {
             grid-template-columns: repeat(auto-fill, var(--ct-cell));
         }

@@ -184,6 +184,8 @@
                 );
                 if (sel.tomes) tree.append(DrawTomes(visible));
                 DrawConnectors();
+                // needs the icons' styles, so only once they are on the page
+                tree.querySelectorAll(".ct-resources").forEach(EvenIcons);
             }
 
             function DrawSection(title, section, rootKey, visible) {
@@ -440,6 +442,62 @@
                 img.className = "ct-badge";
                 img.src = src;
                 return img;
+            }
+
+            // The income icons are drawn with different amounts of empty space around them, so equal boxes
+            // still look uneven. Measure each image's visible pixels once, then scale and centre every icon
+            // so its drawing is the same size.
+            const visibleBoxes = new Map();
+            function VisibleBox(url) {
+                if (!visibleBoxes.has(url)) {
+                    visibleBoxes.set(
+                        url,
+                        new Promise((resolve) => {
+                            const img = new Image();
+                            img.onerror = () => resolve(null);
+                            img.onload = () => {
+                                const w = img.naturalWidth;
+                                const h = img.naturalHeight;
+                                const canvas = document.createElement("canvas");
+                                canvas.width = w;
+                                canvas.height = h;
+                                const g = canvas.getContext("2d");
+                                g.drawImage(img, 0, 0);
+                                const alpha = g.getImageData(0, 0, w, h).data;
+                                let x0 = w, y0 = h, x1 = -1, y1 = -1;
+                                for (let y = 0; y < h; y++) {
+                                    for (let x = 0; x < w; x++) {
+                                        if (alpha[(y * w + x) * 4 + 3] > 40) {
+                                            x0 = Math.min(x0, x); x1 = Math.max(x1, x);
+                                            y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+                                        }
+                                    }
+                                }
+                                resolve(x1 < 0 ? null : { w, h, x0, y0, x1, y1 });
+                            };
+                            img.src = url;
+                        })
+                    );
+                }
+                return visibleBoxes.get(url);
+            }
+
+            async function EvenIcons(container) {
+                const BOX = 20; // the icon's box (see .ct-resources > *)
+                const AREA = 18; // every drawing covers as much as an 18px square: narrow ones get taller
+                const MAX = 22; // but no side grows much past the box
+                for (const icon of container.children) {
+                    const url = /url\("?([^")]+)"?\)/.exec(getComputedStyle(icon).content || "");
+                    const b = url && (await VisibleBox(url[1]));
+                    if (!b) continue;
+                    const fit = BOX / Math.max(b.w, b.h); // object-fit: contain
+                    const vw = (b.x1 - b.x0 + 1) * fit;
+                    const vh = (b.y1 - b.y0 + 1) * fit;
+                    const k = Math.min(AREA / Math.sqrt(vw * vh), MAX / Math.max(vw, vh));
+                    const dx = ((b.x0 + b.x1 + 1) / 2 - b.w / 2) * fit;
+                    const dy = ((b.y0 + b.y1 + 1) / 2 - b.h / 2) * fit;
+                    icon.style.transform = `scale(${k.toFixed(3)}) translate(${(-dx).toFixed(2)}px, ${(-dy).toFixed(2)}px)`;
+                }
             }
 
             function findResources(text) {

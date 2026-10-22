@@ -324,15 +324,11 @@
             }
 
             function DrawTomes(visible) {
-                // a row per affinity (a dual tome's first one; every-affinity tomes under Other), a column per tome tier
+                // a group per affinity (a dual tome's first one; every-affinity tomes under Other), by tome tier
                 const holder = document.createElement("div");
                 holder.className = "ct-section";
                 holder.innerHTML = '<div class="ct-section-title">Tome Buildings</div>';
-                const grid = document.createElement("div");
-                grid.className = "ct-grid";
-                holder.append(grid);
 
-                const groups = [...Object.keys(AFFINITY_COLORS), "other"];
                 const placed = visible
                     .filter((s) => s.section === "tome")
                     .map((s) => {
@@ -341,41 +337,23 @@
                         const group = affinities.length && affinities.length <= 2 ? affinities[0] : "other";
                         return { s, group, tier: parseInt(tome.tier) || 0 };
                     })
-                    .sort((a, b) => TomeName(a.s).localeCompare(TomeName(b.s)) || NameOf(a.s).localeCompare(NameOf(b.s)));
+                    .sort(
+                        (a, b) =>
+                            a.tier - b.tier || TomeName(a.s).localeCompare(TomeName(b.s)) || NameOf(a.s).localeCompare(NameOf(b.s))
+                    );
 
-                // tiers I-V; anything without a tier (the Crystal Pact) goes in the first column
-                const tiers = [...new Set(placed.map((p) => p.tier).filter((t) => t))].sort((a, b) => a - b);
-                const column = new Map(tiers.map((t, i) => [t, i + 1]));
-                column.set(0, 1);
-                tiers.forEach((t, i) => {
-                    const head = document.createElement("div");
-                    head.className = "ct-col-head";
-                    head.textContent = t ? "Tier " + ROMAN[t] : "";
-                    head.style.gridColumn = i + 2;
-                    grid.append(head);
-                });
-
-                let gridRow = 2;
-                for (const group of groups) {
+                for (const group of [...Object.keys(AFFINITY_COLORS), "other"]) {
                     const members = placed.filter((p) => p.group === group);
                     if (!members.length) continue;
-                    const filled = new Map(); // column -> buildings already in it
-                    for (const p of members) {
-                        const col = column.get(p.tier);
-                        const r = filled.get(col) || 0;
-                        filled.set(col, r + 1);
-                        grid.append(PlaceNode(StructureNode(p.s), gridRow + r, col, p.s.resid));
-                    }
-                    const rows = Math.max(...filled.values());
-                    const label = document.createElement("div");
-                    label.className = "ct-row-label";
-                    label.textContent = AFFINITY_LABELS[group];
-                    label.style.gridRow = gridRow + " / span " + rows;
-                    label.style.borderColor = AFFINITY_COLORS[group] || ROW_COLORS.townhall;
-                    grid.append(label);
-                    gridRow += rows;
+                    const head = document.createElement("div");
+                    head.className = "ct-tome-group";
+                    head.textContent = AFFINITY_LABELS[group];
+                    head.style.borderColor = AFFINITY_COLORS[group] || ROW_COLORS.townhall;
+                    const list = document.createElement("div");
+                    list.className = "ct-tome-list";
+                    for (const p of members) list.append(StructureNode(p.s));
+                    holder.append(head, list);
                 }
-                grid.style.gridTemplateColumns = "110px repeat(" + tiers.length + ", var(--ct-cell))";
                 return holder;
             }
 
@@ -419,6 +397,7 @@
                     const res = document.createElement("div");
                     res.className = "ct-resources";
                     res.innerHTML = "+" + resources.join("");
+                    if (resources.length > 6) res.classList.add("ct-many"); // Prismatic Tower: two lines, not three
                     body.append(res);
                 }
 
@@ -527,10 +506,10 @@
             }
 
             async function EvenIcons(container) {
-                const BOX = 22; // the icon's box (see .ct-resources > *)
-                const AREA = 21; // every drawing covers as much as a 21px square: narrow ones get taller
-                const MAX = 24; // but no side grows much past the box
                 for (const icon of [...container.children]) {
+                    const BOX = icon.offsetWidth || 22; // the icon's box (see .ct-resources > *)
+                    const AREA = (BOX * 21) / 22; // every drawing covers as much as a 21px square: narrow ones get taller
+                    const MAX = (BOX * 24) / 22; // but no side grows much past the box
                     const url = /url\("?([^")]+)"?\)/.exec(getComputedStyle(icon).content || "");
                     if (!url) {
                         icon.remove(); // a tag without an icon, such as <hyperlink> in "+3 Vision Range"
@@ -666,6 +645,19 @@
         stroke-width: 2;
         z-index: 1;
     }
+    .ct-tome-group {
+        color: #bbcdf6;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-left: 4px solid;
+        padding-left: 6px;
+        margin: 14px 0 6px;
+    }
+    .ct-tome-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, var(--ct-cell));
+        row-gap: 10px;
+    }
     .ct-row-label {
         grid-column: 1;
         color: #bbcdf6;
@@ -747,6 +739,12 @@
         max-height: 22px;
         object-fit: contain;
         margin: 1px 2px;
+    }
+    .ct-resources.ct-many > * {
+        width: 17px;
+        height: 17px;
+        max-height: 17px;
+        margin: 0 1px;
     }
     .ct-badge {
         position: absolute;

@@ -312,7 +312,8 @@
                     node.dataset.parent = primary.get(s.resid);
                     grid.append(node);
                 }
-                grid.style.gridTemplateColumns = "110px repeat(" + maxColumn + ", var(--ct-cell))";
+                // the labels' column has a card gap's room on its right for the first column's lines
+                grid.style.gridTemplateColumns = "150px repeat(" + maxColumn + ", var(--ct-cell))";
                 return holder;
             }
 
@@ -451,7 +452,7 @@
                 const img = document.createElement("img");
                 img.className = "structureNodeIcon";
                 img.src = icon;
-                img.height = 60;
+                img.height = 70;
                 // badges and income icons are placed within the body, so a name on two lines moves them along
                 const body = document.createElement("div");
                 body.className = "ct-body";
@@ -545,6 +546,7 @@
             // ---- lines between buildings ----
 
             function DrawConnectors() {
+                const cell = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--ct-cell"));
                 for (const grid of document.querySelectorAll(".ct-grid")) {
                     grid.querySelector("svg")?.remove();
                     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -563,15 +565,19 @@
                         const y1 = px(a.top + a.height / 2 - origin.top);
                         const y2 = px(b.top + b.height / 2 - origin.top);
                         const x2 = px(b.left - origin.left);
+                        // the gap between two columns of cards holds two kinds of vertical line, a third apart:
+                        // a link into the next column turns down a third before the child, a link within the
+                        // same column runs down a third after the cards on the left
+                        const gap = cell - b.width;
                         let d;
                         if (b.left > a.right) {
                             const x1 = px(a.right - origin.left);
-                            const mid = px((x1 + x2) / 2);
-                            d = `M ${x1},${y1} H ${mid} V ${y2} H ${x2}`;
+                            const turn = px(x2 - gap / 3);
+                            d = `M ${x1},${y1} H ${turn} V ${y2} H ${x2}`;
                         } else {
-                            // same column, further down: run down the left side
                             const x1 = px(a.left - origin.left);
-                            d = `M ${x1},${y1} H ${x1 - 4} V ${y2} H ${x2}`;
+                            const side = px(x1 - (2 * gap) / 3);
+                            d = `M ${x1},${y1} H ${side} V ${y2} H ${x2}`;
                         }
                         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
                         path.setAttribute("d", d);
@@ -603,7 +609,8 @@
 </html>
 <style>
     :root {
-        --ct-cell: 270px;
+        --ct-cell: 300px; /* a column; the gap between cards is the cell less the card */
+        --ct-card: 260px;
     }
     .ct-page {
         padding: 0 16px;
@@ -665,7 +672,7 @@
     }
     .ct-tome-list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, var(--ct-cell));
+        grid-template-columns: repeat(5, var(--ct-cell));
         row-gap: 10px;
     }
     .ct-row-label {
@@ -684,22 +691,23 @@
         font-size: 12px;
         text-align: center;
         align-self: end;
-        padding-right: 25px;
+        width: var(--ct-card);
     }
     .ct-node {
         position: relative;
         z-index: 2;
-        width: 225px;
+        width: var(--ct-card);
         align-self: center;
     }
     .structureNode {
         position: relative;
+        box-sizing: border-box;
         background-image: url(/evolved/Icons/tooltipBG.png);
-        font-size: 11px;
+        font-size: 13px;
         color: #bbcdf6;
-        min-height: 60px;
-        max-height: 130px;
-        width: 225px;
+        min-height: 70px;
+        max-height: 150px;
+        width: var(--ct-card);
         text-align: left;
         border-style: solid;
         border-image: url(/evolved/Icons/9slicetooltip.png);
@@ -733,9 +741,9 @@
     .ct-resources {
         position: absolute;
         top: 2px;
-        bottom: 12px;
-        left: 70px;
-        right: 53px; /* wrap before the badge */
+        bottom: 14px;
+        left: 80px;
+        right: 62px; /* wrap before the badge */
         display: flex;
         align-items: center;
     }
@@ -763,18 +771,21 @@
         position: absolute;
         top: 0;
         right: 1px;
-        height: 48px;
+        height: 56px;
         opacity: 0.9;
     }
     /* culture emblems fill their image, tome icons have margins: this makes them look the same size */
     .ct-badge-culture {
-        top: 4px;
-        right: 5px;
-        height: 40px;
+        top: 5px;
+        right: 6px;
+        height: 46px;
     }
     @media (max-width: 800px) {
         :root {
-            --ct-cell: 240px;
+            --ct-cell: 280px;
+        }
+        .ct-tome-list {
+            grid-template-columns: repeat(auto-fill, var(--ct-cell));
         }
     }
 </style>

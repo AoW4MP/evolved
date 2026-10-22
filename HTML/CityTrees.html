@@ -376,9 +376,7 @@
                 }
                 if (s.tome && tomeByResid.has(String(s.tome))) {
                     const tome = tomeByResid.get(String(s.tome));
-                    const badge = Badge("/evolved/Icons/TomeIcons/" + tome.icon + ".png");
-                    badge.classList.add("ct-badge-tome");
-                    box.append(badge);
+                    box.append(Badge("/evolved/Icons/TomeIcons/" + tome.icon + ".png"));
                     tip.innerHTML += "<br>" + tome.name;
                 }
                 addTooltipListeners(node, tip);
@@ -599,15 +597,10 @@
     }
     .ct-badge {
         position: absolute;
-        top: 22px;
-        right: 6px;
-        height: 32px;
-        opacity: 0.9;
-    }
-    .ct-badge-tome {
         top: 14px;
         right: 4px;
         height: 54px;
+        opacity: 0.9;
     }
     @media (max-width: 800px) {
         :root {

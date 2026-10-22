@@ -347,8 +347,7 @@ async function CheckData() {
                 tooltipselectable: false,
                 fontSize: "16px",
                 showSecretSpells: false,
-                showBeta: false,
-                language: "EN"
+                showBeta: false
             });
             storedSettings = getUserSettings();
         }
@@ -363,9 +362,6 @@ async function CheckData() {
         // showBetaTooltip = document.getElementById("showBetaCheckbox");
         showBetaTooltip.checked = storedSettings.showBeta;
 
-        //  languageSelect = document.getElementById("languageSelect");
-        languageSelect.value = storedSettings.language;
-        //languageSelect.value = "EN";
         let hoverDiv = document.getElementById("hoverDiv");
         let hoverDiv2 = document.getElementById("hoverDiv2");
         if (checkboxTooltip.checked === true) {
@@ -380,10 +376,9 @@ async function CheckData() {
         if (storedSettings.showBeta) {
             await GetAllData("BETA");
         } else {
-            await GetAllData(storedSettings.language);
+            await GetAllData("EN");
         }
 
-        //await GetAllData("EN");
         AddExtraData();
 
         jsonUnitAbilitiesLocalized.forEach((a) => (abilityMap[a.slug] = a));
@@ -391,9 +386,6 @@ async function CheckData() {
 
         // maps
         HandlePage();
-        if (languageSelect.value != "EN") {
-            LocalizeUI();
-        }
     }
 }
 

@@ -28,8 +28,7 @@ function CheckBoxTooltips() {
     tooltipselectable: checkboxTooltip.checked,
     isolateNumber: checkboxNumbers.checked,
     showBeta: showBetaTooltip.checked,
-      showSecretSpells: showSecretSpells.checked,
-    language: languageSelect.value
+      showSecretSpells: showSecretSpells.checked
   });
 }
 
@@ -38,8 +37,7 @@ function SwitchToBeta() {
         tooltipselectable: checkboxTooltip.checked,
         isolateNumber: checkboxNumbers.checked,
         showBeta: showBetaTooltip.checked,
-      showSecretSpells: showSecretSpells.checked,
-        language: languageSelect.value
+      showSecretSpells: showSecretSpells.checked
     });
     location.reload();
 }

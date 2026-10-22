@@ -11,7 +11,6 @@ const checkboxNumbers = document.getElementById("numbersCheckbox");
 const showBetaTooltip = document.getElementById("showBetaCheckbox");
 
 const showSecretSpells = document.getElementById("showSecretSpellsCheckbox");
-const languageSelect = document.getElementById("languageSelect");
 
 function highlightNumbersInDiv(text) {
     if (!text) return;

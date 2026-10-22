@@ -170,7 +170,8 @@
                 tree.append(
                     DrawSection("City", "city", "town_hall_i_town_center", visible),
                     DrawSection("Fortifications", "fortification", "town_hall_i_town_center", visible),
-                    DrawSection(sel.vampire ? "Throne: Vampire Castle" : "Throne: Wizard's Tower", "throne", "throne", visible)
+                    // the dump has nothing on the Throne itself, so this section has no root node
+                    DrawSection(sel.vampire ? "Throne: Vampire Castle" : "Throne: Wizard's Tower", "throne", null, visible)
                 );
                 if (sel.tomes) tree.append(DrawTomes(visible));
                 DrawConnectors();
@@ -181,7 +182,7 @@
                 const inSection = new Map(members.map((s) => [s.resid, s]));
 
                 // column: the Town Hall tier a building needs, and always right of what it upgrades from
-                const column = new Map([[rootKey, 1]]);
+                const column = new Map(rootKey ? [[rootKey, 1]] : []);
                 const primary = new Map();
                 function columnOf(s) {
                     if (column.has(s.resid)) return column.get(s.resid);
@@ -202,6 +203,18 @@
                     return col;
                 }
                 members.forEach(columnOf);
+                if (!rootKey && members.length) {
+                    // without a root, a building that needs nothing at all (Desecration Chambers) joins the
+                    // first building that does, and the section starts at the first column
+                    const starts = members.filter((s) => !primary.get(s.resid) && s.th).map((s) => column.get(s.resid));
+                    if (starts.length) {
+                        for (const s of members) {
+                            if (!primary.get(s.resid) && !s.th) column.set(s.resid, Math.min(...starts));
+                        }
+                    }
+                    const shift = Math.min(...members.map((s) => column.get(s.resid))) - 1;
+                    for (const s of members) column.set(s.resid, column.get(s.resid) - shift);
+                }
 
                 // rows: each line gets a block of rows; a building stays in its parent's row when it can
                 const grid = document.createElement("div");
@@ -246,7 +259,7 @@
                         rowOf.set(key, gridRow + r);
                         maxColumn = Math.max(maxColumn, col);
                     };
-                    if (line === lines[0]) place(rootKey, 1, 0);
+                    if (rootKey && line === lines[0]) place(rootKey, 1, 0);
                     for (const s of lineMembers) {
                         const p = primary.get(s.resid);
                         const sameLine = p !== rootKey && inSection.get(p)?.line === line;
@@ -270,8 +283,10 @@
                     grid.append(head);
                 }
 
-                const root = treeLinks.roots.find((r) => r.key === rootKey);
-                grid.append(PlaceNode(RootNode(root), rowOf.get(rootKey), 1, rootKey));
+                if (rootKey) {
+                    const root = treeLinks.roots.find((r) => r.key === rootKey);
+                    grid.append(PlaceNode(RootNode(root), rowOf.get(rootKey), 1, rootKey));
+                }
                 for (const s of members) {
                     const node = PlaceNode(StructureNode(s), rowOf.get(s.resid), column.get(s.resid), s.resid);
                     node.dataset.parent = primary.get(s.resid);

@@ -171,7 +171,7 @@
                     DrawSection("City", "city", "town_hall_i_town_center", visible),
                     DrawSection("Fortifications", "fortification", "town_hall_i_town_center", visible),
                     // the dump has nothing on the Throne itself, so this section has no root node
-                    DrawSection(sel.vampire ? "Throne: Vampire Castle" : "Throne: Wizard's Tower", "throne", null, visible)
+                    DrawSection(sel.vampire ? "Vampire Castle" : "Wizard's Tower", "throne", null, visible)
                 );
                 if (sel.tomes) tree.append(DrawTomes(visible));
                 DrawConnectors();

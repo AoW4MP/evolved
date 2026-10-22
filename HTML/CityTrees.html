@@ -371,7 +371,9 @@
                     const sel = Selection();
                     const key = s.cultures.find((k) => sel.keys.has(k)) || s.cultures[0];
                     const culture = treeLinks.cultures.find((c) => c.key === key);
-                    box.append(Badge(CultureIcon(culture)));
+                    const badge = Badge(CultureIcon(culture));
+                    badge.classList.add("ct-badge-culture");
+                    box.append(badge);
                     tip.innerHTML += "<br>" + GameText(culture.name);
                 }
                 if (s.tome && tomeByResid.has(String(s.tome))) {
@@ -602,6 +604,12 @@
         right: 6px;
         height: 48px;
         opacity: 0.9;
+    }
+    /* culture emblems fill their image, tome icons have margins: this makes them look the same size */
+    .ct-badge-culture {
+        top: 26px;
+        right: 10px;
+        height: 40px;
     }
     @media (max-width: 800px) {
         :root {

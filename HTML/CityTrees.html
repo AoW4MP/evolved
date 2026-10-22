@@ -187,7 +187,7 @@
                 tree.innerHTML = "";
                 tree.append(
                     DrawSection("City", "city", "town_hall_i_town_center", visible),
-                    DrawSection("Fortifications", "fortification", "town_hall_i_town_center", visible),
+                    DrawSection("Fortifications", "fortification", null, visible),
                     // the dump has nothing on the Throne itself, so this section has no root node
                     DrawSection(sel.vampire ? "Vampire Castle" : "Wizard's Tower", "throne", null, visible)
                 );
@@ -223,9 +223,9 @@
                     return col;
                 }
                 members.forEach(columnOf);
-                if (!rootKey && members.length) {
-                    // without a root, a building that needs nothing at all (Desecration Chambers) joins the
-                    // first building that does, and the section starts at the first column
+                if (section === "throne" && members.length) {
+                    // the tower has no Town Hall columns: a building that needs nothing at all (Desecration
+                    // Chambers) joins the first building that does, and the section starts at the first column
                     const starts = members.filter((s) => !primary.get(s.resid) && s.th).map((s) => column.get(s.resid));
                     if (starts.length) {
                         for (const s of members) {
@@ -298,18 +298,21 @@
                 for (let c = 1; c <= maxColumn; c++) {
                     const head = document.createElement("div");
                     head.className = "ct-col-head";
-                    head.textContent = section === "throne" ? "" : c <= 4 ? "Town Hall " + ROMAN[c] : "";
+                    head.textContent = section === "throne" ? "" : c <= 4 ? "Needs Town Hall " + ROMAN[c] : "";
                     head.style.gridColumn = c + 1;
                     grid.append(head);
                 }
 
                 if (rootKey) {
                     const root = treeLinks.roots.find((r) => r.key === rootKey);
-                    grid.append(PlaceNode(RootNode(root), rowOf.get(rootKey), 1, rootKey));
+                    const rootNode = PlaceNode(RootNode(root), rowOf.get(rootKey), 1, rootKey);
+                    rootNode.dataset.line = "townhall";
+                    grid.append(rootNode);
                 }
                 for (const s of members) {
                     const node = PlaceNode(StructureNode(s), rowOf.get(s.resid), column.get(s.resid), s.resid);
                     node.dataset.parent = primary.get(s.resid);
+                    node.dataset.line = s.line;
                     grid.append(node);
                 }
                 // the labels' column has a card gap's room on its right for the first column's lines
@@ -558,6 +561,8 @@
                     for (const node of nodes.values()) {
                         const parent = nodes.get(node.dataset.parent);
                         if (!parent) continue;
+                        // a building's column says which Town Hall it needs: only the Town Halls link to each other
+                        if (parent.dataset.line === "townhall" && node.dataset.line !== "townhall") continue;
                         const a = parent.firstElementChild.getBoundingClientRect();
                         const b = node.firstElementChild.getBoundingClientRect();
                         // whole pixels, so lines that share a stretch overlap exactly instead of looking thicker
@@ -688,7 +693,7 @@
     .ct-col-head {
         grid-row: 1;
         color: #d7c297;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         align-self: end;
         width: var(--ct-card);

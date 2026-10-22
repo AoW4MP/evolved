@@ -315,8 +315,7 @@
                     node.dataset.line = s.line;
                     grid.append(node);
                 }
-                // the labels' column has a card gap's room on its right for the first column's lines
-                grid.style.gridTemplateColumns = "150px repeat(" + maxColumn + ", var(--ct-cell))";
+                grid.style.gridTemplateColumns = "110px repeat(" + maxColumn + ", var(--ct-cell))";
                 return holder;
             }
 
@@ -455,7 +454,7 @@
                 const img = document.createElement("img");
                 img.className = "structureNodeIcon";
                 img.src = icon;
-                img.height = 70;
+                img.height = 65;
                 // badges and income icons are placed within the body, so a name on two lines moves them along
                 const body = document.createElement("div");
                 body.className = "ct-body";
@@ -614,8 +613,8 @@
 </html>
 <style>
     :root {
-        --ct-cell: 300px; /* a column; the gap between cards is the cell less the card */
-        --ct-card: 260px;
+        --ct-cell: 272px; /* a column; the gap between cards is the cell less the card */
+        --ct-card: 242px;
     }
     .ct-page {
         padding: 0 16px;
@@ -669,7 +668,7 @@
     }
     .ct-tome-group {
         color: #bbcdf6;
-        font-size: 12px;
+        font-size: 13px;
         text-transform: uppercase;
         border-left: 4px solid;
         padding-left: 6px;
@@ -683,7 +682,7 @@
     .ct-row-label {
         grid-column: 1;
         color: #bbcdf6;
-        font-size: 12px;
+        font-size: 13px;
         text-transform: uppercase;
         border-left: 4px solid;
         padding-left: 6px;
@@ -708,10 +707,10 @@
         position: relative;
         box-sizing: border-box;
         background-image: url(/evolved/Icons/tooltipBG.png);
-        font-size: 13px;
+        font-size: 12px;
         color: #bbcdf6;
-        min-height: 70px;
-        max-height: 150px;
+        min-height: 65px;
+        max-height: 140px;
         width: var(--ct-card);
         text-align: left;
         border-style: solid;
@@ -747,8 +746,8 @@
         position: absolute;
         top: 2px;
         bottom: 14px;
-        left: 80px;
-        right: 62px; /* wrap before the badge */
+        left: 75px;
+        right: 58px; /* wrap before the badge */
         display: flex;
         align-items: center;
     }
@@ -776,19 +775,16 @@
         position: absolute;
         top: 0;
         right: 1px;
-        height: 56px;
+        height: 52px;
         opacity: 0.9;
     }
     /* culture emblems fill their image, tome icons have margins: this makes them look the same size */
     .ct-badge-culture {
         top: 5px;
         right: 6px;
-        height: 46px;
+        height: 43px;
     }
     @media (max-width: 800px) {
-        :root {
-            --ct-cell: 280px;
-        }
         .ct-tome-list {
             grid-template-columns: repeat(auto-fill, var(--ct-cell));
         }

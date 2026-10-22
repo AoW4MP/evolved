@@ -38,6 +38,9 @@ Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donat
 
 `HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's.
 
+`Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow
+for it, and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Phones keep the ☰ menu.
+
 ### English only
 
 Evolved is exported in English only, so the other languages are removed:

@@ -274,6 +274,23 @@ a:hover {
     text-decoration: none;
     color: #eee;
 }
+/* Desktop: the menu wraps onto a second line when the window is too narrow for it, instead of
+   forcing a page-wide scrollbar; the header grows to fit. Phones get the ☰ menu (max-width: 800px). */
+@media (min-width: 801px) {
+    .header-img {
+        height: auto;
+        min-height: 150px;
+    }
+    #menu {
+        min-width: 0;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #menu > li {
+        float: none;
+    }
+}
 @media (min-width:800px) {
     #menu li:hover > a,
     #menu li a:hover {

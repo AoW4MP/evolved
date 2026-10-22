@@ -1,9 +1,15 @@
 # Evolved vs. upstream
 
 This site is a fork of [MinionsArt/aow4db](https://github.com/MinionsArt/aow4db), adapted for the Evolved mod.
-The two repositories share no git history, so syncing is done by hand (see [Syncing](#syncing-with-upstream)).
+The two repositories share no git history.
 
-Last synced upstream commit: `6db93706` (2026-10-20)
+**Direction:** Evolved is gradually becoming its own site and no longer follows upstream as a whole.
+Every file, shared ones such as `HTML/header.html` and `Style/*.css` included, is Evolved's to change.
+Upstream is a source to pick from: take a fix or feature when it is wanted
+(see [Taking changes from upstream](#taking-changes-from-upstream)), rather than syncing everything.
+The sections below list where Evolved already differs, so a change taken from upstream doesn't undo them.
+
+Last full sync with upstream: `6db93706` (2026-10-20)
 
 ## Renames
 
@@ -70,15 +76,28 @@ When syncing, any data conflict is resolved in favour of the local dump. Non-con
 
 After copying a new dump into `Data/EN`, run `python citytree.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json`.
 
-## Syncing with upstream
+## Taking changes from upstream
+
+For a single fix or feature:
 
 1. Fetch upstream: `git fetch https://github.com/MinionsArt/aow4db.git main:refs/remotes/upstream/main`
+2. Look at the change (`git log upstream/main -- <path>`, `git show <commit>`) and apply only the files or hunks wanted,
+   by hand or with `git diff <commit>^ <commit> -- <path> | git apply -3`. Upstream commits are not renamed,
+   so apply the [renames](#renames) to what comes in.
+3. Check it doesn't undo anything listed above, and that no `aow4db` references remain.
+
+A full sync is rarely worth it now, since Evolved's own pages and changes keep growing. The procedure is kept below
+for reference.
+
+### Full sync (as done on 2026-10-22)
+
+1. Fetch upstream as above.
 2. In a temporary worktree, check out the last synced upstream commit, apply the [renames](#renames), and commit (the base).
 3. Replace the worktree's contents with `upstream/main`, apply the renames again, and commit on top of the base.
 4. On `main`, `git cherry-pick --no-commit <that commit>`. Git merges it three-way against the renamed base, so the customizations above survive.
 5. Resolve each conflict hunk, not whole files: `git checkout --ours <file>` throws away upstream's other changes in that file too.
    For data, take the local side of the conflicting hunks; for code, merge by hand.
-   Then check that no `aow4db` references remain, commit to `main`, and update the "Last synced" commit above.
+   Then check that no `aow4db` references remain, commit to `main`, and update the "Last full sync" commit above.
    Upstream changes to the deleted language folders arrive as "deleted by us" conflicts: keep them deleted (`git rm -r -q Data/DE Data/ES Data/FR Data/JA Data/KO Data/PL Data/RU Data/ZH`).
    A brand-new upstream language folder would arrive without a conflict, so check `Data/` for one.
    `HTML/CityTrees.html` is the one file to keep whole: discard upstream's changes to it (`git checkout --ours HTML/CityTrees.html`).

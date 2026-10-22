@@ -318,9 +318,21 @@
                 holder.innerHTML = '<div class="ct-section-title">Tome Buildings</div>';
                 const list = document.createElement("div");
                 list.className = "ct-tome-list";
+                // by the tome's first affinity, then its tier; tomes of every affinity last
+                const order = Object.keys(AFFINITY_COLORS);
+                const sortKey = (s) => {
+                    const tome = tomeByResid.get(String(s.tome)) || {};
+                    const affinities = TomeAffinities(tome);
+                    const group = affinities.length > 2 || !affinities.length ? order.length : order.indexOf(affinities[0]);
+                    return [group, parseInt(tome.tier) || 0];
+                };
                 const tomes = visible
                     .filter((s) => s.section === "tome")
-                    .sort((a, b) => TomeName(a).localeCompare(TomeName(b)) || NameOf(a).localeCompare(NameOf(b)));
+                    .sort((a, b) => {
+                        const [ga, ta] = sortKey(a);
+                        const [gb, tb] = sortKey(b);
+                        return ga - gb || ta - tb || TomeName(a).localeCompare(TomeName(b)) || NameOf(a).localeCompare(NameOf(b));
+                    });
                 for (const s of tomes) list.append(StructureNode(s));
                 holder.append(list);
                 return holder;
@@ -330,6 +342,10 @@
 
             function NameOf(s) {
                 return structureByResid.get(s.resid).name.replaceAll("<br>", " ").replaceAll("</br>", " ");
+            }
+
+            function TomeAffinities(tome) {
+                return [...new Set([...(tome.affinities || "").matchAll(/<empire(\w+)>/g)].map((m) => m[1]))];
             }
 
             function TomeName(s) {
@@ -389,7 +405,7 @@
                     const tome = tomeByResid.get(String(s.tome));
                     box.append(Badge("/evolved/Icons/TomeIcons/" + tome.icon + ".png"));
                     // one or two affinities colour the banner; tomes of every affinity stay neutral
-                    const affinities = [...new Set([...(tome.affinities || "").matchAll(/<empire(\w+)>/g)].map((m) => m[1]))];
+                    const affinities = TomeAffinities(tome);
                     const colors = affinities.length <= 2 ? affinities.map((a) => AFFINITY_COLORS[a]).filter((c) => c) : [];
                     box.querySelector(".structureNodeTitle").style.backgroundImage =
                         "linear-gradient(to right, rgb(0,0,0,0), " + (colors.length ? colors : ["rgb(120, 120, 120)"]).join(", ") + ", rgb(0,0,0,0))";
@@ -606,11 +622,17 @@
         bottom: 2px;
         right: 4px;
     }
+    /* between the title banner and the cost line; a long list wraps onto a second line there */
     .ct-resources {
         position: absolute;
-        bottom: 30px;
+        top: 24px;
+        bottom: 22px;
         left: 75px;
         right: 58px; /* wrap before the badge */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
     }
     .ct-badge {
         position: absolute;

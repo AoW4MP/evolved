@@ -69,7 +69,7 @@ function RevealKey() {
 
 function downloadEditKeyFile() {
   const text =
-    "Age of Wonders 4 Evolved (minionsart.github.io/evolved)\nYour Build Edit Key : " + getOrCreateUserEditKey(); // Replace with your dynamic content
+    "Age of Wonders 4 Evolved (aow4mp.github.io/evolved)\nYour Build Edit Key : " + getOrCreateUserEditKey(); // Replace with your dynamic content
   const filename = "evolved_EditKey.txt";
 
   const blob = new Blob([text], { type: "text/plain" });

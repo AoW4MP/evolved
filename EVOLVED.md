@@ -13,8 +13,8 @@ Every upstream text file goes through these replacements:
 | --- | --- |
 | `/aow4db/` (paths) | `/evolved/` |
 | `Age of Wonders 4 Database` (page titles, headings, `document.title`) | `Age of Wonders 4 Evolved` |
-| `minionsart.github.io/aow4db` (`Data/src/settings.js`) | `minionsart.github.io/evolved` |
-| `Aow4db_EditKey.txt` (`Data/src/settings.js`) | `evolved_EditKey.txt` |
+| `minionsart.github.io/aow4db` (site address in the downloaded edit-key file, `Data/src/settings.js`) | `aow4mp.github.io/evolved` |
+| `Aow4db_EditKey.txt` (name of the downloaded Faction Creator edit-key file, `Data/src/settings.js`) | `evolved_EditKey.txt` |
 | `# aow4db` (`README.md`) | `# evolved` |
 
 Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donate` and the heading "Support the AoW 4 Database".

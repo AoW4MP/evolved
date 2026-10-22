@@ -37,7 +37,8 @@ Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donat
 Evolved is exported in English only, so the other languages are removed:
 
 - `Data/DE`, `ES`, `FR`, `JA`, `KO`, `PL`, `RU` and `ZH` are deleted.
-- `HTML/header.html`: the language dropdown (`<select id="languageSelect">`) is removed.
+- `HTML/header.html`: the language dropdown (`<select id="languageSelect">`) is replaced by an empty 95px-wide `<div>`.
+  The top bar spaces its items evenly, so without that placeholder the Donate button moves to the middle.
 - `Data/Builder.js`: the `languageSelect` lookup is removed.
 - `Data/src/settings.js`: `CheckBoxTooltips` and `SwitchToBeta` no longer save `language`.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")` (or `"BETA"`), and no longer saves a `language` default or calls `LocalizeUI()` for other languages.

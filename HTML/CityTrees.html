@@ -407,6 +407,7 @@
                 const name = NameOf(s);
                 const node = NodeShell(name, "/evolved/Icons/UpgradeIcons/" + info.icon + ".png", s.line);
                 const box = node.firstElementChild;
+                const body = box.querySelector(".ct-body");
 
                 const cost = document.createElement("div");
                 cost.className = "ct-cost";
@@ -418,7 +419,7 @@
                     const res = document.createElement("div");
                     res.className = "ct-resources";
                     res.innerHTML = "+" + resources.join("");
-                    box.append(res);
+                    body.append(res);
                 }
 
                 const tip = document.createElement("span");
@@ -439,12 +440,12 @@
                     const culture = treeLinks.cultures.find((c) => c.key === key);
                     const badge = Badge(CultureIcon(culture));
                     badge.classList.add("ct-badge-culture");
-                    box.append(badge);
+                    body.append(badge);
                     tip.innerHTML += "<br>" + GameText(culture.name);
                 }
                 if (s.tome && tomeByResid.has(String(s.tome))) {
                     const tome = tomeByResid.get(String(s.tome));
-                    box.append(Badge("/evolved/Icons/TomeIcons/" + tome.icon + ".png"));
+                    body.append(Badge("/evolved/Icons/TomeIcons/" + tome.icon + ".png"));
                     // one or two affinities colour the banner; tomes of every affinity stay neutral
                     const affinities = TomeAffinities(tome);
                     const colors = affinities.length <= 2 ? affinities.map((a) => AFFINITY_COLORS[a]).filter((c) => c) : [];
@@ -471,7 +472,11 @@
                 img.className = "structureNodeIcon";
                 img.src = icon;
                 img.height = 60;
-                box.append(title, img);
+                // badges and income icons are placed within the body, so a name on two lines moves them along
+                const body = document.createElement("div");
+                body.className = "ct-body";
+                body.append(img);
+                box.append(title, body);
                 node.append(box);
                 return node;
             }
@@ -712,6 +717,9 @@
         background-image: linear-gradient(to right, rgba(44, 60, 78, 0.6), rgba(97, 47, 162, 0));
     }
     .structureNodeIcon {
+        display: block;
+    }
+    .ct-body {
         position: relative;
     }
     .ct-cost {
@@ -719,13 +727,13 @@
         bottom: 2px;
         right: 4px;
     }
-    /* between the title banner and the cost line; a long list wraps onto a second line there */
+    /* beside the picture, above the cost line; a long list wraps onto a second line there */
     .ct-resources {
         position: absolute;
-        top: 24px;
-        bottom: 22px;
-        left: 75px;
-        right: 58px; /* wrap before the badge */
+        top: 2px;
+        bottom: 12px;
+        left: 70px;
+        right: 53px; /* wrap before the badge */
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -742,15 +750,15 @@
     }
     .ct-badge {
         position: absolute;
-        top: 22px;
-        right: 6px;
+        top: 0;
+        right: 1px;
         height: 48px;
         opacity: 0.9;
     }
     /* culture emblems fill their image, tome icons have margins: this makes them look the same size */
     .ct-badge-culture {
-        top: 26px;
-        right: 10px;
+        top: 4px;
+        right: 5px;
         height: 40px;
     }
     @media (max-width: 800px) {

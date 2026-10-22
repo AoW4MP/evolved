@@ -39,7 +39,9 @@ Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donat
 `HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's.
 
 `Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow
-for it, and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Phones keep the ☰ menu.
+for it, and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred.
+The page body (`.w3-container`: sidebar and content) is at most 1600px wide and centred, so on an ultrawide screen
+the sidebar stays beside the content. Phones keep the ☰ menu.
 
 ### English only
 

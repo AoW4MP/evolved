@@ -71,6 +71,15 @@
                 order: "rgb(170, 150, 50)",
                 shadow: "rgb(100, 40, 140)"
             };
+            const AFFINITY_LABELS = {
+                arcana: "Astral",
+                chaos: "Chaos",
+                matter: "Materium",
+                nature: "Nature",
+                order: "Order",
+                shadow: "Shadow",
+                other: "Other"
+            };
 
             let treeLinks = null;
             const structureByResid = new Map();
@@ -315,28 +324,58 @@
             }
 
             function DrawTomes(visible) {
+                // a row per affinity (a dual tome's first one; every-affinity tomes under Other), a column per tome tier
                 const holder = document.createElement("div");
                 holder.className = "ct-section";
                 holder.innerHTML = '<div class="ct-section-title">Tome Buildings</div>';
-                const list = document.createElement("div");
-                list.className = "ct-tome-list";
-                // by the tome's first affinity, then its tier; tomes of every affinity last
-                const order = Object.keys(AFFINITY_COLORS);
-                const sortKey = (s) => {
-                    const tome = tomeByResid.get(String(s.tome)) || {};
-                    const affinities = TomeAffinities(tome);
-                    const group = affinities.length > 2 || !affinities.length ? order.length : order.indexOf(affinities[0]);
-                    return [group, parseInt(tome.tier) || 0];
-                };
-                const tomes = visible
+                const grid = document.createElement("div");
+                grid.className = "ct-grid";
+                holder.append(grid);
+
+                const groups = [...Object.keys(AFFINITY_COLORS), "other"];
+                const placed = visible
                     .filter((s) => s.section === "tome")
-                    .sort((a, b) => {
-                        const [ga, ta] = sortKey(a);
-                        const [gb, tb] = sortKey(b);
-                        return ga - gb || ta - tb || TomeName(a).localeCompare(TomeName(b)) || NameOf(a).localeCompare(NameOf(b));
-                    });
-                for (const s of tomes) list.append(StructureNode(s));
-                holder.append(list);
+                    .map((s) => {
+                        const tome = tomeByResid.get(String(s.tome)) || {};
+                        const affinities = TomeAffinities(tome);
+                        const group = affinities.length && affinities.length <= 2 ? affinities[0] : "other";
+                        return { s, group, tier: parseInt(tome.tier) || 0 };
+                    })
+                    .sort((a, b) => TomeName(a.s).localeCompare(TomeName(b.s)) || NameOf(a.s).localeCompare(NameOf(b.s)));
+
+                // tiers I-V; anything without a tier (the Crystal Pact) goes in the first column
+                const tiers = [...new Set(placed.map((p) => p.tier).filter((t) => t))].sort((a, b) => a - b);
+                const column = new Map(tiers.map((t, i) => [t, i + 1]));
+                column.set(0, 1);
+                tiers.forEach((t, i) => {
+                    const head = document.createElement("div");
+                    head.className = "ct-col-head";
+                    head.textContent = t ? "Tier " + ROMAN[t] : "";
+                    head.style.gridColumn = i + 2;
+                    grid.append(head);
+                });
+
+                let gridRow = 2;
+                for (const group of groups) {
+                    const members = placed.filter((p) => p.group === group);
+                    if (!members.length) continue;
+                    const filled = new Map(); // column -> buildings already in it
+                    for (const p of members) {
+                        const col = column.get(p.tier);
+                        const r = filled.get(col) || 0;
+                        filled.set(col, r + 1);
+                        grid.append(PlaceNode(StructureNode(p.s), gridRow + r, col, p.s.resid));
+                    }
+                    const rows = Math.max(...filled.values());
+                    const label = document.createElement("div");
+                    label.className = "ct-row-label";
+                    label.textContent = AFFINITY_LABELS[group];
+                    label.style.gridRow = gridRow + " / span " + rows;
+                    label.style.borderColor = AFFINITY_COLORS[group] || ROW_COLORS.townhall;
+                    grid.append(label);
+                    gridRow += rows;
+                }
+                grid.style.gridTemplateColumns = "110px repeat(" + tiers.length + ", var(--ct-cell))";
                 return holder;
             }
 
@@ -483,12 +522,16 @@
             }
 
             async function EvenIcons(container) {
-                const BOX = 20; // the icon's box (see .ct-resources > *)
-                const AREA = 18; // every drawing covers as much as an 18px square: narrow ones get taller
-                const MAX = 22; // but no side grows much past the box
-                for (const icon of container.children) {
+                const BOX = 22; // the icon's box (see .ct-resources > *)
+                const AREA = 21; // every drawing covers as much as a 21px square: narrow ones get taller
+                const MAX = 24; // but no side grows much past the box
+                for (const icon of [...container.children]) {
                     const url = /url\("?([^")]+)"?\)/.exec(getComputedStyle(icon).content || "");
-                    const b = url && (await VisibleBox(url[1]));
+                    if (!url) {
+                        icon.remove(); // a tag without an icon, such as <hyperlink> in "+3 Vision Range"
+                        continue;
+                    }
+                    const b = await VisibleBox(url[1]);
                     if (!b) continue;
                     const fit = BOX / Math.max(b.w, b.h); // object-fit: contain
                     const vw = (b.x1 - b.x0 + 1) * fit;
@@ -498,6 +541,7 @@
                     const dy = ((b.y0 + b.y1 + 1) / 2 - b.h / 2) * fit;
                     icon.style.transform = `scale(${k.toFixed(3)}) translate(${(-dx).toFixed(2)}px, ${(-dy).toFixed(2)}px)`;
                 }
+                if (!container.children.length) container.remove(); // just a "+" left
             }
 
             function findResources(text) {
@@ -641,11 +685,6 @@
         width: 225px;
         align-self: center;
     }
-    .ct-tome-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, var(--ct-cell));
-        row-gap: 10px;
-    }
     .structureNode {
         position: relative;
         background-image: url(/evolved/Icons/tooltipBG.png);
@@ -695,11 +734,11 @@
     /* icons.css gives the resource icons different heights (15-20px) and offsets: one box for all here */
     .ct-resources > * {
         position: static;
-        width: 20px;
-        height: 20px;
-        max-height: 20px;
+        width: 22px;
+        height: 22px;
+        max-height: 22px;
         object-fit: contain;
-        margin: 1px;
+        margin: 1px 2px;
     }
     .ct-badge {
         position: absolute;

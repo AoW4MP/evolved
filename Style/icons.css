@@ -240,7 +240,9 @@ arcanium_ore,
 focus_crystals,
 fireforge_stone,
 blood_glass,
-astral_dew, tranquility_pool,rainbow_clover {
+astral_dew,
+tranquility_pool,
+rainbow_clover {
     max-width: 25px;
     top: 7px;
     position: relative;
@@ -248,36 +250,38 @@ astral_dew, tranquility_pool,rainbow_clover {
 }
 
 haste_berries {
-       content: url(/evolved/Icons/WorldStructures/haste_berries.png);
+    content: url(/evolved/Icons/WorldStructures/haste_berries.png);
 }
 silvertongue_fruit {
-       content: url(/evolved/Icons/WorldStructures/silvertongue_fruit.png);
+    content: url(/evolved/Icons/WorldStructures/silvertongue_fruit.png);
 }
 void_stones {
-       content: url(/evolved/Icons/WorldStructures/void_stones.png);
+    content: url(/evolved/Icons/WorldStructures/void_stones.png);
 }
 
 archon_blood {
-       content: url(/evolved/Icons/WorldStructures/archon_blood.png);
+    content: url(/evolved/Icons/WorldStructures/archon_blood.png);
 }
 arcanium_ore {
-       content: url(/evolved/Icons/WorldStructures/arcanium_ore.png);
+    content: url(/evolved/Icons/WorldStructures/arcanium_ore.png);
 }
 focus_crystals {
-       content: url(/evolved/Icons/WorldStructures/focus_crystals.png);
+    content: url(/evolved/Icons/WorldStructures/focus_crystals.png);
 }
 fireforge_stone {
-       content: url(/evolved/Icons/WorldStructures/fireforge_stone.png);
+    content: url(/evolved/Icons/WorldStructures/fireforge_stone.png);
 }
 blood_glass {
-       content: url(/evolved/Icons/WorldStructures/blood_glass.png);
+    content: url(/evolved/Icons/WorldStructures/blood_glass.png);
 }
 astral_dew {
-       content: url(/evolved/Icons/WorldStructures/astral_dew.png);
-}tranquility_pool {
-       content: url(/evolved/Icons/WorldStructures/tranquility_pool.png);
-}rainbow_clover  {
-       content: url(/evolved/Icons/WorldStructures/rainbow_clover.png);
+    content: url(/evolved/Icons/WorldStructures/astral_dew.png);
+}
+tranquility_pool {
+    content: url(/evolved/Icons/WorldStructures/tranquility_pool.png);
+}
+rainbow_clover {
+    content: url(/evolved/Icons/WorldStructures/rainbow_clover.png);
 }
 
 classWarrior {
@@ -325,7 +329,9 @@ EMPIRESANDASHES,
 ARCHONPROPHECY,
 COSMICWANDERER,
 THRONESOFBLOOD,
-RISEFROMRUIN,SECRETSOFTHEARCHMAGES {
+RISEFROMRUIN,
+SECRETSOFTHEARCHMAGES,
+WITCHOFTHEWAVES, THESILVERSEAS {
     max-width: 20px;
     top: 7px;
     position: relative;
@@ -375,6 +381,13 @@ WAYSOFWAR {
 }
 ARCHONPROPHECY {
     content: url(/evolved/Icons/Text/ArchonProphecy.png);
+}
+
+WITCHOFTHEWAVES {
+    content: url(/evolved/Icons/Text/singer_of_storms.png);
+}
+THESILVERSEAS {
+    content: url(/evolved/Icons/Text/the_silver_seas.png);
 }
 
 /* ///////////////////////////////DLC TAGS */
@@ -439,8 +452,11 @@ unitCivilian,
 unitCavalry,
 unitPlant,
 unitConstruct,
-unitFey,unitAnimal, unitSettler, unitDragon {
-   width: 20px;
+unitFey,
+unitAnimal,
+unitSettler,
+unitDragon {
+    width: 20px;
     height: 20px;
     top: 3px;
     position: relative;
@@ -494,8 +510,8 @@ unitShock {
 unitTower {
     content: url(/evolved/Icons/Text/tower.png);
 }
-unitSettler{
-     content: url(/evolved/Icons/Text/settler.png);
+unitSettler {
+    content: url(/evolved/Icons/Text/settler.png);
 }
 
 unitSiegecraft {
@@ -526,7 +542,6 @@ unitDragon {
 }
 
 unitAnimal {
-   
     content: url(/evolved/Icons/Interface/Header/animal.png);
 }
 
@@ -688,14 +703,14 @@ structureprod {
     position: relative;
 }
 
-warspoils{
+warspoils {
     max-height: 20px;
     top: 3px;
     content: url(/evolved/Icons/Text/war_spoils.png);
     position: relative;
 }
 
-favors{
+favors {
     max-height: 20px;
     top: 3px;
     content: url(/evolved/Icons/Text/favors.png);

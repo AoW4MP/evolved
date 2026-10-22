@@ -31,7 +31,7 @@
   "id": "articas_ice_age",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": false,
-  "description": "Up to 40 random <hyperlink>Provinces</hyperlink> gain an Ice Age Hazard. At the start of the next turn those hazards expire and:<bulletlist><bullet>Enemy units sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Provinces are destroyed.</bullet><bullet>The province:<bulletlist></bullet><bullet>Gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet>",
+  "description": "Up to 40 random <hyperlink>Provinces</hyperlink> gain an Ice Age Hazard. At the start of the next turn, those hazards expire and:<bulletlist><bullet>Enemy units sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Provinces are destroyed.</bullet></bulletlist><bullet>The province:<bulletlist></bullet><bullet>Gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Artica's Ice Age",
   "operation_point_cost": 100,
   "icon": "0000049700003DEC"
@@ -43,7 +43,7 @@
   "id": "spiders_embrace",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": false,
-  "description": "Target race weaves themselves with spiders gaining:<bulletlist><bullet>The Spider unit type.</bullet><bullet>Fast Movement</bullet><bullet>Base attacks gain a base 30% chance of inflicting Immobilized for 1 <turn></turn> Turn. Increased for Single Shots.</bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
+  "description": "Target race weaves themselves with spiders gaining:<bulletlist><bullet>The Spider unit type.</bullet><bullet>Fast Movement.</bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All attacks gain a base 30% chance of inflicting Immobilized for 1 <turn></turn> Turn. Increased for Single Shots.</bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
   "name": "Spider's Embrace",
   "operation_point_cost": 600,
   "icon": "000004D000000512"
@@ -350,7 +350,7 @@
   "id": "umbral_exile",
   "DLC": "ELDRITCHREALMS ",
   "tactical": true,
-  "description": "Target non-<hyperlink>Hero</hyperlink> unit has a base 60% chance of:<bulletlist><bullet>Being immediately removed from combat.</bullet><bullet>Appearing at a random location in the Umbral Abyss after battle.</bullet><bullet>If unsuccessful, inflicts Stunned for 1<turn></turn> Turn instead.</bullet></bulletlist><br></br><br></br>Cannot be used in Water Combat.",
+  "description": "Target non-<hyperlink>Hero</hyperlink> unit has a base 60% chance of:<bulletlist><bullet>Being immediately removed from combat.</bullet><bullet>Appearing at a random location in the Umbral Abyss after battle.</bullet><bullet>If unsuccessful, inflicts Stunned for 1<turn></turn> Turn instead.</bullet></bulletlist>",
   "name": "Umbral Exile",
   "operation_point_cost": 30,
   "icon": "0000049C0000005B"
@@ -369,13 +369,35 @@
   "icon": "0000049C0000003B"
  },
  {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5046586590599,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "nightveil_focus",
+  "tactical": false,
+  "description": "Enchanted units gain:<bulletlist><bullet>Attacks deal +2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Attacks have a base 60% chance of inflicting Blind for 1 <turn></turn> Turn.</bullet><bullet>Universal Camouflage.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Nightveil Focus",
+  "operation_point_cost": 100,
+  "icon": "0000041B00001725"
+ },
+ {
   "casting_cost": "80<mana></mana> ",
   "resid": 5046586588816,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "fanfare_of_mercy",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": true,
-  "description": "Ethereal and Undead units in a 2-hex radius:<bulletlist><bullet>Have a 60% chance of becoming <hyperlink>Routing</hyperlink>. If resisted, they are Pacified for 1 <turn></turn> Turn instead.</bullet>",
+  "description": "Ethereal and Undead units in a 2-hex radius:<bulletlist><bullet>Have a 60% chance of becoming <hyperlink>Routing</hyperlink>. If resisted, they are Pacified for 1 <turn></turn> Turn instead.</bullet></bulletlist>",
   "name": "Fanfare of Mercy",
   "operation_point_cost": 35,
   "icon": "0000049700003E8F"
@@ -399,7 +421,7 @@
   "id": "bhajifs_disruption",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": true,
-  "description": "<bulletlist><bullet>Enemies in a 1-hex radius:<bulletlist></bullet><bullet>Become Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Become Mana Drained for 1 <turn></turn> Turn.</bullet></bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next 2 <turn></turn> Turns, Combat Spells cannot be cast.</bullet></bulletlist></bulletlist>",
+  "description": "<bulletlist><bullet>Enemies in a 1-hex radius:</bullet><bullet>Become Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Become Mana Drained for 1 <turn></turn> Turn.</bullet></bulletlist><bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next 2 <turn></turn> Turns, Combat Spells cannot be cast.</bullet></bulletlist>",
   "name": "Bhajif's Disruption",
   "operation_point_cost": 35,
   "icon": "0000049700003E5A"
@@ -459,7 +481,7 @@
   "id": "noctus_mastery",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": false,
-  "description": "Target friendly city is destroyed. Then for each population of the destroyed city:<bulletlist><bullet>Gain +50 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.</bullet><bullet>Gain +20 <souls></souls> <hyperlink>Soul</hyperlink>.</bullet><bullet>Gain a random Skeleton unit.<bulletlist></bullet><bullet>Each skeleton gained has a small chance of being a <hyperlink>Corrupt Soul</hyperlink> instead.</bullet></bulletlist>",
+  "description": "Target friendly city is destroyed. Then for each population of the destroyed city:<bulletlist><bullet>Gain +50 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.</bullet><bullet>Gain +20 <souls></souls> <hyperlink>Soul</hyperlink>.</bullet><bullet>Gain a random Skeleton unit.</bullet><bullet>Each skeleton gained has a small chance of being a <hyperlink>Corrupt Soul</hyperlink> instead.</bullet></bulletlist>",
   "name": "Noctus' Mastery",
   "operation_point_cost": 45,
   "icon": "0000049700003E04"
@@ -543,7 +565,7 @@
   "id": "corrupt_pact",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": false,
-  "description": "Target Free City:<bulletlist><bullet>Has its <hyperlink>Relations</hyperlink> to other rulers reduced by 200.</bullet><bullet>80% of its <food></food> <hyperlink>Food</hyperlink> income is given to your cities.</bullet></bulletlist>",
+  "description": "Target Free City:<bulletlist><bullet>Has its <hyperlink>Relations</hyperlink> to other rulers reduced by 200.</bullet><bullet>50% of its <food></food> <hyperlink>Food</hyperlink> income is given to your cities.</bullet></bulletlist>",
   "name": "Corrupt Pact",
   "operation_point_cost": 60,
   "icon": "0000049700003A3D"
@@ -596,7 +618,7 @@
   "id": "conjure_weaver_spiders",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": true,
-  "description": "Conjure 2 <hyperlink>Weaver Spiders</hyperlink> on target and adjacent hex.<br></br>This summon lasts for 3 <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Conjure 2 <hyperlink>Weaver Spiders</hyperlink> on target and adjacent hex.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Weaver Spiders",
   "operation_point_cost": 30,
   "icon": "0000049700003BAC",
@@ -750,7 +772,7 @@
   "id": "fiery_heart",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": false,
-  "description": "Target race gains a fiery core, gaining:<bulletlist><bullet>+2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>+10% <hyperlink>Critical Hit</hyperlink> chance</bullet><bullet>Fire Hazard Immunity</bullet>",
+  "description": "Target race gains a fiery core, gaining:<bulletlist><bullet>+2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>+10% <hyperlink>Critical Hit</hyperlink> chance</bullet><bullet>Fire Hazard Immunity</bullet></bulletlist>",
   "name": "Fiery Heart",
   "operation_point_cost": 250,
   "icon": "0000049700003AB0"
@@ -904,7 +926,7 @@
   "id": "conjure_abjurer_pylon",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": true,
-  "description": "Conjure an <hyperlink>Abjurer Pylon</hyperlink> on target hex that casts Magic Shield on friendly units.<br></br>This summon lasts for 3 <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Conjure an <hyperlink>Abjurer Pylon</hyperlink> on target hex that casts Magic Shield on friendly units.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Abjurer Pylon",
   "operation_point_cost": 20,
   "summoned_units": [
@@ -945,7 +967,7 @@
   "id": "city_wards",
   "DLC": "SECRETSOFTHEARCHMAGES ",
   "tactical": false,
-  "description": "Target owned city or non-hostile free city:<bulletlist><bullet>Gains +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Gains +10 <garrison></garrison><hyperlink>Fortification Health</hyperlink> if not under siege.</bullet><bullet>If targeting a free city with an owned <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>, gain +2 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> per turn.</bullet>",
+  "description": "Target owned city or non-hostile free city:<bulletlist><bullet>Gains +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Gains +10 <garrison></garrison><hyperlink>Fortification Health</hyperlink> if not under siege.</bullet><bullet>If targeting a free city with an owned <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>, gain +2 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> per turn.</bullet></bulletlist>",
   "name": "City Wards",
   "operation_point_cost": 45,
   "icon": "00000497000039D5"
@@ -1498,7 +1520,7 @@
   "id": "desecration_ritual",
   "DLC": "THRONESOFBLOOD ",
   "tactical": false,
-  "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Sunless</hyperlink>.</bullet><bullet>Enemy armies sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
+  "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Sunless</hyperlink> for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>Enemy armies sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
   "name": "Desecration Ritual",
   "operation_point_cost": 150,
   "icon": "0000049700002E5B"
@@ -2034,7 +2056,7 @@
   "id": "geomantic_crystallization",
   "DLC": "GIANTKINGS ",
   "tactical": false,
-  "description": "Turn target race into resonating crystals that self infuse with environmental magics, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>Resistance to a specific damage based on the terrain the unit is on.</bullet><bullet>+2 damage on attacks based on terrain the unit is on.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Turn target race into resonating crystals that self infuse with environmental magics, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>Resistance to a specific damage type based on the terrain the unit is on.</bullet><bullet>Melee attackers sustain damage based on terrain the unit is on.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "name": "Geomantic Crystallization",
   "operation_point_cost": 600,
   "icon": "0000049700001A52"
@@ -2309,14 +2331,14 @@
   ]
  },
  {
-  "casting_cost": "200<mana></mana> ",
+  "casting_cost": "100<mana></mana> ",
   "resid": 5046586577587,
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "astral_travel",
   "tactical": false,
   "description": "Makes your leader teleport to the target world hex.",
   "name": "Astral Travel",
-  "operation_point_cost": 200,
+  "operation_point_cost": 100,
   "icon": "0000041B000012CA"
  },
  {
@@ -2529,7 +2551,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
   "id": "monstrous_rebirth",
   "tactical": true,
-  "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals all of its <hyperlink><hp></hp> Hit Points</hyperlink> as <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist><br><br></br>Cannot be used in Water Combat.",
+  "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals all of its <hyperlink><hp></hp> Hit Points</hyperlink> as <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist>",
   "name": "Monstrous Rebirth",
   "operation_point_cost": 30,
   "icon": "0000049700000ECB"
@@ -2850,7 +2872,7 @@
   "id": "downpour",
   "DLC": "PRIMALFURY ",
   "tactical": false,
-  "description": "Target province:<bulletlist><bullet>Alters terrain to Swamp, if land.</bullet><bullet>Becomes Downpouring for 3 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used underground.",
+  "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Alters terrain to Swamp, if land.</bullet><bullet>Becomes Downpouring for 3 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used underground.",
   "name": "Downpour",
   "operation_point_cost": 60,
   "icon": "00000497000005A8"
@@ -2862,7 +2884,7 @@
   "id": "lightning_storm",
   "DLC": "PRIMALFURY ",
   "tactical": true,
-  "description": "<bulletlist><bullet>All units become Wet for 3 <turn></turn> Turns</bullet><bullet>Up to 3 random enemy units:<bulletlist></bullet><bullet>Sustain 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Electrified for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist><br></br>This spell repeats at the start of each turn for the next 6 <turn></turn> Turns.",
+  "description": "<bulletlist><bullet>All units become Wet for 3 <turn></turn> Turns</bullet><bullet>Up to 2 random enemy units:<bulletlist></bullet><bullet>Sustain 30 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Electrified for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist><br></br>This spell repeats at the start of each turn for the next 6 <turn></turn> Turns.",
   "name": "Lightning Storm",
   "operation_point_cost": 35,
   "icon": "00000497000005A4"
@@ -2875,7 +2897,7 @@
   "id": "bounty_of_the_sea",
   "DLC": "PRIMALFURY ",
   "tactical": false,
-  "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Coastal <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet></bulletlist>",
+  "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Coastal <hyperlink>Province Improvement</hyperlink>.</bullet></bulletlist>",
   "name": "Bounty of the Sea",
   "operation_point_cost": 80,
   "icon": "000004970000059C"
@@ -3557,7 +3579,7 @@
   "id": "umbral_flesh",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Gives the target race blessings of the Umbral Abyss, granting them:<bulletlist><bullet>Umbral Malady Immunity</bullet><bullet>While in <hyperlink>Gloom</hyperlink> terrain units gain:<bulletlist></bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet><bullet>+12 <hyperlink><hp></hp> Hit Point</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> on the world map.</bullet></bulletlist><bullet><hyperlink>Cities</hyperlink> of the race:<bulletlist></bullet><bullet>Gain +2 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income for each province with Gloom terrain.</bullet><bullet>Ignore <happiness></happiness> <hyperlink>City Stability</hyperlink> penalties from Gloom terrain.</bullet></bulletlist><bullet>Hero units gain Gloom Shepherd.</bullet></bulletlist><br></br>This transformation is incompatible with Pure Soul.",
+  "description": "Gives the target race blessings of the Umbral Abyss, granting them:<bulletlist><bullet>Umbral Malady Immunity</bullet><bullet>While in <hyperlink>Gloom</hyperlink> terrain units gain:<bulletlist></bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>+12 <hyperlink><hp></hp> Hit Point</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> on the world map.</bullet></bulletlist><bullet><hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> of the race:<bulletlist></bullet><bullet>Gain +2 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income for each province with Gloom terrain.</bullet><bullet>Ignore <happiness></happiness> <hyperlink>City Stability</hyperlink> penalties from Gloom terrain.</bullet></bulletlist><bullet>Hero units gain Gloom Shepherd.</bullet></bulletlist><br></br>This transformation is incompatible with Pure Soul.",
   "name": "Umbral Flesh",
   "operation_point_cost": 250,
   "icon": "0000049000000854"
@@ -4154,7 +4176,7 @@
   "id": "flame_blessed_champions",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain base 60% chance of inflicting Burning</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hex for 3 <turn></turn> Turns</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Deal +1 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Burning</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hex for 3 <turn></turn> Turns</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -4180,7 +4202,7 @@
   "id": "pureflame_staves",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Gain base 60% chance of inflicting Condemned</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hex for 3 <turn></turn> Turns</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Deal +1 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Gain base 60% chance of inflicting Condemned</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hex for 3 <turn></turn> Turns</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -4301,7 +4323,7 @@
   "id": "constricting_focus",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>Gain base 30% chance of inflicting Constricted for 1 <turn></turn> Turn.</bullet><bullet>Chance increased to 60% against Marked or Slowed units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Base <hyperlink>Magic</hyperlink> attacks of enchanted units:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>Gain base 30% chance of inflicting Constricted for 1 <turn></turn> Turn.</bullet><bullet>If unsuccessful, inflicts Status Vulnerability.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -4345,6 +4367,34 @@
   "name": "Tuning Kits",
   "operation_point_cost": 90,
   "icon": "0000046A000000CB"
+ },
+ {
+  "casting_cost": "70<mana></mana> ",
+  "resid": 4995046971172,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "static_shields",
+  "tactical": false,
+  "description": "Enchanted units:<bulletlist><bullet>Gain Static Shield when they enter <hyperlink>Defense Mode</hyperlink>.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Static Shields",
+  "operation_point_cost": 70,
+  "icon": "0000041B0000120C"
  },
  {
   "casting_cost": "90<mana></mana> ",
@@ -4469,7 +4519,7 @@
   "id": "shadow_weapons",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>+20% damage against targets that are Blind.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Attacks of enchanted units:<bulletlist><bullet>Deal +3<damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> when <hyperlink><flank></flank> Flanking</hyperlink> or attacking Blind units.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -4530,7 +4580,7 @@
   "id": "empowered_strikes",
   "DLC": "WAYSOFWAR ",
   "tactical": false,
-  "description": "Makes base <hyperlink>Melee</hyperlink> attacks and Magic Strikes of enchanted units:<bulletlist><bullet>Deal +2<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Third attack in a turn has a 60% base chance of inflicting Stunned for 1<turn></turn> Turn</bullet></bulletlist><br></br>Enchantment doesn't apply to units without a repeating base melee attack.",
+  "description": "Makes base <hyperlink>Melee</hyperlink> attacks and <hyperlink>Magic Strikes</hyperlink> of enchanted units:<bulletlist><bullet>Deal +2<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Third attack in a turn has a 60% base chance of inflicting Stunned for 1<turn></turn> Turn</bullet></bulletlist><br></br>Enchantment doesn't apply to units without a repeating base melee attack.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -4599,7 +4649,7 @@
   "id": "pall_of_gloom",
   "DLC": "ELDRITCHREALMS ",
   "tactical": false,
-  "description": "Target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Gloom</hyperlink></bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Dungeon</hyperlink>.</bullet><bullet>Enemy <hyperlink>Units</hyperlink> suffer 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet></bulletlist>",
+  "description": "Target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Gloom</hyperlink></bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Dungeon</hyperlink>.</bullet><bullet>Enemy <hyperlink>Units</hyperlink> suffer -1 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink> and -1 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink> for 2 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
   "name": "Pall of Gloom",
   "operation_point_cost": 150,
   "icon": "0000048B00000135"
@@ -4611,7 +4661,7 @@
   "id": "naga_transformation",
   "DLC": "PRIMALFURY ",
   "tactical": false,
-  "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Amphibious</bullet><bullet>Slip Away</bullet><bullet>Immunity to Electrified</bullet><bullet>+2 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet>+2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
+  "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Merfolk</bullet><bullet>Slip Away</bullet><bullet>Immunity to Electrified</bullet><bullet>+2 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet>+2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
   "name": "Naga Transformation",
   "operation_point_cost": 600,
   "icon": "0000049700000598"
@@ -4622,7 +4672,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>",
   "id": "tyrannical_exploitation",
   "tactical": false,
-  "description": "Target Vassal City:<bulletlist><bullet>No longer gains <hyperlink><allegiance></allegiance>Allegiance</hyperlink></bullet><bullet>Vassal Income is increased by +20% for each point of <hyperlink><allegiance></allegiance>Allegiance</hyperlink> Income instead.</bullet></bulletlist>",
+  "description": "Target Vassal City:<bulletlist><bullet>No longer gains <hyperlink><allegiance></allegiance>Allegiance</hyperlink></bullet><bullet>Vassal Income is increased by +2% for each point of <hyperlink><allegiance></allegiance>Allegiance</hyperlink> Income instead.</bullet></bulletlist>",
   "name": "Tyrannical Exploitation",
   "operation_point_cost": 30,
   "icon": "000003E300005353"
@@ -4922,20 +4972,15 @@
   ]
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4801773437731,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "flash_freeze",
   "tactical": false,
-  "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy <hyperlink>Units</hyperlink> in the Province suffer: -3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>The province gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>The province loses <hyperlink>Chasm</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Summon a <hyperlink>Snow Spirit</hyperlink> on the targeted hex.</bullet></bulletlist>",
+  "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>For 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink> enemy <hyperlink>Units</hyperlink> in the Province suffer:<bulletlist></bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>-2 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink></bullet></bulletlist><bullet>The province gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>The province loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Flash Freeze",
-  "operation_point_cost": 150,
-  "icon": "0000041B00001764",
-  "summoned_units": [
-   {
-    "slug": "snow_spirit"
-   }
-  ]
+  "operation_point_cost": 80,
+  "icon": "0000041B00001764"
  },
  {
   "casting_cost": "150<mana></mana> ",
@@ -4980,7 +5025,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "destructive_regrowth",
   "tactical": false,
-  "description": "On Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units sustain 20 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and suffer -2 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink> for 2 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
+  "description": "On Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units sustain 15 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink> for 2 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
   "name": "Destructive Regrowth",
   "operation_point_cost": 150,
   "icon": "000003E30000522E"
@@ -5073,7 +5118,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>",
   "id": "gaias_chosen",
   "tactical": false,
-  "description": "Infuse the target race with the blessing of nature. They gain:<bulletlist><bullet>The Plant unit type.</bullet><bullet>+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
+  "description": "Infuse the target race with the blessing of Nature. They gain:<bulletlist><bullet>The Plant unit type.</bullet><bullet><hyperlink>Negative Status Effects</hyperlink> last -1 <turn></turn> Turn, with a minimum of 1.</bullet><bullet>+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
   "name": "Gaia's Chosen",
   "operation_point_cost": 600,
   "icon": "0000044500000057"
@@ -5107,7 +5152,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "call_forth_avatar_of_chaos",
   "tactical": true,
-  "description": "Summons an avatar of your <hyperlink>Ruler</hyperlink> into a battle. The avatar has the same abilities as your Ruler and spawns with full <hyperlink>Action Points</hyperlink>. All Fiends gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink>.<br></br><br></br>Cannot be used in Water battles.<br></br>Cannot be used in battles where your <hyperlink>Ruler</hyperlink> is present.",
+  "description": "Summons an avatar of your <hyperlink>Ruler</hyperlink> into a battle. The avatar has the same abilities as your Ruler and spawns with full <hyperlink>Action Points</hyperlink>. All Fiends gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink>.<br></br><br></br>Cannot be used in battles where your <hyperlink>Ruler</hyperlink> is present.",
   "name": "Call Forth Avatar of Chaos",
   "operation_point_cost": 50,
   "icon": "0000044000000079"
@@ -5170,10 +5215,10 @@
  {
   "casting_cost": "200<mana></mana> ",
   "resid": 4514010634969,
-  "spellType": "<casttactical></casttactical> <hyperlink>Healing Spell</hyperlink>",
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "mass_revive",
   "tactical": true,
-  "description": "<bulletlist><bullet>Brings all dead friendly units with Faithful or Zeal back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All revived units gain 3 Bolstered Defense and 3 Bolstered Resistance.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
+  "description": "<bulletlist><bullet>Brings all dead friendly units with Faithful or Zeal back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All revived units gain 3 Bolstered Defense and 3 Bolstered Resistance.</bullet></bulletlist>",
   "name": "Mass Revive",
   "operation_point_cost": 65,
   "icon": "0000041B000019D9"
@@ -5195,7 +5240,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "supreme_magic",
   "tactical": false,
-  "description": "For enchanted units:<bulletlist><bullet>Grants Zeal, which makes attacks deal extra <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Attacks ignore 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Killing a unit causes it to explode, dealing 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>+2 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> on attacks.</bullet><bullet>Attacks ignore 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Killing a unit causes it to explode, dealing 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> to adjacent enemy units.</bullet></bulletlist><br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -5239,13 +5284,22 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "inquisitors_mark",
   "tactical": false,
-  "description": "Makes attacks of enchanted units have a:<bulletlist><bullet>Base 60% chance of inflicting Condemned until end of combat, reducing enemy <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Base 60% chance of inflicting Weakened, reducing enemy damage.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Grants enchanted units:<bulletlist><bullet>Zeal, which makes attacks deal extra <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Base 60% chance of inflicting Weakened, reducing enemy damage.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
     "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
   "name": "Inquisitor's Mark",
@@ -5302,9 +5356,6 @@
     "requisite": "<unitShield></unitShield> Shield Unit"
    },
    {
-    "requisite": "<unitRanged></unitRanged> Ranged Unit"
-   },
-   {
     "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
    },
    {
@@ -5312,9 +5363,6 @@
    },
    {
     "requisite": "<unitFighter></unitFighter> Fighter Unit"
-   },
-   {
-    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    }
   ],
   "name": "Legion of Zeal",
@@ -5368,7 +5416,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "battlefield_reanimation",
   "tactical": true,
-  "description": "<bulletlist><bullet>All friendly Undead units come back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-undead Corpses come back to life as <hyperlink>Decaying Zombies</hyperlink> under your control until the end of battle.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
+  "description": "<bulletlist><bullet>All friendly Undead units come back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-undead corpses come back to life as <hyperlink>Decaying Zombies</hyperlink> under your control until the end of battle.</bullet></bulletlist>",
   "name": "Battlefield Reanimation",
   "operation_point_cost": 65,
   "icon": "0000041B00001770"
@@ -5528,21 +5576,10 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "marching_winter",
   "tactical": false,
-  "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist><bullet>Provinces in the domain with Snow or Ice provide +2 <food></food> <hyperlink>Food</hyperlink> and +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet></bulletlist>",
+  "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist><bullet>Provinces in the domain with Snow or Ice provide +2 <food></food> <hyperlink>Food</hyperlink> and +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet></bulletlist>",
   "name": "Marching Winter",
   "operation_point_cost": 120,
   "icon": "0000041B00001729"
- },
- {
-  "casting_cost": "100<mana></mana> ",
-  "resid": 4514010634123,
-  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
-  "id": "veil_of_darkness",
-  "tactical": false,
-  "description": "Target that is leading an army gains Universal Camouflage for its entire army for 3 <turn></turn> Turns.",
-  "name": "Veil of Darkness",
-  "operation_point_cost": 100,
-  "icon": "0000041B00001725"
  },
  {
   "casting_cost": "350<mana></mana> ",
@@ -5550,7 +5587,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>",
   "id": "frostling_transformation",
   "tactical": false,
-  "description": "Makes winter run through the target race's veins, granting them:<bulletlist><bullet>3 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>Immunity to Frozen.</bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink> while on cold terrain.</bullet><bullet>Arctic Walk, which allows them to traverse cold terrain faster.</bullet></bulletlist>",
+  "description": "Makes winter run through the target race's veins, granting them:<bulletlist><bullet>3 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>Immunity to Chilled.</bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink> while on <hyperlink>Snow</hyperlink> or <hyperlink>Ice</hyperlink>.</bullet><bullet>Arctic Walk.</bullet><bullet>Snow Camouflage</bullet></bulletlist>",
   "name": "Frostling Transformation",
   "operation_point_cost": 350,
   "icon": "0000041B00001721"
@@ -5567,17 +5604,17 @@
   "icon": "0000041B00001719"
  },
  {
-  "casting_cost": "150<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 4514010633924,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
-  "id": "summon_snow_spirit",
+  "id": "summon_frost_giant",
   "tactical": false,
-  "description": "Summon a <hyperlink>Snow Spirit</hyperlink>, a Magic Fighter Unit with attacks that inflict Frozen.",
-  "name": "Summon Snow Spirit",
-  "operation_point_cost": 150,
+  "description": "Summon a <hyperlink>Frost Giant</hyperlink>, a Mythic Unit with attacks that inflict Frozen.",
+  "name": "Summon Frost Giant",
+  "operation_point_cost": 200,
   "summoned_units": [
    {
-    "slug": "snow_spirit"
+    "slug": "frost_giant"
    }
   ]
  },
@@ -5587,7 +5624,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "blizzard",
   "tactical": false,
-  "description": "All units in target enemy army suffer -2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+  "description": "All units in target enemy army:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer -1 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink> for 1 World Map <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Blizzard",
   "operation_point_cost": 80,
   "icon": "0000041B000006D0"
@@ -5652,16 +5689,22 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "cosmic_overdrive",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>+20% damage.</bullet><bullet>Very Fast Movement.</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>+20% damage.</bullet><bullet><hyperlink>Negative Status Effects</hyperlink> last -1 <turn></turn> Turn, with a minimum of 1.</bullet><bullet>If enchanted unit is a non-mythic Magic Origin unit, it gains Very Fast Movement.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
-    "requisite": "Combat Summon"
+    "requisite": "<unitElemental></unitElemental> Elemental"
    },
    {
     "requisite": "<unitEthereal></unitEthereal> Ethereal"
    },
    {
     "requisite": "Magic Origin"
+   },
+   {
+    "requisite": "<unitFey></unitFey> Fey"
+   },
+   {
+    "requisite": "<unitMerfolk></unitMerfolk> Merfolk"
    },
    {
     "requisite": "<unitUmbral></unitUmbral> Umbral Demon"
@@ -5699,7 +5742,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "phasing_enchantment",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist><br></br>Does not apply to units that inherently have a Phase.",
+  "description": "Grants enchanted units:<bulletlist><bullet>The Charged Phase ability, which allows them to teleport in battle.</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitSupport></unitSupport> Support Unit"
@@ -5769,7 +5812,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_amplification_pylon",
   "tactical": true,
-  "description": "Conjures an <hyperlink>Amplification Pylon</hyperlink>, a stationary structure that deals damage and increases the damage of your spells by +50%.<br></br>This summon lasts for 3 <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Conjures an <hyperlink>Amplification Pylon</hyperlink>, a stationary structure that deals damage and increases the damage of your spells by +50%.<br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Amplification Pylon",
   "operation_point_cost": 30,
   "summoned_units": [
@@ -5807,7 +5850,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "frenzying_imbuement",
   "tactical": false,
-  "description": "Grants enchanted units:<bulletlist><bullet>Frenzy</bullet><bullet>Life Steal</bullet></bulletlist>",
+  "description": "Grants enchanted units:<bulletlist><bullet>+2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> on attacks.</bullet><bullet>Frenzy</bullet><bullet>Life Steal</bullet></bulletlist>",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
@@ -5860,7 +5903,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
   "id": "lightning_torrent",
   "tactical": false,
-  "description": "All units in target enemy army suffer -2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
+  "description": "In target enemy army:<bulletlist><bullet>All units sustain 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>All units suffer -1 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
   "name": "Lightning Torrent",
   "operation_point_cost": 80,
   "icon": "0000041B000012E5"
@@ -5912,7 +5955,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "call_the_titan_of_the_earth",
   "tactical": true,
-  "description": "<bulletlist><bullet>Summons an <hyperlink>Earth Titan</hyperlink> onto the target unoccupied hex.</bullet><bullet>All adjacent enemies lose their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
+  "description": "<bulletlist><bullet>Summons an <hyperlink>Earth Titan</hyperlink> onto the target unoccupied hex.</bullet><bullet>All adjacent enemies lose their <hyperlink>Defense Mode</hyperlink> and <hyperlink>Retaliation Attack</hyperlink>.</bullet></bulletlist>",
   "name": "Call the Titan of the Earth",
   "operation_point_cost": 40,
   "summoned_units": [
@@ -6201,7 +6244,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
   "id": "devolve",
   "tactical": true,
-  "description": "Target non-Hero enemy:<bulletlist><bullet>Has a base 90% chance of being transformed into a random Tier I animal until the end of battle.</bullet><bullet>If resisted, inflicts Stunned instead.</bullet></bulletlist><br></br><br></br>Cannot be used in Water battles.",
+  "description": "Target non-Hero enemy:<bulletlist><bullet>Has a base 90% chance of being transformed into a random Tier I animal until the end of battle.</bullet><bullet>If resisted, inflicts Stunned instead.</bullet></bulletlist>",
   "name": "Devolve",
   "operation_point_cost": 30,
   "icon": "000003E30000521A"
@@ -6234,14 +6277,14 @@
   ]
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4514010631809,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "restore_the_land",
   "tactical": false,
-  "description": "Target and adjacent friendly or unowned <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Grassland</hyperlink> if it is on the Surface or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
+  "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Grassland</hyperlink> if it is on the Surface or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
   "name": "Restore the Land",
-  "operation_point_cost": 45,
+  "operation_point_cost": 80,
   "icon": "0000041B00000D7C"
  },
  {
@@ -6287,7 +6330,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "vine_prison",
   "tactical": true,
-  "description": "Summon 5 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Summon 5 <hyperlink>Living Vine</hyperlink> units randomly in a 2-hex radius which live for 2 <turn></turn> Turns. These don't deal damage but have a chance of inflicting Immobilized on enemies.",
   "name": "Vine Prison",
   "operation_point_cost": 25,
   "icon": "0000041B00000DAB",
@@ -6370,7 +6413,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
   "id": "incite_revolution",
   "tactical": false,
-  "description": "Target enemy city:<bulletlist><bullet>Loses a border province and the population is lost.</bullet><bullet>Spawns a Brigand Camp on land provinces.</bullet><bullet>Spawns a Pirate Cove on coastal provinces.</bullet></bulletlist>",
+  "description": "Target enemy city:<bulletlist><bullet>Loses a border province and the population is lost.</bullet><bullet>Spawns a Brigand Camp on land provinces.</bullet><bullet>Spawns a Pirate Cove on Ocean provinces.</bullet></bulletlist>",
   "name": "Incite Revolution",
   "operation_point_cost": 120,
   "icon": "0000041B00000B64"
@@ -6605,9 +6648,9 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4514010629856,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "frost_blades",
+  "id": "frost_infusion",
   "tactical": false,
-  "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>+10% damage against Frozen or Slowed units.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>+10% damage against Frozen or Chilled units.</bullet></bulletlist> <br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -6620,9 +6663,12 @@
    },
    {
     "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
-  "name": "Frost Blades",
+  "name": "Frost Infusion",
   "operation_point_cost": 80,
   "icon": "0000041B000006C8"
  },
@@ -6632,7 +6678,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
   "id": "ice_coffin",
   "tactical": true,
-  "description": "Target enemy:<bulletlist><bullet>Sustains 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful, inflicts Status Vulnerability.</bullet></bulletlist>",
+  "description": "Target enemy:<bulletlist><bullet>Sustains 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful, inflicts Chilled.</bullet></bulletlist>",
   "name": "Ice Coffin",
   "operation_point_cost": 15,
   "icon": "0000041B000006C0"
@@ -6733,7 +6779,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "totem_of_the_wild",
   "tactical": true,
-  "description": "Summons a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier I or II animal unit when it's created and at the start of your next 2 <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Summons a <hyperlink>Totem of the Wild</hyperlink>, which spawns a random Tier I or II animal unit when it's created and at the start of your next 2 <turn></turn> Turns.",
   "name": "Totem of the Wild",
   "operation_point_cost": 35,
   "summoned_units": [
@@ -6966,7 +7012,7 @@
     "requisite": "<unitSpider></unitSpider> Spider"
    },
    {
-    "requisite": "Naga"
+    "requisite": "<unitMerfolk></unitMerfolk> Merfolk"
    }
   ],
   "name": "Force of Nature",
@@ -7307,7 +7353,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "golden_horde",
   "tactical": false,
-  "description": "<bulletlist><bullet>Summons a full army of random Tier III units that can be produced in a city on the target hex.</bullet><bullet>If cast within an enemy <hyperlink>Province</hyperlink>, instantly pillages it.</bullet></bulletlist>",
+  "description": "<bulletlist><bullet>Summons a full army of random non-Scout Tier I units that can be produced in a city on the target hex.</bullet><bullet>Summon units start at <medalGold></medalGold>Champion rank.</bullet><bullet>If cast within an enemy <hyperlink>Province</hyperlink>, instantly pillages it.</bullet></bulletlist>",
   "name": "Golden Horde",
   "operation_point_cost": 300,
   "icon": "000003E3000059F8"
@@ -7477,27 +7523,18 @@
   "casting_cost": "80<mana></mana> ",
   "resid": 4273492485010,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
-  "id": "frost_imbuement",
+  "id": "frost_arrows",
   "tactical": false,
-  "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>+1 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Slowed.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>+1 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Chilled.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitRanged></unitRanged> Ranged Unit"
    },
    {
-    "requisite": "<unitSupport></unitSupport> Support Unit"
-   },
-   {
-    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
-   },
-   {
     "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
-   },
-   {
-    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    }
   ],
-  "name": "Frost Imbuement",
+  "name": "Frost Arrows",
   "operation_point_cost": 80,
   "icon": "000003E30000638F"
  },
@@ -7585,7 +7622,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
   "id": "summon_lesser_snow_spirit",
   "tactical": false,
-  "description": "Summons a <hyperlink>Lesser Snow Spirit</hyperlink>, a Magic Fighter Unit with attacks that inflict Frozen.",
+  "description": "Summons a <hyperlink>Lesser Snow Spirit</hyperlink>, a Magic Fighter Unit with attacks that inflict Chilled.",
   "name": "Summon Lesser Snow Spirit",
   "operation_point_cost": 60,
   "icon": "0000041B000006CC",
@@ -7601,7 +7638,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "resurrect_unit",
   "tactical": true,
-  "description": "Returns target dead friendly unit to full <temphp></temphp> Temporary Hit Points.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Returns target dead friendly unit to full <temphp></temphp> Temporary Hit Points.",
   "name": "Resurrect Unit",
   "operation_point_cost": 40,
   "icon": "0000041B000019BF"
@@ -7699,7 +7736,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_divine_beacon",
   "tactical": true,
-  "description": "Summons a <hyperlink>Divine Beacon</hyperlink>. Upon casting and at the start of each turn, friendly units in a 2-hex radius:<bulletlist><bullet>Heal +15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain +5 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist><br></br>This summon lasts for 3 <turn></turn> Turns.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Summons a <hyperlink>Divine Beacon</hyperlink>. Upon casting and at the start of each turn, friendly units in a 2-hex radius:<bulletlist><bullet>Heal +15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain +5 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist><br></br>This summon lasts for 3 <turn></turn> Turns.",
   "name": "Conjure Divine Beacon",
   "operation_point_cost": 25,
   "icon": "000003E3000060DF",
@@ -7886,7 +7923,7 @@
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "raise_zombies",
   "tactical": true,
-  "description": "Raises corpses in a 1-hex radius as <hyperlink>Decaying Zombie</hyperlink> units that die at the end of combat.<br></br><br></br>Cannot be used in Water battles.",
+  "description": "Raises corpses in a 1-hex radius as <hyperlink>Decaying Zombie</hyperlink> units that die at the end of combat.",
   "name": "Raise Zombies",
   "operation_point_cost": 15,
   "icon": "0000041B000016EB"
@@ -8117,17 +8154,6 @@
   "icon": "0000041B00001204"
  },
  {
-  "casting_cost": "10<mana></mana> ",
-  "resid": 4273492483578,
-  "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
-  "id": "static_shield",
-  "tactical": true,
-  "description": "Target friendly unit and another within 3 hexes gain Static Shield for 2 <turn></turn> Turns.",
-  "name": "Static Shield",
-  "operation_point_cost": 15,
-  "icon": "0000041B0000120C"
- },
- {
   "casting_cost": "15<mana></mana> ",
   "resid": 4273492483568,
   "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
@@ -8324,7 +8350,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
   "id": "blades_of_decay",
   "tactical": false,
-  "description": "Makes attacks of enchanted units:<bulletlist><bullet>Inflict Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "description": "Makes attacks of enchanted units:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Inflict Decaying, a damage-over-time effect that decreases healing received.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
   "enchantment_requisites": [
    {
     "requisite": "<unitShield></unitShield> Shield Unit"
@@ -8389,14 +8415,14 @@
   "icon": "0000041B00000D41"
  },
  {
-  "casting_cost": "45<mana></mana> ",
+  "casting_cost": "80<mana></mana> ",
   "resid": 4273492482895,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
   "id": "create_forest",
   "tactical": false,
   "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Forest</hyperlink> on the Surface</bullet><bullet>Gain <hyperlink>Mushroom Forest</hyperlink> in the Underground.</bullet></bulletlist>",
   "name": "Create Forest",
-  "operation_point_cost": 45,
+  "operation_point_cost": 80,
   "icon": "0000041B00000D39"
  },
  {
@@ -8499,7 +8525,7 @@
   "spellType": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>",
   "id": "revelers_heart",
   "tactical": false,
-  "description": "Overwhelms the target race with an intense fervor, granting them:<bulletlist><bullet>+50% <happiness></happiness> <hyperlink>Morale</hyperlink> from all sources.</bullet></bulletlist>",
+  "description": "Overwhelms the target race with an intense fervor, granting them:<bulletlist><bullet>+50% <happiness></happiness> <hyperlink>Morale</hyperlink> from all sources.</bullet><bullet>+10% damage when at High Morale.</bullet></bulletlist>",
   "name": "Reveler's Heart",
   "operation_point_cost": 250,
   "icon": "000003E300005A79"

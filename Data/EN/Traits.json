@@ -285,7 +285,7 @@
     "name": "At the start of water combat, a random water themed unit joins you in battle.<bulletlist><bullet>Tier of the unit is based on the <hyperlink>Throne City</hyperlink> tier.</bullet></bulletlist>"
    },
    {
-    "name": "Enables drafting of various water themed units in cities."
+    "name": "Enables drafting of various water themed units in cities for a reduced price."
    }
   ],
   "enabled": true,
@@ -298,7 +298,7 @@
   "biography_description": "They descend upon the sea like an oncoming tempest, mounted on Storm Seamares.",
   "lore_description": "<helpcolor>Mounted units are more common and gain a Storm Seamare mount.</helpcolor>",
   "DLC": "WITCHOFTHEWAVES ",
-  "point_cost": 2,
+  "point_cost": 4,
   "id": "storm_seamare_mounts",
   "name": "Storm Seamare Mounts",
   "screen_description": "",
@@ -327,7 +327,187 @@
   "group_name": "Mounts",
   "front_end": true,
   "icon": "00000497000045D2",
-  "display_order": 3
+  "display_order": 6
+ },
+ {
+  "biography_description": "Hunting in the Ashlands taught them to conceal their steps and swiftly rush their prey.",
+  "lore_description": "<helpcolor>Cannot be easily detected and has increased combat movement speed when in Ashlands.</helpcolor>",
+  "point_cost": 2,
+  "id": "ashland_hunters",
+  "name": "Ashland Hunters",
+  "incompatible_society_traits": [
+   {
+    "name": "Forest Hunters"
+   },
+   {
+    "name": "Sand Hunters"
+   },
+   {
+    "name": "Snow Hunters"
+   },
+   {
+    "name": "Water Hunters"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Ashland Camouflage"
+   },
+   {
+    "name": "Has 6 <combatspeed></combatspeed><hyperlink>Combat Speed</hyperlink> when on <hyperlink>Ashlands</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Utility",
+  "front_end": true,
+  "display_order": 8,
+  "icon": "00000497000043E8"
+ },
+ {
+  "biography_description": "Desert winds obscure their movements yet quicken their steps when stalking their quarry.",
+  "lore_description": "<helpcolor>Cannot be easily detected and has increased combat movement speed when in Sand.</helpcolor>",
+  "point_cost": 2,
+  "id": "sand_hunters",
+  "name": "Sand Hunters",
+  "incompatible_society_traits": [
+   {
+    "name": "Ashland Hunters"
+   },
+   {
+    "name": "Forest Hunters"
+   },
+   {
+    "name": "Snow Hunters"
+   },
+   {
+    "name": "Water Hunters"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Sand Camouflage"
+   },
+   {
+    "name": "Has 6 <combatspeed></combatspeed><hyperlink>Combat Speed</hyperlink> when on <hyperlink>Sand</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Utility",
+  "front_end": true,
+  "display_order": 8,
+  "icon": "00000497000043E3"
+ },
+ {
+  "biography_description": "Enemies barely notice them in snowy lands, despite the frost enhancing their speed in combat.",
+  "lore_description": "<helpcolor>Cannot be easily detected and has increased combat movement speed when in Snow.</helpcolor>",
+  "point_cost": 2,
+  "id": "snow_hunters",
+  "name": "Snow Hunters",
+  "incompatible_society_traits": [
+   {
+    "name": "Ashland Hunters"
+   },
+   {
+    "name": "Forest Hunters"
+   },
+   {
+    "name": "Sand Hunters"
+   },
+   {
+    "name": "Water Hunters"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Snow Camouflage"
+   },
+   {
+    "name": "Has 6 <combatspeed></combatspeed><hyperlink>Combat Speed</hyperlink> when on <hyperlink>Snow</hyperlink> or <hyperlink>Ice</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Utility",
+  "front_end": true,
+  "display_order": 8,
+  "icon": "00000497000043DE"
+ },
+ {
+  "biography_description": "Their fellowship with forests hastens them in combat and hides their presence among trees.",
+  "lore_description": "<helpcolor>Cannot be easily detected and has increased combat movement speed when in Forests.</helpcolor>",
+  "point_cost": 2,
+  "id": "forest_hunters",
+  "name": "Forest Hunters",
+  "incompatible_society_traits": [
+   {
+    "name": "Ashland Hunters"
+   },
+   {
+    "name": "Snow Hunters"
+   },
+   {
+    "name": "Sand Hunters"
+   },
+   {
+    "name": "Water Hunters"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Forest Camouflage"
+   },
+   {
+    "name": "Has 6 <combatspeed></combatspeed><hyperlink>Combat Speed</hyperlink> when on <hyperlink>Forest</hyperlink> or <hyperlink>Mushroom Forest</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Utility",
+  "front_end": true,
+  "display_order": 8,
+  "icon": "00000497000043D8"
+ },
+ {
+  "biography_description": "They are deadly in water, which conceals them and propels them at great speeds in battle.",
+  "lore_description": "<helpcolor>Cannot be easily detected and has increased combat movement speed when in Water.</helpcolor>",
+  "point_cost": 2,
+  "id": "water_hunters",
+  "name": "Water Hunters",
+  "incompatible_society_traits": [
+   {
+    "name": "Ashland Hunters"
+   },
+   {
+    "name": "Forest Hunters"
+   },
+   {
+    "name": "Sand Hunters"
+   },
+   {
+    "name": "Snow Hunters"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Water Camouflage."
+   },
+   {
+    "name": "Has 6 <combatspeed></combatspeed><hyperlink>Combat Speed</hyperlink> when on Water."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Utility",
+  "front_end": true,
+  "display_order": 8,
+  "icon": "00000497000043CB"
  },
  {
   "lore_description": "<helpcolor>Mounted units are more common and gain an Inferno Hound mount.</helpcolor>",
@@ -402,13 +582,13 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Having 1 of each <hyperlink>Affinity</hyperlink> grants:<bulletlist><bullet>+20 <mana></mana> <hyperlink>Mana</hyperlink></bullet><bullet>Tier III tomes have no affinity requirements.</bullet></bulletlist>"
+    "name": "Having 1 of each <hyperlink>Affinity</hyperlink> grants:<bulletlist><bullet>Your <hyperlink>Empire</hyperlink> gains +5 <influence></influence> <hyperlink>Imperium</hyperlink>.</bullet><bullet><hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Tier III <hyperlink>Tomes</hyperlink> have no <hyperlink>Affinity</hyperlink> requirements.</bullet></bulletlist>"
    },
    {
-    "name": "Having 2 of each <hyperlink>Affinity</hyperlink> grants:<bulletlist><bullet>+20 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink></bullet><bullet>Tier IV tomes have no affinity requirements.</bullet></bulletlist>"
+    "name": "Having 2 of each <hyperlink>Affinity</hyperlink> grants:<bulletlist><bullet>Your <hyperlink>Empire</hyperlink> gains +10 <influence></influence> <hyperlink>Imperium</hyperlink>.</bullet><bullet><hyperlink>Cities</hyperlink> gain +10 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Tier IV <hyperlink>Tomes</hyperlink> have no <hyperlink>Affinity</hyperlink> requirements.</bullet></bulletlist>"
    },
    {
-    "name": "Having 3 of each <hyperlink>Affinity</hyperlink> grants:<bulletlist><bullet>+20 <influence></influence> <hyperlink>Imperium</hyperlink></bullet><bullet>Tier V tomes have no affinity requirements.</bullet></bulletlist>"
+    "name": "Having 3 of each <hyperlink>Affinity</hyperlink> grants:<bulletlist><bullet>Your <hyperlink>Empire</hyperlink> gains +15 <influence></influence> <hyperlink>Imperium</hyperlink>.</bullet><bullet><hyperlink>Cities</hyperlink> gain +15 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet><bullet>Tier V <hyperlink>Tomes</hyperlink> have no <hyperlink>Affinity</hyperlink> requirements.</bullet></bulletlist>"
    }
   ],
   "enabled": true,
@@ -1442,6 +1622,46 @@
   "display_order": 6
  },
  {
+  "affinities": [
+   {
+    "name": "1<matter></matter> Materium Affinity"
+   }
+  ],
+  "biography_description": "They are talented merchants and control their Vassals through trade.",
+  "lore_description": "They focus not on expansion but on profit, expanding their influence through clever trade deals.",
+  "point_cost": 1,
+  "id": "merchant_state",
+  "name": "Merchant State",
+  "incompatible_society_traits": [
+   {
+    "name": "Chosen Destroyers <evilact></evilact>"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Cannot obtain or found new <hyperlink>Cities</hyperlink>."
+   },
+   {
+    "name": "Gain +2 <hyperlink>Trade Route</hyperlink> capacity for each Vassal."
+   },
+   {
+    "name": "<hyperlink>Trade Routes</hyperlink> connecting their city to a <hyperlink>Foreign City</hyperlink> grant +5 <influence></influence> <hyperlink>Imperium</hyperlink>."
+   },
+   {
+    "name": "<hyperlink>Trade Routes</hyperlink> connecting to or from this city grant +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>."
+   },
+   {
+    "name": "<hyperlink>Trade Routes</hyperlink> cost -30% less to establish in this city."
+   }
+  ],
+  "enabled": true,
+  "front_end": false,
+  "type": "society",
+  "display_order": 2,
+  "icon": "0000048D00002382"
+ },
+ {
   "lore_description": "Fated to bring about great change to the Realm.",
   "biography_description": "Destined to bring about a ruinous change to the Realm.",
   "point_cost": 1,
@@ -2066,7 +2286,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink>, <mana></mana> <hyperlink>Mana</hyperlink>, <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>, <food></food> <hyperlink>Food</hyperlink>, <structureprod></structureprod> <hyperlink>Production</hyperlink>, and <unitprod></unitprod> <hyperlink>Draft</hyperlink> for each <hyperlink>Magic Material</hyperlink> in their <hyperlink>Domain</hyperlink>."
    }
   ],
   "enabled": true,
@@ -2119,6 +2339,9 @@
    },
    {
     "name": "No <influence></influence> <hyperlink>Imperium</hyperlink> income penalties from <rs_war></rs_war> <hyperlink>War</hyperlink> without <hyperlink>War Justification</hyperlink>."
+   },
+   {
+    "name": "+3 <hyperlink>Trade Route</hyperlink> capacity."
    },
    {
     "name": "-10 <evilact></evilact> <hyperlink>Alignment</hyperlink>."
@@ -2191,7 +2414,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Gain +25% income from <hyperlink>Vassals</hyperlink>."
+    "name": "Gain an additional +10% income from <hyperlink>Vassals</hyperlink>."
    },
    {
     "name": "+10 <goodact></goodact> <hyperlink>Alignment</hyperlink>."
@@ -2661,6 +2884,14 @@
   "display_order": 8
  },
  {
+  "starting_bonuses": [
+   {
+    "description": "Wayfinder Enchantment and Enchanted Crow Companion are already active and cost no upkeep."
+   },
+   {
+    "description": "Start with an extra Scout Unit."
+   }
+  ],
   "affinities": [
    {
     "name": "1<shadow></shadow> Shadow Affinity"
@@ -2671,14 +2902,6 @@
   "point_cost": 1,
   "id": "devious_watchers",
   "name": "Devious Watchers",
-  "incompatible_society_traits": [
-   {
-    "name": "Ancient Wise Ones"
-   },
-   {
-    "name": "Gifted Casters"
-   }
-  ],
   "screen_description": "",
   "effect_descriptions": [
    {
@@ -2695,14 +2918,6 @@
   "front_end": true,
   "type": "society",
   "display_order": 1,
-  "starting_bonuses": [
-   {
-    "description": "Wayfinder Enchantment and Enchanted Crow Companion are already active and cost no upkeep."
-   },
-   {
-    "description": "Start with an extra Scout Unit."
-   }
-  ],
   "icon": "000003FC000004C5"
  },
  {
@@ -2806,7 +3021,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a City."
+    "name": "Ancient Wonders do not require <population></population> Population in order to be annexed to a City or <hyperlink>Outpost</hyperlink>."
    },
    {
     "name": "Cities gain +20% <structureprod></structureprod> <hyperlink>Production</hyperlink> per annexed <hyperlink>Ancient Wonders</hyperlink>."
@@ -2879,7 +3094,7 @@
     "name": "<hyperlink>Cities</hyperlink> gain +5 <gold></gold> <hyperlink>Gold</hyperlink> per Quarry in their <hyperlink>Domain</hyperlink>."
    },
    {
-    "name": "Special Province Improvements cost -25% <structureprod></structureprod> Production."
+    "name": "Special Province Improvements cost -50% <structureprod></structureprod> Production."
    }
   ],
   "enabled": true,
@@ -2907,7 +3122,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "<hyperlink>Cities</hyperlink> gain +2 <gold></gold> Gold, +2 <food></food> Food, and +2 <unitprod></unitprod> Draft for each province with a Coast, River, and Water in their <hyperlink>Domain</hyperlink>."
+    "name": "<hyperlink>Cities</hyperlink> gain +2 <gold></gold> Gold, +2 <food></food> Food, and +2 <unitprod></unitprod> Draft for each Water province in their <hyperlink>Domain</hyperlink>."
    },
    {
     "name": "Embarked units:<bulletlist><bullet>Deal +20% damage.</bullet><bullet>Gain +40% <hyperlink><xp></xp> Experience</hyperlink> from combat.</bullet></bulletlist>"
@@ -3221,7 +3436,7 @@
     "name": "<hyperlink>Cities</hyperlink> require -20% <food></food> <hyperlink>Food</hyperlink> for gaining a new <population></population> <hyperlink>Population</hyperlink>."
    },
    {
-    "name": "Racial Tier I units have +1 Rank."
+    "name": "Racial Tier I and II units have +1 Rank."
    },
    {
     "name": "Non-Magic Origin units require -20% base <hyperlink>Unit Upkeep</hyperlink>."
@@ -3377,7 +3592,7 @@
   "screen_description": "",
   "effect_descriptions": [
    {
-    "name": "When a Tome is unlocked, a random skill from that Tome costs -40% <knowledge></knowledge> Knowledge."
+    "name": "When a Tome is unlocked, a random skill from that Tome costs -60% <knowledge></knowledge> Knowledge."
    }
   ],
   "enabled": true,

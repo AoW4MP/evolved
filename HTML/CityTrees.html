@@ -513,7 +513,7 @@
             async function EvenIcons(res) {
                 const container = res.querySelector(".ct-icons");
                 for (const icon of [...container.children]) {
-                    const BOX = icon.offsetWidth || 22; // the icon's box (see .ct-icons > *)
+                    const BOX = icon.offsetWidth || 19; // the icon's box (see .ct-icons > *)
                     const AREA = (BOX * 21) / 22; // every drawing covers as much as a 21px square: narrow ones get taller
                     const MAX = (BOX * 24) / 22; // but no side grows much past the box
                     const url = /url\("?([^")]+)"?\)/.exec(getComputedStyle(icon).content || "");
@@ -759,16 +759,16 @@
     /* icons.css gives the resource icons different heights (15-20px) and offsets: one box for all here */
     .ct-icons > * {
         position: static;
-        width: 22px;
-        height: 22px;
-        max-height: 22px;
+        width: 19px;
+        height: 19px;
+        max-height: 19px;
         object-fit: contain;
         margin: 1px 2px;
     }
     .ct-resources.ct-many .ct-icons > * {
-        width: 17px;
-        height: 17px;
-        max-height: 17px;
+        width: 15px;
+        height: 15px;
+        max-height: 15px;
         margin: 0 1px;
     }
     .ct-badge {

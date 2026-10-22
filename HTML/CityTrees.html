@@ -634,6 +634,15 @@
         align-items: center;
         align-content: center;
     }
+    /* icons.css gives the resource icons different heights (15-20px) and offsets: one box for all here */
+    .ct-resources > * {
+        position: static;
+        width: 20px;
+        height: 20px;
+        max-height: 20px;
+        object-fit: contain;
+        margin: 1px;
+    }
     .ct-badge {
         position: absolute;
         top: 22px;

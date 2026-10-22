@@ -396,7 +396,8 @@
                 if (resources.length) {
                     const res = document.createElement("div");
                     res.className = "ct-resources";
-                    res.innerHTML = "+" + resources.join("");
+                    // the "+" has its own slot, so a second line of icons starts under the first
+                    res.innerHTML = '<span class="ct-plus">+</span><span class="ct-icons">' + resources.join("") + "</span>";
                     if (resources.length > 6) res.classList.add("ct-many"); // Prismatic Tower: two lines, not three
                     body.append(res);
                 }
@@ -487,16 +488,17 @@
                                 const g = canvas.getContext("2d");
                                 g.drawImage(img, 0, 0);
                                 const alpha = g.getImageData(0, 0, w, h).data;
-                                let x0 = w, y0 = h, x1 = -1, y1 = -1;
+                                let x0 = w, y0 = h, x1 = -1, y1 = -1, ink = 0;
                                 for (let y = 0; y < h; y++) {
                                     for (let x = 0; x < w; x++) {
                                         if (alpha[(y * w + x) * 4 + 3] > 40) {
                                             x0 = Math.min(x0, x); x1 = Math.max(x1, x);
                                             y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+                                            ink++;
                                         }
                                     }
                                 }
-                                resolve(x1 < 0 ? null : { w, h, x0, y0, x1, y1 });
+                                resolve(x1 < 0 ? null : { w, h, x0, y0, x1, y1, ink });
                             };
                             img.src = url;
                         })
@@ -505,9 +507,10 @@
                 return visibleBoxes.get(url);
             }
 
-            async function EvenIcons(container) {
+            async function EvenIcons(res) {
+                const container = res.querySelector(".ct-icons");
                 for (const icon of [...container.children]) {
-                    const BOX = icon.offsetWidth || 22; // the icon's box (see .ct-resources > *)
+                    const BOX = icon.offsetWidth || 22; // the icon's box (see .ct-icons > *)
                     const AREA = (BOX * 21) / 22; // every drawing covers as much as a 21px square: narrow ones get taller
                     const MAX = (BOX * 24) / 22; // but no side grows much past the box
                     const url = /url\("?([^")]+)"?\)/.exec(getComputedStyle(icon).content || "");
@@ -520,12 +523,15 @@
                     const fit = BOX / Math.max(b.w, b.h); // object-fit: contain
                     const vw = (b.x1 - b.x0 + 1) * fit;
                     const vh = (b.y1 - b.y0 + 1) * fit;
-                    const k = Math.min(AREA / Math.sqrt(vw * vh), MAX / Math.max(vw, vh));
+                    // a solid drawing (the stability mask) fills its outline and looks heavier than an open one
+                    // (wheat, a medal): weigh the outline's area and the drawn pixels' area equally
+                    const drawn = b.ink * fit * fit;
+                    const k = Math.min(AREA / Math.sqrt(Math.sqrt(vw * vh * drawn)), MAX / Math.max(vw, vh));
                     const dx = ((b.x0 + b.x1 + 1) / 2 - b.w / 2) * fit;
                     const dy = ((b.y0 + b.y1 + 1) / 2 - b.h / 2) * fit;
                     icon.style.transform = `scale(${k.toFixed(3)}) translate(${(-dx).toFixed(2)}px, ${(-dy).toFixed(2)}px)`;
                 }
-                if (!container.children.length) container.remove(); // just a "+" left
+                if (!container.children.length) res.remove(); // just a "+" left
             }
 
             function findResources(text) {
@@ -727,12 +733,15 @@
         left: 70px;
         right: 53px; /* wrap before the badge */
         display: flex;
+        align-items: center;
+    }
+    .ct-icons {
+        display: flex;
         flex-wrap: wrap;
         align-items: center;
-        align-content: center;
     }
     /* icons.css gives the resource icons different heights (15-20px) and offsets: one box for all here */
-    .ct-resources > * {
+    .ct-icons > * {
         position: static;
         width: 22px;
         height: 22px;
@@ -740,7 +749,7 @@
         object-fit: contain;
         margin: 1px 2px;
     }
-    .ct-resources.ct-many > * {
+    .ct-resources.ct-many .ct-icons > * {
         width: 17px;
         height: 17px;
         max-height: 17px;

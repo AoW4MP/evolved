@@ -41,8 +41,18 @@ Evolved is exported in English only, so the other languages are removed:
   The top bar spaces its items evenly, so without that placeholder the Donate button moves to the middle.
 - `Data/Builder.js`: the `languageSelect` lookup is removed.
 - `Data/src/settings.js`: `CheckBoxTooltips` and `SwitchToBeta` no longer save `language`.
-- `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")` (or `"BETA"`), and no longer saves a `language` default or calls `LocalizeUI()` for other languages.
+- `Data/src/dataloader.js`: `CheckData` no longer saves a `language` default or calls `LocalizeUI()` for other languages.
   `GetAllData` and `LocalizeUI` themselves are unchanged: the landing page still uses `LocalizeUI` with the English text.
+
+### Beta data only
+
+Evolved is played on the game's beta, so the website's own dump in `Data/EN` is already beta data and there is no switch to upstream's `Data/BETA`:
+
+- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice in the same yellow text. Update the beta name in it when the game's beta changes.
+- `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
+- `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
+- `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.
+- `HTML/CityTrees.html`: the Trade Route tree is always shown instead of only with the beta checkbox.
 
 ## Game data
 
@@ -57,6 +67,8 @@ When syncing, any data conflict is resolved in favour of the local dump. Non-con
 2. In a temporary worktree, check out the last synced upstream commit, apply the [renames](#renames), and commit (the base).
 3. Replace the worktree's contents with `upstream/main`, apply the renames again, and commit on top of the base.
 4. On `main`, `git cherry-pick --no-commit <that commit>`. Git merges it three-way against the renamed base, so the customizations above survive.
-5. Resolve data conflicts with the local side, check that no `aow4db` references remain, commit to `main`, and update the "Last synced" commit above.
+5. Resolve each conflict hunk, not whole files: `git checkout --ours <file>` throws away upstream's other changes in that file too.
+   For data, take the local side of the conflicting hunks; for code, merge by hand.
+   Then check that no `aow4db` references remain, commit to `main`, and update the "Last synced" commit above.
    Upstream changes to the deleted language folders arrive as "deleted by us" conflicts: keep them deleted (`git rm -r -q Data/DE Data/ES Data/FR Data/JA Data/KO Data/PL Data/RU Data/ZH`).
    A brand-new upstream language folder would arrive without a conflict, so check `Data/` for one.

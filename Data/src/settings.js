@@ -27,19 +27,8 @@ function CheckBoxTooltips() {
   updateUserSettings({
     tooltipselectable: checkboxTooltip.checked,
     isolateNumber: checkboxNumbers.checked,
-    showBeta: showBetaTooltip.checked,
       showSecretSpells: showSecretSpells.checked
   });
-}
-
-function SwitchToBeta() {
-    updateUserSettings({
-        tooltipselectable: checkboxTooltip.checked,
-        isolateNumber: checkboxNumbers.checked,
-        showBeta: showBetaTooltip.checked,
-      showSecretSpells: showSecretSpells.checked
-    });
-    location.reload();
 }
 
 function CopyField() {

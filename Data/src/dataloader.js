@@ -346,8 +346,7 @@ async function CheckData() {
             setUserSettings({
                 tooltipselectable: false,
                 fontSize: "16px",
-                showSecretSpells: false,
-                showBeta: false
+                showSecretSpells: false
             });
             storedSettings = getUserSettings();
         }
@@ -358,9 +357,6 @@ async function CheckData() {
         //checkboxNumbers = document.getElementById("numbersCheckbox");
         //checkboxNumbers = document.getElementById("numbersCheckbox");
         checkboxNumbers.checked = storedSettings.isolateNumber;
-
-        // showBetaTooltip = document.getElementById("showBetaCheckbox");
-        showBetaTooltip.checked = storedSettings.showBeta;
 
         let hoverDiv = document.getElementById("hoverDiv");
         let hoverDiv2 = document.getElementById("hoverDiv2");
@@ -373,11 +369,7 @@ async function CheckData() {
         }
         CheckBoxTooltips();
 
-        if (storedSettings.showBeta) {
-            await GetAllData("BETA");
-        } else {
-            await GetAllData("EN");
-        }
+        await GetAllData("EN");
 
         AddExtraData();
 

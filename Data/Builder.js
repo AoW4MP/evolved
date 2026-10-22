@@ -8,7 +8,6 @@ const errorImage = "/evolved/Icons/Text/exclamationpoint.png";
 // settings
 const checkboxTooltip = document.getElementById("tooltipCheckbox");
 const checkboxNumbers = document.getElementById("numbersCheckbox");
-const showBetaTooltip = document.getElementById("showBetaCheckbox");
 
 const showSecretSpells = document.getElementById("showSecretSpellsCheckbox");
 

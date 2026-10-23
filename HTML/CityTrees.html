@@ -294,11 +294,14 @@
                     gridRow += rows;
                 }
 
-                // column headers: the Town Hall a column needs
+                // column headers: the Town Hall a column needs; the tower's columns are shifted, so there
+                // only the column whose buildings need one says so (the Foundation needs Town Hall II)
                 for (let c = 1; c <= maxColumn; c++) {
                     const head = document.createElement("div");
                     head.className = "ct-col-head";
-                    head.textContent = section === "throne" ? "" : c <= 4 ? "Needs Town Hall " + ROMAN[c] : "";
+                    const th = Math.max(0, ...members.filter((s) => column.get(s.resid) === c).map((s) => s.th || 0));
+                    head.textContent =
+                        section === "throne" ? (th ? "Needs Town Hall " + ROMAN[th] : "") : c <= 4 ? "Needs Town Hall " + ROMAN[c] : "";
                     head.style.gridColumn = c + 1;
                     grid.append(head);
                 }

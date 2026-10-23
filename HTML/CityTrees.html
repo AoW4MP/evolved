@@ -255,17 +255,27 @@
                     return d;
                 }
 
+                // the city's Town Halls head their own columns, with a line down to what needs them (see
+                // DrawConnectors); the other sections say in a header row which Town Hall a column needs
+                const townHallColumns = ROWS[section].includes("townhall");
+                if (townHallColumns) grid.style.gridTemplateRows = "none";
+
                 const rowOf = new Map();
-                let gridRow = 2;
+                let gridRow = townHallColumns ? 1 : 2;
                 let maxColumn = 1;
                 const lines = ROWS[section];
                 for (const line of lines) {
+                    const parentInLine = (s) => {
+                        const p = primary.get(s.resid);
+                        return p !== rootKey && inSection.get(p)?.line === line;
+                    };
                     const lineMembers = members
                         .filter((s) => s.line === line)
                         .sort(
                             (a, b) =>
                                 column.get(a.resid) - column.get(b.resid) ||
                                 depthOf(b.resid) - depthOf(a.resid) ||
+                                parentInLine(b) - parentInLine(a) || // a chain keeps its row before a newcomer
                                 NameOf(a).localeCompare(NameOf(b))
                         );
                     if (!lineMembers.length && !(line === lines[0])) continue;
@@ -282,8 +292,14 @@
                     if (rootKey && line === lines[0]) place(rootKey, 1, 0);
                     for (const s of lineMembers) {
                         const p = primary.get(s.resid);
-                        const sameLine = p !== rootKey && inSection.get(p)?.line === line;
-                        place(s.resid, column.get(s.resid), sameLine ? rowOf.get(p) - gridRow : 0);
+                        place(s.resid, column.get(s.resid), parentInLine(s) ? rowOf.get(p) - gridRow : 0);
+                        // a child past the next column (Palisade Walls to Stone Walls) keeps the cells in
+                        // between free, so its link runs straight along the row instead of behind other cards
+                        const r = rowOf.get(s.resid) - gridRow;
+                        for (const t of lineMembers) {
+                            if (primary.get(t.resid) !== s.resid) continue;
+                            for (let c = column.get(s.resid) + 1; c < column.get(t.resid); c++) taken.add(r + ":" + c);
+                        }
                     }
                     const label = document.createElement("div");
                     label.className = "ct-row-label";
@@ -296,12 +312,12 @@
 
                 // column headers: the Town Hall a column needs; the tower's columns are shifted, so there
                 // only the column whose buildings need one says so (the Foundation needs Town Hall II)
-                for (let c = 1; c <= maxColumn; c++) {
+                for (let c = 1; c <= maxColumn && !townHallColumns; c++) {
                     const head = document.createElement("div");
                     head.className = "ct-col-head";
                     const th = Math.max(0, ...members.filter((s) => column.get(s.resid) === c).map((s) => s.th || 0));
                     head.textContent =
-                        section === "throne" ? (th ? "Needs Town Hall " + ROMAN[th] : "") : c <= 4 ? "Needs Town Hall " + ROMAN[c] : "";
+                        section === "throne" ? (th ? "Requires Town Hall " + ROMAN[th] : "") : c <= 4 ? "Requires Town Hall " + ROMAN[c] : "";
                     head.style.gridColumn = c + 1;
                     grid.append(head);
                 }
@@ -560,6 +576,21 @@
                     svg.setAttribute("height", grid.scrollHeight);
                     const origin = grid.getBoundingClientRect();
                     const nodes = new Map([...grid.querySelectorAll(".ct-node")].map((n) => [n.dataset.key, n]));
+                    // a Town Hall's line runs down the middle of its column, behind the buildings that need it
+                    for (const hall of nodes.values()) {
+                        if (hall.dataset.line !== "townhall") continue;
+                        const below = [...nodes.values()].filter(
+                            (n) => n.dataset.line !== "townhall" && n.style.gridColumn === hall.style.gridColumn
+                        );
+                        if (!below.length) continue;
+                        const a = hall.firstElementChild.getBoundingClientRect();
+                        const bottom = Math.max(...below.map((n) => n.firstElementChild.getBoundingClientRect().top));
+                        const x = Math.round(a.left + a.width / 2 - origin.left);
+                        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                        path.setAttribute("d", `M ${x},${Math.round(a.bottom - origin.top)} V ${Math.round(bottom - origin.top)}`);
+                        path.classList.add("ct-spine");
+                        svg.append(path);
+                    }
                     for (const node of nodes.values()) {
                         const parent = nodes.get(node.dataset.parent);
                         if (!parent) continue;
@@ -580,7 +611,21 @@
                         if (b.left > a.right) {
                             const x1 = px(a.right - origin.left);
                             const turn = px(x2 - gap / 3);
-                            d = `M ${x1},${y1} H ${turn} V ${y2} H ${x2}`;
+                            // a link past a column (Palisade Walls to Stone Walls) would run behind the cards in
+                            // between: it leaves by the next column's lane and crosses in the gap above the child
+                            const rowY = a.top + a.height / 2;
+                            const inTheWay = [...nodes.values()].some((n) => {
+                                const r = n.firstElementChild.getBoundingClientRect();
+                                return r.left > a.right && r.right < b.left && r.top < rowY && r.bottom > rowY;
+                            });
+                            if (inTheWay) {
+                                const exit = px(a.right + (2 * gap) / 3 - origin.left);
+                                // the middle of the 10px row gap; below the child when it is in the top row
+                                const cross = px((b.top - origin.top > 10 ? b.top - 5 : b.bottom + 5) - origin.top);
+                                d = `M ${x1},${y1} H ${exit} V ${cross} H ${turn} V ${y2} H ${x2}`;
+                            } else {
+                                d = `M ${x1},${y1} H ${turn} V ${y2} H ${x2}`;
+                            }
                         } else {
                             const x1 = px(a.left - origin.left);
                             const side = px(x1 - (2 * gap) / 3);
@@ -639,8 +684,19 @@
         color: white;
         margin: 10px 0 20px;
     }
+    /* the site's .switch is 34px tall with its text at the top: centre it like the dropdowns */
+    .ct-controls .switch {
+        height: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .ct-controls select {
+        margin-left: 4px;
+    }
     .ct-culture-icon {
         height: 40px;
+        margin-right: -8px; /* the controls' gap less the icon's own empty edge */
     }
     .ct-section {
         margin: 0 0 30px;
@@ -673,6 +729,11 @@
         stroke-width: 2;
         shape-rendering: crispEdges;
         z-index: 1;
+    }
+    /* a Town Hall's line down its column: fainter than the links between buildings */
+    .ct-lines .ct-spine {
+        stroke: rgb(173, 156, 122, 0.45);
+        stroke-dasharray: 6 4;
     }
     .ct-tome-group {
         color: #bbcdf6;

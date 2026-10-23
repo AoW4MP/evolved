@@ -54,6 +54,14 @@
                         CreateAllInfusions(); // refresh on subfilter change
                     });
                 });
+
+                // ?material=Focus Crystals (from the Magic Materials page) picks that material's filter
+                const material = new URLSearchParams(location.search).get("material");
+                if (material) {
+                    [...document.querySelectorAll(".treeFilterButtonMM")]
+                        .find((b) => b.dataset.tree !== "all" && material.startsWith(b.dataset.tree))
+                        ?.click();
+                }
             }
             
              function CreateAllInfusions() {

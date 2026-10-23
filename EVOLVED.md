@@ -73,14 +73,26 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 - One culture and sub-culture at a time, with toggles for the Elder Vampire's castle and tome buildings.
 - Upstream's `HTML/CityTest.html`, `HTML/CityTreesNew.html` and `Data/GEN/CityTree.json` are deleted, as is the `CityTree.json` / `jsonCityTreeNodes` pair in `Data/src/dataloader.js`.
 
+### Magic Materials
+
+`HTML/MagicMaterials.html` is Evolved's own page, replacing upstream's (same URL and menu link):
+
+- Sets, their bonuses and requirements, and each material's texts, local income and combat enchantment come from `Data/GEN/MagicMaterials.json`, which `magicmaterials.py` in aow4_diff_tools generates from the live game plus the mod.
+  Pictures and the infusion count come from `Data/GEN/WorldStructures.json` and `Data/EN/ItemForgeUpgrades.json`, by the material's key.
+- Each material card links to `HTML/Infusions.html?material=<name>`, which picks that material's filter.
+- `Data/Builder.js`: a concept link written as `{<hp></hp>}` shows the concept's own name ("Hit Point"), on every page.
+
 ## Game data
 
-`Data/EN/*.json` and `Data/GEN/*.json` are produced by Evolved's own game dumps, with mod balance values and mod-only content.
+Most of `Data/EN/*.json` comes from Evolved's own game dumps (the game's DUMPALL, with the mod loaded), with mod balance values and mod-only content.
+The exceptions are `Data/EN/all.json`, `concept_tooltips.json` and `UI.json`, which come from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
+`all.json` holds the game's texts with the numbers of upstream's vanilla game at the time they made it: no mod values, and older than the live game after an update.
 Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` has spells upstream lacks, such as Astral Keeper Ritual, Summon Frost Giant, Bone Horror Ritual and Bone Dragon Ritual.
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, run `python citytree.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json`.
+After copying a new dump into `Data/EN`, run `python citytree.py` and `python magicmaterials.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json` and `Data/GEN/MagicMaterials.json`.
+A page that shows numbers from `all.json` can be out of date or miss the mod (Focus Crystals +10% where the game now says +20%, Tranquility Pool −10% where the mod says −5%); `magicmaterials.py` reads its texts from the live game and the mod instead.
 
 ## Taking changes from upstream
 
@@ -106,5 +118,5 @@ for reference.
    Then check that no `aow4db` references remain, commit to `main`, and update the "Last full sync" commit above.
    Upstream changes to the deleted language folders arrive as "deleted by us" conflicts: keep them deleted (`git rm -r -q Data/DE Data/ES Data/FR Data/JA Data/KO Data/PL Data/RU Data/ZH`).
    A brand-new upstream language folder would arrive without a conflict, so check `Data/` for one.
-   `HTML/CityTrees.html` is the one file to keep whole: discard upstream's changes to it (`git checkout --ours HTML/CityTrees.html`).
+   `HTML/CityTrees.html` and `HTML/MagicMaterials.html` are the files to keep whole: discard upstream's changes to them (`git checkout --ours HTML/CityTrees.html HTML/MagicMaterials.html`).
    Keep `HTML/CityTest.html`, `HTML/CityTreesNew.html` and `Data/GEN/CityTree.json` deleted, and don't let `CityTree.json` back into `dataloader.js`.

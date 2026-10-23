@@ -16,20 +16,171 @@
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-         <script src="/evolved/Data/Init.js"></script>
+        <script src="/evolved/Data/Init.js"></script>
         <script>
-            var oreArray = ["arcanium_ore", "focus_crystals", "fireforge_stone", "blood_glass"];
-            var liquidArray = ["archon_blood", "astral_dew", "tranquility_pool"];
-            var plantArray = ["haste_berries", "silvertongue_fruit", "rainbow_clover"];
-            var voidArray = ["void_stones"];
+            // Evolved's own Magic Materials page: one section per set, its bonus beside the materials that
+            // make it up. Sets, texts, income and enchantments come from Data/GEN/MagicMaterials.json, which
+            // aow4_diff_tools/magicmaterials.py generates from the game and the mod (the dump's own texts can carry
+            // another resource's numbers); pictures and infusions are looked up by the material's key.
 
-            function HandlePage() {
-                showWorldStructuresWithArgument("Void Stones", undefined, voidArray, "Void Stones");
-                showWorldStructuresWithArgument("Ores", undefined, oreArray, "Ores");
-                showWorldStructuresWithArgument("Liquids", undefined, liquidArray, "Liquids");
-                showWorldStructuresWithArgument("Plants", undefined, plantArray, "Plants");
-                SetLevelUpStuff();
+            // the order and colour of the sets; one the list doesn't name goes last, in grey
+            const SET_STYLE = {
+                rings_of_binding: "rgb(150, 90, 40)",
+                cosmicflux_elixir: "rgb(40, 100, 160)",
+                imperial_essence: "rgb(50, 130, 50)",
+                void_ink: "rgb(100, 40, 140)"
+            };
+            // a local income resource as the site writes it: icon, concept, name
+            const INCOME = {
+                "Structure Production": ["structureprod", "GLOBAL.StructureProductionConcept", "Production"],
+                "Unit Production": ["unitprod", "GLOBAL.UnitProductionConcept", "Draft"],
+                Mana: ["mana", "GLOBAL.ManaConcept", "Mana"],
+                Knowledge: ["knowledge", "GLOBAL.KnowledgeConcept", "Knowledge"],
+                Gold: ["gold", "GLOBAL.GoldConcept", "Gold"],
+                Food: ["food", "GLOBAL.FoodConcept", "Food"],
+                Happiness: ["happiness", "GLOBAL.CityStabilityConcept", "City Stability"],
+                Imperium: ["influence", "GLOBAL.ImperiumConcept", "Imperium"]
+            };
+
+            let materials = null;
+
+            async function HandlePage() {
+                materials = await fetch("/evolved/Data/GEN/MagicMaterials.json").then((res) => res.json());
+                const page = document.getElementById("materials");
+                const intro = findBy(jsonAllFromPOLocalized, "id", "TUTORIAL@MAGICMATERIALS@PAGE01");
+                if (intro) document.getElementById("intro").innerHTML = intro.description;
+
+                const order = Object.keys(SET_STYLE);
+                const rank = (s) => (order.includes(s.key) ? order.indexOf(s.key) : order.length);
+                for (const set of [...materials.sets].sort((a, b) => rank(a) - rank(b))) page.append(DrawSet(set));
+                HandleExtraTooltips(page);
+            }
+
+            function DrawSet(set) {
+                const members = set.materials.map((key) => ({ key, ...materials.materials[key] }));
+                members.sort((a, b) => a.name.localeCompare(b.name));
+                const section = document.createElement("div");
+                section.className = "mm-section";
+                section.style.setProperty("--set", SET_STYLE[set.key] || "rgb(100, 100, 100)");
+                const title = document.createElement("div");
+                title.className = "mm-section-title";
+                title.textContent = set.category;
+                section.append(title);
+
+                const row = document.createElement("div");
+                row.className = "mm-set";
+
+                // the game's rule: so many materials, different ones unless the set is a single material
+                const needs = !set.unique
+                    ? set.required + " " + members.map((m) => m.name).join(" or ")
+                    : members.length > set.required
+                      ? "Any " + set.required + " of the " + members.length + " " + set.category
+                      : "All " + set.required + " " + set.category;
+                const bonus = document.createElement("div");
+                bonus.className = "mm-bonus";
+                bonus.innerHTML =
+                    '<div class="mm-bonus-head">Set Bonus</div>' +
+                    '<div class="mm-bonus-name">' + set.name + "</div>" +
+                    AddTagIconsForStatusEffects(set.description.split(/<br><br>Requires:/)[0].replace(/(<br>)+$/, "")) +
+                    '<div class="mm-bonus-head">Requires</div>' +
+                    "<bulletlist><bullet>" + needs + "</bullet></bulletlist>";
+                row.append(bonus);
+
+                const cards = document.createElement("div");
+                cards.className = "mm-cards";
+                for (const m of members) cards.append(MaterialCard(m));
+                row.append(cards);
+
+                section.append(row);
+                return section;
+            }
+
+            function MaterialCard(m) {
+                const card = document.createElement("div");
+                card.className = "mm-card";
+                const site = jsonWorldStructures.find((s) => s.id === m.key);
+
+                const head = document.createElement("div");
+                head.className = "mm-title";
+                head.innerHTML =
+                    '<img class="mm-icon" src="/evolved/Icons/WorldStructures/' + m.key + '.png" alt="" />' +
+                    "<span>" + m.name.toUpperCase() + "</span>";
+                if (m.dlc) head.append(AddDLCTag(m.dlc));
+                card.append(head);
+
+                const body = document.createElement("div");
+                body.className = "mm-body";
+                const picture = document.createElement("img");
+                picture.className = "mm-picture";
+                picture.src = "/evolved/Icons/StructurePics/" + m.key + ".png";
+                picture.alt = "";
+                if (m.lore) {
+                    const lore = document.createElement("span");
+                    lore.innerHTML = '<span style="color: #deb887">' + m.name.toUpperCase() + "</span><br><br>" + m.lore;
+                    addTooltipListeners(picture, lore);
+                }
+                body.append(picture);
+
+                const effects = document.createElement("div");
+                effects.className = "mm-effects";
+                const global = m.description.replace(/^Unique global effect:\s*/, "");
+                effects.innerHTML = '<div class="mm-label">Global Effect</div>' + AddTagIconsForStatusEffects(global);
+                if (m.income.length) {
+                    effects.innerHTML += '<div class="mm-label">Local Income</div>' + AddTagIconsForStatusEffects(Income(m.income));
+                }
+                body.append(effects);
+                card.append(body);
+
+                if (m.combat) card.append(Enchantment(m.combat, site?.combat));
+
+                // infusions name the material as the dump does
+                const token = site?.name || m.name;
+                const infusions = new Set(
+                    jsonItemForgeUpgrades
+                        .filter((i) => (i.unlock_requirements || []).some((r) => r.token_name === token))
+                        .map((i) => i.name)
+                );
+                if (infusions.size) {
+                    const link = document.createElement("a");
+                    link.className = "mm-infusions";
+                    link.href = "/evolved/HTML/Infusions.html?material=" + encodeURIComponent(token);
+                    link.textContent = infusions.size + " Infusions ›";
+                    card.append(link);
+                }
+                return card;
+            }
+
+            function Income(income) {
+                const items = income.map(([resource, amount]) => {
+                    const [icon, concept, name] = INCOME[resource] || [null, null, resource];
+                    const label = concept ? "[hyperlink," + concept + "]" + name + "[/hyperlink]" : name;
+                    return "<bullet>+" + amount + " " + (icon ? "<" + icon + "></" + icon + "> " : "") + label + "</bullet>";
+                });
+                return "<bulletlist>" + items.join("") + "</bulletlist>";
+            }
+
+            function Enchantment(combat, textId) {
+                const div = document.createElement("div");
+                div.className = "mm-ench";
+                // the picture is named after the enchantment, older ones after its text id
+                const byName = combat.name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
+                const byId = (textId || "").split("@").pop().toLowerCase();
+                const img = document.createElement("img");
+                img.className = "mm-ench-picture";
+                img.alt = "";
+                img.src = "/evolved/Icons/CombatEnchantments/" + byName + ".png";
+                img.onerror = () => {
+                    if (img.src.endsWith("/" + byName + ".png") && byId && byId !== byName) img.src = "/evolved/Icons/CombatEnchantments/" + byId + ".png";
+                    else img.remove();
+                };
+                div.append(img);
+                const words = document.createElement("div");
+                words.innerHTML =
+                    '<div class="mm-label">Combat Enchantment</div>' +
+                    '<div class="mm-ench-name">' + combat.name + "</div>" +
+                    '<div class="mm-ench-text">' + AddTagIconsForStatusEffects(combat.description) + "</div>";
+                div.append(words);
+                return div;
             }
         </script>
 
@@ -39,86 +190,162 @@
     <body>
         <div id="header"></div>
 
-        <div class="textblocktitle">Magic Materials</div>
-
-        <div class="w3-container">
-            <div class="w3-bar w3-black" id="buttonHolder"></div>
-
-            <div class="mod_card">
-                <div class="structure_image_holder" style="align-content: center">
-                    <div class="mod_name">VOID STONES (Needs 3)</div>
-                    <div class="mod_description" style="float: left">
-                        Collection Effect:<br />
-                        <div class="mod_name">Void Ink:</div>
-                        <br />
-
-                        <bulletlist>
-                            <bullet
-                                >Umbral Dwellings with an Eldritch Pact grant +30 <knowledge></knowledge> Knowledge.
-                            </bullet>
-                            <bullet>Vassals grant +30 <knowledge></knowledge> Knowledge. </bullet>
-                        </bulletlist>
-                    </div>
-                </div>
-            </div>
-            <div id="Void Stones"></div>
-
-            <div class="mod_card">
-                <div class="structure_image_holder" style="align-content: center">
-                    <div class="mod_name">ORES</div>
-                    <div class="mod_description" style="float: left">
-                        Collection Effect:<br />
-                        <div class="mod_name">Rings of Binding:</div>
-                        <br />
-
-                        <bulletlist>
-                            Heroes gain:
-                            <bullet>+1 <defense></defense> Defense </bullet>
-                            <bullet>+1 <resistance></resistance> Resistance </bullet>
-                            <bullet>+10% Bonus Damage </bullet>
-                        </bulletlist>
-                    </div>
-                </div>
-            </div>
-
-            <div id="Ores"></div>
-            <div class="mod_card">
-                <div class="structure_image_holder" style="align-content: center">
-                    <div class="mod_name">LIQUIDS</div>
-                    <div class="mod_description" style="float: left">
-                        Collection Effect:<br />
-                        <div class="mod_name">Cosmuflux Elixir:</div>
-                        <bulletlist>
-                            <bullet
-                                >Mana Resource Nodes grant +10 <knowledge></knowledge>
-                                <hyperlink>Knowledge</hyperlink> and +10 <mana></mana>
-                                <hyperlink>Mana</hyperlink>
-                            </bullet>
-                        </bulletlist>
-                    </div>
-                </div>
-            </div>
-
-            <div id="Liquids"></div>
-            <div class="mod_card">
-                <div class="structure_image_holder" style="align-content: center">
-                    <div class="mod_name">PLANTS</div>
-                    <div class="mod_description" style="float: left">
-                        Collection Effect:<br />
-                        <div class="mod_name">Imperial Essence:</div>
-
-                        <bulletlist>
-                            <bullet>+15 <influence></influence> <hyperlink>Imperium</hyperlink> income </bullet>
-                        </bulletlist>
-                    </div>
-                </div>
-            </div>
-            <div id="Plants"></div>
+        <div class="mm-page">
+            <div class="textblocktitle">Magic Materials</div>
+            <div id="intro" class="mm-intro"></div>
+            <div id="materials"></div>
         </div>
     </body>
-    <script></script>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>
+<style>
+    .mm-page {
+        padding: 0 16px;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .mm-intro {
+        color: #bbcdf6;
+        text-align: center;
+        max-width: 720px;
+        margin: 4px auto 24px;
+    }
+    .mm-section {
+        margin: 0 0 30px;
+    }
+    .mm-section-title {
+        color: #d7c297;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0 0 8px;
+    }
+    /* the set bonus beside its materials, like a City Tree row label */
+    .mm-set {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 14px;
+        align-items: start;
+    }
+    .mm-bonus {
+        border-left: 4px solid var(--set);
+        padding: 2px 0 2px 10px;
+        color: #bbcdf6;
+        font-size: 15px;
+    }
+    .mm-bonus-head {
+        color: #d7c297;
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    .mm-bonus-head:first-child {
+        margin-top: 0;
+    }
+    .mm-bonus-name {
+        color: white;
+        font-size: 17px;
+        margin: 2px 0 4px;
+    }
+    .mm-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); /* four across on a wide screen: Ores has four */
+        gap: 14px;
+    }
+    .mm-card {
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        background-image: url(/evolved/Icons/tooltipBG.png);
+        border-style: solid;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 4 10 4 10 fill;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+        padding: 5px 8px 8px;
+        color: #bbcdf6;
+        font-size: 15px;
+        text-shadow: 2px 2px black;
+    }
+    .mm-title {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin: -5px -8px 6px;
+        padding: 3px 8px;
+        color: #d7c297;
+        font-size: 14px;
+        background-image: linear-gradient(to right, rgb(0, 0, 0, 0), var(--set), rgb(0, 0, 0, 0));
+    }
+    .mm-title .mountToolTip {
+        margin-left: auto;
+    }
+    .mm-icon {
+        height: 30px;
+    }
+    .mm-body {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .mm-picture {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        flex: none;
+        border: 1px solid rgb(90, 80, 110);
+    }
+    .mm-label {
+        color: #d7c297;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 6px;
+    }
+    .mm-label:first-child {
+        margin-top: 0;
+    }
+    /* the combat enchantment, always shown: no toggle */
+    .mm-ench {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px solid rgb(90, 80, 110);
+    }
+    /* a text the game left unfilled ({FOCUSED_GAZE_RANGE_BOOST>ADD>MaxRange}) is one long word: break it
+       rather than widen every card in the column */
+    .mm-ench > div,
+    .mm-effects {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+    .mm-ench-picture {
+        width: 44px;
+        flex: none;
+    }
+    .mm-ench-name {
+        color: #aa84f6;
+        font-size: 16px;
+    }
+    .mm-ench-text {
+        font-size: 14px;
+    }
+    .mm-infusions {
+        align-self: flex-end;
+        margin-top: auto;
+        padding-top: 8px;
+        color: #d7c297;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .mm-infusions:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 800px) {
+        .mm-set {
+            grid-template-columns: 1fr;
+        }
+        .mm-cards {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+</style>

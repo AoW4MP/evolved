@@ -62,10 +62,23 @@ function extractHyperlinks(text) {
     return { text, links };
 }
 
+// A link written as "{<hp></hp>}" or "{LOC.CONCEPT@COMBAT_SPEED@NAME}" asks for the concept's own name, as the
+// game shows it: "<hp></hp> Hit Point"
+function ConceptLinkText(globalName, displayText) {
+    const text = displayText.trim();
+    const braced = text.match(/^\{([\s\S]*)\}$/);
+    if (!braced) return text;
+    const concept = jsonConceptTooltipsLocalized?.[globalName];
+    if (concept?.displayHtml || concept?.name) return concept.displayHtml || concept.name;
+    const icon = /^<(\w+)><\/\1>$/.test(braced[1]) ? braced[1] + " " : "";
+    return icon + globalName.split(".").pop().replace(/Concept$/, "").replace(/([a-z])([A-Z])/g, "$1 $2");
+}
+
 function RemoveHyperLinks(text) {
     return text.replace(/\[hyperlink,([^\]]+)\]([\s\S]*?)\[\/hyperlink\]/g, (_, globalName, displayText) => {
         const concept = jsonConceptTooltipsLocalized?.[globalName];
         const iconHtml = concept?.icon ? `<${concept.icon}></${concept.icon}> ` : "";
+        displayText = ConceptLinkText(globalName, displayText);
 
         const visible = `${""}${displayText.trim()}`;
         const noTooltip = `<span>${""}${displayText.trim()}</span>`;
@@ -80,6 +93,7 @@ function processConceptHyperlinks(text) {
     return text.replace(/\[hyperlink,([^\]]+)\]([\s\S]*?)\[\/hyperlink\]/g, (_, globalName, displayText) => {
         const concept = jsonConceptTooltipsLocalized?.[globalName];
         const iconHtml = concept?.icon ? `<${concept.icon}></${concept.icon}> ` : "";
+        displayText = ConceptLinkText(globalName, displayText);
 
         const visible = `<span style="color:white;text-decoration:underline">${""}${displayText.trim()}</span>`;
         const noTooltip = `<span style="color:white;">${""}${displayText.trim()}</span>`;

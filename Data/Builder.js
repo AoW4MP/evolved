@@ -4631,7 +4631,8 @@ function GetStructure(structureID) {
 }
 
 function GetHeroSkillName(skillID) {
-    return findBy(jsonHeroSkills, "id", skillID).name || undefined;
+    // ?. so a skill the game has renamed (AscendedInfo.json) is left out instead of breaking the tome
+    return findBy(jsonHeroSkills, "id", skillID)?.name || undefined;
 }
 
 function GetHeroSkillDescription(skillID) {

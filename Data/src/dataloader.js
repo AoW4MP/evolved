@@ -129,7 +129,15 @@ function fetchJsonFiles(filePaths) {
                 if (!response.ok) {
                     throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
-                return response.json();
+                // a mod's own resources have resids past what a JS number holds exactly, and nearby ones
+                // round to the same number (Bone Dragon Ritual and Bone Horror Ritual): keep those as text
+                return response.text().then((text) =>
+                    JSON.parse(
+                        text.replace(/("resid":\s*)(-?\d{16,})\b/g, (all, key, n) =>
+                            Number.isSafeInteger(Number(n)) ? all : key + '"' + n + '"'
+                        )
+                    )
+                );
             })
         )
     );

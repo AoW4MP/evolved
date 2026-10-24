@@ -465,11 +465,11 @@
                 // the description and what the game predicts beyond it, as on every structure card
                 const description = StructureDescription(info);
                 // a list already ends its line; plain text ("+20 Gold income") needs one before Requirements
-                if (description) tip.innerHTML += RebuildBulletLists(description) + (description.endsWith("</bulletlist>") ? "" : "<br>");
+                if (description) tip.innerHTML += AddTagIconsForStatusEffects(description) + (description.endsWith("</bulletlist>") ? "" : "<br>");
                 tip.innerHTML += StructureHelp(info);
                 // a single requirement often comes without a list: AsBulletList gives it its bullet
-                if (info.requirement_description) tip.innerHTML += "<br>Requirements:" + AsBulletList(info.requirement_description);
-                if (info.boost_requirements) tip.innerHTML += "<br>Boost Requirements:" + AsBulletList(info.boost_requirements);
+                if (info.requirement_description) tip.innerHTML += "<br>Requirements:" + AddTagIconsForStatusEffects(AsBulletList(info.requirement_description));
+                if (info.boost_requirements) tip.innerHTML += "<br>Boost Requirements:" + AddTagIconsForStatusEffects(AsBulletList(info.boost_requirements));
 
                 // whose building it is: the culture's emblem or the tome's icon
                 if (s.cultures) {
@@ -509,7 +509,7 @@
                 const img = document.createElement("img");
                 img.className = "structureNodeIcon";
                 img.src = icon;
-                img.height = 65;
+                img.height = 74;
                 // badges and income icons are placed within the body, so a name on two lines moves them along
                 const body = document.createElement("div");
                 body.className = "ct-body";
@@ -697,8 +697,8 @@
 </html>
 <style>
     :root {
-        --ct-cell: 272px; /* a column; the gap between cards is the cell less the card */
-        --ct-card: 242px;
+        --ct-cell: 278px; /* a column; the gap between cards is the cell less the card */
+        --ct-card: 263px;
     }
     .ct-page {
         padding: 0 16px;
@@ -741,7 +741,7 @@
     }
     .ct-section-title {
         color: #d7c297;
-        font-size: 18px;
+        font-size: 20px;
         text-transform: uppercase;
         margin: 0 0 8px;
     }
@@ -773,7 +773,7 @@
     }
     .ct-tome-group {
         color: #bbcdf6;
-        font-size: 13px;
+        font-size: 15px;
         text-transform: uppercase;
         border-left: 4px solid;
         padding-left: 6px;
@@ -787,7 +787,7 @@
     .ct-row-label {
         grid-column: 1;
         color: #bbcdf6;
-        font-size: 13px;
+        font-size: 15px;
         text-transform: uppercase;
         border-left: 4px solid;
         padding-left: 6px;
@@ -797,7 +797,7 @@
     .ct-col-head {
         grid-row: 1;
         color: #d7c297;
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
         align-self: end;
         width: var(--ct-card);
@@ -812,10 +812,10 @@
         position: relative;
         box-sizing: border-box;
         background-image: url(/evolved/Icons/tooltipBG.png);
-        font-size: 12px;
+        font-size: 14px;
         color: #bbcdf6;
-        min-height: 65px;
-        max-height: 140px;
+        min-height: 74px;
+        max-height: 156px;
         width: var(--ct-card);
         text-align: left;
         border-style: solid;
@@ -850,8 +850,8 @@
     .ct-resources {
         position: absolute;
         top: 2px;
-        bottom: 14px;
-        left: 75px;
+        bottom: 16px;
+        left: 84px;
         right: 58px; /* wrap before the badge */
         display: flex;
         align-items: center;
@@ -864,30 +864,30 @@
     /* icons.css gives the resource icons different heights (15-20px) and offsets: one box for all here */
     .ct-icons > * {
         position: static;
-        width: 19px;
-        height: 19px;
-        max-height: 19px;
+        width: 22px;
+        height: 22px;
+        max-height: 22px;
         object-fit: contain;
         margin: 1px 2px;
     }
     .ct-resources.ct-many .ct-icons > * {
-        width: 15px;
-        height: 15px;
-        max-height: 15px;
+        width: 18px;
+        height: 18px;
+        max-height: 18px;
         margin: 0 1px;
     }
     .ct-badge {
         position: absolute;
         top: 0;
         right: 1px;
-        height: 52px;
+        height: 58px;
         opacity: 0.9;
     }
     /* culture emblems fill their image, tome icons have margins: this makes them look the same size */
     .ct-badge-culture {
         top: 5px;
         right: 6px;
-        height: 43px;
+        height: 48px;
     }
     @media (max-width: 800px) {
         #cityTree {

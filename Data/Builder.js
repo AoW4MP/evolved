@@ -260,8 +260,9 @@ function HandleExtraTooltips(specificDiv) {
         const iconHtml = concept.icon ? `<${concept.icon}></${concept.icon}> ` : "";
         const tooltipEl = document.createElement("span");
         tooltipEl.innerHTML =
-            `<p style="color:#d7c297"><span style="font-size:20px">${iconHtml}${concept.name.toUpperCase()}</span></p>` +
-            concept.description;
+            `<p style="color:#d7c297"><span style="font-size:16px">${iconHtml}${concept.name.toUpperCase()}</span></p>` +
+            // a list already ends its line, so the game's blank line after one needs a single <br>
+            concept.description.replaceAll("</bulletlist><br><br>", "</bulletlist><br>");
 
         // Attach to the visible underlined sibling, not the hidden handler itself
         const visibleSibling = el.previousElementSibling;

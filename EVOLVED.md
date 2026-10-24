@@ -88,6 +88,8 @@ Most of `Data/EN/*.json` comes from Evolved's own game dumps (the game's DUMPALL
 Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` has spells upstream lacks, such as Astral Keeper Ritual, Bone Horror Ritual and Bone Dragon Ritual.
 The exceptions are `Data/EN/all.json`, `concept_tooltips.json` and `UI.json`, which come from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
 `all.json` holds the game's texts with the numbers of upstream's vanilla game at the time they made it: no mod values, and older than the live game after an update.
+Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`, its closing tag misplaced).
+Evolved repaired these in `Data/EN/` and `Data/BETA/concept_tooltips.json` (Gold, Production, Mana, the pacts and others), so a `concept_tooltips.json` taken from upstream brings the broken bullets back; `all.json` still has them.
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
 The other folders under `Icons/` are made by hand. An icon they lack can be taken from the game's content libraries with `clbicons.py` in aow4_diff_tools (`find` a name, then `export … --crop`, which gives the hand-made icons' size); combat enchantments are named after the enchantment (`umbral_ramblings.png`).

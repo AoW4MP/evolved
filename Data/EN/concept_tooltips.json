@@ -536,7 +536,7 @@
     "icon": null,
     "globalName": "GLOBAL.CallToArmsRequirementsConcept",
     "displayHtml": "Bounty Requirements",
-    "description": "In order to create a <span style=\"\">Call To Arms</span>, you must be at <span style=\"\">War</span> with another <span style=\"\">Leader</span> or <span style=\"\">Independent City</span>. Possible bounty targets are:<bulletlist><bullet><span style=\"\">City</span></bullet><bullet><span style=\"\">Outpost</span><bullet></bullet> <span style=\"\">Bound</span> <span style=\"\">Ancient Wonder</span><bullet></bullet> <span style=\"\">Beacons of Unity</span></bullet><bullet>Occupied <span style=\"\">Seals</span></bullet></bulletlist><br><br>A <span style=\"\">Call To Arms Viability</span> is determined for each other ruler which determines whether they can accept your bounty or not. Rulers may accept up to {MaxBounties} <span style=\"\">Call To Arms</span> from another ruler at any time."
+    "description": "In order to create a <span style=\"\">Call To Arms</span>, you must be at <span style=\"\">War</span> with another <span style=\"\">Leader</span> or <span style=\"\">Independent City</span>. Possible bounty targets are:<bulletlist><bullet><span style=\"\">City</span></bullet><bullet><span style=\"\">Outpost</span></bullet><bullet><span style=\"\">Bound</span> <span style=\"\">Ancient Wonder</span></bullet><bullet><span style=\"\">Beacons of Unity</span></bullet><bullet>Occupied <span style=\"\">Seals</span></bullet></bulletlist><br><br>A <span style=\"\">Call To Arms Viability</span> is determined for each other ruler which determines whether they can accept your bounty or not. Rulers may accept up to {MaxBounties} <span style=\"\">Call To Arms</span> from another ruler at any time."
   },
   "GLOBAL.CallToWarConcept": {
     "name": "Call to War",
@@ -550,7 +550,7 @@
     "icon": "casusBelli",
     "globalName": "GLOBAL.CasusBelliConcept",
     "displayHtml": "Grievance",
-    "description": "<casusbelli></casusbelli> Grievances determine your <span style=\"\">War Justification</span> against other <span style=\"\">Leader</span>. They are your reason for going to war.<br><br>Obtained primarily by:<bulletlist><bullet>Seeing a trespasser.</bullet><bullet>Having another Ruler build on a <span style=\"\">Province</span> you've claimed.<bullet></bullet> <span style=\"\">Fabricating a <casusbelli></casusbelli> Grievance</span>.</bullet><bullet>Being attacked.</bullet></bulletlist><br><br><casusbelli></casusbelli> Grievances can be exchanged for <span style=\"\">Resource</span> with the Ruler they're held against."
+    "description": "<casusbelli></casusbelli> Grievances determine your <span style=\"\">War Justification</span> against other <span style=\"\">Leader</span>. They are your reason for going to war.<br><br>Obtained primarily by:<bulletlist><bullet>Seeing a trespasser.</bullet><bullet>Having another Ruler build on a <span style=\"\">Province</span> you've claimed.</bullet><bullet><span style=\"\">Fabricating a <casusbelli></casusbelli> Grievance</span>.</bullet><bullet>Being attacked.</bullet></bulletlist><br><br><casusbelli></casusbelli> Grievances can be exchanged for <span style=\"\">Resource</span> with the Ruler they're held against."
   },
   "GLOBAL.RivalJustificationConcept": {
     "name": "Rival Justification",
@@ -648,7 +648,7 @@
     "icon": "rs_cooperation",
     "globalName": "GLOBAL.PactOfCooperationConcept",
     "displayHtml": "Pact of Cooperation",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> opens its borders.<bullet></bullet> <span style=\"\">Trading</span> is enabled.<bulletlist></bullet><bullet>Up to two resource trades are available.</bullet><bullet><span style=\"\">Magic Material</span> can be traded.</bullet></bulletlist></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> opens its borders.</bullet><bullet><span style=\"\">Trading</span> is enabled.<bulletlist><bullet>Up to two resource trades are available.</bullet><bullet><span style=\"\">Magic Material</span> can be traded.</bullet></bulletlist></bullet></bulletlist>"
   },
   "GLOBAL.PactOfIntegrationConcept": {
     "name": "Pact of Integration",
@@ -676,49 +676,49 @@
     "icon": null,
     "globalName": "GLOBAL.PactOfVassalageLvl-1Concept",
     "displayHtml": "Tributary",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.<bullet></bullet> <span style=\"\">Trading</span> costs increase by {tradingCost}%.</bullet><bullet>War Coordination is disabled and no new armies will be sent out.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.</bullet><bullet><span style=\"\">Trading</span> costs increase by {tradingCost}%.</bullet><bullet>War Coordination is disabled and no new armies will be sent out.</bullet></bulletlist>"
   },
   "GLOBAL.PactOfVassalageLvl-2Concept": {
     "name": "Minor Tributary",
     "icon": null,
     "globalName": "GLOBAL.PactOfVassalageLvl-2Concept",
     "displayHtml": "Minor Tributary",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.<bullet></bullet> <span style=\"\">Trading</span> costs increase by {tradingCost}%.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.</bullet><bullet><span style=\"\">Trading</span> costs increase by {tradingCost}%.</bullet></bulletlist>"
   },
   "GLOBAL.PactOfVassalageLvl-3Concept": {
     "name": "Denying Tributary",
     "icon": null,
     "globalName": "GLOBAL.PactOfVassalageLvl-3Concept",
     "displayHtml": "Denying Tributary",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares none of its income.</bullet><bullet>Shares none of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes nothing to the Rally of the Lieges.<bullet></bullet> <span style=\"\">Trading</span> costs increase by {tradingCost}%.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares none of its income.</bullet><bullet>Shares none of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes nothing to the Rally of the Lieges.</bullet><bullet><span style=\"\">Trading</span> costs increase by {tradingCost}%.</bullet></bulletlist>"
   },
   "GLOBAL.PactOfVassalageLvl0Concept": {
     "name": "Vassalage",
     "icon": "rs_vassalage0",
     "globalName": "GLOBAL.PactOfVassalageLvl0Concept",
     "displayHtml": "Vassalage",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.<bullet></bullet> <span style=\"\">Trading</span> costs are at default levels.</bullet><bullet>War Coordination becomes available.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.</bullet><bullet><span style=\"\">Trading</span> costs are at default levels.</bullet><bullet>War Coordination becomes available.</bullet></bulletlist>"
   },
   "GLOBAL.PactOfVassalageLvl1Concept": {
     "name": "Bonded Vassalage",
     "icon": "rs_vassalage1",
     "globalName": "GLOBAL.PactOfVassalageLvl1Concept",
     "displayHtml": "Bonded Vassalage",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.<bullet></bullet> <span style=\"\">Trading</span> costs decrease by {tradingCost}%.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.</bullet><bullet><span style=\"\">Trading</span> costs decrease by {tradingCost}%.</bullet></bulletlist>"
   },
   "GLOBAL.PactOfVassalageLvl2Concept": {
     "name": "Flourishing Vassalage",
     "icon": "rs_vassalage2",
     "globalName": "GLOBAL.PactOfVassalageLvl2Concept",
     "displayHtml": "Flourishing Vassalage",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.<bullet></bullet> <span style=\"\">Trading</span> costs decrease by {tradingCost}%.</bullet><bullet>City can be <span style=\"\">integrated</span> <influence></influence>.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.</bullet><bullet><span style=\"\">Trading</span> costs decrease by {tradingCost}%.</bullet><bullet>City can be <span style=\"\">integrated</span> <influence></influence>.</bullet></bulletlist>"
   },
   "GLOBAL.PactOfVassalageLvl3Concept": {
     "name": "Supreme Vassalage",
     "icon": "rs_vassalage3",
     "globalName": "GLOBAL.PactOfVassalageLvl3Concept",
     "displayHtml": "Supreme Vassalage",
-    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.<bullet></bullet> <span style=\"\">Trading</span> costs decrease by {tradingCost}%.</bullet><bullet>City can be <span style=\"\">integrated</span> <influence></influence>.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>The <span style=\"\">Independent City</span> shares {incomePercentage}% of its income.</bullet><bullet>Shares all of its <span style=\"\">Magic Material</span>.</bullet><bullet>Contributes {commandPoints}<recruitmentpoints></recruitmentpoints> to the <span style=\"\">Request Military Aid</span>.</bullet><bullet><span style=\"\">Trading</span> costs decrease by {tradingCost}%.</bullet><bullet>City can be <span style=\"\">integrated</span> <influence></influence>.</bullet></bulletlist>"
   },
   "GLOBAL.HouseInfluenceConcept": {
     "name": "Allegiance",
@@ -1530,14 +1530,14 @@
     "icon": null,
     "globalName": "GLOBAL.EmpireRelationConcept",
     "displayHtml": "Empire Relations",
-    "description": "Represents the degree to which two <span style=\"\">Empire</span> are on good terms with one another.<br><br>Good Empire Relations are required to <span style=\"\">negotiate</span> a <span style=\"\">Mutual Consulate</span> and <span style=\"\">Treaty</span>. Eventually good relations can lead to an <span style=\"\">D S Alliance</span>.<br><br>Bad Empire Relations increase the chance of <span style=\"\">War</span> being declared.<br><br>Empire Relations can be improved by:<bulletlist><bullet>High <span style=\"\">Alignment</span></bullet><bullet><span style=\"\">Pronouncements</span></bullet><bullet>Gifts<bullet></bullet> <span style=\"\">Trades</span></bullet></bulletlist>"
+    "description": "Represents the degree to which two <span style=\"\">Empire</span> are on good terms with one another.<br><br>Good Empire Relations are required to <span style=\"\">negotiate</span> a <span style=\"\">Mutual Consulate</span> and <span style=\"\">Treaty</span>. Eventually good relations can lead to an <span style=\"\">D S Alliance</span>.<br><br>Bad Empire Relations increase the chance of <span style=\"\">War</span> being declared.<br><br>Empire Relations can be improved by:<bulletlist><bullet>High <span style=\"\">Alignment</span></bullet><bullet><span style=\"\">Pronouncements</span></bullet><bullet>Gifts</bullet><bullet><span style=\"\">Trades</span></bullet></bulletlist>"
   },
   "GLOBAL.IndependentCityConcept": {
     "name": "Free City",
     "icon": "minorcity",
     "globalName": "GLOBAL.IndependentCityConcept",
     "displayHtml": "Free City",
-    "description": "<minorcity></minorcity>Free Cities are <span style=\"\">City</span> that do not belong to an <span style=\"\">Empire</span>. They have a <span style=\"\">Free City Lord</span> with whom it is possible to <span style=\"\">negotiate</span>.<br><br>With a higher <span style=\"\">Pv E Dipl State</span>, a <minorcity></minorcity> Free City offers:<bulletlist><bullet></bullet> <span style=\"\">Trading</span>.<bullet><span style=\"\">Recruitment Points</span> for the <span style=\"\">Request Military Aid</span>.</bullet><bullet>Shared Income.</bullet></bulletlist><br><br>When an <span style=\"\">Empire</span> reaches the highest <span style=\"\">Pv E Dipl State</span> with a <minorcity></minorcity> Free City, the city may become part of that empire through a <span style=\"\">Pact Of Integration</span>. Alternatively <span style=\"\">Independent City War</span> may be declared to acquire the <minorcity></minorcity> Free City through conquest."
+    "description": "<minorcity></minorcity>Free Cities are <span style=\"\">City</span> that do not belong to an <span style=\"\">Empire</span>. They have a <span style=\"\">Free City Lord</span> with whom it is possible to <span style=\"\">negotiate</span>.<br><br>With a higher <span style=\"\">Pv E Dipl State</span>, a <minorcity></minorcity> Free City offers:<bulletlist><bullet><span style=\"\">Trading</span>.</bullet><bullet><span style=\"\">Recruitment Points</span> for the <span style=\"\">Request Military Aid</span>.</bullet><bullet>Shared Income.</bullet></bulletlist><br><br>When an <span style=\"\">Empire</span> reaches the highest <span style=\"\">Pv E Dipl State</span> with a <minorcity></minorcity> Free City, the city may become part of that empire through a <span style=\"\">Pact Of Integration</span>. Alternatively <span style=\"\">Independent City War</span> may be declared to acquire the <minorcity></minorcity> Free City through conquest."
   },
   "GLOBAL.FreeCityLordConcept": {
     "name": "Free City Lord",
@@ -2356,7 +2356,7 @@
     "icon": "structureprod",
     "globalName": "GLOBAL.StructureProductionConcept",
     "displayHtml": "Production",
-    "description": "<structureprod></structureprod> Production is used for building <span style=\"\">City Structure</span>.<br><br>Every <span style=\"\">Turn</span>, Production is spent on the first structure in the City's <span style=\"\">Production Queue</span>. Leftover Production becomes <span style=\"\">Surplus</span>.<br><br>Gain <structureprod></structureprod> Production by:<bulletlist><bullet></bullet> <span style=\"\">Annexing</span> Iron Deposits.<bullet>Building Foresters and Quarries in <span style=\"\">Province</span>.</bullet><bullet>Building certain <span style=\"\">City Structure</span>.</bullet><bullet>Collecting <span style=\"\">Pickup</span>.</bullet></bulletlist>"
+    "description": "<structureprod></structureprod> Production is used for building <span style=\"\">City Structure</span>.<br><br>Every <span style=\"\">Turn</span>, Production is spent on the first structure in the City's <span style=\"\">Production Queue</span>. Leftover Production becomes <span style=\"\">Surplus</span>.<br><br>Gain <structureprod></structureprod> Production by:<bulletlist><bullet><span style=\"\">Annexing</span> Iron Deposits.</bullet><bullet>Building Foresters and Quarries in <span style=\"\">Province</span>.</bullet><bullet>Building certain <span style=\"\">City Structure</span>.</bullet><bullet>Collecting <span style=\"\">Pickup</span>.</bullet></bulletlist>"
   },
   "GLOBAL.FoodConcept": {
     "name": "Food",
@@ -2370,7 +2370,7 @@
     "icon": "production",
     "globalName": "GLOBAL.ProductionConcept",
     "displayHtml": "Production",
-    "description": "<production></production> Production is used in <span style=\"\">City</span> as the base value for both <span style=\"\">Unit Production</span> and <span style=\"\">Structure Production</span>, enabling cities to produce items faster.<br><br>Gain <production></production> Production by:<bulletlist><bullet></bullet> <span style=\"\">Annexing</span> Iron Deposits.<bullet>Building Foresters and Quarries in <span style=\"\">Province</span>.</bullet></bulletlist>"
+    "description": "<production></production> Production is used in <span style=\"\">City</span> as the base value for both <span style=\"\">Unit Production</span> and <span style=\"\">Structure Production</span>, enabling cities to produce items faster.<br><br>Gain <production></production> Production by:<bulletlist><bullet><span style=\"\">Annexing</span> Iron Deposits.</bullet><bullet>Building Foresters and Quarries in <span style=\"\">Province</span>.</bullet></bulletlist>"
   },
   "GLOBAL.RecruitmentPointsConcept": {
     "name": "Recruitment Point",
@@ -2405,7 +2405,7 @@
     "icon": "gold",
     "globalName": "GLOBAL.GoldConcept",
     "displayHtml": "Gold",
-    "description": "<gold></gold> Gold is your material wealth and riches. Used for:<bulletlist><bullet>Recruiting new <span style=\"\">Unit</span>.</bullet><bullet>Paying <span style=\"\">Unit Upkeep</span>.</bullet><bullet>Building <span style=\"\">City Structure</span>.</bullet></bulletlist><br><br>Gain <gold></gold> Gold by:<bulletlist><bullet></bullet> <span style=\"\">Annexing</span> Gold Veins.<bullet>Building Mines in <span style=\"\">Province</span>.</bullet><bullet>Building certain <span style=\"\">City Structure</span>.</bullet><bullet>Collecting <span style=\"\">Pickup</span>.</bullet></bulletlist>"
+    "description": "<gold></gold> Gold is your material wealth and riches. Used for:<bulletlist><bullet>Recruiting new <span style=\"\">Unit</span>.</bullet><bullet>Paying <span style=\"\">Unit Upkeep</span>.</bullet><bullet>Building <span style=\"\">City Structure</span>.</bullet></bulletlist><br><br>Gain <gold></gold> Gold by:<bulletlist><bullet><span style=\"\">Annexing</span> Gold Veins.</bullet><bullet>Building Mines in <span style=\"\">Province</span>.</bullet><bullet>Building certain <span style=\"\">City Structure</span>.</bullet><bullet>Collecting <span style=\"\">Pickup</span>.</bullet></bulletlist>"
   },
   "GLOBAL.ImperiumConcept": {
     "name": "Imperium",
@@ -2433,7 +2433,7 @@
     "icon": "mana",
     "globalName": "GLOBAL.ManaConcept",
     "displayHtml": "Mana",
-    "description": "<mana></mana> Mana is the raw source of magic. Used for:<bulletlist><bullet>Casting <span style=\"\">Spell</span>.</bullet><bullet>Summoning magical <span style=\"\">Unit</span>.</bullet><bullet>Paying <span style=\"\">Unit Upkeep</span>.</bullet></bulletlist><br>Gain <mana></mana> Mana by:<bulletlist><bullet></bullet> <span style=\"\">Annexing</span> Mana Nodes.<bullet>Building Conduits in <span style=\"\">Province</span>.</bullet><bullet>Building certain <span style=\"\">City Structure</span>.</bullet><bullet>Collecting <span style=\"\">Pickup</span>.</bullet></bulletlist>"
+    "description": "<mana></mana> Mana is the raw source of magic. Used for:<bulletlist><bullet>Casting <span style=\"\">Spell</span>.</bullet><bullet>Summoning magical <span style=\"\">Unit</span>.</bullet><bullet>Paying <span style=\"\">Unit Upkeep</span>.</bullet></bulletlist><br>Gain <mana></mana> Mana by:<bulletlist><bullet><span style=\"\">Annexing</span> Mana Nodes.</bullet><bullet>Building Conduits in <span style=\"\">Province</span>.</bullet><bullet>Building certain <span style=\"\">City Structure</span>.</bullet><bullet>Collecting <span style=\"\">Pickup</span>.</bullet></bulletlist>"
   },
   "GLOBAL.AncientWonderConcept": {
     "name": "Ancient Wonder",
@@ -3329,7 +3329,7 @@
     "icon": "caststrategic",
     "globalName": "GLOBAL.TerraformingSpellConcept",
     "displayHtml": "Terraforming Spell",
-    "description": "<bulletlist><bullet></bullet> <span style=\"\">Terraforms</span> one or more <span style=\"\">Province</span>.<bullet>Costs <span style=\"\">Mana</span> and <span style=\"\">World Map Casting Point</span>.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet><span style=\"\">Terraforms</span> one or more <span style=\"\">Province</span>.</bullet><bullet>Costs <span style=\"\">Mana</span> and <span style=\"\">World Map Casting Point</span>.</bullet></bulletlist>"
   },
   "GLOBAL.ThroneCityConcept": {
     "name": "Throne City",

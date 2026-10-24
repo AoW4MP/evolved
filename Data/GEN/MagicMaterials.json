@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24 00:26",
+ "generated": "2026-10-24 16:52",
  "build": "exe of 2026-10-23",
  "mod": "AoW 4 Evolved",
  "sets": [
@@ -7,7 +7,7 @@
    "key": "void_ink",
    "category": "Void Stones",
    "name": "Void Ink",
-   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink] with an <rs_vassalage></rs_vassalage> [hyperlink,GLOBAL.EldritchPactConcept]Eldritch Pact[/hyperlink] grant +30 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PvEVassalConcept]Vassal[/hyperlink] grant +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet></bulletlist><br><br>Requires:<bulletlist><bullet>3 [hyperlink,GLOBAL.STRUCTURES.VOID_STONES]Essence of Void Stones[/hyperlink]</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink] with an <rs_vassalage></rs_vassalage> [hyperlink,GLOBAL.EldritchPactConcept]Eldritch Pact[/hyperlink] grant +30 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PvEVassalConcept]Vassal[/hyperlink] grant +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet></bulletlist><br><br>Requires:<bulletlist><bullet>3 [hyperlink,GLOBAL.STRUCTURES.VOID_STONES]Void Stones[/hyperlink]</bullet></bulletlist>",
    "required": 3,
    "unique": false,
    "materials": [
@@ -74,7 +74,7 @@
   },
   "blood_glass": {
    "name": "Blood Glass",
-   "description": "Unique global effect:<bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain +5 [hyperlink,GLOBAL.HitPointConcept]{<hp></hp>}[/hyperlink] regeneration per [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect:<bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] regeneration per [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
    "lore": "\"An alluring flower, trapping its victims in a thorny prison. From their drained blood crimson crystals bloom. My druids, wearing pendants of this Blood Glass, feel rejuvenated at dawn, as if its siphoned life force was bestowed upon them. Yet in nightly whispers they invoke the name of the [hyperlink,GLOBAL.UrvatoghLoreConcept]Pale Prince[/hyperlink], and I wonder: is it wrong to harness his curse?\"<br><br>— Sylvani Laurel, Survival within the Sunless Lands",
    "income": [
     [
@@ -138,7 +138,7 @@
    ],
    "combat": {
     "name": "Arcanium Tremors",
-    "description": "Every 2<turn></turn>, all non-[hyperlink,GLOBAL.PROPERTIES.FLOATING_MOVEMENT]Floating movement[/hyperlink] and non-[hyperlink,GLOBAL.PROPERTIES.FLYING_MOVEMENT]Flying movement[/hyperlink] attacking units suffer 20 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]."
+    "description": "Every 2<turn></turn>, all non-[hyperlink,GLOBAL.PROPERTIES.FLOATING_MOVEMENT]Floating[/hyperlink] and non-[hyperlink,GLOBAL.PROPERTIES.FLYING_MOVEMENT]Flying[/hyperlink] attacking units suffer 20 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]."
    }
   },
   "astral_dew": {

@@ -99,20 +99,19 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 
 Most of `Data/EN/*.json` comes from Evolved's own game dumps (the game's DUMPALL, with the mod loaded), with mod balance values and mod-only content.
 Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` has spells upstream lacks, such as Astral Keeper Ritual, Bone Horror Ritual and Bone Dragon Ritual.
-The exceptions are `Data/EN/all.json`, `concept_tooltips.json` and `UI.json`, which come from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
-`all.json` holds the game's texts with the numbers of upstream's vanilla game at the time they made it: no mod values, and older than the live game after an update.
-Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`, its closing tag misplaced), and left some lists closed by a raw `[/bulletlist]`.
-Evolved repaired these in `Data/EN/concept_tooltips.json` (17 concepts: Gold, Production, Mana, the pacts and others) and `Data/EN/all.json` (123 texts), each checked against the game's own text in EN.po, so either file taken from upstream brings the broken bullets back.
-Seven of them were from an older game version (Consulate, Cold Dark's Marching Winter, Crucible's Battlements, Arctica's Ice Age, Bhajif's Disruption, an Eldritch Realms crisis): they are now the live game's text with the mod, filled in with the values of the resource that shows each (`magicmaterials.Texts`).
-Four held a value the game fills in during play ({Primary}, {IntHPBuff}): that bullet is left out.
+`Data/EN/all.json`, the game's texts, is Evolved's own too: `alltexts.py` in aow4_diff_tools writes it from the live game's EN.MO with the mod's `.po`, filled in with the values of the resources that show each text (mod values included: Tranquility Pool −5%, Infrastructure −33%).
+It started from upstream's copy and keeps its entries and order; texts the game added are appended, and texts it no longer has are kept, as pages may still look them up.
+A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
+`concept_tooltips.json` and `UI.json` still come from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
+Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`); Evolved repaired the 17 concepts this hit in `concept_tooltips.json` (Gold, Production, Mana, the pacts and others), so that file taken from upstream brings them back.
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
 The other folders under `Icons/` are made by hand. An icon they lack can be taken from the game's content libraries with `clbicons.py` in aow4_diff_tools (`find` a name, then `export … --crop`, which gives the hand-made icons' size); combat enchantments are named after the enchantment (`umbral_ramblings.png`).
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, run `python citytree.py` and `python magicmaterials.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json`, `StructurePredictions.json` and `MagicMaterials.json`.
-A page that shows numbers from `all.json` can be out of date or miss the mod (Focus Crystals +10% where the game now says +20%, Tranquility Pool −10% where the mod says −5%); `magicmaterials.py` reads its texts from the live game and the mod instead.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `alltexts.py` (`Data/EN/all.json`), `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
+`after_update.bat` (the mod reports) can't do this: it runs before the patched game has made the new dump.
 
 ## Taking changes from upstream
 

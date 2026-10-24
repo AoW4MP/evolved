@@ -393,15 +393,47 @@
                 return (s.tome && tomeByResid.get(String(s.tome))?.name) || "";
             }
 
+            // a root's income as the game words and orders it
+            const ROOT_INCOME = {
+                "Unit Production": ["unitprod", "GLOBAL.UnitProductionConcept", "Draft"],
+                Happiness: ["happiness", "GLOBAL.CityStabilityConcept", "City Stability"],
+                Food: ["food", "GLOBAL.FoodConcept", "Food"],
+                "Structure Production": ["structureprod", "GLOBAL.StructureProductionConcept", "Production"],
+                Gold: ["gold", "GLOBAL.GoldConcept", "Gold"],
+                Mana: ["mana", "GLOBAL.ManaConcept", "Mana"],
+                Knowledge: ["knowledge", "GLOBAL.KnowledgeConcept", "Knowledge"],
+                Imperium: ["influence", "GLOBAL.ImperiumConcept", "Imperium"]
+            };
+            const ROOT_INCOME_ORDER = Object.keys(ROOT_INCOME);
+
             function RootNode(root) {
                 const name = GameText(root.name);
                 const node = NodeShell(name, "/evolved/Icons/" + root.icon + ".png", "townhall");
                 const tip = document.createElement("span");
                 tip.innerHTML = '<span style="color: #d7c297">' + name.toUpperCase() + "</span>";
-                // the game's text beside the name ("Town Hall I: Town Center" unlocks Special Province Improvements)
-                const descriptionId = root.name.replace(/@NAME$/, "@DESCRIPTION");
-                const description = GameText(descriptionId);
-                if (description !== descriptionId) tip.innerHTML += "<br>" + RebuildBulletLists(AddTagIconsForStatusEffects(description));
+                // a root is the game's structure too (CityTreeLinks.json from citytree.py): its income, as the game
+                // lists it, its description, and its help text in yellow
+                let text = "";
+                if (root.income?.length) {
+                    const rank = (r) => (ROOT_INCOME_ORDER.indexOf(r) + 1 || 99);
+                    text += "<bulletlist>" + [...root.income].sort((a, b) => rank(a[0]) - rank(b[0]))
+                        .map(([resource, amount]) => {
+                            const [icon, concept, label] = ROOT_INCOME[resource] || [null, null, resource];
+                            return "<bullet>+" + amount + " " + (icon ? "<" + icon + "></" + icon + "> " : "") +
+                                (concept ? "[hyperlink," + concept + "]" + label + "[/hyperlink]" : label) + " income</bullet>";
+                        }).join("") + "</bulletlist>";
+                }
+                if (root.description) text += GameText(root.description);
+                if (text) tip.innerHTML += "<br>" + RebuildBulletLists(AddTagIconsForStatusEffects(text));
+                // its income icons on the node, as the other buildings show theirs
+                const resources = findResources(text);
+                if (resources.length) {
+                    const res = document.createElement("div");
+                    res.className = "ct-resources";
+                    res.innerHTML = '<span class="ct-plus">+</span><span class="ct-icons">' + resources.join("") + "</span>";
+                    node.querySelector(".ct-body").append(res);
+                }
+                if (root.help) tip.innerHTML += '<div class="ct-help">' + AddTagIconsForStatusEffects(GameText(root.help)) + "</div>";
                 addTooltipListeners(node, tip);
                 return node;
             }
@@ -663,6 +695,11 @@
     </body>
 </html>
 <style>
+    /* a root's help text, yellow as in the game */
+    .ct-help {
+        color: #f2d24b;
+        margin-top: 6px;
+    }
     :root {
         --ct-cell: 272px; /* a column; the gap between cards is the cell less the card */
         --ct-card: 242px;

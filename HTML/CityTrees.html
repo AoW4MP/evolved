@@ -430,10 +430,9 @@
                 const description = StructureDescription(info);
                 // a list already ends its line; plain text ("+20 Gold income") needs one before Requirements
                 if (description) tip.innerHTML += RebuildBulletLists(description) + (description.endsWith("</bulletlist>") ? "" : "<br>");
-                if (info.requirement_description) tip.innerHTML += "<br>Requirements:" + info.requirement_description;
-                // a single boost requirement comes without a list; give it its bullet like the others
-                const boost = info.boost_requirements;
-                if (boost) tip.innerHTML += "<br>Boost Requirements:" + (boost.includes("<bullet>") ? boost : "<bulletlist><bullet>" + boost + "</bullet></bulletlist>");
+                // a single requirement often comes without a list: AsBulletList gives it its bullet
+                if (info.requirement_description) tip.innerHTML += "<br>Requirements:" + AsBulletList(info.requirement_description);
+                if (info.boost_requirements) tip.innerHTML += "<br>Boost Requirements:" + AsBulletList(info.boost_requirements);
 
                 // whose building it is: the culture's emblem or the tome's icon
                 if (s.cultures) {

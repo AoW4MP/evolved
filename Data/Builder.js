@@ -4767,6 +4767,14 @@ function StructureDescription(structure) {
         "<bulletlist>" + added.map((l) => "<bullet>" + l + "</bullet>").join("") + "</bulletlist>";
 }
 
+// A requirement text as a list: most come as one, but a single requirement is often plain text, some on two lines
+// ("Must be built on an annexed Province.<br></br><br></br>Requires City Tier II."): a bullet for each line
+function AsBulletList(text) {
+    if (!text || text.includes("<bullet>")) return text;
+    const lines = text.split(/(?:<br>(?:<\/br>)?\s*)+/).filter((l) => l.trim());
+    return "<bulletlist>" + lines.map((l) => "<bullet>" + l.trim() + "</bullet>").join("") + "</bulletlist>";
+}
+
 function showStructure(a, showOrigin, divOrigin) {
     const structureEN = jsonStructureUpgrades.find((entry) => entry.id == a);
     if (structureEN === undefined) {
@@ -4796,7 +4804,8 @@ function showStructure(a, showOrigin, divOrigin) {
     let description = "";
     if (structureLoc.requirement_description != "") {
         description += "<yellowText>Requirement: </yellowText><br>";
-        description += structureLoc.requirement_description + "<br><br>";
+        // a list already ends its line
+        description += AsBulletList(structureLoc.requirement_description) + "<br>";
     }
 
     description += "<yellowText>Description: </yellowText><br>";

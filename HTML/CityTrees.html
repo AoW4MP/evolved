@@ -398,6 +398,10 @@
                 const node = NodeShell(name, "/evolved/Icons/" + root.icon + ".png", "townhall");
                 const tip = document.createElement("span");
                 tip.innerHTML = '<span style="color: #d7c297">' + name.toUpperCase() + "</span>";
+                // the game's text beside the name ("Town Hall I: Town Center" unlocks Special Province Improvements)
+                const descriptionId = root.name.replace(/@NAME$/, "@DESCRIPTION");
+                const description = GameText(descriptionId);
+                if (description !== descriptionId) tip.innerHTML += "<br>" + RebuildBulletLists(AddTagIconsForStatusEffects(description));
                 addTooltipListeners(node, tip);
                 return node;
             }

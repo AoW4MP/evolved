@@ -22,17 +22,33 @@
             // Data/GEN/RealmTraits.json comes from aow4_diff_tools/realmtraits.py (the game with the mod); a trait's
             // icon is in Icons/RealmTraits when the game has one named after it.
 
+            // each category's colour, for its panel's band and its cards' edge
+            const CATEGORY_COLORS = ["rgb(110, 140, 60)", "rgb(50, 120, 160)", "rgb(150, 100, 50)", "rgb(140, 50, 90)", "rgb(90, 90, 150)"];
+            const slug = (name) => "rt-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
             async function HandlePage() {
                 const data = await fetch("/evolved/Data/GEN/RealmTraits.json").then((res) => res.json());
                 const page = document.getElementById("traits");
+                const nav = document.getElementById("rt-nav");
                 for (const category of data.categories) {
                     const traits = data.traits.filter((t) => t.category === category.key);
-                    if (!traits.length) continue; // Clime: the game has none at present
-                    const section = document.createElement("div");
+                    if (!traits.length) continue;
+                    const title = category.name.replace(/ Trait$/, "");
+                    const color = CATEGORY_COLORS[category.key] || "rgb(100, 100, 100)";
+
+                    const link = document.createElement("a");
+                    link.href = "#cat-" + category.key;
+                    link.style.setProperty("--cat", color);
+                    link.innerHTML = title + ' <span class="rt-count">' + traits.length + "</span>";
+                    nav.append(link);
+
+                    const section = document.createElement("section");
                     section.className = "rt-section";
+                    section.id = "cat-" + category.key;
+                    section.style.setProperty("--cat", color);
                     section.innerHTML =
-                        '<div class="rt-section-title">' + category.name.replace(/ Trait$/, "") + "</div>" +
-                        '<div class="rt-section-text">' + category.description + "</div>";
+                        '<div class="rt-band"><span class="rt-section-title">' + title + "</span>" +
+                        '<span class="rt-section-text">' + category.description + "</span></div>";
                     // a category's traits grouped by subcategory, those with none first
                     const subs = [...new Set(traits.map((t) => t.subcategory || ""))].sort();
                     const cards = document.createElement("div");
@@ -44,22 +60,36 @@
                             head.textContent = sub;
                             cards.append(head);
                         }
-                        for (const t of traits.filter((t) => (t.subcategory || "") === sub)) cards.append(TraitCard(t));
+                        for (const t of traits.filter((t) => (t.subcategory || "") === sub)) cards.append(TraitCard(t, data.exclusive_label));
                     }
                     section.append(cards);
                     page.append(section);
                 }
                 HandleExtraTooltips(page);
+                // a link to another trait: scroll to its card and light it up
+                page.addEventListener("click", (e) => {
+                    const a = e.target.closest("a.rt-exclusive-link");
+                    if (!a) return;
+                    e.preventDefault();
+                    const card = document.getElementById(a.getAttribute("href").slice(1));
+                    if (!card) return;
+                    card.scrollIntoView({ behavior: "smooth", block: "center" });
+                    card.classList.remove("rt-flash");
+                    void card.offsetWidth;
+                    card.classList.add("rt-flash");
+                });
             }
 
-            function TraitCard(t) {
+            function TraitCard(t, exclusiveLabel) {
                 const card = document.createElement("div");
                 card.className = "rt-card";
+                card.id = slug(t.name);
                 const head = document.createElement("div");
                 head.className = "rt-title";
                 head.innerHTML =
                     (t.icon ? '<img class="rt-icon" src="/evolved/Icons/RealmTraits/' + t.icon + '.png" alt="" />' : "") +
-                    "<span>" + t.name.toUpperCase() + "</span>";
+                    '<div class="rt-names"><div class="rt-name">' + t.name + "</div>" +
+                    (t.complexity ? '<div class="rt-complexity">' + t.complexity + "</div>" : "") + "</div>";
                 if (t.dlc) head.append(AddDLCTag(t.dlc));
                 card.append(head);
                 const body = document.createElement("div");
@@ -69,7 +99,9 @@
                 if (t.exclusive.length) {
                     const ex = document.createElement("div");
                     ex.className = "rt-exclusive";
-                    ex.textContent = "Mutually exclusive with: " + t.exclusive.join(", ");
+                    ex.innerHTML =
+                        '<span class="rt-exclusive-label">' + exclusiveLabel + "</span> " +
+                        t.exclusive.map((n) => '<a class="rt-exclusive-link" href="#' + slug(n) + '">' + n + "</a>").join(", ");
                     card.append(ex);
                 }
                 return card;
@@ -84,27 +116,70 @@
 
         <div class="rt-page">
             <div class="textblocktitle">Realm Traits</div>
+            <nav id="rt-nav" class="rt-nav"></nav>
             <div id="traits"></div>
         </div>
     </body>
 </html>
 <style>
     .rt-page {
-        padding: 0 16px;
+        padding: 0 16px 40px;
         max-width: 1500px;
         margin: 0 auto;
     }
+    /* the categories with their counts, a jump to each */
+    .rt-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 6px 0 22px;
+    }
+    .rt-nav a {
+        color: #d7c297;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 5px 14px;
+        border: 1px solid var(--cat);
+        border-left-width: 4px;
+        background: rgba(20, 16, 30, 0.85);
+    }
+    .rt-nav a:hover {
+        background: rgba(60, 45, 80, 0.9);
+    }
+    .rt-count {
+        color: #bbcdf6;
+        font-size: 13px;
+    }
+    /* a category: a panel with its colour's band */
     .rt-section {
-        margin: 0 0 30px;
+        margin: 0 0 34px;
+        padding: 0 14px 16px;
+        background: linear-gradient(to bottom, rgba(40, 30, 55, 0.55), rgba(15, 12, 22, 0.35));
+        border: 1px solid rgba(120, 100, 150, 0.35);
+        scroll-margin-top: 10px;
+    }
+    .rt-band {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 4px 16px;
+        margin: 0 -14px 14px;
+        padding: 9px 14px;
+        background-image: linear-gradient(to right, var(--cat), rgba(0, 0, 0, 0) 75%);
     }
     .rt-section-title {
-        color: #d7c297;
-        font-size: 18px;
+        color: #f0e2bd;
+        font-size: 20px;
         text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px black;
     }
     .rt-section-text {
-        color: #bbcdf6;
-        margin: 2px 0 10px;
+        color: #dfe6f7;
+        font-size: 15px;
+        text-shadow: 1px 1px black;
     }
     .rt-cards {
         display: grid;
@@ -118,26 +193,54 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-top: 6px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid rgba(215, 194, 151, 0.3);
     }
+    /* a trait, drawn as the game's tooltip */
     .rt-card {
         box-sizing: border-box;
         background-image: url(/evolved/Icons/tooltipBG.png);
         border-style: solid;
         border-image: url(/evolved/Icons/9slicetooltip.png);
         border-image-slice: 4 10 4 10 fill;
-        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
-        padding: 6px 10px 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--cat);
+        padding: 8px 12px 12px;
         color: #bbcdf6;
         font-size: 15px;
         text-shadow: 2px 2px black;
+        scroll-margin-top: 20px;
+    }
+    .rt-flash {
+        animation: rt-flash 1.6s ease-out;
+    }
+    @keyframes rt-flash {
+        0%,
+        30% {
+            box-shadow: 0 0 6px 4px rgba(215, 194, 151, 0.9), inset 3px 0 0 var(--cat);
+        }
+        100% {
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--cat);
+        }
     }
     .rt-title {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+    .rt-names {
+        flex: 1;
+        min-width: 0;
+    }
+    .rt-name {
         color: #d7c297;
-        font-size: 16px;
-        margin-bottom: 6px;
+        font-size: 18px;
+        font-variant: small-caps;
+        letter-spacing: 0.5px;
+    }
+    .rt-complexity {
+        color: #e8e2d4;
+        font-size: 14px;
     }
     .rt-title .mountToolTip {
         display: flex !important;
@@ -148,14 +251,25 @@
         margin-left: 0 !important;
     }
     .rt-icon {
-        width: 48px;
-        height: 48px;
+        width: 52px;
+        height: 52px;
         flex: none;
     }
+    /* "Mutually exclusive with:" stands out, in the same font and size as the text */
     .rt-exclusive {
-        margin-top: 8px;
-        color: #c9a5a5;
-        font-size: 14px;
+        margin-top: 10px;
+        padding-top: 7px;
+        border-top: 1px solid rgba(220, 110, 100, 0.35);
+    }
+    .rt-exclusive-label {
+        color: #f08a7e;
+    }
+    .rt-exclusive-link {
+        color: white;
+        text-decoration: underline;
+    }
+    .rt-exclusive-link:hover {
+        color: #d7c297;
     }
     @media (max-width: 800px) {
         .rt-cards {

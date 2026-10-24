@@ -233,7 +233,8 @@ async function GetAllData(selectedLang) {
         "DestinyTraits.json",
         "Relics.json",
         "Pantheon_Tree.json",
-        "ExtraLookSpellsOrigin.json"
+        "ExtraLookSpellsOrigin.json",
+        "StructurePredictions.json"
     ];
     const fileNames = [
         // ingame dump files
@@ -289,7 +290,8 @@ async function GetAllData(selectedLang) {
             "jsonDestinyTriggers",
             "jsonRelics",
             "jsonPantheon",
-            "jsonExtraSpellsLookup"
+            "jsonExtraSpellsLookup",
+            "jsonStructurePredictions"
         ];
         const targets = [
             "jsonHeroItems",

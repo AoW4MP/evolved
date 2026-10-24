@@ -50,6 +50,13 @@ and the patches closed the outer list after the first nested one, so an item aft
 (about 110 texts in Spells, Abilities, Tomes and others). It also turns a raw `[bulletlist]`, `[/bulletlist]` or `[bullet/]` into a list
 and leaves out empty bullets. The concept tooltip's title is 16px instead of upstream's 20px.
 
+`Data/Builder.js`: a structure card (`showStructure`, every page and Search) and the City Tree show one Description
+(`StructureDescription`) instead of upstream's "Full Description" and "Base Income Description". It is the
+structure's description, then only those lines of the game's prediction it doesn't say itself (a Town Hall's
++1 Province Annex Range, not Warcamp's "+15 Draft income" or "Grants Warcamp to every Friendly Unit"). A structure
+whose Show Prediction is off gets no prediction, as in the game: `Data/GEN/StructurePredictions.json`, which
+`citytree.py` writes, lists them (Merchants' Guild, Workers' Guild and 59 more); `dataloader.js` loads it.
+
 ### English only
 
 Evolved is exported in English only, so the other languages are removed:
@@ -104,7 +111,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, run `python citytree.py` and `python magicmaterials.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json` and `Data/GEN/MagicMaterials.json`.
+After copying a new dump into `Data/EN`, run `python citytree.py` and `python magicmaterials.py` in aow4_diff_tools to regenerate `Data/GEN/CityTreeLinks.json`, `StructurePredictions.json` and `MagicMaterials.json`.
 A page that shows numbers from `all.json` can be out of date or miss the mod (Focus Crystals +10% where the game now says +20%, Tranquility Pool −10% where the mod says −5%); `magicmaterials.py` reads its texts from the live game and the mod instead.
 
 ## Taking changes from upstream

@@ -4729,6 +4729,40 @@ function populateGenericCard(divOrigin, { name, description, tier = "", cost = "
     if (icon) img?.setAttribute("src", icon);
 }
 
+// A structure's text in one piece: its description, then those effects the game predicts that it doesn't say
+// itself. No prediction at all where the structure's Show Prediction is off, as in the game
+// (Data/GEN/StructurePredictions.json, from aow4_diff_tools/citytree.py): Merchants' Guild's would list its
+// Bargain Price a second time, unit type by type. Elsewhere the prediction mostly repeats the description
+// ("+15 Draft income" after "+15 Draft."), but some effects are only in it (a Town Hall's +1 Province Annex Range).
+function StructureDescription(structure) {
+    const description = structure.description || "";
+    const hidden = jsonStructurePredictions?.hidden?.includes(String(structure.resid));
+    const prediction = hidden ? "" : structure.prediction_description || "";
+    if (!description || !prediction) return description + prediction;
+
+    // compared as words: no icons, links or "income", no punctuation
+    const plain = (s) =>
+        s.replace(/<[^>]+>/g, " ").toLowerCase().replace(/income/g, " ").replace(/[.,:;!]/g, " ").replace(/\s+/g, " ").trim();
+    const said = plain(description);
+    const own = plain(structure.name || "");
+    const covered = (line) => {
+        const n = plain(line);
+        if (!n || said.includes(n)) return true;
+        // "Grants Warcamp to every Friendly Unit", "Grants Misty to every Unit" where provinces become Misty
+        const grant = n.match(/^grants? (?:(.*?) )?to every /);
+        if (grant) return !grant[1] || grant[1] === own || said.includes(grant[1]);
+        // "Unlock Ballista Towers"
+        const unlock = n.match(/^unlocks? (.*)$/);
+        return !!unlock && unlock[1].startsWith(own);
+    };
+    const lines = [...prediction.matchAll(/<bullet>([\s\S]*?)<\/bullet>/g)].map((m) => m[1]);
+    const added = (lines.length ? lines : [prediction]).filter((l) => !covered(l));
+    if (!added.length) return description;
+    // a list already ends its line
+    return description + (description.endsWith("</bulletlist>") ? "" : "<br>") +
+        "<bulletlist>" + added.map((l) => "<bullet>" + l + "</bullet>").join("") + "</bulletlist>";
+}
+
 function showStructure(a, showOrigin, divOrigin) {
     const structureEN = jsonStructureUpgrades.find((entry) => entry.id == a);
     if (structureEN === undefined) {
@@ -4761,17 +4795,8 @@ function showStructure(a, showOrigin, divOrigin) {
         description += structureLoc.requirement_description + "<br><br>";
     }
 
-    if (structureLoc.prediction_description != "") {
-        description += "<yellowText>Full Description: </yellowText><br>";
-    } else {
-        description += "<yellowText> Description: </yellowText><br>";
-    }
-    description += structureLoc.description;
-
-    if (structureLoc.prediction_description != "") {
-        description +=
-            "<br><br><yellowText> Base Income Description:</yellowText><br>" + structureLoc.prediction_description;
-    }
+    description += "<yellowText>Description: </yellowText><br>";
+    description += StructureDescription(structureLoc);
 
     let imagelink = divOrigin.querySelector("#modicon");
 

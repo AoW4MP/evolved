@@ -427,13 +427,19 @@
                 const tip = document.createElement("span");
                 tip.innerHTML = '<span style="color: #d7c297">' + name.toUpperCase() + "</span><br>";
                 if (info.description) tip.innerHTML += info.description + "<br>";
-                tip.innerHTML += info.prediction_description
-                    .replaceAll("<bulletlist>", "")
-                    .replaceAll("</bulletlist>", "")
-                    .replaceAll("<bullet>", "")
-                    .replaceAll("</bullet>", "<br>");
+                // the effects the game predicts, unless the structure's Show Prediction is off: then the game
+                // shows its description alone (Merchants' Guild's covers what the prediction would list)
+                if (!s.no_prediction) {
+                    tip.innerHTML += info.prediction_description
+                        .replaceAll("<bulletlist>", "")
+                        .replaceAll("</bulletlist>", "")
+                        .replaceAll("<bullet>", "")
+                        .replaceAll("</bullet>", "<br>");
+                }
                 if (info.requirement_description) tip.innerHTML += "<br>Requirements:" + info.requirement_description;
-                if (info.boost_requirements) tip.innerHTML += "<br>Boost Requirements:" + info.boost_requirements;
+                // a single boost requirement comes without a list; give it its bullet like the others
+                const boost = info.boost_requirements;
+                if (boost) tip.innerHTML += "<br>Boost Requirements:" + (boost.includes("<bullet>") ? boost : "<bulletlist><bullet>" + boost + "</bullet></bulletlist>");
 
                 // whose building it is: the culture's emblem or the tome's icon
                 if (s.cultures) {

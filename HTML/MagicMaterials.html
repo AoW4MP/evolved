@@ -108,8 +108,6 @@
                 if (m.dlc) head.append(AddDLCTag(m.dlc));
                 card.append(head);
 
-                const body = document.createElement("div");
-                body.className = "mm-body";
                 const picture = document.createElement("img");
                 picture.className = "mm-picture";
                 picture.src = "/evolved/Icons/StructurePics/" + m.key + ".png";
@@ -119,17 +117,20 @@
                     lore.innerHTML = '<span style="color: #deb887">' + m.name.toUpperCase() + "</span><br><br>" + m.lore;
                     addTooltipListeners(picture, lore);
                 }
-                body.append(picture);
+                card.append(picture);
 
-                const effects = document.createElement("div");
-                effects.className = "mm-effects";
-                const global = m.description.replace(/^Unique global effect:\s*/, "");
-                effects.innerHTML = '<div class="mm-label">Global Effect</div>' + AddTagIconsForStatusEffects(global);
+                const global = document.createElement("div");
+                global.className = "mm-global";
+                global.innerHTML =
+                    '<div class="mm-label">Global Effect</div>' +
+                    AddTagIconsForStatusEffects(m.description.replace(/^Unique global effect:\s*/, ""));
+                card.append(global);
                 if (m.income.length) {
-                    effects.innerHTML += '<div class="mm-label">Local Income</div>' + AddTagIconsForStatusEffects(Income(m.income));
+                    const income = document.createElement("div");
+                    income.className = "mm-income";
+                    income.innerHTML = '<div class="mm-label">Local Income</div>' + AddTagIconsForStatusEffects(Income(m.income));
+                    card.append(income);
                 }
-                body.append(effects);
-                card.append(body);
 
                 if (m.combat) card.append(Enchantment(m.combat, site?.combat));
 
@@ -233,7 +234,8 @@
     }
     .mm-bonus-head {
         color: #d7c297;
-        font-size: 13px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
         text-transform: uppercase;
         margin-top: 10px;
     }
@@ -245,16 +247,23 @@
         font-size: 17px;
         margin: 2px 0 4px;
     }
+    /* each card is five rows of this grid (title, global effect, local income, enchantment, infusions),
+       shared by the cards beside it, so their parts line up however long a text runs */
     .mm-cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(275px, 1fr)); /* four across on a wide screen: Ores has four */
-        gap: 14px;
+        column-gap: 14px;
     }
     .mm-card {
         position: relative;
         box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        grid-template-columns: 72px minmax(0, 1fr);
+        row-gap: 0;
+        column-gap: 10px;
+        margin-bottom: 14px;
         background-image: url(/evolved/Icons/tooltipBG.png);
         border-style: solid;
         border-image: url(/evolved/Icons/9slicetooltip.png);
@@ -266,13 +275,14 @@
         text-shadow: 2px 2px black;
     }
     .mm-title {
+        grid-area: 1 / 1 / 2 / -1;
         display: flex;
         align-items: center;
         gap: 6px;
         margin: -5px -8px 6px;
         padding: 3px 8px;
         color: #d7c297;
-        font-size: 14px;
+        font-size: 16px;
         background-image: linear-gradient(to right, rgb(0, 0, 0, 0), var(--set), rgb(0, 0, 0, 0));
     }
     .mm-title .mountToolTip {
@@ -281,29 +291,30 @@
     .mm-icon {
         height: 30px;
     }
-    .mm-body {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-    }
     .mm-picture {
+        grid-area: 2 / 1 / 4 / 2;
         width: 72px;
         height: 72px;
         object-fit: cover;
         flex: none;
         border: 1px solid rgb(90, 80, 110);
     }
-    .mm-label {
-        color: #d7c297;
-        font-size: 12px;
-        text-transform: uppercase;
+    .mm-global {
+        grid-area: 2 / 2;
+    }
+    .mm-income {
+        grid-area: 3 / 2;
         margin-top: 6px;
     }
-    .mm-label:first-child {
-        margin-top: 0;
+    .mm-label {
+        color: #d7c297;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
     }
     /* the combat enchantment, always shown: no toggle */
     .mm-ench {
+        grid-area: 4 / 1 / 5 / -1;
         display: flex;
         gap: 10px;
         align-items: flex-start;
@@ -314,7 +325,8 @@
     /* a text the game left unfilled ({FOCUSED_GAZE_RANGE_BOOST>ADD>MaxRange}) is one long word: break it
        rather than widen every card in the column */
     .mm-ench > div,
-    .mm-effects {
+    .mm-global,
+    .mm-income {
         min-width: 0;
         overflow-wrap: anywhere;
     }
@@ -330,11 +342,12 @@
         font-size: 14px;
     }
     .mm-infusions {
-        align-self: flex-end;
-        margin-top: auto;
+        grid-area: 5 / 1 / 6 / -1;
+        justify-self: end;
+        align-self: end;
         padding-top: 8px;
         color: #d7c297;
-        font-size: 13px;
+        font-size: 15px;
         text-decoration: none;
     }
     .mm-infusions:hover {

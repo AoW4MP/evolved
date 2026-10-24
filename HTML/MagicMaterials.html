@@ -87,7 +87,7 @@
                 row.append(bonus);
 
                 const cards = document.createElement("div");
-                cards.className = "mm-cards";
+                cards.className = members.length === 1 ? "mm-cards mm-cards-one" : "mm-cards";
                 for (const m of members) cards.append(MaterialCard(m));
                 row.append(cards);
 
@@ -373,6 +373,13 @@
     }
     .mm-infusions:hover {
         text-decoration: underline;
+    }
+    /* a set of one material (Void Stones) has the row to itself: its card takes two columns for its
+       long texts, once the page is wide enough for two */
+    @media (min-width: 900px) {
+        .mm-cards-one .mm-card {
+            grid-column: span 2;
+        }
     }
     @media (max-width: 800px) {
         .mm-set {

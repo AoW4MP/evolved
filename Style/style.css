@@ -1680,6 +1680,20 @@ yellowText {
     font-size: 14px;
 }
 
+/* a card's section labels ("Requirement:", "Description:") a step above its text, not below it */
+.mod_description yellowText {
+    font-size: 16px;
+}
+
+/* a Province Improvement card's tome, on the right between the tome's name and the build cost; out of the
+   layout, as the build cost is, so the header keeps its height */
+.structure_tome_icon {
+    position: absolute;
+    right: 40px;
+    top: 80px;
+    height: 80px;
+}
+
 greenText {
     color: palegreen;
     font-size: 15px;

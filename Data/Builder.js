@@ -4840,6 +4840,9 @@ function showStructure(a, showOrigin, divOrigin) {
             } else {
                 tier.innerHTML = "<br>" + tomeNameandTier[0] + "<br>";
             }
+            // the tome's icon under its name; a culture's improvements come from its culture tome ("Nomad - Conquerors")
+            const tomeIcon = findBy(jsonTomes, "id", tomeNameandTier[2])?.icon;
+            if (tomeIcon) tier.innerHTML += '<img class="structure_tome_icon" src="/evolved/Icons/TomeIcons/' + tomeIcon + '.png" alt="" />';
         }
         modName.innerHTML += "<br> <hyperlink><structure></structure> Province Improvement</hyperlink>";
     } else {

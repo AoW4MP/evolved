@@ -221,7 +221,6 @@ async function GetAllData(selectedLang) {
         "BuilderLookup.json",
         "AscendedInfo.json",
         "BuilderLookupHero.json",
-        "UI.json",
         "FactionCreation.json",
         "StatusEffects.json",
         "ExtraToolTips.json",
@@ -253,7 +252,6 @@ async function GetAllData(selectedLang) {
         "ItemForgeTypes.json",
         "ItemForgeUpgrades.json",
         // non-ingame-dump-json-files
-        "UI.json",
         "all.json",
         "concept_tooltips.json"
     ];
@@ -278,7 +276,6 @@ async function GetAllData(selectedLang) {
             "jsonExtraAscendedInfo",
             "jsonBuilderHeroLookUp",
 
-            "jsonUIGeneric",
             "jsonFactionCreation",
             "jsonStatusEffects",
             "jsonExtraTooltips",
@@ -308,7 +305,6 @@ async function GetAllData(selectedLang) {
             "jsonHeroGovernance",
             "jsonItemForgeTypes",
             "jsonItemForgeUpgrades",
-            "jsonUI",
             "jsonAllFromPO",
             "jsonConceptTooltips"
         ];
@@ -449,65 +445,3 @@ const patchDates = [
     { name: "Ogre 1.2", from: new Date("2025-04-15"), to: new Date("2025-04-28") }
 ];
 
-function LocalizeUI(specific) {
-    // general ui lookup first
-    for (const id in jsonUIGeneric) {
-        let el = "";
-        if (specific != undefined) {
-            el = specific.querySelector("#" + id);
-            console.log(el);
-        } else {
-            el = document.getElementById(id);
-        }
-
-        if (el != null) {
-            let value = "error";
-
-            // check if there is a lookup in the baseConceptLookup file
-            if ("lookup" in jsonUIGeneric[id]) {
-                let test = jsonUIGeneric[id].lookup;
-
-                if (test.includes("&")) {
-                    test = test.split("&");
-
-                    const found = findBy(jsonAllFromPOLocalized, "id", test[0]);
-                    if (found) {
-                        value = found[test[1]];
-                    }
-                } else {
-                    const found = findBy(jsonAllFromPOLocalized, "id", test);
-                    if (found) {
-                        value = found.hyperlink;
-                    }
-                }
-                //   console.log(test);
-                value = value.replaceAll("<hyperlink>", "");
-                value = value.replaceAll("</hyperlink>", "");
-                value = value.split("^")[0];
-            } else if ("unit" in jsonUIGeneric[id]) {
-                let test = jsonUIGeneric[id].unit;
-                const abilityName = findBy(jsonUnitAbilities, "name", test);
-                console.log(abilityName.name);
-                const abilityNameLoc = findBy(jsonUnitAbilitiesLocalized, "slug", abilityName.slug);
-                value = abilityNameLoc.name;
-            } else {
-                // Assumes the image is first, text second
-                value = jsonUIGeneric[id].label;
-            }
-
-            el.childNodes[1].nodeValue = " " + value;
-        }
-    }
-    // then specific for ones that arent in the po file translations
-    for (const id in jsonUILocalized) {
-        const el = document.getElementById(id);
-        if (el) {
-            let value = "error";
-
-            // Assumes the image is first, text second
-            value = jsonUILocalized[id].label;
-
-            el.childNodes[1].nodeValue = " " + value;
-        }
-    }
-}

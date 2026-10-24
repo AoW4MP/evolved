@@ -48,6 +48,7 @@
                     const titleLink = topItem.querySelector("a");
                     const titleText = titleLink ? titleLink.textContent.trim() : "Untitled";
 
+                    if (!titleLink) continue; // the menu's spacer at the end (menuExtras) is no page
                     if (titleLink.id == "menu-units") {
                         for (const unitChild of titleLink.nextElementSibling.children) {
                             const titleLink2 = unitChild.querySelector("a");
@@ -121,7 +122,6 @@
                         grid.appendChild(card);
                     }
                 }
-                 LocalizeUI(grid);
             }
         </script>
         <meta charset="UTF-8" />

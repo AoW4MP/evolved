@@ -66,8 +66,9 @@ Evolved is exported in English only, so the other languages are removed:
   The top bar spaces its items evenly, so without that placeholder the Donate button moves to the middle.
 - `Data/Builder.js`: the `languageSelect` lookup is removed.
 - `Data/src/settings.js`: `CheckBoxTooltips` and `SwitchToBeta` no longer save `language`.
-- `Data/src/dataloader.js`: `CheckData` no longer saves a `language` default or calls `LocalizeUI()` for other languages.
-  `GetAllData` and `LocalizeUI` themselves are unchanged: the landing page still uses `LocalizeUI` with the English text.
+- `Data/src/dataloader.js`: `CheckData` no longer saves a `language` default. `LocalizeUI` and the menu labels it read
+  (`Data/EN/UI.json`, `Data/GEN/UI.json`) are deleted: they only translated the menu, and in English every label was
+  the menu's own text. `index.html` no longer calls it.
 
 ### Beta data only
 
@@ -104,7 +105,6 @@ It started from upstream's copy and keeps its entries and order; texts the game 
 A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
 `Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero).
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
-`UI.json` is no game data: ten English menu labels upstream kept for its translations. It changes nothing on the English site and needs no updating.
 The rest of `Data/GEN/*.json` comes from upstream, apart from the files Evolved generates (below).
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.

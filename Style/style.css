@@ -2173,3 +2173,24 @@ span.number-highlight {
     will-change: transform, top, left, width;
     }
 }
+/* the game's text styles, as all.json writes them (aow4_diff_tools/alltexts.py) */
+white {
+    color: white;
+}
+abilityblue {
+    color: #8fb8ff;
+}
+abilityred {
+    color: #ff7b6b;
+}
+firecol {
+    color: #ff9a3c;
+}
+runicfont,
+lorefont,
+lorefontsize {
+    font-style: italic;
+}
+tooltipheader {
+    color: #d7c297;
+}

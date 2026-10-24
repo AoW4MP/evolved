@@ -105,6 +105,7 @@ It started from upstream's copy and keeps its entries and order; texts the game 
 A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
 `Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero).
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
+`Data/GEN/RealmTraits.json` and `Icons/RealmTraits/` (`realmtraits.py`) feed `HTML/RealmTraits.html`, in the World Map menu: upstream's page was never linked and picked texts by id.
 The rest of `Data/GEN/*.json` comes from upstream, apart from the files Evolved generates (below).
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
@@ -112,7 +113,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `alltexts.py` (`Data/EN/all.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`), `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
 `after_update.bat` (the mod reports) can't do this: it runs before the patched game has made the new dump.
 
 ## Taking changes from upstream

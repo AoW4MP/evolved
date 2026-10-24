@@ -17,129 +17,149 @@
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="/evolved/Data/Init.js"></script>
-
         <script>
-            var bronzeArray = [
-                "ancient_cave",
-                "castle_ruins",
-                "crystal_forest",
-                "hidden_wellspring",
-                "crimson_fane",
-                "barren_wellspring"
-            ];
-            var silverArray = [
-                "lost_tomb",
-                "magma_forge",
-                "secret_temple",
-                "lava_prison",
-                "archon_observatory",
-                "forsaken_temple"
-            ];
-            var goldArray = [
-                "golden_ziggurat",
-                "lost_wizard_tower",
-                "world_tree",
-                "vaultsphere",
-                "giants_throne",
-                "rose_choked_palace",
-                "withered_tree",
-                "fractured_tower"
-            ];
+            // Evolved's Realm Traits page: every trait the game's realm setup offers, one section per category.
+            // Data/GEN/RealmTraits.json comes from aow4_diff_tools/realmtraits.py (the game with the mod); a trait's
+            // icon is in Icons/RealmTraits when the game has one named after it.
 
-            function HandlePage() {
-                showRealmTraits();
-                SetLevelUpStuff();
+            async function HandlePage() {
+                const data = await fetch("/evolved/Data/GEN/RealmTraits.json").then((res) => res.json());
+                const page = document.getElementById("traits");
+                for (const category of data.categories) {
+                    const traits = data.traits.filter((t) => t.category === category.key);
+                    if (!traits.length) continue; // Clime: the game has none at present
+                    const section = document.createElement("div");
+                    section.className = "rt-section";
+                    section.innerHTML =
+                        '<div class="rt-section-title">' + category.name.replace(/ Trait$/, "") + "</div>" +
+                        '<div class="rt-section-text">' + category.description + "</div>";
+                    // a category's traits grouped by subcategory, those with none first
+                    const subs = [...new Set(traits.map((t) => t.subcategory || ""))].sort();
+                    const cards = document.createElement("div");
+                    cards.className = "rt-cards";
+                    for (const sub of subs) {
+                        if (sub) {
+                            const head = document.createElement("div");
+                            head.className = "rt-sub";
+                            head.textContent = sub;
+                            cards.append(head);
+                        }
+                        for (const t of traits.filter((t) => (t.subcategory || "") === sub)) cards.append(TraitCard(t));
+                    }
+                    section.append(cards);
+                    page.append(section);
+                }
+                HandleExtraTooltips(page);
             }
 
-            async function showRealmTraits() {
-                const realmTraits = new Set();
-                for (const entry of jsonAllFromPOLocalized) {
-                    // console.log(entry);
-                    if (entry.id.indexOf("META_EMPIRE@TRAIT") != -1) {
-                        realmTraits.add(entry);
-                    }
+            function TraitCard(t) {
+                const card = document.createElement("div");
+                card.className = "rt-card";
+                const head = document.createElement("div");
+                head.className = "rt-title";
+                head.innerHTML =
+                    (t.icon ? '<img class="rt-icon" src="/evolved/Icons/RealmTraits/' + t.icon + '.png" alt="" />' : "") +
+                    "<span>" + t.name.toUpperCase() + "</span>";
+                if (t.dlc) head.append(AddDLCTag(t.dlc));
+                card.append(head);
+                const body = document.createElement("div");
+                body.className = "rt-text";
+                body.innerHTML = AddTagIconsForStatusEffects(t.description);
+                card.append(body);
+                if (t.exclusive.length) {
+                    const ex = document.createElement("div");
+                    ex.className = "rt-exclusive";
+                    ex.textContent = "Mutually exclusive with: " + t.exclusive.join(", ");
+                    card.append(ex);
                 }
-                console.log(realmTraits);
-
-                const array = Array.from(realmTraits);
-                let cards = await spawnSpellCards(array);
-
-                for (let i = 0; i < array.length; i++) {
-                    showRealmTrait(array[i], cards[i]);
-                }
-            }
-
-            function showRealmTrait(trait, divOrigin) {
-                const traitEN = trait;
-
-                if (traitEN != undefined) {
-                    const modName = divOrigin.querySelector("#modname");
-                    let nameString = "";
-                    if(trait.name == undefined){
-                        return;
-                    }
-                    nameString = traitEN.name.toUpperCase();
-                   // nameString += "<br>" + traitEN.category;
-
-                    modName.innerHTML = nameString;
-                    // backtracktome
-
-                    modName.className = "mod_name";
-                    let descriptionDiv = divOrigin.querySelector("#moddescription");
-                 
-
-                    let description = traitEN.description ? traitEN.description: traitEN.trait_description;
-                    
-                    description = description ? description :traitEN.desc;
-                    const imagelink = divOrigin.querySelector("#modicon");
-
-                    imagelink.setAttribute("src", "/evolved/Icons/EmpireProgressionIcons/" + traitEN.id + ".png");
-
-                    imagelink.setAttribute("style", "background-image: none");
-                    descriptionDiv.innerHTML = description;
-                    descriptionDiv.setAttribute("style", "max-width: 380px");
-
-                    const unitTypesDiv = divOrigin.querySelector("#affectUnitTypes");
-
-                   
-                    const tier = divOrigin.querySelector("#modtier");
-
-                    tier.innerHTML = "";
-
-                    const cost = divOrigin.querySelector("#modcost");
-                    cost.innerHTML = "";
-                }
+                return card;
             }
         </script>
 
-        <title>Age of Wonders 4 Evolved - Ancient Wonders</title>
+        <title>Age of Wonders 4 Evolved - Realm Traits</title>
     </head>
 
     <body>
-        <div class="textblocktitle">Ancient Wonders</div>
-        <div class="w3-container">
-            <div class="w3-bar w3-black" id="buttonHolder">
-                <button
-                    id="Bronze-button"
-                    class="w3-bar-item w3-button tablink w3-red"
-                    onclick="openDiv(event,'Bronze')">
-                    <bronzewonder></bronzewonder>Bronze
-                </button>
-                <button id="Silver-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Silver')">
-                    <silverwonder></silverwonder>Silver
-                </button>
-                <button id="Gold-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Gold')">
-                    <goldwonder></goldwonder>Gold
-                </button>
-            </div>
-            <div id="dataHolder" style="margin-top: -150px">
-                <div id="spell" class="w3-container w3-border city"></div>
+        <div id="header"></div>
 
-            </div>
+        <div class="rt-page">
+            <div class="textblocktitle">Realm Traits</div>
+            <div id="traits"></div>
         </div>
     </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>
+<style>
+    .rt-page {
+        padding: 0 16px;
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .rt-section {
+        margin: 0 0 30px;
+    }
+    .rt-section-title {
+        color: #d7c297;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .rt-section-text {
+        color: #bbcdf6;
+        margin: 2px 0 10px;
+    }
+    .rt-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 14px;
+    }
+    .rt-sub {
+        grid-column: 1 / -1;
+        color: #d7c297;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 6px;
+    }
+    .rt-card {
+        box-sizing: border-box;
+        background-image: url(/evolved/Icons/tooltipBG.png);
+        border-style: solid;
+        border-image: url(/evolved/Icons/9slicetooltip.png);
+        border-image-slice: 4 10 4 10 fill;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+        padding: 6px 10px 10px;
+        color: #bbcdf6;
+        font-size: 15px;
+        text-shadow: 2px 2px black;
+    }
+    .rt-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #d7c297;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    .rt-title .mountToolTip {
+        display: flex !important;
+        float: none !important;
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        margin-left: 0 !important;
+    }
+    .rt-icon {
+        width: 48px;
+        height: 48px;
+        flex: none;
+    }
+    .rt-exclusive {
+        margin-top: 8px;
+        color: #c9a5a5;
+        font-size: 14px;
+    }
+    @media (max-width: 800px) {
+        .rt-cards {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+</style>

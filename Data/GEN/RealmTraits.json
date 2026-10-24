@@ -1,0 +1,1249 @@
+{
+ "generated": "2026-10-24 21:44",
+ "build": "exe of 2026-10-23",
+ "mod": "AoW 4 Evolved",
+ "categories": [
+  {
+   "key": 0,
+   "name": "Geography Trait",
+   "description": "Geography traits determine the general layout of landmasses of the realm."
+  },
+  {
+   "key": 1,
+   "name": "Clime Trait",
+   "description": "Clime traits modify the overlay and theme composition of the realm."
+  },
+  {
+   "key": 2,
+   "name": "Inhabitants Trait",
+   "description": "Inhabitants' traits modify the composition of independent armies on the realm."
+  },
+  {
+   "key": 3,
+   "name": "Presence Trait",
+   "description": "Presence traits add unique leaders and empires to the realm."
+  },
+  {
+   "key": 4,
+   "name": "Misc Trait",
+   "description": "Misc traits apply a variety of effects that adjust the game rules or otherwise provide twists to the realm."
+  }
+ ],
+ "traits": [
+  {
+   "resid": "4264902531684",
+   "name": "Barren Oceans",
+   "description": "Contested landmasses separated by uninhabitable deserts where sandstorms rage.<bulletlist><bullet>This realm consists of several large landmasses separated by oceans of Uninhabitable Deserts.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a landmass with one or two other [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink].</bullet><bullet>Uninhabitable Desert [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are affected by Sandstorms.</bullet><bullet>All surface combat in these [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are affected by [hyperlink,GLOBAL.PROPERTIES.COMBATPROPERTY_SANDSTORM]Blinding Sandstorm[/hyperlink] </bullet><bullet>Units in these [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.SANDSTORMS_UNIT_PROPERTY]Blinding Sandstorm[/hyperlink]</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_BarrenOceans"
+  },
+  {
+   "resid": "5059471475006",
+   "name": "Barren Pangaea",
+   "description": "This realm is dominated by a single, enormous connected landmass surrounded by uninhabitable Deserts on all sides.<bulletlist><bullet>This realm consists of a single massive landmass surrounded by uninhabitable Deserts.</bullet><bullet>Mountain/Stalagmites [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5377299054973",
+   "name": "Burrowed Realm",
+   "description": "The peoples of this realm live in burrows dug beneath the hilly landscape.<bulletlist><bullet>Mountain [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>Hills are <abilityblue>Common</abilityblue>.</bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink]  only exist in the [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink].</bullet><bullet>All <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink]  and marauder races have animalistic forms.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": "RealmTraits_BurrowedRealm"
+  },
+  {
+   "resid": "4350801872036",
+   "name": "Coast",
+   "description": "This realm consists of a single connected landmass next to a small sea.<bulletlist><bullet>This realm features a single massive landmass.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Coast"
+  },
+  {
+   "resid": "4350801872034",
+   "name": "Continents",
+   "description": "This realm is dominated by several large contested landmasses.<bulletlist><bullet>This realm consists of several large landmasses separated by oceans.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a landmass with one or two other [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink].</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Continents"
+  },
+  {
+   "resid": "5377299054620",
+   "name": "Devastated Pangea",
+   "description": "This realm consists of a single, connected landmass, shaken by cataclysms.<bulletlist><bullet>Temperate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>Hostile climes such as Desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Ruins and ruined wonders are <abilityblue>Common</abilityblue>.</bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink]  are <abilityblue>Absent</abilityblue>.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": "RealmTraits_DevastatedPangea"
+  },
+  {
+   "resid": "4264902531660",
+   "name": "Divide",
+   "description": "A land-dominated realm divided in two by an ocean.<bulletlist><bullet>This realm consists of two massive landmasses separated by an ocean.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Divide"
+  },
+  {
+   "resid": "4350801872038",
+   "name": "Islands",
+   "description": "This realm is dominated by oceans, but features many small islands.<bulletlist><bullet>This realm consists of several small landmasses separated by oceans.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] has their own landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Islands"
+  },
+  {
+   "resid": "4784593569180",
+   "name": "Land",
+   "description": "This realm consists of one large landmass without any large bodies of water.<bulletlist><bullet>This realm features a single massive landmass.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Land"
+  },
+  {
+   "resid": "4264902530762",
+   "name": "Lava Divide",
+   "description": "This realm features primarily land, divided in two by an ocean of lava.<bulletlist><bullet>This realm consists of two massive landmasses separated by an impassable ocean of lava.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_LavaDivide"
+  },
+  {
+   "resid": "5278514807440",
+   "name": "Lava Drenched Realm",
+   "description": "This realm is covered in lava and various small islands, but contains a vast underground to explore. <bulletlist><bullet>The following [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Abundant</abilityblue>:<bulletlist><bullet>[hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink], [hyperlink,GLOBAL.ChasmConcept]Chasm[/hyperlink], and [hyperlink,GLOBAL.LavaConcept]Lava[/hyperlink].</bullet></bulletlist></bullet><bullet>The following Province Feature is <abilityblue>Scarce</abilityblue>:<bulletlist><bullet>[hyperlink,GLOBAL.SandConcept]Sand[/hyperlink].</bullet></bulletlist></bullet><bullet>The following Province Features are <abilityblue>Absent</abilityblue>:<bulletlist><bullet>[hyperlink,GLOBAL.FrozenWasteConcept]Ice[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": null
+  },
+  {
+   "resid": "4264902532098",
+   "name": "Lava Lakes",
+   "description": "This realm consists of one large landmass pocked with lakes of lava.<bulletlist><bullet>This realm features a single massive landmass.</bullet><bullet>This realm features lakes of lava.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_LavaLakes"
+  },
+  {
+   "resid": "4904852652193",
+   "name": "Pangea",
+   "description": "This realm is dominated by a single, enormous connected landmass surrounded by ocean on all sides.<bulletlist><bullet>This realm consists of a single massive landmass surrounded by oceans.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Pangea"
+  },
+  {
+   "resid": "4256312598348",
+   "name": "Rings of Fate",
+   "description": "This realm is divided in fragmented rings that have no natural connection.",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "ARCHONPROPHECY",
+   "icon": "RealmTraits_RingsofFate"
+  },
+  {
+   "resid": "4264902531688",
+   "name": "Scarred Divide",
+   "description": "This realm suffered a great scarring in the past, marking it with death and dividing the land.<bulletlist><bullet>This realm consists of two massive landmasses separated by an uninhabitable, desolate ocean.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5029406706437",
+   "name": "Void Divide",
+   "description": "A land-dominated realm divided in two by an impassible void.<bulletlist><bullet>This realm consists of two massive landmasses separated by Astral Void.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [
+    "Blocked Underground"
+   ],
+   "dlc": null,
+   "icon": "RealmTraits_VoidDivide"
+  },
+  {
+   "resid": "5128190952019",
+   "name": "Void Pangea",
+   "description": "This realm is dominated by a single, enormous connected landmass surrounded by Astral Void on all sides.<bulletlist><bullet>This realm consists of a single massive landmass surrounded by impassable Astral Void.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5029406706441",
+   "name": "Void Pockets",
+   "description": "This realm consists one large landmass pocked with impassible void.<bulletlist><bullet>This realm features a single massive landmass.</bullet><bullet>This realm features lakes of Astral Void.</bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] shares a single landmass.</bullet></bulletlist>",
+   "category": 0,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_VoidPockets"
+  },
+  {
+   "resid": "4569845203877",
+   "name": "Astral Invaders",
+   "description": "Astral sea creatures have been drawn to this realm's sources of mana and guard them jealously.<bulletlist><bullet><mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] and [hyperlink,GLOBAL.PickupConcept]Pickup[/hyperlink] are defended by [hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.AstralMonstersLoreConcept]Astral Sea Monsters[/hyperlink].</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_AstralInvaders"
+  },
+  {
+   "resid": "4256312595831",
+   "name": "Birds of Paradise",
+   "description": "The realm is home to many birds, civilized and wild.<bulletlist><bullet>Avian <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.STRUCTURES.GREAT_BIRD_NEST_SPAWNER]Great Bird Nest[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Bird [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": "RealmTraits_BirdsOfParadise"
+  },
+  {
+   "resid": "4256312598407",
+   "name": "Celestial Grounds",
+   "description": "Celestials are common on this realm, replacing all other infestations and Ancient Wonders.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.STRUCTURES.CRUSADER_HOST]Crusader Host[/hyperlink] [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Constructed [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] such as Ziggurats are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "ARCHONPROPHECY",
+   "icon": "RealmTraits_CelestialGrounds"
+  },
+  {
+   "resid": "4264902532330",
+   "name": "Demonic Realm",
+   "description": "Infernal Fiends plague this realm.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INFERNAL_FIEND]Infernal Fiend[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DemonicRealm"
+  },
+  {
+   "resid": "4569845204300",
+   "name": "Dragon Territories",
+   "description": "Dragons claim this realm as their hunting grounds, their lairs dominating much of the land, warding off any competition.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.DRAGON]Dragon[/hyperlink] [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5029406708095",
+   "name": "Fractured Infestations",
+   "description": "The realm has various fractures from which mana-starved creatures emerge.<bulletlist><bullet>[hyperlink,GLOBAL.STRUCTURES.FRACTURED_INFESTATION]Fractured Infestation[/hyperlink] are <abilityblue>common</abilityblue>.</bullet><bullet>These [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] spread [hyperlink,GLOBAL.AstralBarrensConcept]Astral Barrens[/hyperlink].</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "RISEFROMRUIN",
+   "icon": "RealmTraits_FracturedInfestations"
+  },
+  {
+   "resid": "4264902532021",
+   "name": "Frostling Influence",
+   "description": "Frostlings have long since found this world, and none are unaffected by their freezing influence.<bulletlist><bullet>Independent Units gain [hyperlink,GLOBAL.PROPERTIES.FROSTLING_TRANSFORMATION_PROPERTY_GROUP]Frostling Transformation[/hyperlink].</bullet><bullet>Independent Units gain [hyperlink,GLOBAL.PROPERTIES.FROST_BLADES_PROPERTY_GROUP]Frost Strikes[/hyperlink].</bullet><bullet>Independent Units gain [hyperlink,GLOBAL.PROPERTIES.FROST_ARROWS_PROPERTY_GROUP]Frost Arrows[/hyperlink].</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_FrostlingInfluence"
+  },
+  {
+   "resid": "4264902531792",
+   "name": "Immortal Spirits",
+   "description": "This realm features many Ethereal spirits.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ImmortalSpirits"
+  },
+  {
+   "resid": "5046586578139",
+   "name": "Land of Conflict",
+   "description": "Forces of calamity and prosperity occupy this land.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ACCURSED]Accursed Fiend[/hyperlink] and Prosperity [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "WAYSOFWAR",
+   "icon": "RealmTraits_LandofConflict"
+  },
+  {
+   "resid": "4264902531881",
+   "name": "Lingering Creators",
+   "description": "Giants and demigiants are prevalent on this realm.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.GIANT]Giant[/hyperlink] and ogre [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_LingeringCreators"
+  },
+  {
+   "resid": "4264902532088",
+   "name": "Magic Origins",
+   "description": "Astral influence on this realm makes creatures of a magic origin unusually common.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] creatures are <abilityblue>Common</abilityblue> on this realm.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4264902531612",
+   "name": "Megafauna",
+   "description": "The beasts of this realm are especially large and ferocious.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.MarauderConcept]Marauder[/hyperlink] [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.EMPOWERED_BEASTS_PROPERTY_GROUP]Empowered Beasts[/hyperlink].</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Megafauna"
+  },
+  {
+   "resid": "5377299055004",
+   "name": "Mistwalker Incursion",
+   "description": "The Mistwalkers have invaded this realm, setting up a permanent military presence.<bulletlist><bullet>Mistwalker Camp [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": "RealmTraits_MistwalkerIncursion"
+  },
+  {
+   "resid": "4264902531646",
+   "name": "Peaceful Lands",
+   "description": "This realm features mostly benevolent spirits and creatures.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FEY]Fey[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.PLANT]Plant[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_PeacefulLands"
+  },
+  {
+   "resid": "4582730105139",
+   "name": "Rampant Flora",
+   "description": "Living flora sprawls all over this realm.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PLANT]Plant[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4264902530800",
+   "name": "Rampant Undeath",
+   "description": "The Undead plague this realm.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_RampantUndeath"
+  },
+  {
+   "resid": "4256312596316",
+   "name": "Urrath's Grasp",
+   "description": "The people on this realm have fallen under Urrath's influence:<bulletlist><bullet>Racial marauder units have the [hyperlink,GLOBAL.SPECIAL_OPERATIONS.GLOOMSTRIDER_TRANSFORMATION]Gloom Strider[/hyperlink] and [hyperlink,GLOBAL.SPECIAL_OPERATIONS.UMBRAL_FLESH]Umbral Flesh[/hyperlink] transformations.</bullet><bullet>All <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] have the Initiates of the Umbral Abyss or Masters of Corruption trait.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "ELDRITCHREALMS",
+   "icon": "RealmTraits_UrrathsGrasp"
+  },
+  {
+   "resid": "4350801872532",
+   "name": "Wildlands",
+   "description": "Wild animals are common on this realm, replacing all other infestations and Ancient Wonders.<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Constructed [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] such as Ziggurats are <abilityblue>Rare</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Wildlands"
+  },
+  {
+   "resid": "4896262717880",
+   "name": "Low Population",
+   "description": "This realm features less civilization than others.<bulletlist><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet></bulletlist>",
+   "category": 2,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_LowPopulation"
+  },
+  {
+   "resid": "4264902532924",
+   "name": "Archon Prophet",
+   "description": "Claiming to be the chosen of the Archon, a prophet has united the houses of this realm under their banner.<bulletlist><bullet>The Archon Prophet <eventColor>{PROPHET_LEADER.Hyperlink}</eventColor> starts with a large [hyperlink,GLOBAL.ThroneCityConcept]Throne City[/hyperlink].</bullet><bullet><eventColor>{PROPHET_LEADER.Hyperlink}</eventColor> starts with all <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] as [hyperlink,GLOBAL.PvEVassalConcept]Vassal[/hyperlink].</bullet><bullet>Whoever defeats <eventColor>{PROPHET_LEADER.Hyperlink}</eventColor> is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ArchonProphet"
+  },
+  {
+   "resid": "4264902531973",
+   "name": "Artisan Kings",
+   "description": "This realm is home to two powerful cities, each an empire in itself, lead by Artisan Kings.<bulletlist><bullet>The Artisan Kings <eventColor>{ARTISAN_KINGS_INDUSTRIOUS_LEADER_1.Hyperlink}</eventColor> and <eventColor>{ARTISAN_KINGS_HIGH_LEADER_1.Hyperlink}</eventColor> start with massive [hyperlink,GLOBAL.ThroneCityConcept]Throne City[/hyperlink].</bullet><bullet>Each Artisan King starts with a nearby <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] as a [hyperlink,GLOBAL.PvEVassalConcept]Vassal[/hyperlink].</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ArtisanKings"
+  },
+  {
+   "resid": "4264902532201",
+   "name": "Demon Prince",
+   "description": "This realm is dominated by a powerful Demonic Prince of Obbadoth and their minions.<bulletlist><bullet>The Demonic Prince <eventColor>{DEMONIC_PRINCE_LEADER.Hyperlink}</eventColor> starts with a large [hyperlink,GLOBAL.ThroneCityConcept]Throne City[/hyperlink].</bullet><bullet>The Demonic Prince starts with 2 additional [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet>The Demonic Prince's minions gain [hyperlink,GLOBAL.PROPERTIES.DEMONKIN]Demonkin[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SUPERGROWTH_PROPERTY_GROUP]Supergrowth[/hyperlink].</bullet><bullet>Whoever defeats <eventColor>{DEMONIC_PRINCE_LEADER.Hyperlink}</eventColor> is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4264902532047",
+   "name": "Domain of the Frost Queen",
+   "description": "This realm is dominated by a powerful queen of frost and winter.<bulletlist><bullet>The Frost Queen <eventColor>{ICE_QUEEN_LEADER.Hyperlink}</eventColor> starts with a large [hyperlink,GLOBAL.ThroneCityConcept]Throne City[/hyperlink].</bullet><bullet>The Frost Queen starts with 2 additional [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet>The Frost Queen's minions gain [hyperlink,GLOBAL.PROPERTIES.FROSTLING_TRANSFORMATION_PROPERTY_GROUP]Frostling Transformation[/hyperlink].</bullet><bullet>Whoever defeats <eventColor>{ICE_QUEEN_LEADER.Hyperlink}</eventColor> is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4264902532886",
+   "name": "Druidic Alliance",
+   "description": "This Realm has attracted the interest of two powerful Druids, seeking to guide its growth and protect it from meddlers.<bulletlist><bullet>The Druids <eventColor>{DRUID_ALLIANCE_LEADER_1.Hyperlink}</eventColor> and <eventColor>{DRUID_ALLIANCE_LEADER_2.Hyperlink}</eventColor> start with powerful Nature Skills.</bullet><bullet><eventColor>{DRUID_ALLIANCE_LEADER_1.Hyperlink}</eventColor> and <eventColor>{DRUID_ALLIANCE_LEADER_2.Hyperlink}</eventColor> start in an <rs_alliance></rs_alliance> [hyperlink,GLOBAL.DSAllianceConcept]Alliance[/hyperlink].</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DruidicAlliance"
+  },
+  {
+   "resid": "4264902532913",
+   "name": "Iron Emperor",
+   "description": "The Iron Emperor, Ydgaard, has chosen this realm to build a new empire.<bulletlist><bullet>The Iron Emperor <eventColor>{EARTH_KING_LEADER.Hyperlink}</eventColor> starts with powerful Materium Skills.</bullet><bullet><eventColor>{EARTH_KING_LEADER.Hyperlink}</eventColor> starts with +1 additional [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_IronEmperor"
+  },
+  {
+   "resid": "4264902531712",
+   "name": "Pretender Kings",
+   "description": "The kingdom that once dominated this realm has fallen, and 3 successors lay claim to the throne of this once prosperous kingdom.<bulletlist><bullet>The Pretender Kings <eventColor>{PRETENDER_KINGS_FEUDAL_LEADER_1.Hyperlink}</eventColor>, <eventColor>{PRETENDER_KINGS_FEUDAL_LEADER_2.Hyperlink}</eventColor> and <eventColor>{PRETENDER_KINGS_DARK_LEADER_1.Hyperlink}</eventColor> start with +2 additional [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet>Each Pretender King starts at <rs_war></rs_war> [hyperlink,GLOBAL.WarConcept]War[/hyperlink] with the other Pretender Kings.</bullet><bullet>Whoever forms an alliance with or defeats each Pretender King is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_PretenderKings"
+  },
+  {
+   "resid": "5003636901169",
+   "name": "Primal Dispute",
+   "description": "This Realm is the stage of a violent dispute between the Godir Serena and Nimue, whose primal followers fight a bloody conflict.<bulletlist><bullet>The Primal Godir <eventColor>{PRIMAL_DISPUTE_LEADER_1.Hyperlink}</eventColor> and <eventColor>{PRIMAL_DISPUTE_LEADER_2.Hyperlink}</eventColor> start with powerful Nature Skills.</bullet><bullet><eventColor>{PRIMAL_DISPUTE_LEADER_1.Hyperlink}</eventColor> and <eventColor>{PRIMAL_DISPUTE_LEADER_2.Hyperlink}</eventColor> start at <rs_war></rs_war> [hyperlink,GLOBAL.WarConcept]War[/hyperlink].</bullet><bullet>Whoever forms an alliance with or defeats each Primal Godir is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "PRIMALFURY",
+   "icon": "RealmTraits_PrimalDispute"
+  },
+  {
+   "resid": "5128190952610",
+   "name": "Sworn Rivalry",
+   "description": "This Realm is the stage of a violent dispute between three Oathsworn Godir, who disagree on matters of doctrine.<bulletlist><bullet>The Oathsworn Godir <eventColor>{OATHSWORN_DISPUTE_LEADER_1.Hyperlink}</eventColor>, <eventColor>{OATHSWORN_DISPUTE_LEADER_2.Hyperlink}</eventColor>, and <eventColor>{OATHSWORN_DISPUTE_LEADER_3.Hyperlink}</eventColor> are present and start at a higher level.</bullet><bullet><eventColor>{OATHSWORN_DISPUTE_LEADER_1.Hyperlink}</eventColor>, <eventColor>{OATHSWORN_DISPUTE_LEADER_2.Hyperlink}</eventColor>, and <eventColor>{OATHSWORN_DISPUTE_LEADER_3.Hyperlink}</eventColor> start at <rs_war></rs_war> [hyperlink,GLOBAL.WarConcept]War[/hyperlink].</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "WAYSOFWAR",
+   "icon": "RealmTraits_SwornRivalry"
+  },
+  {
+   "resid": "4264902533067",
+   "name": "The Ashen War",
+   "description": "The Elder Dragons that guide this realm have descended into a brutal conflict now known as the Ashen War, each side seeking to guide the realm's growth as they believe is best.<bulletlist><bullet>The Dawnwardens <eventColor>{DAWNWARDENS_ORDER_LEADER.Hyperlink}</eventColor>, <eventColor>{DAWNWARDENS_NATURE_LEADER.Hyperlink}</eventColor>, and <eventColor>{DAWNWARDENS_ASTRAL_LEADER.Hyperlink}</eventColor> start in an Alliance and at war with each of the Reshapers.</bullet><bullet>The Reshapers <eventColor>{RESHAPERS_SHADOW_LEADER.Hyperlink}</eventColor>, <eventColor>{RESHAPERS_MATERIUM_LEADER.Hyperlink}</eventColor>, and <eventColor>{RESHAPERS_CHAOS_LEADER.Hyperlink}</eventColor> start in an Alliance and at war with each of the Dawnwardens.</bullet><bullet>Each of the Elder Dragons is extremely powerful and has a powerful unique ability owing to their Affinity; they extend lesser versions of these abilities to their chosen Heroes.</bullet><bullet>Whoever forms an alliance with all Elder Dragons or forms an alliance with all members of either Alliance and defeats each member of the opposing alliance is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "DRAGONLORDS",
+   "icon": null
+  },
+  {
+   "resid": "4264902532899",
+   "name": "The Librarian",
+   "description": "An Astral ruler known only as \"the Librarian\" rules an empire on this realm.<bulletlist><bullet>The Librarian <eventColor>{THE_LIBRARIAN_LEADER.Hyperlink}</eventColor> starts with powerful Astral Skills.</bullet><bullet><eventColor>{THE_LIBRARIAN_LEADER.Hyperlink}</eventColor> starts with +1 additional [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet><eventColor>{THE_LIBRARIAN_LEADER.Hyperlink}</eventColor> gains accelerated [hyperlink,GLOBAL.ResearchConcept]Research[/hyperlink].</bullet><bullet>Whoever defeats <eventColor>{THE_LIBRARIAN_LEADER.Hyperlink}</eventColor> is <abilityblue>Victorious<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 3,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_TheLibrarian"
+  },
+  {
+   "resid": "5029406707340",
+   "name": "Blessed Fields",
+   "description": "This realm features mostly rolling plains, some of which have been blessed by Celestial grace.<bulletlist><bullet>[hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.SandConcept]Sand[/hyperlink], [hyperlink,GLOBAL.SnowConcept]Snow[/hyperlink], and [hyperlink,GLOBAL.FrozenWasteConcept]Ice[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.FertilePlainsConcept]Grassland[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.BlessedTerrainConcept]Blessed[/hyperlink] [hyperlink,GLOBAL.HandcraftedRegionConcept]Handcrafted Region[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "ARCHONPROPHECY",
+   "icon": "RealmTraits_BlessedFields"
+  },
+  {
+   "resid": "4264902532094",
+   "name": "Desert Realm",
+   "description": "This World's climate is warm and dry, leaving little for flora to thrive on.<bulletlist><bullet>Desert [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Arctic, Highlands, Temperate and Desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet><bullet>Forest [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>Wetlands [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DesertRealm"
+  },
+  {
+   "resid": "4264902531642",
+   "name": "Endless Fields",
+   "description": "This realm features mostly rolling green plains, where food is abundant.<bulletlist><bullet>Temperate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Desolate [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet><bullet>Grassland [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet><food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_EndlessFields"
+  },
+  {
+   "resid": "4264902531858",
+   "name": "Forming Realm",
+   "description": "This realm is young and little of it has yet formed from its volcanic crucible. Over time it will become a new realm, chaotic as it may be.<bulletlist><bullet>The following [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] is <abilityblue>common</abilityblue>: [hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink].</bullet><bullet>The following Province Features are <abilityblue>absent</abilityblue>: [hyperlink,GLOBAL.FertilePlainsConcept]Grassland[/hyperlink], [hyperlink,GLOBAL.SwampConcept]Swamp[/hyperlink], [hyperlink,GLOBAL.SandConcept]Sand[/hyperlink], [hyperlink,GLOBAL.RiverConcept]River[/hyperlink], and [hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink].</bullet><bullet>Each Round, all unowned [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] have a small chance of [hyperlink,GLOBAL.TerraformingConcept]Terraforming[/hyperlink] into having different Province Features.</bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] are <abilityblue>absent</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_FormingRealm"
+  },
+  {
+   "resid": "4582730105066",
+   "name": "Frozen Realm",
+   "description": "This World's climate is harsh and cold. Frozen plains take the place of lush grasslands.<bulletlist><bullet>Arctic and Highlands [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Desert, Desolate, Temperate and Tropical [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_FrozenRealm"
+  },
+  {
+   "resid": "4256312596242",
+   "name": "Harbinger's Hive",
+   "description": "All [hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink] on this realm are following the commands of the Harbinger of Urrath:<bulletlist><bullet>The Harbinger of Urrath has <rs_vassalage></rs_vassalage> [hyperlink,GLOBAL.EldritchPactConcept]Eldritch Pact[/hyperlink] with all [hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink].</bullet><bullet>Enemies of the Harbinger cannot reach peaceful relations with an [hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "ELDRITCHREALMS",
+   "icon": "RealmTraits_HarbingersHive"
+  },
+  {
+   "resid": "4264902530721",
+   "name": "Highlands",
+   "description": "This world features plenty of Highlands and Mountains.<bulletlist><bullet>Mountains and Highlands [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Highlands"
+  },
+  {
+   "resid": "4582730105128",
+   "name": "Overgrown Realm",
+   "description": "A realm where plant life flourishes nearly everywhere.<bulletlist><bullet>Forest [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Desert and Arctic [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>Desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmIcon_Scenario_OvergrownRealm"
+  },
+  {
+   "resid": "4264902530769",
+   "name": "Scorched Climate",
+   "description": "This realm's climate is marked by scorching heat.<bulletlist><bullet>Desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Arctic, Temperate and Highlands [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ScorchedClimate"
+  },
+  {
+   "resid": "5029406706034",
+   "name": "Tropical Realm",
+   "description": "The realm is a tropical paradise, with golden sands, rolling jungles, and the occasional swamp.<bulletlist><bullet>Tropical, swamp, and forest [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet><bullet>Arctic, desert, and desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>Blossom Orchard [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] and Prestigious Statue [hyperlink,GLOBAL.PickupConcept]Pickup[/hyperlink] are <abilityblue>Abundant.</abilityblue></bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5377299055120",
+   "name": "Warped Seasons",
+   "description": "The seasons are unusually potent on this realm, causing constant change and turmoil.<bulletlist><bullet>Each season, a part of the land is [hyperlink,GLOBAL.TerraformingConcept]terraformed[/hyperlink] into different climes and [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink].</bullet><bullet>Each season, different weather effects are active.</bullet><bullet>All [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] become vulnerable to <damageBlight></damageBlight> Blight, <damageFire></damageFire> Fire, <damageLightning></damageLightning> Lightning, or <damageFrost></damageFrost> Frost Damage according to the season.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": null,
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": "RealmTraits_WarpedSeasons"
+  },
+  {
+   "resid": "4582730105065",
+   "name": "Arctic Blizzards",
+   "description": "Freezing blizzards rage over this realm's arctic regions.<bulletlist><bullet>Arctic [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are affected by arctic blizzards.</bullet><bullet>All surface combat is affected by [hyperlink,GLOBAL.PROPERTIES.COMBATPROPERTY_ARCTIC_BLIZZARDS]Snow Storm[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] in these provinces suffer [hyperlink,GLOBAL.PROPERTIES.ARCTIC_BLIZZARDS_UNIT_PROPERTY]Arctic Blizzards[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ArcticBlizzards"
+  },
+  {
+   "resid": "5029406708097",
+   "name": "Barren and Fractured",
+   "description": "This realm bears scars of a magical calamity.<bulletlist><bullet>Handcrafted regions containing [hyperlink,GLOBAL.SandConcept]Sand[/hyperlink] and [hyperlink,GLOBAL.AstralBarrensConcept]Astral Barrens[/hyperlink] are <abilityblue>common</abilityblue>.</bullet><bullet>Ruined [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] such as the [hyperlink,GLOBAL.STRUCTURES.WITHERED_TREE]Withered Tree[/hyperlink] are more <abilityblue>common</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": "RISEFROMRUIN",
+   "icon": "RealmTraits_BarrenandFractured"
+  },
+  {
+   "resid": "4569845203880",
+   "name": "Crystalline Abundance",
+   "description": "Mana crystals grow more easily on this realm, making them unusually abundant.<bulletlist><bullet><mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink], and [hyperlink,GLOBAL.PickupConcept]Pickup[/hyperlink] are <abilityblue>abundant</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_CrystallineAbundance"
+  },
+  {
+   "resid": "4569845203726",
+   "name": "Domain of Mayhem",
+   "description": "This realm has a maddening influence, seeping into the minds of those that fight in its lands.<bulletlist><bullet>All [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] is affected by [hyperlink,GLOBAL.PROPERTIES.DOMAIN_OF_MAYHEM]Domain of Mayhem[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DomainOfMayhem"
+  },
+  {
+   "resid": "5003636901208",
+   "name": "Hostile Seas",
+   "description": "Sea Storms are a permanent feature of this world's seas, making them exceptionally dangerous.<bulletlist><bullet>Surface water [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] are affected by Sea Storms.</bullet><bullet>Combat in these [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] is affected by [hyperlink,GLOBAL.PROPERTIES.HOSTILE_OCEANS_SEA_STORM_COMBAT_AUTO_SPELL]Sea Storm[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] in these provinces suffer [hyperlink,GLOBAL.PROPERTIES.HOSTILE_OCEANS_UNIT_PROPERTY]Hostile Seas[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": "PRIMALFURY",
+   "icon": null
+  },
+  {
+   "resid": "5029406708099",
+   "name": "Ruined Nodes",
+   "description": "The realm's natural resources are partially depleted.<bulletlist><bullet>Around half of the [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] present at the start are [hyperlink,GLOBAL.RuinedNodeConcept]Ruined[/hyperlink].</bullet><bullet>Resource Nodes in [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] adjacent to [hyperlink,GLOBAL.CityConcept]City[/hyperlink] at the start will not be Ruined.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": "RISEFROMRUIN",
+   "icon": "RealmTraits_RuinedNodes"
+  },
+  {
+   "resid": "5029406706933",
+   "name": "Subdued Infestations",
+   "description": "The wildlife on this realm is more dormant than usual. <bulletlist><bullet>The realm starts with a reduced amount of [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_SubduedInfestations"
+  },
+  {
+   "resid": "5029406707741",
+   "name": "Sunless Highlands",
+   "description": "This realm consists of a mountainous and sunless heartland that gets colder towards the edges.<bulletlist><bullet>The following [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] are <abilityblue>Abundant</abilityblue>:<bulletlist><bullet>[hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink], [hyperlink,GLOBAL.SnowConcept]Snow[/hyperlink], and [hyperlink,GLOBAL.FrozenWasteConcept]Ice[/hyperlink].</bullet></bulletlist></bullet><bullet>The following Province Features are <abilityblue>Scarce</abilityblue>:<bulletlist><bullet>[hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink], [hyperlink,GLOBAL.ChasmConcept]Chasm[/hyperlink], and [hyperlink,GLOBAL.LavaConcept]Lava[/hyperlink].</bullet></bulletlist></bullet><bullet>The following Province Feature is <abilityblue>Absent</abilityblue>:<bulletlist><bullet>[hyperlink,GLOBAL.SandConcept]Sand[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": "THRONESOFBLOOD",
+   "icon": "RealmTraits_SunlessHighlands"
+  },
+  {
+   "resid": "4264902532177",
+   "name": "Volcanic Eruptions",
+   "description": "Volcanic activity rages beneath this realm's desolate regions.<bulletlist><bullet>All surface combat in desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] is affected by [hyperlink,GLOBAL.PROPERTIES.COMBATPROPERTY_VOLCANIC_ERUPTION]Volcanic Eruptions[/hyperlink].</bullet><bullet>Units in desolate [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.VOLCANIC_HEAT_UNIT_PROPERTY]Volcanic Heat[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_VolcanicEruptions"
+  },
+  {
+   "resid": "4569845203699",
+   "name": "Warping Wilds",
+   "description": "This realm is in an unnatural state of flux, warping and transforming constantly.<bulletlist><bullet>Each strategic <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all unowned surface provinces have a small chance of transforming their [hyperlink,GLOBAL.ProvinceFeatureConcept]Province Feature[/hyperlink] to new ones.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_WarpingWilds"
+  },
+  {
+   "resid": "4569845203862",
+   "name": "Wondrous Past",
+   "description": "Due to the rich past of this realm, there are many Ancient Wonders present.<bulletlist><bullet>[hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] are <abilityblue>Common<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Environmental Effects",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_WondrousPast"
+  },
+  {
+   "resid": "4264902532000",
+   "name": "City States",
+   "description": "This realm features unusually powerful free cities, which have grown into city states of their own right with a pride to match.<bulletlist><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] start with +5 <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink].</bullet><bullet><allegiance></allegiance> [hyperlink,GLOBAL.InfluenceConcept]Whispering Stone Strength[/hyperlink] is reduced by -50%.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_CityStates"
+  },
+  {
+   "resid": "5029406706063",
+   "name": "Crystal Dwelling",
+   "description": "There is a [hyperlink,GLOBAL.CrystalDwellingConcept]Crystal Dwelling[/hyperlink] present on this map, engaged in its eternal search for knowledge.",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": "GIANTKINGS",
+   "icon": "RealmTraits_CrystalDwelling"
+  },
+  {
+   "resid": "4582730105054",
+   "name": "Distrusting Locals",
+   "description": "The locals do not trust easily, making diplomacy difficult.<bulletlist><bullet><allegiance></allegiance> [hyperlink,GLOBAL.InfluenceConcept]Whispering Stone Strength[/hyperlink] is reduced by -3.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DistrustingLocals"
+  },
+  {
+   "resid": "4264902532189",
+   "name": "Hostile Houses",
+   "description": "The houses of this realm are used to treachery and war, taking no chances with outsiders.<bulletlist><bullet>[hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] suffer -10 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink] and -400 [hyperlink,GLOBAL.IndependentCityRelationConcept]Relations[/hyperlink] with each <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] they meet.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_HostileHouses"
+  },
+  {
+   "resid": "4264902532194",
+   "name": "Might Makes Right",
+   "description": "The houses of this realm respect strength above all. They will grow more loyal to proven conquerors.<bulletlist><bullet>Conquering <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] grants +10 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink] with all other <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PvEVassalConcept]Vassal[/hyperlink] gain +2 Allegiance Levels when first vassalized through conquest.</bullet><bullet><allegiance></allegiance> [hyperlink,GLOBAL.InfluenceConcept]Whispering Stone Strength[/hyperlink] is reduced by -50%.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_MightMakesRight"
+  },
+  {
+   "resid": "4264902531865",
+   "name": "No Free Cities",
+   "description": "This realm is young and unclaimed.<bulletlist><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] are <abilityblue>Absent</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [
+    "City States",
+    "Distrusting Locals",
+    "Hostile Houses",
+    "Low Population",
+    "Might Makes Right",
+    "Ruined Realm"
+   ],
+   "dlc": null,
+   "icon": "RealmTraits_NoFreeCities"
+  },
+  {
+   "resid": "4264902531701",
+   "name": "Ruined Realm",
+   "description": "This realm has seen brutal conflict in the past.<bulletlist><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] are <abilityblue>Rare</abilityblue>.</bullet><bullet>[hyperlink,GLOBAL.CityRuinConcept]City Ruin[/hyperlink] are <abilityblue>Common</abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Free City Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_RuinedRealm"
+  },
+  {
+   "resid": "5257039971071",
+   "name": "Echoes of The Fracturing",
+   "description": "Long ago, this realm was home to some of the experiments of the [hyperlink,GLOBAL.UnmakersLoreConcept]Unmakers[/hyperlink].<br><bulletlist><bullet>There are Fated Regions present on the map which offer quest chains exploring the present and past of [hyperlink,GLOBAL.TheFracturingLoreConcept]the Fracturing[/hyperlink].</bullet><bullet>Gain <artifact></artifact> [hyperlink,GLOBAL.ArtifactConcept]Artifact[/hyperlink] when completing Fated Regions, which grant control over the [hyperlink,GLOBAL.CataclysmConcept]Cataclysm[/hyperlink] that ravages this realm. Obtaining three of them will lead to a [hyperlink,GLOBAL.CataclysmVictoryConcept]Cataclysm Victory[/hyperlink].</bullet><bullet>Fated Regions are affected by [hyperlink,GLOBAL.PROPERTIES.WARDED_BY_FATE]Ward of Fates[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Happenings",
+   "exclusive": [],
+   "dlc": "RISEFROMRUIN",
+   "icon": "RealmTraits_EchoesoftheFracturing"
+  },
+  {
+   "resid": "4256312596890",
+   "name": "Legends of Myrrida",
+   "description": "This realm was once part of the fabled Giant kingdom called [hyperlink,GLOBAL.MyrridaLoreConcept]Myrrida[/hyperlink].<br><bulletlist><bullet>There are Fated Regions present on the map which offer quest chains exploring the present and past of [hyperlink,GLOBAL.MyrridaLoreConcept]Myrrida[/hyperlink].</bullet><bullet>Gain <artifact></artifact> [hyperlink,GLOBAL.ArtifactConcept]Artifact[/hyperlink] when completing Fated Regions, which grant unique bonuses and can be collected to start impactful follow-up Happenings.</bullet><bullet>Fated Regions are affected by [hyperlink,GLOBAL.PROPERTIES.WARDED_BY_FATE]Ward of Fates[/hyperlink].</bullet><bullet>Only some of the Fated Regions available will be present, leaving more to be explored on another realm.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Happenings",
+   "exclusive": [],
+   "dlc": "GIANTKINGS",
+   "icon": null
+  },
+  {
+   "resid": "5029406709049",
+   "name": "Blessed Regions",
+   "description": "The Archons of old have left their blessings in several locations on this realm's surface.<bulletlist><bullet>Several hand-crafted regions with [hyperlink,GLOBAL.BlessedTerrainConcept]Blessed[/hyperlink] can appear on the surface.</bullet><bullet>The [hyperlink,GLOBAL.STRUCTURES.FOUNTAIN_OF_CREATION_LANDMARK]Fountain of Creation[/hyperlink] can appear on the surface.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": "ARCHONPROPHECY",
+   "icon": "RealmTraits_BlessedRegions"
+  },
+  {
+   "resid": "5003636899900",
+   "name": "Blocked Underground",
+   "description": "This realm features a dense earth, resulting in an absence of underground caverns and passages.<bulletlist><bullet>The [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink] is <abilityblue>Absent<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [
+    "Explorative Underground",
+    "Iron Emperor",
+    "Small Underground",
+    "Surface Start",
+    "Underground Start",
+    "Unearthed",
+    "Void Divide"
+   ],
+   "dlc": null,
+   "icon": "RealmTraits_BlockedUnderground"
+  },
+  {
+   "resid": "5029406706540",
+   "name": "Explorative Underground",
+   "description": "The Underground in this realm is a labyrinth of tunnels and small caverns, filled with treasure, but not as suitable for settling.<bulletlist><bullet>The Underground's caverns are much smaller, but are more numerous.</bullet><bullet>Additional pickups appear in the Underground.</bullet><bullet>Additional Ancient Wonders appear in the Underground.</bullet><bullet>More Underground provinces are covered in diggable earth.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ExplorativeUnderground"
+  },
+  {
+   "resid": "4264902532948",
+   "name": "Massive Underground",
+   "description": "This realm has unusually large caverns.<bulletlist><bullet>The [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink] is <abilityblue>bigger<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5029406710271",
+   "name": "Scarce Waters",
+   "description": "Most of the valuable resources on the ocean and lakes in this realm have sunken far below and become unobtainable.<bulletlist><bullet>Reduced amount of [hyperlink,GLOBAL.LocationConcept]Location[/hyperlink] and [hyperlink,GLOBAL.PickupConcept]Pickup[/hyperlink] are present on the water on the Surface and in the Underground</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_ScarceWaters"
+  },
+  {
+   "resid": "5377299054632",
+   "name": "Shrouded Isles",
+   "description": "Ancient gates are scattered throughout the realm. They lead to floating isles in a mysterious dimension where powerful [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink] hid away their most prized secrets.<br><bulletlist><bullet>A new Shrouded map layer is added to the realm.</bullet><bullet>This layer contains [hyperlink,GLOBAL.ShroudedIsleConcept]Shrouded Isle[/hyperlink] and [hyperlink,GLOBAL.BreachedIsleConcept]Breached Isle[/hyperlink].</bullet><bullet>Various portals can be found on the Surface and Underground which lead to these Isles.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": "RealmTraits_ShroudedIsles"
+  },
+  {
+   "resid": "4458176053387",
+   "name": "Small Underground",
+   "description": "This realm has unusually small caverns.<bulletlist><bullet>The [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink] is <abilityblue>smaller<abilityblue></abilityblue>.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_SmallUnderground"
+  },
+  {
+   "resid": "5029406705724",
+   "name": "Subdued Umbral Abyss",
+   "description": "A lesser version of the [hyperlink,GLOBAL.UmbralAbyssConcept]Umbral Abyss[/hyperlink]:<bulletlist><bullet>No Umbral <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] present.</bullet><bullet>Reduced amount of Umbral islands with [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink].</bullet><bullet>Reduced amount of Umbral islands and Umbral Gates overall.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [
+    "Umbral Abyss"
+   ],
+   "dlc": "ELDRITCHREALMS",
+   "icon": null
+  },
+  {
+   "resid": "5029406709046",
+   "name": "Sunless Regions",
+   "description": "There are various places on this realm's surface the sun never seems to touch.<bulletlist><bullet>Several hand-crafted regions with [hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink] can appear on the Surface.</bullet><bullet>The [hyperlink,GLOBAL.STRUCTURES.THORN_HEART_LANDMARK]Thorn Heart[/hyperlink] can appear on the Surface.</bullet><bullet>[hyperlink,GLOBAL.STRUCTURES.BLOOD_GLASS]Blood Glass[/hyperlink] can appear on the Surface.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": "THRONESOFBLOOD",
+   "icon": "RealmTraits_SunlessRegions"
+  },
+  {
+   "resid": "4904852652423",
+   "name": "Umbral Abyss",
+   "description": "The [hyperlink,GLOBAL.UmbralAbyssConcept]Umbral Abyss[/hyperlink] creeps over this realm, opening gates to an eldritch dimension and its invading horrors:<bulletlist><bullet>An additional map layer called the Umbral Abyss is added, which can be reached through Umbral Gates.</bullet><bullet>Enter the Umbral Abyss for forbidden treasures—at a great risk!</bullet><bullet>[hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] and <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] from the Umbral Abyss will creep into the Surface and Underground, spreading [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] in Gloom Terrain will suffer from [hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS]Umbral Malady[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [
+    "Subdued Umbral Abyss"
+   ],
+   "dlc": "ELDRITCHREALMS",
+   "icon": "RealmTraits_UmbralAbyss"
+  },
+  {
+   "resid": "5029406706938",
+   "name": "Unearthed",
+   "description": "No excavation needs to be done in this realm.<bulletlist><bullet>The [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink] in this realm will have no Diggable Earth.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4896262717896",
+   "name": "Uninhabitable Underground",
+   "description": "This realm has unusually small, unwelcoming caverns.<bulletlist><bullet>The [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink] is <abilityblue>smaller</abilityblue>. </bullet><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] starts aboveground, regardless of adaptation traits.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5029406706456",
+   "name": "Untouched",
+   "description": "This realm has had no meddling from outside creators.<bulletlist><bullet>No [hyperlink,GLOBAL.HandcraftedRegionConcept]Handcrafted Region[/hyperlink] will be present in this realm's surface and underground.</bullet><bullet>Does not affect Handcrafted Regions from other Realm Traits or Story Realms.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Layer Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_UntouchedRealm"
+  },
+  {
+   "resid": "4264902532010",
+   "name": "Bannerlords",
+   "description": "This world's Free Cities make powerful allies.<bulletlist><bullet>[hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink] occur +25% more often.</bullet><bullet>All [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] gain +5 <recruitmentPoints></recruitmentPoints> [hyperlink,GLOBAL.RecruitmentPointsConcept]Recruitment Point[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Bannerlords"
+  },
+  {
+   "resid": "4896262719039",
+   "name": "Chaotic Influence",
+   "description": "Chaotic energies make emotions run high.<bulletlist><bullet>Each strategic <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink] gain a stacking negative [hyperlink,GLOBAL.EmpireRelationConcept]Empire Relation[/hyperlink] modifier with each other.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": "RealmTraits_ChaoticInfluence"
+  },
+  {
+   "resid": "4264902531946",
+   "name": "Deathcasting",
+   "description": "The mortals of this realm are infused with its magic, releasing it on their deaths.<bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] grant their owner +10 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Point[/hyperlink] on death.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_Deathcasting"
+  },
+  {
+   "resid": "4264902531640",
+   "name": "Disdain for Evil",
+   "description": "The people on this realm despise evil and will fight to prevent it from taking root.<bulletlist><bullet>All [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] gain <casusBelli></casusBelli> [hyperlink,GLOBAL.CasusBelliConcept]Grievance[/hyperlink] against [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] with Evil [hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DisdainForEvil"
+  },
+  {
+   "resid": "4264902531985",
+   "name": "Megacities",
+   "description": "This world allows for the construction of immense megacities, yet traditional expansion is impossible.<bulletlist><bullet>Cannot absorb, migrate, or settle new [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.CityConcept]City[/hyperlink] can perform [hyperlink,GLOBAL.ProvinceAnnexationConcept]Province Annexation[/hyperlink] +5 [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] further away.</bullet><bullet>[hyperlink,GLOBAL.CityConcept]City[/hyperlink] gain +3 [hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] capacity.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_MegaCities"
+  },
+  {
+   "resid": "4896262719047",
+   "name": "Motivated Truce",
+   "description": "Waging war is discouraged on this realm.<bulletlist><bullet><casusBelli></casusBelli> [hyperlink,GLOBAL.CasusBelliConcept]Grievance[/hyperlink] are less impactful.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": "RealmTraits_MotivatedTruce"
+  },
+  {
+   "resid": "4264902531696",
+   "name": "No Respite",
+   "description": "This realm actively interferes with natural healing.<bulletlist><bullet>[hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.NO_RESPITE_PROPERTY]No Respite[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_NoRespite"
+  },
+  {
+   "resid": "4264902531630",
+   "name": "Regenerating Infestations",
+   "description": "Beasts and monsters never cease nesting in this realm.<bulletlist><bullet>[hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] emerge in unoccupied [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] every 10 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "5029406706550",
+   "name": "Surface Start",
+   "description": "This realm's upstarts all originate from the surface. <bulletlist><bullet>All [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink], even those with Underground Adaptation, start with their [hyperlink,GLOBAL.ThroneCityConcept]Throne City[/hyperlink] on the Surface.</bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] and <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] are unaffected.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_SurfaceStart"
+  },
+  {
+   "resid": "5003636907698",
+   "name": "Timelocked Tomes",
+   "description": "This realm has a strange connection to the tides of the Astral Sea, high tides of inspiration follow ebbs where none can be found. Tomes of magic are discovered only when the tides of the Astral sea will it.<bulletlist><bullet>Tomes are not discovered as Research Skills are unlocked.</bullet><bullet>Tomes are unlocked simultaneously for all Rulers at set intervals based on the Realm's research speed setting.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_TimelockedTomes"
+  },
+  {
+   "resid": "4982162064046",
+   "name": "Unbound Tomes",
+   "description": "The affinities blur and blend on this realm, allowing access to tomes otherwise restricted.<bulletlist><bullet>[hyperlink,GLOBAL.TomeConcept]Tome[/hyperlink] have no [hyperlink,GLOBAL.AffinityConcept]Affinity[/hyperlink] requirements.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4264902532326",
+   "name": "Underground Start",
+   "description": "Civilization only thrives underground on this realm, forcing the throne cities of each empire underground.<bulletlist><bullet>Each [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] starts [hyperlink,GLOBAL.UndergroundConcept]Underground[/hyperlink], regardless of any adaptation traits.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_UndergroundStart"
+  },
+  {
+   "resid": "4264902531926",
+   "name": "Unlimited Power",
+   "description": "This realm is awash with Astral power, and spells flow freely without limit, though they require more mana to channel.<bulletlist><bullet>Can now cast multiple [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] cost 200% more <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] to cast.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_UnlimitedPower"
+  },
+  {
+   "resid": "5029406708103",
+   "name": "Unstable Astral Flow",
+   "description": "The Astral Flow through this realm is tumultuous.<bulletlist><bullet>All [hyperlink,GLOBAL.WorldMapSpellConcept]World Map Spell[/hyperlink] and [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] have a base 20% chance to [hyperlink,GLOBAL.BackfireConcept]Backfiring[/hyperlink]</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Rule Modifiers",
+   "exclusive": [],
+   "dlc": "RISEFROMRUIN",
+   "icon": "RealmTraits_UnstableAstralFlow"
+  },
+  {
+   "resid": "4582730105033",
+   "name": "Curse of Undeath",
+   "description": "The inhabitants of this realm are cursed with a restless death.<bulletlist><bullet>[hyperlink,GLOBAL.MarauderConcept]Marauder[/hyperlink] and <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.CURSE_OF_UNDEATH]Curse of Undeath[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [
+    "Immortals"
+   ],
+   "dlc": null,
+   "icon": "RealmTraits_CurseOfUndeath"
+  },
+  {
+   "resid": "5003636907833",
+   "name": "Dissonant Enchantments",
+   "description": "This realm resists enchantment magic, requiring significantly more mana and effort to be cast and maintained than usual.<bulletlist><bullet><caststrategic></caststrategic> [hyperlink,GLOBAL.UnitEnchantmentConcept]Unit Enchantment[/hyperlink] cost +100% more to cast.</bullet><bullet>[hyperlink,GLOBAL.UnitUpgradeUpkeepConcept]Unit Enchantment Upkeep[/hyperlink] is increased by +100%.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_DissonantEnchantments"
+  },
+  {
+   "resid": "5029406709167",
+   "name": "Expendable Legions",
+   "description": "Life is cheap in this realm, and with that comes a near limitless supply of recruits. However, elites and powerful monsters are in turn much harder to come by.<br><bulletlist><bullet>Tier 1 [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] have their recruitment costs in [hyperlink,GLOBAL.CityConcept]City[/hyperlink] decreased by 50% in [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet>Tier 1 Units gain [hyperlink,GLOBAL.PROPERTIES.EXPENDABLE]Expendable[/hyperlink].</bullet><bullet>Tier 3 and higher Units have their recruitment costs in Cities increased by 50%.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [],
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "icon": null
+  },
+  {
+   "resid": "4264902531875",
+   "name": "Gigantism",
+   "description": "The beings of this realm are lower in number but especially large.<bulletlist><bullet>Racial [hyperlink,GLOBAL.MarauderConcept]Marauder[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.SUPERGROWTH_PROPERTY_GROUP]Supergrowth[/hyperlink].</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": null
+  },
+  {
+   "resid": "4264902530786",
+   "name": "Heavy Fog",
+   "description": "In this realm, endless banks of fog obscure vision.<bulletlist><bullet>[hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] of all [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is reduced by -1.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_HeavyFog"
+  },
+  {
+   "resid": "4264902531936",
+   "name": "High Maintenance",
+   "description": "Materials on this realm are weak, easily worked with, but hard to maintain.<bulletlist><bullet>Base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] is increased by 100%.</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] recruit costs are reduced by -50%.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [],
+   "dlc": null,
+   "icon": "RealmTraits_HighMaintenance"
+  },
+  {
+   "resid": "4264902531731",
+   "name": "Immortals",
+   "description": "This realm's magic wards off death, preventing true death for many.<bulletlist><bullet>All non-Ruler [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.IMMORTAL]Immortal[/hyperlink].</bullet><bullet>[hyperlink.RoutingConcept.HeroConcept]<<Routed>>[/hyperlink] units are never lost.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [
+    "Curse of Undeath"
+   ],
+   "dlc": null,
+   "icon": "RealmTraits_Immortals"
+  },
+  {
+   "resid": "4256312598394",
+   "name": "Ward of the Archons",
+   "description": "A powerful spell woven by the Archons wards off death, preventing true death for Celestials.<bulletlist><bullet>All non-Ruler [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.IMMORTAL_ARCHON_WARD]Immortal Ward[/hyperlink].</bullet><bullet>[hyperlink.RoutingConcept.HeroConcept]<<Routed>>[/hyperlink] [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units are never lost.</bullet></bulletlist>",
+   "category": 4,
+   "subcategory": "Unit Modifiers",
+   "exclusive": [],
+   "dlc": "ARCHONPROPHECY",
+   "icon": null
+  },
+  {
+   "resid": "4982162063607",
+   "name": "World Seals",
+   "description": "Seals are present on this realm. Capturing them will lead to a [hyperlink,GLOBAL.SealsVictoryConcept]Seals Victory[/hyperlink].",
+   "category": 4,
+   "subcategory": "Victory Conditions",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": "RealmTraits_WorldSeals"
+  },
+  {
+   "resid": "4982162063610",
+   "name": "World Seals (Active)",
+   "description": "Seals are present on this realm. Capturing them will lead to a [hyperlink,GLOBAL.SealsVictoryConcept]Seals Victory[/hyperlink].<br>- Fewer Seal Points are required to achieve victory.",
+   "category": 4,
+   "subcategory": "Victory Conditions",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": null
+  },
+  {
+   "resid": "4801773441192",
+   "name": "World Seals (Ample)",
+   "description": "Seals are present on this realm. Capturing them will lead to a [hyperlink,GLOBAL.SealsVictoryConcept]Seals Victory[/hyperlink].<br>- More Seals are present on this realm.",
+   "category": 4,
+   "subcategory": "Victory Conditions",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": null
+  },
+  {
+   "resid": "4982162063603",
+   "name": "World Seals (Dormant)",
+   "description": "Seals are present on this realm. Capturing them will lead to a [hyperlink,GLOBAL.SealsVictoryConcept]Seals Victory[/hyperlink].<br>- More Seal Points are required to achieve victory.",
+   "category": 4,
+   "subcategory": "Victory Conditions",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": null
+  },
+  {
+   "resid": "4801773441186",
+   "name": "World Seals (Scarce)",
+   "description": "Seals are present on this realm. Capturing them will lead to a [hyperlink,GLOBAL.SealsVictoryConcept]Seals Victory[/hyperlink].<br>- Fewer Seals are present on this realm.",
+   "category": 4,
+   "subcategory": "Victory Conditions",
+   "exclusive": [],
+   "dlc": "EMPIRESANDASHES",
+   "icon": null
+  }
+ ]
+}

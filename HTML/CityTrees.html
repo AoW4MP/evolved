@@ -433,7 +433,7 @@
                     res.innerHTML = '<span class="ct-plus">+</span><span class="ct-icons">' + resources.join("") + "</span>";
                     node.querySelector(".ct-body").append(res);
                 }
-                if (root.help) tip.innerHTML += '<div class="ct-help">' + AddTagIconsForStatusEffects(GameText(root.help)) + "</div>";
+                tip.innerHTML += StructureHelp({ help: root.help });
                 addTooltipListeners(node, tip);
                 return node;
             }
@@ -466,6 +466,7 @@
                 const description = StructureDescription(info);
                 // a list already ends its line; plain text ("+20 Gold income") needs one before Requirements
                 if (description) tip.innerHTML += RebuildBulletLists(description) + (description.endsWith("</bulletlist>") ? "" : "<br>");
+                tip.innerHTML += StructureHelp(info);
                 // a single requirement often comes without a list: AsBulletList gives it its bullet
                 if (info.requirement_description) tip.innerHTML += "<br>Requirements:" + AsBulletList(info.requirement_description);
                 if (info.boost_requirements) tip.innerHTML += "<br>Boost Requirements:" + AsBulletList(info.boost_requirements);
@@ -695,11 +696,6 @@
     </body>
 </html>
 <style>
-    /* a root's help text, yellow as in the game */
-    .ct-help {
-        color: #f2d24b;
-        margin-top: 6px;
-    }
     :root {
         --ct-cell: 272px; /* a column; the gap between cards is the cell less the card */
         --ct-card: 242px;

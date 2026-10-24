@@ -4808,6 +4808,17 @@ function StructureDescription(structure) {
         "<bulletlist>" + added.map((l) => "<bullet>" + l + "</bullet>").join("") + "</bulletlist>";
 }
 
+// A structure's Help Text, the yellow line at the foot of its tooltip in the game ("Use mana to cast Spells"), or
+// "" for one without: Data/GEN/StructurePredictions.json names its text (the dump leaves it out), all.json has it
+function StructureHelp(structure) {
+    const id = jsonStructurePredictions?.help?.[String(structure.resid)] || structure.help;
+    if (!id) return "";
+    const at = id.lastIndexOf("@");
+    const entry = findBy(jsonAllFromPOLocalized, "id", id.slice(0, at));
+    const text = entry?.[id.slice(at + 1).toLowerCase()];
+    return text ? '<div class="structure-help">' + AddTagIconsForStatusEffects(text) + "</div>" : "";
+}
+
 // A requirement text as a list: most come as one, but a single requirement is often plain text, some on two lines
 // ("Must be built on an annexed Province.<br></br><br></br>Requires City Tier II."): a bullet for each line
 function AsBulletList(text) {
@@ -4866,7 +4877,7 @@ function showStructure(a, showOrigin, divOrigin) {
         description += "<br><br> Unlocks T2 Culture Units";
     }
 
-    descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description);
+    descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description) + StructureHelp(structureLoc);
 
     descriptionDiv.setAttribute("id", "modicon" + a);
 

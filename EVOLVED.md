@@ -96,7 +96,8 @@ The exceptions are `Data/EN/all.json`, `concept_tooltips.json` and `UI.json`, wh
 `all.json` holds the game's texts with the numbers of upstream's vanilla game at the time they made it: no mod values, and older than the live game after an update.
 Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`, its closing tag misplaced), and left some lists closed by a raw `[/bulletlist]`.
 Evolved repaired these in `Data/EN/concept_tooltips.json` (17 concepts: Gold, Production, Mana, the pacts and others) and `Data/EN/all.json` (123 texts), each checked against the game's own text in EN.po, so either file taken from upstream brings the broken bullets back.
-Eleven of the `all.json` texts are from an older game version than EN.po (Consulate, Cold Dark's Snow and Ice, Crucible's Battlements and a few more) or held a value the game fills in during play: they keep upstream's wording, in proper bullets.
+Seven of them were from an older game version (Consulate, Cold Dark's Marching Winter, Crucible's Battlements, Arctica's Ice Age, Bhajif's Disruption, an Eldritch Realms crisis): they are now the live game's text with the mod, filled in with the values of the resource that shows each (`magicmaterials.Texts`).
+Four held a value the game fills in during play ({Primary}, {IntHPBuff}): that bullet is left out.
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
 The other folders under `Icons/` are made by hand. An icon they lack can be taken from the game's content libraries with `clbicons.py` in aow4_diff_tools (`find` a name, then `export … --crop`, which gives the hand-made icons' size); combat enchantments are named after the enchantment (`umbral_ramblings.png`).

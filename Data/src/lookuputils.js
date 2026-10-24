@@ -373,12 +373,25 @@ function doubleNumbers(inputString) {
 }
 
 
+// A unit set by its units' names, as all_spawnsets.json gives them (aow4_diff_tools/spawnsets.py): "Ice Spider
+// Matriarch", not ICE_SPIDER_MATRIARCH; a set the file names no units for keeps its own name, spaced
+let spawnSetNames = null;
+function SpawnSetName(set) {
+    if (!spawnSetNames) {
+        spawnSetNames = {};
+        for (const t of jsonSpawnTables || []) (t.items || []).forEach((item, i) => t.names?.[i] && (spawnSetNames[item] = t.names[i]));
+    }
+    return spawnSetNames[set] || set.replace(/_/g, " ");
+}
+
 function ConvertSpawnTable(input, subtractName) {
   
     let bulletListName = input.category.split(subtractName + "_")[1]; // Get the first entry as the bullet list name
  if(bulletListName == undefined){
                     bulletListName = "Default";
                 }
+    // "UNDERGROUND_ICE_CAT" -> "Underground Ice"
+    bulletListName = bulletListName.replace(/_CAT$/, "").toLowerCase().replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
     // Calculate the percentages for each entry
     const entryCounts = {};
     for (const entry of input.items) {
@@ -403,7 +416,7 @@ function ConvertSpawnTable(input, subtractName) {
     bulletList.innerHTML = '<bulletList><span class="Test">' + bulletListName + "</span>";
 
     for (const { entry, percentage } of percentages) {
-        const itemText = entry.replace(/_/g, " "); // Replace underscores with spaces
+        const itemText = SpawnSetName(entry);
 
         if (!uniqueEntries.includes(itemText)) {
             uniqueEntries.push(itemText);

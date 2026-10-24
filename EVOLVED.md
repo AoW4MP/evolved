@@ -103,6 +103,7 @@ Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` h
 It started from upstream's copy and keeps its entries and order; texts the game added are appended, and texts it no longer has are kept, as pages may still look them up.
 A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
 `concept_tooltips.json` and `UI.json` still come from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
+`Data/GEN/all_spawnsets.json`, the unit categories summon spells pick from, is Evolved's own: `spawnsets.py` writes it from the game with the mod (upstream's had the vanilla lists: eight animals for Call Greater Animal in cold lands where Evolved offers three).
 Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`); Evolved repaired the 17 concepts this hit in `concept_tooltips.json` (Gold, Production, Mana, the pacts and others), so that file taken from upstream brings them back.
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
@@ -110,7 +111,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `alltexts.py` (`Data/EN/all.json`), `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `alltexts.py` (`Data/EN/all.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`), `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
 `after_update.bat` (the mod reports) can't do this: it runs before the patched game has made the new dump.
 
 ## Taking changes from upstream

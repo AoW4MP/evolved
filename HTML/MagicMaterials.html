@@ -81,7 +81,7 @@
                 bonus.innerHTML =
                     '<div class="mm-bonus-head">Set Bonus</div>' +
                     '<div class="mm-bonus-name">' + set.name + "</div>" +
-                    AddTagIconsForStatusEffects(set.description.split(/<br><br>Requires:/)[0].replace(/(<br>)+$/, "")) +
+                    AddTagIconsForStatusEffects(set.description.split(/(?:<br>)*Requires:/)[0].replace(/(<br>)+$/, "")) +
                     '<div class="mm-bonus-head">Requires</div>' +
                     "<bulletlist><bullet>" + needs + "</bullet></bulletlist>";
                 row.append(bonus);

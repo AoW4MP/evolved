@@ -28,7 +28,7 @@ function OpenStackedTooltip(origin, span, event) {
     WireTooltipLinks(dialog, origin);
     dialog.addEventListener("mouseleave", () => setTimeout(SettleTooltips, 150));
     TOOLTIP_STACK.push(dialog);
-    clampToViewport(dialog, event.clientX - 5, event.clientY - 5);
+    PlaceBelow(dialog, origin);
 }
 
 // close what the mouse has left: a stacked tooltip is held by itself, a tooltip above it or the link under the mouse
@@ -276,7 +276,12 @@ function updateHoverDivPosition(event, secondary) {
         return;
     }
 
-    var offset = secondary != undefined ? -5 : (settings.tooltipselectable ? 2 : 10);
+    // a tooltip to move the mouse into: below the word, so it never covers it
+    if (settings.tooltipselectable && event.currentTarget && event.currentTarget.getBoundingClientRect) {
+        PlaceBelow(hoverDiv, event.currentTarget);
+        return;
+    }
+    var offset = secondary != undefined ? -5 : 10;
     clampToViewport(hoverDiv, event.clientX + offset, event.clientY + offset);
 }
 /*
@@ -291,6 +296,15 @@ function getNormalizedWidth(element) {
     const viewportWidth = window.innerWidth;
     return elementWidth / viewportWidth;
 }*/
+
+// a tooltip just below the element it is for, starting at its left edge; above it where there is no room below
+function PlaceBelow(dialog, el, gap = 3) {
+    const word = el.getBoundingClientRect();
+    const box = dialog.getBoundingClientRect();
+    let top = word.bottom + gap;
+    if (top + box.height > window.innerHeight - 8 && word.top - gap - box.height >= 8) top = word.top - gap - box.height;
+    clampToViewport(dialog, word.left, top);
+}
 
 function clampToViewport(el, viewportLeft, viewportTop, margin = 8) {
     const rect = el.getBoundingClientRect(); // just need width/height

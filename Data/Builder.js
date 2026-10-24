@@ -132,6 +132,49 @@ function processSpellRefs(text) {
     });
 }
 
+// A concept tooltip's key by the words a link shows: its name, its link wording ("<hp></hp> Hit Point") or their
+// plural ("Provinces", "Cities"). A concept of its own (GLOBAL.ProvinceConcept) wins over a property or unit of
+// the same name.
+let conceptKeysByName = null;
+function ConceptKeyByName(words) {
+    if (!conceptKeysByName) {
+        conceptKeysByName = new Map();
+        const plural = (w) =>
+            /s$/i.test(w) ? w : /[^aeiou]y$/i.test(w) ? w.slice(0, -1) + "ies" : /(x|z|ch|sh)$/i.test(w) ? w + "es" : w + "s";
+        const entries = Object.entries(jsonConceptTooltipsLocalized || {}).sort(
+            ([a], [b]) => a.split(".").length - b.split(".").length
+        );
+        for (const [key, c] of entries) {
+            for (const name of [c.name, (c.displayHtml || "").replace(/<[^>]+>/g, "").trim()]) {
+                if (!name) continue;
+                for (const n of [name, plural(name)]) {
+                    const k = n.toLowerCase();
+                    if (!conceptKeysByName.has(k)) conceptKeysByName.set(k, key);
+                }
+            }
+        }
+        // and the wordings all.json links with ("Effects [hyperlink,...]are increased[/hyperlink] for Single Shot",
+        // "Heroes"): each wording's most used concept
+        const used = new Map();
+        for (const e of jsonAllFromPOLocalized || []) {
+            for (const v of Object.values(e)) {
+                if (typeof v !== "string" || !v.includes("[hyperlink,")) continue;
+                for (const m of v.matchAll(/\[hyperlink,(GLOBAL\.[\w.]+)\]([\s\S]*?)\[\/hyperlink\]/g)) {
+                    if (!(m[1] in jsonConceptTooltipsLocalized)) continue;
+                    const k = m[2].replace(/<[^>]+>/g, "").trim().toLowerCase();
+                    const counts = used.get(k) || new Map();
+                    counts.set(m[1], (counts.get(m[1]) || 0) + 1);
+                    used.set(k, counts);
+                }
+            }
+        }
+        for (const [k, counts] of used) {
+            if (!conceptKeysByName.has(k)) conceptKeysByName.set(k, [...counts].sort((a, b) => b[1] - a[1])[0][0]);
+        }
+    }
+    return conceptKeysByName.get(words.toLowerCase());
+}
+
 // main function
 function AddTagIconsForStatusEffects(text) {
     if (!text) return text;
@@ -165,16 +208,14 @@ function AddTagIconsForStatusEffects(text) {
             // Existing: unit ability → status effect tooltip
             restored = abilityTagCache.get(link.inner).replacement;
         } else {
-            // Strip any icon HTML from the inner text to get a clean lookup key
-            const plainInner = link.inner.replace(/<[^>]+>/g, "").trim();
-            const concept = jsonConceptTooltipsLocalized[plainInner];
+            // the game dump's links carry only their words ("<hyperlink>Provinces</hyperlink>"): find the concept by name
+            const key = ConceptKeyByName(link.inner.replace(/<[^>]+>/g, "").trim());
 
-            if (concept) {
-                // Concept tooltip: underlined display name + invisible handler span
-                const iconHtml = concept.icon ? `<${concept.icon}></${concept.icon}> ` : "";
+            if (key) {
+                // as a link of all.json shows: underlined, with the handler HandleExtraTooltips wires the tooltip to
                 restored =
-                    `<span style="color:white;">${""}${plainInner}</span>` +
-                    `<span class="conceptTooltipHandler" data-concept="${plainInner}" style="display:none"></span>`;
+                    `<span style="color:white;text-decoration:underline">${link.inner.trim()}</span>` +
+                    `<span class="conceptTooltipHandler" data-global="${key}" style="display:none"></span>`;
             } else {
                 // Fallback: plain underlined text, no tooltip
                 // restored = `<span style="color:grey;">${link.inner}</span>`;

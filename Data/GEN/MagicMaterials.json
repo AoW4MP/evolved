@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24 17:02",
+ "generated": "2026-10-24 22:13",
  "build": "exe of 2026-10-23",
  "mod": "AoW 4 Evolved",
  "sets": [
@@ -7,7 +7,7 @@
    "key": "void_ink",
    "category": "Void Stones",
    "name": "Void Ink",
-   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink] with an <rs_vassalage></rs_vassalage> [hyperlink,GLOBAL.EldritchPactConcept]Eldritch Pact[/hyperlink] grant +30 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PvEVassalConcept]Vassal[/hyperlink] grant +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet></bulletlist><br>Requires:<bulletlist><bullet>3 [hyperlink,GLOBAL.STRUCTURES.VOID_STONES]Void Stones[/hyperlink]</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwellings[/hyperlink] with an <rs_vassalage></rs_vassalage> [hyperlink,GLOBAL.EldritchPactConcept]Eldritch Pact[/hyperlink] grant +30 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PvEVassalConcept]Vassals[/hyperlink] grant +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet></bulletlist><br>Requires:<bulletlist><bullet>3 [hyperlink,GLOBAL.STRUCTURES.VOID_STONES]Void Stones[/hyperlink]</bullet></bulletlist>",
    "required": 3,
    "unique": false,
    "materials": [
@@ -31,7 +31,7 @@
    "key": "cosmicflux_elixir",
    "category": "Liquids",
    "name": "Cosmoflux Elixir",
-   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink] in provinces with Mana [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] grant +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] and <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvements[/hyperlink] in provinces with Mana [hyperlink,GLOBAL.NodeConcept]Resource Nodes[/hyperlink] grant +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] and <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet></bulletlist>",
    "required": 3,
    "unique": true,
    "materials": [
@@ -44,7 +44,7 @@
    "key": "rings_of_binding",
    "category": "Ores",
    "name": "Rings of Binding",
-   "description": "[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] gain:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+10% bonus damage</bullet></bulletlist>",
+   "description": "[hyperlink,GLOBAL.HeroConcept]Heroes[/hyperlink] gain:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+10% bonus damage</bullet></bulletlist>",
    "required": 3,
    "unique": true,
    "materials": [
@@ -58,7 +58,7 @@
  "materials": {
   "void_stones": {
    "name": "Void Stones",
-   "description": "Unique global effect: <bulletlist><bullet>Gain +2 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink] with discovered [hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwelling[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>Allows the forging of misc items that grant immunity to [hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS]Umbral Malady[/hyperlink] in the [hyperlink,GLOBAL.ItemForgeConcept]Item Forge[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>Gain +2 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink] with discovered [hyperlink,GLOBAL.UmbralDwellingConcept]Umbral Dwellings[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Allows the forging of misc items that grant immunity to [hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS]Umbral Malady[/hyperlink] in the [hyperlink,GLOBAL.ItemForgeConcept]Item Forge[/hyperlink].</bullet></bulletlist>",
    "lore": "\"Levitating stones, smooth as silk, unlike any I encountered on or under the known worlds. Touch one, and the forbidden words of Umbral denizens roll off your tongue. Tap one with a hammer, and its Astral attunement resonates. They seem impossible to split in twain but I suspect they are, in fact, geodes. What treasure is hoarded within?\"<br><br>—Fangir Rockborne, Journals from the Second Age: Appendix",
    "income": [
     [
@@ -68,13 +68,13 @@
    ],
    "combat": {
     "name": "Umbral Ramblings",
-    "description": "The attacking units find themselves speaking in an unknown, ancient tongue.<br><br>After the first <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<br>At the start of the attacker's turn, every attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] adjacent to another attacking unit has 30% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink]. <br><br>If resisted, the unit suffers -5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] instead."
+    "description": "The attacking units find themselves speaking in an unknown, ancient tongue.<br><br>After the first <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<br>At the start of the attacker's turn, every attacking [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] adjacent to another attacking unit has 30% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink]. <br><br>If resisted, the unit suffers -5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] instead."
    },
    "dlc": "ELDRITCHREALMS"
   },
   "blood_glass": {
    "name": "Blood Glass",
-   "description": "Unique global effect:<bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] regeneration per [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect:<bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] regeneration per [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
    "lore": "\"An alluring flower, trapping its victims in a thorny prison. From their drained blood crimson crystals bloom. My druids, wearing pendants of this Blood Glass, feel rejuvenated at dawn, as if its siphoned life force was bestowed upon them. Yet in nightly whispers they invoke the name of the [hyperlink,GLOBAL.UrvatoghLoreConcept]Pale Prince[/hyperlink], and I wonder: is it wrong to harness his curse?\"<br><br>— Sylvani Laurel, Survival within the Sunless Lands",
    "income": [
     [
@@ -84,13 +84,13 @@
    ],
    "combat": {
     "name": "Parasitic Contamination",
-    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all enemy units with [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] have a 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink]."
+    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all enemy units with [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] have a 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink]."
    },
    "dlc": "THRONESOFBLOOD"
   },
   "fireforge_stone": {
    "name": "Fireforge Stone",
-   "description": "Unique global effect: <bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] cost 20% less <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] cost 20% less <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink].</bullet></bulletlist>",
    "lore": "\"Fireforge Stones are said to be the remnants of a volcano's heart. They emanate heat eternally, resisting all attempts to quench their warmth. Weapons can be more efficiently forged when using the magically enhanced temperature of these stones.\"<br><br>— Fangir Rockborne, Journals from the Second Age: Part I",
    "income": [
     [
@@ -105,7 +105,7 @@
   },
   "focus_crystals": {
    "name": "Focus Crystals",
-   "description": "Unique global effect: <bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] gain +20% <xp></xp> experience from combat.</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain +20% <xp></xp> experience from combat.</bullet></bulletlist>",
    "lore": "\"When a geode of crystallized astral essence forms above ground and is touched by starlight, it splits like an earthen, blooming plant. The newly exposed, glistening crystal within is highly magical and infuses its bearers with arcane power.\"<br><br>— Edward Portsmith, Advanced Reports on Mana Infusion",
    "income": [
     [
@@ -124,7 +124,7 @@
   },
   "arcanium_ore": {
    "name": "Arcanium Ore",
-   "description": "Unique global effect: <bulletlist><bullet>Hurry Recruitment for [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is 25% cheaper.</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>Hurry Recruitment for [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] is 25% cheaper.</bullet></bulletlist>",
    "lore": "\"When the ancient Titans shaped the world, their sweat would drip onto the primal materials of the earth, fusing the two together into raw Arcanium. Now, whenever a vein is exposed above ground, a strange, ethereal vapor sees prospectors from all over rushing to its location. Its unique composition makes for magical and malleable metal, meaning far quicker production times!\"<br><br>— Fangir Rockborne, Journals from the Second Age: Part II",
    "income": [
     [
@@ -143,7 +143,7 @@
   },
   "astral_dew": {
    "name": "Astral Dew",
-   "description": "Unique global effect: <bulletlist><bullet>+15 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Point[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>+15 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink].</bullet></bulletlist>",
    "lore": "\"In places where the natural realms and the Astral Sea converge, certain types of flora become infused with arcane properties as they are naturally more susceptible. The dew from this flora is highly sought after by practitioners of magic, as it can act as a catalyst for both spells and research into many kinds of arcana.\"<br><br>— Edward Portsmith, Advanced Reports on Mana Infusion",
    "income": [
     [
@@ -162,7 +162,7 @@
   },
   "archon_blood": {
    "name": "Archon Blood",
-   "description": "Unique global effect: <bulletlist><bullet>+15 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Point[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>+15 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet></bulletlist>",
    "lore": "\"When the mighty and enigmatic Archons fell in ages past, their blood infused and changed the land in certain places. Now, travelers often report feeling strangely invigorated when crossing this hallowed ground. The mysterious substance found therein can be carefully cultivated and gathered as raw magical power.\"<br><br>— Uncredited Scholar, Remnants of the Archon: Part II",
    "income": [
     [
@@ -177,7 +177,7 @@
   },
   "tranquility_pool": {
    "name": "Tranquility Pool",
-   "description": "Unique global effect: <bulletlist><bullet>Researching [hyperlink,GLOBAL.SpellConcept]Spell[/hyperlink] costs -5% less <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>Researching [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] costs -5% less <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet></bulletlist>",
    "lore": "\"Rare wonders in the world, these pools are said to be the liquefaction of the collective wisdom of the people who have walked the land. Those who spend time gazing into their tranquil waters experience clarity of thought like never before.\"<br><br>— Laryssa Mirabilis, Myth and Truth: Folklore and its Arcane Origins",
    "income": [
     [
@@ -187,12 +187,12 @@
    ],
    "combat": {
     "name": "Wave of Tranquility",
-    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all Status Effects on all units are dispelled."
+    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all Status Effects on all units are dispelled."
    }
   },
   "haste_berries": {
    "name": "Haste Berries",
-   "description": "Unique global effect: <bulletlist><bullet>Founding, migrating and absorbing [hyperlink,GLOBAL.CityConcept]City[/hyperlink] takes -2 turns.</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>Founding, migrating and absorbing [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] takes -2 turns.</bullet></bulletlist>",
    "lore": "\"The fruit of the Hasteberry bush grows in the blink of an eye, with a popping sound that almost sounds like music. Those who have consumed the fruit speak of a fizzing sensation and a zesty, tangy taste, as well as of their limbs immediately becoming lighter.\"<br><br>— Roderick Finwing, Local Flora and its Applications: Part I, Medicine and Physical Enhancement",
    "income": [
     [
@@ -225,12 +225,12 @@
    ],
    "combat": {
     "name": "Distracting Whispers",
-    "description": "Each 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], one of the attacking units has a 90% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] until the end of combat."
+    "description": "Each 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], one of the attacking units has a 90% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] until the end of combat."
    }
   },
   "rainbow_clover": {
    "name": "Rainbow Clover",
-   "description": "Unique global effect: <bulletlist><bullet>+100 <goodRelation></goodRelation> relations with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] and [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink].</bullet></bulletlist>",
+   "description": "Unique global effect: <bulletlist><bullet>+100 <goodRelation></goodRelation> relations with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] and [hyperlink,GLOBAL.LeaderConcept]Rulers[/hyperlink].</bullet></bulletlist>",
    "lore": "\"The Rainbow Clover, when lending its scintillating aspect to any setting, has been found to promote feelings of camaraderie and fellowship among those who gaze upon it. Once a notable feature at many halfling tribes' feasts and mead halls.\"<br><br>— Ham Binger, Mead and Meadows: A Halfling's Guide to Merrymaking",
    "income": [
     [
@@ -260,7 +260,7 @@
    ],
    "combat": {
     "name": "Oh So Lucky",
-    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all defending units gain [hyperlink,GLOBAL.PROPERTIES.RALLYING]Rally[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink]."
+    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all defending units gain [hyperlink,GLOBAL.PROPERTIES.RALLYING]Rally[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink]."
    }
   }
  }

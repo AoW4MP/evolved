@@ -1,11 +1,88 @@
 
 
+// ---- stacked tooltips (Selectable Tooltips on) --------------------------------------------------------------------
+// As in the game: a link inside a tooltip opens a new tooltip on top, the one under it stays, and so on. A tooltip
+// closes once the mouse is on neither it, a tooltip above it, nor the link that opened it.
+const TOOLTIP_STACK = [];
+
+function tooltipLevel(el) {
+    const dialog = el.closest && el.closest("dialog.tooltiptextnew");
+    if (!dialog) return -1;
+    return dialog.dataset.level !== undefined ? Number(dialog.dataset.level) : 0;
+}
+
+function OpenStackedTooltip(origin, span, event) {
+    const level = tooltipLevel(origin) + 1;
+    while (TOOLTIP_STACK.length > level - 1) TOOLTIP_STACK.pop().remove();
+    const dialog = document.createElement("dialog");
+    dialog.className = "tooltiptextnew";
+    dialog.dataset.level = level;
+    dialog.origin = origin;
+    dialog.innerHTML = span.innerHTML;
+    dialog.style.pointerEvents = "all";
+    dialog.style.zIndex = 1000 + level;
+    (TOOLTIP_STACK[TOOLTIP_STACK.length - 1] || document.getElementById("hoverDiv2")).after(dialog);
+    dialog.inert = true;
+    dialog.show();
+    dialog.inert = false;
+    WireTooltipLinks(dialog, origin);
+    dialog.addEventListener("mouseleave", () => setTimeout(SettleTooltips, 150));
+    TOOLTIP_STACK.push(dialog);
+    clampToViewport(dialog, event.clientX - 5, event.clientY - 5);
+}
+
+// close what the mouse has left: a stacked tooltip is held by itself, a tooltip above it or the link under the mouse
+function SettleTooltips() {
+    const over = (el) => el && el.isConnected && el.matches(":hover");
+    for (let i = TOOLTIP_STACK.length - 1; i >= 0; i--) {
+        const d = TOOLTIP_STACK[i];
+        if (over(d) || over(d.origin) || i < TOOLTIP_STACK.length - 1) break;
+        TOOLTIP_STACK.pop().remove();
+    }
+    // the two base tooltips stay while one of theirs is stacked on them
+    for (const id of ["hoverDiv", "hoverDiv2"]) {
+        const base = document.getElementById(id);
+        const held = over(base) || over(base.origin) || TOOLTIP_STACK.some((d) => base.contains(d.origin));
+        if (base.open && !held) base.close();
+    }
+    if (!TOOLTIP_STACK.length) return;
+    if (!document.getElementById("hoverDiv").open && !document.getElementById("hoverDiv2").open && !TOOLTIP_STACK.some(over))
+        while (TOOLTIP_STACK.length) TOOLTIP_STACK.pop().remove();
+}
+
+// the links in a tooltip, wired to open their own; a status effect's tooltip is built as one big link to itself,
+// which the box is not, and a tooltip does not link to itself ("Burning counters Wet" in Burning's)
+function WireTooltipLinks(dialog, origin) {
+    for (const outer of dialog.querySelectorAll(":scope > .statusEffectHandler")) outer.classList.remove("statusEffectHandler");
+    const own = origin ? origin.textContent.trim().toLowerCase() : null;
+    if (own) {
+        for (const el of dialog.querySelectorAll(".statusEffectHandler")) {
+            if (el.textContent.trim().toLowerCase() !== own) continue;
+            el.classList.remove("statusEffectHandler");
+            if (el.parentElement?.style.textDecoration.includes("underline")) el.parentElement.style.textDecoration = "none";
+        }
+        for (const el of dialog.querySelectorAll(".conceptTooltipHandler"))
+            if ((el.previousElementSibling?.textContent || "").trim().toLowerCase() === own) el.remove();
+    }
+    HandleExtraTooltips(dialog);
+}
+
 function addTooltipListeners(tooltip, span, secondary) {
     let hoverDiv2 = document.getElementById("hoverDiv2");
     let hoverDiv = document.getElementById("hoverDiv");
 
+    // a link inside a tooltip, with Selectable Tooltips on: a new tooltip on top of it
+    tooltip.addEventListener("mouseenter", function (event) {
+        if (span && typeof checkboxTooltip !== "undefined" && checkboxTooltip.checked && tooltipLevel(tooltip) >= 0) {
+            event.stopImmediatePropagation();
+            OpenStackedTooltip(tooltip, span, event);
+        }
+    });
+
     if (secondary != undefined) {
         tooltip.addEventListener("mouseenter", function (event) {
+            if (event.cancelBubble) return; // opened on top instead
+            if (tooltip != hoverDiv2) hoverDiv2.origin = tooltip;
             TurnOnTooltip(span, secondary);
             //  FillToolTip(span, secondary);
 
@@ -32,6 +109,8 @@ function addTooltipListeners(tooltip, span, secondary) {
         });
     } else {
         tooltip.addEventListener("mouseenter", function (event) {
+            if (event.cancelBubble) return; // opened on top instead
+            if (tooltip != hoverDiv) hoverDiv.origin = tooltip;
             TurnOnTooltip(span, secondary);
             // hoverDiv.show();
             hoverDiv.style.visibility = "hidden";
@@ -70,11 +149,12 @@ function TurnOnTooltip(spa, secondary) {
     if (secondary != undefined) {
         if (spa != null) {
             hoverDiv2.innerHTML = spa.innerHTML;
+            if (checkboxTooltip.checked) WireTooltipLinks(hoverDiv2, hoverDiv2.origin);
         }
     } else {
         if (spa != null) {
             hoverDiv.innerHTML = spa.innerHTML;
-            HandleExtraTooltips(hoverDiv);
+            WireTooltipLinks(hoverDiv);
         }
     }
 }
@@ -83,6 +163,11 @@ function TurnOnTooltip(spa, secondary) {
 function TurnOffTooltip(secondary, origin) {
     let hoverDiv2 = document.getElementById("hoverDiv2");
     let hoverDiv = document.getElementById("hoverDiv");
+
+    if (checkboxTooltip.checked) {
+        setTimeout(SettleTooltips, 150);
+        return;
+    }
 
     if (secondary != undefined) {
         if (checkboxTooltip.checked) {

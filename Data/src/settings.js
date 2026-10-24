@@ -26,8 +26,7 @@ function CheckBoxTooltips() {
   }
   updateUserSettings({
     tooltipselectable: checkboxTooltip.checked,
-    isolateNumber: checkboxNumbers.checked,
-      showSecretSpells: showSecretSpells.checked
+    isolateNumber: checkboxNumbers.checked
   });
 }
 

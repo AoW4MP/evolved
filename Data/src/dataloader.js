@@ -76,26 +76,6 @@ const extraFormUnitsList = [
     "priest_of_the_weave"
 ];
 
-const secretSpellsList = [
-    "abominable_mistling",
-    "colossal_penguin",
-    "feylor",
-    "yakas_feline_infusion",
-    "fanfare_of_mercy",
-    "ysariels_fallen_form",
-    "bhajifs_disruption",
-    "zaethyls_paradise",
-    "karissas_immolation",
-    "cinrens_temptation",
-    "ydgaards_trade",
-    "noctus_mastery",
-    "frikkas_revelation",
-    "nimues_failure",
-    "thulyanas_contortion",
-    "belbedors_folly",
-    "articas_ice_age"
-];
-
 const incorrectIconOverrideList = [
     "summon_zealot",
     "summon_lightbringer",
@@ -113,14 +93,6 @@ const incorrectIconOverrideList = [
 const extraAbilities = [];
 
 const extraSkills = [];
-
-function checkSecretSpell(id) {
-    if (secretSpellsList.includes(id) && !showSecretSpells.checked) {
-        return true;
-    }
-
-    return false;
-}
 
 function fetchJsonFiles(filePaths) {
     return Promise.all(
@@ -349,14 +321,12 @@ async function CheckData() {
         if (storedSettings === null) {
             setUserSettings({
                 tooltipselectable: false,
-                fontSize: "16px",
-                showSecretSpells: false
+                fontSize: "16px"
             });
             storedSettings = getUserSettings();
         }
         //checkboxTooltip = document.getElementById("tooltipCheckbox");
         checkboxTooltip.checked = storedSettings.tooltipselectable;
-        showSecretSpells.checked = storedSettings.showSecretSpells;
 
         //checkboxNumbers = document.getElementById("numbersCheckbox");
         //checkboxNumbers = document.getElementById("numbersCheckbox");

@@ -9,7 +9,6 @@ const errorImage = "/evolved/Icons/Text/exclamationpoint.png";
 const checkboxTooltip = document.getElementById("tooltipCheckbox");
 const checkboxNumbers = document.getElementById("numbersCheckbox");
 
-const showSecretSpells = document.getElementById("showSecretSpellsCheckbox");
 
 function highlightNumbersInDiv(text) {
     if (!text) return;
@@ -301,7 +300,8 @@ function createStatusEffectTooltip(effectData, handlerType = "status") {
     let effect = effectData.name;
 
     // let tag = jsonUnitAbilitiesLocalized[i].description;
-    let tag = maybeHighlight(effectData.description);
+    // its text with live links, so a stacked tooltip can open from it (AddTagIconsForStatusEffects highlights too)
+    let tag = AddTagIconsForStatusEffects(effectData.description);
 
     let image = document.createElement("IMG");
     image.setAttribute("src", "/evolved/Icons/UnitIcons/" + effectData.icon + ".png");
@@ -353,7 +353,7 @@ function HandleExtraTooltips(specificDiv) {
         tooltipEl.innerHTML =
             `<p style="color:#d7c297"><span style="font-size:16px">${iconHtml}${concept.name.toUpperCase()}</span></p>` +
             // a list already ends its line, so the game's blank line after one needs a single <br>
-            concept.description.replaceAll("</bulletlist><br><br>", "</bulletlist><br>");
+            AddTagIconsForStatusEffects(concept.description.replaceAll("</bulletlist><br><br>", "</bulletlist><br>"));
 
         // Attach to the visible underlined sibling, not the hidden handler itself
         const visibleSibling = el.previousElementSibling;
@@ -403,10 +403,6 @@ function GetUnitTierAndName(id, subcultureCheck) {
         // Prepare the unit's name
         let name = unitLoc.name;
 
-        // check for secret spells
-        if (checkSecretSpell(unit.id)) {
-            name = "???";
-        }
 
         // Add mount special tags if applicable
         if (MountedSpecialList.includes(id) || CheckIfOptionalCavalry(id)) {
@@ -2870,21 +2866,6 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         unitCard = document.getElementById("unitCard" + unitEN.id + unitEN.sub_culture_name);
     }
 
-    if (checkSecretSpell(unitEN.id)) {
-        unitCard.classList.add("blurred");
-        let clicker = document.createElement("Div");
-
-        let clickerHolder = document.createElement("Div");
-        unitCard.parentElement.prepend(clickerHolder);
-        clickerHolder.className = "unblurHolder";
-
-        clickerHolder.append(clicker);
-        clicker.className = "unblurclicker";
-        clicker.innerHTML = "Click to reveal";
-        clicker.innerHTML += "<br><br>(Change Top-left Setting: Show Secret Spells to disable)";
-
-        clicker.addEventListener("click", (event) => Unblur(unitCard, clickerHolder, event));
-    }
 
     imagelink = unitCard.querySelector("img#vid");
     imagelink.setAttribute("src", "/evolved/PreviewsAvif/" + unitEN.id + ".avif");
@@ -5066,19 +5047,6 @@ function showRelic(a, divOrigin) {
 
     if ("spell" in relic) {
         for (const spell of relic.spell) {
-            if (checkSecretSpell(spell.id)) {
-                const blurPart = divOrigin.querySelector(".mod_description");
-                blurPart.classList.add("blurred");
-                let clickerHolder = document.createElement("Div");
-                divOrigin.prepend(clickerHolder);
-                clickerHolder.className = "unblurHolder";
-                let clicker = document.createElement("Div");
-                clickerHolder.append(clicker);
-                clicker.className = "unblurclicker";
-                clicker.innerHTML = "Click to reveal";
-                clicker.innerHTML += "<br><br>(Change Top-left Setting: Show Secret Spells to disable)";
-                clicker.addEventListener("click", (event) => Unblur(blurPart, clickerHolder, event));
-            }
             const fragment = spell_card_template.content.cloneNode(true);
             const element = fragment.firstElementChild;
             if (element) {
@@ -6049,19 +6017,6 @@ function showSpell(a, showOrigin, divOrigin) {
         let modName = modCard.querySelector("#modname");
 
         modName.innerHTML = spellFound.name.toUpperCase();
-        if (checkSecretSpell(spellFoundEN.id)) {
-            const blurPart = divOrigin.querySelector(".mod_image_holder");
-            blurPart.classList.add("blurred");
-            let clickerHolder = document.createElement("Div");
-            divOrigin.prepend(clickerHolder);
-            clickerHolder.className = "unblurHolder";
-            let clicker = document.createElement("Div");
-            clickerHolder.append(clicker);
-            clicker.className = "unblurclicker";
-            clicker.innerHTML = "Click to reveal";
-            clicker.innerHTML += "<br><br>(Change Top-left Setting: Show Secret Spells to disable)";
-            clicker.addEventListener("click", (event) => Unblur(blurPart, clickerHolder, event));
-        }
         let description = "<hr>";
         let descriptionDiv = modCard.querySelector("#moddescription");
 

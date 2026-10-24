@@ -57,6 +57,13 @@ structure's description, then only those lines of the game's prediction it doesn
 whose Show Prediction is off gets no prediction, as in the game: `Data/GEN/StructurePredictions.json`, which
 `citytree.py` writes, lists them (Merchants' Guild, Workers' Guild and 59 more); `dataloader.js` loads it.
 
+`Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
+does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.
+Upstream had two boxes, the second replaced each time. Concept and status effect tooltips keep their links for this.
+
+Secret spells are always shown: the Show Secret Spells setting, its blur ("Click to reveal") and the "???" unit names
+are removed (`checkSecretSpell`, `secretSpellsList`).
+
 ### English only
 
 Evolved is exported in English only, so the other languages are removed:

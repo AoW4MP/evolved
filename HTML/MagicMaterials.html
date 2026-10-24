@@ -285,8 +285,15 @@
         font-size: 16px;
         background-image: linear-gradient(to right, rgb(0, 0, 0, 0), var(--set), rgb(0, 0, 0, 0));
     }
+    /* AddDLCTag's inline offsets (a 20px float holding a 25px picture) suit other pages' titles; here
+       the DLC icon sits centred on the title line with the material icon */
     .mm-title .mountToolTip {
-        margin-left: auto;
+        display: flex !important;
+        float: none !important;
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        margin-left: 0 !important;
     }
     .mm-icon {
         height: 30px;

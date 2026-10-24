@@ -1689,9 +1689,9 @@ yellowText {
    layout, as the build cost is, so the header keeps its height */
 .structure_tome_icon {
     position: absolute;
-    right: 40px;
-    top: 80px;
-    height: 80px;
+    right: 30px;
+    top: 75px;
+    height: 105px;
 }
 
 greenText {
@@ -1959,7 +1959,7 @@ silver {
 .content {
     float: right;
     grid-template-columns: 180px 180px;
-    font-size: 12px;
+    font-size: 14px; /* a summon spell's spawn chances */
     padding: 0 0;
     background-color: black;
     display: none;

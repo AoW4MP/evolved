@@ -25791,9 +25791,9 @@
     "city_name": "Altar of Destruction",
     "DLC": "DRAGONLORDS",
     "combat_property_description": "Alipavar the Destroyer gains [hyperlink,GLOBAL.PROPERTIES.THE_DESTROYER_PROPERTY]Might of the Destroyer[/hyperlink].<br>Alipavar's [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.CHOSEN_ALIPAVAR]Chosen of Allipavar[/hyperlink].",
-    "hero_property_description": "This unit gains:<bulletlist><bullet>+20 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet></bulletlist>",
+    "hero_property_description": "This unit gains:<bulletlist><bullet>+20 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet></bulletlist>",
     "hero_property_name": "Chosen of Allipavar",
-    "leader_property_description": "This unit gains:<bulletlist><bullet>+60 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>",
+    "leader_property_description": "This unit gains:<bulletlist><bullet>+60 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>",
     "leader_property_name": "Might of the Destroyer"
   },
   {
@@ -75637,7 +75637,7 @@
   },
   {
     "id": "HD_DEDICATION@MATERIUM4",
-    "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [/hyperlink]</bullet></bulletlist>",
+    "description": "While army leader, all non-hero units in the army gain:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink]</bullet></bulletlist>",
     "name": "Paragon of Materium"
   },
   {
@@ -78541,8 +78541,8 @@
   },
   {
     "id": "HERO_SKILLS@WARRIOR@COMMITTED_CHARGE",
-    "description": "If the hero uses a [hyperlink,GLOBAL.ChargeConcept]Charge[/hyperlink] attack after moving, they gain [hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [/hyperlink].",
-    "modifier_description": "If the unit moved, they gain [hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [/hyperlink].",
+    "description": "If the hero uses a [hyperlink,GLOBAL.ChargeConcept]Charge[/hyperlink] attack after moving, they gain [hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink].",
+    "modifier_description": "If the unit moved, they gain [hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink].",
     "name": "Committed Charge"
   },
   {
@@ -78586,7 +78586,7 @@
   },
   {
     "id": "HERO_SKILLS@WARRIOR@RETALIATOR",
-    "description": "The hero has [hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [/hyperlink].",
+    "description": "The hero has [hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink].",
     "name": "Retaliator"
   },
   {

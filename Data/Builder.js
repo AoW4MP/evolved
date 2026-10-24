@@ -4735,7 +4735,11 @@ function populateGenericCard(divOrigin, { name, description, tier = "", cost = "
 // Bargain Price a second time, unit type by type. Elsewhere the prediction mostly repeats the description
 // ("+15 Draft income" after "+15 Draft."), but some effects are only in it (a Town Hall's +1 Province Annex Range).
 function StructureDescription(structure) {
-    const description = structure.description || "";
+    // the dump writes a line break as "<br></br>", which a browser reads as two; and a list already ends its
+    // line, so the game's blank line after one ("Mutually exclusive with …") needs a single <br>
+    const description = (structure.description || "")
+        .replaceAll("<br></br>", "<br>")
+        .replaceAll("</bulletlist><br><br>", "</bulletlist><br>");
     const hidden = jsonStructurePredictions?.hidden?.includes(String(structure.resid));
     const prediction = hidden ? "" : structure.prediction_description || "";
     if (!description || !prediction) return description + prediction;

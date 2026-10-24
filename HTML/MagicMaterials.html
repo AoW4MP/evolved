@@ -127,7 +127,7 @@
                 card.append(global);
                 if (m.income.length) {
                     const income = document.createElement("div");
-                    income.className = "mm-income";
+                    income.className = m.income.length > 3 ? "mm-income mm-income-split" : "mm-income";
                     income.innerHTML = '<div class="mm-label">Local Income</div>' + AddTagIconsForStatusEffects(Income(m.income));
                     card.append(income);
                 }
@@ -312,6 +312,23 @@
     .mm-income {
         grid-area: 3 / 2;
         margin-top: 6px;
+    }
+    /* a long income list (Rainbow Clover's six) runs down two columns across the card, under the
+       picture, rather than one long one beside it */
+    .mm-card:has(.mm-income-split) .mm-picture {
+        grid-row: 2 / 3;
+    }
+    .mm-income-split {
+        grid-column: 1 / -1;
+    }
+    .mm-income-split bulletlist {
+        display: block;
+        columns: 2;
+        column-gap: 8px;
+    }
+    .mm-income-split bullet {
+        break-inside: avoid;
+        white-space: nowrap;
     }
     .mm-label {
         color: #d7c297;

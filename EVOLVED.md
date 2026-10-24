@@ -103,7 +103,9 @@ Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` h
 It started from upstream's copy and keeps its entries and order; texts the game added are appended, and texts it no longer has are kept, as pages may still look them up.
 A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
 `Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero).
-`UI.json` still comes from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
+`Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
+`UI.json` is no game data: ten English menu labels upstream kept for its translations. It changes nothing on the English site and needs no updating.
+The rest of `Data/GEN/*.json` comes from upstream, apart from the files Evolved generates (below).
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
 The other folders under `Icons/` are made by hand. An icon they lack can be taken from the game's content libraries with `clbicons.py` in aow4_diff_tools (`find` a name, then `export … --crop`, which gives the hand-made icons' size); combat enchantments are named after the enchantment (`umbral_ramblings.png`).

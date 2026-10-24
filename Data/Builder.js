@@ -189,11 +189,61 @@ function AddTagIconsForStatusEffects(text) {
         text = highlightNumbersInDiv(text);
     }
 
-    text = text.replaceAll("<bulletlist></bullet>", "<bulletlist>");
-    text = text.replaceAll("</bullet></bulletlist>", "</bullet></bullet></bulletlist>");
+    text = RebuildBulletLists(text);
     text = text.replaceAll("<br></br>", "<br>");
 
     return text;
+}
+
+// The game's dump writes a nested list as "<bullet>Outer:<bulletlist></bullet><bullet>a</bullet></bulletlist>",
+// closing the outer bullet early and never after its list, and some texts still carry the raw "[bulletlist]" or
+// "[bullet/]". Every opening is in the right order, so rebuild the lists from them: a bullet runs until the next
+// bullet of its list, its own closing tag or the list's end, and a list opened inside a bullet stays in it.
+// A closing tag straight after an opening one is the misplaced kind and is dropped. Correct text is unchanged.
+const BULLET_TAG = /(<bulletlist>|\[bulletlist\]|<\/bulletlist>|\[\/bulletlist\]|<bullet>|\[bullet\/\]|<\/bullet>)/i;
+const BULLET_TAG_ONLY = new RegExp("^" + BULLET_TAG.source + "$", "i");
+function RebuildBulletLists(text) {
+    if (!/bullet/i.test(text)) return text;
+    const out = [];
+    const open = [false]; // per open list, whether a bullet is open in it
+    let fresh = false; // just after an opening tag
+    for (const part of text.split(BULLET_TAG)) {
+        if (!part) continue;
+        const tag = BULLET_TAG_ONLY.test(part) ? part.toLowerCase() : null;
+        if (tag === null) {
+            if (fresh && !part.trim()) continue;
+            out.push(fresh ? part.trimStart() : part);
+        } else if (tag === "<bulletlist>" || tag === "[bulletlist]") {
+            out.push("<bulletlist>");
+            open.push(false);
+            fresh = true;
+            continue;
+        } else if (tag === "</bulletlist>" || tag === "[/bulletlist]") {
+            if (open.length === 1) continue; // closes no list
+            if (open.at(-1)) out.push("</bullet>");
+            out.push("</bulletlist>");
+            open.pop();
+        } else if (tag === "<bullet>" || tag === "[bullet/]") {
+            if (open.at(-1)) out.push("</bullet>");
+            out.push("<bullet>");
+            open[open.length - 1] = true;
+            fresh = true;
+            continue;
+        } else {
+            if (fresh) continue; // "</bullet>" straight after an opening: misplaced
+            if (open.at(-1)) out.push("</bullet>");
+            open[open.length - 1] = false;
+        }
+        fresh = false;
+    }
+    while (true) {
+        if (open.at(-1)) out.push("</bullet>");
+        if (open.length === 1) break;
+        out.push("</bulletlist>");
+        open.pop();
+    }
+    // a bullet left empty held a value the game fills in during play; there is none to show
+    return out.join("").replaceAll("<bullet></bullet>", "");
 }
 
 function lookupStatusEffect(name) {

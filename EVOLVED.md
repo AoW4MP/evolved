@@ -44,6 +44,12 @@ The page body (`.w3-container`: sidebar and content) is at most 1600px wide and 
 the sidebar stays beside the content. The header's corners (Settings, the "Updated" date, Donate, Other Database)
 stay within the same 1600px. Phones keep the ☰ menu.
 
+`Data/Builder.js`: `AddTagIconsForStatusEffects` rebuilds a text's bullet lists (`RebuildBulletLists`) instead of
+upstream's two string patches. The game's dump writes a nested list as `<bullet>Outer:<bulletlist></bullet>…</bulletlist>`,
+and the patches closed the outer list after the first nested one, so an item after a nested list fell out of its list
+(about 110 texts in Spells, Abilities, Tomes and others). It also turns a raw `[bulletlist]`, `[/bulletlist]` or `[bullet/]` into a list
+and leaves out empty bullets. The concept tooltip's title is 16px instead of upstream's 20px.
+
 ### English only
 
 Evolved is exported in English only, so the other languages are removed:
@@ -58,7 +64,7 @@ Evolved is exported in English only, so the other languages are removed:
 
 ### Beta data only
 
-Evolved is played on the game's beta, so the website's own dump in `Data/EN` is already beta data and there is no switch to upstream's `Data/BETA`:
+Evolved is played on the game's beta, so the website's own dump in `Data/EN` is already beta data and there is no switch to upstream's `Data/BETA`, which is deleted:
 
 - `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice in the same yellow text. Update the beta name in it when the game's beta changes.
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
@@ -88,8 +94,9 @@ Most of `Data/EN/*.json` comes from Evolved's own game dumps (the game's DUMPALL
 Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` has spells upstream lacks, such as Astral Keeper Ritual, Bone Horror Ritual and Bone Dragon Ritual.
 The exceptions are `Data/EN/all.json`, `concept_tooltips.json` and `UI.json`, which come from upstream, as does `Data/GEN/*.json` apart from the files Evolved generates (below).
 `all.json` holds the game's texts with the numbers of upstream's vanilla game at the time they made it: no mod values, and older than the live game after an update.
-Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`, its closing tag misplaced).
-Evolved repaired these in `Data/EN/concept_tooltips.json` (Gold, Production, Mana, the pacts and others), so a `concept_tooltips.json` taken from upstream brings the broken bullets back; `all.json` still has them.
+Upstream's conversion broke every bullet that starts with a hyperlink (`[bullet/][hyperlink,…]` became `<bullet></bullet> text`, its closing tag misplaced), and left some lists closed by a raw `[/bulletlist]`.
+Evolved repaired these in `Data/EN/concept_tooltips.json` (17 concepts: Gold, Production, Mana, the pacts and others) and `Data/EN/all.json` (123 texts), each checked against the game's own text in EN.po, so either file taken from upstream brings the broken bullets back.
+Eleven of the `all.json` texts are from an older game version than EN.po (Consulate, Cold Dark's Snow and Ice, Crucible's Battlements and a few more) or held a value the game fills in during play: they keep upstream's wording, in proper bullets.
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
 The other folders under `Icons/` are made by hand. An icon they lack can be taken from the game's content libraries with `clbicons.py` in aow4_diff_tools (`find` a name, then `export … --crop`, which gives the hand-made icons' size); combat enchantments are named after the enchantment (`umbral_ramblings.png`).

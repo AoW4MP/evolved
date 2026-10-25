@@ -6224,7 +6224,8 @@ function GetAllTomesWithAffinity(affinity, dualOnly) {
         arrayResultPlain.sort((a, b) => a.tier - b.tier);
         arrayResultDual.sort((a, b) => a.tier - b.tier);
     } else {
-        arrayResultPlain.reverse();
+        // General Research first, then by name, which keeps a culture's tomes ("Dark - ...") together
+        arrayResultPlain.sort((a, b) => (b.id == "general_research") - (a.id == "general_research") || a.name.localeCompare(b.name));
     }
     console.log(arrayResultPlain);
 

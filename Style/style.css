@@ -277,6 +277,13 @@ a:hover {
     padding: 0 6px;
     text-decoration: none;
     color: #eee;
+    font-size: 15px;
+}
+
+/* icons centred on the bar; the negative margins keep the 40px ones from making it taller */
+#menu a > img {
+    vertical-align: middle;
+    margin: -4px 0;
 }
 /* Desktop: the menu wraps onto a second line when the window is too narrow for it, instead of
    forcing a page-wide scrollbar, centred; the header grows to fit. Phones get the ☰ menu (max-width: 800px). */

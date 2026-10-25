@@ -172,6 +172,11 @@ ul {
     vertical-align: middle;
 }
 
+/* the space the icons had below them when they sat on the text's baseline, so what follows keeps its distance */
+.textblocktitle:has(> img) {
+    padding-bottom: 7px;
+}
+
 .textblock {
     width: 300px;
     height: auto;

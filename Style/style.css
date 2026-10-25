@@ -594,6 +594,8 @@ p {
     min-width: 400px;
     float: left;
     background-image: url(/evolved/Icons/tooltipBG.png);
+    /* the background is 488px wide: tiled across an 800px card it showed a seam */
+    background-size: cover;
     font-size: 13px;
     color: #bbcdf6;
     text-align: left;
@@ -1685,13 +1687,18 @@ yellowText {
     font-size: 16px;
 }
 
+/* a structure card is 800px wide: its text runs on up to the tome icon on the right */
+.structure_image_holder .mod_description {
+    max-width: 520px;
+}
+
 /* a Province Improvement card's tome, on the right between the tome's name and the build cost; out of the
    layout, as the build cost is, so the header keeps its height */
 .structure_tome_icon {
     position: absolute;
     right: 30px;
     top: 75px;
-    height: 105px;
+    height: 90px;
 }
 
 greenText {

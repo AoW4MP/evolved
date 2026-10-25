@@ -2604,8 +2604,14 @@ function findSpellsWithArgument(argumentaffinity, argumentType) {
 
     let finalCheckedList = [];
     if (argumentaffinity === "") {
+        // the Empire Tree's Rites are spells in the game's data, but they belong to the Empire Tree, not the spell lists
+        const empireTreeIds = new Set(jsonEmpire.filter((entry) => entry.category.includes("Rite")).map((entry) => entry.id));
         for (let j = 0; j < jsonSpells.length; j++) {
-            if (jsonSpells[j].spellType.indexOf(argumentType) !== -1 && jsonSpells[j].id != "invalid") {
+            if (
+                jsonSpells[j].spellType.indexOf(argumentType) !== -1 &&
+                jsonSpells[j].id != "invalid" &&
+                !empireTreeIds.has(jsonSpells[j].id)
+            ) {
                 finalCheckedList.push(jsonSpells[j].id);
             }
         }

@@ -521,9 +521,11 @@ p {
 }
 
 .subCultureName {
-    text-align: center;
+    text-align: left;
     color: white;
-    font-size: 11px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .modunlock_icon {
@@ -1098,7 +1100,7 @@ tab {
     /* Center the buttons horizontally */
     align-items: center;
     /* Center the buttons vertically */
-    gap: 10px;
+    gap: 30px;
     /* Space between buttons */
     padding: 10px;
     color: white;
@@ -1107,6 +1109,11 @@ tab {
 .subscultureButton {
     background-color: transparent;
     border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 .subscultureButton:hover {

@@ -3850,13 +3850,8 @@ function CheckIfInStructure(id, unitName) {
             structure.add(jsonStructureUpgrades[i]);
         }
 
-        for (const [keyword, units] of Object.entries(unlockableUnitsMapStructures)) {
-            if (jsonStructureUpgrades[i].id.indexOf(keyword) != -1) {
-                // right structure
-                if (units.includes(id)) {
-                    structure.add(jsonStructureUpgrades[i]);
-                }
-            }
+        if (jsonStructurePredictions?.units?.[String(jsonStructureUpgrades[i].resid)]?.includes(id)) {
+            structure.add(jsonStructureUpgrades[i]);
         }
     }
 
@@ -4895,31 +4890,30 @@ function showStructure(a, showOrigin, divOrigin) {
         modName.append(newDivForMount);
     }
 
-    for (const [keyword, units] of Object.entries(unlockableUnitsMapStructures)) {
-        addUnlockableUnitsToStructure(a, keyword, units, descriptionDiv, unitTypesDiv);
-    }
+    // the units a province improvement unlocks (Data/GEN/StructurePredictions.json, from aow4_diff_tools/citytree.py)
+    const unlocks = jsonStructurePredictions?.units?.[String(structureEN.resid)];
+    if (unlocks) descriptionDiv.append(UnitUnlocksMenu(unlocks));
     found = true;
 
     return modcard;
 }
 
-function addUnlockableUnitsToStructure(a, keyword, unitList, descriptionDiv, unitTypesDiv) {
-    if (a.indexOf(keyword) !== -1) {
-        descriptionDiv.innerHTML += "<br>Unlocks Production of:";
-
-        for (let i = 0; i < unitList.length; i++) {
-            let div = document.createElement("DIV");
-            div.innerHTML =
-                "<bullet>" +
-                '<a href="/evolved/HTML/Units.html?unit=' +
-                unitList[i] +
-                '" target="_blank">' +
-                GetUnitTierAndName(unitList[i]) +
-                "</a>" +
-                "</bullet>";
-            unitTypesDiv.append(div);
-        }
+// a list of units behind a button, as a summon spell's spawn chances are; each button opens its own card's list
+function UnitUnlocksMenu(units) {
+    const menu = document.createElement("DIV");
+    menu.className = "unitUnlocksMenu";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "collapsible";
+    button.innerHTML = "UNLOCKS PRODUCTION OF " + units.length + (units.length == 1 ? " UNIT" : " UNITS");
+    button.onclick = SetUpCombatEnc;
+    const list = document.createElement("DIV");
+    list.className = "unitUnlocksList";
+    for (const id of units) {
+        list.innerHTML += '<a href="/evolved/HTML/Units.html?unit=' + id + '" target="_blank">' + GetUnitTierAndName(id) + "</a>";
     }
+    menu.append(button, list);
+    return menu;
 }
 
 function showCosmicHappening(a, divOrigin) {

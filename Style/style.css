@@ -1687,6 +1687,20 @@ yellowText {
     font-size: 16px;
 }
 
+/* a province improvement's units, behind a button as a summon spell's spawn chances are; the button shows it */
+.unitUnlocksMenu {
+    width: 450px;
+    margin-top: 10px;
+}
+
+.unitUnlocksList {
+    display: none;
+    grid-template-columns: 200px 200px;
+    column-gap: 30px;
+    padding: 5px 10px;
+    background-color: black;
+}
+
 /* a structure card is 800px wide: its text runs on up to the tome icon on the right */
 .structure_image_holder .mod_description {
     max-width: 520px;

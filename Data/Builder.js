@@ -2928,9 +2928,9 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     const hpText = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@HITPOINTS");
     hpspan.innerHTML =
-        '<span style="color:burlywood;text-transform: uppercase ">' +
+        '<span style="color:#d7c297;text-transform: uppercase ">' +
         RemoveHyperLinks(hpText.hyperlink) +
-        '</span><br><span style="font-size: 14px;">' +
+        '</span><br><span>' +
         AddTagIconsForStatusEffects(hpText.description) +
         "</span>";
     let hpTooltip = unitCard.querySelector("div#hp_tt");
@@ -2946,7 +2946,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     let critspan = document.createElement("span");
     critspan.innerHTML =
-        '<span style="color:burlywood;text-transform: uppercase;">Critical Hit Chance</span><br><span style="font-size: 14px;">' +
+        '<span style="color:#d7c297;text-transform: uppercase;">Critical Hit Chance</span><br><span>' +
         AddTagIconsForStatusEffects(critText.description) +
         "</span>";
     let critTooltip = unitCard.querySelector("div#crit_tt");
@@ -2966,7 +2966,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         critTooltip.appendChild(img);
 
         critspan.innerHTML =
-            '<span style="color:burlywood;text-transform: uppercase;">Combat Speed</span><br><span style="font-size: 14px;">' +
+            '<span style="color:#d7c297;text-transform: uppercase;">Combat Speed</span><br><span>' +
             "How many hexes in combat this unit can move" +
             "</span>";
     }
@@ -3020,9 +3020,9 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     }
     let mpspan = document.createElement("span");
     mpspan.innerHTML =
-        '<span style="color:burlywood;text-transform: uppercase;">Move Points</span><br>' +
+        '<span style="color:#d7c297;text-transform: uppercase;">Move Points</span><br>' +
         movementDiv.innerHTML +
-        '</p><span style="font-size: 14px;">' +
+        '</p><span>' +
         AddTagIconsForStatusEffects(defenseText.move_points_description) +
         "</span>";
     let mpTooltip = unitCard.querySelector("div#mp_tt");
@@ -3328,7 +3328,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     const resistanceSpan = document.createElement("span");
     resistanceSpan.innerHTML =
-        '<span style="color:burlywood; text-transform: uppercase;">Resistance</span><br><span style="font-size: 14px;">' +
+        '<span style="color:#d7c297;text-transform: uppercase;">Resistance</span><br><span>' +
         AddTagIconsForStatusEffects(defenseText.resistance_description) +
         "<br><br>" +
         damageRedText.damage_reduction +
@@ -3347,7 +3347,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     let armorTooltip = unitCard.querySelector("div#armor_tt");
 
     armorspan.innerHTML =
-        '<span style="color:burlywood;text-transform: uppercase ">Defense</span><br><span style="font-size: 14px;">' +
+        '<span style="color:#d7c297;text-transform: uppercase ">Defense</span><br><span>' +
         AddTagIconsForStatusEffects(defenseText.armor_description) +
         damageRedText.damage_reduction +
         " : " +

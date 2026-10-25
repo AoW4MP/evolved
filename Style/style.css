@@ -890,6 +890,12 @@ tab {
     margin-right: auto;
 }
 
+/* The unit list takes the first 200px, so centring on what's left puts the card 100px right of the page's middle.
+   Pull it back to the page centre (half the 876px card + half the list = 538px), never over the list. */
+.city > .unit_card {
+    margin-left: max(0px, calc(50% - 538px));
+}
+
 .generic-center {
     height: auto;
     color: white;
@@ -1095,12 +1101,9 @@ tab {
 }
 
 .subcultureHolder {
-    /* equal-width columns, so the middle of three sits under the page title */
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    width: fit-content;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* Center the buttons horizontally */
     align-items: center;
     /* Center the buttons vertically */
     gap: 30px;

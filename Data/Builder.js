@@ -4873,9 +4873,11 @@ function showStructure(a, showOrigin, divOrigin) {
             } else {
                 tier.innerHTML = "<br>" + tomeNameandTier[0] + "<br>";
             }
-            // the tome's icon under its name; a culture's improvements come from its culture tome ("Nomad - Conquerors")
+            // the tome's icon under its name; a culture's improvements come from its culture tome ("Nomad - Conquerors").
+            // Only on a structure card: a tome's own page draws its improvements on spell cards, where the icon
+            // would land on the picture, and the tome is the page itself
             const tomeIcon = findBy(jsonTomes, "id", tomeNameandTier[2])?.icon;
-            if (tomeIcon) tier.innerHTML += '<img class="structure_tome_icon" src="/evolved/Icons/TomeIcons/' + tomeIcon + '.png" alt="" />';
+            if (tomeIcon && divOrigin.querySelector(".structure_image_holder")) tier.innerHTML += '<img class="structure_tome_icon" src="/evolved/Icons/TomeIcons/' + tomeIcon + '.png" alt="" />';
         }
         modName.innerHTML += "<br> <hyperlink><structure></structure> Province Improvement</hyperlink>";
     } else {

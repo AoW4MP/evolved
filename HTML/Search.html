@@ -108,122 +108,120 @@ btn.id = key;
     <body>
         <div id="header"></div>
 
-        <div id="unitS" style="width: 100%; margin: auto; background-color: #0e2229">
-            <h1 style="color: white; text-align: center">DLC List & Search</h1>
-            <div style="height: auto; color: white; text-align: center">Show all entries from DLC:<div id="dlcButtonRow" style="display: flex; flex-wrap: wrap; gap: 6px;    justify-content: center;"></div></div>
-            <div style="height: auto; color: white; text-align: center">
-              <hr>Search Filters:
-                <div style="display: grid; margin: auto; width: fit-content; text-align: left">
-                    
-                    <label class="switch">
-                          
-                        <input
-                            type="checkbox"
-                            name="checkToggle"
-                            id="toggleAllCheck"
-                            checked="checked"
-                            onchange="toggle(this)" />
-                        Toggle All
-                    </label>
-                    
-                    <div id="unitSearchFilters" style="display:flex">
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="unitsCheck" checked="checked" />
-                            Units
-                        </label>
-                          <div id="unitSubFilters" style="background-color: black">
+        <div class="w3-container sidebarPage">
+            <div class="textblocktitle">DLC List & Search</div>
+            <div class="pageHead">
+                <div id="unitS" style="max-width: 876px; margin: auto auto 20px; background-color: #0e2229">
+                    <div style="height: auto; color: white; text-align: center; padding-top: 12px">DLC Filters:<div id="dlcButtonRow" style="display: flex; flex-wrap: wrap; gap: 6px;    justify-content: center;"></div></div>
+                    <div style="height: auto; color: white; text-align: center">
+                      <hr style="margin-bottom: 16px">Search Filters:
+                        <div id="searchFilters">
                             <label class="switch">
-                                <input type="checkbox" name="checkToggle" id="namesCheck" checked="checked" />
-                                Unit Name
-                            </label>
-                            <label class="switch">
-                                <input type="checkbox" name="checkToggle" id="abilityNamesCheck" checked="checked" />
-                                Ability Names
-                            </label>
-                            <label class="switch">
+
                                 <input
                                     type="checkbox"
                                     name="checkToggle"
-                                    id="abilityDescriptionCheck"
-                                    checked="checked" />
-                                Ability Descriptions & Modifiers
-                            </label>
-                            <label class="switch">
-                                <input type="checkbox" name="checkToggle" id="passivesCheck" checked="checked" />
-                                Passives & Types
+                                    id="toggleAllCheck"
+                                    checked="checked"
+                                    onchange="toggle(this)" />
+                                Toggle All
                             </label>
 
-                            <label class="switch">
-                                <input type="checkbox" name="checkToggle" id="resistancesCheck" />
-                                Resistances
-                            </label>
+                            <div id="unitSearchFilters">
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="unitsCheck" checked="checked" />
+                                    Units
+                                </label>
+                                  <div id="unitSubFilters">
+                                    <label class="switch">
+                                        <input type="checkbox" name="checkToggle" id="namesCheck" checked="checked" />
+                                        Unit Name
+                                    </label>
+                                    <label class="switch">
+                                        <input type="checkbox" name="checkToggle" id="abilityNamesCheck" checked="checked" />
+                                        Ability Names
+                                    </label>
+                                    <label class="switch">
+                                        <input
+                                            type="checkbox"
+                                            name="checkToggle"
+                                            id="abilityDescriptionCheck"
+                                            checked="checked" />
+                                        Ability Descriptions & Modifiers
+                                    </label>
+                                    <label class="switch">
+                                        <input type="checkbox" name="checkToggle" id="passivesCheck" checked="checked" />
+                                        Passives & Types
+                                    </label>
+
+                                    <label class="switch">
+                                        <input type="checkbox" name="checkToggle" id="resistancesCheck" />
+                                        Resistances
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="otherSearchFilters">
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="spellsCheck" checked="checked" />
+                                    Spells
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="siegeCheck" checked="checked" />
+                                    Siege Projects
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="heroSkillsCheck" checked="checked" />
+                                    Hero Skills
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="heroItemsCheck" checked="checked" />
+                                    Hero Equipment
+                                </label>
+                                   <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="infusionsCheck" checked="checked" />
+                                    Item Forge Infusions
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="ambitionsCheck" checked="checked" />
+                                    Hero Ambitions
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="worldStructuresCheck" checked="checked" />
+                                    World Structures
+                                </label>
+                                  <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="artifactCheck" checked="checked" />
+                                    Artifacts
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="cityStructuresCheck" checked="checked" />
+                                    City Structures & SPI
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="factionTraitCheck" checked="checked" />
+                                    Faction Traits
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="empireTreeCheck" checked="checked" />
+                                    Empire Tree
+                                </label>
+                            </div>
                         </div>
                     </div>
-                    <div style="display: grid; margin: auto; width: fit-content; grid-template-columns: auto auto auto">
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="spellsCheck" checked="checked" />
-                            Spells
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="siegeCheck" checked="checked" />
-                            Siege Projects
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="heroSkillsCheck" checked="checked" />
-                            Hero Skills
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="heroItemsCheck" checked="checked" />
-                            Hero Equipment
-                        </label>
-                           <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="infusionsCheck" checked="checked" />
-                            Item Forge Infusions
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="ambitionsCheck" checked="checked" />
-                            Hero Ambitions
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="worldStructuresCheck" checked="checked" />
-                            World Structures
-                        </label>
-                          <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="artifactCheck" checked="checked" />
-                            Artifacts
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="cityStructuresCheck" checked="checked" />
-                            City Structures & SPI
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="factionTraitCheck" checked="checked" />
-                            Faction Traits
-                        </label>
-                        <label class="switch">
-                            <input type="checkbox" name="checkToggle" id="empireTreeCheck" checked="checked" />
-                            Empire Tree
-                        </label>
+                    <div style="margin-right: auto; margin-left: auto; width: 500px; padding-top: 6px; padding-bottom: 12px">
+                        <input style="width: 400px" type="text" class="searchbar" id="searchInput" />
+                        <input class="button-random" type="submit" value="Submit" id="button" />
+
+                        <p id="searchResult" style="color: aqua"></p>
                     </div>
                 </div>
-                <br />
+
+                <div id="searchOutputMod"></div>
+
+                <div id="searchOutput"></div>
             </div>
-            <div style="margin-right: auto; margin-left: auto; width: 500px">
-                <input style="width: 400px" type="text" class="searchbar" id="searchInput" />
-                <input class="button-random" type="submit" value="Submit" id="button" />
-
-                <p id="searchResult" style="color: aqua"></p>
-            </div>
-        </div>
-
-        <div id="searchOutputMod"></div>
-
-        <div id="searchOutput"></div>
-
-        <div class="w3-containerBlock">
             <div id="buttonHolder" class="w3-bar w3-black"></div>
             <div id="dataHolder" style="position: sticky"></div>
-            <div id="dataHolder2" style="position: sticky"></div>
         </div>
 
         <script>

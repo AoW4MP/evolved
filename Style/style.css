@@ -658,13 +658,54 @@ p {
     display: grid;
 }
 
-.w3-containerBlock {
-    display: block;
+/* a page with a sidebar: the title across the top, then the filters (.pageHead) and the cards in the middle column,
+   and the sidebar on the left, level with the first card. On desktop an empty column as wide as the sidebar on the
+   right keeps the middle column, and so the title, filters and cards, centred on the page. A subculture page has a
+   sidebar and cards per subculture (.subDiv), which take the same places. */
+.sidebarPage {
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 16px;
+    align-items: start;
+}
+@media (min-width: 801px) {
+    .sidebarPage {
+        grid-template-columns: 240px minmax(0, 1fr) 240px;
+    }
+}
+.sidebarPage > *,
+.sidebarPage .subDiv > .w3-container > * {
+    grid-column: 2;
+}
+.sidebarPage > .textblocktitle {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    padding: 0;
+    /* room for the 40px icons some titles have, so every title is as high */
+    min-height: 44px;
+    line-height: 44px;
+}
+/* in the cards' row: under the title, or under the filters or subculture picker when there are any */
+.sidebarPage > .w3-bar,
+.sidebarPage .subDiv > .w3-container > .w3-bar {
+    grid-column: 1;
+    grid-row: 2;
+}
+.sidebarPage:has(> .pageHead, > .subcultureHolder) > .w3-bar,
+.sidebarPage:has(> .pageHead, > .subcultureHolder) .subDiv > .w3-container > .w3-bar {
+    grid-row: 3;
+}
+/* Search's results list starts level with its form, and runs on beside the cards */
+.sidebarPage:has(#unitS) > .w3-bar {
+    grid-row: 2 / span 2;
+}
+.sidebarPage .subDiv,
+.sidebarPage .subDiv > .w3-container {
+    display: contents;
 }
 
 .w3-bar {
     overflow-y: auto;
-    width: 200px;
+    width: 240px;
     max-height: 800px;
     display: grid;
     grid-auto-columns: auto;
@@ -683,12 +724,38 @@ p {
     color: white;
 }
 
+/* Search's filters: one grid of three columns, as wide as their labels and centred in the box; Toggle All above the
+   middle column, then the unit filters and, a little lower, the others */
+#searchFilters {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 24px;
+    justify-content: center;
+    text-align: left;
+    margin-top: 10px;
+}
+#searchFilters > .switch:first-child {
+    grid-column: 2;
+}
+/* Units starts the next row instead of filling the cell beside Toggle All */
+#unitSearchFilters > .switch {
+    grid-column-start: 1;
+}
+#unitSearchFilters,
+#unitSubFilters,
+#otherSearchFilters {
+    display: contents;
+}
+#otherSearchFilters > .switch:nth-child(-n + 3) {
+    margin-top: 10px;
+}
+
 .w3-bar .w3-bar-item {
     padding: 8px 8px;
     float: left;
     position: relative;
     height: 45px;
-    font-size: 12px;
+    font-size: 13px;
     border: none;
     display: block;
     outline: 0;
@@ -698,6 +765,11 @@ p {
     border-image-slice: 10 10 10 10;
     background-color: rgb(0, 0, 0);
     border-image-repeat: stretch;
+}
+
+/* a unit's or tome's name (a <p>, otherwise 15px) one size up, as the plain labels above */
+.w3-bar .w3-bar-item p {
+    font-size: 16px;
 }
 
 .collapsibleUnits {
@@ -877,6 +949,21 @@ tab {
     .initialBonusCastingPoints {
         margin: 0 auto;
     }
+    /* the header a little higher, apart from the bonuses under it */
+    .InitialBonus {
+        padding-top: 9px;
+    }
+    .InitialBonus .initialBonusHeaderText {
+        margin-bottom: 6px;
+    }
+    /* the bonuses centred under the header, and the casting points a little apart from them */
+    #initialBonusList {
+        justify-items: center;
+        text-align: center;
+    }
+    #initialBonusList .initialBonusCastingPoints {
+        margin-top: 6px;
+    }
 
 
 .tome_card {
@@ -914,6 +1001,49 @@ tab {
    Pull it back to the page centre (half the 876px card + half the list = 538px), never over the list. */
 .city > .unit_card {
     margin-left: max(0px, calc(50% - 538px));
+}
+/* beside a .sidebarPage's sidebar the card has its own column: centred in it. A tome's two columns of cards have
+   less space around and inside each card's frame and their content is 476px instead of 500px,
+   and its banner is as wide as they are, so it leaves room beside the sidebar; in a narrow window, wider than the column, it sticks out on
+   both sides instead of only the right. */
+/* only the sides trimmed: above and below, the space the cards always had */
+.sidebarPage #tome_unlocks .mod_card {
+    padding: 5px 0;
+}
+/* the space between the two columns of cards, with the frames' margins as wide as between two rows (20px); the
+   pair as wide as with 480px cards and no gap */
+.sidebarPage #tome_unlocks {
+    column-gap: 16px;
+}
+.sidebarPage #tome_unlocks .mod_image_holder {
+    width: 476px;
+    margin: 5px 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+/* the name and cost, and tier and upkeep, rows: as wide as the card instead of the template's fixed 500px */
+.sidebarPage #tome_unlocks .spellStatsHighLighter > div {
+    width: 100% !important;
+}
+/* their name, cost and type a size up (the template sets the cost and type inline) */
+.sidebarPage #tome_unlocks .mod_name {
+    font-size: 20px;
+}
+.sidebarPage #tome_unlocks .spell_cost {
+    font-size: 14px !important;
+}
+.sidebarPage #tome_unlocks #modtier {
+    font-size: 16px !important;
+}
+.sidebarPage .tome_card {
+    width: 1006px;
+}
+.sidebarPage .city > .unit_card {
+    margin-left: auto;
+    margin-right: auto;
+}
+.sidebarPage .city:has(> * > .tome_card) {
+    justify-content: unsafe center;
 }
 
 .generic-center {
@@ -1664,6 +1794,21 @@ bullet {
     display: list-item;
     list-style-type: none;
     padding-left: 12px;
+}
+
+/* a little space between a list and the text above it, which a bullet with an icon in it otherwise gets from the
+   icon alone (Call of the Wild's do, Animal Kinship's "+10% damage" did not) */
+bullet:first-child {
+    margin-top: 4px;
+}
+/* except a card's affected unit types and summoned units, each in a div of its own */
+#affectUnitTypes bullet {
+    margin-top: 0;
+}
+/* a list of unit types (bullets): each column as wide as its longest type, so the right one sits close to the left
+   (each type also has a 20px right margin); summoned units keep the template's half-and-half columns */
+#affectUnitTypes:has(> div > bullet) {
+    grid-template-columns: repeat(2, max-content) !important;
 }
 
 xpCol {

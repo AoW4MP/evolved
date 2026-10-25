@@ -163,18 +163,8 @@ async function SetCollapsibleStuff() {
             } else {
                 content.style.display = "grid";
             }
-
-            let buttonHolder = document.getElementById("buttonHolder");
-            let holderHeight = buttonHolder.offsetHeight;
-            let dataHolder = document.getElementById("dataHolder");
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px; margin-left:200px");
         });
     }
-
-    let buttonHolder = document.getElementById("buttonHolder");
-    let holderHeight = buttonHolder.offsetHeight;
-    let dataHolder = document.getElementById("dataHolder");
-    dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;; margin-left:200px");
 }
 
 
@@ -460,8 +450,8 @@ function ConvertSpawnTable(input, subtractName) {
                     holder.appendChild(button);
                 });
 
-                // Append the button holder to the body
-                presetPoint.append(holder);
+                // under the page title, above the cards
+                presetPoint.querySelector(".textblocktitle").after(holder);
 
                 // Generate subDiv sections
                 subcultures.forEach((sub, i) => {
@@ -472,7 +462,7 @@ function ConvertSpawnTable(input, subtractName) {
                     div.innerHTML = `
     <div class="w3-container">
       <div id="buttonHolder${i}" class="w3-bar w3-black"></div>
-      <div id="dataHolder${i}" class="dataholder" style="margin-top:-250px"></div>
+      <div id="dataHolder${i}" class="dataholder"></div>
     </div>
   `;
 

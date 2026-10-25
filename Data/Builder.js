@@ -719,8 +719,6 @@ function SetButtonsAndDivs(list, parent, cardType, otherParent, subcultureCheck)
                     btn.setAttribute("onclick", "openDiv(event,'" + list[i] + "',true)");
                 }
 
-                div.setAttribute("style", "margin-left:200px");
-
                 break;
             case "searchSpell":
                 showSpellFromString(list[i], list[i]);
@@ -733,8 +731,6 @@ function SetButtonsAndDivs(list, parent, cardType, otherParent, subcultureCheck)
         buttonHolder.appendChild(btn);
 
         AddTriangleForDLCUnits(cardType, list[i], btn);
-        let holderHeight = buttonHolder.offsetHeight;
-        dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px; margin-left:200px");
     }
 }
 
@@ -786,21 +782,14 @@ function SetCollapsibleButtonsAndDivs(overwrite, list, cardType) {
 
     buttonHolder.appendChild(btn);
     let dataHolder;
-    let holderHeight = buttonHolder.offsetHeight;
     if (cardType != "unit" && cardType != "searchUnit") {
         btn.className = "w3-bar-item w3-button tablink";
         dataHolder = document.getElementById("dataHolder");
-        holderHeight = buttonHolder.offsetHeight;
-
-        dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
 
         let div = document.createElement("DIV");
 
         div.className = "w3-container w3-border city";
         div.setAttribute("id", overwrite);
-        if (overwrite == "Spells" || overwrite == "Siege Projects") {
-            div.setAttribute("style", "margin-left: 250px;");
-        }
 
         dataHolder.appendChild(div);
     }
@@ -822,67 +811,49 @@ function SetCollapsibleButtonsAndDivs(overwrite, list, cardType) {
             showSkillFromList(list, overwrite);
             break;
         case "item":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showItemFromList(list, overwrite);
             break;
         case "trait":
             showTraitFromList(list, overwrite);
             break;
         case "searchSkill":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showSkillFromList(list, overwrite);
             break;
         case "searchItem":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showItemFromList(list, overwrite);
             break;
         case "searchSiege":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showSiegeProjects(list, overwrite);
             break;
         case "searchEmpire":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showEmpireTrees(list, overwrite);
             break;
         case "searchTraits":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showTraitFromList(list, overwrite);
             break;
         case "searchAmbition":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
-
             showHeroTraitFromList(list, overwrite);
             break;
         case "searchRelics":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
-
             showRelicsFromList(list, overwrite);
             break;
 
         case "searchInfusion":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
-
             showInfusionsFromList(list, overwrite);
             break;
         case "searchDestiny":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showDestinyTraitsFromList(list, overwrite);
             break;
         case "searchStruct":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showStructures(list, overwrite);
             break;
         case "searchWorldStruct":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showWorldStructures(list, overwrite);
             break;
         case "searchSpell":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
-
             showSpellFromList(list, overwrite);
             break;
         case "tome":
-            dataHolder.setAttribute("style", "margin-top:-" + holderHeight + "px;");
             showTomeFromList2(list, overwrite);
             break;
 
@@ -2834,7 +2805,8 @@ function showSubDiv(event, id) {
     // Show the specific div with the given id
     let specificDiv = document.getElementById(id);
     if (specificDiv) {
-        specificDiv.style.display = "block";
+        // the stylesheet's display (its sidebar and cards take their places in the page's grid)
+        specificDiv.style.display = "";
 
         // all of the subculture's units, through its ☰
         specificDiv.querySelector(".listViewButton").click();
@@ -5990,21 +5962,24 @@ function showUnitUnlock(a, divOrigin) {
                 "</bullet>";
             unitTypesDiv.appendChild(div);
         }
-    } else {
-        let div = document.createElement("DIV");
-        div.innerHTML =
-            '<a href ="/evolved/HTML/Units.html?unit=' +
-            a.unit_slug +
-            '" target="_blank">' +
-            GetUnitTierAndName(a.unit_slug) +
-            "</a>" +
-            "</bullet>";
-        unitTypesDiv.appendChild(div);
     }
 
     imagelink.setAttribute("src", "/evolved/Icons/UnitUnlockIcons/" + a.unit_slug + ".png");
 
     descriptionDiv.innerHTML = description;
+
+    // a single unit: its link on the line under the description, instead of in the card's grid below
+    if (a.name !== "Young Dragon") {
+        let div = document.createElement("DIV");
+        div.style.marginTop = "8px";
+        div.innerHTML =
+            '<a href ="/evolved/HTML/Units.html?unit=' +
+            a.unit_slug +
+            '" target="_blank">' +
+            GetUnitTierAndName(a.unit_slug) +
+            "</a>";
+        descriptionDiv.appendChild(div);
+    }
 
     let tier = divOrigin.querySelector("#modtier");
 
@@ -6051,7 +6026,8 @@ function showSpell(a, showOrigin, divOrigin) {
         let unitTypesDiv = modCard.querySelector("#affectUnitTypes");
 
         if (spellFound.enchantment_requisites != undefined) {
-            description += "<br><greenText>Affected Unit Types: </greenText><br>";
+            // its own block, so as far below a description that ends in text as one that ends in a list
+            description += '<div style="margin-top: 1em"><greenText>Affected Unit Types: </greenText></div>';
 
             for (let l = 0; l < spellFound.enchantment_requisites.length; l++) {
                 let div = document.createElement("DIV");
@@ -6061,7 +6037,7 @@ function showSpell(a, showOrigin, divOrigin) {
             }
         }
         if ("summoned_units" in spellFound) {
-            description += "<br>Summoned Units:<br>";
+            description += '<div style="margin-top: 1em">Summoned Units:</div>';
 
             for (let x = 0; x < spellFound.summoned_units.length; x++) {
                 let div = document.createElement("DIV");

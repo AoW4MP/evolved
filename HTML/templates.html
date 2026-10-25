@@ -191,9 +191,10 @@
                     <p class="mod_description" id="moddescription">Mod Description</p>
                 </div>
             </div>
+            <!-- under the description, in line with its text (the icon's 100px and the description's 10px padding) -->
             <div
                 id="affectUnitTypes"
-                style="float: right; display: grid; grid-template-columns: 200px 200px; font-size: 15px"></div>
+                style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: -6px 0 0 110px; font-size: 15px"></div>
         </div>
     </div>
 </template>
@@ -317,32 +318,18 @@
     <div>
         <div class="tome_card">
             <p class="tome_name" id="tomename">Tome of Evocation</p>
-            <p style="text-align: center; font-size: 15px; max-width: 900px" id="tomedescription">Mod Descripiton</p>
-            <div style="width: 150px; float: left">
-                <img class="tome_image" id="tomeicon" src="/evolved/Icons/TomeIcons/.png" />
-            </div>
-            <div
-                style="
-                    display: grid;
-                    grid-template-columns: 500px 500px;
-                    width: auto;
-                    justify-content: start;
-                    align-content: center;
-                    align-items: stretch;
-                    justify-items: center;
-                ">
-                <div style="float: left">
-                    <p class="tome_description" id="tomeloredescription">Lore Description</p>
-                </div>
-
-                <div class="InitialBonus">
+            <p style="text-align: center; font-size: 15px; max-width: 900px; margin: 0 auto" id="tomedescription">Mod Descripiton</p>
+            <!-- icon, lore and initial bonus in one row, centred under the name -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
+                <img class="tome_image" id="tomeicon" src="/evolved/Icons/TomeIcons/.png" style="flex: none" />
+                <p class="tome_description" id="tomeloredescription" style="flex: 0 1 500px">Lore Description</p>
+                <div class="InitialBonus" style="margin-right: 0; flex: none">
                     <span class="initialBonusHeaderText">INITIAL BONUS</span>
                     <div
                         id="initialBonusList"
                         style="display: grid; grid-template-columns: 200px; font-size: 15px"></div>
                 </div>
             </div>
-            <div style="clear: both"></div>
         </div>
         <div
             id="tome_unlocks"

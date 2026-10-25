@@ -44,6 +44,21 @@ The page body (`.w3-container`: sidebar and content) is at most 1600px wide and 
 the sidebar stays beside the content. The header's corners (Settings, the "Updated" date, Donate, Other Database)
 stay within the same 1600px. Phones keep the ☰ menu.
 
+The left sidebar (`#buttonHolder`) is 240px wide on every page (upstream: 200px, 240px on the Tome Units pages). A
+page with a sidebar has `class="w3-container sidebarPage"`, a grid: the title (`.textblocktitle`, always 44px high)
+across the top, then in the middle column any filter box, sort buttons, subculture picker or Search form (`.pageHead`)
+above the cards (`#dataHolder`), and the sidebar on the left, level with the first card. On desktop an empty column as
+wide as the sidebar on the right keeps the middle column, and so the title, filters and cards, centred on the page.
+Unit cards and a tome's cards are centred in it. A tome's cards have less space around and inside their frames and
+476px content instead of 500px, with as much space between their two columns as between their rows, and its banner is as wide as they are (1006px instead of 1075px), so it leaves room beside the sidebar, and its icon, lore and initial bonus are one centred row under its name and description
+(`templates.html`). Upstream pulled the cards
+up beside the sidebar with a negative `margin-top` (in the HTML and set again by `Builder.js` and `lookuputils.js`
+whenever the sidebar changed). Those margins are gone, as are the 200px and 250px left margins Search gave its cards.
+Search's heading is a `.textblocktitle` like the other pages', and its form is as wide as a unit card. On a subculture
+page every subculture's sidebar and cards take the same places in the grid (`.subDiv` is `display: contents`), and
+`showSubDiv` clears a subculture's `display` instead of setting `block`. Pages whose sidebar stays empty (Abilities,
+Passives, Status Effects and others) keep the old layout.
+
 `Data/Builder.js`: `AddTagIconsForStatusEffects` rebuilds a text's bullet lists (`RebuildBulletLists`) instead of
 upstream's two string patches. The game's dump writes a nested list as `<bullet>Outer:<bulletlist></bullet>…</bulletlist>`,
 and the patches closed the outer list after the first nested one, so an item after a nested list fell out of its list

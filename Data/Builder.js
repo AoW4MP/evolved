@@ -6212,14 +6212,15 @@ function GetAllTomesWithAffinity(affinity, dualOnly) {
                     }
                 }
             }
-        } else if (affinity == "general") {
-            // general and cultures
-            if (tome.id != "") {
+        } else if (affinity == "general" || affinity == "dwelling") {
+            // no affinities: General Research and the culture tomes, or the Dwellings' pacts
+            const isPact = tome.id.endsWith("_pact");
+            if (tome.id != "" && isPact == (affinity == "dwelling")) {
                 arrayResultPlain.push(tome);
             }
         }
     }
-    if (affinity != "general") {
+    if (affinity != "general" && affinity != "dwelling") {
         arrayResultPlain.sort((a, b) => a.tier - b.tier);
         arrayResultDual.sort((a, b) => a.tier - b.tier);
     } else {

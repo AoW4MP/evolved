@@ -2733,6 +2733,7 @@ function findTraitsWithArgument(argumentType, affinity) {
     return finalCheckedList;
 }
 
+// the resids of the structures found: an id can belong to more than one
 function findStructuresWithArgument(income, argumentType, includeprovince) {
     let output,
         affinity,
@@ -2744,7 +2745,7 @@ function findStructuresWithArgument(income, argumentType, includeprovince) {
         for (let j = 0; j < jsonStructureUpgrades.length; j++) {
             if (jsonStructureUpgrades[j].name.toUpperCase().indexOf(argumentType.toUpperCase()) !== -1) {
                 if (includeprovince === jsonStructureUpgrades[j].is_sector_upgrade) {
-                    finalCheckedList.push(jsonStructureUpgrades[j].id);
+                    finalCheckedList.push(jsonStructureUpgrades[j].resid);
                 }
             }
         }
@@ -2753,7 +2754,7 @@ function findStructuresWithArgument(income, argumentType, includeprovince) {
         for (let k = 0; k < jsonStructureUpgrades.length; k++) {
             if (jsonStructureUpgrades[k].id.toUpperCase().indexOf(income.toUpperCase()) !== -1) {
                 if (includeprovince === jsonStructureUpgrades[k].is_sector_upgrade) {
-                    finalCheckedList.push(jsonStructureUpgrades[k].id);
+                    finalCheckedList.push(jsonStructureUpgrades[k].resid);
                 }
             }
         }
@@ -4803,12 +4804,15 @@ function AsBulletList(text) {
     return "<bulletlist>" + lines.map((l) => "<bullet>" + l.trim() + "</bullet>").join("") + "</bulletlist>";
 }
 
+// a is a structure's id, or its resid where the id is not unique: "_teleporter___teleporter" is the Province Improvement
+// and also an empty entry that comes first
 function showStructure(a, showOrigin, divOrigin) {
-    const structureEN = jsonStructureUpgrades.find((entry) => entry.id == a);
+    const structureEN = jsonStructureUpgrades.find((entry) => (typeof a === "number" ? entry.resid : entry.id) == a);
     if (structureEN === undefined) {
         console.log("Couldn't find structure: " + a);
         return;
     }
+    a = structureEN.id;
 
     const structureLoc = jsonStructureUpgradesLocalized.find((entry) => entry.resid == structureEN.resid);
 

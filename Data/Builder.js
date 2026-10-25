@@ -615,7 +615,7 @@ function AddListView(list, parent) {
     }
     let btn = document.createElement("BUTTON");
 
-    btn.className = "w3-bar-item w3-button tablink";
+    btn.className = "w3-bar-item w3-button tablink listViewButton";
     btn.type = "button";
     btn.innerHTML = "&#9776";
     btn.setAttribute("onclick", 'openDiv(event, "' + list + '")');
@@ -914,7 +914,11 @@ async function openDiv(evt, cityName, search) {
     }
     if (cityName.indexOf(",") != -1) {
         console.log("is array");
-        let parentDiv = document.getElementById("dataHolder");
+        // the cards beside the clicked ☰ (a subculture page has a dataHolder0, 1, ... per subculture)
+        let parentDiv = evt?.currentTarget?.closest(".w3-container")?.querySelector("[id^='dataHolder']");
+        if (parentDiv == undefined) {
+            parentDiv = document.getElementById("dataHolder");
+        }
         if (parentDiv == undefined) {
             parentDiv = document.getElementById("dataHolder1");
         }
@@ -2826,13 +2830,8 @@ function showSubDiv(event, id) {
     if (specificDiv) {
         specificDiv.style.display = "block";
 
-        // Find the first div with the class "targetClass" within the parent div
-        let targetDiv = specificDiv.querySelector(".dataholder");
-        // Get the first child element of the parent div
-        let firstChild = targetDiv.firstElementChild;
-
-        // Set the display property of the first child to block
-        openDiv(null, firstChild.id);
+        // all of the subculture's units, through its ☰
+        specificDiv.querySelector(".listViewButton").click();
     }
 }
 

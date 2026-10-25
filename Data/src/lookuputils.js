@@ -266,7 +266,6 @@ async function SetLevelUpStuff() {
     if (product != undefined) {
         let splits = product.split("&");
         closeTabLinks(product);
-        document.getElementById(splits[0] + "-button").className += " w3-red";
         // grab the subculture if available
 
         let subCulture = splits[0].split(/(?=[A-Z])/);
@@ -274,8 +273,15 @@ async function SetLevelUpStuff() {
             let test = subCulture.slice(1).join("");
             await showSubDiv(null, test);
         }
-        // open div with type
+        // open div with type (lit after the subculture, whose ☰ unlights the rest)
         await openDiv(event, splits[0]);
+        document.getElementById(splits[0] + "-button").className += " w3-red";
+    } else if (document.querySelector(".subDiv") != null) {
+        // no unit asked for: the first subculture, all its units
+        showSubDiv(null, document.querySelector(".subDiv").id);
+    } else {
+        // no unit asked for: the full list is showing, so its ☰ is the one lit
+        document.querySelector(".listViewButton")?.classList.add("w3-red");
     }
 }
 

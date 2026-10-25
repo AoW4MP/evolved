@@ -17,16 +17,9 @@
        <script src="/evolved/Data/Init.js"></script>
         <script>
             function HandlePage() {
-                unitarray = FindUnitsWithSecondaryPassive("mythic_unit");
-
-                if (unitarray.length > 1) {
-                    for (i in unitarray) {
-                        showUnitsFromList(unitarray[i], "Mythic Tier " + romanize(parseInt(parseInt(i) + 2)) + " ");
-                    }
-                } else {
-                    SetButtonsAndDivs(unitarray[0], undefined, "unit");
-                }
-
+                // one list, tier I to V (the per-tier groups merged)
+                unitarray = [...new Set(FindUnitsWithSecondaryPassive("mythic_unit").flat())];
+                SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
                 SetCollapsibleStuff();
             }

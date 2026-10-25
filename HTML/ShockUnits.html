@@ -17,16 +17,9 @@
        <script src="/evolved/Data/Init.js"></script>
         <script>
             function HandlePage() {
-                unitarray = FindUnitsWithSecondaryPassive("shock_unit");
-
-                if (unitarray.length > 1) {
-                    for (i in unitarray) {
-                        showUnitsFromList(unitarray[i], "Shock Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
-                    }
-                } else {
-                    SetButtonsAndDivs(unitarray[0], undefined, "unit");
-                }
-
+                // one list, tier I to V (the per-tier groups merged)
+                unitarray = [...new Set(FindUnitsWithSecondaryPassive("shock_unit").flat())];
+                SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
                 SetCollapsibleStuff();
             }

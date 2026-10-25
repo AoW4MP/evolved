@@ -18,17 +18,9 @@
         <script src="/evolved/Data/Init.js"></script>
         <script>
             function HandlePage() {
-                unitarray = FindUnitsWithSecondaryPassive("tower");
-                console.log(unitarray);
-
-                if (unitarray.length > 1) {
-                    for (i in unitarray) {
-                        showUnitsFromList(unitarray[i], "Towers Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
-                    }
-                } else {
-                    SetButtonsAndDivs(unitarray[0], undefined, "unit");
-                }
-
+                // one list, tier I to V (the per-tier groups merged)
+                unitarray = [...new Set(FindUnitsWithSecondaryPassive("tower").flat())];
+                SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
                 SetCollapsibleStuff();
             }

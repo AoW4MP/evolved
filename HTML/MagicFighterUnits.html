@@ -18,17 +18,9 @@
         <script>
             function HandlePage() {
               
-                unitarray = FindUnitsWithSecondaryPassive("magic_fighter_unit");
-                console.log(unitarray);
-
-                if (unitarray.length > 1) {
-                    for (i in unitarray) {
-                        showUnitsFromList(unitarray[i], "Magic Fighter Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
-                    }
-                } else {
-                    SetButtonsAndDivs(unitarray[0], undefined, "unit");
-                }
-
+                // one list, tier I to V (the per-tier groups merged)
+                unitarray = [...new Set(FindUnitsWithSecondaryPassive("magic_fighter_unit").flat())];
+                SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
                 SetCollapsibleStuff();
             }

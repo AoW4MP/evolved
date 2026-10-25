@@ -1967,6 +1967,19 @@ async function showUnitsFromList(list, overwritetext) {
 }
 
 async function showUnitsWithIcon(list) {
+    // "unit:tome" entries in tome tier order, a tome's units together and by their own tier
+    const tierOf = (json, id) => json.find((x) => x.id == id)?.tier ?? 99;
+    const firstOfTome = {};
+    list.forEach((entry, i) => (firstOfTome[entry.split(":")[1]] ??= i));
+    const sortKey = (entry) => {
+        const [unit, tome] = entry.split(":");
+        return [tierOf(jsonTomes, tome), firstOfTome[tome], tierOf(jsonUnits, unit)];
+    };
+    list = [...list].sort((a, b) => {
+        const ka = sortKey(a);
+        const kb = sortKey(b);
+        return ka[0] - kb[0] || ka[1] - kb[1] || ka[2] - kb[2];
+    });
     SetButtonsAndDivs(list, "buttonHolder", "unitTomeIcon");
 }
 

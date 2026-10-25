@@ -523,7 +523,7 @@ p {
 .subCultureName {
     text-align: left;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -1095,9 +1095,12 @@ tab {
 }
 
 .subcultureHolder {
-    display: flex;
-    justify-content: center;
-    /* Center the buttons horizontally */
+    /* equal-width columns, so the middle of three sits under the page title */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    width: fit-content;
+    margin: 0 auto;
     align-items: center;
     /* Center the buttons vertically */
     gap: 30px;
@@ -1110,6 +1113,7 @@ tab {
     background-color: transparent;
     border: none;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 8px;
     font-family: inherit;

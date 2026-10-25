@@ -168,8 +168,11 @@ ul {
     text-align: center;
 }
 
+/* "middle" centres the icons on the lowercase letters; the titles are capitals, which stand 2px taller */
 .textblocktitle img {
     vertical-align: middle;
+    position: relative;
+    top: -2px;
 }
 
 /* the space the icons had below them when they sat on the text's baseline, so what follows keeps its distance */

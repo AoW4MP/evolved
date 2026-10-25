@@ -22,17 +22,9 @@
             function HandlePage() {
                 // get fiend name localized
 
-                unitarray = FindUnitsWithSecondaryPassive("accursed_fiend");
-                console.log(unitarray);
-
-                if (unitarray.length > 1) {
-                    for (i in unitarray) {
-                        showUnitsFromList(unitarray[i], "Accursed Fiends Tier " + romanize(parseInt(parseInt(i) + 1)) + " ");
-                    }
-                } else {
-                    SetButtonsAndDivs(unitarray[0], undefined, "unit");
-                }
-
+                // one list, tier I to V (the per-tier groups merged)
+                unitarray = [...new Set(FindUnitsWithSecondaryPassive("accursed_fiend").flat())];
+                SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
                 SetCollapsibleStuff();
             }

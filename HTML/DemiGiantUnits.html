@@ -36,6 +36,9 @@
             ];
 
             function HandlePage() {
+                // tier I to V, as the other Types pages
+                const tierOf = (id) => jsonUnits.find((u) => u.id == id)?.tier ?? 99;
+                unitarray.sort((a, b) => tierOf(a) - tierOf(b));
                 SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
             }

@@ -6248,6 +6248,13 @@ function GetAllTomesWithAffinity(affinity, dualOnly) {
     return merged;
 }
 
+// by tier, and within a tier by release: the base game, then the DLCs in dlcMap's order (their release order)
+function compareUnitsByTierAndRelease(a, b) {
+    const dlcOrder = Object.keys(dlcMap);
+    const released = (unit) => dlcOrder.indexOf(String(unit.DLC ?? "").trim()); // -1 for the base game
+    return a.tier - b.tier || released(a) - released(b);
+}
+
 function FindFormUnits() {
     let unitsList = [];
 
@@ -6260,7 +6267,7 @@ function FindFormUnits() {
     }
 
     // Sort the units list by tier
-    unitsList.sort((a, b) => a.tier - b.tier);
+    unitsList.sort(compareUnitsByTierAndRelease);
 
     // Define the maximum length of each subarray
     const maxLength = 10;
@@ -6326,7 +6333,7 @@ function FindUnitsWithSecondaryPassive(trait) {
     }
 
     // Sort the units list by tier
-    unitsList.sort((a, b) => a.tier - b.tier);
+    unitsList.sort(compareUnitsByTierAndRelease);
 
     // Define the maximum length of each subarray
     const maxLength = 10;

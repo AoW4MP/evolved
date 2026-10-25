@@ -36,9 +36,9 @@
             ];
 
             function HandlePage() {
-                // tier I to V, as the other Types pages
-                const tierOf = (id) => jsonUnits.find((u) => u.id == id)?.tier ?? 99;
-                unitarray.sort((a, b) => tierOf(a) - tierOf(b));
+                // tier I to V and by release, as the other Types pages
+                const unitOf = (id) => jsonUnits.find((u) => u.id == id);
+                unitarray.sort((a, b) => compareUnitsByTierAndRelease(unitOf(a), unitOf(b)));
                 SetButtonsAndDivs(unitarray, undefined, "unit");
                 SetLevelUpStuff();
             }

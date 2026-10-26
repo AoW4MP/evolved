@@ -261,22 +261,7 @@ function updateHoverDivPosition(event, secondary) {
         
         return;
     }
-       
 
-    var selectionsHolder = document.getElementById("selectionsHolder");
-    if (selectionsHolder && event.target.closest && event.target.closest("#selectionsHolder")) {
-        // beside the popup's box, not the full-screen overlay holding it
-        var box = selectionsHolder.querySelector(".selections") || selectionsHolder;
-        var holderRect = box.getBoundingClientRect();
-        var dialogRect = hoverDiv.getBoundingClientRect();
-
-        var desiredLeft = (holderRect.right + 20 + dialogRect.width < window.innerWidth)
-            ? holderRect.right + 20
-            : holderRect.left - dialogRect.width - 20;
-
-        clampToViewport(hoverDiv, desiredLeft, event.clientY - 50 );
-        return;
-    }
 
     // a tooltip to move the mouse into: below the word, so it never covers it
     if (settings.tooltipselectable && event.currentTarget && event.currentTarget.getBoundingClientRect) {

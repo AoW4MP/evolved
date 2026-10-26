@@ -265,7 +265,9 @@ function updateHoverDivPosition(event, secondary) {
 
     var selectionsHolder = document.getElementById("selectionsHolder");
     if (selectionsHolder && event.target.closest && event.target.closest("#selectionsHolder")) {
-        var holderRect = selectionsHolder.getBoundingClientRect();
+        // beside the popup's box, not the full-screen overlay holding it
+        var box = selectionsHolder.querySelector(".selections") || selectionsHolder;
+        var holderRect = box.getBoundingClientRect();
         var dialogRect = hoverDiv.getBoundingClientRect();
 
         var desiredLeft = (holderRect.right + 20 + dialogRect.width < window.innerWidth)

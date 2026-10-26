@@ -903,6 +903,7 @@ function BuildChoicesPanel(choiceslist, originButton, slot, evt) {
    // const selectionsHolder = document.getElementById("selectionsHolder");
    document.getElementById("selectionsHolder").classList.add("open");
       document.body.style.overflow = 'hidden'; // stop background scroll while menu is open
+    document.getElementById("selections").textContent = "Select Signature Skill";
 
     const panel = document.getElementById("choicesPanel");
     panel.innerHTML = "";

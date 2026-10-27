@@ -130,22 +130,83 @@
         <style>
             .grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
                 gap: 20px;
                 max-width: 1200px;
                 margin: 0 auto;
             }
             
             .header {
-                
-    background-color: black;
-    margin: -12px;
-                margin-bottom: 0px;
+                margin: 0 0 22px;
+                text-align: center;
             }
-            
+
+            .header img {
+                display: block;
+                margin: 0 auto 4px;
+            }
+
+            .header a {
+                font-size: 18px;
+            }
+
+            .card ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
             .list {
                 padding-bottom: 5px;
                 font-size: large;
+            }
+
+            /* style.css sets every link to 14px */
+            .list a {
+                font-size: 18px;
+            }
+
+            /* most icons have transparent padding; the affinity icons, DLC logos and a few others fill theirs */
+            .list img {
+                width: 32px;
+                margin-right: 4px;
+                vertical-align: middle;
+            }
+
+            .list img[src$="/astral.png"],
+            .list img[src$="/nature.png"],
+            .list img[src$="/shadow.png"],
+            .list img[src$="/order.png"],
+            .list img[src$="/chaos.png"],
+            .list img[src$="/materium.png"],
+            .list img[src$="/dual.png"],
+            .list img[src$="/DragonDawn.png"],
+            .list img[src$="/empireAshes.png"],
+            .list img[src$="/PrimalFury.png"],
+            .list img[src$="/EldritchRealms.png"],
+            .list img[src$="/waysofwar.png"],
+            .list img[src$="/GKLogo.png"],
+            .list img[src$="/ArchonProphecy.png"],
+            .list img[src$="/ThronesOfBlood.png"],
+            .list img[src$="/RiseFromRuin.png"],
+            .list img[src$="/equipment.png"],
+            .list img[src$="/siegehealth.png"] {
+                width: 24px;
+                margin: 4px 8px 4px 4px; /* keeps the 32px footprint so rows stay evenly spaced */
+            }
+
+            .list img[src$="/piercing_shot.png"],
+            .list img[src$="/ascended_artificer_hero_skill_normal.png"],
+            .list img[src$="/arcane_surge_2.png"] {
+                width: 28px;
+                margin: 2px 6px 2px 2px;
+            }
+
+            /* taller than wide */
+            .list img[src$="/mine.png"] {
+                width: 23px;
+                margin: 1px 9px 1px 4px;
             }
 
             .card {

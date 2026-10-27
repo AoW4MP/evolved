@@ -5226,14 +5226,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ARROW_OF_REMORSE",
     "displayHtml": "Arrow of Harmony",
-    "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base <eventColor>{ARROW_OF_REMORSE_RESISTANCE_CHECK>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for <eventColor>{PACIFICED_STATUS_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>"
+    "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 120% chance of becoming [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.ARTILLERY_BARRAGE": {
     "name": "Artillery Barrage",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ARTILLERY_BARRAGE",
     "displayHtml": "Artillery Barrage",
-    "description": "Target a <eventColor>{ARTILLERY_BARRAGE_CIRCLE_TARGETER_MARKED>AREA>Radius}</eventColor>-hex radius.<bulletlist><bullet>Inflicts [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink].</bullet><bullet>At the start of next turn, inflict 30 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "Target a 1-hex radius.<bulletlist><bullet>Inflicts [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink].</bullet><bullet>At the start of next turn, inflict 30 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.ASCENDED_ARTILLERIST_COMBAT_PROPERTY": {
     "name": "Artillery Cover",
@@ -5275,14 +5275,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ASTRAL_INFLUENCE_EMPOWERED_GROUP",
     "displayHtml": "Empowered Astral Influence",
-    "description": "Unit has:<bulletlist><bullet><eventColor>{ASTRAL_INFLUENCE_DEFENSE>REDUCTION>Shock}</eventColor> <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet><bullet>Base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks deal <eventColor>{ASTRAL_INFLUENCE_EMPOWERED_JUMP>ResolvedEffectMultiplier}</eventColor>% of the damage to another enemy within <eventColor>{ASTRAL_INFLUENCE_EMPOWERED_JUMP>MaxDistance}</eventColor> hexes.</bullet></bulletlist>"
+    "description": "Unit has:<bulletlist><bullet>-2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet><bullet>Base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks deal <eventColor>{ASTRAL_INFLUENCE_EMPOWERED_JUMP>ResolvedEffectMultiplier}</eventColor>% of the damage to another enemy within <eventColor>{ASTRAL_INFLUENCE_EMPOWERED_JUMP>MaxDistance}</eventColor> hexes.</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.ASTRAL_INFLUENCE_GROUP": {
     "name": "Astral Influence",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ASTRAL_INFLUENCE_GROUP",
     "displayHtml": "Astral Influence",
-    "description": "Unit has:<bulletlist><bullet><eventColor>{ASTRAL_INFLUENCE_DEFENSE>REDUCTION>Shock}</eventColor> <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet></bulletlist>"
+    "description": "Unit has:<bulletlist><bullet>-2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.ASTRAL_REFUGE": {
     "name": "Astral Refuge",
@@ -5331,7 +5331,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT",
     "displayHtml": "Belt of the Berserker",
-    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach <eventColor>{BERSERKERS_RAGE_THRESHOLD_EVENT>ResolvedTriggerProportion}</eventColor>% or lower, grants this unit:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for <eventColor>{STRENGTHENED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
+    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach <eventColor>{BERSERKERS_RAGE_THRESHOLD_EVENT>ResolvedTriggerProportion}</eventColor>% or lower, grants this unit:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.BESTOW_MASK_OF_PROSPERITY_CASTER": {
     "name": "Mask of Prosperity",
@@ -5513,14 +5513,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CLEANSING_FLAME_FLAME_BLESSED_CHAMPIONS_PROPERTY_GROUP",
     "displayHtml": "Flame Blessed Champions",
-    "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Spirit}</eventColor> <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base <eventColor>{BURNING_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for <eventColor>{CLEANSING_FLAME_PUREFLAME_STAVES_EFFECT_MARKER>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+    "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Spirit}</eventColor> <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base <eventColor>{BURNING_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
   },
   "GLOBAL.PROPERTIES.CLEANSING_RAIN": {
     "name": "Cleansing Rain",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CLEANSING_RAIN",
     "displayHtml": "Cleansing Rain",
-    "description": "In a <eventColor>{CLEANSING_RAIN_ENEMY_TARGETER>AREA>Radius}</eventColor>-hex radius:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet><bullet>Enemy units have <eventColor>{GENERAL_DISPEL_POSITIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] dispelled.</bullet></bulletlist>"
+    "description": "In a 1-hex radius:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet><bullet>Enemy units have <eventColor>{GENERAL_DISPEL_POSITIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] dispelled.</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COLLECTORS_GIFT": {
     "name": "The Collector",
@@ -5541,7 +5541,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COLOSSUS_MOON_UNIT_AUTO_SPELL",
     "displayHtml": "Thunder Storms",
-    "description": "Each turn in combat:<bulletlist><bullet>All units become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet><eventColor>{COLOSSUS_MOON_UNIT_AUTO_SPELL>MaxCastCount}</eventColor> random unit takes 20 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "Each turn in combat:<bulletlist><bullet>All units become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>1 random unit takes 20 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COMBATPROPERTY_ARCTIC_BLIZZARDS": {
     "name": "Snow Storm",
@@ -5653,7 +5653,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CONJURE_WILDGROWTH",
     "displayHtml": "Conjure Wildgrowth",
-    "description": "Create [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] flora in a <eventColor>{HS_CONJURE_WILDGROWTH_POSITION_TARGETER>AREA>Radius}</eventColor>-hex radius."
+    "description": "Create [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] flora in a 1-hex radius."
   },
   "GLOBAL.PROPERTIES.CONSECRATING_FIRESTORM": {
     "name": "Consecrating Firestorm",
@@ -5681,42 +5681,42 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_ASTRAL",
     "displayHtml": "Cosmos Manifest: Astral",
-    "description": "At the start of the turn within <eventColor>{COSMOS_MANIFEST_ENEMY_TARGETER_ASTRAL>AREA>Radius}</eventColor> hexes:<bulletlist><bullet>Friendly units heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_CHAOS": {
     "name": "Cosmos Manifest: Chaos",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_CHAOS",
     "displayHtml": "Cosmos Manifest: Chaos",
-    "description": "At the start of the turn within <eventColor>{COSMOS_MANIFEST_ENEMY_TARGETER_CHAOS>AREA>Radius}</eventColor> hexes:<bulletlist><bullet>Friendly units gain [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink] for <eventColor>{STRENGTHENED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units gain [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_MATERIUM": {
     "name": "Cosmos Manifest: Materium",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_MATERIUM",
     "displayHtml": "Cosmos Manifest: Materium",
-    "description": "At the start of the turn within <eventColor>{COSMOS_MANIFEST_ENEMY_TARGETER_MATERIUM>AREA>Radius}</eventColor> hexes:<bulletlist><bullet>Friendly units heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_NATURE": {
     "name": "Cosmos Manifest: Nature",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_NATURE",
     "displayHtml": "Cosmos Manifest: Nature",
-    "description": "At the start of the turn within <eventColor>{COSMOS_MANIFEST_ENEMY_TARGETER_NATURE>AREA>Radius}</eventColor> hexes:<bulletlist><bullet>Friendly units heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_ORDER": {
     "name": "Cosmos Manifest: Order",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_ORDER",
     "displayHtml": "Cosmos Manifest: Order",
-    "description": "At the start of the turn within <eventColor>{COSMOS_MANIFEST_ENEMY_TARGETER_ORDER>AREA>Radius}</eventColor> hexes:<bulletlist><bullet>Friendly units gain <eventColor>{COSMOS_MANIFEST_MORALE>Morale Change Absolute}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units gain <eventColor>{COSMOS_MANIFEST_MORALE>Morale Change Absolute}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_SHADOW": {
     "name": "Cosmos Manifest: Shadow",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_SHADOW",
     "displayHtml": "Cosmos Manifest: Shadow",
-    "description": "At the start of the turn within <eventColor>{COSMOS_MANIFEST_ENEMY_TARGETER_SHADOW>AREA>Radius}</eventColor> hexes:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> Negative Status Effects removed.</bullet><bullet>Enemy units sustain 5 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> Negative Status Effects removed.</bullet><bullet>Enemy units sustain 5 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.CRUEL_ABILITY_MODIFIER_PROPERTY": {
     "name": "Cruel",
@@ -5800,7 +5800,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.DRACONIC_FOCUS_BREATH",
     "displayHtml": "Dragonstrike",
-    "description": "Deal damage to units in a <eventColor>{DRACONIC_FOCUS_BREATH_OBSTACLE_TARGETER>AREA>Length}</eventColor>-hex cone."
+    "description": "Deal damage to units in a 1-hex cone."
   },
   "GLOBAL.PROPERTIES.DRAINING_BLADE": {
     "name": "Draining Blade",
@@ -5821,7 +5821,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT_UNITPROP",
     "displayHtml": "Elemental Attunement",
-    "description": "When a [hyperlink,GLOBAL.SpellConcept]Spell[/hyperlink] is cast, this unit's base attack gains +1 damage based on the [hyperlink,GLOBAL.AffinityConcept]Affinity[/hyperlink] of the spell:<bulletlist><bullet><order></order> [hyperlink,GLOBAL.OrderConcept]Order Affinity[/hyperlink] - <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink]</bullet><bullet><chaos></chaos> [hyperlink,GLOBAL.ChaosConcept]Chaos Affinity[/hyperlink] - <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]</bullet><bullet><arcana></arcana> [hyperlink,GLOBAL.AstralConcept]Astral Affinity[/hyperlink] - <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink]</bullet><bullet><matter></matter> [hyperlink,GLOBAL.MateriumConcept]Materium Affinity[/hyperlink] - <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]</bullet><bullet><nature></nature> [hyperlink,GLOBAL.NatureConcept]Nature Affinity[/hyperlink] - <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink]</bullet><bullet><shadow></shadow> [hyperlink,GLOBAL.ShadowConcept]Shadow Affinity[/hyperlink] - <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink]</bullet></bulletlist>Stacks up to <eventColor>{STAR_BLADES_STATUS_DESCRIPTION>MaxStacks}</eventColor> times.<br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+    "description": "When a [hyperlink,GLOBAL.SpellConcept]Spell[/hyperlink] is cast, this unit's base attack gains +1 damage based on the [hyperlink,GLOBAL.AffinityConcept]Affinity[/hyperlink] of the spell:<bulletlist><bullet><order></order> [hyperlink,GLOBAL.OrderConcept]Order Affinity[/hyperlink] - <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink]</bullet><bullet><chaos></chaos> [hyperlink,GLOBAL.ChaosConcept]Chaos Affinity[/hyperlink] - <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]</bullet><bullet><arcana></arcana> [hyperlink,GLOBAL.AstralConcept]Astral Affinity[/hyperlink] - <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink]</bullet><bullet><matter></matter> [hyperlink,GLOBAL.MateriumConcept]Materium Affinity[/hyperlink] - <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]</bullet><bullet><nature></nature> [hyperlink,GLOBAL.NatureConcept]Nature Affinity[/hyperlink] - <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink]</bullet><bullet><shadow></shadow> [hyperlink,GLOBAL.ShadowConcept]Shadow Affinity[/hyperlink] - <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink]</bullet></bulletlist>Stacks up to 3 times.<br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
   },
   "GLOBAL.PROPERTIES.ELEMENTAL_DEFENSES": {
     "name": "Elemental Defenses",
@@ -5877,7 +5877,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.EVOCATION_OF_DEATH",
     "displayHtml": "Curse of the Reaper",
-    "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] enemy unit has a base <eventColor>{FINGER_OF_DEATH_RESISTANCE_CHECK>ResolvedStrength}</eventColor>% chance of dying.<bulletlist><bullet>If a non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit dies this way, it transforms into a [hyperlink,GLOBAL.UNITS.DECAYING_ZOMBIE]Decaying Zombie[/hyperlink] under your control until the end of the battle.</bullet><bullet>If resisted, the unit sustains 45 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] that ignores <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>"
+    "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] enemy unit has a base 60% chance of dying.<bulletlist><bullet>If a non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit dies this way, it transforms into a [hyperlink,GLOBAL.UNITS.DECAYING_ZOMBIE]Decaying Zombie[/hyperlink] under your control until the end of the battle.</bullet><bullet>If resisted, the unit sustains 45 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] that ignores <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.EXHAUSTED": {
     "name": "Exhausted",
@@ -5961,7 +5961,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FEUDAL_MONARCHS_DOMINION",
     "displayHtml": "Monarch's Dominion",
-    "description": "The unit is the absolute Monarch of their faction:<bulletlist><bullet>In combat, activates [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] on friendly units.</bullet><bullet>While army leader, all units in the army with [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] cost -100% [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>This unit gains: +<eventColor>{LED_BY_MONARCH_STAT>BONUS>DEFENSE>Armor}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink], +<eventColor>{LED_BY_MONARCH_STAT>BONUS>DEFENSE>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink], +<eventColor>{LED_BY_MONARCH_MOD>ResolvedMultiplier}</eventColor>% damage, and +<eventColor>{LED_BY_MONARCH_MORALE>MoraleBonus}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist>"
+    "description": "The unit is the absolute Monarch of their faction:<bulletlist><bullet>In combat, activates [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] on friendly units.</bullet><bullet>While army leader, all units in the army with [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] cost -100% [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>This unit gains: +<eventColor>{LED_BY_MONARCH_STAT>BONUS>DEFENSE>Armor}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink], +<eventColor>{LED_BY_MONARCH_STAT>BONUS>DEFENSE>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink], +<eventColor>{LED_BY_MONARCH_MOD>ResolvedMultiplier}</eventColor>% damage, and +10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.FEY_SLAYER": {
     "name": "Fey Slayer",
@@ -5989,7 +5989,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FIRE_BOMB",
     "displayHtml": "Fire Bomb",
-    "description": "Deal damage to units in a <eventColor>{FIRE_BOMB_TARGETER_CIRCLE>AREA>Radius}</eventColor>-hex radius."
+    "description": "Deal damage to units in a 1-hex radius."
   },
   "GLOBAL.PROPERTIES.FIRE_HAZARD_IMMUNITY": {
     "name": "Fire Hazard Immunity",
@@ -6038,7 +6038,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FRIGID_BELCH",
     "displayHtml": "Frigid Belch",
-    "description": "A putrid belch that deals damage in a <eventColor>{FRIGID_BELCH_TARGETER>AREA>Length}</eventColor>-hex cone."
+    "description": "A putrid belch that deals damage in a 1-hex cone."
   },
   "GLOBAL.PROPERTIES.FROSTLING_TRANSFORMATION_PROPERTY_GROUP": {
     "name": "Frostling Transformation",
@@ -6220,14 +6220,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.HS_SPIRITBREAKER_MOD",
     "displayHtml": "Willbreaker",
-    "description": "When this unit kills, enemies within <eventColor>{HS_SPIRITBREAKER_UNIT_TARGETER_CIRCLE>AREA>Radius}</eventColor> hexes of the target suffer:<bulletlist><bullet>1 [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.REMORSE]Remorse[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
+    "description": "When this unit kills, enemies within 3 hexes of the target suffer:<bulletlist><bullet>1 [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.REMORSE]Remorse[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.HS_UNDYIND_LOYALTY": {
     "name": "Undying Loyalty",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.HS_UNDYIND_LOYALTY",
     "displayHtml": "Undying Loyalty",
-    "description": "Target friendly unit gains [hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for <eventColor>{STEADFAST_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+    "description": "Target friendly unit gains [hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.IMMORTAL": {
     "name": "Immortal",
@@ -6255,7 +6255,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.INFERNAL_BLAZE",
     "displayHtml": "Infernal Blaze",
-    "description": "<bulletlist><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] for <eventColor>{INFERNAL_BLAZE_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Adjacent enemies sustain damage.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Adjacent enemies sustain damage.</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.INFINITE_BEING_GROUP": {
     "name": "Attunement: Enhancement",
@@ -6339,7 +6339,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.MASS_REJUVENATION",
     "displayHtml": "Mass Rejuvenation",
-    "description": "Friendly units in a <eventColor>{MASS_REJUVENATION_TARGETER>AREA>Radius}</eventColor>-hex radius gain:<bulletlist><bullet>10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet><bullet>2 [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink]</bullet></bulletlist>"
+    "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet><bullet>2 [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.MATERIUM_DRAGON_ELDER_PROPERTY_AUTO_SPELL": {
     "name": "Materium Scales",
@@ -6626,7 +6626,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.PROPHECY_MARK_OF_NATURE",
     "displayHtml": "Mark of Nature",
-    "description": "This unit bears the mark of Nature and gains:<bulletlist><bullet>Whenever a friendly unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink] for <eventColor>{GRACE_STATUS_EFFECT>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Whenever an enemy unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for <eventColor>{STRENGTHENED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
+    "description": "This unit bears the mark of Nature and gains:<bulletlist><bullet>Whenever a friendly unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Whenever an enemy unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.PROPHECY_MARK_OF_ORDER": {
     "name": "Mark of Order",
@@ -6696,7 +6696,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.RENDING_SLASH",
     "displayHtml": "Radiant Slash",
-    "description": "Enemy units in a 2-hex long, <eventColor>{RENDING_SLASH_SIDE_TARGETER>AREA>Radius}</eventColor>-hex wide line:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
+    "description": "Enemy units in a 2-hex long, 1-hex wide line:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.RESISTANT_STRIKE": {
     "name": "Resistant Strike",
@@ -6906,7 +6906,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SOULBINDERS_GROUP",
     "displayHtml": "Souldraining Strikes",
-    "description": "Unit has:<bulletlist><bullet>A base <eventColor>{SOULBOUND_RESISTANCE_90>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink] on base attacks and [hyperlink,GLOBAL.DebuffConcept]Debuff[/hyperlink] abilities.</bullet><bullet>+<eventColor>{SOULBINDERS_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against units that are [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+    "description": "Unit has:<bulletlist><bullet>A base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink] on base attacks and [hyperlink,GLOBAL.DebuffConcept]Debuff[/hyperlink] abilities.</bullet><bullet>+<eventColor>{SOULBINDERS_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against units that are [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
   },
   "GLOBAL.PROPERTIES.SOULVAULT_UNIT_PROPERTY": {
     "name": "Soulvault Meditation",
@@ -6927,7 +6927,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SPRINT",
     "displayHtml": "Sprint",
-    "description": "For <eventColor>{SPRINT_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> grants:<bulletlist><bullet>+1 hex of movement</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIPPERY]Slippery[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ELUSIVE]Fleeting[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SWIFT]Swift[/hyperlink]</bullet></bulletlist>"
+    "description": "For 1 <turn></turn> grants:<bulletlist><bullet>+1 hex of movement</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIPPERY]Slippery[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ELUSIVE]Fleeting[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SWIFT]Swift[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.STAND_TOGETHER": {
     "name": "Stand Together",
@@ -6990,14 +6990,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SUNSTRUCK_ERUPTIONS_COMBAT_PROPERTY",
     "displayHtml": "Volcanic Eruptions",
-    "description": "Each turn in combat, <eventColor>{SUNSTRUCK_ERUPTIONS_COMBAT_PROPERTY>MinCastCount}</eventColor>-3 markers are placed. Then, after 1 <turn></turn> the ground will erupt and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Random affected hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink]."
+    "description": "Each turn in combat, 1-3 markers are placed. Then, after 1 <turn></turn> the ground will erupt and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Random affected hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.SUPERGROWTH_PROPERTY_GROUP": {
     "name": "Supergrowth",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SUPERGROWTH_PROPERTY_GROUP",
     "displayHtml": "Supergrowth",
-    "description": "Unit has:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{VIGILANT_NUM_OVERWATCH>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink]</bullet></bulletlist>"
+    "description": "Unit has:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+1 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.TAUNTED": {
     "name": "Taunted",
@@ -7396,14 +7396,14 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.BHAJIFS_DISRUPTION",
     "displayHtml": "Bhajif's Disruption",
-    "description": "<bulletlist><bullet>Enemies in a <eventColor>{BHAJIFS_DISRUPTION_TARGETER>AREA>Radius}</eventColor>-hex radius:</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for <eventColor>{DISRUPTION_DISABLE>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink] for <eventColor>{MANA_DRAINED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist><bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next <eventColor>{BHAJIFS_DISRUPTION_BLOCK_OP>TimeToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], [hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] cannot be cast.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>Enemies in a 1-hex radius:</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for <eventColor>{DISRUPTION_DISABLE>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist><bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], [hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] cannot be cast.</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.BLIGHTFALL_PLAYER_SPELL": {
     "name": "Call Blightfall",
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.BLIGHTFALL_PLAYER_SPELL",
     "displayHtml": "Call Blightfall",
-    "description": "For <eventColor>{BLIGHTFALL_PLAYER_COMBAT_PROPERTY>TimeToLive}</eventColor> turns, at the start of your turn, a random enemy unit:<bulletlist><bullet>Takes 15 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet><bullet>Becomes [hyperlink,GLOBAL.PROPERTIES.DISEASED]Diseased[/hyperlink].</bullet></bulletlist>"
+    "description": "For 3 turns, at the start of your turn, a random enemy unit:<bulletlist><bullet>Takes 15 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet><bullet>Becomes [hyperlink,GLOBAL.PROPERTIES.DISEASED]Diseased[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.BLINDING_SANDS_SPELL": {
     "name": "Call Blinding Sands",
@@ -7459,7 +7459,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.CRYSTAL_CRASH",
     "displayHtml": "Crystal Crash",
-    "description": "Enemy units in a <eventColor>{VOLATILE_CHARGE_TARGETER>AREA>Radius}</eventColor>-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Sustain 15 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Have a base <eventColor>{VOLATILE_CHARGE_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
+    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Sustain 15 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Have a base <eventColor>{VOLATILE_CHARGE_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.CRYSTAL_FOCUS": {
     "name": "Crystal Focus",
@@ -7522,7 +7522,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.FANFARE_OF_MERCY",
     "displayHtml": "Fanfare of Mercy",
-    "description": "[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] units in a 2-hex radius:<bulletlist><bullet>Have a <eventColor>{FANFARE_OF_MERCY_RESISTANCE_CHECK>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.RoutingConcept]Routing[/hyperlink]. If resisted, they are [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for <eventColor>{PACIFICED_STATUS_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] instead.</bullet></bulletlist>"
+    "description": "[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] units in a 2-hex radius:<bulletlist><bullet>Have a 60% chance of becoming [hyperlink,GLOBAL.RoutingConcept]Routing[/hyperlink]. If resisted, they are [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] instead.</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.FEYTOUCHED": {
     "name": "Feytouched",
@@ -7564,7 +7564,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.FULMINATION",
     "displayHtml": "Fulmination",
-    "description": "Enemy units in a <eventColor>{FULMINATION_UNIT_TARGETER_CIRCLE>AREA>Radius}</eventColor>-hex radius:<bulletlist><bullet>Sustain 15 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Have a <eventColor>{ELECTRIFIED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>"
+    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Have a <eventColor>{ELECTRIFIED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.GIFT_OF_THE_OLD_BLOOD": {
     "name": "Gift of the Old Blood",
@@ -7788,7 +7788,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.TEAR_FRACTURE",
     "displayHtml": "Tear Fracture",
-    "description": "Target hex becomes marked, Units in <eventColor>{TEAR_FRACTURE_CIRCLE_TARGETER_DISRUPTED>AREA>Radius}</eventColor>-hex radius of the marked hex have a 60% base chance of receiving [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]. After 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], the marked hex explodes and inflicts the following in a <eventColor>{TEAR_FRACTURE_CIRCLE_TARGETER_DISRUPTED>AREA>Radius}</eventColor>-hex radius:<bulletlist><bullet>Units suffer 48 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Units have 60% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink].</bullet><bullet>Each hex has 20% chance of creating a Mana Fracture obstacle, which have [hyperlink,GLOBAL.DrainingConcept]Draining[/hyperlink] and spread to adjacent hexes when spells are cast.</bullet></bulletlist><br>This spell cannot [hyperlink,GLOBAL.BackfireConcept]Backfire[/hyperlink]."
+    "description": "Target hex becomes marked, Units in 2-hex radius of the marked hex have a 60% base chance of receiving [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]. After 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], the marked hex explodes and inflicts the following in a 2-hex radius:<bulletlist><bullet>Units suffer 48 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Units have 60% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink].</bullet><bullet>Each hex has 20% chance of creating a Mana Fracture obstacle, which have [hyperlink,GLOBAL.DrainingConcept]Draining[/hyperlink] and spread to adjacent hexes when spells are cast.</bullet></bulletlist><br>This spell cannot [hyperlink,GLOBAL.BackfireConcept]Backfire[/hyperlink]."
   },
   "GLOBAL.SPECIAL_OPERATIONS.THRALL_EFFIGY": {
     "name": "Thrall Effigy",
@@ -7802,7 +7802,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.THUNDER_STORMS_SPELL",
     "displayHtml": "Call Thunder Storms",
-    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>All units become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet><eventColor>{THUNDER_STORMS_UNIT_AUTO_SPELL>MinCastCount}</eventColor> random units take 20 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist>"
+    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>All units become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>1 random units take 20 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.TRANSFORMATION_ASCETICS": {
     "name": "Transformation Ascetics",
@@ -7837,7 +7837,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.WAYFINDER",
     "displayHtml": "Wayfinder Enchantment",
-    "description": "When enchanted units rout in combat:<bulletlist><bullet>They never die.</bullet><bullet>They return <eventColor>{WAYFINDER_FAST_ROUT>RoutTurnBonus}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] sooner.</bullet></bulletlist>"
+    "description": "When enchanted units rout in combat:<bulletlist><bullet>They never die.</bullet><bullet>They return 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] sooner.</bullet></bulletlist>"
   },
   "GLOBAL.SPECIAL_OPERATIONS.YSARIEL_FALLEN_FORM_TRANSFORMATION": {
     "name": "Ysariel's Fallen Form",

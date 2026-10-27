@@ -1056,12 +1056,10 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     abilityName = abilityLoc.name;
 
     let abilityHasMedal = false;
-    if (uniqueMedal != null) {
-        if (uniqueMedal.name.split("Champion ")[1] == abilityEn.name) {
-            abilityName += " <champion></champion>";
-            // add note about the levelup change
-            abilityHasMedal = true;
-        }
+    if (GetChampionMedalText(uniqueMedal, abilityEn.name) != null) {
+        abilityName += " <champion></champion>";
+        // add note about the levelup change
+        abilityHasMedal = true;
     }
 
     abilityIcon = abilityLoc.icon;
@@ -1427,6 +1425,22 @@ function IncreaseDamageValue(input, percentage) {
     return newString;
 }
 
+// The champion medal's text for this ability, or null. A medal named after the ability ("Champion Heal") applies whole;
+// one for several abilities ("Champion Seals") has a "Name:" section per ability, split by <br></br>, each maybe
+// after a subculture icon tag
+function GetChampionMedalText(uniqueMedal, abilityName) {
+    if (uniqueMedal == null) {
+        return null;
+    }
+    if (uniqueMedal.name.split("Champion ")[1] == abilityName) {
+        return uniqueMedal.description;
+    }
+    const section = uniqueMedal.description
+        .split("<br></br>")
+        .find((part) => part.replace(/^(<\w+><\/\w+>)+/, "").startsWith(abilityName + ":"));
+    return section ?? null;
+}
+
 function GetAbilityToolTip(ability, uniqueMedal) {
     // get template
     const abiltyTemplate = ability_slot_template.content.cloneNode(true);
@@ -1477,15 +1491,12 @@ function GetAbilityToolTip(ability, uniqueMedal) {
         }
     }
 
-    if (uniqueMedal != undefined) {
-        if (uniqueMedal.name.split("Champion ")[1] == ability.name) {
-            let championMedal = uniqueMedal.description;
-
-            abilityMod +=
-                '<br><span style="color:yellow"><medal_champion></medal_champion> Champion Medal ' +
-                championMedal +
-                "</span><br>";
-        }
+    let championMedal = GetChampionMedalText(uniqueMedal, ability.name);
+    if (championMedal != null) {
+        abilityMod +=
+            '<br><span style="color:yellow"><medal_champion></medal_champion> Champion Medal ' +
+            championMedal +
+            "</span><br>";
     }
     // modifiers
     if (abilityMod != "") {

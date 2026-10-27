@@ -72,6 +72,12 @@ structure's description, then only those lines of the game's prediction it doesn
 whose Show Prediction is off gets no prediction, as in the game: `Data/GEN/StructurePredictions.json`, which
 `citytree.py` writes, lists them (Merchants' Guild, Workers' Guild and 59 more); `dataloader.js` loads it.
 
+`Data/Builder.js`: `GetChampionMedalText` finds a unit's Champion medal effect for an ability. Upstream only matched a
+medal named after the ability ("Champion Heal"); the Sealbearer's one medal for all three seals ("Champion Seals") has
+a "Transference Seal:" section and so on, and each seal now shows its own section. `Data/src/dataloader.js`:
+`AddExtraData` gives the three seal abilities the icons the dump leaves out (the game picks them by subculture);
+`Icons/UnitIcons/0000049700001064`, `…68` and `…6C.png` are exported from the game with `clbicons.py`.
+
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.
 Upstream had two boxes, the second replaced each time. Concept and status effect tooltips keep their links for this.

@@ -302,6 +302,18 @@ function AddExtraData() {
 
     jsonUnitAbilities = [...jsonUnitAbilities, ...jsonExtraTooltips];
     jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonExtraTooltips];
+
+    // the dump leaves out the Sealbearer's seal icons: the game picks them by subculture
+    const missingAbilityIcons = {
+        magic_seal_ability_0000049000000E8C_0000049700000fb5: "0000049700001068", // Transference Seal
+        magic_seal_ability_0000049000000E8C_0000049700000fb2: "0000049700001064", // Resonance Seal
+        magic_seal_ability_0000049000000E8C_0000049700000fb8: "000004970000106C" // Fire Seal
+    };
+    for (const ability of [...jsonUnitAbilities, ...jsonUnitAbilitiesLocalized]) {
+        if (ability.icon == undefined && ability.slug in missingAbilityIcons) {
+            ability.icon = missingAbilityIcons[ability.slug];
+        }
+    }
 }
 
 const abilityMap = {};

@@ -13463,8 +13463,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -17395,7 +17395,7 @@
   "description": "Target enemy unit and 2 others within 3 hexes are dealt damage.",
   "name": "Electrifying Arc",
   "slug": "electrifying_arc_ability_0000041B00001303",
-  "damage": "16<damagelightning></damagelightning> ",
+  "damage": "20<damagelightning></damagelightning> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Magic</hyperlink>"
@@ -22402,12 +22402,6 @@
   "icon": "000003E300005CB4"
  },
  {
-  "damage": "<fireCol>6<damagespirit></damagespirit></fireCol>",
-  "description": "",
-  "name": "<fireCol>Spirit Weakness</fireCol>",
-  "slug": "Spirit_weakness_6"
- },
- {
   "modifiers": [
    {
     "description": "Inflict Sundered Defense for 3 <turn></turn> Turns.",
@@ -24099,8 +24093,8 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "range": "6",
   "notes": [
    {
     "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
@@ -52472,9 +52466,6 @@
    },
    {
     "requisite": "<hyperlink>Magic</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
   "accuracy": "Always Hits",
@@ -52849,9 +52840,6 @@
    },
    {
     "requisite": "<hyperlink>Magic</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
   "accuracy": "Always Hits",

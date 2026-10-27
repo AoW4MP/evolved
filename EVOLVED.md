@@ -77,6 +77,8 @@ medal named after the ability ("Champion Heal"); the Sealbearer's one medal for 
 a "Transference Seal:" section and so on, and each seal now shows its own section. `Data/src/dataloader.js`:
 `AddExtraData` gives the three seal abilities the icons the dump leaves out (the game picks them by subculture);
 `Icons/UnitIcons/0000049700001064`, `…68` and `…6C.png` are exported from the game with `clbicons.py`.
+It also gives the Oathsworn's Paragon abilities (Paragon of Strife and so on) back the link to the ability they grant
+(Infernal Blaze, Radiant Slash, Arrow of Harmony), which the dump drops; that ability's concept tooltip then shows.
 
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.

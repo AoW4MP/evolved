@@ -309,9 +309,20 @@ function AddExtraData() {
         magic_seal_ability_0000049000000E8C_0000049700000fb2: "0000049700001064", // Resonance Seal
         magic_seal_ability_0000049000000E8C_0000049700000fb8: "000004970000106C" // Fire Seal
     };
+    // and the links of the Oathsworn's Paragon abilities to the ability they grant, which the game's text has
+    // ("gain the [hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink] ability")
+    const missingAbilityLinks = {
+        "0000049700001555": "Infernal Blaze", // Paragon of Strife
+        "0000049700001558": "Radiant Slash", // Paragon of Righteousness
+        "000004970000155a": "Arrow of Harmony" // Paragon of Harmony
+    };
     for (const ability of [...jsonUnitAbilities, ...jsonUnitAbilitiesLocalized]) {
         if (ability.icon == undefined && ability.slug in missingAbilityIcons) {
             ability.icon = missingAbilityIcons[ability.slug];
+        }
+        const linked = missingAbilityLinks[ability.slug];
+        if (linked && !ability.description.includes(`<hyperlink>${linked}</hyperlink>`)) {
+            ability.description = ability.description.replace(` ${linked} `, ` <hyperlink>${linked}</hyperlink> `);
         }
     }
 }

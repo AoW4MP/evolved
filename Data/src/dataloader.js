@@ -197,7 +197,8 @@ async function GetAllData(selectedLang) {
         "Relics.json",
         "Pantheon_Tree.json",
         "ExtraLookSpellsOrigin.json",
-        "StructurePredictions.json"
+        "StructurePredictions.json",
+        "LinkedAbilities.json"
     ];
     const fileNames = [
         // ingame dump files
@@ -252,7 +253,8 @@ async function GetAllData(selectedLang) {
             "jsonRelics",
             "jsonPantheon",
             "jsonExtraSpellsLookup",
-            "jsonStructurePredictions"
+            "jsonStructurePredictions",
+            "jsonLinkedAbilities"
         ];
         const targets = [
             "jsonHeroItems",
@@ -303,6 +305,12 @@ function AddExtraData() {
     jsonUnitAbilities = [...jsonUnitAbilities, ...jsonExtraTooltips];
     jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonExtraTooltips];
 
+    // the abilities the game's texts link to that the dump leaves out (Paragon of Strife's Infernal Blaze), from
+    // abilities.py in aow4_diff_tools; linked only where a text links them, not wherever their name stands
+    for (const ability of jsonLinkedAbilities) ability.linkedOnly = true;
+    jsonUnitAbilities = [...jsonUnitAbilities, ...jsonLinkedAbilities];
+    jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonLinkedAbilities];
+
     // the dump leaves out the Sealbearer's seal icons: the game picks them by subculture
     const missingAbilityIcons = {
         magic_seal_ability_0000049000000E8C_0000049700000fb5: "0000049700001068", // Transference Seal
@@ -310,7 +318,8 @@ function AddExtraData() {
         magic_seal_ability_0000049000000E8C_0000049700000fb8: "000004970000106C" // Fire Seal
     };
     // and the links of the Oathsworn's Paragon abilities to the ability they grant, which the game's text has
-    // ("gain the [hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink] ability")
+    // ("gain the [hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink] ability"): a linked-only
+    // ability needs one
     const missingAbilityLinks = {
         "0000049700001555": "Infernal Blaze", // Paragon of Strife
         "0000049700001558": "Radiant Slash", // Paragon of Righteousness

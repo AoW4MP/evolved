@@ -1,0 +1,1332 @@
+[
+ {
+  "name": "Arcfire Typhoon",
+  "slug": "000003E300005775",
+  "description": "In target 2-hex radius:<bulletlist><bullet>Enemy units sustain damage.</bullet><bullet>Fire and Lightning hazards are created that last for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+  "damage": "8<damagelightning></damagelightning> 8<damagefire></damagefire> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300005776"
+ },
+ {
+  "name": "Arrow of Harmony",
+  "slug": "000004970000108C",
+  "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 120% chance of becoming [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+  "damage": "20<damageblight></damageblight> 20<damagespirit></damagespirit> ",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Missile</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000004970000108D"
+ },
+ {
+  "name": "Artillery Barrage",
+  "slug": "0000046A00000147",
+  "description": "Target a 1-hex radius.<bulletlist><bullet>Inflicts [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink].</bullet><bullet>At the start of next turn, inflict 30 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000046A00000148"
+ },
+ {
+  "name": "Aspect of the Root",
+  "slug": "0000041B00001C65",
+  "description": "The unit:<bulletlist><bullet>Heals +30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Enters [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink].</bullet><bullet>Has [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] Flora created below it.</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003EB000005E8"
+ },
+ {
+  "name": "Astral Rift",
+  "slug": "000003E30000570A",
+  "description": "Conjure an [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoner[/hyperlink] or [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpent[/hyperlink].<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Summoning</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E30000570B"
+ },
+ {
+  "name": "Astral Storm",
+  "slug": "000003E300005702",
+  "description": "3 to 5 random enemy units, potentially the same unit, sustain:<bulletlist><bullet>10 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink]</bullet><bullet>10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]</bullet><bullet>10 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink]</bullet></bulletlist><br>This repeats at the start of your turn for the next 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300005703"
+ },
+ {
+  "name": "Blazing Chain Lightning",
+  "slug": "0000049700000B6E",
+  "description": "Target enemy unit and up to <eventColor>{BLAZING_CHAIN_LIGHTNING_TARGETER>MaxJumps}</eventColor> other enemy units within <eventColor>{BLAZING_CHAIN_LIGHTNING_TARGETER>MaxDistance}</eventColor> hexes:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+  "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B6F"
+ },
+ {
+  "name": "Blessed Champion",
+  "slug": "0000049700000B80",
+  "description": "Target friendly unit gains:<bulletlist><bullet>For 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>5 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink]</bullet><bullet>5 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink]</bullet><bullet>5 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]</bullet></bulletlist></bullet><bullet><eventColor>{BLESSED_CHAMPION_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B81"
+ },
+ {
+  "name": "Blessed Judgment",
+  "slug": "0000049700000B84",
+  "description": "In a <eventColor>{BLESSED_JUDGMENT_FRIENDLY_TARGETER>AREA>Radius}</eventColor>-hex radius:<bulletlist><bullet>Enemy units:<bulletlist><bullet>Sustain damage.</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] until the end of combat.</bullet></bulletlist></bullet><bullet>Friendly units:<bulletlist><bullet>Heal <eventColor>{BLESSED_JUDGMENT_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] until the end of combat.</bullet></bulletlist></bullet></bulletlist>",
+  "damage": "15<damagespirit></damagespirit> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B85"
+ },
+ {
+  "name": "Chaos Pulse",
+  "slug": "0000049700000AD1",
+  "description": "Enemies in a <eventColor>{CHAOS_PULSE_CIRCLE_TARGETER>AREA>Radius}</eventColor>-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Turn into a random Tier I [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] for <eventColor>{CHAOS_PULSE_ANIMAL>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Sustain <eventColor>{CHAOS_PULSE_FIRE_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] until the end of combat.</bullet><bullet><eventColor>{CHAOS_PULSE_MORALE>Morale Change}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Suffer <eventColor>{CHAOS_PULSE_FROST_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and become [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INFERNAL_REBIRTH]Infernal Rebirth[/hyperlink] until the end of combat.</bullet><bullet>Gain 5 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Heal <eventColor>{CHAOS_PULSE_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000AD2"
+ },
+ {
+  "name": "Charged Phase",
+  "slug": "0000041B0000148D",
+  "description": "Caster:<bulletlist><bullet>Moves to target hex.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.STATIC_CHARGE]Static Charge[/hyperlink] for <eventColor>{STATIC_CHARGE_STATUS_DESCRIPTION>NumTurns}</eventColor><turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Leaves 1 [hyperlink,GLOBAL.ActionPointConcept]Action Point[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Movement</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Teleport</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000041B0000148C"
+ },
+ {
+  "name": "Cleansing Rain",
+  "slug": "000004970000137B",
+  "description": "In a 1-hex radius:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet><bullet>Enemy units have <eventColor>{GENERAL_DISPEL_POSITIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] dispelled.</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000004970000137C"
+ },
+ {
+  "name": "Collector's gift",
+  "slug": "000003E100002053",
+  "description": "Summons 3 random Tier I Undead units.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Summoning</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E100002064"
+ },
+ {
+  "name": "Conjure Astral Ward",
+  "slug": "0000048D0000094F",
+  "description": "Summon an [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobile[/hyperlink] [hyperlink,GLOBAL.UNITS.ASTRAL_WARD]Astral Ward[/hyperlink].<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "3",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Summoning</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048D00000954"
+ },
+ {
+  "name": "Conjure Wildgrowth",
+  "slug": "0000048B00000356",
+  "description": "Create [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] flora in a 1-hex radius.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048B00000357"
+ },
+ {
+  "name": "Consume Flora",
+  "slug": "000004970000068A",
+  "description": "Destroy target [hyperlink,GLOBAL.FloraObstacleConcept]Flora Obstacle[/hyperlink]:<bulletlist><bullet>Heal <eventColor>{CONSUME_FLORA_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain 1 random positive effect.</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000004970000068B"
+ },
+ {
+  "name": "Corpse Eating",
+  "slug": "0000041B00001C8F",
+  "description": "Destroy target corpses to heal 15 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000041B00001C8E"
+ },
+ {
+  "name": "Cosmic Barrage",
+  "slug": "000003E300005741",
+  "description": "Deal damage in a 2 hex radius.",
+  "damage": "8<damagelightning></damagelightning> 8<damagefire></damagefire> 8<damagefrost></damagefrost> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300005743"
+ },
+ {
+  "name": "Cosmic Pulse",
+  "slug": "0000049700000B09",
+  "description": "Enemies in a <eventColor>{COSMIC_PULSE_TARGETER>AREA>Radius}</eventColor>-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Sustain <eventColor>{COSMIC_PULSE_FIRE_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Sustain <eventColor>{COSMIC_PULSE_FROST_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and have a base <eventColor>{FROZEN_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet><bullet>Sustain <eventColor>{COSMIC_PULSE_LIGHTNING_DAMAGE>DAMAGE>Shock}</eventColor> <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B0A"
+ },
+ {
+  "name": "Curse of the Reaper",
+  "slug": "0000049700000955",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] enemy unit has a base 60% chance of dying.<bulletlist><bullet>If a non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit dies this way, it transforms into a [hyperlink,GLOBAL.UNITS.DECAYING_ZOMBIE]Decaying Zombie[/hyperlink] under your control until the end of the battle.</bullet><bullet>If resisted, the unit sustains 45 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] that ignores <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   },
+   {
+    "note": "Starts on cooldown: 1<turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300006018"
+ },
+ {
+  "name": "Debilitation",
+  "slug": "0000049700000B59",
+  "description": "Enemy units in a <eventColor>{DEBILITATION_TARGETER>AREA>Radius}</eventColor>-hex radius gain for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink]</bullet><bullet>3 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink]</bullet><bullet>3 [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink]</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B5A"
+ },
+ {
+  "name": "Distribute Tonic",
+  "slug": "000003E3000071C6",
+  "description": "Target unit:<bulletlist><bullet>Gains 2 random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink].</bullet><bullet>Has one of their [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E3000071C7"
+ },
+ {
+  "name": "Dragonstrike",
+  "slug": "0000048D00001C02",
+  "description": "Deal damage to units in a 1-hex cone.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048D00001C03"
+ },
+ {
+  "name": "Draining Blade",
+  "slug": "000003E300005C3F",
+  "description": "Deals damage to target enemy and heals you the same amount as the damage dealt.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Melee</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300005C40"
+ },
+ {
+  "name": "Eldritch Mind Control",
+  "slug": "0000049700000A47",
+  "description": "Target enemy unit has a base <eventColor>{ENTHRALL_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.MIND_CONTROLLED]Final Ultimatum[/hyperlink] for <eventColor>{MIND_CONTROL_TEMP>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000A48"
+ },
+ {
+  "name": "Eldritch Truth",
+  "slug": "0000049700000A3B",
+  "description": "Target unit has a base <eventColor>{MADNESS_RESISTANCE>ResolvedStrength}</eventColor>% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MADNESS]Madness[/hyperlink] until the end of combat. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000A3C"
+ },
+ {
+  "name": "Enrapturing Truth",
+  "slug": "0000049700000A76",
+  "description": "Target unit has a base <eventColor>{MADDENED_RESISTANCE>ResolvedStrength}</eventColor>% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.ENRAPTURING_DOMINATION]Enrapturing Domination[/hyperlink] until the end of combat.<br><br>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000A6F"
+ },
+ {
+  "name": "Fairy Dust",
+  "slug": "0000049700003B52",
+  "description": "Target enemy unit has a base <eventColor>{SLOWED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink], or [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] for <eventColor>{SLOWED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700003B53"
+ },
+ {
+  "name": "Fey Blessing",
+  "slug": "0000049700000587",
+  "description": "Target unit:<bulletlist><bullet>Heals +<eventColor>{SOOTHING_MIST_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains a stack of [hyperlink,GLOBAL.PROPERTIES.CLINGING_MIST]Clinging Mist[/hyperlink] for <eventColor>{CLINGING_MIST_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gains a random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "3",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000588"
+ },
+ {
+  "name": "Fire Bomb",
+  "slug": "000003E300006BAB",
+  "description": "Deal damage to units in a 1-hex radius.",
+  "damage": "20<damagefire></damagefire> ",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300006BAC"
+ },
+ {
+  "name": "Focus Aim",
+  "slug": "0000048B000001F5",
+  "description": "The unit gains [hyperlink,GLOBAL.PROPERTIES.TRUE_STRIKE]True Strike[/hyperlink] for this turn, and cannot miss.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048B000001F6"
+ },
+ {
+  "name": "Forgefather's Creation",
+  "slug": "000003E100002060",
+  "description": "Summons a random Golem unit.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Summoning</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E100002065"
+ },
+ {
+  "name": "Forgefather's Gift",
+  "slug": "000003E10000205C",
+  "description": "Target friendly unit:<bulletlist><bullet>Heals +30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains 1 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink].</bullet><bullet>Gains 1 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E10000200F"
+ },
+ {
+  "name": "Free Their Souls",
+  "slug": "000004C000000A2C",
+  "description": "Destroys the target corpse.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049300000ED9"
+ },
+ {
+  "name": "Frigid Belch",
+  "slug": "000003E300004362",
+  "description": "A putrid belch that deals damage in a 1-hex cone.",
+  "damage": "6<damagefrost></damagefrost> ",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [],
+  "modifiers": [],
+  "icon": "000003E300004363"
+ },
+ {
+  "name": "Greater Possession",
+  "slug": "0000049700000AC1",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit gains [hyperlink,GLOBAL.PROPERTIES.GREATER_EMPOWER]Greater Empower[/hyperlink] for <eventColor>{GREATER_EMPOWER_STATUS_DESCREPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B00"
+ },
+ {
+  "name": "Havoc Pulse",
+  "slug": "0000049700000AFE",
+  "description": "Enemies in a <eventColor>{CHAOS_PULSE_CIRCLE_TARGETER>AREA>Radius}</eventColor>-hex radius have 2 of these effects occur to them at random:<bulletlist><bullet>Turn into a random Tier I [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] for <eventColor>{CHAOS_PULSE_ANIMAL>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Sustain <eventColor>{CHAOS_PULSE_FIRE_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] until the end of combat.</bullet><bullet><eventColor>{CHAOS_PULSE_MORALE>Morale Change}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Suffer <eventColor>{CHAOS_PULSE_FROST_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and become [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INFERNAL_REBIRTH]Infernal Rebirth[/hyperlink] until the end of combat.</bullet><bullet>Gain 5 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Heal <eventColor>{CHAOS_PULSE_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000AD2"
+ },
+ {
+  "name": "Infernal Blaze",
+  "slug": "00000497000010C5",
+  "description": "<bulletlist><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Adjacent enemies sustain damage.</bullet></bulletlist>",
+  "damage": "18<damagefire></damagefire> ",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "00000497000010C6"
+ },
+ {
+  "name": "Inspiring Resistance",
+  "slug": "000003E3000069D4",
+  "description": "Unit enters [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink], then it and adjacent friendly units gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E3000069D5"
+ },
+ {
+  "name": "Lesser Evocation",
+  "slug": "000004C000000BFC",
+  "description": "Target unit takes damage based on the chosen Discipline.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000004C000000BFD"
+ },
+ {
+  "name": "Mass Plague",
+  "slug": "000003E300005786",
+  "description": "Deals damage in a 2-hex radius.",
+  "damage": "18<damageblight></damageblight> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300005787"
+ },
+ {
+  "name": "Mass Rejuvenation",
+  "slug": "000003E30000564A",
+  "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet><bullet>2 [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink]</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E30000564B"
+ },
+ {
+  "name": "Mind Shattering Truth",
+  "slug": "0000049700000A78",
+  "description": "Target unit has a base <eventColor>{MADNESS_RESISTANCE>ResolvedStrength}</eventColor>% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MADNESS]Madness[/hyperlink] until the end of combat. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000A79"
+ },
+ {
+  "name": "Possession",
+  "slug": "0000049700000A8B",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit gains [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for <eventColor>{EMPOWER_STATUS_DESCREPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000A8C"
+ },
+ {
+  "name": "Puppeteer's Domination",
+  "slug": "0000049700000DCA",
+  "description": "Target enemy unit has a base <eventColor>{DOMINATED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DOMINATED]Dominated[/hyperlink] for <eventColor>{DOMINATED_TEMP>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000DEE"
+ },
+ {
+  "name": "Puppeteer's Possession",
+  "slug": "0000049700000AC0",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit and up to <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxJumps}</eventColor> other non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly units within <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxDistance}</eventColor> hexes gain [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for <eventColor>{EMPOWER_STATUS_DESCREPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000AFF"
+ },
+ {
+  "name": "Radiant Slash",
+  "slug": "00000497000010AC",
+  "description": "Enemy units in a 2-hex long, 1-hex wide line:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+  "damage": "25<damagespirit></damagespirit> ",
+  "accuracy": "100%",
+  "range": "1",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "00000497000010AD"
+ },
+ {
+  "name": "Recall Mask of Prosperity",
+  "slug": "0000048B00000285",
+  "description": "<bulletlist><bullet>Break the [hyperlink,GLOBAL.PROPERTIES.BESTOW_MASK_OF_PROSPERITY_CASTER]Mask of Prosperity[/hyperlink] link.</bullet><bullet>Consume all [hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink] stacks. Then per consumed stack:<bulletlist><bullet>Heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain a stack of [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [],
+  "modifiers": [],
+  "icon": "0000048B00000286"
+ },
+ {
+  "name": "Renew",
+  "slug": "000003E300005753",
+  "description": "Friendly units in a 2-hex radius heal +25 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300005754"
+ },
+ {
+  "name": "Restoration",
+  "slug": "000003E300005639",
+  "description": "Heals target friendly unit +<eventColor>{RESTORATION_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and dispels its [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].<br>A target friendly unit that is dead can be revived with <eventColor>{RESTORATION_RESS>ResolvedHitPoints}</eventColor>% of its total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E30000563A"
+ },
+ {
+  "name": "Restore (Overflowing)",
+  "slug": "0000048B0000034B",
+  "description": "Target friendly units in a 1-hex radius:<bulletlist><bullet>Heal +<eventColor>{RALLYING_CRY_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink].</bullet><bullet>Have their [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] removed.</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048B00000313"
+ },
+ {
+  "name": "Rip Mask of Calamity",
+  "slug": "0000048B00000446",
+  "description": "Remove [hyperlink,GLOBAL.PROPERTIES.MASK_OF_CALAMITY_PROP]Mask of Calamity[/hyperlink] dealing <eventColor>{RIP_MASK_OF_CALAMITY_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and <eventColor>{RIP_MASK_OF_CALAMITY_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] for each stack of [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] the unit has.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [],
+  "modifiers": [],
+  "icon": "0000048B00000447"
+ },
+ {
+  "name": "Rot Away",
+  "slug": "0000049700000B55",
+  "description": "Target unit:<bulletlist><bullet>Sustains Damage</bullet><bullet>Gains for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>4 [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.DISEASED]Diseased[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
+  "damage": "45<damageblight></damageblight> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B56"
+ },
+ {
+  "name": "Sanctify",
+  "slug": "000003E300006115",
+  "description": "Target friendly units gains:<bulletlist><bullet>+3 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink]</bullet><bullet>+3 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300006116"
+ },
+ {
+  "name": "Sprint",
+  "slug": "000003E3000054EC",
+  "description": "For 1 <turn></turn> grants:<bulletlist><bullet>+1 hex of movement</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIPPERY]Slippery[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ELUSIVE]Fleeting[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SWIFT]Swift[/hyperlink]</bullet></bulletlist>",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E3000054EB"
+ },
+ {
+  "name": "Stormcall",
+  "slug": "0000048D00000ECC",
+  "description": "Displace all adjacent enemies up to 2 hexes.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048D00000ECF"
+ },
+ {
+  "name": "Summon Devastator Sphere",
+  "slug": "000003E300006920",
+  "description": "Summon a [hyperlink,GLOBAL.UNITS.DEVASTATOR_SPHERE_UNIT]Devastator Sphere[/hyperlink] on target hex.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Summoning</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300006921"
+ },
+ {
+  "name": "Summon Elemental",
+  "slug": "000003E30000565C",
+  "description": "Summons a random Tier III Elemental unit.<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "1",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Summoning</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E30000565D"
+ },
+ {
+  "name": "Temporal Plague",
+  "slug": "0000048D00000D03",
+  "description": "Debuffs the target and all connected enemy units.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "3",
+  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Debuff</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048D00000D04"
+ },
+ {
+  "name": "Undying Loyalty",
+  "slug": "0000041B00000952",
+  "description": "Target friendly unit gains [hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "4",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 4 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000003E300006A4C"
+ }
+]

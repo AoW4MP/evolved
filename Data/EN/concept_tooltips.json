@@ -5221,20 +5221,6 @@
     "displayHtml": "Arctic Blizzards",
     "description": "This unit is in an Arctic Blizzard and subject to the following:<bulletlist><bullet>This Unit [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].</bullet><bullet>This Unit suffers -1 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink].</bullet><bullet>This Unit gains [hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink].</bullet></bulletlist>"
   },
-  "GLOBAL.PROPERTIES.ARROW_OF_REMORSE": {
-    "name": "Arrow of Harmony",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.ARROW_OF_REMORSE",
-    "displayHtml": "Arrow of Harmony",
-    "description": "Target unit:<bulletlist><bullet>Sustains damage.</bullet><bullet>Has a base 120% chance of becoming [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.ARTILLERY_BARRAGE": {
-    "name": "Artillery Barrage",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.ARTILLERY_BARRAGE",
-    "displayHtml": "Artillery Barrage",
-    "description": "Target a 1-hex radius.<bulletlist><bullet>Inflicts [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink].</bullet><bullet>At the start of next turn, inflict 30 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.ASCENDED_ARTILLERIST_COMBAT_PROPERTY": {
     "name": "Artillery Cover",
     "icon": null,
@@ -5248,20 +5234,6 @@
     "globalName": "GLOBAL.PROPERTIES.ASHLAND_CAMOUFLAGE",
     "displayHtml": "Ashland Camouflage",
     "description": "This unit cannot be detected when on Ashland hexes."
-  },
-  "GLOBAL.PROPERTIES.ASPECT_ROOT": {
-    "name": "Aspect of the Root",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.ASPECT_ROOT",
-    "displayHtml": "Aspect of the Root",
-    "description": "The unit:<bulletlist><bullet>Heals +30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Enters [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink].</bullet><bullet>Has [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] Flora created below it.</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.ASTRAL_ELDER_STORMCALL_ABILITY": {
-    "name": "Stormcall",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.ASTRAL_ELDER_STORMCALL_ABILITY",
-    "displayHtml": "Stormcall",
-    "description": "Displace all adjacent enemies up to 2 hexes."
   },
   "GLOBAL.PROPERTIES.ASTRAL_INCARNATE_UNIT_PROPERTY": {
     "name": "Astral Incarnate",
@@ -5431,13 +5403,6 @@
     "displayHtml": "Chaotic Influence",
     "description": "Unit has:<bulletlist><bullet>-2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink]</bullet></bulletlist>"
   },
-  "GLOBAL.PROPERTIES.CHARGED_PHASE_TELEPORT": {
-    "name": "Charged Phase",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CHARGED_PHASE_TELEPORT",
-    "displayHtml": "Charged Phase",
-    "description": "Caster:<bulletlist><bullet>Moves to target hex.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.STATIC_CHARGE]Static Charge[/hyperlink] for <eventColor>{STATIC_CHARGE_STATUS_DESCRIPTION>NumTurns}</eventColor><turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Leaves 1 [hyperlink,GLOBAL.ActionPointConcept]Action Point[/hyperlink]."
-  },
   "GLOBAL.PROPERTIES.CHOSEN_ALIPAVAR": {
     "name": "Chosen of Allipavar",
     "icon": null,
@@ -5458,13 +5423,6 @@
     "globalName": "GLOBAL.PROPERTIES.CHOSEN_KRALICAVIR",
     "displayHtml": "Chosen of Kralicavir",
     "description": "This unit gains [hyperlink,GLOBAL.PROPERTIES.KRALICAVIR_SUMMON_UNDEAD]Collector's gift[/hyperlink]"
-  },
-  "GLOBAL.PROPERTIES.CHOSEN_OF_VOXSEBAS_ABILITY": {
-    "name": "Forgefather's Gift",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CHOSEN_OF_VOXSEBAS_ABILITY",
-    "displayHtml": "Forgefather's Gift",
-    "description": "Target friendly unit:<bulletlist><bullet>Heals +30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains 1 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink].</bullet><bullet>Gains 1 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.CHOSEN_SONCEVAR": {
     "name": "Chosen of Soncevar",
@@ -5514,13 +5472,6 @@
     "globalName": "GLOBAL.PROPERTIES.CLEANSING_FLAME_FLAME_BLESSED_CHAMPIONS_PROPERTY_GROUP",
     "displayHtml": "Flame Blessed Champions",
     "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Spirit}</eventColor> <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base <eventColor>{BURNING_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
-  },
-  "GLOBAL.PROPERTIES.CLEANSING_RAIN": {
-    "name": "Cleansing Rain",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CLEANSING_RAIN",
-    "displayHtml": "Cleansing Rain",
-    "description": "In a 1-hex radius:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet><bullet>Enemy units have <eventColor>{GENERAL_DISPEL_POSITIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] dispelled.</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.COLLECTORS_GIFT": {
     "name": "The Collector",
@@ -5641,40 +5592,12 @@
     "displayHtml": "Combat Trained",
     "description": "This unit is under the control of a Player or Free City and gains:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{COMBAT_TRAINED_STATS>BONUS>DEFENSE>Armor}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+<eventColor>{COMBAT_TRAINED_STATS>BONUS>DEFENSE>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>"
   },
-  "GLOBAL.PROPERTIES.CONJURE_ASTRAL_WARD_HERO_SKILL": {
-    "name": "Conjure Astral Ward",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CONJURE_ASTRAL_WARD_HERO_SKILL",
-    "displayHtml": "Conjure Astral Ward",
-    "description": "Summon an [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobile[/hyperlink] [hyperlink,GLOBAL.UNITS.ASTRAL_WARD]Astral Ward[/hyperlink].<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
-  },
-  "GLOBAL.PROPERTIES.CONJURE_WILDGROWTH": {
-    "name": "Conjure Wildgrowth",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CONJURE_WILDGROWTH",
-    "displayHtml": "Conjure Wildgrowth",
-    "description": "Create [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] flora in a 1-hex radius."
-  },
   "GLOBAL.PROPERTIES.CONSECRATING_FIRESTORM": {
     "name": "Consecrating Firestorm",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CONSECRATING_FIRESTORM",
     "displayHtml": "Consecrating Firestorm",
     "description": "Combat in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>Has the [hyperlink,GLOBAL.PROPERTIES.CLEANSING_FLAMEHERALD_COMBAT_PROPERTY]Flameherald's Consecration[/hyperlink] combat enchantment.</bullet><bullet>At the start of combat, [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] appear on random hexes.</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.CONSUME_FLORA": {
-    "name": "Consume Flora",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CONSUME_FLORA",
-    "displayHtml": "Consume Flora",
-    "description": "Destroy target [hyperlink,GLOBAL.FloraObstacleConcept]Flora Obstacle[/hyperlink]:<bulletlist><bullet>Heal <eventColor>{CONSUME_FLORA_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain 1 random positive effect.</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.CORPSE_EATING": {
-    "name": "Corpse Eating",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.CORPSE_EATING",
-    "displayHtml": "Corpse Eating",
-    "description": "Destroy target corpses to heal 15 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_ASTRAL": {
     "name": "Cosmos Manifest: Astral",
@@ -5774,13 +5697,6 @@
     "displayHtml": "Disrupted",
     "description": "This unit's <caststrategic></caststrategic> [hyperlink,GLOBAL.UnitEnchantmentConcept]Unit Enchantments[/hyperlink] are temporarily disabled."
   },
-  "GLOBAL.PROPERTIES.DISTRIBUTE_TONIC": {
-    "name": "Distribute Tonic",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.DISTRIBUTE_TONIC",
-    "displayHtml": "Distribute Tonic",
-    "description": "Target unit:<bulletlist><bullet>Gains 2 random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink].</bullet><bullet>Has one of their [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.DOMAIN_OF_MAYHEM": {
     "name": "Domain of Mayhem",
     "icon": null,
@@ -5794,20 +5710,6 @@
     "globalName": "GLOBAL.PROPERTIES.DOWNPOURING",
     "displayHtml": "Downpouring",
     "description": "At the start of combat, units in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>Become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>If flying, become [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] in combat.</bullet></bulletlist><br>Units with [hyperlink,GLOBAL.PROPERTIES.AMPHIBIOUS_MOVEMENT]Amphibious[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.WATER_MOVEMENT]Water Movement[/hyperlink] are not affected."
-  },
-  "GLOBAL.PROPERTIES.DRACONIC_FOCUS_BREATH": {
-    "name": "Dragonstrike",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.DRACONIC_FOCUS_BREATH",
-    "displayHtml": "Dragonstrike",
-    "description": "Deal damage to units in a 1-hex cone."
-  },
-  "GLOBAL.PROPERTIES.DRAINING_BLADE": {
-    "name": "Draining Blade",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.DRAINING_BLADE",
-    "displayHtml": "Draining Blade",
-    "description": "Deals damage to target enemy and heals you the same amount as the damage dealt."
   },
   "GLOBAL.PROPERTIES.DUPE_COLD_BLOODED_MORALE_RESISTANCE": {
     "name": "Cold Blooded",
@@ -5858,26 +5760,12 @@
     "displayHtml": "Enchained",
     "description": "At the end of the units turn it has a 30% chance to break free, if failed sustains 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]."
   },
-  "GLOBAL.PROPERTIES.ENTHRALL": {
-    "name": "Eldritch Mind Control",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.ENTHRALL",
-    "displayHtml": "Eldritch Mind Control",
-    "description": "Target enemy unit has a base <eventColor>{ENTHRALL_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.MIND_CONTROLLED]Final Ultimatum[/hyperlink] for <eventColor>{MIND_CONTROL_TEMP>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]."
-  },
   "GLOBAL.PROPERTIES.EVIL_3_UNIT_PROPERTY": {
     "name": "[reputation0/] Pure Evil",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.EVIL_3_UNIT_PROPERTY",
     "displayHtml": "[reputation0/] Pure Evil",
     "description": "<reputation0></reputation0> Pure Evil"
-  },
-  "GLOBAL.PROPERTIES.EVOCATION_OF_DEATH": {
-    "name": "Curse of the Reaper",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.EVOCATION_OF_DEATH",
-    "displayHtml": "Curse of the Reaper",
-    "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] enemy unit has a base 60% chance of dying.<bulletlist><bullet>If a non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit dies this way, it transforms into a [hyperlink,GLOBAL.UNITS.DECAYING_ZOMBIE]Decaying Zombie[/hyperlink] under your control until the end of the battle.</bullet><bullet>If resisted, the unit sustains 45 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] that ignores <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.EXHAUSTED": {
     "name": "Exhausted",
@@ -5920,13 +5808,6 @@
     "globalName": "GLOBAL.PROPERTIES.EYE_OF_FIRE_PROPERTY_GROUP",
     "displayHtml": "Demonic Potential",
     "description": "Base attacks have a base 30% chance of inflicting a random [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effect[/hyperlink].<br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
-  },
-  "GLOBAL.PROPERTIES.FAIRY_DUST_ABILITY": {
-    "name": "Fairy Dust",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.FAIRY_DUST_ABILITY",
-    "displayHtml": "Fairy Dust",
-    "description": "Target enemy unit has a base <eventColor>{SLOWED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink], or [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] for <eventColor>{SLOWED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.FAST_EMBARK": {
     "name": "Fast Embark",
@@ -5984,13 +5865,6 @@
     "displayHtml": "Fiend Slayer",
     "description": "Base attacks deal +<eventColor>{FIEND_SLAYER_DAMAGE>ResolvedMultiplier}</eventColor>% damage to [hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] units."
   },
-  "GLOBAL.PROPERTIES.FIRE_BOMB": {
-    "name": "Fire Bomb",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.FIRE_BOMB",
-    "displayHtml": "Fire Bomb",
-    "description": "Deal damage to units in a 1-hex radius."
-  },
   "GLOBAL.PROPERTIES.FIRE_HAZARD_IMMUNITY": {
     "name": "Fire Hazard Immunity",
     "icon": null,
@@ -6005,13 +5879,6 @@
     "displayHtml": "Seal of Fire",
     "description": "At the start of the turn, this unit sustains <eventColor>{FIRE_SEAL_AUTO_SPELL_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].<br><br>If the unit dies while under this effect, it explodes dealing <eventColor>{FIRE_SEAL_ON_UNIT_DEATH_DAMAGE>DAMAGE>Fire}</eventColor><damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] to adjacent friendly units."
   },
-  "GLOBAL.PROPERTIES.FOCUS": {
-    "name": "Focus Aim",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.FOCUS",
-    "displayHtml": "Focus Aim",
-    "description": "The unit gains [hyperlink,GLOBAL.PROPERTIES.TRUE_STRIKE]True Strike[/hyperlink] for this turn, and cannot miss."
-  },
   "GLOBAL.PROPERTIES.FORGEFATHER_PROPERTY": {
     "name": "The Forgefather",
     "icon": null,
@@ -6025,20 +5892,6 @@
     "globalName": "GLOBAL.PROPERTIES.FOR_THE_MONARCH",
     "displayHtml": "For the Monarch",
     "description": "While in combat in own Domain or alongside their [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink], this unit gains:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+10% damage</bullet><bullet>+10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.FREE_THEIR_SOULS": {
-    "name": "Free Their Souls",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.FREE_THEIR_SOULS",
-    "displayHtml": "Free Their Souls",
-    "description": "Destroys the target corpse."
-  },
-  "GLOBAL.PROPERTIES.FRIGID_BELCH": {
-    "name": "Frigid Belch",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.FRIGID_BELCH",
-    "displayHtml": "Frigid Belch",
-    "description": "A putrid belch that deals damage in a 1-hex cone."
   },
   "GLOBAL.PROPERTIES.FROSTLING_TRANSFORMATION_PROPERTY_GROUP": {
     "name": "Frostling Transformation",
@@ -6208,26 +6061,12 @@
     "displayHtml": "Fatal Strikes",
     "description": "Damage increases as the target loses health, up to +<eventColor>{HS_FATAL_STRIKES_DAMAGE>ResolvedMultiplier}</eventColor>%."
   },
-  "GLOBAL.PROPERTIES.HS_MAGE_TEMPORAL_PLAGUE_ABILITY": {
-    "name": "Temporal Plague",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.HS_MAGE_TEMPORAL_PLAGUE_ABILITY",
-    "displayHtml": "Temporal Plague",
-    "description": "Debuffs the target and all connected enemy units."
-  },
   "GLOBAL.PROPERTIES.HS_SPIRITBREAKER_MOD": {
     "name": "Willbreaker",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.HS_SPIRITBREAKER_MOD",
     "displayHtml": "Willbreaker",
     "description": "When this unit kills, enemies within 3 hexes of the target suffer:<bulletlist><bullet>1 [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.REMORSE]Remorse[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.HS_UNDYIND_LOYALTY": {
-    "name": "Undying Loyalty",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.HS_UNDYIND_LOYALTY",
-    "displayHtml": "Undying Loyalty",
-    "description": "Target friendly unit gains [hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.IMMORTAL": {
     "name": "Immortal",
@@ -6250,33 +6089,12 @@
     "displayHtml": "Immune to Seduced",
     "description": "This unit cannot be seduced."
   },
-  "GLOBAL.PROPERTIES.INFERNAL_BLAZE": {
-    "name": "Infernal Blaze",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.INFERNAL_BLAZE",
-    "displayHtml": "Infernal Blaze",
-    "description": "<bulletlist><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Adjacent enemies sustain damage.</bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.INFINITE_BEING_GROUP": {
     "name": "Attunement: Enhancement",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.INFINITE_BEING_GROUP",
     "displayHtml": "Attunement: Enhancement",
     "description": "Whenever a spell is cast, this units gains a random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink]."
-  },
-  "GLOBAL.PROPERTIES.INSPIRING_DEFENSE": {
-    "name": "Inspiring Resistance",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.INSPIRING_DEFENSE",
-    "displayHtml": "Inspiring Resistance",
-    "description": "Unit enters [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink], then it and adjacent friendly units gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]."
-  },
-  "GLOBAL.PROPERTIES.KRALICAVIR_SUMMON_UNDEAD": {
-    "name": "Collector's gift",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.KRALICAVIR_SUMMON_UNDEAD",
-    "displayHtml": "Collector's gift",
-    "description": "Summons 3 random Tier I Undead units."
   },
   "GLOBAL.PROPERTIES.LED_BY_ARCHON": {
     "name": "Led by Archon",
@@ -6291,13 +6109,6 @@
     "globalName": "GLOBAL.PROPERTIES.LED_BY_SHEPHERD",
     "displayHtml": "Led by Shepherd",
     "description": "This unit has:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STALWART]Stalwart[/hyperlink]</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.LESSER_EVOCATION": {
-    "name": "Lesser Evocation",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.LESSER_EVOCATION",
-    "displayHtml": "Lesser Evocation",
-    "description": "Target unit takes damage based on the chosen Discipline."
   },
   "GLOBAL.PROPERTIES.LIEGE_LORD": {
     "name": "Liege Lord",
@@ -6333,13 +6144,6 @@
     "globalName": "GLOBAL.PROPERTIES.MASK_OF_CALAMITY_PROP",
     "displayHtml": "Mask of Calamity",
     "description": "<bulletlist><bullet>Each time the caster unit is attacked, this unit suffers 5 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and 5 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>At the start of its turn the unit gains [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.MASS_REJUVENATION": {
-    "name": "Mass Rejuvenation",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.MASS_REJUVENATION",
-    "displayHtml": "Mass Rejuvenation",
-    "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet><bullet>2 [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.MATERIUM_DRAGON_ELDER_PROPERTY_AUTO_SPELL": {
     "name": "Materium Scales",
@@ -6663,13 +6467,6 @@
     "displayHtml": "Blinding Sandstorm",
     "description": "Units in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] suffer:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.SANDSTORMS_UNIT_PROPERTY]Blinding Sandstorm[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.COMBATPROPERTY_SANDSTORM]Blinding Sandstorm[/hyperlink] in combat</bullet></bulletlist>"
   },
-  "GLOBAL.PROPERTIES.RECALL_MASK_OF_PROSPERITY": {
-    "name": "Recall Mask of Prosperity",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.RECALL_MASK_OF_PROSPERITY",
-    "displayHtml": "Recall Mask of Prosperity",
-    "description": "<bulletlist><bullet>Break the [hyperlink,GLOBAL.PROPERTIES.BESTOW_MASK_OF_PROSPERITY_CASTER]Mask of Prosperity[/hyperlink] link.</bullet><bullet>Consume all [hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink] stacks. Then per consumed stack:<bulletlist><bullet>Heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain a stack of [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink].</bullet></bulletlist></bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.REFLECTION": {
     "name": "Astral Reflection",
     "icon": null,
@@ -6691,13 +6488,6 @@
     "displayHtml": "Seal of Resonance",
     "description": "Attacking this unit deals an extra <eventColor>{RESONANCE_SEAL_DAMAGE>DAMAGE>Blight}</eventColor> <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].<br><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
   },
-  "GLOBAL.PROPERTIES.RENDING_SLASH": {
-    "name": "Radiant Slash",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.RENDING_SLASH",
-    "displayHtml": "Radiant Slash",
-    "description": "Enemy units in a 2-hex long, 1-hex wide line:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.RESISTANT_STRIKE": {
     "name": "Resistant Strike",
     "icon": null,
@@ -6712,26 +6502,12 @@
     "displayHtml": "Resurgent Strength",
     "description": "When this unit's [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] are <eventColor>{RESURGING_STRENGTH>ResolvedTriggerProportion}</eventColor>% or lower, it becomes 3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink]."
   },
-  "GLOBAL.PROPERTIES.RIP_MASK_OF_CALAMITY": {
-    "name": "Rip Mask of Calamity",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.RIP_MASK_OF_CALAMITY",
-    "displayHtml": "Rip Mask of Calamity",
-    "description": "Remove [hyperlink,GLOBAL.PROPERTIES.MASK_OF_CALAMITY_PROP]Mask of Calamity[/hyperlink] dealing <eventColor>{RIP_MASK_OF_CALAMITY_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and <eventColor>{RIP_MASK_OF_CALAMITY_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] for each stack of [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] the unit has."
-  },
   "GLOBAL.PROPERTIES.RIVER_WALK": {
     "name": "River Walk",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.RIVER_WALK",
     "displayHtml": "River Walk",
     "description": "Moving through Rivers costs <eventColor>{RIVER_WALK>CostOverride}</eventColor> <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] instead of 12."
-  },
-  "GLOBAL.PROPERTIES.SANCTIFY": {
-    "name": "Sanctify",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.SANCTIFY",
-    "displayHtml": "Sanctify",
-    "description": "Target friendly units gains:<bulletlist><bullet>+3 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink]</bullet><bullet>+3 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.SANDSTORMS_UNIT_PROPERTY": {
     "name": "Blinding Sandstorm",
@@ -6838,13 +6614,6 @@
     "displayHtml": "Rays of Winter",
     "description": "Unit has:<bulletlist><bullet><eventColor>{SOLAR_WINTER_STAT_BONUS>BONUS>Regen}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per turn.</bullet><bullet><eventColor>{SOLAR_WINTER_STAT_BONUS>BONUS>SightRange}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>"
   },
-  "GLOBAL.PROPERTIES.SOOTHING_MIST": {
-    "name": "Fey Blessing",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.SOOTHING_MIST",
-    "displayHtml": "Fey Blessing",
-    "description": "Target unit:<bulletlist><bullet>Heals +<eventColor>{SOOTHING_MIST_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains a stack of [hyperlink,GLOBAL.PROPERTIES.CLINGING_MIST]Clinging Mist[/hyperlink] for <eventColor>{CLINGING_MIST_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gains a random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.SOTAM3_AUTUMN_DISCIPLE_RULER_PROPERTY_GROUP": {
     "name": "Disciple of Autumn",
     "icon": null,
@@ -6922,13 +6691,6 @@
     "displayHtml": "Spawnkin",
     "description": "Unit has:<bulletlist><bullet>An increased number of units in formation.</bullet><bullet>+<eventColor>{SPAWNKIN_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist>"
   },
-  "GLOBAL.PROPERTIES.SPRINT": {
-    "name": "Sprint",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.SPRINT",
-    "displayHtml": "Sprint",
-    "description": "For 1 <turn></turn> grants:<bulletlist><bullet>+1 hex of movement</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIPPERY]Slippery[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ELUSIVE]Fleeting[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SWIFT]Swift[/hyperlink]</bullet></bulletlist>"
-  },
   "GLOBAL.PROPERTIES.STAND_TOGETHER": {
     "name": "Stand Together",
     "icon": null,
@@ -6963,20 +6725,6 @@
     "globalName": "GLOBAL.PROPERTIES.STARS_ALIGNED",
     "displayHtml": "Aligned Stars",
     "description": "Due to being part of an [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] with Astrological Diviners and it being the 10th <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], this unit has:<bulletlist><bullet>+100% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet></bulletlist>"
-  },
-  "GLOBAL.PROPERTIES.SUMMON_DEVASTATOR_SPHERE": {
-    "name": "Summon Devastator Sphere",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.SUMMON_DEVASTATOR_SPHERE",
-    "displayHtml": "Summon Devastator Sphere",
-    "description": "Summon a [hyperlink,GLOBAL.UNITS.DEVASTATOR_SPHERE_UNIT]Devastator Sphere[/hyperlink] on target hex."
-  },
-  "GLOBAL.PROPERTIES.SUMMON_ELEMENTAL": {
-    "name": "Summon Elemental",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.SUMMON_ELEMENTAL",
-    "displayHtml": "Summon Elemental",
-    "description": "Summons a random Tier III Elemental unit.<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.SUNLIGHT_WEAKNESS": {
     "name": "Sunlight Weakness",
@@ -7180,13 +6928,6 @@
     "globalName": "GLOBAL.PROPERTIES.VOXSEBAS_BLESSING_ABILITY",
     "displayHtml": "Chosen of Vox'Sebas",
     "description": "This unit gains [hyperlink,GLOBAL.PROPERTIES.CHOSEN_OF_VOXSEBAS_ABILITY]Forgefather's Gift[/hyperlink]"
-  },
-  "GLOBAL.PROPERTIES.VOXSEBAS_CREATION_ABILITY": {
-    "name": "Forgefather's Creation",
-    "icon": null,
-    "globalName": "GLOBAL.PROPERTIES.VOXSEBAS_CREATION_ABILITY",
-    "displayHtml": "Forgefather's Creation",
-    "description": "Summons a random Golem unit."
   },
   "GLOBAL.PROPERTIES.WARDED_BY_FATE": {
     "name": "Ward of Fates",

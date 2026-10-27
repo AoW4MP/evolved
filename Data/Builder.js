@@ -43,7 +43,7 @@ function buildAbilityTagCache() {
         const escaped = abilityName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         const regex = new RegExp(`\\b${escaped}\\b`, "g");
 
-        abilityTagCache.set(abilityName, { replacement, regex }); // store both
+        abilityTagCache.set(abilityName, { replacement, regex, linkedOnly: ability.linkedOnly }); // store both
     }
 }
 
@@ -97,6 +97,9 @@ function processConceptHyperlinks(text) {
         const visible = `<span style="color:white;text-decoration:underline">${""}${displayText.trim()}</span>`;
         const noTooltip = `<span style="color:white;">${""}${displayText.trim()}</span>`;
 
+        // a link to an ability ("[hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink]") opens the
+        // ability's tooltip; alltexts.py writes no concept tooltip for one the site has
+        if (!concept && abilityTagCache?.has(displayText.trim())) return abilityTagCache.get(displayText.trim()).replacement;
         if (!concept) return noTooltip; // no tooltip available, just underline
 
         // Hidden handler lets HandleExtraTooltips wire up the tooltip
@@ -177,17 +180,18 @@ function ConceptKeyByName(words) {
 // main function
 function AddTagIconsForStatusEffects(text) {
     if (!text) return text;
+    if (!abilityTagCache) buildAbilityTagCache();
     text = processSpellRefs(text);
     text = processConceptHyperlinks(text);
 
     text = cleanTranslation(text);
-    if (!abilityTagCache) buildAbilityTagCache();
 
     const extracted = extractHyperlinks(text);
     text = extracted.text;
 
     // Use the pre-compiled regex instead of building it here
-    for (const [abilityName, { replacement, regex }] of abilityTagCache.entries()) {
+    for (const [abilityName, { replacement, regex, linkedOnly }] of abilityTagCache.entries()) {
+        if (linkedOnly) continue; // "Renew", "Possession": only where a text links them
         regex.lastIndex = 0; // reset since the regex has the "g" flag
         text = text.replace(regex, replacement);
     }
@@ -289,6 +293,8 @@ function RebuildBulletLists(text) {
 function lookupStatusEffect(name) {
     const effect = findBy(jsonUnitAbilitiesLocalized, "name", name);
     if (!effect) return name;
+    // an ability a unit uses opens its own tooltip, with its damage, accuracy and actions, as in the game
+    if (effect.actionPoints) return GetAbilityToolTip(effect).innerHTML;
     return createStatusEffectTooltip(effect, "status");
 }
 
@@ -1535,38 +1541,41 @@ function GetAbilityToolTip(ability, uniqueMedal) {
     let reqs = element.querySelector("#abilityTags");
     reqs.innerHTML = "";
 
-    const Melee = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@MELEE_ABILITY");
+    // by their words: the dump writes "<hyperlink>Melee</hyperlink>", all.json "[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink]"
+    const words = (s) => (s || "").replace(/\[\/?hyperlink[^\]]*\]|<[^>]+>/g, "").trim();
+    const Melee = words(findBy(jsonAllFromPOLocalized, "id", "CONCEPT@MELEE_ABILITY").hyperlink);
 
-    const Magic = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@MAGIC_ABILITY");
-    const PhysicalRanged = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@RANGED_ABILITY");
+    const Magic = words(findBy(jsonAllFromPOLocalized, "id", "CONCEPT@MAGIC_ABILITY").hyperlink);
+    const PhysicalRanged = words(findBy(jsonAllFromPOLocalized, "id", "CONCEPT@RANGED_ABILITY").hyperlink);
 
     if (Array.isArray(ability.requisites)) {
         for (const requisite of ability.requisites) {
             let newReq = document.createElement("DIV");
+            const req = words(requisite.requisite);
 
             newReq.setAttribute("style", "background-color:#2e2e28");
-            if (requisite.requisite == "Support") {
+            if (req == "Support") {
                 newReq.setAttribute("style", "background-color:#263b38");
             }
-            if (requisite.requisite == Melee.hyperlink) {
+            if (req == Melee) {
                 newReq.innerHTML += "<defense></defense>";
                 newReq.setAttribute("style", "background-color:#3b2826");
             }
-            if (requisite.requisite == PhysicalRanged.hyperlink) {
+            if (req == PhysicalRanged) {
                 newReq.innerHTML += "<defense></defense>";
                 newReq.setAttribute("style", "background-color:#383125");
             }
-            if (requisite.requisite == Magic.hyperlink) {
+            if (req == Magic) {
                 newReq.innerHTML += "<resistance></resistance>";
                 newReq.setAttribute("style", "background-color:#262f42");
             }
-            if (requisite.requisite == "Debuff") {
+            if (req == "Debuff") {
                 newReq.setAttribute("style", "background-color:#3c2642");
             }
-            if (requisite.requisite == "Summoning") {
+            if (req == "Summoning") {
                 newReq.setAttribute("style", "background-color:#422631");
             }
-            if (requisite.requisite == "Base") {
+            if (req == "Base") {
                 newReq.setAttribute("style", "background-color:#5d5d5c");
             }
             newReq.className = "requisiteSlot";

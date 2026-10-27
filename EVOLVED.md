@@ -78,7 +78,16 @@ a "Transference Seal:" section and so on, and each seal now shows its own sectio
 `AddExtraData` gives the three seal abilities the icons the dump leaves out (the game picks them by subculture);
 `Icons/UnitIcons/0000049700001064`, `…68` and `…6C.png` are exported from the game with `clbicons.py`.
 It also gives the Oathsworn's Paragon abilities (Paragon of Strife and so on) back the link to the ability they grant
-(Infernal Blaze, Radiant Slash, Arrow of Harmony), which the dump drops; that ability's concept tooltip then shows.
+(Infernal Blaze, Radiant Slash, Arrow of Harmony), which the dump drops.
+
+`Data/GEN/LinkedAbilities.json` (`abilities.py` in aow4_diff_tools) holds the abilities the game's texts link to that
+the dump leaves out, as no unit has them from the start (Infernal Blaze, Sprint, Fire Bomb: 60), in `Abilities.json`'s
+format; their icons are in `Icons/UnitIcons`. `dataloader.js` adds them to the abilities, marked `linkedOnly`: they are
+linked only where a text links them, not wherever their name stands ("Renew", "Possession").
+`Data/Builder.js`: a link to an ability a unit uses opens its own tooltip (damage, accuracy, actions, requisites), as
+in the game, not only its description; a game text's link to an ability with no concept tooltip opens the ability.
+A requisite is matched by its words, so Melee, Missile and Magic get their colors and icons whether written as the
+dump writes them (`<hyperlink>Melee</hyperlink>`) or as `all.json` does.
 
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.
@@ -135,6 +144,7 @@ It started from upstream's copy and keeps its entries and order; texts the game 
 A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
 `Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero).
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
+`Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).
 `Data/GEN/RealmTraits.json` and `Icons/RealmTraits/` (`realmtraits.py`) feed `HTML/RealmTraits.html`, in the World Map menu: upstream's page was never linked and picked texts by id.
 The rest of `Data/GEN/*.json` comes from upstream, apart from the files Evolved generates (below).
 
@@ -143,7 +153,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
 `after_update.bat` (the mod reports) can't do this: it runs before the patched game has made the new dump.
 
 ## Taking changes from upstream

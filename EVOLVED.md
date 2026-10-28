@@ -140,7 +140,9 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 
 - The links between buildings come from `Data/GEN/CityTreeLinks.json`, which `citytree.py` in aow4_diff_tools generates from the live game plus the mod.
   It holds only resids, keys and text ids; names, icons, costs and texts come from `Data/EN/StructureUpgrades.json`, `Tomes.json` and `all.json`.
-- One culture and sub-culture at a time, with toggles for the Elder Vampire's castle and tome buildings.
+- One culture and sub-culture at a time, with toggles for the Elder Vampire's castle and tome buildings. The cultures are a row
+  of emblems (`.iconPicker`), the sub-cultures the units pages' picker (`.subcultureHolder`), the toggles `.toggleChip`s; the
+  first and last are shared classes in `Style/style.css`. The title names the culture ("Feudal City Tree").
 - Upstream's `HTML/CityTest.html`, `HTML/CityTreesNew.html` and `Data/GEN/CityTree.json` are deleted, as is the `CityTree.json` / `jsonCityTreeNodes` pair in `Data/src/dataloader.js`.
 
 ### Magic Materials

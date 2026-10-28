@@ -103,50 +103,77 @@
             }
 
             function CultureIcon(culture) {
-                const icon = culture.icon || treeLinks.cultures.find((c) => c.key === culture.parent)?.icon;
-                return icon ? "/evolved/Icons/Text/" + icon + ".png" : "";
+                // the game gives Oathsworn's subcultures no icon; the site has them under their own names
+                const icon = culture.icon || culture.key.slice(culture.parent.length + 1);
+                return "/evolved/Icons/Text/" + icon + ".png";
             }
 
             // ---- controls ----
 
+            const picked = { culture: "feudal", sub: "" };
+
             function SetUpControls() {
                 const hash = new URLSearchParams(location.hash.slice(1));
-                const cultureSelect = document.getElementById("cultureSelect");
-                for (const c of treeLinks.cultures.filter((c) => !c.parent)) {
-                    cultureSelect.add(new Option(GameText(c.name), c.key));
+                const cultures = treeLinks.cultures.filter((c) => !c.parent);
+                if (cultures.some((c) => c.key === hash.get("culture"))) picked.culture = hash.get("culture");
+
+                const picker = document.getElementById("culturePicker");
+                for (const c of cultures) {
+                    const button = PickerButton(c, "iconPickerButton");
+                    button.title = GameText(c.name);
+                    button.addEventListener("click", () => {
+                        picked.culture = c.key;
+                        FillSubcultures();
+                        DrawTree();
+                    });
+                    picker.append(button);
                 }
-                cultureSelect.value = hash.get("culture") || "feudal";
                 FillSubcultures(hash.get("sub"));
                 document.getElementById("vampireCheck").checked = hash.get("vampire") === "1";
                 document.getElementById("tomeCheck").checked = hash.get("tomes") !== "0";
 
-                cultureSelect.addEventListener("change", () => {
-                    FillSubcultures();
-                    DrawTree();
-                });
-                for (const id of ["subcultureSelect", "vampireCheck", "tomeCheck"]) {
+                for (const id of ["vampireCheck", "tomeCheck"]) {
                     document.getElementById(id).addEventListener("change", DrawTree);
                 }
             }
 
+            // the units pages' subculture picker: icon and name, the picked one's name lit
             function FillSubcultures(wanted) {
-                const culture = document.getElementById("cultureSelect").value;
-                const subSelect = document.getElementById("subcultureSelect");
-                subSelect.innerHTML = "";
-                for (const c of treeLinks.cultures.filter((c) => c.parent === culture)) {
-                    subSelect.add(new Option(GameText(c.name), c.key));
+                const subs = treeLinks.cultures.filter((c) => c.parent === picked.culture);
+                picked.sub = subs.some((c) => c.key === wanted) ? wanted : subs[0]?.key || "";
+                const holder = document.getElementById("subculturePicker");
+                holder.innerHTML = "";
+                for (const c of subs) {
+                    const button = PickerButton(c, "subscultureButton");
+                    const name = document.createElement("span");
+                    name.className = "subCultureName";
+                    name.textContent = GameText(c.name);
+                    button.append(name);
+                    button.addEventListener("click", () => {
+                        picked.sub = c.key;
+                        DrawTree();
+                    });
+                    holder.append(button);
                 }
-                if (wanted && [...subSelect.options].some((o) => o.value === wanted)) subSelect.value = wanted;
-                document.getElementById("subcultureLabel").style.display = subSelect.options.length ? "" : "none";
+                holder.style.display = subs.length ? "" : "none";
+            }
+
+            function PickerButton(culture, className) {
+                const button = document.createElement("button");
+                button.className = className;
+                button.dataset.key = culture.key;
+                const img = document.createElement("img");
+                img.src = CultureIcon(culture);
+                img.alt = "";
+                button.append(img);
+                return button;
             }
 
             function Selection() {
-                const culture = document.getElementById("cultureSelect").value;
-                const sub = document.getElementById("subcultureSelect").value;
                 return {
-                    culture: culture,
-                    sub: sub,
-                    keys: new Set([culture, sub].filter((k) => k)),
+                    culture: picked.culture,
+                    sub: picked.sub,
+                    keys: new Set([picked.culture, picked.sub].filter((k) => k)),
                     vampire: document.getElementById("vampireCheck").checked,
                     tomes: document.getElementById("tomeCheck").checked
                 };
@@ -179,8 +206,15 @@
                 if (!sel.tomes) hash.set("tomes", "0");
                 history.replaceState(null, "", "#" + hash);
 
-                const culture = treeLinks.cultures.find((c) => c.key === (sel.sub || sel.culture));
-                document.getElementById("cultureIcon").src = CultureIcon(culture);
+                // "◆ Feudal City Tree ◆", and the picked culture and subculture lit in the pickers
+                const culture = treeLinks.cultures.find((c) => c.key === sel.culture);
+                document.getElementById("cultureName").textContent = GameText(culture.name);
+                document.querySelectorAll(".ct-title-icon").forEach((img) => (img.src = CultureIcon(culture)));
+                for (const button of document.querySelectorAll("#culturePicker > button, #subculturePicker > button")) {
+                    const on = sel.keys.has(button.dataset.key);
+                    button.classList.toggle("selected", on);
+                    button.setAttribute("aria-pressed", on);
+                }
 
                 const visible = VisibleStructures(sel);
                 const tree = document.getElementById("cityTree");
@@ -509,7 +543,7 @@
                 const img = document.createElement("img");
                 img.className = "structureNodeIcon";
                 img.src = icon;
-                img.height = 74;
+                img.height = 67;
                 // badges and income icons are placed within the body, so a name on two lines moves them along
                 const body = document.createElement("div");
                 body.className = "ct-body";
@@ -683,13 +717,17 @@
         <div id="header"></div>
 
         <div class="ct-page">
-            <div class="textblocktitle">City Tree</div>
+            <div class="textblocktitle">
+                <img class="ct-title-icon" height="44" alt="" /> <span id="cultureName"></span> City Tree
+                <img class="ct-title-icon" height="44" alt="" />
+            </div>
             <div class="ct-controls">
-                <img id="cultureIcon" class="ct-culture-icon" alt="" />
-                <label>Culture <select id="cultureSelect" class="button-random"></select></label>
-                <label id="subcultureLabel">Sub-culture <select id="subcultureSelect" class="button-random"></select></label>
-                <label class="switch"><input type="checkbox" id="vampireCheck" /> Elder Vampire</label>
-                <label class="switch"><input type="checkbox" id="tomeCheck" checked /> Tome Buildings</label>
+                <div id="culturePicker" class="iconPicker"></div>
+                <div id="subculturePicker" class="subcultureHolder"></div>
+                <div class="ct-toggles">
+                    <label class="toggleChip"><input type="checkbox" id="vampireCheck" /> Elder Vampire</label>
+                    <label class="toggleChip"><input type="checkbox" id="tomeCheck" checked /> Tome Buildings</label>
+                </div>
             </div>
             <div id="cityTree"></div>
         </div>
@@ -697,8 +735,8 @@
 </html>
 <style>
     :root {
-        --ct-cell: 278px; /* a column; the gap between cards is the cell less the card */
-        --ct-card: 263px;
+        --ct-cell: 252px; /* a column; the gap between cards is the cell less the card */
+        --ct-card: 237px;
     }
     .ct-page {
         padding: 0 16px;
@@ -711,28 +749,31 @@
         max-width: 100%;
         margin: 0 auto;
     }
+    /* cultures, subcultures, then the switches: one band under the title, ruled off from the tree */
     .ct-controls {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        max-width: 1100px;
+        margin: 4px auto 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgb(173, 156, 122, 0.35);
+    }
+    /* Primal's seven take two rows, and more on a phone */
+    .ct-controls .subcultureHolder {
         flex-wrap: wrap;
-        gap: 16px;
-        align-items: center;
+        gap: 8px 30px;
+        padding: 0;
+    }
+    .ct-controls .subscultureButton:not(.selected) .subCultureName {
+        color: grey;
+    }
+    .ct-toggles {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        color: white;
-        margin: 10px 0 20px;
-    }
-    /* the site's .switch is 34px tall with its text at the top: centre it like the dropdowns */
-    .ct-controls .switch {
-        height: auto;
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-    }
-    .ct-controls select {
-        margin-left: 4px;
-    }
-    .ct-culture-icon {
-        height: 40px;
-        margin-right: -8px; /* the controls' gap less the icon's own empty edge */
+        gap: 12px;
     }
     .ct-section {
         margin: 0 0 30px;
@@ -812,10 +853,10 @@
         position: relative;
         box-sizing: border-box;
         background-image: url(/evolved/Icons/tooltipBG.png);
-        font-size: 14px;
+        font-size: 13px;
         color: #bbcdf6;
-        min-height: 74px;
-        max-height: 156px;
+        min-height: 67px;
+        max-height: 140px;
         width: var(--ct-card);
         text-align: left;
         border-style: solid;
@@ -850,9 +891,9 @@
     .ct-resources {
         position: absolute;
         top: 2px;
-        bottom: 16px;
-        left: 84px;
-        right: 58px; /* wrap before the badge */
+        bottom: 15px;
+        left: 76px;
+        right: 52px; /* wrap before the badge */
         display: flex;
         align-items: center;
     }
@@ -864,30 +905,30 @@
     /* icons.css gives the resource icons different heights (15-20px) and offsets: one box for all here */
     .ct-icons > * {
         position: static;
-        width: 22px;
-        height: 22px;
-        max-height: 22px;
+        width: 20px;
+        height: 20px;
+        max-height: 20px;
         object-fit: contain;
         margin: 1px 2px;
     }
     .ct-resources.ct-many .ct-icons > * {
-        width: 18px;
-        height: 18px;
-        max-height: 18px;
+        width: 16px;
+        height: 16px;
+        max-height: 16px;
         margin: 0 1px;
     }
     .ct-badge {
         position: absolute;
         top: 0;
         right: 1px;
-        height: 58px;
+        height: 52px;
         opacity: 0.9;
     }
     /* culture emblems fill their image, tome icons have margins: this makes them look the same size */
     .ct-badge-culture {
-        top: 5px;
-        right: 6px;
-        height: 48px;
+        top: 4px;
+        right: 5px;
+        height: 43px;
     }
     @media (max-width: 800px) {
         #cityTree {

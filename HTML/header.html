@@ -763,16 +763,15 @@
             display: flex;
             gap: 28px;
             font-family: "Header", serif;
-            font-size: 14px;
-            /* in capitals, as Settings, Donate and the menu: the font's lowercase is thin at this size */
-            text-transform: uppercase;
+            font-size: 15px;
             color: #e6d9b8;
-            text-shadow: 1px 1px 1px black;
+            /* a hard shadow: a soft one blurs the font's thin lowercase at this size */
+            text-shadow: 1px 1px 0 black;
             white-space: nowrap;
         }
         .hud-date {
             color: #bbcdf6;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .topbar {

@@ -60,12 +60,13 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
     and the ability diamond) are the game's `unit`, `province` and `casttactical` text icons (`Icons/TML/`) in the
     medallions' beige, on a blank dark sphere made from the site's other medallions.
   Each glyph Evolved draws is centred in its sphere; the four HUD buttons keep the game's own placement.
-  The dataset and the "Updated:" date are in capitals, as Settings, Donate and the menu (the Header font's lowercase is thin and looks blurred at this size), 14px and 13px (11px on a phone).
+  The "Updated:" date is 14px (11px on a phone), a size under the dataset's name; both have a hard shadow, as a soft
+  one blurs the Header font's thin lowercase.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.
 
 `Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow
-for it (a second stone bar), and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred, spread along the bar by gaps that take up the room they leave (up to 40px each, none on a bar the menu wraps onto). The empty `#menuExtras` item (Settings and Donate's place in the ☰ menu) is hidden on desktop.
+for it (a second stone bar), and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred. The empty `#menuExtras` item (Settings and Donate's place in the ☰ menu) is hidden on desktop.
 The page body (`.w3-container`: sidebar and content) is at most 1600px wide and centred, so on an ultrawide screen
 the sidebar stays beside the content. Phones keep the ☰ menu.
 

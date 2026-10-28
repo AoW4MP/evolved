@@ -297,10 +297,7 @@ a:hover {
         min-height: 44px;
         display: flex;
         flex-wrap: wrap;
-        /* centred, spread along the bar by gaps that take up the room the items (about 1300px together) leave, up to
-           40px each; a bar the menu wraps onto gets none */
         justify-content: center;
-        column-gap: clamp(0px, calc((100% - 1300px) / 8), 40px);
         align-items: center;
         /* out to the window's edges; the 16px under it is a list's own margin, which the page titles keep their distance by */
         margin: 0 -8px 16px;

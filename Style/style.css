@@ -182,7 +182,7 @@ ul {
 
 /* an affinity Tomes page's icon ("Astral Tomes"): a text icon, at a title's size */
 .textblocktitle > :is(empirearcana, empireastral, empirechaos, empirenature, empireshadow, empirematter, empirematerium, empireorder) {
-    max-height: 28px;
+    max-height: 24px;
     top: 0;
     vertical-align: middle;
     margin-right: 6px;
@@ -679,9 +679,11 @@ p {
     grid-column: 1 / -1;
     grid-row: 1;
     padding: 0;
-    /* room for the 48px icons some titles have, so every title is as high */
+    /* room for the 44px icons some titles have, so every title is as high */
     min-height: 50px;
     line-height: 50px;
+    /* as far from what follows as from the menu above it (its 16px margin) */
+    margin-bottom: 16px;
 }
 /* in the cards' row: under the title, or under the filters or subculture picker when there are any */
 .sidebarPage > .w3-bar,

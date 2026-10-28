@@ -181,12 +181,12 @@ ul {
     padding-bottom: 7px;
 }
 
-/* an affinity Tomes page's icon ("Astral Tomes"): a text icon, at a title's size */
+/* an affinity Tomes page's icons, either side of "Astral Tomes": text icons, at a title's size */
 .textblocktitle > :is(empirearcana, empireastral, empirechaos, empirenature, empireshadow, empirematter, empirematerium, empireorder) {
     max-height: 24px;
     top: -3px;
     vertical-align: middle;
-    margin-right: 6px;
+    margin: 0 5px;
 }
 
 .textblock {

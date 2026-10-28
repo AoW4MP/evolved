@@ -46,7 +46,8 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
-  Every menu item has one of the game's round HUD medallions, 44px and centred on the stone. Units, Heroes and Search
+  Every menu item has one of the game's round HUD medallions, 44px and centred on the stone, its ring 86% of its image
+  (as in `TomesIcon.png`) so all nine rings are the same size. Units, Heroes and Search
   (upstream: the Tome Units star, `HeroIcon.png` and `search.png`) have `UnitsIcon.png`, `HeroesIcon.png` and
   `SearchIcon.png`: the Culture Units, Heroes and Search medallions with their glyph cleared and the game's own text icon
   (`Icons/TML/unit.png`, `unithero.png`, `inspect.png`) drawn smaller in its place, as small in its circle as the others'

@@ -14,26 +14,24 @@
         <div id="menuBackdrop" class="menu-backdrop"></div>
         <div class="header-img">
             <div id="topbarAnchor"></div>
-            <!-- Settings and the date on the left of the banner, Donate on the right; on a phone, in the ☰ menu (Init.js) -->
+            <!-- Settings on the left of the banner, Donate on the right; on a phone, in the ☰ menu (Init.js) -->
             <div class="topbar">
-                <div class="topbar-side">
-                    <div class="dropdown">
-                        <div class="dropdown-title">Settings ▼</div>
-                        <div class="dropdown-content">
-                            <div class="prett">
-                                Selectable Tooltips:
-                                <input type="checkbox" id="tooltipCheckbox" onclick="CheckBoxTooltips()" />
-                            </div>
-
-                            <div class="prett">
-                                Highlight Numbers:
-                                <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
-                            </div>
-                        </div>
+                <div class="dropdown">
+                    <div class="dropdown-title header-button">
+                        <img src="/evolved/Icons/TML/autocombat.png" alt="" />Settings
                     </div>
-                    <div class="current-version">Updated: October 22nd, 2026</div>
+                    <div class="dropdown-content">
+                        <label class="prett">
+                            Selectable Tooltips
+                            <input type="checkbox" id="tooltipCheckbox" onclick="CheckBoxTooltips()" />
+                        </label>
+                        <label class="prett">
+                            Highlight Numbers
+                            <input type="checkbox" id="numbersCheckbox" onclick="CheckBoxTooltips()" />
+                        </label>
+                    </div>
                 </div>
-                <a class="donate" href="/evolved/HTML/Donate.html">
+                <a class="donate header-button" href="/evolved/HTML/Donate.html">
                     <img src="/evolved/Icons/Text/health.png" alt="" />Donate
                 </a>
             </div>
@@ -41,7 +39,7 @@
                 <a href="/evolved/" class="hero-link"><div class="hero-text">Age of Wonders 4 Evolved</div></a>
                 <div class="mid-text">
                     Manta Beta Dataset
-                    <br /><i>(AoW 4 Evolved is played on the Manta beta)</i>
+                    <br /><i>Updated: October 22nd, 2026</i>
                 </div>
             </div>
 
@@ -231,7 +229,7 @@
                                 </li>
                                 <li>
                                     <a id="tomesU-sota" href="/evolved/HTML/SecretsOfTheArchmagesTomeUnits.html"
-                                        ><img src="/evolved/Icons/Text/SotaLogo.png" width="20px" /> Secrets of the
+                                        ><img src="/evolved/Icons/Text/SecretsOfTheArchmages.png" width="20px" /> Secrets of the
                                         Archmages</a
                                     >
                                 </li>
@@ -755,13 +753,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 30;
-        }
-
-        .topbar-side {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
+            /* the settings open over the menu bar (its items are at 1000) */
+            z-index: 1001;
         }
 
         .dropdown {
@@ -769,7 +762,8 @@
             display: inline-block;
         }
 
-        .donate {
+        /* Settings and Donate */
+        .header-button {
             display: inline-flex;
             align-items: center;
             gap: 7px;
@@ -786,13 +780,16 @@
             box-shadow:
                 0 0 0 1px rgba(0, 0, 0, 0.7),
                 0 2px 8px rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+            user-select: none;
             transition:
                 border-color 0.15s,
                 box-shadow 0.15s,
                 color 0.15s;
         }
 
-        .donate:hover {
+        .header-button:hover,
+        .dropdown:hover > .header-button {
             color: white;
             text-decoration: none;
             border-color: #f0d38a;
@@ -801,46 +798,53 @@
                 0 0 12px rgba(240, 200, 120, 0.45);
         }
 
-        .donate img {
+        .header-button img {
             width: 18px;
             height: 18px;
         }
 
-        .dropdown-title {
-            cursor: pointer;
-            font-weight: bold;
-        }
-
+        /* the settings, under the Settings button, in the buttons' colours */
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #333;
-            color: white;
-            min-width: 150px;
-            padding: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            top: calc(100% + 6px);
+            left: 0;
+            min-width: 210px;
+            padding: 8px 12px;
+            background: linear-gradient(180deg, #2a1636 0%, #170b1f 100%);
+            border: 1px solid #b8955a;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            color: #f3e6c4;
             z-index: 10;
+        }
+
+        /* the gap between button and panel keeps the panel open */
+        .dropdown-content::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -8px;
+            height: 8px;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-        .dropdown-content a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            margin: 8px 0;
+        .dropdown-content label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 5px 0;
+            font-size: 14px;
+            cursor: pointer;
         }
 
-        .dropdown-content img {
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-
-        .dropdown-content select,
         .dropdown-content input {
-            margin: 4px 0;
+            margin: 0;
         }
     </style>
 </html>

@@ -180,6 +180,14 @@ ul {
     padding-bottom: 7px;
 }
 
+/* an affinity Tomes page's icon ("Astral Tomes"): a text icon, at a title's size */
+.textblocktitle > :is(empirearcana, empireastral, empirechaos, empirenature, empireshadow, empirematter, empirematerium, empireorder) {
+    max-height: 28px;
+    top: 0;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
 .textblock {
     width: 300px;
     height: auto;
@@ -671,9 +679,9 @@ p {
     grid-column: 1 / -1;
     grid-row: 1;
     padding: 0;
-    /* room for the 40px icons some titles have, so every title is as high */
-    min-height: 44px;
-    line-height: 44px;
+    /* room for the 48px icons some titles have, so every title is as high */
+    min-height: 50px;
+    line-height: 50px;
 }
 /* in the cards' row: under the title, or under the filters or subculture picker when there are any */
 .sidebarPage > .w3-bar,
@@ -1262,6 +1270,12 @@ tab {
     gap: 8px;
     font-family: inherit;
     cursor: pointer;
+}
+
+/* a culture's subculture icons, a little smaller than the culture's own in the title */
+.subcultureHolder .subscultureButton > img {
+    width: 42px;
+    height: auto;
 }
 
 .subscultureButton:hover {

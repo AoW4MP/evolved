@@ -47,10 +47,14 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
   Every menu item has one of the game's round HUD medallions. Units has the Culture Units helmet (upstream: the Tome
-  Units star). Abilities, World Map and Builds/Planners (upstream: the ability diamond, the Structures hammer and the
-  info "i") have Evolved's own `AbilitiesIcon.png`, `WorldMapIcon.png` and `BuildsIcon.png` in
-  `Icons/Interface/Header/`: the game's tactical-cast star, province pin and wrench (`Icons/TML/`) in the medallions'
-  beige, on a blank medallion made from the others.
+  Units star). Abilities and World Map (upstream: the ability diamond and the Structures hammer) have Evolved's own
+  `AbilitiesIcon.png` and `WorldMapIcon.png` in `Icons/Interface/Header/`: the game's tactical-cast star and province
+  pin (`Icons/TML/`) in the medallions' beige, on a blank medallion made from the others. Spells, Empire and
+  Builds/Planners (upstream: `SpellsIcon.png`, the grey `EmpireIcon.png` and the info "i") have the world-map HUD's own
+  Spells, Empire and Item Forge buttons, `SpellsHudIcon.png`, `EmpireHudIcon.png` and `ForgeHudIcon.png`: each its
+  frame, gem and picture from the game's TopBar atlas (`INTERFACEASSETS` atlas 13, read with aow4_diff_tools'
+  `tmlicons.atlases`), the picture enlarged 25% so the glyph is as big as the other medallions'.
+  The "Updated:" date is 14px (11px on a phone), a size under the dataset's name.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.
 

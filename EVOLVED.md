@@ -46,8 +46,11 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
-  Every menu item has one of the game's round HUD medallions. Units has the Culture Units helmet (upstream: the Tome
-  Units star). Abilities and World Map (upstream: the ability diamond and the Structures hammer) have Evolved's own
+  Every menu item has one of the game's round HUD medallions, 44px and centred on the stone. Units, Heroes and Search
+  (upstream: the Tome Units star, `HeroIcon.png` and `search.png`) have `UnitsIcon.png`, `HeroesIcon.png` and
+  `SearchIcon.png`: the Culture Units, Heroes and Search medallions with their glyph cleared and the game's own text icon
+  (`Icons/TML/unit.png`, `unithero.png`, `inspect.png`) drawn smaller in its place, as small in its circle as the others'
+  glyphs. Abilities and World Map (upstream: the ability diamond and the Structures hammer) have Evolved's own
   `AbilitiesIcon.png` and `WorldMapIcon.png` in `Icons/Interface/Header/`: the game's tactical-cast star and province
   pin (`Icons/TML/`) in the medallions' beige, on a blank medallion made from the others. Spells, Empire and
   Builds/Planners (upstream: `SpellsIcon.png`, the grey `EmpireIcon.png` and the info "i") have the world-map HUD's own

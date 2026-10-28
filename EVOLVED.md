@@ -46,6 +46,11 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
+  Every menu item has one of the game's round HUD medallions. Units has the Culture Units helmet (upstream: the Tome
+  Units star). Abilities, World Map and Builds/Planners (upstream: the ability diamond, the Structures hammer and the
+  info "i") have Evolved's own `AbilitiesIcon.png`, `WorldMapIcon.png` and `BuildsIcon.png` in
+  `Icons/Interface/Header/`: the game's tactical-cast star, province pin and wrench (`Icons/TML/`) in the medallions'
+  beige, on a blank medallion made from the others.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.
 

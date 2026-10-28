@@ -37,17 +37,22 @@ button (buymeacoffee.com/aowevolved) instead of upstream's Ko-fi widget.
 | 1172 | `origin.point_cost + getPoints() > 5` | `origin.point_cost + getPoints() > 10` |
 | 3491 | `if (getPoints() > 5)` | `if (getPoints() > 10)` |
 
-`HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's. The banner is one band
-(`--banner-height`): the title, "Manta Beta Dataset" and the "Updated:" date below it, the Settings button (the game's
-gear icon, `Icons/TML/autocombat.png`) on the left and Donate (to `HTML/Donate.html`, which links to Buy Me a Coffee)
-on the right, both centred in its height; the bar holding them lets clicks through to the title. No Other Database
-dropdown: Evolved keeps no other databases. On a phone Settings and Donate are in the ☰ menu.
+`HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's. The header is drawn after the
+game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands:
+- the game's top strip (`.hud-strip`, `Icons/Interface/HudStrip.jpg`: the sheet's marble on dark teal, a gold line
+  under it): "Manta Beta Dataset" and the "Updated:" date on the left, where the game shows resources; Settings (the
+  game's gear icon, `Icons/TML/autocombat.png`; its two settings are `.toggleChip`s) and Donate (to `HTML/Donate.html`,
+  which links to Buy Me a Coffee) on the right, as the game's info and settings buttons;
+- the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
+- the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
+  labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
+No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
+and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.
 
 `Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow
-for it, and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred.
+for it (a second stone bar), and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred.
 The page body (`.w3-container`: sidebar and content) is at most 1600px wide and centred, so on an ultrawide screen
-the sidebar stays beside the content. The banner's Settings and Donate buttons stay
-within the same 1600px. Phones keep the ☰ menu.
+the sidebar stays beside the content. Phones keep the ☰ menu.
 
 The left sidebar (`#buttonHolder`) is 240px wide on every page (upstream: 200px, 240px on the Tome Units pages). A
 page with a sidebar has `class="w3-container sidebarPage"`, a grid: the title (`.textblocktitle`, as high as its text or icons, 16px above what follows)

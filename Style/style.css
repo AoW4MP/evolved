@@ -277,7 +277,7 @@ a:hover {
     line-height: 35px;
     padding: 0 6px;
     text-decoration: none;
-    color: #eee;
+    color: #ece2c6;
     font-size: 15px;
 }
 
@@ -289,13 +289,35 @@ a:hover {
 /* Desktop: the menu wraps onto a second line when the window is too narrow for it, instead of
    forcing a page-wide scrollbar, centred; the header grows to fit. Phones get the ☰ menu (max-width: 800px). */
 @media (min-width: 801px) {
+    /* the menu on the game's stone bar (Icons/Interface/HudStoneBar.png, from its world-map HUD sheet TopBar.png),
+       a gem at each end, out to the window's edges; the labels on the stone as the game's resource numbers */
     #menu {
         min-width: 0;
         height: auto;
+        min-height: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin: 0 -8px;
+        padding: 0 0 4px; /* the bar's copper trim under the labels */
+        background: none;
+        border-width: 0 100px;
+        border-image: url(/evolved/Icons/Interface/HudStoneBar.png) 0 180 fill / 0 100px round;
+    }
+    #menu > li > a {
+        line-height: 38px;
+        font-family: "Header", serif;
+        letter-spacing: 0.5px;
+        text-shadow: 0 0 3px black, 1px 1px 2px black, 0 0 6px black;
+    }
+    #menu > li > a > img {
+        width: 30px;
+        margin: -4px 4px -4px 0;
+        filter: drop-shadow(0 0 2px black);
+    }
+    #menu > li:hover > a > img {
+        filter: drop-shadow(0 0 5px rgba(255, 220, 140, 0.8));
     }
     /* the page body (sidebar and content together) stays at most this wide and centred, so on an
        ultrawide screen the sidebar doesn't sit far from the content */
@@ -304,34 +326,18 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
-    /* Settings and the "Updated" date on the left of the banner, Donate on its right, centred in its height, within
-       the same 1600px; a click between them reaches the title under them */
-    .topbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: var(--banner-height);
-        max-width: 1600px;
-        margin: 0 auto;
-        padding: 0 32px;
-        pointer-events: none;
-    }
-    .topbar > * {
-        pointer-events: auto;
-    }
-    /* the title and its lines stay clear of them */
-    .banner {
-        padding: 0 230px;
-    }
     #menu > li {
         float: none;
     }
 }
 @media (min-width:800px) {
-    #menu li:hover > a,
-    #menu li a:hover {
-        background: #111;
+    #menu > li:hover > a {
+        color: #ffe9a8;
+    }
+    #menu ul.menus li:hover > a {
+        border-left-color: #d7c297;
+        color: white;
+        background: rgba(215, 194, 151, 0.08);
     }
 
     #menu li:hover ul.menus {
@@ -369,13 +375,16 @@ a:hover {
     left: 35px;
 }
 
+/* the dropdowns: the cards' panel, the site's font; a group (Culture ▸) in gold, a page in the cards' blue, a gold bar
+   beside the one under the mouse */
 #menu ul.menus {
     height: auto;
-    width: 180px;
-    background: black;
+    width: 200px;
+    background: url(/evolved/Icons/tooltipBG.png);
     border-image: url(/evolved/Icons/9slicetooltip.png);
     border-image-slice: 4 10 4 10 fill;
     border-style: solid;
+    box-shadow: 0 4px 10px black;
     position: absolute;
 
     z-index: 99;
@@ -385,8 +394,24 @@ a:hover {
 #menu ul.menus li {
     display: block;
     width: 100%;
-    font: 12px Arial;
+    font: 15px "Regular", serif;
     text-transform: uppercase;
+}
+
+#menu ul.menus a {
+    line-height: 30px;
+    color: #bbcdf6;
+    border-left: 3px solid transparent;
+    text-shadow: 1px 1px 2px black;
+}
+
+#menu ul.menus .has-submenu > a {
+    color: #d7c297;
+}
+
+#menu ul.menus a > img {
+    width: 22px;
+    margin-right: 6px;
 }
 
 #menu a.home {
@@ -411,14 +436,11 @@ a:hover {
 #menu ul.menus .submenu {
     display: none;
     position: absolute;
-    left: 180px;
-    background: #111;
+    left: 200px;
     top: 0;
-    width: 180px;
-}
-
-#menu ul.menus .submenu li {
-    background: #111;
+    width: 200px;
+    background: url(/evolved/Icons/tooltipBG.png);
+    box-shadow: 0 4px 10px black;
 }
 
 .collapsible {
@@ -1998,9 +2020,9 @@ silver {
     font-size: 15px;
 }
 
-/* the banner: the title and its lines on the header's picture, the menu below */
+/* the banner: the title on the header's picture, between the top strip (header.html) and the menu */
 :root {
-    --banner-height: 112px;
+    --banner-height: 80px;
 }
 .header-img {
     position: relative;
@@ -2170,15 +2192,14 @@ silver {
     background: linear-gradient(126deg, #9ff663 50%, #ff002d);
 }
 
-/* the banner's picture, out to the page's edges: over the body's 8px margin above and beside it */
+/* the banner's picture, out to the page's edges over the body's 8px margin beside it, darkening towards the menu */
 .banner::before {
     content: "";
-    background: url(/evolved/Icons/Interface/library_hero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    opacity: 0.5;
-    top: -8px;
+    background:
+        linear-gradient(to bottom, rgba(4, 6, 5, 0) 40%, rgba(4, 6, 5, 0.85) 100%),
+        url(/evolved/Icons/Interface/library_hero.jpg) center 35% / cover no-repeat;
+    opacity: 0.8;
+    top: 0;
     left: -8px;
     bottom: 0;
     right: -8px;
@@ -2202,20 +2223,6 @@ silver {
     padding: 10px;
     color: aquamarine;
     font-size:15px;
-}
-
-.mid-text {
-    font-size: 17px;
-    line-height: 1.3;
-    margin-top: 4px;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        2px 2px 5px black,
-        -2px -2px 5px black,
-        1px 1px 0 #000;
-    color: #ffee64;
 }
 
 .hero-text {
@@ -2326,19 +2333,22 @@ span.number-highlight {
         width: 100%;
         max-width: 100%;
     }
+    /* the ☰ button: in the top strip's colours, at its left end (and staying there while the page scrolls) */
     .menu-toggle {
         display: block;
         position: fixed;
-        top: 10px;
-        left: 10px;
+        top: 3px;
+        left: 6px;
         z-index: 1001;
-        width: 44px;
-        height: 44px;
-        font-size: 24px;
-        background: #111;
-        color: white;
-        border: none;
-        border-radius: 4px;
+        width: 38px;
+        height: 28px;
+        padding: 0;
+        font-size: 18px;
+        line-height: 26px;
+        background: #0a1618;
+        color: #e6d9b8;
+        border: 1px solid rgba(168, 139, 90, 0.7);
+        border-radius: 3px;
         cursor: pointer;
     }
 
@@ -2353,27 +2363,39 @@ span.number-highlight {
         display: block;
     }
 
-    /* Pull #menu out of .header-img's cramped 150px box entirely */
+    /* the ☰ menu: a drawer from the left on the cards' panel, a gold edge on its right */
     #menu {
-          padding:10px;
-         padding-top:60px;
-      
+        padding: 44px 10px 10px;
         position: fixed;
         top: 0;
-        left: -85%;      /* hidden off-screen by default */
+        left: -85%; /* hidden off-screen by default */
         width: 80%;
         max-width: 320px;
         height: 100vh;
         min-width: 0;
         margin-top: 0;
-        background: black;
+        /* the panel once, as wide as the drawer, then its bottom colour: repeated, it shows a seam */
+        background: #150d1a url(/evolved/Icons/tooltipBG.png) top / 100% auto no-repeat;
+        border: none;
+        border-image: none;
+        border-right: 2px solid #a88b5a;
+        box-shadow: 4px 0 12px black;
+        box-sizing: border-box;
         overflow-y: auto;
         z-index: 1000;
         transition: left 0.25s ease;
     }
     #menu.open {
         left: 0;
-        
+    }
+    #menu > li > a {
+        font-family: "Header", serif;
+        line-height: 40px;
+        text-shadow: 1px 1px 2px black;
+    }
+    #menu > li > a > img {
+        width: 32px;
+        margin-right: 6px;
     }
 
     #menu > li {
@@ -2388,6 +2410,9 @@ span.number-highlight {
         position: static;
         width: 100%;
         display: none;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.3);
+        box-shadow: none;
     }
     #menu ul.menus.open {
         display: block;
@@ -2396,8 +2421,11 @@ span.number-highlight {
         position: static;
         left: auto;
         width: 100%;
+        box-sizing: border-box;
         display: none;
         padding-left: 20px;
+        background: none;
+        box-shadow: none;
     }
     #menu ul.menus .submenu.open {
         display: block;
@@ -2415,63 +2443,51 @@ span.number-highlight {
         clear: both;
     }
 
-    /* the banner keeps clear of the ☰ button */
     .banner {
-        padding: 10px 60px;
+        padding: 10px 16px;
         min-height: 0;
     }
     .hero-text {
         font-size: 24px;
     }
-    .mid-text {
-        font-size: 13px;
-    }
+    /* Settings and Donate at the foot of the menu, as its other items */
     #menuExtras .topbar {
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 0;
+        height: auto;
     }
     /* the menu's own link style (#menu a) would undo the button's */
     #menuExtras .header-button {
-        align-self: center;
-        display: inline-flex;
+        display: flex;
+        height: auto;
+        padding: 10px 5px;
+        border-left: none;
+        font-size: 15px;
         line-height: normal;
-        padding: 6px 16px 6px 11px;
-    }
-    /* dropdowns rely on :hover, which doesn't exist on touch —
-       just show their contents inline since they're already tucked
-       away behind the hamburger */
-    #menuExtras .dropdown-content {
-        position: static;
-        display: block !important;
-        box-shadow: none;
-        background: transparent;
-        padding-left: 12px;
     }
 }
 
 @media (hover: none), (max-width: 800px) {
+    /* Settings opens with a tap, its switches under it */
     #menuExtras .dropdown-content {
-        display: none;           /* closed by default now, not forced open */
+        display: none;
         position: static;
         box-shadow: none;
-        background: transparent;
+        background: none;
         border: none;
-        padding-left: 12px;
+        padding: 2px 0 8px 12px;
     }
     #menuExtras .dropdown-content.open {
-        display: block;
+        display: flex;
     }
-    /* the settings, not the old menu's big labels and inputs (#menu label, #menu input) */
-    #menuExtras .dropdown-content label {
-        font: 14px "Regular", sans-serif;
+    /* the switches, not the old menu's big labels and inputs (#menu label, #menu input) */
+    #menuExtras .toggleChip {
+        font: 15px "Regular", serif;
         width: auto;
         height: auto;
         line-height: normal;
         text-align: left;
     }
-    #menuExtras .dropdown-content input {
+    #menuExtras .toggleChip > input {
         width: auto;
         height: auto;
     }

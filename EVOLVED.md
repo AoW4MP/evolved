@@ -65,7 +65,7 @@ No Other Database dropdown: Evolved keeps no other databases. On a phone the str
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.
 
 `Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow
-for it (a second stone bar), and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred.
+for it (a second stone bar), and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred, spread along the bar by gaps that take up the room they leave (up to 40px each, none on a bar the menu wraps onto). The empty `#menuExtras` item (Settings and Donate's place in the ☰ menu) is hidden on desktop.
 The page body (`.w3-container`: sidebar and content) is at most 1600px wide and centred, so on an ultrawide screen
 the sidebar stays beside the content. Phones keep the ☰ menu.
 

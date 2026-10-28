@@ -36,9 +36,9 @@ Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donat
 | 1172 | `origin.point_cost + getPoints() > 5` | `origin.point_cost + getPoints() > 10` |
 | 3491 | `if (getPoints() > 5)` | `if (getPoints() > 10)` |
 
-`HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's. The banner is one compact
-band (`--banner-height`): the title with its Manta beta line in one line below it, Settings and the date on the left,
-Donate on the right (to `HTML/Donate.html`, which links to Buy Me a Coffee). No Other Database dropdown: Evolved
+`HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's. The banner is one band
+(`--banner-height`): the title with its Manta beta lines below it, Settings and the date on the left and Donate on
+the right, both centred in its height (the bar holding them lets clicks through to the title) (to `HTML/Donate.html`, which links to Buy Me a Coffee). No Other Database dropdown: Evolved
 keeps no other databases. On a phone Settings, the date and Donate are in the ☰ menu.
 
 `Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow

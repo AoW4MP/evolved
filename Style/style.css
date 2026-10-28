@@ -679,11 +679,14 @@ p {
     grid-column: 1 / -1;
     grid-row: 1;
     padding: 0;
-    /* room for the 44px icons some titles have, so every title is as high */
-    min-height: 50px;
-    line-height: 50px;
-    /* as far from what follows as from the menu above it (its 16px margin) */
+    /* as high as its text or icons, and as far from what follows as from the menu above it (its 16px margin): the
+       same space around "Astral Tomes" as around a culture's title with its 44px icons */
+    line-height: 1.3;
     margin-bottom: 16px;
+}
+/* a culture's subcultures belong to its title: close under it */
+.sidebarPage:has(> .subcultureHolder, > .pageHead > .subcultureHolder) > .textblocktitle {
+    margin-bottom: 4px;
 }
 /* in the cards' row: under the title, or under the filters or subculture picker when there are any */
 .sidebarPage > .w3-bar,

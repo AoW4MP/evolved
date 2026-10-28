@@ -48,7 +48,7 @@ the sidebar stays beside the content. The banner's sides (Settings, the "Updated
 within the same 1600px. Phones keep the ☰ menu.
 
 The left sidebar (`#buttonHolder`) is 240px wide on every page (upstream: 200px, 240px on the Tome Units pages). A
-page with a sidebar has `class="w3-container sidebarPage"`, a grid: the title (`.textblocktitle`, always 50px high)
+page with a sidebar has `class="w3-container sidebarPage"`, a grid: the title (`.textblocktitle`, as high as its text or icons, 16px above what follows)
 across the top, then in the middle column any filter box, sort buttons, subculture picker or Search form (`.pageHead`)
 above the cards (`#dataHolder`), and the sidebar on the left, level with the first card. On desktop an empty column as
 wide as the sidebar on the right keeps the middle column, and so the title, filters and cards, centred on the page.

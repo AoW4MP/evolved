@@ -23,7 +23,8 @@ Every upstream text file goes through these replacements:
 | `Aow4db_EditKey.txt` (name of the downloaded Faction Creator edit-key file, `Data/src/settings.js`) | `evolved_EditKey.txt` |
 | `# aow4db` (`README.md`) | `# evolved` |
 
-Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donate` and the heading "Support the AoW 4 Database".
+`HTML/Donate.html` is Evolved's own: "Support the AoW 4 Evolved Mod", the maintainer's message and a Buy Me a Coffee
+button (buymeacoffee.com/aowevolved) instead of upstream's Ko-fi widget.
 
 ## Code changes for the mod
 
@@ -81,8 +82,12 @@ medal named after the ability ("Champion Heal"); the Sealbearer's one medal for 
 a "Transference Seal:" section and so on, and each seal now shows its own section. `Data/src/dataloader.js`:
 `AddExtraData` gives the three seal abilities the icons the dump leaves out (the game picks them by subculture);
 `Icons/UnitIcons/0000049700001064`, `…68` and `…6C.png` are exported from the game with `clbicons.py`.
-It also gives the Oathsworn's Paragon abilities (Paragon of Strife and so on) back the link to the ability they grant
-(Infernal Blaze, Radiant Slash, Arrow of Harmony), which the dump drops.
+
+`Data/src/dataloader.js`: `RestoreDumpLinks` puts back the links the dump's texts lose. A dump text with the same words
+as a text of `all.json` gets that text's links, written as the dump writes them ("inflicts
+`<hyperlink>Seal of Transference</hyperlink>`, a link effect that lasts for 3 `<turn></turn> <hyperlink>Turns</hyperlink>`";
+about 3,000 links in 1,800 texts, the Paragon abilities' links to Infernal Blaze and the others among them). An
+entry's own `name` stays unlinked; a `name` inside an entry (a trait's effect lines) is relinked.
 
 `Data/GEN/LinkedAbilities.json` (`abilities.py` in aow4_diff_tools) holds the abilities the game's texts link to that
 the dump leaves out, as no unit has them from the start (Infernal Blaze, Sprint, Fire Bomb: 60), in `Abilities.json`'s
@@ -98,6 +103,9 @@ Ability names in plain text are linked in one pass, the longest first, outside t
 link is made inside another ("Mana Drained" is one link, with no "Drained" link in it; "Chaos Affinity" no Chaos one).
 A requisite is matched by its words, so Melee, Missile and Magic get their colors and icons whether written as the
 dump writes them (`<hyperlink>Melee</hyperlink>`) or as `all.json` does.
+A concept tooltip with an `image` (a property, structure, special operation... the link names) shows that icon by its
+title. A link to a Province Improvement or City Structure (`GLOBAL.STRUCTURE_UPGRADES.…`) opens the structure's own card
+(`StructureTooltip`); in a tooltip the card's build cost sits below its description.
 
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.
@@ -111,8 +119,7 @@ are removed (`checkSecretSpell`, `secretSpellsList`).
 Evolved is exported in English only, so the other languages are removed:
 
 - `Data/DE`, `ES`, `FR`, `JA`, `KO`, `PL`, `RU` and `ZH` are deleted.
-- `HTML/header.html`: the language dropdown (`<select id="languageSelect">`) is replaced by an empty 95px-wide `<div>`.
-  The top bar spaces its items evenly, so without that placeholder the Donate button moves to the middle.
+- `HTML/header.html`: the language dropdown (`<select id="languageSelect">`) is removed.
 - `Data/Builder.js`: the `languageSelect` lookup is removed.
 - `Data/src/settings.js`: `CheckBoxTooltips` and `SwitchToBeta` no longer save `language`.
 - `Data/src/dataloader.js`: `CheckData` no longer saves a `language` default. `LocalizeUI` and the menu labels it read
@@ -123,7 +130,7 @@ Evolved is exported in English only, so the other languages are removed:
 
 Evolved is played on the game's beta, so the website's own dump in `Data/EN` is already beta data and there is no switch to upstream's `Data/BETA`, which is deleted:
 
-- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice in the same yellow text. Update the beta name in it when the game's beta changes.
+- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice under the title ("Manta Beta Dataset"). Update the beta name in it when the game's beta changes.
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
 - `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.
@@ -152,7 +159,8 @@ Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` h
 `Data/EN/all.json`, the game's texts, is Evolved's own too: `alltexts.py` in aow4_diff_tools writes it from the live game's EN.MO with the mod's `.po`, filled in with the values of the resources that show each text (mod values included: Tranquility Pool −5%, Infrastructure −33%).
 It started from upstream's copy and keeps its entries and order; texts the game added are appended, and texts it no longer has are kept, as pages may still look them up.
 A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
-`Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero).
+`Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero), and the properties, structures and the like texts link to, 346 of them with their icon (`image`, exported to `Icons/UnitIcons`).
+Both follow the game's grammar more closely than the game's own texts do: a word the game counts agrees with the number before it ("for 1 Turn", "3 Turns").
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
 `Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).
 `Data/GEN/RealmTraits.json` and `Icons/RealmTraits/` (`realmtraits.py`) feed `HTML/RealmTraits.html`, in the World Map menu: upstream's page was never linked and picked texts by id.
@@ -163,7 +171,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order, as `magicmaterials.py` words its links the way `all.json` does.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
 `after_update.bat` (the mod reports) can't do this: it runs before the patched game has made the new dump.
 
 ## Taking changes from upstream

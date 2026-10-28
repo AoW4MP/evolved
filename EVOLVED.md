@@ -53,12 +53,13 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
     own Research, Spells, Empire and Item Forge buttons: their picture and glass from the same atlas, the picture
     enlarged 25% so the glyph is as big as the others'. Upstream: `TomesIcon.png`, `SpellsIcon.png`, the grey
     `EmpireIcon.png` and the info "i".
-  - `UnitsIcon.png`, `HeroesIcon.png` and `SearchIcon.png` (upstream: the Tome Units star, `HeroIcon.png` and
-    `search.png`) are the Culture Units, Heroes and Search medallions' spheres, their glyph cleared and the game's own
-    text icon (`Icons/TML/unit.png`, `unithero.png`, `inspect.png`) drawn smaller in its place.
-  - `AbilitiesIcon.png` and `WorldMapIcon.png` (upstream: the ability diamond and the Structures hammer) are the
-    game's tactical-cast star and province pin (`Icons/TML/`) in the medallions' beige, on a blank sphere made from
-    the site's other medallions.
+  - `HeroesIcon.png` (upstream: `HeroIcon.png`) is the Heroes medallion's glass, its helmet cleared and the game's own
+    `Icons/TML/unithero.png` drawn smaller in its place. `SearchIcon.png` (upstream: the light green `search.png`) is
+    the same glass a little greener, with `Icons/TML/inspect.png`.
+  - `UnitsIcon.png`, `WorldMapIcon.png` and `AbilitiesIcon.png` (upstream: the Tome Units star, the Structures hammer
+    and the ability diamond) are the game's `unit`, `province` and `casttactical` text icons (`Icons/TML/`) in the
+    medallions' beige, on a blank dark sphere made from the site's other medallions.
+  Each glyph Evolved draws is centred in its sphere; the four HUD buttons keep the game's own placement.
   The "Updated:" date is 14px (11px on a phone), a size under the dataset's name.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.

@@ -365,7 +365,12 @@ function HandleExtraTooltips(specificDiv) {
         const concept = jsonConceptTooltipsLocalized?.[globalName];
         if (!concept) return;
 
-        const iconHtml = concept.icon ? `<${concept.icon}></${concept.icon}> ` : "";
+        // a text icon ("<hp></hp>"), or the image of a property, structure... the link is to (Seal of Transference)
+        const iconHtml = concept.image
+            ? `<img src="/evolved/Icons/UnitIcons/${concept.image}.png" width="30" height="30" style="vertical-align:middle"> `
+            : concept.icon
+              ? `<${concept.icon}></${concept.icon}> `
+              : "";
         const tooltipEl = document.createElement("span");
         tooltipEl.innerHTML =
             `<p style="color:#d7c297"><span style="font-size:16px">${iconHtml}${concept.name.toUpperCase()}</span></p>` +

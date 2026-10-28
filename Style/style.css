@@ -227,6 +227,7 @@ a:hover {
     border-style: solid;
     height: 35px;
     min-width: 1200px;
+    margin-top: 0; /* straight under the banner's picture */
 }
 
 #menu ul,
@@ -1925,6 +1926,7 @@ silver {
     width: 100%;
 }
 .banner {
+    position: relative;
     min-height: var(--banner-height);
     display: flex;
     flex-direction: column;
@@ -2087,17 +2089,18 @@ silver {
     background: linear-gradient(126deg, #9ff663 50%, #ff002d);
 }
 
-.header-img::after {
+/* the banner's picture, out to the page's edges: over the body's 8px margin above and beside it */
+.banner::before {
     content: "";
     background: url(/evolved/Icons/Interface/library_hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     opacity: 0.5;
-    top: 0;
-    left: 0;
+    top: -8px;
+    left: -8px;
     bottom: 0;
-    right: 0;
+    right: -8px;
     position: absolute;
     z-index: -1;
 }

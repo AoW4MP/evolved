@@ -46,6 +46,8 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
+  The stylesheet gives these colours: upstream's inline `style="color: burlywood"` on the groups and `coral` on Search
+  are removed from `header.html`.
   Every menu item is a round medallion in one frame, the world-map HUD's Research/Empire frame
   (`ResearchButton_Frame`, from the game's TopBar atlas: `INTERFACEASSETS` atlas 13, read with aow4_diff_tools'
   `tmlicons.atlases`), 44px and centred on the stone, the frame 86% of the image. In `Icons/Interface/Header/`:
@@ -151,7 +153,7 @@ Evolved is exported in English only, so the other languages are removed:
 
 Evolved is played on the game's beta, so the website's own dump in `Data/EN` is already beta data and there is no switch to upstream's `Data/BETA`, which is deleted:
 
-- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice under the title ("Manta Beta Dataset"). Update the beta name in it when the game's beta changes.
+- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice, "Manta Beta Dataset" on the left of the top strip (`.hud-facts`). Update the beta name in it when the game's beta changes.
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
 - `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.

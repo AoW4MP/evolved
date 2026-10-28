@@ -49,8 +49,8 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
   The stylesheet gives these colours: upstream's inline `style="color: burlywood"` on the groups and `coral` on Search
   are removed from `header.html`.
   Every menu item is a round medallion in one frame, the world-map HUD's Research/Empire frame
-  (`ResearchButton_Frame`, from the game's TopBar atlas: `INTERFACEASSETS` atlas 13, read with aow4_diff_tools'
-  `tmlicons.atlases`), 44px and centred on the stone, the frame 86% of the image. In `Icons/Interface/Header/`:
+  (`ResearchButton_Frame`, from the game's TopBar atlas: `INTERFACEASSETS` atlas 13, exported with aow4_diff_tools'
+  `hudimages.py export`), 44px and centred on the stone, the frame 86% of the image. In `Icons/Interface/Header/`:
   - `TomesHudIcon.png`, `SpellsHudIcon.png`, `EmpireHudIcon.png` and `ForgeHudIcon.png` (Builds/Planners) are the HUD's
     own Research, Spells, Empire and Item Forge buttons: their picture and glass from the same atlas, the picture
     enlarged 25% so the glyph is as big as the others'. Upstream: `TomesIcon.png`, `SpellsIcon.png`, the grey

@@ -82,10 +82,16 @@ It also gives the Oathsworn's Paragon abilities (Paragon of Strife and so on) ba
 
 `Data/GEN/LinkedAbilities.json` (`abilities.py` in aow4_diff_tools) holds the abilities the game's texts link to that
 the dump leaves out, as no unit has them from the start (Infernal Blaze, Sprint, Fire Bomb: 60), in `Abilities.json`'s
-format; their icons are in `Icons/UnitIcons`. `dataloader.js` adds them to the abilities, marked `linkedOnly`: they are
-linked only where a text links them, not wherever their name stands ("Renew", "Possession").
+format; their icons are in `Icons/UnitIcons`. `dataloader.js` adds them to the abilities. The dump's texts lose their
+links ("The Fire Bomb ability"), so they are linked wherever their name stands, as the dump's abilities are, except
+those the game's own texts use as everyday words ("Renew your oath", "Priceless Possession"), marked `linkedOnly`:
+linked only where a text links them.
+`Data/GEN/ExtraToolTips.json` (upstream's, by hand) keeps only what the game data has nowhere else (Expert Channeling,
+Mindrend...), with the game's icons; its copies of the abilities above are gone.
 `Data/Builder.js`: a link to an ability a unit uses opens its own tooltip (damage, accuracy, actions, requisites), as
 in the game, not only its description; a game text's link to an ability with no concept tooltip opens the ability.
+Ability names in plain text are linked in one pass, the longest first, outside the links a text already has, so no
+link is made inside another ("Mana Drained" is one link, with no "Drained" link in it; "Chaos Affinity" no Chaos one).
 A requisite is matched by its words, so Melee, Missile and Magic get their colors and icons whether written as the
 dump writes them (`<hyperlink>Melee</hyperlink>`) or as `all.json` does.
 

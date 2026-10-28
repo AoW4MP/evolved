@@ -22,6 +22,7 @@ function highlightNumbersInDiv(text) {
 
 // cache maps so we don't rebuild every time
 let abilityTagCache = null;
+let abilityNamesRegex = null;
 
 function buildAbilityTagCache() {
     abilityTagCache = new Map();
@@ -39,12 +40,16 @@ function buildAbilityTagCache() {
         const tooltipspan = `<span class="statusEffectHandler">${abilityName}</span>`;
         const replacement = `${underline}<${tag}></${tag}>${tooltipspan}${endtag}`;
 
-        // Pre-compile the regex here instead of later
-        const escaped = abilityName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const regex = new RegExp(`\\b${escaped}\\b`, "g");
-
-        abilityTagCache.set(abilityName, { replacement, regex, linkedOnly: ability.linkedOnly }); // store both
+        abilityTagCache.set(abilityName, { replacement, linkedOnly: ability.linkedOnly });
     }
+
+    // the names linked wherever they stand, in one pass and the longest first: "Mana Drained" is one link, with no
+    // "Drained" link inside it
+    const names = [...abilityTagCache.keys()]
+        .filter((name) => !abilityTagCache.get(name).linkedOnly) // "Renew", "Possession": only where a text links them
+        .sort((a, b) => b.length - a.length)
+        .map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    abilityNamesRegex = new RegExp(`\\b(?:${names.join("|")})\\b`, "g");
 }
 
 function extractHyperlinks(text) {
@@ -98,8 +103,9 @@ function processConceptHyperlinks(text) {
         const noTooltip = `<span style="color:white;">${""}${displayText.trim()}</span>`;
 
         // a link to an ability ("[hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink]") opens the
-        // ability's tooltip; alltexts.py writes no concept tooltip for one the site has
-        if (!concept && abilityTagCache?.has(displayText.trim())) return abilityTagCache.get(displayText.trim()).replacement;
+        // ability's tooltip; alltexts.py writes no concept tooltip for one the site has. Written as the dump's links
+        // are, so the ability names in plain text are not looked for in it again
+        if (!concept && abilityTagCache?.has(displayText.trim())) return `<hyperlink>${displayText.trim()}</hyperlink>`;
         if (!concept) return noTooltip; // no tooltip available, just underline
 
         // Hidden handler lets HandleExtraTooltips wire up the tooltip
@@ -114,6 +120,9 @@ function processSpellRefs(text) {
     return text.replace(/\[spellref,([^\]]+)\]([\s\S]*?)\[\/spellref\]/g, (_, globalKey, displayText) => {
       
         const name = displayText.trim();
+
+        // an ability: linked as the dump's links are, so its name is not linked again inside it
+        if (abilityTagCache?.has(name)) return `<hyperlink>${name}</hyperlink>`;
 
         // Try looking up in your existing ability/spell JSON by name
         const ability = findBy(jsonUnitAbilitiesLocalized, "name", name) ?? findBy(jsonSpells, "name", name); // add whichever JSONs apply
@@ -189,12 +198,14 @@ function AddTagIconsForStatusEffects(text) {
     const extracted = extractHyperlinks(text);
     text = extracted.text;
 
-    // Use the pre-compiled regex instead of building it here
-    for (const [abilityName, { replacement, regex, linkedOnly }] of abilityTagCache.entries()) {
-        if (linkedOnly) continue; // "Renew", "Possession": only where a text links them
-        regex.lastIndex = 0; // reset since the regex has the "g" flag
-        text = text.replace(regex, replacement);
-    }
+    // a concept link's words stay its own: "Enters Defense Mode" links the concept, not the ability inside it too
+    const conceptLinks = [];
+    text = text.replace(
+        /<span style="color:white;text-decoration:underline">[^]*?<\/span><span class="conceptTooltipHandler"[^>]*><\/span>/g,
+        (link) => `__CONCEPTLINK_${conceptLinks.push(link) - 1}__`
+    );
+    text = text.replace(abilityNamesRegex, (name) => abilityTagCache.get(name).replacement);
+    text = text.replace(/__CONCEPTLINK_(\d+)__/g, (_, i) => conceptLinks[i]);
 
     /* for (const link of extracted.links) {
         let restored = `<hyperlink>${link.inner}</hyperlink>`;

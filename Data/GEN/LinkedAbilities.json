@@ -91,7 +91,7 @@
  {
   "name": "Astral Rift",
   "slug": "000003E30000570A",
-  "description": "Conjure an [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoner[/hyperlink] or [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpent[/hyperlink].<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Conjure an [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoner[/hyperlink] or [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpent[/hyperlink].<br>This summon lasts for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "99",
@@ -160,7 +160,7 @@
  {
   "name": "Blessed Champion",
   "slug": "0000049700000B80",
-  "description": "Target friendly unit gains:<bulletlist><bullet>For 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>5 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink]</bullet><bullet>5 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink]</bullet><bullet>5 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]</bullet></bulletlist></bullet><bullet><eventColor>{BLESSED_CHAMPION_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet></bulletlist>",
+  "description": "Target friendly unit gains:<bulletlist><bullet>For 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>5 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink]</bullet><bullet>5 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink]</bullet><bullet>5 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]</bullet></bulletlist></bullet><bullet>30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "99",
@@ -184,7 +184,7 @@
  {
   "name": "Blessed Judgment",
   "slug": "0000049700000B84",
-  "description": "In a <eventColor>{BLESSED_JUDGMENT_FRIENDLY_TARGETER>AREA>Radius}</eventColor>-hex radius:<bulletlist><bullet>Enemy units:<bulletlist><bullet>Sustain damage.</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] until the end of combat.</bullet></bulletlist></bullet><bullet>Friendly units:<bulletlist><bullet>Heal <eventColor>{BLESSED_JUDGMENT_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] until the end of combat.</bullet></bulletlist></bullet></bulletlist>",
+  "description": "In a 2-hex radius:<bulletlist><bullet>Enemy units:<bulletlist><bullet>Sustain damage.</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] until the end of combat.</bullet></bulletlist></bullet><bullet>Friendly units:<bulletlist><bullet>Heal 15 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] until the end of combat.</bullet></bulletlist></bullet></bulletlist>",
   "damage": "15<damagespirit></damagespirit> ",
   "accuracy": "Always Hits",
   "range": "99",
@@ -211,7 +211,7 @@
  {
   "name": "Chaos Pulse",
   "slug": "0000049700000AD1",
-  "description": "Enemies in a <eventColor>{CHAOS_PULSE_CIRCLE_TARGETER>AREA>Radius}</eventColor>-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Turn into a random Tier I [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] for <eventColor>{CHAOS_PULSE_ANIMAL>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Sustain <eventColor>{CHAOS_PULSE_FIRE_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] until the end of combat.</bullet><bullet><eventColor>{CHAOS_PULSE_MORALE>Morale Change}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Suffer <eventColor>{CHAOS_PULSE_FROST_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and become [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INFERNAL_REBIRTH]Infernal Rebirth[/hyperlink] until the end of combat.</bullet><bullet>Gain 5 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Heal <eventColor>{CHAOS_PULSE_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
+  "description": "Enemies in a 1-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Turn into a random Tier I [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Sustain 20 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] until the end of combat.</bullet><bullet>-30 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Suffer 8 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and become [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INFERNAL_REBIRTH]Infernal Rebirth[/hyperlink] until the end of combat.</bullet><bullet>Gain 5 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -235,7 +235,7 @@
  {
   "name": "Charged Phase",
   "slug": "0000041B0000148D",
-  "description": "Caster:<bulletlist><bullet>Moves to target hex.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.STATIC_CHARGE]Static Charge[/hyperlink] for <eventColor>{STATIC_CHARGE_STATUS_DESCRIPTION>NumTurns}</eventColor><turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Leaves 1 [hyperlink,GLOBAL.ActionPointConcept]Action Point[/hyperlink].",
+  "description": "Caster:<bulletlist><bullet>Moves to target hex.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.STATIC_CHARGE]Static Charge[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Leaves 1 [hyperlink,GLOBAL.ActionPointConcept]Action Point[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -259,7 +259,7 @@
  {
   "name": "Cleansing Rain",
   "slug": "000004970000137B",
-  "description": "In a 1-hex radius:<bulletlist><bullet>Friendly units have <eventColor>{GENERAL_DISPEL_NEGATIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet><bullet>Enemy units have <eventColor>{GENERAL_DISPEL_POSITIVE>NumThingsToDispel}</eventColor> [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] dispelled.</bullet></bulletlist>",
+  "description": "In a 1-hex radius:<bulletlist><bullet>Friendly units have 2 [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] dispelled.</bullet><bullet>Enemy units have 2 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] dispelled.</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -304,7 +304,7 @@
  {
   "name": "Conjure Astral Ward",
   "slug": "0000048D0000094F",
-  "description": "Summon an [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobile[/hyperlink] [hyperlink,GLOBAL.UNITS.ASTRAL_WARD]Astral Ward[/hyperlink].<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Summon an [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobile[/hyperlink] [hyperlink,GLOBAL.UNITS.ASTRAL_WARD]Astral Ward[/hyperlink].<br>This summon lasts for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "3",
@@ -342,7 +342,7 @@
  {
   "name": "Consume Flora",
   "slug": "000004970000068A",
-  "description": "Destroy target [hyperlink,GLOBAL.FloraObstacleConcept]Flora Obstacle[/hyperlink]:<bulletlist><bullet>Heal <eventColor>{CONSUME_FLORA_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain 1 random positive effect.</bullet></bulletlist>",
+  "description": "Destroy target [hyperlink,GLOBAL.FloraObstacleConcept]Flora Obstacle[/hyperlink]:<bulletlist><bullet>Heal 20 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gain 1 random positive effect.</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "1",
@@ -400,7 +400,7 @@
  {
   "name": "Cosmic Pulse",
   "slug": "0000049700000B09",
-  "description": "Enemies in a <eventColor>{COSMIC_PULSE_TARGETER>AREA>Radius}</eventColor>-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Sustain <eventColor>{COSMIC_PULSE_FIRE_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Sustain <eventColor>{COSMIC_PULSE_FROST_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and have a base <eventColor>{FROZEN_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet><bullet>Sustain <eventColor>{COSMIC_PULSE_LIGHTNING_DAMAGE>DAMAGE>Shock}</eventColor> <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>",
+  "description": "Enemies in a 2-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Sustain 30 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Sustain 30 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and have a base 90% chance of becoming [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet><bullet>Sustain 30 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -448,7 +448,7 @@
  {
   "name": "Debilitation",
   "slug": "0000049700000B59",
-  "description": "Enemy units in a <eventColor>{DEBILITATION_TARGETER>AREA>Radius}</eventColor>-hex radius gain for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink]</bullet><bullet>3 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink]</bullet><bullet>3 [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink]</bullet></bulletlist>",
+  "description": "Enemy units in a 1-hex radius gain for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink]</bullet><bullet>3 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink]</bullet><bullet>3 [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink]</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "99",
@@ -494,7 +494,7 @@
   "name": "Dragonstrike",
   "slug": "0000048D00001C02",
   "description": "Deal damage to units in a 1-hex cone.",
-  "damage": "",
+  "damage": "20<damagefire></damagefire> ",
   "accuracy": "Always Hits",
   "range": "1",
   "actionPoints": "<singleuseaction></singleuseaction>",
@@ -541,7 +541,7 @@
  {
   "name": "Eldritch Mind Control",
   "slug": "0000049700000A47",
-  "description": "Target enemy unit has a base <eventColor>{ENTHRALL_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.MIND_CONTROLLED]Final Ultimatum[/hyperlink] for <eventColor>{MIND_CONTROL_TEMP>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+  "description": "Target enemy unit has a base 90% chance of becoming [hyperlink,GLOBAL.PROPERTIES.MIND_CONTROLLED]Final Ultimatum[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "4",
@@ -565,7 +565,7 @@
  {
   "name": "Eldritch Truth",
   "slug": "0000049700000A3B",
-  "description": "Target unit has a base <eventColor>{MADNESS_RESISTANCE>ResolvedStrength}</eventColor>% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MADNESS]Madness[/hyperlink] until the end of combat. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target unit has a base 70% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MADNESS]Madness[/hyperlink] until the end of combat. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -589,7 +589,7 @@
  {
   "name": "Enrapturing Truth",
   "slug": "0000049700000A76",
-  "description": "Target unit has a base <eventColor>{MADDENED_RESISTANCE>ResolvedStrength}</eventColor>% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.ENRAPTURING_DOMINATION]Enrapturing Domination[/hyperlink] until the end of combat.<br><br>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target unit has a base 70% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.ENRAPTURING_DOMINATION]Enrapturing Domination[/hyperlink] until the end of combat.<br><br>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -613,7 +613,7 @@
  {
   "name": "Fairy Dust",
   "slug": "0000049700003B52",
-  "description": "Target enemy unit has a base <eventColor>{SLOWED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink], or [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] for <eventColor>{SLOWED_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target enemy unit has a base 120% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink], or [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "4",
@@ -634,7 +634,7 @@
  {
   "name": "Fey Blessing",
   "slug": "0000049700000587",
-  "description": "Target unit:<bulletlist><bullet>Heals +<eventColor>{SOOTHING_MIST_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains a stack of [hyperlink,GLOBAL.PROPERTIES.CLINGING_MIST]Clinging Mist[/hyperlink] for <eventColor>{CLINGING_MIST_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gains a random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist>",
+  "description": "Target unit:<bulletlist><bullet>Heals +10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains a stack of [hyperlink,GLOBAL.PROPERTIES.CLINGING_MIST]Clinging Mist[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gains a random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "3",
@@ -772,7 +772,7 @@
  {
   "name": "Greater Possession",
   "slug": "0000049700000AC1",
-  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit gains [hyperlink,GLOBAL.PROPERTIES.GREATER_EMPOWER]Greater Empower[/hyperlink] for <eventColor>{GREATER_EMPOWER_STATUS_DESCREPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit gains [hyperlink,GLOBAL.PROPERTIES.GREATER_EMPOWER]Greater Empower[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -793,7 +793,7 @@
  {
   "name": "Havoc Pulse",
   "slug": "0000049700000AFE",
-  "description": "Enemies in a <eventColor>{CHAOS_PULSE_CIRCLE_TARGETER>AREA>Radius}</eventColor>-hex radius have 2 of these effects occur to them at random:<bulletlist><bullet>Turn into a random Tier I [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] for <eventColor>{CHAOS_PULSE_ANIMAL>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Sustain <eventColor>{CHAOS_PULSE_FIRE_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] until the end of combat.</bullet><bullet><eventColor>{CHAOS_PULSE_MORALE>Morale Change}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Suffer <eventColor>{CHAOS_PULSE_FROST_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and become [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INFERNAL_REBIRTH]Infernal Rebirth[/hyperlink] until the end of combat.</bullet><bullet>Gain 5 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Heal <eventColor>{CHAOS_PULSE_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
+  "description": "Enemies in a 1-hex radius have 2 of these effects occur to them at random:<bulletlist><bullet>Turn into a random Tier I [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Sustain 20 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] until the end of combat.</bullet><bullet>-30 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Suffer 8 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and become [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.INFERNAL_REBIRTH]Infernal Rebirth[/hyperlink] until the end of combat.</bullet><bullet>Gain 5 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -930,8 +930,8 @@
  {
   "name": "Mind Shattering Truth",
   "slug": "0000049700000A78",
-  "description": "Target unit has a base <eventColor>{MADNESS_RESISTANCE>ResolvedStrength}</eventColor>% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MADNESS]Madness[/hyperlink] until the end of combat. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{INSANITY_EFFECT_DESCRIPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
-  "damage": "",
+  "description": "Target unit has a base 70% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MADNESS]Madness[/hyperlink] until the end of combat. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "20<damagephysical></damagephysical> ",
   "accuracy": "Always Hits",
   "range": "6",
   "actionPoints": "<fullaction></fullaction>",
@@ -960,7 +960,7 @@
  {
   "name": "Possession",
   "slug": "0000049700000A8B",
-  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit gains [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for <eventColor>{EMPOWER_STATUS_DESCREPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit gains [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -981,7 +981,7 @@
  {
   "name": "Puppeteer's Domination",
   "slug": "0000049700000DCA",
-  "description": "Target enemy unit has a base <eventColor>{DOMINATED_RESISTANCE>ResolvedStrength}</eventColor>% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DOMINATED]Dominated[/hyperlink] for <eventColor>{DOMINATED_TEMP>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+  "description": "Target enemy unit has a base 120% chance of becoming [hyperlink,GLOBAL.PROPERTIES.DOMINATED]Dominated[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<br><br>If unsuccessful, reduces their action points to 1 for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "4",
@@ -1005,7 +1005,7 @@
  {
   "name": "Puppeteer's Possession",
   "slug": "0000049700000AC0",
-  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit and up to <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxJumps}</eventColor> other non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly units within <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxDistance}</eventColor> hexes gain [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for <eventColor>{EMPOWER_STATUS_DESCREPTION>NumTurns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit and up to <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxJumps}</eventColor> other non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly units within <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxDistance}</eventColor> hexes gain [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -1088,7 +1088,7 @@
  {
   "name": "Restoration",
   "slug": "000003E300005639",
-  "description": "Heals target friendly unit +<eventColor>{RESTORATION_HEAL>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and dispels its [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].<br>A target friendly unit that is dead can be revived with <eventColor>{RESTORATION_RESS>ResolvedHitPoints}</eventColor>% of its total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].",
+  "description": "Heals target friendly unit +40 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and dispels its [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].<br>A target friendly unit that is dead can be revived with <eventColor>{RESTORATION_RESS>ResolvedHitPoints}</eventColor>% of its total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "4",
@@ -1133,7 +1133,7 @@
  {
   "name": "Rip Mask of Calamity",
   "slug": "0000048B00000446",
-  "description": "Remove [hyperlink,GLOBAL.PROPERTIES.MASK_OF_CALAMITY_PROP]Mask of Calamity[/hyperlink] dealing <eventColor>{RIP_MASK_OF_CALAMITY_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and <eventColor>{RIP_MASK_OF_CALAMITY_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] for each stack of [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] the unit has.",
+  "description": "Remove [hyperlink,GLOBAL.PROPERTIES.MASK_OF_CALAMITY_PROP]Mask of Calamity[/hyperlink] dealing 7 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and 7 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] for each stack of [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] the unit has.",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "0",
@@ -1263,7 +1263,7 @@
  {
   "name": "Summon Elemental",
   "slug": "000003E30000565C",
-  "description": "Summons a random Tier III Elemental unit.<br>This summon lasts for <eventColor>{SUMMON_POSITION_EFFECT>TurnsToLive}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Summons a random Tier III Elemental unit.<br>This summon lasts for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "1",
@@ -1288,7 +1288,7 @@
   "name": "Temporal Plague",
   "slug": "0000048D00000D03",
   "description": "Debuffs the target and all connected enemy units.",
-  "damage": "",
+  "damage": "5<damagelightning></damagelightning> ",
   "accuracy": "Always Hits",
   "range": "3",
   "actionPoints": "<fullactioncontinue></fullactioncontinue>",

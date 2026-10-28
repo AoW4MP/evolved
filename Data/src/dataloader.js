@@ -306,8 +306,19 @@ function AddExtraData() {
     jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonExtraTooltips];
 
     // the abilities the game's texts link to that the dump leaves out (Paragon of Strife's Infernal Blaze), from
-    // abilities.py in aow4_diff_tools; linked only where a text links them, not wherever their name stands
-    for (const ability of jsonLinkedAbilities) ability.linkedOnly = true;
+    // abilities.py in aow4_diff_tools. The dump's texts lose their links ("The Fire Bomb ability"), so one is linked
+    // wherever its name stands, as the dump's abilities are, unless the game's own texts use the name unlinked: then
+    // it is an everyday word too ("Renew your oath", "Priceless Possession") and linked only where a text links it
+    const escaped = jsonLinkedAbilities.map((a) => a.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const named = new RegExp(`\\b(?:${escaped.join("|")})\\b`, "g");
+    const unlinked = new Set();
+    for (const entry of jsonAllFromPOLocalized) {
+        for (const [key, text] of Object.entries(entry)) {
+            if (typeof text !== "string" || key === "id" || key.endsWith("name")) continue;
+            for (const m of text.replace(/\[hyperlink,[^\]]*\][^]*?\[\/hyperlink\]/g, "").matchAll(named)) unlinked.add(m[0]);
+        }
+    }
+    for (const ability of jsonLinkedAbilities) ability.linkedOnly = unlinked.has(ability.name);
     jsonUnitAbilities = [...jsonUnitAbilities, ...jsonLinkedAbilities];
     jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonLinkedAbilities];
 

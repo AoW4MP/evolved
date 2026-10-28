@@ -60,7 +60,7 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
     and the ability diamond) are the game's `unit`, `province` and `casttactical` text icons (`Icons/TML/`) in the
     medallions' beige, on a blank dark sphere made from the site's other medallions.
   Each glyph Evolved draws is centred in its sphere; the four HUD buttons keep the game's own placement.
-  The "Updated:" date is 14px (11px on a phone), a size under the dataset's name.
+  The dataset and the "Updated:" date are in capitals, as Settings, Donate and the menu (the Header font's lowercase is thin and looks blurred at this size), 14px and 13px (11px on a phone).
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.
 

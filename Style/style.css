@@ -306,8 +306,9 @@ a:hover {
         margin: 0 -8px 16px;
         padding: 0 0 4px; /* the bar's copper trim under the labels */
         background: none;
-        border-width: 0 100px;
-        border-image: url(/evolved/Icons/Interface/HudStoneBar.png) 0 180 fill / 0 100px round;
+        /* the gem ends (173px of the image) at the stone's scale; the stone's tips touch the window's edges */
+        border-width: 0 96px;
+        border-image: url(/evolved/Icons/Interface/HudStoneBar.png) 0 173 fill / 0 96px round;
     }
     #menu > li > a {
         line-height: 38px;

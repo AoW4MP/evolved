@@ -299,7 +299,8 @@ a:hover {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin: 0 -8px;
+        /* out to the window's edges; the 16px under it is a list's own margin, which the page titles keep their distance by */
+        margin: 0 -8px 16px;
         padding: 0 0 4px; /* the bar's copper trim under the labels */
         background: none;
         border-width: 0 100px;

@@ -294,7 +294,113 @@ async function GetAllData(selectedLang) {
     }
 }
 
+// The dump's texts lose many of the game's links ("inflicts Seal of Transference, a link effect that lasts for
+// 3 <turn></turn> Turns"), which all.json keeps ("inflicts [hyperlink,GLOBAL.PROPERTIES.TRANSFERENCE_SEAL_DEBUFF_GROUP]
+// Seal of Transference[/hyperlink] ... [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]"). A dump text with the same
+// words as a text of all.json gets its links back, as the dump writes them: "<hyperlink>Seal of Transference</hyperlink>"
+function RestoreDumpLinks(dumps, allFromPO) {
+    const HYPERLINK = /\[hyperlink,[^\]]*\]([\s\S]*?)\[\/hyperlink\]/g;
+    const words = (s) => s.replace(/<[^>]*>|\[\/?bullet[^\]]*\]|\s+/g, "");
+
+    // the texts of all.json with links, by their words; of two with the same words, the one with more links
+    const linked = new Map();
+    for (const entry of allFromPO) {
+        for (const [key, text] of Object.entries(entry)) {
+            if (key === "id" || typeof text !== "string" || !text.includes("[hyperlink,")) continue;
+            const links = [...text.matchAll(HYPERLINK)].map((m) => m[1].trim());
+            const k = words(text.replace(HYPERLINK, "$1"));
+            // a text that is a link and nothing else ("Defense Mode") is a name: the dump's names stay unlinked
+            if (links.length === 1 && words(links[0]) === k) continue;
+            if ((linked.get(k)?.length ?? 0) < links.length) linked.set(k, links);
+        }
+    }
+
+    function Relink(text) {
+        const links = linked.get(words(text.replace(/<\/?hyperlink>/g, "")));
+        if (!links) return text;
+
+        // the text without its tags, each tag one "\0", with where each character stands in the text and whether a
+        // link of the dump holds it
+        let plain = "";
+        const at = [];
+        const inLink = [];
+        let depth = 0;
+        for (const m of text.matchAll(/<[^>]*>|[^<]+|</g)) {
+            if (m[0].length > 1 && m[0].startsWith("<")) {
+                if (/^<hyperlink\b[^>]*>$/i.test(m[0])) depth++; // and "<hyperlink.GLOBAL.ExcavationConcept>"
+                else if (/^<\/hyperlink>$/i.test(m[0])) depth = Math.max(0, depth - 1);
+                plain += "\0";
+                at.push(m.index);
+                inLink.push(depth > 0);
+                continue;
+            }
+            for (let i = 0; i < m[0].length; i++) {
+                plain += m[0][i];
+                at.push(m.index + i);
+                inLink.push(depth > 0);
+            }
+        }
+        at.push(text.length);
+
+        // each link's words in the game's order, after the one before; a link the dump has already is passed by
+        const wraps = [];
+        let from = 0;
+        for (const link of links) {
+            const icon = link.match(/^(?:<(\w+)><\/\1>\s*)+/)?.[0].replace(/\s+/g, "") ?? "";
+            const name = link.replace(/<[^>]*>/g, "").trim();
+            if (!name) continue;
+            const found = new RegExp(`(?<![\\w-])${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\w-])`, "g");
+            found.lastIndex = from;
+            const m = found.exec(plain);
+            if (!m) continue;
+            from = m.index + name.length;
+            if (inLink.slice(m.index, from).some(Boolean)) continue;
+            let start = at[m.index];
+            // a link with an icon holds it too: "3<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink>"
+            const before = text.slice(0, start).trimEnd();
+            if (icon && before.toLowerCase().endsWith(icon.toLowerCase())) start = before.length - icon.length;
+            wraps.push([start, at[from - 1] + 1]);
+        }
+        for (const [start, end] of wraps.reverse()) {
+            text = text.slice(0, start) + "<hyperlink>" + text.slice(start, end) + "</hyperlink>" + text.slice(end);
+        }
+        return text;
+    }
+
+    const NOT_TEXT = new Set(["name", "slug", "id", "resid", "icon"]);
+    function Walk(node) {
+        if (Array.isArray(node)) node.forEach(Walk);
+        else if (node && typeof node === "object") {
+            for (const [key, value] of Object.entries(node)) {
+                if (typeof value === "string") {
+                    if (!NOT_TEXT.has(key) && value.length > 3) node[key] = Relink(value);
+                } else Walk(value);
+            }
+        }
+    }
+    dumps.forEach(Walk);
+}
+
 function AddExtraData() {
+    const dumps = [
+        "jsonHeroItems",
+        "jsonHeroSkills",
+        "jsonSiegeProjects",
+        "jsonUnits",
+        "jsonFactionCreation2",
+        "jsonTomes",
+        "jsonUnitAbilities",
+        "jsonEmpire",
+        "jsonSpells",
+        "jsonStructureUpgrades",
+        "jsonHeroAmbitions",
+        "jsonHeroGovernance",
+        "jsonItemForgeTypes",
+        "jsonItemForgeUpgrades"
+    ];
+    RestoreDumpLinks(dumps.map((d) => window[d]), jsonAllFromPO);
+    RestoreDumpLinks(dumps.map((d) => window[d + "Localized"]), jsonAllFromPOLocalized);
+
     // add extra data to the main data set
     jsonHeroSkills = [...jsonHeroSkills, ...extraSkills];
     jsonHeroSkillsLocalized = [...jsonHeroSkillsLocalized, ...extraSkills];
@@ -328,21 +434,9 @@ function AddExtraData() {
         magic_seal_ability_0000049000000E8C_0000049700000fb2: "0000049700001064", // Resonance Seal
         magic_seal_ability_0000049000000E8C_0000049700000fb8: "000004970000106C" // Fire Seal
     };
-    // and the links of the Oathsworn's Paragon abilities to the ability they grant, which the game's text has
-    // ("gain the [hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink] ability"): a linked-only
-    // ability needs one
-    const missingAbilityLinks = {
-        "0000049700001555": "Infernal Blaze", // Paragon of Strife
-        "0000049700001558": "Radiant Slash", // Paragon of Righteousness
-        "000004970000155a": "Arrow of Harmony" // Paragon of Harmony
-    };
     for (const ability of [...jsonUnitAbilities, ...jsonUnitAbilitiesLocalized]) {
         if (ability.icon == undefined && ability.slug in missingAbilityIcons) {
             ability.icon = missingAbilityIcons[ability.slug];
-        }
-        const linked = missingAbilityLinks[ability.slug];
-        if (linked && !ability.description.includes(`<hyperlink>${linked}</hyperlink>`)) {
-            ability.description = ability.description.replace(` ${linked} `, ` <hyperlink>${linked}</hyperlink> `);
         }
     }
 }

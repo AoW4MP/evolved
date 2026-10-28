@@ -4928,7 +4928,7 @@ function showStructure(a, showOrigin, divOrigin) {
     }
 
     let cost = divOrigin.querySelector("#modcost");
-    cost.className = "spell_cost";
+    cost.classList.add("spell_cost"); // beside structure_cost, which places it
     cost.innerHTML = "Build Cost: " + structureLoc.cost;
 
     //let name = backtraceTomeOriginAndTier(structureEN, showOrigin);

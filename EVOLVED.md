@@ -36,13 +36,16 @@ Exception: `HTML/Donate.html` keeps the title `Age of Wonders 4 Database - Donat
 | 1172 | `origin.point_cost + getPoints() > 5` | `origin.point_cost + getPoints() > 10` |
 | 3491 | `if (getPoints() > 5)` | `if (getPoints() > 10)` |
 
-`HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's.
+`HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's. The banner is one compact
+band (`--banner-height`): the title with its Manta beta line in one line below it, Settings and the date on the left,
+Donate on the right (to `HTML/Donate.html`, which links to Buy Me a Coffee). No Other Database dropdown: Evolved
+keeps no other databases. On a phone Settings, the date and Donate are in the ☰ menu.
 
 `Style/style.css`: on desktop (wider than 800px) the menu bar wraps onto a second line when the window is too narrow
 for it, and the header grows to fit, instead of the menu forcing a page-wide scrollbar. Its items are centred.
 The page body (`.w3-container`: sidebar and content) is at most 1600px wide and centred, so on an ultrawide screen
-the sidebar stays beside the content. The header's corners (Settings, the "Updated" date, Donate, Other Database)
-stay within the same 1600px. Phones keep the ☰ menu.
+the sidebar stays beside the content. The banner's sides (Settings, the "Updated" date, Donate) stay
+within the same 1600px. Phones keep the ☰ menu.
 
 The left sidebar (`#buttonHolder`) is 240px wide on every page (upstream: 200px, 240px on the Tome Units pages). A
 page with a sidebar has `class="w3-container sidebarPage"`, a grid: the title (`.textblocktitle`, always 44px high)

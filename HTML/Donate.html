@@ -1,76 +1,147 @@
 <!doctype html>
 <html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/evolved/Data/Init.js"></script>
+        <script>
+            function HandlePage() {}
+        </script>
 
-        gtag("config", "G-CC3NE8PT7K");
-    </script>
-    <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
-    <meta charset="UTF-8" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-   <script src="/evolved/Data/Init.js"></script>
-    <script>
-        function HandlePage() { }
-    </script>
+        <title>Age of Wonders 4 Evolved - Support the Mod</title>
+        <style>
+            .support {
+                max-width: 760px;
+                margin: 24px auto 48px;
+                padding: 0 16px;
+            }
 
-    <title>Age of Wonders 4 Database - Donate</title>
-</head>
+            .support-card {
+                position: relative;
+                overflow: hidden;
+                padding: 44px 48px 40px;
+                border-width: 10px;
+                border-style: solid;
+                border-image: url(/evolved/Icons/9slicetooltip.png);
+                border-image-slice: 10 10 10 10;
+                background:
+                    linear-gradient(90deg, rgba(8, 6, 16, 0.94) 0%, rgba(8, 6, 16, 0.86) 55%, rgba(8, 6, 16, 0.55) 100%),
+                    url(/evolved/Icons/header.jpg) center / cover;
+                box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+                color: #d8dcef;
+                font-size: 17px;
+                line-height: 1.6;
+                text-shadow: 1px 1px 3px black;
+            }
 
-<body>
-    <div id="header"></div>
+            .support-card .greeting {
+                margin: 0 0 18px;
+                font-family: "Decorative", sans-serif;
+                font-size: 30px;
+                line-height: 1.2;
+                color: #e8cf8f;
+            }
 
-    <div class="textblocktitle">
-        <img src="/evolved/Icons/FactionCreation/hardy.png" height="40px" /> Support the AoW 4 Database
-        <img src="/evolved/Icons/FactionCreation/hardy.png" height="40px" />
-    </div>
+            .support-card p {
+                margin: 0 0 16px;
+            }
 
-    <div class="w3-container">
-        <div class="w3-bar w3-black" id="buttonHolder"></div>
-        <div id="dataHolder">
-            <div class="mod_card">
-                <div style="background-image: url(/evolved/Icons/header.jpg);background-size: cover;">
-                    <div
-                        style="padding:100px ; text-shadow: 2px 2px 4px rgba(0, 0, 0, 1) ; background-color: #06080c26; font-size: large;">
-                        Greetings
-                        Godir!<br><br>
-                        Thanks for using the Database, this side project has grown a lot since the release of the game
-                        and
-                        it's been
-                        great seeing how many people visit it.
-                        <br><br>
-                        If you’ve enjoyed using the site, found it helpful, or just want to support its upkeep and
-                        future
-                        improvements, you can buy me a coffee below, if you're so inclined.
-                        <br><br>
-                        <script type=" text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js">
-                        </script>
-                        <script type="text/javascript">
-                            kofiwidget2.init("Buy me a coffee", "#72a4f2", "H2H8695X");
-                            kofiwidget2.draw();
-                        </script>
+            .coffee-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin: 10px 0 26px;
+                padding: 12px 24px 12px 18px;
+                border-radius: 10px;
+                background: #ffdd00;
+                color: #1a1408;
+                font-family: "Regular", sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration: none;
+                text-shadow: none;
+                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+                transition:
+                    transform 0.15s,
+                    box-shadow 0.15s;
+            }
 
-                        <br><br>
-                        Thank you!
-                    </div>
-                </div>
+            .coffee-button:hover {
+                color: #1a1408;
+                text-decoration: none;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 18px rgba(255, 221, 0, 0.35);
+            }
+
+            .coffee-button svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .support-card .thanks {
+                margin: 0;
+                font-style: italic;
+                color: #e8cf8f;
+            }
+
+            @media (max-width: 600px) {
+                .support-card {
+                    padding: 28px 22px 26px;
+                    font-size: 16px;
+                }
+
+                .support-card .greeting {
+                    font-size: 25px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="header"></div>
+
+        <div class="textblocktitle">
+            <img src="/evolved/Icons/FactionCreation/hardy.png" height="40px" alt="" /> Support the AoW 4 Evolved Mod
+            <img src="/evolved/Icons/FactionCreation/hardy.png" height="40px" alt="" />
+        </div>
+
+        <div class="support">
+            <div class="support-card">
+                <p class="greeting">Greetings Godir!</p>
+                <p>
+                    Thanks for using the AoW 4 Evolved mod, this side project has grown a lot since the release of the
+                    game and it's been great seeing how many people use it as well as the impact it has had on the
+                    development of the game and the direction it has taken.
+                </p>
+                <p>
+                    If you’ve enjoyed using the mod, or just want to support its upkeep and future improvements, you can
+                    buy me a coffee below, if you're so inclined.
+                </p>
+                <a class="coffee-button" href="https://buymeacoffee.com/aowevolved" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z" />
+                        <path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" />
+                        <path d="M8 2.5c-.6.8-.6 1.7 0 2.5M11.5 2.5c-.6.8-.6 1.7 0 2.5M15 2.5c-.6.8-.6 1.7 0 2.5" />
+                    </svg>
+                    Buy me a coffee
+                </a>
+                <p class="thanks">Thank you for your support!</p>
             </div>
         </div>
-    </div>
-
-    <script></script>
-</body>
-
+    </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>

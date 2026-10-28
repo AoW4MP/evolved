@@ -11,8 +11,9 @@
 
     <body>
         <div id="topbarAnchor"></div>
+        <!-- Settings and the date on the left of the banner, Donate on the right; on a phone, in the ☰ menu (Init.js) -->
         <div class="topbar">
-            <div style="display: flex">
+            <div class="topbar-side">
                 <div class="dropdown">
                     <div class="dropdown-title">Settings ▼</div>
                     <div class="dropdown-content">
@@ -27,47 +28,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="current-version">Updated: October 22nd, 2026</div>
             </div>
-            <!-- keeps the spacing of the removed language dropdown, so Donate stays where upstream has it -->
-            <div style="width: 95px"></div>
-            <div class="donate">
-                <a class="prett" href="/evolved/HTML/Donate.html">
-                    Donate<img src="/evolved/Icons/Text/health.png" width="20px" />
-                </a>
-            </div>
-
-            <div class="dropdown">
-                <div class="dropdown-title">Other Database ▼</div>
-                <div class="dropdown-content">
-                    <a class="prett" href="https://minionsart.github.io/aow3db/" target="_blank">
-                        <img src="/evolved/Icons/Interface/aow3icon.png" width="20px" /> AOW3
-                    </a>
-                    <a class="prett" href="https://minionsart.github.io/aowp/" target="_blank">
-                        <img src="/evolved/Icons/Interface/aowpficon.png" width="20px" /> AOW Planetfall
-                    </a>
-                </div>
-            </div>
+            <a class="donate" href="/evolved/HTML/Donate.html">
+                <img src="/evolved/Icons/Text/health.png" alt="" />Donate
+            </a>
         </div>
         <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
         <div id="menuBackdrop" class="menu-backdrop"></div>
         <div class="header-img">
-            <div id="topButtonContainer" style="display: none">
-                <div id="myCenteredButton"><a href="/evolved/HTML/Donate.html">Donate</a></div>
+            <div class="banner">
+                <a href="/evolved/" class="hero-link"><div class="hero-text">Age of Wonders 4 Evolved</div></a>
+                <div class="mid-text">
+                    Manta Beta Dataset
+                    <i>(AoW 4 Evolved is played on the Manta beta, so this site shows the beta version of the game)</i>
+                </div>
             </div>
 
-            <a href="/evolved/" style="text-decoration: none"><div class="hero-text">Age of Wonders 4 Evolved</div></a>
-            <div class="mid-text" style="display: block; margin: 15px">
-                Manta Beta Dataset
-                <br /><i>(AoW 4 Evolved is played on the Manta beta, so this site shows the beta version of the game)</i>
-            </div>
-            <div class="current-version">Updated: October 22nd, 2026</div>
-
-            <div class="hero-text">
-                <img
-                    style="position: relative; display: none; top: 0px"
-                    src="/evolved/Icons/Text/SotaLogo.png"
-                    width="250px" />
-            </div>
             <ul id="menu">
                 <li>
                     <a class="prett" id="menu-units"
@@ -774,15 +751,17 @@
     <style>
         .topbar {
             color: white;
-
             font-size: 14px;
-            position: relative;
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: nowrap;
+            align-items: center;
             z-index: 30;
-            flex-direction: row;
+        }
+
+        .topbar-side {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
         .dropdown {
@@ -791,20 +770,40 @@
         }
 
         .donate {
-            right: -152px;
-            position: relative;
-            display: inline-block;
-            background-color: #4b1d63;
-            color: #fff;
-            border: none;
-            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 6px 16px 6px 11px;
+            font-family: "Regular", sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            color: #f3e6c4;
             text-decoration: none;
-            position: relative;
-            /* height: 30px; */
-            border-width: 5px;
-            border-style: solid;
-            border-image: url(/evolved/Icons/9slicetooltip.png);
-            border-image-slice: 10 10 10 10;
+            text-shadow: 1px 1px 2px black;
+            background: linear-gradient(180deg, #5d2b78 0%, #351340 100%);
+            border: 1px solid #b8955a;
+            border-radius: 6px;
+            box-shadow:
+                0 0 0 1px rgba(0, 0, 0, 0.7),
+                0 2px 8px rgba(0, 0, 0, 0.6);
+            transition:
+                border-color 0.15s,
+                box-shadow 0.15s,
+                color 0.15s;
+        }
+
+        .donate:hover {
+            color: white;
+            text-decoration: none;
+            border-color: #f0d38a;
+            box-shadow:
+                0 0 0 1px rgba(0, 0, 0, 0.7),
+                0 0 12px rgba(240, 200, 120, 0.45);
+        }
+
+        .donate img {
+            width: 18px;
+            height: 18px;
         }
 
         .dropdown-title {

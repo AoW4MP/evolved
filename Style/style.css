@@ -203,16 +203,6 @@ a:hover {
     text-decoration: underline;
 }
 
-#topButtonContainer {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-image: url(/evolved/Icons/9slicetooltip%20-%20Copy.png);
-    z-index: 999;
-    /* keeps it above other elements */
-}
-
 .spinner {
     border: 6px solid #00f5cf;
     border-top: 6px solid #0a363f;
@@ -230,12 +220,6 @@ a:hover {
     }
 }
 
-#myCenteredButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 #menu {
     background: black;
     border-image: url(/evolved/Icons/9slicetooltip.png);
@@ -243,7 +227,6 @@ a:hover {
     border-style: solid;
     height: 35px;
     min-width: 1200px;
-    margin-top: -32px;
 }
 
 #menu ul,
@@ -296,10 +279,6 @@ a:hover {
 /* Desktop: the menu wraps onto a second line when the window is too narrow for it, instead of
    forcing a page-wide scrollbar, centred; the header grows to fit. Phones get the ☰ menu (max-width: 800px). */
 @media (min-width: 801px) {
-    .header-img {
-        height: auto;
-        min-height: 150px;
-    }
     #menu {
         min-width: 0;
         height: auto;
@@ -315,14 +294,20 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
-    /* the header's corners (Settings, Donate, Other Database, the "Updated" date) line up with it too */
+    /* Settings and the "Updated" date on the left of the banner, Donate on its right, within the same 1600px */
     .topbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--banner-height);
         max-width: 1600px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
+        padding: 0 20px;
     }
-    .header-img .current-version {
-        left: max(1%, calc(50% - 800px));
+    /* the title and its lines stay clear of them */
+    .banner {
+        padding: 0 230px;
     }
     #menu > li {
         float: none;
@@ -1885,6 +1870,19 @@ yellowText {
     max-width: 520px;
 }
 
+/* a structure card's build cost, in its bottom-right corner; in a tooltip, which is narrower and has no picture
+   column to keep that corner free, on a line of its own below the description */
+.structure_cost {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.tooltiptextnew .structure_cost {
+    position: static;
+    text-align: right;
+    margin: 4px 0 0;
+}
+
 /* a Province Improvement card's tome, on the right between the tome's name and the build cost; out of the
    layout, as the build cost is, so the header keeps its height */
 .structure_tome_icon {
@@ -1913,9 +1911,25 @@ silver {
     font-size: 15px;
 }
 
+/* the banner: the title and its lines on the header's picture, the menu below */
+:root {
+    --banner-height: 70px;
+}
 .header-img {
+    position: relative;
     width: 100%;
-    height: 150px;
+}
+.banner {
+    min-height: var(--banner-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-link,
+.hero-link:hover {
+    text-decoration: none;
 }
 
 .EMPIRESANDASHEStriangle {
@@ -2070,7 +2084,6 @@ silver {
 
 .header-img::after {
     content: "";
-    height: 150px;
     background: url(/evolved/Icons/Interface/library_hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -2103,13 +2116,9 @@ silver {
 }
 
 .mid-text {
-    text-align: center;
-    position: relative;
-
-    font-size: 17px;
-    top: -20%;
-    margin: -15px;
-    text-shadow: 2px 2px 5px black;
+    font-size: 13px;
+    line-height: 1.3;
+    margin-top: 3px;
     text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -2118,20 +2127,12 @@ silver {
         -2px -2px 5px black,
         1px 1px 0 #000;
     color: #ffee64;
-    opacity: 2;
 }
 
 .hero-text {
-    text-align: center;
-    width: fit-content;
-    position: relative;
     font-family: "Decorative", sans-serif;
-    font-size: 35px;
-   
-   
-    left: 50%;
-    transform: translate(-50%, -30%);
-    text-shadow: 2px 2px 5px black;
+    font-size: 28px;
+    line-height: 1.1;
     text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -2142,18 +2143,12 @@ silver {
     color: whitesmoke;
 }
 
+/* under Settings */
 .current-version {
-   
-  
-    text-align: left;
-    width: fit-content;
-    position: absolute;
     font-family: "Regular", sans-serif;
-    font-size: 14px;
-    top: 50px;
-    left: 1%;
-    color: whitesmoke;
-    opacity: 2;
+    font-size: 13px;
+    color: #d9d4c7;
+    text-shadow: 1px 1px 2px black;
 }
 
 .content {
@@ -2338,20 +2333,29 @@ span.number-highlight {
         clear: both;
     }
 
-    /* header-img no longer needs to reserve space for the menu on mobile */
-    .header-img {
-        height: 150px;
-        overflow: visible;
+    /* the banner keeps clear of the ☰ button */
+    .banner {
+        padding: 10px 60px;
+        min-height: 0;
     }
-     #menuExtras .topbar {
+    .hero-text {
+        font-size: 22px;
+    }
+    .mid-text {
+        font-size: 12px;
+    }
+    #menuExtras .topbar {
         flex-direction: column;
         align-items: stretch;
-        gap: 8px;
+        gap: 12px;
         padding: 12px 0;
     }
+    /* the menu's own link style (#menu a) would undo the button's */
     #menuExtras .donate {
-        right: 0; /* was right:-152px, meant for the old wide desktop bar */
-        text-align: center;
+        align-self: center;
+        display: inline-flex;
+        line-height: normal;
+        padding: 6px 16px 6px 11px;
     }
     /* dropdowns rely on :hover, which doesn't exist on touch —
        just show their contents inline since they're already tucked

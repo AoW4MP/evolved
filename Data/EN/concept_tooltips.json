@@ -1348,7 +1348,7 @@
     "icon": null,
     "globalName": "GLOBAL.ScavengerLootConcept",
     "displayHtml": "Loot",
-    "description": "Can be picked up by any unit with the [hyperlink,GLOBAL.PROPERTIES.SCAVENGER]Scavenger[/hyperlink] property by moving onto this hex.<br>On pickup, the unit:<bulletlist><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.LOOTED_POWER]Looted Power[/hyperlink].</bullet><bullet>Heals for +15 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink].</bullet></bulletlist>"
+    "description": "Can be picked up by any unit with the [hyperlink,GLOBAL.PROPERTIES.SCAVENGER]Scavenger[/hyperlink] property by moving onto this hex.<br>On pickup, the unit:<bulletlist><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.LOOTED_POWER]Looted Power[/hyperlink].</bullet><bullet>Heals for +15 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.NomadConcept": {
     "name": "Nomad",
@@ -1404,7 +1404,7 @@
     "icon": null,
     "globalName": "GLOBAL.SandstormConcept",
     "displayHtml": "Sandstorm",
-    "description": "Units passing through or ending their turn on this hex:<bulletlist><bullet>Have a base 60% chance of becoming [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Units with [hyperlink,GLOBAL.PROPERTIES.SAND_WALK]Sand Walk[/hyperlink] are immune to this effect."
+    "description": "Units passing through or ending their turn on this hex:<bulletlist><bullet>Have a base 60% chance of becoming [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>Units with [hyperlink,GLOBAL.PROPERTIES.SAND_WALK]Sand Walk[/hyperlink] are immune to this effect."
   },
   "GLOBAL.BackfireConcept": {
     "name": "Spell Backfiring",
@@ -3273,7 +3273,7 @@
     "icon": null,
     "globalName": "GLOBAL.StarvationConcept",
     "displayHtml": "Starvation",
-    "description": "When <population></population> [hyperlink,GLOBAL.PopulationUpkeepConcept]Population Upkeep[/hyperlink] is higher than <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] income, the city's <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] will starve.<br><br>Starvation leads to <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] dying and a [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink] leaving the city every 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]"
+    "description": "When <population></population> [hyperlink,GLOBAL.PopulationUpkeepConcept]Population Upkeep[/hyperlink] is higher than <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] income, the city's <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] will starve.<br><br>Starvation leads to <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] dying and a [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink] leaving the city every 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]"
   },
   "GLOBAL.WorldMapConcept": {
     "name": "World Map",
@@ -3840,7 +3840,7 @@
     "icon": null,
     "globalName": "GLOBAL.CleansingFlamesHazard",
     "displayHtml": "Cleansing Flames",
-    "description": "Units passing through or ending their turn on this hex:<bulletlist><bullet>Non-[hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] units lose -1 [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] units lose -1 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink].</bullet></bulletlist>"
+    "description": "Units passing through or ending their turn on this hex:<bulletlist><bullet>Non-[hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] units lose -1 [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effect[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] units lose -1 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.CliffConcept": {
     "name": "Cliff",
@@ -4008,7 +4008,7 @@
     "icon": null,
     "globalName": "GLOBAL.DistractingConcept",
     "displayHtml": "Distracting",
-    "description": "Units passing through or ending their turn on this hex will become [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+    "description": "Units passing through or ending their turn on this hex will become [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]."
   },
   "GLOBAL.DomeOfProtectionConcept": {
     "name": "Dome of Protection",
@@ -4190,7 +4190,7 @@
     "icon": null,
     "globalName": "GLOBAL.GaiasChosenConcept",
     "displayHtml": "Gaia's Chosen",
-    "description": "Infuse the target race with the blessing of Nature. They gain:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.PLANT]Plant[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] last -1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], with a minimum of 1.</bullet><bullet>+3 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet></bulletlist>"
+    "description": "Infuse the target race with the blessing of Nature. They gain:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.PLANT]Plant[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] last -1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], with a minimum of 1.</bullet><bullet>+3 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.GloomHooknailLoreConcept": {
     "name": "Gloom Hooknail",
@@ -5323,7 +5323,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT",
     "displayHtml": "Belt of the Berserker",
-    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach <eventColor>{BERSERKERS_RAGE_THRESHOLD_EVENT>ResolvedTriggerProportion}</eventColor>% or lower, grants this unit:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach <eventColor>{BERSERKERS_RAGE_THRESHOLD_EVENT>ResolvedTriggerProportion}</eventColor>% or lower, grants this unit:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
     "image": "000003E300004F08"
   },
   "GLOBAL.PROPERTIES.BESTOW_MASK_OF_PROSPERITY_CASTER": {
@@ -5634,7 +5634,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_VOLCANIC_ERUPTION",
     "displayHtml": "Volcanic Eruptions",
-    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], a marker is placed. Then, after 1 <turn></turn> the ground will erupt and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Random affected hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
+    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], a marker is placed. Then, after 1 <turn></turn> the ground will erupt and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Random affected hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
     "image": "000003E100001C46"
   },
   "GLOBAL.PROPERTIES.COMBAT_SUMMON": {
@@ -5843,10 +5843,10 @@
     "image": "0000048B00000D08"
   },
   "GLOBAL.PROPERTIES.EVIL_3_UNIT_PROPERTY": {
-    "name": "[reputation0/] Pure Evil",
+    "name": "Pure Evil",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.EVIL_3_UNIT_PROPERTY",
-    "displayHtml": "[reputation0/] Pure Evil",
+    "displayHtml": "Pure Evil",
     "description": "<reputation0></reputation0> Pure Evil"
   },
   "GLOBAL.PROPERTIES.EXHAUSTED": {
@@ -6028,17 +6028,17 @@
     "image": "0000049700000F29"
   },
   "GLOBAL.PROPERTIES.GOOD_2_UNIT_PROPERTY": {
-    "name": "[reputation7/] Very Good",
+    "name": "Very Good",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.GOOD_2_UNIT_PROPERTY",
-    "displayHtml": "[reputation7/] Very Good",
+    "displayHtml": "Very Good",
     "description": "<reputation7></reputation7> Very Good"
   },
   "GLOBAL.PROPERTIES.GOOD_3_UNIT_PROPERTY": {
-    "name": "[reputation8/] Pure Good",
+    "name": "Pure Good",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.GOOD_3_UNIT_PROPERTY",
-    "displayHtml": "[reputation8/] Pure Good",
+    "displayHtml": "Pure Good",
     "description": "<reputation8></reputation8> Pure Good"
   },
   "GLOBAL.PROPERTIES.GRACE": {
@@ -6476,7 +6476,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.POWER_FROM_SLAUGHTER",
     "displayHtml": "Power from Slaughter",
-    "description": "Unit permanently gains +1 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and +1% damage when killing an enemy unit. Stacks up to 50 times.",
+    "description": "Unit permanently gains +1 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] and +1% damage when killing an enemy unit. Stacks up to 50 times.",
     "image": "000003E100001997"
   },
   "GLOBAL.PROPERTIES.PRECOGNITION": {
@@ -6595,7 +6595,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.PROPHECY_MARK_OF_NATURE",
     "displayHtml": "Mark of Nature",
-    "description": "This unit bears the mark of Nature and gains:<bulletlist><bullet>Whenever a friendly unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Whenever an enemy unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+    "description": "This unit bears the mark of Nature and gains:<bulletlist><bullet>Whenever a friendly unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>Whenever an enemy unit dies, this unit gains:<br>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
     "image": "0000048D00001801"
   },
   "GLOBAL.PROPERTIES.PROPHECY_MARK_OF_ORDER": {
@@ -7393,7 +7393,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.BHAJIFS_DISRUPTION",
     "displayHtml": "Bhajif's Disruption",
-    "description": "<bulletlist><bullet>Enemies in a 1-hex radius:</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist><bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], [hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] cannot be cast.</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Enemies in a 1-hex radius:</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Become [hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist><bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], [hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] cannot be cast.</bullet></bulletlist>",
     "image": "0000049700003E5A"
   },
   "GLOBAL.SPECIAL_OPERATIONS.BLIGHTFALL_PLAYER_SPELL": {
@@ -7537,7 +7537,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.FANFARE_OF_MERCY",
     "displayHtml": "Fanfare of Mercy",
-    "description": "[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] units in a 2-hex radius:<bulletlist><bullet>Have a 60% chance of becoming [hyperlink,GLOBAL.RoutingConcept]Routing[/hyperlink]. If resisted, they are [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] instead.</bullet></bulletlist>",
+    "description": "[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] units in a 2-hex radius:<bulletlist><bullet>Have a 60% chance of becoming [hyperlink,GLOBAL.RoutingConcept]Routing[/hyperlink]. If resisted, they are [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] instead.</bullet></bulletlist>",
     "image": "0000049700003E8F"
   },
   "GLOBAL.SPECIAL_OPERATIONS.FEYTOUCHED": {
@@ -7784,7 +7784,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.SOULCURSE_OF_GREED",
     "displayHtml": "Soulcurse of Greed",
-    "description": "Target enemy army:<bulletlist><bullet>Sustains 8 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] and 8 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>Becomes [hyperlink,GLOBAL.PROPERTIES.SOULCURSE_OF_GREED_STATUS]Cursed by Greed[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+    "description": "Target enemy army:<bulletlist><bullet>Sustains 8 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] and 8 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>Becomes [hyperlink,GLOBAL.PROPERTIES.SOULCURSE_OF_GREED_STATUS]Cursed by Greed[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
     "image": "000003DF00001C78"
   },
   "GLOBAL.SPECIAL_OPERATIONS.SOULCURSE_OF_PRIDE": {
@@ -7845,7 +7845,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.THRALL_EFFIGY",
     "displayHtml": "Thrall Effigy",
-    "description": "Gain 3 <thralls></thralls> [hyperlink,GLOBAL.ThrallConcept]Thrall[/hyperlink].",
+    "description": "Gain 3 <thralls></thralls> [hyperlink,GLOBAL.ThrallConcept]Thralls[/hyperlink].",
     "image": "0000049700000CB3"
   },
   "GLOBAL.SPECIAL_OPERATIONS.THUNDER_STORMS_SPELL": {
@@ -8133,10 +8133,10 @@
     "description": "<bulletlist><bullet>+2 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] and +2 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] per <forester></forester> [hyperlink,GLOBAL.ForesterConcept]Forester[/hyperlink] in [hyperlink,GLOBAL.CityConcept]City[/hyperlink] [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>Adds [hyperlink,GLOBAL.UNITS.ENTWINED_THRALL_UNIT]Entwined Thrall[/hyperlink], [hyperlink,GLOBAL.UNITS.ENTWINED_PROTECTOR_UNIT]Entwined Protector[/hyperlink], and [hyperlink,GLOBAL.UNITS.ENTWINED_SCOURGE_UNIT]Entwined Scourge[/hyperlink] to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURE_UPGRADES.ALTAR_OF_MARCHING_GLOOM": {
-    "name": "[conduit/] Altar of Marching Gloom",
+    "name": "Altar of Marching Gloom",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURE_UPGRADES.ALTAR_OF_MARCHING_GLOOM",
-    "displayHtml": "[conduit/] Altar of Marching Gloom",
+    "displayHtml": "Altar of Marching Gloom",
     "description": "<bulletlist><bullet>+10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], 1 [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] within a radius equal to the City Tier:<bulletlist><bullet>Gains [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink].</bullet><bullet>Loses [hyperlink,GLOBAL.ChasmConcept]Chasm[/hyperlink], [hyperlink,GLOBAL.RiverConcept]River[/hyperlink], [hyperlink,GLOBAL.SwampConcept]Swamp[/hyperlink], [hyperlink,GLOBAL.SandConcept]Sand[/hyperlink], [hyperlink,GLOBAL.SnowConcept]Snow[/hyperlink], [hyperlink,GLOBAL.FrozenWasteConcept]Ice[/hyperlink], and [hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink].</bullet></bulletlist></bullet><bullet>Counts as a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink].</bullet></bulletlist>",
     "image": "0000048B0000016C"
   },
@@ -8148,10 +8148,10 @@
     "description": "[hyperlink,GLOBAL.CityBattlementStructureConcept]Battlement Structure[/hyperlink]"
   },
   "GLOBAL.STRUCTURE_UPGRADES.BEACONOFUNITY": {
-    "name": "[expansionvictory/] Beacon of Unity",
+    "name": "Beacon of Unity",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURE_UPGRADES.BEACONOFUNITY",
-    "displayHtml": "[expansionvictory/] Beacon of Unity",
+    "displayHtml": "Beacon of Unity",
     "description": "A [hyperlink,GLOBAL.SpecialImprovementConcept]Special Province Improvement[/hyperlink] that is built as part of the Expansion Victory. Once three Beacons have been built, an option to Light the Beacons will appear. Lighting the Beacons will start a <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] timer counting down to victory."
   },
   "GLOBAL.STRUCTURE_UPGRADES.CALTROP_STASH": {
@@ -8170,10 +8170,10 @@
     "image": "00000497000015AF"
   },
   "GLOBAL.STRUCTURE_UPGRADES.GIANT_FORUM_SPI": {
-    "name": "[quarry/] Giant Forum",
+    "name": "Giant Forum",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURE_UPGRADES.GIANT_FORUM_SPI",
-    "displayHtml": "[quarry/] Giant Forum",
+    "displayHtml": "Giant Forum",
     "description": "<bulletlist><bullet>+10 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink].</bullet><bullet>+1 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink] per adjacent [hyperlink,GLOBAL.SpecialImprovementConcept]Special Province Improvement[/hyperlink].</bullet><bullet>Counts as a <quarry></quarry> [hyperlink,GLOBAL.QuarryConcept]Quarry[/hyperlink].</bullet></bulletlist>",
     "image": "0000049300000CC4"
   },
@@ -8208,10 +8208,10 @@
     "description": "<bulletlist><bullet>This allows for the [hyperlink,GLOBAL.ProvinceAnnexationConcept]Annexation[/hyperlink] of a single province.</bullet><bullet>If a [hyperlink,GLOBAL.CityConcept]City[/hyperlink] is founded from this outpost, it will start with one additional <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] and the annexed province already attached.</bullet><bullet>A [hyperlink,GLOBAL.STRUCTURE_UPGRADES.TELEPORTER]<teleporter></teleporter> Teleporter[/hyperlink] improvement can be built in the province with the Teleporter Infrastructure [hyperlink,GLOBAL.EmpireSkillConcept]Empire Skill[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURE_UPGRADES.SPELL_JAMMER": {
-    "name": "[conduit/] Spell Jammer",
+    "name": "Spell Jammer",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURE_UPGRADES.SPELL_JAMMER",
-    "displayHtml": "[conduit/] Spell Jammer",
+    "displayHtml": "Spell Jammer",
     "description": "<bulletlist><bullet>Enemies cannot target [hyperlink,GLOBAL.WorldMapSpellConcept]World Map Spells[/hyperlink] in this [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>-10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Counts as a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURE_UPGRADES.STONE_WALLS": {
@@ -8223,10 +8223,10 @@
     "image": "0000048D00001D0B"
   },
   "GLOBAL.STRUCTURE_UPGRADES.TELEPORTER": {
-    "name": "[teleporter/] Teleporter",
+    "name": "Teleporter",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURE_UPGRADES.TELEPORTER",
-    "displayHtml": "[teleporter/] Teleporter",
+    "displayHtml": "Teleporter",
     "description": "A [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink] which enables an [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink] to teleport from one teleporter to another.<br><br>-10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink]."
   },
   "GLOBAL.STRUCTURE_UPGRADES.WIZARD_TOWER_ITEM_FORGE": {

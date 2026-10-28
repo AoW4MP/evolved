@@ -367,18 +367,20 @@ function RestoreDumpLinks(dumps, allFromPO) {
         return text;
     }
 
-    const NOT_TEXT = new Set(["name", "slug", "id", "resid", "icon"]);
-    function Walk(node) {
-        if (Array.isArray(node)) node.forEach(Walk);
+    // an entry's own name stays as it is ("+2 Resistance", an item forge upgrade); a "name" inside it is often a
+    // sentence: a trait's effects ("Cities may build the <conduit></conduit> Altar of Marching Gloom.")
+    const NOT_TEXT = new Set(["slug", "id", "resid", "icon"]);
+    function Walk(node, entry) {
+        if (Array.isArray(node)) node.forEach((n) => Walk(n, false));
         else if (node && typeof node === "object") {
             for (const [key, value] of Object.entries(node)) {
                 if (typeof value === "string") {
-                    if (!NOT_TEXT.has(key) && value.length > 3) node[key] = Relink(value);
-                } else Walk(value);
+                    if (!NOT_TEXT.has(key) && !(entry && key === "name") && value.length > 3) node[key] = Relink(value);
+                } else Walk(value, false);
             }
         }
     }
-    dumps.forEach(Walk);
+    dumps.forEach((dump) => dump.forEach((e) => Walk(e, true)));
 }
 
 function AddExtraData() {

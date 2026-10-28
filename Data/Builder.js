@@ -351,6 +351,18 @@ function createStatusEffectTooltip(effectData, handlerType = "status") {
     }
 }*/
 
+// A link to a Province Improvement or City Structure ("Cities may build the <conduit></conduit> Altar of Marching
+// Gloom") opens the structure's own card, as the game opens the structure's tooltip; null for any other link
+function StructureTooltip(globalName, concept) {
+    if (!globalName.startsWith("GLOBAL.STRUCTURE_UPGRADES.")) return null;
+    const words = (s) => (s || "").replace(/<[^>]+>/g, "").trim().toLowerCase();
+    // by name: "_teleporter___teleporter" is also an empty entry
+    const structure = jsonStructureUpgradesLocalized.find((s) => words(s.name) === words(concept.name) && s.description);
+    if (!structure) return null;
+    const card = structure_card_template.content.cloneNode(true).firstElementChild;
+    return showStructure(structure.resid, false, card).firstElementChild;
+}
+
 function HandleExtraTooltips(specificDiv) {
     const root = specificDiv ?? document;
 
@@ -364,6 +376,12 @@ function HandleExtraTooltips(specificDiv) {
         const globalName = el.getAttribute("data-global");
         const concept = jsonConceptTooltipsLocalized?.[globalName];
         if (!concept) return;
+
+        const structure = StructureTooltip(globalName, concept);
+        if (structure) {
+            if (el.previousElementSibling) addTooltipListeners(el.previousElementSibling, structure);
+            return;
+        }
 
         // a text icon ("<hp></hp>"), or the image of a property, structure... the link is to (Seal of Transference)
         const iconHtml = concept.image

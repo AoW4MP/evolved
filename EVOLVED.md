@@ -46,18 +46,19 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.
-  Every menu item has one of the game's round HUD medallions, 44px and centred on the stone, its ring 86% of its image
-  (as in `TomesIcon.png`) so all nine rings are the same size. Units, Heroes and Search
-  (upstream: the Tome Units star, `HeroIcon.png` and `search.png`) have `UnitsIcon.png`, `HeroesIcon.png` and
-  `SearchIcon.png`: the Culture Units, Heroes and Search medallions with their glyph cleared and the game's own text icon
-  (`Icons/TML/unit.png`, `unithero.png`, `inspect.png`) drawn smaller in its place, as small in its circle as the others'
-  glyphs. Abilities and World Map (upstream: the ability diamond and the Structures hammer) have Evolved's own
-  `AbilitiesIcon.png` and `WorldMapIcon.png` in `Icons/Interface/Header/`: the game's tactical-cast star and province
-  pin (`Icons/TML/`) in the medallions' beige, on a blank medallion made from the others. Spells, Empire and
-  Builds/Planners (upstream: `SpellsIcon.png`, the grey `EmpireIcon.png` and the info "i") have the world-map HUD's own
-  Spells, Empire and Item Forge buttons, `SpellsHudIcon.png`, `EmpireHudIcon.png` and `ForgeHudIcon.png`: each its
-  frame, gem and picture from the game's TopBar atlas (`INTERFACEASSETS` atlas 13, read with aow4_diff_tools'
-  `tmlicons.atlases`), the picture enlarged 25% so the glyph is as big as the other medallions'.
+  Every menu item is a round medallion in one frame, the world-map HUD's Research/Empire frame
+  (`ResearchButton_Frame`, from the game's TopBar atlas: `INTERFACEASSETS` atlas 13, read with aow4_diff_tools'
+  `tmlicons.atlases`), 44px and centred on the stone, the frame 86% of the image. In `Icons/Interface/Header/`:
+  - `TomesHudIcon.png`, `SpellsHudIcon.png`, `EmpireHudIcon.png` and `ForgeHudIcon.png` (Builds/Planners) are the HUD's
+    own Research, Spells, Empire and Item Forge buttons: their picture and glass from the same atlas, the picture
+    enlarged 25% so the glyph is as big as the others'. Upstream: `TomesIcon.png`, `SpellsIcon.png`, the grey
+    `EmpireIcon.png` and the info "i".
+  - `UnitsIcon.png`, `HeroesIcon.png` and `SearchIcon.png` (upstream: the Tome Units star, `HeroIcon.png` and
+    `search.png`) are the Culture Units, Heroes and Search medallions' spheres, their glyph cleared and the game's own
+    text icon (`Icons/TML/unit.png`, `unithero.png`, `inspect.png`) drawn smaller in its place.
+  - `AbilitiesIcon.png` and `WorldMapIcon.png` (upstream: the ability diamond and the Structures hammer) are the
+    game's tactical-cast star and province pin (`Icons/TML/`) in the medallions' beige, on a blank sphere made from
+    the site's other medallions.
   The "Updated:" date is 14px (11px on a phone), a size under the dataset's name.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
 and Settings and Donate are at the foot of the ☰ menu, a drawer on the cards' panel.

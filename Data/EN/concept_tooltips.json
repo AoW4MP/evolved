@@ -5236,7 +5236,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ASCENDED_ARTILLERIST_COMBAT_PROPERTY",
     "displayHtml": "Artillery Cover",
-    "description": "While the Ascended Artillerist is in combat:<bulletlist><bullet>At the start of the owner's <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink] enemies are struck for <eventColor>{ASCENDED_ARTILLERIST_COMBAT_PROPERTY_EFFECT_DAMAGE>DAMAGE>Physic}</eventColor> <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>",
+    "description": "While the Ascended Artillerist is in combat:<bulletlist><bullet>At the start of the owner's <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink] enemies are struck for 20 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>",
     "image": "0000048D000004CE"
   },
   "GLOBAL.PROPERTIES.ASHLAND_CAMOUFLAGE": {
@@ -5259,7 +5259,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ASTRAL_INFLUENCE_EMPOWERED_GROUP",
     "displayHtml": "Empowered Astral Influence",
-    "description": "Unit has:<bulletlist><bullet>-2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet><bullet>Base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks deal <eventColor>{ASTRAL_INFLUENCE_EMPOWERED_JUMP>ResolvedEffectMultiplier}</eventColor>% of the damage to another enemy within <eventColor>{ASTRAL_INFLUENCE_EMPOWERED_JUMP>MaxDistance}</eventColor> hexes.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>-2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet><bullet>Base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks deal 30% of the damage to another enemy within 3 hexes.</bullet></bulletlist>",
     "image": "000004A600000719"
   },
   "GLOBAL.PROPERTIES.ASTRAL_INFLUENCE_GROUP": {
@@ -5315,7 +5315,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.BATTLE_SHIELD",
     "displayHtml": "Battle Shields",
-    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach <eventColor>{ABJURER_GLYPH_PRECOG_60_THRESHOLD>ResolvedTriggerProportion}</eventColor>% and <eventColor>{ABJURER_GLYPH_PRECOG_30_THRESHOLD>ResolvedTriggerProportion}</eventColor>%, it gains [hyperlink,GLOBAL.PROPERTIES.PRECOGNITION]Precognition[/hyperlink].",
+    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach 60% and 30%, it gains [hyperlink,GLOBAL.PROPERTIES.PRECOGNITION]Precognition[/hyperlink].",
     "image": "00000497000039DD"
   },
   "GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT": {
@@ -5323,7 +5323,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT",
     "displayHtml": "Belt of the Berserker",
-    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach <eventColor>{BERSERKERS_RAGE_THRESHOLD_EVENT>ResolvedTriggerProportion}</eventColor>% or lower, grants this unit:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+    "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach 30% or lower, grants this unit:<bulletlist><bullet>3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STEADFAST]Steadfast[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
     "image": "000003E300004F08"
   },
   "GLOBAL.PROPERTIES.BESTOW_MASK_OF_PROSPERITY_CASTER": {
@@ -5339,7 +5339,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.BLESSED_ARMORS_GROUP",
     "displayHtml": "Blessed Armors",
-    "description": "This unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INNER_GRACE]Inner Grace[/hyperlink]</bullet><bullet>+<eventColor>{BLESSED_ARMORS_RESISTANCE>DEF_MOD>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
+    "description": "This unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INNER_GRACE]Inner Grace[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
     "image": "0000049700001359"
   },
   "GLOBAL.PROPERTIES.BLIGHTFALL_COMBAT_PROPERTY": {
@@ -5395,7 +5395,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CAVALRY_SLAYER",
     "displayHtml": "Cavalry Slayer",
-    "description": "This unit deals +<eventColor>{CAVALRY_SLAYER_DAMAGE_UP>ResolvedMultiplier}</eventColor>% damage to [hyperlink,GLOBAL.PROPERTIES.CAVALRY_GROUP]Optional Cavalry[/hyperlink] units.",
+    "description": "This unit deals +40% damage to [hyperlink,GLOBAL.PROPERTIES.CAVALRY_GROUP]Optional Cavalry[/hyperlink] units.",
     "image": "000003E3000055A5"
   },
   "GLOBAL.PROPERTIES.CELESTIAL_SLAYER": {
@@ -5403,7 +5403,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CELESTIAL_SLAYER",
     "displayHtml": "Celestial Slayer",
-    "description": "Base attacks deal +<eventColor>{CELESTIAL_SLAYER_DAMAGE>ResolvedMultiplier}</eventColor>% damage to [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units.",
+    "description": "Base attacks deal +40% damage to [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units.",
     "image": "000003E3000055A5"
   },
   "GLOBAL.PROPERTIES.CHAOS_BRAND_ON_DEATH": {
@@ -5442,7 +5442,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CHOSEN_ALIPAVAR",
     "displayHtml": "Chosen of Allipavar",
-    "description": "This unit gains:<bulletlist><bullet>+20 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attacks[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet></bulletlist>",
+    "description": "This unit gains:<bulletlist><bullet>+20 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+1/2 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attacks[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet></bulletlist>",
     "image": "000003E100002010"
   },
   "GLOBAL.PROPERTIES.CHOSEN_BOSZORKAN": {
@@ -5482,7 +5482,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CH_ASTRAL_PROPERTY_GROUP",
     "displayHtml": "Magic Origin Potential",
-    "description": "Unit has:<bulletlist><bullet>Attacks inflict [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink].</bullet><bullet>Grant <eventColor>{CH_ASTRAL_GIVE_OPERATION_POINTS>PointsToGive}</eventColor> <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>Attacks inflict [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink].</bullet><bullet>Grant 5 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet></bulletlist>",
     "image": "000004A600000710"
   },
   "GLOBAL.PROPERTIES.CH_ORDER_PROPERTY_GROUP": {
@@ -5514,7 +5514,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CLEANSING_FLAME_FLAME_BLESSED_CHAMPIONS_PROPERTY_GROUP",
     "displayHtml": "Flame Blessed Champions",
-    "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +<eventColor>{FLAME_BLESSED_CHAMPIONS_EXTRA_DAMAGE>DAMAGE>Spirit}</eventColor> <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base <eventColor>{BURNING_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +1/2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +1/2 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base 30/50/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D000007C8"
   },
   "GLOBAL.PROPERTIES.COLLECTORS_GIFT": {
@@ -5649,7 +5649,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COMBAT_TRAINED",
     "displayHtml": "Combat Trained",
-    "description": "This unit is under the control of a Player or Free City and gains:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{COMBAT_TRAINED_STATS>BONUS>DEFENSE>Armor}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+<eventColor>{COMBAT_TRAINED_STATS>BONUS>DEFENSE>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
+    "description": "This unit is under the control of a Player or Free City and gains:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
     "image": "00000497000038F7"
   },
   "GLOBAL.PROPERTIES.CONSECRATING_FIRESTORM": {
@@ -5697,7 +5697,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.COSMOS_MANIFEST_ORDER",
     "displayHtml": "Cosmos Manifest: Order",
-    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units gain <eventColor>{COSMOS_MANIFEST_MORALE>Morale Change Absolute}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet></bulletlist>",
+    "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units gain 10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Enemy units sustain 5 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet></bulletlist>",
     "image": "0000049700003D20"
   },
   "GLOBAL.PROPERTIES.COSMOS_MANIFEST_SHADOW": {
@@ -5713,7 +5713,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CRUEL_ABILITY_MODIFIER_PROPERTY",
     "displayHtml": "Cruel",
-    "description": "Unit has:<bulletlist><bullet>+<eventColor>{CRUEL_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against units with <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] of \"Low\" or worse.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>+30% damage against units with <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] of \"Low\" or worse.</bullet></bulletlist>",
     "image": "0000048D00001927"
   },
   "GLOBAL.PROPERTIES.CULT_OF_TYRANNY": {
@@ -5721,7 +5721,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CULT_OF_TYRANNY",
     "displayHtml": "Cult of Tyranny",
-    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AURA_OF_TYRANNY]Aura of Tyranny[/hyperlink]</bullet><bullet>Attacks gain base <eventColor>{CULT_OF_TYRANNY_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] and heal this unit for <eventColor>{CULT_OF_TYRANNY_HEALING>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AURA_OF_TYRANNY]Aura of Tyranny[/hyperlink]</bullet><bullet>Attacks gain base 60/90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] and heal this unit for 5/10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001AA2"
   },
   "GLOBAL.PROPERTIES.CURSE_OF_UNDEATH": {
@@ -5831,7 +5831,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.EMPOWERED_BEASTS_PROPERTY_GROUP",
     "displayHtml": "Empowered Beasts",
-    "description": "Enchanted unit:<bulletlist><bullet>Deals +<eventColor>{EMPOWERED_BEASTS_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet><bullet>Gains +10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink].</bullet></bulletlist>",
+    "description": "Enchanted unit:<bulletlist><bullet>Deals +20% damage.</bullet><bullet>Gains +10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink].</bullet></bulletlist>",
     "image": "000003E300004AFF"
   },
   "GLOBAL.PROPERTIES.ENCHAINED": {
@@ -5882,7 +5882,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.EXPLOIT_VULNERABILITY",
     "displayHtml": "Exploit Vulnerability",
-    "description": "Unit's attacks have a Base <eventColor>{CULT_OF_TYRANNY_RESISTANCE>ResolvedStrength}</eventColor>% chance of:<bulletlist><bullet>Inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Healing self for <eventColor>{CULT_OF_TYRANNY_HEALING>NumHitpointsToRestore}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Unit's attacks have a Base 60/90% chance of:<bulletlist><bullet>Inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Healing self for 5/10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001AA2"
   },
   "GLOBAL.PROPERTIES.EYE_OF_FIRE_PROPERTY_GROUP": {
@@ -5913,7 +5913,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FEDERATE_LEVY",
     "displayHtml": "Federate Levy",
-    "description": "This unit is Levied from a Vassal:<bulletlist><bullet>Attacks inflict [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_SOLDIER]Federate Soldier[/hyperlink] targets for +20% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_SOLDIER]Federate Soldier[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{FEDERATE_LEVY_XP_BONUS>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
+    "description": "This unit is Levied from a Vassal:<bulletlist><bullet>Attacks inflict [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_SOLDIER]Federate Soldier[/hyperlink] targets for +20% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_SOLDIER]Federate Soldier[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+2 [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
     "image": "0000048D00001FBC"
   },
   "GLOBAL.PROPERTIES.FEDERATE_SOLDIER": {
@@ -5921,7 +5921,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FEDERATE_SOLDIER",
     "displayHtml": "Federate Soldier",
-    "description": "This unit is part of the core Federation:<bulletlist><bullet>Bonus damage and accuracy against units with [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] targets for +20% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{FEDERATE_SOLDIER_XP_BONUS>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
+    "description": "This unit is part of the core Federation:<bulletlist><bullet>Bonus damage and accuracy against units with [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] targets for +20% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+2 [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
     "image": "0000048D00001FBD"
   },
   "GLOBAL.PROPERTIES.FEUDAL_MONARCHS_DOMINION": {
@@ -5929,7 +5929,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FEUDAL_MONARCHS_DOMINION",
     "displayHtml": "Monarch's Dominion",
-    "description": "The unit is the absolute Monarch of their faction:<bulletlist><bullet>In combat, activates [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] on friendly units.</bullet><bullet>While army leader, all units in the army with [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] cost -100% [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>This unit gains: +<eventColor>{LED_BY_MONARCH_STAT>BONUS>DEFENSE>Armor}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink], +<eventColor>{LED_BY_MONARCH_STAT>BONUS>DEFENSE>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink], +<eventColor>{LED_BY_MONARCH_MOD>ResolvedMultiplier}</eventColor>% damage, and +10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist>",
+    "description": "The unit is the absolute Monarch of their faction:<bulletlist><bullet>In combat, activates [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] on friendly units.</bullet><bullet>While army leader, all units in the army with [hyperlink,GLOBAL.PROPERTIES.FOR_THE_MONARCH]For the Monarch[/hyperlink] cost -100% [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>This unit gains: +1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink], +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink], +10% damage, and +10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist>",
     "image": "0000048D000011D8"
   },
   "GLOBAL.PROPERTIES.FEY_SLAYER": {
@@ -5937,7 +5937,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FEY_SLAYER",
     "displayHtml": "Fey Slayer",
-    "description": "+<eventColor>{FEY_SLAYER_DAMAGE>ResolvedMultiplier}</eventColor>% damage to [hyperlink,GLOBAL.PROPERTIES.FEY]Fey[/hyperlink] units.",
+    "description": "+40% damage to [hyperlink,GLOBAL.PROPERTIES.FEY]Fey[/hyperlink] units.",
     "image": "000003E3000055A5"
   },
   "GLOBAL.PROPERTIES.FIEND": {
@@ -5953,7 +5953,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FIEND_SLAYER",
     "displayHtml": "Fiend Slayer",
-    "description": "Base attacks deal +<eventColor>{FIEND_SLAYER_DAMAGE>ResolvedMultiplier}</eventColor>% damage to [hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] units.",
+    "description": "Base attacks deal +40% damage to [hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] units.",
     "image": "000003E3000055A5"
   },
   "GLOBAL.PROPERTIES.FIRE_HAZARD_IMMUNITY": {
@@ -6001,7 +6001,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FROST_ARROWS_PROPERTY_GROUP",
     "displayHtml": "Frost Arrows",
-    "description": "Unit's attacks have:<bulletlist><bullet>+<eventColor>{FROST_BLADES_EXTRA_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>A base <eventColor>{CHILLED_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Unit's attacks have:<bulletlist><bullet>+1/2/4 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>A base 30/50/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "000003E30000638F"
   },
   "GLOBAL.PROPERTIES.FROST_BLADES_PROPERTY_GROUP": {
@@ -6009,7 +6009,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FROST_BLADES_PROPERTY_GROUP",
     "displayHtml": "Frost Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+<eventColor>{FROST_BLADES_EXTRA_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+<eventColor>{FROST_BLADES_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+    "description": "Base attacks gain:<bulletlist><bullet>+1/2/4 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
   },
   "GLOBAL.PROPERTIES.GIANT": {
     "name": "Giant",
@@ -6149,7 +6149,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.HONOR_GUARD",
     "displayHtml": "Honor Guard",
-    "description": "Friendly units adjacent to the wielder of the Kingsblade:<bulletlist><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.STALWART]Stalwart[/hyperlink]</bullet><bullet>Deal +<eventColor>{KINGSBLADE_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage</bullet></bulletlist>",
+    "description": "Friendly units adjacent to the wielder of the Kingsblade:<bulletlist><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.STALWART]Stalwart[/hyperlink]</bullet><bullet>Deal +20% damage</bullet></bulletlist>",
     "image": "000003E100001384"
   },
   "GLOBAL.PROPERTIES.HOSTILE_OCEANS_SEA_STORM_COMBAT_AUTO_SPELL": {
@@ -6165,7 +6165,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.HOSTILE_OCEANS_UNIT_PROPERTY",
     "displayHtml": "Hostile Seas",
-    "description": "This unit is in a Sea Storm and subject to the following:<bulletlist><bullet>This unit [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].</bullet><bullet>This unit suffers -<eventColor>{REALM_TRAIT_UNIT_PROPERTY_HEALTH_DRAIN>HealthLoss}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] each <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>This unit suffers <eventColor>{REALM_TRAIT_UNIT_PROPERTY_STAT_BONUS>BONUS>SightRange}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink].</bullet><bullet>This unit gains [hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink].</bullet></bulletlist>",
+    "description": "This unit is in a Sea Storm and subject to the following:<bulletlist><bullet>This unit [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].</bullet><bullet>This unit suffers -<eventColor>{REALM_TRAIT_UNIT_PROPERTY_HEALTH_DRAIN>HealthLoss}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] each <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>This unit suffers -3 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink].</bullet><bullet>This unit gains [hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink].</bullet></bulletlist>",
     "image": "0000048D00000498"
   },
   "GLOBAL.PROPERTIES.HS_FATAL_STRIKES_MODIFIER_PROPERTY": {
@@ -6173,7 +6173,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.HS_FATAL_STRIKES_MODIFIER_PROPERTY",
     "displayHtml": "Fatal Strikes",
-    "description": "Damage increases as the target loses health, up to +<eventColor>{HS_FATAL_STRIKES_DAMAGE>ResolvedMultiplier}</eventColor>%.",
+    "description": "Damage increases as the target loses health, up to +50%.",
     "image": "0000048B00000574"
   },
   "GLOBAL.PROPERTIES.HS_SPIRITBREAKER_MOD": {
@@ -6237,7 +6237,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.LIEGE_LORD",
     "displayHtml": "Liege Lord",
-    "description": "This hero is the Liege Lord of their House, granting them and House units in their army:<bulletlist><bullet>-<eventColor>{LIEGE_LORD_STACK_UPKEEP_MODIFIER>ResolvedUpkeepModifier}</eventColor>% base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>Regenerate an additional +<eventColor>{LIEGE_LORD_STACK_PROPERTY_STAT_BONUS>BONUS>Regen}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per World Map <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>+5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist><br>This bonus increases as this Hero gains <renown></renown> [hyperlink,GLOBAL.RenownConcept]Renown[/hyperlink].",
+    "description": "This hero is the Liege Lord of their House, granting them and House units in their army:<bulletlist><bullet>-10% base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>Regenerate an additional +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per World Map <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>+5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist><br>This bonus increases as this Hero gains <renown></renown> [hyperlink,GLOBAL.RenownConcept]Renown[/hyperlink].",
     "image": "0000048D000012A7"
   },
   "GLOBAL.PROPERTIES.LINKED_MINDS_PROPERTY_GROUP": {
@@ -6293,7 +6293,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.MERFOLK",
     "displayHtml": "Merfolk",
-    "description": "A merfolk unit with:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AMPHIBIOUS_MOVEMENT]Amphibious[/hyperlink]</bullet><bullet>When in water this unit has:<bulletlist><bullet><eventColor>{VERY_FAST_MOVEMENT>TacticalMovePoints}</eventColor> <combatspeed></combatspeed> [hyperlink,GLOBAL.CombatSpeedConcept]Combat Speed[/hyperlink].</bullet><bullet>+<eventColor>{MERFOLK_TAIL_DAMAGE>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist></bullet></bulletlist>",
+    "description": "A merfolk unit with:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AMPHIBIOUS_MOVEMENT]Amphibious[/hyperlink]</bullet><bullet>When in water this unit has:<bulletlist><bullet>6 <combatspeed></combatspeed> [hyperlink,GLOBAL.CombatSpeedConcept]Combat Speed[/hyperlink].</bullet><bullet>+10% damage.</bullet></bulletlist></bullet></bulletlist>",
     "image": "0000048B0000173C"
   },
   "GLOBAL.PROPERTIES.MIGHT_MAKES_RIGHT_DUMMY": {
@@ -6308,7 +6308,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.MISTY",
     "displayHtml": "Misty",
-    "description": "Units in this province have:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink]</bullet><bullet><eventColor>{LINGERING_MIST_VISION_REDUCTION>BONUS>SightRange}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] during combat:<bulletlist><bullet>Various [hyperlink,GLOBAL.MistConcept]Mist[/hyperlink] clouds appear.</bullet></bulletlist>",
+    "description": "Units in this province have:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink]</bullet><bullet>-2 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] during combat:<bulletlist><bullet>Various [hyperlink,GLOBAL.MistConcept]Mist[/hyperlink] clouds appear.</bullet></bulletlist>",
     "image": "000004970000052F"
   },
   "GLOBAL.PROPERTIES.MOLTEN_ARMOR": {
@@ -6332,7 +6332,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.NAVAL_UNIT",
     "displayHtml": "Embarked Unit",
-    "description": "This land unit is embarked and has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.LIMITED_TURNING]Limited Maneuverability[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LARGE_TARGET]Large Target[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.REINFORCED]Reinforced[/hyperlink]</bullet><bullet><eventColor>{EMBARKED_RESISTANCE>REDUCTION>Fire}</eventColor> <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink]</bullet></bulletlist>",
+    "description": "This land unit is embarked and has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.LIMITED_TURNING]Limited Maneuverability[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LARGE_TARGET]Large Target[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.REINFORCED]Reinforced[/hyperlink]</bullet><bullet>-2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink]</bullet></bulletlist>",
     "image": "0000041B00001C26"
   },
   "GLOBAL.PROPERTIES.NO_RESPITE_PROPERTY": {
@@ -6651,7 +6651,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.REINFORCED_ARMOR",
     "displayHtml": "Reinforced Armor",
-    "description": "Unit gains +<eventColor>{REINFORCED_ARMOR>DEF_MOD>Armor}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and +<eventColor>{REINFORCED_ARMOR>DEF_MOD>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink] due to being produced in a City with a Smiths' Guild.",
+    "description": "Unit gains +1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink] due to being produced in a City with a Smiths' Guild.",
     "image": "8D1FD0C9000000A1"
   },
   "GLOBAL.PROPERTIES.REMORSEFUL_SEAL_DEBUFF_GROUP": {
@@ -6675,14 +6675,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.RESURGING_STRENGTH",
     "displayHtml": "Resurgent Strength",
-    "description": "When this unit's [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] are <eventColor>{RESURGING_STRENGTH>ResolvedTriggerProportion}</eventColor>% or lower, it becomes 3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink]."
+    "description": "When this unit's [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] are 50% or lower, it becomes 3 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.RIVER_WALK": {
     "name": "River Walk",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.RIVER_WALK",
     "displayHtml": "River Walk",
-    "description": "Moving through Rivers costs <eventColor>{RIVER_WALK>CostOverride}</eventColor> <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] instead of 12.",
+    "description": "Moving through Rivers costs 6 <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] instead of 12.",
     "image": "000003BD0000131C"
   },
   "GLOBAL.PROPERTIES.SANDSTORMS_UNIT_PROPERTY": {
@@ -6698,7 +6698,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SATIATED_RIFT",
     "displayHtml": "Satiated Rift",
-    "description": "This unit:<bulletlist><bullet>Cannot use [hyperlink,GLOBAL.PROPERTIES.ABDUCT]Abduct[/hyperlink].</bullet><bullet>Is [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink].</bullet><bullet>Summons an [hyperlink,GLOBAL.UNITS.UMBRAL_SPLITTERLING]Splitterling[/hyperlink] adjacent to this unit at the end of the turn.</bullet><bullet>Heals <eventColor>{SATIATED_RIFT_HEAL>ResolvedProportionHeal}</eventColor>% of their maximum hit points as [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] at the end of the turn.</bullet></bulletlist>",
+    "description": "This unit:<bulletlist><bullet>Cannot use [hyperlink,GLOBAL.PROPERTIES.ABDUCT]Abduct[/hyperlink].</bullet><bullet>Is [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink].</bullet><bullet>Summons an [hyperlink,GLOBAL.UNITS.UMBRAL_SPLITTERLING]Splitterling[/hyperlink] adjacent to this unit at the end of the turn.</bullet><bullet>Heals 10% of their maximum hit points as [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] at the end of the turn.</bullet></bulletlist>",
     "image": "0000049700000CEE"
   },
   "GLOBAL.PROPERTIES.SCORCHING_STENCH_OF_SUFFERING": {
@@ -6730,7 +6730,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SHADOW_SICKNESS",
     "displayHtml": "Umbral Malady",
-    "description": "The Unit suffers:<bulletlist><bullet><eventColor>{SHADOW_SICKNESS>BONUS>SightRange}</eventColor> Vision range.</bullet><bullet>Cannot regenerate [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] in the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].</bullet><bullet>Loses -6 <hp></hp> Hit Points at the end of each <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in the World Map.</bullet></bulletlist>",
+    "description": "The Unit suffers:<bulletlist><bullet>-1 Vision range.</bullet><bullet>Cannot regenerate [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] in the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].</bullet><bullet>Loses -6 <hp></hp> Hit Points at the end of each <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in the World Map.</bullet></bulletlist>",
     "image": "0000049300000397"
   },
   "GLOBAL.PROPERTIES.SIGN_OF_THE_CLEFT_SHIELD_PROPERTY_GROUP": {
@@ -6738,7 +6738,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SIGN_OF_THE_CLEFT_SHIELD_PROPERTY_GROUP",
     "displayHtml": "Sign of the Cleft Shield",
-    "description": "Unit has:<bulletlist><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Base attacks deal +<eventColor>{SIGN_OF_THE_CLEFT_SHIELD_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Base attacks deal +40% damage.</bullet></bulletlist>",
     "image": "000004A600000574"
   },
   "GLOBAL.PROPERTIES.SIGN_OF_THE_HUNTRESS_PROPERTY_GROUP": {
@@ -6746,7 +6746,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SIGN_OF_THE_HUNTRESS_PROPERTY_GROUP",
     "displayHtml": "Sign of the Huntress",
-    "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks have +<eventColor>{SIGN_OF_THE_HUNTRESS_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage and -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].",
+    "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks have +30% damage and -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].",
     "image": "000004A6000004D0"
   },
   "GLOBAL.PROPERTIES.SIGN_OF_THE_LUMBERING_STAFF_PROPERTY_GROUP": {
@@ -6762,7 +6762,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SIGN_OF_THE_VANGUARD_PROPERTY_GROUP",
     "displayHtml": "Sign Of The Vanguard",
-    "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -<eventColor>{SIGN_OF_THE_VANGUARD_ACCURACY_TARGET>ResolvedAccuracyModifier}</eventColor>% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -<eventColor>{SIGN_OF_THE_VANGUARD_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -20% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -20% damage.</bullet></bulletlist>",
     "image": "000004A6000006E4"
   },
   "GLOBAL.PROPERTIES.SLOW_MOVEMENT": {
@@ -6800,7 +6800,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SOLAR_WINTER_PROPERTY_GROUP",
     "displayHtml": "Rays of Winter",
-    "description": "Unit has:<bulletlist><bullet><eventColor>{SOLAR_WINTER_STAT_BONUS>BONUS>Regen}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per turn.</bullet><bullet><eventColor>{SOLAR_WINTER_STAT_BONUS>BONUS>SightRange}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>-5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per turn.</bullet><bullet>-2 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>",
     "image": "000004A60000067A"
   },
   "GLOBAL.PROPERTIES.SOTAM3_AUTUMN_DISCIPLE_RULER_PROPERTY_GROUP": {
@@ -6872,7 +6872,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SOULBINDERS_GROUP",
     "displayHtml": "Souldraining Strikes",
-    "description": "Unit has:<bulletlist><bullet>A base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink] on base attacks and [hyperlink,GLOBAL.DebuffConcept]Debuff[/hyperlink] abilities.</bullet><bullet>+<eventColor>{SOULBINDERS_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against units that are [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Unit has:<bulletlist><bullet>A base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink] on base attacks and [hyperlink,GLOBAL.DebuffConcept]Debuff[/hyperlink] abilities.</bullet><bullet>+10% damage against units that are [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B000016F3"
   },
   "GLOBAL.PROPERTIES.SOULVAULT_UNIT_PROPERTY": {
@@ -6880,7 +6880,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SOULVAULT_UNIT_PROPERTY",
     "displayHtml": "Soulvault Meditation",
-    "description": "This Hero is [hyperlink,GLOBAL.GovernorConcept]Governor[/hyperlink] of a city containing a Soulvault that grants them <eventColor>{SOULVAULT_UNIT_PROPERTY>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+    "description": "This Hero is [hyperlink,GLOBAL.GovernorConcept]Governor[/hyperlink] of a city containing a Soulvault that grants them 20 [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
     "image": "0000048D00001A62"
   },
   "GLOBAL.PROPERTIES.SPAWNKIN_PROPERTY_GROUP": {
@@ -6888,7 +6888,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.SPAWNKIN_PROPERTY_GROUP",
     "displayHtml": "Spawnkin",
-    "description": "Unit has:<bulletlist><bullet>An increased number of units in formation.</bullet><bullet>+<eventColor>{SPAWNKIN_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>An increased number of units in formation.</bullet><bullet>+20% damage.</bullet></bulletlist>",
     "image": "000003E300005A18"
   },
   "GLOBAL.PROPERTIES.STAND_TOGETHER": {
@@ -6896,7 +6896,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.STAND_TOGETHER",
     "displayHtml": "Stand Together",
-    "description": "Unit deals +<eventColor>{STAND_TOGETHER_DAMAGE>ResolvedMultiplier}</eventColor>% damage when adjacent to another friendly unit with <abilityblue>Stand Together</abilityblue>.",
+    "description": "Unit deals +20% damage when adjacent to another friendly unit with <abilityblue>Stand Together</abilityblue>.",
     "image": "000003BD00002DDF"
   },
   "GLOBAL.PROPERTIES.STARSEEDS_COMBAT_PROPERTY": {
@@ -6920,7 +6920,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.STARSEEDS_PROPERTY_GROUP",
     "displayHtml": "Living Forest",
-    "description": "Unit has:<bulletlist><bullet><eventColor>{STARSEEDS_STAT_BONUS>BONUS>Regen}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per turn.</bullet><bullet><eventColor>{STARSEEDS_STAT_BONUS>BONUS>SightRange}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>-5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per turn.</bullet><bullet>-1 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>",
     "image": "000004E40000034E"
   },
   "GLOBAL.PROPERTIES.STARS_ALIGNED": {
@@ -6967,7 +6967,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.THE_DESTROYER_PROPERTY",
     "displayHtml": "Might of the Destroyer",
-    "description": "This unit gains:<bulletlist><bullet>+60 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+<eventColor>{EXTRA_RETALIATION>NumTriggersToAdd}</eventColor> [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attacks[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>",
+    "description": "This unit gains:<bulletlist><bullet>+60 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+1/2 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attacks[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>",
     "image": "000003E100002048"
   },
   "GLOBAL.PROPERTIES.TIER_1_PROP_GROUP": {
@@ -7028,7 +7028,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.TSR_CSP_RELIC_UNIT_PROP",
     "displayHtml": "Blessing of Storms",
-    "description": "Unit has:<bulletlist><bullet>+3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] on base attacks, [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]increased[/hyperlink] for Single Shot attacks.</bullet><bullet>+<eventColor>{RELIC_UNIT_EXTRA_RESISTANCE>DEF_MOD>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+5 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ATTUNEMENT_FORTUNE]Attunement: Fortune[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_EFFECT_IMMUNITY_ELECTRIFY]Status Effect Immunity: Electrified[/hyperlink]</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>+3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] on base attacks, [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]increased[/hyperlink] for Single Shot attacks.</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+5 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ATTUNEMENT_FORTUNE]Attunement: Fortune[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_EFFECT_IMMUNITY_ELECTRIFY]Status Effect Immunity: Electrified[/hyperlink]</bullet></bulletlist>",
     "image": "00000497000025B8"
   },
   "GLOBAL.PROPERTIES.TSR_DGC_COBWEB_INFESTATION": {
@@ -7068,7 +7068,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.TSR_HOE_RELIC_UNIT_PROP",
     "displayHtml": "Blessing of Rock",
-    "description": "Unit has:<bulletlist><bullet>+<eventColor>{RELIC_UNIT_EXTRA_DMG>ResolvedMultiplier}</eventColor>% damage.</bullet><bullet>+2 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXPEDITED_MOUNTAIN]Mountain Walk[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.CAVE_WALK]Cave Walk[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_EFFECT_IMMUNITY_BLEEDING]Status Effect Immunity: Bleeding[/hyperlink]</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>+20% damage.</bullet><bullet>+2 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXPEDITED_MOUNTAIN]Mountain Walk[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.CAVE_WALK]Cave Walk[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_EFFECT_IMMUNITY_BLEEDING]Status Effect Immunity: Bleeding[/hyperlink]</bullet></bulletlist>",
     "image": "00000497000025B7"
   },
   "GLOBAL.PROPERTIES.TSR_MS_RELIC_UNIT_PROP": {
@@ -7076,7 +7076,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.TSR_MS_RELIC_UNIT_PROP",
     "displayHtml": "Blessing of Flame",
-    "description": "Unit has:<bulletlist><bullet>+3 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] on base attacks, [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]increased[/hyperlink] for Single Shot attacks.</bullet><bullet>+<eventColor>{RELIC_UNIT_EXTRA_RESISTANCE>DEF_MOD>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+5 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.VENGEFUL_FLAMES]Vengeful Flames[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_EFFECT_IMMUNITY_BURNING]Status Effect Immunity: Burning[/hyperlink]</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>+3 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] on base attacks, [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]increased[/hyperlink] for Single Shot attacks.</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+5 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.VENGEFUL_FLAMES]Vengeful Flames[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_EFFECT_IMMUNITY_BURNING]Status Effect Immunity: Burning[/hyperlink]</bullet></bulletlist>",
     "image": "00000497000025B9"
   },
   "GLOBAL.PROPERTIES.TSR_RFR_GWL_WORM_PROPERTY": {
@@ -7107,7 +7107,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.UMBRAL_DEMON_SLAYER",
     "displayHtml": "Umbral Demon Slayer",
-    "description": "Base attacks deal +<eventColor>{UMBRAL_DEMON_SLAYER_DAMAGE>ResolvedMultiplier}</eventColor>% damage to [hyperlink,GLOBAL.PROPERTIES.UMBRAL_DEMON]Umbral Demon[/hyperlink] units.",
+    "description": "Base attacks deal +40% damage to [hyperlink,GLOBAL.PROPERTIES.UMBRAL_DEMON]Umbral Demon[/hyperlink] units.",
     "image": "000003E3000055A5"
   },
   "GLOBAL.PROPERTIES.UMBRAL_DRAIN": {
@@ -7123,7 +7123,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT",
     "displayHtml": "Athletics",
-    "description": "Grants <eventColor>{FAST_MOVEMENT>TacticalMovePoints}</eventColor> <combatspeed></combatspeed> [hyperlink,GLOBAL.CombatSpeedConcept]Combat Speed[/hyperlink]."
+    "description": "Grants 5/6 <combatspeed></combatspeed> [hyperlink,GLOBAL.CombatSpeedConcept]Combat Speed[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.VIGOR_HP": {
     "name": "Enhanced Vigor",
@@ -7170,14 +7170,14 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.WILLBREAKER_MOD",
     "displayHtml": "Cruel",
-    "description": "Unit has:<bulletlist><bullet>+<eventColor>{CRUEL_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against units with <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] of \"Low\" or worse.</bullet></bulletlist>"
+    "description": "Unit has:<bulletlist><bullet>+30% damage against units with <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] of \"Low\" or worse.</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.XORN_JAVELIN_GROUP": {
     "name": "Portent of Rousing",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.XORN_JAVELIN_GROUP",
     "displayHtml": "Portent of Rousing",
-    "description": "Base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] reduced by -<eventColor>{XORN_JAVELIN_UPKEEP_MODIFIER>ResolvedUpkeepModifier}</eventColor>%.",
+    "description": "Base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] reduced by -50%.",
     "image": "000004A600000563"
   },
   "GLOBAL.SIEGE_PROJECTS.CAPTIVATING_MIST": {
@@ -7273,7 +7273,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.FROST_BLADES_HERO_SKILL",
     "displayHtml": "Frost Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+<eventColor>{FROST_BLADES_EXTRA_DAMAGE>DAMAGE>Frost}</eventColor> <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+<eventColor>{FROST_BLADES_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Base attacks gain:<bulletlist><bullet>+1/2/4 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000045E00000373"
   },
   "GLOBAL.SKILLS.HS_ASTRAL_WISP_RITUAL": {
@@ -7281,7 +7281,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.HS_ASTRAL_WISP_RITUAL",
     "displayHtml": "Astral Keeper Ritual",
-    "description": "<bulletlist><bullet>Gain +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Gain +<eventColor>{ASTRAL_KEEPER_RITUAL_HP>BONUS>DEFENSE>Resistance}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Gain +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Gain +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
     "image": "0000049700000C2C"
   },
   "GLOBAL.SKILLS.HS_CLEANSING_FLAMEHERALD": {
@@ -7297,7 +7297,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.LIGHTNING_MAGIC",
     "displayHtml": "Lightning Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+<eventColor>{LIGHTNING_MAGIC_EXTRA_DAMAGE>DAMAGE>Shock}</eventColor> <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+<eventColor>{LIGHTNING_BLADES_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Base attacks gain:<bulletlist><bullet>+2/4 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B00001219"
   },
   "GLOBAL.SKILLS.SEARING_STEEL_HS": {
@@ -7305,7 +7305,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.SEARING_STEEL_HS",
     "displayHtml": "Searing Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+<eventColor>{SEARING_STEEL_HS_EXTRA_DAMAGE>DAMAGE>Fire}</eventColor> <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+<eventColor>{SEARING_STEEL_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Base attacks gain:<bulletlist><bullet>+2/4 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B000008FB"
   },
   "GLOBAL.SPECIAL_OPERATIONS.ABRADE_MOUNTAIN": {
@@ -7369,7 +7369,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.AMPLIFIED_ARROWS",
     "displayHtml": "Amplifying Imbuement",
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +<eventColor>{AMPLIFIED_ARROWS_EXTRA_DAMAGE>DAMAGE>Shock}</eventColor> <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Deal 3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] to <eventColor>{AMPLIFIED_ARROWS_JUMP>MaxJumps}</eventColor> other targets within <eventColor>{AMPLIFIED_ARROWS_JUMP>MaxDistance}</eventColor> hexes.</bullet><bullet>Have a base <eventColor>{SUNDERED_RESISTANCE_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] on each target hit for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +3/6 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Deal 3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] to 2 other targets within 2 hexes.</bullet><bullet>Have a base 30/60/90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] on each target hit for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "000003E30000639C"
   },
   "GLOBAL.SPECIAL_OPERATIONS.ARCANE_RENEWAL": {
@@ -7409,7 +7409,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.BLINDING_SANDS_SPELL",
     "displayHtml": "Call Blinding Sands",
-    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Each enemy unit has a 60% chance of becoming [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for <eventColor>{BLINDED_EFFECT_DESCRIPTION>NumTurns}</eventColor> turn.</bullet></bulletlist>",
+    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Each enemy unit has a 60% chance of becoming [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1/2 turn.</bullet></bulletlist>",
     "image": "000004A60000083E"
   },
   "GLOBAL.SPECIAL_OPERATIONS.BLOOD_MOON_RITUAL": {
@@ -7473,7 +7473,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.CRYSTAL_FOCUS",
     "displayHtml": "Crystal Focus",
-    "description": "Attacks of enchanted units gain:<bulletlist><bullet>A base <eventColor>{VOLATILE_CHARGE_RESISTANCE>ResolvedStrength}</eventColor>% chance of applying [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink].</bullet></bulletlist>",
+    "description": "Attacks of enchanted units gain:<bulletlist><bullet>A base 30/60/90/120% chance of applying [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink].</bullet></bulletlist>",
     "image": "000004970000159F"
   },
   "GLOBAL.SPECIAL_OPERATIONS.DARK_KNOWLEDGE_RITUAL": {
@@ -7521,7 +7521,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.ENCHANTED_CROW",
     "displayHtml": "Enchanted Crow Companion",
-    "description": "Grants +<eventColor>{ENCHANTED_CROW_STATS_BONUS>BONUS>SightRange}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] on the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].",
+    "description": "Grants +2 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] on the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].",
     "image": "0000041300001553"
   },
   "GLOBAL.SPECIAL_OPERATIONS.ENTRHALL_POPULATION": {
@@ -7569,7 +7569,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.FRACTURED_TRANSFORMATION",
     "displayHtml": "Fractured Transformation",
-    "description": "Target race becomes fractured:<bulletlist><bullet>Attacks have a base <eventColor>{DISRUPTION_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]. This effect is increased for Single Shot attacks.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.MANA_STARVED]Mana Starved[/hyperlink].</bullet><bullet>Has all its other enchantments and transformations disabled. For each disabled gain:<bulletlist><bullet>5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{FRACTURED_TRANSFORMATION_UPGRADE_DAMAGE>ResolvedMultiplier}</eventColor>% damage</bullet></bulletlist></bullet></bulletlist>",
+    "description": "Target race becomes fractured:<bulletlist><bullet>Attacks have a base 30/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]. This effect is increased for Single Shot attacks.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.MANA_STARVED]Mana Starved[/hyperlink].</bullet><bullet>Has all its other enchantments and transformations disabled. For each disabled gain:<bulletlist><bullet>5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+5% damage</bullet></bulletlist></bullet></bulletlist>",
     "image": "000004970000382B"
   },
   "GLOBAL.SPECIAL_OPERATIONS.FREEZE_THE_LAND": {
@@ -7593,7 +7593,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.GIFT_OF_THE_OLD_BLOOD",
     "displayHtml": "Gift of the Old Blood",
-    "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LIFEDRINKER]Lifedrinker[/hyperlink].</bullet><bullet>Base attacks have a base <eventColor>{BLOOD_PARASITE_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
+    "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LIFEDRINKER]Lifedrinker[/hyperlink].</bullet><bullet>Base attacks have a base 30/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
     "image": "0000049700003439"
   },
   "GLOBAL.SPECIAL_OPERATIONS.GLOOMSTRIDER_TRANSFORMATION": {
@@ -7657,7 +7657,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.LIGHTNING_BLADES",
     "displayHtml": "Lightning Blades",
-    "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+<eventColor>{LIGHTNING_BLADES_EXTRA_DAMAGE>DAMAGE>Shock}</eventColor> <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+<eventColor>{LIGHTNING_BLADES_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2/4 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B0000121F"
   },
   "GLOBAL.SPECIAL_OPERATIONS.MAGESLAYER_BLADES": {
@@ -7665,7 +7665,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.MAGESLAYER_BLADES",
     "displayHtml": "Disrupting Weapons",
-    "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>A base <eventColor>{DISRUPTION_RESISTANCE>ResolvedStrength}</eventColor>% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for <eventColor>{DISRUPTION_DISABLE>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>A base 30/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 1/2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000046A0000021B"
   },
   "GLOBAL.SPECIAL_OPERATIONS.MAGE_BANE_RITUAL": {
@@ -7744,7 +7744,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.SIGN_OF_THE_CLEFT_SHIELD_UNIT_ENCHANTMENT",
     "displayHtml": "Sign of the Cleft Shield",
-    "description": "Unit has:<bulletlist><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Base attacks deal +<eventColor>{SIGN_OF_THE_CLEFT_SHIELD_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Base attacks deal +40% damage.</bullet></bulletlist>",
     "image": "000004A60000057A"
   },
   "GLOBAL.SPECIAL_OPERATIONS.SIGN_OF_THE_HUNTRESS_UNIT_ENCHANTMENT": {
@@ -7752,7 +7752,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.SIGN_OF_THE_HUNTRESS_UNIT_ENCHANTMENT",
     "displayHtml": "Sign of the Huntress",
-    "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks have +<eventColor>{SIGN_OF_THE_HUNTRESS_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage and -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].",
+    "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks have +30% damage and -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].",
     "image": "000004A6000004DD"
   },
   "GLOBAL.SPECIAL_OPERATIONS.SIGN_OF_THE_LUMBERING_STAFF_UNIT_ENCHANTMENT": {
@@ -7768,7 +7768,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.SIGN_OF_THE_VANGUARD_UNIT_ENCHANTMENT",
     "displayHtml": "Sign Of The Vanguard",
-    "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -<eventColor>{SIGN_OF_THE_VANGUARD_ACCURACY_TARGET>ResolvedAccuracyModifier}</eventColor>% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -<eventColor>{SIGN_OF_THE_VANGUARD_DAMAGE_MULTIPLIER>ResolvedMultiplier}</eventColor>% damage.</bullet></bulletlist>",
+    "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -20% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -20% damage.</bullet></bulletlist>",
     "image": "000004A6000006EA"
   },
   "GLOBAL.SPECIAL_OPERATIONS.SOULCURSE_OF_GLUTTONY": {
@@ -7869,7 +7869,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.UMBRAL_FLESH",
     "displayHtml": "Umbral Flesh",
-    "description": "Gives the target race blessings of the Umbral Abyss, granting them:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS_IMMUNITY]Umbral Malady Immunity[/hyperlink]</bullet><bullet>While in [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink] terrain units gain:<bulletlist><bullet>+10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>+<eventColor>{GLOOM_SHEPHERD_HEALTH_REGEN>BONUS>Regen}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] on the world map.</bullet></bulletlist></bullet><bullet>[hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] and [hyperlink,GLOBAL.OutpostConcept]Outposts[/hyperlink] of the race:<bulletlist><bullet>Gain +2 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income for each province with Gloom terrain.</bullet><bullet>Ignore <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] penalties from Gloom terrain.</bullet></bulletlist></bullet><bullet>Hero units gain [hyperlink,GLOBAL.PROPERTIES.GLOOM_SHEPHERD]Gloom Shepherd[/hyperlink].</bullet></bulletlist>This transformation is incompatible with [hyperlink,GLOBAL.SPECIAL_OPERATIONS.PURE_SOUL]Pure Soul[/hyperlink].",
+    "description": "Gives the target race blessings of the Umbral Abyss, granting them:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS_IMMUNITY]Umbral Malady Immunity[/hyperlink]</bullet><bullet>While in [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink] terrain units gain:<bulletlist><bullet>+10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>+12 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] on the world map.</bullet></bulletlist></bullet><bullet>[hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] and [hyperlink,GLOBAL.OutpostConcept]Outposts[/hyperlink] of the race:<bulletlist><bullet>Gain +2 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income for each province with Gloom terrain.</bullet><bullet>Ignore <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] penalties from Gloom terrain.</bullet></bulletlist></bullet><bullet>Hero units gain [hyperlink,GLOBAL.PROPERTIES.GLOOM_SHEPHERD]Gloom Shepherd[/hyperlink].</bullet></bulletlist>This transformation is incompatible with [hyperlink,GLOBAL.SPECIAL_OPERATIONS.PURE_SOUL]Pure Soul[/hyperlink].",
     "image": "0000049000000854"
   },
   "GLOBAL.SPECIAL_OPERATIONS.VIVISECTION_RITUAL": {

@@ -136,7 +136,7 @@
  {
   "name": "Blazing Chain Lightning",
   "slug": "0000049700000B6E",
-  "description": "Target enemy unit and up to <eventColor>{BLAZING_CHAIN_LIGHTNING_TARGETER>MaxJumps}</eventColor> other enemy units within <eventColor>{BLAZING_CHAIN_LIGHTNING_TARGETER>MaxDistance}</eventColor> hexes:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+  "description": "Target enemy unit and up to 3 other enemy units within 4 hexes:<bulletlist><bullet>Sustain damage.</bullet><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
   "damage": "6<damagelightning></damagelightning> 6<damagefire></damagefire> ",
   "accuracy": "Always Hits",
   "range": "99",
@@ -1005,7 +1005,7 @@
  {
   "name": "Puppeteer's Possession",
   "slug": "0000049700000AC0",
-  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit and up to <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxJumps}</eventColor> other non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly units within <eventColor>{PUPPETEER_POSSESSION_JUMP_TARGETER>MaxDistance}</eventColor> hexes gain [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "description": "Target non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly unit and up to 2 other non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] friendly units within 3 hexes gain [hyperlink,GLOBAL.PROPERTIES.EMPOWER]Empower[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "6",
@@ -1088,7 +1088,7 @@
  {
   "name": "Restoration",
   "slug": "000003E300005639",
-  "description": "Heals target friendly unit +40 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and dispels its [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].<br>A target friendly unit that is dead can be revived with <eventColor>{RESTORATION_RESS>ResolvedHitPoints}</eventColor>% of its total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].",
+  "description": "Heals target friendly unit +40 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and dispels its [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].<br>A target friendly unit that is dead can be revived with 60% of its total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].",
   "damage": "",
   "accuracy": "Always Hits",
   "range": "4",

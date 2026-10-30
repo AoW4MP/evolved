@@ -55,13 +55,22 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
     own Research, Spells, Empire and Item Forge buttons: their picture and glass from the same atlas, the picture
     enlarged 25% so the glyph is as big as the others'. Upstream: `TomesIcon.png`, `SpellsIcon.png`, the grey
     `EmpireIcon.png` and the info "i".
-  - `HeroesIcon.png` (upstream: `HeroIcon.png`) is the Heroes medallion's glass, its helmet cleared and the game's own
-    `Icons/TML/unithero.png` drawn smaller in its place. `SearchIcon.png` (upstream: the light green `search.png`) is
-    the same glass a little greener, with `Icons/TML/inspect.png`.
+  - `HeroesIcon.png` (upstream: `HeroIcon.png`) is the HUD's own Heroes button in its normal state,
+    `TopBar_Heroes_DEFAULT` (72px, from the same atlas), rebuilt to the others' glyph size: its glass with the helmet
+    painted out, inside the shared frame, and the game's sharper helmet `RadialMenu_Heroes` smaller on it, coloured
+    with the default icon's grey-to-teal gradient.
+    `SearchIcon.png` (upstream: the light green `search.png`) is a teal-green glass with `Icons/TML/inspect.png`.
   - `UnitsIcon.png`, `WorldMapIcon.png` and `AbilitiesIcon.png` (upstream: the Tome Units star, the Structures hammer
     and the ability diamond) are the game's `unit`, `province` and `casttactical` text icons (`Icons/TML/`) in the
     medallions' beige, on a blank dark sphere made from the site's other medallions.
   Each glyph Evolved draws is centred in its sphere; the four HUD buttons keep the game's own placement.
+  The dropdowns' icons are a little larger than upstream's (art about 18px): a 33px image (32px on a phone) with the art
+  24px, in 30px rows in a 210px panel with a thin black line, not upstream's 9-slice border and its thick grey bars.
+  `header.html` takes them from `Icons/Interface/DropdownIcons/`, copies of the originals with their art trimmed, scaled
+  to 93px and centred in 128px, as the originals' art fills 72-100% of theirs. Solid ones (a tome's disc: over 72% of
+  their box opaque) are 85px, 22px on screen, as they look bigger than a glyph; those with a ring like the buttons'
+  (`CultureUnitsIcon`, `TomeUnitsIcon`, `WildlifeUnitsIcon`, `ItemForge`) 104px. A new menu icon needs such a copy.
+  `ItemForge.png` is the HUD's own button, `TopBar_ItemForge_DEFAULT`.
   The "Updated:" date is 14px (11px on a phone), a size under the dataset's name; both have a hard shadow, as a soft
   one blurs the Header font's thin lowercase.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
@@ -183,7 +192,7 @@ Most of `Data/EN/*.json` comes from Evolved's own game dumps (the game's DUMPALL
 Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` has spells upstream lacks, such as Astral Keeper Ritual, Bone Horror Ritual and Bone Dragon Ritual.
 `Data/EN/all.json`, the game's texts, is Evolved's own too: `alltexts.py` in aow4_diff_tools writes it from the live game's EN.MO with the mod's `.po`, filled in with the values of the resources that show each text (mod values included: Tranquility Pool −5%, Infrastructure −33%).
 It started from upstream's copy and keeps its entries and order; texts the game added are appended, and texts it no longer has are kept, as pages may still look them up.
-A value the game only knows in play stays a placeholder, `<eventColor>{key}</eventColor>`. Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
+A value the game only knows in play, or whose tag no resource holds, stays a placeholder, `<eventColor>{key}</eventColor>`. A value several versions of an effect share a tag for, with nothing to tell which the text means, shows all of them ("+2/4 Fire Damage"). Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
 `Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero), and the properties, structures and the like texts link to, 346 of them with their icon (`image`, exported to `Icons/UnitIcons`).
 Both follow the game's grammar more closely than the game's own texts do: a word the game counts agrees with the number before it ("for 1 Turn", "3 Turns").
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).

@@ -344,6 +344,10 @@ a:hover {
     #menu > li:hover > a {
         color: #ffe9a8;
     }
+    /* above the other items: when the bar wraps, those on its second line would show through the dropdown */
+    #menu > li:hover {
+        z-index: 1001;
+    }
     #menu ul.menus li:hover > a {
         border-left-color: #d7c297;
         color: white;
@@ -385,15 +389,14 @@ a:hover {
     left: 35px;
 }
 
-/* the dropdowns: the cards' panel, the site's font; a group (Culture ▸) in gold, a page in the cards' blue, a gold bar
-   beside the one under the mouse */
+/* the dropdowns: the cards' panel in a thin black line, the site's font; a group (Culture ▸) in gold, a page in the
+   cards' blue, a gold bar beside the one under the mouse */
 #menu ul.menus {
     height: auto;
-    width: 200px;
+    width: 210px;
     background: url(/evolved/Icons/tooltipBG.png);
-    border-image: url(/evolved/Icons/9slicetooltip.png);
-    border-image-slice: 4 10 4 10 fill;
-    border-style: solid;
+    border: 1px solid black;
+    border-image: none;
     box-shadow: 0 4px 10px black;
     position: absolute;
 
@@ -409,7 +412,10 @@ a:hover {
 }
 
 #menu ul.menus a {
-    line-height: 30px;
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* an icon's empty edge, or the last row would give a long submenu a scrollbar */
+    line-height: 1.2;
     color: #bbcdf6;
     border-left: 3px solid transparent;
     text-shadow: 1px 1px 2px black;
@@ -419,9 +425,13 @@ a:hover {
     color: #d7c297;
 }
 
+/* smaller than the menu's own buttons: Icons/Interface/DropdownIcons/ holds them with their art 24px at this size, a solid
+   disc 22px as it looks bigger than a glyph. The negative margins: an image's edge is empty, the rows 30px */
 #menu ul.menus a > img {
-    width: 22px;
-    margin-right: 6px;
+    flex: none;
+    width: 33px;
+    height: 33px;
+    margin: -1.5px 3px -1.5px -3px;
 }
 
 #menu a.home {
@@ -446,10 +456,15 @@ a:hover {
 #menu ul.menus .submenu {
     display: none;
     position: absolute;
-    left: 200px;
-    top: 0;
-    width: 200px;
+    left: 210px;
+    top: -1px; /* its rows level with the row that opens it, past its line */
+    width: 210px;
+    /* a long one scrolls rather than running off a short screen */
+    max-height: calc(100vh - 220px);
+    overflow-y: auto;
     background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid black;
+    border-image: none;
     box-shadow: 0 4px 10px black;
 }
 
@@ -2434,8 +2449,15 @@ span.number-highlight {
         box-sizing: border-box;
         display: none;
         padding-left: 20px;
+        max-height: none;
         background: none;
         box-shadow: none;
+    }
+    /* as big as the drawer's own buttons, in rows still easy to tap */
+    #menu ul.menus a > img {
+        width: 32px;
+        height: 32px;
+        margin: 4px 6px 4px 0;
     }
     #menu ul.menus .submenu.open {
         display: block;

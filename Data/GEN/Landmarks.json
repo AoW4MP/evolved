@@ -1,0 +1,341 @@
+{
+ "generated": "2026-10-31 20:29",
+ "build": "exe of 2026-10-30",
+ "mod": "AoW 4 Evolved",
+ "landmarks": [
+  {
+   "key": "ancient_dragon_hoard",
+   "name": "Ancient Dragon Hoard",
+   "dlc": "GIANTKINGS",
+   "lore": "\"Gazing up at the remnants of what once was a majestic hoard, one cannot help but contemplate the [hyperlink,GLOBAL.DragonsLoreConcept]Dragon[/hyperlink] that fell here, and its destructive rivalry with the [hyperlink,GLOBAL.GiantsLoreConcept]Giants[/hyperlink]. See how even the bones seem to still protect its treasures. As the wind howled through the peaks, I swear I could hear the dragon's ancient roar still...\"<br><br>— Fangir Rockborne, Journals from the Second Age: Part II",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink]</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ANCIENT_DRACONIC_INSTINCT]Ancient draconic instinct[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink]</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Unlocks recruitment of tier 4 and 5 [hyperlink,GLOBAL.PROPERTIES.DRAGON]Dragon[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Ancient Draconic Frenzy",
+     "description": "All [hyperlink,GLOBAL.PROPERTIES.DRAGON]Dragon[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink] until the end of combat.",
+     "icon": "ancient_draconic_frenzy.png"
+    }
+   ],
+   "units": [
+    "bone_dragon",
+    "fire_dragon",
+    "frost_dragon",
+    "golden_dragon",
+    "obsidian_dragon",
+    "prosperity_dragon",
+    "calamity_dragon"
+   ],
+   "picture": "ancient_dragon_hoard",
+   "icon": "landmark_ancient_dragon_hoard.png"
+  },
+  {
+   "key": "broken_wizards_throne",
+   "name": "Broken Wizard's Throne",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "\"Imagine the masters of strongly opposing magics all gathered within a single tower. They may hate each other to oblivion, but they have learned to respect that every affinity must seep through a world for it to be in equilibrium. The Wizard's Throne is the ultimate guarantor of a [hyperlink,GLOBAL.CircleOfDeogaiLoreConcept]Circle of Deogai's[/hyperlink] balance. For it reminds all Wizards of their own diminutiveness within the vast schemes of the cosmos.\"<br><br>— Gabriel, Chronicles of Evermore",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>A <researchpost></researchpost> [hyperlink,GLOBAL.ResearchPostConcept]Research Post[/hyperlink] in the Province gains +10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL_DEFENSES]Elemental Defenses[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>Enemy [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] have 33% chance of [hyperlink,GLOBAL.BackfireConcept]Backfiring[/hyperlink] within the domain.</bullet><bullet>The City's owner gains 15 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink] and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Unlocks the <span style=\"color:white\">Cosmic Inspiration</span> <caststrategic></caststrategic> [hyperlink,GLOBAL.CitySpellConcept]City Spell[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Elemental Defenses",
+     "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], a random [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is targeted by one of the following effects chosen at random:<bulletlist><bullet><span style=\"color:white\">Ice Coffin</span></bullet><bullet><span style=\"color:white\">Ignite</span></bullet><bullet><span style=\"color:white\">Fulmination</span></bullet><bullet><span style=\"color:white\">Rock Blast</span></bullet></bulletlist>",
+     "icon": "elemental_defenses.png"
+    }
+   ],
+   "units": [],
+   "picture": "broken_wizard_throne",
+   "icon": null
+  },
+  {
+   "key": "cascade_falls",
+   "name": "Cascade Falls",
+   "dlc": "GIANTKINGS",
+   "lore": "\"When the crown weighed heavily upon my mother, she would turn to the sanctuary of the falls. She said the cascade drowns out all chaos. In my search for her I, too, visit this place of peace. I wade into the stream, I let the torrent wash over me, and in its relentless rhythm I rediscover clarity and strength.\"<br><br>— Sundren of House Inioch, Memories of the Elven Court",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet>A <farm></farm> Farm or <forester></forester> Forester in this province grants +10 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Unlocks recruitment of [hyperlink,GLOBAL.UNITS.LESSER_TIDE_SPIRIT]Lesser Tide Spirit[/hyperlink] and [hyperlink,GLOBAL.UNITS.TIDE_SPIRIT]Tide Spirit[/hyperlink].</bullet><bullet>Friendly [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in the domain [hyperlink,GLOBAL.WorldMapRegeneration]regenerate[/hyperlink] +25 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [],
+   "units": [
+    "lesser_tide_spirit",
+    "tide_spirit"
+   ],
+   "picture": "waterfalls",
+   "icon": "landmark_cascade_falls.png"
+  },
+  {
+   "key": "chained_hellion",
+   "name": "Chained Hellion",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "\"I can hear them screaming; beasts of chaos incarnated, subdued and bound in chains. They howl in rage and pain, swearing to destroy those who confined them. They tell their story again and again, so they never forget the hatred that keeps them alive. Oh... how I wish I could hunt them again.\" <br><br>— Demonic Prince Karavar, The Hellion Wars.",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] and +10 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.SCORCHING_STENCH_OF_SUFFERING]Scorching Stench of Suffering[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+2 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] and +5 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] per Province with [hyperlink,GLOBAL.ChasmConcept]Chasm[/hyperlink] or [hyperlink,GLOBAL.LavaConcept]Lava[/hyperlink] in the [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>The City's owner gains the <span style=\"color:white\">Brimstone Bind</span> <casttactical></casttactical> [hyperlink,GLOBAL.DebuffSpellConcept]Debuff Spell[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Scorching Stench of Suffering",
+     "description": "All non-[hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] suffer -5 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink] and -2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink].<br>In addition, every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<bulletlist><bullet>All [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] lose 5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] per stack of [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] they have.</bullet></bulletlist>",
+     "icon": "scorching_stench_of_suffering.png"
+    }
+   ],
+   "units": [],
+   "picture": "chained_demon",
+   "icon": null
+  },
+  {
+   "key": "fountain_of_creation",
+   "name": "Fountain of Creation",
+   "dlc": "ARCHONPROPHECY",
+   "lore": "\"Like the geysers of lustral water we must sanctify the earth and tend it with providential care. By this truth, we erect fountains upon these torrents and thus, by understanding the labor of His work, we draw closer to the Allfather. For what are these streams, if not the incarnation of the Well of Creation made manifest?\"<br><br>— Anon Archon Wizard of Life, On the Paths to Divine Ascent",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>A <farm></farm> Farm in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CELESTIAL_RAIN]Celestial rain[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet><farm></farm> Farms in the domain grant +2 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] and +2 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CELESTIAL_RAIN]Celestial rain[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink] in the domain.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Celestial Rain",
+     "description": "Every 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>All units become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] for 3 <turn></turn> Turns</bullet><bullet>All [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units have their negative status effects cleansed.</bullet></bulletlist>",
+     "icon": "celestial_rain.png"
+    }
+   ],
+   "units": [],
+   "picture": "fountain_of_creation",
+   "icon": null
+  },
+  {
+   "key": "grand_statuary",
+   "name": "Grand Statuary",
+   "dlc": "GIANTKINGS",
+   "lore": "\"When I walk among these weathered statues, I ponder the souls they immortalize. Even those whose names are forgotten command my respect. Will I too, be remembered—or forgotten—like this? Will offerings grace my stone likeness, or will it be abandoned to time? Were my features carved into stone, would they become a beacon of hope—or of dread?\"<br><br>— Alfred Elderstone, Musings on Rulership",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+10 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet>A <researchpost></researchpost> Research Post in this province grants +2 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>The [hyperlink,GLOBAL.GovernorConcept]Governor[/hyperlink] of the City gains 10 <renown></renown> [hyperlink,GLOBAL.RenownConcept]Renown[/hyperlink] every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] recruited in the City gain +1 starting Rank.</bullet></bulletlist>",
+   "enchantments": [],
+   "units": [],
+   "picture": "giant_steps",
+   "icon": "landmark_grand_statuary.png"
+  },
+  {
+   "key": "haunted_battlefield",
+   "name": "Haunted Battlefield",
+   "dlc": "GIANTKINGS",
+   "lore": "\"Do you feel it? Forbidden magic lingers on this battlefield... Not of creation, but of un-life. My kin tell the story of a [hyperlink,GLOBAL.TraitorKingsLoreConcept]Traitor King[/hyperlink] who cursed the grounds with ancient magics where he fell... None who fought here shall ever know peace. And so, the souls of the fallen remain among their bones, forever fighting, forever dying...\"<br><br>— Fjalla Tor-Builder, In the Giant's Footsteps: As cited by Ham Binger",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+10 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink].</bullet><bullet>If <souls></souls> [hyperlink,GLOBAL.SoulConcept]Souls[/hyperlink] are obtainable, this province grants +2 <souls></souls> [hyperlink,GLOBAL.SoulConcept]Souls[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDYING_BATTLEFIELD]Undying battlefield[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink]</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Undead [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] have their recruitment cost reduced by 20% in the City.</bullet><bullet>If <souls></souls> [hyperlink,GLOBAL.SoulConcept]Souls[/hyperlink] are obtainable, unlocks recruitment of Tier 3 and 4 Undead units.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Undying Battlefield",
+     "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], each corpse is resurrected as a random Skeleton unit with [hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink].<br><br>Skeleton units themselves are not resurrected by this effect, are [hyperlink,GLOBAL.PROPERTIES.NON_VITAL]Non-Vital[/hyperlink], and die at the end of combat.",
+     "icon": "undying_battlefield.png"
+    }
+   ],
+   "units": [
+    "bone_horror",
+    "corrupt_soul",
+    "banshee",
+    "bone_dragon"
+   ],
+   "picture": "haunted_battlefield",
+   "icon": "landmark_haunted_battlefield.png"
+  },
+  {
+   "key": "icebound_behemoth",
+   "name": "Icebound Behemoth",
+   "dlc": "GIANTKINGS",
+   "lore": "\"To gaze upon these vast, frozen eyes is to stand on the edge of eternity itself. Even sealed in frost, they pierce me—through flesh, soul, the very fabric of the cosmos. We, who claim mastery of the arcane, know nothing compared to this colossus of the [hyperlink,GLOBAL.UrwildernessLoreConcept]Urwilderness[/hyperlink]. What are we to such an ageless, forgotten seer?\"<br><br>— Merlin the Wanderer, recovered Journals from the Fourth Age",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>A <researchpost></researchpost> Research Post in this province grants +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.BEHEMOTHS_DREADFUL_PRESENCE]Behemoths dreadful presence[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink]</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Gain +10 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] and +20 [hyperlink,GLOBAL.SensorRangeConcept]Sensing Range[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Behemoth's Dreadful Presence",
+     "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], every unit has a 90% of suffering [hyperlink,GLOBAL.PROPERTIES.REMORSE]Remorse[/hyperlink].",
+     "icon": "behemoths_dreadful_presence.png"
+    }
+   ],
+   "units": [],
+   "picture": "trapped_behemoth",
+   "icon": "landmark_icebound_behemoth.png"
+  },
+  {
+   "key": "infernal_volcano",
+   "name": "Infernal Volcano",
+   "dlc": "GIANTKINGS",
+   "lore": "\"One need only witness what devastation volcanoes precipitate to understand its arcane potential... And mythical allure. Some propose these fiery chasms serve as portals to [hyperlink,GLOBAL.ObbadothLoreConcept]Obbadoth[/hyperlink]. I have yet to confirm whether the fiends encountered here emerged from the molten heart itself, or if they have simply claimed it as their home.\"<br><br>— Larissa Mirabilis, Myth and Truth: Folklore and its Arcane Origins",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.COMBATPROPERTY_VOLCANIC_ERUPTION]Volcanic Eruptions[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantments[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in the Province gain [hyperlink,GLOBAL.PROPERTIES.VOLCANIC_HEAT_UNIT_PROPERTY]Volcanic Heat[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>Unlock recruitment of [hyperlink,GLOBAL.PROPERTIES.INFERNAL_FIEND]Infernal Fiend[/hyperlink] and [hyperlink,GLOBAL.UNITS.MAGMA_SPIRIT]Magma Spirit[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Volcanic Eruptions",
+     "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], a marker is placed. Then, after 1 <turn></turn> the ground will erupt and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Random affected hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
+     "icon": "volcanic_eruptions.png"
+    }
+   ],
+   "units": [
+    "inferno_puppy",
+    "magma_spirit",
+    "inferno_hound",
+    "immolated_soul",
+    "skald",
+    "nightmare",
+    "gremlin",
+    "infernal_juggernaut",
+    "chaos_eater"
+   ],
+   "picture": "volcano",
+   "icon": "landmark_infernal_volcano.png"
+  },
+  {
+   "key": "leviathan_eyes",
+   "name": "Leviathan Eyes",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "\"First, it brought the night. The light was eclipsed by its gargantuan shape, still veiled behind the overcast sky. Tentacles pierced the clouds, heralding the arrival of the beast. And then it fell. There was no sky—only the Leviathan. And its grotesque body, plunging like the end of all things.\"<br><br>— Sumuskira the Grovetender, Tales of the Elder: As cited by Reskar Scapeshaper",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>-20 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] and +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELDRITCH_GAZE]Eldritch gaze[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+100 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink]</bullet><bullet>Allows recruitment of [hyperlink,GLOBAL.UNITS.ASTRAL_WISP_UNIT]Astral Wisps[/hyperlink], [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpents[/hyperlink], and [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoners[/hyperlink].</bullet><bullet>On new turn, this Landmark is bound, putting it in a dormant state where its other adjacency effects are disabled.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Eldritch Gaze",
+     "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>All non-[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] have a 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If it fails, the Unit suffers -10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] instead.</bullet></bulletlist>",
+     "icon": "eldritch_gaze.png"
+    }
+   ],
+   "units": [
+    "astral_wisp",
+    "astral_serpent",
+    "astral_siphoner"
+   ],
+   "picture": null,
+   "icon": null
+  },
+  {
+   "key": "leviathan_tail",
+   "name": "Leviathan Tail",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "\"First, it brought the night. The light was eclipsed by its gargantuan shape, still veiled behind the overcast sky. Tentacles pierced the clouds, heralding the arrival of the beast. And then it fell. There was no sky—only the Leviathan. And its grotesque body, plunging like the end of all things.\"<br><br>— Sumuskira the Grovetender, Tales of the Elder: As cited by Reskar Scapeshaper",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>-20 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] and +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELDRITCH_WAKE]Eldritch wake[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+100 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink]</bullet><bullet>Allows recruitment of [hyperlink,GLOBAL.UNITS.ASTRAL_WISP_UNIT]Astral Wisps[/hyperlink], [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpents[/hyperlink], and [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoners[/hyperlink].</bullet><bullet>On new turn, this Landmark is bound, putting it in a dormant state where its other adjacency effects are disabled.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Eldritch Wake",
+     "description": "[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] have their [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] Attacks and [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] Abilities jump to another target within 2 hexes, but their Damage and Healing is reduced by 40%.",
+     "icon": "eldritch_wake.png"
+    }
+   ],
+   "units": [
+    "astral_wisp",
+    "astral_serpent",
+    "astral_siphoner"
+   ],
+   "picture": null,
+   "icon": null
+  },
+  {
+   "key": "leviathan_tentacles",
+   "name": "Leviathan Tentacles",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "\"First, it brought the night. The light was eclipsed by its gargantuan shape, still veiled behind the overcast sky. Tentacles pierced the clouds, heralding the arrival of the beast. And then it fell. There was no sky—only the Leviathan. And its grotesque body, plunging like the end of all things.\"<br><br>— Sumuskira the Grovetender, Tales of the Elder: As cited by Reskar Scapeshaper",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>-20 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] and +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELDRITCH_LURE]Eldritch lure[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+100 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink]</bullet><bullet>Allows recruitment of [hyperlink,GLOBAL.UNITS.ASTRAL_WISP_UNIT]Astral Wisps[/hyperlink], [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpents[/hyperlink], and [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoners[/hyperlink].</bullet><bullet>On new turn, this Landmark is bound, putting it in a dormant state where its other adjacency effects are disabled.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Eldritch Lure",
+     "description": "Non-[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>Suffer [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink]</bullet><bullet>Cannot regenerate and lose 6 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].</bullet></bulletlist>",
+     "icon": "eldritch_lure.png"
+    }
+   ],
+   "units": [
+    "astral_wisp",
+    "astral_serpent",
+    "astral_siphoner"
+   ],
+   "picture": null,
+   "icon": null
+  },
+  {
+   "key": "lithorine_peaks",
+   "name": "Lithorine Peaks",
+   "dlc": "GIANTKINGS",
+   "lore": "\"Contrary to the 'cold' magic of the Focus Crystal, Lithorite emits a pulsating warmth. Perhaps this is why the ancient [hyperlink,GLOBAL.GiantKingLoreConcept]Giant Kings[/hyperlink] picked this material for the creation of Lithorine creatures. Even though those are fairly common, large clusters of the material itself are rare. When the sun catches the crystal peaks, it is truly a sight to behold.\"<br><br>— Edward Portsmith, Advanced Reports on Mana Infusion",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+3 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] and +3 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT]Elemental attunement[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>Unlocks recruitment of Lithorine [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink].</bullet><bullet>+10 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink] and +10 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Elemental Attunement",
+     "description": "All [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL]Elemental[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT_UNITPROP]Elemental Attunement[/hyperlink] until the end of combat.",
+     "icon": "elemental_attunement.png"
+    }
+   ],
+   "units": [
+    "lithorine_core",
+    "lithorine_needler",
+    "lithorine_shardlancer",
+    "lithorine_gemcaster",
+    "lithorine_simulacrum"
+   ],
+   "picture": "lithorine_peak",
+   "icon": "landmark_lithorine_peaks.png"
+  },
+  {
+   "key": "mistflow_gardens",
+   "name": "Mistflow Gardens",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "\"These mistflow gardens are places of communion for the Fey folk. Within them, the energy of [hyperlink,GLOBAL.DuathaLoreConcept]Duatha[/hyperlink] is vibrant, making them ideal ground for all manner of rituals. I myself was judged in one of them by the [hyperlink,GLOBAL.DuathadaeLoreConcept]Duathadae[/hyperlink]. But what followed... is a story for another day.\"<br><br>— Ham Binger, Beyond the Mist of the Fey.",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] and +3 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in the Province grants +5 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] and +5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.MISTY]Misty[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>Allows recruitment of Tier I, II, and III [hyperlink,GLOBAL.PROPERTIES.FEY]Fey[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Misty",
+     "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] during combat, various [hyperlink,GLOBAL.MistConcept]Mist[/hyperlink] clouds appear.",
+     "icon": "misty.png"
+    }
+   ],
+   "units": [
+    "morning_sprite",
+    "evening_sprite",
+    "autumn_fairy",
+    "spring_fairy",
+    "summer_fairy",
+    "winter_fairy",
+    "nymph"
+   ],
+   "picture": "misflow_gardens",
+   "icon": null
+  },
+  {
+   "key": "perishing_archnemesis",
+   "name": "Perishing Archnemesis",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "lore": "Black banners billowed above [hyperlink,GLOBAL.ObbadothLoreConcept]The Carnage Bounds[/hyperlink].<br>Hellions held hard; their titan-lords roared.<br>Yet hosts of [hyperlink,GLOBAL.DemonicOverlordLoreConcept]The Nether Prime[/hyperlink] came clawing skyward fiercely, while [hyperlink,GLOBAL.YsarielLoreConcept]The Future Throne[/hyperlink] broke gates and bulwark.<br>Thus Demon-kind surged forth; the elder breed perished.<br><br>—Liztia Great Skald of Pseumodius, Victory Poem of the Hellion Wars",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] and +10 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.SCORCHING_STENCH_OF_SUFFERING]Scorching Stench of Suffering[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+2 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] and +5 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] per Province with [hyperlink,GLOBAL.ChasmConcept]Chasm[/hyperlink] or [hyperlink,GLOBAL.LavaConcept]Lava[/hyperlink] in the [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>The City's owner gains the <span style=\"color:white\">Brimstone Bind</span> <casttactical></casttactical> [hyperlink,GLOBAL.DebuffSpellConcept]Debuff Spell[/hyperlink].</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Scorching Stench of Suffering",
+     "description": "All non-[hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] suffer -5 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink] and -2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink].<br>In addition, every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<bulletlist><bullet>All [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] lose 5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] per stack of [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] they have.</bullet></bulletlist>",
+     "icon": "scorching_stench_of_suffering.png"
+    }
+   ],
+   "units": [],
+   "picture": "chained_demon",
+   "icon": null
+  },
+  {
+   "key": "subterranean_monuments",
+   "name": "Subterranean Monuments",
+   "dlc": "GIANTKINGS",
+   "lore": "\"I see the fallen empire of [hyperlink,GLOBAL.MyrridaLoreConcept]Myrrida[/hyperlink] and my heart aches for what my kin have lost. Endless corridors and districts, sprawling through the Underground... How I grieve for Myrrida's Golden Age, its lost majesty carved into our history. But as a [hyperlink,GLOBAL.GiantKingLoreConcept]Giant King[/hyperlink] I must try and live up to its legacy...\"<br><br>— Fjalla Tor-Builder, In the Giant's Footsteps: As cited by Ham Binger",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>A <quarry></quarry> Quarry in this province grants +5 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink].</bullet><bullet>A <mine></mine> Mine in this province grants +5 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>Gain +20 <bindingessence></bindingessence> [hyperlink,GLOBAL.BindingEssenceConcept]Binding Essence[/hyperlink] and +5  <bindingfragments></bindingfragments> [hyperlink,GLOBAL.BindingEssenceConcept]Fragments[/hyperlink] additional income.</bullet></bulletlist>",
+   "enchantments": [],
+   "units": [],
+   "picture": "subterreanean_passage",
+   "icon": "landmark_subterranean_monuments.png"
+  },
+  {
+   "key": "thorn_heart",
+   "name": "Thorn Heart",
+   "dlc": "THRONESOFBLOOD",
+   "lore": "\"Following the blood rivers upstream, my Orcs found the literal heart of the Sunless Lands, beating within the trunk of a defiled World Tree. Soon after, they succumbed to the Blood Parasites, devoured from the inside. Some say the heart's infection is a curse from the ancient times, others call it the vile progeny of Vampiric cults. Me, I call it perfection.\"<br><br>— Karissa the Red, Blood Rites throughout the Ages",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>+5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>A Farm <farm></farm> in this province grants +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] additional income.</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The City terraforms 1 province on the surface within a 5 province radius of its [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. The terraformed province:<bulletlist><bullet>Gains [hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink].</bullet><bullet>Loses [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink].</bullet></bulletlist></bullet><bullet>The City's [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] gains the [hyperlink,GLOBAL.PROPERTIES.PARASITICINFECTION]Parasiticinfection[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink] when fighting in a province with Sunless.</bullet></bulletlist>",
+   "enchantments": [],
+   "units": [],
+   "picture": "thorn_heart",
+   "icon": null
+  }
+ ]
+}

@@ -65,7 +65,7 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
     medallions' beige, on a blank dark sphere made from the site's other medallions.
   Each glyph Evolved draws is centred in its sphere; the four HUD buttons keep the game's own placement.
   The dropdowns' icons are a little larger than upstream's (art about 18px): a 33px image (32px on a phone) with the art
-  24px, in 30px rows in a 210px panel with a thin black line, not upstream's 9-slice border and its thick grey bars.
+  24px, in 30px rows in a 210px panel with a thin grey line (`#555`; black vanished against the dark page), not upstream's 9-slice border and its thick grey bars.
   `header.html` takes them from `Icons/Interface/DropdownIcons/`, copies of the originals with their art trimmed, scaled
   to 93px and centred in 128px, as the originals' art fills 72-100% of theirs. Solid ones (a tome's disc: over 72% of
   their box opaque) are 85px, 22px on screen, as they look bigger than a glyph; those with a ring like the buttons'
@@ -179,12 +179,64 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 
 ### Magic Materials
 
-`HTML/MagicMaterials.html` is Evolved's own page, replacing upstream's (same URL and menu link):
+`HTML/MagicMaterials.html` is Evolved's own page, replacing upstream's (same URL and menu link, `?type=<set key>`), laid out as Ancient Wonders is:
+
+- A tab per set (Ores, Liquids, Plants, Void Stones), its bonus and requirement on top and a large card per material under it: picture, lore, global effect, local income, combat enchantment and infusions.
 
 - Sets, their bonuses and requirements, and each material's texts, local income and combat enchantment come from `Data/GEN/MagicMaterials.json`, which `magicmaterials.py` in aow4_diff_tools generates from the live game plus the mod.
-  Pictures and the infusion count come from `Data/GEN/WorldStructures.json` and `Data/EN/ItemForgeUpgrades.json`, by the material's key.
+  Pictures come by the material's key, the infusion count from `Data/EN/ItemForgeUpgrades.json`.
 - Each material card links to `HTML/Infusions.html?material=<name>`, which picks that material's filter.
 - `Data/Builder.js`: a concept link written as `{<hp></hp>}` shows the concept's own name ("Hit Point"), on every page.
+
+### World Map pages
+
+`HTML/Spawners.html` (Infestations), `HTML/Landmarks.html`, `HTML/CosmicHappenings.html` and `HTML/ProvinceImprovements.html` are Evolved's own pages, replacing upstream's (same URLs and menu links, `?type=<tab>`). They share `Data/worldmap.js` and `Style/worldmap.css`: tabs and large cards, as on Ancient Wonders.
+
+- `worldmap.py` in aow4_diff_tools generates `Data/GEN/Infestations.json`, `Landmarks.json` and `Happenings.json` from the live game plus the mod. Pictures aren't in the icon libraries it can read: it finds the site's own through upstream's `WorldStructures.json` and `CosmicHappenings.json`, by text id or name, and keeps icons it can read.
+- Infestations: a tab per tier, with defenders (a Mistwalker Camp's per season), size, growth and reward. A story realm's, tome's or happening's copy under the same name is left out.
+- Landmarks: all or a DLC's. The units a landmark unlocks are those its threshold property allows; the Leviathan parts have no picture on the site.
+- Cosmic Happenings: Minor, Major, Intrigue (with their opening event) and Special (Visions of Ruin, Blood Moon, Warped Seasons). Story realm happenings are left out.
+- Province Improvements: a tab per kind, grouped by where they come from; the search and resource buttons work across the tabs, whose counts follow. The texts stay the dump's. The victory monuments and Magic Victory structures aren't listed, as on upstream's page.
+
+### Spells pages
+
+`HTML/StrategicSpells.html`, `HTML/CombatSpells.html` (Tactical Spells), `HTML/TransformationSpells.html`, `HTML/EnchantmentSpells.html` and `HTML/SiegeProjects.html` are Evolved's own pages, replacing upstream's (same URLs, `?type=<tab>`). They share `Data/spellbook.js` and `Style/spellbook.css`, on top of `Data/worldmap.js` and `Style/worldmap.css`.
+
+- `spells.py` in aow4_diff_tools generates `Data/GEN/SpellBook.json`: costs, upkeep, kinds and where a spell comes from from the live game plus the mod, the texts from the dump (the game fills in its own values there). The dump's texts have a few repairs: a value it lost ("a -hex radius"), a number run into an icon ("+1Range"), one form for any count ("3 Turn").
+- A tab per kind; a Damage/Debuff Spell is on both tabs, a dual tome's enchantment on both affinities'. Search and the affinity buttons work across the tabs, whose counts follow; sorted by tier, the cards are grouped by tome tier. A list of more than six units folds away.
+- A spell's source is where its unlock property is given: a tome, a hero skill, an artifact, an adventure, a happening, a building...
+- Spells sharing an id with different texts each have their card (`Ancestral Harmony` for each animal); the old pages showed the first's text on every copy.
+- What no one can get is left out (`left_out` in the file, with the reason): the property that unlocks it is given by nothing, such as the Empire Tree's Rites, Elemental Bane and Raise Zombies. A story realm's spells are left out too, as are those the data can't tell are unused (`NOT_SPELLS` in `spells.py`, from the maintainer): Construct Population and Signet of Loyalty (not in use), Move Portal (a button that moves a Shrouded Isles portal), Bone Horror Ritual (an old mod spell) and Astral Wisp Ritual (replaced by Astral Keeper Ritual). The Fey Invasion's relic spells and siege projects, which the dump lacks, are in, their texts filled by the tool.
+- Upkeep comes from the spell's cost data, so Corrupt Pact, Tyrannical Exploitation and Faithful Whispers show theirs, which the dump leaves out.
+
+### Search
+
+Spells, siege projects and the world map's sites come from the files their own pages read (`SpellBook.json`, `AncientWonders.json`, `Landmarks.json`, `Infestations.json`, `MagicMaterials.json`, `Happenings.json`) and show those pages' cards: `Data/ancientwonders.js` and `Data/magicmaterials.js` hold their pages' code as modules for this, and `Data/worldmap.js` the Infestation, Landmark and Happening cards. Cosmic Happenings has its own filter. Artifacts are searched by the game's names and texts and the spells they unlock.
+
+### Tomes
+
+- A tome's page shows all it unlocks in the Spells pages' cards (`SbTomeCards` in `Data/spellbook.js`, also for units, structures and empire bonuses): which of a spell's versions is by the game's own link to the tome, so Storm Crow's Ancestral Harmony speaks of Storm Crow, and spells the dump's tome has no link for (Call young Dragon, Conjure Elemental) are there too. `Spells.html?spell=`, `?siege=` and `?tome=` draw the same cards; a spell's id shows all its versions. The old `showSpell` card stays only for what is left out and in a few tooltips (Faction Creator, the Artifacts page's spells).
+- The dump lists an Architect's Monuments II, III and IV six times each, a version per Affinity. A tome's Initial Bonus lists each once. II's six are the same; III's and IV's differ in their Protection and Affinity, which `StructureVersions` shows as a "By Affinity" list in the one text, wherever a structure's text is drawn.
+- `HTML/GeneralCultureTomes.html` (the menu's Culture) picks as the City Tree does: a row of culture emblems, then the subcultures, with General Research as an emblem of its own. Its address is `#culture=<key>&sub=<tome>`, as the City Tree's; an old `?type=<tome>` still opens that tome.
+
+### Units
+
+A unit's origins read the new data: `CheckIfInSpells` and `CheckIfInSiege` the spell book, so a spell no one can get is no origin and the Fey Invasion's are; `CheckIfInAncientWonder` the book's `sites`, made from `AncientWonders.json` and `Landmarks.json`, whose links go to those pages. Upstream's list was wrong on some (Haunted Battlefield's skeletons).
+
+### Old lists
+
+`Data/GEN/WorldStructures.json`, `CosmicHappenings.json` and `CombatEnchantments.json` aren't loaded by the site any more, and `showWorldStructure`, `showCosmicHappening` and the like are gone. Keep the first two: `worldmap.py` finds the pictures through them. `Data/GEN/Relics.json` is now written by `spells.py`, with the game's names and spells, keeping upstream's ids and pictures. An old `Spells.html?wonder=` link goes to the wonder's page.
+
+On a phone a sidebar page has no column for its sidebar: it comes above the cards, and a card wider than the page (a unit's) scrolls by itself.
+
+### Ancient Wonders
+
+`HTML/AncientWonders.html` is Evolved's own page, replacing upstream's (same URL and menu link, `?type=Bronze|Silver|Gold`):
+
+- A tab per tier, a card per wonder, and under it the wonder's adventures, one open at a time: the story, each option with its cost, reward, affinity check and enchantments (their text on hover), the defenders and the aftermath. The side lists the Combat Enchantments with their text: "Always active" (the event's own, and those every way into the battle adds, as Dark Whispers: the game writes it on each option) and "Depends on your choice" (the rest, a failed check's included).
+- Everything but the pictures comes from `Data/GEN/AncientWonders.json`, which `ancientwonders.py` in aow4_diff_tools generates from the live game plus the mod. Upstream's hand-kept lists are gone from this page, and with them the stale incomes and enchantments; Breached and Shrouded Arcanum are listed.
+- Stories read as if your leader enters, the game's own variant. What only play decides is worded generally ("your Hero", "Hero Item") in the event colour, so no `{EventHero}` placeholders remain.
+- `Icons/CombatEnchantments/` gets the game's icons from the same tool, under the name `Data/Builder.js` looks for. Six enchantments have no icon the tool can read (it warns about them) and show without one.
 
 ## Game data
 
@@ -197,7 +249,7 @@ A value the game only knows in play, or whose tag no resource holds, stays a pla
 Both follow the game's grammar more closely than the game's own texts do: a word the game counts agrees with the number before it ("for 1 Turn", "3 Turns").
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
 `Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).
-`Data/GEN/RealmTraits.json` and `Icons/RealmTraits/` (`realmtraits.py`) feed `HTML/RealmTraits.html`, in the World Map menu: upstream's page was never linked and picked texts by id.
+`Data/GEN/RealmTraits.json` and `Icons/RealmTraits/` (`realmtraits.py`) feed `HTML/RealmTraits.html`, in the World Map menu, a tab per category (`?type=Geography`): upstream's page was never linked and picked texts by id.
 The rest of `Data/GEN/*.json` comes from upstream, apart from the files Evolved generates (below).
 
 DUMPALL also writes the icon folders `AmbitionIcons`, `EmpireProgressionIcons`, `GovernanceIcons`, `SiegeProjectIcons`, `SpellIcons`, `TomeIcons`, `TraitIcons`, `UnitIcons` and `UpgradeIcons`.
@@ -232,5 +284,5 @@ for reference.
    Then check that no `aow4db` references remain, commit to `main`, and update the "Last full sync" commit above.
    Upstream changes to the deleted language folders arrive as "deleted by us" conflicts: keep them deleted (`git rm -r -q Data/DE Data/ES Data/FR Data/JA Data/KO Data/PL Data/RU Data/ZH`).
    A brand-new upstream language folder would arrive without a conflict, so check `Data/` for one.
-   `HTML/CityTrees.html` and `HTML/MagicMaterials.html` are the files to keep whole: discard upstream's changes to them (`git checkout --ours HTML/CityTrees.html HTML/MagicMaterials.html`).
+   `HTML/CityTrees.html`, `HTML/MagicMaterials.html`, `HTML/AncientWonders.html`, `HTML/Spawners.html`, `HTML/Landmarks.html`, `HTML/CosmicHappenings.html` and `HTML/ProvinceImprovements.html`, `HTML/StrategicSpells.html`, `HTML/CombatSpells.html`, `HTML/TransformationSpells.html`, `HTML/EnchantmentSpells.html` and `HTML/SiegeProjects.html`, `HTML/GeneralCultureTomes.html` are the files to keep whole: discard upstream's changes to them (`git checkout --ours` on each).
    Keep `HTML/CityTest.html`, `HTML/CityTreesNew.html` and `Data/GEN/CityTree.json` deleted, and don't let `CityTree.json` back into `dataloader.js`.

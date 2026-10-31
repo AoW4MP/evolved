@@ -1,0 +1,284 @@
+/* The Ancient Wonders page, and its cards on Search */
+.aw-page {
+    --aw-bronze: rgb(150, 90, 40);
+    --aw-silver: rgb(120, 130, 145);
+    --aw-gold: rgb(165, 130, 40);
+    padding: 0 16px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.aw-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px 0 20px;
+}
+.aw-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 18px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+.aw-tab span {
+    color: #8d97ad;
+    font-size: 14px;
+}
+.aw-tab:hover {
+    color: white;
+}
+.aw-tab.selected {
+    color: #ffe9a8;
+    border-color: #d7c297;
+}
+.aw-card {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 16px;
+    margin-bottom: 20px;
+    background-image: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 0 14px 12px;
+    color: #bbcdf6;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+}
+.aw-title {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 -14px 12px;
+    padding: 5px 14px;
+    color: #d7c297;
+    font-size: 18px;
+    background-image: linear-gradient(to right, var(--tier), rgb(0, 0, 0, 0) 70%);
+}
+/* AddDLCTag's inline offsets suit other pages' titles, as on the Magic Materials page */
+.aw-title .mountToolTip {
+    display: flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+}
+.aw-picture {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border: 1px solid #555;
+}
+.aw-about {
+    min-width: 0;
+}
+.aw-lore {
+    color: #c9bda3;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+/* by the text's baseline: each icon has its own height, and would push its own text down */
+.aw-province {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 8px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(215, 194, 151, 0.25);
+}
+.aw-label {
+    color: white;
+}
+.aw-income {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 8px;
+}
+.aw-head {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 10px 0 4px;
+}
+.aw-units {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+}
+.aw-pool {
+    margin-top: 4px;
+    font-size: 14px;
+}
+/* GetUnitTierAndName lays a name out for a fixed-width table: here the tier follows the name */
+.aw-unit {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #bbcdf6;
+}
+.aw-unit * {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+a.aw-unit:hover {
+    color: white;
+}
+.aw-stories {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+}
+.aw-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 6px;
+}
+.aw-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 6px 10px;
+    color: #bbcdf6;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #555;
+    border-left: 3px solid var(--tier);
+    font: inherit;
+    text-align: left;
+    text-shadow: inherit;
+    cursor: pointer;
+}
+.aw-tile:hover {
+    background: rgba(215, 194, 151, 0.08);
+}
+.aw-tile[aria-expanded="true"] {
+    background: rgba(215, 194, 151, 0.14);
+    border-color: #d7c297;
+}
+.aw-tile-name {
+    color: #ffe9a8;
+}
+.aw-tile-sites {
+    color: #8d97ad;
+    font-size: 13px;
+}
+.aw-story:not([hidden]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 20px;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(215, 194, 151, 0.35);
+}
+.aw-passage p {
+    margin: 0 0 8px;
+}
+.aw-options {
+    display: grid;
+    gap: 5px;
+    margin-top: 8px;
+}
+.aw-option {
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #d7c297;
+}
+.aw-leave {
+    border-left-color: #555;
+}
+.aw-option-text {
+    color: white;
+}
+.aw-notes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    margin-top: 4px;
+    font-size: 14px;
+}
+.aw-check {
+    color: #d7c297;
+}
+.aw-cost {
+    color: #e8a0a0;
+}
+.aw-reward {
+    color: #a5d6a7;
+}
+.aw-chip {
+    color: #deb887;
+    cursor: help;
+}
+.aw-chip img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.aw-removed {
+    color: #e8a0a0;
+}
+.aw-ends {
+    margin-top: 4px;
+    font-size: 14px;
+}
+.aw-win {
+    color: #a5d6a7;
+}
+.aw-lose {
+    color: #e8a0a0;
+}
+.aw-aftermath {
+    margin-top: 10px;
+}
+.aw-aftermath summary {
+    color: #d7c297;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+.aw-story-side .aw-head:first-child {
+    margin-top: 0;
+}
+.aw-ench {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.aw-ench img {
+    width: 40px;
+    height: 40px;
+}
+/* the text keeps its column when the enchantment has no icon */
+.aw-ench > div {
+    grid-column: 2;
+}
+.aw-ench-name {
+    color: #deb887;
+}
+@media (max-width: 800px) {
+    .aw-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .aw-picture {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 8px;
+    }
+    .aw-story:not([hidden]) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

@@ -1906,8 +1906,9 @@ function SetTomePreview(span, origin) {
     if ("initial_upgrades" in locOrigin) {
         span.innerHTML += '<p  style="color: #97d7a2;>' + '<span style="font-size:20px;">Initial Upgrades:<br></p>';
 
-        for (let index = 0; index < locOrigin.initial_upgrades.length; index++) {
-            const struc = GetStructure(locOrigin.initial_upgrades[index].upgrade_slug);
+        // a structure with a version per Affinity is listed once for each (an Architect's Monuments)
+        for (const slug of new Set(locOrigin.initial_upgrades.map((u) => u.upgrade_slug))) {
+            const struc = GetStructure(slug);
             span.innerHTML +=
                 '<bullet> <img width="20px" src="/evolved/Icons/UpgradeIcons/' +
                 struc.icon +

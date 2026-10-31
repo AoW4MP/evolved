@@ -1,27 +1,112 @@
 <!doctype html>
 <html lang="en">
     <head>
-                 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-CC3NE8PT7K');
-</script>
-       
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/spellbook.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="/evolved/Data/Init.js"></script>
-        
+        <script src="/evolved/Data/worldmap.js"></script>
+        <script src="/evolved/Data/spellbook.js"></script>
         <script>
+            // Evolved's own Culture page: the culture's emblem and its subculture picked as on the City Tree, and that one's tome
+            // under them, with General Research as a choice of its own. An old link's ?type=<tome> still opens its tome.
+
+            const GENERAL = "general_research";
+            // an emblem whose name isn't the tome's
+            const ICON = { reaver_federated: "reaver_federate", oathsworn_harmony: "harmony", oathsworn_righteousness: "righteousness", oathsworn_strife: "strife" };
+
+            const picked = { culture: "feudal", sub: "" };
+            let cultures = [];
 
             function HandlePage() {
-                   let tomeArray = GetAllTomesWithAffinity("general");
-                SetButtonsAndDivs(tomeArray, undefined, "tome");
-                SetLevelUpStuff();
+                const tomes = jsonTomes.filter((t) => t.id && !t.affinities && !t.id.endsWith("_pact") && t.id !== GENERAL);
+                const keys = [...new Set(tomes.map((t) => t.id.split("_")[0]))].sort();
+                cultures = keys.map((key) => {
+                    const own = tomes.filter((t) => t.id === key || t.id.startsWith(key + "_")).sort((a, b) => a.name.localeCompare(b.name));
+                    return { key, name: own[0].name.split(" - ")[0], tomes: own };
+                });
+
+                const hash = new URLSearchParams(location.hash.slice(1));
+                const old = new URLSearchParams(location.search).get("type");
+                const wanted = hash.get("sub") || old;
+                if (old === GENERAL || hash.get("culture") === GENERAL) picked.culture = GENERAL;
+                else if (cultures.some((c) => c.key === hash.get("culture"))) picked.culture = hash.get("culture");
+                else if (cultures.some((c) => c.key === old?.split("_")[0])) picked.culture = old.split("_")[0];
+
+                const picker = document.getElementById("culturePicker");
+                const general = jsonTomes.find((t) => t.id === GENERAL);
+                picker.append(Emblem(GENERAL, general.name, "/evolved/Icons/TomeIcons/" + general.icon + ".png"));
+                for (const c of cultures) picker.append(Emblem(c.key, c.name, "/evolved/Icons/Text/" + c.key + ".png"));
+                Pick(picked.culture, wanted);
+            }
+
+            function Emblem(key, name, src) {
+                const button = document.createElement("button");
+                button.className = "iconPickerButton";
+                button.dataset.key = key;
+                button.title = name;
+                button.innerHTML = '<img src="' + src + '" alt="" />';
+                button.onclick = () => Pick(key);
+                return button;
+            }
+
+            function Pick(culture, wanted) {
+                picked.culture = culture;
+                const own = cultures.find((c) => c.key === culture);
+                const subs = own && own.tomes.length > 1 ? own.tomes : [];
+                picked.sub = subs.some((t) => t.id === wanted) ? wanted : subs[0]?.id || "";
+                const holder = document.getElementById("subculturePicker");
+                holder.innerHTML = "";
+                for (const t of subs) {
+                    const button = document.createElement("button");
+                    button.className = "subscultureButton";
+                    button.dataset.key = t.id;
+                    button.innerHTML =
+                        '<img src="/evolved/Icons/Text/' + (ICON[t.id] || t.id) + '.png" alt="" /><span class="subCultureName">' + t.name.split(" - ")[1] + "</span>";
+                    button.onclick = () => {
+                        picked.sub = t.id;
+                        ShowTome();
+                    };
+                    holder.append(button);
+                }
+                holder.style.display = subs.length ? "" : "none";
+                ShowTome();
+            }
+
+            async function ShowTome() {
+                const own = cultures.find((c) => c.key === picked.culture);
+                const id = picked.sub || (own ? own.tomes[0].id : GENERAL);
+                const hash = new URLSearchParams({ culture: picked.culture });
+                if (picked.sub) hash.set("sub", picked.sub);
+                history.replaceState(null, "", location.pathname + "#" + hash);
+
+                document.getElementById("cultureName").textContent = own ? own.name + " Culture" : "General Research";
+                const src = document.querySelector('#culturePicker > [data-key="' + picked.culture + '"] img').src;
+                document.querySelectorAll(".cu-title-icon").forEach((img) => (img.src = src));
+                for (const button of document.querySelectorAll("#culturePicker > button, #subculturePicker > button")) {
+                    const on = button.dataset.key === picked.culture || button.dataset.key === picked.sub;
+                    button.classList.toggle("selected", on);
+                    button.setAttribute("aria-pressed", on);
+                }
+
+                const holder = document.getElementById("tomeHolder");
+                holder.innerHTML = "";
+                await showTomeFromString(id, "tomeHolder");
+                HandleExtraTooltips(holder);
             }
         </script>
 
@@ -31,14 +116,50 @@
     <body>
         <div id="header"></div>
 
-        <div class="w3-container sidebarPage">
-            <div class="textblocktitle">Culture Tomes</div>
-            <div class="w3-bar w3-black" id="buttonHolder"></div>
-            <div id="dataHolder"></div>
+        <div class="cu-page">
+            <div class="textblocktitle">
+                <img class="cu-title-icon" height="44" alt="" /> <span id="cultureName"></span>
+                <img class="cu-title-icon" height="44" alt="" />
+            </div>
+            <div class="cu-controls">
+                <div id="culturePicker" class="iconPicker"></div>
+                <div id="subculturePicker" class="subcultureHolder"></div>
+            </div>
+            <div id="tomeHolder"></div>
         </div>
     </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>
+<style>
+    .cu-page {
+        padding: 0 16px 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    /* as on the City Tree: one band under the title, ruled off from the tome */
+    .cu-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 4px auto 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgb(173, 156, 122, 0.35);
+    }
+    .cu-controls .subcultureHolder {
+        flex-wrap: wrap;
+        gap: 8px 30px;
+        padding: 0;
+    }
+    .cu-controls .subscultureButton:not(.selected) .subCultureName {
+        color: grey;
+    }
+    .cu-page .tome_card {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    @media (max-width: 800px) {
+        .cu-page .tome_card > div {
+            flex-wrap: wrap;
+        }
+    }
+</style>

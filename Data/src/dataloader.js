@@ -188,9 +188,6 @@ async function GetAllData(selectedLang) {
         "FactionCreation.json",
         "StatusEffects.json",
         "ExtraToolTips.json",
-        "CombatEnchantments.json",
-        "WorldStructures.json",
-        "CosmicHappenings.json",
         "all_spawnsets_strategic.json",
         "FreeCities.json",
         "DestinyTraits.json",
@@ -198,7 +195,8 @@ async function GetAllData(selectedLang) {
         "Pantheon_Tree.json",
         "ExtraLookSpellsOrigin.json",
         "StructurePredictions.json",
-        "LinkedAbilities.json"
+        "LinkedAbilities.json",
+        "SpellBook.json"
     ];
     const fileNames = [
         // ingame dump files
@@ -244,9 +242,6 @@ async function GetAllData(selectedLang) {
             "jsonFactionCreation",
             "jsonStatusEffects",
             "jsonExtraTooltips",
-            "jsonCombatEnchantments",
-            "jsonWorldStructures",
-            "jsonCosmicHappenings",
             "jsonSpawnSetsStrat",
             "jsonFreeCities",
             "jsonDestinyTriggers",
@@ -254,7 +249,8 @@ async function GetAllData(selectedLang) {
             "jsonPantheon",
             "jsonExtraSpellsLookup",
             "jsonStructurePredictions",
-            "jsonLinkedAbilities"
+            "jsonLinkedAbilities",
+            "jsonSpellBook"
         ];
         const targets = [
             "jsonHeroItems",

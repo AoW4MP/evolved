@@ -1,0 +1,175 @@
+/* The Spells pages and Search's spell and siege cards: a grid of cards under the World Map pages' tabs (Style/worldmap.css) */
+.sb-page {
+    max-width: 1500px;
+}
+.sb-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+}
+.sb-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 8px 12px 10px;
+    background-image: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+    color: #bbcdf6;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+    overflow-wrap: anywhere;
+}
+.sb-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.sb-head > img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex: none;
+}
+.sb-names {
+    flex: 1;
+    min-width: 0;
+}
+.sb-name {
+    color: #d7c297;
+    font-size: 18px;
+}
+.sb-variant {
+    margin-left: 4px;
+    color: #bbcdf6;
+    font-size: 14px;
+}
+.sb-type {
+    color: #e8e2d4;
+    font-size: 14px;
+}
+.sb-head .mountToolTip {
+    display: flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    flex: none;
+}
+.tome_name .mountToolTip {
+    display: inline-flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 10px !important;
+    vertical-align: middle;
+}
+.sb-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 14px;
+}
+.sb-chances > div {
+    margin-top: 6px;
+}
+.sb-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 6px 16px;
+    margin-top: auto;
+    padding-top: 10px;
+}
+.sb-sources {
+    min-width: 0;
+    font-size: 14px;
+}
+.sb-source {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 6px;
+}
+.sb-source a {
+    color: #e8e2d4;
+}
+.sb-source a:hover {
+    color: white;
+}
+.sb-tome {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.sb-tome img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+.sb-tome-tier {
+    color: #8d97ad;
+}
+.sb-costs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2px 12px;
+    margin-left: auto;
+    color: white;
+}
+.sb-costs b {
+    color: #d7c297;
+    font-weight: normal;
+}
+.sb-single {
+    display: block;
+    max-width: 620px;
+    margin: 0 auto;
+}
+/* a tome's unlocks, as wide as its card */
+.sb-tome-cards {
+    box-sizing: border-box;
+    margin-top: 14px;
+}
+.sidebarPage .sb-tome-cards {
+    width: 1024px;
+}
+.InitialBonus[hidden] {
+    display: none;
+}
+.sb-card .structure-help {
+    margin-top: 6px;
+}
+.sb-none {
+    color: #8d97ad;
+    text-align: center;
+    padding: 30px 0;
+}
+@media (max-width: 800px) {
+    .sb-cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    /* a tome's card and unlocks fit the page */
+    .sidebarPage .city .sb-tome-cards,
+    .sidebarPage .city .tome_card {
+        display: block;
+        box-sizing: border-box;
+        width: auto;
+    }
+    .sidebarPage .city .sb-tome-cards {
+        display: grid;
+    }
+    .sidebarPage .city:has(> * > .tome_card) {
+        display: block;
+    }
+    .tome_card > div {
+        flex-wrap: wrap;
+    }
+}

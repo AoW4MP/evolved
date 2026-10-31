@@ -1,0 +1,301 @@
+/* The World Map pages made from the game's data (Infestations, Landmarks, Cosmic Happenings, Province Improvements):
+   a tab per group and large cards, as on Ancient Wonders and Magic Materials */
+.wm-page {
+    padding: 0 16px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.wm-intro {
+    color: #bbcdf6;
+    text-align: center;
+    max-width: 720px;
+    margin: 4px auto 16px;
+}
+.wm-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px 0 20px;
+}
+.wm-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 18px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* one size in a square, without the nudges a text icon has in icons.css */
+.wm-tab > :not(span) {
+    position: static;
+    width: 24px;
+    height: 24px;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+}
+.wm-tab span {
+    color: #8d97ad;
+    font-size: 14px;
+}
+.wm-tab:hover {
+    color: white;
+}
+.wm-tab.selected {
+    color: #ffe9a8;
+    border-color: #d7c297;
+}
+.wm-tab:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+/* a search, and a row of icon buttons that choose one */
+.wm-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 14px;
+    margin-bottom: 20px;
+}
+.wm-search {
+    box-sizing: border-box;
+    width: 320px;
+    max-width: 100%;
+    padding: 6px 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #555;
+    font: inherit;
+}
+.wm-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.wm-choice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 34px;
+    padding: 0;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    cursor: pointer;
+}
+/* one size in a square, without the nudges a text icon has in icons.css */
+.wm-choice > * {
+    position: static;
+    width: 24px;
+    height: 24px;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+}
+/* its picture has wide empty sides */
+.wm-choice influence {
+    transform: scale(1.35);
+}
+.wm-choice.selected,
+.wm-sort.selected {
+    border-color: #d7c297;
+    background: rgba(215, 194, 151, 0.25);
+}
+.wm-sort {
+    height: 34px;
+    padding: 0 12px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    font: inherit;
+    cursor: pointer;
+}
+.wm-sort:hover {
+    color: white;
+}
+.wm-card {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 16px;
+    margin-bottom: 20px;
+    background-image: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 0 14px 12px;
+    color: #bbcdf6;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+}
+.wm-title {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 -14px 12px;
+    padding: 5px 14px;
+    color: #d7c297;
+    font-size: 18px;
+    background-image: linear-gradient(to right, var(--band, rgb(90, 80, 110)), rgb(0, 0, 0, 0) 70%);
+}
+.wm-title img {
+    height: 30px;
+}
+.wm-title-note {
+    margin-left: auto;
+    color: #bbcdf6;
+    font-size: 14px;
+}
+/* AddDLCTag's inline offsets suit other pages' titles */
+.wm-title .mountToolTip,
+.pi-head .mountToolTip {
+    display: flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+}
+.wm-picture {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border: 1px solid #555;
+}
+/* a thing with only an icon: the icon on the picture's dark ground */
+.wm-picture.wm-icon-only {
+    box-sizing: border-box;
+    padding: 50px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.35);
+}
+.wm-about {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.wm-card > .wm-about:nth-child(2) {
+    grid-column: 1 / -1;
+}
+.wm-lore {
+    color: #c9bda3;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.wm-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 20px;
+}
+.wm-label {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.wm-part {
+    margin-top: 10px;
+}
+.wm-facts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 18px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(215, 194, 151, 0.25);
+}
+.wm-facts b {
+    color: #d7c297;
+    font-weight: normal;
+}
+.wm-units {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+}
+.wm-others {
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* GetUnitTierAndName lays a name out for a fixed-width table: here the tier follows the name */
+.wm-unit {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #bbcdf6;
+}
+.wm-unit * {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+a.wm-unit:hover {
+    color: white;
+}
+.wm-ench {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 4px;
+}
+.wm-ench > div {
+    min-width: 0;
+}
+.wm-ench img {
+    width: 56px;
+    flex: none;
+}
+.wm-ench-name {
+    color: #aa84f6;
+    font-size: 16px;
+}
+.wm-group {
+    color: #d7c297;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 6px 0 10px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(215, 194, 151, 0.3);
+}
+.wm-season {
+    color: white;
+    margin-top: 6px;
+}
+.wm-story {
+    margin-top: 10px;
+}
+.wm-story summary {
+    color: #d7c297;
+    cursor: pointer;
+}
+.wm-story p {
+    margin: 6px 0;
+}
+.wm-story-option {
+    margin-top: 4px;
+    padding: 4px 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #d7c297;
+}
+@media (max-width: 800px) {
+    .wm-card,
+    .wm-columns {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .wm-picture {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 8px;
+    }
+}

@@ -13,6 +13,10 @@
             gtag("config", "G-CC3NE8PT7K");
         </script>
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/spellbook.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/ancientwonders.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/magicmaterials.css" />
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
         <meta charset="UTF-8" />
@@ -36,9 +40,14 @@
 }</style>
 
         <script src="/evolved/Data/Init.js"></script>
+        <script src="/evolved/Data/worldmap.js"></script>
+        <script src="/evolved/Data/spellbook.js"></script>
+        <script src="/evolved/Data/ancientwonders.js"></script>
+        <script src="/evolved/Data/magicmaterials.js"></script>
         <script>
           
-            function HandlePage() {
+            async function HandlePage() {
+                await LoadSearchBooks();
                 
                   const unitsToggle = document.getElementById("unitsCheck");
             const unitSubFilters = document.querySelectorAll("#unitSubFilters input[type='checkbox']");
@@ -189,6 +198,10 @@ btn.id = key;
                                     <input type="checkbox" name="checkToggle" id="worldStructuresCheck" checked="checked" />
                                     World Structures
                                 </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="happeningsCheck" checked="checked" />
+                                    Cosmic Happenings
+                                </label>
                                   <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="artifactCheck" checked="checked" />
                                     Artifacts
@@ -208,8 +221,8 @@ btn.id = key;
                             </div>
                         </div>
                     </div>
-                    <div style="margin-right: auto; margin-left: auto; width: 500px; padding-top: 6px; padding-bottom: 12px">
-                        <input style="width: 400px" type="text" class="searchbar" id="searchInput" />
+                    <div id="searchBox" style="margin-right: auto; margin-left: auto; max-width: 500px; padding-top: 6px; padding-bottom: 12px">
+                        <input style="width: 400px; max-width: calc(100% - 90px)" type="text" class="searchbar" id="searchInput" />
                         <input class="button-random" type="submit" value="Submit" id="button" />
 
                         <p id="searchResult" style="color: aqua"></p>

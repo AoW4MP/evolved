@@ -1,0 +1,464 @@
+{
+ "generated": "2026-10-31 20:29",
+ "build": "exe of 2026-10-30",
+ "mod": "AoW 4 Evolved",
+ "happenings": [
+  {
+   "key": "invading_sylviculture",
+   "name": "Invading Sylviculture",
+   "group": "Minor",
+   "category": "Asteroid",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "A World Seedling causes forests to spread.<br>[hyperlink,GLOBAL.PROPERTIES.STARSEEDS_COMBAT_PROPERTY]Grasping Vines[/hyperlink] is active in combat.<br>[hyperlink,GLOBAL.PROPERTIES.STARSEEDS_PROPERTY_GROUP]Living Forest[/hyperlink] affects units on forest provinces.",
+   "description": "<bulletlist><bullet>Forests start to spread into adjacent provinces.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STARSEEDS_COMBAT_PROPERTY]Grasping Vines[/hyperlink] active in combat.</bullet><bullet>Units on Forest provinces suffer from [hyperlink,GLOBAL.PROPERTIES.STARSEEDS_PROPERTY_GROUP]Living Forest[/hyperlink].</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_Starseeds.png",
+   "icon": "category_icon_Asteroid.png"
+  },
+  {
+   "key": "portent_of_rousing",
+   "name": "Portent of Rousing",
+   "group": "Minor",
+   "category": "Asteroid",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Units benefit from the [hyperlink,GLOBAL.PROPERTIES.XORN_JAVELIN_GROUP]Portent of Rousing[/hyperlink].<br>Cities gain +100% <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] income.<br>At the end of the happening, gain 20 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] for each unit in your empire.",
+   "description": "<bulletlist><bullet>Base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] is reduced by up to -50%.</bullet><bullet>Cities gain +100% <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] income.</bullet><bullet>At the end of the happening, gain 20 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] for each unit in your empire.</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_XornsJavelin.png",
+   "icon": "category_icon_Asteroid.png"
+  },
+  {
+   "key": "rays_of_winter",
+   "name": "Rays of Winter",
+   "group": "Minor",
+   "category": "Asteroid",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Arctic terrain slowly covers the land.<br>[hyperlink,GLOBAL.PROPERTIES.SOLAR_WINTER_COMBAT_PROPERTY]Arctic Blizzards[/hyperlink] is active in combat.<br>Units on Arctic provinces suffer from [hyperlink,GLOBAL.PROPERTIES.SOLAR_WINTER_PROPERTY_GROUP]Rays of Winter[/hyperlink].",
+   "description": "<bulletlist><bullet>Arctic terrain spreads around the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SOLAR_WINTER_COMBAT_PROPERTY]Arctic Blizzards[/hyperlink] active in combat.</bullet><bullet>Units on Arctic provinces suffer from [hyperlink,GLOBAL.PROPERTIES.SOLAR_WINTER_PROPERTY_GROUP]Rays of Winter[/hyperlink].</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_RaysOfWinter.png",
+   "icon": "category_icon_Asteroid.png"
+  },
+  {
+   "key": "phase_shift_nixing",
+   "name": "Phase-shift Nixing",
+   "group": "Minor",
+   "category": "Chain Ender",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.PHASE_TELEPORT]Phasing units[/hyperlink] suffer from [hyperlink,GLOBAL.PROPERTIES.PHASE_SHIFT_NIXING_GROUP]Phase-shift Nixing[/hyperlink].<br>[hyperlink,GLOBAL.STRUCTURE_UPGRADES.TELEPORTER]<teleporter></teleporter> Teleporters[/hyperlink] and teleporting spells and abilities are disabled.",
+   "description": "<bulletlist><bullet>Teleporter province improvements, Teleportation spells, and Teleportation abilities are disabled.</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_PhaseShiftNixing.png",
+   "icon": "category_icon_Entity.png"
+  },
+  {
+   "key": "starry_eyed_enlightenment",
+   "name": "Starry-eyed Enlightenment",
+   "group": "Minor",
+   "category": "Chain Ender",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "<knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income increased by +100%.<br>Declaring wars is always [hyperlink,GLOBAL.WarJustificationConcept]unjust[/hyperlink].<br>Ending wars grants 200 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink].",
+   "description": "<bulletlist><bullet>Cities gain +100% <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income.</bullet><bullet>Declaring wars is always [hyperlink,GLOBAL.WarJustificationConcept]unjust[/hyperlink].</bullet><bullet>Ending wars grants 200 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink].</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_GabrielsEye.png",
+   "icon": "category_icon_Constellation.png"
+  },
+  {
+   "key": "astral_eclipse",
+   "name": "Astral Eclipse",
+   "group": "Minor",
+   "category": "Constellation",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "<mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income reduced by -30%.<br>Combat and World Map Spells cost +50% Casting Points.",
+   "description": "<bulletlist><bullet><mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income is reduced by -30%.</bullet><bullet>[hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] and [hyperlink,GLOBAL.WorldMapSpellConcept]World Map Spells[/hyperlink] cost +50% Casting Points.</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_AstralEclipse.png",
+   "icon": "category_icon_Constellation.png"
+  },
+  {
+   "key": "sign_of_the_cleft_shield",
+   "name": "Sign of the Cleft Shield",
+   "group": "Minor",
+   "category": "Constellation",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "The [hyperlink,GLOBAL.PROPERTIES.SIGN_OF_THE_CLEFT_SHIELD_PROPERTY_GROUP]Sign of the Cleft Shield[/hyperlink] affects [hyperlink,GLOBAL.PROPERTIES.SHIELD_UNIT]Shield Units[/hyperlink].",
+   "description": "[hyperlink,GLOBAL.PROPERTIES.SHIELD_UNIT]Shield Units[/hyperlink] have:<bulletlist><bullet>Attacks deal +40% damage.</bullet><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_SignoftheCleftShield.png",
+   "icon": "category_icon_Constellation.png"
+  },
+  {
+   "key": "sign_of_the_huntress",
+   "name": "Sign of the Huntress",
+   "group": "Minor",
+   "category": "Constellation",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "The [hyperlink,GLOBAL.PROPERTIES.SIGN_OF_THE_HUNTRESS_PROPERTY_GROUP]Sign of the Huntress[/hyperlink] affects [hyperlink,GLOBAL.PROPERTIES.RANGED_UNIT]Ranged Units[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.SKIRMISHER]Skirmisher Units[/hyperlink].",
+   "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks of [hyperlink,GLOBAL.PROPERTIES.RANGED_UNIT]Ranged Units[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.SKIRMISHER]Skirmisher Units[/hyperlink]:<bulletlist><bullet>Deal +30% more damage.</bullet><bullet>Have -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_SignOfTheHuntress.png",
+   "icon": "category_icon_Constellation.png"
+  },
+  {
+   "key": "sign_of_the_lumbering_staff",
+   "name": "Sign of the Lumbering Staff",
+   "group": "Minor",
+   "category": "Constellation",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "The [hyperlink,GLOBAL.PROPERTIES.SIGN_OF_THE_LUMBERING_STAFF_PROPERTY_GROUP]Sign Of The Lumbering Staff[/hyperlink] affects [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]Support Units[/hyperlink].",
+   "description": "[hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]Support Units[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink] have:<bulletlist><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities have +1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLOW_MOVEMENT]Slow Movement[/hyperlink] in combat.</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_SignOfTheLumberingStaff.png",
+   "icon": "category_icon_Constellation.png"
+  },
+  {
+   "key": "sign_of_the_vanguard",
+   "name": "Sign of the Vanguard",
+   "group": "Minor",
+   "category": "Constellation",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "The [hyperlink,GLOBAL.PROPERTIES.SIGN_OF_THE_VANGUARD_PROPERTY_GROUP]Sign Of The Vanguard[/hyperlink] affects [hyperlink,GLOBAL.PROPERTIES.SHOCK_UNIT]Shock Units[/hyperlink].",
+   "description": "[hyperlink,GLOBAL.PROPERTIES.SHOCK_UNIT]Shock Units[/hyperlink] have:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -20% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -20% damage.</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_SignOfTheVanguard.png",
+   "icon": "category_icon_Constellation.png"
+  },
+  {
+   "key": "meleniss_kiss",
+   "name": "Melenis's Kiss",
+   "group": "Minor",
+   "category": "Entity",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "All units have a 30% chance of turning slain enemies into Zombies under your control.<br>These Zombies stay after combat and have [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].",
+   "description": "<bulletlist><bullet>All units have a 30% chance of turning slain non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] enemies into Zombies under your control that stay after combat.</bullet><bullet>These Zombies have [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_MelenisKiss.png",
+   "icon": "category_icon_Entity.png"
+  },
+  {
+   "key": "sunstruck_eruptions",
+   "name": "Sunstruck Eruptions",
+   "group": "Minor",
+   "category": "Entity",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.SUNSTRUCK_ERUPTIONS_COMBAT_PROPERTY]Volcanic Eruptions[/hyperlink] is active in combat.<br>Provinces are slowly becoming Desolate.",
+   "description": "<bulletlist><bullet>Provinces turn into Desolate around the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SUNSTRUCK_ERUPTIONS_COMBAT_PROPERTY]Volcanic Eruptions[/hyperlink] active in combat.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_SunstruckEruptions.png",
+   "icon": "category_icon_Entity.png"
+  },
+  {
+   "key": "ravenous_visitants",
+   "name": "Ravenous Visitants",
+   "group": "Minor",
+   "category": "Invasion",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Astral parasites invade your world!<br>[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] Units benefit from [hyperlink,GLOBAL.PROPERTIES.INFINITE_BEING_GROUP]Attunement: Enhancement[/hyperlink].",
+   "description": "<bulletlist><bullet>Armies of hostile astral creatures appear across the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] units gain [hyperlink,GLOBAL.PROPERTIES.INFINITE_BEING_GROUP]a random positive status effect[/hyperlink] when a spell is cast.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_InfiniteBeing.png",
+   "icon": "category_icon_Entity.png"
+  },
+  {
+   "key": "blightfall_conjunction",
+   "name": "Blightfall Conjunction",
+   "group": "Minor",
+   "category": "Planet Phase",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.BLIGHTFALL_COMBAT_PROPERTY]Blightfall Conjunction[/hyperlink] is active in combat.<br>Cities require more <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BLIGHTFALL_COMBAT_PROPERTY]Blightfall Conjunction[/hyperlink] active in combat.</bullet><bullet>Cities lose -5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] per <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink].</bullet></bulletlist>",
+   "duration": 5,
+   "warning": null,
+   "image": "image_BlightfallConjunction.png",
+   "icon": "category_icon_PlanetPhase.png"
+  },
+  {
+   "key": "colossus_moon",
+   "name": "Colossus Moon",
+   "group": "Minor",
+   "category": "Planet Phase",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.COLOSSUS_MOON_UNIT_AUTO_SPELL]Thunder Storms [/hyperlink] are active in combat. Regions around the world turn into Swamps.",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.COLOSSUS_MOON_UNIT_AUTO_SPELL]Thunder Storms[/hyperlink] active in combat.</bullet><bullet>Regions around the world turn into Swamps.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_ColossusMoon.png",
+   "icon": "category_icon_PlanetPhase.png"
+  },
+  {
+   "key": "stirring_stone_conjunction",
+   "name": "Stirring Stone Conjunction",
+   "group": "Minor",
+   "category": "Planet Phase",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Cities gain +100% <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] income.<br>All units have [hyperlink,GLOBAL.PROPERTIES.SIEGE_BREAKER]Siege Breaker[/hyperlink].",
+   "description": "<bulletlist><bullet>Cities gain +100% <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] income.</bullet><bullet>All units have [hyperlink,GLOBAL.PROPERTIES.SIEGE_BREAKER]Siege Breaker[/hyperlink].</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_StirringStoneConjunction.png",
+   "icon": "category_icon_PlanetPhase.png"
+  },
+  {
+   "key": "cosmic_winds",
+   "name": "Cosmic Winds",
+   "group": "Minor",
+   "category": "Weather",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Deserts spread across your world.<br>[hyperlink,GLOBAL.PROPERTIES.SOLAR_WINDS_COMBAT_PROPERTY]Blinding Sands[/hyperlink] affects combat.",
+   "description": "<bulletlist><bullet>Provinces turn into Deserts around the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SOLAR_WINDS_COMBAT_PROPERTY]Blinding Sands[/hyperlink] active in combat.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": "image_SolarWinds.png",
+   "icon": "category_icon_Weather.png"
+  },
+  {
+   "key": "dawn_of_the_lodestar",
+   "name": "<order></order> Dawn of the Lodestar",
+   "group": "Major",
+   "category": "Affinity",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.CH_ORDER_PROPERTY_GROUP]Angelic Potential[/hyperlink] affects [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units and units with [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink]<br><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] spawn armies to attack their targets<br>All units permanently suffer [hyperlink,GLOBAL.PROPERTIES.ORDER_INFLUENCE_GROUP]Order Influence[/hyperlink]",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units and units with [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] have:<bulletlist><bullet>+2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet><bullet>+20 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet></bulletlist></bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] spawn armies to attack their targets.</bullet></bulletlist><br>For the rest of the game:<bulletlist><bullet>All units have -2 <defensespirit></defensespirit> [hyperlink,GLOBAL.SpiritResistanceConcept]Spirit Protection[/hyperlink].</bullet></bulletlist>",
+   "duration": 12,
+   "warning": 2,
+   "image": "image_DawnOfTheLodestar.png",
+   "icon": "category_icon_Major.png"
+  },
+  {
+   "key": "drifting_ley_lines",
+   "name": "<arcana></arcana> Drifting Ley Lines",
+   "group": "Major",
+   "category": "Affinity",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.CH_ASTRAL_PROPERTY_GROUP]Magic Origin Potential[/hyperlink] affects [hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] units. <br>[hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] are [hyperlink,GLOBAL.SpellOverchargeConcept]Overcharged[/hyperlink] the first time they are cast each combat.<br>Units permanently suffer [hyperlink,GLOBAL.PROPERTIES.ASTRAL_INFLUENCE_GROUP]Astral Influence[/hyperlink].",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] units have:<bulletlist><bullet>Attacks inflict [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink].</bullet><bullet>Grant +5 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink] in combat.</bullet></bulletlist></bullet><bullet>[hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] are always [hyperlink,GLOBAL.SpellOverchargeConcept]Overcharged[/hyperlink] the first time they are cast each combat.</bullet></bulletlist><br>For the rest of the game:<bulletlist><bullet>All units have -2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink].</bullet></bulletlist>",
+   "duration": 12,
+   "warning": 2,
+   "image": "image_WanderingLeylines.png",
+   "icon": "category_icon_Major.png"
+  },
+  {
+   "key": "eye_of_fire",
+   "name": "<chaos></chaos> Eye of Fire",
+   "group": "Major",
+   "category": "Affinity",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Demons are empowered by [hyperlink,GLOBAL.PROPERTIES.EYE_OF_FIRE_PROPERTY_GROUP]Demonic Potential[/hyperlink].<br>Units are affected by [hyperlink,GLOBAL.PROPERTIES.CHAOTIC_INFLUENCE_GROUP]Chaotic Influence[/hyperlink].<br>[hyperlink,GLOBAL.PactOfVassalageConcept]Vassals[/hyperlink] are growing distrustful of their Overlords.",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] units have:<bulletlist><bullet>Base attacks have a 30% chance of inflicting a random status effect.</bullet></bulletlist></bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] lose -10 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink] per turn and are able to declare war on their overlords when reaching [hyperlink,GLOBAL.PactOfVassalageLvl-1Concept]Tributary[/hyperlink] or lower.</bullet></bulletlist><br>For the rest of the game:<bulletlist><bullet>All units have -2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink].</bullet></bulletlist>",
+   "duration": 12,
+   "warning": 2,
+   "image": "image_EyeOfFire.png",
+   "icon": "category_icon_Major.png"
+  },
+  {
+   "key": "toll_of_seasons",
+   "name": "Toll of Seasons",
+   "group": "Major",
+   "category": "Invasion",
+   "dlc": "ELDRITCHREALMS",
+   "sub": "Await the spreading mists.",
+   "description": "There are ill tales told on <eventColor>this realm</eventColor>, speaking of a thick mist that lays itself upon the land. When it dissipates, villages and entire cities disappear, leaving no trace of their former inhabitants.",
+   "duration": null,
+   "warning": null,
+   "image": "image_TollOfSeasons.png",
+   "icon": "category_icon_TollOfSeasons.png"
+  },
+  {
+   "key": "dawn_of_calamity",
+   "name": "Dawn of Calamity",
+   "group": "Intrigue",
+   "category": "",
+   "dlc": "WAYSOFWAR",
+   "sub": "<eventColor>The former ruler</eventColor> has been replaced...",
+   "description": "It is said that those who lean too far into [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink] risk stirring the bringer of cataclysms, the harbinger of destruction. The end of realms is heralded by a draconic roar...",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_dawn_of_calamity.png",
+   "story": {
+    "text": [
+     "As you ponder the realm, you are suddenly contacted by none other than a <eventColor>Calamity Dragon</eventColor>, who now seems to rule the <eventColor>people</eventColor>.",
+     "With a thundering voice, <eventColor>the new ruler</eventColor> announces: \"Behold the arrival of <eventColor>the new ruler</eventColor>, Calamity incarnate! The <eventColor>people</eventColor> have been deemed worthy of my guidance into [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink]. Join me or face your demise!\"",
+     "It seems <eventColor>the former ruler</eventColor> of the <eventColor>people</eventColor> has been replaced. How could this have happened to <eventColor>the former ruler</eventColor>? Is this a threat... or an opportunity for you?"
+    ],
+    "options": []
+   }
+  },
+  {
+   "key": "day_of_judgment",
+   "name": "Day of Judgment",
+   "group": "Intrigue",
+   "category": "",
+   "dlc": "WAYSOFWAR",
+   "sub": "<eventColor>The former ruler</eventColor> has been replaced...",
+   "description": "When a realm is in turmoil and no solution seems to be in sight, the divine machinations of the [hyperlink,GLOBAL.AstralSeaLoreConcept]Astral Sea[/hyperlink] bring forth a Judge to restore [hyperlink,GLOBAL.OrderConcept]Order[/hyperlink]. The day of judgment has come.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_day_of_judgment.png",
+   "story": {
+    "text": [
+     "Be it near or far, this realm has seen war and strife. As you contemplate this, a new Ruler announces themselves.",
+     "\"Greetings, [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink]. Given the present state of the realm, <eventColor>the former ruler</eventColor> has been divested of their rule until the manifold troubles are settled. In their stead, the mantle of authority over all <eventColor>people</eventColor> has been bestowed upon me, as <eventColor>the new ruler</eventColor>. By the sacred powers vested in me, I shall henceforth render judgment upon all who rule here.\"",
+     "\"Those who can rule with faith and [hyperlink,GLOBAL.OrderConcept]Order[/hyperlink] have nothing to fear. Soon, I will contact those worthy of redemption.\""
+    ],
+    "options": [
+     "\"Finally, a devotee of Order <order></order> such as I!\"",
+     "\"I recognize no authority but my own!\" <imperium></imperium>",
+     "\"Very well...\""
+    ]
+   }
+  },
+  {
+   "key": "fiendish_takeover",
+   "name": "Fiendish Takeover",
+   "group": "Intrigue",
+   "category": "",
+   "dlc": "WAYSOFWAR",
+   "sub": "<eventColor>The former ruler</eventColor> has been replaced...",
+   "description": "The Infernal [hyperlink,GLOBAL.WorldsWithinLoreConcept]World[/hyperlink] of [hyperlink,GLOBAL.ObbadothLoreConcept]Obbadoth[/hyperlink], realm of war and [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink], is cause for many a wary tale. The beings who rule Obbadoth promise great powers... to those who can pay the price.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_fiendish_takeover.png",
+   "story": {
+    "text": [
+     "As you ponder the realm, you are suddenly contacted by none other than a <eventColor>Balor</eventColor>, who now seems to rule the <eventColor>people</eventColor>.",
+     "Before you can demand an explanation, the new <eventColor>the new ruler</eventColor> grins. \"Mortals and [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink]! The Empire of <eventColor>the former ruler</eventColor> is now under new management. Bow to me, the great <eventColor>the new ruler</eventColor>, and despair, for the wrath and fury of [hyperlink,GLOBAL.ObbadothLoreConcept]Obbadoth[/hyperlink] has arrived!\" Their grin grows darker as <eventColor>the new ruler</eventColor> severs the connection.",
+     "It seems <eventColor>the former ruler</eventColor> of the <eventColor>people</eventColor> has been... replaced. How could this have happened to <eventColor>the former ruler</eventColor>? Is this a danger... or an opportunity for you?"
+    ],
+    "options": []
+   }
+  },
+  {
+   "key": "game_of_death",
+   "name": "Game of Death",
+   "group": "Intrigue",
+   "category": "",
+   "dlc": "WAYSOFWAR",
+   "sub": "<eventColor>The former ruler</eventColor> has been replaced...",
+   "description": "As immortal souls, many [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink] stop fearing death altogether. A grave mistake, for Death itself is not one to taunt. When you play games with the Reaper, make sure you win... and ask not for whom the bell tolls.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_game_of_death.png",
+   "story": {
+    "text": [
+     "During a moment of respite, you suddenly feel a cold chill, as a <eventColor>Reaper</eventColor> appears before you.",
+     "The faceless <eventColor>Reaper</eventColor> whispers in a voice both immensely loud and soft as the rustle of dead leaves: \"<eventColor>The former ruler</eventColor> summoned me. <eventColor>The former ruler</eventColor> thought <eventColor>the former ruler</eventColor> could chain me, cheat me, but no chains can hold death itself. <eventColor>The former ruler</eventColor> gambled with their [hyperlink,GLOBAL.SoulsLoreConcept]Soul[/hyperlink] and lost. And thus I claim it, and the [hyperlink,GLOBAL.SoulsLoreConcept]Souls[/hyperlink] of the <eventColor>people</eventColor>. I have no name... but you may call me <eventColor>the new ruler</eventColor>.\"",
+     "<eventColor>The former ruler</eventColor> of the <eventColor>people</eventColor> has lost a game with <eventColor>the new ruler</eventColor> and has been... supplanted."
+    ],
+    "options": []
+   }
+  },
+  {
+   "key": "honor_and_intrigue",
+   "name": "Honor and Intrigue",
+   "group": "Intrigue",
+   "category": "",
+   "dlc": "WAYSOFWAR",
+   "sub": "The <eventColor>people</eventColor> have a new <eventColor>ruler</eventColor>...",
+   "description": "Even the Council of a powerful [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink] is not safe from politics and intrigue. Many sycophants prey on a Ruler's weakest moment to claim power through any means necessary.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_honor_and_intrigue.png",
+   "story": {
+    "text": [
+     "<eventColor>The former ruler</eventColor> has recently retreated to the [hyperlink,GLOBAL.AstralVoidLoreConcept]Astral Void[/hyperlink]. In their absence, <eventColor>the new ruler</eventColor> introduces themselves.",
+     "\"Well met. Our great <eventColor>the former ruler</eventColor> is currently... indisposed, and whilst we investigate their absence, the weight of our proud [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] has fallen onto my shoulders. Rest assured, we will find the one responsible for the fate of our grand [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink], and justice will be served.\"",
+     "It is not abnormal for a [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink] to temporarily retreat into the Void. For someone to rule in their temporary absence, however, is certainly... unique."
+    ],
+    "options": []
+   }
+  },
+  {
+   "key": "voice_of_the_people",
+   "name": "Voice of the People",
+   "group": "Intrigue",
+   "category": "",
+   "dlc": "WAYSOFWAR",
+   "sub": "Unrest brews within the Empire of <eventColor>the targeted ruler</eventColor>...",
+   "description": "When times are dire and tyrants rule, from the people a [hyperlink,GLOBAL.AscendedChampLoreConcept]Champion[/hyperlink] will ascend to take the throne and lead them to a greater tomorrow... Unless said tyrant stops them.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_voice_of_the_people.png",
+   "story": {
+    "text": [
+     "Too long the [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] of <eventColor>the new ruler</eventColor> has been at unrest. Now, rumors of a rebellion reach your court.",
+     "Any dissent was met with severe punishment from <eventColor>the new ruler</eventColor>, but that only seems to have stirred the flames within. Recently, however, the loudest voice of the <eventColor>people</eventColor> has disappeared, rumored to have fled to greener pastures.",
+     "Unrest rumbles within the Empire of <eventColor>the new ruler</eventColor>. A threat to be dealt with... or an opportunity for you?"
+    ],
+    "options": [
+     "Time will tell."
+    ]
+   }
+  },
+  {
+   "key": "age_of_death",
+   "name": "Age of Death",
+   "group": "Special",
+   "category": "",
+   "dlc": "ARCHONPROPHECY",
+   "sub": "The Age of Death has arisen...",
+   "description": "<bulletlist><bullet>All non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] receive 50% less [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] when healed.</bullet><bullet>In combat with the Prophet's armies, all non-friendly units gain [hyperlink,GLOBAL.PROPERTIES.AGE_OF_DEATH_WIGHTBORN_CURSE_PROPERTY]Curse of Servitude[/hyperlink].</bullet><bullet>The Prophet gains +20 <souls></souls> [hyperlink,GLOBAL.SoulConcept]Souls[/hyperlink] per turn.</bullet></bulletlist>The ruler that foresaw the Vision of Ruin and brought about this age is the Prophet.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_age_of_death.png"
+  },
+  {
+   "key": "age_of_magic",
+   "name": "Age of Magic",
+   "group": "Special",
+   "category": "",
+   "dlc": "ARCHONPROPHECY",
+   "sub": "The Age of Magic has dawned...",
+   "description": "<bulletlist><bullet>All rulers may cast an additional [hyperlink,GLOBAL.SpellConcept]Spell[/hyperlink] each <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in combat.</bullet><bullet>The ruler that foresaw the Vision of Ruin may cast [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] for -50% less <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink] and <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink].</bullet></bulletlist>",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_age_of_magic.png"
+  },
+  {
+   "key": "blood_moon",
+   "name": "Blood Moon",
+   "group": "Special",
+   "category": "",
+   "dlc": "THRONESOFBLOOD",
+   "sub": "The sky darkens into scarlet. The Blood Moon eclipses the light of the sun.",
+   "description": "For the next 10 [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] Vampires:<bulletlist><bullet>Don't suffer from [hyperlink,GLOBAL.PROPERTIES.SUNLIGHT_WEAKNESS]Sunlight Weakness[/hyperlink].</bullet><bullet>+15 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] regeneration on the World Map.</bullet><bullet>Gain +20% damage.</bullet><bullet>Gain +2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>",
+   "duration": 10,
+   "warning": null,
+   "image": null,
+   "icon": "icon_blood_moon.png"
+  },
+  {
+   "key": "warped_seasons",
+   "name": "Warped Seasons",
+   "group": "Special",
+   "category": "",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "sub": "It is spring time. During this season:",
+   "description": "The seasons are unusually potent on this realm, causing constant change and turmoil.",
+   "duration": null,
+   "warning": null,
+   "image": null,
+   "icon": "icon_warped_seasons.png"
+  }
+ ]
+}

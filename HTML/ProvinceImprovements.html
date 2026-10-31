@@ -1,36 +1,148 @@
 <!doctype html>
 <html lang="en">
     <head>
-                 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-CC3NE8PT7K');
-</script>
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
         <script src="/evolved/Data/Init.js"></script>
+        <script src="/evolved/Data/worldmap.js"></script>
         <script>
-            function HandlePage() {
-                showStructuresWithArgument("forester", "Foresters", "", true);
-                showStructuresWithArgument("conduit", "Conduits", "", true);
-                showStructuresWithArgument("farm", "Farms", "", true);
-                showStructuresWithArgument("mine", "Mines", "", true);
-                showStructuresWithArgument("research", "Research", "", true);
-                showStructuresWithArgument("quarry", "Quarry", "", true);
-                showStructuresWithArgument("teleporter_", "Teleport", "", true);
-                //showStructuresWithArgument("victory", "Magic", "", true);
-                SetLevelUpStuff();
+            // Evolved's own Province Improvements page: a tab per kind, and in it where each comes from: no tome, a culture's or
+            // other special tome, or a tome's tier. The search and the resources work across the tabs, whose counts follow. The texts are the dump's
+            // (Data/EN/StructureUpgrades.json), the units from Data/GEN/StructurePredictions.json.
 
-                $("#filterInput").on("change input", function () {
-                    ShowAllDivsWithFilters("mod_card");
-                    SetLevelUpStuff();
+            // tab, icon, what the id holds
+            const KINDS = [
+                ["Foresters", "forester", "forester"],
+                ["Conduits", "conduit", "conduit"],
+                ["Farms", "farm", "farm"],
+                ["Mines", "mine", "mine"],
+                ["Research", "researchpost", "research"],
+                ["Quarry", "quarry", "quarry"],
+                ["Teleport", "teleporter", "teleporter_"]
+            ];
+            const LABEL = { Research: "Research Posts", Quarry: "Quarries", Teleport: "Teleporters" };
+            const RESOURCES = ["food", "structureprod", "gold", "unitprod", "knowledge", "mana", "influence", "happiness"];
+
+            let wanted = { words: "", resource: null };
+            const cards = [];
+
+            function HandlePage() {
+                const entries = KINDS.map(([id, icon, key]) => {
+                    const here = jsonStructureUpgrades.filter(
+                        // an empty entry shares the Teleporter's id
+                        (s) => s.is_sector_upgrade && s.id.includes(key) && (s.description || s.prediction_description)
+                    );
+                    const panel = document.createElement("div");
+                    const groups = new Map();
+                    for (const s of here) {
+                        const made = Improvement(s, id);
+                        if (!groups.has(made.group)) groups.set(made.group, []);
+                        groups.get(made.group).push(made);
+                    }
+                    for (const group of [...groups.keys()].sort((a, b) => GroupRank(a) - GroupRank(b))) {
+                        const head = WmElement("div", "wm-group", group);
+                        const grid = WmElement("div", "pi-cards");
+                        for (const made of groups.get(group).sort((a, b) => a.name.localeCompare(b.name))) grid.append(made.card);
+                        panel.append(head, grid);
+                    }
+                    panel.append(WmElement("div", "pi-none", "Nothing here matches."));
+                    panel.classList.add("pi-panel");
+                    return { id, label: "<" + icon + "></" + icon + "> " + (LABEL[id] || id), count: here.length, panel };
+                });
+                WmTabs(entries);
+
+                const row = document.getElementById("resources");
+                for (const r of RESOURCES) {
+                    const button = WmElement("button", "wm-choice", "<" + r + "></" + r + ">");
+                    button.onclick = () => {
+                        wanted.resource = wanted.resource === r ? null : r;
+                        row.querySelectorAll(".wm-choice").forEach((b) => b.classList.toggle("selected", b === button && wanted.resource === r));
+                        Refilter();
+                    };
+                    row.append(button);
+                }
+                document.getElementById("filterInput").addEventListener("input", (e) => {
+                    wanted.words = e.target.value.trim().toLowerCase();
+                    Refilter();
+                });
+            }
+
+            const NO_TOME = "Without a tome";
+            const SPECIAL_TOME = "Culture and special tomes";
+
+            function GroupRank(group) {
+                if (group === NO_TOME) return 0;
+                if (group === SPECIAL_TOME) return 1;
+                return 2 + ["I", "II", "III", "IV", "V", "VI"].indexOf(group.split(" ")[1]);
+            }
+
+            function Improvement(s, kind) {
+                const loc = jsonStructureUpgradesLocalized.find((e) => e.resid == s.resid);
+                const name = loc.name.replace(/<[^>]+>/g, "").trim();
+                const tome = backtraceStructureToTomeNameAndTier(s.id);
+                const tomeName = tome ? tome[0].split("<br>").pop().trim() : "";
+                const group = !tome ? NO_TOME : tome[1] > 0 ? "Tier " + romanize(tome[1]) + " Tomes" : SPECIAL_TOME;
+
+                const card = WmElement("div", "pi-card");
+                const head = WmElement("div", "pi-head");
+                head.innerHTML =
+                    '<img src="/evolved/Icons/UpgradeIcons/' + loc.icon + '.png" alt="" />' +
+                    '<div class="pi-names"><div class="pi-name">' + name + "</div>" +
+                    (tome ? '<div class="pi-source">' + tome[0].replace("<br>", "") + "</div>" : "") +
+                    "</div>";
+                if (s.DLC) head.append(AddDLCTag(s.DLC));
+                card.append(head);
+
+                const effects = StructureDescription(loc);
+                card.append(WmElement("div", "pi-text", WmMarkup(effects) + StructureHelp(loc)));
+                const unlocks = jsonStructurePredictions?.units?.[String(s.resid)];
+                if (unlocks) {
+                    const part = WmElement("div", "wm-part", '<div class="wm-label">Unlocks</div>');
+                    part.append(WmUnits(unlocks));
+                    card.append(part);
+                }
+                if (loc.requirement_description) {
+                    const part = WmElement("div", "pi-requires", '<div class="wm-label">Requires</div>' + WmMarkup(AsBulletList(loc.requirement_description)));
+                    card.append(part);
+                }
+                card.append(WmElement("div", "pi-cost", WmMarkup(loc.cost)));
+
+                const entry = { card, kind, words: (name + " " + tomeName + " " + card.textContent).toLowerCase(), effects };
+                cards.push(entry);
+                return { card, group, name };
+            }
+
+            // the search and resource across all tabs; a tab shows how many of its own are left
+            function Refilter() {
+                const left = {};
+                for (const c of cards) {
+                    const shown = (!wanted.words || c.words.includes(wanted.words)) && (!wanted.resource || c.effects.includes("<" + wanted.resource + ">"));
+                    c.card.hidden = !shown;
+                    if (shown) left[c.kind] = (left[c.kind] || 0) + 1;
+                }
+                document.querySelectorAll(".wm-tab").forEach((t) => (t.querySelector("span").textContent = left[t.dataset.id] || 0));
+                // a group with nothing left goes too
+                document.querySelectorAll(".pi-cards").forEach((grid) => {
+                    const empty = ![...grid.children].some((c) => !c.hidden);
+                    grid.hidden = empty;
+                    grid.previousElementSibling.hidden = empty;
+                });
+                document.querySelectorAll(".pi-panel").forEach((panel) => {
+                    panel.querySelector(".pi-none").hidden = [...panel.querySelectorAll(".pi-cards")].some((g) => !g.hidden);
                 });
             }
         </script>
@@ -41,59 +153,90 @@
     <body>
         <div id="header"></div>
 
-        <div class="w3-container sidebarPage">
+        <div class="wm-page">
             <div class="textblocktitle">Province Improvements</div>
-            <div class="pageHead">
-                <div style="height: auto; color: white; text-align: center">
-                    <br />
-                    Filter<br />
-                    <div style="margin-right: auto; margin-left: auto; width: 500px">
-                        <input type="text" class="searchbar" id="filterInput" />
-                    </div>
-                </div>
+            <div id="tabs" class="wm-tabs"></div>
+            <div class="wm-filters">
+                <input type="text" class="wm-search" id="filterInput" placeholder="Search all improvements" />
+                <div id="resources" class="wm-choices"></div>
             </div>
-            <div class="w3-bar w3-black" id="buttonHolder">
-                <button
-                    id="Foresters-button"
-                    class="w3-bar-item w3-button tablink w3-red"
-                    onclick="openDiv(event,'Foresters')">
-                    <forester></forester>Foresters
-                </button>
-                <button id="Conduits-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Conduits')">
-                    <conduit></conduit>Conduits
-                </button>
-                <button id="Farms-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Farms')">
-                    <farm></farm>Farms
-                </button>
-                <button id="Mines-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Mines')">
-                    <mine></mine>Mines
-                </button>
-                <button id="Research-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Research')">
-                    <researchpost></researchpost>Research Posts
-                </button>
-                <button id="Quarry-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Quarry')">
-                    <quarry></quarry>Quarry
-                </button>
-                <button id="Teleport-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Teleport')">
-                    <teleporter></teleporter>Teleporters
-                </button>
-            </div>
-            <div id="dataHolder">
-                <div id="Foresters" class="w3-container w3-border city"></div>
-
-                <div id="Conduits" class="w3-container w3-border city"></div>
-
-                <div id="Farms" class="w3-container w3-border city"></div>
-                <div id="Mines" class="w3-container w3-border city"></div>
-                <div id="Research" class="w3-container w3-border city"></div>
-                <div id="Quarry" class="w3-container w3-border city"></div>
-                <div id="Teleport" class="w3-container w3-border city"></div>
-                <div id="Magic" class="w3-container w3-border city"></div>
-            </div>
+            <div id="panels"></div>
         </div>
     </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>
+<style>
+    .wm-page {
+        max-width: 1500px;
+    }
+    .pi-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+    .pi-cards[hidden],
+    .pi-none[hidden] {
+        display: none;
+    }
+    .pi-card {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 8px 12px 10px;
+        background-image: url(/evolved/Icons/tooltipBG.png);
+        border: 1px solid #555;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+        color: #bbcdf6;
+        font-size: 15px;
+        text-shadow: 2px 2px black;
+    }
+    .pi-card[hidden] {
+        display: none;
+    }
+    .pi-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 6px;
+    }
+    .pi-head > img {
+        width: 52px;
+        height: 52px;
+        flex: none;
+    }
+    .pi-names {
+        flex: 1;
+        min-width: 0;
+    }
+    .pi-name {
+        color: #d7c297;
+        font-size: 18px;
+    }
+    .pi-source {
+        color: #e8e2d4;
+        font-size: 14px;
+    }
+    .pi-requires {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .pi-cost {
+        margin-top: auto;
+        padding-top: 8px;
+        text-align: right;
+        color: white;
+    }
+    .pi-none {
+        color: #8d97ad;
+        text-align: center;
+        padding: 30px 0;
+    }
+    .pi-panel:has(.pi-cards:not([hidden])) .pi-none {
+        display: none;
+    }
+    @media (max-width: 800px) {
+        .pi-cards {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+</style>

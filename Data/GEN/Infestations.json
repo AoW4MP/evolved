@@ -1,0 +1,836 @@
+{
+ "generated": "2026-10-31 20:29",
+ "build": "exe of 2026-10-30",
+ "mod": "AoW 4 Evolved",
+ "infestations": [
+  {
+   "key": "brigand_camp",
+   "name": "Brigand Camp",
+   "tier": "Bronze",
+   "dlc": null,
+   "water": false,
+   "description": "A band of bloodthirsty brigands has claimed this region.",
+   "lore": "Few know what drives the hearts of mortals. Oft it is greed, valor, or simply hunger. When the common cause grows large enough, men and women of like minds will find each other in secret places. Smoke from campfires and makeshift forges drifts among shoddy tents and huts of these haphazard armies. It is from here that they assault the surrounding lands with relentless impunity.",
+   "picture": "bandit_spawner",
+   "reward": {
+    "resource": "Production",
+    "tier": 3
+   },
+   "size": {
+    "start": 2,
+    "max": 6,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Base Architect Units",
+      "Hero",
+      "All Base Barbarian Units",
+      "Barbarian Enchantments",
+      "Architect Enchantments",
+      "All Base Dark Units",
+      "Dark Enchantments",
+      "All Base Feudal Units",
+      "Feudal Enchantments",
+      "All Base High Units",
+      "High Enchantments",
+      "All Base Industrious Units",
+      "Industrious Enchantments",
+      "All Base Mystic Units",
+      "Mystic Enchantments",
+      "All Base Reaver Units",
+      "Reaver Enchantments",
+      "All Base Primal Units",
+      "Primal Enchantments",
+      "All Base Oathsworn Units",
+      "Oathsworn Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "fleeting_fractured_infestation",
+   "name": "Fleeting Fractured Infestation",
+   "tier": "Bronze",
+   "dlc": "RISEFROMRUIN",
+   "water": false,
+   "description": "A temporary scar inhabited by [hyperlink,GLOBAL.PROPERTIES.MANA_STARVED]Mana Starved[/hyperlink] creatures which spreads [hyperlink,GLOBAL.AstralBarrensConcept]Astral Barrens[/hyperlink] in its territory.",
+   "lore": "A [hyperlink,GLOBAL.FractureLoreConcept]Fracture[/hyperlink] leaves only death and devastation. The land is rendered barren, its inhabitants twisted and deformed. Those cursed to survive become hollow husks barely resembling their former selves, driven by a ravenous hunger for mana. Their very presence drains the energy from their surroundings, transforming the places they inhabit and spreading the pollution further.",
+   "picture": "fleeting_fractured_infestation",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 5
+   },
+   "size": {
+    "start": 1,
+    "max": 12,
+    "growth": 3
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Fractured Units",
+      "All Culture Non-Mage Units",
+      "All Tome Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "haunted_graveyard",
+   "name": "Haunted Graveyard",
+   "tier": "Bronze",
+   "dlc": null,
+   "water": false,
+   "description": "A mass of haunted undead has claimed this region.",
+   "lore": "The dead often grow restless in troubled times. In places like graveyards, where they are all conveniently amassed in a single, sometimes less than final, resting place, this can be fatal for others. Whether driven by dark magic, a confluence of ambient spiritual energy, or some other source of ire from beyond the veil, hordes of the Undead rise with one need... to feast upon the flesh of the living.",
+   "picture": "undead_spawner",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 3
+   },
+   "size": {
+    "start": 2,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Necromancer",
+      "Zombie"
+     ],
+     "others": [
+      "All Culture Base Units",
+      "All Undead Units - No Water Movement",
+      "Tier I - II Shadow Enchantments",
+      "Tier III - IV Shadow Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "pirate_cove",
+   "name": "Pirate Cove",
+   "tier": "Bronze",
+   "dlc": null,
+   "water": true,
+   "description": "A roving band of pirates has claimed this region.<br>If left unchecked, they will grow in strength, expand their territory, and send out invasion parties.",
+   "lore": "Freebooters laugh as they smuggle goods along the waves and pirates raze the villages by the sea and riverside, plundering all they desire. The call of the sea resonates with these men and women who congregate in hidden coves and bays. Raucous singing can be heard in these places, accompanied by the smell of stale, stolen ale wafting through the humid air.",
+   "picture": "pirate_spawner",
+   "reward": {
+    "resource": "Gold",
+    "tier": 3
+   },
+   "size": {
+    "start": 2,
+    "max": 6,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Base Architect Units",
+      "Hero",
+      "All Base Barbarian Units",
+      "Barbarian Enchantments",
+      "Architect Enchantments",
+      "All Base Dark Units",
+      "Dark Enchantments",
+      "All Base Feudal Units",
+      "Feudal Enchantments",
+      "All Base High Units",
+      "High Enchantments",
+      "All Base Industrious Units",
+      "Industrious Enchantments",
+      "All Base Mystic Units",
+      "Mystic Enchantments",
+      "All Base Reaver Units",
+      "Reaver Enchantments",
+      "All Base Primal Units",
+      "Primal Enchantments",
+      "All Base Oathsworn Units",
+      "Oathsworn Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "small_monster_den",
+   "name": "Small Monster Den",
+   "tier": "Bronze",
+   "dlc": null,
+   "water": false,
+   "description": "A throng of vile monsters has claimed this region.",
+   "lore": "Nature is seldom good or evil. It is hungry, territorial, and protective of its young. Nests and dens such as these are home to various beasts of the wild, whose natural ferocity and power of tooth, claw, or beak may prove more than a match for the sharpest steel.",
+   "picture": "monster_spawner",
+   "reward": {
+    "resource": "Food",
+    "tier": 3
+   },
+   "size": {
+    "start": 2,
+    "max": 6,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Hunter Spider",
+      "Hunter Spider Matriarch",
+      "Dread Spider Hatchling",
+      "Dread Spider Matriarch",
+      "Vampire Spider Hatchling",
+      "Vampire Spider Matriarch",
+      "Entwined Thrall",
+      "Entwined Protector",
+      "Nymph",
+      "Horned God",
+      "Goretusk Piglet",
+      "Goretusk Matriarch",
+      "Druid of the Cycle",
+      "Wildspeaker",
+      "Razorback",
+      "Warg",
+      "White Wolf",
+      "Inferno Hound",
+      "Inferno Puppy",
+      "Spirit Wolf"
+     ],
+     "others": [
+      "Tier I - II Nature Enchantments",
+      "Tier III - IV Nature Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "crusader_host",
+   "name": "Crusader Host",
+   "tier": "Silver",
+   "dlc": "ARCHONPROPHECY",
+   "water": false,
+   "description": "Devotees and celestials gather to vanquish evil.<br><br>This Infestation will be [hyperlink,GLOBAL.InfestationNeutralityConcept]Neutral[/hyperlink] to those with <reputation7></reputation7> Very Good or better [hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink].",
+   "lore": "If walls could talk, the cracks in this structure would whisper the chronicles of the crusades against Urrath. After ages of strife, this Crusader Host still stands unshaken, serving as a meeting ground for the [hyperlink,GLOBAL.ArchonsLoreConcept]Archons[/hyperlink] and other champions of light. Yet the Crusaders' duty is not limited to the Umbral infestations; their honor compels them to raise their swords against all who rule through evil.",
+   "picture": "crusader_host",
+   "reward": {
+    "resource": "Production",
+    "tier": 3
+   },
+   "size": {
+    "start": 3,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Archon Units",
+      "Tier I - II Order Enchantments",
+      "Tier III - IV Order Enchantments",
+      "All Base High Units",
+      "Pure Order Tome Units - Land",
+      "All Celestial Units"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "derelict_workshop",
+   "name": "Derelict Workshop",
+   "tier": "Silver",
+   "dlc": "EMPIRESANDASHES",
+   "water": false,
+   "description": "An ancient workshop infested with rampant mechanical creations.",
+   "lore": "Few question the morality of machines, as a weapon is meaningless without its wielder. However, the war machines that emerge from the derelict workshop know no master but their collective directive. Having long outlasted their mortal creators, the workshop and its hosts now have one priority: to feed the engines that drive the creation of their own kind.",
+   "picture": "derelict_workshop",
+   "reward": {
+    "resource": "Production",
+    "tier": 4
+   },
+   "size": {
+    "start": 3,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Scrap Hermit",
+      "Magelock"
+     ],
+     "others": [
+      "All Construct Units (Non Celestial)",
+      "Poison Blades",
+      "Poison Arrows",
+      "Flameburst Weapons",
+      "Tier I - II Materium Enchantments",
+      "Tier III - IV Materium Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "fractured_infestation",
+   "name": "Fractured Infestation",
+   "tier": "Silver",
+   "dlc": "RISEFROMRUIN",
+   "water": false,
+   "description": "A massive scar inhabited by [hyperlink,GLOBAL.PROPERTIES.MANA_STARVED]Mana Starved[/hyperlink] creatures.<br>This infestation spreads [hyperlink,GLOBAL.AstralBarrensConcept]Astral Barrens[/hyperlink] in its territory.",
+   "lore": "A [hyperlink,GLOBAL.FractureLoreConcept]Fracture[/hyperlink] leaves only death and devastation. The land is rendered barren, its inhabitants twisted and deformed. Those cursed to survive become hollow husks barely resembling their former selves, driven by a ravenous hunger for mana. Their very presence drains the energy from their surroundings, transforming the places they inhabit and spreading the pollution further.",
+   "picture": "fractured_infestation",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 5
+   },
+   "size": {
+    "start": 1,
+    "max": 12,
+    "growth": 4
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Fractured Units",
+      "All Culture Non-Mage Units",
+      "All Tome Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "great_bird_nest",
+   "name": "Great Bird Nest",
+   "tier": "Silver",
+   "dlc": null,
+   "water": false,
+   "description": "A flock of dangerous birds has claimed this region.",
+   "lore": "Feathers, bones, and baubles litter the nesting grounds of these gigantic kings and queens of the sky. The sound of hungrily consumed flesh and bone, interspersed with loud chirping and monstrous squawks, carries over the nests of these avian behemoths. Oftentimes their presence is so potent that lesser beings will join their flock, raiding the surrounding areas for gifts, food, and other forms of tribute.",
+   "picture": "bird_spawner",
+   "reward": {
+    "resource": "Food",
+    "tier": 4
+   },
+   "size": {
+    "start": 3,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Grimbeak Crow",
+      "Carrion Bird",
+      "Thunderbird",
+      "Lesser Storm Spirit",
+      "Storm Spirit",
+      "Wind Rager",
+      "Phoenix",
+      "Horned God"
+     ],
+     "others": [
+      "Tier I - II Nature Enchantments",
+      "Tier III - IV Nature Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "lithorine_cradle",
+   "name": "Lithorine Cradle",
+   "tier": "Silver",
+   "dlc": "GIANTKINGS",
+   "water": false,
+   "description": "A crystal formation that replicates Lithorine in an uncontrolled manner.",
+   "lore": "A potent garden that grows rock and Lithorite, spewing forth territorial hordes of stone-form aberrations. The Elder Giants of long-lost Myrrida once created and commanded the synthetic organisms colloquially referred to as Lithorine. Defying Nature, the creatures in this garden somehow reproduce their spark of life. Evidently, even synthetic life eventually finds a way.",
+   "picture": "lithorine_spawner",
+   "reward": {
+    "resource": "Production",
+    "tier": 4
+   },
+   "size": {
+    "start": 3,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Lithorine Units",
+      "Tier I - II Materium Enchantments",
+      "Tier III - IV Materium Enchantments",
+      "Tier I - II Astral Enchantments",
+      "Tier III - IV Astral Sea Enchantments",
+      "All Culture Base Units"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "mistwalker_camp",
+   "name": "Mistwalker Camp",
+   "tier": "Silver",
+   "dlc": "SECRETSOFTHEARCHMAGES",
+   "water": false,
+   "description": "A crude encampment where sinister Fey lurk in the mists.<br>Provinces in this infestation's territory have [hyperlink,GLOBAL.PROPERTIES.MISTY]Misty[/hyperlink].",
+   "lore": "The mist spreads the domain of [hyperlink,GLOBAL.DuathaLoreConcept]Duatha[/hyperlink]. The [hyperlink,GLOBAL.UNITS.FEY_ABOMINATION]Feylor[/hyperlink] are no longer content with mere incursions, they have come to claim this land. Do not trust this lingering fog, for it hides no friends, only foes.",
+   "picture": "mistwalker_camp",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 5
+   },
+   "size": {
+    "start": 5,
+    "max": 14,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "Spring",
+     "units": [
+      "Spring Fairy",
+      "Nymph",
+      "Entwined Thrall",
+      "Plague Serpent",
+      "Entwined Scourge",
+      "Horned God",
+      "Wildspeaker",
+      "Glade Runner",
+      "Druid of the Cycle",
+      "Swamp Troll",
+      "Morning Sprite"
+     ],
+     "others": [
+      "All Base Barbarian Units",
+      "Poison Arrows",
+      "Blight Blades",
+      "Blades of Devay",
+      "Mirror Veil"
+     ]
+    },
+    {
+     "label": "Summer",
+     "units": [
+      "Summer Fairy",
+      "Glade Runner",
+      "Pyromancer",
+      "Nightmare",
+      "Phoenix",
+      "Entwined Protector",
+      "Karagh",
+      "Entwined Thrall",
+      "Warbreed",
+      "Transmuter",
+      "Morning Sprite"
+     ],
+     "others": [
+      "All Base Barbarian Units",
+      "Fiery Projectiles",
+      "Searing Steal",
+      "Flameburst Weapons",
+      "Mirrow Veil"
+     ]
+    },
+    {
+     "label": "Autumn",
+     "units": [
+      "Autumn Fairy",
+      "Stormscale Serpent",
+      "Entwined Protector",
+      "Glade Runner",
+      "Thunderbird",
+      "Astral Wisp",
+      "Hunter Spider Matriarch",
+      "Horned God",
+      "Entwined Thrall",
+      "Evening Sprite"
+     ],
+     "others": [
+      "All Base Barbarian Units",
+      "Lightning Blades",
+      "Lightning Focus",
+      "Amplified Arrows",
+      "Seeker Arrows",
+      "Mirrow Veil"
+     ]
+    },
+    {
+     "label": "Winter",
+     "units": [
+      "Winter Fairy",
+      "Entwined Protector",
+      "Glade Runner",
+      "Living Fog",
+      "White Witch",
+      "White Wolf",
+      "Entwined Thrall",
+      "Reaper",
+      "Banshee",
+      "Ice Spider Matriarch",
+      "Ice Spider",
+      "Evening Sprite"
+     ],
+     "others": [
+      "All Base Barbarian Units",
+      "Frost Blades",
+      "Frost Arrows",
+      "Cruel Weaponry",
+      "Mirror Veil"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "ritual_circle",
+   "name": "Ritual Circle",
+   "tier": "Silver",
+   "dlc": null,
+   "water": false,
+   "description": "A cabal of crazed cultists has claimed this region.",
+   "lore": "Eerie otherworldly shrieks mingle with the terrified whimpers of sacrificial victims-to-be. A cloud of oily smoke from hundreds of ritual candles blankets the area. Here, dark summoners invoke creatures from distant worlds and send them out to wreak havoc on the lands beyond. ",
+   "picture": "cultist_spawner",
+   "reward": {
+    "resource": "Mana",
+    "tier": 4
+   },
+   "size": {
+    "start": 3,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Evoker",
+      "Watcher",
+      "Phase Beast",
+      "Phantasm Warrior",
+      "Astral Serpent",
+      "Astral Keeper",
+      "Astral Wisp",
+      "Mirror Mimic",
+      "Lost Wizard",
+      "Pyromancer",
+      "Skald",
+      "White Witch",
+      "White Wolf",
+      "Snow Spirit",
+      "Lesser Snow Spirit",
+      "Frost Dragon",
+      "Banshee",
+      "Living Fog",
+      "Skeleton Archer",
+      "Skeleton Mage",
+      "Skeleton Militia",
+      "Skeleton Warrior"
+     ],
+     "others": [
+      "All Base Support/Battle Mage Units (Mystic)",
+      "Tier I - II Astral Enchantments",
+      "Tier III - IV Astral Enchantments",
+      "All Infernal Fiend Units",
+      "All Base Support/Battle Mage Units (Barbarian)",
+      "Tier I - II Chaos Enchantments",
+      "Tier III - IV Chaos Enchantments",
+      "All Base Support/Battle Mage Units (Dark)",
+      "Tier I - II Shadow Enchantments",
+      "Tier III - IV Shadow Enchantments",
+      "All Astral Enchantments",
+      "All Accursed Fiends Units"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "umbral_nest",
+   "name": "Umbral Nest",
+   "tier": "Silver",
+   "dlc": "ELDRITCHREALMS",
+   "water": false,
+   "description": "A hive from which [hyperlink,GLOBAL.PROPERTIES.UMBRAL_DEMON]Umbral Demons[/hyperlink] emerge in their many unholy forms.",
+   "lore": "Rings of tooth-like petrified tentacles appear to swallow these dread breeding grounds of eldritch abominations, a congress of forsaken creatures from the Umbral Abyss and the Astral Void. The Umbral Nest spews forth hordes of Umbral Demons that crave the flesh of the unsullied. Equally horrendous, the Eldritch Maw produces the Gloom that infests fertile lands and invokes the Umbral Malady.",
+   "picture": "umbral_nest",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 5
+   },
+   "size": {
+    "start": 1,
+    "max": 12,
+    "growth": 1
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [],
+     "others": [
+      "All Umbral Demon Units",
+      "All Astral Monster Units - No Tier 5",
+      "All Ethereal Units (Except Astral Sea Monsters) - No Tier 5",
+      "All Undead Units - No Water Movement - No Tier 5",
+      "All Astral Enchantments Except Tier V",
+      "All Shadow Enchantments Except Tier V",
+      "All Culture Base Units",
+      "Tier V Shadow Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "astral_rift",
+   "name": "Astral Rift",
+   "tier": "Gold",
+   "dlc": null,
+   "water": false,
+   "description": "A gathering of eldritch creatures from the Astral Sea has claimed this region.",
+   "lore": "Hosts of otherworldly foes have managed to break through in places where the veil between our world and the Astral Sea is weak or has been ruptured. Eerie battle cries and strange magics fill the air as this tide of danger washes onto the shores of our reality. Should such rifts be left unchecked, these foes may sweep through our lands without mercy.",
+   "picture": "astral_rift_spawner",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 5
+   },
+   "size": {
+    "start": 5,
+    "max": 14,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Astral Wisp",
+      "Flow Serpent",
+      "Astral Siphoner",
+      "Mage Bane",
+      "Lost Wizard",
+      "Phase Beast",
+      "Watcher"
+     ],
+     "others": [
+      "Tier I - II Astral Enchantments",
+      "Tier III - IV Astral Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "dragons_lair",
+   "name": "Dragon's Lair",
+   "tier": "Gold",
+   "dlc": null,
+   "water": false,
+   "description": "A flight of mighty dragons has claimed this region.",
+   "lore": "A dragon's nest is a sight that instills terror, awe... and many similar feelings one might have when in the presence of something deep and primal. Whether the inhabitant of the nest is an ancient dragon, born in the age of giants, or a younger wyvern, denizens of the surrounding lands should beware. Or better yet, flee...",
+   "picture": "dragon_spawner",
+   "reward": {
+    "resource": "Gold",
+    "tier": 5
+   },
+   "size": {
+    "start": 5,
+    "max": 14,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Golden Dragon",
+      "Young Golden Dragon",
+      "Exemplar",
+      "Phoenix",
+      "Blessed Soul",
+      "Spirit Wolf",
+      "Unicorn",
+      "Chaplain",
+      "Lightbringer",
+      "Zealot",
+      "Spirit Hawk",
+      "Obsidian Dragon",
+      "Druid of the Cycle",
+      "Slither",
+      "Glade Runner",
+      "Plague Serpent",
+      "Floral Stinger",
+      "Wildspeaker",
+      "Slither Hatchling",
+      "Young Obsidian Dragon",
+      "Fire Dragon",
+      "Fire Wyvern",
+      "Magma Spirit",
+      "Lesser Magma Spirit",
+      "Lesser Storm Spirit",
+      "Storm Spirit",
+      "Frost Dragon",
+      "Frost Wyvern",
+      "Lesser Tide Spirit",
+      "Tide Spirit",
+      "Lesser Snow Spirit",
+      "Snow Spirit",
+      "White Wolf",
+      "Banshee",
+      "White Witch",
+      "Subjugator",
+      "Nymph"
+     ],
+     "others": [
+      "Tier I - II Astral Enchantments",
+      "Tier III - IV Astral Enchantments",
+      "Tier I - II Order Enchantments",
+      "Tier III - IV Order Enchantments",
+      "Tier I - II Nature Enchantments",
+      "Tier III - IV Nature Enchantments",
+      "Tier I - II Chaos Enchantments",
+      "Tier III - IV Chaos Enchantments",
+      "Tier I - II Shadow Enchantments",
+      "Tier III - IV Shadow Enchantments",
+      "All Accursed Fiends Units",
+      "All Prosperity Units"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "forsaken_cove",
+   "name": "Forsaken Cove",
+   "tier": "Gold",
+   "dlc": null,
+   "water": true,
+   "description": "Nautical horrors have claimed this region.<br>If left unchecked, they will grow in strength, expand their territory, and send out invasion parties.",
+   "lore": "Shanties warn of the Forsaken Cove, where monsters lurk beneath the waves and sunken ships rise from the depths. It was once a notorious den of pirates, cursed by a sailor's widow after they murdered her husband. Now the cove marks the edge of the world, a border even the bravest sailors should not cross. Beware! Here be monsters.",
+   "picture": "forsaken_cove",
+   "reward": {
+    "resource": "Gold",
+    "tier": 5
+   },
+   "size": {
+    "start": 2,
+    "max": 6,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Kraken Spawn",
+      "Banshee",
+      "Kraken",
+      "Ghost Ship",
+      "Tide Spirit",
+      "Lesser Tide Spirit",
+      "Phantasm Warrior",
+      "Bone Wyvern"
+     ],
+     "others": [
+      "Tier I - II Shadow Enchantments",
+      "Tier III - IV Shadow Enchantments"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "great_worm_infestation",
+   "name": "Great Worm Infestation",
+   "tier": "Gold",
+   "dlc": "RISEFROMRUIN",
+   "water": false,
+   "description": "A massive scar inhabited by the Great Worm and her progeny.<br>This infestation spreads [hyperlink,GLOBAL.AstralBarrensConcept]Astral Barrens[/hyperlink] in its territory.The territory of the Great Worm will suffer [hyperlink,GLOBAL.PROPERTIES.TSR_RFR_GWL_WORM_PROPERTY]Gargantuan Tremors[/hyperlink].",
+   "lore": "A [hyperlink,GLOBAL.FractureLoreConcept]Fracture[/hyperlink] leaves only death and devastation. The land is rendered barren, its inhabitants twisted and deformed. Those cursed to survive become hollow husks barely resembling their former selves, driven by a ravenous hunger for mana. Their very presence drains the energy from their surroundings, transforming the places they inhabit and spreading the pollution further.",
+   "picture": "great_worm_infestation",
+   "reward": {
+    "resource": "Knowledge",
+    "tier": 5
+   },
+   "size": {
+    "start": 3,
+    "max": 14,
+    "growth": 2
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Fractured Worm",
+      "Sand Worm"
+     ],
+     "others": []
+    }
+   ]
+  },
+  {
+   "key": "large_monster_den",
+   "name": "Large Monster Den",
+   "tier": "Gold",
+   "dlc": null,
+   "water": false,
+   "description": "A horde of vile monsters has claimed this region.",
+   "lore": "The crunch of half-chewed bones underfoot and the overwhelming scent of past victims drifting through the air mark this den a home of monsters. From ancient giants, shapers of the world, to vicious trolls, still incensed at the loss of their deep domains, one might expect any type of powerful creature and their minions to emerge. ",
+   "picture": "monster_spawner_large",
+   "reward": {
+    "resource": "Food",
+    "tier": 5
+   },
+   "size": {
+    "start": 5,
+    "max": 14,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Primordial Basilisk",
+      "Stormscale Serpent",
+      "Plague Serpent",
+      "Bone Dragon",
+      "Caustic Worm",
+      "Young Caustic Worm",
+      "Primordial Bloodback",
+      "Ape",
+      "Entwined Scourge",
+      "Entwined Protector",
+      "Entwined Thrall",
+      "Primordial Pyremoth",
+      "Pyremoth",
+      "Phoenix",
+      "Lesser Magma Spirit",
+      "Fire Wyvern",
+      "Summer Fairy",
+      "Karagh",
+      "Swamp Troll",
+      "River Troll",
+      "Butcher Ogre",
+      "Rock Giant"
+     ],
+     "others": [
+      "Tier I - II Nature Enchantments",
+      "Tier III - IV Nature Enchantments",
+      "Tier I - II Shadow Enchantments",
+      "Tier III - IV Shadow Enchantments",
+      "Tier I - II Chaos Enchantments",
+      "Tier III - IV Chaos Enchantments",
+      "Large Monster Nest - Pyremoth - Fiend Animals Tag Filter"
+     ]
+    }
+   ]
+  }
+ ]
+}

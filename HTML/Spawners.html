@@ -14,42 +14,39 @@
         </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="/evolved/Data/Init.js"></script>
-        
+        <script src="/evolved/Data/worldmap.js"></script>
         <script>
-          
-            function HandlePage() {
-                showWorldStructuresWithArgument(undefined, "Spawner", undefined, "Bronze");
-                SetLevelUpStuff();
+            // Evolved's own Infestations page: a tab per tier, a card per infestation. Everything but the pictures comes from
+            // Data/GEN/Infestations.json, which aow4_diff_tools/worldmap.py generates from the game and the mod.
+
+            async function HandlePage() {
+                const data = await fetch("/evolved/Data/GEN/Infestations.json").then((res) => res.json());
+                WmTabs(
+                    Object.keys(WM_TIER_BAND).map((tier) => {
+                        const here = data.infestations.filter((e) => e.tier === tier);
+                        const panel = document.createElement("div");
+                        for (const e of here) panel.append(WmInfestation(e));
+                        return { id: tier, label: "<infestation" + tier.toLowerCase() + "></infestation" + tier.toLowerCase() + "> " + tier, count: here.length, panel };
+                    })
+                );
             }
         </script>
 
-        <title>Age of Wonders 4 Evolved - Spawners</title>
+        <title>Age of Wonders 4 Evolved - Infestations</title>
     </head>
 
     <body>
-        <div class="w3-container sidebarPage">
-            <div class="textblocktitle">Infestation Spawners</div>
-            <div class="w3-bar w3-black" id="buttonHolder">
-                <button
-                    id="Bronze-button"
-                    class="w3-bar-item w3-button tablink w3-red"
-                    onclick="openDiv(event,'Bronze')">
-                    Infestations
-                </button>
-              
-            </div>
-            <div id="dataHolder">
-                <div id="Bronze" class="w3-container w3-border city"></div>
+        <div id="header"></div>
 
-                
-            </div>
+        <div class="wm-page">
+            <div class="textblocktitle">Infestations</div>
+            <div class="wm-intro">If left unchecked, an infestation will grow in strength, expand its territory, and send out invasion armies.</div>
+            <div id="tabs" class="wm-tabs"></div>
+            <div id="panels"></div>
         </div>
     </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>

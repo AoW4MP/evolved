@@ -1,0 +1,174 @@
+/* The Magic Materials page, and its cards on Search */
+.mm-page {
+    padding: 0 16px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mm-intro {
+    color: #bbcdf6;
+    text-align: center;
+    max-width: 720px;
+    margin: 4px auto 16px;
+}
+.mm-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px 0 20px;
+}
+.mm-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 18px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+.mm-tab img {
+    height: 24px;
+}
+.mm-tab span {
+    color: #8d97ad;
+    font-size: 14px;
+}
+.mm-tab:hover {
+    color: white;
+}
+.mm-tab.selected {
+    color: #ffe9a8;
+    border-color: #d7c297;
+}
+.mm-bonus,
+.mm-card {
+    margin-bottom: 20px;
+    background-image: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+    padding: 0 14px 12px;
+    color: #bbcdf6;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+}
+.mm-bonus .mm-title {
+    margin-bottom: 8px;
+    padding: 6px 14px;
+}
+/* the requirement right beside the bonus, not across the card from it */
+.mm-bonus-parts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 60px;
+}
+.mm-card {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    column-gap: 16px;
+}
+.mm-title {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 -14px 12px;
+    padding: 3px 14px;
+    color: #d7c297;
+    font-size: 18px;
+    background-image: linear-gradient(to right, var(--set), rgb(0, 0, 0, 0) 70%);
+}
+/* AddDLCTag's inline offsets (a 20px float holding a 25px picture) suit other pages' titles; here
+   the DLC icon sits centred on the title line with the material icon */
+.mm-title .mountToolTip {
+    display: flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+}
+.mm-icon {
+    height: 30px;
+}
+.mm-picture {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border: 1px solid #555;
+}
+.mm-about {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.mm-lore {
+    color: #c9bda3;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+/* a text the game left unfilled ({FOCUSED_GAZE_RANGE_BOOST>ADD>MaxRange}) is one long word: break it
+   rather than widen the card */
+.mm-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    overflow-wrap: anywhere;
+}
+.mm-label {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.mm-next {
+    margin-top: 10px;
+}
+/* by the text's baseline: each icon has its own height, and would push its own text down */
+.mm-income {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 8px;
+}
+.mm-ench {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.mm-ench > div {
+    min-width: 0;
+}
+.mm-ench-picture {
+    width: 56px;
+    flex: none;
+}
+.mm-ench-name {
+    color: #aa84f6;
+    font-size: 16px;
+}
+.mm-infusions {
+    align-self: flex-end;
+    margin-top: auto;
+    padding-top: 8px;
+    color: #d7c297;
+    font-size: 15px;
+    text-decoration: none;
+}
+.mm-infusions:hover {
+    text-decoration: underline;
+}
+@media (max-width: 800px) {
+    .mm-card,
+    .mm-columns {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .mm-picture {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 8px;
+    }
+}

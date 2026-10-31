@@ -18,7 +18,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="/evolved/Data/Init.js"></script>
         <script>
-            // Evolved's Realm Traits page: every trait the game's realm setup offers, one section per category.
+            // Evolved's Realm Traits page: every trait the game's realm setup offers, a tab per category.
             // Data/GEN/RealmTraits.json comes from aow4_diff_tools/realmtraits.py (the game with the mod); a trait's
             // icon is in Icons/RealmTraits when the game has one named after it.
 
@@ -29,22 +29,27 @@
             async function HandlePage() {
                 const data = await fetch("/evolved/Data/GEN/RealmTraits.json").then((res) => res.json());
                 const page = document.getElementById("traits");
-                const nav = document.getElementById("rt-nav");
+                const tabs = document.getElementById("tabs");
+                const wanted = new URLSearchParams(location.search).get("type");
+                let first = null;
                 for (const category of data.categories) {
                     const traits = data.traits.filter((t) => t.category === category.key);
                     if (!traits.length) continue;
                     const title = category.name.replace(/ Trait$/, "");
                     const color = CATEGORY_COLORS[category.key] || "rgb(100, 100, 100)";
 
-                    const link = document.createElement("a");
-                    link.href = "#cat-" + category.key;
-                    link.style.setProperty("--cat", color);
-                    link.innerHTML = title + ' <span class="rt-count">' + traits.length + "</span>";
-                    nav.append(link);
+                    const tab = document.createElement("button");
+                    tab.className = "rt-tab";
+                    tab.dataset.type = title;
+                    tab.style.setProperty("--cat", color);
+                    tab.innerHTML = title + " <span>" + traits.length + "</span>";
+                    tab.onclick = () => OpenCategory(title);
+                    tabs.append(tab);
+                    if (!first || title === wanted) first = title;
 
                     const section = document.createElement("section");
                     section.className = "rt-section";
-                    section.id = "cat-" + category.key;
+                    section.dataset.type = title;
                     section.style.setProperty("--cat", color);
                     section.innerHTML =
                         '<div class="rt-band"><span class="rt-section-title">' + title + "</span>" +
@@ -65,19 +70,27 @@
                     section.append(cards);
                     page.append(section);
                 }
+                OpenCategory(first, true);
                 HandleExtraTooltips(page);
-                // a link to another trait: scroll to its card and light it up
+                // a link to another trait: open its category, scroll to its card and light it up
                 page.addEventListener("click", (e) => {
                     const a = e.target.closest("a.rt-exclusive-link");
                     if (!a) return;
                     e.preventDefault();
                     const card = document.getElementById(a.getAttribute("href").slice(1));
                     if (!card) return;
+                    OpenCategory(card.closest(".rt-section").dataset.type);
                     card.scrollIntoView({ behavior: "smooth", block: "center" });
                     card.classList.remove("rt-flash");
                     void card.offsetWidth;
                     card.classList.add("rt-flash");
                 });
+            }
+
+            function OpenCategory(type, keepAddress) {
+                document.querySelectorAll(".rt-tab").forEach((t) => t.classList.toggle("selected", t.dataset.type === type));
+                document.querySelectorAll(".rt-section").forEach((s) => (s.hidden = s.dataset.type !== type));
+                if (!keepAddress) history.replaceState(null, "", "?type=" + type + "&");
             }
 
             function TraitCard(t, exclusiveLabel) {
@@ -116,7 +129,7 @@
 
         <div class="rt-page">
             <div class="textblocktitle">Realm Traits</div>
-            <nav id="rt-nav" class="rt-nav"></nav>
+            <div id="tabs" class="rt-tabs"></div>
             <div id="traits"></div>
         </div>
     </body>
@@ -127,30 +140,36 @@
         max-width: 1500px;
         margin: 0 auto;
     }
-    /* the categories with their counts, a jump to each */
-    .rt-nav {
+    .rt-tabs {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-        margin: 6px 0 22px;
+        gap: 8px;
+        margin: 6px 0 20px;
     }
-    .rt-nav a {
-        color: #d7c297;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 15px;
-        padding: 5px 14px;
-        border: 1px solid var(--cat);
-        border-left-width: 4px;
-        background: rgba(20, 16, 30, 0.85);
-    }
-    .rt-nav a:hover {
-        background: rgba(60, 45, 80, 0.9);
-    }
-    .rt-count {
+    .rt-tab {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 18px;
         color: #bbcdf6;
-        font-size: 13px;
+        background: url(/evolved/Icons/tooltipBG.png);
+        border: 1px solid #555;
+        border-left: 4px solid var(--cat);
+        font: inherit;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .rt-tab span {
+        color: #8d97ad;
+        font-size: 14px;
+    }
+    .rt-tab:hover {
+        color: white;
+    }
+    .rt-tab.selected {
+        color: #ffe9a8;
+        border-color: #d7c297 #d7c297 #d7c297 var(--cat);
     }
     /* a category: a panel with its colour's band */
     .rt-section {
@@ -158,7 +177,6 @@
         padding: 0 14px 16px;
         background: linear-gradient(to bottom, rgba(40, 30, 55, 0.55), rgba(15, 12, 22, 0.35));
         border: 1px solid rgba(120, 100, 150, 0.35);
-        scroll-margin-top: 10px;
     }
     .rt-band {
         display: flex;

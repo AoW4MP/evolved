@@ -1,3 +1,64 @@
+// Spells, siege projects and the world map's sites come from the files their own pages read, made from the game and the mod
+// (aow4_diff_tools: spells.py, ancientwonders.py, magicmaterials.py, worldmap.py); so do the cards shown for them
+let searchBooks = null;
+
+async function LoadSearchBooks() {
+    const read = (name) => fetch("/evolved/Data/GEN/" + name + ".json").then((res) => res.json());
+    const [book, infestations, landmarks, happenings] = await Promise.all([SbLoad(), read("Infestations"), read("Landmarks"), read("Happenings"), AncientWondersPage.Load(), MagicMaterialsPage.Load()]);
+    searchBooks = {
+        spells: book.spells,
+        siege: book.siege,
+        infestations: infestations.infestations,
+        landmarks: landmarks.landmarks,
+        happenings: happenings.happenings,
+        wonders: AncientWondersPage.All(),
+        materials: MagicMaterialsPage.All()
+    };
+}
+
+// a thing's text, as words: without links, icons and other markup
+function SearchWords(parts) {
+    return parts
+        .flat(Infinity)
+        .filter(Boolean)
+        .join(" ")
+        .replace(/\[\/?[^\]]*\]|<[^>]+>/g, " ")
+        .replace(/\s+/g, " ")
+        .toUpperCase();
+}
+
+const SEARCH_WORDS = {
+    spells: (e) => [e.name, e.variant, e.type, e.description, e.requisites, e.units, e.sources.map((s) => s.name)],
+    siege: (e) => [e.name, e.description, e.sources.map((s) => s.name)],
+    infestations: (e) => [e.name, e.tier, e.description, e.lore, e.pools.map((p) => [p.label, p.units, p.others])],
+    landmarks: (e) => [e.name, e.lore, e.adjacent, e.city, e.enchantments.map((x) => [x.name, x.description]), e.units],
+    happenings: (e) => [e.name, e.category, e.sub, e.description, e.story?.text, e.story?.options],
+    wonders: (e) => [e.name, e.tier, e.description, e.lore, e.units, e.stories.map((s) => [s.title, s.names])],
+    materials: (e) => [e.name, e.description, e.lore, e.combat?.name, e.combat?.description, e.set?.name, e.set?.category, e.set?.description]
+};
+
+function returnFromBook(book, fieldToSearch) {
+    if (!fieldToSearch) return [];
+    if (DLCCheck(fieldToSearch)) return searchBooks[book].filter((e) => e.dlc === fieldToSearch.toUpperCase());
+    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
+    return searchBooks[book].filter((e) => SearchWords(SEARCH_WORDS[book](e)).includes(search));
+}
+
+// a tab of results from a book, its cards in a grid when small
+function ShowFromBook(title, list, makeCard, grid) {
+    if (list.length === 0) return;
+    SetCollapsibleButtonsAndDivs(title, list, "searchBook");
+    const holder = document.getElementById(title);
+    const cards = list.map(makeCard);
+    if (grid) {
+        const cardsHolder = WmElement("div", "sb-cards");
+        cardsHolder.append(...cards);
+        holder.append(cardsHolder);
+    } else {
+        holder.append(...cards);
+    }
+}
+
 const excludeListStructures = [
     "shadow_focus_crystal",
     "nature_focus_crystal",
@@ -20,6 +81,7 @@ const filterMap = {
     heroItemsCheck: "hi",
     ambitionsCheck: "ha",
     worldStructuresCheck: "ws",
+    happeningsCheck: "ch",
     cityStructuresCheck: "cs",
     factionTraitCheck: "ft",
     empireTreeCheck: "et",
@@ -48,6 +110,7 @@ const heroSkillChecked = document.getElementById("heroSkillsCheck");
 const factionTraitsChecked = document.getElementById("factionTraitCheck");
 const heroItemsChecked = document.getElementById("heroItemsCheck");
 const worldStructuresChecked = document.getElementById("worldStructuresCheck");
+const happeningsChecked = document.getElementById("happeningsCheck");
 const cityStructuresChecked = document.getElementById("cityStructuresCheck");
 const ambitionsChecked = document.getElementById("ambitionsCheck");
 const infusionsChecked = document.getElementById("infusionsCheck");
@@ -257,29 +320,6 @@ function returnEmpireTreeList(fieldToSearch) {
     return Array.from(results);
 }
 
-function returnSpellList(fieldToSearch) {
-    if (!fieldToSearch) return [];
-
-    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    if (DLCCheck(fieldToSearch)) {
-        return DLCAdd(jsonSpells, fieldToSearch, "id", true);
-    }
-
-    for (const spell of jsonSpellsLocalized) {
-        const name = spell.name?.toUpperCase() || "";
-        const description = Sanitize(spell.description || "").toUpperCase();
-
-        if (name.includes(search) || description.includes(search)) {
-            const spellEN = findBy(jsonSpells, "resid", spell.resid);
-            results.add(spellEN.id);
-        }
-    }
-
-    return Array.from(results);
-}
-
 function returnInfusionsList(fieldsToSearch, allMatchingUnitAbilities) {
     if (!fieldsToSearch) return [];
 
@@ -326,13 +366,9 @@ function returnArtifactsList(fieldsToSearch){
     }
 
     for (const trait of jsonRelics) {
-        const name = trait.name?.toUpperCase() || "";
-        const description = Sanitize(trait.description || "").toUpperCase();
-
-        if (name.includes(search) || description.includes(search)) {
-           // const traitEN = findBy(jsonHeroAmbitions, "icon", trait.icon);
-            results.add(trait);
-        }
+        const text = findBy(jsonAllFromPOLocalized, "id", trait.extraLookup);
+        const spells = (trait.spell || []).map((s) => findBy(jsonSpells, "id", s.id)?.name);
+        if (SearchWords([trait.name, text?.description, spells]).includes(search)) results.add(trait);
     }
 
     return Array.from(results);
@@ -531,64 +567,10 @@ function returnEquipList(fieldToSearch, listofAllMatchingUnitAbilities) {
     return Array.from(resultsSet);
 }
 
-function returnSiegeProj(fieldToSearch) {
-    if (!fieldToSearch) return [];
-
-    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    if (DLCCheck(fieldToSearch)) {
-        return DLCAdd(jsonSiegeProjects, fieldToSearch, "id", true);
-    }
-
-    for (const spell of jsonSiegeProjectsLocalized) {
-        const name = spell.name?.toUpperCase() || "";
-        const description = Sanitize(spell.description || "").toUpperCase();
-
-        if (name.includes(search) || description.includes(search)) {
-            const siegeEN = findBy(jsonSiegeProjects, "resid", spell.resid);
-
-            results.add(siegeEN.id);
-        }
-    }
-
-    return Array.from(results);
-}
-
 function Sanitize(string) {
     string = string.replaceAll("<hyperlink>", "");
     string = string.replaceAll("</hyperlink>", "");
     return string;
-}
-
-function returnWorldStructure(fieldToSearch, locToCheck) {
-    if (!fieldToSearch) return [];
-
-    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    if (DLCCheck(fieldToSearch)) {
-        return DLCAdd(jsonWorldStructures, fieldToSearch, "id", true);
-    }
-
-    for (const entry of jsonWorldStructures) {
-        const name = entry.name?.toUpperCase() || "";
-        const description = Sanitize(entry.description || "").toUpperCase();
-
-        if ("extraLookup" in entry) {
-            const exists = locToCheck.some((e) => e.id === entry.extraLookup);
-
-            if (exists) {
-                results.add(entry.id);
-            }
-        }
-
-        if (name.includes(search) || description.includes(search)) {
-            results.add(entry.id);
-        }
-    }
-
-    return Array.from(results);
 }
 
 function returnStructure(fieldToSearch) {
@@ -636,8 +618,6 @@ function searchAll(keyword) {
     }
     let list = Array.from(listSet);
 
-    let listspells = spellsChecked.checked ? returnSpellList(fields[0]) : "";
-    let listSiegeProj = siegeChecked.checked ? returnSiegeProj(fields[0]) : "";
     let listskills = heroSkillChecked.checked ? returnSkillList(fields[0], listMatchingUnitAbilities) : "";
 
     let listStructures = cityStructuresChecked.checked ? returnStructure(fields[0]) : "";
@@ -653,7 +633,6 @@ function searchAll(keyword) {
 
     // console.log(listOfLocEntries);
     let listTraits = factionTraitsChecked.checked ? returnTraitsList(fields[0], listOfLocEntries) : "";
-    let listWorldStructures = worldStructuresChecked.checked ? returnWorldStructure(fields[0], listOfLocEntries) : "";
 
     var buttonHolder = document.getElementById("buttonHolder");
 
@@ -671,18 +650,18 @@ function searchAll(keyword) {
         SetButtonsAndDivs(list, "Units" + "-button", "searchUnit", undefined, undefined, undefined);
         //   SetButtonsAndDivs(list, "buttonHolder", "searchUnit", undefined, undefined, undefined);
     }
-    if (listspells.length > 0) {
-        SetCollapsibleButtonsAndDivs("Spells", listspells, "searchSpell");
-    }
-    if (listSiegeProj.length > 0) {
-        SetCollapsibleButtonsAndDivs("Siege Projects", listSiegeProj, "searchSiege");
-    }
+    if (spellsChecked.checked) ShowFromBook("Spells", returnFromBook("spells", fields[0]), SbSpellCard, true);
+    if (siegeChecked.checked) ShowFromBook("Siege Projects", returnFromBook("siege", fields[0]), SbSiegeCard, true);
     if (listStructures.length > 0) {
         SetCollapsibleButtonsAndDivs("Structures", listStructures, "searchStruct");
     }
-    if (listWorldStructures.length > 0) {
-        SetCollapsibleButtonsAndDivs("World Structures", listWorldStructures, "searchWorldStruct");
+    if (worldStructuresChecked.checked) {
+        ShowFromBook("Ancient Wonders", returnFromBook("wonders", fields[0]), AncientWondersPage.Card);
+        ShowFromBook("Landmarks", returnFromBook("landmarks", fields[0]), WmLandmark);
+        ShowFromBook("Infestations", returnFromBook("infestations", fields[0]), WmInfestation);
+        ShowFromBook("Magic Materials", returnFromBook("materials", fields[0]), MagicMaterialsPage.Card);
     }
+    if (happeningsChecked.checked) ShowFromBook("Cosmic Happenings", returnFromBook("happenings", fields[0]), WmHappening);
     if (listskills.length > 0) {
         SetCollapsibleButtonsAndDivs("Hero Skills", listskills, "searchSkill");
     }

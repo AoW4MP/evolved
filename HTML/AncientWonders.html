@@ -14,20 +14,19 @@
         </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/ancientwonders.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="/evolved/Data/Init.js"></script>
-        
+        <script src="/evolved/Data/ancientwonders.js"></script>
+
         <script>
-            var bronzeArray = ["ancient_cave", "castle_ruins", "crystal_forest", "hidden_wellspring", "crimson_fane", "barren_wellspring"];
-            var silverArray = ["lost_tomb", "magma_forge", "secret_temple", "lava_prison","archon_observatory", "forsaken_temple"];
-            var goldArray = ["golden_ziggurat", "lost_wizard_tower", "world_tree", "vaultsphere", "giants_throne", "rose_choked_palace", "withered_tree", "fractured_tower"];
+            // Evolved's own Ancient Wonders page: a tab per tier, a card per wonder, and under it its stories, one open
+            // at a time. Everything comes from Data/GEN/AncientWonders.json, which aow4_diff_tools/ancientwonders.py
+            // generates from the game and the mod; only the pictures are looked up, by the wonder's key.
 
             function HandlePage() {
-                showWorldStructuresWithArgument("Bronze", undefined, bronzeArray, "Bronze");
-                showWorldStructuresWithArgument("Silver", undefined, silverArray, "Silver");
-                showWorldStructuresWithArgument("Gold", undefined, goldArray, "Gold");
-                SetLevelUpStuff();
+                return AncientWondersPage.Open();
             }
         </script>
 
@@ -35,33 +34,12 @@
     </head>
 
     <body>
-        <div class="w3-container sidebarPage">
+        <div id="header"></div>
+
+        <div class="aw-page">
             <div class="textblocktitle">Ancient Wonders</div>
-            <div class="w3-bar w3-black" id="buttonHolder">
-                <button
-                    id="Bronze-button"
-                    class="w3-bar-item w3-button tablink w3-red"
-                    onclick="openDiv(event,'Bronze')">
-                    <bronzewonder></bronzewonder>Bronze
-                </button>
-                <button id="Silver-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Silver')">
-                    <silverwonder></silverwonder>Silver
-                </button>
-                <button id="Gold-button" class="w3-bar-item w3-button tablink" onclick="openDiv(event,'Gold')">
-                    <goldwonder></goldwonder>Gold
-                </button>
-            </div>
-            <div id="dataHolder">
-                <div id="Bronze" class="w3-container w3-border city"></div>
-
-                <div id="Silver" class="w3-container w3-border city"></div>
-
-                <div id="Gold" class="w3-container w3-border city"></div>
-            </div>
+            <div id="tabs" class="aw-tabs"></div>
+            <div id="wonders"></div>
         </div>
     </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>

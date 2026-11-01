@@ -891,8 +891,9 @@ function SetButtonsAndDivs(list, parent, cardType, otherParent, subcultureCheck)
                 break;
         }
 
-        if (UNIT_LIST_TYPES.includes(cardType)) {
-            btn.dataset.tier = div.dataset.tier = UnitTierOf(list[i].split(":")[0], subcultureCheck2);
+        if (cardType in TIER_LIST_TYPES) {
+            btn.dataset.tier = div.dataset.tier =
+                cardType === "tome" ? (findBy(jsonTomes, "id", list[i])?.tier ?? 0) : UnitTierOf(list[i].split(":")[0], subcultureCheck2);
         }
 
         buttonHolder.appendChild(btn);
@@ -900,49 +901,53 @@ function SetButtonsAndDivs(list, parent, cardType, otherParent, subcultureCheck)
         AddTriangleForDLCUnits(cardType, list[i], btn);
     }
 
-    if (UNIT_LIST_TYPES.includes(cardType) && list.length > 1) AddUnitTierFilter(buttonHolder);
+    if (cardType in TIER_LIST_TYPES && list.length > 1) AddTierFilter(buttonHolder, TIER_LIST_TYPES[cardType]);
 }
 
-// the Units pages' lists, not Search's
-const UNIT_LIST_TYPES = ["unit", "unitTomeIcon", "subcultureUnit"];
+// the lists with tier buttons: the Units and Tomes pages', not Search's
+const TIER_LIST_TYPES = { unit: "units", unitTomeIcon: "units", subcultureUnit: "units", tome: "tomes" };
 
 function UnitTierOf(id, subculture) {
     const units = jsonUnits.filter((u) => u.id === id && depCheckResID(u.resid) != true);
     return (units.find((u) => subculture === undefined || u.sub_culture_name === subculture) ?? units[0])?.tier ?? 0;
 }
 
-// The tier buttons at the top of a Units page's sidebar: they filter its list and its cards. One choice for the page, so
-// it stays when another subculture is picked; a tier its list doesn't have is greyed out
-let unitTierShown = 0;
-function AddUnitTierFilter(holder) {
+// The tier buttons at the top of a Units or Tomes page's sidebar: they filter its list and its cards. One choice for the
+// page, so it stays when another subculture is picked; a tier its list doesn't have is greyed out. None for a list with no
+// tiers at all (a pact's tomes)
+let tierShown = 0;
+function AddTierFilter(holder, kind) {
     const tiers = new Set([...holder.querySelectorAll("[data-tier]")].map((b) => Number(b.dataset.tier)));
+    tiers.delete(0);
+    if (!tiers.size) return;
     const bar = document.createElement("div");
-    bar.className = "unit-tier-filter";
+    bar.className = "tier-filter";
+    bar.dataset.kind = kind;
     for (const tier of [0, 1, 2, 3, 4, 5]) {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.textContent = tier ? romanize(tier) : "All";
-        btn.title = tier ? "Tier " + romanize(tier) + " units" : "All tiers";
+        btn.title = tier ? "Tier " + romanize(tier) + " " + kind : "All tiers";
         btn.dataset.filterTier = tier;
         btn.disabled = tier !== 0 && !tiers.has(tier);
-        btn.classList.toggle("tier-on", tier === unitTierShown);
-        btn.onclick = () => FilterUnitTier(tier);
+        btn.classList.toggle("tier-on", tier === tierShown);
+        btn.onclick = () => FilterTier(tier);
         bar.append(btn);
     }
     const none = document.createElement("div");
-    none.className = "unit-tier-none";
+    none.className = "tier-none";
     none.hidden = true;
     holder.prepend(bar, none);
 }
 
-function FilterUnitTier(tier) {
-    unitTierShown = tier;
+function FilterTier(tier) {
+    tierShown = tier;
     for (const el of document.querySelectorAll("[data-tier]")) el.classList.toggle("tier-hidden", tier !== 0 && Number(el.dataset.tier) !== tier);
-    for (const bar of document.querySelectorAll(".unit-tier-filter")) {
+    for (const bar of document.querySelectorAll(".tier-filter")) {
         for (const btn of bar.children) btn.classList.toggle("tier-on", Number(btn.dataset.filterTier) === tier);
         const none = bar.nextElementSibling;
         none.hidden = tier === 0 || bar.parentElement.querySelector(`[data-tier="${tier}"]`) !== null;
-        none.textContent = none.hidden ? "" : "No Tier " + romanize(tier) + " units here.";
+        none.textContent = none.hidden ? "" : "No Tier " + romanize(tier) + " " + bar.dataset.kind + " here.";
     }
     // the card being read isn't of this tier: all that are
     if (document.getElementById(currentView)?.classList.contains("tier-hidden")) {

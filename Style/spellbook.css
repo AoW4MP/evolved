@@ -416,6 +416,19 @@
     font-size: max(16px, calc(var(--u) * 17));
     text-shadow: 0 2px 6px black;
 }
+/* beside a sidebar the tome stands under the page's title, in the page's middle: half the column right of the page's middle
+   column (240px) and its gap (16px) to the left of the card's. The bonus runs on into that room */
+@media (min-width: 1200px) {
+    .sidebarPage .tome-stage {
+        padding-right: 266px;
+    }
+    .sidebarPage .tome-stage > .tome-art {
+        left: calc(50% - 128px);
+    }
+    .sidebarPage .tome-scrolls {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    }
+}
 /* no room for the bonus beside the scroll, or then for three columns */
 @container (max-width: 860px) {
     .tome-scrolls {

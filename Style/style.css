@@ -198,7 +198,7 @@ ul {
 
 /* an affinity Tomes page's icons, either side of "Astral Tomes": text icons, at a title's size */
 .textblocktitle > :is(empirearcana, empireastral, empirechaos, empirenature, empireshadow, empirematter, empirematerium, empireorder) {
-    max-height: 24px;
+    max-height: 30px;
     top: -3px;
     vertical-align: middle;
     margin: 0 5px;
@@ -777,8 +777,8 @@ p {
     white-space: normal;
 }
 
-/* a Units page's tier buttons: in view while its list scrolls */
-.unit-tier-filter {
+/* a Units or Tomes page's tier buttons: in view while its list scrolls */
+.tier-filter {
     position: sticky;
     top: 0;
     z-index: 3;
@@ -786,7 +786,7 @@ p {
     grid-template-columns: 1.4fr repeat(5, 1fr);
     background: black;
 }
-.unit-tier-filter button {
+.tier-filter button {
     height: 36px;
     padding: 0;
     color: #deb887;
@@ -797,24 +797,24 @@ p {
     border: 3px solid;
     border-image: url(/evolved/Icons/9slicetooltip.png) 10;
 }
-.unit-tier-filter button:hover:not(:disabled) {
+.tier-filter button:hover:not(:disabled) {
     color: white;
 }
-.unit-tier-filter button.tier-on {
+.tier-filter button.tier-on {
     color: white;
     background: #4b1d63;
 }
-.unit-tier-filter button:disabled {
+.tier-filter button:disabled {
     color: #555;
     cursor: default;
 }
-.unit-tier-none {
+.tier-none {
     padding: 10px 8px;
     color: #8d97ad;
     font-size: 13px;
     text-align: center;
 }
-.unit-tier-none[hidden],
+.tier-none[hidden],
 .tier-hidden {
     display: none !important;
 }

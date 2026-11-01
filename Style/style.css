@@ -1743,6 +1743,45 @@ hyperlink {
     color: beige;
 }
 
+/* a link to a unit: its tooltip, as the game's */
+.unit-tip {
+    display: grid;
+    gap: 6px;
+    min-width: min(340px, 100%);
+}
+.unit-tip-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.unit-tip-name {
+    color: #d7c297;
+    font-size: 18px;
+}
+.unit-tip-stats {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 4px 0;
+    border-block: 1px solid rgba(255, 255, 255, 0.15);
+}
+.unit-tip-attack {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.unit-tip-attack img {
+    width: 34px;
+    height: 34px;
+}
+.unit-tip-damage {
+    margin-left: auto;
+}
+.unit-tip-foot {
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .MiniIconCheck{
     bottom: 39px;
     position: relative;

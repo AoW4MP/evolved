@@ -131,7 +131,7 @@
 .tome_card {
     container-type: inline-size;
     --u: clamp(0.72px, 100cqw / 1440, 0.93px);
-    --medallion: calc(var(--u) * 135);
+    --medallion: calc(var(--u) * 165);
     --book: calc(var(--u) * 180);
     position: relative;
     box-sizing: border-box;
@@ -144,7 +144,7 @@
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 .tome-stage {
-    --circle: calc(var(--u) * 260);
+    --circle: calc(var(--u) * 275);
     position: relative;
     box-sizing: border-box;
     display: flex;

@@ -105,8 +105,10 @@ function processConceptHyperlinks(text) {
         // a link to an ability ("[hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink]") opens the
         // ability's tooltip; alltexts.py writes no concept tooltip for one the site has. Written as the dump's links
         // are, so the ability names in plain text are not looked for in it again
-        if (!concept && (abilityTagCache?.has(displayText.trim()) || PluralAbilityLink(displayText.trim())))
+        if (!concept && (abilityTagCache?.has(displayText.trim()) || AbilityLinkInOtherWords(displayText.trim())))
             return `<hyperlink>${displayText.trim()}</hyperlink>`;
+        // a unit's link opens the unit, whether or not the game's libraries give it a line of its own
+        if (globalName.startsWith("GLOBAL.UNITS.") && UnitByLinkWords(displayText)) return UnitLink(displayText.trim(), UnitByLinkWords(displayText));
         if (!concept) return noTooltip; // no tooltip available, just underline
 
         // Hidden handler lets HandleExtraTooltips wire up the tooltip
@@ -187,13 +189,112 @@ function ConceptKeyByName(words) {
     return conceptKeysByName.get(words.toLowerCase());
 }
 
-// An ability's link in the plural the text uses ("Animals", "Battle Mage Units"): its tooltip, in those words
-function PluralAbilityLink(words) {
-    const one = words.replace(/ies$/, "y").replace(/s$/, "");
-    if (one === words || !abilityTagCache?.has(one)) return null;
+// An ability's link in other words than its name: what all.json's links to it say ("Immobile" is
+// [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]) or the plural a text uses ("Animals", "Battle Mage Units"). Its tooltip, in
+// those words
+let abilityLinkWordings = null;
+function AbilityLinkInOtherWords(words) {
+    if (!abilityTagCache) return null;
+    if (!abilityLinkWordings) {
+        abilityLinkWordings = new Map();
+        const byTag = new Map([...abilityTagCache.keys()].map((name) => [name.toLowerCase(), name]));
+        for (const entry of jsonAllFromPOLocalized || []) {
+            for (const text of Object.values(entry)) {
+                if (typeof text !== "string" || !text.includes("[hyperlink,GLOBAL.PROPERTIES.")) continue;
+                for (const m of text.matchAll(/\[hyperlink,GLOBAL\.PROPERTIES\.(\w+)\]([^\[]*?)\[\/hyperlink\]/g)) {
+                    if (`GLOBAL.PROPERTIES.${m[1]}` in jsonConceptTooltipsLocalized) continue;
+                    const name = byTag.get(m[1].replaceAll("_", " ").toLowerCase());
+                    const wording = m[2].replace(/<[^>]+>/g, "").trim();
+                    if (name && wording && !abilityTagCache.has(wording)) abilityLinkWordings.set(wording, name);
+                }
+            }
+        }
+    }
+    const one = abilityLinkWordings.get(words) ?? [words.replace(/s$/, ""), words.replace(/ies$/, "y")].find((w) => w !== words && abilityTagCache.has(w));
+    if (!one || !abilityTagCache.has(one)) return null;
     return abilityTagCache
         .get(one)
         .replacement.replace(`<span class="statusEffectHandler">${one}<`, `<span class="statusEffectHandler" data-ability="${one}">${words}<`);
+}
+
+const UNIT_ROLE_NAMES = [
+    "Shock Unit",
+    "Shield Unit",
+    "Fighter Unit",
+    "Magic Fighter Unit",
+    "Support Unit",
+    "Battle Mage Unit",
+    "Skirmisher Unit",
+    "Scout Unit",
+    "Polearm Unit",
+    "Ranged Unit",
+    "Mythic Unit",
+    "Tower",
+    "Siegecraft",
+    "Civilian",
+    "Settler Unit"
+];
+// what a unit moves as, most telling first: a flyer also has Land Movement
+const UNIT_MOVEMENT_NAMES = ["Flying", "Floating", "Amphibious", "Water Movement", "Land Movement"];
+
+// A unit by the words of a link to it: its name or their plural ("Decaying Zombies")
+let unitsByName = null;
+function UnitByLinkWords(words) {
+    if (!unitsByName) {
+        unitsByName = new Map();
+        for (const unit of jsonUnits) {
+            const name = (unit.name || "").toLowerCase();
+            if (name && !unitsByName.has(name)) unitsByName.set(name, unit);
+        }
+    }
+    const plain = words.replace(/<[^>]+>/g, "").trim().toLowerCase();
+    return unitsByName.get(plain) ?? unitsByName.get(plain.replace(/s$/, "")) ?? unitsByName.get(plain.replace(/ies$/, "y"));
+}
+
+// the link: underlined, with the handler HandleExtraTooltips wires the tooltip to
+function UnitLink(words, unit) {
+    return (
+        `<span style="color:white;text-decoration:underline">${words}</span>` +
+        `<span class="unitTooltipHandler" data-unit="${unit.resid}" style="display:none"></span>`
+    );
+}
+
+// A unit's tooltip, as the game's: what it is, its attacks, how it moves and its upkeep. Ability links carry their own
+// ability, as many share a name ("Melee Strike") with other damage
+function UnitTooltip(resid) {
+    const unit = jsonUnits.find((u) => String(u.resid) === String(resid));
+    const loc = jsonUnitsLocalized.find((u) => u.resid === unit.resid) ?? unit;
+    const ability = (entry) => findBy(jsonUnitAbilitiesLocalized, "slug", entry.slug);
+    const passives = (unit.secondary_passives || []).map(ability).filter(Boolean);
+    const role = passives.find((p) => UNIT_ROLE_NAMES.includes(p.name));
+    const movement = UNIT_MOVEMENT_NAMES.map((name) => passives.find((p) => p.name === name)).find(Boolean);
+    const about = jsonConceptTooltipsLocalized?.[ConceptKeyByName(loc.name)]?.description;
+    const link = (a) =>
+        `<span style="color:white;text-decoration:underline"><span class="statusEffectHandler" data-ability="${a.name}" data-slug="${a.slug}">${a.name}</span></span>`;
+
+    const attacks = (unit.abilities || [])
+        .map(ability)
+        .filter((a) => a && a.name !== "Defense Mode")
+        .map(
+            (a) =>
+                `<div class="unit-tip-attack"><img src="/evolved/Icons/UnitIcons/${a.icon}.png" alt="" />${link(a)}` +
+                `<span class="unit-tip-damage">${a.damage || ""}</span></div>`
+        )
+        .join("");
+
+    const tip = document.createElement("span");
+    tip.innerHTML =
+        `<div class="unit-tip"><div class="unit-tip-row"><span class="unit-tip-name">${loc.name.toUpperCase()}</span><span>${unit.hp}<hp></hp></span></div>` +
+        (role
+            ? `<div><img src="/evolved/Icons/Text/${role.name.replaceAll(" ", "_").toLowerCase()}.png" height="20" alt="" style="vertical-align:middle" /> ${AddTagIconsForStatusEffects(`<hyperlink>${role.name}</hyperlink>`)}</div>`
+            : "") +
+        (about ? `<div>${AddTagIconsForStatusEffects(about)}</div>` : "") +
+        `<div class="unit-tip-stats"><span>Tier ${romanize(unit.tier || 1)}</span><span>${unit.armor}<defense></defense></span><span>${unit.resistance}<resistance></resistance></span></div>` +
+        attacks +
+        `<div class="unit-tip-row unit-tip-foot"><span>${movement ? link(movement) + ": " : ""}${unit.mp}<mp></mp></span>` +
+        (unit.upkeep ? `<span>Upkeep: ${unit.upkeep}</span>` : "") +
+        "</div></div>";
+    return tip;
 }
 
 // main function
@@ -234,8 +335,11 @@ function AddTagIconsForStatusEffects(text) {
         } else {
             // the game dump's links carry only their words ("<hyperlink>Provinces</hyperlink>"): find the concept by name
             const key = ConceptKeyByName(link.inner.replace(/<[^>]+>/g, "").trim());
+            const unit = (!key || key.startsWith("GLOBAL.UNITS.")) && UnitByLinkWords(link.inner);
 
-            if (key) {
+            if (unit) {
+                restored = UnitLink(link.inner.trim(), unit);
+            } else if (key) {
                 // as a link of all.json shows: underlined, with the handler HandleExtraTooltips wires the tooltip to
                 restored =
                     `<span style="color:white;text-decoration:underline">${link.inner.trim()}</span>` +
@@ -243,7 +347,7 @@ function AddTagIconsForStatusEffects(text) {
             } else {
                 // Fallback: plain underlined text, no tooltip
                 // restored = `<span style="color:grey;">${link.inner}</span>`;
-                restored = PluralAbilityLink(link.inner.trim()) ?? `<hyperlink>${link.inner}</hyperlink>`;
+                restored = AbilityLinkInOtherWords(link.inner.trim()) ?? `<hyperlink>${link.inner}</hyperlink>`;
             }
         }
 
@@ -311,8 +415,8 @@ function RebuildBulletLists(text) {
     return out.join("").replaceAll("<bullet></bullet>", "");
 }
 
-function lookupStatusEffect(name) {
-    const effect = findBy(jsonUnitAbilitiesLocalized, "name", name);
+function lookupStatusEffect(name, slug) {
+    const effect = (slug && findBy(jsonUnitAbilitiesLocalized, "slug", slug)) || findBy(jsonUnitAbilitiesLocalized, "name", name);
     if (!effect) return name;
     // an ability a unit uses opens its own tooltip, with its damage, accuracy and actions, as in the game
     if (effect.actionPoints) return GetAbilityToolTip(effect).innerHTML;
@@ -383,8 +487,12 @@ function HandleExtraTooltips(specificDiv) {
 
     root.querySelectorAll(".statusEffectHandler").forEach((el) => {
         let spantest = document.createElement("span");
-        spantest.innerHTML = lookupStatusEffect(el.dataset.ability ?? el.innerText);
+        spantest.innerHTML = lookupStatusEffect(el.dataset.ability ?? el.innerText, el.dataset.slug);
         addTooltipListeners(el, spantest, "something");
+    });
+
+    root.querySelectorAll(".unitTooltipHandler").forEach((el) => {
+        if (el.previousElementSibling) addTooltipListeners(el.previousElementSibling, UnitTooltip(el.dataset.unit), "unit");
     });
 
     root.querySelectorAll(".conceptTooltipHandler").forEach((el) => {
@@ -1046,25 +1154,7 @@ function addUnitTypeIcon(a, holder, origin) {
     iconName = unitAbilityEN.name;
 
     if (origin !== "") {
-        const roleNames = [
-            "Shock Unit",
-            "Shield Unit",
-            "Fighter Unit",
-            "Magic Fighter Unit",
-            "Support Unit",
-            "Battle Mage Unit",
-            "Skirmisher Unit",
-            "Scout Unit",
-            "Polearm Unit",
-            "Ranged Unit",
-            "Mythic Unit",
-            "Tower",
-            "Siegecraft",
-            "Civilian",
-            "Settler Unit"
-        ];
-
-        if (roleNames.includes(iconName)) {
+        if (UNIT_ROLE_NAMES.includes(iconName)) {
             const unitRole = origin.querySelector("img#unit_role"); // no need for [0]
             const unitType = iconsrc;
 

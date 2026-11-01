@@ -233,8 +233,8 @@ if (!isRepeatable) {
                                     "src",
                                     "/evolved/Icons/EmpireProgressionIcons/" + jsonEmpire[i].icon + ".png"
                                 );
-                                img.setAttribute("height", "50px");
-                                img.setAttribute("style", "left:-35%");
+                                img.setAttribute("height", "45px");
+                                img.setAttribute("style", "left:-35%; margin: 2.5px 0 0 2.5px");
                                 img.className = "empireNodeIcon";
                                 newNode.append(img);
 
@@ -279,7 +279,7 @@ if (!isRepeatable) {
                     "style",
                     "grid-row:" +
                         row +
-                        "; grid-column:16; left: 30%; position: relative; color: grey; font-size:12px;top: 75%;"
+                        "; grid-column:16; left: 57%; position: relative; color: grey; font-size:12px;top: 75%;"
                 );
                 breakline.innerHTML = breakpoint;
                 // add breaklines
@@ -303,7 +303,7 @@ if (!isRepeatable) {
                 var connectionLine = document.createElement("DIV");
                 connectionLine.setAttribute(
                     "style",
-                    "top:" + toppos + "px; left:" + leftpos + "px; rotate:0deg;width: 1100px;"
+                    "top:" + toppos + "px; left:" + leftpos + "px; rotate:0deg;width: 1150px;"
                 );
 
                 connectionLine.className = "dotted-line";
@@ -317,9 +317,11 @@ if (!isRepeatable) {
     <body>
         <div id="header"></div>
 
-        <div class="textblocktitle">Empire Tree</div>
-        <div class="tree-space" id="treespace">
-            <div class="tree-grid" id="treeHolder"></div>
+        <div class="textblocktitle"><img src="/evolved/Icons/Interface/TitleIcons/EmpireIcon.png" height="40px" alt="" /> Empire Tree <img src="/evolved/Icons/Interface/TitleIcons/EmpireIcon.png" height="40px" alt="" /></div>
+        <div class="tree-scroll">
+            <div class="tree-space" id="treespace">
+                <div class="tree-grid" id="treeHolder"></div>
+            </div>
         </div>
     </body>
 </html>
@@ -377,10 +379,22 @@ if (!isRepeatable) {
         border-style: solid;
     }
 
+    /* the tree's lines are placed in pixels: all of it is made larger together, where the window has the room. A window too
+       narrow for it scrolls the tree alone */
+    .tree-scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
     .tree-space {
-        width: auto;
-        height: auto;
+        width: 1156px;
+        height: 756px;
+        margin: 0 auto;
         position: relative;
+    }
+    @media (min-width: 1310px) {
+        .tree-space {
+            zoom: 1.1;
+        }
     }
 
     .entry {

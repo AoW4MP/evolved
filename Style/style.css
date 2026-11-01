@@ -777,6 +777,48 @@ p {
     white-space: normal;
 }
 
+/* a Units page's tier buttons: in view while its list scrolls */
+.unit-tier-filter {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1.4fr repeat(5, 1fr);
+    background: black;
+}
+.unit-tier-filter button {
+    height: 36px;
+    padding: 0;
+    color: #deb887;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    background: black;
+    border: 3px solid;
+    border-image: url(/evolved/Icons/9slicetooltip.png) 10;
+}
+.unit-tier-filter button:hover:not(:disabled) {
+    color: white;
+}
+.unit-tier-filter button.tier-on {
+    color: white;
+    background: #4b1d63;
+}
+.unit-tier-filter button:disabled {
+    color: #555;
+    cursor: default;
+}
+.unit-tier-none {
+    padding: 10px 8px;
+    color: #8d97ad;
+    font-size: 13px;
+    text-align: center;
+}
+.unit-tier-none[hidden],
+.tier-hidden {
+    display: none !important;
+}
+
 .switch{
     color: white;
 }

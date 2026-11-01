@@ -54,7 +54,7 @@ function SettleTooltips() {
 // which the box is not, and a tooltip does not link to itself ("Burning counters Wet" in Burning's)
 function WireTooltipLinks(dialog, origin) {
     for (const outer of dialog.querySelectorAll(":scope > .statusEffectHandler")) outer.classList.remove("statusEffectHandler");
-    const own = origin ? origin.textContent.trim().toLowerCase() : null;
+    const own = origin ? (origin.dataset?.ability ?? origin.textContent).trim().toLowerCase() : null;
     if (own) {
         for (const el of dialog.querySelectorAll(".statusEffectHandler")) {
             if (el.textContent.trim().toLowerCase() !== own) continue;

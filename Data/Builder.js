@@ -105,7 +105,8 @@ function processConceptHyperlinks(text) {
         // a link to an ability ("[hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink]") opens the
         // ability's tooltip; alltexts.py writes no concept tooltip for one the site has. Written as the dump's links
         // are, so the ability names in plain text are not looked for in it again
-        if (!concept && abilityTagCache?.has(displayText.trim())) return `<hyperlink>${displayText.trim()}</hyperlink>`;
+        if (!concept && (abilityTagCache?.has(displayText.trim()) || PluralAbilityLink(displayText.trim())))
+            return `<hyperlink>${displayText.trim()}</hyperlink>`;
         if (!concept) return noTooltip; // no tooltip available, just underline
 
         // Hidden handler lets HandleExtraTooltips wire up the tooltip
@@ -186,6 +187,15 @@ function ConceptKeyByName(words) {
     return conceptKeysByName.get(words.toLowerCase());
 }
 
+// An ability's link in the plural the text uses ("Animals", "Battle Mage Units"): its tooltip, in those words
+function PluralAbilityLink(words) {
+    const one = words.replace(/ies$/, "y").replace(/s$/, "");
+    if (one === words || !abilityTagCache?.has(one)) return null;
+    return abilityTagCache
+        .get(one)
+        .replacement.replace(`<span class="statusEffectHandler">${one}<`, `<span class="statusEffectHandler" data-ability="${one}">${words}<`);
+}
+
 // main function
 function AddTagIconsForStatusEffects(text) {
     if (!text) return text;
@@ -233,7 +243,7 @@ function AddTagIconsForStatusEffects(text) {
             } else {
                 // Fallback: plain underlined text, no tooltip
                 // restored = `<span style="color:grey;">${link.inner}</span>`;
-                restored = `<hyperlink>${link.inner}</hyperlink>`;
+                restored = PluralAbilityLink(link.inner.trim()) ?? `<hyperlink>${link.inner}</hyperlink>`;
             }
         }
 
@@ -373,7 +383,7 @@ function HandleExtraTooltips(specificDiv) {
 
     root.querySelectorAll(".statusEffectHandler").forEach((el) => {
         let spantest = document.createElement("span");
-        spantest.innerHTML = lookupStatusEffect(el.innerText);
+        spantest.innerHTML = lookupStatusEffect(el.dataset.ability ?? el.innerText);
         addTooltipListeners(el, spantest, "something");
     });
 
@@ -3555,18 +3565,16 @@ function backtrackUnitOrigins(unitData, name, holder) {
 
     const unitAbility = CheckIfFromAbility(name, GetAllMatchingAbilities);
 
-    for (let x = 0; x < unitAbility.length; x++) {
-        const tooltipText = `Unit mentioned in Ability <hyperlink>${unitAbility[x][1].name}</hyperlink> of Unit <hyperlink>${unitAbility[x][0].name}</hyperlink>`;
-        const imgSrc =
-            unitAbility[0] != ""
-                ? `/evolved/Icons/UnitIcons/${unitAbility[x][1].icon}.png`
-                : `/evolved/Icons/UnitIcons/${unitAbility[x][1].icon}.png`;
+    for (const [ability, units] of unitAbility) {
+        const unitNames = [...new Set(units.map((u) => u.name))];
+        const tooltipText = `Unit mentioned in Ability <hyperlink>${ability.name}</hyperlink> of ${unitNames.length > 1 ? "Units" : "Unit"} ${unitNames.map((n) => `<hyperlink>${n}</hyperlink>`).join(", ")}`;
+        const imgSrc = `/evolved/Icons/UnitIcons/${ability.icon}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
-        const link = `/evolved/HTML/Units.html?unit=${unitAbility[x][0].id}`;
+        const link = `/evolved/HTML/Units.html?unit=${units[0].id}`;
         createFoundUnitInHereIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
     }
 
-    let infusion = CheckIfFromInfusion(name, GetAllMatchingAbilities);
+    let infusion = OncePerName(CheckIfFromInfusion(name, GetAllMatchingAbilities));
 
     for (let x = 0; x < infusion.length; x++) {
         const tooltipText = `Unit mentioned in Infusion <hyperlink>${infusion[x].name} </<hyperlink>`;
@@ -3580,7 +3588,7 @@ function backtrackUnitOrigins(unitData, name, holder) {
         holderOrigin.appendChild(miniIcon);
     }
 
-    let heroSkill = CheckIfFromHeroSkill(name, GetAllMatchingAbilities);
+    let heroSkill = OncePerName(CheckIfFromHeroSkill(name, GetAllMatchingAbilities));
     for (let x = 0; x < heroSkill.length; x++) {
         const tooltipText = `Unit mentioned in Hero Skill <hyperlink>${heroSkill[x].name}</hyperlink>`;
         const imgSrc = `/evolved/Icons/UnitIcons/${heroSkill[x].icon}.png`;
@@ -3675,11 +3683,14 @@ function CheckIfMatchingAbility(unitName) {
             unitName = "Runestone";
         }
 
-        if (jsonUnitAbilities[i].description.indexOf(unitName + "s") != -1) {
+        // what a unit can't become is no origin: "cannot be transformed into a Decaying Zombie"
+        const description = jsonUnitAbilities[i].description.replace(/cannot be [^.]*\./gi, "");
+
+        if (description.indexOf(unitName + "s") != -1) {
             ability.add(jsonUnitAbilities[i].slug);
         }
 
-        if (regex.test(jsonUnitAbilities[i].description)) {
+        if (regex.test(description)) {
             //   if (jsonUnitAbilities[i].description.indexOf(unitName) != -1) {
             ability.add(jsonUnitAbilities[i].slug);
         }
@@ -3689,25 +3700,27 @@ function CheckIfMatchingAbility(unitName) {
     return ability;
 }
 
+// the matching abilities and passives, each once by name, with the units that have it: [ability, units]
 function CheckIfFromAbility(unitName, matchingList) {
-    let unitslugLookup = new Set();
+    const byName = new Map();
 
-    let k = 0;
-    for (let j = 0; j < jsonUnits.length; j++) {
-        for (let k = 0; k < jsonUnits[j].abilities.length; k++) {
-            if (matchingList.has(jsonUnits[j].abilities[k].slug)) {
-                unitslugLookup.add([jsonUnits[j], findBy(jsonUnitAbilities, "slug", jsonUnits[j].abilities[k].slug)]);
-            }
-        }
-        for (let l = 0; l < jsonUnits[j].primary_passives.length; l++) {
-            if (matchingList.has(jsonUnits[j].primary_passives[l].slug)) {
-                unitslugLookup.add([jsonUnits[j], findBy(jsonUnitAbilities, "slug", jsonUnits[j].abilities[k].slug)]);
-            }
+    for (const unit of jsonUnits) {
+        for (const { slug } of [...unit.abilities, ...unit.primary_passives]) {
+            if (!matchingList.has(slug)) continue;
+            const ability = findBy(jsonUnitAbilities, "slug", slug);
+            if (!byName.has(ability.name)) byName.set(ability.name, [ability, []]);
+            const units = byName.get(ability.name)[1];
+            if (!units.includes(unit)) units.push(unit);
         }
     }
 
-    // console.log(unitslugLookup);
-    return Array.from(unitslugLookup);
+    return Array.from(byName.values());
+}
+
+// a thing with several versions (a hero skill per hero type, an infusion per item) is one mention
+function OncePerName(list) {
+    const seen = new Set();
+    return list.filter((entry) => !seen.has(entry.name) && seen.add(entry.name));
 }
 
 function CheckIfFromHeroSkill(unitName, matchingList) {
@@ -4020,17 +4033,18 @@ function addMedalEntry(name, icon, xp, container) {
 
 function addRewards(rewards = [], container) {
     for (const reward of rewards) {
-        const isTooltip = reward.slug.includes("medal") || reward.slug.includes("champion_");
-        const rewardText = `<bullet>${lookupSlug(reward.slug)}</bullet>`;
+        const name = lookupSlug(reward.slug);
 
-        if (isTooltip) {
-            const entry = NewLevelUpEntry(`<p class="levelup_medal">${rewardText}`);
-            const tooltip = document.createElement("span");
-            tooltip.innerHTML = lookupSlugFull(reward.slug).description;
-            addTooltipListeners(entry, tooltip);
-            container.append(entry);
+        // a value ("+10<hp></hp>") says it all; a named reward ("Champion Medal: Brawler") links to what it does
+        if (name.startsWith("+")) {
+            container.append(NewLevelUpEntry(`<bullet>${name}</bullet>`));
         } else {
-            container.append(NewLevelUpEntry(rewardText));
+            const full = lookupSlugFull(reward.slug);
+            const entry = NewLevelUpEntry(`<bullet><span class="levelup_medal">${name}</span></bullet>`);
+            // one (Champion Graceful Rain) has no icon of its own
+            const tooltip = CreatePassiveSlotToolTip(full.icon ?? "../Text/medal_champion", name, full.description);
+            addTooltipListeners(entry.querySelector(".levelup_medal"), tooltip);
+            container.append(entry);
         }
     }
 }
@@ -4166,39 +4180,31 @@ function showTome(a, divOrigin) {
     modName.innerHTML = "";
 
     modName.innerHTML += tomeLoc.name;
-    if ("DLC" in tomeEN) {
-        let newDivForMount = AddDLCTag(tomeEN.DLC);
-
-        modName.append(newDivForMount);
-    }
+    // its own line under the tier, as in the game
+    const dlc = "DLC" in tomeEN && dlcMap[tomeEN.DLC.replaceAll(" ", "")];
+    if (dlc)
+        divOrigin.querySelector("#tomedlc").innerHTML =
+            '<img src="' + dlc.src + '" alt="" /><span>Age of Wonders 4: ' + dlc.text.replace(/^Part of the | DLC$/g, "") + "</span>";
 
     descriptionDiv = divOrigin.querySelector("#tomedescription");
     description = tomeLoc.gameplay_description;
-    if ("affinities" in tomeEN) {
-        let affinitiesdual = tomeEN.affinities.split(", ");
+    descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description);
 
-        let allAffinity = "";
-        for (let i = 0; i < affinitiesdual.length; i++) {
-            if (affinitiesdual[i].indexOf("reputa") == -1) {
-                let affinities = affinitiesdual[i].split(" ");
-                allAffinity += affinities[0] + affinities[1];
-
-                allAffinity = expandTags(allAffinity);
-                allAffinity = allAffinity.replaceAll(",", "");
-            }
-        }
-
-        descriptionDiv.innerHTML = "Tier " + romanize(tomeEN.tier) + " - " + allAffinity + " " + "<br>" + description;
-    } else {
-        descriptionDiv.innerHTML = description;
-    }
-    descriptionDiv.innerHTML += "<hr>";
+    // a pip per point of affinity: "2 <empireorder></empireorder> ..." is two. A tome no one researches has no tier: a
+    // culture's is unlocked from the start, a pact's spells come from a Dwelling
+    const affinityIcons = (tomeEN.affinities || "")
+        .split(", ")
+        .filter((a) => a && a.indexOf("reputa") == -1)
+        .map((a) => a.split(" ")[1].repeat(a.split(" ")[0]))
+        .join("");
+    if (tomeEN.tier)
+        divOrigin.querySelector("#tometier").innerHTML = affinityIcons + "<span>Tier " + romanize(tomeEN.tier || 1) + "</span>";
 
     let loreDescription = tomeLoc.lore_description;
     loreDescription = loreDescription.replace(String.fromCharCode(92), "");
     loreDescription = loreDescription.replace(String.fromCharCode(92), "");
 
-    if (tomeLoc.lore_author) loreDescription += "<br> -" + tomeLoc.lore_author;
+    if (tomeLoc.lore_author) loreDescription += "<br> - " + tomeLoc.lore_author;
     let descriptionLoreDiv = divOrigin.querySelector("#tomeloredescription");
     descriptionLoreDiv.innerHTML = loreDescription;
 
@@ -4218,10 +4224,10 @@ function showTome(a, divOrigin) {
                     allAffinity += "<br>";
                 }
                 // example output: +1 <empirenature></empirenature> Nature Affinity
-                allAffinity += `+${affinities[0]} ${affinities[1]} ${affinities[3]} ${affinities[4]}`;
+                allAffinity += `+${affinities[0]} ${affinities[1]} <hyperlink>${affinities[3]} ${affinities[4]}</hyperlink>`;
             }
         }
-        div.innerHTML = allAffinity;
+        div.innerHTML = AddTagIconsForStatusEffects(allAffinity);
         unitTypesDiv.appendChild(div);
     }
     // tome passives
@@ -4323,9 +4329,7 @@ function showTome(a, divOrigin) {
 
     unitTypesDiv.appendChild(div);
 
-    let skillHolder = divOrigin.querySelector("#tome_unlocks");
-
-    skillHolder.append(...SbTomeCards(tomeEN));
+    SbTomeMedallions(SbTomeSkills(tomeEN), divOrigin.querySelector("#tomeskills"));
     if (!unitTypesDiv.textContent.trim()) divOrigin.querySelector(".InitialBonus").hidden = true;
 
     let imagelink = divOrigin.querySelector("#tomeicon");

@@ -398,6 +398,8 @@ function AddExtraData() {
     ];
     RestoreDumpLinks(dumps.map((d) => window[d]), jsonAllFromPO);
     RestoreDumpLinks(dumps.map((d) => window[d + "Localized"]), jsonAllFromPOLocalized);
+    // the spell book's texts are the dump's
+    RestoreDumpLinks([jsonSpellBook.spells, jsonSpellBook.siege], jsonAllFromPOLocalized);
 
     // add extra data to the main data set
     jsonHeroSkills = [...jsonHeroSkills, ...extraSkills];

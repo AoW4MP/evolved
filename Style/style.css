@@ -181,6 +181,21 @@ ul {
     padding-bottom: 7px;
 }
 
+/* on a phone a long title wraps between its icons, instead of dropping the last icon to a line of its own */
+@media (max-width: 800px) {
+    .textblocktitle:has(> img) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .textblocktitle > img {
+        top: 0;
+        flex-shrink: 0;
+    }
+}
+
 /* an affinity Tomes page's icons, either side of "Astral Tomes": text icons, at a title's size */
 .textblocktitle > :is(empirearcana, empireastral, empirechaos, empirenature, empireshadow, empirematter, empirematerium, empireorder) {
     max-height: 24px;
@@ -625,17 +640,6 @@ p {
     max-width: 360px;
 }
 
-.tome_description {
-    position: relative;
-    float: right;
-    font-size: 13px;
-    padding: 10px;
-    color: darkgray;
-    text-align: center;
-    padding-top: 15px;
-    max-width: 600px;
-}
-
 .mod_image_holder {
     position: relative;
     width: 500px;
@@ -726,7 +730,8 @@ p {
 .sidebarPage > .textblocktitle {
     grid-column: 1 / -1;
     grid-row: 1;
-    padding: 0;
+    /* the capitals sit high in their line: measured from the stone bar and to what follows, the same space above as below */
+    padding: 7px 0 0;
     /* as high as its text or icons, and as far from what follows as from the menu above it (its 16px margin): the
        same space around "Astral Tomes" as around a culture's title with its 44px icons */
     line-height: 1.3;
@@ -984,13 +989,6 @@ p {
     overflow: visible;
 }
 
-.tome_image {
-    float: left;
-    padding: 10px;
-    width: 150px;
-    overflow: visible;
-}
-
 .corner_icon {
     float: left;
     position: absolute;
@@ -1030,52 +1028,6 @@ tab {
 
 
 
-.InitialBonus {
-    display: flex;
-    flex-direction: column;
-    margin-right: 70px;
-    padding: 15px;
-    color: #362314;
-    border-style: solid;
-    border-image: url(/evolved/Icons/Interface/parchment2.png);
-    border-image-slice: 2 fill;
-}
-    .initialBonusHeaderText,
-    .initialBonusCastingPoints {
-        margin: 0 auto;
-    }
-    /* the header a little higher, apart from the bonuses under it */
-    .InitialBonus {
-        padding-top: 9px;
-    }
-    .InitialBonus .initialBonusHeaderText {
-        margin-bottom: 6px;
-    }
-    /* the bonuses centred under the header, and the casting points a little apart from them */
-    #initialBonusList {
-        justify-items: center;
-        text-align: center;
-    }
-    #initialBonusList .initialBonusCastingPoints {
-        margin-top: 6px;
-    }
-
-
-.tome_card {
-    color: white;
-    width: 1075px;
-    border-style: solid;
-    border-image: url(/evolved/Icons/Interface/Background_Unitpanel.png);
-    border-image-slice: 2;
-    border-width: 4px;
-    background-image: url(/evolved/Icons/Interface/Background_Unitpanel.png);
-    background-size: cover;
-    padding: 5px;
-    display: table;
-    margin: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .unit_card {
     background-color: rgb(5, 30, 45, 1);
@@ -1097,48 +1049,10 @@ tab {
 .city > .unit_card {
     margin-left: max(0px, calc(50% - 538px));
 }
-/* beside a .sidebarPage's sidebar the card has its own column: centred in it. A tome's two columns of cards have
-   less space around and inside each card's frame and their content is 476px instead of 500px,
-   and its banner is as wide as they are, so it leaves room beside the sidebar; in a narrow window, wider than the column, it sticks out on
-   both sides instead of only the right. */
-/* only the sides trimmed: above and below, the space the cards always had */
-.sidebarPage #tome_unlocks .mod_card {
-    padding: 5px 0;
-}
-/* the space between the two columns of cards, with the frames' margins as wide as between two rows (20px); the
-   pair as wide as with 480px cards and no gap */
-.sidebarPage #tome_unlocks {
-    column-gap: 16px;
-}
-.sidebarPage #tome_unlocks .mod_image_holder {
-    width: 476px;
-    margin: 5px 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-/* the name and cost, and tier and upkeep, rows: as wide as the card instead of the template's fixed 500px */
-.sidebarPage #tome_unlocks .spellStatsHighLighter > div {
-    width: 100% !important;
-}
-/* their name, cost and type a size up (the template sets the cost and type inline) */
-.sidebarPage #tome_unlocks .mod_name {
-    font-size: 20px;
-}
-.sidebarPage #tome_unlocks .spell_cost {
-    font-size: 14px !important;
-}
-.sidebarPage #tome_unlocks #modtier {
-    font-size: 16px !important;
-}
-.sidebarPage .tome_card {
-    width: 1006px;
-}
+/* beside a .sidebarPage's sidebar the card has its own column: centred in it */
 .sidebarPage .city > .unit_card {
     margin-left: auto;
     margin-right: auto;
-}
-.sidebarPage .city:has(> * > .tome_card) {
-    justify-content: unsafe center;
 }
 
 .generic-center {
@@ -1306,6 +1220,15 @@ tab {
     clear: left;
     width: auto;
     text-align: center;
+}
+
+/* six mentions fit beside the portrait down to the card's edge; more start another column */
+#originHolder {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    column-gap: 22px;
+    max-height: 396px;
 }
 
 .unit_ability_icon {
@@ -1682,12 +1605,9 @@ hr {
 }
 
 .levelup_medal {
-    position: relative;
     cursor: pointer;
-    color: beige;
-    display: inline-block;
-    max-width: auto;
-    font-size: 12px;
+    color: white;
+    text-decoration: underline;
 }
 
 .unittype_icon {

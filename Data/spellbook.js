@@ -127,37 +127,95 @@ function SbStructureCard(skill) {
     return card;
 }
 
-// all a tome unlocks, in its own order, by what the game says comes from it: which of a spell's versions, and what its
-// skills have no link to. On its page the tome, its tier and its DLC are said already
-function SbTomeCards(tome) {
+// a tome's skills in the game's order. It sorts the list the dump has by tier alone, with a quicksort that doesn't keep the
+// order of equals (Delphi's TList.Sort: the pivot is the middle one): nothing else gave the order of the tomes compared
+function SbGameOrder(skills) {
+    const list = [...skills];
+    const tier = (skill) => skill.tier || 0;
+    const sort = (left, right) => {
+        if (left >= right) return;
+        const pivot = tier(list[(left + right) >> 1]);
+        let i = left;
+        let j = right;
+        while (i <= j) {
+            while (tier(list[i]) < pivot) i++;
+            while (tier(list[j]) > pivot) j--;
+            if (i <= j) {
+                [list[i], list[j]] = [list[j], list[i]];
+                i++;
+                j--;
+            }
+        }
+        sort(left, j);
+        sort(i, right);
+    };
+    sort(0, list.length - 1);
+    return list;
+}
+
+// all a tome unlocks, by tier as in the game, by what the game says comes from it: which of a spell's versions, and what
+// its skills have no link to. Each with its card or cards (a spell's versions). On its page the tome, its tier and its DLC
+// are said already
+function SbTomeSkills(tome) {
     const fromTome = (e) => e.sources.some((s) => s.kind === "Tome" && s.id === tome.id);
     const spells = jsonSpellBook.spells.filter(fromTome);
     const siege = jsonSpellBook.siege.filter(fromTome);
     const shown = new Set();
-    const cards = [];
-    const add = (list, makeCard) => {
+    const skills = [];
+    const add = (skill, list, makeCard) => {
+        const cards = [];
         for (const e of list) {
             if (shown.has(e)) continue;
             shown.add(e);
             cards.push(makeCard({ ...e, tier: null, dlc: null, sources: [] }));
         }
+        if (cards.length) skills.push({ ...skill, cards });
     };
-    for (const skill of tome.skills || []) {
+    for (const skill of SbGameOrder(tome.skills || [])) {
         const named = (e) => e.id === skill.spell_slug || e.id === skill.siege_project_slug || e.name === skill.name;
-        if (skill.unit_slug) cards.push(SbUnitCard(skill));
+        if (skill.unit_slug) skills.push({ ...skill, cards: [SbUnitCard(skill)] });
         else if (skill.upgrade_slug) {
             const card = SbStructureCard(skill);
-            if (card) cards.push(card);
-        } else if (siege.some(named)) add(siege.filter(named), SbSiegeCard);
-        else if (spells.some(named)) add(spells.filter(named), SbSpellCard);
+            if (card) skills.push({ ...skill, cards: [card] });
+        } else if (siege.some(named)) add(skill, siege.filter(named), SbSiegeCard);
+        else if (spells.some(named)) add(skill, spells.filter(named), SbSpellCard);
         else if (!jsonSpellBook.left_out.some((e) => e.name === skill.name)) {
             const type = skill.type.includes("Empire Bonus") ? "<empire></empire> Empire Bonus" : skill.type;
-            cards.push(SbCard({ name: skill.name, description: skill.description }, type, "/evolved/Icons/ExtraIcons/" + skill.name.replaceAll(" ", "_").toLowerCase() + ".png"));
+            const card = SbCard({ name: skill.name, description: skill.description }, type, "/evolved/Icons/ExtraIcons/" + skill.name.replaceAll(" ", "_").toLowerCase() + ".png");
+            skills.push({ ...skill, cards: [card] });
         }
     }
-    add(spells, SbSpellCard);
-    add(siege, SbSiegeCard);
-    return cards;
+    for (const e of spells) add({ name: e.name, tier: tome.tier, type: e.type }, [e], SbSpellCard);
+    for (const e of siege) add({ name: e.name, tier: tome.tier, type: "Siege Project" }, [e], SbSiegeCard);
+    return skills.sort((a, b) => (a.tier || 0) - (b.tier || 0));
+}
+
+// the frame the game gives a skill of a kind (TomeOfWondersScreen.xaml); an enchantment's for a unit and anything else
+function SbSkillFrame(type) {
+    if (/Summon/.test(type)) return "summon";
+    if (/Transformation/.test(type)) return "transformation";
+    if (/Unit Enchantment/.test(type) || !/cast(strategic|tactical)/.test(type)) return "enchantment";
+    return type.includes("casttactical") ? "tactical" : "strategic";
+}
+
+// the scroll's medallions, as in the game: a skill's card when the mouse is on it
+function SbTomeMedallions(skills, holder) {
+    holder.closest(".tome-scroll").hidden = !skills.length;
+    for (const skill of skills) {
+        const icon = skill.cards[0].querySelector(".sb-head > img")?.getAttribute("src");
+        const medallion = WmElement(
+            "div",
+            "tome-skill",
+            '<span class="tome-medallion"><img src="/evolved/Icons/Interface/Tome/frame_' + SbSkillFrame(skill.type) + '.png" alt="" />' +
+                (icon ? '<img class="tome-skill-icon" src="' + icon + '" alt="" onerror="this.remove()" />' : "") +
+                '<span class="tome-skill-tier">' + romanize(skill.tier || 1) + "</span></span>" +
+                '<span class="tome-skill-name">' + skill.name + "</span>"
+        );
+        const tip = document.createElement("span");
+        tip.append(...skill.cards);
+        addTooltipListeners(medallion, tip);
+        holder.append(medallion);
+    }
 }
 
 // a spell's or siege project's own page

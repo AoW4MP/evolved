@@ -61,15 +61,6 @@
     margin-left: 0 !important;
     flex: none;
 }
-.tome_name .mountToolTip {
-    display: inline-flex !important;
-    float: none !important;
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    margin-left: 10px !important;
-    vertical-align: middle;
-}
 .sb-chips {
     display: flex;
     flex-wrap: wrap;
@@ -133,16 +124,332 @@
     max-width: 620px;
     margin: 0 auto;
 }
-/* a tome's unlocks, as wide as its card */
-.sb-tome-cards {
+/* A tome's page, laid out as the game's (TomeOfWondersScreen.xaml), with --u as one of its layout units: the art is a fixed
+   background whose centre is 150 units above the screen's middle, and the book, texts, scrolls and lore are one column centred
+   on that middle. So the more a tome holds, the higher its book in the circle, while the circle stays. The stage is the
+   game's screen, trimmed to what the circle and a full tome need, and the same on a page with a sidebar and one without */
+.tome_card {
+    container-type: inline-size;
+    --u: clamp(0.72px, 100cqw / 1440, 0.93px);
+    --medallion: calc(var(--u) * 135);
+    --book: calc(var(--u) * 180);
+    position: relative;
     box-sizing: border-box;
-    margin-top: 14px;
+    width: 100%;
+    margin: 5px auto;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    background: url(/evolved/Icons/Interface/Background_Unitpanel.png) center / cover;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
-.sidebarPage .sb-tome-cards {
-    width: 1024px;
+.tome-stage {
+    --circle: calc(var(--u) * 260);
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(var(--circle) * 2 + var(--u) * 300);
+    padding: 0 10px;
 }
+.tome-stage > * {
+    position: relative;
+}
+/* beside a sidebar, all the room there is: the empty column that centres other pages' cards too */
+@media (min-width: 801px) {
+    .sidebarPage > #dataHolder:has(.tome_card) {
+        grid-column: 2 / -1;
+    }
+}
+/* a block: as a .w3-container's grid it would be as wide as the tome's text */
+.sidebarPage .city:has(> * > .tome_card) {
+    display: block;
+}
+.tome-book {
+    flex: none;
+    width: var(--book);
+    height: var(--book);
+    margin: 0 auto;
+}
+.tome-stage > .tome-art {
+    position: absolute;
+    left: 50%;
+    top: var(--circle);
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+.tome-art img {
+    position: absolute;
+    max-width: none;
+    width: calc(var(--u) * 1000);
+    height: calc(var(--u) * 1000);
+    translate: -50% -50%;
+    opacity: 0.3;
+}
+/* the ring isn't quite in the middle of its image */
+.tome-art .tome-runes {
+    width: calc(var(--u) * 546);
+    height: auto;
+    translate: -50% -51.3%;
+    transform-origin: 50% 51.3%;
+    opacity: 0.75;
+    animation: tome-runes 120s linear infinite;
+}
+@keyframes tome-runes {
+    to {
+        rotate: 360deg;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .tome-art .tome-runes {
+        animation: none;
+    }
+}
+.tome_image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+.tome_card .tome_name {
+    margin: 0 0 2px;
+    padding: 0;
+    font-size: max(28px, calc(var(--u) * 38));
+    line-height: 1.15;
+    text-shadow: 0 2px 10px black;
+}
+.tome-tier,
+.tome-dlc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 4px;
+    color: #e8e2d4;
+    font-size: 18px;
+    text-shadow: 0 2px 6px black;
+}
+.tome-dlc {
+    color: #d9e8d2;
+    font-size: 16px;
+}
+.tome-tier:empty,
+.tome-dlc:empty {
+    display: none;
+}
+.tome-tier > :not(span) {
+    max-height: 28px;
+    top: 0;
+}
+.tome-dlc img {
+    max-height: 22px;
+}
+.tome-text {
+    width: 100%;
+    max-width: calc(var(--u) * 750);
+    margin: 0 auto calc(var(--u) * 20);
+    color: #d9e8d2;
+    font-size: max(16px, calc(var(--u) * 17));
+    text-shadow: 0 2px 6px black;
+}
+/* the skills' scroll in the page's middle, under the book, with the bonus beside it. Without the room, the bonus has what
+   it needs and the scroll moves over */
+.tome-scrolls {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: calc(var(--u) * 22 + 10px);
+}
+.tome-scroll {
+    grid-column: 2;
+    position: relative;
+    box-sizing: border-box;
+    width: calc(var(--u) * 733);
+    max-width: 100%;
+    padding: calc(var(--u) * 25) 0 calc(var(--u) * 45);
+    background: url(/evolved/Icons/Interface/Tome/scroll.png) center / 100% 100%;
+}
+.tome-scroll[hidden],
 .InitialBonus[hidden] {
     display: none;
+}
+.tome-scroll::before,
+.tome-scroll::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    width: 38px;
+    background: url(/evolved/Icons/Interface/Tome/scroll_end.png) center / 100% 100%;
+}
+.tome-scroll::before {
+    left: -10px;
+}
+.tome-scroll::after {
+    right: -10px;
+    transform: scaleX(-1);
+}
+/* three columns however few skills there are, and a short last row starts at the left */
+.tome-skills {
+    display: grid;
+    grid-template-columns: repeat(3, calc(var(--u) * 240));
+    justify-content: center;
+    gap: 6px 0;
+}
+.tome-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2a1a0c;
+    text-shadow: none;
+    cursor: default;
+}
+.tome-medallion {
+    position: relative;
+    display: block;
+    width: var(--medallion);
+    height: var(--medallion);
+    margin-bottom: calc(var(--medallion) * -0.17);
+    transition: filter 0.15s;
+}
+.tome-skill:hover .tome-medallion {
+    filter: brightness(1.15) drop-shadow(0 0 5px rgba(255, 240, 190, 0.9));
+}
+.tome-medallion img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.tome-medallion .tome-skill-icon {
+    inset: 25.9%;
+    width: 48.2%;
+    height: 48.2%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* in the frame's ring at the lower right */
+.tome-skill-tier {
+    position: absolute;
+    left: 78.4%;
+    top: 71.5%;
+    width: 16%;
+    height: 16%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: max(11px, calc(var(--medallion) * 0.1));
+    line-height: 1;
+}
+.tome-skill-name {
+    position: relative;
+    width: calc(var(--u) * 200);
+    max-width: 100%;
+    font-size: max(15px, calc(var(--u) * 17));
+    line-height: 1.15;
+}
+.InitialBonus {
+    grid-column: 3;
+    justify-self: start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: max(230px, calc(var(--u) * 300));
+    padding: 30px 26px 32px;
+    color: #2a1a0c;
+    text-shadow: none;
+    background: url(/evolved/Icons/Interface/Tome/scroll_vertical.png) center / 100% 100%;
+}
+.tome-scroll[hidden] + .InitialBonus {
+    grid-column: 2;
+}
+.InitialBonus::before,
+.InitialBonus::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    height: 28px;
+    background: url(/evolved/Icons/Interface/Tome/scroll_vertical_end.png) center / 100% 100%;
+}
+.InitialBonus::before {
+    top: -6px;
+}
+.InitialBonus::after {
+    bottom: -6px;
+}
+.initialBonusHeaderText {
+    margin: 0 auto 8px;
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+#initialBonusList {
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+    font-size: 17px;
+}
+#initialBonusList .initialBonusText:not(.initialBonusCastingPoints) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+/* a link's white is for the dark page, not the scroll */
+#initialBonusList span[style*="underline"] {
+    color: inherit !important;
+    text-underline-offset: 2px;
+}
+#initialBonusList .initialBonusCastingPoints {
+    margin: 6px auto 0;
+}
+.tome_card .tome_description {
+    width: 100%;
+    max-width: calc(var(--u) * 900);
+    margin: calc(var(--u) * 20 + 4px) auto 12px;
+    color: #a7adb8;
+    white-space: pre-line;
+    font-size: max(16px, calc(var(--u) * 17));
+    text-shadow: 0 2px 6px black;
+}
+/* no room for the bonus beside the scroll, or then for three columns */
+@container (max-width: 860px) {
+    .tome-scrolls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+    .tome-scroll {
+        margin: 0 10px;
+    }
+}
+@container (max-width: 600px) {
+    .tome-stage {
+        padding: 0 10px;
+    }
+    .tome-scroll {
+        width: calc(100% - 20px);
+        padding: 14px 0 18px;
+    }
+    .tome-skills {
+        --medallion: 120px;
+        grid-template-columns: repeat(2, minmax(0, 128px));
+    }
+}
+/* a skill's card in a tooltip: the tooltip is its frame */
+.tooltiptextnew .sb-card {
+    padding: 0;
+    background: none;
+    border: 0;
+    box-shadow: none;
+}
+.tooltiptextnew .sb-card + .sb-card {
+    margin-top: 12px;
 }
 .sb-card .structure-help {
     margin-top: 6px;
@@ -155,21 +462,5 @@
 @media (max-width: 800px) {
     .sb-cards {
         grid-template-columns: minmax(0, 1fr);
-    }
-    /* a tome's card and unlocks fit the page */
-    .sidebarPage .city .sb-tome-cards,
-    .sidebarPage .city .tome_card {
-        display: block;
-        box-sizing: border-box;
-        width: auto;
-    }
-    .sidebarPage .city .sb-tome-cards {
-        display: grid;
-    }
-    .sidebarPage .city:has(> * > .tome_card) {
-        display: block;
-    }
-    .tome_card > div {
-        flex-wrap: wrap;
     }
 }

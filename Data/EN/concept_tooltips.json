@@ -5442,7 +5442,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CHOSEN_ALIPAVAR",
     "displayHtml": "Chosen of Allipavar",
-    "description": "This unit gains:<bulletlist><bullet>+20 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+1/2 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attacks[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet></bulletlist>",
+    "description": "This unit gains:<bulletlist><bullet>+20 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+1 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet></bulletlist>",
     "image": "000003E100002010"
   },
   "GLOBAL.PROPERTIES.CHOSEN_BOSZORKAN": {
@@ -5514,7 +5514,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CLEANSING_FLAME_FLAME_BLESSED_CHAMPIONS_PROPERTY_GROUP",
     "displayHtml": "Flame Blessed Champions",
-    "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +1/2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +1/2 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base 30/50/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +1 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D000007C8"
   },
   "GLOBAL.PROPERTIES.COLLECTORS_GIFT": {
@@ -5721,7 +5721,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CULT_OF_TYRANNY",
     "displayHtml": "Cult of Tyranny",
-    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AURA_OF_TYRANNY]Aura of Tyranny[/hyperlink]</bullet><bullet>Attacks gain base 60/90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] and heal this unit for 5/10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AURA_OF_TYRANNY]Aura of Tyranny[/hyperlink]</bullet><bullet>Attacks gain base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] and heal this unit for 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001AA2"
   },
   "GLOBAL.PROPERTIES.CURSE_OF_UNDEATH": {
@@ -5882,7 +5882,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.EXPLOIT_VULNERABILITY",
     "displayHtml": "Exploit Vulnerability",
-    "description": "Unit's attacks have a Base 60/90% chance of:<bulletlist><bullet>Inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Healing self for 5/10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Unit's attacks have a Base 60% chance of:<bulletlist><bullet>Inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Healing self for 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001AA2"
   },
   "GLOBAL.PROPERTIES.EYE_OF_FIRE_PROPERTY_GROUP": {
@@ -6001,7 +6001,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FROST_ARROWS_PROPERTY_GROUP",
     "displayHtml": "Frost Arrows",
-    "description": "Unit's attacks have:<bulletlist><bullet>+1/2/4 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>A base 30/50/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Unit's attacks have:<bulletlist><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "000003E30000638F"
   },
   "GLOBAL.PROPERTIES.FROST_BLADES_PROPERTY_GROUP": {
@@ -6009,7 +6009,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.FROST_BLADES_PROPERTY_GROUP",
     "displayHtml": "Frost Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+1/2/4 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+    "description": "Base attacks gain:<bulletlist><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
   },
   "GLOBAL.PROPERTIES.GIANT": {
     "name": "Giant",
@@ -6967,7 +6967,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.THE_DESTROYER_PROPERTY",
     "displayHtml": "Might of the Destroyer",
-    "description": "This unit gains:<bulletlist><bullet>+60 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+1/2 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attacks[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>",
+    "description": "This unit gains:<bulletlist><bullet>+60 maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXTRA_RETALIATION]+1 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink][/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT]Belt of the Berserker[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>",
     "image": "000003E100002048"
   },
   "GLOBAL.PROPERTIES.TIER_1_PROP_GROUP": {
@@ -7123,7 +7123,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT",
     "displayHtml": "Athletics",
-    "description": "Grants 5/6 <combatspeed></combatspeed> [hyperlink,GLOBAL.CombatSpeedConcept]Combat Speed[/hyperlink]."
+    "description": "Grants 5 <combatspeed></combatspeed> [hyperlink,GLOBAL.CombatSpeedConcept]Combat Speed[/hyperlink]."
   },
   "GLOBAL.PROPERTIES.VIGOR_HP": {
     "name": "Enhanced Vigor",
@@ -7273,7 +7273,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.FROST_BLADES_HERO_SKILL",
     "displayHtml": "Frost Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+1/2/4 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Base attacks gain:<bulletlist><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000045E00000373"
   },
   "GLOBAL.SKILLS.HS_ASTRAL_WISP_RITUAL": {
@@ -7297,7 +7297,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.LIGHTNING_MAGIC",
     "displayHtml": "Lightning Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+2/4 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Base attacks gain:<bulletlist><bullet>+2 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B00001219"
   },
   "GLOBAL.SKILLS.SEARING_STEEL_HS": {
@@ -7305,7 +7305,7 @@
     "icon": null,
     "globalName": "GLOBAL.SKILLS.SEARING_STEEL_HS",
     "displayHtml": "Searing Strikes",
-    "description": "Base attacks gain:<bulletlist><bullet>+2/4 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Base attacks gain:<bulletlist><bullet>+2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B000008FB"
   },
   "GLOBAL.SPECIAL_OPERATIONS.ABRADE_MOUNTAIN": {
@@ -7369,7 +7369,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.AMPLIFIED_ARROWS",
     "displayHtml": "Amplifying Imbuement",
-    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +3/6 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Deal 3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] to 2 other targets within 2 hexes.</bullet><bullet>Have a base 30/60/90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] on each target hit for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes base attacks of enchanted units:<bulletlist><bullet>Deal +3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Deal 3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] to 2 other targets within 2 hexes.</bullet><bullet>Have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] on each target hit for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "000003E30000639C"
   },
   "GLOBAL.SPECIAL_OPERATIONS.ARCANE_RENEWAL": {
@@ -7409,7 +7409,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.BLINDING_SANDS_SPELL",
     "displayHtml": "Call Blinding Sands",
-    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Each enemy unit has a 60% chance of becoming [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1/2 turn.</bullet></bulletlist>",
+    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Each enemy unit has a 60% chance of becoming [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1 turn.</bullet></bulletlist>",
     "image": "000004A60000083E"
   },
   "GLOBAL.SPECIAL_OPERATIONS.BLOOD_MOON_RITUAL": {
@@ -7473,7 +7473,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.CRYSTAL_FOCUS",
     "displayHtml": "Crystal Focus",
-    "description": "Attacks of enchanted units gain:<bulletlist><bullet>A base 30/60/90/120% chance of applying [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink].</bullet></bulletlist>",
+    "description": "Attacks of enchanted units gain:<bulletlist><bullet>A base 30% chance of applying [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink].</bullet></bulletlist>",
     "image": "000004970000159F"
   },
   "GLOBAL.SPECIAL_OPERATIONS.DARK_KNOWLEDGE_RITUAL": {
@@ -7569,7 +7569,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.FRACTURED_TRANSFORMATION",
     "displayHtml": "Fractured Transformation",
-    "description": "Target race becomes fractured:<bulletlist><bullet>Attacks have a base 30/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]. This effect is increased for Single Shot attacks.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.MANA_STARVED]Mana Starved[/hyperlink].</bullet><bullet>Has all its other enchantments and transformations disabled. For each disabled gain:<bulletlist><bullet>5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+5% damage</bullet></bulletlist></bullet></bulletlist>",
+    "description": "Target race becomes fractured:<bulletlist><bullet>Attacks have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]. This effect is increased for Single Shot attacks.</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.MANA_STARVED]Mana Starved[/hyperlink].</bullet><bullet>Has all its other enchantments and transformations disabled. For each disabled gain:<bulletlist><bullet>5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+5% damage</bullet></bulletlist></bullet></bulletlist>",
     "image": "000004970000382B"
   },
   "GLOBAL.SPECIAL_OPERATIONS.FREEZE_THE_LAND": {
@@ -7593,7 +7593,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.GIFT_OF_THE_OLD_BLOOD",
     "displayHtml": "Gift of the Old Blood",
-    "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LIFEDRINKER]Lifedrinker[/hyperlink].</bullet><bullet>Base attacks have a base 30/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
+    "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LIFEDRINKER]Lifedrinker[/hyperlink].</bullet><bullet>Base attacks have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
     "image": "0000049700003439"
   },
   "GLOBAL.SPECIAL_OPERATIONS.GLOOMSTRIDER_TRANSFORMATION": {
@@ -7657,7 +7657,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.LIGHTNING_BLADES",
     "displayHtml": "Lightning Blades",
-    "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2/4 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes attacks of enchanted units deal:<bulletlist><bullet>+2 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B0000121F"
   },
   "GLOBAL.SPECIAL_OPERATIONS.MAGESLAYER_BLADES": {
@@ -7665,7 +7665,7 @@
     "icon": null,
     "globalName": "GLOBAL.SPECIAL_OPERATIONS.MAGESLAYER_BLADES",
     "displayHtml": "Disrupting Weapons",
-    "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>A base 30/60/90/120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 1/2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "description": "Makes attacks of enchanted units gain:<bulletlist><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000046A0000021B"
   },
   "GLOBAL.SPECIAL_OPERATIONS.MAGE_BANE_RITUAL": {

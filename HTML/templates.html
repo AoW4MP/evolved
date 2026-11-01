@@ -317,20 +317,22 @@
 <template id="tome_card_template">
     <div>
         <div class="tome_card">
-            <p class="tome_name" id="tomename">Tome of Evocation</p>
-            <p style="text-align: center; font-size: 15px; max-width: 900px; margin: 0 auto" id="tomedescription">Mod Descripiton</p>
-            <!-- icon, lore and initial bonus in one row, centred under the name -->
-            <div style="display: flex; justify-content: center; align-items: center; gap: 20px">
-                <img class="tome_image" id="tomeicon" src="/evolved/Icons/TomeIcons/.png" style="flex: none" />
-                <p class="tome_description" id="tomeloredescription" style="flex: 0 1 500px">Lore Description</p>
-                <div class="InitialBonus" style="margin-right: 0; flex: none">
-                    <span class="initialBonusHeaderText">INITIAL BONUS</span>
-                    <div
-                        id="initialBonusList"
-                        style="display: grid; grid-template-columns: 200px; font-size: 15px"></div>
+            <div class="tome-stage">
+                <div class="tome-art"><img src="/evolved/Icons/Interface/Tome/lines.png" alt="" /><img class="tome-runes" src="/evolved/Icons/Interface/Runecircle.png" alt="" /></div>
+                <div class="tome-book"><img class="tome_image" id="tomeicon" src="/evolved/Icons/TomeIcons/.png" alt="" /></div>
+                <p class="tome_name" id="tomename">Tome of Evocation</p>
+                <p class="tome-tier" id="tometier"></p>
+                <p class="tome-dlc" id="tomedlc"></p>
+                <p class="tome-text" id="tomedescription">Mod Descripiton</p>
+                <div class="tome-scrolls">
+                    <div class="tome-scroll"><div class="tome-skills" id="tomeskills"></div></div>
+                    <div class="InitialBonus">
+                        <span class="initialBonusHeaderText">INITIAL BONUS</span>
+                        <div id="initialBonusList"></div>
+                    </div>
                 </div>
+                <p class="tome_description" id="tomeloredescription">Lore Description</p>
             </div>
         </div>
-        <div id="tome_unlocks" class="sb-cards sb-tome-cards"></div>
     </div>
 </template>

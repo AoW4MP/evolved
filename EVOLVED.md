@@ -156,7 +156,9 @@ Evolved is exported in English only, so the other languages are removed:
 - `Data/src/settings.js`: `CheckBoxTooltips` and `SwitchToBeta` no longer save `language`.
 - `Data/src/dataloader.js`: `CheckData` no longer saves a `language` default. `LocalizeUI` and the menu labels it read
   (`Data/EN/UI.json`, `Data/GEN/UI.json`) are deleted: they only translated the menu, and in English every label was
-  the menu's own text. `index.html` no longer calls it.
+  the menu's own text. `index.html` no longer calls it. `GetAllData` downloads the English files once for both the
+  English and the "localized" sets (`fetchJsonTexts`), reading each twice, as `AddExtraData` changes the two apart;
+  upstream fetched every file twice at once, about 14 MB more on a first visit.
 
 ### Beta data only
 
@@ -181,7 +183,7 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 
 `HTML/MagicMaterials.html` is Evolved's own page, replacing upstream's (same URL and menu link, `?type=<set key>`), laid out as Ancient Wonders is:
 
-- A tab per set (Ores, Liquids, Plants, Void Stones), its bonus and requirement on top and a large card per material under it: picture, lore, global effect, local income, combat enchantment and infusions.
+- A tab per set (Ores, Liquids, Plants, Void Stones), its bonus and requirement on top and a large card per material under it: picture, lore, global effect, local income, combat enchantment and infusions. The bonus and requirement are a grid, labels in a row and texts in the next, each row by its text's baseline: an icon in the bonus's first line (Mana's) would push its text below the requirement's.
 
 - Sets, their bonuses and requirements, and each material's texts, local income and combat enchantment come from `Data/GEN/MagicMaterials.json`, which `magicmaterials.py` in aow4_diff_tools generates from the live game plus the mod.
   Pictures come by the material's key, the infusion count from `Data/EN/ItemForgeUpgrades.json`.
@@ -208,6 +210,7 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 - Spells sharing an id with different texts each have their card (`Ancestral Harmony` for each animal); the old pages showed the first's text on every copy.
 - What no one can get is left out (`left_out` in the file, with the reason): the property that unlocks it is given by nothing, such as the Empire Tree's Rites, Elemental Bane and Raise Zombies. A story realm's spells are left out too, as are those the data can't tell are unused (`NOT_SPELLS` in `spells.py`, from the maintainer): Construct Population and Signet of Loyalty (not in use), Move Portal (a button that moves a Shrouded Isles portal), Bone Horror Ritual (an old mod spell) and Astral Wisp Ritual (replaced by Astral Keeper Ritual). The Fey Invasion's relic spells and siege projects, which the dump lacks, are in, their texts filled by the tool.
 - Upkeep comes from the spell's cost data, so Corrupt Pact, Tyrannical Exploitation and Faithful Whispers show theirs, which the dump leaves out.
+- The Enchantments page is titled "Enchantments" (upstream: "Unit Enchantments").
 
 ### Search
 
@@ -223,6 +226,8 @@ Spells, siege projects and the world map's sites come from the files their own p
 ### Units
 
 The Empire Tree is centred, with a title icon from `DropdownIcons/EmpireIcon.png`; its lines are placed in pixels, so all of it is enlarged together with `zoom` where the window has the room, and a narrow window scrolls the tree alone. A Units or Tomes page's sidebar starts with tier buttons (`AddTierFilter`, for the lists of `SetButtonsAndDivs` named in `TIER_LIST_TYPES`): they filter the list and the cards, the choice holds for the whole page, across its subcultures, and a tier the list doesn't have is greyed out. A list with no tiers (the pacts) has none, and the Culture page's tomes have no tier and no such list. A unit's mentions keep to its card: more than six start a second column, a source with several versions (a hero skill per hero type, an infusion per item, an ability on many units) is one icon, and what a unit cannot become is no mention (the Soulbound immunity's "cannot be transformed into a Decaying Zombie" gave Decaying Zombie 31 of them). A link to a unit opens the unit's tooltip, as the game's (`UnitTooltip`, all texts through `AddTagIconsForStatusEffects`): name, Hit Points, role, tier, Defense and Resistance, attacks, movement, upkeep; by the words of the link, name or plural. A link in other words than an ability's name opens that ability, unless a concept has those words (`AbilityLinkInOtherWords`): what all.json's links to it say ("Immobile" is `GLOBAL.PROPERTIES.IMMOBILIZED`), or its plural ("Animals", "Battle Mage Units"). A medal's named rewards link to what they do (`addRewards`); its values don't.
+
+A Units or Tomes page whose address names no entry opens on its list's first (`OpenFirstEntry`, from `SetLevelUpStuff`), and a subculture on its first unit, as the Tomes menu's links name a tome; upstream's Units menu links named a unit, which Evolved's left out, so those pages opened on all their cards. ☰ still shows them all. A card's images load once it shows (`LazyImages`, set in the same run of code as their `src`), as do a tome medallion's card's: the other cards are still built, but no longer download their pictures (Astral Tomes about 17 MB of them). Highlight Number (`highlightNumbersInDiv`) leaves numbers in tags and entities alone: it wrapped a unit link's `data-unit` id, and the link's tooltip failed (Blessed Soul's medallion).
 
 A unit's origins read the new data: `CheckIfInSpells` and `CheckIfInSiege` the spell book, so a spell no one can get is no origin and the Fey Invasion's are; `CheckIfInAncientWonder` the book's `sites`, made from `AncientWonders.json` and `Landmarks.json`, whose links go to those pages. Upstream's list was wrong on some (Haunted Battlefield's skeletons).
 

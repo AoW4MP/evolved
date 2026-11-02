@@ -79,10 +79,10 @@ const MagicMaterialsPage = (() => {
         bonus.innerHTML =
             '<div class="mm-title"><span>' + set.name.toUpperCase() + "</span></div>" +
             '<div class="mm-bonus-parts">' +
-            '<div><div class="mm-label">Set Bonus</div>' +
+            '<div><div class="mm-label">Set Bonus</div><div>' +
             AddTagIconsForStatusEffects(set.description.split(/(?:<br>)*Requires:/)[0].replace(/(<br>)+$/, "")) +
-            "</div>" +
-            '<div><div class="mm-label">Requires</div>' + needs + "</div>" +
+            "</div></div>" +
+            '<div><div class="mm-label">Requires</div><div>' + needs + "</div></div>" +
             "</div>";
         section.append(bonus);
 

@@ -86,7 +86,7 @@ const extraAbilities = [];
 
 const extraSkills = [];
 
-function fetchJsonFiles(filePaths) {
+function fetchJsonTexts(filePaths) {
     return Promise.all(
         filePaths.map((filePath) =>
             fetch(filePath).then((response) => {
@@ -96,15 +96,17 @@ function fetchJsonFiles(filePaths) {
                 // a mod's own resources have resids past what a JS number holds exactly, and nearby ones
                 // round to the same number (Bone Dragon Ritual and Bone Horror Ritual): keep those as text
                 return response.text().then((text) =>
-                    JSON.parse(
-                        text.replace(/("resid":\s*)(-?\d{16,})\b/g, (all, key, n) =>
-                            Number.isSafeInteger(Number(n)) ? all : key + '"' + n + '"'
-                        )
+                    text.replace(/("resid":\s*)(-?\d{16,})\b/g, (all, key, n) =>
+                        Number.isSafeInteger(Number(n)) ? all : key + '"' + n + '"'
                     )
                 );
             })
         )
     );
+}
+
+function fetchJsonFiles(filePaths) {
+    return fetchJsonTexts(filePaths).then((texts) => texts.map((text) => JSON.parse(text)));
 }
 var jsonSiegeProjects;
 
@@ -225,12 +227,16 @@ async function GetAllData(selectedLang) {
     const filesToFetchLocal = fileNames.map((f) => basePathLocal + f);
 
     try {
-        const [dataGen, dataEN, dataLocal, templatesHtml] = await Promise.all([
+        // in English the localized files are the English ones: downloaded once, each read twice, as the two sets are
+        // changed apart (AddExtraData restores the links of each)
+        const [dataGen, textsEN, textsLocal, templatesHtml] = await Promise.all([
             fetchJsonFiles(filesToFetchGeneric),
-            fetchJsonFiles(filesToFetchEN),
-            fetchJsonFiles(filesToFetchLocal),
+            fetchJsonTexts(filesToFetchEN),
+            basePathLocal === basePathEN ? null : fetchJsonTexts(filesToFetchLocal),
             fetch("/evolved/HTML/templates.html").then((res) => res.text())
         ]);
+        const dataEN = textsEN.map((text) => JSON.parse(text));
+        const dataLocal = (textsLocal ?? textsEN).map((text) => JSON.parse(text));
 
         const genericTargets = [
             "jsonEnchantments",

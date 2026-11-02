@@ -59,11 +59,18 @@
     margin-bottom: 8px;
     padding: 6px 14px;
 }
-/* the requirement right beside the bonus, not across the card from it */
+/* the requirement right beside the bonus, not across the card from it: labels in one row and texts in the next, each
+   row by its text's baseline, as an icon in the bonus's first line (Mana's) would push that line's text down */
 .mm-bonus-parts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 60px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: baseline;
+    column-gap: 60px;
+}
+.mm-bonus-parts > div {
+    display: contents;
 }
 .mm-card {
     display: grid;
@@ -170,5 +177,14 @@
         width: 100%;
         height: 180px;
         margin-bottom: 8px;
+    }
+    /* the requirement under the bonus */
+    .mm-bonus-parts {
+        grid-template-rows: none;
+        grid-auto-flow: row;
+        row-gap: 0;
+    }
+    .mm-bonus-parts > div:last-child > .mm-label {
+        margin-top: 8px;
     }
 }

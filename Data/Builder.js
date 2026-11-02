@@ -10,12 +10,12 @@ const checkboxTooltip = document.getElementById("tooltipCheckbox");
 const checkboxNumbers = document.getElementById("numbersCheckbox");
 
 
+// the text's numbers, not those in its tags and entities (a unit link's data-unit="1234", "&#9776;")
 function highlightNumbersInDiv(text) {
     if (!text) return;
 
-    text = text.replace(
-        /(?<!\d)([+-]?\d+(?:\.\d+)?%?|%\d+(?:\.\d+)?)(?!-)/g,
-        '<span class="number-highlight">[$1]</span>'
+    text = text.replace(/(<[^>]*>|&#?\w+;)|(?<!\d)([+-]?\d+(?:\.\d+)?%?|%\d+(?:\.\d+)?)(?!-)/g, (match, markup, number) =>
+        markup ? markup : '<span class="number-highlight">[' + number + "]</span>"
     );
     return text;
 }
@@ -953,6 +953,11 @@ function FilterTier(tier) {
     if (document.getElementById(currentView)?.classList.contains("tier-hidden")) {
         document.getElementById(currentView + "-button")?.closest(".w3-bar")?.querySelector(".listViewButton")?.click();
     }
+}
+
+// A Units or Tomes page opens on its list's first entry (of the tier shown), not on all its cards: ☰ shows them all
+function OpenFirstEntry(holder) {
+    (holder.querySelector(".tablink[data-tier]:not(.tier-hidden)") ?? holder.querySelector(".listViewButton"))?.click();
 }
 
 function AddTriangleForDLCUnits(type, string, div) {
@@ -2188,6 +2193,13 @@ async function spawnCard(string, divID) {
 async function showUnitFromString(string, divID, subcultureCheck, resID) {
     let newDiv = await spawnCard(string, divID);
     showUnit(string, subcultureCheck, resID, newDiv);
+    LazyImages(newDiv);
+}
+
+// A card's images load once it shows, not those of a page's other cards, nor a hover card's before it opens. Set before
+// the browser starts on them: in the same run of code as their src
+function LazyImages(root) {
+    for (const img of root.querySelectorAll("img")) img.loading = "lazy";
 }
 
 function SetUpSpawnTable() {
@@ -2293,6 +2305,7 @@ async function showTomeFromList2(string, divID) {
     let card = await spawnTomeCards(string, divID);
 
     showTome(string, card);
+    LazyImages(card);
 }
 
 async function showTomeFromList(list, divID, overwritetext) {
@@ -2974,8 +2987,8 @@ function showSubDiv(event, id) {
         // the stylesheet's display (its sidebar and cards take their places in the page's grid)
         specificDiv.style.display = "";
 
-        // all of the subculture's units, through its ☰
-        specificDiv.querySelector(".listViewButton").click();
+        // the subculture's first unit
+        OpenFirstEntry(specificDiv);
     }
 }
 

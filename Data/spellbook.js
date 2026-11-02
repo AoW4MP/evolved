@@ -213,6 +213,7 @@ function SbTomeMedallions(skills, holder) {
         );
         const tip = document.createElement("span");
         tip.append(...skill.cards);
+        LazyImages(tip);
         addTooltipListeners(medallion, tip);
         holder.append(medallion);
     }

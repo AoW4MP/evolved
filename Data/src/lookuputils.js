@@ -267,8 +267,11 @@ async function SetLevelUpStuff() {
         await openDiv(event, splits[0]);
         document.getElementById(splits[0] + "-button").className += " w3-red";
     } else if (document.querySelector(".subDiv") != null) {
-        // no unit asked for: the first subculture, all its units
+        // no unit asked for: the first subculture's first unit
         showSubDiv(null, document.querySelector(".subDiv").id);
+    } else if (document.querySelector(".tablink[data-tier]") != null) {
+        // nothing asked for on a Units or Tomes page: its first entry
+        OpenFirstEntry(document);
     } else {
         // no unit asked for: the full list is showing, so its ☰ is the one lit
         document.querySelector(".listViewButton")?.classList.add("w3-red");

@@ -196,7 +196,7 @@ Evolved is played on the game's beta, so the website's own dump in `Data/EN` is 
 
 - `worldmap.py` in aow4_diff_tools generates `Data/GEN/Infestations.json`, `Landmarks.json` and `Happenings.json` from the live game plus the mod. Pictures aren't in the icon libraries it can read: it finds the site's own through upstream's `WorldStructures.json` and `CosmicHappenings.json`, by text id or name, and keeps icons it can read.
 - Infestations: a tab per tier, with defenders (a Mistwalker Camp's per season), size, growth and reward. A story realm's, tome's or happening's copy under the same name is left out.
-- Landmarks: all or a DLC's. The units a landmark unlocks are those its threshold property allows; the Leviathan parts have no picture on the site.
+- Landmarks: a tab per DLC, with no All tab, as the other World Map pages have none (an old `?type=All` opens the first). The units a landmark unlocks are those its threshold property allows; the Leviathan parts have no picture on the site.
 - Cosmic Happenings: Minor, Major, Intrigue (with their opening event) and Special (Visions of Ruin, Blood Moon, Warped Seasons). Story realm happenings are left out.
 - Province Improvements: a tab per kind, grouped by where they come from; the search and resource buttons work across the tabs, whose counts follow. The texts stay the dump's. The victory monuments and Magic Victory structures aren't listed, as on upstream's page.
 

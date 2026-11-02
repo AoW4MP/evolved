@@ -20,7 +20,7 @@
         <script src="/evolved/Data/Init.js"></script>
         <script src="/evolved/Data/worldmap.js"></script>
         <script>
-            // Evolved's own Landmarks page: all of them or a DLC's, a card each. Everything but the pictures comes from
+            // Evolved's own Landmarks page: a tab per DLC, a card each. Everything but the pictures comes from
             // Data/GEN/Landmarks.json, which aow4_diff_tools/worldmap.py generates from the game and the mod.
 
             async function HandlePage() {
@@ -31,14 +31,13 @@
                     return panel;
                 };
                 const dlcs = [...new Set(data.landmarks.map((e) => e.dlc))];
-                WmTabs([
-                    { id: "All", label: "All", count: data.landmarks.length, panel: panelOf(data.landmarks) },
-                    ...dlcs.map((dlc) => {
+                WmTabs(
+                    dlcs.map((dlc) => {
                         const here = data.landmarks.filter((e) => e.dlc === dlc);
                         const label = dlcMap[dlc].text.replace(/^Part of the | DLC$/g, "");
                         return { id: dlc, label: '<img src="' + dlcMap[dlc].src + '" alt="" /> ' + label, count: here.length, panel: panelOf(here) };
                     })
-                ]);
+                );
             }
         </script>
 

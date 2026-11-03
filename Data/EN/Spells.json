@@ -1,5 +1,89 @@
 [
  {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5377299056582,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_adventurer_captain",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure the Adventurer <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+  "name": "Conjure Adventurer Captain",
+  "operation_point_cost": 40,
+  "icon": "000004E4000007B6"
+ },
+ {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5377299056579,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_protector_captain",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure the Protector <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+  "name": "Conjure Protector Captain",
+  "operation_point_cost": 40,
+  "icon": "000004E4000007B1"
+ },
+ {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5377299056576,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_family_captain",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure the Family <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+  "name": "Conjure Family Captain",
+  "operation_point_cost": 40,
+  "icon": "000004E4000007AC"
+ },
+ {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5377299056573,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_maniac-hunter_captain",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure the Maniac-Hunter <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+  "name": "Conjure Maniac-Hunter Captain",
+  "operation_point_cost": 40,
+  "icon": "000004E4000007A7"
+ },
+ {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5377299056570,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_demonic_captain",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure the Demonic <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+  "name": "Conjure Demonic Captain",
+  "operation_point_cost": 40,
+  "icon": "000004E4000007A2"
+ },
+ {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5377299056541,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_gold-cursed_captain",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure the Gold-Cursed <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+  "name": "Conjure Gold-Cursed Captain",
+  "operation_point_cost": 40,
+  "icon": "000004E400000799"
+ },
+ {
+  "casting_cost": "240<mana></mana> ",
+  "resid": 5377299056509,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+  "id": "gust_of_the_seven_seas",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "All your <hyperlink>Armies</hyperlink> regain all their movement points if they are on water. Half if they are on land.<br></br>A unit cannot benefit from this spell more than once per turn.",
+  "name": "Gust of the Seven Seas",
+  "operation_point_cost": 240,
+  "icon": "0000041B00000FD4"
+ },
+ {
   "casting_cost": "150<mana></mana> ",
   "resid": 5377299055251,
   "spellType": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>",
@@ -47,6 +131,55 @@
   "name": "Spider's Embrace",
   "operation_point_cost": 600,
   "icon": "000004D000000512"
+ },
+ {
+  "casting_cost": "60<mana></mana> ",
+  "resid": 5257039972535,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
+  "id": "banish_waters",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target habitable and unowned water <hyperlink>Province</hyperlink> which does not contain an <hyperlink>Ancient Wonder</hyperlink> or <hyperlink>Infestation Spawner</hyperlink>:<bulletlist><bullet>Is terraformed to <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink>.</bullet><bullet>Loses all <hyperlink>Resource Nodes</hyperlink> and <hyperlink>Magic Materials</hyperlink> on it.</bullet><bullet>Has a chance of spawning its own <hyperlink>Resource Node</hyperlink> or <hyperlink>Magic Material</hyperlink>.</bullet></bulletlist>",
+  "name": "Banish Waters",
+  "operation_point_cost": 60,
+  "icon": "000004C8000008C3"
+ },
+ {
+  "casting_cost": "60<mana></mana> ",
+  "resid": 5257039972528,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
+  "id": "deluge",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target habitable and unowned land <hyperlink>Province</hyperlink> which does not contain an <hyperlink>Ancient Wonder</hyperlink>, <hyperlink>Landmark</hyperlink>, or <hyperlink>Diggable Earth</hyperlink>:<bulletlist><bullet>Is terraformed to water.</bullet><bullet>Loses all <hyperlink>Resource Nodes</hyperlink> and <hyperlink>Magic Materials</hyperlink> on it.</bullet><bullet>Has a chance of spawning its own <hyperlink>Resource Node</hyperlink> or <hyperlink>Magic Material</hyperlink>.</bullet></bulletlist>",
+  "name": "Deluge",
+  "operation_point_cost": 60,
+  "icon": "000004C8000008C2"
+ },
+ {
+  "casting_cost": "80<mana></mana> ",
+  "resid": 5257039972273,
+  "upkeep": "8<mana></mana> ",
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
+  "id": "glittering_waters",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Water <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet></bulletlist>",
+  "name": "Glittering Waters",
+  "operation_point_cost": 80,
+  "icon": "000004C8000007BB"
+ },
+ {
+  "casting_cost": "80<mana></mana> ",
+  "resid": 5257039972250,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
+  "id": "requiem_of_the_damned",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target army:<bulletlist><bullet>Sustains 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>For 2 <hyperlink>World Map</hyperlink> <turn></turn> Turn, at the start of combat units in this army have a 90% chance of suffering Ghostfire.</bullet></bulletlist>",
+  "name": "Requiem of the Damned",
+  "operation_point_cost": 80,
+  "icon": "000004C80000079B"
  },
  {
   "casting_cost": "45<mana></mana> ",
@@ -369,6 +502,46 @@
   "icon": "0000049C0000003B"
  },
  {
+  "casting_cost": "300<mana></mana> 100<souls></souls> ",
+  "resid": 5046586591002,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>",
+  "id": "nevermoors_curse",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Curse your units to never know rest. Applies:<bulletlist><bullet>The Undead unit type.</bullet><bullet>The Ethereal unit type.</bullet></bulletlist>",
+  "name": "Nevermoor's Curse",
+  "operation_point_cost": 300,
+  "icon": "000004970000471D"
+ },
+ {
+  "casting_cost": "45<mana></mana> ",
+  "resid": 5046586590859,
+  "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+  "id": "conjure_pirate_cannon_tower",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure a <hyperlink>Pirate Cannon Tower</hyperlink>, a Tier III long range Tower unit.<br></br>This summon lasts for 3 <turn></turn> Turns.",
+  "name": "Conjure Pirate Cannon Tower",
+  "operation_point_cost": 30,
+  "summoned_units": [
+   {
+    "slug": "pirate_cannon_tower"
+   }
+  ]
+ },
+ {
+  "casting_cost": "150<gold></gold> ",
+  "resid": 5046586590854,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+  "id": "construct_pirate_cove",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Place a Pirate Cove <hyperlink>Infestation</hyperlink> on target water province. It is neutral towards you.",
+  "name": "Construct Pirate Cove",
+  "operation_point_cost": 150,
+  "icon": "0000049700004678"
+ },
+ {
   "casting_cost": "100<mana></mana> ",
   "resid": 5046586590599,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
@@ -389,6 +562,377 @@
   "name": "Nightveil Focus",
   "operation_point_cost": 100,
   "icon": "0000041B00001725"
+ },
+ {
+  "casting_cost": "300<mana></mana> ",
+  "resid": 5046586590364,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+  "id": "summon_ancient_hoarfrost_manta",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Summon an <hyperlink>Ancient Hoarfrost Manta</hyperlink>, a Mythic Unit that supports your units as it freezes your enemies.",
+  "name": "Summon Ancient Hoarfrost Manta",
+  "operation_point_cost": 300,
+  "summoned_units": [
+   {
+    "slug": "ancient_hoarfrost_manta"
+   }
+  ]
+ },
+ {
+  "casting_cost": "600<mana></mana> ",
+  "resid": 5046586590339,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>",
+  "id": "ice_fusion",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target race becomes one with ice, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>+4 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>-2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>Immunity to Frozen and Chilled.</bullet><bullet>Rime Healing.</bullet><bullet>Water Walk.</bullet></bulletlist>",
+  "name": "Ice Fusion",
+  "operation_point_cost": 600,
+  "icon": "0000049700004405"
+ },
+ {
+  "casting_cost": "140<mana></mana> ",
+  "resid": 5046586590322,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "ice_focus",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted units gain:<bulletlist><bullet>Base 60% chance of inflicting Chilled with all attacks.</bullet><bullet>The Ice Nova ability.</bullet><bullet>The damage of this ability increases with the unit's tier.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   }
+  ],
+  "name": "Ice Focus",
+  "operation_point_cost": 140,
+  "icon": "000004970000440D"
+ },
+ {
+  "casting_cost": "180<mana></mana> ",
+  "resid": 5046586590299,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "eternal_ice_blades",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted unit's attacks:<bulletlist><bullet>Deal +2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Inflict Chilled for 3 <turn></turn> Turns.</bullet><bullet>This unit gains Regeneration when it inflicts Chilled.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   }
+  ],
+  "name": "Eternal Ice Blades",
+  "operation_point_cost": 180,
+  "icon": "0000049700004409"
+ },
+ {
+  "casting_cost": "80<mana></mana> ",
+  "resid": 5046586590290,
+  "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
+  "id": "deep_freeze",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Target enemy unit:<bulletlist><bullet>Sustains 40 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 120% chance of becoming Frozen for 1 <turn></turn> Turn. If resisted, gains 2 Chilled for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Adjacent enemy units:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen for 1 <turn></turn> Turn. If resisted, gains Chilled for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "name": "Deep Freeze",
+  "operation_point_cost": 35,
+  "icon": "0000049700004401"
+ },
+ {
+  "casting_cost": "120<mana></mana> ",
+  "resid": 5046586590236,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+  "id": "whiteout",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target and adjacent <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gain Whiteout for 3 <turn></turn> Turns.</bullet><bullet>Water provinces gain <hyperlink>Ice</hyperlink> for 3 <turn></turn> Turns.</bullet><bullet>Alter land provinces to <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.<bulletlist></bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist></bulletlist>",
+  "name": "Whiteout",
+  "operation_point_cost": 120,
+  "icon": "0000049700004411"
+ },
+ {
+  "casting_cost": "350<mana></mana> ",
+  "resid": 5046586590133,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>",
+  "id": "merfolk_transformation",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target race gains:<bulletlist><bullet>Merfolk.</bullet><bullet>Fast Movement.</bullet><bullet>When on the water units lose their legs and gain a merfolk tail.</bullet></bulletlist><br></br><br></br>Special notes:<bulletlist><bullet>Incompatible with transformations that give Flying or disable mounts.</bullet><bullet>Mounted units lose their mounts.</bullet><bullet>Heroes lose their mount equipment slots.</bullet></bulletlist>",
+  "name": "Merfolk Transformation",
+  "operation_point_cost": 350,
+  "icon": "00000497000043BB"
+ },
+ {
+  "casting_cost": "90<mana></mana> ",
+  "resid": 5046586590086,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "raiders_of_the_sea",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted units:<bulletlist><bullet>Increase resources gained from <hyperlink>Pillaging</hyperlink> a <hyperlink>Province</hyperlink> by 100%. Does not stack.</bullet><bullet>Gain Sailor, increasing combat speed and damage when fighting on water.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Raiders of the Sea",
+  "operation_point_cost": 90,
+  "icon": "0000049700004316"
+ },
+ {
+  "casting_cost": "90<mana></mana> ",
+  "resid": 5046586590047,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "plundering_blades",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted units attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 60% chance of Rob the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   }
+  ],
+  "name": "Plundering Blades",
+  "operation_point_cost": 90,
+  "icon": "0000049700004312"
+ },
+ {
+  "casting_cost": "90<mana></mana> ",
+  "resid": 5046586590028,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "ember_dust_residue",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted units attacks:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>. Increased for Single Shots.</bullet><bullet>The third strike from a base attack has a base 90% chance of inflicting Ember Dust.</bullet><bullet>Single Shot base attacks instead get a base 60% chance of inflictiing Ember Dust.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Ember Dust Residue",
+  "operation_point_cost": 90,
+  "icon": "000004970000430E"
+ },
+ {
+  "casting_cost": "45<mana></mana> ",
+  "resid": 5046586590023,
+  "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+  "id": "ember_cloud",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Units in a 1-hex radius:<bulletlist><bullet>Have a base 90% chance of becoming Blind for 1 <turn></turn> Turn.</bullet><bullet>Become inflicted with Ember Dust.</bullet></bulletlist>",
+  "name": "Ember Cloud",
+  "operation_point_cost": 30,
+  "icon": "000004970000430A"
+ },
+ {
+  "casting_cost": "60<mana></mana> ",
+  "resid": 5046586589855,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+  "id": "curse_of_the_damned",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target province gains Curse of the Damned for 3 <turn></turn> Turns.",
+  "name": "Curse of the Damned",
+  "operation_point_cost": 60,
+  "icon": "0000049700004266"
+ },
+ {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 5046586589829,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "accursed_blades",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted units attacks gain:<bulletlist><bullet>+1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>+1 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   }
+  ],
+  "name": "Accursed Blades",
+  "operation_point_cost": 100,
+  "icon": "0000049700004262"
+ },
+ {
+  "casting_cost": "45<mana></mana> ",
+  "resid": 5046586589824,
+  "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
+  "id": "accursed_undertow",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Enemy units in a 2 hex radius:<bulletlist><bullet>Sustain 8 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 8 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer Ghostfire.</bullet><bullet>Are pulled towards the target location.</bullet></bulletlist>",
+  "name": "Accursed Undertow",
+  "operation_point_cost": 30,
+  "icon": "000004970000425E"
+ },
+ {
+  "casting_cost": "150<mana></mana> ",
+  "resid": 5046586589801,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+  "id": "summon_accursed_lamenter",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Summon an <hyperlink>Accursed Lamenter</hyperlink> on to target hex.",
+  "name": "Summon Accursed Lamenter",
+  "operation_point_cost": 150,
+  "summoned_units": [
+   {
+    "slug": "accursed_lamenter"
+   }
+  ]
+ },
+ {
+  "casting_cost": "30<mana></mana> ",
+  "resid": 5046586589752,
+  "spellType": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
+  "id": "riptide",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 12 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Wet for 3 <turn></turn> Turns.</bullet><bullet>If on the outer radius, they are pushed 1-hex away from the center.</bullet><bullet>Targets that were already Wet have the above effects doubled.</bullet></bulletlist>",
+  "name": "Riptide",
+  "operation_point_cost": 25,
+  "icon": "00000497000041F9"
+ },
+ {
+  "casting_cost": "45<mana></mana> ",
+  "resid": 5046586589740,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
+  "id": "revitalizing_rush",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Units in target friendly army:<bulletlist><bullet>Heal 10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>At the start of the next combat, units are Hastened for 3 <turn></turn> Turns.</bullet></bulletlist>",
+  "name": "Revitalizing Rush",
+  "operation_point_cost": 45,
+  "icon": "00000497000041FD"
+ },
+ {
+  "casting_cost": "60<mana></mana> ",
+  "resid": 5046586589736,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+  "id": "summon_lesser_tide_spirit",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Summons a <hyperlink>Lesser Tide Spirit</hyperlink> on target hex.",
+  "name": "Summon Lesser Tide Spirit",
+  "operation_point_cost": 60,
+  "icon": "00000497000041ED",
+  "summoned_units": [
+   {
+    "slug": "lesser_tide_spirit"
+   }
+  ]
+ },
+ {
+  "casting_cost": "80<mana></mana> ",
+  "resid": 5046586589715,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "flowing_imbuement",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted unit's base attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>On the third strike, push the unit away 1 hex and inflict Wet.</bullet><bullet>Single Strike attacks have a base 90% chance of triggering this effect instead.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Flowing Imbuement",
+  "operation_point_cost": 80,
+  "icon": "00000497000041F5"
+ },
+ {
+  "casting_cost": "80<mana></mana> ",
+  "resid": 5046586589704,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "staves_of_the_river",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted unit's <hyperlink>Support</hyperlink> abilities:<bulletlist><bullet>Heal 5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dispel 1 status effect.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   }
+  ],
+  "name": "Staves of the River",
+  "operation_point_cost": 80,
+  "icon": "00000497000041F1"
  },
  {
   "casting_cost": "80<mana></mana> ",
@@ -3402,6 +3946,30 @@
   "icon": "000004970000026B"
  },
  {
+  "casting_cost": "30<mana></mana> ",
+  "resid": 5029406710240,
+  "spellType": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
+  "id": "temporary_crabification",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Target friendly non-Hero <hyperlink>Unit</hyperlink>:<bulletlist><bullet>Transforms into a <hyperlink>Lightning Rune Crab</hyperlink> until the end of the battle.</bullet><bullet>Has its <hyperlink><hp></hp> Hit Points</hyperlink> reset.</bullet><bullet>Loses all <hyperlink>Negative Status Effects</hyperlink> and <hyperlink>Positive Status Effects</hyperlink>.</bullet><bullet>Loses all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink>, <caststrategic></caststrategic> <hyperlink>Race Transformations</hyperlink>, and ranks until the end of the battle.</bullet></bulletlist><br></br>Does not work in lava battles.",
+  "name": "Temporary Crabification",
+  "operation_point_cost": 25,
+  "icon": "00000493000019E1"
+ },
+ {
+  "casting_cost": "30<mana></mana> ",
+  "resid": 5029406709860,
+  "spellType": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
+  "id": "pearltide_bomb",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Conjure a Pearltide Bomb on target hex:<bulletlist><bullet>All enemy <hyperlink>Units</hyperlink> within 5 hexes of the Pearltide Bomb suffer Wet for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>After 1 <turn></turn> <hyperlink>Turn</hyperlink>:<bulletlist></bullet><bullet>The enemy unit on the hex of the Pearltide Bomb suffers 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 25 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Enemy units within a 2 hex radius of the Pearltide Bomb instead suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet></bulletlist></bulletlist><br></br>Can only be used in water battles.",
+  "name": "Pearltide Bomb",
+  "operation_point_cost": 25,
+  "icon": "0000049300001865"
+ },
+ {
   "casting_cost": "100<mana></mana> ",
   "resid": 5029406709324,
   "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
@@ -3595,6 +4163,131 @@
   "name": "Gloom Strider",
   "operation_point_cost": 600,
   "icon": "000004900000082F"
+ },
+ {
+  "casting_cost": "30<gold></gold> ",
+  "resid": 5003636908730,
+  "upkeep": "3<gold></gold> ",
+  "spellType": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>",
+  "id": "shadow_negotiations",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target Free City:<bulletlist><bullet>Allegiance gain from Whispering Stones is increased by +1.</bullet><bullet>Other Rulers' Allegiance gain is reduced by -30%.</bullet></bulletlist>",
+  "name": "Shadow Negotiations",
+  "operation_point_cost": 30,
+  "icon": "0000048D00002205"
+ },
+ {
+  "casting_cost": "10<mana></mana> ",
+  "resid": 5003636908563,
+  "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+  "id": "mark_bounty",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Target enemy unit:<bulletlist><bullet>Suffers Bounty until the end of combat.</bullet><bullet>Suffers 3 stacks of Marked for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+  "name": "Mark Bounty",
+  "operation_point_cost": 15,
+  "icon": "0000048D00002201"
+ },
+ {
+  "casting_cost": "90<mana></mana> ",
+  "resid": 5003636908552,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "bounty_hunters_writ",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Grants non-Mercantile, units:<bulletlist><bullet>Bounty Hunter</bullet><bullet>Support units gain Assign Bounty instead.</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitMythic></unitMythic> Mythic Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Bounty Hunter's Writ",
+  "operation_point_cost": 90,
+  "icon": "0000048D000021FD"
+ },
+ {
+  "casting_cost": "10<mana></mana> ",
+  "resid": 5003636908373,
+  "spellType": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+  "id": "scry_leverage",
+  "DLC": "SILVERSEAS ",
+  "tactical": true,
+  "description": "Target enemy unit:<bulletlist><bullet>Suffers 2 Leverage.</bullet></bulletlist><br></br>This effect jumps to 2 additional targets within 3 hexes.",
+  "name": "Scry Leverage",
+  "operation_point_cost": 15,
+  "icon": "0000048D00002146"
+ },
+ {
+  "casting_cost": "90<mana></mana> ",
+  "resid": 5003636908365,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "signia_of_the_cartel",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Grants non-Mercantile units:<bulletlist><bullet>Observant</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitShield></unitShield> Shield Unit"
+   },
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
+    "requisite": "<unitPolearm></unitPolearm> Polearm Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitShock></unitShock> Shock Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitMythic></unitMythic> Mythic Unit"
+   },
+   {
+    "requisite": "<unitFighter></unitFighter> Fighter Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Signia of the Cartel",
+  "operation_point_cost": 90,
+  "icon": "0000048D0000213E"
  },
  {
   "casting_cost": "15<mana></mana> ",
@@ -4369,6 +5062,35 @@
   "icon": "0000046A000000CB"
  },
  {
+  "casting_cost": "100<mana></mana> ",
+  "resid": 4995046971375,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+  "id": "mark_of_the_damned",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Enchanted units attacks gain:<bulletlist><bullet>Inflict Ghostfire on units that do not have it.</bullet><bullet>Inflict Damned</bullet></bulletlist>",
+  "enchantment_requisites": [
+   {
+    "requisite": "<unitRanged></unitRanged> Ranged Unit"
+   },
+   {
+    "requisite": "<unitSupport></unitSupport> Support Unit"
+   },
+   {
+    "requisite": "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   },
+   {
+    "requisite": "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
+   },
+   {
+    "requisite": "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   }
+  ],
+  "name": "Mark of the Damned",
+  "operation_point_cost": 100,
+  "icon": "000004970000425A"
+ },
+ {
   "casting_cost": "70<mana></mana> ",
   "resid": 4995046971172,
   "spellType": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
@@ -4395,6 +5117,19 @@
   "name": "Static Shields",
   "operation_point_cost": 70,
   "icon": "0000041B0000120C"
+ },
+ {
+  "casting_cost": "50<gold></gold> ",
+  "resid": 4995046971027,
+  "upkeep": "10<gold></gold> ",
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>",
+  "id": "bribes_and_incentives",
+  "DLC": "SILVERSEAS ",
+  "tactical": false,
+  "description": "Target <hyperlink>Infestation</hyperlink> becomes neutral towards you and will not launch attacks against you for 10 <turn></turn> <hyperlink>Turns</hyperlink>.",
+  "name": "Bribes and Incentives",
+  "operation_point_cost": 30,
+  "icon": "0000048D0000214A"
  },
  {
   "casting_cost": "90<mana></mana> ",
@@ -9127,6 +9862,54 @@
   "name": "Soulcurse of Greed",
   "operation_point_cost": 80,
   "icon": "000003DF00001C78"
+ },
+ {
+  "casting_cost": "300<mana></mana> ",
+  "resid": 4256312596144,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
+  "id": "onokas_chosen",
+  "DLC": "ELDRITCHREALMS ",
+  "tactical": false,
+  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Winter</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
+  "name": "Onoka's Chosen",
+  "operation_point_cost": 300,
+  "icon": "000003DF000016E6"
+ },
+ {
+  "casting_cost": "300<mana></mana> ",
+  "resid": 4256312596143,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
+  "id": "luths_chosen",
+  "DLC": "ELDRITCHREALMS ",
+  "tactical": false,
+  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Autumn</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
+  "name": "Luth's Chosen",
+  "operation_point_cost": 300,
+  "icon": "000003DF000016E5"
+ },
+ {
+  "casting_cost": "300<mana></mana> ",
+  "resid": 4256312596142,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
+  "id": "ventroghs_chosen",
+  "DLC": "ELDRITCHREALMS ",
+  "tactical": false,
+  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Summer</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
+  "name": "Ventrogh's Chosen",
+  "operation_point_cost": 300,
+  "icon": "000003DF000016E4"
+ },
+ {
+  "casting_cost": "300<mana></mana> ",
+  "resid": 4256312596133,
+  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
+  "id": "ilandras_chosen",
+  "DLC": "ELDRITCHREALMS ",
+  "tactical": false,
+  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Spring</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
+  "name": "Ilandra's Chosen",
+  "operation_point_cost": 300,
+  "icon": "000003DF000016E0"
  },
  {
   "casting_cost": "2<thralls></thralls> ",

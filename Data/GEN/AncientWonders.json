@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-01 14:51",
- "build": "exe of 2026-10-30",
+ "generated": "2026-11-03 21:46",
+ "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "wonders": [
   {
@@ -3151,6 +3151,560 @@
         "gains": [
          "Curious"
         ]
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "key": "uncharted_harbor",
+   "name": "Uncharted Harbor",
+   "tier": "Bronze",
+   "dlc": "SILVERSEAS",
+   "description": "<bulletlist><bullet>Friendly Embarked [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in the [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.FAMILIAR_WATERS]Familiar Waters[/hyperlink].</bullet><bullet>Adds the [hyperlink,GLOBAL.UNITS.SEAMARE]Seamare[/hyperlink] unit to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet></bulletlist>",
+   "lore": "<lorefontsize><lorefont>The ominous rock formation that crowns this remote isle, whether man-made or sculpted by winds and water, portend the inhospitality of its shores. A waterway pulls ships towards the gaping mouth of the skull-like mountain: a hideout that often harbors refugees and castaways that are either content or forced to live far removed from civilization.</lorefont></lorefontsize>",
+   "counts": "quarry",
+   "income": [
+    [
+     "Happiness",
+     -5
+    ],
+    [
+     "Structure Production",
+     10
+    ],
+    [
+     "Unit Production",
+     5
+    ],
+    [
+     "Imperium",
+     5
+    ]
+   ],
+   "units": [
+    "Seamare"
+   ],
+   "stories": [
+    {
+     "key": "exiledpirates",
+     "names": [
+      "Hidden Harbor",
+      "Port Clandestine",
+      "Buccaneer's Bay"
+     ],
+     "mandatory": [],
+     "pool": [
+      "Swashbuckler",
+      "Warbreed",
+      "All Base Mercantile Units",
+      "Plundering Blades",
+      "Ember Dust Residue",
+      "Raiders of the Sea",
+      "All Materium Enchantments",
+      "All Chaos Enchantments"
+     ],
+     "enchantments": [
+      "slavers"
+     ],
+     "title": "People Business",
+     "text": [
+      "You steer your troops into a cavern that hides an Uncharted Harbor. Armed <eventColor>race</eventColor> on sturdy ships await them with tense reservation.",
+      "\"Here fer business?\" barks their leader, a <eventColor>Swashbuckler</eventColor>. The <eventColor>Swashbuckler</eventColor> then clenches their blade and adds: \"Or did one of the Free Bond fools sic ye on us?\" Your eye then falls on the many shackled sailors and civilians that line the hidden harbor's docks, pleading for help. The <eventColor>Swashbuckler</eventColor> chuckles. \"Or perhaps ye're volunteerin' to join this sorry lot, eh?\"",
+      "The <eventColor>Swashbuckler</eventColor> growls: \"Aye, lads. I reckon these souls be volunteerin'.\" The Pirate Slavers threaten to surround you and your warriors."
+     ],
+     "options": [
+      {
+       "text": "Slay these slaving sailors.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Pay <gold></gold> a slave-trading <eventColor>Bribe Unit</eventColor> to sit out the ensuing battle.",
+       "kind": "Attack",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Summon a wind to billow your army's sails during combat.",
+       "kind": "Materium Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "hastened_army"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Materium",
+        "header": "Direct the sea winds to push your warriors forward:",
+        "success": "A salty breeze speeds up your army's movements on water.",
+        "failure": "You fail to direct the winds from the open seas into the enclosed Uncharted Harbor.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Condemn slavery as a crime against Nature.",
+       "kind": "Nature Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "discouraged_enemies"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Nature",
+        "header": "Attempt to demotivate the attacking <eventColor>race</eventColor>:",
+        "success": "Unnerved by your resolute words, the resolve of the slavers cracks.",
+        "failure": "These salty pirates are unfazed by your monologue on ethics.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Do not interfere with the corsair's business.",
+       "kind": "Retreat / Back Out",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      }
+     ],
+     "aftermath": {
+      "title": "People Business: Aftermath",
+      "text": [
+       "The slaving pirates surrender after <eventColor>your</eventColor> army defeated enough of them. The caged \"wares\" observed the battle with trepidation.",
+       "A quick interrogation teaches you that these pirates are outcasts. Once in service of the Bond of the Free Captains, their greed drove them into the slave trading business; a direct violation of the Bond's orders. They shunned the dishonorable pirates and even started hunting them. This Uncharted Harbor is one of their lairs.",
+       "You force the slavers to yield their weapons. What other business may you conduct with the ostracized pirates?"
+      ],
+      "options": [
+       {
+        "text": "Sell <gold></gold> your <eventColor>Player Unit</eventColor> <unit></unit> to them. <evilact></evilact>",
+        "kind": "Gain Gold",
+        "costs": [],
+        "rewards": [
+         [
+          "Gold",
+          "High"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Enlist the steadfast <eventColor>Swashbucklers</eventColor> <unit></unit> that the slavers captured.",
+        "kind": "Gain Unit",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": [
+         "Control Loss Immunity"
+        ]
+       },
+       {
+        "text": "Free <goodact></goodact> all famished prisoners kept in cages.",
+        "kind": "Good Act",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Seize the slavers' earnings. <gold></gold>",
+        "kind": "Gain Gold",
+        "costs": [],
+        "rewards": [
+         [
+          "Gold",
+          "Low"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Slaves and slavers shall both serve <thralls></thralls> one new master: you.",
+        "kind": "",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Pick up the <eventColor>Hero Item</eventColor> <item></item> beneath the surface of the water.",
+        "kind": "Gain Hero Item",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       }
+      ]
+     }
+    },
+    {
+     "key": "hermitwizard",
+     "names": [
+      "Submerged Hermitage",
+      "Scuttling Cave",
+      "Isle of Isolation"
+     ],
+     "mandatory": [],
+     "pool": [
+      "Frenzied Fish Swarm",
+      "Lightning Rune Crab",
+      "Storm Rune Crab",
+      "Deep-Sea Nimu",
+      "Hoarfrost Manta",
+      "Scrap Hermit",
+      "Tier I - II Animal Enchantments",
+      "Tier III - IV Animal Enchantments",
+      "Tier V Animal Enchantments"
+     ],
+     "enchantments": [
+      "crabify"
+     ],
+     "title": "The Hermit's Crabs",
+     "text": [
+      "A symphony of staccato clicks welcomes you into the Uncharted Harbor, interspersed with maniacal cackling. The dim light reveals an unsettling scene.",
+      "Inside the watery cavern, a Wizard King works hunched over a bench. The <eventColor>Frenzied Fish Swarm</eventColor> is surrounded by a legion of <eventColor>Frenzied Fish Swarms</eventColor>, all clicking their claws excitedly. The Wizard King cries: \"Crabs! All crabs! It's inevitable!\" The <eventColor>Frenzied Fish Swarm</eventColor> turns around to face you and giggles: \"There's a crab in you too! I, <eventColor>Frenzied Fish Swarm</eventColor>, shall refashion your evolution!\"",
+      "Before you can make sense of the <eventColor>Frenzied Fish Swarm</eventColor>'s ravings, their <eventColor>Frenzied Fish Swarms</eventColor> click their electrified claws at you and your army and advance."
+     ],
+     "options": [
+      {
+       "text": "Cut the crab that <eventColor>Frenzied Fish Swarm</eventColor> produces.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Bring hammers <structureprod></structureprod> from <eventColor>your city</eventColor> to smash the crabs' shells.",
+       "kind": "Attack",
+       "costs": [
+        [
+         "Production",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "adds": [
+        "sundered_armor_enemies"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Forfeit your army's resistance. Catch the chaotic crustacean craze.",
+       "kind": "Chaos Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "crab_adapted"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Chaos",
+        "header": "Welcome the mad Hermit's transformation spells:",
+        "success": "Your troops become stronger when turned into <eventColor>Frenzied Fish Swarms</eventColor>.",
+        "failure": "Appalled by your address, your army refuse to accept their crustacean upgrades.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Divert the electric currents of the <eventColor>Frenzied Fish Swarms</eventColor> into the waters.",
+       "kind": "Astral Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "bolstered_lightning_resistance"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Astral",
+        "header": "Command the flows of Astral lightning:",
+        "success": "The electrified attacks of the <eventColor>Frenzied Fish Swarms</eventColor> barely shock your army.",
+        "failure": "Your warriors' wet armor is too willing a conductor for electric currents to be controlled.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Step away from this madness. Leave the Hermit to their experiments.",
+       "kind": "Retreat / Back Out",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      }
+     ],
+     "aftermath": {
+      "title": "The Hermit's Crabs: Aftermath",
+      "text": [
+       "You victoriously fend off the swarming <eventColor>Frenzied Fish Swarms</eventColor> and fell the deranged Wizard King <eventColor>Frenzied Fish Swarm</eventColor>. Surviving <eventColor>Frenzied Fish Swarms</eventColor> hide behind crates.",
+       "To your horror, you see what <eventColor>Frenzied Fish Swarm</eventColor> was working on: severed limbs are laid out on their workbench in the shape of a crab. Above it hang diagrams and schematics containing hastily scribbled illustrations of humanoids that develop into crustaceans. Further investigation reveals barrels and crates of hacked off limbs and disseminated torsos of various races. A sickening display.",
+       "While collecting the smashed crustaceans' soft crab meat, you ignore any thoughts about their origins to consider what else to claim."
+      ],
+      "options": [
+       {
+        "text": "Recruit the surviving <eventColor>Frenzied Fish Swarms</eventColor> <unit></unit> for your army.",
+        "kind": "Gain Unit",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Fashion a <eventColor>Hero Item</eventColor> <item></item> from an unshattered crab shell.",
+        "kind": "Gain Hero Item",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Pocket the pouch of mana <mana></mana> used in the Wizard King's experiments.",
+        "kind": "Gain Mana",
+        "costs": [],
+        "rewards": [
+         [
+          "Mana",
+          "Low"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Study <knowledge></knowledge> the deranged experiments of the Hermit.",
+        "kind": "Gain Knowledge",
+        "costs": [],
+        "rewards": [
+         [
+          "Knowledge",
+          "Low"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "See the beauty in the Hermit's plans. <casttactical></casttactical>",
+        "kind": "",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       }
+      ]
+     }
+    },
+    {
+     "key": "cannibalsurvivors",
+     "names": [
+      "Cavern of Castaways",
+      "Shady Shantytown",
+      "Marooner's Rock"
+     ],
+     "mandatory": [],
+     "pool": [
+      "All Base Mercantile Units",
+      "All Racial Tome Units - Land",
+      "Tier I - II Chaos Enchantments"
+     ],
+     "enchantments": [
+      "feeding_frenzy"
+     ],
+     "title": "Blood in the Water",
+     "text": [
+      "Inside the Uncharted Harbor, you find a shanty town and are greeted by its inhabitants. There are no ships in sight.",
+      "<eventColor>Race</eventColor> swim towards your army. Their leader, a meaty [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink], introduces themselves as <eventColor>enemy</eventColor>. \"We've been stuck in here without fresh food for days! We're so glad that civilized folks have finally found us. Your arrival is our salvation!\" The <eventColor>race</eventColor> that surround you don't appear very famished. You then notice that there are many more improvised shacks than survivors.",
+      "\"Yes, so happy you arrived.\" <eventColor>enemy</eventColor> bares their razor-sharp teeth. It dawns on you that these survivors indulge in cannibalism!"
+     ],
+     "options": [
+      {
+       "text": "Cull the monstrous <eventColor>race</eventColor>.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Use bait <food></food> from <eventColor>your city</eventColor> to call <eventColor>enemies</eventColor> near the cannibals.",
+       "kind": "Attack",
+       "costs": [
+        [
+         "Food",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "adds": [
+        "berserk_fish"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Spill your blood <hp></hp> to draw the ire of the cannibals.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "bleeding_taunt"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Invoke the divine calling to cleanse the Uncharted Harbor of the cannibals' sins.",
+       "kind": "Order Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "encouraged"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Order",
+        "header": "Become a sin-slaying sword of divine duty:",
+        "success": "Your troops fight with ardent conviction.",
+        "failure": "Divine inspiration fails to kindle your warriors' fervor.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Chill the waters to match these chilling deeds.",
+       "kind": "Shadow Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "slowed_enemies"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Shadow",
+        "header": "Freeze the waters in which these cannibal <eventColor>race</eventColor> swim:",
+        "success": "The cold currents slow the cannibals in the water.",
+        "failure": "The waters growing colder does not hamper the ravenous <eventColor>race</eventColor>.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Flee the Uncharted Harbor, lest your army is eaten.",
+       "kind": "Retreat / Back Out",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      }
+     ],
+     "aftermath": {
+      "title": "Blood In The Water: Aftermath",
+      "text": [
+       "You successfully overpowered the cannibal <eventColor>race</eventColor>. Those not slain are bound. Some among them show remorse and shame.",
+       "They relate their sorrowful tale to you. Inevitable tidal currents once carried the <eventColor>race</eventColor> into it. It was <eventColor>enemy</eventColor> who first proposed to eat one of their own. The starved survivors admitted how this heinous act restored their vitality. The ritual gave <eventColor>enemy</eventColor> even greater power. Ever since, the <eventColor>race</eventColor> would feast on whomever the currents would deliver to them.",
+       "By stopping the cannibals, you have performed an inspiring deed this day. Such efforts are deserving of a reward."
+      ],
+      "options": [
+       {
+        "text": "Nurse the survivors back to health. <goodact></goodact>",
+        "kind": "Good Act",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Nibble at the <eventColor>race</eventColor>. <evilact></evilact> See how they taste.",
+        "kind": "Evil Act",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": [
+         "Corpse Eating"
+        ]
+       },
+       {
+        "text": "Procure the weapons <draft></draft> of the cannibal <eventColor>race</eventColor>.",
+        "kind": "Gain Draft",
+        "costs": [],
+        "rewards": [
+         [
+          "Draft",
+          "Low"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Have the survivors work in <eventColor>your city</eventColor>'s quarries <structureprod></structureprod> as punishment.",
+        "kind": "Gain Production",
+        "costs": [],
+        "rewards": [
+         [
+          "Production",
+          "Low"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Feed on the remaining survivors. <xp></xp>",
+        "kind": "Level Up Unit",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Drain the surviving souls of their will. <thralls></thralls>",
+        "kind": "",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
        }
       ]
      }
@@ -9913,6 +10467,551 @@
    ]
   },
   {
+   "key": "pearltide_dome",
+   "name": "Pearltide Dome",
+   "tier": "Gold",
+   "dlc": "SILVERSEAS",
+   "description": "<bulletlist><bullet>Unlocks the <span style=\"color:white\">Pearltide Bomb</span> [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink].</bullet><bullet>Adds the [hyperlink,GLOBAL.UNITS.STORM_RUNE_CRAB]Storm Rune Crab[/hyperlink] unit to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet></bulletlist>",
+   "lore": "<lorefontsize><lorefont>An alluring sphere of unknown origin, perched high above the tumultuous waves so its mysterious gleam is cast far and away. Towering shells of a gargantuan oyster fail to contain the orb's beckoning light. A pearl of this size is bound to attract attention from all that travel the high seas.</lorefont></lorefontsize>",
+   "counts": "conduit",
+   "income": [
+    [
+     "Happiness",
+     -5
+    ],
+    [
+     "Food",
+     5
+    ],
+    [
+     "Mana",
+     10
+    ],
+    [
+     "Knowledge",
+     10
+    ],
+    [
+     "Imperium",
+     5
+    ]
+   ],
+   "units": [
+    "Storm Rune Crab"
+   ],
+   "stories": [
+    {
+     "key": "hydromancers",
+     "names": [
+      "Whirling Whitewater",
+      "Maelstrom of Mages",
+      "Tidal Torrents"
+     ],
+     "mandatory": [],
+     "pool": [
+      "Lesser Tide Spirit",
+      "Transmuter",
+      "Racial Shield Units",
+      "Tier I - II Frost Enchantments",
+      "Tier III - IV Frost Enchantments",
+      "All Astral Enchantments"
+     ],
+     "enchantments": [
+      "rampant_whirlpools"
+     ],
+     "title": "The Shaping of Water",
+     "text": [
+      "You are greeted by frothing waves and turbulent currents as you enter the domain of the Pearltide Dome.",
+      "Fighting against the ill-tempered sea, you navigate labyrinthine cliffs in search of the shining pearl that rises high above the waves. You finally find it, but it is surrounded by a small army of water sorcerers: Hydromancers who appear to perform some kind of ritual on the pearl. The pearl itself seems to oscillate between being solid and being liquid.",
+      "The Cult of Hydromancers, who created the whirlpools to keep invaders away from their ritual, turn their torrents against you."
+     ],
+     "options": [
+      {
+       "text": "Disrupt whatever ritual the Hydromancer Cult is performing.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Apply your Stormlore <knowledge></knowledge> to use Hydromancer's whirlpools to your advantage.",
+       "kind": "Attack",
+       "costs": [
+        [
+         "Knowledge",
+         "High"
+        ]
+       ],
+       "rewards": [],
+       "adds": [
+        "hastened_army"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Command water to bounce off your skin.",
+       "kind": "Materium Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "immunity_wet"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Materium",
+        "header": "Enchant your warriors so that they cannot become wet:",
+        "success": "Your army has become impervious to wetness.",
+        "failure": "The Hydromancers' water spells unfortunately still affect your warriors.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Call forth a thunderous storm to unbalance the Hydromancers.",
+       "kind": "Astral Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "lightning_storm"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Astral",
+        "header": "Summon a tempest to bring havoc to the Hydromancers' ritual:",
+        "success": "Rain flogs the battlefield while thunder threatens to strike your opponents.",
+        "failure": "Your spells are repelled by the magic of the Pearltide Dome.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Permit the waves and whirlpools to drive you away.",
+       "kind": "Retreat / Back Out",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      }
+     ],
+     "aftermath": {
+      "title": "The Shaping of Water: Aftermath",
+      "text": [
+       "The Hydromancers are swallowed by the sea they worshiped. You turn your attention to the giant pearl.",
+       "You study the magical inscriptions on the pearl's pedestal and the Hydromancers' spellbook to learn that the mad magicians found the unstable pearl in the heart of the ocean. It has the potential to become any Magic Material once the Hydromancers' ritual is completed. You add the last ingredient, utter the final words, forcing the pearl into its ultimate form.",
+       "The pearl now serves as a supply of Astral Dew. There is time to plunder the Hydromancer's supplies."
+      ],
+      "options": [
+       {
+        "text": "Collect the cache of Binding Fragments. <bindingfragments></bindingfragments>",
+        "kind": "",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Take the [hyperlink,GLOBAL.EQUIPMENT.SUMMON_WHIRLPOOL_WAND]Summon whirlpool wand[/hyperlink] <item></item> that summons whirlpools in combat.",
+        "kind": "Gain Hero Item",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Claim the stockpile of mana <mana></mana> that the Hydromancers left behind.",
+        "kind": "Gain Mana",
+        "costs": [],
+        "rewards": [
+         [
+          "Mana",
+          "High"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Read a page <knowledge></knowledge> from the Hydromancy spellbook.",
+        "kind": "Gain Knowledge",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Extract the secrets <knowledge></knowledge> of Merfolk Tails from the Hydromancers.",
+        "kind": "Gain Knowledge",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       }
+      ]
+     }
+    },
+    {
+     "key": "seamonsters",
+     "names": [
+      "Trench of Titans",
+      "Gulf of Life",
+      "Brooding Reef"
+     ],
+     "mandatory": [],
+     "pool": [
+      "Ancient Hoarfrost Manta",
+      "Tier I - II Animal Enchantments",
+      "Tier III - IV Animal Enchantments",
+      "Tier V Nature Enchantments",
+      "Staves of the River",
+      "Flowing Focus"
+     ],
+     "enchantments": [
+      "symbiotic_reinforcements"
+     ],
+     "title": "Spawn of Oceans",
+     "text": [
+      "Enormous sea creatures glide beneath the waves, accompanying you on your course towards the pearly white orb within it.",
+      "Inside the reef, sea life incessantly flocks to the elevated pearl, as if the aquatic beasts worship it. You feel rejuvenated in the presence of the orb, until a cold shadow passes underneath you. An <eventColor>Ancient Hoarfrost Manta</eventColor> bursts from the depths and bites a crab-like creature in half. Its carcass attracts even more fish. It is a sanctuary of the Cycle of Life.",
+      "When one of your warriors nears the pearl, the sanctuary's sea monsters form ranks to defend their object of worship."
+     ],
+     "options": [
+      {
+       "text": "Engage with the sea monsters in battle.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Hunters <unitprod></unitprod> from <eventColor>your city</eventColor> teach your army their sea monster hunting techniques.",
+       "kind": "Attack",
+       "costs": [
+        [
+         "Draft",
+         "High"
+        ]
+       ],
+       "rewards": [],
+       "adds": [
+        "strengthened_army"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Let the power of the Cycle of Life empower your army.",
+       "kind": "Nature Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "healing_death"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Nature",
+        "header": "Convince your warriors to not waste any loss of life:",
+        "success": "Your warriors are healed whenever an adjacent opponent dies.",
+        "failure": "Your warriors are too engaged in battle to heed the Cycle of Life's powers.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "\"Chaos overtake the minds of whatever reinforcements spawn when sea creatures die.\"",
+       "kind": "Chaos Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "distracted_reinforcements"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Chaos",
+        "header": "Attempt to disorient any new reinforcements that arrive:",
+        "success": "Bewildered by Chaos, the reinforcements are dazzled and distracted upon arrival.",
+        "failure": "The primitive minds of the reinforcements resist your manipulations of Chaos.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Leave the sea creatures to their business, whatever it is.",
+       "kind": "Retreat / Back Out",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      }
+     ],
+     "aftermath": {
+      "title": "Spawn of Oceans: Aftermath",
+      "text": [
+       "After a ferocious battle, an eerie quiet descends on the Pearltide Dome. All sea monsters are slain.",
+       "You investigate why the sea creatures gathered here to worship the orb. Closer inspection reveals that the orb is actually the egg of an oversized sea creature! You conclude that this sanctuary's aura of vitality causes marine wildlife to grow to extraordinary size. You document all that you learn for future research.",
+       "What fate do you have in mind for the giant egg that the sea creatures appeared to worship?"
+      ],
+      "options": [
+       {
+        "text": "Ignore the egg. Study <knowledge></knowledge> the carcasses of the slain sea monsters.",
+        "kind": "Gain Knowledge",
+        "costs": [],
+        "rewards": [
+         [
+          "Knowledge",
+          "High"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Hatch <unit></unit> the egg. An <eventColor>Ancient Hoarfrost Manta</eventColor> emerges from it.",
+        "kind": "Gain Unit",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Cook the giant egg to feed <food></food> your <eventColor>race</eventColor>.",
+        "kind": "Gain Food",
+        "costs": [],
+        "rewards": [
+         [
+          "Food",
+          "High"
+         ],
+         [
+          "Food",
+          "Low"
+         ],
+         [
+          "Food",
+          "Very Low"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Display <influence></influence> the egg in your throne room as a symbol of triumph.",
+        "kind": "Gain Imperium",
+        "costs": [],
+        "rewards": [
+         [
+          "Imperium",
+          "High"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       }
+      ]
+     }
+    },
+    {
+     "key": "sirenpearl",
+     "names": [
+      "Ebbing Glimmer",
+      "Singing Sphere",
+      "Wailing Wisplight"
+     ],
+     "mandatory": [],
+     "pool": [
+      "Accursed Lamenter",
+      "Accursed Wisp",
+      "Ghost Ship",
+      "Corrupt Soul",
+      "Banshee",
+      "Phantasm Warrior",
+      "Living Fog",
+      "Tier I - II Undead Enchantments",
+      "Tier III - IV Undead Enchantments",
+      "Tier V Undead Enchantments",
+      "All Culture Base Units"
+     ],
+     "enchantments": [],
+     "title": "Songs of the Sea",
+     "text": [
+      "You cannot remember how you arrived here at the heart of the Pearltide Dome, facing the glowing pearl perched on high.",
+      "You look around. Your army is entranced, their faces frozen in blissful expressions. The pearl vibrates and sings, and you unwillingly take one step closer to the alluring orb, as do your warriors. You shake your head, trying to dispel the deadly enchantment that traps you there. You scream over the pearl's melody at your troops to wake them up.",
+      "Sensing your resistance to their siren song, ghostly apparitions rise from the cold waters to drag you down into the abyss."
+     ],
+     "options": [
+      {
+       "text": "Fight the will-sapping defenders of the Pearltide Dome.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "siren_pearl"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Enchant <mana></mana> the apparitions to make them more vulnerable to magical attacks.",
+       "kind": "Attack",
+       "costs": [
+        [
+         "Mana",
+         "High"
+        ]
+       ],
+       "rewards": [],
+       "adds": [
+        "siren_pearl",
+        "sundered_resistance_enemies"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Remind your warriors <thralls></thralls> that you are the embodiment of true terror.",
+       "kind": "Attack",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "siren_pearl",
+        "bolstered_resistance_army"
+       ],
+       "removes": [],
+       "gains": []
+      },
+      {
+       "text": "Start singing a shanty and command your army to join in.",
+       "kind": "Order Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "sea_shanty"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Order",
+        "header": "Attempt to break the Pearltide Dome's sway over your army:",
+        "success": "Your warriors cannot hear the pearl's song over their own singing.",
+        "failure": "Despite the shanty, the pearl's melody still penetrates the ears of your army.",
+        "failure_adds": [
+         "siren_pearl"
+        ]
+       }
+      },
+      {
+       "text": "Corrupt the pearl's song to become a weapon for your warriors.",
+       "kind": "Shadow Affinity Option",
+       "costs": [],
+       "rewards": [],
+       "adds": [
+        "siren_pearl",
+        "bolstering_song"
+       ],
+       "removes": [],
+       "gains": [],
+       "check": {
+        "affinity": "Shadow",
+        "header": "Attempt to change the pearl's curse into a boon for your warriors:",
+        "success": "Whoever is drawn by the pearl, finds their strength increased.",
+        "failure": "The dark hold of the pearl will not allow itself to be manipulated by you.",
+        "failure_adds": []
+       }
+      },
+      {
+       "text": "Escape the dreadful Pearltide Dome.",
+       "kind": "Retreat / Back Out",
+       "costs": [],
+       "rewards": [],
+       "adds": [],
+       "removes": [],
+       "gains": []
+      }
+     ],
+     "aftermath": {
+      "title": "Songs of the Sea: Aftermath",
+      "text": [
+       "You successfully repelled the ghostly assault of the Pearltide Dome defenders.",
+       "You now notice how many shipwrecks are scattered around the central pearl. Who knows how many unwitting souls were lured here by the pearl's hypnotizing song? Already you order that the shipwrecks should be salvaged. Meanwhile, the pearl glows and hums. There is a movement deep beneath the waves. A titanic shadow that lingers in the deep abyss.",
+       "There is a deep, powerful bellow that signals that the Pearltide Dome is sinking. What can you salvage before leaving?"
+      ],
+      "options": [
+       {
+        "text": "Bind two <eventColor>Accursed Lamenters</eventColor> to your command. <unit></unit>",
+        "kind": "Gain Unit",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Manipulate the singing to make your people in nearby <eventColor>your city</eventColor> happy. <happiness></happiness>",
+        "kind": "Gain City Stability",
+        "costs": [],
+        "rewards": [
+         [
+          "City Stability",
+          "High"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Study <knowledge></knowledge> the tactical techniques of the banshees.",
+        "kind": "Gain Knowledge",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Reveal the maddening <hp></hp> secret <knowledge></knowledge> of the pearl.",
+        "kind": "Gain Knowledge",
+        "costs": [],
+        "rewards": [
+         [
+          "Knowledge",
+          "Very High"
+         ]
+        ],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       },
+       {
+        "text": "Reap the lost souls <souls></souls> that linger here.",
+        "kind": "Gain Souls",
+        "costs": [],
+        "rewards": [],
+        "adds": [],
+        "removes": [],
+        "gains": []
+       }
+      ]
+     }
+    }
+   ]
+  },
+  {
    "key": "rose_choked_palace",
    "name": "Rose Choked Palace",
    "tier": "Gold",
@@ -11731,6 +12830,12 @@
    "positive": false,
    "icon": "berserk_enemies.png"
   },
+  "berserk_fish": {
+   "name": "Berserk Fish",
+   "description": "At the start of combat, a [hyperlink,GLOBAL.UNITS.FRENZIED_FISH_SWARM]Frenzied Fish Swarm[/hyperlink] joins the defenders but suffers [hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] until the end of combat.",
+   "positive": false,
+   "icon": "berserk_fish.png"
+  },
   "berserk_wyrms": {
    "name": "Serpentine Frenzy",
    "description": "Lesser serpents become [hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink].",
@@ -11754,6 +12859,12 @@
    "description": "The attacker's [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.MAGIC_FIGHTER]Magic Fighter Units[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]Support Units[/hyperlink] attacks gain a 30% chance of inflicting:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.MANA_DRAINED]Mana Drained[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>Increased for Single Shots.",
    "positive": true,
    "icon": "bhajif03.png"
+  },
+  "bleeding_taunt": {
+   "name": "Bloody Taunt",
+   "description": "The [hyperlink,GLOBAL.PROPERTIES.EXPEDITION_LEADER]Expedition Leader[/hyperlink] suffers [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] and as a result inflicts [hyperlink,GLOBAL.PROPERTIES.TAUNTED]Taunted[/hyperlink] on all attacking [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+   "positive": false,
+   "icon": "bleeding_taunt.png"
   },
   "blinded_moth": {
    "name": "Sensory Overload",
@@ -11779,6 +12890,12 @@
    "positive": true,
    "icon": null
   },
+  "bolstered_lightning_resistance": {
+   "name": "Insulated Attackers",
+   "description": "All attacking units have +2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink] until the end of battle.",
+   "positive": true,
+   "icon": "bolstered_lightning_resistance.png"
+  },
   "bolstered_resistance_army": {
    "name": "Resistant Attackers",
    "description": "All attacking units have [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink] until the end of battle.",
@@ -11790,6 +12907,12 @@
    "description": "Attacking units have +1 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink] until the end of battle.",
    "positive": true,
    "icon": "bolstered_status_resistance_army.png"
+  },
+  "bolstering_song": {
+   "name": "Bolstered by Song",
+   "description": "When an attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is targeted by [hyperlink,GLOBAL.PROPERTIES.SIREN_SONG]Siren Song[/hyperlink], they gain [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+   "positive": true,
+   "icon": "bolstering_song.png"
   },
   "boonoflife": {
    "name": "Boon of Nature",
@@ -11862,6 +12985,18 @@
    "description": "When a defending [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] Unit dies, they resurrect as a [hyperlink,GLOBAL.UNITS.CORRUPT_SOUL]Corrupt Soul[/hyperlink] after 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
    "positive": true,
    "icon": "corrupted_souls.png"
+  },
+  "crab_adapted": {
+   "name": "Crab Adapted",
+   "description": "Every time an attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is transformed by [hyperlink,GLOBAL.PROPERTIES.CRABIFY]Crabify[/hyperlink], they gain [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] instead of [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+   "positive": true,
+   "icon": "crab_adapted.png"
+  },
+  "crabify": {
+   "name": "Crabify",
+   "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], a random attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is transformed into a [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crab[/hyperlink] until the end of the battle and suffers [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+   "positive": false,
+   "icon": "crabify.png"
   },
   "crashing_rubble": {
    "name": "Crashing Rubble",
@@ -11971,6 +13106,12 @@
    "positive": false,
    "icon": "distracted_army.png"
   },
+  "distracted_reinforcements": {
+   "name": "Distracted Reinforcements",
+   "description": "Whenever a [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is summoned due to [hyperlink,GLOBAL.PROPERTIES.SYMBIOTIC_REINFORCEMENTS]Symbiotic Reinforcements[/hyperlink], it suffers [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink].",
+   "positive": false,
+   "icon": "distracted_reinforcements.png"
+  },
   "draconic_catalyst": {
    "name": "Draconic Catalyst",
    "description": "When a Red Dragon has [hyperlink,GLOBAL.PROPERTIES.DRACONIC_RAGE]Draconic Rage[/hyperlink], all attacking units have a 90% chance to suffer [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] every turn.<br><br>When a Blue Dragon has [hyperlink,GLOBAL.PROPERTIES.DRACONIC_RAGE]Draconic Rage[/hyperlink], all attacking units have a 60% chance to get [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] every turn.",
@@ -12024,6 +13165,12 @@
    "description": "Every 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all corpses of defending [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] are resurrected as a [hyperlink,GLOBAL.UNITS.PHANTASM_WARRIOR_UNIT]Phantasm Warrior[/hyperlink] which dies after 3 <turn></turn> Turns.",
    "positive": false,
    "icon": "fading_souls.png"
+  },
+  "feeding_frenzy": {
+   "name": "Feeding Frenzy",
+   "description": "Defending [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.CORPSE_EATING]Corpse Eating[/hyperlink] until the end of combat.",
+   "positive": true,
+   "icon": "feeding_frenzy.png"
   },
   "fire_immunity": {
    "name": "Immunity to Burning Attackers",
@@ -12133,6 +13280,12 @@
    "positive": false,
    "icon": "hastening_storm.png"
   },
+  "healing_death": {
+   "name": "Healing Deaths",
+   "description": "Whenever a defending [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] dies, adjacent attacking [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] are healed for 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].",
+   "positive": false,
+   "icon": "healing_death.png"
+  },
   "hidden_traps": {
    "name": "Hidden Traps",
    "description": "Several hidden traps are scattered on the map! If a unit moves over them, it will be inflicted with [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] and reveal the trap! <br><br>Does not affect [hyperlink,GLOBAL.PROPERTIES.FLOATING_MOVEMENT]Floating[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.FLYING_MOVEMENT]Flying[/hyperlink], or [hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] units.",
@@ -12144,6 +13297,12 @@
    "description": "All attacking units are [hyperlink,GLOBAL.PROPERTIES.IMMUMESEDUCED]Immune to Seduced[/hyperlink] until the end of battle!",
    "positive": true,
    "icon": "immumeseduced.png"
+  },
+  "immunity_wet": {
+   "name": "Water Repellent Attackers",
+   "description": "All attacking [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] are immune to [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] until the end of the battle.",
+   "positive": false,
+   "icon": "immunity_wet.png"
   },
   "joining_the_fun": {
    "name": "Joining the Fun",
@@ -12189,7 +13348,7 @@
   },
   "lightning_storm": {
    "name": "Lightning Storm",
-   "description": "At the start of a turn, for the next 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] a random attacking unit takes 24 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].",
+   "description": "At the start of a turn, for the next 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] a random enemy unit takes 24 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink]",
    "positive": false,
    "icon": "lightning_storm.png"
   },
@@ -12445,6 +13604,12 @@
    "positive": false,
    "icon": "rampant_flora.png"
   },
+  "rampant_whirlpools": {
+   "name": "Rampant Whirlpools",
+   "description": "Several [hyperlink,GLOBAL.VortexConcept]Vortex[/hyperlink] obstacles are present in combat. They will exile [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] which enter them to the Underground.<br>Defending [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] entering a Vortex are displaced instead.",
+   "positive": false,
+   "icon": "rampant_whirlpools.png"
+  },
   "rejuvinating_souls": {
    "name": "Rejuvenating Souls",
    "description": "Every 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all corpses of defending [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] are resurrected as a [hyperlink,GLOBAL.UNITS.PHANTASM_WARRIOR_UNIT]Phantasm Warrior[/hyperlink]. When this happens, all attacking units within a 2-hex radius of the corpse are healed for 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].",
@@ -12475,6 +13640,12 @@
    "positive": false,
    "icon": "sabotaged_constructs.png"
   },
+  "sea_shanty": {
+   "name": "Sea Shanty",
+   "description": "All attacking [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.RALLYING]Rally[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] and suffer [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] until the end of combat.",
+   "positive": false,
+   "icon": "sea_shanty.png"
+  },
   "silver_knight": {
    "name": "Duelist's Protection",
    "description": "The duelist takes reduced damage from all units, except from the stack leader of the opposing army.",
@@ -12487,6 +13658,12 @@
    "positive": false,
    "icon": "silver_knight_taunt.png"
   },
+  "siren_pearl": {
+   "name": "Siren Song",
+   "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], a random attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] has a 120% chance of suffering [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. If unsuccessful, the unit suffers [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] instead.",
+   "positive": false,
+   "icon": "siren_pearl.png"
+  },
   "skeleton_summon_on_death": {
    "name": "Haunted Coffins",
    "description": "Whenever a Sarcophagus obstacle is destroyed, it summons a [hyperlink,GLOBAL.UNITS.SKELETON_UNIT]Skeleton Militia[/hyperlink] on the defender's side until the end of combat.",
@@ -12498,6 +13675,12 @@
    "description": "At the start of battle, a couple of War Hound units inflicted with [hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink] join the fight adjacent to defending units.",
    "positive": false,
    "icon": "slave_revolt.png"
+  },
+  "slavers": {
+   "name": "Slavers",
+   "description": "Defender [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Unit[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]Support Unit[/hyperlink] units gain [hyperlink,GLOBAL.PROPERTIES.SUBDUE_PANTHEON]Subdue[/hyperlink]. Other units gain a base 30% [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink] chance on their base attacks, increased for Single Shot.",
+   "positive": true,
+   "icon": "slavers.png"
   },
   "sleeper_in_shadow": {
    "name": "Dead King's presence",
@@ -12648,6 +13831,12 @@
    "description": "All attacking units gain [hyperlink,GLOBAL.PROPERTIES.PRECOGNITION]Precognition[/hyperlink] at the start of combat.",
    "positive": false,
    "icon": "supporting_divination.png"
+  },
+  "symbiotic_reinforcements": {
+   "name": "Symbiotic Reinforcements",
+   "description": "When a defending [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] that was not summoned dies, a lower tier [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is summoned nearby on the defender side until the end of the battle.",
+   "positive": true,
+   "icon": "symbiotic_reinforcements.png"
   },
   "taunted_dragon": {
    "name": "Fractured Dragon Taunt",

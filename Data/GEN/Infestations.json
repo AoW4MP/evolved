@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31 20:29",
- "build": "exe of 2026-10-30",
+ "generated": "2026-11-03 23:22",
+ "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "infestations": [
   {
@@ -45,6 +45,8 @@
       "Reaver Enchantments",
       "All Base Primal Units",
       "Primal Enchantments",
+      "All Base Mercantile Units",
+      "Mercantile Enchantments",
       "All Base Oathsworn Units",
       "Oathsworn Enchantments"
      ]
@@ -157,6 +159,8 @@
       "Reaver Enchantments",
       "All Base Primal Units",
       "Primal Enchantments",
+      "All Base Mercantile Units",
+      "Mercantile Enchantments",
       "All Base Oathsworn Units",
       "Oathsworn Enchantments"
      ]
@@ -555,6 +559,37 @@
       "Tier III - IV Shadow Enchantments",
       "All Astral Enchantments",
       "All Accursed Fiends Units"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "spawning_shoal",
+   "name": "Spawning Shoal",
+   "tier": "Silver",
+   "dlc": "SILVERSEAS",
+   "water": true,
+   "description": "Various marine wildlife overpopulate the area and travel in symbiotic packs to hunt for food and protect their habitat.<br>If left unchecked, they will grow in strength, expand their territory, and send out invasions.",
+   "lore": "\"There is nothing a mother would not do for her young. The Spawning Shoals are living proof of it: countless species dwell together within them, guarding one another's broods and hunting to keep them fed. I would advise against disturbing those little nurseries, for no fury compares to that of a mother defending her offspring.\"<br><br>—Nimue, Raising the Right Offspring.",
+   "picture": null,
+   "reward": {
+    "resource": "Gold",
+    "tier": 3
+   },
+   "size": {
+    "start": 2,
+    "max": 10,
+    "growth": 6
+   },
+   "pools": [
+    {
+     "label": "",
+     "units": [
+      "Ancient Hoarfrost Manta"
+     ],
+     "others": [
+      "Tier I - II Animal Enchantments",
+      "Tier III - IV Animal Enchantments"
      ]
     }
    ]

@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-30 22:10",
- "build": "exe of 2026-10-30",
+ "generated": "2026-11-03 23:21",
+ "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "roots": [
   {
@@ -108,6 +108,24 @@
    "name": "CULTURE_INDUSTRIOUS@INDUSTRIOUS@NAME",
    "parent": null,
    "icon": "industrious"
+  },
+  {
+   "key": "mercantile",
+   "name": "DLC@SILVERSEAS@CULTURE_MERCANTILE@MERCANTILE@NAME",
+   "parent": null,
+   "icon": "mercantile"
+  },
+  {
+   "key": "mercantile_barony",
+   "name": "DLC@SILVERSEAS@CULTURE_MERCANTILE@MERCANTILE_BARONY@NAME",
+   "parent": "mercantile",
+   "icon": "mercantile_barony"
+  },
+  {
+   "key": "mercantile_cartel",
+   "name": "DLC@SILVERSEAS@CULTURE_MERCANTILE@MERCANTILE_CARTEL@NAME",
+   "parent": "mercantile",
+   "icon": "mercantile_cartel"
   },
   {
    "key": "mystic",
@@ -375,6 +393,25 @@
    ]
   },
   {
+   "resid": "5003636908582",
+   "section": "city",
+   "line": "food",
+   "th": null,
+   "parents": [
+    "5003636908577",
+    "5003636907244",
+    "5003636904555",
+    "4578435139252",
+    "4282082401233"
+   ],
+   "cultures": [
+    "mercantile_barony"
+   ],
+   "replaces": [
+    "4578435138508"
+   ]
+  },
+  {
    "resid": "5003636904555",
    "section": "city",
    "line": "food",
@@ -414,6 +451,21 @@
    ]
   },
   {
+   "resid": "5003636908577",
+   "section": "city",
+   "line": "food",
+   "th": null,
+   "parents": [
+    "town_hall_i_town_center"
+   ],
+   "cultures": [
+    "mercantile_barony"
+   ],
+   "replaces": [
+    "4282082401233"
+   ]
+  },
+  {
    "resid": "4578435139252",
    "section": "city",
    "line": "food",
@@ -434,6 +486,7 @@
    "line": "food",
    "th": 2,
    "parents": [
+    "5003636908577",
     "5003636907244",
     "5003636904555",
     "4578435139252",
@@ -446,6 +499,7 @@
    "line": "food",
    "th": 2,
    "parents": [
+    "5003636908577",
     "5003636907244",
     "5003636904555",
     "4578435139252",
@@ -464,6 +518,7 @@
    "line": "food",
    "th": 2,
    "parents": [
+    "5003636908577",
     "5003636907244",
     "5003636904555",
     "4578435139252",
@@ -482,6 +537,7 @@
    "line": "food",
    "th": 2,
    "parents": [
+    "5003636908577",
     "5003636907244",
     "5003636904555",
     "4578435139252",
@@ -500,6 +556,7 @@
    "line": "food",
    "th": 3,
    "parents": [
+    "5003636908582",
     "5003636907250",
     "5003636904560",
     "4578435139247",
@@ -513,6 +570,38 @@
    "th": 4,
    "parents": [
     "4282082401242"
+   ]
+  },
+  {
+   "resid": "5003636908383",
+   "section": "city",
+   "line": "gold",
+   "th": null,
+   "parents": [
+    "5046586576858",
+    "5003636908380",
+    "4041564233023"
+   ],
+   "cultures": [
+    "mercantile_cartel"
+   ],
+   "replaces": [
+    "4578435138484"
+   ]
+  },
+  {
+   "resid": "5003636908380",
+   "section": "city",
+   "line": "gold",
+   "th": null,
+   "parents": [
+    "town_hall_i_town_center"
+   ],
+   "cultures": [
+    "mercantile_cartel"
+   ],
+   "replaces": [
+    "4041564233023"
    ]
   },
   {
@@ -546,6 +635,7 @@
    "th": 2,
    "parents": [
     "5046586576858",
+    "5003636908380",
     "4041564233023"
    ],
    "cultures": [
@@ -562,6 +652,7 @@
    "th": 2,
    "parents": [
     "5046586576858",
+    "5003636908380",
     "4041564233023"
    ],
    "cultures": [
@@ -578,6 +669,7 @@
    "th": 2,
    "parents": [
     "5046586576858",
+    "5003636908380",
     "4041564233023"
    ]
   },
@@ -588,6 +680,7 @@
    "th": 3,
    "parents": [
     "5046586576863",
+    "5003636908383",
     "4578435139237",
     "4578435138484"
    ]
@@ -599,6 +692,7 @@
    "th": 3,
    "parents": [
     "5046586576863",
+    "5003636908383",
     "4578435139237",
     "4578435138484"
    ],
@@ -1167,6 +1261,18 @@
    ]
   },
   {
+   "resid": "5003636908589",
+   "section": "city",
+   "line": "special",
+   "th": 3,
+   "parents": [
+    "5003636908258"
+   ],
+   "cultures": [
+    "mercantile_barony"
+   ]
+  },
+  {
    "resid": "5003636907795",
    "section": "city",
    "line": "special",
@@ -1200,6 +1306,18 @@
    ],
    "cultures": [
     "reaver_imperial"
+   ]
+  },
+  {
+   "resid": "5003636908390",
+   "section": "city",
+   "line": "special",
+   "th": 3,
+   "parents": [
+    "5003636908258"
+   ],
+   "cultures": [
+    "mercantile_cartel"
    ]
   },
   {
@@ -1356,6 +1474,7 @@
     "5046586576837",
     "5016521807228",
     "5016521802568",
+    "5003636908251",
     "4986457030794",
     "4578435138579",
     "4578435138331",
@@ -1513,6 +1632,22 @@
    ]
   },
   {
+   "resid": "5003636908251",
+   "section": "city",
+   "line": "townhall",
+   "th": 2,
+   "parents": [
+    "town_hall_i_town_center"
+   ],
+   "cultures": [
+    "mercantile_barony",
+    "mercantile_cartel"
+   ],
+   "replaces": [
+    "4041564232980"
+   ]
+  },
+  {
    "resid": "5046586576837",
    "section": "city",
    "line": "townhall",
@@ -1616,6 +1751,22 @@
    ],
    "cultures": [
     "industrious"
+   ],
+   "replaces": [
+    "4041564232996"
+   ]
+  },
+  {
+   "resid": "5003636908258",
+   "section": "city",
+   "line": "townhall",
+   "th": 3,
+   "parents": [
+    "5003636908251"
+   ],
+   "cultures": [
+    "mercantile_barony",
+    "mercantile_cartel"
    ],
    "replaces": [
     "4041564232996"
@@ -1852,6 +2003,22 @@
    ]
   },
   {
+   "resid": "5003636908265",
+   "section": "city",
+   "line": "townhall",
+   "th": 4,
+   "parents": [
+    "5003636908258"
+   ],
+   "cultures": [
+    "mercantile_barony",
+    "mercantile_cartel"
+   ],
+   "replaces": [
+    "4041564236955"
+   ]
+  },
+  {
    "resid": "4578435138055",
    "section": "city",
    "line": "townhall",
@@ -1945,6 +2112,7 @@
     "5046586576837",
     "5016521807228",
     "5016521802568",
+    "5003636908251",
     "4986457030794",
     "4578435138579",
     "4578435138331",
@@ -2021,6 +2189,7 @@
     "5046586576844",
     "5016521807235",
     "5016521802574",
+    "5003636908258",
     "4986457030800",
     "4578435138616",
     "4578435138339",
@@ -2028,6 +2197,19 @@
     "4578435138246",
     "4578435138048",
     "4282082401410"
+   ]
+  },
+  {
+   "resid": "5003636908874",
+   "section": "fortification",
+   "line": "fortification",
+   "th": 3,
+   "parents": [
+    "4488240825430",
+    "4389456578758"
+   ],
+   "cultures": [
+    "mercantile"
    ]
   },
   {
@@ -2062,6 +2244,7 @@
    "line": "fortification",
    "th": 4,
    "parents": [
+    "5003636908874",
     "5003636907280",
     "4488240825430"
    ]
@@ -2460,6 +2643,7 @@
     "5046586576837",
     "5016521807228",
     "5016521802568",
+    "5003636908251",
     "4986457030794",
     "4578435138579",
     "4578435138331",
@@ -2480,6 +2664,7 @@
     "5046586576837",
     "5016521807228",
     "5016521802568",
+    "5003636908251",
     "4986457030794",
     "4578435138579",
     "4578435138331",
@@ -2633,6 +2818,14 @@
    "th": null,
    "parents": [],
    "tome": "4514010633978"
+  },
+  {
+   "resid": "5046586590863",
+   "section": "tome",
+   "line": "tome",
+   "th": null,
+   "parents": [],
+   "tome": "5046586590816"
   },
   {
    "resid": "5046586588192",

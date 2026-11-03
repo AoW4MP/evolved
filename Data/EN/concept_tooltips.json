@@ -4407,7 +4407,7 @@
     "icon": null,
     "globalName": "GLOBAL.MarinusLoreConcept",
     "displayHtml": "Marinus",
-    "description": ""
+    "description": "King of Merchants and Lord of the Waters, Marinus remains far more interested in living a life of luxury than in warfare. After ages spent amassing riches, the avid master trader has invested his wealth and ambition in establishing a legacy brighter than gold.<br><br>Convinced that [hyperlink,GLOBAL.SilverSeasLoreConcept]the legendary Silver Seas[/hyperlink] are not a place to search, but a place to build, Marinus has founded the Silver Seas Company. The mercantile empire is celebrating marine festivals and opening countless trade routes to enrich itself and its allies. Conquering with coin rather than steel."
   },
   "GLOBAL.MateriumConcept": {
     "name": "Materium Affinity",
@@ -5151,6 +5151,97 @@
     "displayHtml": "Zone of Control",
     "description": "<bulletlist><bullet>A unit's Zone of Control is the three hexes in front of it.</bullet><bullet>The Zone of Control blocks enemy movement and determines where the unit can perform a [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink].</bullet><bullet>Going into [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink] extends the Zone of Control to all adjacent hexes.</bullet></bulletlist>"
   },
+  "GLOBAL.MercantileConcept": {
+    "name": "Mercantile",
+    "icon": null,
+    "globalName": "GLOBAL.MercantileConcept",
+    "displayHtml": "Mercantile",
+    "description": "<bulletlist><bullet>Establish [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] without requiring a <rs_cooperation></rs_cooperation> [hyperlink,GLOBAL.PactOfCooperationConcept]Pact of Cooperation[/hyperlink].</bullet><bullet>May found [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] on [hyperlink,GLOBAL.OutpostConcept]Outposts[/hyperlink] in water provinces.</bullet><bullet>Units that utilize cunning and mobility to flank their enemies and secure victory.</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingAvariciousPirateConcept": {
+    "name": "Avaricious Pirate",
+    "icon": "personalityPirateAvaricious",
+    "globalName": "GLOBAL.PirateDwellingAvariciousPirateConcept",
+    "displayHtml": "Avaricious Pirate",
+    "description": "Avaricious Pirates focus on profit above all else.<br><bulletlist><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] only breaks a truce with Rulers owning a lot of <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink]. The wealthier the Ruler, the higher the chance this will happen.</bullet><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] likes Rulers with a lot of <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] and, dislikes Rulers with little <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink].</bullet><bullet>The personality informs some of the Dwelling's trading options, quests and which unique <artifact></artifact> [hyperlink,GLOBAL.ArtifactConcept]Artifacts[/hyperlink] may be acquired when reaching a <rs_lifebond></rs_lifebond> [hyperlink,GLOBAL.PirateDwellingLifeBondConcept]Life Bond[/hyperlink].</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingBloodBondConcept": {
+    "name": "Blood Bond",
+    "icon": "rs_bloodbond",
+    "globalName": "GLOBAL.PirateDwellingBloodBondConcept",
+    "displayHtml": "Blood Bond",
+    "description": "<bulletlist><bullet>Reaching this Bond starts a unique quest. Only by completing that quest can <rs_lifebond></rs_lifebond> [hyperlink,GLOBAL.PirateDwellingLifeBondConcept]Life Bond[/hyperlink] be reached.</bullet><bullet>The <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] shares its vision.</bullet><bullet>Unlocks purchase of additional trade items via cooperation.</bullet><bullet>Contributes 6 <recruitmentPoints></recruitmentPoints> to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet><bullet>You can no longer become the target of <pirateRaid></pirateRaid> [hyperlink,GLOBAL.PirateRaidConcept]Pirate Raids[/hyperlink]. Bribing the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] to raid other [hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] costs 100 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] less and happens 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] faster.</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingBloodthirstyPirateConcept": {
+    "name": "Bloodthirsty Pirate",
+    "icon": "personalityPirateBloodthirsty",
+    "globalName": "GLOBAL.PirateDwellingBloodthirstyPirateConcept",
+    "displayHtml": "Bloodthirsty Pirate",
+    "description": "Bloodthirsty Pirates revel in violence and destruction.<br><bulletlist><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] has a high chance of breaking a truce and declaring war.</bullet><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] likes Rulers waging wars and dislikes Rulers forging defensive pacts and alliances.</bullet><bullet>The personality informs some of the Dwelling's trading options, quests, and which unique <artifact></artifact> [hyperlink,GLOBAL.ArtifactConcept]Artifacts[/hyperlink] may be acquired when reaching a <rs_lifebond></rs_lifebond> [hyperlink,GLOBAL.PirateDwellingLifeBondConcept]Life Bond[/hyperlink].</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingConcept": {
+    "name": "Free Captain",
+    "icon": null,
+    "globalName": "GLOBAL.PirateDwellingConcept",
+    "displayHtml": "Free Captain",
+    "description": "Free Captains are the charismatic lords of pirate <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwellings[/hyperlink], where the most infamous sailors band together to terrorize the seas.<br><bulletlist><bullet>Up to 2 Free Captains exist on a realm.</bullet><bullet>Free Captains have different personalities: <personalityPirateAvaricious></personalityPirateAvaricious> [hyperlink,GLOBAL.PirateDwellingAvariciousPirateConcept]Avaricious[/hyperlink], <personalityPirateBloodthirsty></personalityPirateBloodthirsty> [hyperlink,GLOBAL.PirateDwellingBloodthirstyPirateConcept]Bloodthirsty[/hyperlink], or <personalityPirateHeroic></personalityPirateHeroic> [hyperlink,GLOBAL.PirateDwellingHeroicPirateConcept]Heroic[/hyperlink].</bullet><bullet>Bonds with Free Captains are achieved by fulfilling their Demands or doing their Quests.</bullet><bullet>Having a Bond with a Free Captain will unlock several trading options with them, such as [hyperlink,GLOBAL.TomeConcept]Tome[/hyperlink] content, pirate [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] and [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] , or <item></item> [hyperlink,GLOBAL.EquipmentConcept]Equipment[/hyperlink].</bullet><bullet>Free Captains send out <pirateRaid></pirateRaid> [hyperlink,GLOBAL.PirateRaidConcept]Pirate Raids[/hyperlink] while at <rs_war></rs_war> [hyperlink,GLOBAL.PirateDwellingWarConcept]War[/hyperlink] or when another [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] pays them to attack—even their allies.</bullet><bullet>Once Captured, the <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] of a Free Captain is immediately destroyed and awards some of the Dwelling's treasures and trade items to the conqueror.</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingGoldBondConcept": {
+    "name": "Gold Bond",
+    "icon": "rs_goldbond",
+    "globalName": "GLOBAL.PirateDwellingGoldBondConcept",
+    "displayHtml": "Gold Bond",
+    "description": "<bulletlist><bullet>Will [hyperlink,GLOBAL.ReinforcementRuleConcept]reinforce[/hyperlink] in [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] against [hyperlink,GLOBAL.MarauderConcept]Marauders[/hyperlink] and [hyperlink,GLOBAL.LeaderConcept]Rulers[/hyperlink] the <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] is at <rs_war></rs_war> [hyperlink,GLOBAL.IndependentCityWarConcept]War[/hyperlink] with.</bullet><bullet>Unlocks purchase of additional trade items via cooperation.</bullet><bullet>Contributes 4 <recruitmentPoints></recruitmentPoints> to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet><bullet>You can now bribe the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] to start a <pirateRaid></pirateRaid> [hyperlink,GLOBAL.PirateRaidConcept]Pirate Raid[/hyperlink] against other Rulers, but you can still become a target of those raids yourself.</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingHeroicPirateConcept": {
+    "name": "Heroic Pirate",
+    "icon": "personalityPirateHeroic",
+    "globalName": "GLOBAL.PirateDwellingHeroicPirateConcept",
+    "displayHtml": "Heroic Pirate",
+    "description": "Heroic Pirates focus on breaking the law to help the poor and the downtrodden.<br><bulletlist><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] only breaks a truce with evil Rulers. The lower the Ruler's [hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink], the higher the chance this will happen.</bullet><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] likes Rulers with good [hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink] and dislikes Rulers with evil [hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink].</bullet><bullet>The personality informs some of the Dwelling's trading options, quests, and which unique <artifact></artifact> [hyperlink,GLOBAL.ArtifactConcept]Artifacts[/hyperlink] may be acquired when reaching a <rs_lifebond></rs_lifebond> [hyperlink,GLOBAL.PirateDwellingLifeBondConcept]Life Bond[/hyperlink].</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingLifeBondConcept": {
+    "name": "Life Bond",
+    "icon": "rs_lifebond",
+    "globalName": "GLOBAL.PirateDwellingLifeBondConcept",
+    "displayHtml": "Life Bond",
+    "description": "<bulletlist><bullet>Other Rulers can no longer negotiate with the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] and the <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink] declares war on Rulers you are at war with.</bullet><bullet>Unlocks purchase of additional trade items via Cooperation.</bullet><bullet>Contributes 8 <recruitmentPoints></recruitmentPoints> to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet><bullet>Bribing the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] to raid other [hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] now costs 200 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] less and happens 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] faster.</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingSaltBondConcept": {
+    "name": "Salt Bond",
+    "icon": "rs_saltbond",
+    "globalName": "GLOBAL.PirateDwellingSaltBondConcept",
+    "displayHtml": "Salt Bond",
+    "description": "<bulletlist><bullet>The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] opens their borders.</bullet><bullet>Unlocks purchase of a variety of trade items via Cooperation.</bullet><bullet>Contributes 2 <recruitmentPoints></recruitmentPoints> to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] can be bribed by other rulers to start a <pirateRaid></pirateRaid> [hyperlink,GLOBAL.PirateRaidConcept]Pirate Raid[/hyperlink] against you.</bullet></bulletlist>"
+  },
+  "GLOBAL.PirateDwellingTruceConcept": {
+    "name": "Truce",
+    "icon": "rs_neutral",
+    "globalName": "GLOBAL.PirateDwellingTruceConcept",
+    "displayHtml": "Truce",
+    "description": "The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] tolerates you.<br><br>Counts as <rs_neutral></rs_neutral> [hyperlink,GLOBAL.IndependentCityNeutralConcept]Neutral[/hyperlink] state.<br><br>[hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] do not care about Province Claims.<br><br>You cannot assign a <whisperingStone></whisperingStone> [hyperlink,GLOBAL.DiplomaticTokenConcept]Whispering Stone[/hyperlink] to [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink]. Instead, completing quests and fulfilling demands will let you reach higher diplomatic states and eventually a <rs_lifebond></rs_lifebond> [hyperlink,GLOBAL.PirateDwellingLifeBondConcept]Life Bond[/hyperlink].<br><br>[hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] have a small chance each turn of breaking the Truce and declaring <rs_war></rs_war> [hyperlink,GLOBAL.PirateDwellingWarConcept]War[/hyperlink].<br><br>[hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] can be bribed by other Rulers to start a <pirateRaid></pirateRaid> [hyperlink,GLOBAL.PirateRaidConcept]Pirate Raid[/hyperlink] against you."
+  },
+  "GLOBAL.PirateDwellingWarConcept": {
+    "name": "War",
+    "icon": "rs_war",
+    "globalName": "GLOBAL.PirateDwellingWarConcept",
+    "displayHtml": "War",
+    "description": "A state of <rs_war></rs_war> War with a [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] means that [hyperlink,GLOBAL.ArmyConcept]Armies[/hyperlink] can engage in [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] and [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] can be attacked.<br><br>During war, [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] will occasionally start <pirateRaid></pirateRaid> [hyperlink,GLOBAL.PirateRaidConcept]Pirate Raids[/hyperlink] to attack their enemies.<br><br>Wars end through defeat on either side or by negotiating peace."
+  },
+  "GLOBAL.PirateRaidConcept": {
+    "name": "Pirate Raid",
+    "icon": "pirateRaid",
+    "globalName": "GLOBAL.PirateRaidConcept",
+    "displayHtml": "Pirate Raid",
+    "description": "Pirate Raids are assaults launched by [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] against an [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink], focused on raiding [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] and [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink].<br><bulletlist><bullet>Pirate Raids fly the black flag and do not adhere to diplomatic treaties.</bullet><bullet>Once a Pirate Raid has successfully raided 4 targets, the raid will end.</bullet><bullet>[hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] can pay a [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] to start a Pirate Raid:<bulletlist><bullet>Gain a share of the looted rewards when the raid ends. This can include skills [hyperlink,GLOBAL.ResearchConcept]researched[/hyperlink] by the targeted [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink].</bullet><bullet>If the Pirate Raid is defeated, the attacked [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink] may find out and gain a <casusBelli></casusBelli> [hyperlink,GLOBAL.CasusBelliConcept]Grievance[/hyperlink].</bullet></bulletlist></bullet><bullet>The attacked [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink] can bribe <gold></gold> the raiding party to abort their attack when engaging them with an [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink].</bullet><bullet>A single [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] can have multiple Pirate Raids in action at the same time.</bullet></bulletlist>"
+  },
+  "GLOBAL.VortexConcept": {
+    "name": "Vortex",
+    "icon": null,
+    "globalName": "GLOBAL.VortexConcept",
+    "displayHtml": "Vortex",
+    "description": "Whenever a non-flying/non-floating [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] moves through or ends up in this location, they are removed from [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] and transported to a different location on the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] after Combat."
+  },
   "GLOBAL.DEFENSES.NULLIFY_WALL": {
     "name": "Defense Mode: Nullify",
     "icon": null,
@@ -5244,7 +5335,8 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.ASHLAND_CAMOUFLAGE",
     "displayHtml": "Ashland Camouflage",
-    "description": "This unit cannot be detected when on Ashland hexes."
+    "description": "This unit cannot be detected when on Ashland hexes.",
+    "image": "00000497000043F3"
   },
   "GLOBAL.PROPERTIES.ASTRAL_INCARNATE_UNIT_PROPERTY": {
     "name": "Astral Incarnate",
@@ -5373,6 +5465,22 @@
     "displayHtml": "Born Under the Stars",
     "description": "This Unit deals +20% [hyperlink,GLOBAL.CriticalHitConcept]Critical Hit[/hyperlink] Damage on its attacks.",
     "image": "0000049300000EDE"
+  },
+  "GLOBAL.PROPERTIES.BOUNTY_HUNTER": {
+    "name": "Bounty Hunter",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.BOUNTY_HUNTER",
+    "displayHtml": "Bounty Hunter",
+    "description": "Against units with [hyperlink,GLOBAL.PROPERTIES.BOUNTY]Bounty[/hyperlink], this unit:<bulletlist><bullet>Deals +20% damage.</bullet><bullet>Gains +2 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and +2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>",
+    "image": "0000048D000021A4"
+  },
+  "GLOBAL.PROPERTIES.BRUME_ON_THE_WATER": {
+    "name": "Brume on the Water",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.BRUME_ON_THE_WATER",
+    "displayHtml": "Brume on the Water",
+    "description": "<bulletlist><bullet>Units have [hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink] in this province.</bullet><bullet>During combat [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] mist covers the battlefield.</bullet></bulletlist>",
+    "image": "0000048B00001685"
   },
   "GLOBAL.PROPERTIES.CANNOT_REGENERATE": {
     "name": "Cannot Regenerate",
@@ -5708,6 +5816,14 @@
     "description": "At the start of the turn within 3 hexes:<bulletlist><bullet>Friendly units have 2 Negative Status Effects removed.</bullet><bullet>Enemy units sustain 5 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet></bulletlist>",
     "image": "0000049700003D26"
   },
+  "GLOBAL.PROPERTIES.CRABIFY": {
+    "name": "Crabify",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.CRABIFY",
+    "displayHtml": "Crabify",
+    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], a random attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is transformed into a [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crab[/hyperlink] until the end of the battle and suffers [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+    "image": "00000493000018FC"
+  },
   "GLOBAL.PROPERTIES.CRUEL_ABILITY_MODIFIER_PROPERTY": {
     "name": "Cruel",
     "icon": null,
@@ -5723,6 +5839,14 @@
     "displayHtml": "Cult of Tyranny",
     "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AURA_OF_TYRANNY]Aura of Tyranny[/hyperlink]</bullet><bullet>Attacks gain base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] and heal this unit for 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001AA2"
+  },
+  "GLOBAL.PROPERTIES.CURSE_OF_THE_DAMNED": {
+    "name": "Curse of the Damned",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.CURSE_OF_THE_DAMNED",
+    "displayHtml": "Curse of the Damned",
+    "description": "Target province gains [hyperlink,GLOBAL.PROPERTIES.CURSE_OF_THE_DAMNED]Curse of the Damned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+    "image": "0000049700004266"
   },
   "GLOBAL.PROPERTIES.CURSE_OF_UNDEATH": {
     "name": "Curse of Undeath",
@@ -5786,6 +5910,14 @@
     "displayHtml": "Downpouring",
     "description": "At the start of combat, units in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>Become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>If flying, become [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] in combat.</bullet></bulletlist><br>Units with [hyperlink,GLOBAL.PROPERTIES.AMPHIBIOUS_MOVEMENT]Amphibious[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.WATER_MOVEMENT]Water Movement[/hyperlink] are not affected.",
     "image": "00000497000005A8"
+  },
+  "GLOBAL.PROPERTIES.DROWNED_PROCESSION": {
+    "name": "Procession of the Drowned",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.DROWNED_PROCESSION",
+    "displayHtml": "Procession of the Drowned",
+    "description": "This [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] grants +2 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink] income.",
+    "image": "0000048B0000167D"
   },
   "GLOBAL.PROPERTIES.DUPE_COLD_BLOODED_MORALE_RESISTANCE": {
     "name": "Cold Blooded",
@@ -5863,6 +5995,14 @@
     "displayHtml": "Exhausted Immunity",
     "description": "This unit cannot become [hyperlink,GLOBAL.PROPERTIES.EXHAUSTED]Exhausted[/hyperlink] from [hyperlink,GLOBAL.SpeedMarchConcept]Forced March[/hyperlink] and other sources."
   },
+  "GLOBAL.PROPERTIES.EXPEDITED_WATER_MOVEMENT": {
+    "name": "Expedited Movement (Water)",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.EXPEDITED_WATER_MOVEMENT",
+    "displayHtml": "Expedited Movement (Water)",
+    "description": "The unit has increased movement in the water on the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].",
+    "image": "0000041300000EEE"
+  },
   "GLOBAL.PROPERTIES.EXPEDITIONLEADER": {
     "name": "Expedition Leader",
     "icon": null,
@@ -5892,6 +6032,13 @@
     "displayHtml": "Demonic Potential",
     "description": "Base attacks have a base 30% chance of inflicting a random [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effect[/hyperlink].<br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "000004A600000511"
+  },
+  "GLOBAL.PROPERTIES.FAMILIAR_WATERS": {
+    "name": "Familiar Waters",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.FAMILIAR_WATERS",
+    "displayHtml": "Familiar Waters",
+    "description": "While this Unit remains in water:<bulletlist><bullet>This Unit regenerates an additional +20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink]</bullet><bullet>This Unit starts [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] with [hyperlink,GLOBAL.PROPERTIES.HASTENED]Hastened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>This Unit does not suffer the penalty from [hyperlink,GLOBAL.PROPERTIES.EMBARKED_PENALTY]Embarked[/hyperlink].</bullet></bulletlist>"
   },
   "GLOBAL.PROPERTIES.FAST_EMBARK": {
     "name": "Fast Embark",
@@ -6136,6 +6283,14 @@
     "description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br>Each [hyperlink,GLOBAL.SpecialImprovementConcept]Special Province Improvement[/hyperlink] grants +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet><white>Renown level 2</white><br>Each <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] or <researchpost></researchpost> [hyperlink,GLOBAL.ResearchPostConcept]Research Post[/hyperlink] grants +5 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet><white>Renown level 3</white><br>Each <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] grants +2 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet><white>Renown level 4</white><br>+10% more <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet></bulletlist>In addition each renown level grants +5 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink] and +5 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink].",
     "image": "0000048D00000DDD"
   },
+  "GLOBAL.PROPERTIES.HIDEOUS_STENCH_PROP_GROUP": {
+    "name": "Hideous Stench",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.HIDEOUS_STENCH_PROP_GROUP",
+    "displayHtml": "Hideous Stench",
+    "description": "Adjacent enemies without this trait suffer:<bulletlist><bullet>-2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet></bulletlist>",
+    "image": "0000049700000066"
+  },
   "GLOBAL.PROPERTIES.HOLY_RETRIBUTION": {
     "name": "Holy Retribution",
     "icon": null,
@@ -6239,6 +6394,14 @@
     "displayHtml": "Liege Lord",
     "description": "This hero is the Liege Lord of their House, granting them and House units in their army:<bulletlist><bullet>-10% base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>Regenerate an additional +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per World Map <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>+5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist><br>This bonus increases as this Hero gains <renown></renown> [hyperlink,GLOBAL.RenownConcept]Renown[/hyperlink].",
     "image": "0000048D000012A7"
+  },
+  "GLOBAL.PROPERTIES.LIGHT_OF_THE_DEPTHS": {
+    "name": "Light of the Depths",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.LIGHT_OF_THE_DEPTHS",
+    "displayHtml": "Light of the Depths",
+    "description": "Income in this [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] is increased by 100%",
+    "image": "0000048B0000165A"
   },
   "GLOBAL.PROPERTIES.LINKED_MINDS_PROPERTY_GROUP": {
     "name": "Linked Minds",
@@ -6447,6 +6610,14 @@
     "description": "When this unit is hit by an attack it gains:<bulletlist><bullet>2 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>A random positive status effect.</bullet></bulletlist>",
     "image": "000004970000335A"
   },
+  "GLOBAL.PROPERTIES.PARAGON_OF_THE_SEAS_GROUP": {
+    "name": "Paragon of the Seas",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.PARAGON_OF_THE_SEAS_GROUP",
+    "displayHtml": "Paragon of the Seas",
+    "description": "When in the water, this unit has:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
+    "image": "0000048B0000166A"
+  },
   "GLOBAL.PROPERTIES.PHASE_SHIFT_NIXING_GROUP": {
     "name": "Phase-shift Nixing",
     "icon": null,
@@ -6630,6 +6801,14 @@
     "description": "Grant all Friendly units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.AWAKENED]Awakened[/hyperlink] for 3 <turn></turn>.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.RALLYING]Rally[/hyperlink] for 3 <turn></turn>.</bullet></bulletlist>",
     "image": "000003E100002014"
   },
+  "GLOBAL.PROPERTIES.RAGING_WINDS_COMBAT_PROP_PLAIN": {
+    "name": "The Tempest",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.RAGING_WINDS_COMBAT_PROP_PLAIN",
+    "displayHtml": "The Tempest",
+    "description": "Units in this sector during combat:<bulletlist><bullet>Become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>Every <turn></turn> Turn:<bulletlist><bullet>All units are displaced 1 hex.</bullet><bullet>Up to 3 random units sustain 10 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and have a base 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "0000048B0000164A"
+  },
   "GLOBAL.PROPERTIES.REALMTRAIT__SANDSTORM_DISPLAY": {
     "name": "Blinding Sandstorm",
     "icon": null,
@@ -6765,6 +6944,14 @@
     "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -20% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -20% damage.</bullet></bulletlist>",
     "image": "000004A6000006E4"
   },
+  "GLOBAL.PROPERTIES.SIREN_SONG": {
+    "name": "Siren Song",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.SIREN_SONG",
+    "displayHtml": "Siren Song",
+    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], a random attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] has a 120% chance of suffering [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. If unsuccessful, the unit suffers [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] instead.",
+    "image": "0000049300001962"
+  },
   "GLOBAL.PROPERTIES.SLOW_MOVEMENT": {
     "name": "Slow Movement",
     "icon": null,
@@ -6802,6 +6989,14 @@
     "displayHtml": "Rays of Winter",
     "description": "Unit has:<bulletlist><bullet>-5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per turn.</bullet><bullet>-2 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink]</bullet></bulletlist>",
     "image": "000004A60000067A"
+  },
+  "GLOBAL.PROPERTIES.SONG_OF_THE_WINDS": {
+    "name": "The Song of the Winds",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.SONG_OF_THE_WINDS",
+    "displayHtml": "The Song of the Winds",
+    "description": "[hyperlink,GLOBAL.PROPERTIES.SONG_OF_THE_WINDS]The Song of the Winds[/hyperlink] fills the sails of your ships on the open sea.",
+    "image": "0000048B00001676"
   },
   "GLOBAL.PROPERTIES.SOTAM3_AUTUMN_DISCIPLE_RULER_PROPERTY_GROUP": {
     "name": "Disciple of Autumn",
@@ -6955,12 +7150,28 @@
     "description": "Unit has:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+1 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink]</bullet></bulletlist>",
     "image": "000003E300004AFB"
   },
+  "GLOBAL.PROPERTIES.SYMBIOTIC_REINFORCEMENTS": {
+    "name": "Symbiotic Reinforcements",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.SYMBIOTIC_REINFORCEMENTS",
+    "displayHtml": "Symbiotic Reinforcements",
+    "description": "When a defending [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] that was not summoned dies, a lower tier [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] is summoned nearby on the defender side until the end of the battle.",
+    "image": "0000049300001927"
+  },
   "GLOBAL.PROPERTIES.TAUNTED": {
     "name": "Taunted",
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.TAUNTED",
     "displayHtml": "Taunted",
     "description": "This unit is uncontrollable and will always attack the unit that taunted it.<br>A unit can taunt multiple opponents."
+  },
+  "GLOBAL.PROPERTIES.THALASSAN_HUNTER": {
+    "name": "Thalassan Hunter",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.THALASSAN_HUNTER",
+    "displayHtml": "Thalassan Hunter",
+    "description": "This unit does +40% damage vs [hyperlink,GLOBAL.PROPERTIES.ANIMAL]Animals[/hyperlink] with [hyperlink,GLOBAL.PROPERTIES.WATER_MOVEMENT]Water Movement[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.AMPHIBIOUS_MOVEMENT]Amphibious[/hyperlink].",
+    "image": "0000048B00001668"
   },
   "GLOBAL.PROPERTIES.THE_DESTROYER_PROPERTY": {
     "name": "Might of the Destroyer",
@@ -7187,6 +7398,14 @@
     "displayHtml": "Captivating Mists",
     "description": "<bulletlist><bullet>While besieged, the city loses -1 <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] each <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. When it reaches 0 <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink], the city will be razed.</bullet></bulletlist>",
     "image": "000003DF000017AE"
+  },
+  "GLOBAL.SIEGE_PROJECTS.EXPLOIT_NETWORKS": {
+    "name": "Exploit Networks",
+    "icon": null,
+    "globalName": "GLOBAL.SIEGE_PROJECTS.EXPLOIT_NETWORKS",
+    "displayHtml": "Exploit Networks",
+    "description": "<bulletlist><bullet>At the start of combat, all enemy units gain 1 [hyperlink,GLOBAL.PROPERTIES.LEVERAGE]Leverage[/hyperlink].</bullet><bullet>When the walls are breached, gain 50 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] per tier of the besieged City.</bullet></bulletlist>",
+    "image": "0000048B000016A8"
   },
   "GLOBAL.SIEGE_PROJECTS.FEY_INVASION_AUTUMN_SIEGE": {
     "name": "Autumnstorm Evocation",
@@ -7596,6 +7815,14 @@
     "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.LIFEDRINKER]Lifedrinker[/hyperlink].</bullet><bullet>Base attacks have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
     "image": "0000049700003439"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.GLITTERING_WATERS": {
+    "name": "Glittering Waters",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.GLITTERING_WATERS",
+    "displayHtml": "Glittering Waters",
+    "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Water [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink].</bullet><bullet>-10 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet></bulletlist>",
+    "image": "000004C8000007BB"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.GLOOMSTRIDER_TRANSFORMATION": {
     "name": "Gloom Strider",
     "icon": null,
@@ -7612,6 +7839,14 @@
     "description": "All [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in your [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS_IMMUNITY]Umbral Malady Immunity[/hyperlink].",
     "image": "0000049300000710"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.GOLDEN_TOUCHED": {
+    "name": "Goldtouched",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.GOLDEN_TOUCHED",
+    "displayHtml": "Goldtouched",
+    "description": "Makes the target race gain an affinity for gold, granting them:<bulletlist><bullet>+2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet><bullet>+1 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] per <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] in their [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink].</bullet></bulletlist>",
+    "image": "000003E300005D36"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.GRASPING_VINES_SPELL": {
     "name": "Call Grasping Vines",
     "icon": null,
@@ -7619,6 +7854,14 @@
     "displayHtml": "Call Grasping Vines",
     "description": "Every turn in combat, all enemy units have a 50% chance of becoming [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink] for 3 turn.<br><br>Lasts for 3 turns.",
     "image": "000004A6000004EE"
+  },
+  "GLOBAL.SPECIAL_OPERATIONS.GUST_OF_SEVEN_SEAS": {
+    "name": "Gust of the Seven Seas",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.GUST_OF_SEVEN_SEAS",
+    "displayHtml": "Gust of the Seven Seas",
+    "description": "All your [hyperlink,GLOBAL.ArmyConcept]Armies[/hyperlink] regain all their movement points if they are on water. Half if they are on land.<br>A unit cannot benefit from this spell more than once per turn.",
+    "image": "0000041B00000FD4"
   },
   "GLOBAL.SPECIAL_OPERATIONS.HEALING_ROOTS": {
     "name": "Healing Roots",
@@ -7635,6 +7878,14 @@
     "displayHtml": "Ice Coffin",
     "description": "Target enemy:<bulletlist><bullet>Sustains 15 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>Has a base 90% chance of becoming [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink]. If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>",
     "image": "0000041B000006C0"
+  },
+  "GLOBAL.SPECIAL_OPERATIONS.LAND_TO_WATER_SPELL": {
+    "name": "Deluge",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.LAND_TO_WATER_SPELL",
+    "displayHtml": "Deluge",
+    "description": "Target habitable and unowned land [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] which does not contain an [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink], [hyperlink,GLOBAL.LandmarkConcept]Landmark[/hyperlink], or [hyperlink,GLOBAL.DiggableEarthConcept]Diggable Earth[/hyperlink]:<bulletlist><bullet>Is terraformed to water.</bullet><bullet>Loses all [hyperlink,GLOBAL.NodeConcept]Resource Nodes[/hyperlink] and [hyperlink,GLOBAL.MagicMaterialConcept]Magic Materials[/hyperlink] on it.</bullet><bullet>Has a chance of spawning its own [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] or [hyperlink,GLOBAL.MagicMaterialConcept]Magic Material[/hyperlink].</bullet></bulletlist>",
+    "image": "000004C8000008C2"
   },
   "GLOBAL.SPECIAL_OPERATIONS.LAVA_FLOW": {
     "name": "Summon Lava Runestele",
@@ -7691,6 +7942,14 @@
     "description": "Decreases the [hyperlink,GLOBAL.FracturingWindsConcept]Devouring Winds[/hyperlink] value by 220, temporarily reducing the chance of a [hyperlink,GLOBAL.CataclysmConcept]Cataclysm[/hyperlink].<br>The cost of this spell is reduced based on the amount of [hyperlink,GLOBAL.ArtifactConcept]Artifacts[/hyperlink] of the [hyperlink,GLOBAL.UnmakersLoreConcept]Unmakers[/hyperlink] the caster has.<br><br>This spell does not contribute to the [hyperlink,GLOBAL.FracturingWindsConcept]Devouring Winds[/hyperlink] and cannot [hyperlink,GLOBAL.BackfireConcept]Backfire[/hyperlink].",
     "image": "000004C8000003A9"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.MERFOLK_TAIL_TRANSFORMATION": {
+    "name": "Merfolk Transformation",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.MERFOLK_TAIL_TRANSFORMATION",
+    "displayHtml": "Merfolk Transformation",
+    "description": "Target race gains:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.MERFOLK]Merfolk[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.EQUIPMENT_UPGRADES.FAST_MOVEMENT_UPGRADE]Fast movement upgrade[/hyperlink].</bullet><bullet>When on the water units lose their legs and gain a merfolk tail.</bullet></bulletlist><br>Special notes:<bulletlist><bullet>Incompatible with transformations that give [hyperlink,GLOBAL.PROPERTIES.FLYING_MOVEMENT]Flying[/hyperlink] or disable mounts.</bullet><bullet>Mounted units lose their mounts.</bullet><bullet>Heroes lose their mount equipment slots.</bullet></bulletlist>",
+    "image": "00000497000043BB"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.MISTY_MAGIC": {
     "name": "Misty Magic",
     "icon": null,
@@ -7699,6 +7958,14 @@
     "description": "[hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] Mist covers the battlefield for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], giving your units standing in the mist +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink] and enemy units become [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink].",
     "image": "000004AC000000A7"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.NEVERMOOR_CURSE_SPELL": {
+    "name": "Nevermoor's Curse",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.NEVERMOOR_CURSE_SPELL",
+    "displayHtml": "Nevermoor's Curse",
+    "description": "Curse your units to never know rest. Applies:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] unit type.</bullet></bulletlist>",
+    "image": "000004970000471D"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.PALL_OF_DARKNESS": {
     "name": "Pall of Darkness Ritual",
     "icon": null,
@@ -7706,6 +7973,14 @@
     "displayHtml": "Pall of Darkness Ritual",
     "description": "Target surface [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] gain [hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
     "image": "0000048B00000F32"
+  },
+  "GLOBAL.SPECIAL_OPERATIONS.PEARLTIDE_BOMB": {
+    "name": "Pearltide Bomb",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.PEARLTIDE_BOMB",
+    "displayHtml": "Pearltide Bomb",
+    "description": "Conjure a Pearltide Bomb on target hex:<bulletlist><bullet>All enemy [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] within 5 hexes of the Pearltide Bomb suffer [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>After 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<bulletlist><bullet>The enemy unit on the hex of the Pearltide Bomb suffers 25 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 25 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Enemy units within a 2 hex radius of the Pearltide Bomb instead suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet></bulletlist></bullet></bulletlist>Can only be used in water battles.",
+    "image": "0000049300001865"
   },
   "GLOBAL.SPECIAL_OPERATIONS.PURE_SOUL": {
     "name": "Pure Soul",
@@ -7888,6 +8163,14 @@
     "description": "For 3 turns, at the start of your turn, a marker is placed near an enemy. Then, after 3 <turn></turn> the ground will erupt, and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] and 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Random affected hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
     "image": "000004A600000840"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.WATER_TO_LAND_SPELL": {
+    "name": "Banish Waters",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.WATER_TO_LAND_SPELL",
+    "displayHtml": "Banish Waters",
+    "description": "Target habitable and unowned water [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] which does not contain an [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] or [hyperlink,GLOBAL.InfestationSpawnerConcept]Infestation Spawner[/hyperlink]:<bulletlist><bullet>Is terraformed to [hyperlink,GLOBAL.FertilePlainsConcept]Grassland[/hyperlink] and [hyperlink,GLOBAL.ForestConcept]Forest[/hyperlink].</bullet><bullet>Loses all [hyperlink,GLOBAL.NodeConcept]Resource Nodes[/hyperlink] and [hyperlink,GLOBAL.MagicMaterialConcept]Magic Materials[/hyperlink] on it.</bullet><bullet>Has a chance of spawning its own [hyperlink,GLOBAL.NodeConcept]Resource Node[/hyperlink] or [hyperlink,GLOBAL.MagicMaterialConcept]Magic Material[/hyperlink].</bullet></bulletlist>",
+    "image": "000004C8000008C3"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.WAYFINDER": {
     "name": "Wayfinder Enchantment",
     "icon": null,
@@ -7895,6 +8178,14 @@
     "displayHtml": "Wayfinder Enchantment",
     "description": "When enchanted units rout in combat:<bulletlist><bullet>They never die.</bullet><bullet>They return 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] sooner.</bullet></bulletlist>",
     "image": "0000041300001533"
+  },
+  "GLOBAL.SPECIAL_OPERATIONS.WIGHTBORN": {
+    "name": "Wightborn",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.WIGHTBORN",
+    "displayHtml": "Wightborn",
+    "description": "Gives the target race immortality beyond life, granting them:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] unit type.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink], which restores [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] upon each attack.</bullet></bulletlist>",
+    "image": "0000041B00001700"
   },
   "GLOBAL.SPECIAL_OPERATIONS.YSARIEL_FALLEN_FORM_TRANSFORMATION": {
     "name": "Ysariel's Fallen Form",
@@ -8058,6 +8349,28 @@
     "displayHtml": "Mistwalker Camp",
     "description": "A crude encampment where sinister Fey lurk in the mists.<br>Provinces in this infestation's territory have [hyperlink,GLOBAL.PROPERTIES.MISTY]Misty[/hyperlink].<br>If left unchecked, they will grow in strength, expand their territory, and send out invasion armies."
   },
+  "GLOBAL.STRUCTURES.PALE_TIDEBLOOM": {
+    "name": "Pale Tidebloom",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.PALE_TIDEBLOOM",
+    "displayHtml": "Pale Tidebloom",
+    "description": "Unique global effect:<bulletlist><bullet>Cost of [hyperlink,GLOBAL.EmpireSkillConcept]Empire Skills[/hyperlink] is reduced by 10%.</bullet></bulletlist>",
+    "image": "0000049700004518"
+  },
+  "GLOBAL.STRUCTURES.PEARLTIDE_DOME": {
+    "name": "Pearltide Dome",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.PEARLTIDE_DOME",
+    "displayHtml": "Pearltide Dome",
+    "description": "<bulletlist><bullet>Unlocks the [hyperlink,GLOBAL.SPECIAL_OPERATIONS.PEARLTIDE_BOMB]Pearltide Bomb[/hyperlink] [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink].</bullet><bullet>Adds the [hyperlink,GLOBAL.UNITS.STORM_RUNE_CRAB]Storm Rune Crab[/hyperlink] unit to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet></bulletlist>"
+  },
+  "GLOBAL.STRUCTURES.PEARL_NODE": {
+    "name": "Pearl Reef",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.PEARL_NODE",
+    "displayHtml": "Pearl Reef",
+    "description": "A bloom of valuable pearls."
+  },
   "GLOBAL.STRUCTURES.RAINBOW_CLOVER": {
     "name": "Rainbow Clover",
     "icon": null,
@@ -8094,6 +8407,20 @@
     "displayHtml": "Silvertongue Fruit",
     "description": "Unique global effect: <bulletlist><bullet><whisperingStone></whisperingStone> [hyperlink,GLOBAL.DiplomaticTokenConcept]Whispering Stones[/hyperlink] grant +1 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink].</bullet></bulletlist>",
     "image": "0000042A000008D8"
+  },
+  "GLOBAL.STRUCTURES.SPAWNING_SHOAL": {
+    "name": "Spawning Shoal",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.SPAWNING_SHOAL",
+    "displayHtml": "Spawning Shoal",
+    "description": "Various marine wildlife overpopulate the area and travel in symbiotic packs to hunt for food and protect their habitat.<br>If left unchecked, they will grow in strength, expand their territory, and send out invasions."
+  },
+  "GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX": {
+    "name": "Tempestuous Vortex",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX",
+    "displayHtml": "Tempestuous Vortex",
+    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province.</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.VORTEX_STORM]Vortex storm[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] starting their <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in this Province gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The ability to draft [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] in the City for <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Friendly Units starting their <turn></turn> Turn in the Domain gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> Turns.</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURES.THORN_HEART_LANDMARK": {
     "name": "Thorn Heart",
@@ -8228,6 +8555,13 @@
     "globalName": "GLOBAL.STRUCTURE_UPGRADES.TELEPORTER",
     "displayHtml": "Teleporter",
     "description": "A [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink] which enables an [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink] to teleport from one teleporter to another.<br><br>-10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink]."
+  },
+  "GLOBAL.STRUCTURE_UPGRADES.TRADE_POST": {
+    "name": "Trade Post",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURE_UPGRADES.TRADE_POST",
+    "displayHtml": "Trade Post",
+    "description": "<bulletlist><bullet>+1 [hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] capacity.</bullet><bullet>Improve the escorts of this city's [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink].</bullet></bulletlist>For each unowned [hyperlink,GLOBAL.ForeignCityConcept]Foreign[/hyperlink] [hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] connecting to this city:<bulletlist><bullet>+5 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink]</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURE_UPGRADES.WIZARD_TOWER_ITEM_FORGE": {
     "name": "Wizard Tower: Item Forge",

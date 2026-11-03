@@ -1,5 +1,31 @@
 [
  {
+  "biography_description": "They glide the seas mounted on Hoarfrost Mantas.",
+  "lore_description": "<helpcolor>Mounted units are more common and gain a Hoarfrost Manta mount.</helpcolor>",
+  "DLC": "SILVERSEAS ",
+  "point_cost": 3,
+  "id": "hoarfrost_manta_mounts",
+  "name": "Hoarfrost Manta Mounts",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Gain Flying movement."
+   },
+   {
+    "name": "Additional units become Cavalry"
+   },
+   {
+    "name": "Ruler starts with a Hoarfrost Manta mount."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Mounts",
+  "front_end": true,
+  "icon": "000004D000000B72",
+  "display_order": 2
+ },
+ {
   "biography_description": "They darken the sky, mounted on obsidian wyverns.",
   "lore_description": "<helpcolor>Mounted units are more common and gain an Obsidian Wyvern mount.</helpcolor>",
   "DLC": "DRAGONLORDS ",
@@ -261,6 +287,41 @@
   "front_end": true,
   "icon": "000004C5000008FD",
   "display_order": 5
+ },
+ {
+  "biography_description": "They roam the seas mounted on majestic seamares.",
+  "lore_description": "<helpcolor>Mounted units are more common and gain a Seamare mount.</helpcolor>",
+  "DLC": "SILVERSEAS ",
+  "point_cost": 2,
+  "id": "seamare_mounts",
+  "name": "Seamare Mounts",
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "Gain Amphibious movement."
+   },
+   {
+    "name": "Grants the Slippery passive ability."
+   },
+   {
+    "name": "+2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink>."
+   },
+   {
+    "name": "+2 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink>."
+   },
+   {
+    "name": "Additional units become Cavalry"
+   },
+   {
+    "name": "Ruler starts with a Seamare Mount."
+   }
+  ],
+  "enabled": true,
+  "type": "form",
+  "group_name": "Mounts",
+  "front_end": true,
+  "icon": "0000049700004636",
+  "display_order": 3
  },
  {
   "starting_bonuses": [
@@ -2079,6 +2140,46 @@
   "type": "society",
   "display_order": 2,
   "icon": "0000048D00000179"
+ },
+ {
+  "affinities": [
+   {
+    "name": "1<nature></nature> Nature Affinity"
+   }
+  ],
+  "biography_description": "Their people are as at home among the waves as they are upon the land.",
+  "lore_description": "Their people are as at home among the waves as they are upon the land.",
+  "DLC": "SILVERSEAS ",
+  "point_cost": 1,
+  "id": "children_of_the_waves",
+  "name": "Children of the Waves",
+  "incompatible_society_traits": [
+   {
+    "name": "Experienced Seafarers"
+   },
+   {
+    "name": "Transformation Ascetics"
+   }
+  ],
+  "screen_description": "",
+  "effect_descriptions": [
+   {
+    "name": "<hyperlink>Cities</hyperlink> gain +2 <happiness></happiness> City Stability, +2 <structureprod></structureprod> Production, and +2 <mana></mana> Mana for each Water province in their <hyperlink>Domain</hyperlink>."
+   }
+  ],
+  "enabled": true,
+  "front_end": true,
+  "type": "society",
+  "display_order": 3,
+  "starting_bonuses": [
+   {
+    "description": "Start with Merfolk Transformation active."
+   },
+   {
+    "empire_progression_slug": "basic_seafaring"
+   }
+  ],
+  "icon": "0000048B000017DC"
  },
  {
   "biography_description": "They share a deep kinship with the honorable Gracious Judges.",

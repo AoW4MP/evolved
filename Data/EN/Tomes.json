@@ -110,6 +110,289 @@
   ]
  },
  {
+  "lore_description": "",
+  "gameplay_description": "These boons can be purchased from a <hyperlink>Free Captain</hyperlink> by reaching various bond levels with them. Granting pirate themed spell and units.",
+  "resid": 5046586590816,
+  "id": "pirate_bond",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "",
+  "name": "Pirate Bond",
+  "tier": 0,
+  "icon": "0000049700004661",
+  "skills": [
+   {
+    "description": "Conjure a <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+    "name": "Conjure Pirate Captain",
+    "tier": 8,
+    "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
+   },
+   {
+    "description": "Conjure a <hyperlink>Pirate Cannon Tower</hyperlink>, a Tier III long range Tower unit.<br></br>This summon lasts for <turn></turn> Turns.",
+    "name": "Conjure Pirate Cannon Tower",
+    "spell_slug": "conjure_pirate_cannon_tower",
+    "tier": 5,
+    "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>"
+   },
+   {
+    "description": "<hyperlink>Trade Routes</hyperlink> in this city going over <hyperlink>Ocean</hyperlink> provinces grant +3 <gold></gold> <hyperlink>Gold</hyperlink> for each <hyperlink>Ocean</hyperlink> province they cross.",
+    "name": "Pirate Smuggling Den",
+    "tier": 7,
+    "type": "<hyperlink>City Structure</hyperlink>",
+    "upgrade_slug": "pirate_smuggling_den"
+   },
+   {
+    "description": "Place a Pirate Cove <hyperlink>Infestation</hyperlink> on target water province. It is neutral towards you.",
+    "name": "Construct Pirate Cove",
+    "spell_slug": "construct_pirate_cove",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
+   },
+   {
+    "description": "A magical fighter who specializes in displacing the enemy around the battlefield.",
+    "name": "Wavemaster",
+    "tier": 4,
+    "unit_slug": "wavemaster",
+    "type": "<hyperlink>Unit</hyperlink>"
+   }
+  ]
+ },
+ {
+  "affinities": "2 <empireshadow></empireshadow> Empire Shadow Affinity",
+  "lore_description": "\\\"The primeval power of frost is as ancient as the cosmos, and one day it will be its Ruler. For there will come a time when the stars freeze and a regal permafrost glazes the Worlds Within, when majestic hoarfrost mantas glide across every realm. Herald that day. Fuse with the ice and ascend in primordial perfection, become the Eternal Frostling.\\\"",
+  "gameplay_description": "Embrace the power of frost and freeze your enemies while making your own units eternal.",
+  "resid": 5046586590201,
+  "id": "tome_of_eternal_ice",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "Artica the Cold, Queen of the Frostlings",
+  "name": "Tome of Eternal Ice",
+  "tier": 4,
+  "icon": "00000497000043FA",
+  "skills": [
+   {
+    "description": "Target and adjacent <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gain Whiteout for 3 <turn></turn> Turns.</bullet><bullet>Water provinces gain <hyperlink>Ice</hyperlink> for 3 <turn></turn> Turns.</bullet><bullet>Alter land provinces to <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.<bulletlist></bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist></bulletlist>",
+    "name": "Whiteout",
+    "spell_slug": "whiteout",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>"
+   },
+   {
+    "description": "Enchanted units gain:<bulletlist><bullet>Base % chance of inflicting Chilled with all attacks.</bullet><bullet>The Ice Nova ability.</bullet><bullet>The damage of this ability increases with the unit's tier.</bullet></bulletlist>",
+    "name": "Ice Focus",
+    "spell_slug": "ice_focus",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Enchanted unit's attacks:<bulletlist><bullet>Deal + <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Inflict Chilled for <turn></turn> Turns.</bullet><bullet>This unit gains Regeneration when it inflicts Chilled.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Eternal Ice Blades",
+    "spell_slug": "eternal_ice_blades",
+    "tier": 7,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Target race becomes one with ice, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>+ <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet> <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>Immunity to Frozen and Chilled.</bullet><bullet>Rime Healing.</bullet><bullet>Water Walk.</bullet></bulletlist>",
+    "name": "Ice Fusion",
+    "spell_slug": "ice_fusion",
+    "tier": 8,
+    "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>"
+   },
+   {
+    "description": "Target enemy unit:<bulletlist><bullet>Sustains <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base % chance of becoming Frozen for <turn></turn> Turns. If resisted, gains 2 Chilled for <turn></turn> Turns.</bullet></bulletlist><br></br>Adjacent enemy units:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen for <turn></turn> Turns. If resisted, gains Chilled for <turn></turn> Turns.</bullet></bulletlist>",
+    "name": "Deep Freeze",
+    "spell_slug": "deep_freeze",
+    "tier": 7,
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "Summon an <hyperlink>Ancient Hoarfrost Manta</hyperlink>, a Mythic Unit that supports your units as it freezes your enemies.",
+    "name": "Summon Ancient Hoarfrost Manta",
+    "spell_slug": "summon_ancient_hoarfrost_manta",
+    "tier": 8,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_researchpost___permafrost_nexus"
+   }
+  ]
+ },
+ {
+  "affinities": "1 <empirematter></empirematter> Empire Materium Affinity, 1 <empirechaos></empirechaos> Empire Chaos Affinity",
+  "lore_description": "\\\"I want to be a pirate, sailing the Silver Seas! With a ship full of ember dust and a belly full of thunder. To pillage, loot, and plunder under open skies and breeze. And if any Godir wants to cut my sails or my crew to seize, I will offer them a barrel of powder-keg diplomacy! I want to be a pirate, sailing the Silver Seas!\\\"",
+  "gameplay_description": "Dominate the seas with highly mobile skirmishers, use explosive Ember Dust, and plunder and pillage your enemies.",
+  "resid": 5046586589954,
+  "id": "tome_of_piracy",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "One-Eyed Corso Silverfin, Pirate Prince",
+  "name": "Tome of Piracy",
+  "tier": 2,
+  "icon": "0000049700004303",
+  "skills": [
+   {
+    "description": "At the start of combat:<bulletlist><bullet>Wall Obstacles are damaged.</bullet><bullet>Wall Obstacles have a 25% chance of being destroyed.</bullet><bullet>6 to 12 enemy units gain Ember Dust.</bullet></bulletlist>",
+    "name": "Powder Keg Diplomacy",
+    "tier": 3,
+    "type": "<hyperlink>Siege Project</hyperlink>"
+   },
+   {
+    "description": "Enchanted units:<bulletlist><bullet>Increase resources gained from <hyperlink>Pillaging</hyperlink> a <hyperlink>Province</hyperlink> by 100%. Does not stack.</bullet><bullet>Gain Sailor, increasing combat speed and damage when fighting on water.</bullet></bulletlist>",
+    "name": "Raiders of the Sea",
+    "spell_slug": "raiders_of_the_sea",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Enchanted units attacks:<bulletlist><bullet>Deal + <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base % chance of Rob the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Plundering Blades",
+    "spell_slug": "plundering_blades",
+    "tier": 4,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Enchanted units attacks:<bulletlist><bullet>Deal + <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>. Increased for Single Shots.</bullet><bullet>The third strike from a base attack has a base % chance of inflicting Ember Dust.</bullet><bullet>Single Shot base attacks instead get a base % chance of inflictiing Ember Dust.</bullet></bulletlist>",
+    "name": "Ember Dust Residue",
+    "spell_slug": "ember_dust_residue",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Units in a -hex radius:<bulletlist><bullet>Have a base % chance of becoming Blind for <turn></turn> Turns.</bullet><bullet>Become inflicted with Ember Dust.</bullet></bulletlist>",
+    "name": "Ember Cloud",
+    "spell_slug": "ember_cloud",
+    "tier": 3,
+    "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "Fast and mobile unit that can apply Ember Dust.",
+    "name": "Swashbuckler",
+    "tier": 4,
+    "unit_slug": "swashbuckler",
+    "type": "<hyperlink>Unit</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_mine___pirate_haven"
+   }
+  ]
+ },
+ {
+  "affinities": "1 <empirechaos></empirechaos> Empire Chaos Affinity, 1 <empireshadow></empireshadow> Empire Shadow Affinity",
+  "lore_description": "\\\"Oh my sailor, you look paler, <br></br>fear no fire or frost.<br></br>For my brave, beneath the waves, <br></br>we hold all you've lost\\\"",
+  "gameplay_description": "Apply Ghostfire to your enemies and use it as a conduit to summon <hyperlink>Accursed Wisps</hyperlink>.",
+  "resid": 5046586589778,
+  "id": "tome_of_the_damned",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "Requias the Discordant, Queen of Lamenters",
+  "name": "Tome of the Damned",
+  "tier": 2,
+  "icon": "0000049700004253",
+  "skills": [
+   {
+    "description": "Target province gains Curse of the Damned for 3 <turn></turn> Turns.",
+    "name": "Curse of the Damned",
+    "spell_slug": "curse_of_the_damned",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>"
+   },
+   {
+    "description": "Enchanted units attacks gain:<bulletlist><bullet>+ <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>+ <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base % chance of inflicting Ghostfire for <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+    "name": "Accursed Blades",
+    "spell_slug": "accursed_blades",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Enemy units in a hex radius:<bulletlist><bullet>Sustain <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer Ghostfire.</bullet><bullet>Are pulled towards the target location.</bullet></bulletlist>",
+    "name": "Accursed Undertow",
+    "spell_slug": "accursed_undertow",
+    "tier": 4,
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "Enchanted units attacks gain:<bulletlist><bullet>Inflict Ghostfire on units that do not have it.</bullet><bullet>Inflict Damned</bullet></bulletlist>",
+    "name": "Mark of the Damned",
+    "spell_slug": "mark_of_the_damned",
+    "tier": 4,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Summon an <hyperlink>Accursed Lamenter</hyperlink> on to target hex.",
+    "name": "Summon Accursed Lamenter",
+    "spell_slug": "summon_accursed_lamenter",
+    "tier": 4,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_conduit___accursed_grave"
+   }
+  ]
+ },
+ {
+  "affinities": "1 <empirenature></empirenature> Empire Nature Affinity, 1 <empirematter></empirematter> Empire Materium Affinity",
+  "lore_description": "\\\"Water is as powerful as it is versatile. You can summon a riptide to drown your enemies, or water your garden. You can send entire fleets adrift with colossal waves, or revitalize yourself and your guests at the summer party. In the end, it is up to you and what you choose to do with your water.\\\"",
+  "gameplay_description": "Rush your allies, manipulate your enemies, and inflict the Wet status effect.",
+  "resid": 5046586589669,
+  "id": "tome_of_hydromancy",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "Marinus, Lord of the Waters",
+  "name": "Tome of Hydromancy",
+  "tier": 1,
+  "icon": "00000497000041E6",
+  "skills": [
+   {
+    "description": "Units in target friendly army:<bulletlist><bullet>Heal 10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>At the start of the next combat, units are Hastened for 3 <turn></turn> Turns.</bullet></bulletlist>",
+    "name": "Revitalizing Rush",
+    "spell_slug": "revitalizing_rush",
+    "tier": 2,
+    "type": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>"
+   },
+   {
+    "description": "Units in a -hex radius:<bulletlist><bullet>Sustain <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Wet for <turn></turn> Turns.</bullet><bullet>If on the outer radius, they are pushed -hex away from the center.</bullet><bullet>Targets that were already Wet have the above effects doubled.</bullet></bulletlist>",
+    "name": "Riptide",
+    "spell_slug": "riptide",
+    "tier": 1,
+    "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "Enchanted unit's base attacks:<bulletlist><bullet>Deal + <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>On the third strike, push the unit away 1 hex and inflict Wet.</bullet><bullet>Single Strike attacks have a base % chance of triggering this effect instead.</bullet></bulletlist>",
+    "name": "Flowing Imbuement",
+    "spell_slug": "flowing_imbuement",
+    "tier": 2,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Enchanted unit's <hyperlink>Support</hyperlink> abilities:<bulletlist><bullet>Heal <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dispel status effect.</bullet></bulletlist>",
+    "name": "Staves of the River",
+    "spell_slug": "staves_of_the_river",
+    "tier": 2,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   },
+   {
+    "description": "Summons a <hyperlink>Lesser Tide Spirit</hyperlink> on target hex.",
+    "name": "Summon Lesser Tide Spirit",
+    "spell_slug": "summon_lesser_tide_spirit",
+    "tier": 1,
+    "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>"
+   },
+   {
+    "description": "Ranged Unit that inflicts Wet and Immobilized on its enemies.",
+    "name": "Flowbinder Archer",
+    "tier": 2,
+    "unit_slug": "flowbinder_archer",
+    "type": "<hyperlink>Unit</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_researchpost___meditation_fountain"
+   }
+  ]
+ },
+ {
   "affinities": "1 <empirearcana></empirearcana> Empire Astral Affinity, 1 <reputation4></reputation4> Empire {GLOBAL.AlignmentConcept.Hyperlink}, 1 <empireshadow></empireshadow> Empire Shadow Affinity, 1 <empirechaos></empirechaos> Empire Chaos Affinity, 1 <empirenature></empirenature> Empire Nature Affinity, 1 <empirematter></empirematter> Empire Materium Affinity, 1 <empireorder></empireorder> Empire Order Affinity",
   "lore_description": "\\\"One of the defining steps toward cosmic awakening is to become a wanderer, surrendering oneself to the currents of the Astral Sea. No true master remains bound to a single facet of the arcane, but instead embraces its full prismatic spectrum. For in the end, we are but the convergence of soul and body, order and chaos, life and death.\\\"",
   "gameplay_description": "Use your mastery over the magic of the universe to empower your units and your economy, and summon a mighty Avatar of the Cosmos itself.",
@@ -1920,6 +2203,84 @@
     "tier": 4,
     "unit_slug": "shade",
     "type": "<hyperlink>Unit</hyperlink>"
+   }
+  ]
+ },
+ {
+  "lore_description": "",
+  "gameplay_description": "This research is available to Rulers of the <hyperlink>Mercantile</hyperlink> Barony subculture.",
+  "resid": 5003636908355,
+  "id": "mercantile_barony",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "",
+  "name": "Mercantile - Barony",
+  "tier": 0,
+  "icon": "0000048D00002144",
+  "skills": [
+   {
+    "description": "Target Free City:<bulletlist><bullet>Allegiance gain from Whispering Stones is increased by +1.</bullet><bullet>Other Rulers' Allegiance gain is reduced by -30%.</bullet></bulletlist>",
+    "name": "Shadow Negotiations",
+    "spell_slug": "shadow_negotiations",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
+   },
+   {
+    "description": "Target enemy unit:<bulletlist><bullet>Suffers Bounty until the end of combat.</bullet><bullet>Suffers 3 stacks of Marked for <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+    "name": "Mark Bounty",
+    "spell_slug": "mark_bounty",
+    "tier": 3,
+    "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "Grants non-Mercantile, units:<bulletlist><bullet>Bounty Hunter</bullet><bullet>Support units gain Assign Bounty instead.</bullet></bulletlist>",
+    "name": "Bounty Hunter's Writ",
+    "spell_slug": "bounty_hunters_writ",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_mine___trade_district"
+   }
+  ]
+ },
+ {
+  "lore_description": "",
+  "gameplay_description": "This research is available to Rulers of the <hyperlink>Mercantile</hyperlink> Cartel subculture.",
+  "resid": 5003636908353,
+  "id": "mercantile_cartel",
+  "DLC": "SILVERSEAS ",
+  "lore_author": "",
+  "name": "Mercantile - Cartel",
+  "tier": 0,
+  "icon": "0000048D00002142",
+  "skills": [
+   {
+    "description": "Target <hyperlink>Infestation</hyperlink> becomes neutral towards you and will not launch attacks against you for 10 <turn></turn> <hyperlink>Turns</hyperlink>.",
+    "name": "Bribes and Incentives",
+    "spell_slug": "bribes_and_incentives",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>"
+   },
+   {
+    "description": "Target enemy unit:<bulletlist><bullet>Suffers 2 Leverage.</bullet></bulletlist><br></br>This effect jumps to 2 additional targets within 3 hexes.",
+    "name": "Scry Leverage",
+    "spell_slug": "scry_leverage",
+    "tier": 3,
+    "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>"
+   },
+   {
+    "description": "Grants non-Mercantile units:<bulletlist><bullet>Observant</bullet></bulletlist>",
+    "name": "Signia of the Cartel",
+    "spell_slug": "signia_of_the_cartel",
+    "tier": 3,
+    "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>"
+   }
+  ],
+  "initial_upgrades": [
+   {
+    "upgrade_slug": "_mine___privateers_camp"
    }
   ]
  },

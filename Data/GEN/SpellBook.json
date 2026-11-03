@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31 23:40",
- "build": "exe of 2026-10-30",
+ "generated": "2026-11-03 23:29",
+ "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "spells": [
   {
@@ -190,6 +190,55 @@
    "icon": "SpellIcons/00000497000013BE.png"
   },
   {
+   "key": "accursed_blades",
+   "id": "accursed_blades",
+   "name": "Accursed Blades",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Chaos",
+    "Shadow"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 100,
+   "upkeep": [],
+   "description": "Enchanted units attacks gain:<bulletlist><bullet>+1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>+1 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>A base 60% chance of inflicting Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+   "requisites": [
+    "<unitShield></unitShield> Shield Unit",
+    "<unitPolearm></unitPolearm> Polearm Unit",
+    "<unitShock></unitShock> Shock Unit",
+    "<unitFighter></unitFighter> Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of the Damned",
+     "id": "tome_of_the_damned",
+     "tier": 2,
+     "icon": "0000049700004253",
+     "affinities": [
+      "Chaos",
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004262.png"
+  },
+  {
    "key": "accursed_imbuement",
    "id": "accursed_imbuement",
    "name": "Accursed Imbuement",
@@ -238,6 +287,50 @@
    ],
    "dlc": "WAYSOFWAR",
    "icon": "SpellIcons/00000497000013BA.png"
+  },
+  {
+   "key": "accursed_undertow",
+   "id": "accursed_undertow",
+   "name": "Accursed Undertow",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Damage",
+    "Debuff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     45,
+     "mana"
+    ]
+   ],
+   "op": 30,
+   "upkeep": [],
+   "description": "Enemy units in a 2 hex radius:<bulletlist><bullet>Sustain 8 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 8 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer Ghostfire.</bullet><bullet>Are pulled towards the target location.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of the Damned",
+     "id": "tome_of_the_damned",
+     "tier": 2,
+     "icon": "0000049700004253",
+     "affinities": [
+      "Chaos",
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004970000425E.png"
   },
   {
    "key": "adaptive_armor",
@@ -2230,6 +2323,34 @@
    "icon": "SpellIcons/000003E300005354.png"
   },
   {
+   "key": "banish_waters",
+   "id": "banish_waters",
+   "name": "Banish Waters",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "Terraforming"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     60,
+     "mana"
+    ]
+   ],
+   "op": 60,
+   "upkeep": [],
+   "description": "Target habitable and unowned water <hyperlink>Province</hyperlink> which does not contain an <hyperlink>Ancient Wonder</hyperlink> or <hyperlink>Infestation Spawner</hyperlink>:<bulletlist><bullet>Is terraformed to <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink>.</bullet><bullet>Loses all <hyperlink>Resource Nodes</hyperlink> and <hyperlink>Magic Materials</hyperlink> on it.</bullet><bullet>Has a chance of spawning its own <hyperlink>Resource Node</hyperlink> or <hyperlink>Magic Material</hyperlink>.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004C8000008C3.png"
+  },
+  {
    "key": "banner_of_the_federation",
    "id": "banner_of_the_federation",
    "name": "Banner of the Federation",
@@ -3109,6 +3230,54 @@
    "icon": "SpellIcons/8D1FD0C900000498.png"
   },
   {
+   "key": "bounty_hunters_writ",
+   "id": "bounty_hunters_writ",
+   "name": "Bounty Hunter's Writ",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Cultures"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     90,
+     "mana"
+    ]
+   ],
+   "op": 90,
+   "upkeep": [],
+   "description": "Grants non-Mercantile, units:<bulletlist><bullet>Bounty Hunter</bullet><bullet>Support units gain Assign Bounty instead.</bullet></bulletlist>",
+   "requisites": [
+    "<unitShield></unitShield> Shield Unit",
+    "<unitRanged></unitRanged> Ranged Unit",
+    "<unitPolearm></unitPolearm> Polearm Unit",
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitShock></unitShock> Shock Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit",
+    "<unitMythic></unitMythic> Mythic Unit",
+    "<unitFighter></unitFighter> Fighter Unit",
+    "<unitSkirmisher></unitSkirmisher> Skirmisher Unit",
+    "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Mercantile - Barony",
+     "id": "mercantile_barony",
+     "tier": 0,
+     "icon": "0000048D00002144",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000048D000021FD.png"
+  },
+  {
    "key": "bounty_of_the_sea",
    "id": "bounty_of_the_sea",
    "name": "Bounty of the Sea",
@@ -3198,6 +3367,48 @@
    ],
    "dlc": "RISEFROMRUIN",
    "icon": "SpellIcons/0000049700003783.png"
+  },
+  {
+   "key": "bribes_and_incentives",
+   "id": "bribes_and_incentives",
+   "name": "Bribes and Incentives",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "World"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Sustained World Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     50,
+     "gold"
+    ]
+   ],
+   "op": 30,
+   "upkeep": [
+    [
+     10,
+     "gold"
+    ]
+   ],
+   "description": "Target <hyperlink>Infestation</hyperlink> becomes neutral towards you and will not launch attacks against you for 10 <turn></turn> <hyperlink>Turns</hyperlink>.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Mercantile - Cartel",
+     "id": "mercantile_cartel",
+     "tier": 0,
+     "icon": "0000048D00002142",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000048D0000214A.png"
   },
   {
    "key": "brimstone_bind",
@@ -4738,6 +4949,43 @@
    "icon": "SummonIcons/conjure_abjurer_pylon.png"
   },
   {
+   "key": "conjure_adventurer_captain",
+   "id": "conjure_adventurer_captain",
+   "name": "Conjure Adventurer Captain",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 40,
+   "upkeep": [],
+   "description": "Conjure the Adventurer <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004E4000007B6.png"
+  },
+  {
    "key": "conjure_amplification_pylon",
    "id": "conjure_amplification_pylon",
    "name": "Conjure Amplification Pylon",
@@ -4861,6 +5109,43 @@
    "affinities": [],
    "dlc": null,
    "icon": "SpellIcons/0000048D00000781.png"
+  },
+  {
+   "key": "conjure_demonic_captain",
+   "id": "conjure_demonic_captain",
+   "name": "Conjure Demonic Captain",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 40,
+   "upkeep": [],
+   "description": "Conjure the Demonic <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004E4000007A2.png"
   },
   {
    "key": "conjure_divine_beacon",
@@ -5140,6 +5425,117 @@
    "icon": "SpellIcons/0000048D000015BD.png"
   },
   {
+   "key": "conjure_family_captain",
+   "id": "conjure_family_captain",
+   "name": "Conjure Family Captain",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 40,
+   "upkeep": [],
+   "description": "Conjure the Family <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004E4000007AC.png"
+  },
+  {
+   "key": "conjure_gold-cursed_captain",
+   "id": "conjure_gold-cursed_captain",
+   "name": "Conjure Gold-Cursed Captain",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 40,
+   "upkeep": [],
+   "description": "Conjure the Gold-Cursed <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004E400000799.png"
+  },
+  {
+   "key": "conjure_maniac-hunter_captain",
+   "id": "conjure_maniac-hunter_captain",
+   "name": "Conjure Maniac-Hunter Captain",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 40,
+   "upkeep": [],
+   "description": "Conjure the Maniac-Hunter <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004E4000007A7.png"
+  },
+  {
    "key": "conjure_orb_of_desire",
    "id": "conjure_orb_of_desire",
    "name": "Conjure Orb of Desire",
@@ -5181,6 +5577,45 @@
    ],
    "dlc": "SECRETSOFTHEARCHMAGES",
    "icon": "SpellIcons/0000049700003AA4.png"
+  },
+  {
+   "key": "conjure_pirate_cannon_tower",
+   "id": "conjure_pirate_cannon_tower",
+   "name": "Conjure Pirate Cannon Tower",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     45,
+     "mana"
+    ]
+   ],
+   "op": 30,
+   "upkeep": [],
+   "description": "Conjure a <hyperlink>Pirate Cannon Tower</hyperlink>, a Tier III long range Tower unit.<br></br>This summon lasts for 3 <turn></turn> Turns.",
+   "requisites": [],
+   "units": [
+    "pirate_cannon_tower"
+   ],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SummonIcons/conjure_pirate_cannon_tower.png"
   },
   {
    "key": "conjure_primal_crocodile",
@@ -5454,6 +5889,43 @@
    "affinities": [],
    "dlc": "PRIMALFURY",
    "icon": "SummonIcons/conjure_primal_wolf.png"
+  },
+  {
+   "key": "conjure_protector_captain",
+   "id": "conjure_protector_captain",
+   "name": "Conjure Protector Captain",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 40,
+   "upkeep": [],
+   "description": "Conjure the Protector <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004E4000007B1.png"
   },
   {
    "key": "conjure_spellward",
@@ -5761,6 +6233,43 @@
    ],
    "dlc": "ELDRITCHREALMS",
    "icon": "SpellIcons/0000048D000005A4.png"
+  },
+  {
+   "key": "construct_pirate_cove",
+   "id": "construct_pirate_cove",
+   "name": "Construct Pirate Cove",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "World"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     150,
+     "gold"
+    ]
+   ],
+   "op": 150,
+   "upkeep": [],
+   "description": "Place a Pirate Cove <hyperlink>Infestation</hyperlink> on target water province. It is neutral towards you.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Pirate Bond",
+     "id": "pirate_bond",
+     "tier": 0,
+     "icon": "0000049700004661",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004678.png"
   },
   {
    "key": "corrupt_pact",
@@ -6542,6 +7051,49 @@
    "icon": "SpellIcons/0000041B00000AC2.png"
   },
   {
+   "key": "curse_of_the_damned",
+   "id": "curse_of_the_damned",
+   "name": "Curse of the Damned",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "World"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     60,
+     "mana"
+    ]
+   ],
+   "op": 60,
+   "upkeep": [],
+   "description": "Target province gains Curse of the Damned for 3 <turn></turn> Turns.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of the Damned",
+     "id": "tome_of_the_damned",
+     "tier": 2,
+     "icon": "0000049700004253",
+     "affinities": [
+      "Chaos",
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004266.png"
+  },
+  {
    "key": "curse_reversal",
    "id": "curse_reversal",
    "name": "Curse Reversal",
@@ -6699,6 +7251,76 @@
    "affinities": [],
    "dlc": null,
    "icon": "SpellIcons/0000048D00001A6A.png"
+  },
+  {
+   "key": "deep_freeze",
+   "id": "deep_freeze",
+   "name": "Deep Freeze",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Damage",
+    "Debuff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     80,
+     "mana"
+    ]
+   ],
+   "op": 35,
+   "upkeep": [],
+   "description": "Target enemy unit:<bulletlist><bullet>Sustains 40 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 120% chance of becoming Frozen for 1 <turn></turn> Turn. If resisted, gains 2 Chilled for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Adjacent enemy units:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen for 1 <turn></turn> Turn. If resisted, gains Chilled for 3 <turn></turn> Turns.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Eternal Ice",
+     "id": "tome_of_eternal_ice",
+     "tier": 4,
+     "icon": "00000497000043FA",
+     "affinities": [
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 4,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004401.png"
+  },
+  {
+   "key": "deluge",
+   "id": "deluge",
+   "name": "Deluge",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "Terraforming"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Terraforming Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     60,
+     "mana"
+    ]
+   ],
+   "op": 60,
+   "upkeep": [],
+   "description": "Target habitable and unowned land <hyperlink>Province</hyperlink> which does not contain an <hyperlink>Ancient Wonder</hyperlink>, <hyperlink>Landmark</hyperlink>, or <hyperlink>Diggable Earth</hyperlink>:<bulletlist><bullet>Is terraformed to water.</bullet><bullet>Loses all <hyperlink>Resource Nodes</hyperlink> and <hyperlink>Magic Materials</hyperlink> on it.</bullet><bullet>Has a chance of spawning its own <hyperlink>Resource Node</hyperlink> or <hyperlink>Magic Material</hyperlink>.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004C8000008C2.png"
   },
   {
    "key": "demonic_hunger",
@@ -8499,6 +9121,99 @@
    "icon": "SummonIcons/eldritch_rituals.png"
   },
   {
+   "key": "ember_cloud",
+   "id": "ember_cloud",
+   "name": "Ember Cloud",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Debuff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     45,
+     "mana"
+    ]
+   ],
+   "op": 30,
+   "upkeep": [],
+   "description": "Units in a 1-hex radius:<bulletlist><bullet>Have a base 90% chance of becoming Blind for 1 <turn></turn> Turn.</bullet><bullet>Become inflicted with Ember Dust.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Piracy",
+     "id": "tome_of_piracy",
+     "tier": 2,
+     "icon": "0000049700004303",
+     "affinities": [
+      "Chaos",
+      "Materium"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Materium"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004970000430A.png"
+  },
+  {
+   "key": "ember_dust_residue",
+   "id": "ember_dust_residue",
+   "name": "Ember Dust Residue",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Chaos",
+    "Materium"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     90,
+     "mana"
+    ]
+   ],
+   "op": 90,
+   "upkeep": [],
+   "description": "Enchanted units attacks:<bulletlist><bullet>Deal +1 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>. Increased for Single Shots.</bullet><bullet>The third strike from a base attack has a base 90% chance of inflicting Ember Dust.</bullet><bullet>Single Shot base attacks instead get a base 60% chance of inflictiing Ember Dust.</bullet></bulletlist>",
+   "requisites": [
+    "<unitRanged></unitRanged> Ranged Unit",
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit",
+    "<unitSkirmisher></unitSkirmisher> Skirmisher Unit",
+    "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Piracy",
+     "id": "tome_of_piracy",
+     "tier": 2,
+     "icon": "0000049700004303",
+     "affinities": [
+      "Chaos",
+      "Materium"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Materium"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004970000430E.png"
+  },
+  {
    "key": "emergency_teleportation",
    "id": "emergency_teleportation",
    "name": "Emergency Teleportation",
@@ -8834,6 +9549,52 @@
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
    "icon": "SpellIcons/0000049700000BCA.png"
+  },
+  {
+   "key": "eternal_ice_blades",
+   "id": "eternal_ice_blades",
+   "name": "Eternal Ice Blades",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Shadow"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     180,
+     "mana"
+    ]
+   ],
+   "op": 180,
+   "upkeep": [],
+   "description": "Enchanted unit's attacks:<bulletlist><bullet>Deal +2 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Inflict Chilled for 3 <turn></turn> Turns.</bullet><bullet>This unit gains Regeneration when it inflicts Chilled.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+   "requisites": [
+    "<unitShield></unitShield> Shield Unit",
+    "<unitPolearm></unitPolearm> Polearm Unit",
+    "<unitShock></unitShock> Shock Unit",
+    "<unitFighter></unitFighter> Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Eternal Ice",
+     "id": "tome_of_eternal_ice",
+     "tier": 4,
+     "icon": "00000497000043FA",
+     "affinities": [
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 4,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004409.png"
   },
   {
    "key": "exalted_champion",
@@ -9977,6 +10738,56 @@
    "icon": "SpellIcons/000004970000329E.png"
   },
   {
+   "key": "flowing_imbuement",
+   "id": "flowing_imbuement",
+   "name": "Flowing Imbuement",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Materium",
+    "Nature"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     80,
+     "mana"
+    ]
+   ],
+   "op": 80,
+   "upkeep": [],
+   "description": "Enchanted unit's base attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>On the third strike, push the unit away 1 hex and inflict Wet.</bullet><bullet>Single Strike attacks have a base 90% chance of triggering this effect instead.</bullet></bulletlist>",
+   "requisites": [
+    "<unitRanged></unitRanged> Ranged Unit",
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit",
+    "<unitSkirmisher></unitSkirmisher> Skirmisher Unit",
+    "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Hydromancy",
+     "id": "tome_of_hydromancy",
+     "tier": 1,
+     "icon": "00000497000041E6",
+     "affinities": [
+      "Materium",
+      "Nature"
+     ]
+    }
+   ],
+   "tier": 1,
+   "affinities": [
+    "Materium",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000497000041F5.png"
+  },
+  {
    "key": "focus_aim",
    "id": "focus_aim",
    "name": "Focus Aim",
@@ -10791,6 +11602,42 @@
    "icon": "SpellIcons/000003E300005D42.png"
   },
   {
+   "key": "glittering_waters",
+   "id": "glittering_waters",
+   "name": "Glittering Waters",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "City"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Sustained City Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     80,
+     "mana"
+    ]
+   ],
+   "op": 80,
+   "upkeep": [
+    [
+     8,
+     "mana"
+    ]
+   ],
+   "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Water <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [],
+   "tier": null,
+   "affinities": [
+    "Astral",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004C8000007BB.png"
+  },
+  {
    "key": "gloom_strider",
    "id": "gloom_strider",
    "name": "Gloom Strider",
@@ -10906,6 +11753,10 @@
      "affinities": [
       "Materium"
      ]
+    },
+    {
+     "kind": "Artifact",
+     "name": "The Rotten Gold"
     }
    ],
    "tier": 4,
@@ -11090,6 +11941,41 @@
    ],
    "dlc": null,
    "icon": "SpellIcons/0000041B00001259.png"
+  },
+  {
+   "key": "gust_of_the_seven_seas",
+   "id": "gust_of_the_seven_seas",
+   "name": "Gust of the Seven Seas",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "World"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     240,
+     "mana"
+    ]
+   ],
+   "op": 240,
+   "upkeep": [],
+   "description": "All your <hyperlink>Armies</hyperlink> regain all their movement points if they are on water. Half if they are on land.<br></br>A unit cannot benefit from this spell more than once per turn.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Artifact",
+     "name": "Conch of Fair Winds"
+    }
+   ],
+   "tier": null,
+   "affinities": [
+    "Materium"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000041B00000FD4.png"
   },
   {
    "key": "harvest_population",
@@ -11388,6 +12274,91 @@
    "icon": "SpellIcons/0000041B000006C0.png"
   },
   {
+   "key": "ice_focus",
+   "id": "ice_focus",
+   "name": "Ice Focus",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Shadow"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     140,
+     "mana"
+    ]
+   ],
+   "op": 140,
+   "upkeep": [],
+   "description": "Enchanted units gain:<bulletlist><bullet>Base 60% chance of inflicting Chilled with all attacks.</bullet><bullet>The Ice Nova ability.</bullet><bullet>The damage of this ability increases with the unit's tier.</bullet></bulletlist>",
+   "requisites": [
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Eternal Ice",
+     "id": "tome_of_eternal_ice",
+     "tier": 4,
+     "icon": "00000497000043FA",
+     "affinities": [
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 4,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004970000440D.png"
+  },
+  {
+   "key": "ice_fusion",
+   "id": "ice_fusion",
+   "name": "Ice Fusion",
+   "variant": null,
+   "page": "Transformation",
+   "tabs": [
+    "Major"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     600,
+     "mana"
+    ]
+   ],
+   "op": 600,
+   "upkeep": [],
+   "description": "Target race becomes one with ice, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>+4 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>-2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>Immunity to Frozen and Chilled.</bullet><bullet>Rime Healing.</bullet><bullet>Water Walk.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Eternal Ice",
+     "id": "tome_of_eternal_ice",
+     "tier": 4,
+     "icon": "00000497000043FA",
+     "affinities": [
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 4,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004405.png"
+  },
+  {
    "key": "ignite",
    "id": "ignite",
    "name": "Ignite",
@@ -11448,7 +12419,7 @@
    ],
    "op": 300,
    "upkeep": [],
-   "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_SPRING]Scourge of Spring[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
+   "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Spring</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
    "requisites": [],
    "units": [],
    "sources": [
@@ -11461,7 +12432,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "SpellIcons/ilandras_chosen.png"
+   "icon": "SpellIcons/000003DF000016E0.png"
   },
   {
    "key": "illusory_feast",
@@ -12594,7 +13565,7 @@
    ],
    "op": 300,
    "upkeep": [],
-   "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_AUTUMN]Scourge of Autumn[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
+   "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Autumn</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
    "requisites": [],
    "units": [],
    "sources": [
@@ -12607,7 +13578,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "SpellIcons/luths_chosen.png"
+   "icon": "SpellIcons/000003DF000016E5.png"
   },
   {
    "key": "mage_armor",
@@ -12998,6 +13969,43 @@
    "icon": "SpellIcons/0000041B000002DF.png"
   },
   {
+   "key": "mark_bounty",
+   "id": "mark_bounty",
+   "name": "Mark Bounty",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Debuff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     10,
+     "mana"
+    ]
+   ],
+   "op": 15,
+   "upkeep": [],
+   "description": "Target enemy unit:<bulletlist><bullet>Suffers Bounty until the end of combat.</bullet><bullet>Suffers 3 stacks of Marked for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Mercantile - Barony",
+     "id": "mercantile_barony",
+     "tier": 0,
+     "icon": "0000048D00002144",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000048D00002201.png"
+  },
+  {
    "key": "mark_of_invulnerability",
    "id": "mark_of_invulnerability",
    "name": "Mark of Invulnerability",
@@ -13084,6 +14092,56 @@
    ],
    "dlc": null,
    "icon": "SpellIcons/000003E3000059E3.png"
+  },
+  {
+   "key": "mark_of_the_damned",
+   "id": "mark_of_the_damned",
+   "name": "Mark of the Damned",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Chaos",
+    "Shadow"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     100,
+     "mana"
+    ]
+   ],
+   "op": 100,
+   "upkeep": [],
+   "description": "Enchanted units attacks gain:<bulletlist><bullet>Inflict Ghostfire on units that do not have it.</bullet><bullet>Inflict Damned</bullet></bulletlist>",
+   "requisites": [
+    "<unitRanged></unitRanged> Ranged Unit",
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit",
+    "<unitSkirmisher></unitSkirmisher> Skirmisher Unit",
+    "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of the Damned",
+     "id": "tome_of_the_damned",
+     "tier": 2,
+     "icon": "0000049700004253",
+     "affinities": [
+      "Chaos",
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004970000425A.png"
   },
   {
    "key": "mark_of_the_death_cult",
@@ -13594,6 +14652,44 @@
    ],
    "dlc": null,
    "icon": "SpellIcons/0000041B00001251.png"
+  },
+  {
+   "key": "merfolk_transformation",
+   "id": "merfolk_transformation",
+   "name": "Merfolk Transformation",
+   "variant": null,
+   "page": "Transformation",
+   "tabs": [
+    "Minor"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Minor Race Transformation</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     350,
+     "mana"
+    ]
+   ],
+   "op": 350,
+   "upkeep": [],
+   "description": "Target race gains:<bulletlist><bullet>Merfolk.</bullet><bullet>Fast Movement.</bullet><bullet>When on the water units lose their legs and gain a merfolk tail.</bullet></bulletlist><br></br><br></br>Special notes:<bulletlist><bullet>Incompatible with transformations that give Flying or disable mounts.</bullet><bullet>Mounted units lose their mounts.</bullet><bullet>Heroes lose their mount equipment slots.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Ancient Wonder",
+     "name": "Pearltide Dome",
+     "tab": "Gold"
+    },
+    {
+     "kind": "Trait",
+     "name": "Children of the Waves"
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000497000043BB.png"
   },
   {
    "key": "mesmerizing_draft_ritual",
@@ -14223,6 +15319,45 @@
    "icon": "SpellIcons/000003E30000669A.png"
   },
   {
+   "key": "nevermoors_curse",
+   "id": "nevermoors_curse",
+   "name": "Nevermoor's Curse",
+   "variant": null,
+   "page": "Transformation",
+   "tabs": [
+    "Major"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Major Race Transformation</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     300,
+     "mana"
+    ],
+    [
+     100,
+     "souls"
+    ]
+   ],
+   "op": 300,
+   "upkeep": [],
+   "description": "Curse your units to never know rest. Applies:<bulletlist><bullet>The Undead unit type.</bullet><bullet>The Ethereal unit type.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Artifact",
+     "name": "Heart of the Maer"
+    }
+   ],
+   "tier": null,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004970000471D.png"
+  },
+  {
    "key": "nightveil_focus",
    "id": "nightveil_focus",
    "name": "Nightveil Focus",
@@ -14455,7 +15590,7 @@
    ],
    "op": 300,
    "upkeep": [],
-   "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_WINTER]Scourge of Winter[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
+   "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Winter</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
    "requisites": [],
    "units": [],
    "sources": [
@@ -14468,7 +15603,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "SpellIcons/onokas_chosen.png"
+   "icon": "SpellIcons/000003DF000016E6.png"
   },
   {
    "key": "painbound",
@@ -14621,6 +15756,41 @@
    ],
    "dlc": null,
    "icon": "SpellIcons/0000041B00000D60.png"
+  },
+  {
+   "key": "pearltide_bomb",
+   "id": "pearltide_bomb",
+   "name": "Pearltide Bomb",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Damage",
+    "Debuff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Damage/Debuff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     30,
+     "mana"
+    ]
+   ],
+   "op": 25,
+   "upkeep": [],
+   "description": "Conjure a Pearltide Bomb on target hex:<bulletlist><bullet>All enemy <hyperlink>Units</hyperlink> within 5 hexes of the Pearltide Bomb suffer Wet for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>After 1 <turn></turn> <hyperlink>Turn</hyperlink>:<bulletlist></bullet><bullet>The enemy unit on the hex of the Pearltide Bomb suffers 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 25 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Enemy units within a 2 hex radius of the Pearltide Bomb instead suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet></bulletlist></bulletlist><br></br>Can only be used in water battles.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Ancient Wonder",
+     "name": "Pearltide Dome - Ancient Wonder",
+     "tab": null
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049300001865.png"
   },
   {
    "key": "phantasmal_ritual",
@@ -14887,6 +16057,55 @@
    "affinities": [],
    "dlc": "WAYSOFWAR",
    "icon": "SpellIcons/0000049700001168.png"
+  },
+  {
+   "key": "plundering_blades",
+   "id": "plundering_blades",
+   "name": "Plundering Blades",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Chaos",
+    "Materium"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     90,
+     "mana"
+    ]
+   ],
+   "op": 90,
+   "upkeep": [],
+   "description": "Enchanted units attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 60% chance of Rob the target.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
+   "requisites": [
+    "<unitShield></unitShield> Shield Unit",
+    "<unitPolearm></unitPolearm> Polearm Unit",
+    "<unitShock></unitShock> Shock Unit",
+    "<unitFighter></unitFighter> Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Piracy",
+     "id": "tome_of_piracy",
+     "tier": 2,
+     "icon": "0000049700004303",
+     "affinities": [
+      "Chaos",
+      "Materium"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Materium"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004312.png"
   },
   {
    "key": "poison_imbuement",
@@ -15332,6 +16551,60 @@
    "icon": "SpellIcons/000004970000194B.png"
   },
   {
+   "key": "raiders_of_the_sea",
+   "id": "raiders_of_the_sea",
+   "name": "Raiders of the Sea",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Chaos",
+    "Materium"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     90,
+     "mana"
+    ]
+   ],
+   "op": 90,
+   "upkeep": [],
+   "description": "Enchanted units:<bulletlist><bullet>Increase resources gained from <hyperlink>Pillaging</hyperlink> a <hyperlink>Province</hyperlink> by 100%. Does not stack.</bullet><bullet>Gain Sailor, increasing combat speed and damage when fighting on water.</bullet></bulletlist>",
+   "requisites": [
+    "<unitShield></unitShield> Shield Unit",
+    "<unitRanged></unitRanged> Ranged Unit",
+    "<unitPolearm></unitPolearm> Polearm Unit",
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitShock></unitShock> Shock Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit",
+    "<unitFighter></unitFighter> Fighter Unit",
+    "<unitSkirmisher></unitSkirmisher> Skirmisher Unit",
+    "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Piracy",
+     "id": "tome_of_piracy",
+     "tier": 2,
+     "icon": "0000049700004303",
+     "affinities": [
+      "Chaos",
+      "Materium"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Materium"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004316.png"
+  },
+  {
    "key": "raise_undead_army",
    "id": "raise_undead_army",
    "name": "Raise Undead Army",
@@ -15551,6 +16824,37 @@
    ],
    "dlc": "WAYSOFWAR",
    "icon": "SpellIcons/0000048B0000022D.png"
+  },
+  {
+   "key": "requiem_of_the_damned",
+   "id": "requiem_of_the_damned",
+   "name": "Requiem of the Damned",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "EnemyArmy"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Enemy Army Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     80,
+     "mana"
+    ]
+   ],
+   "op": 80,
+   "upkeep": [],
+   "description": "Target army:<bulletlist><bullet>Sustains 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>For 2 <hyperlink>World Map</hyperlink> <turn></turn> Turn, at the start of combat units in this army have a 90% chance of suffering Ghostfire.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [],
+   "tier": null,
+   "affinities": [
+    "Chaos",
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/000004C80000079B.png"
   },
   {
    "key": "resilient_incarnation",
@@ -15927,6 +17231,92 @@
    "affinities": [],
    "dlc": "EMPIRESANDASHES",
    "icon": "SpellIcons/0000048D00001FFB.png"
+  },
+  {
+   "key": "revitalizing_rush",
+   "id": "revitalizing_rush",
+   "name": "Revitalizing Rush",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "FriendlyArmy"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     45,
+     "mana"
+    ]
+   ],
+   "op": 45,
+   "upkeep": [],
+   "description": "Units in target friendly army:<bulletlist><bullet>Heal 10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>At the start of the next combat, units are Hastened for 3 <turn></turn> Turns.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Hydromancy",
+     "id": "tome_of_hydromancy",
+     "tier": 1,
+     "icon": "00000497000041E6",
+     "affinities": [
+      "Materium",
+      "Nature"
+     ]
+    }
+   ],
+   "tier": 1,
+   "affinities": [
+    "Materium",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000497000041FD.png"
+  },
+  {
+   "key": "riptide",
+   "id": "riptide",
+   "name": "Riptide",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Damage"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Damage Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     30,
+     "mana"
+    ]
+   ],
+   "op": 25,
+   "upkeep": [],
+   "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 12 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Wet for 3 <turn></turn> Turns.</bullet><bullet>If on the outer radius, they are pushed 1-hex away from the center.</bullet><bullet>Targets that were already Wet have the above effects doubled.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Hydromancy",
+     "id": "tome_of_hydromancy",
+     "tier": 1,
+     "icon": "00000497000041E6",
+     "affinities": [
+      "Materium",
+      "Nature"
+     ]
+    }
+   ],
+   "tier": 1,
+   "affinities": [
+    "Materium",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000497000041F9.png"
   },
   {
    "key": "rite_of_bloodletting",
@@ -16734,6 +18124,43 @@
    "icon": "SpellIcons/0000041B0000124D.png"
   },
   {
+   "key": "scry_leverage",
+   "id": "scry_leverage",
+   "name": "Scry Leverage",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Debuff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Debuff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     10,
+     "mana"
+    ]
+   ],
+   "op": 15,
+   "upkeep": [],
+   "description": "Target enemy unit:<bulletlist><bullet>Suffers 2 Leverage.</bullet></bulletlist><br></br>This effect jumps to 2 additional targets within 3 hexes.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Mercantile - Cartel",
+     "id": "mercantile_cartel",
+     "tier": 0,
+     "icon": "0000048D00002142",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000048D00002146.png"
+  },
+  {
    "key": "searing_blades",
    "id": "searing_blades",
    "name": "Searing Blades",
@@ -16912,6 +18339,48 @@
    "affinities": [],
    "dlc": "PRIMALFURY",
    "icon": "SpellIcons/000004970000026B.png"
+  },
+  {
+   "key": "shadow_negotiations",
+   "id": "shadow_negotiations",
+   "name": "Shadow Negotiations",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "City"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>City Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     30,
+     "gold"
+    ]
+   ],
+   "op": 30,
+   "upkeep": [
+    [
+     3,
+     "gold"
+    ]
+   ],
+   "description": "Target Free City:<bulletlist><bullet>Allegiance gain from Whispering Stones is increased by +1.</bullet><bullet>Other Rulers' Allegiance gain is reduced by -30%.</bullet></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Mercantile - Barony",
+     "id": "mercantile_barony",
+     "tier": 0,
+     "icon": "0000048D00002144",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000048D00002205.png"
   },
   {
    "key": "shadow_weapons",
@@ -17202,6 +18671,54 @@
    "icon": "SpellIcons/000004A6000006EA.png"
   },
   {
+   "key": "signia_of_the_cartel",
+   "id": "signia_of_the_cartel",
+   "name": "Signia of the Cartel",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Cultures"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     90,
+     "mana"
+    ]
+   ],
+   "op": 90,
+   "upkeep": [],
+   "description": "Grants non-Mercantile units:<bulletlist><bullet>Observant</bullet></bulletlist>",
+   "requisites": [
+    "<unitShield></unitShield> Shield Unit",
+    "<unitRanged></unitRanged> Ranged Unit",
+    "<unitPolearm></unitPolearm> Polearm Unit",
+    "<unitSupport></unitSupport> Support Unit",
+    "<unitShock></unitShock> Shock Unit",
+    "<unitBattleMage></unitBattleMage> Battle Mage Unit",
+    "<unitMythic></unitMythic> Mythic Unit",
+    "<unitFighter></unitFighter> Fighter Unit",
+    "<unitSkirmisher></unitSkirmisher> Skirmisher Unit",
+    "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Mercantile - Cartel",
+     "id": "mercantile_cartel",
+     "tier": 0,
+     "icon": "0000048D00002142",
+     "affinities": []
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000048D0000213E.png"
+  },
+  {
    "key": "sleep_of_oblivion",
    "id": "sleep_of_oblivion",
    "name": "Sleep of Oblivion",
@@ -17351,6 +18868,10 @@
     {
      "kind": "Hero Skill",
      "name": "Enthralling Presence"
+    },
+    {
+     "kind": "Artifact",
+     "name": "Heart of the Maer"
     },
     {
      "kind": "City Structure",
@@ -17991,6 +19512,52 @@
    "icon": "SpellIcons/0000049700000531.png"
   },
   {
+   "key": "staves_of_the_river",
+   "id": "staves_of_the_river",
+   "name": "Staves of the River",
+   "variant": null,
+   "page": "Enchantment",
+   "tabs": [
+    "Materium",
+    "Nature"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Unit Enchantment</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     80,
+     "mana"
+    ]
+   ],
+   "op": 80,
+   "upkeep": [],
+   "description": "Enchanted unit's <hyperlink>Support</hyperlink> abilities:<bulletlist><bullet>Heal 5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dispel 1 status effect.</bullet></bulletlist>",
+   "requisites": [
+    "<unitSupport></unitSupport> Support Unit"
+   ],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Hydromancy",
+     "id": "tome_of_hydromancy",
+     "tier": 1,
+     "icon": "00000497000041E6",
+     "affinities": [
+      "Materium",
+      "Nature"
+     ]
+    }
+   ],
+   "tier": 1,
+   "affinities": [
+    "Materium",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000497000041F1.png"
+  },
+  {
    "key": "staves_of_warding",
    "id": "staves_of_warding",
    "name": "Staves of Warding",
@@ -18234,6 +19801,51 @@
    "icon": "SpellIcons/000003DF000018E2.png"
   },
   {
+   "key": "summon_accursed_lamenter",
+   "id": "summon_accursed_lamenter",
+   "name": "Summon Accursed Lamenter",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     150,
+     "mana"
+    ]
+   ],
+   "op": 150,
+   "upkeep": [],
+   "description": "Summon an <hyperlink>Accursed Lamenter</hyperlink> on to target hex.",
+   "requisites": [],
+   "units": [
+    "accursed_lamenter"
+   ],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of the Damned",
+     "id": "tome_of_the_damned",
+     "tier": 2,
+     "icon": "0000049700004253",
+     "affinities": [
+      "Chaos",
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SummonIcons/summon_accursed_lamenter.png"
+  },
+  {
    "key": "summon_accursed_ogre",
    "id": "summon_accursed_ogre",
    "name": "Summon Accursed Ogre",
@@ -18267,6 +19879,49 @@
    "affinities": [],
    "dlc": "WAYSOFWAR",
    "icon": "SummonIcons/summon_accursed_ogre.png"
+  },
+  {
+   "key": "summon_ancient_hoarfrost_manta",
+   "id": "summon_ancient_hoarfrost_manta",
+   "name": "Summon Ancient Hoarfrost Manta",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     300,
+     "mana"
+    ]
+   ],
+   "op": 300,
+   "upkeep": [],
+   "description": "Summon an <hyperlink>Ancient Hoarfrost Manta</hyperlink>, a Mythic Unit that supports your units as it freezes your enemies.",
+   "requisites": [],
+   "units": [
+    "ancient_hoarfrost_manta"
+   ],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Eternal Ice",
+     "id": "tome_of_eternal_ice",
+     "tier": 4,
+     "icon": "00000497000043FA",
+     "affinities": [
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 4,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SummonIcons/summon_ancient_hoarfrost_manta.png"
   },
   {
    "key": "summon_astra",
@@ -19570,6 +21225,51 @@
    ],
    "dlc": null,
    "icon": "SummonIcons/summon_lesser_storm_spirit.png"
+  },
+  {
+   "key": "summon_lesser_tide_spirit",
+   "id": "summon_lesser_tide_spirit",
+   "name": "Summon Lesser Tide Spirit",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "Summon"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>Summon Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     60,
+     "mana"
+    ]
+   ],
+   "op": 60,
+   "upkeep": [],
+   "description": "Summons a <hyperlink>Lesser Tide Spirit</hyperlink> on target hex.",
+   "requisites": [],
+   "units": [
+    "lesser_tide_spirit"
+   ],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Hydromancy",
+     "id": "tome_of_hydromancy",
+     "tier": 1,
+     "icon": "00000497000041E6",
+     "affinities": [
+      "Materium",
+      "Nature"
+     ]
+    }
+   ],
+   "tier": 1,
+   "affinities": [
+    "Materium",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000497000041ED.png"
   },
   {
    "key": "summon_light_spirit",
@@ -21048,6 +22748,43 @@
    "icon": "SpellIcons/0000042A00000955.png"
   },
   {
+   "key": "temporary_crabification",
+   "id": "temporary_crabification",
+   "name": "Temporary Crabification",
+   "variant": null,
+   "page": "Tactical",
+   "tabs": [
+    "Buff"
+   ],
+   "type": "<casttactical></casttactical> <hyperlink>Buff Spell</hyperlink>",
+   "tactical": true,
+   "cost": [
+    [
+     30,
+     "mana"
+    ]
+   ],
+   "op": 25,
+   "upkeep": [],
+   "description": "Target friendly non-Hero <hyperlink>Unit</hyperlink>:<bulletlist><bullet>Transforms into a <hyperlink>Lightning Rune Crab</hyperlink> until the end of the battle.</bullet><bullet>Has its <hyperlink><hp></hp> Hit Points</hyperlink> reset.</bullet><bullet>Loses all <hyperlink>Negative Status Effects</hyperlink> and <hyperlink>Positive Status Effects</hyperlink>.</bullet><bullet>Loses all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink>, <caststrategic></caststrategic> <hyperlink>Race Transformations</hyperlink>, and ranks until the end of the battle.</bullet></bulletlist><br></br>Does not work in lava battles.",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Ancient Wonder",
+     "name": "Uncharted Harbor",
+     "tab": "Bronze"
+    }
+   ],
+   "tier": null,
+   "affinities": [
+    "Astral",
+    "Nature"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/00000493000019E1.png"
+  },
+  {
    "key": "thrall_effigy",
    "id": "thrall_effigy",
    "name": "Thrall Effigy",
@@ -21073,6 +22810,10 @@
     {
      "kind": "Hero Skill",
      "name": "Enthralling Presence"
+    },
+    {
+     "kind": "Artifact",
+     "name": "Heart of the Maer"
     },
     {
      "kind": "City Structure",
@@ -21871,7 +23612,7 @@
    ],
    "op": 300,
    "upkeep": [],
-   "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_SUMMER]Scourge of Summer[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
+   "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Summer</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
    "requisites": [],
    "units": [],
    "sources": [
@@ -21884,7 +23625,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "SpellIcons/ventroghs_chosen.png"
+   "icon": "SpellIcons/000003DF000016E4.png"
   },
   {
    "key": "vessels_of_chaos",
@@ -22242,6 +23983,47 @@
    "icon": "SpellIcons/0000041300001533.png"
   },
   {
+   "key": "whiteout",
+   "id": "whiteout",
+   "name": "Whiteout",
+   "variant": null,
+   "page": "Strategic",
+   "tabs": [
+    "World"
+   ],
+   "type": "<caststrategic></caststrategic> <hyperlink>World Spell</hyperlink>",
+   "tactical": false,
+   "cost": [
+    [
+     120,
+     "mana"
+    ]
+   ],
+   "op": 120,
+   "upkeep": [],
+   "description": "Target and adjacent <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gain Whiteout for 3 <turn></turn> Turns.</bullet><bullet>Water provinces gain <hyperlink>Ice</hyperlink> for 3 <turn></turn> Turns.</bullet><bullet>Alter land provinces to <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.<bulletlist></bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist></bulletlist>",
+   "requisites": [],
+   "units": [],
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Eternal Ice",
+     "id": "tome_of_eternal_ice",
+     "tier": 4,
+     "icon": "00000497000043FA",
+     "affinities": [
+      "Shadow"
+     ]
+    }
+   ],
+   "tier": 4,
+   "affinities": [
+    "Shadow"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "SpellIcons/0000049700004411.png"
+  },
+  {
    "key": "wightborn",
    "id": "wightborn",
    "name": "Wightborn",
@@ -22277,6 +24059,10 @@
      "affinities": [
       "Shadow"
      ]
+    },
+    {
+     "kind": "Artifact",
+     "name": "The Rotten Gold"
     }
    ],
    "tier": 3,
@@ -22766,7 +24552,7 @@
     ]
    ],
    "damage": 2,
-   "description": "<bulletlist><bullet>Every 2 turns in combat, a random enemy is hit by the <span style=\"color:white\">Fulmination</span> spell.</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>Every 2 turns in combat, a random enemy is hit by the Fulmination spell.</bullet></bulletlist>",
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -22777,7 +24563,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "autumnstorm_evocation.png"
+   "icon": "000003DF000017B1.png"
   },
   {
    "key": "burn_battlements",
@@ -23046,6 +24832,25 @@
    "icon": "000003E300006B93.png"
   },
   {
+   "key": "exploit_networks",
+   "id": "exploit_networks",
+   "name": "Exploit Networks",
+   "tab": "Other",
+   "cost": [],
+   "damage": 2,
+   "description": "<bulletlist><bullet>At the start of combat, all enemy units gain 1 Leverage.</bullet><bullet>When the walls are breached, gain 50 <gold></gold> <hyperlink>Gold</hyperlink> per tier of the besieged City.</bullet></bulletlist>",
+   "sources": [
+    {
+     "kind": "Culture",
+     "name": "Cartel Mercantile Subculture"
+    }
+   ],
+   "tier": null,
+   "affinities": [],
+   "dlc": "SILVERSEAS",
+   "icon": "0000048B000016A8.png"
+  },
+  {
    "key": "foresee_downfall",
    "id": "foresee_downfall",
    "name": "Foresee Downfall",
@@ -23181,6 +24986,40 @@
    ],
    "dlc": null,
    "icon": "0000044000000075.png"
+  },
+  {
+   "key": "powder_keg_diplomacy",
+   "id": "powder_keg_diplomacy",
+   "name": "Powder Keg Diplomacy",
+   "tab": "Tomes",
+   "cost": [
+    [
+     150,
+     "gold"
+    ]
+   ],
+   "damage": 2,
+   "description": "At the start of combat:<bulletlist><bullet>Wall Obstacles are damaged.</bullet><bullet>Wall Obstacles have a 25% chance of being destroyed.</bullet><bullet>6 to 12 enemy units gain Ember Dust.</bullet></bulletlist>",
+   "sources": [
+    {
+     "kind": "Tome",
+     "name": "Tome of Piracy",
+     "id": "tome_of_piracy",
+     "tier": 2,
+     "icon": "0000049700004303",
+     "affinities": [
+      "Chaos",
+      "Materium"
+     ]
+    }
+   ],
+   "tier": 2,
+   "affinities": [
+    "Chaos",
+    "Materium"
+   ],
+   "dlc": "SILVERSEAS",
+   "icon": "000004970000431A.png"
   },
   {
    "key": "raiding_party__reputation2__",
@@ -23342,7 +25181,7 @@
     ]
    ],
    "damage": 2,
-   "description": "<bulletlist><bullet>Every 2 turns in combat, a random ally is healed by the <span style=\"color:white\">Healing Roots</span> spell.</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>Every 2 turns in combat, a random ally is healed by the Healing Roots spell.</bullet></bulletlist>",
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -23353,7 +25192,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "springvine_evocation.png"
+   "icon": "000003DF000017B0.png"
   },
   {
    "key": "subjugating_raid",
@@ -23394,7 +25233,7 @@
     ]
    ],
    "damage": 2,
-   "description": "<bulletlist><bullet>Every 2 turns in combat, a random enemy is hit by the <span style=\"color:white\">Ignite</span> spell.</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>Every 2 turns in combat, a random enemy is hit by the Ignite spell.</bullet></bulletlist>",
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -23405,7 +25244,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "summerburst_evocation.png"
+   "icon": "000003DF000017AF.png"
   },
   {
    "key": "tower_bombardment",
@@ -23525,7 +25364,7 @@
     ]
    ],
    "damage": 2,
-   "description": "<bulletlist><bullet>Every 2 turns in combat, a random enemy is hit by the <span style=\"color:white\">Ice Coffin</span> spell.</bullet></bulletlist>",
+   "description": "<bulletlist><bullet>Every 2 turns in combat, a random enemy is hit by the Ice Coffin spell.</bullet></bulletlist>",
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -23536,7 +25375,7 @@
    "tier": null,
    "affinities": [],
    "dlc": "ELDRITCHREALMS",
-   "icon": "winterfreeze_evocation.png"
+   "icon": "000003DF000017B2.png"
   },
   {
    "key": "wizards_bombardment",
@@ -23628,6 +25467,16 @@
     "summer_fairy",
     "autumn_fairy",
     "winter_fairy"
+   ]
+  },
+  {
+   "id": "uncharted_harbor",
+   "name": "Uncharted Harbor",
+   "type": "<bronzewonder></bronzewonder> Bronze Ancient Wonder",
+   "link": "AncientWonders.html?type=Bronze&",
+   "image": "StructurePics/uncharted_harbor.png",
+   "units": [
+    "seamare"
    ]
   },
   {
@@ -23736,6 +25585,16 @@
    ]
   },
   {
+   "id": "pearltide_dome",
+   "name": "Pearltide Dome",
+   "type": "<goldwonder></goldwonder> Gold Ancient Wonder",
+   "link": "AncientWonders.html?type=Gold&",
+   "image": "StructurePics/pearltide_dome.png",
+   "units": [
+    "storm_rune_crab"
+   ]
+  },
+  {
    "id": "rose_choked_palace",
    "name": "Rose Choked Palace",
    "type": "<goldwonder></goldwonder> Gold Ancient Wonder",
@@ -23822,6 +25681,7 @@
     "magma_spirit",
     "inferno_hound",
     "immolated_soul",
+    "accursed_lamenter",
     "skald",
     "nightmare",
     "gremlin",
@@ -23893,6 +25753,16 @@
     "summer_fairy",
     "winter_fairy",
     "nymph"
+   ]
+  },
+  {
+   "id": "tempestuous_vortex",
+   "name": "Tempestuous Vortex",
+   "type": "Landmark",
+   "link": "Landmarks.html",
+   "image": "StructurePics/tempestuous_vortex.png",
+   "units": [
+    "lightning_rune_crab"
    ]
   }
  ],

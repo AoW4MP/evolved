@@ -815,6 +815,27 @@
   "icon": "0000049700000AD2"
  },
  {
+  "name": "Ice Nova",
+  "slug": "000004970000447A",
+  "description": "Deal damage to units in a 1-hex radius.",
+  "damage": "16<damagefrost></damagefrost> ",
+  "accuracy": "Always Hits",
+  "range": "6",
+  "actionPoints": "<fullaction></fullaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 3 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000004970000447B"
+ },
+ {
   "name": "Infernal Blaze",
   "slug": "00000497000010C5",
   "description": "<bulletlist><bullet>Gain 3 [hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Adjacent enemies sustain damage.</bullet></bulletlist>",

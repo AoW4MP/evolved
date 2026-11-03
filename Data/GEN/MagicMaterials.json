@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31 23:33",
- "build": "exe of 2026-10-30",
+ "generated": "2026-11-03 21:46",
+ "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "sets": [
   {
@@ -23,6 +23,7 @@
    "unique": true,
    "materials": [
     "haste_berries",
+    "pale_tidebloom",
     "rainbow_clover",
     "silvertongue_fruit"
    ]
@@ -72,6 +73,27 @@
     "key": "umbral_ramblings"
    },
    "dlc": "ELDRITCHREALMS"
+  },
+  "pale_tidebloom": {
+   "name": "Pale Tidebloom",
+   "description": "Unique global effect:<bulletlist><bullet>Cost of [hyperlink,GLOBAL.EmpireSkillConcept]Empire Skills[/hyperlink] is reduced by 10%.</bullet></bulletlist>",
+   "lore": "\"By what means the Pale Tidebloom attains its full maturity remains much disputed among scholars and is the subject of no few legends. This light-bearing seaweed gives forth a great measure of vital essence from the earliest days of its growth, yet only upon coming into contact with accursed devils does it begin to burn with fiendish fire.\"<br><br>— Roderick Finwing, Local Flora and Its Applications: Part IV, Breeding and Harvesting.",
+   "income": [
+    [
+     "Food",
+     10
+    ],
+    [
+     "Mana",
+     10
+    ]
+   ],
+   "combat": {
+    "name": "Ghostfire Curse",
+    "description": "When a unit is inflicted with [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink], it has a base 60% chance of gaining another [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] stack.",
+    "key": "ghostfire_curse"
+   },
+   "dlc": "SILVERSEAS"
   },
   "blood_glass": {
    "name": "Blood Glass",

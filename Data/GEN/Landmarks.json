@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-31 20:29",
- "build": "exe of 2026-10-30",
+ "generated": "2026-11-03 23:22",
+ "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "landmarks": [
   {
@@ -28,6 +28,24 @@
    ],
    "picture": "ancient_dragon_hoard",
    "icon": "landmark_ancient_dragon_hoard.png"
+  },
+  {
+   "key": "armadas_fall",
+   "name": "Armada's Fall",
+   "dlc": "SILVERSEAS",
+   "lore": "\"When I first saw the Armada's Fall, I understood where all the treasures lost at sea end up. Swept away by a Tempestuous Vortex, the graveyard of ships and treasures is a blessing to the pockets of whoever finds it. For uncontested gold is the most profitable of all.\"<br><br>—Marinus Lord of the Waters, Ventures in the Seas.",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+2 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink], +2 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink], and +1 <souls></souls> [hyperlink,GLOBAL.SoulConcept]Soul[/hyperlink] income if available.</bullet><bullet>A <quarry></quarry> [hyperlink,GLOBAL.QuarryConcept]Quarry[/hyperlink] or <mine></mine> [hyperlink,GLOBAL.MineConcept]Mine[/hyperlink] can be constructed in this province.</bullet><bullet>Every 10 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], a random water [hyperlink,GLOBAL.PickupConcept]Pickup[/hyperlink] spawns in this province if able.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.RAMPANT_DEBRIS]Rampant debris[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet><quarry></quarry> [hyperlink,GLOBAL.QuarryConcept]Quarries[/hyperlink] in the [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] grant +5 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] income.</bullet><bullet><mine></mine> [hyperlink,GLOBAL.MineConcept]Mines[/hyperlink] in the Domain grant +5 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] income.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Rampant Debris",
+     "description": "If Combat takes place in water, several additional debris Obstacles are present which are [hyperlink,GLOBAL.SlowingConcept]Slowing[/hyperlink] or [hyperlink,GLOBAL.ExplosiveConcept]Explosive[/hyperlink].",
+     "icon": "rampant_debris.png"
+    }
+   ],
+   "units": [],
+   "picture": "armadas_fall",
+   "icon": null
   },
   {
    "key": "broken_wizards_throne",
@@ -170,6 +188,7 @@
     "magma_spirit",
     "inferno_hound",
     "immolated_soul",
+    "accursed_lamenter",
     "skald",
     "nightmare",
     "gremlin",
@@ -324,6 +343,26 @@
    "units": [],
    "picture": "subterreanean_passage",
    "icon": "landmark_subterranean_monuments.png"
+  },
+  {
+   "key": "tempestuous_vortex",
+   "name": "Tempestuous Vortex",
+   "dlc": "SILVERSEAS",
+   "lore": "\"Half of the king's fleet was behind us when we heard the cry from the crow's nest: 'The sea has opened to swallow us! A maelstrom as vast as an empire!' With death behind us, we set sail for the vortex, to ride its current and escape our fate. But our ship cracked, the helm broke, and the sea swallowed us whole.\"<br><br>—Amaro Arieta, ghost of the Haunted Armada, Wisdom of the Fallen: As cited by Noctus.",
+   "adjacent": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province.</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.VORTEX_STORM]Vortex storm[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] starting their <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in this Province gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+   "city": "A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The ability to draft [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] in the City for <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Friendly Units starting their <turn></turn> Turn in the Domain gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> Turns.</bullet></bulletlist>",
+   "enchantments": [
+    {
+     "name": "Vortex Storm",
+     "description": "During [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] on water:<bulletlist><bullet>All [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] until the end of combat.</bullet><bullet>Several [hyperlink,GLOBAL.VortexConcept]Vortex[/hyperlink] obstacles are present in combat.</bullet><bullet>Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all Units are displaced by 1 hex.</bullet></bulletlist>",
+     "icon": "vortex_storm.png"
+    }
+   ],
+   "units": [
+    "lightning_rune_crab"
+   ],
+   "picture": "tempestuous_vortex",
+   "icon": null
   },
   {
    "key": "thorn_heart",

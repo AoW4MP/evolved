@@ -200,7 +200,8 @@ async function GetAllData(selectedLang) {
         "ExtraLookSpellsOrigin.json",
         "StructurePredictions.json",
         "LinkedAbilities.json",
-        "SpellBook.json"
+        "SpellBook.json",
+        "AffinityAttacks.json"
     ];
     const fileNames = [
         // ingame dump files
@@ -258,7 +259,8 @@ async function GetAllData(selectedLang) {
             "jsonExtraSpellsLookup",
             "jsonStructurePredictions",
             "jsonLinkedAbilities",
-            "jsonSpellBook"
+            "jsonSpellBook",
+            "jsonAffinityAttacks"
         ];
         const targets = [
             "jsonHeroItems",
@@ -435,6 +437,15 @@ function AddExtraData() {
     for (const ability of jsonLinkedAbilities) ability.linkedOnly = unlinked.has(ability.name);
     jsonUnitAbilities = [...jsonUnitAbilities, ...jsonLinkedAbilities];
     jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonLinkedAbilities];
+
+    // the dump gives each affinity version of an Architect unit its abilities' default attack (the Surveyor's Magic Bolts
+    // as 10 Lightning); affinityattacks.py in aow4_diff_tools has the attack and name the game gives that affinity
+    for (const abilities of [jsonUnitAbilities, jsonUnitAbilitiesLocalized]) {
+        for (const ability of abilities) {
+            const attack = jsonAffinityAttacks[ability.slug];
+            if (attack) Object.assign(ability, { damage: attack.damage, name: attack.name });
+        }
+    }
 
     // the dump leaves out the Sealbearer's seal icons: the game picks them by subculture
     const missingAbilityIcons = {

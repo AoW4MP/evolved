@@ -33,7 +33,7 @@
             let cultures = [];
 
             function HandlePage() {
-                const tomes = jsonTomes.filter((t) => t.id && !t.affinities && !t.id.endsWith("_pact") && t.id !== GENERAL);
+                const tomes = jsonTomes.filter((t) => t.id && !t.affinities && !IsDwellingPact(t) && t.id !== GENERAL);
                 const keys = [...new Set(tomes.map((t) => t.id.split("_")[0]))].sort();
                 cultures = keys.map((key) => {
                     const own = tomes.filter((t) => t.id === key || t.id.startsWith(key + "_")).sort((a, b) => a.name.localeCompare(b.name));

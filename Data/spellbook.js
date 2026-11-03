@@ -173,12 +173,20 @@ function SbTomeSkills(tome) {
     };
     for (const skill of SbGameOrder(tome.skills || [])) {
         const named = (e) => e.id === skill.spell_slug || e.id === skill.siege_project_slug || e.name === skill.name;
+        // a skill standing for several spells, one per choice the player makes: Pirate Bond's Conjure Pirate Captain is a
+        // Conjure … Captain per captain. Its tome's spells with its first and last word and as many words
+        const words = skill.name.split(" ");
+        const family = (e) => {
+            const w = e.name.split(" ");
+            return !skill.spell_slug && w.length === words.length && w[0] === words[0] && w.at(-1) === words.at(-1);
+        };
         if (skill.unit_slug) skills.push({ ...skill, cards: [SbUnitCard(skill)] });
         else if (skill.upgrade_slug) {
             const card = SbStructureCard(skill);
             if (card) skills.push({ ...skill, cards: [card] });
         } else if (siege.some(named)) add(skill, siege.filter(named), SbSiegeCard);
         else if (spells.some(named)) add(skill, spells.filter(named), SbSpellCard);
+        else if (spells.some(family)) add(skill, spells.filter(family), SbSpellCard);
         else if (!jsonSpellBook.left_out.some((e) => e.name === skill.name)) {
             const type = skill.type.includes("Empire Bonus") ? "<empire></empire> Empire Bonus" : skill.type;
             const card = SbCard({ name: skill.name, description: skill.description }, type, "/evolved/Icons/ExtraIcons/" + skill.name.replaceAll(" ", "_").toLowerCase() + ".png");

@@ -40,7 +40,7 @@ button (buymeacoffee.com/aowevolved) instead of upstream's Ko-fi widget.
 `HTML/header.html`: the "Updated:" date tracks Evolved's own game dumps, not upstream's. The header is drawn after the
 game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands:
 - the game's top strip (`.hud-strip`, `Icons/Interface/HudStrip.jpg`: the sheet's marble on dark teal, a gold line
-  under it): "Manta Beta Dataset" and the "Updated:" date on the left, where the game shows resources; Settings (the
+  under it): the dataset's name ("Silver Seas Dataset") and the "Updated:" date on the left, where the game shows resources; Settings (the
   game's gear icon, `Icons/TML/autocombat.png`; its two settings are `.toggleChip`s) and Donate (to `HTML/Donate.html`,
   which links to Buy Me a Coffee) on the right, as the game's info and settings buttons;
 - the banner (`--banner-height`, 80px): just the title on the picture, which darkens towards the menu;
@@ -160,11 +160,12 @@ Evolved is exported in English only, so the other languages are removed:
   English and the "localized" sets (`fetchJsonTexts`), reading each twice, as `AddExtraData` changes the two apart;
   upstream fetched every file twice at once, about 14 MB more on a first visit.
 
-### Beta data only
+### One dataset
 
-Evolved is played on the game's beta, so the website's own dump in `Data/EN` is already beta data and there is no switch to upstream's `Data/BETA`, which is deleted:
+The website's own dump in `Data/EN` is of the game the mod is played on, a beta when there is one (the Manta beta until
+it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to upstream's `Data/BETA`, which is deleted:
 
-- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice, "Manta Beta Dataset" on the left of the top strip (`.hud-facts`). Update the beta name in it when the game's beta changes.
+- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice on the left of the top strip (`.hud-facts`), "Silver Seas Dataset". Update the name in it when the game's version or beta changes.
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
 - `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.
@@ -239,6 +240,27 @@ On a phone a sidebar page has no column for its sidebar: it comes above the card
 
 The Spells and World Map pages have the same icon either side of their title as their entry in the menu, at 40px. `Icons/Interface/TitleIcons` holds them, made from `Icons/Interface/DropdownIcons` so each takes up about the same space on the page, 27-28px by eye, whatever its shape, centred on its weight: by the box its art fills, not its painted area, which leaves spiky and narrow shapes small. The affinity Tomes and Tome Units pages' icons are 30px to match; a culture's medallion is 44px. The Empire Tree's dark-ringed disc is 32px of its 40.
 
+### Silver Seas
+
+The DLC as Evolved shows it, not upstream's pages (2026-11-03):
+
+- `HTML/MercantileUnits.html` (Culture ▸ Mercantile: Barony and Cartel) and `HTML/SilverSeasUnits.html` (Tomes ▸ The
+  Silver Seas) are the other culture and Tome Units pages' layout. Their menu icons, `DropdownIcons/mercantile.png` and
+  `SilverSeas.png`, are made as above (93px art). The City Tree and the Culture tomes page pick Mercantile up from the
+  data; `CityTrees.html` falls back to a culture's key when it has no icon yet.
+- The dump tags the DLC `SILVERSEAS`; upstream's theorycrafting tag `THESILVERSEAS` and its four placeholder tomes in
+  `Data/Faction.js` are gone.
+- `IsDwellingPact` (`Data/Builder.js`): the Pirate Dwelling's Pirate Bond is a pact though its id doesn't end in `_pact`;
+  the Dwelling and Culture tome pages both ask it.
+- A tome skill with no spell of its own that stands for several (Pirate Bond's Conjure Pirate Captain: a Conjure …
+  Captain per captain) shows them on one medallion (`family` in `SbTomeSkills`). `spells.py` gives those six spells
+  Pirate Bond as their source: a skill outside a tome's grid that requires a property one of the tome's skills gives.
+- Pictures upstream made by hand are upstream's (unit previews, unlock icons, relics, structures, culture emblems).
+  `UnitUnlockIcons/wavemaster.png`, which upstream lacks, is cut from its preview in the others' purple ring.
+  `Data/GEN/Relics.json` got upstream's eight new relics so `spells.py` keeps them; `WorldStructures.json`,
+  `FactionCreation.json`, `BuilderLookup.json` and `BuilderLookupHero.json` are upstream's, and `AscendedInfo.json`
+  has upstream's three new Ascensions plus Hydromancy's Tide Summoner, which upstream's list lacks.
+
 ### Ancient Wonders
 
 `HTML/AncientWonders.html` is Evolved's own page, replacing upstream's (same URL and menu link, `?type=Bronze|Silver|Gold`):
@@ -267,7 +289,11 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`) and `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`), `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), `ancientwonders.py`, `worldmap.py` and `spells.py`, in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
+A new culture's emblem or a DLC's relic and landmark pictures have to be on the site before `citytree.py`, `spells.py`
+and `worldmap.py` run, as they look for them: run those three again after adding them.
+The dump can't be trusted for the Architect units' attacks: it writes each affinity version with the ability's default
+attack (the Surveyor's Magic Bolts as 10 Lightning), not the affinity's plugin the game uses (6 of its own type).
 `after_update.bat` (the mod reports) can't do this: it runs before the patched game has made the new dump.
 
 ## Taking changes from upstream

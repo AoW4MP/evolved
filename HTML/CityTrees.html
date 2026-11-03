@@ -103,8 +103,9 @@
             }
 
             function CultureIcon(culture) {
-                // the game gives Oathsworn's subcultures no icon; the site has them under their own names
-                const icon = culture.icon || culture.key.slice(culture.parent.length + 1);
+                // the game gives Oathsworn's subcultures no icon; the site has them under their own names.
+                // A culture with none (new before its icon was added) falls back to its key.
+                const icon = culture.icon || (culture.parent ? culture.key.slice(culture.parent.length + 1) : culture.key);
                 return "/evolved/Icons/Text/" + icon + ".png";
             }
 

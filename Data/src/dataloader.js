@@ -65,7 +65,9 @@ const extraFormUnitsList = [
     "lieutenant",
     "warlord",
     "temptress",
-    "priest_of_the_weave"
+    "priest_of_the_weave",
+    "flowbinder_archer",
+    "wavemaster"
 ];
 
 const incorrectIconOverrideList = [
@@ -163,9 +165,9 @@ const dlcMap = {
         src: "/evolved/Icons/Text/singer_of_storms.png",
         text: "Part of the Singer of Storms DLC"
     },
-    THESILVERSEAS: {
+    SILVERSEAS: {
         src: "/evolved/Icons/Text/the_silver_seas.png",
-        text: "Silver Seas for theorycrafting"
+        text: "Part of the Silver Seas DLC"
     }
 };
 

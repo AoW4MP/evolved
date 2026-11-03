@@ -2809,7 +2809,8 @@ function findSpellsWithArgument(argumentaffinity, argumentType) {
                         jsonTomes[i].name.toUpperCase().indexOf("Reaver".toUpperCase()) !== -1 ||
                         jsonTomes[i].name.toUpperCase().indexOf("Oathsworn".toUpperCase()) !== -1 ||
                         jsonTomes[i].name.toUpperCase().indexOf("Architect".toUpperCase()) !== -1 ||
-                        jsonTomes[i].name.toUpperCase().indexOf("Nomad".toUpperCase()) !== -1
+                        jsonTomes[i].name.toUpperCase().indexOf("Nomad".toUpperCase()) !== -1 ||
+                        jsonTomes[i].name.toUpperCase().indexOf("Mercantile".toUpperCase()) !== -1
                     ) {
                         for (let k = 0; k < jsonTomes[i].skills.length; k++) {
                             listMod.push(jsonTomes[i].skills[k].spell_slug);
@@ -5864,6 +5865,11 @@ function GetCultureUnitsOf(cultureName, subCultureName) {
     return units.map((u) => u.id);
 }
 
+// a Dwelling's pact, which has no affinity either: Crystal Pact, Eldritch Pact, and the Pirate Dwelling's Pirate Bond
+function IsDwellingPact(tome) {
+    return tome.id.endsWith("_pact") || tome.id == "pirate_bond";
+}
+
 function GetAllTomesWithAffinity(affinity, dualOnly) {
     let arrayResultPlain = [];
     let arrayResultDual = [];
@@ -5885,8 +5891,7 @@ function GetAllTomesWithAffinity(affinity, dualOnly) {
             }
         } else if (affinity == "general" || affinity == "dwelling") {
             // no affinities: General Research and the culture tomes, or the Dwellings' pacts
-            const isPact = tome.id.endsWith("_pact");
-            if (tome.id != "" && isPact == (affinity == "dwelling")) {
+            if (tome.id != "" && IsDwellingPact(tome) == (affinity == "dwelling")) {
                 arrayResultPlain.push(tome);
             }
         }

@@ -1,5 +1,6 @@
-// What the World Map pages made from the game's data share (Infestations, Landmarks, Cosmic Happenings, Province
-// Improvements): their tabs, cards and unit links. Style/worldmap.css goes with it.
+// What the World Map pages made from the game's data share (Infestations, Landmarks, Cosmic and Oceanic Happenings,
+// Province Improvements): their tabs, cards and unit links, and the search bar Ancient Wonders and Realm Traits use too.
+// Style/worldmap.css goes with it.
 
 // entries: {id, label (HTML), count, panel}. A tab's own address is ?type=<id>&; returns the function that opens a tab
 function WmTabs(entries) {
@@ -23,6 +24,61 @@ function WmTabs(entries) {
     open(entries.some((e) => e.id === wanted) ? wanted : entries[0].id, true);
     HandleExtraTooltips(page);
     return open;
+}
+
+// the search bar of a page WmTabs made: its tabs and their panels, in the same order; .wm-card cards
+function WmTabsSearch(placeholder, heads) {
+    const panels = document.getElementById("panels").children;
+    WmSearchBar([...document.querySelectorAll("#tabs .wm-tab")].map((tab, i) => [tab, panels[i]]), ".wm-card", heads, placeholder);
+}
+
+// a search bar under a page's tabs, over the cards of all of them at once (the World Map pages, Ancient Wonders, Realm
+// Traits). A card stays while its text holds every word typed, folded parts and its data-search words too (a wonder's
+// stories, built only when opened); each tab's count follows, a group heading goes with the last of its cards, and a tab
+// with nothing left says so. pairs: [tab, panel] (a tab's count is its <span>); cards and heads: selectors in a panel
+function WmSearchBar(pairs, cards, heads, placeholder) {
+    const filters = WmElement("div", "wm-filters");
+    const input = WmElement("input", "wm-search");
+    input.type = "search";
+    input.placeholder = placeholder;
+    filters.append(input);
+    document.getElementById("tabs").after(filters);
+    const words = (el) => (el.textContent + " " + (el.dataset.search || "")).toLowerCase();
+    const panels = pairs.map(([tab, panel]) => {
+        const none = WmElement("div", "wm-none", "Nothing here matches.");
+        none.hidden = true;
+        panel.append(none);
+        const items = [...panel.querySelectorAll(cards + (heads ? ", " + heads : ""))].map((el) => ({
+            el,
+            head: heads ? el.matches(heads) : false,
+            words: words(el)
+        }));
+        return { tab, none, items };
+    });
+    input.addEventListener("input", () => {
+        const typed = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+        for (const p of panels) {
+            let left = 0;
+            let head = null;
+            let headLeft = 0;
+            // a class, not hidden: a card's own display (grid, flex) outranks the browser's [hidden]
+            const closeHead = () => head && head.el.classList.toggle("wm-filtered", !headLeft);
+            for (const it of p.items) {
+                if (it.head) {
+                    closeHead();
+                    head = it;
+                    headLeft = 0;
+                    continue;
+                }
+                const shown = typed.every((w) => it.words.includes(w));
+                it.el.classList.toggle("wm-filtered", !shown);
+                if (shown) left++, headLeft++;
+            }
+            closeHead();
+            p.tab.querySelector("span").textContent = left;
+            p.none.hidden = left > 0;
+        }
+    });
 }
 
 function WmElement(tag, className, html) {

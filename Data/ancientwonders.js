@@ -50,6 +50,8 @@ const AncientWondersPage = (() => {
         }
         OpenTier(first, true);
         HandleExtraTooltips(page);
+        // the search bar over all tiers (worldmap.js)
+        WmSearchBar([...tabs.children].map((tab) => [tab, page.querySelector('.aw-tier[data-tier="' + tab.dataset.tier + '"]')]), ".aw-card", null, "Search all wonders");
     }
 
     function OpenTier(tier, keepAddress) {
@@ -86,6 +88,9 @@ const AncientWondersPage = (() => {
         const card = document.createElement("div");
         card.className = "aw-card";
         card.style.setProperty("--tier", "var(--aw-" + w.tier.toLowerCase() + ")");
+        // the stories' words for the search bar: a story is built only when opened
+        const texts = (v) => (typeof v === "string" ? [v] : v && typeof v === "object" ? Object.values(v).flatMap(texts) : []);
+        card.dataset.search = texts(w.stories).join(" ").replace(/<[^>]+>|\[[^\]]*\]/g, " ");
 
         const head = document.createElement("div");
         head.className = "aw-title";

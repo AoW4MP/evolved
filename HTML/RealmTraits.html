@@ -14,9 +14,12 @@
         </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <!-- the search bar (WmSearchBar) -->
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="/evolved/Data/Init.js"></script>
+        <script src="/evolved/Data/worldmap.js"></script>
         <script>
             // Evolved's Realm Traits page: every trait the game's realm setup offers, a tab per category.
             // Data/GEN/RealmTraits.json comes from aow4_diff_tools/realmtraits.py (the game with the mod); a trait's
@@ -72,6 +75,8 @@
                 }
                 OpenCategory(first, true);
                 HandleExtraTooltips(page);
+                // the search bar over all categories (worldmap.js)
+                WmSearchBar([...tabs.children].map((tab) => [tab, page.querySelector('.rt-section[data-type="' + tab.dataset.type + '"]')]), ".rt-card", ".rt-sub", "Search all realm traits");
                 // a link to another trait: open its category, scroll to its card and light it up
                 page.addEventListener("click", (e) => {
                     const a = e.target.closest("a.rt-exclusive-link");

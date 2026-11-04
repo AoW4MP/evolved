@@ -63,6 +63,16 @@
     gap: 8px 14px;
     margin-bottom: 20px;
 }
+/* a card or heading the search bar (WmSearchBar) leaves out, over the card's own display */
+.wm-filtered {
+    display: none !important;
+}
+/* a tab the search bar left empty */
+.wm-none {
+    color: #8d97ad;
+    text-align: center;
+    padding: 30px 0;
+}
 .wm-search {
     box-sizing: border-box;
     width: 320px;

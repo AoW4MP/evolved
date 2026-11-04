@@ -6254,15 +6254,15 @@
  {
   "modifiers": [
    {
-    "description": "Inflicts 3 Electrified for 3 <turn></turn> Turns.",
-    "name": "Electrified",
+    "description": "Base 90% chance of inflicting Frozen for 1 <turn></turn> Turn. If unsuccessful, inflicts Chilled.",
+    "name": "Frozen",
     "count": 1
    }
   ],
   "description": "Deals damage to target unit and enemy units in a 3-hex line behind it.",
-  "name": "Tempestuous Smash",
+  "name": "Blizzard Smash",
   "slug": "tempestuous_smash_ability_0000049700002A6F",
-  "damage": "16<damagephysical></damagephysical> 16<damagelightning></damagelightning> ",
+  "damage": "16<damagephysical></damagephysical> 16<damagefrost></damagefrost> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
@@ -21499,15 +21499,15 @@
  {
   "modifiers": [
    {
-    "description": "Inflicts 3 Electrified for 3 <turn></turn> Turns.",
-    "name": "Electrified",
+    "description": "Inflicts 3 stacks of Burning for 3 <turn></turn> Turns.",
+    "name": "Burning",
     "count": 1
    }
   ],
   "description": "Deals damage to target unit and enemy units in a 3-hex line behind it.",
-  "name": "Tempestuous Smash",
+  "name": "Volcanic Smash",
   "slug": "tempestuous_smash_ability_000003EC00000DA1",
-  "damage": "16<damagephysical></damagephysical> 16<damagelightning></damagelightning> ",
+  "damage": "16<damagephysical></damagephysical> 16<damagefire></damagefire> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
@@ -21571,15 +21571,15 @@
  {
   "modifiers": [
    {
-    "description": "Inflicts 3 Electrified for 3 <turn></turn> Turns.",
-    "name": "Electrified",
+    "description": "Base 90% chance of inflicting Stunned for 1 <turn></turn> Turn.",
+    "name": "Stunned",
     "count": 1
    }
   ],
   "description": "Deals damage to target unit and enemy units in a 3-hex line behind it.",
-  "name": "Tempestuous Smash",
+  "name": "Earthquake Smash",
   "slug": "tempestuous_smash_ability_000003EC00000DA0",
-  "damage": "16<damagephysical></damagephysical> 16<damagelightning></damagelightning> ",
+  "damage": "31<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
@@ -26873,7 +26873,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit gains:<bulletlist><bullet>+15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist><br></br>Enter <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "This unit and adjacent friendly units:<bulletlist><bullet>Heal +15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist>",
   "name": "Soothing Standard",
   "slug": "soothing_standard_ability_000003E3000052D2_0000048d000011e2",
   "damage": "",
@@ -26941,7 +26941,7 @@
     "note": "Cooldown: 1 <turn></turn>"
    }
   ],
-  "description": "Target friendly unit gains:<bulletlist><bullet>+15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist><br></br>Enter <hyperlink>Defense Mode</hyperlink> after use.",
+  "description": "This unit and adjacent friendly units:<bulletlist><bullet>Heal +15<hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist>",
   "name": "Soothing Standard",
   "slug": "soothing_standard_ability_000003E3000052D2_0000048d00001220",
   "damage": "",

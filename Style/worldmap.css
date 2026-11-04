@@ -281,6 +281,21 @@ a.wm-unit:hover {
 .wm-story p {
     margin: 6px 0;
 }
+/* a choice's costs and rewards, as the Ancient Wonders' (.aw-notes) */
+.wm-notes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 10px;
+    margin-top: 4px;
+    font-size: 14px;
+}
+.wm-cost {
+    color: #e8a0a0;
+}
+.wm-reward {
+    color: #a5d6a7;
+}
 .wm-story-option {
     margin-top: 4px;
     padding: 4px 10px;

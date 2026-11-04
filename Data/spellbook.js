@@ -65,13 +65,8 @@ function SbSpellCard(s) {
         card.append(part);
     }
     if (s.units.length) {
-        const label = s.type.includes("Summon") ? "Summons" : "Units";
         // a long list folds away, or it stretches the row of cards it is on
-        const part = s.units.length > 6
-            ? WmElement("details", "wm-story", "<summary>" + label + " (" + s.units.length + ")</summary>")
-            : WmElement("div", "wm-part", '<div class="wm-label">' + label + "</div>");
-        part.append(WmUnits(s.units));
-        card.append(part);
+        card.append(WmUnitList(s.type.includes("Summon") ? "Summons" : "Units", s.units));
     }
     const chances = SpellSpawnChances(s.id);
     if (chances) {
@@ -117,11 +112,7 @@ function SbStructureCard(skill) {
     const card = SbCard({ name: loc.name.replace(/<br>/g, ""), description: StructureDescription(loc) }, type, "/evolved/Icons/UpgradeIcons/" + loc.icon + ".png");
     card.querySelector(".sb-text").insertAdjacentHTML("beforeend", StructureHelp(loc));
     const unlocks = jsonStructurePredictions?.units?.[String(structure.resid)];
-    if (unlocks) {
-        const part = WmElement("div", "wm-part", '<div class="wm-label">Unlocks</div>');
-        part.append(WmUnits(unlocks));
-        card.append(part);
-    }
+    if (unlocks) card.append(WmUnitList("Unlocks", unlocks));
     if (loc.requirement_description) card.append(WmElement("div", "wm-part", '<div class="wm-label">Requires</div>' + WmMarkup(AsBulletList(loc.requirement_description))));
     card.append(SbFoot({ sources: [] }, ["<b>Build Cost</b> " + loc.cost]));
     return card;

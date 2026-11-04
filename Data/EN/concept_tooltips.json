@@ -5250,6 +5250,62 @@
     "description": "This unit ends its turn and goes into a defensive mode:<bulletlist><bullet>Extends its [hyperlink,GLOBAL.ZoneOfControlConcept]Zone of Control[/hyperlink] to all adjacent hexes.</bullet><bullet>Gains +2 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Gains +2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet><bullet>Immune to [hyperlink,GLOBAL.FlankingConcept]<flank></flank> Flanking[/hyperlink].</bullet><bullet>All adjacent friendly units gain +3 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Enemy units adjacent to this unit suffer [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
     "image": "000004930000149E"
   },
+  "GLOBAL.PICKUPS.DRAFT_UNGUARDED_PICKUP": {
+    "name": "Draft Stash",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.DRAFT_UNGUARDED_PICKUP",
+    "displayHtml": "Draft Stash",
+    "description": "Steel, hilts, and other materials for crafting weapons that are just lying around.<br><br>Moving your army onto it will instantly grant you some <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink]."
+  },
+  "GLOBAL.PICKUPS.FLOATSOAM_PICKUP": {
+    "name": "Flotsam",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.FLOATSOAM_PICKUP",
+    "displayHtml": "Flotsam",
+    "description": "An ancient artifact, a mighty helmet, or maybe a chest full of lost riches.<br><br>Moving onto it with an [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink] will grant you some <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] and possibly an item which your [hyperlink,GLOBAL.HeroConcept]Heroes[/hyperlink] can use."
+  },
+  "GLOBAL.PICKUPS.LARGE_CREATURE_PICKUP": {
+    "name": "Large Creature Cage",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.LARGE_CREATURE_PICKUP",
+    "displayHtml": "Large Creature Cage",
+    "description": "A large cage with a trapped creature.<br><br>Moving your army onto it will allow the creature to join your ranks."
+  },
+  "GLOBAL.PICKUPS.LUMINOUS_WAVES": {
+    "name": "Luminous Waves",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.LUMINOUS_WAVES",
+    "displayHtml": "Luminous Waves",
+    "description": "Vigorous magic infuses the billows, weaving a bioluminescent aurora.<br><br>Moving your army onto it will instantly grant you some <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] and <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink]."
+  },
+  "GLOBAL.PICKUPS.LUMINOUS_WAVES_UNGUARDED": {
+    "name": "Luminous Waves",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.LUMINOUS_WAVES_UNGUARDED",
+    "displayHtml": "Luminous Waves",
+    "description": "Vigorous magic infuses the billows, weaving a bioluminescent aurora.<br><br>Moving your army onto it will instantly grant you some <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] and <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink]."
+  },
+  "GLOBAL.PICKUPS.STRUCTURE_UNGUARDED_PICKUP": {
+    "name": "Production Stash",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.STRUCTURE_UNGUARDED_PICKUP",
+    "displayHtml": "Production Stash",
+    "description": "A forgotten stockpile of construction supplies.<br><br>Moving your army onto it will instantly grant you some <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink]."
+  },
+  "GLOBAL.PICKUPS.WATER_EGG_PICKUP_GUARDED": {
+    "name": "Abandoned Egg Cluster",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.WATER_EGG_PICKUP_GUARDED",
+    "displayHtml": "Abandoned Egg Cluster",
+    "description": "An egg cluster from an aquatic creature, beset by predators. At least one of them seems ready to hatch.<br><br>Moving your army onto it will allow the creature to join your ranks."
+  },
+  "GLOBAL.PICKUPS.WRECKAGE_PICKUP": {
+    "name": "Galleon Wreckage",
+    "icon": null,
+    "globalName": "GLOBAL.PICKUPS.WRECKAGE_PICKUP",
+    "displayHtml": "Galleon Wreckage",
+    "description": "Wreckage from a galleon transporting goods and currency.<br><br>Moving your [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink] onto it will grant you <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink], <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] or [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] equipment."
+  },
   "GLOBAL.PROPERTIES.ACCURSED_ARMORS_GROUP": {
     "name": "Accursed Armors",
     "icon": null,

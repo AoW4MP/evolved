@@ -127,9 +127,13 @@ const AncientWondersPage = (() => {
         about.append(province);
 
         if (w.units.length) {
-            const rally = document.createElement("div");
+            // folded away past UNIT_LIST_FOLD units, as every card's list
+            const fold = w.units.length > UNIT_LIST_FOLD;
+            const rally = document.createElement(fold ? "details" : "div");
             rally.className = "aw-rally";
-            rally.innerHTML = '<div class="aw-head">Rally of the Lieges</div>';
+            rally.innerHTML = fold
+                ? '<summary class="aw-head">Rally of the Lieges (' + w.units.length + ")</summary>"
+                : '<div class="aw-head">Rally of the Lieges</div>';
             const list = document.createElement("div");
             list.className = "aw-units";
             for (const u of w.units) list.append(UnitLink(u));
@@ -330,5 +334,5 @@ const AncientWondersPage = (() => {
         return div;
     }
 
-    return { Open: HandlePage, Load, Card: WonderCard, All: () => wonders.wonders };
+    return { Open: HandlePage, Load, Card: WonderCard, All: () => wonders.wonders, Resource };
 })();

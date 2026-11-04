@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
+        <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
+        <meta charset="UTF-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="/evolved/Data/Init.js"></script>
+        <script src="/evolved/Data/worldmap.js"></script>
+        <!-- the choices' costs and rewards in the Ancient Wonders' words (AncientWondersPage.Resource) -->
+        <script src="/evolved/Data/ancientwonders.js"></script>
+        <script>
+            // The Silver Seas' Oceanic Happenings: a tab per kind (Minor, Major), a card per happening with its events and
+            // choices. All of it comes from Data/GEN/Happenings.json (group "Oceanic"), which aow4_diff_tools/worldmap.py
+            // generates from the game and the mod.
+
+            async function HandlePage() {
+                const data = await fetch("/evolved/Data/GEN/Happenings.json").then((res) => res.json());
+                WmTabs(
+                    Object.entries(WM_OCEANIC_KINDS).map(([id, [label]]) => {
+                        const here = data.happenings.filter((e) => e.group === "Oceanic" && e.category === id);
+                        const panel = document.createElement("div");
+                        for (const e of here) panel.append(WmHappening(e));
+                        return { id, label: '<img src="' + WM_HAPPENING_ICONS + here[0].icon + '" alt="" /> ' + label, count: here.length, panel };
+                    })
+                );
+            }
+        </script>
+
+        <title>Age of Wonders 4 Evolved - Oceanic Happenings</title>
+    </head>
+
+    <body>
+        <div id="header"></div>
+
+        <div class="wm-page">
+            <div class="textblocktitle">
+                <img src="/evolved/Icons/Interface/TitleIcons/category_icon_oceanic.png" height="40px" alt="" /> Oceanic Happenings
+                <img src="/evolved/Icons/Interface/TitleIcons/category_icon_oceanic.png" height="40px" alt="" />
+            </div>
+            <div id="tabs" class="wm-tabs"></div>
+            <div id="panels"></div>
+        </div>
+    </body>
+</html>

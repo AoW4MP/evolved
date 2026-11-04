@@ -110,11 +110,7 @@
                 const effects = StructureDescription(loc);
                 card.append(WmElement("div", "pi-text", WmMarkup(effects) + StructureHelp(loc)));
                 const unlocks = jsonStructurePredictions?.units?.[String(s.resid)];
-                if (unlocks) {
-                    const part = WmElement("div", "wm-part", '<div class="wm-label">Unlocks</div>');
-                    part.append(WmUnits(unlocks));
-                    card.append(part);
-                }
+                if (unlocks) card.append(WmUnitList("Unlocks", unlocks));
                 if (loc.requirement_description) {
                     const part = WmElement("div", "pi-requires", '<div class="wm-label">Requires</div>' + WmMarkup(AsBulletList(loc.requirement_description)));
                     card.append(part);

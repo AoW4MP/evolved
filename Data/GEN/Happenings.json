@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03 23:22",
+ "generated": "2026-11-04 15:22",
  "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "happenings": [
@@ -459,6 +459,1913 @@
    "warning": null,
    "image": null,
    "icon": "icon_warped_seasons.png"
+  },
+  {
+   "key": "the_cursed_gold",
+   "name": "The Cursed Gold",
+   "group": "Oceanic",
+   "category": "Major",
+   "dlc": "SILVERSEAS",
+   "sub": "The light of the golden ring shines upon the gilded skulls that guard the map to the legendary treasure.",
+   "description": "<bulletlist><bullet>Armies of gilded skulls can be found throughout the realm, guarding the clues to My'dhas' treasure.</bullet><bullet>After 12 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], the eclipse will end and the clues will fade from reach.</bullet></bulletlist>",
+   "duration": 12,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The moon of the realm eclipses the sun, and the emerging beams of light mark the location of an ancient forgotten treasure: the cursed gold of My'dhas.",
+      "Legends tell of a great lost hoard, of riches so dazzling that the very seas shone with the reflection of its gold. It is said that the treasure was what crowned My'dhas as the God of Wealth, and also the cause of his imprisonment within a [hyperlink,GLOBAL.VaultsphereLoreConcept]Vaultsphere[/hyperlink]. The treasure is said to be cursed, for it has taken the life of anyone who has sought it.",
+      "The legend says: \"When fire turns hollow, the light of the golden ring will shine upon the gilded skulls that guard the map.\""
+     ],
+     "options": [
+      {
+       "text": "\"A golden opportunity indeed.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The moon begins to move past the sun and the eclipse comes to an end, making it impossible to find the clues leading to the legendary treasure.",
+      "For those who do not know the location of the Cursed Gold, the bounty becomes a legend once more, to be told until the next eclipse. But for those who know where the X marks the spot, the treasure is still within reach. If they dare to claim it...",
+      "Treasure hunters return home empty-handed. It may be a good opportunity to recruit experienced sailors."
+     ],
+     "options": [
+      {
+       "text": "Leave them searching for treasures they will never find.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Lure them <influence></influence> into your ranks <unit></unit> with promises of adventures to be had and bounties to discover.",
+       "costs": [],
+       "rewards": [
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Offer them your <eventColor>Object</eventColor> to train your new armies. <unitprod></unitprod>",
+       "costs": [],
+       "rewards": [
+        [
+         "Draft",
+         "Medium"
+        ],
+        [
+         "Draft",
+         "High"
+        ],
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Promote <influence></influence> the stories between your ranks, let your renown <renown></renown> grow.",
+       "costs": [
+        [
+         "Imperium",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Silence <unhappiness></unhappiness> the stories. The longer it takes them to find out, the better. <influence></influence>",
+       "costs": [],
+       "rewards": [
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "the_nevermoor",
+   "name": "The Nevermoor",
+   "group": "Oceanic",
+   "category": "Major",
+   "dlc": "SILVERSEAS",
+   "sub": "The Nevermoor and its Haunted Armada are raiding the seas.",
+   "description": "<bulletlist><bullet>The Nevermoor sails the seas. Defeat its captain to end this Happening and earn a great reward.</bullet><bullet>The Haunted Armada has risen, affecting all water sectors and filling the seas with ghost ships.</bullet><bullet>Defeating ghost ship armies will grant rewards and an advantage against the Nevermoor fleet.</bullet></bulletlist>",
+   "duration": 15,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The sky turns black, darkened, not by clouds, but by a storm of souls. It is the legend of the Nevermoor.",
+      "You can hear a captain cry: \"Bear to port me boys! Haul away and run! The Nevermoor has come for our souls and the Allfather knows we are outgunned.\" The cursed caravel is an old tale from the [hyperlink,GLOBAL.WorldsWithinLoreConcept]Worlds Within[/hyperlink], of a spectral captain and their Haunter Armada. A tale that has turn into a terrifying reality, pillaging and attacking any vessel on sight in this realm.",
+      "Ghost ships now roam the waters, laden with treasures and the secrets of how the defiled fleet came to be... and perhaps how it might be brought low."
+     ],
+     "options": [
+      {
+       "text": "\"In a calm sea, everybody is a captain.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The Nevermoor vanishes, and with it, the storm of souls that followed in its wake.",
+      "The sunken ships and drowned souls descend once more to the bottom of the sea, and the dark clouds begin to disperse. It seems the Nevermoor and its fleet have had their fill of pillaging, looting, and plundering.",
+      "The seas are no longer haunted by the Haunted Armada, and the souls of the drowned rest at the bottom of the ocean."
+     ],
+     "options": [
+      {
+       "text": "Let the Nevermoor become a legend once more.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Call <mana></mana> upon those who still linger. <unit></unit>",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Hire <gold></gold> priests to lay those souls to rest. <goodact></goodact>",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Keep the heart to become the captain of the new Nevermoor. <artifact></artifact>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Destroy the heart and absorb its power. <xp></xp> <souls></souls>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Destroy the heart and free the drowned souls. <goodact></goodact> <mana></mana>",
+       "costs": [],
+       "rewards": [
+        [
+         "Mana",
+         "Very High"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "approaching_doom",
+   "name": "Approaching Doom",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "Something is draining the resources from the land, and soon all production on it will be reduced by 40%.",
+   "description": "In 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], land [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] will reduce their production by 40%.",
+   "duration": 12,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Prelude",
+     "text": [
+      "You sense a disturbance in the magic flows. Something is disrupting the ley lines of the realm.",
+      "You cannot figure out yet what it is, but something is draining the realm. Soon the crops will wither and mana crystals will crumble, diminishing your resources. Strangely, for some reason, the seas do not seem to be affected by this phenomenon.",
+      "If you do not wish to see your empire perish, you should find other sources of resources or prepare for scarcity."
+     ],
+     "options": []
+    },
+    {
+     "label": "Beginning",
+     "text": [
+      "Just as you predicted, the crops are perishing and the mana crystals are cracking... something is draining the life from the land.",
+      "Following the trail of energy, you have found the culprit: a radiant [hyperlink,GLOBAL.STRUCTURES.PEARLTIDE_DOME]Pearltide Dome[/hyperlink]. The structure is leeching the life of the realm. Whatever is happening within it, you must put a stop to it if the world is to be restored.",
+      "Yet while valleys and mountains wither, the seascape remains untouched. Some of the energy seems to accumulate within [hyperlink,GLOBAL.STRUCTURES.PEARL_NODE]Pearl Reefs[/hyperlink], nourishing the surrounding waters."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Life returns to the land. Crops begin to grow once more, and the realm regains its natural balance.",
+      "The [hyperlink,GLOBAL.STRUCTURES.PEARLTIDE_DOME]Pearltide Dome[/hyperlink] has stabilized, gathering enough energy to fulfill its mysterious purpose. Whatever created this effect still lingers, but it no longer pose a threat to the realm. Your attention now turns to your empire and how to best restore it.",
+      "What measures will you take after this catastrophe?"
+     ],
+     "options": [
+      {
+       "text": "\"The natural cycle has been restored. We must not interfere with it.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Infuse <mana></mana> your crops with energy so they may flourish <food></food> once more.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Food",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Focus <influence></influence> on the well being of your population. <happiness></happiness>",
+       "costs": [
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "City Stability",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Return the energy to the land, restoring the crops <food></food> from your empire.",
+       "costs": [],
+       "rewards": [
+        [
+         "Food",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Force the energy to crystallize. <mana></mana>",
+       "costs": [],
+       "rewards": [
+        [
+         "Mana",
+         "High"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "brume_on_the_water",
+   "name": "Brume on the Water",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "Some water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] are affected by the [hyperlink,GLOBAL.PROPERTIES.BRUME_ON_THE_WATER]Brume on the Water[/hyperlink], where treasures and monstrous figures lurk.",
+   "description": "Some water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] are affected by the [hyperlink,GLOBAL.PROPERTIES.BRUME_ON_THE_WATER]Brume on the Water[/hyperlink]. In them, monstrous figures lurk around [hyperlink,GLOBAL.PICKUPS.FLOATSOAM_PICKUP]Flotsam[/hyperlink] and [hyperlink,GLOBAL.PICKUPS.LUMINOUS_WAVES_UNGUARDED]Luminous Waves[/hyperlink].",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "A dense brume has settled over the ocean, and countless ships have vanished within it.",
+      "No vessel that has ventured into the fog has ever returned. Only the stories have made it back to port; stories of monstrous figures lurking in the mist, guarding vast treasures and waters overflowing with mana. Whether you choose to believe such stories is up to you. But the disappearance of so many ships is unsettling beyond doubt.",
+      "This mystery haunts the seas, and its answer can only be found among the treasures concealed within the brume"
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The brume has receded, and with it, the beings that dwelled within.",
+      "Like a heavy shroud, the fog has sunk into the deepest reaches of the ocean, taking its horrors with it. Your forces were unable to find enough clues to determine what these creatures sought, but whatever their purpose, their threat has passed.",
+      "One can only hope that whatever drew them here has now come to an end."
+     ],
+     "options": [
+      {
+       "text": "Let the memory of the brume fade.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Redirect your resources <structureprod></structureprod> to new troops <unitprod></unitprod>, you will not rely on luck alone.",
+       "costs": [
+        [
+         "Production",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Draft",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Hire <gold></gold> eldritch experts to research <knowledge></knowledge> the event.",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Knowledge",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Infuse <mana></mana> yourself with the forbidden power of the monsters.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "frozen_seas",
+   "name": "Frozen Seas",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "The seas freeze, affected by a <span style=\"color:white\">Whiteout</span>.<br>[hyperlink,GLOBAL.PICKUPS.LARGE_CREATURE_PICKUP]Large Creature Cage[/hyperlink] guarded by Hoarfrost Mantas spawn all over these frozen seas.<br>After 8 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], the ice will melt, drowning any unit unable to swim or embark.",
+   "description": "<bulletlist><bullet>Water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] are affected by a <span style=\"color:white\">Whiteout</span>, allowing your troops to walk through them.</bullet><bullet>[hyperlink,GLOBAL.PICKUPS.LARGE_CREATURE_PICKUP]Large Creature Cage[/hyperlink] guarded by Hoarfrost Mantas spawn all over these frozen seas.</bullet><bullet>After 8 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], the ice will melt, and any unit unable to swim or embark will immediately drown.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "A bone-chilling cold sweeps across the realm, freezing the seas and trapping countless victims beneath their solid waves.",
+      "The Hoarfrost Mantas gather once again for their seasonal feeding ritual, freezing the waters with their icy breath. Schools of these primordial creatures flock around their immobilized prey, devouring their essence in a ravenous frenzy.",
+      "Those unfortunate souls would surely be grateful to anyone who rescued them, owing their lives and their service to their savior."
+     ],
+     "options": []
+    },
+    {
+     "label": "Warning",
+     "text": [
+      "The manta schools have nearly sated their hunger, and the ice begins to crack.",
+      "The thick sheet of ice that allowed your armies to march across the sea is melting away. Anyone unable to swim will soon be claimed by the depths.",
+      "The waters will flow again in no time."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The temperature begins to rise, shattering the sheets of ice that blanketed the sea.",
+      "The schools of Hoarfrost Mantas disperse, leaving their half-frozen victims to sink beneath the waves. Yet some fragments of ice seem to have undergone a magical transformation, darkening in color and remaining locked in a state of perpetual frost.",
+      "Your troops have recovered one of these frost gems. What will you do with it?"
+     ],
+     "options": [
+      {
+       "text": "You have no interest in such magic.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Forge <bindingfragments></bindingfragments> it into a ring. <item></item>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Infuse <mana></mana> its essence into a spell.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Build <structureprod></structureprod> an artifact to use the gem as a power source. <mana></mana>",
+       "costs": [
+        [
+         "Production",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Mana",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Use the gem to attract and raise <food></food> your own Hoarfrost Mantas.",
+       "costs": [
+        [
+         "Food",
+         "High"
+        ]
+       ],
+       "rewards": [],
+       "units": [
+        "hoarfrost_manta",
+        "ancient_hoarfrost_manta"
+       ]
+      }
+     ]
+    }
+   ],
+   "units": [
+    "hoarfrost_manta",
+    "ancient_hoarfrost_manta"
+   ]
+  },
+  {
+   "key": "lamenters_call",
+   "name": "Lamenters' Call",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "Units starting their turn on water gain <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink], while units starting their turn on land lose it.<br>Your [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] lose <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].<br>[hyperlink,GLOBAL.UNITS.ACCURSED_LAMENTER]Accursed Lamenters[/hyperlink] sing over [hyperlink,GLOBAL.PICKUPS.WRECKAGE_PICKUP]Galleon Wreckages[/hyperlink]; slaying them rewards <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] to all your cities.",
+   "description": "<bulletlist><bullet>Units that start their turn on water provinces gain +5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Units that start their turn on land provinces lose -5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>Your [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] lose <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] for the duration of the Happening.</bullet><bullet>[hyperlink,GLOBAL.UNITS.ACCURSED_LAMENTER]Accursed Lamenters[/hyperlink] sing over [hyperlink,GLOBAL.PICKUPS.WRECKAGE_PICKUP]Galleon Wreckages[/hyperlink]; slaying them rewards <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] to all your cities.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "A mournful song fills the air, and a great sorrow washes over you. ",
+      "An irresistible urge to venture out to sea and hear it up close takes hold of you. The song cannot break your will, but not everyone possesses your resolve. Ships and boats sail out to sea, seeking the melody that makes them yearn for all they once loved.",
+      "The lamenters are singing in a realm-wide chorus, bringing doom to every soul that hears their tune."
+     ],
+     "options": [
+      {
+       "text": "\"Magic and steel will silence their song.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The song of the accursed fiends has ceased, and the wrecks sink into the sea with the souls of the drowned.",
+      "The realm-wide choir of lamenters has ceased its song, and the weight upon your soul fades away. A fleeting sense of relief fills you, but the melody continues to gnaw at your mind. Their words echo: \"Oh my sailor, you look paler, fear no fire or frost; For my brave, beneath the waves, we hold all you've lost.\" ",
+      "The power and rhythm of the song still linger within you. A nuisance, or perhaps an opportunity."
+     ],
+     "options": [
+      {
+       "text": "Let the song fade.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Compose <knowledge></knowledge> a spell with the accursed melody.",
+       "costs": [
+        [
+         "Knowledge",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Hire <gold></gold> bards to compose a new song to forget <happiness></happiness> the accursed requiem.",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "City Stability",
+         "Low"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "light_of_the_depths",
+   "name": "Light of the Depths",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "The [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] of the seas shine with the [hyperlink,GLOBAL.PROPERTIES.LIGHT_OF_THE_DEPTHS]Light of the Depths[/hyperlink].",
+   "description": "Water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] are affected by the [hyperlink,GLOBAL.PROPERTIES.LIGHT_OF_THE_DEPTHS]Light of the Depths[/hyperlink].",
+   "duration": 10,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Seas and underground lakes begin to glow throughout the realm. Old sailors speak of an ancient legend, a mysterious algae said to rise from the depths.",
+      "From the deepest ocean trenches, hundreds of luminous strands begin to emerge. At first, their glow is faint, unable to illuminate the vastness of the sea. But as more appear, the waters are transformed into a dazzling spectacle of light and energy. These algae do not merely fill the sea with radiance; they fill them with power.",
+      "Charged with an unknown magic, the seaweed imbues everything it touches with its energy. Though its origin remains a mystery, your empire could prosper greatly from its discovery."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "With the coming of the new moon, the luminous algae begin to sink back. Yet a bewitched and mysterious song seems to hold some of them fast.",
+      "A few strands remain behind, swaying with the tides and the inhuman melody. You know this song of sorrow and despair, it is the dirge of the [hyperlink,GLOBAL.UNITS.ACCURSED_LAMENTER]Accursed Lamenter[/hyperlink]. Their voices seem to be transforming the algae, draining its color and causing it to gleam accursed energy.",
+      "The fiends appear intent on using the algae for their own ends. Perhaps you could do the same."
+     ],
+     "options": [
+      {
+       "text": "\"It is unwise to meddle in the affairs of the damned.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Sing the canticle <mana></mana> of the damned, adding your own stanza.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Set an ambush <unitprod></unitprod> to capture one of the creatures. <unit></unit>",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Task your tideweavers <knowledge></knowledge> with mastering the cultivation of this algae.",
+       "costs": [
+        [
+         "Knowledge",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Compose <influence></influence> a requiem with the harmony of the dirge.",
+       "costs": [
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "marine_festival",
+   "name": "Marine Festival",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "Water [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] increase their income by 50%.<br>The cost of new [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] is halved.<br>[hyperlink,GLOBAL.PROPERTIES.EMBARKED_PENALTY]Embarked[/hyperlink] units reduced their upkeep by 50%.",
+   "description": "During 8 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>[hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] going through water increase their income by 50%.</bullet><bullet>The cost of new [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] is halved.</bullet><bullet>Upkeep of [hyperlink,GLOBAL.PROPERTIES.EMBARKED_PENALTY]Embarked[/hyperlink] units is reduced by 50%.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "You have been invited to the Marine Festival, hosted by the [hyperlink,GLOBAL.MarinusLoreConcept]Silver Seas Company[/hyperlink].",
+      "In the heart of the ocean lies a floating harbor unlike any other: dozens of ships anchored side by side and linked by wooden piers. Renowned sailing vessels from across the realm gather here, creating a temporary city upon the waves; home to merchants, entertainers, mercenaries, and seafarers of every kind. Maritime trade flourishes as the fair draws visitors from every corner of the realm.",
+      "The event presents an excellent investment opportunity. How will you respond to the invitation?"
+     ],
+     "options": [
+      {
+       "text": "\"Not all that glitters is gold.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Send your agents <influence></influence> to forge new commercial ties.",
+       "costs": [
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Send your ships <unitprod></unitprod> to participate in the festival and earn profits.",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The maritime fair has come to an end, though your fleet never took part in it.",
+      "For a few short moons, this festival was the beating heart of the sea. Countless crews found promising new deckhands, while merchants and traders filled their coffers. Once again, the fair proved a resounding success.",
+      "Maritime trade has returned to normal."
+     ],
+     "options": [
+      {
+       "text": "Return to sail the seas.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Use the treaties to open a new Trade Route. <traderoutetoken></traderoutetoken>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Use the treaties to improve relations with Free Cities. <allegiance></allegiance>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Leverage your influence <influence></influence> as the host to broker a deal benefiting both parts. <traderoutetoken></traderoutetoken> <allegiance></allegiance>",
+       "costs": [
+        [
+         "Imperium",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Cash the notes in for gold. <gold></gold>",
+       "costs": [],
+       "rewards": [
+        [
+         "Gold",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Cash the notes in for mana. <mana></mana>",
+       "costs": [],
+       "rewards": [
+        [
+         "Mana",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Hold the notes <influence></influence> and collect the interest. <gold></gold> <mana></mana>",
+       "costs": [
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Gold",
+         "High"
+        ],
+        [
+         "Mana",
+         "High"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "mating_season",
+   "name": "Mating Season",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "[hyperlink,GLOBAL.PICKUPS.WATER_EGG_PICKUP_GUARDED]Abandoned Egg Clusters[/hyperlink] fill the seas, stolen from the now peaceful [hyperlink,GLOBAL.STRUCTURES.SPAWNING_SHOAL]Spawning Shoals[/hyperlink].",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.STRUCTURES.SPAWNING_SHOAL]Spawning Shoals[/hyperlink] are neutral to players. </bullet><bullet>[hyperlink,GLOBAL.PICKUPS.WATER_EGG_PICKUP_GUARDED]Abandoned Egg Clusters[/hyperlink] spawn in water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink].</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The mating season of the [hyperlink,GLOBAL.UNITS.NIMU_UNIT]Nimu[/hyperlink] and other marine species has arrived, and the seas ring with courtship songs and breeding rituals.",
+      "Various subspecies of Nimu rise to the surface, their shells adorned with beautiful corals to attract a mate. The [hyperlink,GLOBAL.STRUCTURES.SPAWNING_SHOAL]Spawning Shoals[/hyperlink] are now peaceful nesting grounds, tended by devoted parents. Yet other creatures seize the opportunity to steal the eggs, using them as a rich source of nourishment.",
+      "The sea is filled with [hyperlink,GLOBAL.PICKUPS.WATER_EGG_PICKUP_GUARDED]Abandoned Egg Clusters[/hyperlink], guarded by predators competing for their tasty prize. Perhaps you could offer these marine creatures a better fate."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Mating season has come to an end, and the aquatic species once again gather around the [hyperlink,GLOBAL.STRUCTURES.SPAWNING_SHOAL]Spawning Shoals[/hyperlink].",
+      "The nests are now filled with hungry hatchlings waiting to be fed. And so, inexperienced but determined parents take to the hunt in great numbers, attacking any vessel they encounter in search of food or to defend their territory.",
+      "All [hyperlink,GLOBAL.PICKUPS.WATER_EGG_PICKUP_GUARDED]Abandoned Egg Clusters[/hyperlink] have either hatched or been devoured by predators. And now, an opportunity presents itself."
+     ],
+     "options": [
+      {
+       "text": "Better to use your resources elsewhere.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Feed <food></food> the Spawning Shoals.",
+       "costs": [
+        [
+         "Food",
+         "Very High"
+        ]
+       ],
+       "rewards": [],
+       "units": [
+        "nimu",
+        "deep-sea_nimu",
+        "kraken_spawn",
+        "seamare"
+       ]
+      },
+      {
+       "text": "Drill <unitprod></unitprod> your new aquatic army in naval warfare. <xp></xp>",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Release <unit></unit> the animals you saved. <goodact></goodact>",
+       "costs": [],
+       "rewards": [
+        [
+         "Imperium",
+         "Very Low"
+        ]
+       ],
+       "units": [
+        "nimu",
+        "deep-sea_nimu",
+        "kraken_spawn",
+        "kraken",
+        "seamare"
+       ]
+      }
+     ]
+    }
+   ],
+   "units": [
+    "nimu",
+    "deep-sea_nimu",
+    "kraken_spawn",
+    "seamare",
+    "kraken"
+   ]
+  },
+  {
+   "key": "mutiny",
+   "name": "Mutiny!",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "A mutiny has broken out against the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink]. Bounties have been posted for every pirate [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] and [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink].",
+   "description": "Bounties have been posted for every pirate [hyperlink,GLOBAL.InfestationConcept]Infestation[/hyperlink] and [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink].",
+   "duration": 15,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "To arms! Numerous pirate crews have risen in rebellion against the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink].",
+      "The great pirate lords have wasted no time in responding, generous bounties have been posted for the heads of the mutineers. The rebels have answered in kind, placing prices on the heads of the pirate captains. Loyalties are put to the test in this bidding war, one that drenches the seas in ember dust and blood.",
+      "It is a great opportunity for those whose only allegiance is to gold."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The pirate feud has come to an end, and the accounts have been settled in blood and gold.",
+      "The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink] has reached agreements with the surviving crews to preserve the status quo: A larger share of the spoils, the right to sail under their own banner, promotions... Whatever the terms, the conflict has left behind cargo to be sold and crews to be hired by the highest bidder.",
+      "Some of the wares and free pirates catch your eye."
+     ],
+     "options": [
+      {
+       "text": "Nothing here is worth the gold.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "<gold></gold> \"The <eventColor>Crew Name</eventColor> <eventColor>Crew Name2</eventColor> crew is fine steel for my ships.\" <unit></unit>",
+       "costs": [
+        [
+         "Gold",
+         "High"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "<gold></gold> \"A fiery addition to my arsenal.\" <item></item>",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Take advantage of the opportunity to strike a deal with the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captain[/hyperlink]. <allegiance></allegiance>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Take advantage of the opportunity to strike a deal with the mutineers.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "paragon_of_the_seas",
+   "name": "Paragon of the Seas",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "The [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink] with more water provinces will receive a primordial boon!",
+   "description": "After <eventColor>OCEANIC_PARAGON_TURNS_LEFT</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], the [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink] with more water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] will receive the primordial boon of the seas.",
+   "duration": 12,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Upon the open sea, the waters themselves begin to stir. Powerful currents whirl together, taking the shape of a colossal and primordial figure.",
+      "Its voice is as deep as the ocean and as mighty as a tidal wave: \"Uncertain times draw near, Godir. The elements are out of balance, and the seas of this realm seek a new Paragon. Prove yourselves worthy of such a boon. During this lunar phase, grow with the tides, become one with the water, and the might of the sea shall be yours.\"",
+      "The primordial being fades away in the waves, and its water crashes upon the shores bearing a promise of power."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "When the appointed time of the primordial being comes to an end, its continental form reappears offshore.",
+      "Born from waves and seafoam, its voice proclaims the victor of the divine contest: \"Let it be known to all who sail the waters that today the seas of the realm have a new champion. Remember the name of <eventColor>Winner</eventColor>, Paragon of the Seas, for they now command our strength.\"",
+      "The waves of the primordial crash upon the shores of the realm with a warning: a Godir has gained great power."
+     ],
+     "options": [
+      {
+       "text": "The primordial turns toward <eventColor>your city</eventColor>, addressing you directly.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Suddenly, the primordial turns toward <eventColor>your city</eventColor>, addressing you directly.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Let the waves crash on the shore, they cannot reach you.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Call <influence></influence> your people to arms <unitprod></unitprod>, you must be ready.",
+       "costs": [
+        [
+         "Imperium",
+         "Very Low"
+        ]
+       ],
+       "rewards": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Craft <mana></mana> magical protections for your troops.",
+       "costs": [
+        [
+         "Mana",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "The winner's prize",
+     "text": [
+      "The towering primordial speaks again, its voice thundering across the realm:",
+      "\"<eventColor>Player</eventColor>, the strength of the seas is now yours. Wield it wisely, and safeguard the waters from what is yet to come. May your empire and the ocean become one; may the winds always blow in your favor, and so long as the waters surround you, may you remain unstoppable.\"",
+      "The primordial pauses before asking: \"Now tell me... how will you rule the seas?\""
+     ],
+     "options": [
+      {
+       "text": "\"I shall rule with the might of the sea.\" <unit></unit>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I shall sail the waves myself, setting an example for my people.\" <item></item>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I shall expand my empire until it reaches every corner of the ocean.\" <food></food> <influence></influence>",
+       "costs": [],
+       "rewards": [
+        [
+         "Food",
+         "High"
+        ],
+        [
+         "Imperium",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "\"I shall become one with the sea itself.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "The others' prize",
+     "text": [
+      "The towering primordial speaks again, its voice thundering across the waters:",
+      "\"Yet there are others who have proven themselves kindred to the sea. <eventColor>Player</eventColor>, your empire shall always be welcome among the waves. Allow me to offer you a reward worthy of your might.\"",
+      "The billows offer you their blessing. What will you ask of them?"
+     ],
+     "options": [
+      {
+       "text": "The waves of the seas. <unit></unit>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "The might of the seas. <item></item>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "The riches of the seas.<food></food> <mana></mana> <gold></gold>",
+       "costs": [],
+       "rewards": [
+        [
+         "Food",
+         "Medium"
+        ],
+        [
+         "Mana",
+         "Medium"
+        ],
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "The shape of the seas.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "procession_of_the_drowned",
+   "name": "Procession of the Drowned",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "The [hyperlink,GLOBAL.PROPERTIES.DROWNED_PROCESSION]Procession of the Drowned[/hyperlink] is taking place in water provinces.",
+   "description": "Water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] yield +2 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink] income.",
+   "duration": 10,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "In countless coastal villages, the locals descend beneath the waves, only to emerge bearing a ceremonial throne.",
+      "The rite known as the Procession of the Drowned is taking place throughout the realm. Sacred effigies of [hyperlink,GLOBAL.NimueLoreConcept]Nimue[/hyperlink], [hyperlink,GLOBAL.MaelLoreConcept]Mael[/hyperlink], and other sea deities are raised from the ocean floor, where they rest throughout the year, protecting sailors and sheltering the souls of those who perished at sea. As the figures are paraded, the faithful cast floating lanterns and offerings upon the water, praying for the gods' mercy.",
+      "This ancient tradition is deeply rooted in the culture of the realm. Should your empire take part, it would surely bring you fame."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The Procession of the Drowned is coming to an end. The ceremonial thrones are lowered back beneath the waves, and the final offerings are cast upon the sea.",
+      "The coastal folk gather along the shore to bid farewell to their sacred icons. One by one, they make their offerings: fishermen surrender their first catch, expectant mothers cast a sea flower seed into the tide, and mages offer a single silver coin. By ancient custom, the Ruler presents the final and generous offering.",
+      "Will you take part in the rite yourself?"
+     ],
+     "options": [
+      {
+       "text": "\"These pagan beliefs do not suit me.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Make an offering <gold></gold> <mana></mana> <food></food> and commune with the sea gods.",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ],
+        [
+         "Mana",
+         "Low"
+        ],
+        [
+         "Food",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Commission <unitprod></unitprod> your own statue and throne, it is you they should be praying to. <renown></renown>",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "runecrab_migration",
+   "name": "Runecrab Migration",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "A massive runecrab migration is a-brewing!<br>[hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] <unit></unit> will join your ranks if you annex enough [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] from a [hyperlink,GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX]Tempestuous Vortex[/hyperlink],",
+   "description": "<bulletlist><bullet>After 10 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], the massive runecrab migration will take place.</bullet><bullet>For every province annexed from a [hyperlink,GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX]Tempestuous Vortex[/hyperlink], a [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crab[/hyperlink] will join your ranks.</bullet><bullet>For every 2 province annexed from the Vortexes, said [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] will gain an additional level of [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink].</bullet></bulletlist>",
+   "duration": 10,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The runecrabs have begun their migratory dance. Entire colonies move in circles, generating powerful electrical currents.",
+      "The [hyperlink,GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX]Tempestuous Vortexes[/hyperlink] created by these currents will hurl the runecrabs across every corner of the realm. The creatures are drawn to rich concentrations of mana and resources, seeking to join powerful colonies. Your scholars theorize that by attuning your cities to the energy of the Tempestuous Vortexes, you may convince the runecrabs to accept your empire as their new home.",
+      "It is your chance to amass a mighty storm of crustacean creatures."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The mass exodus of the crustacean creatures has come to an end, and they have settled around the realm.",
+      "Even with most runecrabs established, the powerful electrical currents seem to have left a permanent mark on the seas. The [hyperlink,GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX]Tempestuous Vortexes[/hyperlink] continue to twist with tremendous force, hurling any straggling runecrabs and infusing the realm with its power.",
+      "Perhaps you could harness some of that power, now that the currents still rage."
+     ],
+     "options": [
+      {
+       "text": "\"Still waters run deep.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Redirect <mana></mana> the stormy energy into your new army. <xp></xp> ",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Expose <hp></hp> <influence></influence> yourself to the power of the Vortex to acquire some of its properties.",
+       "costs": [
+        [
+         "Imperium",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Build a thriving habitat <structureprod></structureprod> <food></food> beside the Tempestuous Vortex so the runecrabs can grow.",
+       "costs": [
+        [
+         "Production",
+         "Low"
+        ],
+        [
+         "Food",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": [
+        "storm_rune_crab"
+       ]
+      },
+      {
+       "text": "Trap <bindingfragments></bindingfragments> the tempestuous magic in a wand. <item></item>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": [
+    "storm_rune_crab"
+   ]
+  },
+  {
+   "key": "the_great_flood",
+   "name": "The Great Flood",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "A massive deluge is drowning the whole realm! Surface and underground land [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] flood every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+   "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], several surface and underground land [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] will turn into water provinces.",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Without warning, a deluge descends upon the realm. Yet not a single cloud darkens the sky. Instead, colossal glyphs of an immense hydromantic spell shimmer overhead.",
+      "The rain falls like a curtain of water, unceasing across the entire realm. Lakes and rivers overflow, flooding valleys and plains, inundating caverns and caves. The seas begin to devour the shores, threatening to swallow every stretch of dry land. [hyperlink,GLOBAL.NimueLoreConcept]Nimue[/hyperlink], [hyperlink,GLOBAL.MaelLoreConcept]Mael[/hyperlink], or perhaps the primordials of the sea may be responsible. But whatever the cause, it is far too late to stop it.",
+      "As you look at the glyphs through the rain, an idea comes to mind: a spell capable of altering them and countering the flood."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The rains cease as suddenly as they began, and the glyphs overhead start to fade, leaving behind trails of silver light.",
+      "The Great Flood has submerged vast portions of the realm, reshaping its lakes, rivers, and coastlines. Now that the downpour has ended, you can clearly study the glyphs responsible for such a feat. Ancient and powerful magic weaves through every symbol and rune, hanging tantalizingly within sight.",
+      "Before the glyphs vanish completely, perhaps you can preserve some of their knowledge for your own purposes."
+     ],
+     "options": [
+      {
+       "text": "\"All things belong to the sea, and all things shall return to it.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Use the glyph design to retain <mana></mana> your [hyperlink,GLOBAL.SPECIAL_OPERATIONS.WATER_TO_LAND_SPELL]Banish Waters[/hyperlink].",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Copy the glyphs <mana></mana> to develop a [hyperlink,GLOBAL.SPECIAL_OPERATIONS.LAND_TO_WATER_SPELL]Deluge[/hyperlink].",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "the_littoral_market",
+   "name": "The Littoral Market",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "The Littoral Market is opening!<br>[hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] income increases by 50%.<br>Killing a water unit rewards an additional 6 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] per [hyperlink,GLOBAL.UnitTierConcept]Unit tier[/hyperlink].",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] income increases by 50%.</bullet><bullet>Killing a water unit will reward an additional 6 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] per [hyperlink,GLOBAL.UnitTierConcept]Unit tier[/hyperlink].</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "There is a great bustle in the ports as sailors prepare to put out to sea and earn their livelihood.",
+      "Boatswains bark orders and rally their crews: \"It's fishing season me boys! The market opens soon; fishmongers and scalesmiths are buying! All hands on deck, we are going to make a fortune!\". The flesh of sea beasts is considered an exotic delicacy, while their bones, hides, and scales are crafted into trinkets and magical trinkets.",
+      "The realm-wide Littoral Market will soon be held. Marine meat and materials are in high demand."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Sea beasts season has ended and the Littoral Market buzzes with activity.",
+      "Merchants from various empires travel to it in search of supplies for their nations. As you scry the stalls and sales, several opportunities catch your eye: A fishmonger sells quality provisions in bulk; a scalesmith, accepting only mana as payment, offers magical trinkets of exceptional craftsmanship; and a vendor serves a peculiar local delicacy said to possess unique properties.",
+      "You may only have time to secure one of the deals before another buyer does."
+     ],
+     "options": [
+      {
+       "text": "No deal seems worthwhile.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Purchase <gold></gold> fish and sea beast meat <food></food> for your empire.",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Food",
+         "Medium"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Purchase <mana></mana> a trinket <item></item> crafted from marine monsters.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Purchase <gold></gold> a bowl of fermented frenzied fish guts in storm crab soup.",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "the_song_of_the_winds",
+   "name": "The Song of the Winds",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.SONG_OF_THE_WINDS]The Song of the Winds[/hyperlink] fills the sails of your ships on the open sea.",
+   "description": "Units that start their turn on surface water provinces gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The melody of an old galley shanty begins to ride upon the wind, bringing with it powerful gales.",
+      "The ancient sea shanty sings:<br>\"When the salt calls, but your body is sore<br>Sing the song of the Winds, HEY!<br>If you can't push your paddle no more<br>May the breeze come blowing your way, HUH!<br><br>When it's your wish to see home once more<br>Sing the song of the Winds, HEY!<br>If there is no breeze nor sight of the shore<br>May the winds come howling your way, HUH!\"",
+      "It is unknown where the old melody comes from, but whatever its origin, its effects are soon felt throughout the realm."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The melody has faded, and with it the fierce winds that accompanied its song.",
+      "Your scholars theorize that the melody belonged to a [hyperlink,GLOBAL.MaerLoreConcept]Maer[/hyperlink], whose voice once guided—or perhaps even commanded—the [hyperlink,GLOBAL.AstralFlowsLoreConcept]Astral Flows[/hyperlink], granting safe passage to this realm to those in need. The shanty itself appears to have been composed ages ago, serving both as a work song and a prayer, sung by weary sailors in the hope that their voices would summon favorable winds.",
+      "The ancient melody still lingers in your mind, its magic waiting to be harnessed."
+     ],
+     "options": [
+      {
+       "text": "Let the wind fade.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Capture <mana></mana> the last gust of wind in a bottle. <item></item>",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Create <mana></mana> a spell so the wind always blows in your favor.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Record <knowledge></knowledge> the ancient sea shanties, preserving the power carried by the winds. <item></item>",
+       "costs": [
+        [
+         "Knowledge",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "the_tempest",
+   "name": "The Tempest",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "[hyperlink,GLOBAL.PROPERTIES.RAGING_WINDS_COMBAT_PROP_PLAIN]The Tempest[/hyperlink] strike the seas, filling it with [hyperlink,GLOBAL.PICKUPS.LUMINOUS_WAVES_UNGUARDED]Luminous Waves[/hyperlink]! <span style=\"color:white\">Lightning Torrents</span> may strike armies that collect pickups.",
+   "description": "<bulletlist><bullet>Surface water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] are affected by [hyperlink,GLOBAL.PROPERTIES.RAGING_WINDS_COMBAT_PROP_PLAIN]The Tempest[/hyperlink] and numerous [hyperlink,GLOBAL.PICKUPS.LUMINOUS_WAVES_UNGUARDED]Luminous Waves[/hyperlink] will appear across them.</bullet><bullet>A <span style=\"color:white\">Lightning Torrent</span> may strike armies that collect pickups.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Your cloudseers bring word of it: winds charged with mana from the west have collided with the coastal current. The mother of all storms approaches.",
+      "Beneath darkened skies, thunder and lightning lash the seas with unparalleled fury. In their wake, they leave behind waters infused with Astral energy, a dazzling prize for those daring enough to brave the seas during the tempest. Who knows what secrets you might uncover if you gather enough of them.",
+      "Your mages yearn to lay their hands upon the [hyperlink,GLOBAL.PICKUPS.LUMINOUS_WAVES]Luminous Waves[/hyperlink], which will dissolve among the waters after the storm."
+     ],
+     "options": [
+      {
+       "text": "\"Wind and waves are always on the side of the better sailor.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I am the tempest!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The clouds part, the winds subside, the storm has passed, and the remnants of crystallized mana dissolve among the waves.",
+      "The waters are brimming with magic and life. The energy of the storm has revitalized the marine ecosystem. Runecrabs have recharged their runes while algae and coral flourish everywhere, pearls overflow with mana, and countless species grow at an astonishing rate.",
+      "The sea teems with natural resources. Perhaps you can take advantage of this opportunity before the biome returns to balance."
+     ],
+     "options": [
+      {
+       "text": "Leave the cycle of nature to take place.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Call the fishermen <unitprod></unitprod>, it is a fine day for a haul. <food></food>",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Food",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Build <structureprod></structureprod> artificial reefs so a [hyperlink,GLOBAL.STRUCTURES.PEARL_NODE]Pearl Reef[/hyperlink] <gold></gold><mana></mana> can flourish within your domain.",
+       "costs": [
+        [
+         "Production",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Learn <knowledge></knowledge> the arcane magic that was left in the [hyperlink,GLOBAL.PICKUPS.LUMINOUS_WAVES]Luminous Waves[/hyperlink].",
+       "costs": [],
+       "rewards": [
+        [
+         "Knowledge",
+         "Medium"
+        ],
+        [
+         "Knowledge",
+         "High"
+        ],
+        [
+         "Knowledge",
+         "Very High"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "the_thalassan_hunt",
+   "name": "The Thalassan Hunt",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "The [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] with more points will win the bounty of The Thalassan Hunt.",
+   "description": "Killing independent non-racial units in water will grant you points equal to their tiers. After <eventColor>THALASSAL_TURNS_LEFT</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], the [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] with more points will win the bounty of the Thalassan Hunt.",
+   "duration": 10,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The great Thalassal Hunt has begun! The most formidable pirates are preparing to make a name for themselves in this legendary competition.",
+      "The tournament, originally founded to keep the seas safe for navigation, has become one of the most celebrated traditions among pirates. Sponsored by the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink], the event draws countless crews, many of whom form temporary alliances in pursuit of victory. There is nothing preventing your empire from taking part.",
+      "A rich bounty and lasting fame await the winner."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The Thalassal Hunt is over! The [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink] celebrates with a grand feast, inviting all who took part.",
+      "The captains gather to tally their deeds and proclaim the final rankings. After a brief deliberation, the winner is announced, and the news is shouted to the four winds. A banner bearing the name and likeness of <eventColor>Winner</eventColor> towers above the rest of the participants, proclaiming <eventColor>your Hero</eventColor> as the [hyperlink,GLOBAL.PROPERTIES.THALASSAN_HUNTER]Thalassan Hunter[/hyperlink].",
+      "Cheers and jeers erupt throughout the feast. Participants raise their drinks to celebrate victories and drown their sorrows."
+     ],
+     "options": [
+      {
+       "text": "It is time to claim your reward.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Claim your prize, you still ranked highly in the competition.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Leave the celebration. There is nothing here for you.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Celebrate <influence></influence> the event with your troops. <morale></morale>",
+       "costs": [
+        [
+         "Imperium",
+         "Very Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Buy <gold></gold> a round for everyone. <allegiance></allegiance>",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "The winner's prize",
+     "text": [
+      "All the captains have come together for this event, an unusual occurrence. For even under their alliance, captains keep tabs on old grudges.",
+      "Whatever quarrels may exist between them, or with you, this competition is sacred, and all differences are set aside. Before you lies your reward: a hefty purse of gold and the title of [hyperlink,GLOBAL.PROPERTIES.THALASSAN_HUNTER]Thalassan Hunter[/hyperlink]. Before you claim what is owed to you, one of the captains calls out: \"Your legend now sails these seas, <eventColor>Leader</eventColor>. Ye've earned the favor of the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink], should ye seek it.\"",
+      "The captains offer you one final boon. How will you respond?"
+     ],
+     "options": [
+      {
+       "text": "\"Let your finest quartermaster join my crew, if they wish.\" <unitHero></unitHero>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"My reward is the honor of sailing beside you all.\" <allegiance></allegiance>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "It is not gold or glory which you seek, share <gold></gold> the bounty with your cities. <happiness></happiness> <goodact></goodact>",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "rewards": [
+        [
+         "City Stability",
+         "Medium"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "The others' prize",
+     "text": [
+      "All the captains have come together for this event, an unusual occurrence. For even under their alliance, captains keep tabs on old grudges.",
+      "Whatever quarrels may exist between them, or with you, this competition is sacred, and all differences are set aside. Before you lies your reward: a purse of gold and the title of Renowned Hunter. Before you claim what is owed to you, one of the captains calls out: \"Your legend now sails these seas, <eventColor>Leader</eventColor>. Ye've earned the favor of the [hyperlink,GLOBAL.PirateDwellingConcept]Free Captains[/hyperlink], should ye seek it.\"",
+      "The captains offer you one final boon. How will you respond?"
+     ],
+     "options": [
+      {
+       "text": "\"Let your quartermasters join my crew, if they wish.\" <unitHero></unitHero>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"My reward is the honor of sailing beside you all.\" <allegiance></allegiance>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "It is not gold or glory which you seek, share <gold></gold> the bounty with your cities. <happiness></happiness> <goodact></goodact>",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "rewards": [
+        [
+         "City Stability",
+         "Low"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "unbound_krakens",
+   "name": "Unbound Krakens",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "[hyperlink,GLOBAL.UNITS.KRAKEN_UNIT]Krakens[/hyperlink] fill the waters, leaving [hyperlink,GLOBAL.PICKUPS.WRECKAGE_PICKUP]Galleon Wreckages[/hyperlink] behind. Armies that collect pickups may be ambushed by them.",
+   "description": "<bulletlist><bullet>[hyperlink,GLOBAL.UNITS.KRAKEN_UNIT]Kraken[/hyperlink] armies roam the surface and underground water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink], leaving [hyperlink,GLOBAL.PICKUPS.WRECKAGE_PICKUP]Galleon Wreckages[/hyperlink] behind.</bullet><bullet>Armies that collect pickups may be ambushed by Krakens.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "A strange earthquake shakes the realm, yet what troubles you most is the roar that followed it.",
+      "Reports soon begin to arrive: numerous sightings of adult [hyperlink,GLOBAL.UNITS.KRAKEN_UNIT]Krakens[/hyperlink], aggressively attacking every vessel in sight. The seas have become a graveyard of ships, littered with [hyperlink,GLOBAL.PICKUPS.WRECKAGE_PICKUP]Galleon Wreckage[/hyperlink]. As your mages investigate the phenomenon, you begin to consider whether there might be something to gain from this crisis.",
+      "Unclaimed wealth awaits in the waves. It is a dangerous endeavor, but a calm sea never forged a fabled sailor."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The [hyperlink,GLOBAL.UNITS.KRAKEN_UNIT]Krakens[/hyperlink] have left the seas, and despite the danger, there are those who have profited from the wrecks they left behind.",
+      "Before your mages could uncover its origin, another earthquake strikes the realm—one of precisely the same intensity and duration. When the tremors cease, the [hyperlink,GLOBAL.UNITS.KRAKEN_UNIT]Krakens[/hyperlink] are gone. Sailors swear that every last one of them was heading in the same direction before diving beneath the waves. Whatever brought them here has now called them back.",
+      "A relic merchant passes through your <eventColor>your city</eventColor>, selling goods salvaged from the remaining wreckages. Amid trinkets and trifles, you discover a few items of genuine interest."
+     ],
+     "options": [
+      {
+       "text": "These wares are not worth your gold.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Acquire <gold></gold> a cheap <eventColor>Hero Item</eventColor>. <item></item>",
+       "costs": [
+        [
+         "Gold",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Acquire <gold></gold> the <eventColor>Item2</eventColor>. <item></item>",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Acquire <gold></gold> all the logbooks <knowledge></knowledge> of the sunken ships.",
+       "costs": [
+        [
+         "Gold",
+         "Medium"
+        ]
+       ],
+       "rewards": [
+        [
+         "Knowledge",
+         "High"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Confiscate <unitprod></unitprod> <evilact></evilact> the goods <item></item> <knowledge></knowledge>, what sinks in the sea belongs to you.",
+       "costs": [
+        [
+         "Draft",
+         "Very High"
+        ]
+       ],
+       "rewards": [
+        [
+         "Knowledge",
+         "High"
+        ]
+       ],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
+  },
+  {
+   "key": "volcanic_eruptions",
+   "name": "Volcanic Eruptions",
+   "group": "Oceanic",
+   "category": "Minor",
+   "dlc": "SILVERSEAS",
+   "sub": "Volcanic islands have emerged full of resources.<br>Unguarded [hyperlink,GLOBAL.PICKUPS.STRUCTURE_UNGUARDED_PICKUP]Production Stash[/hyperlink] <production></production> and [hyperlink,GLOBAL.PICKUPS.DRAFT_UNGUARDED_PICKUP]Draft Stash[/hyperlink] <unitprod></unitprod> appear all over these islands.<br>[hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink] <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] and <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] income is doubled.",
+   "description": "<bulletlist><bullet>Volcanic islands emerge on surface water [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink].</bullet><bullet>Unguarded [hyperlink,GLOBAL.PICKUPS.STRUCTURE_UNGUARDED_PICKUP]Production Stash[/hyperlink] <production></production> and [hyperlink,GLOBAL.PICKUPS.DRAFT_UNGUARDED_PICKUP]Draft Stash[/hyperlink] <unitprod></unitprod> appear all over these islands.</bullet><bullet><structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] and <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] income in [hyperlink,GLOBAL.AshlandsConcept]Ashlands[/hyperlink] is doubled.</bullet></bulletlist>",
+   "duration": 8,
+   "warning": null,
+   "image": null,
+   "icon": "category_icon_oceanic_minor_happening_icon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "A mysterious surge of Chaos energy has swept across the realm, awakening countless Infernal Volcanoes that had long slumbered beneath the sea.",
+      "Gigantic fiery fissures erupt across the oceans, hurling molten rock. When the molten inferno finally subsides, a chain of newborn volcanic islands rises above the waves. The scorching archipelagos still pulse with Chaos energy, spewing lava, metals, and molten minerals from minor cracks.",
+      "The virgin volcanic islands overflow with valuable metals and resources, waiting to be claimed."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The volcanic eruptions have ceased, and the precious materials have become buried beneath layers of solid rock.",
+      "The seascape has been forever changed by this eruption, as has the crust of the realm, now infused with valuable minerals. At last, the lava seems to be cooling, restoring stability to the realm. Even so, you can still sense traces of the Chaos energy that swept across the land, rising from the volcanic earth.",
+      "Maybe you could take advantage of it."
+     ],
+     "options": [
+      {
+       "text": "Leave the Chaos behind.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Open <unitprod></unitprod> new mines to look for those minerals. <bindingfragments></bindingfragments>",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Concentrate <mana></mana> the Chaotic energy into a Fireforge Stone within your domain.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Become a conduit <mana></mana> of the volcanic energy of your domain.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   }
  ]
 }

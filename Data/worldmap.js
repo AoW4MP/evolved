@@ -68,6 +68,15 @@ function WmUnit(nameOrId) {
     return link;
 }
 
+// units under a label, folded away past UNIT_LIST_FOLD (Builder.js) of them: what a spell summons, a structure or landmark unlocks
+function WmUnitList(label, units) {
+    const part = units.length > UNIT_LIST_FOLD
+        ? WmElement("details", "wm-story", "<summary>" + label + " (" + units.length + ")</summary>")
+        : WmElement("div", "wm-part", '<div class="wm-label">' + label + "</div>");
+    part.append(WmUnits(units));
+    return part;
+}
+
 function WmUnits(units, others) {
     const holder = document.createElement("div");
     if (units.length) {
@@ -101,6 +110,8 @@ const WM_HAPPENING_GROUPS = {
     Special: ["Special", "icon_blood_moon.png", "rgb(100, 40, 140)"]
 };
 const WM_HAPPENING_ICONS = "/evolved/Icons/CosmicHappenings/";
+// the Oceanic Happenings page's tabs: label, the cards' band
+const WM_OCEANIC_KINDS = { Minor: ["Minor", "rgb(30, 120, 140)"], Major: ["Major", "rgb(20, 70, 120)"] };
 
 function WmInfestation(e) {
     const tag = "infestation" + e.tier.toLowerCase();
@@ -158,9 +169,7 @@ function WmLandmark(e) {
         about.append(part);
     }
     if (e.units.length) {
-        const part = WmElement("div", "wm-part", '<div class="wm-label">Units it unlocks</div>');
-        part.append(WmUnits(e.units));
-        about.append(part);
+        about.append(WmUnitList("Units it unlocks", e.units));
     }
     card.append(about);
     return card;
@@ -168,9 +177,9 @@ function WmLandmark(e) {
 
 function WmHappening(e) {
     const card = WmCard(WmMarkup(e.name).replace(/<[^>]+>/g, "").trim(), {
-        band: WM_HAPPENING_GROUPS[e.group][2],
+        band: e.group === "Oceanic" ? WM_OCEANIC_KINDS[e.category][1] : WM_HAPPENING_GROUPS[e.group][2],
         icon: '<img src="' + WM_HAPPENING_ICONS + e.icon + '" alt="" />',
-        note: e.group === "Minor" ? "" : e.category,
+        note: e.group === "Oceanic" ? (e.category === "Major" ? "Major" : "") : e.group === "Minor" ? "" : e.category,
         dlc: e.dlc,
         picture: e.image ? WM_HAPPENING_ICONS + e.image : "",
         iconOnly: e.icon ? WM_HAPPENING_ICONS + e.icon : ""
@@ -188,6 +197,31 @@ function WmHappening(e) {
         for (const o of e.story.options) story.append(WmElement("div", "wm-story-option", WmMarkup(o)));
         about.append(story);
     }
+    // an Oceanic one: the units its choices unlock, then its events, each a fold with its choices
+    if (e.units?.length) about.append(WmUnitList("Unlocks", e.units));
+    for (const ev of e.events || []) {
+        const story = WmElement("details", "wm-story", "<summary>" + ev.label + "</summary>" + ev.text.map((t) => "<p>" + WmMarkup(t) + "</p>").join(""));
+        for (const o of ev.options) story.append(WmChoice(o));
+        about.append(story);
+    }
     card.append(about);
     return card;
+}
+
+// an event's choice: its text, then what it costs and gives (in the Ancient Wonders' words) and the units it unlocks
+function WmChoice(o) {
+    const row = WmElement("div", "wm-story-option", WmMarkup(o.text));
+    const resource = (r) => WmMarkup(AncientWondersPage.Resource(r));
+    const once = (pairs) => [...new Map(pairs.map((p) => [p.join(" "), p])).values()];    // a reward for each case: once
+    const notes = [
+        ...once(o.costs).map(([r, level]) => '<span class="wm-cost">Costs ' + level + " " + resource(r) + "</span>"),
+        ...once(o.rewards).map(([r, level]) => '<span class="wm-reward">' + level + " " + resource(r) + "</span>")
+    ];
+    if (notes.length) row.append(WmElement("div", "wm-notes", notes.join("")));
+    if (o.units.length) {
+        const units = WmElement("div", "wm-notes", '<span class="wm-reward">Unlocks</span>');
+        units.append(WmUnits(o.units));
+        row.append(units);
+    }
+    return row;
 }

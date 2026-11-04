@@ -3727,6 +3727,10 @@ function backtrackUnitOrigins(unitData, name, holder) {
             miniIcon.innerHTML = "<landmark></landmark>";
 
             tooltipText = `Unit unlocked from <landmark></landmark> <hyperlink>${wonder[x].type}</<hyperlink> : <hyperlink>${wonder[x].name}</<hyperlink>`;
+        } else if (wonder[x].type == "Oceanic Happening") {
+            // a choice at its end lets cities draft the unit (Mating Season's Seamare)
+            miniIcon.innerHTML = "";
+            tooltipText = `Unit production unlocked by a choice in Oceanic Happening <hyperlink>${wonder[x].name}</hyperlink>`;
         } else {
             miniIcon.innerHTML = "<rally></rally>";
             tooltipText = `Rally Unit unlocked from <hyperlink>${wonder[x].type}</<hyperlink> : <hyperlink>${wonder[x].name}</<hyperlink>`;
@@ -5069,9 +5073,13 @@ function showStructure(a, showOrigin, divOrigin) {
     return modcard;
 }
 
-// the units something lets cities draft, as the Spells pages' cards list them: under a label, folded away past six
+// a card's list of units folds away past this many of them, on every page (WmUnitList, the Ancient Wonders' rallies too)
+const UNIT_LIST_FOLD = 4;
+
+// the units something lets cities draft, as the Spells pages' cards list them: under a label, folded away past
+// UNIT_LIST_FOLD of them
 function UnitUnlocksMenu(units, label = "Unlocks") {
-    const fold = units.length > 6;
+    const fold = units.length > UNIT_LIST_FOLD;
     const part = document.createElement(fold ? "details" : "div");
     part.className = "unitUnlocks";
     part.innerHTML = fold ? `<summary>${label} (${units.length})</summary>` : `<div class="unitUnlocksLabel">${label}</div>`;

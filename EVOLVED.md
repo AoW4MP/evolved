@@ -213,6 +213,8 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - Infestations: a tab per tier, with defenders (a Mistwalker Camp's per season), size, growth and reward. A story realm's, tome's or happening's copy under the same name is left out.
 - Landmarks: a tab per DLC, with no All tab, as the other World Map pages have none (an old `?type=All` opens the first). The units a landmark unlocks are those its threshold property allows; the Leviathan parts have no picture on the site.
 - Cosmic Happenings: Minor, Major, Intrigue (with their opening event) and Special (Visions of Ruin, Blood Moon, Warped Seasons). Story realm happenings are left out.
+- Oceanic Happenings (`HTML/OceanicHappenings.html`, Evolved's own; upstream has none): the Silver Seas' 20, a tab for the Minor ones and one for the two Major ones (The Nevermoor, The Cursed Gold; the game's type and icon for them are the Minor ones', only their tags tell). They are `Happenings.json`'s group `Oceanic`. A card has the game's Oceanic icon (no picture: the events show a 3D scene), the units its choices unlock, then each event as a fold (Beginning, End, a contest's two prizes) with its choices: what each costs and gives, in the Ancient Wonders' words (`AncientWondersPage.Resource`, so the page loads `ancientwonders.js` too), and the units it lets cities draft (Mating Season's Feed the Spawning Shoals: Nimu, Seamare...). The menu and title icons are made from the game's 72px icon (`category_icon_oceanic.png`).
+- A card's list of units folds away past 4 of them (`UNIT_LIST_FOLD` in `Builder.js`, `WmUnitList` in `worldmap.js`): what a spell summons, a structure, landmark, trait, artifact, skill or happening unlocks, a wonder's Rally of the Lieges. Defenders don't fold.
 - Province Improvements: a tab per kind, grouped by where they come from; the search and resource buttons work across the tabs, whose counts follow. The texts stay the dump's. The victory monuments and Magic Victory structures aren't listed, as on upstream's page.
 
 ### Spells pages
@@ -220,7 +222,7 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 `HTML/StrategicSpells.html`, `HTML/CombatSpells.html` (Tactical Spells), `HTML/TransformationSpells.html`, `HTML/EnchantmentSpells.html` and `HTML/SiegeProjects.html` are Evolved's own pages, replacing upstream's (same URLs, `?type=<tab>`). They share `Data/spellbook.js` and `Style/spellbook.css`, on top of `Data/worldmap.js` and `Style/worldmap.css`.
 
 - `spells.py` in aow4_diff_tools generates `Data/GEN/SpellBook.json`: costs, upkeep, kinds and where a spell comes from from the live game plus the mod, the texts from the dump (the game fills in its own values there). The dump's texts have a few repairs: a value it lost ("a -hex radius"), a number run into an icon ("+1Range"), one form for any count ("3 Turn").
-- A tab per kind; a Damage/Debuff Spell is on both tabs, a dual tome's enchantment on both affinities'. Search and the affinity buttons work across the tabs, whose counts follow; sorted by tier, the cards are grouped by tome tier. A list of more than six units folds away.
+- A tab per kind; a Damage/Debuff Spell is on both tabs, a dual tome's enchantment on both affinities'. Search and the affinity buttons work across the tabs, whose counts follow; sorted by tier, the cards are grouped by tome tier. A list of more than 4 units folds away (see World Map pages).
 - A spell's source is where its unlock property is given: a tome, a hero skill, an artifact, an adventure, a happening, a building...
 - Spells sharing an id with different texts each have their card (`Ancestral Harmony` for each animal); the old pages showed the first's text on every copy.
 - What no one can get is left out (`left_out` in the file, with the reason): the property that unlocks it is given by nothing, such as the Empire Tree's Rites, Elemental Bane and Raise Zombies. A story realm's spells are left out too, as are those the data can't tell are unused (`NOT_SPELLS` in `spells.py`, from the maintainer): Construct Population and Signet of Loyalty (not in use), Move Portal (a button that moves a Shrouded Isles portal), Bone Horror Ritual (an old mod spell) and Astral Wisp Ritual (replaced by Astral Keeper Ritual). The Fey Invasion's relic spells and siege projects, which the dump lacks, are in, their texts filled by the tool.
@@ -229,7 +231,7 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 
 ### Search
 
-Spells, siege projects and the world map's sites come from the files their own pages read (`SpellBook.json`, `AncientWonders.json`, `Landmarks.json`, `Infestations.json`, `MagicMaterials.json`, `Happenings.json`) and show those pages' cards: `Data/ancientwonders.js` and `Data/magicmaterials.js` hold their pages' code as modules for this, and `Data/worldmap.js` the Infestation, Landmark and Happening cards. Cosmic Happenings has its own filter. Artifacts are searched by the game's names and texts and the spells they unlock.
+Spells, siege projects and the world map's sites come from the files their own pages read (`SpellBook.json`, `AncientWonders.json`, `Landmarks.json`, `Infestations.json`, `MagicMaterials.json`, `Happenings.json`) and show those pages' cards: `Data/ancientwonders.js` and `Data/magicmaterials.js` hold their pages' code as modules for this, and `Data/worldmap.js` the Infestation, Landmark and Happening cards. Happenings has its own filter, and the Oceanic ones their own tab of results, by their events' texts too. Artifacts are searched by the game's names and texts and the spells they unlock.
 
 ### Tomes
 
@@ -253,12 +255,13 @@ player can get: `UNUSED_UNITS` in `citytree.py`), `traits` (Tidecallers' 13 wate
 (Ascension: Living Spider Nest's five spiders, Rosebound Noble, Nimue's secret spell), from `citytree.py`, and
 `Relics.json`'s `unit_unlock` (Heart of the Maer, Head of Ceaseless Laments, Nimue's Secret Scroll), from `spells.py`.
 The card of each lists them (`UnitUnlocksMenu`) as the Spells pages' cards list a spell's units: an "Unlocks" label
-over the links, folded away past six ("Unlocks (13)"), in `style.css` as `.unitUnlocks` since not every page loads
+over the links, folded away past 4 ("Unlocks (13)"), in `style.css` as `.unitUnlocks` since not every page loads
 `worldmap.css`; upstream's button with a black list (`.unitUnlocksMenu`) is gone, and a Vision of Destiny's "Rally
 Units" use the same list. A unit's origins name them: "Unit production unlocked by Society Trait / Artifact / Hero
 Skill" (`CheckIfInSocietyTraits`, `CheckIfInArtifacts`). `Spells.html?trait=` shows a trait (upstream linked there with
 nothing to show it). The Artifacts page has a Silver Seas Artifacts tab (`ArtifactTab` names a DLC's tab).
-Oceanic happenings unlock some units too (Mating Season's Seamare and Kraken), which no page lists yet.
+An Oceanic happening whose choices unlock a unit is one of its origins, through the spell book's `sites` ("Unit production
+unlocked by a choice in Oceanic Happening Mating Season").
 
 ### Old lists
 
@@ -307,7 +310,7 @@ Examples: Specialized Troops is −40% instead of −25%, and `EN/Spells.json` h
 `Data/EN/all.json`, the game's texts, is Evolved's own too: `alltexts.py` in aow4_diff_tools writes it from the live game's EN.MO with the mod's `.po`, filled in with the values of the resources that show each text (mod values included: Tranquility Pool −5%, Infrastructure −33%).
 It started from upstream's copy and keeps its entries and order; texts the game added are appended, and texts it no longer has are kept, as pages may still look them up.
 A value the game only knows in play, or whose tag no resource holds, stays a placeholder, `<eventColor>{key}</eventColor>`. A value several versions of an effect share a tag for, with nothing to tell which the text means, shows the lowest, as the game does until one applies to a unit (Cult of Tyranny's 60% and 5 Temporary Hit Points; a Single Shot attack uses the higher 90% and 10). Never take `all.json` from upstream: it has vanilla numbers, older texts and broken bullets.
-`Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero), and the properties, structures and the like texts link to, 346 of them with their icon (`image`, exported to `Icons/UnitIcons`).
+`Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero), and the properties, structures and the like texts link to, 346 of them with their icon (`image`, exported to `Icons/UnitIcons`). A pickup a text links to is named by the game's name for it ("Abandoned Egg Clusters", "Galleon Wreckages"), not its tag's words ("Water egg pickup guardeds").
 Both follow the game's grammar more closely than the game's own texts do: a word the game counts agrees with the number before it ("for 1 Turn", "3 Turns").
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
 `Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).

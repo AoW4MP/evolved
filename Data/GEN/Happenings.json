@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04 15:51",
+ "generated": "2026-11-04 15:59",
  "build": "exe of 2026-11-03",
  "mod": "AoW 4 Evolved",
  "happenings": [
@@ -13,8 +13,63 @@
    "description": "<bulletlist><bullet>Forests start to spread into adjacent provinces.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STARSEEDS_COMBAT_PROPERTY]Grasping Vines[/hyperlink] active in combat.</bullet><bullet>Units on Forest provinces suffer from [hyperlink,GLOBAL.PROPERTIES.STARSEEDS_PROPERTY_GROUP]Living Forest[/hyperlink].</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_Starseeds.png",
-   "icon": "category_icon_Asteroid.png"
+   "image": "image_invading_sylviculture.png",
+   "icon": "category_icon_Asteroid.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "When a great World Tree has sufficiently matured, it shoots its seeds off into the Astral Sea towards new worlds.",
+      "World Trees do not reproduce on their own worlds. Instead, they spread their seeds on distant realms. Should a World Seed find a barren world, it will eventually make it fertile and inhabitable. However, a World Seed finding a lush world will stir the trees and plants that were already there.",
+      "Fragments of the shattered world have crashed in every forest, causing them to spread and grow hostile towards your armies."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "After a period of upheaval, a World Seedling from a distant world has taken root, spawning a new this realm.",
+      "Peace returns within the realm and balance is restored, as is Nature's wont. Your troops may once again traverse the woodlands safely and unhindered. Yet for all the turmoil the World Seedling caused, you may have an opportunity to benefit from the woody incursion.",
+      "Will you restore your lands claimed by forests? Or is it more appealing to learn new power over nature?"
+     ],
+     "options": [
+      {
+       "text": "Banish <mana></mana> the invading Forests and revert your provinces to their original terrains.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ],
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Learn <eventColor>Enchantment</eventColor> to have plants aid you in battle.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "The forests are here to stay, yielding us timber. <structureprod></structureprod>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "No forests grow in your domain.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "portent_of_rousing",
@@ -26,8 +81,29 @@
    "description": "<bulletlist><bullet>Base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] is reduced by up to -50%.</bullet><bullet>Cities gain +100% <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] income.</bullet><bullet>At the end of the happening, gain 20 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] for each unit in your empire.</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_XornsJavelin.png",
-   "icon": "category_icon_Asteroid.png"
+   "image": "image_portent_of_rousing.png",
+   "icon": "category_icon_Asteroid.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Sightings have been reported of Xorn's Javelin, a long-tailed comet that pierces brightly through the nightly sky.",
+      "Every time this comet passes by a world, its denizens are overcome with an uncanny urge to fight. Already, your <eventColor>race</eventColor> are ardently lining up to enlist! Meanwhile, your troops in the field are stirred by the omen and passionately fight for your cause, as if Xorn the Disciplined himself leads them.",
+      "A thirst for battle rouses your citizens, while your troops are inspired to fight for your cause, instead of your gold."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Xorn's Javelin has traveled out of your sight, and the eagerness for combat that gripped your <eventColor>race</eventColor> quickly evaporates.",
+      "But, just as the comet crosses the horizon, it issues one final burst of burning loyalty. Your citizens that cannot fight are inspired to contribute to your war efforts. For each warrior in your army, a donation is made in celebration of the glory of your rulership.",
+      "With your coffers replenished, the future looks bright. You cannot wait until Xorn's Javelin returns."
+     ],
+     "options": []
+    }
+   ],
+   "units": []
   },
   {
    "key": "rays_of_winter",
@@ -39,8 +115,63 @@
    "description": "<bulletlist><bullet>Arctic terrain spreads around the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SOLAR_WINTER_COMBAT_PROPERTY]Arctic Blizzards[/hyperlink] active in combat.</bullet><bullet>Units on Arctic provinces suffer from [hyperlink,GLOBAL.PROPERTIES.SOLAR_WINTER_PROPERTY_GROUP]Rays of Winter[/hyperlink].</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_RaysOfWinter.png",
-   "icon": "category_icon_Asteroid.png"
+   "image": "image_rays_of_winter.png",
+   "icon": "category_icon_Asteroid.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "A substantial celestial crystal is lining up with the sun, turning its light red as ruby and diminishing its heat.",
+      "The sun is still as bright as ever, but its rays no longer convey their comforting heat. As the welcome warmth withdraws from your realm, snow and ice change your lands to the Evercold. Your citizens seek shelter in their homes, but your troops suffer from sudden blizzards.",
+      "The sun's rays of winter disrupt your world. Snowstorms not only complicate combat, but also freeze the land."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Finally, the sun releases the cosmic crystal from its pull. Warm rays of sunlight wash over your domain.",
+      "Yet the otherworldly cold that affected your world is not easily dismissed. But while the icy plains of permafrost formed, your mages have studied the celestial object that caused the solar disruption. They ensure you they can harness some of the crystal's magical properties for your own benefit.",
+      "Will you drive back the snow that claimed your lands? Or will you draw power from the fleeting rays of winter?"
+     ],
+     "options": [
+      {
+       "text": "Thaw the snow with your inner magical fire. <mana></mana>",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ],
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Learn the power of <eventColor>Enchantment</eventColor> from the retreating winter.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Apply the clarity offered by the cold to gain new insights. <knowledge></knowledge>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Fortunately, the winter never invaded your territory.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "phase_shift_nixing",
@@ -52,8 +183,29 @@
    "description": "<bulletlist><bullet>Teleporter province improvements, Teleportation spells, and Teleportation abilities are disabled.</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_PhaseShiftNixing.png",
-   "icon": "category_icon_Entity.png"
+   "image": "image_phase_shift_nixing.png",
+   "icon": "category_icon_Entity.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The recent visit of the <eventColor>Entity</eventColor> has stirred the cosmic cohesion of the firmament.",
+      "What is usually fleeting in the [hyperlink,GLOBAL.AstralSeaLoreConcept]Astral Sea[/hyperlink], is now earthbound by the lingering aura of the <eventColor>Entity</eventColor>. The magic property of some particles that allows them to shift from substance into energy, is nullified.",
+      "Until the Sea can restore itself, the workings of [hyperlink,GLOBAL.STRUCTURE_UPGRADES.TELEPORTER]<teleporter></teleporter> Teleporters[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.PHASE]phase-shifters[/hyperlink] has been severely disrupted."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Finally, the comforting hums of [hyperlink,GLOBAL.STRUCTURE_UPGRADES.TELEPORTER]<teleporter></teleporter> Teleporters[/hyperlink] fill the realm once more as their connections are restored.",
+      "But even while their abilities were disrupted, the teleporters continued to extract sublimated magic from the [hyperlink,GLOBAL.AstralSeaLoreConcept]Astral Sea[/hyperlink]. With nowhere else to go, the magical energies were stored with these structures.",
+      "Deposits of suppressed magical energies are now suddenly released all at once, resulting in a snowfall of <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] crystals."
+     ],
+     "options": []
+    }
+   ],
+   "units": []
   },
   {
    "key": "starry_eyed_enlightenment",
@@ -65,8 +217,42 @@
    "description": "<bulletlist><bullet>Cities gain +100% <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income.</bullet><bullet>Declaring wars is always [hyperlink,GLOBAL.WarJustificationConcept]unjust[/hyperlink].</bullet><bullet>Ending wars grants 200 <influence></influence> [hyperlink,GLOBAL.ImperiumConcept]Imperium[/hyperlink].</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_GabrielsEye.png",
-   "icon": "category_icon_Constellation.png"
+   "image": "image_starry_eyed_enlightenment.png",
+   "icon": "category_icon_Constellation.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Stargazers discover a new star in the sky. Dubbed \"Gabriel's Eye,\" its gleam inspires all rulers to pursue knowledge.",
+      "Your scholars theorize that the recent disturbance of <eventColor>Constellation</eventColor> caused the new star to light up in the firmament. You discern within yourself a rising thirst for knowledge, while your hunger for battle wanes.",
+      "Will Gabriel's Eye bring about a new era of enlightenment, in which wisdom is valued over war? Time will tell."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "As suddenly as it appeared, Gabriel's Eye is fading again, as are its pacifying effects.",
+      "You wonder if the ancient wizard had truly fixed its gaze on your world, or if this was a rumor produced by your people's superstition. However it may be, you cannot deny how its presence impacted the realm, pushing an era of enlightenment.",
+      "Slowly, the [hyperlink,GLOBAL.GodirLoreConcept]Godir[/hyperlink] of this realm revert to their old, warring ways."
+     ],
+     "options": [
+      {
+       "text": "\"The insolent warmongers of this realm must be held accountable.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"One way or another, this realm shall be mine.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "astral_eclipse",
@@ -78,8 +264,36 @@
    "description": "<bulletlist><bullet><mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income is reduced by -30%.</bullet><bullet>[hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] and [hyperlink,GLOBAL.WorldMapSpellConcept]World Map Spells[/hyperlink] cost +50% Casting Points.</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_AstralEclipse.png",
-   "icon": "category_icon_Constellation.png"
+   "image": "image_astral_eclipse.png",
+   "icon": "category_icon_Constellation.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "This night, the cries of scholars and mages echo throughout your realm: all the stars' lights have been snuffed!",
+      "No one comprehends what caused this event, yet your wizards and sorcerers inform you that they sense a dampening of their magical powers. You know they speak true: you felt it too.",
+      "All spellcasting and sources of magic are suppressed while the stars remain dimmed."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Behold! The stars are reignited one by one! The astral eclipse draws to an end.",
+      "Within a single night, all the constellations have returned to the firmament. In the distance, flashes of dazzling lights evidence the glee of your mages, who too have discovered the return of their powers.",
+      "A new age of wizarding and enchantment dawns. Let the magic flow freely from your fingers once again."
+     ],
+     "options": [
+      {
+       "text": "\"My sorcerous spark returns at last.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "sign_of_the_cleft_shield",
@@ -91,8 +305,53 @@
    "description": "[hyperlink,GLOBAL.PROPERTIES.SHIELD_UNIT]Shield Units[/hyperlink] have:<bulletlist><bullet>Attacks deal +40% damage.</bullet><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_SignoftheCleftShield.png",
-   "icon": "category_icon_Constellation.png"
+   "image": "image_sign_of_the_cleft_shield.png",
+   "icon": "category_icon_Constellation.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The \"shield\" in the constellation of Baradir the Shield Master has broken in twain! Shields and bucklers everywhere spontaneously shatter.",
+      "Now that their full advantage of shield-wielding is lost, defenders are compelled to focus on their attacks. It is a formidable sight to behold: they strike harder and deeper, paying less heed to their defensive tactics.",
+      "The realm's [hyperlink,GLOBAL.PROPERTIES.SHIELD_UNIT]Shield Bearers[/hyperlink] may carry broken shields, but they are poised to thrash your enemies in the front lines."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The \"shield\" in the constellation of Baradir the Shield Master has restored itself. Your [hyperlink,GLOBAL.PROPERTIES.SHIELD_UNIT]Shield Bearers'[/hyperlink] shields are equally mended.",
+      "Smiths and armorers repaired or reforged every broken targe and buckler in your realm. Defenders everywhere proudly bear their shields high once again. Having favored their sword-arm over their shields for so long, they reacquaint themselves with their familiar role as protectors.",
+      "Discounting the odd shield bash, this realm's [hyperlink,GLOBAL.PROPERTIES.SHIELD_UNIT]Shield Bearers[/hyperlink] once again favor defense over fierce attacks."
+     ],
+     "options": [
+      {
+       "text": "\"You must train <unitprod></unitprod> your sword-arm even more.\"",
+       "costs": [
+        [
+         "Draft",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"By my blood, my shield bearers may hold this starbound power.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"Protecting the meek is once more a shield-warrior's calling.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "sign_of_the_huntress",
@@ -104,8 +363,53 @@
    "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks of [hyperlink,GLOBAL.PROPERTIES.RANGED_UNIT]Ranged Units[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.SKIRMISHER]Skirmisher Units[/hyperlink]:<bulletlist><bullet>Deal +30% more damage.</bullet><bullet>Have -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_SignOfTheHuntress.png",
-   "icon": "category_icon_Constellation.png"
+   "image": "image_sign_of_the_huntress.png",
+   "icon": "category_icon_Constellation.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Complaints from your archers reach you. Their arrows seem weightier. Astrologers soon find the cause: the constellation of Leana's Draw has changed!",
+      "New stars have appeared around the \"arrow\" in the constellation of Leana's Draw. The celestial image now looks like the Huntress is drawing back a javelin on her bow. The alteration somehow affects not just your archers' arrows, but also the magical projectiles of your casters.",
+      "The constellation's new stars cosmically bolster the damage of this realm's [hyperlink,GLOBAL.PROPERTIES.RANGED_UNIT]archers[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]casters[/hyperlink], at the cost of their range."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The additional stars in the constellation of Leana's Draw have dimmed again, much to the relief of your archers.",
+      "Your astrologers have several hypotheses concerning the cause of this alteration of the Sign of the Huntress, ranging from prophecies to divine intervention. Regardless, with the stars that elongated the \"arrow\" in the constellation gone, your [hyperlink,GLOBAL.PROPERTIES.RANGED_UNIT]archers'[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]casters'[/hyperlink] natural range and damage are restored. They shake their weary arms and rejoice.",
+      "However, depending on how useful you found their temporary effectiveness, your archers' celebration could be premature."
+     ],
+     "options": [
+      {
+       "text": "\"Instruct my mages to study <mana></mana> how to replicate this effect.\"",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Perform a blood sacrifice to gain the enchantment.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"Let arrows fly far once more!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "sign_of_the_lumbering_staff",
@@ -117,8 +421,53 @@
    "description": "[hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]Support Units[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Units[/hyperlink] have:<bulletlist><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities have +1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLOW_MOVEMENT]Slow Movement[/hyperlink] in combat.</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_SignOfTheLumberingStaff.png",
-   "icon": "category_icon_Constellation.png"
+   "image": "image_sign_of_the_lumbering_staff.png",
+   "icon": "category_icon_Constellation.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The star that represents the \"staff gem\" in the constellation of Anon's Ascent gleams as bright as the waxing moon.",
+      "Those who normally tend to the wounded or who empower warriors from afar, sense a hidden power burning inside them. They grow more potent, but the magnitude of their magical might weighs them down.",
+      "Proud [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]mages[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]healers[/hyperlink] stand taller than ever before, now that their power is surging. Their decreased speed clearly worries them not."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Your astrologers had already predicted it: the luminous star in Anon's Ascent returned to its original brightness.",
+      "While <eventColor>enemies</eventColor> wail about the loss of their powers, warriors are keen to point out that they have not disappeared, but merely returned to their original strength.",
+      "[hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Mages[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]soothers[/hyperlink] vainly inspect their hands, which yesterday wielded such great magical force. They lament their tempering. Do you?"
+     ],
+     "options": [
+      {
+       "text": "\"Keeping my mages empowered deserves a personal investment of magic.\" <mana></mana>",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Perform a blood sacrifice to gain the enchantment.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I favor their mobility returning. A slow mage is a dead mage.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "sign_of_the_vanguard",
@@ -130,8 +479,60 @@
    "description": "[hyperlink,GLOBAL.PROPERTIES.SHOCK_UNIT]Shock Units[/hyperlink] have:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -20% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -20% damage.</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_SignOfTheVanguard.png",
-   "icon": "category_icon_Constellation.png"
+   "image": "image_sign_of_the_vanguard.png",
+   "icon": "category_icon_Constellation.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Half of the stars that make up the fabled great sword in the constellation of Ja'Vasqa's Charge have disappeared!",
+      "The nimble Tigran Warlord represented in the constellation now appears to brandish a short sword. Your warriors feel quickened by the cosmic phenomenon and report a surge in stamina and agility. They may move across the battlefield more deftly, at the expense of brute strength.",
+      "Even though their strikes inflict less damage, your [hyperlink,GLOBAL.PROPERTIES.SHOCK_UNIT]warriors[/hyperlink] will have no trouble meeting your enemies in combat."
+     ],
+     "options": [
+      {
+       "text": "\"Charge forth on the wings of victory, my warriors!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "Ja'Vasqa's great sword has been celestially reforged. The stars have returned to complete the constellation.",
+      "Warriors leading the charge discover that their normal stamina has been restored. Fortunately, the strength in their arms also returned. The time of bolting across the battlefield like a gale of fury has passed. Or has it?",
+      "Some [hyperlink,GLOBAL.PROPERTIES.SHOCK_UNIT]warriors[/hyperlink] delight in the return of their martial strength, while others miss their increased agility. What did you prefer?"
+     ],
+     "options": [
+      {
+       "text": "\"My magical talents <mana></mana> may make their haste permanent.\"",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Perform a blood sacrifice to gain the enchantment.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I prefer my warriors strong, not swift.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "meleniss_kiss",
@@ -143,8 +544,73 @@
    "description": "<bulletlist><bullet>All units have a 30% chance of turning slain non-[hyperlink,GLOBAL.PROPERTIES.UNDEAD]Undead[/hyperlink] enemies into Zombies under your control that stay after combat.</bullet><bullet>These Zombies have [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_MelenisKiss.png",
-   "icon": "category_icon_Entity.png"
+   "image": "image_meleniss_kiss.png",
+   "icon": "category_icon_Entity.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Once, an ancient curse created the Undead on another world. Its echo now encroaches from the [hyperlink,GLOBAL.AstralSeaLoreConcept]Astral Sea[/hyperlink] and envelops your world.",
+      "The eldritch nebula, dubbed [hyperlink,GLOBAL.MelenisLoreConcept]Melenis's[/hyperlink] Kiss by seers, imprints a shared dream on the soldiers of your realm. A dream of menacing hunger and endless waking. A promise of unrelenting thralldom at the mercy of your rivals.",
+      "Those slain in combat are imperiled by this curse: to serve the masters of those they fight. In undeath."
+     ],
+     "options": [
+      {
+       "text": "\"A double-edged sword. My troops must be vigilant.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"They believe I am involved in this? How quaint. How delightful.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"Curse <eventColor>Player</eventColor> and her foul tricks!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "[hyperlink,GLOBAL.AstralFlowsLoreConcept]Astral winds[/hyperlink] finally carry away [hyperlink,GLOBAL.MelenisLoreConcept]Melenis[/hyperlink] Kiss back into the cosmos, where it will surely haunt another world.",
+      "Yet its presence undeniably left its stain on your world. Troops who fought loyally for their masters were forced to join the ranks of their sworn enemies. For some Godir, Melenis's Kiss was a blessing. For others, their downfall.",
+      "Now you must decide how to deal with the shadowy chaos it left in its wake."
+     ],
+     "options": [
+      {
+       "text": "\"My glory <influence></influence> rejects these abominations. They must be destroyed!\" <unit></unit>",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"These creatures are imperfect. My dark spells <souls></souls> will mend them.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I've grown quite fond of my involuntary conscripts. They may stay.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Melenis's Kiss did not gift you any Zombies.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "sunstruck_eruptions",
@@ -156,8 +622,78 @@
    "description": "<bulletlist><bullet>Provinces turn into Desolate around the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SUNSTRUCK_ERUPTIONS_COMBAT_PROPERTY]Volcanic Eruptions[/hyperlink] active in combat.</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_SunstruckEruptions.png",
-   "icon": "category_icon_Entity.png"
+   "image": "image_sunstruck_eruptions.png",
+   "icon": "category_icon_Entity.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Astrologers warn you that the sun inches towards your world. Every hour, the fiery orb in the heavens seems larger.",
+      "They suspect [hyperlink,GLOBAL.YakaLoreConcept]Yaka[/hyperlink], or one of his overconfident acolytes, is performing an improvident ritual. Global temperatures rise until a flashpoint is reached. Volcanoes violently appear across the world, burning lush lands and renewable resources.",
+      "Volcanic blaze and ruin wreak havoc in your realm. Can you and your armies withstand the heat?"
+     ],
+     "options": [
+      {
+       "text": "\"If I can keep a cool head, we won't get burned.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"This wasn't my doing... this time.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"<eventColor>Player</eventColor> will burn for this treachery!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "You notice that the days become cooler again, as the sun finally abates its encroachment on your world.",
+      "The flaming chaos withdraws as the sun reclaims its usual position in the cosmos. Its warmth is once again comforting instead of scorching. Yet the devastation that the sun caused leaves a smoldering mark on your lands.",
+      "Will you invest in the restoration of your lands? Or do you suffer the desolation to gain other boons?"
+     ],
+     "options": [
+      {
+       "text": "Reseed <food></food> the desolated wastelands to restore their lush and life.",
+       "costs": [
+        [
+         "Food",
+         "Low"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Extract the secrets of <eventColor>Enchantment</eventColor> from the dying volcanoes.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I will conquer <influence></influence> this realm, regardless of any wastelands within my domain.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Wastelands do not tarnish your domain.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "ravenous_visitants",
@@ -169,8 +705,29 @@
    "description": "<bulletlist><bullet>Armies of hostile astral creatures appear across the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] units gain [hyperlink,GLOBAL.PROPERTIES.INFINITE_BEING_GROUP]a random positive status effect[/hyperlink] when a spell is cast.</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_InfiniteBeing.png",
-   "icon": "category_icon_Entity.png"
+   "image": "image_ravenous_visitants.png",
+   "icon": "category_icon_Entity.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "An impossibly deep bellow heralds the arrival of a colossal creature from the far reaches of the [hyperlink,GLOBAL.AstralSeaLoreConcept]Astral Sea[/hyperlink].",
+      "Although intimidating, the Astral Leviathan does not appear hostile. Yet in its wake follow swarms of malicious [hyperlink,GLOBAL.AstralMonstersLoreConcept]Astral Sea Monsters[/hyperlink], such as <eventColor>enemies</eventColor>. What's worse, the Astral Leviathan's deep song makes ethereal creatures such as these parasites more attuned to the reverberations of magic.",
+      "Ravenous parasitic creatures that follow the Astral Leviathan descend upon your realm to feast on life!"
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The Astral Leviathan that circumscribes your world has seemingly lost interest. It drifts away peacefully, after one final bellow.",
+      "Within a few heartbeats, the colossus has gone from your sight, floating away with an unlikely haste. Most of the invaders that swarmed your world notice its departure and follow its ethereal current.",
+      "The Astral parasites that remain on your world, marooned and severed from their cosmic host, will die off soon."
+     ],
+     "options": []
+    }
+   ],
+   "units": []
   },
   {
    "key": "blightfall_conjunction",
@@ -182,8 +739,48 @@
    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BLIGHTFALL_COMBAT_PROPERTY]Blightfall Conjunction[/hyperlink] active in combat.</bullet><bullet>Cities lose -5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] per <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink].</bullet></bulletlist>",
    "duration": 5,
    "warning": null,
-   "image": "image_BlightfallConjunction.png",
-   "icon": "category_icon_PlanetPhase.png"
+   "image": "image_blightfall_conjunction.png",
+   "icon": "category_icon_PlanetPhase.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "Astrologers warn you of the imminent conjunction of <eventColor>Random Nature World</eventColor>, a world of Growth, and <eventColor>Random Shadow World</eventColor>, a world of Decay.",
+      "The combined pull on your realm is causing crops to rot as they ripen. The threat of a famine looms. Equally disastrous are the reports of your troops suffering from an unnatural disease.",
+      "Finding uncorrupted food to harvest has become a nigh impossible challenge, while your soldiers threaten to succumb to pestilence."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The realm is finally permitted respite: the Blightfall Conjunction has ended.",
+      "Your famished <eventColor>race</eventColor> are relieved to find an abundance of fresh foods after such a deprivation. Your warriors, full-bellied once again, stand strong and firm, ready at your command.",
+      "The realm is healing. Only the most devious would seek to profit from this global disaster."
+     ],
+     "options": [
+      {
+       "text": "Learn the <eventColor>spell</eventColor> spell to curse <evilact></evilact> your enemies with this plague.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Harvest the souls <souls></souls> of those who succumbed to the Blightfall.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Let us leave this age of pestilence behind us.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "colossus_moon",
@@ -195,8 +792,59 @@
    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.COLOSSUS_MOON_UNIT_AUTO_SPELL]Thunder Storms[/hyperlink] active in combat.</bullet><bullet>Regions around the world turn into Swamps.</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_ColossusMoon.png",
-   "icon": "category_icon_PlanetPhase.png"
+   "image": "image_colossus_moon.png",
+   "icon": "category_icon_PlanetPhase.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The full moon draws closer to your world. Its pull on the oceans climbs to unprecedented levels.",
+      "This is a moon unlike any you've seen before. It glows like a white-hot steel shield. Soon, salty waves stir with such violence that they wash over beaches and cliffs alike. Storm clouds black as ink form over the seas and deluge the continents, their burdens spilling on the saturated surface of the realm.",
+      "The Colossus Moon reigns supreme. Shores cannot contain the seas and thunderstorms flood the lands."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "The Colossus Moon finally seems satisfied with the destruction it wrought on the world. It has begun to wane.",
+      "Scouts confirm your presumptions. Many provinces on the coast have turned into Swamps after being flooded by the torrential barrages that the thunderstorms delivered.",
+      "Can you use these new swamps to your benefit? Or will you erase the scars of the thunderstorms?"
+     ],
+     "options": [
+      {
+       "text": "Drain new swamps in your domain using earth, wood, and stone. <production></production>",
+       "costs": [
+        [
+         "Production",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Learn the secrets of <eventColor>Enchantment</eventColor> from the thunderous onslaught.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"The downpour made the lands more fertile. <food></food> My cities will grow.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Swamps never flooded your domain.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "stirring_stone_conjunction",
@@ -208,8 +856,59 @@
    "description": "<bulletlist><bullet>Cities gain +100% <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] income.</bullet><bullet>All units have [hyperlink,GLOBAL.PROPERTIES.SIEGE_BREAKER]Siege Breaker[/hyperlink].</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_StirringStoneConjunction.png",
-   "icon": "category_icon_PlanetPhase.png"
+   "image": "image_stirring_stone_conjunction.png",
+   "icon": "category_icon_PlanetPhase.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The conjunction of the <matter></matter> [hyperlink,GLOBAL.MateriumConcept]Materium Affinity[/hyperlink] world <eventColor>Random Materium World</eventColor> and the <arcana></arcana> [hyperlink,GLOBAL.AstralConcept]Astral Affinity[/hyperlink] world <eventColor>Random Astral World</eventColor> was foretold. That prophecy is now fulfilled.",
+      "Magical properties seep into rock and stone, making both more compliant and easier to manipulate. However, the augmented stone cannot discern between chisel and battering ram. Masonry that was built to last now gladly yields to the striking sword.",
+      "While builders benefit from the malleable stone, defensive structures suddenly easily crumble!"
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "As the Stirring Stone conjunction nears its end, stone and earth are magically stirred from their slumber and begin to move.",
+      "From within city walls, <eventColor>enemies</eventColor> are trying to break free. Binding these spirits to your service is easily achieved, but their release will cause the obliteration of the [hyperlink,GLOBAL.STRUCTURE_UPGRADES.STONE_WALLS]Sentry Nests[/hyperlink] that birthed them.",
+      "Will you welcome these stone-faced allies, or shall you bind them within your walls?"
+     ],
+     "options": [
+      {
+       "text": "\"A simple sleep enchantment <mana></mana> will keep my walls intact.\"",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"Stone bends to my will. One <eventColor>enemy</eventColor> <unit></unit> won't destroy the walls.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"The <eventColor>enemy</eventColor> <unit></unit> are worth more to me than stone walls.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"It's a good thing I don't have any Stone Walls.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "cosmic_winds",
@@ -221,8 +920,63 @@
    "description": "<bulletlist><bullet>Provinces turn into Deserts around the world.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SOLAR_WINDS_COMBAT_PROPERTY]Blinding Sands[/hyperlink] active in combat.</bullet></bulletlist>",
    "duration": 8,
    "warning": null,
-   "image": "image_SolarWinds.png",
-   "icon": "category_icon_Weather.png"
+   "image": "image_cosmic_winds.png",
+   "icon": "category_icon_Weather.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "From the outer skies above the realm, cosmic winds flagellate the world. Wherever they blow, vegetation is burned or sanded down.",
+      "Rivers and lakes dry up. Not even the thickest wall or highest mountain can repel the currents. You are at the mercy of the fickle gales issued by the cosmos.",
+      "You can only witness how your domain slowly erodes into a barren desert."
+     ],
+     "options": []
+    },
+    {
+     "label": "End",
+     "text": [
+      "Finally, the relentless cosmic winds recede. The world is given a chance to restore life in the barren deserts.",
+      "You only vaguely remember what your world used to look like before. Much of what was lush and verdant has been scourged by the dry tempests. There is but one solacing thought: that all your rivals have endured the same sandy ordeal.",
+      "Will you advance the desolate realm's restoration? Or have the sandstorms inspired you to develop new tricks."
+     ],
+     "options": [
+      {
+       "text": "Revitalize <mana></mana> the coarse Deserts and revert your provinces to their original terrains.",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ],
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Learn <eventColor>Enchantment</eventColor> to summon sandstorms in combat.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Sieve your desert's sands to claim treasures <gold></gold> previously locked in earth.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Sand does not blanket any of your lands.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "dawn_of_the_lodestar",
@@ -234,8 +988,105 @@
    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units and units with [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink] have:<bulletlist><bullet>+2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet><bullet>+20 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet></bulletlist></bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] spawn armies to attack their targets.</bullet></bulletlist><br>For the rest of the game:<bulletlist><bullet>All units have -2 <defensespirit></defensespirit> [hyperlink,GLOBAL.SpiritResistanceConcept]Spirit Protection[/hyperlink].</bullet></bulletlist>",
    "duration": 12,
    "warning": 2,
-   "image": "image_DawnOfTheLodestar.png",
-   "icon": "category_icon_Major.png"
+   "image": "image_dawn_of_the_lodestar.png",
+   "icon": "category_icon_Major.png",
+   "events": [
+    {
+     "label": "Foreshadowing",
+     "text": [
+      "A new light has appeared in the heavens. Only you seem to be able to see its gleam.",
+      "Engulfed by the light of this new star, its peace and purpose fill your spirit: this Lodestar will soon reveal itself to the rest of this world. It shall be a new True North for the allies of Order and Zeal. Let all those who serve its tenets bask in its glorious rays and grow stronger.",
+      "As a servant of [hyperlink,GLOBAL.OrderConcept]Order[/hyperlink], you are compelled to foster the dawn of this Lodestar. Will you obey your duty?"
+     ],
+     "options": [
+      {
+       "text": "\"My inner holy fire <mana></mana> will brighten the star when it comes!\"",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"A fast <food></food> shall empower the Lodestar's presence!\"",
+       "costs": [
+        [
+         "Food",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I should not interfere with the natural order of the cosmos.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "Beginning",
+     "text": [
+      "The world basks in the warm light of a new rising star, quickly dubbed the Lodestar.",
+      "The Lodestar guides those who follow the path of [hyperlink,GLOBAL.OrderConcept]Order[/hyperlink]: The Celestial, the Faithful, and the Zealous. Vassals feel their hearts and spirits bolstered and launch crusades against their Lords' enemies. Faint harmonies of a chorus resonate in the very foundations of the world, causing all who hear it to quiver.",
+      "The Lodestar has dawned, and it brightly ushers in an age of [hyperlink,GLOBAL.OrderConcept]Order[/hyperlink] and Zeal."
+     ],
+     "options": [
+      {
+       "text": "\"May its dawn nourish my plans.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"What fanatic bolstered the Lodestar's light, I wonder.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"As it is was destined to be.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The golden gleam of the Lodestar is slowly fading, and its servants lament its diminishing.",
+      "Yet the Lodestar's rays permanently touched the hearts of those who beheld it, leaving a vulnerability in their spirits.",
+      "After the dawn comes the setting of the Lodestar. The world has grown slightly darker, and less orderly."
+     ],
+     "options": [
+      {
+       "text": "\"The light fades. The memory lasts.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"The truth about <eventColor>Player</eventColor> is finally brought to light!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I pray the world reveled in the blessings I orchestrated.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "drifting_ley_lines",
@@ -247,8 +1098,109 @@
    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] units have:<bulletlist><bullet>Attacks inflict [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink].</bullet><bullet>Grant +5 <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink] in combat.</bullet></bulletlist></bullet><bullet>[hyperlink,GLOBAL.CombatSpellConcept]Combat Spells[/hyperlink] are always [hyperlink,GLOBAL.SpellOverchargeConcept]Overcharged[/hyperlink] the first time they are cast each combat.</bullet></bulletlist><br>For the rest of the game:<bulletlist><bullet>All units have -2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink].</bullet></bulletlist>",
    "duration": 12,
    "warning": 2,
-   "image": "image_WanderingLeylines.png",
-   "icon": "category_icon_Major.png"
+   "image": "image_drifting_ley_lines.png",
+   "icon": "category_icon_Major.png",
+   "events": [
+    {
+     "label": "Foreshadowing",
+     "text": [
+      "Something feels off. You feel pulled at. Peeled. An inner resonance is off-key. A shift is imminent.",
+      "You invoke your deep [hyperlink,GLOBAL.AstralConcept]Astral[/hyperlink] attunement to divine the origin of the entrancing sensation. The electrifying realization follows soon: a storm between stars flows over the ley lines of this world. The sorcerous channels of the world are about to drift from their arcane positions. You also sense that this drifting will cause magic to become less predictable.",
+      "Is this an opportunity? Dare you drive the drifting of the ley lines and summon uncertainty within the world's magic?"
+     ],
+     "options": [
+      {
+       "text": "\"My curiosity ordains such an enchanting <mana></mana> experiment!\"",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ],
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"My scholars <knowledge></knowledge> will uncover how to further imbalance the ley lines.\"",
+       "costs": [
+        [
+         "Knowledge",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"The ley lines must drift on the Astral flows unhindered.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "Beginning",
+     "text": [
+      "The magical coherence of the world is at risk. The ley lines, the fundamental [hyperlink,GLOBAL.AstralConcept]Astral[/hyperlink] alignment, stray from their courses.",
+      "A turbulence in the cosmos washes over the deep Astral channels that bind and guide the magic to this world. Your troops are shocked to discover that they have become conduits for lightning magic. Ethereal beings unwittingly amplify magical energies and all spells burst from potency.",
+      "[hyperlink,GLOBAL.AstralConcept]Astral[/hyperlink] tremors ripple through the realms. It is an era in which little is certain, apart from magic growing unpredictable."
+     ],
+     "options": [
+      {
+       "text": "\"This world will never be the same again.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"Which power-crazed wizard delivers us this misery?\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"Promising results, so far!\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "Having strayed far from their original alignments, the drift of the ley lines is slowing down. [hyperlink,GLOBAL.AstralConcept]Astral[/hyperlink] stability is re-emerging.",
+      "Spells are less volatile, and the empowering tether that ethereal beings shared the Astral energies is severed. Yet the susceptibility to electrifying magics did not dissipate from your troops.",
+      "Centuries shall pass before the ley lines' drifting fully halts. Until then, all must suffer the unpredictable shape of magic."
+     ],
+     "options": [
+      {
+       "text": "\"My ambitions require stability too, to lay it on the line.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"<eventColor>Player</eventColor>? The <eventColor>Player</eventColor> crossed a line with this plot.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"I will suffer this outcome as an absolute win.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "eye_of_fire",
@@ -260,8 +1212,105 @@
    "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FIEND]Fiend[/hyperlink] units have:<bulletlist><bullet>Base attacks have a 30% chance of inflicting a random status effect.</bullet></bulletlist></bullet><bullet><minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] lose -10 [hyperlink,GLOBAL.HouseInfluenceConcept]<allegiance></allegiance> Allegiance[/hyperlink] per turn and are able to declare war on their overlords when reaching [hyperlink,GLOBAL.PactOfVassalageLvl-1Concept]Tributary[/hyperlink] or lower.</bullet></bulletlist><br>For the rest of the game:<bulletlist><bullet>All units have -2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink].</bullet></bulletlist>",
    "duration": 12,
    "warning": 2,
-   "image": "image_EyeOfFire.png",
-   "icon": "category_icon_Major.png"
+   "image": "image_eye_of_fire.png",
+   "icon": "category_icon_Major.png",
+   "events": [
+    {
+     "label": "Foreshadowing",
+     "text": [
+      "You are no stranger to nightly visions of [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink], yet tonight's imagery offers an eerie clarity. An Eye of Fire calls you.",
+      "The Eye of Fire you see in your feverish vision presents itself to you as a gargantuan ring of flames in the sky. Its gaze will cause lesser lords to break oaths, and demons to ravage the realm. You wake up and realize your world is about to be plummeted into Chaos.",
+      "You grin. Fueling the imminent bonfires of [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink] will deliver maximum pandemonium."
+     ],
+     "options": [
+      {
+       "text": "\"My magic <mana></mana> shall fan the flames of Chaos!\"",
+       "costs": [
+        [
+         "Mana",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"My serfs <population></population> shall kindle the flames of Chaos!\" <evilact></evilact>",
+       "costs": [
+        [
+         "Pop",
+         "Medium"
+        ]
+       ],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"The Eye of Fire will incite sufficient mayhem.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "Beginning",
+     "text": [
+      "A distant world somewhere in the [hyperlink,GLOBAL.AstralSeaLoreConcept]Astral Sea[/hyperlink] shifts in front of [hyperlink,GLOBAL.ObbadothLoreConcept]Obbadoth[/hyperlink]. It is ensnared in the [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink] World's radiance, forming an ungodly ring of fire in the heavens.",
+      "Like a naked Balor eye in the firmament, the Eye of Fire gazes down on your helpless world. Demons and fiends summoned to your world revel in its light, while vassals are driven mad and abandon their oaths and fealty. The Eye's unholy gleam causes the fires on your world to grow, and their flames burn with searing malice.",
+      "The entire realm descends into a maddening domain of fiery [hyperlink,GLOBAL.ChaosConcept]Chaos[/hyperlink]. May the odds be in your favor."
+     ],
+     "options": [
+      {
+       "text": "\"We will weather this evil storm.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"What madman would reinforce this occurrence?\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"All according to plan.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The demon eye in the sky, wreathed in infernal flames, turns away. Perhaps it hungers for another world to consume.",
+      "The world is given a chance to heal from its smoldering wounds. Vassals once again turn to their lords for guidance and plead for their forgiveness.",
+      "In any case, your people wish and pray that they shall never again be submitted to such an ordeal."
+     ],
+     "options": [
+      {
+       "text": "\"Back to my ambitions for this realm.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"<eventColor>Player</eventColor> must answer for their part in this phenomenon.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "\"That was entertaining.\"",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "toll_of_seasons",
@@ -274,7 +1323,49 @@
    "duration": null,
    "warning": null,
    "image": "image_TollOfSeasons.png",
-   "icon": "category_icon_TollOfSeasons.png"
+   "icon": "category_icon_TollOfSeasons.png",
+   "events": [
+    {
+     "label": "Foreshadowing",
+     "text": [
+      "The city guards of <eventColor>your city</eventColor> bring before you a bedraggled man, accused of sowing panic with <eventColor>your</eventColor> stories of impending doom.",
+      "\"The mists will come, <eventColor>Leader</eventColor>!\" <eventColor>Your Hero</eventColor> speaks with terror in <eventColor>your</eventColor> eyes. \"They spread from the fields, creep through the cracks in your city walls... and then—swoosh—everyone is gone! Stolen by the Fey!\" The man stares into space until <eventColor>your Hero</eventColor> takes out a broken <eventColor>Hero Item</eventColor>. \"This,\" <eventColor>your Hero</eventColor> yells, shaking <eventColor>your</eventColor> fists, \"is all that's left of my <eventColor>Realm</eventColor>.\"",
+      "What will you do with this fool and <eventColor>your</eventColor> far-fetched claims about a <eventColor>Realm</eventColor> lost to the mists?"
+     ],
+     "options": [
+      {
+       "text": "Interrogate the man to learn more about the threat from the mists.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Better safe than sorry. Increase the recruitment <unitprod></unitprod> efforts!",
+       "costs": [],
+       "rewards": [
+        [
+         "Draft",
+         "Low"
+        ]
+       ],
+       "units": []
+      },
+      {
+       "text": "Jail the troublemaker for causing public unrest.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      },
+      {
+       "text": "Banish the fool, but keep <eventColor>your</eventColor> <eventColor>Hero Item</eventColor> <item></item> after mending it.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "dawn_of_calamity",
@@ -419,7 +1510,9 @@
    "duration": null,
    "warning": null,
    "image": null,
-   "icon": "icon_age_of_death.png"
+   "icon": "icon_age_of_death.png",
+   "events": [],
+   "units": []
   },
   {
    "key": "age_of_magic",
@@ -432,7 +1525,9 @@
    "duration": null,
    "warning": null,
    "image": null,
-   "icon": "icon_age_of_magic.png"
+   "icon": "icon_age_of_magic.png",
+   "events": [],
+   "units": []
   },
   {
    "key": "blood_moon",
@@ -444,8 +1539,43 @@
    "description": "For the next 10 [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] Vampires:<bulletlist><bullet>Don't suffer from [hyperlink,GLOBAL.PROPERTIES.SUNLIGHT_WEAKNESS]Sunlight Weakness[/hyperlink].</bullet><bullet>+15 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] regeneration on the World Map.</bullet><bullet>Gain +20% damage.</bullet><bullet>Gain +2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>",
    "duration": 10,
    "warning": null,
-   "image": null,
-   "icon": "icon_blood_moon.png"
+   "image": "image_blood_moon.png",
+   "icon": "icon_blood_moon.png",
+   "events": [
+    {
+     "label": "Beginning",
+     "text": [
+      "The sky darkens into scarlet. The Blood Moon, summoned by <eventColor>Blood Moon Player</eventColor>, eclipses the light of the sun.",
+      "The moon bleeds through an open wound, staining the sky crimson. Animals flee to hide, villagers bar their doors, and the creatures of the dusk rejoice in its glow. For the night is red and ruled by horrors.",
+      "During its eclipse, the Blood Moon empowers all [hyperlink,GLOBAL.VampireLordConcept]Vampires[/hyperlink] and allows them to roam freely throughout the world."
+     ],
+     "options": [
+      {
+       "text": "Prepare for the red night.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    },
+    {
+     "label": "End",
+     "text": [
+      "The Blood Moon wanes, and the fear of light returns to those who bask in darkness.",
+      "The sun rises behind the fading moon, restoring color to the world. Its rays breathe life into the meadows and kindle hope in weary hearts. The creatures of the dusk retreat to their lairs, sheltered by the shadows within them.",
+      "[hyperlink,GLOBAL.VampireLordConcept]Vampires[/hyperlink] are no longer empowered by the Blood Moon and once again suffer the consequences of walking in the light of day."
+     ],
+     "options": [
+      {
+       "text": "Bid farewell to the red night.",
+       "costs": [],
+       "rewards": [],
+       "units": []
+      }
+     ]
+    }
+   ],
+   "units": []
   },
   {
    "key": "warped_seasons",
@@ -457,8 +1587,10 @@
    "description": "The seasons are unusually potent on this realm, causing constant change and turmoil.",
    "duration": null,
    "warning": null,
-   "image": null,
-   "icon": "icon_warped_seasons.png"
+   "image": "image_warped_seasons.png",
+   "icon": "icon_warped_seasons.png",
+   "events": [],
+   "units": []
   },
   {
    "key": "the_cursed_gold",

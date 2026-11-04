@@ -5901,7 +5901,7 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.CURSE_OF_THE_DAMNED",
     "displayHtml": "Curse of the Damned",
-    "description": "Target province gains [hyperlink,GLOBAL.PROPERTIES.CURSE_OF_THE_DAMNED]Curse of the Damned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+    "description": "Units in this province:<bulletlist><bullet>Start combat with [hyperlink,GLOBAL.PROPERTIES.DAMNED]Damned[/hyperlink].</bullet><bullet>When they die in combat, adjacent friendly units suffer 2 [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink].</bullet></bulletlist>[hyperlink,GLOBAL.PROPERTIES.FIEND]Fiends[/hyperlink] are not affected.",
     "image": "0000049700004266"
   },
   "GLOBAL.PROPERTIES.CURSE_OF_UNDEATH": {
@@ -7279,8 +7279,8 @@
     "icon": null,
     "globalName": "GLOBAL.PROPERTIES.TREACHEROUS_REFLECTION",
     "displayHtml": "Treacherous Reflection",
-    "description": "Create a [hyperlink,GLOBAL.PROPERTIES.TREACHEROUS_REFLECTION]Treacherous Reflection[/hyperlink] of target enemy unit.<br><br>Cannot target [hyperlink,GLOBAL.PROPERTIES.HERO]Heroes[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.COMBAT_SUMMON]Combat Summons[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.MYTHIC_UNIT]Mythic Units[/hyperlink].",
-    "image": "0000049C00000086"
+    "description": "A copy of another unit:<bulletlist><bullet>The reflection dies when the enemy unit dies.</bullet><bullet>The reflection gains the [hyperlink,GLOBAL.PROPERTIES.UMBRAL_DEMON]Umbral Demon[/hyperlink] unit type.</bullet><bullet>Cannot summon other units.</bullet></bulletlist>",
+    "image": "0000049700000F0B"
   },
   "GLOBAL.PROPERTIES.TSR_CRYSTAL_STORM_AUTO_SPELL": {
     "name": "Crystal Storms",

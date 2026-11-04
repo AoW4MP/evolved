@@ -246,6 +246,19 @@ A Units or Tomes page whose address names no entry opens on its list's first (`O
 
 A unit's origins read the new data: `CheckIfInSpells` and `CheckIfInSiege` the spell book, so a spell no one can get is no origin and the Fey Invasion's are; `CheckIfInAncientWonder` the book's `sites`, made from `AncientWonders.json` and `Landmarks.json`, whose links go to those pages. Upstream's list was wrong on some (Haunted Battlefield's skeletons).
 
+What lets cities draft a unit comes from the game (a unit's Required Structure Properties, see aow4_diff_tools'
+CLAUDE.md): `StructurePredictions.json`'s `units` (structures by resid: province improvements, and city structures such
+as the Shipyard's Ram Warship and Grand Wharf's Ballista Warship), `traits` (Tidecallers' 13 water units) and `skills`
+(Ascension: Living Spider Nest's five spiders, Rosebound Noble, Nimue's secret spell), from `citytree.py`, and
+`Relics.json`'s `unit_unlock` (Heart of the Maer, Head of Ceaseless Laments, Nimue's Secret Scroll), from `spells.py`.
+The card of each lists them (`UnitUnlocksMenu`) as the Spells pages' cards list a spell's units: an "Unlocks" label
+over the links, folded away past six ("Unlocks (13)"), in `style.css` as `.unitUnlocks` since not every page loads
+`worldmap.css`; upstream's button with a black list (`.unitUnlocksMenu`) is gone, and a Vision of Destiny's "Rally
+Units" use the same list. A unit's origins name them: "Unit production unlocked by Society Trait / Artifact / Hero
+Skill" (`CheckIfInSocietyTraits`, `CheckIfInArtifacts`). `Spells.html?trait=` shows a trait (upstream linked there with
+nothing to show it). The Artifacts page has a Silver Seas Artifacts tab (`ArtifactTab` names a DLC's tab).
+Oceanic happenings unlock some units too (Mating Season's Seamare and Kraken), which no page lists yet.
+
 ### Old lists
 
 `Data/GEN/WorldStructures.json`, `CosmicHappenings.json` and `CombatEnchantments.json` aren't loaded by the site any more, and `showWorldStructure`, `showCosmicHappening` and the like are gone. Keep the first two: `worldmap.py` finds the pictures through them. `Data/GEN/Relics.json` is now written by `spells.py`, with the game's names and spells, keeping upstream's ids and pictures. An old `Spells.html?wonder=` link goes to the wonder's page.

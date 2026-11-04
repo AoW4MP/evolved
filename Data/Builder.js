@@ -714,6 +714,12 @@ function ShowSpellFromLink() {
             key: "structure",
             title: "Structure",
             action: showStructureFromString
+        },
+        {
+            // a society or form trait (Traits.json), or a Vision of Destiny one (FactionCreation.json): a unit's origins link here
+            key: "trait",
+            title: (id) => (findBy(jsonFactionCreation2, "id", id) || findBy(jsonFactionCreation, "id", id))?.name ?? "Trait",
+            action: async (id, divID) => showTrait(id, await spawnSpellCardSingle(id, divID))
         }
     ];
 
@@ -3695,6 +3701,21 @@ function backtrackUnitOrigins(unitData, name, holder) {
         createFoundUnitInHereIcon(holderOrigin, imgSrc, imgFallbackSrc, link, tooltipText);
     }
 
+    for (const trait of CheckIfInSocietyTraits(unitData.id)) {
+        const traitLoc = findBy(jsonFactionCreation2Localized, "icon", trait.icon) || trait;
+        const tooltipText = `Unit production unlocked by Society Trait <hyperlink>${traitLoc.name}</hyperlink>`;
+        const imgSrc = `/evolved/Icons/TraitIcons/${trait.icon}.png`;
+        const link = `/evolved/HTML/Spells.html?trait=${trait.id}`;
+        createFoundUnitInHereIcon(holderOrigin, imgSrc, null, link, tooltipText);
+    }
+
+    for (const relic of CheckIfInArtifacts(unitData.id)) {
+        const tooltipText = `Unit production unlocked by Artifact <hyperlink>${relic.name}</hyperlink>`;
+        const imgSrc = `/evolved/Icons/RelicIcons/${relic.icon}.png`;
+        const link = `/evolved/HTML/Artifacts.html?type=${ArtifactTab(relic)}&`;
+        createFoundUnitInHereIcon(holderOrigin, imgSrc, null, link, tooltipText);
+    }
+
     let wonder = CheckIfInAncientWonder(unitData.id);
     for (let x = 0; x < wonder.length; x++) {
         // if landmark different text:
@@ -3755,9 +3776,14 @@ function backtrackUnitOrigins(unitData, name, holder) {
         holderOrigin.appendChild(miniIcon);
     }
 
-    let heroSkill = OncePerName(CheckIfFromHeroSkill(name, GetAllMatchingAbilities));
+    // the skills that let cities draft the unit (StructurePredictions.json's skills) first, then those that mention it
+    const draftSkills = Object.keys(jsonStructurePredictions?.skills || {}).filter((id) => jsonStructurePredictions.skills[id].includes(unitData.id));
+    const skillsDrafting = draftSkills.map((id) => findBy(jsonHeroSkills, "id", id)).filter(Boolean);
+    let heroSkill = OncePerName([...skillsDrafting, ...CheckIfFromHeroSkill(name, GetAllMatchingAbilities)]);
     for (let x = 0; x < heroSkill.length; x++) {
-        const tooltipText = `Unit mentioned in Hero Skill <hyperlink>${heroSkill[x].name}</hyperlink>`;
+        const tooltipText = draftSkills.includes(heroSkill[x].id)
+            ? `Unit production unlocked by Hero Skill <hyperlink>${heroSkill[x].name}</hyperlink>`
+            : `Unit mentioned in Hero Skill <hyperlink>${heroSkill[x].name}</hyperlink>`;
         const imgSrc = `/evolved/Icons/UnitIcons/${heroSkill[x].icon}.png`;
         const imgFallbackSrc = `/evolved/Icons/Text/mp.png`;
         const link = `/evolved/HTML/Spells.html?skill=${heroSkill[x].id}`;
@@ -4092,6 +4118,25 @@ function CheckIfInTraits(unitID) {
         }
     }
     return Array.from(wonder);
+}
+
+// the society traits that let cities draft the unit (Tidecallers' water units: StructurePredictions.json's traits)
+function CheckIfInSocietyTraits(unitID) {
+    return Object.entries(jsonStructurePredictions?.traits || {})
+        .filter(([id, units]) => units.includes(unitID))
+        .map(([id]) => findBy(jsonFactionCreation2, "id", id))
+        .filter(Boolean);
+}
+
+// the artifacts that let cities draft the unit (Heart of the Maer's Ghost Ship)
+function CheckIfInArtifacts(unitID) {
+    return jsonRelics.filter((relic) => relic.unit_unlock?.some((u) => u.id === unitID));
+}
+
+// the Artifacts page's tab of an artifact, by its DLC
+function ArtifactTab(relic) {
+    const tabs = { GIANTKINGS: "Giants", RISEFROMRUIN: "Fractured", SECRETSOFTHEARCHMAGES: "Secret", SILVERSEAS: "SilverSeas" };
+    return tabs[(relic.DLC || "").trim()] || "Giants";
 }
 
 function CheckIfInAncientWonder(unitID) {
@@ -5024,22 +5069,19 @@ function showStructure(a, showOrigin, divOrigin) {
     return modcard;
 }
 
-// a list of units behind a button, as a summon spell's spawn chances are; each button opens its own card's list
-function UnitUnlocksMenu(units) {
-    const menu = document.createElement("DIV");
-    menu.className = "unitUnlocksMenu";
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "collapsible";
-    button.innerHTML = "UNLOCKS PRODUCTION OF " + units.length + (units.length == 1 ? " UNIT" : " UNITS");
-    button.onclick = SetUpCombatEnc;
-    const list = document.createElement("DIV");
+// the units something lets cities draft, as the Spells pages' cards list them: under a label, folded away past six
+function UnitUnlocksMenu(units, label = "Unlocks") {
+    const fold = units.length > 6;
+    const part = document.createElement(fold ? "details" : "div");
+    part.className = "unitUnlocks";
+    part.innerHTML = fold ? `<summary>${label} (${units.length})</summary>` : `<div class="unitUnlocksLabel">${label}</div>`;
+    const list = document.createElement("div");
     list.className = "unitUnlocksList";
-    for (const id of units) {
-        list.innerHTML += '<a href="/evolved/HTML/Units.html?unit=' + id + '" target="_blank">' + GetUnitTierAndName(id) + "</a>";
-    }
-    menu.append(button, list);
-    return menu;
+    list.innerHTML = units
+        .map((id) => `<a href="/evolved/HTML/Units.html?unit=${id}" target="_blank">${GetUnitTierAndName(id)}</a>`)
+        .join("");
+    part.append(list);
+    return part;
 }
 
 function showRelic(a, divOrigin) {
@@ -5103,6 +5145,8 @@ function showRelic(a, divOrigin) {
         modName.append(newDivForMount);
     }
     descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description);
+    // the units the artifact lets cities draft (Relics.json, from aow4_diff_tools/spells.py)
+    if ("unit_unlock" in relic) descriptionDiv.append(UnitUnlocksMenu(relic.unit_unlock.map((u) => u.id)));
 
     let imagelink = divOrigin.querySelector("#modicon");
 
@@ -6310,20 +6354,7 @@ function showTraitSetup(currentTrait, divOrigin, loc) {
     }
 
     if ("unit_unlocks" in currentTrait) {
-        descriptionDiv.innerHTML += "<br><span style='color:beige'>Rally Units:</span><br>";
-
-        for (let x = 0; x < currentTrait.unit_unlocks.length; x++) {
-            let div = document.createElement("DIV");
-            div.setAttribute("style", "margin-right: 20px;");
-            div.innerHTML =
-                '<a href="/evolved/HTML/Units.html?unit=' +
-                currentTrait.unit_unlocks[x].slug +
-                '" target="_blank">' +
-                GetUnitTierAndName(currentTrait.unit_unlocks[x].slug) +
-                "</a>" +
-                "</bullet>";
-            descriptionDiv.appendChild(div);
-        }
+        descriptionDiv.append(UnitUnlocksMenu(currentTrait.unit_unlocks.map((u) => u.slug), "Rally Units"));
     }
 
     // descriptionDiv.innerHTML =  AddTagIconsForStatusEffects(descriptionDiv.innerHTML);
@@ -6359,6 +6390,10 @@ function showTraitSetup(currentTrait, divOrigin, loc) {
         imagelink.setAttribute("src", "/evolved/Icons/TraitIcons/" + iconLink + ".png");
     }
     descriptionDiv.innerHTML = AddTagIconsForStatusEffects(descriptionDiv.innerHTML);
+    // the units a society trait lets cities draft (Data/GEN/StructurePredictions.json, from aow4_diff_tools/citytree.py),
+    // added after the text is set, which would drop the button's handler
+    const traitUnits = jsonStructurePredictions?.traits?.[originalTrait.id];
+    if (traitUnits) descriptionDiv.append(UnitUnlocksMenu(traitUnits));
 
     // imagelink.setAttribute("src", "/evolved/Icons/TraitIcons/" + iconLink + ".png");
     imagelink.setAttribute("style", "background-image:none");
@@ -6684,6 +6719,7 @@ function showSkill(a, checkInAbilities, icon_slug, category, level, group_name, 
         let spa = CreatePassiveSlotToolTip(skillLoc.icon, skillLoc.name, skillLoc.description);
         spa.className = "itemAbility";
         descriptionDiv.append(spa);
+        if (jsonStructurePredictions?.skills?.[a.id]) descriptionDiv.append(UnitUnlocksMenu(jsonStructurePredictions.skills[a.id]));
 
         found = true;
 
@@ -6707,6 +6743,9 @@ function showSkill(a, checkInAbilities, icon_slug, category, level, group_name, 
         }
         descriptionDiv.innerHTML += "One of Following Tomes Researched : <br>" + ascendedInfo.description;
     }
+    // the units the skill lets the empire's cities draft (StructurePredictions.json's skills, from aow4_diff_tools/citytree.py)
+    const skillUnits = jsonStructurePredictions?.skills?.[a.id];
+    if (skillUnits) descriptionDiv.append(UnitUnlocksMenu(skillUnits));
 
     if (found === false) {
         console.log("Couldn't find skill: " + a.id);

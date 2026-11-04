@@ -2029,18 +2029,41 @@ yellowText {
     font-size: 16px;
 }
 
-/* a province improvement's units, behind a button as a summon spell's spawn chances are; the button shows it */
-.unitUnlocksMenu {
-    width: 450px;
+/* the units a structure, trait, artifact or hero skill unlocks, as the Spells pages' cards list them (.wm-part and
+   .wm-units in worldmap.css, which not every page loads): a label, or past six units a fold */
+.unitUnlocks {
     margin-top: 10px;
 }
-
+.unitUnlocksLabel {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.unitUnlocks summary {
+    color: #d7c297;
+    cursor: pointer;
+}
 .unitUnlocksList {
-    display: none;
-    grid-template-columns: 200px 200px;
-    column-gap: 30px;
-    padding: 5px 10px;
-    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+}
+/* GetUnitTierAndName lays a name out for a fixed-width table: here the tier follows the name */
+.unitUnlocksList a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #bbcdf6;
+}
+.unitUnlocksList a:hover {
+    color: white;
+}
+.unitUnlocksList a * {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
 }
 
 /* a structure card is 800px wide: its text runs on up to the tome icon on the right */

@@ -5073,7 +5073,7 @@ function showStructure(a, showOrigin, divOrigin) {
     return modcard;
 }
 
-// a card's list of units folds away past this many of them, on every page (WmUnitList, the Ancient Wonders' rallies too)
+// a card's list of units folds away past this many of them, on every page (WmUnitList); not a wonder's Rally of the Lieges
 const UNIT_LIST_FOLD = 4;
 
 // the units something lets cities draft, as the Spells pages' cards list them: under a label, folded away past

@@ -127,13 +127,10 @@ const AncientWondersPage = (() => {
         about.append(province);
 
         if (w.units.length) {
-            // folded away past UNIT_LIST_FOLD units, as every card's list
-            const fold = w.units.length > UNIT_LIST_FOLD;
-            const rally = document.createElement(fold ? "details" : "div");
+            // never folded, unlike other unit lists (UNIT_LIST_FOLD): five at most, and only one wonder has that many
+            const rally = document.createElement("div");
             rally.className = "aw-rally";
-            rally.innerHTML = fold
-                ? '<summary class="aw-head">Rally of the Lieges (' + w.units.length + ")</summary>"
-                : '<div class="aw-head">Rally of the Lieges</div>';
+            rally.innerHTML = '<div class="aw-head">Rally of the Lieges</div>';
             const list = document.createElement("div");
             list.className = "aw-units";
             for (const u of w.units) list.append(UnitLink(u));

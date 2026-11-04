@@ -2261,6 +2261,21 @@ silver {
     background: linear-gradient(126deg, #9ff663 50%, #ff002d);
 }
 
+.SILVERSEAStriangle {
+    position: absolute;
+
+    z-index: 0;
+    top: -22px;
+    right: -28px;
+    width: 30px;
+    height: 30px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #2d22ff;
+    transform: rotate(45deg);
+    background: linear-gradient(126deg, #63e5f6 50%, #3000ff);
+}
+
 /* the banner's picture, out to the page's edges over the body's 8px margin beside it, darkening towards the menu */
 .banner::before {
     content: "";

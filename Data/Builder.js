@@ -56,9 +56,10 @@ function extractHyperlinks(text) {
     const links = [];
     let index = 0;
 
-    text = text.replace(/<hyperlink>(.*?)<\/hyperlink>/g, (_, inner) => {
+    // '<hyperlink data-slug="…">': a link to an ability its name doesn't tell apart (RestoreDumpLinks)
+    text = text.replace(/<hyperlink(?: data-slug="([^"]*)")?>(.*?)<\/hyperlink>/g, (_, slug, inner) => {
         const token = `__HYPERLINK_${index}__`;
-        links.push({ token, inner });
+        links.push({ token, inner, slug });
         index++;
         return token;
     });
@@ -105,8 +106,10 @@ function processConceptHyperlinks(text) {
         // a link to an ability ("[hyperlink,GLOBAL.PROPERTIES.INFERNAL_BLAZE]Infernal Blaze[/hyperlink]") opens the
         // ability's tooltip; alltexts.py writes no concept tooltip for one the site has. Written as the dump's links
         // are, so the ability names in plain text are not looked for in it again
-        if (!concept && (abilityTagCache?.has(displayText.trim()) || AbilityLinkInOtherWords(displayText.trim())))
-            return `<hyperlink>${displayText.trim()}</hyperlink>`;
+        if (!concept && (abilityTagCache?.has(displayText.trim()) || AbilityLinkInOtherWords(displayText.trim()))) {
+            const slug = abilityLinkSlugs.get(globalName);
+            return `<hyperlink${slug ? ` data-slug="${slug}"` : ""}>${displayText.trim()}</hyperlink>`;
+        }
         // a unit's link opens the unit, whether or not the game's libraries give it a line of its own
         if (globalName.startsWith("GLOBAL.UNITS.") && UnitByLinkWords(displayText)) return UnitLink(displayText.trim(), UnitByLinkWords(displayText));
         if (!concept) return noTooltip; // no tooltip available, just underline
@@ -297,8 +300,9 @@ function UnitTooltip(resid) {
     return tip;
 }
 
-// main function
-function AddTagIconsForStatusEffects(text) {
+// main function. onlyGameLinks: the text has all the game's links (a tome's description), so ability names in plain
+// text are words, not links ("Heal and support your units", "Convert your people")
+function AddTagIconsForStatusEffects(text, onlyGameLinks = false) {
     if (!text) return text;
     if (!abilityTagCache) buildAbilityTagCache();
     text = processSpellRefs(text);
@@ -315,7 +319,7 @@ function AddTagIconsForStatusEffects(text) {
         /<span style="color:white;text-decoration:underline">[^]*?<\/span><span class="conceptTooltipHandler"[^>]*><\/span>/g,
         (link) => `__CONCEPTLINK_${conceptLinks.push(link) - 1}__`
     );
-    text = text.replace(abilityNamesRegex, (name) => abilityTagCache.get(name).replacement);
+    if (!onlyGameLinks) text = text.replace(abilityNamesRegex, (name) => abilityTagCache.get(name).replacement);
     text = text.replace(/__CONCEPTLINK_(\d+)__/g, (_, i) => conceptLinks[i]);
 
     /* for (const link of extracted.links) {
@@ -330,8 +334,9 @@ function AddTagIconsForStatusEffects(text) {
         let restored;
 
         if (abilityTagCache.has(link.inner)) {
-            // Existing: unit ability → status effect tooltip
+            // Existing: unit ability → status effect tooltip; by its slug where its name is another's too
             restored = abilityTagCache.get(link.inner).replacement;
+            if (link.slug) restored = restored.replace('<span class="statusEffectHandler">', `<span class="statusEffectHandler" data-slug="${link.slug}">`);
         } else {
             // the game dump's links carry only their words ("<hyperlink>Provinces</hyperlink>"): find the concept by name
             const key = ConceptKeyByName(link.inner.replace(/<[^>]+>/g, "").trim());
@@ -4350,7 +4355,8 @@ function showTome(a, divOrigin) {
 
     descriptionDiv = divOrigin.querySelector("#tomedescription");
     description = tomeLoc.gameplay_description;
-    descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description);
+    // the game's links only: RestoreDumpLinks gave it them all, and its ability names are words ("Heal and support")
+    descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description, true);
 
     // a pip per point of affinity: "2 <empireorder></empireorder> ..." is two. A tome no one researches has no tier: a
     // culture's is unlocked from the start, a pact's spells come from a Dwelling

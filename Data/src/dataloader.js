@@ -111,6 +111,8 @@ function fetchJsonFiles(filePaths) {
     return fetchJsonTexts(filePaths).then((texts) => texts.map((text) => JSON.parse(text)));
 }
 var jsonSiegeProjects;
+// "GLOBAL.PROPERTIES.<tag>" → slug, for the abilities a name doesn't tell apart (AddExtraData)
+var abilityLinkSlugs = new Map();
 
 const dlcMap = {
     DRAGONLORDS: {
@@ -303,9 +305,11 @@ async function GetAllData(selectedLang) {
 // The dump's texts lose many of the game's links ("inflicts Seal of Transference, a link effect that lasts for
 // 3 <turn></turn> Turns"), which all.json keeps ("inflicts [hyperlink,GLOBAL.PROPERTIES.TRANSFERENCE_SEAL_DEBUFF_GROUP]
 // Seal of Transference[/hyperlink] ... [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]"). A dump text with the same
-// words as a text of all.json gets its links back, as the dump writes them: "<hyperlink>Seal of Transference</hyperlink>"
+// words as a text of all.json gets its links back, as the dump writes them: "<hyperlink>Seal of Transference</hyperlink>".
+// A link to an ability that shares its name with another (abilityLinkSlugs) names it by its slug:
+// '<hyperlink data-slug="00000497000044D9">Water Shift</hyperlink>'
 function RestoreDumpLinks(dumps, allFromPO) {
-    const HYPERLINK = /\[hyperlink,[^\]]*\]([\s\S]*?)\[\/hyperlink\]/g;
+    const HYPERLINK = /\[hyperlink,([^\]]*)\]([\s\S]*?)\[\/hyperlink\]/g;
     const words = (s) => s.replace(/<[^>]*>|\[\/?bullet[^\]]*\]|\s+/g, "");
 
     // the texts of all.json with links, by their words; of two with the same words, the one with more links
@@ -313,10 +317,10 @@ function RestoreDumpLinks(dumps, allFromPO) {
     for (const entry of allFromPO) {
         for (const [key, text] of Object.entries(entry)) {
             if (key === "id" || typeof text !== "string" || !text.includes("[hyperlink,")) continue;
-            const links = [...text.matchAll(HYPERLINK)].map((m) => m[1].trim());
-            const k = words(text.replace(HYPERLINK, "$1"));
+            const links = [...text.matchAll(HYPERLINK)].map((m) => ({ words: m[2].trim(), slug: abilityLinkSlugs.get(m[1]) }));
+            const k = words(text.replace(HYPERLINK, "$2"));
             // a text that is a link and nothing else ("Defense Mode") is a name: the dump's names stay unlinked
-            if (links.length === 1 && words(links[0]) === k) continue;
+            if (links.length === 1 && words(links[0].words) === k) continue;
             if ((linked.get(k)?.length ?? 0) < links.length) linked.set(k, links);
         }
     }
@@ -351,7 +355,7 @@ function RestoreDumpLinks(dumps, allFromPO) {
         // each link's words in the game's order, after the one before; a link the dump has already is passed by
         const wraps = [];
         let from = 0;
-        for (const link of links) {
+        for (const { words: link, slug } of links) {
             const icon = link.match(/^(?:<(\w+)><\/\1>\s*)+/)?.[0].replace(/\s+/g, "") ?? "";
             const name = link.replace(/<[^>]*>/g, "").trim();
             if (!name) continue;
@@ -365,10 +369,10 @@ function RestoreDumpLinks(dumps, allFromPO) {
             // a link with an icon holds it too: "3<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink>"
             const before = text.slice(0, start).trimEnd();
             if (icon && before.toLowerCase().endsWith(icon.toLowerCase())) start = before.length - icon.length;
-            wraps.push([start, at[from - 1] + 1]);
+            wraps.push([start, at[from - 1] + 1, slug ? `<hyperlink data-slug="${slug}">` : "<hyperlink>"]);
         }
-        for (const [start, end] of wraps.reverse()) {
-            text = text.slice(0, start) + "<hyperlink>" + text.slice(start, end) + "</hyperlink>" + text.slice(end);
+        for (const [start, end, open] of wraps.reverse()) {
+            text = text.slice(0, start) + open + text.slice(start, end) + "</hyperlink>" + text.slice(end);
         }
         return text;
     }
@@ -406,6 +410,13 @@ function AddExtraData() {
         "jsonItemForgeTypes",
         "jsonItemForgeUpgrades"
     ];
+    // an ability of LinkedAbilities.json that shares its name with one of the dump's is another thing (the Seamare's
+    // Water Shift passive gives the Water Shift ability on Ocean; the Fire Hex ability inflicts the Fire Hex status): a
+    // link to it, by the tags the game's texts link it by, carries its slug, as its name alone opens the dump's
+    const dumpAbilityNames = new Set(jsonUnitAbilities.map((a) => a.name));
+    for (const ability of jsonLinkedAbilities) {
+        if (dumpAbilityNames.has(ability.name)) for (const tag of ability.tags || []) abilityLinkSlugs.set("GLOBAL.PROPERTIES." + tag, ability.slug);
+    }
     RestoreDumpLinks(dumps.map((d) => window[d]), jsonAllFromPO);
     RestoreDumpLinks(dumps.map((d) => window[d + "Localized"]), jsonAllFromPOLocalized);
     // the spell book's texts are the dump's

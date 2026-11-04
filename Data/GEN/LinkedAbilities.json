@@ -21,7 +21,37 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300005776"
+  "icon": "000003E300005776",
+  "tags": [
+   "ARCFIRE_THYPHOON"
+  ]
+ },
+ {
+  "name": "Arcfire Weapons",
+  "slug": "0000049700000B72",
+  "description": "Friendly units within a 1-hex radius gain [hyperlink,GLOBAL.PROPERTIES.ARCFIRE_WEAPONS_PROP_GROUP]Arcfire Weapons[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B73",
+  "tags": [
+   "ARCFIRE_WEAPONS"
+  ]
  },
  {
   "name": "Arrow of Harmony",
@@ -48,7 +78,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000004970000108D"
+  "icon": "000004970000108D",
+  "tags": [
+   "ARROW_OF_REMORSE"
+  ]
  },
  {
   "name": "Artillery Barrage",
@@ -65,7 +98,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000046A00000148"
+  "icon": "0000046A00000148",
+  "tags": [
+   "ARTILLERY_BARRAGE"
+  ]
  },
  {
   "name": "Aspect of the Root",
@@ -86,7 +122,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003EB000005E8"
+  "icon": "000003EB000005E8",
+  "tags": [
+   "ASPECT_ROOT"
+  ]
  },
  {
   "name": "Astral Rift",
@@ -110,7 +149,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E30000570B"
+  "icon": "000003E30000570B",
+  "tags": [
+   "ASTRAL_RIFT"
+  ]
  },
  {
   "name": "Astral Storm",
@@ -131,7 +173,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300005703"
+  "icon": "000003E300005703",
+  "tags": [
+   "ASTRAL_STORM"
+  ]
  },
  {
   "name": "Blazing Chain Lightning",
@@ -155,7 +200,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B6F"
+  "icon": "0000049700000B6F",
+  "tags": [
+   "BLAZING_CHAIN_LIGHTNING"
+  ]
  },
  {
   "name": "Blessed Champion",
@@ -179,7 +227,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B81"
+  "icon": "0000049700000B81",
+  "tags": [
+   "BLESSED_CHAMPION"
+  ]
  },
  {
   "name": "Blessed Judgment",
@@ -206,7 +257,37 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B85"
+  "icon": "0000049700000B85",
+  "tags": [
+   "BLESSED_JUDGMENT"
+  ]
+ },
+ {
+  "name": "Channel Power",
+  "slug": "0000048D00000CAA",
+  "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks gain +50% damage until the end of the current turn.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "0",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Support</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   },
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000048D00000CAB",
+  "tags": [
+   "CHANNEL_POWER"
+  ]
  },
  {
   "name": "Chaos Pulse",
@@ -230,7 +311,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000AD2"
+  "icon": "0000049700000AD2",
+  "tags": [
+   "CHAOS_PULSE"
+  ]
  },
  {
   "name": "Charged Phase",
@@ -254,7 +338,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000041B0000148C"
+  "icon": "0000041B0000148C",
+  "tags": [
+   "CHARGED_PHASE_TELEPORT"
+  ]
  },
  {
   "name": "Cleansing Rain",
@@ -278,7 +365,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000004970000137C"
+  "icon": "000004970000137C",
+  "tags": [
+   "CLEANSING_RAIN"
+  ]
  },
  {
   "name": "Collector's gift",
@@ -299,7 +389,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E100002064"
+  "icon": "000003E100002064",
+  "tags": [
+   "KRALICAVIR_SUMMON_UNDEAD"
+  ]
  },
  {
   "name": "Conjure Astral Ward",
@@ -320,7 +413,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048D00000954"
+  "icon": "0000048D00000954",
+  "tags": [
+   "CONJURE_ASTRAL_WARD_HERO_SKILL"
+  ]
  },
  {
   "name": "Conjure Wildgrowth",
@@ -337,7 +433,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048B00000357"
+  "icon": "0000048B00000357",
+  "tags": [
+   "CONJURE_WILDGROWTH"
+  ]
  },
  {
   "name": "Consume Flora",
@@ -354,7 +453,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000004970000068B"
+  "icon": "000004970000068B",
+  "tags": [
+   "CONSUME_FLORA"
+  ]
  },
  {
   "name": "Corpse Eating",
@@ -371,7 +473,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000041B00001C8E"
+  "icon": "0000041B00001C8E",
+  "tags": [
+   "CORPSE_EATING"
+  ]
  },
  {
   "name": "Cosmic Barrage",
@@ -395,7 +500,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300005743"
+  "icon": "000003E300005743",
+  "tags": [
+   "COSMIC_BARRAGE"
+  ]
  },
  {
   "name": "Cosmic Pulse",
@@ -419,7 +527,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B0A"
+  "icon": "0000049700000B0A",
+  "tags": [
+   "COSMIC_PULSE"
+  ]
  },
  {
   "name": "Curse of the Reaper",
@@ -443,7 +554,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300006018"
+  "icon": "000003E300006018",
+  "tags": [
+   "EVOCATION_OF_DEATH"
+  ]
  },
  {
   "name": "Debilitation",
@@ -467,7 +581,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B5A"
+  "icon": "0000049700000B5A",
+  "tags": [
+   "DEBILITATION"
+  ]
  },
  {
   "name": "Distribute Tonic",
@@ -488,7 +605,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E3000071C7"
+  "icon": "000003E3000071C7",
+  "tags": [
+   "DISTRIBUTE_TONIC"
+  ]
  },
  {
   "name": "Dragonstrike",
@@ -512,7 +632,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048D00001C03"
+  "icon": "0000048D00001C03",
+  "tags": [
+   "DRACONIC_FOCUS_BREATH"
+  ]
  },
  {
   "name": "Draining Blade",
@@ -536,7 +659,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300005C40"
+  "icon": "000003E300005C40",
+  "tags": [
+   "DRAINING_BLADE"
+  ]
  },
  {
   "name": "Eldritch Mind Control",
@@ -560,7 +686,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000A48"
+  "icon": "0000049700000A48",
+  "tags": [
+   "ENTHRALL"
+  ]
  },
  {
   "name": "Eldritch Truth",
@@ -584,7 +713,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000A3C"
+  "icon": "0000049700000A3C",
+  "tags": [
+   "ELDRITCH_GLIMPSE"
+  ]
  },
  {
   "name": "Enrapturing Truth",
@@ -608,7 +740,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000A6F"
+  "icon": "0000049700000A6F",
+  "tags": [
+   "ENTRHALLING_GLIMPSE"
+  ]
  },
  {
   "name": "Fairy Dust",
@@ -629,7 +764,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700003B53"
+  "icon": "0000049700003B53",
+  "tags": [
+   "FAIRY_DUST_ABILITY"
+  ]
  },
  {
   "name": "Fey Blessing",
@@ -653,7 +791,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000588"
+  "icon": "0000049700000588",
+  "tags": [
+   "SOOTHING_MIST"
+  ]
  },
  {
   "name": "Fire Bomb",
@@ -674,7 +815,37 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300006BAC"
+  "icon": "000003E300006BAC",
+  "tags": [
+   "FIRE_BOMB"
+  ]
+ },
+ {
+  "name": "Fire Hex",
+  "slug": "0000049700000B31",
+  "description": "Enemy units in a 1-hex:<bulletlist><bullet>Sustain damage</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.FIRE_HEX_PROP_GROUP]Fire Hex[/hyperlink]</bullet></bulletlist>",
+  "damage": "10<damagefire></damagefire> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B32",
+  "tags": [
+   "FIRE_HEX"
+  ]
  },
  {
   "name": "Focus Aim",
@@ -691,7 +862,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048B000001F6"
+  "icon": "0000048B000001F6",
+  "tags": [
+   "FOCUS"
+  ]
  },
  {
   "name": "Forgefather's Creation",
@@ -712,7 +886,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E100002065"
+  "icon": "000003E100002065",
+  "tags": [
+   "VOXSEBAS_CREATION_ABILITY"
+  ]
  },
  {
   "name": "Forgefather's Gift",
@@ -733,7 +910,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E10000200F"
+  "icon": "000003E10000200F",
+  "tags": [
+   "CHOSEN_OF_VOXSEBAS_ABILITY"
+  ]
  },
  {
   "name": "Free Their Souls",
@@ -750,7 +930,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049300000ED9"
+  "icon": "0000049300000ED9",
+  "tags": [
+   "FREE_THEIR_SOULS"
+  ]
  },
  {
   "name": "Frigid Belch",
@@ -767,7 +950,37 @@
   ],
   "notes": [],
   "modifiers": [],
-  "icon": "000003E300004363"
+  "icon": "000003E300004363",
+  "tags": [
+   "FRIGID_BELCH"
+  ]
+ },
+ {
+  "name": "Frost Hex",
+  "slug": "0000049700000B27",
+  "description": "Enemy units in a 1-hex:<bulletlist><bullet>Sustain damage</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.FROST_HEX_PROP_GROUP]Frost Hex[/hyperlink]</bullet></bulletlist>",
+  "damage": "15<damagefrost></damagefrost> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B28",
+  "tags": [
+   "FROST_HEX"
+  ]
  },
  {
   "name": "Greater Possession",
@@ -788,7 +1001,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B00"
+  "icon": "0000049700000B00",
+  "tags": [
+   "GREATER_TENTACLED_POSSESSION"
+  ]
  },
  {
   "name": "Havoc Pulse",
@@ -812,7 +1028,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000AD2"
+  "icon": "0000049700000AD2",
+  "tags": [
+   "HAVOC_PULSE"
+  ]
  },
  {
   "name": "Ice Nova",
@@ -833,7 +1052,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000004970000447B"
+  "icon": "000004970000447B",
+  "tags": [
+   "ICE_NOVA"
+  ]
  },
  {
   "name": "Infernal Blaze",
@@ -854,7 +1076,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "00000497000010C6"
+  "icon": "00000497000010C6",
+  "tags": [
+   "INFERNAL_BLAZE"
+  ]
  },
  {
   "name": "Inspiring Resistance",
@@ -871,7 +1096,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E3000069D5"
+  "icon": "000003E3000069D5",
+  "tags": [
+   "INSPIRING_DEFENSE"
+  ]
  },
  {
   "name": "Lesser Evocation",
@@ -898,7 +1126,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000004C000000BFD"
+  "icon": "000004C000000BFD",
+  "tags": [
+   "LESSER_EVOCATION"
+  ]
  },
  {
   "name": "Mass Plague",
@@ -922,7 +1153,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300005787"
+  "icon": "000003E300005787",
+  "tags": [
+   "MASS_PLAGUE"
+  ]
  },
  {
   "name": "Mass Rejuvenation",
@@ -946,7 +1180,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E30000564B"
+  "icon": "000003E30000564B",
+  "tags": [
+   "MASS_REJUVENATION"
+  ]
  },
  {
   "name": "Mind Shattering Truth",
@@ -976,7 +1213,37 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000A79"
+  "icon": "0000049700000A79",
+  "tags": [
+   "MIND_SHATTERING_GLIMPSE"
+  ]
+ },
+ {
+  "name": "Necro Hex",
+  "slug": "0000049700000B3B",
+  "description": "Enemy units in a 1-hex:<bulletlist><bullet>Sustain damage</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.NECRO_HEX_PROP_GROUP]Necro Hex[/hyperlink]</bullet></bulletlist>",
+  "damage": "10<damageblight></damageblight> 10<damagefrost></damagefrost> ",
+  "accuracy": "Always Hits",
+  "range": "99",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "requisites": [
+   {
+    "requisite": "Forgotten Tome"
+   },
+   {
+    "requisite": "<hyperlink>Magic</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Can only be used once per battle."
+   }
+  ],
+  "modifiers": [],
+  "icon": "0000049700000B3C",
+  "tags": [
+   "NECRO_HEX"
+  ]
  },
  {
   "name": "Possession",
@@ -997,7 +1264,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000A8C"
+  "icon": "0000049700000A8C",
+  "tags": [
+   "TENTACLED_POSSESSION"
+  ]
  },
  {
   "name": "Puppeteer's Domination",
@@ -1021,7 +1291,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000DEE"
+  "icon": "0000049700000DEE",
+  "tags": [
+   "PUPPETEERS_DOMINATION"
+  ]
  },
  {
   "name": "Puppeteer's Possession",
@@ -1042,7 +1315,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000AFF"
+  "icon": "0000049700000AFF",
+  "tags": [
+   "PUPPETEER_POSSESSION"
+  ]
  },
  {
   "name": "Radiant Slash",
@@ -1063,7 +1339,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "00000497000010AD"
+  "icon": "00000497000010AD",
+  "tags": [
+   "RENDING_SLASH"
+  ]
  },
  {
   "name": "Recall Mask of Prosperity",
@@ -1080,7 +1359,10 @@
   ],
   "notes": [],
   "modifiers": [],
-  "icon": "0000048B00000286"
+  "icon": "0000048B00000286",
+  "tags": [
+   "RECALL_MASK_OF_PROSPERITY"
+  ]
  },
  {
   "name": "Renew",
@@ -1104,7 +1386,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300005754"
+  "icon": "000003E300005754",
+  "tags": [
+   "RENEW"
+  ]
  },
  {
   "name": "Restoration",
@@ -1128,7 +1413,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E30000563A"
+  "icon": "000003E30000563A",
+  "tags": [
+   "RESTORATION"
+  ]
  },
  {
   "name": "Restore (Overflowing)",
@@ -1149,7 +1437,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048B00000313"
+  "icon": "0000048B00000313",
+  "tags": [
+   "RALLYING_CRY"
+  ]
  },
  {
   "name": "Rip Mask of Calamity",
@@ -1169,7 +1460,10 @@
   ],
   "notes": [],
   "modifiers": [],
-  "icon": "0000048B00000447"
+  "icon": "0000048B00000447",
+  "tags": [
+   "RIP_MASK_OF_CALAMITY"
+  ]
  },
  {
   "name": "Rot Away",
@@ -1196,7 +1490,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000049700000B56"
+  "icon": "0000049700000B56",
+  "tags": [
+   "ROT_AWAY"
+  ]
  },
  {
   "name": "Sanctify",
@@ -1217,7 +1514,37 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300006116"
+  "icon": "000003E300006116",
+  "tags": [
+   "SANCTIFY"
+  ]
+ },
+ {
+  "name": "Sand Shift",
+  "slug": "000004970000367C",
+  "description": "Move to target hex.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "3",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Movement</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Teleport</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 2 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "000004970000367D",
+  "tags": [
+   "SAND_SHIFT"
+  ]
  },
  {
   "name": "Sprint",
@@ -1234,7 +1561,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E3000054EB"
+  "icon": "000003E3000054EB",
+  "tags": [
+   "SPRINT"
+  ]
  },
  {
   "name": "Stormcall",
@@ -1255,7 +1585,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048D00000ECF"
+  "icon": "0000048D00000ECF",
+  "tags": [
+   "ASTRAL_ELDER_STORMCALL_ABILITY"
+  ]
  },
  {
   "name": "Summon Devastator Sphere",
@@ -1279,7 +1612,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300006921"
+  "icon": "000003E300006921",
+  "tags": [
+   "SUMMON_DEVASTATOR_SPHERE"
+  ]
  },
  {
   "name": "Summon Elemental",
@@ -1303,7 +1639,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E30000565D"
+  "icon": "000003E30000565D",
+  "tags": [
+   "SUMMON_ELEMENTAL"
+  ]
  },
  {
   "name": "Temporal Plague",
@@ -1327,7 +1666,10 @@
    }
   ],
   "modifiers": [],
-  "icon": "0000048D00000D04"
+  "icon": "0000048D00000D04",
+  "tags": [
+   "HS_MAGE_TEMPORAL_PLAGUE_ABILITY"
+  ]
  },
  {
   "name": "Undying Loyalty",
@@ -1348,6 +1690,36 @@
    }
   ],
   "modifiers": [],
-  "icon": "000003E300006A4C"
+  "icon": "000003E300006A4C",
+  "tags": [
+   "HS_UNDYIND_LOYALTY"
+  ]
+ },
+ {
+  "name": "Water Shift",
+  "slug": "00000497000044D9",
+  "description": "Move to target hex.",
+  "damage": "",
+  "accuracy": "Always Hits",
+  "range": "3",
+  "actionPoints": "<freeaction></freeaction>",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Movement</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Teleport</hyperlink>"
+   }
+  ],
+  "notes": [
+   {
+    "note": "Cooldown: 1 <turn></turn>"
+   }
+  ],
+  "modifiers": [],
+  "icon": "00000497000044DA",
+  "tags": [
+   "WATER_SHIFT"
+  ]
  }
 ]

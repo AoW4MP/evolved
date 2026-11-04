@@ -268,7 +268,10 @@ Units" use the same list. A unit's origins name them: "Unit production unlocked 
 Skill" (`CheckIfInSocietyTraits`, `CheckIfInArtifacts`). `Spells.html?trait=` shows a trait (upstream linked there with
 nothing to show it). The Artifacts page has a Silver Seas Artifacts tab (`ArtifactTab` names a DLC's tab).
 An Oceanic happening whose choices unlock a unit is one of its origins, through the spell book's `sites` ("Unit production
-unlocked by a choice in Oceanic Happening Mating Season").
+unlocked by a choice in Oceanic Happening Mating Season"). A unit a choice gives one of is no unlock, though the choice
+grants the property its recruitment needs: `ONE_COPY_UNITS` in `citytree.py`, from the maintainer (the Ancient Hoarfrost
+Manta, from Frozen Seas, whose tooltip names the Hoarfrost Manta alone). The happening's card and the choice list it under
+"Gains one" (`gains`), and the unit's origin reads "One unit gained from a choice in Oceanic Happening Frozen Seas" (`once`).
 
 ### Old lists
 

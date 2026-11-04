@@ -199,6 +199,8 @@ function WmHappening(e) {
     }
     // an Oceanic one: the units its choices unlock, then its events, each a fold with its choices
     if (e.units?.length) about.append(WmUnitList("Unlocks", e.units));
+    // one of each, not their recruitment (Frozen Seas' Ancient Hoarfrost Manta)
+    if (e.gains?.length) about.append(WmUnitList("Gains one", e.gains));
     for (const ev of e.events || []) {
         const story = WmElement("details", "wm-story", "<summary>" + ev.label + "</summary>" + ev.text.map((t) => "<p>" + WmMarkup(t) + "</p>").join(""));
         for (const o of ev.options) story.append(WmChoice(o));
@@ -218,9 +220,10 @@ function WmChoice(o) {
         ...once(o.rewards).map(([r, level]) => '<span class="wm-reward">' + level + " " + resource(r) + "</span>")
     ];
     if (notes.length) row.append(WmElement("div", "wm-notes", notes.join("")));
-    if (o.units.length) {
-        const units = WmElement("div", "wm-notes", '<span class="wm-reward">Unlocks</span>');
-        units.append(WmUnits(o.units));
+    for (const [label, ids] of [["Unlocks", o.units], ["Gains one", o.gains || []]]) {
+        if (!ids.length) continue;
+        const units = WmElement("div", "wm-notes", '<span class="wm-reward">' + label + "</span>");
+        units.append(WmUnits(ids));
         row.append(units);
     }
     return row;

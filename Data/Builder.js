@@ -3728,9 +3728,12 @@ function backtrackUnitOrigins(unitData, name, holder) {
 
             tooltipText = `Unit unlocked from <landmark></landmark> <hyperlink>${wonder[x].type}</<hyperlink> : <hyperlink>${wonder[x].name}</<hyperlink>`;
         } else if (wonder[x].type == "Oceanic Happening") {
-            // a choice at its end lets cities draft the unit (Mating Season's Seamare)
+            // a choice at its end lets cities draft the unit (Mating Season's Seamare), or gives one of it (once: Frozen
+            // Seas' Ancient Hoarfrost Manta)
             miniIcon.innerHTML = "";
-            tooltipText = `Unit production unlocked by a choice in Oceanic Happening <hyperlink>${wonder[x].name}</hyperlink>`;
+            tooltipText = wonder[x].once
+                ? `One unit gained from a choice in Oceanic Happening <hyperlink>${wonder[x].name}</hyperlink>`
+                : `Unit production unlocked by a choice in Oceanic Happening <hyperlink>${wonder[x].name}</hyperlink>`;
         } else {
             miniIcon.innerHTML = "<rally></rally>";
             tooltipText = `Rally Unit unlocked from <hyperlink>${wonder[x].type}</<hyperlink> : <hyperlink>${wonder[x].name}</<hyperlink>`;

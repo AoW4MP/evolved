@@ -32,7 +32,7 @@ const SEARCH_WORDS = {
     siege: (e) => [e.name, e.description, e.sources.map((s) => s.name)],
     infestations: (e) => [e.name, e.tier, e.description, e.lore, e.pools.map((p) => [p.label, p.units, p.others])],
     landmarks: (e) => [e.name, e.lore, e.adjacent, e.city, e.enchantments.map((x) => [x.name, x.description]), e.units],
-    happenings: (e) => [e.name, e.category, e.sub, e.description, e.story?.text, e.story?.options, e.events?.map((v) => [v.text, v.options.map((o) => o.text)]), e.units, e.gains],
+    happenings: (e) => [e.name, e.category, e.sub, e.description, e.story?.text, e.story?.options, e.events?.map((v) => [v.text, v.options.map((o) => o.text)]), e.units],
     wonders: (e) => [e.name, e.tier, e.description, e.lore, e.units, e.stories.map((s) => [s.title, s.names])],
     materials: (e) => [e.name, e.description, e.lore, e.combat?.name, e.combat?.description, e.set?.name, e.set?.category, e.set?.description]
 };

@@ -248,7 +248,8 @@ A unit's origins read the new data: `CheckIfInSpells` and `CheckIfInSiege` the s
 
 What lets cities draft a unit comes from the game (a unit's Required Structure Properties, see aow4_diff_tools'
 CLAUDE.md): `StructurePredictions.json`'s `units` (structures by resid: province improvements, and city structures such
-as the Shipyard's Ram Warship and Grand Wharf's Ballista Warship), `traits` (Tidecallers' 13 water units) and `skills`
+as the Vampire Castle: Soul Forge's bats; not the Shipyard's Ram Warship nor the Grand Wharf's Ballista Warship, which no
+player can get: `UNUSED_UNITS` in `citytree.py`), `traits` (Tidecallers' 13 water units) and `skills`
 (Ascension: Living Spider Nest's five spiders, Rosebound Noble, Nimue's secret spell), from `citytree.py`, and
 `Relics.json`'s `unit_unlock` (Heart of the Maer, Head of Ceaseless Laments, Nimue's Secret Scroll), from `spells.py`.
 The card of each lists them (`UnitUnlocksMenu`) as the Spells pages' cards list a spell's units: an "Unlocks" label

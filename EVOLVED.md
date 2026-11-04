@@ -270,7 +270,8 @@ The DLC as Evolved shows it, not upstream's pages (2026-11-03):
   `UnitUnlockIcons/wavemaster.png`, which upstream lacks, is cut from its preview in the others' purple ring.
   `Data/GEN/Relics.json` got upstream's eight new relics so `spells.py` keeps them; `WorldStructures.json`,
   `FactionCreation.json`, `BuilderLookup.json` and `BuilderLookupHero.json` are upstream's, and `AscendedInfo.json`
-  has upstream's three new Ascensions plus Hydromancy's Tide Summoner, which upstream's list lacks.
+  is upstream's, with its four new Ascensions (Eternal Ice, Piracy, the Damned and Hydromancy's Tide Summoner). A tome
+  lists every entry naming it, so an entry there twice shows twice.
 
 ### Ancient Wonders
 

@@ -2323,6 +2323,15 @@ silver {
     color: whitesmoke;
 }
 
+/* the current DLC's logo under the title, as upstream's header shows it; it takes the room the banner had left */
+.dlc-logo {
+    display: block;
+    width: 250px;
+    height: auto;
+    margin-top: -6px; /* the title's line has room under its letters: the banner stays 80px */
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+}
+
 
 .content {
     float: right;
@@ -2540,6 +2549,9 @@ span.number-highlight {
     }
     .hero-text {
         font-size: 24px;
+    }
+    .dlc-logo {
+        width: 170px;
     }
     /* Settings and Donate at the foot of the menu, as its other items */
     #menuExtras .topbar {

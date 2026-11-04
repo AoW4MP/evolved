@@ -305,6 +305,7 @@ function UnitTooltip(resid) {
 function AddTagIconsForStatusEffects(text, onlyGameLinks = false) {
     if (!text) return text;
     if (!abilityTagCache) buildAbilityTagCache();
+    const source = text;
     text = processSpellRefs(text);
     text = processConceptHyperlinks(text);
 
@@ -359,6 +360,8 @@ function AddTagIconsForStatusEffects(text, onlyGameLinks = false) {
         text = text.replace(link.token, restored);
     }
 
+    text = LinksElsewhere(text, source);
+
     if (getUserSettings().isolateNumber) {
         text = highlightNumbersInDiv(text);
     }
@@ -367,6 +370,102 @@ function AddTagIconsForStatusEffects(text, onlyGameLinks = false) {
     text = text.replaceAll("<br></br>", "<br>");
 
     return text;
+}
+
+// A link never opens the text it stands in. An ability's name is linked wherever it stands, so Strengthened's own
+// "Strengthened counters Weakened" linked Strengthened again, and a hero skill's "Gain Frost Hex" opened the casting
+// ability with the same words, not the Frost Hex it inflicts. A link whose tooltip says what its text says (word for
+// word, or nearly when it has the name of the thing the text belongs to: "for 2 Turns" where the other has 3) opens
+// another thing of that name whose text differs (Frost Hex's: "a 20% chance of becoming Frozen"), else shows its words
+// unlinked, as the game does. checktooltips.py in aow4_diff_tools reports what's left
+const LINK_WORDS = /\[hyperlink,[^\]]*\]|\[\/hyperlink\]|\[\/?\w+\/?\]|<<m:|>>|<[^>]*>/g;
+function TextWords(text) {
+    return String(text || "")
+        .replace(LINK_WORDS, " ")
+        .replace(/[^\p{L}\p{N}%+-]+/gu, " ")
+        .trim()
+        .toLowerCase();
+}
+// how alike two texts read, word order kept: 1 the same, 0 nothing in common
+function TextsAlike(a, b) {
+    const x = a.split(" "), y = b.split(" ");
+    if (!a || !b) return 0;
+    let row = new Array(y.length + 1).fill(0);
+    for (let i = 1; i <= x.length; i++) {
+        const next = [0];
+        for (let j = 1; j <= y.length; j++) next[j] = x[i - 1] === y[j - 1] ? row[j - 1] + 1 : Math.max(row[j], next[j - 1]);
+        row = next;
+    }
+    return (2 * row[y.length]) / (x.length + y.length);
+}
+let linkTargets = null;
+function LinkTargets() {
+    if (linkTargets?.abilities === jsonUnitAbilitiesLocalized) return linkTargets;
+    const words = new Map(); // a text's words, once
+    const wordsOf = (text) => {
+        if (!words.has(text)) words.set(text, TextWords(text));
+        return words.get(text);
+    };
+    const byName = new Map(); // an ability's name: all of that name, the dump's first
+    const owners = new Map(); // a text's words: the names of what it is the text of
+    const own = (text, name) => {
+        const w = wordsOf(text);
+        if (!w || !name) return;
+        if (!owners.has(w)) owners.set(w, new Set());
+        owners.get(w).add(TextWords(name.split("^")[0]));
+    };
+    for (const a of jsonUnitAbilitiesLocalized) {
+        const name = (a.name || "").split("^")[0];
+        if (!byName.has(name)) byName.set(name, []);
+        byName.get(name).push(a);
+        own(a.description, a.name);
+    }
+    for (const c of Object.values(jsonConceptTooltipsLocalized || {})) own(c.description, c.name);
+    for (const s of jsonSpellsLocalized || []) own(s.description, s.name);
+    for (const e of jsonAllFromPOLocalized || []) {
+        if (!e.name) continue;
+        for (const [key, text] of Object.entries(e)) if (typeof text === "string" && /description/i.test(key)) own(text, e.name);
+    }
+    linkTargets = { abilities: jsonUnitAbilitiesLocalized, wordsOf, byName, owners };
+    return linkTargets;
+}
+function LinksElsewhere(html, source) {
+    if (!html.includes("TooltipHandler") && !html.includes("statusEffectHandler")) return html;
+    const { wordsOf, byName, owners } = LinkTargets();
+    const mine = wordsOf(source);
+    if (!mine) return html;
+    const names = owners.get(mine);
+    // a tooltip with this name and nearly these words, or these words
+    const repeats = (name, text) => {
+        const theirs = wordsOf(text);
+        if (theirs === mine) return true;
+        return !!names?.has(TextWords(String(name).split("^")[0])) && TextsAlike(theirs, mine) >= 0.8;
+    };
+    const unlinked = (words) => `<span style="color:white;">${words}</span>`;
+
+    html = html.replace(
+        /<span style="color:white;text-decoration:underline">([^]*?)<\/span><span class="conceptTooltipHandler" data-global="([^"]+)" style="display:none"><\/span>/g,
+        (link, words, key) => {
+            const concept = jsonConceptTooltipsLocalized?.[key];
+            return concept && repeats(concept.name, concept.description) ? unlinked(words) : link;
+        }
+    );
+    return html.replace(
+        /<span style="color:white; ?text-decoration:underline">(?:<([^<>\s\/]+)><\/\1>)?<span class="statusEffectHandler"([^>]*)>([^<]*)<\/span><\/span>/g,
+        (link, icon, attrs, words) => {
+            const slug = attrs.match(/data-slug="([^"]*)"/)?.[1];
+            const name = attrs.match(/data-ability="([^"]*)"/)?.[1] ?? words;
+            // as lookupStatusEffect finds it
+            const ability = (slug && findBy(jsonUnitAbilitiesLocalized, "slug", slug)) || findBy(jsonUnitAbilitiesLocalized, "name", name);
+            if (!ability || !repeats(ability.name, ability.description)) return link;
+            const other = (byName.get(ability.name.split("^")[0]) || []).find(
+                (a) => a !== ability && wordsOf(a.description) && !repeats(a.name, a.description)
+            );
+            if (!other) return unlinked(words);
+            const attrsElsewhere = attrs.replace(/\s*data-slug="[^"]*"/, "") + ` data-slug="${other.slug}"`;
+            return link.replace(`<span class="statusEffectHandler"${attrs}>`, `<span class="statusEffectHandler"${attrsElsewhere}>`);
+        }
+    );
 }
 
 // The game's dump writes a nested list as "<bullet>Outer:<bulletlist></bullet><bullet>a</bullet></bulletlist>",

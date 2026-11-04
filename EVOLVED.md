@@ -152,6 +152,17 @@ dump writes them (`<hyperlink>Melee</hyperlink>`) or as `all.json` does.
 A concept tooltip with an `image` (a property, structure, special operation... the link names) shows that icon by its
 title. A link to a Province Improvement or City Structure (`GLOBAL.STRUCTURE_UPGRADES.…`) opens the structure's own card
 (`StructureTooltip`); in a tooltip the card's build cost sits below its description.
+A link never opens the text it stands in (`LinksElsewhere`, at the end of `AddTagIconsForStatusEffects`). Ability names
+being linked wherever they stand, a status effect's own name in its text linked itself: Strengthened's "Strengthened
+counters Weakened", Burning, Chilled, Flying, Dragon and 50-odd more. A link whose tooltip has the words of its text, or
+nearly (word order kept, 80%) with the name of what the text is of (an ability, concept, spell or all.json entry), opens
+another of that name with other words, else shows its words unlinked, as the game does. So a hero skill's "Gain Frost
+Hex" opens the Frost Hex its enemies get (20% chance of becoming Frozen), not the casting ability of the same words that
+`findBy`'s name lookup gives (its lookup map keeps the last of a name, `LinkedAbilities.json`'s; left as it is, units and
+spells rely on it); Fire Hex, Necro Hex, Arcfire Weapons and Volatile Summon the same. One link of the game's own goes:
+the Tooltip concept's tutorial text links itself ("you can string together tooltips endlessly").
+`checktooltips.py` in aow4_diff_tools runs every text the site holds through this in Edge and lists the links whose
+tooltip still repeats its text: none on 2026-11-04 (121 before).
 
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.
@@ -331,6 +342,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
 After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`), `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), `ancientwonders.py`, `worldmap.py`, `spells.py` and `affinityattacks.py` (`Data/GEN/AffinityAttacks.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
+Then `python checktooltips.py` there lists tooltip links that open the text they are in (see `LinksElsewhere` above).
 A new culture's emblem or a DLC's relic and landmark pictures have to be on the site before `citytree.py`, `spells.py`
 and `worldmap.py` run, as they look for them: run those three again after adding them.
 The dump gets the Architect units' attacks wrong: it writes each affinity version with the ability's default attack

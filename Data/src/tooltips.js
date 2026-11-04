@@ -284,8 +284,10 @@ function getNormalizedWidth(element) {
     return elementWidth / viewportWidth;
 }*/
 
-// a tooltip just below the element it is for, starting at its left edge; above it where there is no room below
-function PlaceBelow(dialog, el, gap = 3) {
+// a tooltip just below the element it is for, starting at its left edge; above it where there is no room below. It
+// overlaps the element's edge (gap -2): a gap shows what lies beyond it, and moving the mouse to the tooltip across a
+// list (a unit's abilities, a menu) opened the next entry's tooltip instead, which then went below that entry
+function PlaceBelow(dialog, el, gap = -2) {
     const word = el.getBoundingClientRect();
     const box = dialog.getBoundingClientRect();
     let top = word.bottom + gap;

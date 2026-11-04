@@ -156,6 +156,11 @@ title. A link to a Province Improvement or City Structure (`GLOBAL.STRUCTURE_UPG
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.
 Upstream had two boxes, the second replaced each time. Concept and status effect tooltips keep their links for this.
+A selectable tooltip overlaps the bottom 2px of what it is for (`PlaceBelow`, gap -2; upstream left 3px between): moving
+the mouse down to it across a list (a unit's abilities) crossed the next entry in that gap, whose tooltip replaced it and
+went below that entry. A spell card in a tooltip (an artifact's spells, the Faction Creator's traits) loses the
+template's empty affected-types row, whose -6px margin made the text 6px too tall and gave every trait a scroll bar,
+and its 500px name and cost rows take the tooltip's width (`style.css`, `.tooltiptextnew`).
 
 Secret spells are always shown: the Show Secret Spells setting, its blur ("Click to reveal") and the "???" unit names
 are removed (`checkSecretSpell`, `secretSpellsList`).
@@ -254,6 +259,8 @@ as the Vampire Castle: Soul Forge's bats; not the Shipyard's Ram Warship nor the
 player can get: `UNUSED_UNITS` in `citytree.py`), `traits` (Tidecallers' 13 water units) and `skills`
 (Ascension: Living Spider Nest's five spiders, Rosebound Noble, Nimue's secret spell), from `citytree.py`, and
 `Relics.json`'s `unit_unlock` (Heart of the Maer, Head of Ceaseless Laments, Nimue's Secret Scroll), from `spells.py`.
+An artifact's spells are such a list too (`SpellList`: the spell book's icon and name, a link to the spell, its card on
+hover); upstream put each spell's 500px card in the text, which stood out of a narrower card (Search).
 The card of each lists them (`UnitUnlocksMenu`) as the Spells pages' cards list a spell's units: an "Unlocks" label
 over the links, folded away past 4 ("Unlocks (13)"), in `style.css` as `.unitUnlocks` since not every page loads
 `worldmap.css`; upstream's button with a black list (`.unitUnlocksMenu`) is gone, and a Vision of Destiny's "Rally

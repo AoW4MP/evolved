@@ -1777,6 +1777,16 @@ hr {
       max-height: 80vh;
     overflow-y: auto;
 }
+/* a card's empty "affected unit types" row, the last in the template, has margin-top -6px: in a tooltip, which scrolls
+   what it can't hold, the text then overflowed by 6px and every trait in the Faction Creator got a scroll bar */
+.tooltiptextnew #affectUnitTypes:empty {
+    display: none !important; /* over the template's inline display: grid */
+}
+/* a spell card's name and cost rows are 500px in the template, wider than a tooltip: there they cut off the name's start */
+.tooltiptextnew .spellStatsHighLighter > div {
+    width: auto !important;
+    gap: 12px;
+}
 .tooltiptextnew.wide {
     max-width: 500px;
 }
@@ -2055,6 +2065,10 @@ yellowText {
     align-items: center;
     gap: 4px;
     color: #bbcdf6;
+}
+/* a spell's icon in an artifact's list of spells (SpellList) */
+.unitUnlocksIcon {
+    height: 24px; /* its width is auto (.unitUnlocksList a *) */
 }
 .unitUnlocksList a:hover {
     color: white;

@@ -5160,18 +5160,35 @@ function showRelic(a, divOrigin) {
 
     imagelink.setAttribute("src", "/evolved/Icons/RelicIcons/" + relic.icon + ".png");
 
-    if ("spell" in relic) {
-        for (const spell of relic.spell) {
-            const fragment = spell_card_template.content.cloneNode(true);
-            const element = fragment.firstElementChild;
-            if (element) {
-                element.style.left = "-40px";
-                element.style.position = "relative";
-            }
-            descriptionDiv.appendChild(element);
-            showSpell(spell.id, false, element);
-        }
+    // the spells it unlocks, a list as its units are, each spell's card on hover (upstream put the cards in the text,
+    // where at 500px they stood out of a card narrower than the Artifacts page's)
+    if ("spell" in relic) descriptionDiv.append(SpellList(relic.spell.map((s) => s.id)));
+}
+
+// spells by id under a label, as UnitUnlocksMenu lists units: the spell book's icon and name, a link to the spell's card,
+// and that card on hover
+function SpellList(ids, label = "Spells") {
+    const fold = ids.length > UNIT_LIST_FOLD;
+    const part = document.createElement(fold ? "details" : "div");
+    part.className = "unitUnlocks";
+    part.innerHTML = fold ? `<summary>${label} (${ids.length})</summary>` : `<div class="unitUnlocksLabel">${label}</div>`;
+    const list = document.createElement("div");
+    list.className = "unitUnlocksList";
+    for (const id of ids) {
+        const spell = jsonSpellBook.spells.find((s) => s.id === id);
+        const link = document.createElement("a");
+        link.href = "/evolved/HTML/Spells.html?spell=" + id;
+        link.target = "_blank";
+        link.innerHTML = (spell?.icon ? `<img class="unitUnlocksIcon" src="/evolved/Icons/${spell.icon}" alt="" />` : "") + (spell?.name ?? id);
+        // the card's contents, not the 500px card: as the Faction Creator's tooltips
+        const card = document.createElement("span");
+        card.innerHTML = spell_card_template.content.firstElementChild.firstElementChild.innerHTML;
+        showSpell(id, false, card);
+        addTooltipListeners(link, card);
+        list.append(link);
     }
+    part.append(list);
+    return part;
 }
 
 function getEventStructureNameByPrefix(obj, prefix) {

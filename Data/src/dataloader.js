@@ -435,8 +435,16 @@ function AddExtraData() {
     // the abilities the game's texts link to that the dump leaves out (Paragon of Strife's Infernal Blaze), from
     // abilities.py in aow4_diff_tools. The dump's texts lose their links ("The Fire Bomb ability"), so one is linked
     // wherever its name stands, as the dump's abilities are, unless the game's own texts use the name unlinked: then
-    // it is an everyday word too ("Renew your oath", "Priceless Possession") and linked only where a text links it
-    const escaped = jsonLinkedAbilities.map((a) => a.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    // it is an everyday word too ("Renew your oath", "Priceless Possession") and linked only where a text links it.
+    // So is an ability of the dump named by one verb ("Heal 10 Hit Points", "Restore all Hit Points", "Convert your
+    // people"): the game links Restore only where it means the ability ("Gains the Restore ability"). A status or other
+    // passive by that name (Fury) is no verb, and keeps its links
+    const named1 = (a) => a.name.split("^")[0];
+    const passives = new Set(jsonUnitAbilities.filter((a) => !a.actionPoints).map(named1));
+    const verbs = new Set(
+        jsonUnitAbilities.filter((a) => a.actionPoints && /^[A-Z][a-z]+$/.test(named1(a)) && !passives.has(named1(a))).map(named1)
+    );
+    const escaped = [...new Set([...jsonLinkedAbilities.map((a) => a.name), ...verbs])].map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
     const named = new RegExp(`\\b(?:${escaped.join("|")})\\b`, "g");
     const unlinked = new Set();
     for (const entry of jsonAllFromPOLocalized) {
@@ -446,6 +454,9 @@ function AddExtraData() {
         }
     }
     for (const ability of jsonLinkedAbilities) ability.linkedOnly = unlinked.has(ability.name);
+    for (const ability of [...jsonUnitAbilities, ...jsonUnitAbilitiesLocalized]) {
+        if (verbs.has(named1(ability)) && unlinked.has(named1(ability))) ability.linkedOnly = true;
+    }
     jsonUnitAbilities = [...jsonUnitAbilities, ...jsonLinkedAbilities];
     jsonUnitAbilitiesLocalized = [...jsonUnitAbilitiesLocalized, ...jsonLinkedAbilities];
 

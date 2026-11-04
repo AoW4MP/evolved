@@ -126,7 +126,10 @@ the dump leaves out, as no unit has them from the start (Infernal Blaze, Sprint,
 format, with the DataStoreTags texts link them by (`tags`); their icons are in `Icons/UnitIcons`. `dataloader.js` adds them to the abilities. The dump's texts lose their
 links ("The Fire Bomb ability"), so they are linked wherever their name stands, as the dump's abilities are, except
 those the game's own texts use as everyday words ("Renew your oath", "Priceless Possession"), marked `linkedOnly`:
-linked only where a text links them.
+linked only where a text links them. So are the dump's active abilities named by one word that the game's texts use
+unlinked: they are verbs there ("Heal 10 Hit Points", "Restore all Hit Points", "Convert your people"), and the game
+links Restore only where it means the ability ("Gains the Restore ability"). About 50 of them (Heal, Restore, Convert,
+Revive, Smite, Curse, Chaos...); a name a passive has too (Fury) keeps its links, as do statuses (Bleeding, Burning).
 Seven share their name with a passive of the dump: the Seamare's and Sand Scorpion's Water Shift and Sand Shift passives
 give the Water Shift and Sand Shift abilities ("Move to target hex"), and the Fire, Frost and Necro Hex, Arcfire Weapons and
 Channel Power abilities give a passive of their own name. `abilities.py` skips only a name the dump has as an active

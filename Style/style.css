@@ -2091,7 +2091,7 @@ silver {
 
 /* the banner: the title on the header's picture, between the top strip (header.html) and the menu */
 :root {
-    --banner-height: 80px;
+    --banner-height: 100px;
 }
 .header-img {
     position: relative;
@@ -2328,7 +2328,7 @@ silver {
     display: block;
     width: 250px;
     height: auto;
-    margin-top: -6px; /* the title's line has room under its letters: the banner stays 80px */
+    margin-top: 2px;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
 }
 

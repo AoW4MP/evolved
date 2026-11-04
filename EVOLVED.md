@@ -43,9 +43,10 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
   under it): the dataset's name ("Silver Seas Dataset") and the "Updated:" date on the left, where the game shows resources; Settings (the
   game's gear icon, `Icons/TML/autocombat.png`; its two settings are `.toggleChip`s) and Donate (to `HTML/Donate.html`,
   which links to Buy Me a Coffee) on the right, as the game's info and settings buttons;
-- the banner (`--banner-height`, 80px): the title on the picture, which darkens towards the menu, and under it the
+- the banner (`--banner-height`, 100px): the title on the picture, which darkens towards the menu, and under it the
   current DLC's logo, as upstream shows it (`.dlc-logo`, `Icons/Text/SilverSeasLogo.png`, 250px wide, 170px on a phone).
-  It is tucked into the room the title's line leaves, so the banner stays 80px and no page grows. Change it with the
+  The banner was 80px with the title alone; at 100px the tallest page that fit a 1260px-high window still does
+  (Culture Tomes, 1245px with a subculture's tome). Change the logo with the
   dataset's name when a new DLC comes out;
 - the menu on the game's stone bar (`Icons/Interface/HudStoneBar.png`: the sheet's bar with its gem at both ends), its
   labels in the game's Header font; the dropdowns on the cards' panel, a group (Culture ▸) in gold, a page in blue.

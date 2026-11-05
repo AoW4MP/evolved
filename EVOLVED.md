@@ -301,6 +301,9 @@ The DLC as Evolved shows it, not upstream's pages (2026-11-03):
 - The dump tags the DLC `SILVERSEAS`; upstream's theorycrafting tag `THESILVERSEAS` and its four placeholder tomes in
   `Data/Faction.js` are gone. A Silver Seas unit or tome has upstream's blue corner in a sidebar (`.SILVERSEAStriangle`,
   `Style/style.css`).
+- Mercantile in `Data/GEN/FactionCreation.json` is a real culture with the game's text: `extraLookup` is its lore,
+  `extraLookup2` (`…@CULTURE_MERCANTILE@MERCANTILE`) its name and bullets, as for Primal and Reaver. Without the second,
+  the Faction Creator's Culture menu broke on its nameless entry and opened on nothing (2026-11-05).
 - `IsDwellingPact` (`Data/Builder.js`): the Pirate Dwelling's Pirate Bond is a pact though its id doesn't end in `_pact`;
   the Dwelling and Culture tome pages both ask it.
 - A tome skill with no spell of its own that stands for several (Pirate Bond's Conjure Pirate Captain: a Conjure …

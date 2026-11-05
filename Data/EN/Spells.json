@@ -1,6 +1,6 @@
 [
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5377299056582,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_adventurer_captain",
@@ -8,11 +8,11 @@
   "tactical": true,
   "description": "Conjure the Adventurer <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
   "name": "Conjure Adventurer Captain",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "000004E4000007B6"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5377299056579,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_protector_captain",
@@ -20,11 +20,11 @@
   "tactical": true,
   "description": "Conjure the Protector <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
   "name": "Conjure Protector Captain",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "000004E4000007B1"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5377299056576,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_family_captain",
@@ -32,11 +32,11 @@
   "tactical": true,
   "description": "Conjure the Family <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
   "name": "Conjure Family Captain",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "000004E4000007AC"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5377299056573,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_maniac-hunter_captain",
@@ -44,11 +44,11 @@
   "tactical": true,
   "description": "Conjure the Maniac-Hunter <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
   "name": "Conjure Maniac-Hunter Captain",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "000004E4000007A7"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5377299056570,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_demonic_captain",
@@ -56,11 +56,11 @@
   "tactical": true,
   "description": "Conjure the Demonic <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
   "name": "Conjure Demonic Captain",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "000004E4000007A2"
  },
  {
-  "casting_cost": "100<mana></mana> ",
+  "casting_cost": "200<mana></mana> ",
   "resid": 5377299056541,
   "spellType": "<casttactical></casttactical> <hyperlink>Combat Summon Spell</hyperlink>",
   "id": "conjure_gold-cursed_captain",
@@ -68,7 +68,7 @@
   "tactical": true,
   "description": "Conjure the Gold-Cursed <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
   "name": "Conjure Gold-Cursed Captain",
-  "operation_point_cost": 40,
+  "operation_point_cost": 65,
   "icon": "000004E400000799"
  },
  {
@@ -9868,54 +9868,6 @@
   "name": "Soulcurse of Greed",
   "operation_point_cost": 80,
   "icon": "000003DF00001C78"
- },
- {
-  "casting_cost": "300<mana></mana> ",
-  "resid": 4256312596144,
-  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
-  "id": "onokas_chosen",
-  "DLC": "ELDRITCHREALMS ",
-  "tactical": false,
-  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Winter</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
-  "name": "Onoka's Chosen",
-  "operation_point_cost": 300,
-  "icon": "000003DF000016E6"
- },
- {
-  "casting_cost": "300<mana></mana> ",
-  "resid": 4256312596143,
-  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
-  "id": "luths_chosen",
-  "DLC": "ELDRITCHREALMS ",
-  "tactical": false,
-  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Autumn</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
-  "name": "Luth's Chosen",
-  "operation_point_cost": 300,
-  "icon": "000003DF000016E5"
- },
- {
-  "casting_cost": "300<mana></mana> ",
-  "resid": 4256312596142,
-  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
-  "id": "ventroghs_chosen",
-  "DLC": "ELDRITCHREALMS ",
-  "tactical": false,
-  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Summer</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
-  "name": "Ventrogh's Chosen",
-  "operation_point_cost": 300,
-  "icon": "000003DF000016E4"
- },
- {
-  "casting_cost": "300<mana></mana> ",
-  "resid": 4256312596133,
-  "spellType": "<caststrategic></caststrategic> <hyperlink>Friendly Army Spell</hyperlink>",
-  "id": "ilandras_chosen",
-  "DLC": "ELDRITCHREALMS ",
-  "tactical": false,
-  "description": "Target <hyperlink>Hero</hyperlink> leading an army you control is permanently transformed into a <hyperlink>Scourge of Spring</hyperlink>. This also restores all <hyperlink><hp></hp> Hit Points</hyperlink> and <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> of the unit.<br></br><br></br>This transformation cannot be reverted and the <hyperlink>Hero</hyperlink> loses its hero status, becoming a normal <hyperlink>Unit</hyperlink>!",
-  "name": "Ilandra's Chosen",
-  "operation_point_cost": 300,
-  "icon": "000003DF000016E0"
  },
  {
   "casting_cost": "2<thralls></thralls> ",

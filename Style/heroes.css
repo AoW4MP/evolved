@@ -1,0 +1,112 @@
+/* The Heroes pages (Equipment, Item Forge, Ascension Skills, Ambitions, Governance, Skill List) and Search's hero cards: the
+   Spells pages' cards (Style/spellbook.css) under the World Map pages' tabs (Style/worldmap.css) */
+
+/* an ability as on a unit's card, the card's width */
+.hb-card .itemAbility {
+    width: auto;
+    margin: 6px 0 0;
+    padding-bottom: 6px;
+}
+.hb-card .itemAbility .abilityHighLighter {
+    margin-top: 0;
+}
+/* a passive's own name, when it isn't the card's */
+.hb-passive {
+    margin-top: 8px;
+}
+.hb-passive-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #d7c297;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.hb-passive-name img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.hb-card .wm-part {
+    margin-top: 8px;
+}
+.hb-links {
+    color: #e8e2d4;
+}
+/* who wears an item: the class icons in a row */
+.hb-classes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.hb-class > * {
+    position: static;
+    width: 22px;
+    height: 22px;
+    max-width: none;
+    object-fit: contain;
+    margin: 0;
+}
+/* the class icon before a skill's type */
+.sb-type .hb-class > * {
+    width: 18px;
+    height: 18px;
+    vertical-align: -3px;
+}
+/* the kinds of item an infusion fits */
+.hb-fits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 2px;
+}
+.hb-fit img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #555;
+}
+/* a slot's tab: its picture has wide empty sides, so it is drawn larger, without making the tab taller */
+.wm-tab > img.hb-tab-pic {
+    width: 36px;
+    height: 36px;
+    margin: -6px;
+}
+/* the item type buttons are pictures, not text icons */
+#itemTypes .wm-choice img {
+    width: 28px;
+    height: 28px;
+}
+.hb-foot-label {
+    color: #8d97ad;
+    margin-bottom: 2px;
+}
+/* an ambition's goal and reward */
+.hb-goal {
+    color: white;
+}
+.hb-reward {
+    color: #a5d6a7;
+    font-size: 14px;
+}
+.hb-reward-skill {
+    padding: 4px 10px 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border-left: 3px solid #d7c297;
+}
+/* a governor's benefits by Renown level */
+.hb-levels {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 6px 12px;
+    margin-top: 8px;
+    align-items: baseline;
+}
+.hb-level-label {
+    color: #d7c297;
+    font-size: 14px;
+    white-space: nowrap;
+}

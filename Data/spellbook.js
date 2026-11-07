@@ -236,90 +236,23 @@ function SbCost(e) {
 }
 
 // tabs: [[id, label (HTML)]]. tabsOf: the tabs a thing is on. A thing on two tabs has a card on each. The search and the
-// affinity buttons work across all tabs, whose counts follow
+// affinity buttons work across all tabs, whose counts follow (WmBoard)
 function SbBoard(tabs, items, tabsOf, makeCard, { affinity = true } = {}) {
-    const cards = [];
-    const panels = {};
-    const entries = tabs.map(([id, label]) => {
-        const here = items.filter((e) => tabsOf(e).includes(id));
-        const panel = WmElement("div", "sb-panel");
-        panels[id] = panel;
-        for (const e of here) {
-            const card = makeCard(e);
-            const words = (e.name + " " + card.textContent).toLowerCase();
-            cards.push({ e, id, card, words });
-        }
-        return { id, label, count: here.length, panel };
+    const byName = (a, b) => a.name.localeCompare(b.name);
+    const affinities = Object.entries(SB_AFFINITIES).map(([name, icon]) => ({
+        label: "<" + icon + "></" + icon + ">",
+        title: name,
+        test: (e) => (e.affinities || []).includes(name)
+    }));
+    if (!affinity) document.getElementById("affinities").remove();
+    WmBoard(tabs, items, {
+        tabsOf,
+        makeCard,
+        choices: affinity ? [{ holder: "affinities", buttons: affinities }] : [],
+        sorts: [
+            { id: "tier", label: "Tier", order: (a, b) => SbGroup(a).rank - SbGroup(b).rank || byName(a, b), group: SbGroup },
+            { id: "name", label: "Name", order: byName },
+            { id: "cost", label: "Cost", order: (a, b) => SbCost(a) - SbCost(b) || byName(a, b) }
+        ]
     });
-
-    const wanted = { words: "", affinity: null, sort: "tier" };
-    const order = {
-        tier: (a, b) => SbGroup(a.e).rank - SbGroup(b.e).rank || a.e.name.localeCompare(b.e.name),
-        name: (a, b) => a.e.name.localeCompare(b.e.name),
-        cost: (a, b) => SbCost(a.e) - SbCost(b.e) || a.e.name.localeCompare(b.e.name)
-    };
-
-    function Lay() {
-        for (const [id, panel] of Object.entries(panels)) {
-            panel.replaceChildren();
-            const here = cards.filter((c) => c.id === id && c.shown).sort(order[wanted.sort]);
-            const groups = new Map();
-            for (const c of here) {
-                const name = wanted.sort === "tier" ? SbGroup(c.e).name : "";
-                if (!groups.has(name)) groups.set(name, []);
-                groups.get(name).push(c.card);
-            }
-            for (const [name, list] of groups) {
-                if (name && groups.size > 1) panel.append(WmElement("div", "wm-group", name));
-                const grid = WmElement("div", "sb-cards");
-                grid.append(...list);
-                panel.append(grid);
-            }
-            if (!here.length) panel.append(WmElement("div", "sb-none", "Nothing here matches."));
-        }
-    }
-
-    function Refilter() {
-        const left = {};
-        for (const c of cards) {
-            c.shown = (!wanted.words || c.words.includes(wanted.words)) && (!wanted.affinity || (c.e.affinities || []).includes(wanted.affinity));
-            if (c.shown) left[c.id] = (left[c.id] || 0) + 1;
-        }
-        document.querySelectorAll(".wm-tab").forEach((t) => (t.querySelector("span").textContent = left[t.dataset.id] || 0));
-        Lay();
-    }
-
-    for (const c of cards) c.shown = true;
-    Lay();
-    WmTabs(entries);
-
-    document.getElementById("filterInput").addEventListener("input", (event) => {
-        wanted.words = event.target.value.trim().toLowerCase();
-        Refilter();
-    });
-    const affinities = document.getElementById("affinities");
-    if (affinity) {
-        for (const [name, icon] of Object.entries(SB_AFFINITIES)) {
-            const button = WmElement("button", "wm-choice", "<" + icon + "></" + icon + ">");
-            button.title = name;
-            button.onclick = () => {
-                wanted.affinity = wanted.affinity === name ? null : name;
-                affinities.querySelectorAll(".wm-choice").forEach((b) => b.classList.toggle("selected", b === button && wanted.affinity === name));
-                Refilter();
-            };
-            affinities.append(button);
-        }
-    } else {
-        affinities.remove();
-    }
-    const sorts = document.getElementById("sorts");
-    for (const [id, label] of [["tier", "Tier"], ["name", "Name"], ["cost", "Cost"]]) {
-        const button = WmElement("button", "wm-sort" + (id === wanted.sort ? " selected" : ""), label);
-        button.onclick = () => {
-            wanted.sort = id;
-            sorts.querySelectorAll(".wm-sort").forEach((b) => b.classList.toggle("selected", b === button));
-            Lay();
-        };
-        sorts.append(button);
-    }
 }

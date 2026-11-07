@@ -1134,29 +1134,11 @@ function SetCollapsibleButtonsAndDivs(overwrite, list, cardType) {
         case "spell":
             showSpellFromList(list, overwrite);
             break;
-        case "heroTrait":
-            showHeroTraitFromList(list, overwrite);
-            break;
         case "freeCity":
             showFreeCityUpgradeSetFromList(list, overwrite);
             break;
-        case "heroGov":
-            showHeroGovFromList(list, overwrite);
-            break;
-        case "skill":
-            showSkillFromList(list, overwrite);
-            break;
-        case "item":
-            showItemFromList(list, overwrite);
-            break;
         case "trait":
             showTraitFromList(list, overwrite);
-            break;
-        case "searchSkill":
-            showSkillFromList(list, overwrite);
-            break;
-        case "searchItem":
-            showItemFromList(list, overwrite);
             break;
         case "searchSiege":
             showSiegeProjects(list, overwrite);
@@ -1167,16 +1149,10 @@ function SetCollapsibleButtonsAndDivs(overwrite, list, cardType) {
         case "searchTraits":
             showTraitFromList(list, overwrite);
             break;
-        case "searchAmbition":
-            showHeroTraitFromList(list, overwrite);
-            break;
         case "searchRelics":
             showRelicsFromList(list, overwrite);
             break;
 
-        case "searchInfusion":
-            showInfusionsFromList(list, overwrite);
-            break;
         case "searchDestiny":
             showDestinyTraitsFromList(list, overwrite);
             break;
@@ -2355,21 +2331,6 @@ function SetUpCombatEnc(event) {
     */
 }
 
-async function spawnEquipCards(list, divID) {
-    if (divID === undefined) {
-        divID = "equip";
-    }
-    let doc = document.getElementById(divID);
-    for (let i = 0; i < list.length; i++) {
-        let iDiv = item_card_template.content.cloneNode(true);
-        doc.appendChild(iDiv);
-    }
-}
-
-async function showEquipmentFromList(list, divID) {
-    await spawnEquipCards(list, divID);
-}
-
 async function showSiegeProjects(list) {
     if (list === undefined) {
         let newDiv = await spawnSpellCards(jsonSiegeProjects, "dataHolder");
@@ -2438,37 +2399,6 @@ async function spawnSpellCards(list, divID = "spell") {
     return listOfCreatedDivs;
 }
 
-async function spawnItemCards(list, divID) {
-    let newDivs = [];
-    if (divID === undefined) {
-        divID = "item";
-    }
-    let j = "";
-    let doc = document.getElementById(divID);
-    for (let i = 0; i < list.length; i++) {
-        let iDiv = item_card_template.content.cloneNode(true);
-        let element = iDiv.firstElementChild;
-        doc.appendChild(iDiv);
-        newDivs.push(element);
-    }
-    return newDivs;
-}
-
-async function spawnSkillCards(list, divID) {
-    if (divID === undefined) {
-        divID = "item";
-    }
-    let newDivArray = [];
-    let doc = document.getElementById(divID);
-    for (let i = 0; i < list.length; i++) {
-        let iDiv = skill_card_template.content.cloneNode(true);
-        const element = iDiv.firstElementChild;
-        doc.appendChild(element);
-        newDivArray.push(element);
-    }
-    return newDivArray;
-}
-
 async function spawnSpellCardSingle(list, divID) {
     if (divID === undefined) {
         divID = "spell";
@@ -2528,29 +2458,11 @@ async function showSpellFromList(list, divID) {
         showSpell(list[i], true, listOfNewDivs[i]);
     }
 }
-async function showHeroTraitFromList(list, divID) {
-    let cards = await spawnSpellCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showHeroTrait(list[i].id, cards[i]);
-    }
-}
 async function showRelicsFromList(list, divID) {
     let cards = await spawnSpellCards(list, divID);
 
     for (let i = 0; i < list.length; i++) {
         showRelic(list[i].id, cards[i]);
-    }
-}
-
-async function showInfusionsFromList(list, divID) {
-    // let cards = await spawnSpellCards(list, divID);
-    let doc = document.getElementById(divID);
-    for (let i = 0; i < list.length; i++) {
-        const div = showInfusionListEntrySmall(list[i]);
-        if (div != undefined) {
-            doc.appendChild(div);
-        }
     }
 }
 
@@ -2562,43 +2474,6 @@ async function showFreeCityUpgradeSetFromList(list, divID) {
     }
 }
 
-async function showHeroGovFromList(list, divID) {
-    let cards = await spawnSpellCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showHeroGov(list[i], undefined, cards[i]);
-    }
-}
-
-async function showSkillFromList(list, divID) {
-    let newDivs = await spawnSkillCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        // check if has description
-        if ("description" in list[i]) {
-            showSkill(
-                list[i],
-                "",
-                list[i].icon,
-                list[i].category_name,
-                list[i].level_name,
-                list[i].group_name,
-                newDivs[i]
-            );
-        } else {
-            showSkill(
-                list[i],
-                "true",
-                list[i].icon,
-                list[i].category_name,
-                list[i].level_name,
-                list[i].group_name,
-                newDivs[i]
-            );
-        }
-    }
-}
-
 async function showTraitFromList(list, divID) {
     let cards = await spawnSpellCards(list, divID);
 
@@ -2607,27 +2482,11 @@ async function showTraitFromList(list, divID) {
     }
 }
 
-async function showHeroAmbitionFromList(list, divID) {
-    let cards = await spawnSpellCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showHeroAmbitions(list[i], cards[i]);
-    }
-}
-
 async function showDestinyTraitsFromList(list, divID) {
     let cards = await spawnSpellCards(list, divID);
 
     for (let i = 0; i < list.length; i++) {
         showDestinyTrait(list[i], cards[i]);
-    }
-}
-
-async function showItemFromList(list, divID) {
-    let newDivs = await spawnItemCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showItem(list[i], newDivs[i]);
     }
 }
 
@@ -2652,39 +2511,11 @@ async function showStructuresWithArgument(argument, divID, argumentType, include
     }
 }
 
-async function showItemsWithArgument(argumentType, overwritetext) {
-    let list = [];
-    list = findItemsWithArgument(argumentType);
-
-    SetCollapsibleButtonsAndDivs(overwritetext, list, "item");
-}
-
-async function showSkillsWithArgument(signature, argumentType, overwritetext) {
-    let list = [];
-    list = findSkillsWithArgument(signature, argumentType);
-
-    SetCollapsibleButtonsAndDivs(overwritetext, list, "skill");
-}
-
-async function showHeroAmbitions() {
-    let list = [];
-    list = findHeroAmbition();
-
-    SetCollapsibleButtonsAndDivs("Hero Ambitions", list, "heroTrait");
-}
-
 async function showFreeCityUpgradeSets() {
     let list = [];
     list = findFreeCitySets();
 
     SetCollapsibleButtonsAndDivs("Free City Sets", list, "freeCity");
-}
-
-async function showHeroGovernance() {
-    let list = [];
-    list = findHeroGovernance();
-
-    SetCollapsibleButtonsAndDivs("Hero Governance", list, "heroGov");
 }
 
 async function showSpellsWithArgument(argument, argumentType, overwritetext) {
@@ -2721,9 +2552,9 @@ async function showSiegeProjectFromString(string, divID) {
     showSiegeProject(string, true, newSiegeDiv);
 }
 
+// a governor's card, as on the Hero Governance page (Data/heroes.js); the Giant King's, one for each clan
 async function showHeroGovernanceFromString(string, divID) {
-    let card = await spawnSpellCardSingle(string, divID);
-    showHeroGov(string, true, card);
+    SbShowCards(HbGovernors().filter((g) => g.id === string).map(HbGovernorCard), divID);
 }
 
 async function showTomeFromString(string, divID) {
@@ -2736,85 +2567,11 @@ async function showStructureFromString(string, divID) {
     showStructure(string, false, strucDiv);
 }
 
+// a hero skill's card, as on the Heroes pages (Data/heroes.js): a unit's origins link here
 async function showHeroSkillFromString(string, divID) {
-    const skillCard = await spawnSpellCardSingle(string, divID);
-    let skill = findBy(jsonHeroSkills, "id", string);
-
-    // check if has description
-    if ("description" in skill) {
-        showSkill(skill, "", skill.icon, skill.category_name, skill.level_name, skill.group_name, skillCard);
-    } else {
-        showSkill(skill, "true", skill.icon, skill.category_name, skill.level_name, skill.group_name, skillCard);
-    }
-}
-
-function findItemsWithArgument(argumentType) {
-    // Step 1: filter items with argumentType
-    const matchingItems = jsonHeroItems.filter((item) => item.slot.includes(argumentType) && item.tier_numerals);
-
-    // Step 2: build a Set of resid for fast lookup
-    const residSet = new Set(matchingItems.map((item) => item.resid));
-
-    // Step 3: return matches from second list
-    return jsonHeroItemsLocalized.filter((obj) => residSet.has(obj.resid));
-}
-
-function findSkillsWithArgument(signature, argumentType) {
-    let j = "";
-
-    let finalCheckedList = [];
-    if (signature === "") {
-        for (let j = 0; j < jsonHeroSkills.length; j++) {
-            if ("tree_name" in jsonHeroSkills[j]) {
-                if (jsonHeroSkills[j].tree_name.indexOf(argumentType) !== -1) {
-                    if (!isInArray(finalCheckedList, jsonHeroSkills[j])) {
-                        finalCheckedList.push(jsonHeroSkills[j]);
-                    }
-                }
-            }
-        }
-    } else if (signature === "sig") {
-        for (let j = 0; j < jsonHeroSkills.length; j++) {
-            if ("type" in jsonHeroSkills[j]) {
-                if (jsonHeroSkills[j].type === "signature") {
-                    if (!isInArray(finalCheckedList, jsonHeroSkills[j])) {
-                        finalCheckedList.push(jsonHeroSkills[j]);
-                    }
-                }
-            }
-        }
-    } else if (signature === "pantheon") {
-        for (let j = 0; j < jsonHeroSkills.length; j++) {
-            if ("type" in jsonHeroSkills[j]) {
-                if (
-                    jsonHeroSkills[j].group_name === "Pantheon Hero Skills" &&
-                    jsonHeroSkills[j].name.indexOf("Ascension") != -1
-                ) {
-                    if (!isInArray(finalCheckedList, jsonHeroSkills[j])) {
-                        finalCheckedList.push(jsonHeroSkills[j]);
-                    }
-                }
-            }
-        }
-    }
-
-    // Remove duplicate objects from the array
-    const uniqueArray = finalCheckedList.filter((item, index) => {
-        return index === finalCheckedList.findIndex((obj) => obj.id === item.id && obj.name === item.name);
-    });
-    return uniqueArray;
-}
-
-function findHeroGovernance() {
-    let j = "";
-
-    let finalCheckedList = [];
-
-    for (let j = 0; j < jsonHeroGovernance.length; j++) {
-        finalCheckedList.push(jsonHeroGovernance[j]);
-    }
-    console.log(finalCheckedList);
-    return finalCheckedList;
+    const skill = HbSkills(await HbLoadSources(), { all: true }).find((s) => s.id === string);
+    const raw = findBy(jsonHeroSkillsLocalized, "id", string);
+    SbShowCards([HbSkillCard(skill || { ...raw, kind: "Other", heading: "", from: [] })], divID);
 }
 
 function findFreeCitySets() {
@@ -2823,25 +2580,6 @@ function findFreeCitySets() {
     for (let j = 0; j < jsonFreeCities.length; j++) {
         if (!isInArray(finalCheckedList, jsonFreeCities[j])) {
             finalCheckedList.push(jsonFreeCities[j]);
-        }
-    }
-
-    // Remove duplicate objects from the array
-    const uniqueArray = finalCheckedList.filter((item, index) => {
-        return index === finalCheckedList.findIndex((obj) => obj.id === item.id && obj.name === item.name);
-    });
-
-    return uniqueArray;
-}
-
-function findHeroAmbition() {
-    let finalCheckedList = [];
-
-    for (let j = 0; j < jsonHeroAmbitions.length; j++) {
-        if (!isInArray(finalCheckedList, jsonHeroAmbitions[j])) {
-            if (jsonHeroAmbitions[j].screen_description.indexOf("WIP") == -1) {
-                finalCheckedList.push(jsonHeroAmbitions[j]);
-            }
         }
     }
 
@@ -5302,354 +5040,6 @@ function getStoryParts(obj, prefix, lookup) {
         .map(([_, value]) => value);
 }
 
-function ListInfusionsOfMagicMaterial(structure) {
-    const divHolder = document.createElement("div");
-    const div = document.createElement("div");
-
-    div.className = "combatEnchantment";
-    const TitleHolder = document.createElement("button");
-    TitleHolder.className = "collapsible";
-    TitleHolder.onclick = SetUpCombatEnc;
-    const AlternateNames = document.createElement("div");
-    divHolder.appendChild(TitleHolder);
-    divHolder.appendChild(div);
-
-    // spawnsets
-
-    TitleHolder.innerText = "Infusions";
-    const combatReveal = document.createElement("div");
-    combatReveal.setAttribute("style", "display: flex;justify-content: space-between;");
-    div.appendChild(combatReveal);
-
-    const combatEnchHolder = document.createElement("div");
-    combatEnchHolder.setAttribute("style", "display: grid; width:100%");
-
-    const infusions = new Set();
-    // get all infusions
-    for (const infusion of jsonItemForgeUpgrades) {
-        if ("unlock_requirements" in infusion) {
-            for (const requirement of infusion.unlock_requirements) {
-                console.log(structure.name);
-                if (requirement.token_name == structure.name) {
-                    infusions.add(infusion);
-                }
-            }
-        }
-    }
-
-    for (const entry of infusions) {
-        const child = showInfusionListEntrySmall(entry);
-
-        //child.innerHTML = entry.name;
-        combatEnchHolder.appendChild(child);
-    }
-
-    combatReveal.appendChild(combatEnchHolder);
-
-    // combat enchantment
-
-    // div.innerHTML = eventHandle;
-    // console.log(eventHandle);
-    return divHolder;
-}
-const weapons = [
-    "OneHanded",
-    "TwoHandedHeavy",
-    "Bow",
-    "Polearm",
-    "Staff",
-    "MagicalOrb",
-    "MeleeRanged",
-    "RangedPhysical",
-    "Cestus",
-    "DragonClaw",
-    "Warclaw",
-    "ArmoredClaw",
-    "EldritchRelic",
-    "Warhammer",
-    "GiantAxe",
-    "Obelisk"
-];
-const armor = ["Shield", "Head", "Armor", "Legs", "Ring", "Wand", "Amulet"];
-
-const pantheonList = [
-    "umbral_staff_equipment_upgrade",
-    "umbral_greataxe_equipment_upgrade_(umbral_wake)",
-    "umbral_greataxe_equipment_upgrade_(umbral_immunity)",
-    "lashers_sword_equipment_upgrade",
-    "crowmasters_bow_equipment_upgrade",
-    "captains_shield_equipment_upgrade",
-    "earthshaker_hammer_equipment_upgrade",
-    "staff_of_necromancy_equipment_upgrade",
-    "cryomancers_staff_equipment_upgrade",
-    "druids_staff_equipment_upgrade",
-    "berserkers_greataxe_equipment_upgrade",
-    "tyrants_shield_equipment_upgrade",
-    "innate_spell_jammer_infusion_equipment_upgrade",
-    "inner_grace_infusion_equipment_upgrade",
-    "mirror_veil_infusion_equipment_upgrade",
-    "overcharge_cast_infusion_equipment_upgrade",
-    "greater_farsight_infusion_equipment_upgrade",
-    "pierce_shot_infusion_equipment_upgrade",
-    "pull_shot_infusion_euipment_upgrade",
-    "inspiring_presence_infusion_equipment_upgrade",
-    "wail_of_the_banshee_infusion_equipment_upgrade",
-    "summon_spirit_hawk_infusion_equipment_upgrade",
-    "defense_mode_nullify_infusion_equipment_upgrade",
-    "subdue_infusion_equipment_upgrade",
-    "equipment_upgrade_defense_mode_protective_wall",
-    "bless_infusion_equipment_upgrade",
-    "fearless_infusion_equipment_upgrade",
-    "magic_shield_infusion_equipment_upgrade"
-];
-function showInfusionListEntrySmall(infusion, selectedTreeFilter, selectedSubTreeFilter, selectedMMTreeFilter) {
-    const div = document.createElement("div");
-    div.className = "list_abilityslot";
-    div.setAttribute("style", "font-size:15px; color:white");
-    // icon
-    const icon = document.createElement("img");
-    icon.setAttribute("src", "/evolved/Icons/UnitIcons/" + infusion.icon + ".png");
-    icon.setAttribute("style", "width:40px; height:40px");
-    icon.className = "unit_ability_icon";
-    // name
-    // requirements
-    const name = document.createElement("div");
-    name.innerHTML = infusion.name;
-    if ("DLC" in infusion) {
-        name.innerHTML += " <" + infusion.DLC + "></" + infusion.DLC + ">";
-    }
-    name.className = "tooltip";
-    name.setAttribute("style", "width:250px;");
-    const type = document.createElement("div");
-    type.setAttribute("style", "width:50px;");
-    type.className = "list_types";
-
-    const description = document.createElement("div");
-    description.setAttribute("style", "width:50px; display:none");
-    description.innerHTML = infusion.description;
-
-    if ("abilities" in infusion) {
-        for (const slug of infusion.abilities) {
-            const ab = findBy(jsonUnitAbilitiesLocalized, "slug", slug.slug);
-            const spa = GetAbilityInfo(ab);
-            addTooltipListeners(name, spa);
-            description.innerHTML += spa.innerHTML;
-        }
-        type.innerHTML = "Active";
-    } else if (infusion.name.indexOf(" Damage") != -1) {
-        const spa = document.createElement("span");
-        spa.innerHTML = AddTagIconsForStatusEffects(infusion.description);
-        addTooltipListeners(name, spa);
-        type.innerHTML = "Damage";
-    } else {
-        const spa = document.createElement("span");
-        spa.innerHTML = AddTagIconsForStatusEffects(infusion.description);
-        addTooltipListeners(name, spa);
-        type.innerHTML = "Passive";
-    }
-
-    // Main tree filter
-    // if (selectedTreeFilter !== "all" && !treeName.includes(selectedTreeFilter.toLowerCase())) return;
-
-    // Sub-type filter
-    if (selectedSubTreeFilter != undefined) {
-        if (
-            selectedSubTreeFilter !== "all" &&
-            type.innerHTML.toLocaleLowerCase() !== selectedSubTreeFilter.toLowerCase()
-        )
-            return;
-    }
-
-    const requirements = document.createElement("div");
-    requirements.setAttribute("style", "width:100px;");
-    requirements.className = "requirements";
-    if (pantheonList.includes(infusion.id)) {
-        requirements.innerHTML += "<pantheon></pantheon>"; // + unlocks.token_name ;
-    }
-    if ("unlock_requirements" in infusion) {
-        for (const unlocks of infusion.unlock_requirements) {
-            const nameClean = unlocks.token_name.toLowerCase().replaceAll(" ", "_");
-            requirements.innerHTML += unlocks.num_required + " <" + nameClean + "></" + nameClean + ">"; // + unlocks.token_name ;
-        }
-    } else if (infusion.name.indexOf("Rune of ") != -1) {
-        requirements.innerHTML += "GiantKing"; // + unlocks.token_name ;
-    } else if (!pantheonList.includes(infusion.id)) {
-        // always onlocked
-        requirements.innerHTML += "Always"; // + unlocks.token_name ;
-    }
-
-    // console.log(requirements.innerHTML + selectedMMTreeFilter);
-    // Sub-type filter
-    if (selectedMMTreeFilter != undefined) {
-        if (
-            selectedMMTreeFilter !== "all" &&
-            requirements.innerHTML.toLowerCase().indexOf(selectedMMTreeFilter.toLowerCase().replaceAll(" ", "_")) == -1
-        ) {
-            return;
-        }
-    }
-
-    // point cost
-    const points = document.createElement("div");
-    points.className = "point_cost";
-    points.innerHTML = infusion.point_cost;
-    points.setAttribute("style", "width:50px");
-    // slot
-    const slot = document.createElement("div");
-    slot.setAttribute("style", "width:800px");
-
-    slot.className = "infusionsGrid";
-
-    /*   slot.innerHTML += infusion.tag_filter.condition;// + unlocks.token_name ;
-     for(const tagchild of infusion.tag_filter.children){
-      let condition = tagchild.condition;
-       condition=  condition.replaceAll("Does not contain ", "X");
-          condition=  condition.replaceAll("Contains ", "V");
-          slot.innerHTML += "<br>" + condition ;// + unlocks.token_name ;
-    }*/
-    const rule = document.createElement("div");
-    rule.className = "rule-box";
-    slot.appendChild(rule);
-    for (const entry of weapons) {
-        const weaponHolder = document.createElement("div");
-
-        // weaponHolder.setAttribute("style", "background-color:black");
-        const name = document.createElement("div");
-
-        name.setAttribute("style", "text-align: center; font-size:12px");
-        name.innerHTML = entry;
-        const img = document.createElement("img");
-        img.setAttribute("src", "/evolved/Icons/ItemForge/" + entry.toLowerCase() + ".png");
-        img.setAttribute("style", "width:30px;height:30px");
-        const spa = document.createElement("span");
-        spa.innerHTML = entry;
-        const box = document.createElement("div");
-        box.setAttribute("id", entry);
-        box.setAttribute("style", "text-align: center;");
-        box.innerHTML = "";
-        addTooltipListeners(img, spa);
-        // weaponHolder.appendChild(name);
-        weaponHolder.appendChild(img);
-        weaponHolder.appendChild(box);
-        //AddTriangleForDLCUnits("Unit", "DRAGONLORDS", box);
-        rule.appendChild(weaponHolder);
-    }
-
-    for (const entry of armor) {
-        const weaponHolder = document.createElement("div");
-        //weaponHolder.setAttribute("style", "background-color:black");
-        const img = document.createElement("img");
-        img.setAttribute("src", "/evolved/Icons/ItemForge/" + entry.toLowerCase() + ".png");
-        img.setAttribute("style", "width:30px;height:30px");
-        const spa = document.createElement("span");
-        spa.innerHTML = entry;
-        const box = document.createElement("div");
-        box.setAttribute("id", entry);
-        box.setAttribute("style", "text-align: center;");
-        box.innerHTML = "";
-        addTooltipListeners(img, spa);
-        weaponHolder.appendChild(img);
-        weaponHolder.appendChild(box);
-
-        rule.appendChild(weaponHolder);
-    }
-
-    const textBased = document.createElement("div");
-    renderRule(infusion.tag_filter, rule, textBased);
-    // console.log(textBased);
-    if (selectedTreeFilter != null) {
-        if (
-            selectedTreeFilter !== "all" &&
-            textBased.innerHTML.toLowerCase().indexOf(selectedTreeFilter.toLowerCase()) == -1
-        ) {
-            return;
-        }
-    }
-
-    div.appendChild(type);
-    div.appendChild(icon);
-    div.appendChild(name);
-    div.appendChild(points);
-    div.appendChild(description);
-
-    div.appendChild(requirements);
-    div.appendChild(slot);
-    //div.appendChild(textBased);
-    return div;
-}
-
-function renderRule(node, weaponHolder, textBased) {
-    const parsed = parseCondition(node.condition);
-
-    if (parsed.type === "all" || parsed.type === "any") {
-        node.children.forEach((child) => {
-            renderRule(child, weaponHolder, textBased);
-        });
-    }
-
-    const icon = document.createElement("span");
-    icon.className = parsed.type === "contains" ? "check" : "cross";
-    icon.textContent = parsed.type === "contains" ? "✔" : "✖";
-
-    const text = document.createElement("span");
-    let name = parsed.text.replaceAll("inherited ", "");
-    name = name.replaceAll("ItemType", "");
-    if (name == "Instrument") {
-        name = "Amulet";
-    }
-    for (const entry of weapons) {
-        if (name.indexOf(entry) != -1) {
-            const test = weaponHolder.querySelector("#" + entry);
-            test.innerHTML = "✔";
-        }
-    }
-    for (const entry of armor) {
-        if (name.indexOf(entry) != -1) {
-            // false positive
-            if (name.indexOf("ArmoredClaw") != -1) {
-                break;
-            }
-            const test = weaponHolder.querySelector("#" + entry);
-            test.innerHTML = "✔";
-        }
-    }
-    /* if (weapons.includes(name) || armor.includes(name)) {
-      
-    } else {
-        console.log("Couldnt find: " + name);
-    }*/
-    text.textContent = name;
-
-    //text.setAttribute('style', "display:none");
-    textBased.appendChild(text);
-
-    //  rule.appendChild(icon);
-    // rule.appendChild(text);
-
-    // return rule;
-}
-function parseCondition(condition) {
-    const clean = condition.replace(/<.*?>/g, "").trim();
-
-    if (clean.startsWith("Does not contain")) {
-        return { type: "not", text: clean.replace("Does not contain ", "") };
-    }
-
-    if (clean.startsWith("Contains")) {
-        return { type: "contains", text: clean.replace("Contains ", "") };
-    }
-
-    if (clean.includes("All of the following")) {
-        return { type: "all", text: "ALL" };
-    }
-
-    if (clean.includes("One or More")) {
-        return { type: "any", text: "ANY" };
-    }
-
-    return { type: "unknown", text: clean };
-}
-
 function processStoryEventText(text) {
     return text;
 }
@@ -6229,83 +5619,6 @@ function FindUnitsWithSecondaryPassive(trait) {
     return sortedUnitListArray;
 }
 
-function showItem(itemLoc, divOrigin) {
-    let modName = divOrigin.querySelector("#modname");
-    // console.log(a.id);
-    if (itemLoc.id.indexOf("pantheon") != -1) {
-        modName.innerHTML = "<pantheon></pantheon>" + itemLoc.name.toUpperCase();
-    } else {
-        modName.innerHTML = itemLoc.name.toUpperCase();
-    }
-
-    let descriptionDiv = divOrigin.querySelector("#moddescription");
-
-    descriptionDiv.innerHTML = "<hr>";
-    if ("description" in itemLoc) {
-        descriptionDiv.innerHTML += itemLoc.description + "<br>";
-    }
-    // const fragment = document.createElement("span");
-
-    if ("ability_slugs" in itemLoc) {
-        for (const slugObj of itemLoc.ability_slugs) {
-            const ability = abilityMap[slugObj.slug];
-            if (!ability) continue;
-            const abTooltips = document.createElement("div");
-            if ("range" in ability) {
-                const abilityElement = GetAbilityToolTip(ability); //
-                abTooltips.appendChild(abilityElement);
-            } else {
-                const passiveElement = CreatePassiveSlotToolTip(ability.icon, ability.name, ability.description); //
-                abTooltips.appendChild(passiveElement);
-            }
-            abTooltips.className = "itemAbility";
-
-            descriptionDiv.innerHTML += abTooltips.innerHTML;
-        }
-    }
-
-    if ("DLC" in itemLoc) {
-        let dlctag = AddDLCTag(itemLoc.DLC);
-        modName.append(dlctag);
-    }
-
-    let unitTypesDiv = divOrigin.querySelector("#affectUnitTypes");
-
-    for (let i = 0; i < itemLoc.disabled_slots.length; i++) {
-        let div = document.createElement("DIV");
-        div.innerHTML = "&#11049" + itemLoc.disabled_slots[i].slot_name;
-        unitTypesDiv.appendChild(div);
-    }
-    if (itemLoc.disabled_slots.length > 0) {
-        descriptionDiv.innerHTML += "Disabled slots: <br>";
-    }
-
-    let tier = divOrigin.querySelector("#spell_tier");
-    tier.innerHTML = itemLoc.tier;
-
-    let cost = divOrigin.querySelector("#modcost");
-    let costText = itemLoc.slot + "<br>";
-    // add classes
-    if ("hero_classes" in itemLoc) {
-        for (let i = 0; i < itemLoc.hero_classes.length; i++) {
-            costText += itemLoc.hero_classes[i].name + " , ";
-        }
-    }
-    costText += "<br>";
-    if ("hero_types" in itemLoc) {
-        for (let i = 0; i < itemLoc.hero_types.length; i++) {
-            costText += itemLoc.hero_types[i].name + " , ";
-        }
-    }
-    cost.innerHTML = costText;
-
-    let imagelink = divOrigin.querySelector("#modicon");
-    imagelink.remove();
-
-    let tomeOriginIcon = divOrigin.querySelector("#originTomeIcon");
-    tomeOriginIcon.setAttribute("src", "/evolved/Icons/UnitIcons/" + itemLoc.icon + ".png");
-}
-
 function showTraitSetup(currentTrait, divOrigin, loc) {
     const originalTrait = currentTrait;
     if (loc == "loc") {
@@ -6741,139 +6054,6 @@ function showHeroTrait(a, divOrigin) {
     }
 
     found = true;
-}
-
-function showHeroGov(data, check, divOrigin) {
-    let modName,
-        description,
-        cost,
-        type,
-        tier = "";
-    let found = false;
-
-    let thisGovernance = data;
-    modName = divOrigin.querySelector("#modname");
-    modName.innerHTML = thisGovernance.name.toUpperCase();
-
-    let descriptionDiv = divOrigin.querySelector("#moddescription");
-
-    descriptionDiv.innerHTML = "";
-
-    descriptionDiv.innerHTML = "<hr>" + thisGovernance.screen_description;
-
-    tier = divOrigin.querySelector("#modtier");
-    tier.innerHTML = "";
-
-    let imagelink = divOrigin.querySelector("#modicon");
-    imagelink.setAttribute("src", "/evolved/Icons/GovernanceIcons/" + thisGovernance.icon + ".png");
-    imagelink.setAttribute("style", "background-image:none");
-    found = true;
-}
-
-function showSkill(a, checkInAbilities, icon_slug, category, level, group_name, divOrigin) {
-    const skillEN = jsonHeroSkills.find((entry) => entry.id === a.id);
-    const skillLoc = jsonHeroSkillsLocalized.find((entry) => entry.resid === skillEN.resid);
-    let modName = divOrigin.querySelector("#modname");
-
-    modName.innerHTML = skillLoc.name.toUpperCase();
-
-    let descriptionDiv = divOrigin.querySelector("#moddescription");
-    descriptionDiv.innerHTML = "";
-    if ("group_name" in skillLoc) {
-        let span = document.createElement("span");
-        span.innerHTML = skillLoc.group_name;
-        //  console.log(span.innerHeight);
-        descriptionDiv.append(span);
-    }
-
-    let unitTypesDiv = divOrigin.querySelector("#affectUnitTypes");
-
-    let tier = divOrigin.querySelector("#spell_tier");
-    if (tier == undefined) {
-        tier = divOrigin.querySelector("#modtier");
-    }
-    tier.innerHTML = "";
-
-    if (category != undefined) {
-        tier.innerHTML += "<br>" + skillLoc.category + " - " + level;
-        tier.innerHTML += "<br>" + group_name;
-    }
-
-    let cost = divOrigin.querySelector("#modcost");
-    cost.innerHTML = "";
-
-    let imagelink = divOrigin.querySelector("#modicon");
-    if (a.type === "signature") {
-        imagelink.className = "smallerIcon";
-        imagelink.setAttribute("src", "/evolved/Icons/UnitIcons/" + icon_slug + ".png");
-        imagelink.setAttribute("id", "modicon" + a.id);
-
-        cost.innerHTML = transformString(a.hero_property);
-        // spa.setAttribute("style", "width: 360px");
-    } else {
-        imagelink.remove();
-    }
-
-    if ("DLC" in a) {
-        let newDivForMount = AddDLCTag(a.DLC);
-        modName.append(newDivForMount);
-    }
-
-    if (checkInAbilities != "") {
-        let spa;
-        for (let j = 0; j < jsonUnitAbilitiesLocalized.length; j++) {
-            if (skillLoc.abilities) {
-                for (let k = 0; k < skillLoc.abilities.length; k++) {
-                    if (jsonUnitAbilitiesLocalized[j].slug === skillLoc.abilities[k].slug) {
-                        let abilityName = jsonUnitAbilitiesLocalized[j].name;
-                        let abilityReq = "";
-
-                        spa = GetAbilityInfo(jsonUnitAbilitiesLocalized[j]);
-
-                        spa.className = "itemAbility";
-                        spa.setAttribute("style", "width:380px");
-                        descriptionDiv.append(spa);
-
-                        found = true;
-                    }
-                }
-            }
-        }
-    } else {
-        let spa = CreatePassiveSlotToolTip(skillLoc.icon, skillLoc.name, skillLoc.description);
-        spa.className = "itemAbility";
-        descriptionDiv.append(spa);
-        if (jsonStructurePredictions?.skills?.[a.id]) descriptionDiv.append(UnitUnlocksMenu(jsonStructurePredictions.skills[a.id]));
-
-        found = true;
-
-        return;
-    }
-
-    let ascendedInfo = findBy(jsonExtraAscendedInfo, "id", a.id);
-    if (ascendedInfo != undefined) {
-        if ("extraspell" in ascendedInfo) {
-            const fragment = spell_card_template.content.cloneNode(true);
-            const element = fragment.firstElementChild;
-            // Access the root element in the DocumentFragment
-
-            // Apply the style to the root element
-            if (element) {
-                element.style.left = "-40px";
-                element.style.position = "relative";
-            }
-            descriptionDiv.appendChild(element);
-            showSpell(ascendedInfo.extraspell, false, element);
-        }
-        descriptionDiv.innerHTML += "One of Following Tomes Researched : <br>" + ascendedInfo.description;
-    }
-    // the units the skill lets the empire's cities draft (StructurePredictions.json's skills, from aow4_diff_tools/citytree.py)
-    const skillUnits = jsonStructurePredictions?.skills?.[a.id];
-    if (skillUnits) descriptionDiv.append(UnitUnlocksMenu(skillUnits));
-
-    if (found === false) {
-        console.log("Couldn't find skill: " + a.id);
-    }
 }
 
 function AddDLCTag(dlcname) {

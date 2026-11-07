@@ -30,7 +30,7 @@
     font-size: 16px;
     cursor: pointer;
 }
-/* one size in a square, without the nudges a text icon has in icons.css */
+/* one size in a square, without the nudges a text icon has in icons.css (a class icon's margin-top lifts it) */
 .wm-tab > :not(span) {
     position: static;
     width: 24px;
@@ -38,6 +38,7 @@
     max-width: none;
     max-height: none;
     object-fit: contain;
+    margin: 0;
 }
 .wm-tab span {
     color: #8d97ad;
@@ -49,6 +50,10 @@
 .wm-tab.selected {
     color: #ffe9a8;
     border-color: #d7c297;
+}
+/* a board with one tab (WmBoard): the page has its search alone */
+.wm-tabs[hidden] {
+    display: none;
 }
 .wm-tab:disabled {
     opacity: 0.45;
@@ -99,7 +104,7 @@
     border: 1px solid #555;
     cursor: pointer;
 }
-/* one size in a square, without the nudges a text icon has in icons.css */
+/* one size in a square, without the nudges a text icon has in icons.css (a class icon's margin-top lifts it) */
 .wm-choice > * {
     position: static;
     width: 24px;
@@ -107,6 +112,17 @@
     max-width: none;
     max-height: none;
     object-fit: contain;
+    margin: 0;
+}
+/* a choice in words (Active, Passive) */
+.wm-choice.wm-choice-text {
+    width: auto;
+    padding: 0 12px;
+    color: #bbcdf6;
+    font: inherit;
+}
+.wm-choice.wm-choice-text:hover {
+    color: white;
 }
 /* its picture has wide empty sides */
 .wm-choice influence {

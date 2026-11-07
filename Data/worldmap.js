@@ -81,6 +81,102 @@ function WmSearchBar(pairs, cards, heads, placeholder) {
     });
 }
 
+// A page of cards in tabs, built once (the Spells and Heroes pages). tabs: [[id, label (HTML)]]; tabsOf: the tabs a thing is
+// on, with a card on each. The search (#filterInput) and the rows of choice buttons work across all tabs, whose counts
+// follow: a card stays while its text holds every word typed and every row's chosen button passes it.
+//   choices: [{holder: element id, buttons: [{label (HTML), title, test (thing => bool), text (a word, not an icon)}]}]
+//   sorts:   [{id, label, order (a, b => number), group (thing => {name}): the heading it goes under}], the first at first
+// Returns the rows' buttons, so a page can pick one from its address
+function WmBoard(tabs, items, { tabsOf, makeCard, choices = [], sorts = [] }) {
+    const cards = [];
+    const panels = {};
+    const entries = tabs.map(([id, label]) => {
+        const here = items.filter((e) => tabsOf(e).includes(id));
+        const panel = WmElement("div", "sb-panel");
+        panels[id] = panel;
+        for (const e of here) {
+            const card = makeCard(e);
+            LazyImages(card);
+            cards.push({ e, id, card, words: ((e.name || "") + " " + card.textContent + " " + (card.dataset.search || "")).toLowerCase(), shown: true });
+        }
+        return { id, label, count: here.length, panel };
+    });
+
+    const chosen = choices.map(() => null);
+    let typed = [];
+    let sort = sorts[0];
+
+    function Lay() {
+        for (const [id, panel] of Object.entries(panels)) {
+            panel.replaceChildren();
+            const here = cards.filter((c) => c.id === id && c.shown);
+            if (sort) here.sort((a, b) => sort.order(a.e, b.e));
+            const groups = new Map();
+            for (const c of here) {
+                const name = sort?.group?.(c.e)?.name || "";
+                if (!groups.has(name)) groups.set(name, []);
+                groups.get(name).push(c.card);
+            }
+            for (const [name, list] of groups) {
+                if (name && groups.size > 1) panel.append(WmElement("div", "wm-group", name));
+                const grid = WmElement("div", "sb-cards");
+                grid.append(...list);
+                panel.append(grid);
+            }
+            if (!here.length) panel.append(WmElement("div", "sb-none", "Nothing here matches."));
+        }
+    }
+
+    function Refilter() {
+        const left = {};
+        for (const c of cards) {
+            c.shown = typed.every((w) => c.words.includes(w)) && chosen.every((b) => !b || b.test(c.e));
+            if (c.shown) left[c.id] = (left[c.id] || 0) + 1;
+        }
+        document.querySelectorAll("#tabs .wm-tab").forEach((t) => (t.querySelector("span").textContent = left[t.dataset.id] || 0));
+        Lay();
+    }
+
+    Lay();
+    WmTabs(entries);
+    // one tab is no choice: the page has its search alone
+    document.getElementById("tabs").hidden = entries.length < 2;
+
+    document.getElementById("filterInput").addEventListener("input", (event) => {
+        typed = event.target.value.toLowerCase().split(/\s+/).filter(Boolean);
+        Refilter();
+    });
+    const rows = choices.map((row, i) => {
+        const holder = document.getElementById(row.holder);
+        return row.buttons.map((b) => {
+            const button = WmElement("button", "wm-choice" + (b.text ? " wm-choice-text" : ""), b.label);
+            button.title = b.title || "";
+            button.onclick = () => {
+                chosen[i] = chosen[i] === b ? null : b;
+                holder.querySelectorAll(".wm-choice").forEach((x) => x.classList.toggle("selected", x === button && chosen[i] === b));
+                Refilter();
+            };
+            holder.append(button);
+            return button;
+        });
+    });
+    const sortHolder = document.getElementById("sorts");
+    if (sortHolder && sorts.length > 1) {
+        for (const s of sorts) {
+            const button = WmElement("button", "wm-sort" + (s === sort ? " selected" : ""), s.label);
+            button.onclick = () => {
+                sort = s;
+                sortHolder.querySelectorAll(".wm-sort").forEach((b) => b.classList.toggle("selected", b === button));
+                Lay();
+            };
+            sortHolder.append(button);
+        }
+    } else if (sortHolder) {
+        sortHolder.remove();
+    }
+    return rows;
+}
+
 function WmElement(tag, className, html) {
     const element = document.createElement(tag);
     if (className) element.className = className;

@@ -1,10 +1,23 @@
 // Spells, siege projects and the world map's sites come from the files their own pages read, made from the game and the mod
-// (aow4_diff_tools: spells.py, ancientwonders.py, magicmaterials.py, worldmap.py); so do the cards shown for them
+// (aow4_diff_tools: spells.py, ancientwonders.py, magicmaterials.py, worldmap.py); so do the cards shown for them. So do the
+// hero skills, equipment, infusions, ambitions and governors: the Heroes pages' things (Data/heroes.js), what no one can
+// get left out
 let searchBooks = null;
 
 async function LoadSearchBooks() {
     const read = (name) => fetch("/evolved/Data/GEN/" + name + ".json").then((res) => res.json());
-    const [book, infestations, landmarks, happenings] = await Promise.all([SbLoad(), read("Infestations"), read("Landmarks"), read("Happenings"), AncientWondersPage.Load(), MagicMaterialsPage.Load()]);
+    const [book, infestations, landmarks, happenings, , , heroSources] = await Promise.all([
+        SbLoad(),
+        read("Infestations"),
+        read("Landmarks"),
+        read("Happenings"),
+        AncientWondersPage.Load(),
+        MagicMaterialsPage.Load(),
+        HbLoadSources(),
+        HbLoadItemSources()
+    ]);
+    // the dump's DLC, as the books' own (a trailing space in the dump)
+    const withDlc = (list) => list.map((e) => ({ ...e, dlc: (e.DLC || "").trim() || null }));
     searchBooks = {
         spells: book.spells,
         siege: book.siege,
@@ -12,8 +25,21 @@ async function LoadSearchBooks() {
         landmarks: landmarks.landmarks,
         happenings: happenings.happenings,
         wonders: AncientWondersPage.All(),
-        materials: MagicMaterialsPage.All()
+        materials: MagicMaterialsPage.All(),
+        heroSkills: withDlc(HbSkills(heroSources)),
+        heroItems: withDlc(HbItems()),
+        infusions: withDlc(HbInfusions()),
+        ambitions: withDlc(HbAmbitions()),
+        governors: HbGovernors()
     };
+}
+
+// the names and texts of the abilities a hero skill, item or infusion gives
+function SearchAbilities(slugs) {
+    return (slugs || []).map((a) => {
+        const ability = HbAbilityOf(a.slug);
+        return ability ? [ability.name, ability.description, (ability.modifiers || []).map((m) => [m.name, m.description])] : [];
+    });
 }
 
 // a thing's text, as words: without links, icons and other markup
@@ -34,7 +60,12 @@ const SEARCH_WORDS = {
     landmarks: (e) => [e.name, e.lore, e.adjacent, e.city, e.enchantments.map((x) => [x.name, x.description]), e.units],
     happenings: (e) => [e.name, e.category, e.sub, e.description, e.story?.text, e.story?.options, e.events?.map((v) => [v.text, v.options.map((o) => o.text)]), e.units],
     wonders: (e) => [e.name, e.tier, e.description, e.lore, e.units, e.stories.map((s) => [s.title, s.names])],
-    materials: (e) => [e.name, e.description, e.lore, e.combat?.name, e.combat?.description, e.set?.name, e.set?.category, e.set?.description]
+    materials: (e) => [e.name, e.description, e.lore, e.combat?.name, e.combat?.description, e.set?.name, e.set?.category, e.set?.description],
+    heroSkills: (e) => [e.name, e.description, e.heading, e.className, e.ruler, SearchAbilities(e.abilities), e.from.map((f) => f.name)],
+    heroItems: (e) => [e.name, e.description, HB_SLOTS[e.slot], SearchAbilities(e.ability_slugs), HbItemSourceLines(e)],
+    infusions: (e) => [e.name, e.description, e.kind, SearchAbilities(e.abilities), (e.unlock_requirements || []).map((r) => r.token_name)],
+    ambitions: (e) => [e.name, e.screen_description, e.ambitions.map((g) => [g.screen_description, g.reward_properties.map((r) => [r.name, r.screen_description])])],
+    governors: (e) => [e.name, e.variant, e.tab, e.level_data.map((l) => l.effect_description)]
 };
 
 function returnFromBook(book, fieldToSearch) {
@@ -80,6 +111,7 @@ const filterMap = {
     heroSkillsCheck: "hs",
     heroItemsCheck: "hi",
     ambitionsCheck: "ha",
+    governanceCheck: "hg",
     worldStructuresCheck: "ws",
     happeningsCheck: "ch",
     cityStructuresCheck: "cs",
@@ -113,6 +145,7 @@ const worldStructuresChecked = document.getElementById("worldStructuresCheck");
 const happeningsChecked = document.getElementById("happeningsCheck");
 const cityStructuresChecked = document.getElementById("cityStructuresCheck");
 const ambitionsChecked = document.getElementById("ambitionsCheck");
+const governanceChecked = document.getElementById("governanceCheck");
 const infusionsChecked = document.getElementById("infusionsCheck");
 
 const deprecatedCheckList = ["000003e300005fe2", "000003e300005fe5", "000003e300005fe7", "000003e300005fe6"];
@@ -320,41 +353,6 @@ function returnEmpireTreeList(fieldToSearch) {
     return Array.from(results);
 }
 
-function returnInfusionsList(fieldsToSearch, allMatchingUnitAbilities) {
-    if (!fieldsToSearch) return [];
-
-    const search = fieldsToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    // const arrayToTest = [];
-
-    if (DLCCheck(fieldsToSearch)) {
-        return DLCAdd(jsonItemForgeUpgrades, fieldsToSearch, null, true);
-    }
-
-    for (const trait of jsonItemForgeUpgradesLocalized) {
-        const name = trait.name?.toUpperCase() || "";
-        const description = Sanitize(trait.description || "").toUpperCase();
-        if ("abilities" in trait) {
-           for (const slug of trait.abilities) {
-         //      console.log(slug);
-                if (allMatchingUnitAbilities.has(slug.slug)) {
-                    const traitEN = findBy(jsonItemForgeUpgrades, "resid", trait.resid);
-                    results.add(traitEN);
-                }
-            }
-        }
-
-        if (name.includes(search) || description.includes(search)) {
-            const traitEN = findBy(jsonItemForgeUpgrades, "resid", trait.resid);
-            results.add(traitEN);
-            // arrayToTest.push(traitEN);
-        }
-    }
-    //return arrayToTest;
-    return Array.from(results);
-}
-
 function returnArtifactsList(fieldsToSearch){
       if (!fieldsToSearch) return [];
 
@@ -369,29 +367,6 @@ function returnArtifactsList(fieldsToSearch){
         const text = findBy(jsonAllFromPOLocalized, "id", trait.extraLookup);
         const spells = (trait.spell || []).map((s) => findBy(jsonSpells, "id", s.id)?.name);
         if (SearchWords([trait.name, text?.description, spells]).includes(search)) results.add(trait);
-    }
-
-    return Array.from(results);
-}
-
-function returnAmbitionsList(fieldsToSearch) {
-    if (!fieldsToSearch) return [];
-
-    const search = fieldsToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    if (DLCCheck(fieldsToSearch)) {
-        return DLCAdd(jsonHeroAmbitions, fieldsToSearch, null, true);
-    }
-
-    for (const trait of jsonHeroAmbitionsLocalized) {
-        const name = trait.name?.toUpperCase() || "";
-        const description = Sanitize(trait.description || "").toUpperCase();
-
-        if (name.includes(search) || description.includes(search)) {
-            const traitEN = findBy(jsonHeroAmbitions, "icon", trait.icon);
-            results.add(traitEN);
-        }
     }
 
     return Array.from(results);
@@ -472,101 +447,6 @@ function returnTraitsList(fieldToSearch, locToCheck) {
     return Array.from(results);
 }
 
-function returnSkillList(fieldToSearch, listMatchingUnitAbilities) {
-    if (!fieldToSearch) return [];
-
-    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
-  //  const heroSlugs = new Set();
-    const results = new Set();
-
-    if (DLCCheck(fieldToSearch)) {
-        return DLCAdd(jsonHeroSkills, fieldToSearch, null, true);
-    }
-
-    const matches = (text) => text && text.toUpperCase().includes(search);
-
-    // Collect matching unit abilities
-   /* for (const ability of jsonUnitAbilitiesLocalized) {
-        if (matches(ability.description) || matches(ability.name)) {
-            const abilityEN = findBy(jsonUnitAbilities, "id", ability.id);
-            heroSlugs.add(ability.slug);
-        }
-
-        if (Array.isArray(ability.modifiers)) {
-            for (const mod of ability.modifiers) {
-                if (matches(mod.description) || matches(mod.name)) {
-                    const abilityEN = findBy(jsonUnitAbilities, "id", ability.id);
-
-                    heroSlugs.add(ability.slug);
-                    //break; // stop early if found
-                }
-            }
-        }
-    }*/
-
-    // console.log(heroSlugs);
-
-    // Match hero skills
-    for (const skill of jsonHeroSkillsLocalized) {
-        // Ability match
-        if (listMatchingUnitAbilities.size && Array.isArray(skill.abilities)) {
-            if (skill.abilities.some((a) => listMatchingUnitAbilities.has(a.slug))) {
-                const skillEN = findBy(jsonHeroSkills, "id", skill.id);
-
-                results.add(skillEN);
-                continue; // already matched, skip to next skill
-            }
-        }
-
-        // Description / name match
-        if (matches(Sanitize(skill.description || "")) || matches(skill.name)) {
-            const skillEN = findBy(jsonHeroSkills, "id", skill.id);
-
-            results.add(skillEN);
-        }
-    }
-
-    // Return unique results as array
-    return Array.from(results);
-}
-
-function returnEquipList(fieldToSearch, listofAllMatchingUnitAbilities) {
-    if (!fieldToSearch) return [];
-
-    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
-   
-    const resultsSet = new Set();
-
-    if (DLCCheck(fieldToSearch)) {
-        return DLCAdd(jsonHeroItems, fieldToSearch, null, true);
-    }
-
-    // Collect abilities matching the search
-    
-    
-   
-    // Match items with those abilities
-
-    for (const item of jsonHeroItemsLocalized) {
-        if (item.ability_slugs?.some((a) => listofAllMatchingUnitAbilities.has(a.slug))) {
-            const itemEN = findBy(jsonHeroItems, "resid", item.resid);
-
-            resultsSet.add(itemEN);
-            continue; // skip description/name check if already matched
-        }
-
-        const matches = (text) => text && Sanitize(text).toUpperCase().includes(search);
-
-        if (matches(item.description) || matches(item.name)) {
-            const itemEN = findBy(jsonHeroItems, "resid", item.resid);
-
-            resultsSet.add(itemEN);
-        }
-    }
-
-    return Array.from(resultsSet);
-}
-
 function Sanitize(string) {
     string = string.replaceAll("<hyperlink>", "");
     string = string.replaceAll("</hyperlink>", "");
@@ -618,14 +498,10 @@ function searchAll(keyword) {
     }
     let list = Array.from(listSet);
 
-    let listskills = heroSkillChecked.checked ? returnSkillList(fields[0], listMatchingUnitAbilities) : "";
 
     let listStructures = cityStructuresChecked.checked ? returnStructure(fields[0]) : "";
     let listEmpireTree = empireTreeChecked.checked ? returnEmpireTreeList(fields[0]) : "";
     let listArtifacts = artifactChecked.checked ? returnArtifactsList(fields[0]) : "";
-    let listEquip = heroItemsChecked.checked ? returnEquipList(fields[0],listMatchingUnitAbilities) : "";
-    let listAmbtions = ambitionsChecked.checked ? returnAmbitionsList(fields[0]) : "";
-    let listInfusions = infusionsChecked.checked ? returnInfusionsList(fields[0], listMatchingUnitAbilities) : "";
     // javascript exports
     // get all localization and then back
     let listOfLocEntries = returnLocList(fields[0]);
@@ -666,15 +542,9 @@ function searchAll(keyword) {
         ShowFromBook("Cosmic Happenings", found.filter((e) => e.group !== "Oceanic"), WmHappening);
         ShowFromBook("Oceanic Happenings", found.filter((e) => e.group === "Oceanic"), WmHappening);
     }
-    if (listskills.length > 0) {
-        SetCollapsibleButtonsAndDivs("Hero Skills", listskills, "searchSkill");
-    }
-    if (listEquip.length > 0) {
-        SetCollapsibleButtonsAndDivs("Hero Equipment", listEquip, "searchItem");
-    }
-    if (listInfusions.length > 0) {
-        SetCollapsibleButtonsAndDivs("Item Forge Infusions", listInfusions, "searchInfusion");
-    }
+    if (heroSkillChecked.checked) ShowFromBook("Hero Skills", returnFromBook("heroSkills", fields[0]), HbSkillCard, true);
+    if (heroItemsChecked.checked) ShowFromBook("Hero Equipment", returnFromBook("heroItems", fields[0]), HbItemCard, true);
+    if (infusionsChecked.checked) ShowFromBook("Item Forge Infusions", returnFromBook("infusions", fields[0]), HbInfusionCard, true);
     if (listEmpireTree.length > 0) {
         SetCollapsibleButtonsAndDivs("Empire Tree", listEmpireTree, "searchEmpire");
     }
@@ -686,9 +556,8 @@ function searchAll(keyword) {
     if (listTraits.length > 0) {
         SetCollapsibleButtonsAndDivs("Faction Traits", listTraits, "searchTraits");
     }
-    if (listAmbtions.length > 0) {
-        SetCollapsibleButtonsAndDivs("Hero Ambitions", listAmbtions, "searchAmbition");
-    }
+    if (ambitionsChecked.checked) ShowFromBook("Hero Ambitions", returnFromBook("ambitions", fields[0]), HbAmbitionCard, true);
+    if (governanceChecked.checked) ShowFromBook("Hero Governance", returnFromBook("governors", fields[0]), HbGovernorCard, true);
 
     SetLevelUpStuff();
     SetCollapsibleStuff();

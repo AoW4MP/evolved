@@ -74,7 +74,20 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
   to 93px and centred in 128px, as the originals' art fills 72-100% of theirs. Solid ones (a tome's disc: over 72% of
   their box opaque) are 85px, 22px on screen, as they look bigger than a glyph; those with a ring like the buttons'
   (`CultureUnitsIcon`, `TomeUnitsIcon`, `WildlifeUnitsIcon`, `ItemForge`) 104px. A new menu icon needs such a copy.
-  `ItemForge.png` is the HUD's own button, `TopBar_ItemForge_DEFAULT`.
+  `ItemForge.png` is the HUD's own button, `TopBar_ItemForge_DEFAULT`. The rest of the Heroes menu is the game's own
+  art for each kind of page, not one item's or skill's icon (were the TML item chest, Ascended Artificer, Challenger,
+  Eldritch Governor and Piercing Shot):
+  - `HeroEquipment.png` and `HeroSkills.png` (Skill List) are the hero panel's Equipment and Skills buttons
+    (`Inventory_All_DEFAULT`, `Inventory_LevelUp_DEFAULT`; 70px, ringed: 104px).
+  - `Ascension.png` is the crown of the Pantheon's Ascend button (`AscensionButton_Default`), since hero Ascensions
+    are Pantheon skills. The game draws it half transparent in a dark bronze, so it is made opaque and recoloured to
+    the beige of the two glyphs below it.
+  - `Ambitions.png` is the Ambition Reward property's star (`UnitProperties_AmbitionReward`, Gameplay_Icons.clb).
+  - `Governance.png` is the Governor property's castle (`UnitProperties_Governance`). Both are 64px sources.
+  The UI atlases are packed by outline, so the box `hudimages.py export` cuts catches its neighbours' edges. These
+  were masked to the margins the box's record holds (fields 14 and 15: each side's, as minus twice its fraction of
+  the box), and the pieces left hugging the box's edge were removed. The Skill List's `SignatureSkill.png` was cut the
+  same way.
   The "Updated:" date is 14px (11px on a phone), a size under the dataset's name; both have a hard shadow, as a soft
   one blurs the Header font's thin lowercase.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
@@ -256,7 +269,7 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - Ascension Skills: a tab per affinity of the tomes an Ascension needs (`AscendedInfo.json`; a dual tome's skill on both, Cosmos Chosen on all six). A card lists the tomes as the Spells pages list a tome source, the spell it unlocks as an artifact's spells are listed (`SpellList`), and the units it lets cities draft.
 - Ambitions: one list (the tab bar hides when there is one tab): the major and minor ambition's goal and Renown, the skill the major one gives. The two the game marks WIP (Necromancer, Martyr) are left out, as before.
 - Governance: Rulers (Champion, Wizard King, Dragon Lord, Eldritch Sovereign, Giant King, Elder Vampire: the game gives a ruler type's governor with it) and Heroes (the other ten); the benefits by Renown level. The dump has the Giant King's four times, one per clan, each enabling its own giants: four cards, named by clan.
-- Skill List: tabs Class, Ruler (by ruler, the Giant Kings by clan), Signature (by the property that offers it: Astral…), Affinity and Other (Training Camp, Secret Spells, Quests and Adventures, Ruler Backgrounds), sorted by tree (under headings, in the tree's rows) or name. Class buttons keep a class's tree and the other tabs' skills; Active and Passive go by the ability a skill gives. A card names the skills it requires (any one of them, as the Hero Builder reads `required_skills`) and those it can't be taken with. Ascensions are on their own page. `heroskills.py` in aow4_diff_tools writes `Data/GEN/HeroSkillSources.json`: what gives a skill outside the trees, and the 85 the dump has that no one can get (the Invalid Hero Skills group, the old Ritualist and Wizard King I-III chains, nameless ones, 13 Pantheon skills now the Pantheon weapons' infusions), which upstream's list showed. Inspiring Presence is in the Invalid group but an event gives it (Cinren's Arcanum, a hero quest), so it is in.
+- Skill List: tabs Class, Ruler (by ruler, the Giant Kings by clan), Signature (by the property that offers it: Astral…; its icon is the unit panel's Signature Skill button, `Icons/Interface/SignatureSkill.png` from `SignatureSkill_DEFAULT`, drawn at 28px as `hb-tab-icon`), Affinity and Other (Training Camp, Secret Spells, Quests and Adventures, Ruler Backgrounds), sorted by tree (under headings, in the tree's rows) or name. Class buttons keep a class's tree and the other tabs' skills; Active and Passive go by the ability a skill gives. A card names the skills it requires (any one of them, as the Hero Builder reads `required_skills`) and those it can't be taken with. Ascensions are on their own page. `heroskills.py` in aow4_diff_tools writes `Data/GEN/HeroSkillSources.json`: what gives a skill outside the trees, and the 85 the dump has that no one can get (the Invalid Hero Skills group, the old Ritualist and Wizard King I-III chains, nameless ones, 13 Pantheon skills now the Pantheon weapons' infusions), which upstream's list showed. Inspiring Presence is in the Invalid group but an event gives it (Cinren's Arcanum, a hero quest), so it is in.
 - `Spells.html?skill=` and `?governance=` (a unit's origins link there) show these cards; the Giant King's governance its four.
 - Upstream's hero cards and lists are gone from `Data/Builder.js` (`showItem`, `showSkill`, `showHeroGov`, `showInfusionListEntrySmall`, `findItemsWithArgument` and the like); `showHeroTrait` stays for the Faction Creator's ambition tooltips.
 

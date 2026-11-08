@@ -716,7 +716,8 @@ async function HbSkillListPage() {
         [
             ["Class", "<unithero></unithero> Class"],
             ["Ruler", "<unitruler></unitruler> Ruler"],
-            ["Signature", "<questpoints></questpoints> Signature"],
+            // the unit panel's Signature Skill button
+            ["Signature", '<img class="hb-tab-icon" src="/evolved/Icons/Interface/SignatureSkill.png" alt="" /> Signature'],
             ["Affinity", "<spellbutton></spellbutton> Affinity"],
             ["Other", "<skillpoint></skillpoint> Other"]
         ],

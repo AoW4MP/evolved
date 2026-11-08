@@ -75,6 +75,12 @@
     height: 36px;
     margin: -6px;
 }
+/* a tab's game picture that fills its box (Signature's button): a little larger than a text icon, without making the tab taller */
+.wm-tab > img.hb-tab-icon {
+    width: 28px;
+    height: 28px;
+    margin: -2px;
+}
 /* the item type buttons are pictures, not text icons */
 #itemTypes .wm-choice img {
     width: 28px;

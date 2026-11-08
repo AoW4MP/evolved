@@ -1,7 +1,7 @@
 // Spells, siege projects and the world map's sites come from the files their own pages read, made from the game and the mod
 // (aow4_diff_tools: spells.py, ancientwonders.py, magicmaterials.py, worldmap.py); so do the cards shown for them. So do the
 // hero skills, equipment, infusions, ambitions and governors: the Heroes pages' things (Data/heroes.js), what no one can
-// get left out
+// get left out; and the artifacts, traits, prophecies, ruler types and cultures of the Empire pages (Data/empire.js)
 let searchBooks = null;
 
 async function LoadSearchBooks() {
@@ -30,7 +30,9 @@ async function LoadSearchBooks() {
         heroItems: withDlc(HbItems()),
         infusions: withDlc(HbInfusions()),
         ambitions: withDlc(HbAmbitions()),
-        governors: HbGovernors()
+        governors: HbGovernors(),
+        artifacts: EmArtifacts(),
+        factionTraits: EmFactionThings()
     };
 }
 
@@ -65,7 +67,9 @@ const SEARCH_WORDS = {
     heroItems: (e) => [e.name, e.description, HB_SLOTS[e.slot], SearchAbilities(e.ability_slugs), HbItemSourceLines(e)],
     infusions: (e) => [e.name, e.description, e.kind, SearchAbilities(e.abilities), (e.unlock_requirements || []).map((r) => r.token_name)],
     ambitions: (e) => [e.name, e.screen_description, e.ambitions.map((g) => [g.screen_description, g.reward_properties.map((r) => [r.name, r.screen_description])])],
-    governors: (e) => [e.name, e.variant, e.tab, e.level_data.map((l) => l.effect_description)]
+    governors: (e) => [e.name, e.variant, e.tab, e.level_data.map((l) => l.effect_description)],
+    artifacts: (e) => [e.name, e.description, e.lore, EmText(e.property)?.description, e.spells.map((id) => jsonSpellBook.spells.find((x) => x.id === id)?.name), e.units],
+    factionTraits: (e) => EmFactionWords(e)
 };
 
 function returnFromBook(book, fieldToSearch) {
@@ -353,99 +357,8 @@ function returnEmpireTreeList(fieldToSearch) {
     return Array.from(results);
 }
 
-function returnArtifactsList(fieldsToSearch){
-      if (!fieldsToSearch) return [];
 
-    const search = fieldsToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
 
-    if (DLCCheck(fieldsToSearch)) {
-        return DLCAdd(jsonRelics, fieldsToSearch, null, true);
-    }
-
-    for (const trait of jsonRelics) {
-        const text = findBy(jsonAllFromPOLocalized, "id", trait.extraLookup);
-        const spells = (trait.spell || []).map((s) => findBy(jsonSpells, "id", s.id)?.name);
-        if (SearchWords([trait.name, text?.description, spells]).includes(search)) results.add(trait);
-    }
-
-    return Array.from(results);
-}
-
-function returnLocList(fieldsToSearch) {
-    if (!fieldsToSearch) return [];
-
-    const search = fieldsToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    if (DLCCheck(fieldsToSearch)) {
-        return DLCAdd(jsonHeroAmbitions, fieldsToSearch, null, true);
-    }
-
-    for (const entry of jsonAllFromPOLocalized) {
-        const name = entry.name?.toUpperCase() || "";
-        const description = Sanitize(entry.description || "").toUpperCase();
-
-        if (name.includes(search) || description.includes(search)) {
-            // const traitEN = findBy(jsonHeroAmbitions, "icon", trait.icon);
-            results.add(entry);
-        }
-    }
-
-    return Array.from(results);
-}
-
-function returnTraitsList(fieldToSearch, locToCheck) {
-    if (!fieldToSearch) return [];
-
-    const search = fieldToSearch.replaceAll("_", " ").toUpperCase();
-    const results = new Set();
-
-    if (DLCCheck(fieldToSearch)) {
-        let setExtra = DLCAdd(jsonFactionCreation2, fieldToSearch, "id", true);
-        const setExtra2 = DLCAdd(jsonFactionCreation, fieldToSearch, "id", true);
-        setExtra = new Set([...setExtra, ...setExtra2]);
-
-        return Array.from(setExtra);
-    }
-
-    for (const trait of jsonFactionCreation2) {
-        const name = trait.name?.toUpperCase() || "";
-        const description = Sanitize(trait.description || "").toUpperCase();
-
-        if (name.includes(search) || description.includes(search)) {
-            results.add(trait.id);
-        }
-        if (Array.isArray(trait.effect_descriptions)) {
-            for (const effect of trait.effect_descriptions) {
-                if (effect.name.toUpperCase().includes(search)) {
-                    const traitEN = findBy(jsonFactionCreation2, "icon", trait.icon);
-                    results.add(traitEN.id);
-                }
-            }
-        }
-    }
-    // manual check
-    for (const trait of jsonFactionCreation) {
-        const name = trait.name?.toUpperCase() || "";
-        const description = Sanitize(trait.description || "").toUpperCase();
-
-        // check lookup
-        if ("extraLookup" in trait) {
-            const exists = locToCheck.some((e) => e.id === trait.extraLookup);
-
-            if (exists) {
-                results.add(trait.id);
-            }
-        }
-
-        if (name.includes(search) || description.includes(search)) {
-            // const traitEN = findBy(jsonFactionCreation, "id", trait.id);
-        }
-    }
-
-    return Array.from(results);
-}
 
 function Sanitize(string) {
     string = string.replaceAll("<hyperlink>", "");
@@ -501,14 +414,6 @@ function searchAll(keyword) {
 
     let listStructures = cityStructuresChecked.checked ? returnStructure(fields[0]) : "";
     let listEmpireTree = empireTreeChecked.checked ? returnEmpireTreeList(fields[0]) : "";
-    let listArtifacts = artifactChecked.checked ? returnArtifactsList(fields[0]) : "";
-    // javascript exports
-    // get all localization and then back
-    let listOfLocEntries = returnLocList(fields[0]);
-    // check if IDs are used in any of the javascript exported files
-
-    // console.log(listOfLocEntries);
-    let listTraits = factionTraitsChecked.checked ? returnTraitsList(fields[0], listOfLocEntries) : "";
 
     var buttonHolder = document.getElementById("buttonHolder");
 
@@ -548,14 +453,8 @@ function searchAll(keyword) {
     if (listEmpireTree.length > 0) {
         SetCollapsibleButtonsAndDivs("Empire Tree", listEmpireTree, "searchEmpire");
     }
-    
-    if(listArtifacts.length > 0){
-         SetCollapsibleButtonsAndDivs("Artifacts/Secret Spells", listArtifacts, "searchRelics");
-    }
-
-    if (listTraits.length > 0) {
-        SetCollapsibleButtonsAndDivs("Faction Traits", listTraits, "searchTraits");
-    }
+    if (artifactChecked.checked) ShowFromBook("Artifacts/Secret Spells", returnFromBook("artifacts", fields[0]), EmArtifactCard, true);
+    if (factionTraitsChecked.checked) ShowFromBook("Faction Traits", returnFromBook("factionTraits", fields[0]), EmFactionCard, true);
     if (ambitionsChecked.checked) ShowFromBook("Hero Ambitions", returnFromBook("ambitions", fields[0]), HbAmbitionCard, true);
     if (governanceChecked.checked) ShowFromBook("Hero Governance", returnFromBook("governors", fields[0]), HbGovernorCard, true);
 

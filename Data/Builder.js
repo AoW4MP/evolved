@@ -815,10 +815,15 @@ function ShowSpellFromLink() {
             action: showStructureFromString
         },
         {
-            // a society or form trait (Traits.json), or a Vision of Destiny one (FactionCreation.json): a unit's origins link here
+            // a society or form trait (Traits.json), or a Vision of Destiny one (FactionCreation.json): a unit's origins link here.
+            // Its card is the Faction Traits page's (Data/empire.js)
             key: "trait",
             title: (id) => (findBy(jsonFactionCreation2, "id", id) || findBy(jsonFactionCreation, "id", id))?.name ?? "Trait",
-            action: async (id, divID) => showTrait(id, await spawnSpellCardSingle(id, divID))
+            action: async (id, divID) => {
+                const thing = typeof EmFactionThings === "function" && EmFactionThings().find((e) => e.id === id);
+                if (thing) return SbShowCards([EmFactionCard(thing)], divID);
+                showTrait(id, await spawnSpellCardSingle(id, divID));
+            }
         }
     ];
 
@@ -1137,24 +1142,11 @@ function SetCollapsibleButtonsAndDivs(overwrite, list, cardType) {
         case "freeCity":
             showFreeCityUpgradeSetFromList(list, overwrite);
             break;
-        case "trait":
-            showTraitFromList(list, overwrite);
-            break;
         case "searchSiege":
             showSiegeProjects(list, overwrite);
             break;
         case "searchEmpire":
             showEmpireTrees(list, overwrite);
-            break;
-        case "searchTraits":
-            showTraitFromList(list, overwrite);
-            break;
-        case "searchRelics":
-            showRelicsFromList(list, overwrite);
-            break;
-
-        case "searchDestiny":
-            showDestinyTraitsFromList(list, overwrite);
             break;
         case "searchStruct":
             showStructures(list, overwrite);
@@ -2458,45 +2450,11 @@ async function showSpellFromList(list, divID) {
         showSpell(list[i], true, listOfNewDivs[i]);
     }
 }
-async function showRelicsFromList(list, divID) {
-    let cards = await spawnSpellCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showRelic(list[i].id, cards[i]);
-    }
-}
-
 async function showFreeCityUpgradeSetFromList(list, divID) {
     let cards = await spawnSpellCards(list, divID);
 
     for (let i = 0; i < list.length; i++) {
         showFreeCityUpgrade(list[i].id, cards[i]);
-    }
-}
-
-async function showTraitFromList(list, divID) {
-    let cards = await spawnSpellCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showTrait(list[i], cards[i]);
-    }
-}
-
-async function showDestinyTraitsFromList(list, divID) {
-    let cards = await spawnSpellCards(list, divID);
-
-    for (let i = 0; i < list.length; i++) {
-        showDestinyTrait(list[i], cards[i]);
-    }
-}
-
-async function showAllRelics(argumentType, divID) {
-    let list = [];
-    list = findRelics(argumentType);
-
-    let cards = await spawnStructureCards(list, divID);
-    for (let i = 0; i < list.length; i++) {
-        showRelic(list[i], cards[i]);
     }
 }
 
@@ -2528,13 +2486,6 @@ async function showSpellsWithArgument(argument, argumentType, overwritetext) {
     }*/
 
     SetCollapsibleButtonsAndDivs(overwritetext, list, "spell");
-}
-
-async function showTraitsWithArgument(argument, overwritetext, affinity) {
-    let list = [];
-    list = findTraitsWithArgument(argument, affinity);
-
-    SetCollapsibleButtonsAndDivs(overwritetext, list, "trait");
 }
 
 async function showSpellFromString(string, divID) {
@@ -2704,69 +2655,6 @@ function ClearAffinityExtraTags(input) {
     return input;
 }
 
-function findTraitsWithArgument(argumentType, affinity) {
-    let i,
-        output,
-        textvalue,
-        j,
-        l,
-        k,
-        x,
-        result = "";
-
-    let finalCheckedList = [];
-    if (argumentType != "") {
-        for (let j = 0; j < jsonFactionCreation2.length; j++) {
-            if (jsonFactionCreation2[j].type.toUpperCase().indexOf(argumentType.toUpperCase()) !== -1) {
-                if (affinity != "") {
-                    if ("affinities" in jsonFactionCreation2[j])
-                        for (let index = 0; index < jsonFactionCreation2[j].affinities.length; index++) {
-                            if (
-                                jsonFactionCreation2[j].affinities[index].name
-                                    .toUpperCase()
-                                    .indexOf(affinity.toUpperCase()) != -1
-                            ) {
-                                if (
-                                    jsonFactionCreation2[j].enabled == true &&
-                                    jsonFactionCreation2[j].id != "guardians_of_nature__goodact__"
-                                ) {
-                                    finalCheckedList.push(jsonFactionCreation2[j].id);
-                                }
-                            }
-                        }
-                } else {
-                    if (
-                        jsonFactionCreation2[j].enabled == true &&
-                        jsonFactionCreation2[j].id != "guardians_of_nature__goodact__"
-                    ) {
-                        finalCheckedList.push(jsonFactionCreation2[j].id);
-                    }
-                }
-            }
-
-            if (argumentType == "Visions") {
-                if (jsonFactionCreation2[j].name.indexOf("Vision of") != -1) {
-                    finalCheckedList.push(jsonFactionCreation2[j].id);
-                }
-            }
-        }
-
-        for (let j = 0; j < jsonFactionCreation.length; j++) {
-            if (jsonFactionCreation[j].type.toUpperCase() == argumentType.toUpperCase()) {
-                finalCheckedList.push(jsonFactionCreation[j].id);
-            }
-
-            if (argumentType == "Visions") {
-                if (jsonFactionCreation[j].type == "SubSociety") {
-                    finalCheckedList.push(jsonFactionCreation[j].id);
-                }
-            }
-        }
-    }
-
-    return finalCheckedList;
-}
-
 // the resids of the structures found: an id can belong to more than one
 function findStructuresWithArgument(income, argumentType, includeprovince) {
     let output,
@@ -2791,18 +2679,6 @@ function findStructuresWithArgument(income, argumentType, includeprovince) {
                     finalCheckedList.push(jsonStructureUpgrades[k].resid);
                 }
             }
-        }
-    }
-
-    return finalCheckedList;
-}
-
-function findRelics(argumentType) {
-    let finalCheckedList = [];
-
-    for (let j = 0; j < jsonRelics.length; j++) {
-        if (jsonRelics[j].DLC == argumentType) {
-            finalCheckedList.push(jsonRelics[j].id);
         }
     }
 
@@ -4929,79 +4805,6 @@ function UnitUnlocksMenu(units, label = "Unlocks") {
     return part;
 }
 
-function showRelic(a, divOrigin) {
-    let modName,
-        description,
-        nameString = "";
-
-    const relic = findBy(jsonRelics, "id", a);
-
-    if (relic == undefined) {
-        console.log("couldnt find relic " + a);
-        return;
-    }
-    modName = divOrigin.querySelector("#modname");
-    nameString = "";
-    nameString = relic.name.toUpperCase();
-
-    if (modName == undefined) {
-    }
-    modName.innerHTML = nameString;
-    modName.className = "mod_name";
-
-    let descriptionDiv = divOrigin.querySelector("#moddescription");
-    descriptionDiv.setAttribute("style", "max-width:560px;");
-
-    if ("extraLookup" in relic) {
-        const valueLookup = findBy(jsonAllFromPOLocalized, "id", relic.extraLookup);
-        console.log(valueLookup.description);
-        description = valueLookup.description;
-
-        modName.innerHTML = valueLookup.name.toUpperCase();
-    }
-
-    if ("unlock" in relic) {
-        const valueLookup = findBy(jsonAllFromPOLocalized, "id", relic.unlock);
-        console.log(valueLookup.description);
-
-        description += "<hr>" + valueLookup.name.toUpperCase() + "<br>";
-        description += valueLookup.description;
-    }
-    if ("unlock2" in relic) {
-        const valueLookup = findBy(jsonAllFromPOLocalized, "id", relic.unlock2);
-        console.log(valueLookup.description);
-        description += "<hr>";
-        if (valueLookup.name) {
-            description += valueLookup.name.toUpperCase() + "<br>";
-        }
-
-        description += valueLookup.description;
-    }
-    if ("unlock3" in relic) {
-        const valueLookup = findBy(jsonAllFromPOLocalized, "id", relic.unlock3);
-        console.log(valueLookup.description);
-
-        description += "<hr>" + valueLookup.name.toUpperCase() + "<br>";
-        description += valueLookup.description;
-    }
-
-    if ("DLC" in relic) {
-        let newDivForMount = AddDLCTag(relic.DLC);
-        modName.append(newDivForMount);
-    }
-    descriptionDiv.innerHTML = AddTagIconsForStatusEffects(description);
-    // the units the artifact lets cities draft (Relics.json, from aow4_diff_tools/spells.py)
-    if ("unit_unlock" in relic) descriptionDiv.append(UnitUnlocksMenu(relic.unit_unlock.map((u) => u.id)));
-
-    let imagelink = divOrigin.querySelector("#modicon");
-
-    imagelink.setAttribute("src", "/evolved/Icons/RelicIcons/" + relic.icon + ".png");
-
-    // the spells it unlocks, a list as its units are, each spell's card on hover (upstream put the cards in the text,
-    // where at 500px they stood out of a card narrower than the Artifacts page's)
-    if ("spell" in relic) descriptionDiv.append(SpellList(relic.spell.map((s) => s.id)));
-}
-
 // spells by id under a label, as UnitUnlocksMenu lists units: the spell book's icon and name, a link to the spell's card,
 // and that card on hover
 function SpellList(ids, label = "Spells") {
@@ -5080,51 +4883,6 @@ function FindCombatEnchantment(combatID) {
     collapsibleC.append(div);
     info.appendChild(collapsibleC);
     return info;
-}
-
-function showDestinyTrait(trait, divOrigin) {
-    const traitEN = findBy(jsonDestiny, "id", trait);
-
-    if (traitEN != undefined) {
-        const modName = divOrigin.querySelector("#modname");
-        let nameString = "";
-        nameString = traitEN.name.toUpperCase();
-        nameString += "<br>" + traitEN.category;
-
-        modName.innerHTML = nameString;
-        // backtracktome
-
-        modName.className = "mod_name";
-        let descriptionDiv = divOrigin.querySelector("#moddescription");
-        let description = "Trigger: <br>";
-
-        description += traitEN.trigger;
-
-        const imagelink = divOrigin.querySelector("#modicon");
-
-        imagelink.setAttribute("src", "/evolved/Icons/EmpireProgressionIcons/" + traitEN.id + ".png");
-
-        imagelink.setAttribute("style", "background-image: none");
-        descriptionDiv.innerHTML = description;
-        descriptionDiv.setAttribute("style", "max-width: 380px");
-
-        const unitTypesDiv = divOrigin.querySelector("#affectUnitTypes");
-
-        descriptionDiv.innerHTML += "<br><br>Effect: <br>";
-
-        for (let l = 0; l < traitEN.gains.length; l++) {
-            let div = document.createElement("DIV");
-            div.innerHTML = "<bullet>" + traitEN.gains[l].description + "</bullet>";
-            descriptionDiv.appendChild(div);
-        }
-
-        const tier = divOrigin.querySelector("#modtier");
-
-        tier.innerHTML = "";
-
-        const cost = divOrigin.querySelector("#modcost");
-        cost.innerHTML = "";
-    }
 }
 
 function showEmpireTree(a, divOrigin) {

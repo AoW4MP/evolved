@@ -1,68 +1,56 @@
 <!doctype html>
 <html lang="en">
     <head>
-                 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CC3NE8PT7K"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-  gtag('config', 'G-CC3NE8PT7K');
-</script>
+            gtag("config", "G-CC3NE8PT7K");
+        </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/spellbook.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/heroes.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/empire.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
         <script src="/evolved/Data/Init.js"></script>
+        <script src="/evolved/Data/worldmap.js"></script>
+        <script src="/evolved/Data/spellbook.js"></script>
+        <script src="/evolved/Data/heroes.js"></script>
+        <script src="/evolved/Data/empire.js"></script>
         <script>
-          
+            // Evolved's own Artifacts page: the DLCs' artifacts and secret scrolls, a tab per DLC, from Relics.json (aow4_diff_tools' spells.py) and all.json (Data/empire.js).
 
-            function HandlePage() {
-                showAllRelics("GIANTKINGS ", "Giants");
-                  showAllRelics("RISEFROMRUIN ", "Fractured");
-                  showAllRelics("SECRETSOFTHEARCHMAGES ", "Secret");
-                  showAllRelics("SILVERSEAS ", "SilverSeas");
-                SetLevelUpStuff();
+            async function HandlePage() {
+                await EmArtifactsPage();
             }
         </script>
 
-        <title>Age of Wonders 4 Evolved - Artifacts/Secret Spells</title>
+        <title>Age of Wonders 4 Evolved - Artifacts</title>
     </head>
 
     <body>
         <div id="header"></div>
 
-        <div class="w3-container sidebarPage">
-            <div class="textblocktitle">Artifacts/Secret Spells</div>
-            <div class="w3-bar w3-black" id="buttonHolder">
-                <button id="Giants-button" class="w3-bar-item w3-button tablink w3-red" onclick="openDiv(event,'Giants')">
-                    Giant Kings Artifacts
-                </button>
-                 <button id="Fractured-button" class="w3-bar-item w3-button tablink w3-red" onclick="openDiv(event,'Fractured')">
-                    Fractured Artifacts
-                </button>
-                 <button id="Secret-button" class="w3-bar-item w3-button tablink w3-red" onclick="openDiv(event,'Secret')">
-                    Secret Spells
-                </button>
-                 <button id="SilverSeas-button" class="w3-bar-item w3-button tablink w3-red" onclick="openDiv(event,'SilverSeas')">
-                    Silver Seas Artifacts
-                </button>
-
+        <div class="wm-page sb-page">
+            <div class="textblocktitle">
+                <img src="/evolved/Icons/Interface/TitleIcons/Artifacts.png" height="40px" alt="" /> Artifacts
+                <img src="/evolved/Icons/Interface/TitleIcons/Artifacts.png" height="40px" alt="" />
             </div>
-             <div id="dataHolder">
-                <div id="Giants" class="w3-container w3-border city"></div>
-                 <div id="Fractured" class="w3-container w3-border city"></div>
-                 <div id="Secret" class="w3-container w3-border city"></div>
-                 <div id="SilverSeas" class="w3-container w3-border city"></div>
+            <div id="tabs" class="wm-tabs"></div>
+            <div class="wm-filters">
+                <input type="text" class="wm-search" id="filterInput" placeholder="Search all artifacts" />
 
-               
+                <div id="sorts" class="wm-choices"></div>
             </div>
+            <div id="panels"></div>
         </div>
     </body>
 </html>
-<footer>
-    <br />
-    <br />
-</footer>

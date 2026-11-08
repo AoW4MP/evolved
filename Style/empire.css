@@ -1,0 +1,168 @@
+/* The Empire pages (Pantheon Tree, Destiny Traits, Faction Traits, Artifacts) and Search's cards for them: the Heroes pages'
+   cards (Style/heroes.css) under the World Map pages' tabs (Style/worldmap.css) */
+
+/* a DLC's logo in a tab, a little larger than a text icon */
+.wm-tab > img.em-tab-logo {
+    width: 28px;
+    height: 28px;
+    margin: -2px;
+}
+/* a card's list of names (what a trait can't be taken with) */
+.em-incompatible {
+    color: #e8e2d4;
+}
+.em-needs {
+    margin-top: 2px;
+}
+
+/* ---------------------------------------------------------------- Pantheon Tree: a page's parts side by side on the Empire
+   Tree's panel; a node in its kind's frame (upstream's), joined by lines to what it follows */
+.em-pan-scroll {
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+.em-pan-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px 36px;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 24px;
+    /* the Empire Tree's background, stretched: a page of the Pantheon is taller than it, and the picture's tiles show a seam */
+    background: black url(/evolved/Icons/Interface/panel_Background.png) center / cover;
+    border-image: url(/evolved/Icons/9slicetooltip.png);
+    border-image-slice: 4 10 4 10 fill;
+    border-style: solid;
+}
+.em-pan-title {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.em-pan-field {
+    position: relative;
+}
+.em-pan-line {
+    position: absolute;
+    height: 3px;
+    margin-top: -1.5px;
+    transform-origin: 0 50%;
+    background: #5f9cc0;
+    transition: opacity 0.15s;
+}
+.em-pan-node {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.15s, filter 0.15s;
+}
+.em-pan-node > img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+.em-pan-node:hover > img {
+    filter: brightness(140%);
+}
+.em-pan-dim {
+    opacity: 0.25;
+    filter: saturate(0);
+}
+/* a DLC's logo at a node's corner */
+.em-pan-dlc {
+    position: absolute;
+    right: -6px;
+    bottom: -4px;
+}
+.em-pan-dlc img {
+    width: 20px;
+    height: 20px;
+}
+/* the frames, and the same as swatches on the kind buttons */
+.em-pan-trait {
+    border: 2px solid #fed60b;
+    border-radius: 50%;
+    background-color: #442f14;
+}
+.em-pan-infusion {
+    border: 2px solid #d73636;
+    border-radius: 10px;
+    background-color: #33112a;
+}
+.em-pan-outfit {
+    background-image: url(/evolved/Icons/Interface/CosmicHappeningPortal.png);
+}
+.em-pan-weapon {
+    background-image: url(/evolved/Icons/Interface/ItemBG.png);
+}
+.em-pan-origin {
+    background-image: url(/evolved/Icons/Interface/trait_slot.png);
+}
+.em-pan-banner {
+    background-image: url(/evolved/Icons/Interface/passive.png);
+}
+.em-pan-mount {
+    background-image: url(/evolved/Icons/Interface/ItemBGActive.png);
+}
+.em-pan-trinket {
+    background-image: url(/evolved/Icons/Interface/pantheonIconBG.png);
+}
+.em-pan-realm {
+    border: 2px solid #8fb8d8;
+    border-radius: 50%;
+}
+.em-pan-realm > img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+.em-pan-choice {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.em-pan-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* a frame drawn with a border is thinner as a swatch */
+.em-pan-swatch.em-pan-trait,
+.em-pan-swatch.em-pan-infusion,
+.em-pan-swatch.em-pan-realm {
+    border-width: 2px;
+}
+/* a cosmetic's card shows its picture large */
+.em-pan-picture {
+    text-align: center;
+    margin-top: 6px;
+}
+.em-pan-picture img {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+}
+
+/* an artifact's or trait's lore closes its card */
+.em-card .em-lore {
+    margin: 10px 0 0;
+    font-size: 14px;
+}

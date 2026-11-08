@@ -88,6 +88,13 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
   were masked to the margins the box's record holds (fields 14 and 15: each side's, as minus twice its fraction of
   the box), and the pieces left hugging the box's edge were removed. The Skill List's `SignatureSkill.png` was cut the
   same way.
+  The Empire menu's are made the same way, where the game has art for the kind of page (were the Info "i", Mark of the
+  Owl, the Adaptable trait and a blue secret scroll):
+  - `Pantheon.png` and `Artifacts.png` are the game's text icons for the Pantheon (`[pantheon/]`, the laurel) and
+    for Artifacts (the Artifact concept's own icon, the vase), 64px, as glyphs (93px).
+  - The game has no icon for destiny or faction traits. `DestinyTraits.png` is a destiny mark whole
+    (`RacialDestinyTrait_MarkofOwl`, Gameplay_Icons.clb, 256px), at 108px as its circle is a thin frame (112 by the
+    title); `FactionTraits.png` is the faction creator's Human form (`Form_Human`), ringed (104px).
   The "Updated:" date is 14px (11px on a phone), a size under the dataset's name; both have a hard shadow, as a soft
   one blurs the Header font's thin lowercase.
 No Other Database dropdown: Evolved keeps no other databases. On a phone the strip holds just the dataset and date,
@@ -273,9 +280,21 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - `Spells.html?skill=` and `?governance=` (a unit's origins link there) show these cards; the Giant King's governance its four.
 - Upstream's hero cards and lists are gone from `Data/Builder.js` (`showItem`, `showSkill`, `showHeroGov`, `showInfusionListEntrySmall`, `findItemsWithArgument` and the like); `showHeroTrait` stays for the Faction Creator's ambition tooltips.
 
+### Empire pages
+
+`HTML/PantheonTree.html`, `HTML/DestinyTraits.html`, `HTML/FactionCreation.html` (Faction Traits) and `HTML/Artifacts.html` are Evolved's own pages, replacing upstream's (same URLs, `?type=<tab>`); the Empire Tree is its own (above). They share `Data/empire.js` and `Style/empire.css`, on the Heroes pages' cards (`HbCard`, `Data/heroes.js`) and the board (`WmBoard`), and have title icons made from their menu icons (above), as the Heroes pages' are.
+
+- The traits are the dump's (`Traits.json`): those in use (`enabled`), each once. Their pictures are the dump's `Icons/TraitIcons`. Ruler types, cultures and the prophecies' readings are `Data/GEN/FactionCreation.json`'s (upstream's), with all.json's texts; artifacts are `Relics.json` (`spells.py`).
+- Faction Traits: tabs Form Traits (by group: Offense, Defense, Utility, Mounts, Adaptations, Flaws; or by points), Society Traits (by affinity, the Pantheon's last), Prophecies, Ruler Types and Cultures. Affinity buttons work across the tabs (a trait's, a reading's, a culture's), and buttons for the Pantheon's traits and the good and evil ones. A card has the trait's effects, starting bonus (an empire skill or structure by name), what it can't be taken with, its units (`StructurePredictions.json`), and its points, alignment and affinities at its foot. The 16 society traits the faction creator doesn't show at first (`front_end` false) are the Pantheon's: `Pantheon_Tree.json` has every one.
+- Prophecies: each Vision (a society trait) and its readings by affinity: objective, rewards, Rally units. A ruler type's card lists its dragon types, clans or bloodlines; a culture's its subcultures (Architect's and Mercantile's, which the data has no text for, by name on one line) and links its units page.
+- Destiny Traits: the eight marks, each with the quest that gives it and what that asks (`DestinyTraits.json`; "Sons/Daughters of War" for the quest named with a placeholder).
+- Artifacts: a tab per DLC with its logo; the tab ids are the old page's (`Giants`, `Fractured`, `Secret`, `SilverSeas`), which a unit's origins link to (`ArtifactTab`). A secret scroll's text names its spell with a placeholder the game fills (`{GLOBAL.SPECIAL_OPERATIONS.…Hyperlink}`): the spell's name. A menhir's blessing is spelled out, then the spells (`SpellList`), units and lore. The menu links the page alone (was `?type=Giants&`).
+- Pantheon Tree: the two pages as tabs, each page's parts where `Pantheon_Tree.json` places them (upstream's headings "Page 1 Left" and the like are gone, but Realms and DLC Outfits), on the Empire Tree's panel, scrolling alone where the window is narrow. A node keeps upstream's frame for its kind. Hovering one shows the thing's own card where the site has one: the society trait's, the Item Forge's infusion (by id among `HB_PANTHEON_INFUSIONS`, or by the name less "Passive Item Infusion": Innate Spell Jammer isn't in the dump), the mount's item; else its name and picture. The search and a kind's button light up what they find and dim the rest; the tabs count what is lit.
+- `Spells.html?trait=` (a unit's origins) shows the Faction Traits page's card. Upstream's cards and lists for these are gone from `Data/Builder.js` (`showRelic`, `showAllRelics`, `showDestinyTrait`, `showTraitsWithArgument` and their finders); `showTrait` stays for the Faction Creator's tooltips and anything the new lists lack.
+
 ### Search
 
-Spells, siege projects and the world map's sites come from the files their own pages read (`SpellBook.json`, `AncientWonders.json`, `Landmarks.json`, `Infestations.json`, `MagicMaterials.json`, `Happenings.json`) and show those pages' cards: `Data/ancientwonders.js` and `Data/magicmaterials.js` hold their pages' code as modules for this, and `Data/worldmap.js` the Infestation, Landmark and Happening cards. Happenings has its own filter, and the Oceanic ones their own tab of results, by their events' texts too. Artifacts are searched by the game's names and texts and the spells they unlock. Hero skills, equipment, infusions, ambitions and governors are the Heroes pages' (`Data/heroes.js`), searched by their texts and their abilities' (equipment by where it comes from too: "beast wrangler"), with those pages' cards; what no one can get isn't found. Governance is new to Search (its own switch, `f=hg`).
+Spells, siege projects and the world map's sites come from the files their own pages read (`SpellBook.json`, `AncientWonders.json`, `Landmarks.json`, `Infestations.json`, `MagicMaterials.json`, `Happenings.json`) and show those pages' cards: `Data/ancientwonders.js` and `Data/magicmaterials.js` hold their pages' code as modules for this, and `Data/worldmap.js` the Infestation, Landmark and Happening cards. Happenings has its own filter, and the Oceanic ones their own tab of results, by their events' texts too. Artifacts, and the traits, prophecies, ruler types and cultures, are the Empire pages' (`Data/empire.js`), searched by their texts (an artifact's spells and units too, a Pantheon trait by "pantheon"), with those pages' cards. Hero skills, equipment, infusions, ambitions and governors are the Heroes pages' (`Data/heroes.js`), searched by their texts and their abilities' (equipment by where it comes from too: "beast wrangler"), with those pages' cards; what no one can get isn't found. Governance is new to Search (its own switch, `f=hg`).
 
 ### Tomes
 
@@ -315,7 +334,7 @@ unlocked by a choice in Oceanic Happening Mating Season").
 
 On a phone a sidebar page has no column for its sidebar: it comes above the cards, and a card wider than the page (a unit's) scrolls by itself. A long page title wraps between its two icons.
 
-The Spells, World Map and Heroes pages have the same icon either side of their title as their entry in the menu, at 40px. `Icons/Interface/TitleIcons` holds them, made from `Icons/Interface/DropdownIcons` so each takes up about the same space on the page, 27-28px by eye, whatever its shape, centred on its weight: by the box its art fills, not its painted area, which leaves spiky and narrow shapes small. The affinity Tomes and Tome Units pages' icons are 30px to match; a culture's medallion is 44px. The Empire Tree's dark-ringed disc is 32px of its 40.
+The Spells, World Map, Heroes and Empire pages have the same icon either side of their title as their entry in the menu, at 40px. `Icons/Interface/TitleIcons` holds them, made from `Icons/Interface/DropdownIcons` so each takes up about the same space on the page, 27-28px by eye, whatever its shape, centred on its weight: by the box its art fills, not its painted area, which leaves spiky and narrow shapes small. The affinity Tomes and Tome Units pages' icons are 30px to match; a culture's medallion is 44px. The Empire Tree's dark-ringed disc is 32px of its 40.
 
 ### Silver Seas
 

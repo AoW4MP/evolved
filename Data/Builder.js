@@ -5002,36 +5002,49 @@ function showUnitUnlock(a, divOrigin) {
 
 const SpellDuplicateExclusionList = []; // [4514010629343, 4514010628856];
 
-// the chances of a spell that summons a random unit, a list per land; null for the others. Its spawnset is what a
-// category's name says after it ("RAISE_UNDEAD_ARMY_T3_CAT": T3)
-function SpellSpawnChances(id) {
-    const Pairs = [
-        { id: "call_wild_animal", spawnset: "SUMMON_WILD_ANIMAL" },
-        { id: "call_greater_animal", spawnset: "SUMMON_GREATER_WILD_ANIMAL" },
-        { id: "summon_elemental", spawnset: "SUMMON_ELEMENTAL" },
-        { id: "awaken_the_forest", spawnset: "AWAKEN_THE_FOREST" },
-        { id: "demonic_summoning", spawnset: "DEMONIC_SUMMONING" },
-        { id: "raise_undead_army", spawnset: "RAISE_UNDEAD_ARMY" }
-    ];
-    const match = Pairs.find((p) => p.id === id);
-    if (!match) return null;
-    // the categories its summons draw from (SpellBook.json's spawns, aow4_diff_tools/spells.py), not every one of its name:
-    // the game keeps those no effect uses (with the mod, Raise Undead Army's Low and Mid, Awaken the Forest's Low; Summon
-    // Elemental's Signature)
-    const spawns = jsonSpellBook.spells.find((s) => s.id === id)?.spawns || [];
-    const related = jsonSpawnTables.filter((t) => spawns.includes(t.category));
-    if (!related.length) return null;
-    // several resources can share a category: all their items together
+// The chances of a spell that summons a unit at random, a list per land or tier; null for the others. Which spells and
+// which lists is the game's (SpellBook.json's spawns, aow4_diff_tools/spells.py): the categories its summons draw from,
+// not every one of its name, as the game keeps those no effect uses (with the mod, Raise Undead Army's Low and Mid). A
+// spell whose player picks from all its units (Call Young Dragon) or gets the one of a tier (Crystallize Essence) has none.
+// spawns: a card's own, as the cards sharing an id can differ
+function SpellSpawnChances(id, spawns = jsonSpellBook.spells.find((s) => s.id === id)?.spawns) {
+    if (!spawns?.length) return null;
+    // several resources can share a category, as the game adds them up: all their items together
     const results = [];
-    for (const entry of related) {
+    for (const entry of jsonSpawnTables) {
+        if (!spawns.includes(entry.category)) continue;
         let existing = results.find((r) => r.category === entry.category);
-        if (!existing) {
-            existing = { category: entry.category, items: [] };
-            results.push(existing);
-        }
+        if (!existing) results.push((existing = { category: entry.category, items: [] }));
         existing.items.push(...entry.items);
     }
-    return results.map((entry) => ConvertSpawnTable(entry, match.spawnset));
+    if (!results.length) return null;
+    // a spell's only list needs no heading (its units show their tier on the card); several are what the land or tier
+    // they're for says after the start most of them share: SUMMON_WILD_ANIMAL_UNDERGROUND_ICE_CAT is Underground Ice,
+    // FIGHT_FOR_POWER_II_CAT II, and SUMMON_GREATER_GREATER_ANIMAL_CAT, among SUMMON_GREATER_WILD_ANIMAL_*, Default
+    const categories = results.map((r) => r.category);
+    let start = "";
+    for (const words of categories.map((c) => c.split("_"))) {
+        for (let k = 1; k < words.length - 1; k++) {
+            const prefix = words.slice(0, k).join("_");
+            const shared = categories.filter((c) => c.startsWith(prefix + "_")).length;
+            if (shared * 2 > categories.length && prefix.length > start.length) start = prefix;
+        }
+    }
+    const heading = (category) => {
+        if (results.length === 1) return null;
+        const rest = !start ? category : category.startsWith(start + "_") ? category.slice(start.length + 1) : "";
+        const words = rest.replace(/(^|_)CAT$/, "").split("_").filter(Boolean);
+        if (!words.length) return "Default";
+        // a tier keeps its numeral: II, T3
+        return words.map((w) => (/^[IVX]+$|\d/.test(w) ? w : w[0] + w.slice(1).toLowerCase())).join(" ");
+    };
+    // the default land first, tiers in their order (II before III, which the names' order puts after it), lands by name
+    const TIERS = ["I", "II", "III", "IV", "V"];
+    const rank = (h) => (h === "Default" ? "0" : TIERS.includes(h) ? "1" + TIERS.indexOf(h) : "2" + h);
+    return results
+        .map((entry) => ({ entry, heading: heading(entry.category) }))
+        .sort((a, b) => rank(a.heading ?? "").localeCompare(rank(b.heading ?? "")))
+        .map(({ entry, heading }) => ConvertSpawnTable(entry, heading));
 }
 
 function showSpell(a, showOrigin, divOrigin) {

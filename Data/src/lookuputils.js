@@ -383,14 +383,8 @@ function SpawnSetName(set) {
     return spawnSetNames[set] || set.replace(/_/g, " ");
 }
 
-function ConvertSpawnTable(input, subtractName) {
-  
-    let bulletListName = input.category.split(subtractName + "_")[1]; // Get the first entry as the bullet list name
- if(bulletListName == undefined){
-                    bulletListName = "Default";
-                }
-    // "UNDERGROUND_ICE_CAT" -> "Underground Ice"
-    bulletListName = bulletListName.replace(/_CAT$/, "").toLowerCase().replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+// a list of a spell's random summons, under its heading (a land or tier: SpellSpawnChances), none for a spell's only list
+function ConvertSpawnTable(input, heading) {
     // Calculate the percentages for each entry
     const entryCounts = {};
     for (const entry of input.items) {
@@ -412,7 +406,7 @@ function ConvertSpawnTable(input, subtractName) {
     const uniqueEntries = [];
     const bulletList = document.createElement("DIV");
 
-    bulletList.innerHTML = '<bulletList><span class="Test">' + bulletListName + "</span>";
+    bulletList.innerHTML = "<bulletList>" + (heading ? '<span class="Test">' + heading + "</span>" : "");
 
     for (const { entry, percentage } of percentages) {
         const itemText = SpawnSetName(entry);

@@ -383,41 +383,46 @@ function SpawnSetName(set) {
     return spawnSetNames[set] || set.replace(/_/g, " ");
 }
 
-// a list of a spell's random summons, under its heading (a land or tier: SpellSpawnChances), none for a spell's only list
-function ConvertSpawnTable(input, heading) {
-    // Calculate the percentages for each entry
-    const entryCounts = {};
-    for (const entry of input.items) {
-        entryCounts[entry] = (entryCounts[entry] || 0) + 1;
-    }
+// a list of a spell's random summons, under its heading (a land or tier: SpellSpawnChances), none for a spell's only list.
+// Each unit's chance of being summoned: its share of the list, whose repeats make a unit likelier. A recruit (offer: from
+// SpellBook.json's offers) lets the player choose from a few of the list, so the chance is of being among them: drawn one
+// by one, a unit not twice, each by its share times its pick weight (Call Wild Animal's Tier II animals are offered less);
+// a list no longer than the offer is offered whole
+function ConvertSpawnTable(input, heading, offer) {
+    const tickets = new Map();
+    for (const set of input.items) tickets.set(set, (tickets.get(set) || 0) + 1);
+    const total = input.items.length;
+    const chance = offer ? OfferedChances(new Map([...tickets].map(([set, n]) => [set, n * (offer.weights?.[set] ?? 100)])), offer.options) : null;
+    const rows = [...tickets].map(([set, n]) => ({ name: SpawnSetName(set), p: chance ? chance.get(set) : n / total }));
+    rows.sort((a, b) => b.p - a.p);
 
-    const percentages = input.items.map((entry) => {
-        const percentage = (entryCounts[entry] / input.items.length) * 100;
-        return {
-            entry,
-            percentage
-        };
-    });
-
-    // Sort the percentages in descending order
-    percentages.sort((a, b) => b.percentage - a.percentage);
-
-    // Create a bullet list for the unique entries
-    const uniqueEntries = [];
     const bulletList = document.createElement("DIV");
-
-    bulletList.innerHTML = "<bulletList>" + (heading ? '<span class="Test">' + heading + "</span>" : "");
-
-    for (const { entry, percentage } of percentages) {
-        const itemText = SpawnSetName(entry);
-
-        if (!uniqueEntries.includes(itemText)) {
-            uniqueEntries.push(itemText);
-            bulletList.innerHTML += "<bullet>" + `${percentage.toFixed(0)}% - ${itemText}` + "</bullet>";
-        }
+    let html = "<bulletList>" + (heading ? '<span class="Test">' + heading + "</span>" : "");
+    const shown = new Set();
+    for (const { name, p } of rows) {
+        if (shown.has(name)) continue;
+        shown.add(name);
+        // not 100% unless it's sure, nor 0% when it can be
+        const pct = Math.round(p * 100);
+        html += "<bullet>" + (p < 1 && pct === 100 ? 99 : p > 0 && pct === 0 ? "<1" : pct) + "% - " + name + "</bullet>";
     }
-    bulletList.innerHTML += "</bulletList>";
+    bulletList.innerHTML = html + "</bulletList>";
     return bulletList;
+}
+
+// {set: chance it is among n drawn one by one without repeats, each draw by the weights of those left}
+function OfferedChances(weights, n) {
+    const chance = new Map([...weights.keys()].map((set) => [set, weights.size <= n ? 1 : 0]));
+    if (weights.size <= n) return chance;
+    const draw = (left, sum, p, k) => {
+        for (const set of left) {
+            const q = (p * weights.get(set)) / sum;
+            chance.set(set, chance.get(set) + q);
+            if (k > 1) draw(left.filter((x) => x !== set), sum - weights.get(set), q, k - 1);
+        }
+    };
+    draw([...weights.keys()], [...weights.values()].reduce((a, b) => a + b, 0), 1, n);
+    return chance;
 }
 
   function CreateParts(subcultures, icons, names) {

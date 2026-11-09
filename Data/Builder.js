@@ -5006,8 +5006,9 @@ const SpellDuplicateExclusionList = []; // [4514010629343, 4514010628856];
 // which lists is the game's (SpellBook.json's spawns, aow4_diff_tools/spells.py): the categories its summons draw from,
 // not every one of its name, as the game keeps those no effect uses (with the mod, Raise Undead Army's Low and Mid). A
 // spell whose player picks from all its units (Call Young Dragon) or gets the one of a tier (Crystallize Essence) has none.
-// spawns: a card's own, as the cards sharing an id can differ
-function SpellSpawnChances(id, spawns = jsonSpellBook.spells.find((s) => s.id === id)?.spawns) {
+// spawns, offers: a card's own, as the cards sharing an id can differ; offers, of the lists a recruit draws from (spells.py)
+function SpellSpawnChances(id, spawns, offers) {
+    if (!spawns) ({ spawns, offers } = jsonSpellBook.spells.find((s) => s.id === id) || {});
     if (!spawns?.length) return null;
     // several resources can share a category, as the game adds them up: all their items together
     const results = [];
@@ -5044,7 +5045,7 @@ function SpellSpawnChances(id, spawns = jsonSpellBook.spells.find((s) => s.id ==
     return results
         .map((entry) => ({ entry, heading: heading(entry.category) }))
         .sort((a, b) => rank(a.heading ?? "").localeCompare(rank(b.heading ?? "")))
-        .map(({ entry, heading }) => ConvertSpawnTable(entry, heading));
+        .map(({ entry, heading }) => ConvertSpawnTable(entry, heading, offers?.[entry.category]));
 }
 
 function showSpell(a, showOrigin, divOrigin) {

@@ -413,6 +413,13 @@ land or tier their names give after the start most share (Underground Ice, II; C
 `SUMMON_GREATER_GREATER_ANIMAL_CAT` is Default), Default first, tiers in order; a spell's only list has no heading, its
 units' tiers being on the card. Resources sharing a category's name are still added up: the game adds them, as a DLC's
 "Evolution Extension" does to Call Wild Animal's default and water animals.
+A summon's chance is a unit's share of its list (repeats make it likelier). A recruit (Call Wild Animal, Call Greater
+Animal, Fight for Power) offers a few of its list to choose from, so its chances are of being offered (`ConvertSpawnTable`,
+`OfferedChances` in `Data/src/lookuputils.js`; 2026-11-09, were the shares): SpellBook.json's `offers` give how many (Num
+Recruit Options, 3 by default; Call Wild Animal's default land 4) and the pick weights of its Recruitment Settings
+(`pick_weights` in `spells.py`: Call Wild Animal's Tier II animals 75, those that Evolve 40, the others 100). A list no
+longer than the offer is offered whole, 100% each (Call Greater Animal's lands but the default, 75% there). How the game
+draws them is not in the data: the site takes them one by one, a unit not twice, each by share × weight.
 A tooltip's background is scaled to the box (`background-size: cover`, as the cards'): tiled at its 650px, a taller one
 (Call Greater Animal's spawn chances) began the picture's lighter top again near its foot.
 `Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).

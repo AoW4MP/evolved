@@ -77,7 +77,7 @@ function SbSpellCard(s) {
         // a long list folds away, or it stretches the row of cards it is on
         card.append(WmUnitList(s.type.includes("Summon") ? "Summons" : "Units", s.units));
     }
-    const chances = SpellSpawnChances(s.id, s.spawns);
+    const chances = SpellSpawnChances(s.id, s.spawns, s.offers);
     if (chances) {
         const details = WmElement("details", "wm-story sb-chances", "<summary>Spawn chances</summary>");
         details.append(...chances);

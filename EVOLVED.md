@@ -183,6 +183,9 @@ spells rely on it); Fire Hex, Necro Hex, Arcfire Weapons and Volatile Summon the
 the Tooltip concept's tutorial text links itself ("you can string together tooltips endlessly").
 `checktooltips.py` in aow4_diff_tools runs every text the site holds through this in Edge and lists the links whose
 tooltip still repeats its text: none on 2026-11-04 (121 before).
+A status effect's icon by its name in a text is its tag's rule in `Style/icons.css` (`<bleeding></bleeding>`). Chilled
+had none, so it stood bare wherever it's named, as in Afflicted's list among five with icons:
+`Icons/StatusEffects/chilled.png` is its ability icon (`0000049700004447`), as upstream's there are (2026-11-09).
 
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.

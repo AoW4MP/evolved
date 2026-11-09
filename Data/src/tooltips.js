@@ -20,7 +20,7 @@ function OpenStackedTooltip(origin, span, event) {
     dialog.origin = origin;
     dialog.innerHTML = span.innerHTML;
     dialog.style.pointerEvents = "all";
-    dialog.style.zIndex = 1000 + level;
+    dialog.style.zIndex = `calc(var(--tooltip-z) + ${level})`; // over the one it opened from (style.css)
     (TOOLTIP_STACK[TOOLTIP_STACK.length - 1] || document.getElementById("hoverDiv2")).after(dialog);
     dialog.inert = true;
     dialog.show();

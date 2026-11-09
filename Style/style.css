@@ -1751,6 +1751,11 @@ hr {
     color: #ffff79;
 }
 
+/* the tooltips' layer: over the pinned top strip (header.html) and the pick-lists; a tooltip opened from one goes a
+   level higher (tooltips.js, OpenStackedTooltip) */
+:root {
+    --tooltip-z: 1004;
+}
 .tooltiptextnew {
     background-image: url(/evolved/Icons/tooltipBG.png);
     background-size: auto;
@@ -1767,7 +1772,7 @@ hr {
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
-    z-index: 1004; /* over the pinned top strip (header.html) and the pick-lists */
+    z-index: var(--tooltip-z);
     min-width: 300px;
     max-width: 400px;
     min-height: 40px;
@@ -2670,7 +2675,7 @@ html {
         overflow-y: auto;
         border-radius: 12px 12px 0 0;
         box-sizing: border-box;
-        z-index: 1004; /* above the selections popup */
+        z-index: var(--tooltip-z); /* above the selections popup */
           /* Smooth out stuttering transitions during zoom */
     transform-origin: bottom left; 
     will-change: transform, top, left, width;

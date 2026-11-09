@@ -48,7 +48,9 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
   with the page's 8px margin between, as at the window's sides (`--sticky-top`: `--hud-strip-height`, 36px, plus 8px;
   0 on a phone): the Units and Tomes sidebar `.w3-bar`, and `scroll-padding-top`. The layers
   over the page: the menu 1000 (a hovered item 1001), the strip 1002, the Faction Creator's and Hero Builder's
-  pick-lists (`.selectionsHolder`) 1003, tooltips 1004 (were 1000, 999 for the pick-lists);
+  pick-lists (`.selectionsHolder`) 1003, tooltips 1004 (`--tooltip-z`; were 1000, 999 for the pick-lists), and a
+  tooltip opened from another one level higher each (`OpenStackedTooltip`, `tooltips.js`: was 1000 + its level, which
+  put it under the tooltip it opened from once those were at 1004);
 - the banner (`--banner-height`, 100px): the title on the picture, which darkens towards the menu, and under it the
   current DLC's logo, as upstream shows it (`.dlc-logo`, `Icons/Text/SilverSeasLogo.png`, 250px wide, 170px on a phone).
   The banner was 80px with the title alone; at 100px the tallest page that fit a 1260px-high window still does

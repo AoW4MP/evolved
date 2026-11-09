@@ -57,11 +57,20 @@ function SbFoot(e, facts) {
     return foot;
 }
 
+// A unit type a spell affects, a link as in the game: "<unitMerfolk></unitMerfolk> Merfolk". Most are abilities, linked by
+// name wherever they stand; Merfolk (a race's transformation) and Fiend (a group of types) are only the game's concepts,
+// which plain words don't link to, so a type's words are written as a link where they name one. Not "Tier I": its concept
+// is the tier's upkeep
+function SbRequisite(r) {
+    const type = r.match(/^(<(unit\w+)><\/\2>\s*)(.+)$/);
+    return WmMarkup(type && ConceptKeyByName(type[3]) ? type[1] + "<hyperlink>" + type[3] + "</hyperlink>" : r);
+}
+
 function SbSpellCard(s) {
     const card = SbCard(s, s.type, "/evolved/Icons/" + s.icon);
     if (s.requisites.length) {
         const part = WmElement("div", "wm-part", '<div class="wm-label">Affected Unit Types</div>');
-        part.append(WmElement("div", "sb-chips", s.requisites.map((r) => "<span>" + WmMarkup(r) + "</span>").join("")));
+        part.append(WmElement("div", "sb-chips", s.requisites.map((r) => "<span>" + SbRequisite(r) + "</span>").join("")));
         card.append(part);
     }
     if (s.units.length) {

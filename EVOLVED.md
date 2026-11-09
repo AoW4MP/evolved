@@ -280,6 +280,11 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - What no one can get is left out (`left_out` in the file, with the reason): the property that unlocks it is given by nothing, such as the Empire Tree's Rites, Elemental Bane and Raise Zombies. A story realm's spells are left out too, as are those the data can't tell are unused (`NOT_SPELLS` in `spells.py`, from the maintainer): Construct Population and Signet of Loyalty (not in use), Move Portal (a button that moves a Shrouded Isles portal), Bone Horror Ritual (an old mod spell) and Astral Wisp Ritual (replaced by Astral Keeper Ritual). The Fey Invasion's relic spells and siege projects, which the dump lacks, are in, their texts filled by the tool.
 - Upkeep comes from the spell's cost data, so Corrupt Pact, Tyrannical Exploitation and Faithful Whispers show theirs, which the dump leaves out.
 - The Enchantments page is titled "Enchantments" (upstream: "Unit Enchantments").
+- Affected Unit Types are links (`SbRequisite`, `Data/spellbook.js`): most are abilities, which a name links wherever it
+  stands, but Merfolk (Silver Seas: a race's Merfolk Transformation) and Fiend are only the game's concepts
+  (`GLOBAL.PROPERTIES.MERFOLK`, `.FIEND`), so a type with its icon tag that names a concept is written as a link. Before,
+  they had no tooltip (Force of Nature, Cosmic Overdrive, Demonic Siphon; 2026-11-09). "Tier I" stays plain: its concept
+  is the tier's upkeep, and Tier IV and V have none.
 
 ### Heroes pages
 

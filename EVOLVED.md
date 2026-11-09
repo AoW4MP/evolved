@@ -44,8 +44,9 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
   game's gear icon, `Icons/TML/autocombat.png`; its two settings are `.toggleChip`s) and Donate (to `HTML/Donate.html`,
   which links to Buy Me a Coffee) on the right, as the game's info and settings buttons. On a computer (over 800px) it
   stays at the window's top as the page scrolls, as the game's top bar does, so Settings is always at hand (2026-11-09):
-  fixed, with `.header-img` keeping its room, so nothing below moves. What sticks to the window's top goes below it
-  (`--hud-strip-height`, 36px, 0 on a phone: the Units and Tomes sidebar `.w3-bar`; `scroll-padding-top`). The layers
+  fixed, with `.header-img` keeping its room, so nothing below moves. What sticks to the window's top stops below it,
+  with the page's 8px margin between, as at the window's sides (`--sticky-top`: `--hud-strip-height`, 36px, plus 8px;
+  0 on a phone): the Units and Tomes sidebar `.w3-bar`, and `scroll-padding-top`. The layers
   over the page: the menu 1000 (a hovered item 1001), the strip 1002, the Faction Creator's and Hero Builder's
   pick-lists (`.selectionsHolder`) 1003, tooltips 1004 (were 1000, 999 for the pick-lists);
 - the banner (`--banner-height`, 100px): the title on the picture, which darkens towards the menu, and under it the

@@ -767,7 +767,7 @@ p {
     display: grid;
     grid-auto-columns: auto;
     position: sticky;
-    top: var(--hud-strip-height); /* below the pinned top strip */
+    top: var(--sticky-top); /* below the pinned top strip */
     z-index: 2;
   scrollbar-color: #15846f black;
   scrollbar-width: thin;
@@ -2129,17 +2129,20 @@ silver {
 /* the banner: the title on the header's picture, between the top strip (header.html) and the menu */
 :root {
     --banner-height: 100px;
-    /* the top strip pinned over the page on a computer (header.html): what sticks to the window's top goes below it */
+    /* the top strip pinned over the page on a computer (header.html), and where what sticks to the window's top stops:
+       below the strip, with the page's 8px margin between them, as at the window's sides */
     --hud-strip-height: 0px;
+    --sticky-top: 0px;
 }
 @media (min-width: 801px) {
     :root {
         --hud-strip-height: 36px;
+        --sticky-top: calc(var(--hud-strip-height) + 8px);
     }
 }
 /* a link to a place on the page scrolls it to below the pinned strip, not under it */
 html {
-    scroll-padding-top: var(--hud-strip-height);
+    scroll-padding-top: var(--sticky-top);
 }
 .header-img {
     position: relative;

@@ -28,6 +28,8 @@ function CheckBoxTooltips() {
     tooltipselectable: checkboxTooltip.checked,
     isolateNumber: checkboxNumbers.checked
   });
+  // the numbers of every text, shown or still to be, take it at once (style.css, .highlight-numbers)
+  document.documentElement.classList.toggle("highlight-numbers", checkboxNumbers.checked);
 }
 
 function CopyField() {

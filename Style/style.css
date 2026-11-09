@@ -767,7 +767,7 @@ p {
     display: grid;
     grid-auto-columns: auto;
     position: sticky;
-    top: 0;
+    top: var(--hud-strip-height); /* below the pinned top strip */
     z-index: 2;
   scrollbar-color: #15846f black;
   scrollbar-width: thin;
@@ -1767,7 +1767,7 @@ hr {
     padding-left: 20px;
     padding-right: 20px;
     position: absolute;
-    z-index: 1000;
+    z-index: 1004; /* over the pinned top strip (header.html) and the pick-lists */
     min-width: 300px;
     max-width: 400px;
     min-height: 40px;
@@ -2129,6 +2129,17 @@ silver {
 /* the banner: the title on the header's picture, between the top strip (header.html) and the menu */
 :root {
     --banner-height: 100px;
+    /* the top strip pinned over the page on a computer (header.html): what sticks to the window's top goes below it */
+    --hud-strip-height: 0px;
+}
+@media (min-width: 801px) {
+    :root {
+        --hud-strip-height: 36px;
+    }
+}
+/* a link to a place on the page scrolls it to below the pinned strip, not under it */
+html {
+    scroll-padding-top: var(--hud-strip-height);
 }
 .header-img {
     position: relative;
@@ -2388,9 +2399,16 @@ silver {
     overflow: hidden;
 }
 
-span.number-highlight {
+/* Highlight Numbers (Settings): a text's numbers are always in these spans, and the setting's class on the page
+   (settings.js) colours them and puts them in brackets, so switching it changes what is already shown */
+.highlight-numbers span.number-highlight {
     color: #f3d451;
-    /* Example: gold color */
+}
+.highlight-numbers span.number-highlight::before {
+    content: "[";
+}
+.highlight-numbers span.number-highlight::after {
+    content: "]";
 }
 
 /* Basic spoiler style */
@@ -2649,7 +2667,7 @@ span.number-highlight {
         overflow-y: auto;
         border-radius: 12px 12px 0 0;
         box-sizing: border-box;
-        z-index: 1001; /* above the selections popup */
+        z-index: 1004; /* above the selections popup */
           /* Smooth out stuttering transitions during zoom */
     transform-origin: bottom left; 
     will-change: transform, top, left, width;

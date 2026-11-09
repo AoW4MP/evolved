@@ -42,7 +42,12 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
 - the game's top strip (`.hud-strip`, `Icons/Interface/HudStrip.jpg`: the sheet's marble on dark teal, a gold line
   under it): the dataset's name ("Silver Seas Dataset") and the "Updated:" date on the left, where the game shows resources; Settings (the
   game's gear icon, `Icons/TML/autocombat.png`; its two settings are `.toggleChip`s) and Donate (to `HTML/Donate.html`,
-  which links to Buy Me a Coffee) on the right, as the game's info and settings buttons;
+  which links to Buy Me a Coffee) on the right, as the game's info and settings buttons. On a computer (over 800px) it
+  stays at the window's top as the page scrolls, as the game's top bar does, so Settings is always at hand (2026-11-09):
+  fixed, with `.header-img` keeping its room, so nothing below moves. What sticks to the window's top goes below it
+  (`--hud-strip-height`, 36px, 0 on a phone: the Units and Tomes sidebar `.w3-bar`; `scroll-padding-top`). The layers
+  over the page: the menu 1000 (a hovered item 1001), the strip 1002, the Faction Creator's and Hero Builder's
+  pick-lists (`.selectionsHolder`) 1003, tooltips 1004 (were 1000, 999 for the pick-lists);
 - the banner (`--banner-height`, 100px): the title on the picture, which darkens towards the menu, and under it the
   current DLC's logo, as upstream shows it (`.dlc-logo`, `Icons/Text/SilverSeasLogo.png`, 250px wide, 170px on a phone).
   The banner was 80px with the title alone; at 100px the tallest page that fit a 1260px-high window still does
@@ -186,6 +191,10 @@ tooltip still repeats its text: none on 2026-11-04 (121 before).
 A status effect's icon by its name in a text is its tag's rule in `Style/icons.css` (`<bleeding></bleeding>`). Chilled
 had none, so it stood bare wherever it's named, as in Afflicted's list among five with icons:
 `Icons/StatusEffects/chilled.png` is its ability icon (`0000049700004447`), as upstream's there are (2026-11-09).
+Highlight Numbers (Settings) changes what is shown when it's switched: `AddTagIconsForStatusEffects` puts a text's
+numbers in `span.number-highlight` whether it's on or not, and `CheckBoxTooltips` puts the class `highlight-numbers` on
+the page, which colours them gold in brackets (`style.css`). Upstream wrapped them only with it on, brackets in the
+text, so the switch changed nothing on a page until it was reloaded (2026-11-09).
 
 `Data/src/tooltips.js`: with Selectable Tooltips on, a link inside a tooltip opens a new tooltip on top (as the game
 does), the ones under it stay; each closes once the mouse is on neither it, one above it, nor the link that opened it.

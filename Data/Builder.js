@@ -12,10 +12,10 @@ const checkboxNumbers = document.getElementById("numbersCheckbox");
 
 // the text's numbers, not those in its tags and entities (a unit link's data-unit="1234", "&#9776;")
 function highlightNumbersInDiv(text) {
-    if (!text) return;
+    if (!text) return text;
 
     text = text.replace(/(<[^>]*>|&#?\w+;)|(?<!\d)([+-]?\d+(?:\.\d+)?%?|%\d+(?:\.\d+)?)(?!-)/g, (match, markup, number) =>
-        markup ? markup : '<span class="number-highlight">[' + number + "]</span>"
+        markup ? markup : '<span class="number-highlight">' + number + "</span>"
     );
     return text;
 }
@@ -362,9 +362,8 @@ function AddTagIconsForStatusEffects(text, onlyGameLinks = false) {
 
     text = LinksElsewhere(text, source);
 
-    if (getUserSettings().isolateNumber) {
-        text = highlightNumbersInDiv(text);
-    }
+    // in their spans whether Highlight Numbers is on or not: the setting's class shows them (style.css)
+    text = highlightNumbersInDiv(text);
 
     text = RebuildBulletLists(text);
     text = text.replaceAll("<br></br>", "<br>");

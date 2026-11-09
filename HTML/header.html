@@ -765,8 +765,9 @@
            with a gold line under it, the full width of the window */
         .hud-strip {
             position: relative;
-            /* the settings open over the menu bar (its items are at 1000) */
-            z-index: 1001;
+            /* the settings open over the menu bar (its items are at 1000, a hovered one at 1001), and the pinned strip
+               stays over it as it scrolls under; the pick-lists (1003) and tooltips (1004) go over the strip */
+            z-index: 1002;
             margin: -8px -8px 0; /* over the body's margin */
             height: 34px;
             display: flex;
@@ -865,6 +866,22 @@
 
         .dropdown:hover .dropdown-content {
             display: flex;
+        }
+
+        /* on a computer the strip stays at the window's top as the page scrolls, as the game's top bar stays on
+           screen, so Settings is always at hand. The header keeps its room: the strip's 36px (--hud-strip-height,
+           style.css) less the body's 8px margin it used to lie over */
+        @media (min-width: 801px) {
+            .hud-strip {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0;
+            }
+            .header-img {
+                padding-top: calc(var(--hud-strip-height) - 8px);
+            }
         }
 
         /* on a phone the strip holds just the facts, clear of the ☰ button and under it and the open menu

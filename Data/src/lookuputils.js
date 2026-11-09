@@ -387,7 +387,8 @@ function SpawnSetName(set) {
 // Each unit's chance of being summoned: its share of the list, whose repeats make a unit likelier. A recruit (offer: from
 // SpellBook.json's offers) lets the player choose from a few of the list, so the chance is of being among them: drawn one
 // by one, a unit not twice, each by its share times its pick weight (Call Wild Animal's Tier II animals are offered less);
-// a list no longer than the offer is offered whole
+// a list no longer than the offer is offered whole, as the game does (Call Greater Animal on water: its Kraken and Storm
+// Rune Crab, once each)
 function ConvertSpawnTable(input, heading, offer) {
     const tickets = new Map();
     for (const set of input.items) tickets.set(set, (tickets.get(set) || 0) + 1);

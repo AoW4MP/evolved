@@ -420,7 +420,9 @@ Animal, Fight for Power) offers a few of its list to choose from, so its chances
 Recruit Options, 3 by default; Call Wild Animal's default land 4) and the pick weights of its Recruitment Settings
 (`pick_weights` in `spells.py`: Call Wild Animal's Tier II animals 75, those that Evolve 40, the others 100). A list no
 longer than the offer is offered whole, 100% each (Call Greater Animal's lands but the default, 75% there). How the game
-draws them is not in the data: the site takes them one by one, a unit not twice, each by share × weight.
+draws them is not in the data: the site takes them one by one, a unit not twice, each by share × weight. That a unit is
+not offered twice was tried in the game (2026-11-09): Call Greater Animal on water offers its Kraken and Storm Rune Crab
+once each, two cards for its three options, and no cast of it or Call Wild Animal showed a unit twice.
 A tooltip's background is scaled to the box (`background-size: cover`, as the cards'): tiled at its 650px, a taller one
 (Call Greater Animal's spawn chances) began the picture's lighter top again near its foot.
 `Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).

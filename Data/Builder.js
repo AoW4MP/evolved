@@ -5002,7 +5002,8 @@ function showUnitUnlock(a, divOrigin) {
 
 const SpellDuplicateExclusionList = []; // [4514010629343, 4514010628856];
 
-// the chances of a spell that summons a random unit, a list per land; null for the others
+// the chances of a spell that summons a random unit, a list per land; null for the others. Its spawnset is what a
+// category's name says after it ("RAISE_UNDEAD_ARMY_T3_CAT": T3)
 function SpellSpawnChances(id) {
     const Pairs = [
         { id: "call_wild_animal", spawnset: "SUMMON_WILD_ANIMAL" },
@@ -5014,10 +5015,12 @@ function SpellSpawnChances(id) {
     ];
     const match = Pairs.find((p) => p.id === id);
     if (!match) return null;
-    const related = jsonSpawnTables.filter((t) => t.category.startsWith(match.spawnset + "_"));
-    if (id === "call_greater_animal") {
-        related.push(...jsonSpawnTables.filter((t) => t.category.startsWith("SUMMON_GREATER_GREATER_ANIMAL_CAT")));
-    }
+    // the categories its summons draw from (SpellBook.json's spawns, aow4_diff_tools/spells.py), not every one of its name:
+    // the game keeps those no effect uses (with the mod, Raise Undead Army's Low and Mid, Awaken the Forest's Low; Summon
+    // Elemental's Signature)
+    const spawns = jsonSpellBook.spells.find((s) => s.id === id)?.spawns || [];
+    const related = jsonSpawnTables.filter((t) => spawns.includes(t.category));
+    if (!related.length) return null;
     // several resources can share a category: all their items together
     const results = [];
     for (const entry of related) {

@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-05 21:10",
- "build": "exe of 2026-11-05",
+ "generated": "2026-11-09 13:53",
+ "build": "exe of 2026-11-06",
  "mod": "AoW 4 Evolved",
  "spells": [
   {
@@ -25,6 +25,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Has a base 120% chance of becoming Pacified for 1 <turn></turn> Turn.</bullet><bullet>Chance decreases based on target's lost <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -74,6 +75,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -118,6 +120,9 @@
    "requisites": [],
    "units": [
     "magma_spirit"
+   ],
+   "spawns": [
+    "SUMMON_MAGMA_SPIRIT_CAT"
    ],
    "sources": [
     {
@@ -168,6 +173,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -217,6 +223,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -267,6 +274,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -311,6 +319,7 @@
    "description": "Enemy units in a 2 hex radius:<bulletlist><bullet>Sustain 8 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 8 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer Ghostfire.</bullet><bullet>Are pulled towards the target location.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -361,6 +370,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -407,6 +417,7 @@
    "description": "Channel the Age of Astral to reach the <hyperlink>Magic Victory</hyperlink>. While channeling:<bulletlist><bullet>Your <arcana></arcana> <hyperlink>Astral Affinity</hyperlink> <hyperlink>Spells</hyperlink> cost -20% <mana></mana> <hyperlink>Mana</hyperlink>, <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>, and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Each turn in combat, a random enemy takes 15 mixed Fire, Lightning, and Frost, damage and gets 2 Sundered Resistance and 2 Status Vulnerability.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -447,6 +458,7 @@
    "description": "Channel the Age of Chaos to reach the <hyperlink>Magic Victory</hyperlink>. While channeling:<bulletlist><bullet>Your <chaos></chaos> <hyperlink>Chaos Affinity</hyperlink> <hyperlink>Spells</hyperlink> cost -20% <mana></mana> <hyperlink>Mana</hyperlink>, <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>, and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Each <turn></turn> Turn in combat, a random enemy unit sustains 15 damage of a random type and has a base 90% chance of receiving a random <hyperlink>Negative Status Effect</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -487,6 +499,7 @@
    "description": "Channel the Age of Materium to reach the <hyperlink>Magic Victory</hyperlink>. While channeling:<bulletlist><bullet>Your <matter></matter> <hyperlink>Materium Affinity</hyperlink> <hyperlink>Spells</hyperlink> cost -20% <mana></mana> <hyperlink>Mana</hyperlink>, <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>, and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Each turn in combat, a friendly unit gains Bolstered Defense and Bolstered Resistance. Repeats 2-4 times.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -527,6 +540,7 @@
    "description": "Channel the Age of Nature to reach the <hyperlink>Magic Victory</hyperlink>. While channeling:<bulletlist><bullet>Your <nature></nature> <hyperlink>Nature Affinity</hyperlink> <hyperlink>Spells</hyperlink> cost -20% <mana></mana> <hyperlink>Mana</hyperlink>, <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>, and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Every 2 turns in combat, a Tier II-III nature unit is summoned on your side.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -567,6 +581,7 @@
    "description": "Channel the Age of Order to reach the <hyperlink>Magic Victory</hyperlink>. While channeling:<bulletlist><bullet>Your <order></order> <hyperlink>Order Affinity</hyperlink> <hyperlink>Spells</hyperlink> cost -20% <mana></mana> <hyperlink>Mana</hyperlink>, <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>, and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Each turn in combat, a random ally gains 3 random <hyperlink>Positive Status Effects</hyperlink> and loses all <hyperlink>Negative Status Effects</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -607,6 +622,7 @@
    "description": "Channel the Age of Shadow to reach the <hyperlink>Magic Victory</hyperlink>. While channeling:<bulletlist><bullet>Your <shadow></shadow> <hyperlink>Shadow Affinity</hyperlink> <hyperlink>Spells</hyperlink> cost -20% <mana></mana> <hyperlink>Mana</hyperlink>, <caststrategic></caststrategic> <hyperlink>World Map Casting Points</hyperlink>, and <optactical></optactical> <hyperlink> Combat Casting Points</hyperlink>.</bullet><bullet>Each turn in combat, a random corpse is reanimated as a <hyperlink>Decaying Zombie</hyperlink> until the end of combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -643,6 +659,7 @@
    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 30 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet><bullet>Have a base 90% chance of gaining 3 stacks of Torment until end of combat. On failure, inflict 1 stack of Torment instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -689,6 +706,7 @@
    "description": "Target owned city gains:<bulletlist><bullet>+20 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -736,6 +754,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -777,6 +796,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Mire Crocodile is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -814,6 +834,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Storm Crow is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -851,6 +872,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Glacial Mammoth is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -888,6 +910,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Ash Sabertooth is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -925,6 +948,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Dune Serpent is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -962,6 +986,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Tunneling Spider is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -999,6 +1024,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If Fury of the Sylvan Wolf is active, heal twice the amount.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1036,6 +1062,7 @@
    "description": "Turns the target race into angelic beings, granting them:<bulletlist><bullet>The Celestial unit type.</bullet><bullet>Flying Movement, which increases mobility.</bullet><bullet>Faithful, which reduces <hyperlink>Unit Upkeep</hyperlink>.</bullet><bullet>Decreased number of units in formation.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1077,6 +1104,7 @@
    "description": "Makes the target race more bestial and connected to animals. When adjacent to a friendly Animal, both units are granted:<bulletlist><bullet>+10% damage</bullet><bullet>+10% <crit></crit>Critical Hit Chance</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1120,6 +1148,9 @@
    "units": [
     "floral_stinger"
    ],
+   "spawns": [
+    "FLORAL_STINGER_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -1161,6 +1192,7 @@
    "description": "Gives the target race divine protection, granting them:<bulletlist><bullet>+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet><bullet>+3 <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1202,6 +1234,7 @@
    "description": "All allied units gain:<bulletlist><bullet>3 Strengthened.</bullet><bullet>+15 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1243,6 +1276,7 @@
    "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Have 2 <hyperlink>Negative Status Effects</hyperlink> dispelled.</bullet><bullet>Gain 2 Status Protection.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1286,6 +1320,7 @@
    "description": "Target enemy Magic Origin unit has a base 90% chance of becoming Dominated for 2 <turn></turn> Turns.<br></br><br></br>If unsuccessful, deals 30 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> instead.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1327,6 +1362,7 @@
    "description": "Target friendly unit heals 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -1360,6 +1396,7 @@
    "description": "Heals all friendly Magic Origin units +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1401,6 +1438,7 @@
    "description": "For 10 <turn></turn> Turns, target owned city:<bulletlist><bullet>Contributes 1 <hyperlink>Arcane Inspiration</hyperlink> to a random spell each <turn></turn> Turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1438,6 +1476,7 @@
    "description": "For 3 <turn></turn> Turns, target friendly Magic Origin unit gains:<bulletlist><bullet>5 Strengthened</bullet><bullet>3 Bolstered Defense</bullet><bullet>3 Bolstered Resistance</bullet><bullet>Static Charge</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1479,6 +1518,7 @@
    "description": "Units in target army heal 30 <hyperlink><hp></hp> Hit Points</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1520,6 +1560,7 @@
    "description": "Up to 40 random <hyperlink>Provinces</hyperlink> gain an Ice Age Hazard. At the start of the next turn, those hazards expire and:<bulletlist><bullet>Enemy units sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Provinces are destroyed.</bullet></bulletlist><bullet>The province:<bulletlist></bullet><bullet>Gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -1560,6 +1601,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1601,6 +1643,9 @@
    "description": "Target dead non-Hero and non-Celestial unit:<bulletlist><bullet>Revives as a <hyperlink>Vigil</hyperlink> under the caster's control until the end of combat.</bullet><bullet>On revive, all friendly units in a 2-hex radius are healed for 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "SUMMON_ARCHON_ANGEL_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -1642,6 +1687,7 @@
    "description": "Non-Hero units in target army gain 1 Rank.<br></br><br></br>Cannot promote units above Legendary rank.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1689,6 +1735,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1730,6 +1777,7 @@
    "description": "Links the target race to the Astral Sea, granting them:<bulletlist><bullet>The Ethereal unit type.</bullet><bullet>Attunement: Astral Omen, granting a random <hyperlink>Positive Status Effect</hyperlink> when a spell is cast in combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1771,6 +1819,7 @@
    "description": "Makes magic begin to flow through the veins of the target race, granting them:<bulletlist><bullet>Attunement: Fortune, which increases <hyperlink><crit></crit>Critical Hit Chance</hyperlink> when spells are cast.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1812,6 +1861,7 @@
    "description": "Create and reveal new <hyperlink>Astral Echoes</hyperlink> in provinces near your domain.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1859,6 +1909,9 @@
    "units": [
     "astral_keeper"
    ],
+   "spawns": [
+    "ASTRAL_KEEPER_RITUAL_CAT"
+   ],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -1897,6 +1950,7 @@
    "description": "Units and Cities you control gain +7 Vision Range.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1939,6 +1993,7 @@
    "description": "Target Magic Origin <hyperlink>Unit</hyperlink>:<bulletlist><bullet>Has a base 90% chance of being killed.</bullet><bullet>If unsuccessful, inflicts Disrupted and 4 stacks of Decaying.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -1982,6 +2037,9 @@
    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink> and no <hyperlink>Ancient Wonder</hyperlink>, it becomes ruins.</bullet><bullet>Spawns a powerful marauding <hyperlink>Army</hyperlink> of Astral Sea <hyperlink>Units</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "ASTRAL_SHATTERING_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -2025,6 +2083,9 @@
    "units": [
     "astral_siphoner"
    ],
+   "spawns": [
+    "ASTRAL_SIPHONER_RITUAL_CAT"
+   ],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -2060,6 +2121,7 @@
    "description": "Makes your leader teleport to the target world hex.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2101,6 +2163,7 @@
    "description": "All enemy units suffer Wet until the end of battle.<br></br><br></br>In addition, after 5 <turn></turn> <hyperlink>Turns</hyperlink>, all enemy units that are Wet suffer 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink> and have a 60%% chance of suffering Stunned.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -2135,6 +2198,7 @@
    "description": "Friendly units in a 1-hex radius become Awakened for 3 <turn></turn> Turns.<br></br>If already Awakened, a unit gains Strengthened instead.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2173,6 +2237,7 @@
    "description": "All friendly units in a 2-hex radius:<bulletlist><bullet>Heal +25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Regain all <hyperlink>Action Points</hyperlink>.</bullet><bullet>Become Berserk for 2 <turn></turn> Turns.</bullet></bulletlist><br></br>Does not affect units with <hyperlink>Control Loss Immunity</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2220,6 +2285,9 @@
     "goretusk_matriarch",
     "entwined_scourge"
    ],
+   "spawns": [
+    "AWAKEN_THE_FOREST_MID_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -2266,6 +2334,7 @@
    "description": "Target owned city has:<bulletlist><bullet>+20 <structureprod></structureprod> <hyperlink>Production</hyperlink></bullet><bullet>+20 <unitprod></unitprod> <hyperlink>Draft</hyperlink></bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2307,6 +2376,7 @@
    "description": "Enemy units in a 1-hex radius gain:<bulletlist><bullet>Base 90% chance of inflicting 2 Weakened for 3 <turn></turn> Turns.</bullet><bullet>Base 90% chance of inflicting 2 Misfortune for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2344,6 +2414,7 @@
    "description": "Target habitable and unowned water <hyperlink>Province</hyperlink> which does not contain an <hyperlink>Ancient Wonder</hyperlink> or <hyperlink>Infestation Spawner</hyperlink>:<bulletlist><bullet>Is terraformed to <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink>.</bullet><bullet>Loses all <hyperlink>Resource Nodes</hyperlink> and <hyperlink>Magic Materials</hyperlink> on it.</bullet><bullet>Has a chance of spawning its own <hyperlink>Resource Node</hyperlink> or <hyperlink>Magic Material</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [],
    "tier": null,
    "affinities": [],
@@ -2383,6 +2454,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2420,6 +2492,7 @@
    "description": "When cast and for the next 2 <turn></turn> Turns, apply effect to the battle in the following order:<bulletlist><bullet>All friendly units gain +25% <hyperlink>Evasion</hyperlink> for the turn.</bullet><bullet>All friendly units gain Precognition.</bullet><bullet>All friendly units gain +20% damage for the turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2463,6 +2536,9 @@
    "description": "<bulletlist><bullet>All friendly Undead units come back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Non-undead corpses come back to life as <hyperlink>Decaying Zombies</hyperlink> under your control until the end of battle.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "BATTLEFIELD_REANIMATION_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -2506,6 +2582,9 @@
    "units": [
     "feylor"
    ],
+   "spawns": [
+    "FEY_ABOMINATION_UNIT_CAT"
+   ],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -2542,6 +2621,7 @@
    "description": "<bulletlist><bullet>Enemies in a 1-hex radius:</bullet><bullet>Become Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Become Mana Drained for 1 <turn></turn> Turn.</bullet></bulletlist><bulletlist><bullet>Additionally:</bullet><bullet>All active combat enchantments are dispelled.</bullet><bullet>For the next 2 <turn></turn> Turns, Combat Spells cannot be cast.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -2578,6 +2658,7 @@
    "description": "<bulletlist><bullet>Target owned and annexed Gold <siteGold></siteGold> <hyperlink>Ancient Wonder</hyperlink> becomes bound.</bullet><bullet>While bound, it grants +50 <knowledge></knowledge>.</bullet><bullet>A number of bound Golden Ancient Wonders are required for <hyperlink>Magic Victory</hyperlink>.</bullet><bullet>This spell is canceled if the Bound Ancient Wonder is occupied or changes ownership.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Magic Victory",
@@ -2616,6 +2697,7 @@
    "description": "Puts the Leviathan Landmark next to the target city into dormant state, deactivating its adjacency effects. As the crisis progresses, once all Landmarks have been revealed, a bound Leviathan Landmark may be woken up again, disengaging this spell.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [],
    "tier": null,
    "affinities": [],
@@ -2649,6 +2731,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2690,6 +2773,7 @@
    "description": "Target enemy unit suffers:<bulletlist><bullet>25 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>+5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> for each adjacent friendly unit</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2738,6 +2822,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2787,6 +2872,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2835,6 +2921,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2876,6 +2963,7 @@
    "description": "All units in target enemy army:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Suffer -1 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink> for 1 World Map <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2923,6 +3011,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -2966,6 +3055,7 @@
    "description": "For the next 10 <hyperlink>World Map</hyperlink> <turn></turn> Turns Vampires:<bulletlist><bullet>Don't suffer from Sunlight Weakness.</bullet><bullet>+15 <hyperlink><hp></hp> Hit Points</hyperlink> regeneration on the World Map.</bullet><bullet>Gain +20% damage.</bullet><bullet>Gain +2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -2999,6 +3089,7 @@
    "description": "In target friendly army:<bulletlist><bullet>Heal Vampires for 50% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Heal non-Vampires for 20% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -3040,6 +3131,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3087,6 +3179,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3129,6 +3222,7 @@
    "description": "Friendly units in a 2-hex radius:<bulletlist><bullet>Heal +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 3 Regeneration.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3171,6 +3265,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 2 Bolstered Defense.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3209,6 +3304,9 @@
    "requisites": [],
    "units": [
     "bone_dragon"
+   ],
+   "spawns": [
+    "BONE_DRAGON_CAT"
    ],
    "sources": [
     {
@@ -3262,6 +3360,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3304,6 +3403,7 @@
    "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Coastal <hyperlink>Province Improvement</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3347,6 +3447,7 @@
    "description": "Transformed units become stronger and more battle ready gaining:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>+10% <happiness></happiness> <hyperlink>Morale</hyperlink> resistance to morale loss, plus +10% for each adjacent friendly unit.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3395,6 +3496,7 @@
    "description": "Target <hyperlink>Infestation</hyperlink> becomes neutral towards you and will not launch attacks against you for 10 <turn></turn> <hyperlink>Turns</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3432,6 +3534,7 @@
    "description": "Target enemy Unit:<bulletlist><bullet>Has 120% chance of suffering Burning for 3 <turn></turn> <hyperlink>Turns</hyperlink>.<bulletlist></bullet><bullet>This effect repeats 5 times.</bullet></bulletlist><bullet>Suffers Immobilized and Pacified for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Landmark",
@@ -3478,6 +3581,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3515,6 +3619,7 @@
    "description": "All units in target enemy army gain 3 Remorse for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3556,6 +3661,7 @@
    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Enemy units take 8 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>All Wet units have a 90% chance of becoming Frozen for 1 turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -3590,6 +3696,7 @@
    "description": "For 3 turns, at the start of your turn, a random enemy unit:<bulletlist><bullet>Takes 15 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Becomes Diseased.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -3624,6 +3731,7 @@
    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Each enemy unit has a 60% chance of becoming Blind for 1 turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -3658,6 +3766,7 @@
    "description": "Summons an avatar of your <hyperlink>Ruler</hyperlink> into a battle. The avatar has the same abilities as your Ruler and spawns with full <hyperlink>Action Points</hyperlink>. All Fiends gain +10 <happiness></happiness> <hyperlink>Morale</hyperlink>.<br></br><br></br>Cannot be used in battles where your <hyperlink>Ruler</hyperlink> is present.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3699,6 +3808,7 @@
    "description": "Every turn in combat, all enemy units have a 50% chance of becoming Immobilized for 3 turns.<br></br><br></br>Lasts for 3 turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -3745,6 +3855,17 @@
     "storm_rune_crab",
     "fractured_worm"
    ],
+   "spawns": [
+    "SUMMON_GREATER_WILD_ANIMAL_COLD_CAT",
+    "SUMMON_GREATER_GREATER_ANIMAL_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_UNDERGROUND_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_FIRE_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_WATER_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_UNDERGROUND_FIRE_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_UNDERGROUND_ICE_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_SUNLESS_CAT",
+    "SUMMON_GREATER_WILD_ANIMAL_BARREN_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -3787,6 +3908,9 @@
    "requisites": [],
    "units": [
     "militia"
+   ],
+   "spawns": [
+    "FEUDAL_MILITIA_UNIT_CAT"
    ],
    "sources": [
     {
@@ -3833,6 +3957,7 @@
    "description": "Friendly Animal and Cavalry units in a 1-hex radius gain:<bulletlist><bullet>2 Bolstered Defense</bullet><bullet>2 Strengthened</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3876,6 +4001,9 @@
    "units": [
     "earth_titan"
    ],
+   "spawns": [
+    "EARTH_TITAN_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -3917,6 +4045,7 @@
    "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>All units become Wet.</bullet><bullet>1 random units take 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -3951,6 +4080,7 @@
    "description": "For 3 <turn></turn> <hyperlink>Turns</hyperlink> all friendly units gain:<bulletlist><bullet>+5 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of your <turn></turn> <hyperlink>Turn</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -3996,6 +4126,7 @@
    "description": "For 3 turns, at the start of your turn, a marker is placed near an enemy. Then, after 3 <turn></turn> the ground will erupt, and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>. Random affected hexes will gain <hyperlink>On Fire</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -4064,6 +4195,17 @@
     "plague_serpent",
     "fractured_serpent"
    ],
+   "spawns": [
+    "SUMMON_WILD_ANIMAL_COLD_CAT",
+    "SUMMON_WILD_ANIMAL_FIRE_CAT",
+    "SUMMON_WILD_ANIMAL_UNDERGROUND_CAT",
+    "SUMMON_WILD_ANIMAL_DEFAULT_CAT",
+    "SUMMON_WILD_ANIMAL_WATER_CAT",
+    "SUMMON_WILD_ANIMAL_UNDERGROUND_FIRE_CAT",
+    "SUMMON_WILD_ANIMAL_UNDERGROUND_ICE_CAT",
+    "SUMMON_WILD_ANIMAL_SUNLESS_CAT",
+    "SUMMON_WILD_ANIMAL_ASTRAL_BARREN_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -4110,6 +4252,9 @@
     "young_golden_dragon",
     "young_obsidian_dragon"
    ],
+   "spawns": [
+    "SUMMON_YOUNG_DRAGON_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -4153,6 +4298,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Becomes Distracted for 1 <turn></turn> Turn.</bullet><bullet>Has its <hyperlink>Defense Mode</hyperlink> canceled.</bullet><bullet>Has its <hyperlink>Retaliation Attacks</hyperlink> removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4196,6 +4342,7 @@
    "description": "Target friendly Construct or Linked Minds unit: <bulletlist><bullet>Gains Defensive Masters for 1 <turn></turn> Turn.</bullet><bullet>Has 2 <hyperlink>Negative Status Effects</hyperlink> dispelled.</bullet><bullet>This effect then applies to adjacent friendly Construct or Linked Mind units and is repeated.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4239,6 +4386,7 @@
    "description": "Target friendly Construct or Linked Minds unit gains:<bulletlist><bullet>Hastened</bullet><bullet>Strengthened</bullet><bullet>This effect then cascades to adjacent friendly Construct or Linked Mind units and is repeated.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4287,6 +4435,7 @@
    "description": "Whenever you cast a spell in Tactical Combat, add a Stack of Cascading Power to that combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4328,6 +4477,7 @@
    "description": "Target friendly army loses all their movement points then heals by 1 <hyperlink><hp></hp> Hit Point</hyperlink> per movement point lost.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4371,6 +4521,7 @@
    "description": "Enemies in a 1-hex radius have a base 90% chance of losing -15 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4412,6 +4563,7 @@
    "description": "Target leader of an army gains Celestial Guardians for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn, conjuring 2 Tier III Archon units at the start of combat for the duration.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4454,6 +4606,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 30 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Is inflicted with 2 Electrified.</bullet><bullet>This effect passes on to another enemy within 3 hexes.</bullet><bullet>Passes on up to 2 times.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4506,6 +4659,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4543,6 +4697,7 @@
    "description": "<bulletlist><bullet>A random non-hero enemy in target army deserts its ranks.</bullet><bullet>You may acquire it for an additional <mana></mana> <hyperlink>Mana</hyperlink> cost.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -4590,6 +4745,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4632,6 +4788,7 @@
    "description": "Target owned city or non-hostile free city:<bulletlist><bullet>Gains +10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Gains +10 <garrison></garrison><hyperlink>Fortification Health</hyperlink> if not under siege.</bullet><bullet>If targeting a free city with an owned <whisperingStone></whisperingStone> <hyperlink>Whispering Stone</hyperlink>, gain +2 <hyperlink><allegiance></allegiance>Allegiance</hyperlink> per turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4675,6 +4832,7 @@
    "description": "Reveals the closest undiscovered <hyperlink>Infestation</hyperlink> or <hyperlink>Ancient Wonder</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -4709,6 +4867,7 @@
    "description": "Units in a 2-hex radius:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a 50% base chance of becoming Frozen for 1 <turn></turn> Turn.</bullet><bullet>Gain 2 stacks of Ghostfire for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4752,6 +4911,7 @@
    "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gain 15 <happiness></happiness> <hyperlink>Morale</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4801,6 +4961,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4844,6 +5005,7 @@
    "description": "All units in target enemy army:<bulletlist><bullet>Become Condemned for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet><bullet>Suffer -2 <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4886,6 +5048,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Becomes Condemned until the end of battle.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -4928,6 +5091,9 @@
    "requisites": [],
    "units": [
     "abjurer_pylon"
+   ],
+   "spawns": [
+    "CONJURE_ABJURER_PYLON_CAT"
    ],
    "sources": [
     {
@@ -4972,6 +5138,7 @@
    "description": "Conjure the Adventurer <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5010,6 +5177,9 @@
    "requisites": [],
    "units": [
     "amplification_pylon"
+   ],
+   "spawns": [
+    "AMPLIFICATION_PYLON_CAT"
    ],
    "sources": [
     {
@@ -5054,6 +5224,9 @@
    "units": [
     "astral_keeper"
    ],
+   "spawns": [
+    "SUMMON_ASTRAL_KEEPER_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5097,6 +5270,9 @@
    "units": [
     "astral_ward"
    ],
+   "spawns": [
+    "CONJURE_ASTRAL_WARD_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5134,6 +5310,7 @@
    "description": "Conjure the Demonic <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5172,6 +5349,9 @@
    "requisites": [],
    "units": [
     "divine_beacon"
+   ],
+   "spawns": [
+    "DIVINE_BEACON_CAT"
    ],
    "sources": [
     {
@@ -5216,6 +5396,9 @@
    "units": [
     "lesser_storm_spirit"
    ],
+   "spawns": [
+    "CONJURE_LESSER_STORM_SPIRIT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5254,6 +5437,9 @@
    "requisites": [],
    "units": [
     "lesser_magma_spirit"
+   ],
+   "spawns": [
+    "CONJURE_LESSER_MAGMA_SPIRIT"
    ],
    "sources": [
     {
@@ -5294,6 +5480,9 @@
    "units": [
     "lesser_stone_spirit"
    ],
+   "spawns": [
+    "CONJURE_LESSER_STONE_SPIRIT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5332,6 +5521,9 @@
    "requisites": [],
    "units": [
     "lesser_tide_spirit"
+   ],
+   "spawns": [
+    "CONJURE_LESSER_TIDE_SPIRIT"
    ],
    "sources": [
     {
@@ -5372,6 +5564,9 @@
    "units": [
     "lesser_light_spirit"
    ],
+   "spawns": [
+    "CONJURE_LIGHT_SPIRIT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5411,6 +5606,9 @@
    "units": [
     "lesser_snow_spirit"
    ],
+   "spawns": [
+    "CONJURE_LESSER_SNOW_SPIRIT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5448,6 +5646,7 @@
    "description": "Conjure the Family <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5485,6 +5684,7 @@
    "description": "Conjure the Gold-Cursed <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5522,6 +5722,7 @@
    "description": "Conjure the Maniac-Hunter <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5560,6 +5761,9 @@
    "requisites": [],
    "units": [
     "orb_of_desire"
+   ],
+   "spawns": [
+    "CONJURE_ORB_OF_DESIRE_CAT"
    ],
    "sources": [
     {
@@ -5604,6 +5808,9 @@
    "units": [
     "pirate_cannon_tower"
    ],
+   "spawns": [
+    "PIRATE_CANNON_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5642,6 +5849,9 @@
    "requisites": [],
    "units": [
     "primal_crocodile"
+   ],
+   "spawns": [
+    "CONJURE_PRIMAL_CROCODILE"
    ],
    "sources": [
     {
@@ -5682,6 +5892,9 @@
    "units": [
     "primal_crow"
    ],
+   "spawns": [
+    "CONJURE_PRIMAL_CROW"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5720,6 +5933,9 @@
    "requisites": [],
    "units": [
     "primal_mammoth"
+   ],
+   "spawns": [
+    "CONJURE_PRIMAL_MAMMOTH"
    ],
    "sources": [
     {
@@ -5760,6 +5976,9 @@
    "units": [
     "primal_sabertooth"
    ],
+   "spawns": [
+    "CONJURE_PRIMAL_SABERTOOTH"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5798,6 +6017,9 @@
    "requisites": [],
    "units": [
     "primal_serpent"
+   ],
+   "spawns": [
+    "CONJURE_PRIMAL_SERPENT"
    ],
    "sources": [
     {
@@ -5838,6 +6060,9 @@
    "units": [
     "primal_spider"
    ],
+   "spawns": [
+    "CONJURE_PRIMAL_SPIDER"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5877,6 +6102,9 @@
    "units": [
     "primal_wolf"
    ],
+   "spawns": [
+    "CONJURE_PRIMAL_WOLF"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -5914,6 +6142,7 @@
    "description": "Conjure the Protector <hyperlink>Free Captain</hyperlink> into combat as a Combat Summon. Cannot be used when that captain is already in combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5951,6 +6180,7 @@
    "description": "Conjures a Spellward on an empty hex in the target <hyperlink>Province</hyperlink>. This structure:<bulletlist><bullet>Functions as a <spelljammer></spelljammer> <hyperlink>Spell Jammer</hyperlink> for this and adjacent provinces.</bullet><bullet>Provides vision in 4-hex radius.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -5994,6 +6224,7 @@
    "description": "Conjures a Summoning Rift on an empty hex in the target <hyperlink>Province</hyperlink>. This structure:<bulletlist><bullet>Allows summoning spells to be cast on or adjacent to it.</bullet><bullet>Provides vision in 5-hex radius.</bullet><bullet>Units in this province gain <hyperlink>regenerate</hyperlink> +15 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>During combat in this province friendly <casttactical></casttactical> Combat Summon Spells are 20% cheaper to cast.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6032,6 +6263,9 @@
    "requisites": [],
    "units": [
     "tentacle"
+   ],
+   "spawns": [
+    "TENTACLE_CAT"
    ],
    "sources": [
     {
@@ -6077,6 +6311,9 @@
    "requisites": [],
    "units": [
     "weaver_spider"
+   ],
+   "spawns": [
+    "CONJURE_WEAVER_SPIDERS_CAT"
    ],
    "sources": [
     {
@@ -6126,6 +6363,7 @@
    "description": "Target friendly City, friendly units in the Domain gain:<bulletlist><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+20 <happiness></happiness> <hyperlink>Morale</hyperlink> at the start of battle.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6167,6 +6405,7 @@
    "description": "In target <hyperlink>Province</hyperlink>:<bulletlist><bullet>The province gains Consecrating Firestorm for 3 <turn></turn> Turns</bullet><bullet>If it has an enemy owned <hyperlink>Province Improvement</hyperlink>, it is <hyperlink>Pillaged</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6215,6 +6454,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6258,6 +6498,7 @@
    "description": "Place a Pirate Cove <hyperlink>Infestation</hyperlink> on target water province. It is neutral towards you.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6300,6 +6541,7 @@
    "description": "Target Free City:<bulletlist><bullet>Has its <hyperlink>Relations</hyperlink> to other rulers reduced by 200.</bullet><bullet>50% of its <food></food> <hyperlink>Food</hyperlink> income is given to your cities.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6341,6 +6583,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Loses all <hyperlink>Positive Status Effects</hyperlink>.</bullet><bullet>If a lost status effect has any Status Effects Countering, then the unit gains a stack of that <hyperlink>Negative Status Effect</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6384,6 +6627,7 @@
    "description": "Target unit sustains:<bulletlist><bullet>10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink></bullet><bullet>10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink></bullet><bullet>10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6421,6 +6665,7 @@
    "description": "<bulletlist><bullet>Requires target owned <hyperlink>City</hyperlink> with 3 or more <hyperlink>Provinces</hyperlink> in its <hyperlink>Domain</hyperlink> adjacent to the Broken Wizard's Throne.</bullet><bullet>Each City can only be targeted once by this Spell.</bullet><bullet>Immediately unlocks a random <hyperlink>Spell</hyperlink> that you do not have access to yet.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Landmark",
@@ -6461,6 +6706,7 @@
     "<unitUmbral></unitUmbral> Umbral Demon"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6502,6 +6748,7 @@
    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink> and no <hyperlink>Ancient Wonder</hyperlink>, it is removed and the <population></population> <hyperlink>Population</hyperlink> is lost.</bullet><bullet>Enemy <hyperlink>Units</hyperlink> in the province sustain 4 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>, <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>, <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>, <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>, <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>, and <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [],
    "tier": null,
    "affinities": [],
@@ -6545,6 +6792,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6596,6 +6844,7 @@
    "description": "Friendly units in a 1-hex radius gain, for 1 <turn></turn> Turn:<bulletlist><bullet>First Strike</bullet><bullet>An extra <hyperlink>Retaliation Attack</hyperlink></bullet><bullet>Defensive Masters</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6649,6 +6898,7 @@
    "description": "Units recruited through <hyperlink>Rally of the Lieges</hyperlink> from the target <hyperlink>Vassal</hyperlink> have Faithful.<br></br>Target Vassal city grants the player +15 <mana></mana> <hyperlink>Mana</hyperlink> each <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6690,6 +6940,7 @@
    "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Forest</hyperlink> on the Surface</bullet><bullet>Gain <hyperlink>Mushroom Forest</hyperlink> in the Underground.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6742,6 +6993,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6790,6 +7042,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6834,6 +7087,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6876,6 +7130,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 50 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Suffers 3 Sundered Defense for 3 <turn></turn> Turns.</bullet><bullet>Has a base 90% chance of becoming Stunned for 1 <turn></turn> Turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6918,6 +7173,7 @@
    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Sustain 15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of inflicting Volatile Charge for 2 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6959,6 +7215,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -6996,6 +7253,13 @@
    "description": "Revive target non-Lithorine non-Hero unit as a Lithorine of its Tier.<br></br><br></br>If victorious in combat, units revived can be kept for a <mana></mana> <hyperlink>Mana</hyperlink> cost.",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "CRYSTALLIZE_ESSENCE_TIER_1_CAT",
+    "CRYSTALLIZE_ESSENCE_TIER_2_CAT",
+    "CRYSTALLIZE_ESSENCE_TIER_3_CAT",
+    "CRYSTALLIZE_ESSENCE_TIER_4_CAT",
+    "CRYSTALLIZE_ESSENCE_TIER_5_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -7033,6 +7297,7 @@
    "description": "Targets in a 2-hex radius suffer 2 Misfortune.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7074,6 +7339,7 @@
    "description": "Target province gains Curse of the Damned for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7117,6 +7383,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Has its negative status effects removed.</bullet><bullet>If the removed status effects have positive <hyperlink>counters</hyperlink>, the unit gains a stack of it.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7165,6 +7432,7 @@
    "description": "All battles that take place in target city's domain gain <abilityblue>Cycle of Seasons</abilityblue>, granting a different effect each battle turn in the following order:<bulletlist><bullet>Winter: All enemies sustain 10 <damageFrost></damageFrost>.</bullet><bullet>Spring: All friendly units become 1 Strengthened.</bullet><bullet>Summer: All friendly units heal +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Autumn: All enemies become 1 Weakened.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7206,6 +7474,7 @@
    "description": "Gain 150 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -7239,6 +7508,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Regains its <hyperlink>Action Points</hyperlink> and Health.</bullet><bullet>Gains Resurgence.</bullet><bullet>Gains Doomed, dying at the end of this turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7277,6 +7547,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 40 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 120% chance of becoming Frozen for 1 <turn></turn> Turn. If resisted, gains 2 Chilled for 3 <turn></turn> Turns.</bullet></bulletlist><br></br>Adjacent enemy units:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen for 1 <turn></turn> Turn. If resisted, gains Chilled for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7318,6 +7589,7 @@
    "description": "Target habitable and unowned land <hyperlink>Province</hyperlink> which does not contain an <hyperlink>Ancient Wonder</hyperlink>, <hyperlink>Landmark</hyperlink>, or <hyperlink>Diggable Earth</hyperlink>:<bulletlist><bullet>Is terraformed to water.</bullet><bullet>Loses all <hyperlink>Resource Nodes</hyperlink> and <hyperlink>Magic Materials</hyperlink> on it.</bullet><bullet>Has a chance of spawning its own <hyperlink>Resource Node</hyperlink> or <hyperlink>Magic Material</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [],
    "tier": null,
    "affinities": [],
@@ -7346,6 +7618,7 @@
    "description": "Target race is charged with infernal forces of gluttony, gaining:<bulletlist><bullet>When killing a non-Combat Summon enemy unit, gain a permanent stack of Gorged which:<bulletlist></bullet><bullet>At 5 stacks turns into a permanent stack of Demonic Satiation.</bullet><bullet>Cannot be gained when Demonic Satiation is at 5 stacks.</bullet></bulletlist><bullet>When pillaging a province, heal for 25% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7387,6 +7660,7 @@
    "description": "All attacking units gain Killing Momentum and Hastened for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7433,6 +7707,7 @@
     "<unitAccursed></unitAccursed> Accursed Fiend"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7483,6 +7758,10 @@
     "chaos_eater",
     "accursed_trickster"
    ],
+   "spawns": [
+    "DEMONIC_SUMMONING_T3_CAT",
+    "DEMONIC_SUMMONING_T4_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -7524,6 +7803,7 @@
    "description": "Turns the target race into demonic beings, which grants them:<bulletlist><bullet>The Infernal Fiend unit type.</bullet><bullet>Flying, increasing mobility.</bullet><bullet>Frenzy, increasing damage as they attack.</bullet><bullet><hyperlink>Cities</hyperlink> of this race ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Chasm and Lava in their <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7565,6 +7845,7 @@
    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>If it contains a <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are granted its rewards and lose <reputation2></reputation2> <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The province loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7613,6 +7894,7 @@
    "description": "Targets a resource node in your domain:<bulletlist><bullet>Node provides +5 <souls></souls> <hyperlink>Souls</hyperlink> income.</bullet><bullet>If you lose the province, the effect stops.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7654,6 +7936,7 @@
    "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Sunless</hyperlink> for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>Enemy armies sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -7687,6 +7970,7 @@
    "description": "Target and adjacent surface <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Sand</hyperlink>.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7730,6 +8014,7 @@
    "description": "Target enemy gains:<bulletlist><bullet>2 Marked</bullet><bullet>Immobilized</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7768,6 +8053,7 @@
    "description": "Units in 2-hex radius are Marked. After 1 <turn></turn> <hyperlink>Turn</hyperlink> the Mana Core explodes inflicting:<bulletlist><bullet>24 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink></bullet><bullet>24 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>60% base chance of receiving Disrupted.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7811,6 +8097,7 @@
    "description": "On Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units sustain 15 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink> and suffer -3 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink> for 2 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it becomes <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You are not granted its rewards nor do you lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7852,6 +8139,7 @@
    "description": "Target Fractured Infestation or Fleeting Fractured Infestation is destroyed, does not grant its rewards.<br></br><br></br>This spell does not contribute to the <hyperlink>Devouring Winds</hyperlink> and cannot <hyperlink>Backfire</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -7888,6 +8176,9 @@
    "description": "Target non-Hero enemy:<bulletlist><bullet>Has a base 90% chance of being transformed into a random Tier I animal until the end of battle.</bullet><bullet>If resisted, inflicts Stunned instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "DEVOLVE_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -7929,6 +8220,7 @@
    "description": "<bulletlist><bullet>Conjures a <hyperlink>Devouring Void</hyperlink> in a 1-hex radius.</bullet><bullet>Each turn, the radius increases by 1 hex.</bullet><bullet>Lasts for 2 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -7970,6 +8262,7 @@
    "description": "Enemy units in a 1-hex radius sustain 10 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.<br></br><br></br>Damage changes based on your <hyperlink>Devotion</hyperlink> level.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8024,6 +8317,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 30 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gains 1 Decaying.</bullet></bulletlist><br></br>Friendly units in a 2-hex range. <bulletlist><bullet>Heal +15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain 1 Regeneration.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8065,6 +8359,7 @@
    "description": "Create <hyperlink>Afflicting Miasma</hyperlink> in a 1-radius.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8108,6 +8403,7 @@
    "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> damage.</bullet><bullet>Are displaced by up to 1 hexes.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled.</bullet><bullet>Have their <hyperlink>Retaliation Attack</hyperlink> removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8158,6 +8454,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8202,6 +8499,7 @@
    "description": "<bulletlist><bullet>Enemy units have a base 120% chance of becoming Disrupted for 2 <turn></turn> Turns.</bullet><bullet>Dispels 3 <hyperlink>Positive Status Effects</hyperlink> from enemies.</bullet><bullet>Dispels 3 <hyperlink>Negative Status Effects</hyperlink> from allies.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8243,6 +8541,7 @@
    "description": "Target <hyperlink>Province</hyperlink> that is marked to be struck by a <hyperlink>Cataclysm</hyperlink> loses its mark and will not be struck next Cataclysm.<br></br><br></br>This spell does not contribute to the <hyperlink>Devouring Winds</hyperlink> and cannot <hyperlink>Backfire</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -8279,6 +8578,7 @@
    "description": "Units in target friendly army gain Resurgence for 1 <turn></turn>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8325,6 +8625,7 @@
    "description": "Target friendly city:<bulletlist><bullet>Has +20 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet><bullet>Friendly Undead units in the domain deal +10% damage.</bullet><bullet>Enemy units in the domain become Soulbound.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8377,6 +8678,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8414,6 +8716,7 @@
    "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Alters terrain to Swamp, if land.</bullet><bullet>Becomes Downpouring for 3 <turn></turn> Turns.</bullet></bulletlist><br></br><br></br>Cannot be used underground.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8457,6 +8760,7 @@
    "description": "Turn target race into Draconians, which grants them:<bulletlist><bullet>Dragon unit type.</bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Natural Regeneration, which makes the unit regain health faster.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8500,6 +8804,7 @@
    "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink> regeneration per <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>+3 <hyperlink><hp></hp> Hit Points</hyperlink> per Unit Rank.</bullet><bullet>+2 <hyperlink><hp></hp> Hit Points</hyperlink> per Hero Level, up to Level 10.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8550,6 +8855,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8597,6 +8903,7 @@
     "<unitSpider></unitSpider> Spider"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8640,6 +8947,7 @@
    "description": "Units in a 2-hex radius:<bulletlist><bullet>Have a base 90% chance of becoming Immobilized for 1 <turn></turn> Turn.</bullet><bullet>Gain 2 Remorse for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8683,6 +8991,7 @@
    "description": "Target race becomes one with the desert, granting them:<bulletlist><bullet>Sand Walk</bullet><bullet>Sand Camouflage</bullet><bullet>When on <hyperlink>Sand</hyperlink> terrain gain:<bulletlist></bullet><bullet>Fast Movement</bullet><bullet>+20% <hyperlink><flank></flank> Flanking</hyperlink> damage</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8726,6 +9035,7 @@
    "description": "All units in target enemy army suffer -2 <defensephysical></defensephysical> <hyperlink>Physical Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8768,6 +9078,7 @@
    "description": "Enemy units in a 2-hex radius:<bulletlist><bullet>Sustain 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Blind for 1 <turn></turn> Turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8811,6 +9122,9 @@
    "units": [
     "stone_spirit"
    ],
+   "spawns": [
+    "EARTH_SHATTER_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -8852,6 +9166,7 @@
    "description": "Makes rock growths develop on the target race, granting them:<bulletlist><bullet>+1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet><bullet>Mountain Camouflage, which allows them to hide on Mountain terrain.</bullet><bullet>Mountain Walk, which allows them to traverse Mountain terrain faster.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -8893,6 +9208,7 @@
    "description": "Target friendly or unowned <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Ashlands</hyperlink></bullet><bullet>Loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Culture",
@@ -8930,6 +9246,7 @@
    "description": "Target friendly or unowned <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Forest</hyperlink> if it is on the Surface.</bullet><bullet><hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Culture",
@@ -8967,6 +9284,7 @@
    "description": "Target friendly or unowned Surface <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Grassland</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Culture",
@@ -9000,6 +9318,7 @@
    "description": "Target friendly or unowned Surface <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Sand</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Culture",
@@ -9037,6 +9356,7 @@
    "description": "Target friendly or unowned <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Culture",
@@ -9074,6 +9394,7 @@
    "description": "Target friendly or unowned Surface <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Swamp</hyperlink></bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Culture",
@@ -9111,6 +9432,7 @@
    "description": "Units in target friendly army deal +20% damage until the end of their next combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -9144,6 +9466,7 @@
    "description": "Units in a 1-hex radius:<bulletlist><bullet>Have a base 90% chance of becoming Blind for 1 <turn></turn> Turn.</bullet><bullet>Become inflicted with Ember Dust.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9194,6 +9517,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9237,6 +9561,7 @@
    "description": "Teleport the closest allied unit within 4 hexes to target empty hex.<br></br>That unit heals +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> and has all <hyperlink>Negative Status Effects</hyperlink> removed.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9280,6 +9605,7 @@
     "<unitAnimal></unitAnimal> Animal"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9328,6 +9654,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9371,6 +9698,7 @@
    "description": "Target friendly unit with Scavenger:<bulletlist><bullet>Gains +1 Looted Power</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9413,6 +9741,7 @@
    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface, or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet><bullet>Provinces within the domain with either Grasslands, Forests, Fungus Fields, or Mushroom Forest features gain: +5 <food></food> <hyperlink>Food</hyperlink>, +5 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9456,6 +9785,7 @@
     "<unitScout></unitScout> Scout Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9504,6 +9834,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9541,6 +9872,7 @@
    "description": "<bulletlist><bullet>Target owned or vassal city loses 1 <population></population> <hyperlink>Population</hyperlink>.</bullet><bullet>If used on a vassal lose -200 <goodRelation></goodRelation> relation with them.</bullet><bullet>You gain 3 <thralls></thralls> <hyperlink>Thralls</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -9579,6 +9911,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9620,6 +9953,7 @@
    "description": "For 3 <turn></turn> Turns, makes target friendly unit:<bulletlist><bullet>Deal +100% damage.</bullet><bullet>Gain +5 Bolstered Defense.</bullet><bullet>Gain +5 Bolstered Resistance.</bullet><bullet>Gain +5 Status Protection.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9662,6 +9996,7 @@
    "description": "All friendly units gain +15 <happiness></happiness> <hyperlink>Morale</hyperlink>.<br></br>All enemy units have a base 90% chance of becoming Distracted.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9705,6 +10040,9 @@
    "units": [
     "astral_serpent",
     "astral_siphoner"
+   ],
+   "spawns": [
+    "EXPLOSIVE_MANIFESTATION_CAT"
    ],
    "sources": [
     {
@@ -9751,6 +10089,7 @@
     "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9799,6 +10138,7 @@
    "description": "Allegiance with target Free City increases 30% faster.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9841,6 +10181,7 @@
    "description": "All enemy units:<bulletlist><bullet>Sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> that ignores 50% of <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>Are inflicted with Burning.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9882,6 +10223,7 @@
    "description": "For 3 <turn></turn> Turns, target owned city:<bulletlist><bullet>Gains +45 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet><bullet>Loses -15 <food></food> <hyperlink>Food</hyperlink> income.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -9923,6 +10265,7 @@
    "description": "Ethereal and Undead units in a 2-hex radius:<bulletlist><bullet>Have a 60% chance of becoming <hyperlink>Routing</hyperlink>. If resisted, they are Pacified for 1 <turn></turn> Turn instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -9965,6 +10308,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10008,6 +10352,7 @@
    "description": "Target friendly army regains all their Movement points if they are on water. Half if they are on land.<br></br>A unit cannot benefit from this spell more than once per turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10049,6 +10394,7 @@
    "description": "Target friendly army:<bulletlist><bullet>Heal non-Undead units for 20 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Heal Undead units for 40 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10097,6 +10443,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10149,6 +10496,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10192,6 +10540,7 @@
    "description": "In a 1-hex radius:<bulletlist><bullet>Place <hyperlink>Mist</hyperlink> clouds.</bullet><bullet>Friendly units gain 2 random <hyperlink>Positive Status Effects</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10235,6 +10584,7 @@
    "description": "Makes the target race connect with Fey powers, granting them:<bulletlist><bullet>Fey Guile</bullet><bullet>The ability to ignore:<bulletlist></bullet><bullet>Vision penalties from Misty.</bullet><bullet><hyperlink><accuracy></accuracy> Accuracy</hyperlink> penalties from Clinging Mist.</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10278,6 +10628,7 @@
    "description": "Target race gains a fiery core, gaining:<bulletlist><bullet>+2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>+10% <hyperlink>Critical Hit</hyperlink> chance</bullet><bullet>Fire Hazard Immunity</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10325,6 +10676,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10361,6 +10713,12 @@
    "description": "Two Fiend units of the same Tier in the target army fight each other. One dies and the other transforms into a Fiend with a Tier one level higher than before.",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "FIGHT_FOR_POWER_II_CAT",
+    "FIGHT_FOR_POWER_III_CAT",
+    "FIGHT_FOR_POWER_IV_CAT",
+    "FIGHT_FOR_POWER_V_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -10403,6 +10761,7 @@
    "description": "All non-hero corpses on the map are destroyed. For each corpse destroyed, friendly units:<bulletlist><bullet>Gain +1 Bolstered Resistance</bullet><bullet>Heals +5 <temphp></temphp> Temporary Hit Points</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10446,6 +10805,7 @@
    "description": "Target non-Hero unit with <happiness></happiness> <hyperlink>Morale</hyperlink> of \\\"Low\\\" or worse:<bulletlist><bullet>Has a chance of becoming permanently mind controlled.</bullet><bullet>The lower the target unit's <happiness></happiness> <hyperlink>Morale</hyperlink> is, the more this chance increases.</bullet><bullet>If successful, it gains <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>If resisted, it suffers 40 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10493,6 +10853,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10537,6 +10898,7 @@
    "description": "In a 1-hex radius:<bulletlist><bullet>Enemy units sustain 16 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 16 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Enemy units gain 2 Burning for 3 <turn></turn> Turns.</bullet><bullet>Hexes are set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10586,6 +10948,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10636,6 +10999,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10677,6 +11041,7 @@
    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>For 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turns</hyperlink> enemy <hyperlink>Units</hyperlink> in the Province suffer:<bulletlist></bullet><bullet>-2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>-2 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink></bullet></bulletlist><bullet>The province gains <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>The province loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10718,6 +11083,7 @@
    "description": "Carve profane sigils onto the flesh of your race, granting them:<bulletlist><bullet>+5 <hyperlink><hp></hp> Hit Points</hyperlink> regeneration on the <hyperlink>World Map</hyperlink>.</bullet><bullet>Attack and <hyperlink>Debuff</hyperlink> abilities:<bulletlist></bullet><bullet>Ignore 1 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> per stack of Bleeding on the target.</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10768,6 +11134,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10817,6 +11184,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10864,6 +11232,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10910,6 +11279,7 @@
    "description": "Target friendly <hyperlink>City</hyperlink>. Any battle in the <hyperlink>Domain</hyperlink> of the <hyperlink>City</hyperlink> now has the Fog of Insanity battle enchantment, which causes enemies to have a base 20% chance of gaining Insanity every <turn></turn> <hyperlink>Turn</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -10959,6 +11329,7 @@
     "<unitMerfolk></unitMerfolk> Merfolk"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11000,6 +11371,7 @@
    "description": "Target a friendly <hyperlink>Army</hyperlink>, a random Tier I or Tier II <hyperlink>Unit</hyperlink> in the army with Evolve immediately gains enough ranks to evolve.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ancient Wonder",
@@ -11039,6 +11411,7 @@
    "description": "All forests grant <hyperlink>Vision</hyperlink> on the World Map.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11085,6 +11458,7 @@
    "description": "Your empire gains:<bulletlist><bullet>Your non-hero units in your domain earn 10 <hyperlink><xp></xp> Experience</hyperlink> each <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Enemy units in this domain spend 4 more <movementgeneral></movementgeneral> <hyperlink>Move Points</hyperlink> per hex moved.</bullet><bullet>A Living Vine spawns next to an enemy each turn during battle in your domain.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11126,6 +11500,7 @@
    "description": "Target race becomes fractured:<bulletlist><bullet>Attacks have a base 60% chance of inflicting Disrupted. This effect is increased for Single Shot attacks.</bullet><bullet>Gains Mana Starved.</bullet><bullet>Has all its other enchantments and transformations disabled. For each disabled gain:<bulletlist></bullet><bullet>5 <hyperlink><hp></hp> Hit Points</hyperlink></bullet><bullet>+5% damage</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -11165,6 +11540,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11206,6 +11582,9 @@
    "description": "Target non-<hyperlink>Hero</hyperlink> enemy unit is revealed to be a <hyperlink>Mirror Mimic</hyperlink> spy on your side.<br></br><br></br>If it survives until the end of combat, it can be acquired for a <mana></mana> <hyperlink>Mana</hyperlink> cost.",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "FRIKKA'S_REVELATION_UNIT_CAT"
+   ],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -11245,6 +11624,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11292,6 +11672,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11333,6 +11714,7 @@
    "description": "Makes winter run through the target race's veins, granting them:<bulletlist><bullet>3 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>Immunity to Chilled.</bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink> while on <hyperlink>Snow</hyperlink> or <hyperlink>Ice</hyperlink>.</bullet><bullet>Arctic Walk.</bullet><bullet>Snow Camouflage</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11375,6 +11757,7 @@
    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 15 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a 60% chance of becoming Electrified.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11416,6 +11799,7 @@
    "description": "Tier I and Tier II friendly units in a 2-hex radius gain:<bulletlist><bullet>2 stacks of Strengthened.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11457,6 +11841,7 @@
    "description": "Infuse the target race with the blessing of Nature. They gain:<bulletlist><bullet>The Plant unit type.</bullet><bullet><hyperlink>Negative Status Effects</hyperlink> last -1 <turn></turn> Turn, with a minimum of 1.</bullet><bullet>+3 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>+20 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11498,6 +11883,7 @@
    "description": "Turn target race into resonating crystals that self infuse with environmental magics, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>Resistance to a specific damage type based on the terrain the unit is on.</bullet><bullet>Melee attackers sustain damage based on terrain the unit is on.</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11541,6 +11927,7 @@
    "description": "Transform your units as they ritually imbibe blood from an Exarch, granting them:<bulletlist><bullet>The Undead unit type.</bullet><bullet>Lifedrinker.</bullet><bullet>Base attacks have a base 90% chance of inflicting Blood Parasite for 3 <turn></turn> Turns. This effect is increased for Single Shot attacks.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11584,6 +11971,7 @@
    "description": "Grants units in a 1-hex radius a 120% chance of becoming Gilded for 1 <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11630,6 +12018,7 @@
    "description": "Target owned City gains:<bulletlist><bullet>Double the base resources from Water <hyperlink>Province Improvement</hyperlink>.</bullet><bullet>-10 <happiness></happiness> <hyperlink>City Stability</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [],
    "tier": null,
    "affinities": [
@@ -11661,6 +12050,7 @@
    "description": "Turns target race into Umbral beings, which grants them:<bulletlist><bullet>The Umbral Demon unit type.</bullet><bullet>Floating.</bullet><bullet>Fast Movement.<br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.<br></br><br></br>This transformation is incompatible with Pure Soul.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11704,6 +12094,7 @@
    "description": "<bulletlist><bullet>Summons a full army of random non-Scout Tier I units that can be produced in a city on the target hex.</bullet><bullet>Summon units start at <medalGold></medalGold>Champion rank.</bullet><bullet>If cast within an enemy <hyperlink>Province</hyperlink>, instantly pillages it.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11745,6 +12136,7 @@
    "description": "Makes the target race gain an affinity for gold, granting them:<bulletlist><bullet>+2 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>+1 <gold></gold> <hyperlink>Gold</hyperlink> per <population></population> <hyperlink>Population</hyperlink> in their <hyperlink>Cities</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11790,6 +12182,7 @@
    "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>2 Grace</bullet><bullet>2 Bolstered Defense for 3 <turn></turn> Turns</bullet><bullet>2 Bolstered Resistance for 3 <turn></turn> Turns</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11833,6 +12226,9 @@
    "description": "Resurrects target non-Hero unit:<bulletlist><bullet>As a <hyperlink>Corrupt Soul</hyperlink> if not Undead.</bullet><bullet>With 100% of its total <hyperlink><hp></hp> Hit Points</hyperlink> if Undead.</bullet></bulletlist><br></br>If a <hyperlink>Corrupt Soul</hyperlink> or enemy Undead survives this combat, the controller will have the option of spending <souls></souls> to keep the unit permanently.",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "CORRUPT_SOUL_GREAT_ANIMATION_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -11879,6 +12275,7 @@
    "description": "Targets a city, and whenever you fight in that domain, a <hyperlink>Gremlin</hyperlink> is summoned next to one of your units every <turn></turn> <hyperlink>Turn</hyperlink>.<br></br>Up to 3 <hyperlink>Gremlins</hyperlink> can be summoned per battle.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11925,6 +12322,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -11966,6 +12364,7 @@
    "description": "All your <hyperlink>Armies</hyperlink> regain all their movement points if they are on water. Half if they are on land.<br></br>A unit cannot benefit from this spell more than once per turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -12001,6 +12400,7 @@
    "description": "Target friendly City:<bulletlist><bullet>No longer gains any <food></food> Food income.</bullet><bullet>Gains +30 <souls></souls> Souls income.</bullet><bullet>Has -20 <happiness></happiness> <hyperlink>City Stability</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12046,6 +12446,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12088,6 +12489,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals +10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 2 Regeneration.</bullet><bullet>Has <hyperlink>Obscuring</hyperlink> Flora created below it.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12129,6 +12531,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet><bullet>Gains Steadfast for 1 <turn></turn> Turn.</bullet><bullet>Ignores the penalties from <hyperlink>Casualties</hyperlink> for 1 <turn></turn> Turn.</bullet></bulletlist><br></br><br></br>Can only affect a unit once per battle.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12170,6 +12573,7 @@
    "description": "Friendly units in a 1-hex radius for 1 <turn></turn> Turn gain:<bulletlist><bullet>Defensive Masters</bullet><bullet>Charge Resistance</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12214,6 +12618,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12256,6 +12661,7 @@
    "description": "Target enemy:<bulletlist><bullet>Sustains 15 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Has a base 90% chance of becoming Frozen. If unsuccessful, inflicts Chilled.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12300,6 +12706,7 @@
     "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12341,6 +12748,7 @@
    "description": "Target race becomes one with ice, gaining:<bulletlist><bullet>The Elemental unit type.</bullet><bullet>+4 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink>.</bullet><bullet>-2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>Immunity to Frozen and Chilled.</bullet><bullet>Rime Healing.</bullet><bullet>Water Walk.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12383,6 +12791,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 25 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Is inflicted with Burning.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12424,6 +12833,7 @@
    "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_SPRING]Scourge of Spring[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -12458,6 +12868,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Becomes Distracted for 1 <turn></turn> Turn.</bullet><bullet>Has a base 90% chance of becoming Stunned for 1 <turn></turn> Turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12499,6 +12910,7 @@
    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>Sustain an extra 15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> if they are Burning.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12540,6 +12952,7 @@
    "description": "All friendly units with Looted Power:<bulletlist><bullet>Heal for 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12588,6 +13001,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12625,6 +13039,7 @@
    "description": "Target enemy city:<bulletlist><bullet>Loses a border province and the population is lost.</bullet><bullet>Spawns a Brigand Camp on land provinces.</bullet><bullet>Spawns a Pirate Cove on Ocean provinces.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12666,6 +13081,7 @@
    "description": "Target non-<hyperlink>Hero</hyperlink> unit has:<bulletlist><bullet>90% chance of being inflicted with Infectious Insanity for 2 <turn></turn> Turns. </bullet><bullet>If resisted, the target is inflicted with Insanity for 1 <turn></turn> Turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12707,6 +13123,7 @@
    "description": "Target enemy sustains:<bulletlist><bullet>15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>15 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist><br></br>If the enemy dies, adjacent friendly units:<bulletlist><bullet>Heal 20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>If they have Demonic Hunger or Imp's Hunger, gain Gorged.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12748,6 +13165,7 @@
    "description": "Grants the target race mastery over their own internal energies, granting them:<bulletlist><bullet>+1<statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink></bullet><bullet>+20% healing received in combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12797,6 +13215,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12838,6 +13257,7 @@
    "description": "Friendly units in a 2-hex radius gain:<bulletlist><bullet>10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12886,6 +13306,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -12927,6 +13348,7 @@
    "description": "Target army:<bulletlist><bullet>Sustains 15 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>, doubled if cast on an <hyperlink>Astral Barrens</hyperlink>.</bullet><bullet>For 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn, at the start of combat units in this army has a 60% chance of becoming Mana Drained.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -12968,6 +13390,7 @@
    "description": "Target race becomes a living morale siphon, gaining:<bulletlist><bullet>+4 <happiness></happiness> <hyperlink>Morale</hyperlink> when attacking an enemy.</bullet><bullet>Demoralizer</bullet></bulletlist><br></br>Effects <hyperlink>are increased</hyperlink> for Single Shot attacks.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13009,6 +13432,7 @@
    "description": "Target enemy unit sustains 60 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>. If it dies to this damage and is not a hero or Combat Summon unit, it turns into an <hyperlink>Immolated Soul</hyperlink> under your control that can be acquired at the end of combat for a <mana></mana> <hyperlink>Mana</hyperlink> cost.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -13051,6 +13475,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13093,6 +13518,7 @@
    "description": "Targets a 2-hex radius:<bulletlist><bullet>All units sustain 30 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet><bullet>All units are inflicted with Burning.</bullet><bullet>All units are Slowed.</bullet><bullet>The ground is set <hyperlink>On Fire</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13134,6 +13560,7 @@
    "description": "Makes the target race one with the forest, granting them:<bulletlist><bullet>Forest Walk</bullet><bullet>Forest Camouflage</bullet><bullet>When in a province with <hyperlink>Forest</hyperlink> or <hyperlink>Mushroom Forest</hyperlink>:<bulletlist></bullet><bullet>+10% <hyperlink>Evasion</hyperlink></bullet><bullet>+10% <hyperlink><accuracy></accuracy> Accuracy</hyperlink></bullet><bullet>+10% <hyperlink><crit></crit>Critical Hit Chance</hyperlink></bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13180,6 +13607,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13225,6 +13653,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13271,6 +13700,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13316,6 +13746,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13357,6 +13788,7 @@
    "description": "<bulletlist><bullet>All units become Wet for 3 <turn></turn> Turns</bullet><bullet>Up to 2 random enemy units:<bulletlist></bullet><bullet>Sustain 30 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Electrified for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist><br></br>This spell repeats at the start of each turn for the next 6 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13400,6 +13832,7 @@
    "description": "In target enemy army:<bulletlist><bullet>All units sustain 20 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>All units suffer -1 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13441,6 +13874,7 @@
    "description": "Target province becomes Misty for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13484,6 +13918,7 @@
    "description": "Units of this race gain the ability to share senses, granting them:<bulletlist><bullet>Hyper-Awareness when standing next to a Construct or another unit with Linked Minds.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13527,6 +13962,7 @@
    "description": "Wreathes target race in swirling shadows, granting them:<bulletlist><bullet>+10% <hyperlink>Evasion</hyperlink>.</bullet><bullet>Fleeting.</bullet><bullet>When this unit's <hyperlink><hp></hp> Hit Points</hyperlink> drop below 60%:<bulletlist></bullet><bullet>It becomes Obscured for 1 <turn></turn> Turn.</bullet><bullet>Adjacent enemies have a base 90% chance of becoming Blind for 1 <turn></turn> Turn.</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13570,6 +14006,7 @@
    "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_AUTUMN]Scourge of Autumn[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -13609,6 +14046,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13654,6 +14092,9 @@
    "units": [
     "mage_bane"
    ],
+   "spawns": [
+    "MAGE_BANE_RITUAL_CAT"
+   ],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -13689,6 +14130,7 @@
    "description": "Target unit gains:<bulletlist><bullet>3 Bolstered Defense for 3 <turn></turn> Turns.</bullet><bullet>3 Bolstered Resistance for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13726,6 +14168,7 @@
    "description": "Inscribes magical wards onto the target race, granting:<bulletlist><bullet>+2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet><bullet>+2 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink></bullet><bullet>+2 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13778,6 +14221,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13819,6 +14263,7 @@
     "Tier V"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13862,6 +14307,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals 15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Has their negative status effects removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13910,6 +14356,7 @@
    "description": "Target friendly <hyperlink>City</hyperlink> gains:<bulletlist><bullet>Every <turn></turn> <hyperlink>Turn</hyperlink>, 2 <hyperlink>Provinces</hyperlink> within or adjacent to the <hyperlink>Domain</hyperlink>:<bulletlist></bullet><bullet>Gain <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist><bullet>Provinces in the domain with Snow or Ice provide +2 <food></food> <hyperlink>Food</hyperlink> and +2 <structureprod></structureprod> <hyperlink>Production</hyperlink> income.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13951,6 +14398,7 @@
    "description": "Target enemy:<bulletlist><bullet>Becomes Distracted.</bullet><bullet>Suffers 3 Sundered Defense.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -13992,6 +14440,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Suffers Bounty until the end of combat.</bullet><bullet>Suffers 3 stacks of Marked for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14029,6 +14478,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Becomes Invulnerable for 1 <turn></turn> Turn.</bullet><bullet>Has their <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist><br></br>Cannot be used on a unit more than once per battle.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14076,6 +14526,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14124,6 +14575,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14178,6 +14630,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14226,6 +14679,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14265,6 +14719,9 @@
    "requisites": [],
    "units": [
     "decaying_zombie"
+   ],
+   "spawns": [
+    "VISIONS_OF_DEATH_CAT"
    ],
    "sources": [
     {
@@ -14308,6 +14765,7 @@
    "description": "Enemies in a 1-hex radius:<bulletlist><bullet>Sustain 10 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Become Condemned until the end of battle.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14349,6 +14807,7 @@
    "description": "Inflicts a random <hyperlink>Negative Status Effect</hyperlink> on all units in a 1-hex radius.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14390,6 +14849,7 @@
    "description": "Enemy units in target <hyperlink>Province</hyperlink> lose 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -14423,6 +14883,7 @@
    "description": "Makes target friendly army teleport back to the nearest owned city.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14464,6 +14925,7 @@
    "description": "<bulletlist><bullet>Heals all friendly units +40 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Brings all dead friendly Animals and Plants back to life with 50% of their total <hp></hp> Hit Points.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14505,6 +14967,7 @@
    "description": "<bulletlist><bullet>Brings all dead friendly units with Faithful or Zeal back to life with 50% of their total <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All revived units gain 3 Bolstered Defense and 3 Bolstered Resistance.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14547,6 +15010,7 @@
    "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Gain 2 Sundered Defense.</bullet><bullet>Sustain 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14588,6 +15052,7 @@
    "description": "Decreases the <hyperlink>Devouring Winds</hyperlink> value by 220, temporarily reducing the chance of a <hyperlink>Cataclysm</hyperlink>.<br></br>The cost of this spell is reduced based on the amount of <hyperlink>Artifacts</hyperlink> of the <hyperlink>Unmakers</hyperlink> the caster has.<br></br><br></br>This spell does not contribute to the <hyperlink>Devouring Winds</hyperlink> and cannot <hyperlink>Backfire</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -14636,6 +15101,7 @@
    "description": "Target Enemies in a 1-hex radius gain:<bulletlist><bullet>2 Marked.</bullet><bullet>2 Sundered Resistance.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14677,6 +15143,7 @@
    "description": "Target race gains:<bulletlist><bullet>Merfolk.</bullet><bullet>Fast Movement.</bullet><bullet>When on the water units lose their legs and gain a merfolk tail.</bullet></bulletlist><br></br><br></br>Special notes:<bulletlist><bullet>Incompatible with transformations that give Flying or disable mounts.</bullet><bullet>Mounted units lose their mounts.</bullet><bullet>Heroes lose their mount equipment slots.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ancient Wonder",
@@ -14715,6 +15182,7 @@
    "description": "Target owned city gains +50 <unitprod></unitprod> <hyperlink>Draft</hyperlink> for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -14754,6 +15222,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14795,6 +15264,7 @@
    "description": "Up to 3 random enemy units and enemies adjacent to those:<bulletlist><bullet>Sustain 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet></bulletlist><br></br>This spell repeats at the start of each turn for the next 5 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14836,6 +15306,7 @@
    "description": "All friendly units in a 2-hex radius gain:<bulletlist><bullet>Infernal Might for 3 <turn></turn> Turns.</bullet><bullet>15 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet></bulletlist><br></br>Doubled for Tier I, Tier II, and Tier III units.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14880,6 +15351,7 @@
     "Tier II"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14928,6 +15400,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -14970,6 +15443,7 @@
    "description": "<hyperlink>Obscuring</hyperlink> Mist covers the battlefield for 3 <turn></turn> <hyperlink>Turns</hyperlink>, giving your units standing in the mist +1 <resistance></resistance> <hyperlink>Resistance</hyperlink> and enemy units become Distracted.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ancient Wonder",
@@ -15004,6 +15478,7 @@
    "description": "For 2 <turn></turn> Turns, all friendly units gain the benefit from For the Monarch as though the Monarch were present.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15041,6 +15516,9 @@
    "description": "Target friendly Tier I, II, or III non-Magic Origin, non-Construct unit:<bulletlist><bullet>Transforms into a <hyperlink>Warbreed</hyperlink>.</bullet><bullet>Heals all of its <hyperlink><hp></hp> Hit Points</hyperlink> as <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dies at the end of combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "MONSTROUS_REBIRTH_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -15086,6 +15564,7 @@
    "description": "Units in friendly armies in the target Province:<bulletlist><bullet>Restore all <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Gain Universal Camouflage for 3 <turn></turn> Turns.</bullet><bullet>Gain +15 <happiness></happiness> <hyperlink>Morale</hyperlink> until the end of their next combat.</bullet><bullet>Gain +20 <hyperlink><hp></hp> Hit Points</hyperlink> until the end of their next combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15126,6 +15605,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15169,6 +15649,7 @@
    "description": "Target race gains the body of a Naga, granting:<bulletlist><bullet>Fast Movement</bullet><bullet>Merfolk</bullet><bullet>Slip Away</bullet><bullet>Immunity to Electrified</bullet><bullet>+2 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet>+2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15212,6 +15693,7 @@
    "description": "All friendly units in the target Province gain +15 max <hyperlink><hp></hp> Hit Points</hyperlink> and <hyperlink>regenerate</hyperlink> 15 <hyperlink><hp></hp> Hit Points</hyperlink> in neutral and friendly domain for the next 2 <hyperlink>World Map</hyperlink> <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15259,6 +15741,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15301,6 +15784,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Sustains 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink></bullet><bullet>Gains 2 stacks of Decaying for 3 <turn></turn> Turns.</bullet><bullet>When it dies, it becomes a <hyperlink>Decaying Zombie</hyperlink> under your control until the end of combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15346,6 +15830,7 @@
    "description": "Curse your units to never know rest. Applies:<bulletlist><bullet>The Undead unit type.</bullet><bullet>The Ethereal unit type.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -15385,6 +15870,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15428,6 +15914,9 @@
    "units": [
     "colossal_penguin"
    ],
+   "spawns": [
+    "COLOSSAL_PENGUIN_UNIT_CAT"
+   ],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -15464,6 +15953,7 @@
    "description": "Target friendly city is destroyed. Then for each population of the destroyed city:<bulletlist><bullet>Gain +50 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.</bullet><bullet>Gain +20 <souls></souls> <hyperlink>Souls</hyperlink>.</bullet><bullet>Gain a random Skeleton unit.</bullet><bullet>Each skeleton gained has a small chance of being a <hyperlink>Corrupt Soul</hyperlink> instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -15503,6 +15993,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15554,6 +16045,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15595,6 +16087,7 @@
    "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_WINTER]Scourge of Winter[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -15629,6 +16122,7 @@
    "description": "Target race embraces pain and when hit by an attack gain:<bulletlist><bullet>2 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>A random positive status effect.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15670,6 +16164,7 @@
    "description": "Target surface <hyperlink>Provinces</hyperlink> gain <hyperlink>Sunless</hyperlink> for 3 <turn></turn> <hyperlink>Turns</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -15703,6 +16198,7 @@
    "description": "Target <hyperlink>Province</hyperlink> and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Gloom</hyperlink></bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>River</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Dungeon</hyperlink>.</bullet><bullet>Enemy <hyperlink>Units</hyperlink> suffer -1 <defensefrost></defensefrost> <hyperlink>Frost Protection</hyperlink> and -1 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink> for 2 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15740,6 +16236,7 @@
    "description": "Until the end of battle, whenever a friendly unit dies, all other friendly units within 2 hexes heal +15 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15782,6 +16279,7 @@
    "description": "Conjure a Pearltide Bomb on target hex:<bulletlist><bullet>All enemy <hyperlink>Units</hyperlink> within 5 hexes of the Pearltide Bomb suffer Wet for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet><bullet>After 1 <turn></turn> <hyperlink>Turn</hyperlink>:<bulletlist></bullet><bullet>The enemy unit on the hex of the Pearltide Bomb suffers 25 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 25 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet><bullet>Enemy units within a 2 hex radius of the Pearltide Bomb instead suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink> and 10 <damageLightning></damageLightning> <hyperlink>Lightning Damage</hyperlink>.</bullet></bulletlist></bulletlist><br></br>Can only be used in water battles.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ancient Wonder",
@@ -15816,6 +16314,7 @@
    "description": "Target enemy army loses 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -15853,6 +16352,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15895,6 +16395,7 @@
    "description": "Units in a 2-hex radius:<bulletlist><bullet>Suffer 20 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Marked.</bullet><bullet>Have a base 60% chance of becoming Immobilized.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15949,6 +16450,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -15997,6 +16499,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16045,6 +16548,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16088,6 +16592,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16137,6 +16642,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16178,6 +16684,7 @@
    "description": "Target enemy army gains 3 Demoralized for 1 <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16227,6 +16734,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16270,6 +16778,7 @@
    "description": "Purify the souls of target race, granting them:<bulletlist><bullet>At the start of each turn in combat, dispel 1 <hyperlink>Negative Status Effect</hyperlink>.</bullet><bullet>If the Negative Status Effect removed had a positive <hyperlink>counter</hyperlink>, gain the <hyperlink>Positive Status Effect</hyperlink>.</bullet></bulletlist><br></br>This transformation is incompatible with Umbral Flesh and Gloom Strider.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16316,6 +16825,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16365,6 +16875,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16406,6 +16917,7 @@
    "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Heal for 30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Have 3 of their negative status effects removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16449,6 +16961,7 @@
    "description": "Target <hyperlink>Province</hyperlink>:<bulletlist><bullet>Enemy units in the province suffer -3 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink> for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>If it contains an enemy <hyperlink>Province Improvement</hyperlink>, it will be <hyperlink>Pillaged</hyperlink>.<bulletlist></bullet><bullet>You will not gain its rewards or lose <hyperlink>Alignment</hyperlink>.</bullet></bulletlist><bullet>The province gains <hyperlink>Ashlands</hyperlink>.</bullet><bullet>The province loses <hyperlink>River</hyperlink>, <hyperlink>Grassland</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Fungus Fields</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16490,6 +17003,7 @@
    "description": "Units in target friendly army gain Very Fast Movement for 2 <hyperlink>World Map</hyperlink> <turn></turn> Turns",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -16533,6 +17047,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16585,6 +17100,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16632,6 +17148,9 @@
     "banshee",
     "bone_horror"
    ],
+   "spawns": [
+    "RAISE_UNDEAD_ARMY_T3_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -16677,6 +17196,7 @@
     "Units that have Evolved"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16720,6 +17240,7 @@
    "description": "Return target <hyperlink>Army</hyperlink> with your <hyperlink>Ruler</hyperlink> to your <hyperlink>Throne City</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -16764,6 +17285,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16806,6 +17328,7 @@
    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Sustain 16<damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of becoming Blind for 1<turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Have a base 90% chance of gaining Sundered Defense for 3<turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16849,6 +17372,7 @@
    "description": "Target army:<bulletlist><bullet>Sustains 10 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> and 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>For 2 <hyperlink>World Map</hyperlink> <turn></turn> Turn, at the start of combat units in this army have a 90% chance of suffering Ghostfire.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [],
    "tier": null,
    "affinities": [
@@ -16880,6 +17404,7 @@
    "description": "Target friendly unit gains +1 <defense></defense> <hyperlink>Defense</hyperlink> and <resistance></resistance> <hyperlink>Resistance</hyperlink> per stack of Affinity Incarnate for 1 <turn></turn> Turn.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16926,6 +17451,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -16969,6 +17495,7 @@
    "description": "Target and adjacent <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gains <hyperlink>Grassland</hyperlink> if it is on the Surface or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if it is in the Underground.</bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17010,6 +17537,7 @@
    "description": "Returns target dead friendly unit to full <temphp></temphp> Temporary Hit Points.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17051,6 +17579,7 @@
    "description": "Target friendly unit gains Retaliating Growths for 2 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17094,6 +17623,7 @@
    "description": "Overwhelms the target race with an intense fervor, granting them:<bulletlist><bullet>+50% <happiness></happiness> <hyperlink>Morale</hyperlink> from all sources.</bullet><bullet>+10% damage when at High Morale.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17135,6 +17665,7 @@
    "description": "Non-hero units in target friendly army gain +100% <hyperlink><xp></xp> Experience</hyperlink> from combat for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17176,6 +17707,7 @@
    "description": "Target enemy army gains Revenant Whispers for 1 <hyperlink>World Map</hyperlink> <turn></turn> Turn, Conjuring 3 Skeletons with Unholy Champion on the attacker's side at the start of combat.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17219,6 +17751,7 @@
    "description": "Heal target friendly unit:<bulletlist><bullet>Federate Soldier units:<bulletlist></bullet><bullet>+10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>+5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> for each friendly Federate Levy in battle.</bullet></bulletlist><bullet>Federate Levy units:<bulletlist></bullet><bullet>+10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>+5 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> for each friendly Federate Soldier in battle.</bullet></bulletlist></bulletlist><br></br>This effect jumps to 2 additional targets within 3 hexes.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17256,6 +17789,7 @@
    "description": "Units in target friendly army:<bulletlist><bullet>Heal 10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>At the start of the next combat, units are Hastened for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17299,6 +17833,7 @@
    "description": "Units in a 1-hex radius:<bulletlist><bullet>Sustain 12 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Become Wet for 3 <turn></turn> Turns.</bullet><bullet>If on the outer radius, they are pushed 1-hex away from the center.</bullet><bullet>Targets that were already Wet have the above effects doubled.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17343,6 +17878,7 @@
    "description": "Target friendly unit sustains 5 unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all enemy units within 2 hexes:<bulletlist><bullet>Sustain 12 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 2 Bleeding for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17386,6 +17922,7 @@
    "description": "Target friendly unit sustains 5 unblockable <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>. Then all friendly units in a 2-hex radius gain:<bulletlist><bullet>Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Life Steal for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17429,6 +17966,7 @@
    "description": "In the target enemy army:<bulletlist><bullet>At the start of each battle, all units have a base 90% chance of becoming Stunned for 2 <turn></turn> Turns.</bullet><bullet>Lasts 1 <hyperlink>World Map</hyperlink> <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17475,6 +18013,7 @@
    "description": "All <hyperlink>Units</hyperlink> in your <hyperlink>Empire</hyperlink> gain Umbral Malady Immunity.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17516,6 +18055,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Suffers 24 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Has its <hyperlink>Defense Mode</hyperlink> canceled.</bullet><bullet>Has its <hyperlink>Retaliation Attacks</hyperlink> removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17558,6 +18098,7 @@
    "description": "Target friendly <hyperlink>Zombie</hyperlink> or Skeleton unit explodes, all enemies in a 2-hex radius:<bulletlist><bullet>Sustain 10 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink> and 10 <damageBlight></damageBlight> <hyperlink>Blight Damage</hyperlink>.</bullet><bullet>Gain 2 Decaying for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17610,6 +18151,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17658,6 +18200,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17695,6 +18238,7 @@
    "description": "Target friendly unit explodes and enemy units within 2 hexes:<bulletlist><bullet>Sustain 20 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> plus 5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> per Tier of the sacrificed unit.</bullet><bullet>Suffer one random <hyperlink>Negative Status Effect</hyperlink> per Tier of the sacrificed unit.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17737,6 +18281,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals all of its <hyperlink><hp></hp> Hit Points</hyperlink> as <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Dispels its <hyperlink>Negative Status Effects</hyperlink>.</bullet><bullet>Gains 3 Bolstered Resistance.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17778,6 +18323,7 @@
    "description": "Conjure a <hyperlink>Sandstorm</hyperlink> in a 2-hex radius that lasts for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17826,6 +18372,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17880,6 +18427,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17917,6 +18465,7 @@
    "description": "Makes the target race the embodiment of fire, granting them:<bulletlist><bullet>4 <defensefire></defensefire> <hyperlink>Fire Protection</hyperlink>.</bullet><bullet>Vengeful Flames, which damages <hyperlink>Melee</hyperlink> attackers.</bullet><bullet>Fiery Wake, which ignites flammable terrain such as <hyperlink>Flora Obstacles</hyperlink>.</bullet><bullet>Immunity to Burning.</bullet><bullet>Lava Walk.</bullet><bullet><hyperlink>Cities</hyperlink> of this race ignore the <happiness></happiness> <hyperlink>City Stability</hyperlink> penalty from Chasm and Lava in their <hyperlink>Domain</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -17967,6 +18516,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18021,6 +18571,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18069,6 +18620,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18106,6 +18658,7 @@
    "description": "All enemies in the target army provide you with vision for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18147,6 +18700,7 @@
    "description": "Target enemy unit:<bulletlist><bullet>Suffers 2 Leverage.</bullet></bulletlist><br></br>This effect jumps to 2 additional targets within 3 hexes.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18189,6 +18743,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18233,6 +18788,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18275,6 +18831,7 @@
    "description": "Target enemies in a 1-hex radius:<bulletlist><bullet>Sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Gain 1 Sundered Defense.</bullet><bullet>Are inflicted with Slowed.</bullet></bulletlist><br></br>This spell deals double damage to obstacles.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18327,6 +18884,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18369,6 +18927,7 @@
    "description": "Target Free City:<bulletlist><bullet>Allegiance gain from Whispering Stones is increased by +1.</bullet><bullet>Other Rulers' Allegiance gain is reduced by -30%.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18415,6 +18974,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18461,6 +19021,7 @@
     "<unitConstruct></unitConstruct> Construct"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18506,6 +19067,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18549,6 +19111,7 @@
     "<unitShield></unitShield> Shield Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -18587,6 +19150,7 @@
     "<unitSkirmisher></unitSkirmisher> Skirmisher Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -18624,6 +19188,7 @@
     "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -18660,6 +19225,7 @@
     "<unitShock></unitShock> Shock Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -18705,6 +19271,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18742,6 +19309,7 @@
    "description": "Target non-Hero unit dies. After 2 <turn></turn> Turns, they come back to life with 75% of their total <hyperlink><hp></hp> Hit Points</hyperlink> and are inflicted with Insanity.<br></br><br></br>While dead this way the unit cannot be revived or have its corpse destroyed.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18783,6 +19351,7 @@
    "description": "For 3 <turn></turn> Turns, target friendly unit gains:<bulletlist><bullet>Berserk</bullet><bullet>3 Strengthened</bullet></bulletlist><br></br>Does not affect units with <hyperlink>Control Loss Immunity</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18825,6 +19394,7 @@
    "description": "<bulletlist><bullet>Gain +10 <souls></souls> <hyperlink>Souls</hyperlink> income.</bullet><bullet>Costs 20 <gold></gold> <hyperlink>Gold</hyperlink> upkeep.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18866,6 +19436,7 @@
    "description": "Gain 30 <souls></souls> Souls.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -18907,6 +19478,7 @@
    "description": "Friendly units in a 1-hex radius:<bulletlist><bullet>Gain 1 Strengthened.</bullet><bullet>Gain +20 maximum <hyperlink><hp></hp> Hit Points</hyperlink> until the end of battle.</bullet><bullet>Have 2 <hyperlink>Negative Status Effects</hyperlink> removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18952,6 +19524,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -18993,6 +19566,7 @@
    "description": "Target province becomes affected by Malediction of Gluttony for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -19029,6 +19603,7 @@
    "description": "Target enemy army:<bulletlist><bullet>Sustains 8 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> and 8 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Becomes Cursed by Greed for 1 <turn></turn> Turn.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -19065,6 +19640,7 @@
    "description": "Target enemy <hyperlink>City</hyperlink>:<bulletlist><bullet>Loses a border land <hyperlink>Province</hyperlink> and the <population></population> <hyperlink>Population</hyperlink> is lost.</bullet><bullet>Spawns a Ritual Circle <hyperlink>Infestation</hyperlink> on lost province.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -19101,6 +19677,7 @@
    "description": "Makes the target race smaller and more numerous, granting them:<bulletlist><bullet>Increased number of units in formation.</bullet><bullet>+20% damage for non-hero units.</bullet><bullet>+10% <hyperlink>Evasion</hyperlink> for hero units. </bullet><bullet>Incompatible with Supergrowth.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19144,6 +19721,7 @@
     "<unitShield></unitShield> Shield Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19196,6 +19774,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19233,6 +19812,7 @@
    "description": "Target race weaves themselves with spiders gaining:<bulletlist><bullet>The Spider unit type.</bullet><bullet>Fast Movement.</bullet><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>All attacks gain a base 30% chance of inflicting Immobilized for 1 <turn></turn> Turn. Increased for Single Shots.</bullet></bulletlist><br></br><br></br>Mounted units lose their mounts.<br></br><br></br>Heroes lose their Mount and Leg equipment slots.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19276,6 +19856,7 @@
    "description": "Each time the owner's units suffer damage, they gain 1 stack(s) of Regeneration.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -19316,6 +19897,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19360,6 +19942,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19405,6 +19988,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19448,6 +20032,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19492,6 +20077,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19538,6 +20124,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19583,6 +20170,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19624,6 +20212,7 @@
    "description": "Transmutes the target race's skin into steel, granting them:<bulletlist><bullet>+2 <defensephysical></defensephysical> <hyperlink>Physical Protection</hyperlink>.</bullet><bullet>+2 <defenseblight></defenseblight> <hyperlink>Blight Protection</hyperlink></bullet><bullet>-2 <defenselightning></defenselightning> <hyperlink>Lightning Protection</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19665,6 +20254,7 @@
    "description": "All friendly units lose all stacks of Bolstered Defense and Bolstered Resistance. For each stack lost they gain:<bulletlist><bullet> Strengthened</bullet><bullet> Fortune</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19702,6 +20292,7 @@
    "description": "Target unit gains Stone Skin for 3 <turn></turn> Turns.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19749,6 +20340,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -19790,6 +20382,7 @@
    "description": "At the start of the owner's turn, enemy units adjacent to owner's units have 90% chance of suffering Burning and suffer 5 <damageFire></damageFire> <hyperlink>Fire Damage</hyperlink> for each stack of Burning they have.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -19825,6 +20418,9 @@
    "requisites": [],
    "units": [
     "accursed_lamenter"
+   ],
+   "spawns": [
+    "SUMMON_ACCURSED_LAMENTER_CAT"
    ],
    "sources": [
     {
@@ -19871,6 +20467,9 @@
    "units": [
     "accursed_ogre"
    ],
+   "spawns": [
+    "SUMMON_ACCURSED_OGRE_CAT"
+   ],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -19905,6 +20504,9 @@
    "requisites": [],
    "units": [
     "ancient_hoarfrost_manta"
+   ],
+   "spawns": [
+    "SUMMON_ANCIENT_HOARFROST_MANTA_CAT"
    ],
    "sources": [
     {
@@ -19953,6 +20555,9 @@
    "units": [
     "astra"
    ],
+   "spawns": [
+    "SUMMON_ARCHON_ASTRA_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -19994,6 +20599,7 @@
    "description": "Summons an Astral Reflection of target friendly unit onto an unoccupied adjacent hex.<br></br><br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -20037,6 +20643,9 @@
    "units": [
     "astral_serpent"
    ],
+   "spawns": [
+    "SUMMON_ASTRAL_SERPENT_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20079,6 +20688,9 @@
    "requisites": [],
    "units": [
     "avatar_of_the_cosmos"
+   ],
+   "spawns": [
+    "SUMMON_EARTH_ELEMENTAL_CAT"
    ],
    "sources": [
     {
@@ -20133,6 +20745,9 @@
    "units": [
     "balor"
    ],
+   "spawns": [
+    "HELL_BALOR_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20175,6 +20790,9 @@
    "requisites": [],
    "units": [
     "banshee"
+   ],
+   "spawns": [
+    "HERALD_DOOM_BANSHEE_CAT"
    ],
    "sources": [
     {
@@ -20219,6 +20837,9 @@
    "units": [
     "blessed_dragon"
    ],
+   "spawns": [
+    "SUMMON_BLESSED_DRAGON_CAT"
+   ],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -20253,6 +20874,9 @@
    "requisites": [],
    "units": [
     "blessed_soul"
+   ],
+   "spawns": [
+    "BLESSED_REINFORCEMENTS_CAT"
    ],
    "sources": [
     {
@@ -20301,6 +20925,9 @@
    "units": [
     "blood_exarch"
    ],
+   "spawns": [
+    "SUMMON_BLOOD_EXARCH_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20345,6 +20972,9 @@
    "requisites": [],
    "units": [
     "calamity_dragon"
+   ],
+   "spawns": [
+    "SUMMON_DRAGON_OF_CALAMITY_CAT"
    ],
    "sources": [
     {
@@ -20391,6 +21021,9 @@
    "units": [
     "chaos_eater"
    ],
+   "spawns": [
+    "SUMMON_CHAOS_EATER_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20434,6 +21067,9 @@
    "units": [
     "copper_golem"
    ],
+   "spawns": [
+    "SUMMON_ANIMATED_ARMOR_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20476,6 +21112,9 @@
    "requisites": [],
    "units": [
     "corrupt_soul"
+   ],
+   "spawns": [
+    "SUMMON_CORRUPT_SOUL_CAT"
    ],
    "sources": [
     {
@@ -20524,6 +21163,13 @@
     "storm_spirit",
     "tide_spirit"
    ],
+   "spawns": [
+    "SUMMON_ELEMENTAL_MAGMA_CAT",
+    "SUMMON_ELEMENTAL_SNOW_CAT",
+    "SUMMON_ELEMENTAL_STONE_CAT",
+    "SUMMON_ELEMENTAL_STORM_CAT",
+    "SUMMON_ELEMENTAL_TIDE_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20569,6 +21215,9 @@
    "units": [
     "entwined_protector"
    ],
+   "spawns": [
+    "ENTWINED_PROTECTOR_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20612,6 +21261,9 @@
    "units": [
     "entwined_thrall"
    ],
+   "spawns": [
+    "SUMMON_ENTWINED_THRALL_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20654,6 +21306,9 @@
    "requisites": [],
    "units": [
     "fallen_angel"
+   ],
+   "spawns": [
+    "SUMMON_FALLEN_ANGEL_CAT"
    ],
    "sources": [
     {
@@ -20701,6 +21356,9 @@
     "fire_dragon",
     "herald_of_war"
    ],
+   "spawns": [
+    "SUMMON_FLAME_INCARNATION_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20743,6 +21401,9 @@
    "requisites": [],
    "units": [
     "frost_giant"
+   ],
+   "spawns": [
+    "SUMMON_FROST_GIANT_CAT"
    ],
    "sources": [
     {
@@ -20787,6 +21448,9 @@
    "units": [
     "gluttonous_imp"
    ],
+   "spawns": [
+    "SUMMON_GLUTTONOUS_IMP_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20830,6 +21494,9 @@
    "units": [
     "gremlin"
    ],
+   "spawns": [
+    "SUMMON_GREMLIN_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -20872,6 +21539,9 @@
    "requisites": [],
    "units": [
     "horned_god"
+   ],
+   "spawns": [
+    "SUMMON_HORNED_GOD_CAT"
    ],
    "sources": [
     {
@@ -20919,6 +21589,7 @@
    "description": "Summon an <hyperlink>Ice Runestele</hyperlink> on target <hyperlink>Province</hyperlink>, which will appear on an empty hex and <hyperlink>terraform</hyperlink> surrounding provinces every <turn></turn> <hyperlink>Turn</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ruler",
@@ -20954,6 +21625,7 @@
    "description": "Summons a random non-Scout Tier I unit that can be produced in a city on the target hex.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -21000,6 +21672,7 @@
    "description": "Summon a <hyperlink>Lava Runestele</hyperlink> on target <hyperlink>Province</hyperlink>, which will appear on an empty hex and <hyperlink>terraform</hyperlink> surrounding provinces every <turn></turn> <hyperlink>Turn</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ruler",
@@ -21036,6 +21709,9 @@
    "requisites": [],
    "units": [
     "lesser_light_spirit"
+   ],
+   "spawns": [
+    "LESSER_LIGHT_CAT"
    ],
    "sources": [
     {
@@ -21080,6 +21756,9 @@
    "units": [
     "lesser_magma_spirit"
    ],
+   "spawns": [
+    "SUMMON_INFERNO_PUPPY_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21122,6 +21801,9 @@
    "requisites": [],
    "units": [
     "lesser_snow_spirit"
+   ],
+   "spawns": [
+    "SUMMON_LESSER_ICE_ELEMENTAL_CAT"
    ],
    "sources": [
     {
@@ -21166,6 +21848,9 @@
    "units": [
     "lesser_stone_spirit"
    ],
+   "spawns": [
+    "SUMMON_LESSER_EARTH_ELEMENTAL_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21209,6 +21894,9 @@
    "units": [
     "lesser_storm_spirit"
    ],
+   "spawns": [
+    "SUMMON_LESSER_STORM_SPIRIT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21251,6 +21939,9 @@
    "requisites": [],
    "units": [
     "lesser_tide_spirit"
+   ],
+   "spawns": [
+    "SUMMON_LESSER_TIDE_SPIRIT_CAT"
    ],
    "sources": [
     {
@@ -21297,6 +21988,9 @@
    "units": [
     "light_spirit"
    ],
+   "spawns": [
+    "SUMMON_LIGHT_SPIRIT_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21339,6 +22033,9 @@
    "requisites": [],
    "units": [
     "lightbringer"
+   ],
+   "spawns": [
+    "SUMMON_LIGHTBRINGER_CAT"
    ],
    "sources": [
     {
@@ -21383,6 +22080,9 @@
    "units": [
     "living_fog"
    ],
+   "spawns": [
+    "LIVING_FOG_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21426,6 +22126,9 @@
    "units": [
     "mirror_mimic"
    ],
+   "spawns": [
+    "ASTRAL_MIRROR_MIRROR_MIMIC_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21468,6 +22171,9 @@
    "requisites": [],
    "units": [
     "mistling"
+   ],
+   "spawns": [
+    "SUMMON_MISTLING_CAT"
    ],
    "sources": [
     {
@@ -21514,6 +22220,9 @@
    "units": [
     "nymph"
    ],
+   "spawns": [
+    "NYMPH_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21556,6 +22265,9 @@
    "requisites": [],
    "units": [
     "phantasm_warrior"
+   ],
+   "spawns": [
+    "WARDING_PHANTASM_WARRIOR_CAT"
    ],
    "sources": [
     {
@@ -21600,6 +22312,9 @@
    "units": [
     "phase_beast"
    ],
+   "spawns": [
+    "SUMMON_PHASE_BEAST"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21643,6 +22358,9 @@
    "units": [
     "progenitor_golem"
    ],
+   "spawns": [
+    "SUMMON_PROGENITOR_GOLEM_CAT"
+   ],
    "sources": [
     {
      "kind": "Ancient Wonder",
@@ -21682,6 +22400,9 @@
    "requisites": [],
    "units": [
     "prosperity_dragon"
+   ],
+   "spawns": [
+    "SUMMON_DRAGON_OF_PROSPERITY_CAT"
    ],
    "sources": [
     {
@@ -21728,6 +22449,9 @@
    "units": [
     "reaper"
    ],
+   "spawns": [
+    "REAPER_UNIT_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -21770,6 +22494,9 @@
    "requisites": [],
    "units": [
     "rock_giant"
+   ],
+   "spawns": [
+    "SUMMON_ROCK_GIANT_CAT"
    ],
    "sources": [
     {
@@ -21817,6 +22544,7 @@
    "description": "Summon a <hyperlink>Rock Runestele</hyperlink> on target <hyperlink>Province</hyperlink>, which will appear on an empty hex and <hyperlink>terraform</hyperlink> surrounding provinces every <turn></turn> <hyperlink>Turn</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ruler",
@@ -21853,6 +22581,9 @@
    "requisites": [],
    "units": [
     "sand_scorpion"
+   ],
+   "spawns": [
+    "SUMMON_SAND_SCORPION_CAT"
    ],
    "sources": [
     {
@@ -21899,6 +22630,9 @@
    "units": [
     "morning_sprite",
     "evening_sprite"
+   ],
+   "spawns": [
+    "SUMMON_SPRITE_CAT"
    ],
    "sources": [
     {
@@ -21948,6 +22682,7 @@
    "description": "Summon a <hyperlink>Storm Runestele</hyperlink> on target Surface <hyperlink>Province</hyperlink>, which will appear on an empty hex and <hyperlink>terraform</hyperlink> surrounding provinces every <turn></turn> <hyperlink>Turn</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Ruler",
@@ -21984,6 +22719,9 @@
    "requisites": [],
    "units": [
     "umbral_juggernaut"
+   ],
+   "spawns": [
+    "SUMMON_UMBRAL_JUGGERNAUT_CAT"
    ],
    "sources": [
     {
@@ -22023,6 +22761,9 @@
    "requisites": [],
    "units": [
     "umbral_mistress"
+   ],
+   "spawns": [
+    "UMBRAL_MISTRESS_CAT"
    ],
    "sources": [
     {
@@ -22069,6 +22810,9 @@
    "units": [
     "vigil"
    ],
+   "spawns": [
+    "SUMMON_ARCHON_ANGEL_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -22111,6 +22855,9 @@
    "requisites": [],
    "units": [
     "war_golem"
+   ],
+   "spawns": [
+    "SUMMON_WAR_GOLEM_CAT"
    ],
    "sources": [
     {
@@ -22155,6 +22902,9 @@
    "units": [
     "watcher"
    ],
+   "spawns": [
+    "SCRYING_WATCHER_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -22198,6 +22948,9 @@
    "units": [
     "willthief"
    ],
+   "spawns": [
+    "SUMMON_UMBRAL_WILLTHIEF_CAT"
+   ],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -22232,6 +22985,9 @@
    "requisites": [],
    "units": [
     "wind_rager"
+   ],
+   "spawns": [
+    "SUMMON_WIND_RAGER_CAT"
    ],
    "sources": [
     {
@@ -22275,6 +23031,9 @@
    "requisites": [],
    "units": [
     "wyvern_fledgling"
+   ],
+   "spawns": [
+    "WYVERN_FLEDLING_CAT"
    ],
    "sources": [
     {
@@ -22321,6 +23080,9 @@
    "units": [
     "zealot"
    ],
+   "spawns": [
+    "ZEALOT_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -22363,6 +23125,7 @@
    "description": "Units in a 1-hex radius:<bulletlist><bullet>Suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a 90% chance of inflicting Sundered Defense for 3 <turn></turn> <hyperlink>Turns</hyperlink></bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22405,6 +23168,7 @@
     "<unitFighter></unitFighter> Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22446,6 +23210,7 @@
    "description": "Makes the target race grow in mass and stature, granting them:<bulletlist><bullet>+10 <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>+1 <hyperlink>Retaliation Attack</hyperlink>.</bullet><bullet>Decreased number of units in formation.</bullet></bulletlist><br></br>This transformation is incompatible with Spawnkin.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22488,6 +23253,7 @@
    "description": "Units in a 1-hex radius:<bulletlist><bullet>Suffer 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have their <hyperlink>Defense Mode</hyperlink> canceled and <hyperlink>Retaliation Attacks</hyperlink> removed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22529,6 +23295,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22570,6 +23337,7 @@
    "description": "Target friendly unit that has action points remaining and another within 3 hexes gain:<bulletlist><bullet>Momentum for 1 <turn></turn> <hyperlink>Turn</hyperlink>.</bullet><bullet>Fortune for 3 <turn></turn> <hyperlink>Turns</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22608,6 +23376,7 @@
    "description": "Target hex becomes marked, Units in 2-hex radius of the marked hex have a 60% base chance of receiving Disrupted. After 1 <turn></turn> <hyperlink>Turn</hyperlink>, the marked hex explodes and inflicts the following in a 2-hex radius:<bulletlist><bullet>Units suffer 48 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Units have 60% base chance of suffering Mana Drained.</bullet><bullet>Each hex has 20% chance of creating a Mana Fracture obstacle, which have <hyperlink>Draining</hyperlink> and spread to adjacent hexes when spells are cast.</bullet></bulletlist><br></br><br></br>This spell cannot <hyperlink>Backfire</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Artifact",
@@ -22649,6 +23418,7 @@
    "description": "When cast and for the next 2 <turn></turn> Turns:<bulletlist><bullet>Up to 3 enemy units:<bulletlist></bullet><bullet>Sustain 10 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>Have a base 90% chance of gaining Blood Parasite for 3 <turn></turn> Turns.</bullet></bulletlist><bullet>Up to 3 friendly units:<bulletlist></bullet><bullet>Heal for 10 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gain Fortune for 3 <turn></turn> Turns.</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22693,6 +23463,7 @@
    "description": "<bulletlist><bullet>All enemies sustain 30 <damagePhysical></damagePhysical> <hyperlink>Physical Damage</hyperlink>.</bullet><bullet>All enemies have a base 60% chance of becoming Stunned.</bullet><bullet>All obstacles on the map have a 50% chance of being destroyed.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22734,6 +23505,7 @@
    "description": "Return target <hyperlink>Army</hyperlink> to <hyperlink>Throne City</hyperlink>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -22771,6 +23543,9 @@
    "description": "Target friendly non-Hero <hyperlink>Unit</hyperlink>:<bulletlist><bullet>Transforms into a <hyperlink>Lightning Rune Crab</hyperlink> until the end of the battle.</bullet><bullet>Has its <hyperlink><hp></hp> Hit Points</hyperlink> reset.</bullet><bullet>Loses all <hyperlink>Negative Status Effects</hyperlink> and <hyperlink>Positive Status Effects</hyperlink>.</bullet><bullet>Loses all <caststrategic></caststrategic> <hyperlink>Unit Enchantments</hyperlink>, <caststrategic></caststrategic> <hyperlink>Race Transformations</hyperlink>, and ranks until the end of the battle.</bullet></bulletlist><br></br>Does not work in lava battles.",
    "requisites": [],
    "units": [],
+   "spawns": [
+    "CRABIFY_CAT"
+   ],
    "sources": [
     {
      "kind": "Ancient Wonder",
@@ -22808,6 +23583,7 @@
    "description": "Gain 3 <thralls></thralls> <hyperlink>Thralls</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Hero Skill",
@@ -22849,6 +23625,7 @@
    "description": "Target friendly unit gains:<bulletlist><bullet>Berserk for 3 <turn></turn> Turns.</bullet><bullet>5 Infernal Might for 3<turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22892,6 +23669,9 @@
    "units": [
     "abominable_mistling"
    ],
+   "spawns": [
+    "MISBORN_MISTLING_UNIT_CAT"
+   ],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -22928,6 +23708,7 @@
    "description": "Target enemy units in a 1-hex radius:<bulletlist><bullet>Become Stunned for 1 <turn></turn> Turn.</bullet><bullet>Become Distracted for 1 <turn></turn> Turn.</bullet><bullet>Gain 5 Marked for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -22975,6 +23756,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23017,6 +23799,9 @@
    "requisites": [],
    "units": [
     "totem_of_the_wild"
+   ],
+   "spawns": [
+    "SUMMON_TOTEM_OF_THE_WILD_CAT"
    ],
    "sources": [
     {
@@ -23064,6 +23849,7 @@
    "description": "Target owned city:<bulletlist><bullet>Gains 40 <unitprod></unitprod> <hyperlink>Draft</hyperlink>.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23107,6 +23893,7 @@
    "description": "Target owned city converts their <mana></mana> Mana income, gaining <gold></gold> Gold, <structureprod></structureprod> Production, and <food></food> Food income equal to 75% of the <mana></mana> Mana income.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23148,6 +23935,7 @@
    "description": "Create a Treacherous Reflection of target enemy unit.<br></br><br></br>Cannot target Heroes, Combat Summons, and Mythic Units.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23194,6 +23982,7 @@
     "<unitBattleMage></unitBattleMage> Battle Mage Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23238,6 +24027,7 @@
     "<unitSupport></unitSupport> Support Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23286,6 +24076,7 @@
    "description": "Target Vassal City:<bulletlist><bullet>No longer gains <hyperlink><allegiance></allegiance>Allegiance</hyperlink></bullet><bullet>Vassal Income is increased by +2% for each point of <hyperlink><allegiance></allegiance>Allegiance</hyperlink> Income instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23323,6 +24114,7 @@
    "description": "Target non-<hyperlink>Hero</hyperlink> unit has a base 60% chance of:<bulletlist><bullet>Being immediately removed from combat.</bullet><bullet>Appearing at a random location in the Umbral Abyss after battle.</bullet><bullet>If unsuccessful, inflicts Stunned for 1<turn></turn> Turn instead.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23360,6 +24152,7 @@
    "description": "Gives the target race blessings of the Umbral Abyss, granting them:<bulletlist><bullet>Umbral Malady Immunity</bullet><bullet>While in <hyperlink>Gloom</hyperlink> terrain units gain:<bulletlist></bullet><bullet>+10 <happiness></happiness> <hyperlink>Morale</hyperlink>.</bullet><bullet>+12 <hyperlink><hp></hp> Hit Points</hyperlink> per <turn></turn> <hyperlink>Turn</hyperlink> on the world map.</bullet></bulletlist><bullet><hyperlink>Cities</hyperlink> and <hyperlink>Outposts</hyperlink> of the race:<bulletlist></bullet><bullet>Gain +2 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink> income for each province with Gloom terrain.</bullet><bullet>Ignore <happiness></happiness> <hyperlink>City Stability</hyperlink> penalties from Gloom terrain.</bullet></bulletlist><bullet>Hero units gain Gloom Shepherd.</bullet></bulletlist><br></br>This transformation is incompatible with Pure Soul.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23401,6 +24194,7 @@
    "description": "Target enemy city:<bulletlist><bullet>Loses a border land province and the population is lost.</bullet><bullet>Spawns an Umbral Nest <hyperlink>Infestation</hyperlink> on lost province.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23449,6 +24243,7 @@
    "description": "Create an Umbral Rift in the target Umbral Abyss province, and another nearby on the Surface layer.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23489,6 +24284,7 @@
     "<unitUndead></unitUndead> Undead"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23533,6 +24329,7 @@
    "description": "Target friendly non-Hero unit gains:<bulletlist><bullet>+50% damage.</bullet><bullet>Undying.</bullet><bullet>Armor of Despair</bullet></bulletlist><br></br>On cast, enemy units in a 2-hex radius lose 10 <happiness></happiness> <hyperlink>Morale</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23576,6 +24373,7 @@
    "description": "Target Animal or Cavalry unit gains, for 3 <turn></turn> Turns:<bulletlist><bullet>5 Strengthened</bullet><bullet>5 Bolstered Defense</bullet><bullet>Berserk.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23617,6 +24415,7 @@
    "description": "Target [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] leading an army you control is permanently transformed into a [hyperlink,GLOBAL.UNITS.SCOURGE_SUMMER]Scourge of Summer[/hyperlink]. This also restores all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] of the unit.<br><br>This transformation cannot be reverted and the [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] loses its hero status, becoming a normal [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]!",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -23651,6 +24450,7 @@
    "description": "Turns the target race into a conduit for chaotic energies, granting them:<bulletlist><bullet>+10% damage for each of the target's <hyperlink>Negative Status Effects</hyperlink>. Stacks up to 3 times.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23694,6 +24494,9 @@
    "units": [
     "living_vine"
    ],
+   "spawns": [
+    "LIVING_VINE_CAT"
+   ],
    "sources": [
     {
      "kind": "Tome",
@@ -23735,6 +24538,7 @@
    "description": "Gives target race strength in moments of weakness, giving them:<bulletlist><bullet>+2 <defensespirit></defensespirit> <hyperlink>Spirit Protection</hyperlink></bullet><bullet>When this unit drops below 60% of their maximum <hyperlink><hp></hp> Hit Points</hyperlink>:<bulletlist></bullet><bullet>Ignores 50% of its <hyperlink>Casualties</hyperlink>.</bullet><bullet>Gains +1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet><bullet>Gains +1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23776,6 +24580,7 @@
    "description": "Friendly units in a 1-hex radius gain 3 Fortune.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23813,6 +24618,7 @@
    "description": "All units in target enemy army gain 1 Bleeding for 1 <hyperlink>World Map</hyperlink> <turn></turn> <hyperlink>Turn</hyperlink>. You then gain +150 <knowledge></knowledge> <hyperlink>Knowledge</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "City Structure",
@@ -23847,6 +24653,7 @@
    "description": "Target friendly unit:<bulletlist><bullet>Heals +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink></bullet><bullet>Gains 2 Bolstered Resistance</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23887,6 +24694,7 @@
     "<unitConstruct></unitConstruct> Construct"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23930,6 +24738,7 @@
    "description": "Target province:<bulletlist><bullet>Provides vision in a 3 hex-radius from the province center.</bullet><bullet>Enemy units in this province suffer Marked.</bullet></bulletlist><br></br>Lasts for 3 <turn></turn> <hyperlink>Turns</hyperlink>.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -23969,6 +24778,7 @@
     "<unitScout></unitScout> Scout Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24006,6 +24816,7 @@
    "description": "Target and adjacent <hyperlink>Province</hyperlink>:<bulletlist><bullet>Gain Whiteout for 3 <turn></turn> Turns.</bullet><bullet>Water provinces gain <hyperlink>Ice</hyperlink> for 3 <turn></turn> Turns.</bullet><bullet>Alter land provinces to <hyperlink>Snow</hyperlink> and <hyperlink>Ice</hyperlink>.<bulletlist></bullet><bullet>Loses <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24051,6 +24862,7 @@
    "description": "Gives the target race immortality beyond life, granting them:<bulletlist><bullet>The Undead unit type.</bullet><bullet>Life Steal, which restores <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink> upon each attack.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24096,6 +24908,7 @@
    "description": "Enemy units suffer 5 stack(s) of Demoralized whenever they kill another unit.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Cosmic Happening",
@@ -24130,6 +24943,7 @@
    "description": "Each turn, for 3 <turn></turn> Turns, all enemies:<bulletlist><bullet>Sustain 20 <damageFrost></damageFrost> <hyperlink>Frost Damage</hyperlink>.</bullet><bullet>Have a base 120% chance of becoming Blind for 1 <turn></turn> Turn.</bullet><bullet>Have a base 120% chance of becoming Weakened for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24182,6 +24996,7 @@
     "<unitMagicFighter></unitMagicFighter> Magic Fighter Unit"
    ],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24219,6 +25034,7 @@
    "description": "Target enemy army:<bulletlist><bullet>Sustains 20 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink>.</bullet><bullet>Gains 3 Demoralized for 1 <turn></turn> Turn.</bullet><bullet>Becomes Condemned for 1 <turn></turn> Turn.</bullet><bullet>If cast in enemy territory, the army additionally sustains +50% damage.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24260,6 +25076,7 @@
    "description": "Target enemy unit sustains 10 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> plus 5 <damageSpirit></damageSpirit> <hyperlink>Spirit Damage</hyperlink> per each friendly Faithful unit in battle (up to 8).",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24301,6 +25118,7 @@
    "description": "Infuse target race with feline essence gaining:<bulletlist><bullet>Very Fast Movement</bullet><bullet>+25% <hyperlink>Evasion</hyperlink> against <hyperlink>Missile</hyperlink> and <hyperlink>Magic</hyperlink> attacks.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -24336,6 +25154,7 @@
    "description": "Heroes in target army:<bulletlist><bullet>Lose 20 maximum <hyperlink><hp></hp> Hit Points</hyperlink>.</bullet><bullet>Base attacks gain a base 60% chance of inflicting Gilded for 1 <turn></turn> Turn.</bullet><bullet>Grants +50 <gold></gold> <hyperlink>Gold</hyperlink> per <hyperlink>World Map</hyperlink> <turn></turn> Turn.</bullet></bulletlist><br></br>Cannot affect Leaders.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -24372,6 +25191,7 @@
    "description": "Target unit:<bulletlist><bullet>Heals for 25 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet><bullet>Gains 2 stacks of Strengthened.</bullet></bulletlist><br></br>Units with Evolve or Product of Evolution:<bulletlist><bullet>Gain Resurgence until the end of combat.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",
@@ -24415,6 +25235,7 @@
    "description": "Target race is infused with Fallen Angels gaining:<bulletlist><bullet>The Celestial unit type.</bullet><bullet>Flying.</bullet><bullet>Frenzy.</bullet><bullet>Decreased number of units in formation.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -24451,6 +25272,7 @@
    "description": "All <hyperlink>Provinces</hyperlink>:<bulletlist><bullet>Gain <hyperlink>Grassland</hyperlink> and <hyperlink>Forest</hyperlink> if on the Surface or <hyperlink>Fungus Fields</hyperlink> and <hyperlink>Mushroom Forest</hyperlink> if they are in the Underground.</bullet><bullet>Lose <hyperlink>Chasm</hyperlink>, <hyperlink>Swamp</hyperlink>, <hyperlink>Snow</hyperlink>, <hyperlink>Ice</hyperlink>, <hyperlink>Ashlands</hyperlink>, <hyperlink>Sand</hyperlink>, <hyperlink>Cavern Floor</hyperlink>, <hyperlink>Stalagmites</hyperlink>, and <hyperlink>Gloom</hyperlink>.</bullet></bulletlist><br></br>Additionally, all your <hyperlink>Provinces</hyperlink> with <hyperlink>Grassland</hyperlink> or <hyperlink>Forest</hyperlink> gain double income.",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Secret Spell",
@@ -24487,6 +25309,7 @@
    "description": "Target unit:<bulletlist><bullet>Gains Zeal until the end of battle.<br></br>If target already has Zeal, gain 2 Strengthened for 3 <turn></turn> Turns.</bullet><bullet>Enemy units in a 2-hex radius suffer Condemned until the end of battle.</bullet><bullet>Create <hyperlink>Cleansing Flames</hyperlink> on the target hexes for 3 <turn></turn> Turns.</bullet></bulletlist>",
    "requisites": [],
    "units": [],
+   "spawns": [],
    "sources": [
     {
      "kind": "Tome",

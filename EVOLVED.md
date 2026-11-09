@@ -401,6 +401,12 @@ A value the game only knows in play, or whose tag no resource holds, stays a pla
 `Data/EN/concept_tooltips.json`, the concept tooltips, is written by the same tool: every concept the game's tooltip libraries name (Title, icon, Hyperlink wording, Description), 228 more than upstream's copy had (On Fire, Province, Hero), and the properties, structures and the like texts link to, 346 of them with their icon (`image`, exported to `Icons/UnitIcons`). A pickup a text links to is named by the game's name for it ("Abandoned Egg Clusters", "Galleon Wreckages"), not its tag's words ("Water egg pickup guardeds").
 Both follow the game's grammar more closely than the game's own texts do: a word the game counts agrees with the number before it ("for 1 Turn", "3 Turns").
 `Data/GEN/all_spawnsets_strategic.json`, the world map's unit pools that events link to, is written by `spawnsets.py` too (659 pools; upstream's had 416, some under garbled names).
+A summon spell's Spawn chances (`SpellSpawnChances`, `Data/Builder.js`; six spells) show the categories its summons draw
+from, SpellBook.json's `spawns` (`spawn_categories` in `spells.py`: the unit categories its summon effects name), not
+every category of its name in `all_spawnsets.json`: the game keeps some no effect uses. With the mod, Raise Undead Army
+summons from T3 alone (its Low and Mid were shown, the game's own spell), Awaken the Forest from Mid alone; Summon
+Elemental's Signature category is no part of the spell either (2026-11-09). Resources sharing a category's name are still
+added up: the game adds them, as a DLC's "Evolution Extension" does to Call Wild Animal's default and water animals.
 `Data/GEN/LinkedAbilities.json` (`abilities.py`): the abilities texts link to that the dump leaves out (see above).
 `Data/GEN/RealmTraits.json` and `Icons/RealmTraits/` (`realmtraits.py`) feed `HTML/RealmTraits.html`, in the World Map menu, a tab per category (`?type=Geography`): upstream's page was never linked and picked texts by id.
 The rest of `Data/GEN/*.json` comes from upstream, apart from the files Evolved generates (below).

@@ -381,6 +381,10 @@ The DLC as Evolved shows it, not upstream's pages (2026-11-03):
   `FactionCreation.json`, `BuilderLookup.json` and `BuilderLookupHero.json` are upstream's, and `AscendedInfo.json`
   is upstream's, with its four new Ascensions (Eternal Ice, Piracy, the Damned and Hydromancy's Tide Summoner). A tome
   lists every entry naming it, so an entry there twice shows twice.
+- A Faction Creator share link holds each choice's place in `BuilderLookup.json`, so a choice whose id isn't there
+  makes no link (`decimalToHex(undefined)`). Two entries are renamed in place to the game's ids, keeping their places
+  and old links: 0x557 `hoarfrost_manta_mount` to `hoarfrost_manta_mounts`, and 0x9 `bannerlords` (which old links
+  use) to `_pantheon___bannerlords__goodact__`, the game's only Bannerlords (2026-11-11). New entries go at the end.
 
 ### Ancient Wonders
 

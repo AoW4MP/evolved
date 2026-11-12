@@ -42,12 +42,7 @@ const MagicMaterialsPage = (() => {
         for (const set of sets) {
             const members = set.materials.map((key) => ({ key, ...materials.materials[key] }));
             members.sort((a, b) => a.name.localeCompare(b.name));
-            const tab = document.createElement("button");
-            tab.className = "mm-tab";
-            tab.dataset.set = set.key;
-            tab.innerHTML =
-                '<img src="/evolved/Icons/WorldStructures/' + members[0].key + '.png" alt="" />' +
-                set.category + " <span>" + members.length + "</span>";
+            const tab = WmTab(set.key, '<img src="/evolved/Icons/WorldStructures/' + members[0].key + '.png" alt="" /> ' + set.category, members.length);
             tab.onclick = () => OpenSet(set.key);
             tabs.append(tab);
             page.append(DrawSet(set, members));
@@ -57,7 +52,7 @@ const MagicMaterialsPage = (() => {
     }
 
     function OpenSet(key, keepAddress) {
-        document.querySelectorAll(".mm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.set === key));
+        document.querySelectorAll("#tabs .wm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.id === key));
         document.querySelectorAll(".mm-section").forEach((s) => (s.hidden = s.dataset.set !== key));
         if (!keepAddress) history.replaceState(null, "", "?type=" + key + "&");
     }

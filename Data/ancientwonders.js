@@ -36,10 +36,7 @@ const AncientWondersPage = (() => {
         const first = TIERS.includes(wanted) ? wanted : TIERS[0];
         for (const tier of TIERS) {
             const here = wonders.wonders.filter((w) => w.tier === tier);
-            const tab = document.createElement("button");
-            tab.className = "aw-tab";
-            tab.dataset.tier = tier;
-            tab.innerHTML = "<" + TIER_ICON[tier] + "></" + TIER_ICON[tier] + "> " + tier + " <span>" + here.length + "</span>";
+            const tab = WmTab(tier, "<" + TIER_ICON[tier] + "></" + TIER_ICON[tier] + "> " + tier, here.length);
             tab.onclick = () => OpenTier(tier);
             tabs.append(tab);
             const holder = document.createElement("div");
@@ -51,11 +48,11 @@ const AncientWondersPage = (() => {
         OpenTier(first, true);
         HandleExtraTooltips(page);
         // the search bar over all tiers (worldmap.js)
-        WmSearchBar([...tabs.children].map((tab) => [tab, page.querySelector('.aw-tier[data-tier="' + tab.dataset.tier + '"]')]), ".aw-card", null, "Search all wonders");
+        WmSearchBar([...tabs.children].map((tab) => [tab, page.querySelector('.aw-tier[data-tier="' + tab.dataset.id + '"]')]), ".aw-card", null, "Search all wonders");
     }
 
     function OpenTier(tier, keepAddress) {
-        document.querySelectorAll(".aw-tab").forEach((t) => t.classList.toggle("selected", t.dataset.tier === tier));
+        document.querySelectorAll("#tabs .wm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.id === tier));
         document.querySelectorAll(".aw-tier").forEach((t) => (t.hidden = t.dataset.tier !== tier));
         if (!keepAddress) history.replaceState(null, "", "?type=" + tier + "&");
     }

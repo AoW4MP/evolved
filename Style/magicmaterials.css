@@ -10,39 +10,6 @@
     max-width: 720px;
     margin: 4px auto 16px;
 }
-.mm-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin: 6px 0 20px;
-}
-.mm-tab {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 18px;
-    color: #bbcdf6;
-    background: url(/evolved/Icons/tooltipBG.png);
-    border: 1px solid #555;
-    font: inherit;
-    font-size: 16px;
-    cursor: pointer;
-}
-.mm-tab img {
-    height: 24px;
-}
-.mm-tab span {
-    color: #8d97ad;
-    font-size: 14px;
-}
-.mm-tab:hover {
-    color: white;
-}
-.mm-tab.selected {
-    color: #ffe9a8;
-    border-color: #d7c297;
-}
 .mm-bonus,
 .mm-card {
     margin-bottom: 20px;

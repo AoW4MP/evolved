@@ -1,5 +1,6 @@
 // What the World Map pages made from the game's data share (Infestations, Landmarks, Cosmic and Oceanic Happenings,
-// Province Improvements): their tabs, cards and unit links, and the search bar Ancient Wonders and Realm Traits use too.
+// Province Improvements): their tabs, cards and unit links, and the tabs (WmTab) and search bar Ancient Wonders and Realm
+// Traits use too (Magic Materials, the tabs).
 // Style/worldmap.css goes with it.
 
 // entries: {id, label (HTML), count, panel}. A tab's own address is ?type=<id>&; returns the function that opens a tab
@@ -12,16 +13,7 @@ function WmTabs(entries) {
         if (!keepAddress) history.replaceState(null, "", "?type=" + id + "&");
     };
     for (const e of entries) {
-        const tab = document.createElement("button");
-        tab.className = "wm-tab";
-        tab.dataset.id = e.id;
-        tab.innerHTML = e.label;
-        // its words and count (.wm-count) in one line of text, on one baseline, and that line centred beside its icon
-        const words = [...tab.childNodes].filter((n) => n.nodeType === Node.TEXT_NODE);
-        const line = WmElement("span", "wm-tab-words", "");
-        line.append(words.map((n) => n.textContent).join("").trim() + " ", WmElement("span", "wm-count", String(e.count)));
-        words.forEach((n) => n.remove());
-        tab.append(line);
+        const tab = WmTab(e.id, e.label, e.count);
         tab.onclick = () => open(e.id);
         tabs.append(tab);
         page.append(e.panel);
@@ -30,6 +22,20 @@ function WmTabs(entries) {
     open(entries.some((e) => e.id === wanted) ? wanted : entries[0].id, true);
     HandleExtraTooltips(page);
     return open;
+}
+
+// a tab (.wm-tab, its id in data-id), for WmTabs and the pages that open their tabs themselves (Ancient Wonders, Magic
+// Materials, Realm Traits): its icon, and its words and count (.wm-count) in one line of text, on one baseline, that
+// line centred beside the icon. label: HTML, its icon a tag or an <img>
+function WmTab(id, label, count) {
+    const tab = WmElement("button", "wm-tab", label);
+    tab.dataset.id = id;
+    const words = [...tab.childNodes].filter((n) => n.nodeType === Node.TEXT_NODE);
+    const line = WmElement("span", "wm-tab-words", "");
+    line.append(words.map((n) => n.textContent).join("").trim() + " ", WmElement("span", "wm-count", String(count)));
+    words.forEach((n) => n.remove());
+    tab.append(line);
+    return tab;
 }
 
 // the search bar of a page WmTabs made: its tabs and their panels, in the same order; .wm-card cards

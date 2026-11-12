@@ -14,7 +14,7 @@
         </script>
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/style.css" />
-        <!-- the search bar (WmSearchBar) -->
+        <!-- the tabs (WmTab) and search bar (WmSearchBar) -->
         <link rel="stylesheet" type="text/css" href="/evolved/Style/worldmap.css" />
         <meta charset="UTF-8" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -41,11 +41,8 @@
                     const title = category.name.replace(/ Trait$/, "");
                     const color = CATEGORY_COLORS[category.key] || "rgb(100, 100, 100)";
 
-                    const tab = document.createElement("button");
-                    tab.className = "rt-tab";
-                    tab.dataset.type = title;
+                    const tab = WmTab(title, title, traits.length);
                     tab.style.setProperty("--cat", color);
-                    tab.innerHTML = title + " <span>" + traits.length + "</span>";
                     tab.onclick = () => OpenCategory(title);
                     tabs.append(tab);
                     if (!first || title === wanted) first = title;
@@ -76,7 +73,7 @@
                 OpenCategory(first, true);
                 HandleExtraTooltips(page);
                 // the search bar over all categories (worldmap.js)
-                WmSearchBar([...tabs.children].map((tab) => [tab, page.querySelector('.rt-section[data-type="' + tab.dataset.type + '"]')]), ".rt-card", ".rt-sub", "Search all realm traits");
+                WmSearchBar([...tabs.children].map((tab) => [tab, page.querySelector('.rt-section[data-type="' + tab.dataset.id + '"]')]), ".rt-card", ".rt-sub", "Search all realm traits");
                 // a link to another trait: open its category, scroll to its card and light it up
                 page.addEventListener("click", (e) => {
                     const a = e.target.closest("a.rt-exclusive-link");
@@ -93,7 +90,7 @@
             }
 
             function OpenCategory(type, keepAddress) {
-                document.querySelectorAll(".rt-tab").forEach((t) => t.classList.toggle("selected", t.dataset.type === type));
+                document.querySelectorAll("#tabs .wm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.id === type));
                 document.querySelectorAll(".rt-section").forEach((s) => (s.hidden = s.dataset.type !== type));
                 if (!keepAddress) history.replaceState(null, "", "?type=" + type + "&");
             }
@@ -137,7 +134,7 @@
                 <img src="/evolved/Icons/Interface/TitleIcons/RealmTraits_Continents.png" height="40px" alt="" /> Realm Traits
                 <img src="/evolved/Icons/Interface/TitleIcons/RealmTraits_Continents.png" height="40px" alt="" />
             </div>
-            <div id="tabs" class="rt-tabs"></div>
+            <div id="tabs" class="wm-tabs rt-tabs"></div>
             <div id="traits"></div>
         </div>
     </body>
@@ -148,35 +145,11 @@
         max-width: 1500px;
         margin: 0 auto;
     }
-    .rt-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        margin: 6px 0 20px;
-    }
-    .rt-tab {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 18px;
-        color: #bbcdf6;
-        background: url(/evolved/Icons/tooltipBG.png);
-        border: 1px solid #555;
+    /* the shared tabs (WmTab), each with its category's colour on its left */
+    .rt-tabs .wm-tab {
         border-left: 4px solid var(--cat);
-        font: inherit;
-        font-size: 16px;
-        cursor: pointer;
     }
-    .rt-tab span {
-        color: #8d97ad;
-        font-size: 14px;
-    }
-    .rt-tab:hover {
-        color: white;
-    }
-    .rt-tab.selected {
-        color: #ffe9a8;
+    .rt-tabs .wm-tab.selected {
         border-color: #d7c297 #d7c297 #d7c297 var(--cat);
     }
     /* a category: a panel with its colour's band */

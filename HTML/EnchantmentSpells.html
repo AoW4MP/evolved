@@ -23,7 +23,7 @@
         <script src="/evolved/Data/spellbook.js"></script>
         <script>
             // Evolved's own Enchantments page: a tab per where they come from (General Research and the affinities' tomes are
-            // Tomes), affinity and unit class buttons as filters. Everything comes from Data/GEN/SpellBook.json (Data/spellbook.js).
+            // Tomes), affinity buttons as filters and, on a row of their own, unit class and unit type buttons. Everything comes from Data/GEN/SpellBook.json (Data/spellbook.js).
 
             const TABS = [
                 ["Tomes", "Tomes"],
@@ -34,7 +34,7 @@
 
             async function HandlePage() {
                 const book = await SbLoad();
-                const [affinities] = SbBoard(TABS, book.spells.filter((s) => s.page === "Enchantment"), (s) => s.tabs, SbSpellCard, { classes: true });
+                const [affinities] = SbBoard(TABS, book.spells.filter((s) => s.page === "Enchantment"), (s) => s.tabs, SbSpellCard, { units: true });
                 // an affinity had a tab of its own (?type=Order): its button instead
                 const old = Object.keys(SB_AFFINITIES).indexOf(new URLSearchParams(location.search).get("type"));
                 if (old >= 0) affinities[old].click();
@@ -56,8 +56,10 @@
             <div class="wm-filters">
                 <input type="text" class="wm-search" id="filterInput" placeholder="Search all enchantments" />
                 <div id="affinities" class="wm-choices"></div>
-                <div id="classes" class="wm-choices"></div>
                 <div id="sorts" class="wm-choices"></div>
+                <div class="wm-break"></div>
+                <div id="classes" class="wm-choices"></div>
+                <div id="types" class="wm-choices"></div>
             </div>
             <div id="panels"></div>
         </div>

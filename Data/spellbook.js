@@ -264,10 +264,20 @@ function SbClasses(e) {
     return (e.requisites || []).map((r) => r.match(/^<(unit\w+)><\/\1>\s*.+ Unit$/)?.[1]).filter(Boolean);
 }
 
+// the unit types a spell's Affected Unit Types name, the others with an icon tag ("<unitAnimal></unitAnimal> Animal"):
+// [tag, name]. Not Magic Origin, Tier I or Units that Evolve, which are no type and have none
+function SbTypes(e) {
+    return (e.requisites || [])
+        .map((r) => r.match(/^<(unit\w+)><\/\1>\s*(.+)$/))
+        .filter((m) => m && !/ Unit$/.test(m[2]))
+        .map((m) => [m[1], m[2]]);
+}
+
 // tabs: [[id, label (HTML)]]. tabsOf: the tabs a thing is on. A thing on two tabs has a card on each. The search and the
-// affinity buttons work across all tabs, whose counts follow (WmBoard). classes: a button per unit class too (in
-// #classes), which keeps what is for that class and what names none, as Hero Equipment does with a hero's class
-function SbBoard(tabs, items, tabsOf, makeCard, { classes = false } = {}) {
+// affinity buttons work across all tabs, whose counts follow (WmBoard). units: a button per unit class (in #classes),
+// which keeps what is for that class and what names none (Empowered Beasts is for an Animal of any class), as Hero
+// Equipment does with a hero's class; and per unit type the things name (in #types), which keeps what names it
+function SbBoard(tabs, items, tabsOf, makeCard, { units = false } = {}) {
     const byName = (a, b) => a.name.localeCompare(b.name);
     const icon = (tag) => "<" + tag + "></" + tag + ">";
     const affinities = Object.entries(SB_AFFINITIES).map(([name, tag]) => ({
@@ -276,7 +286,7 @@ function SbBoard(tabs, items, tabsOf, makeCard, { classes = false } = {}) {
         test: (e) => (e.affinities || []).includes(name)
     }));
     const choices = [{ holder: "affinities", buttons: affinities }];
-    if (classes) {
+    if (units) {
         choices.push({
             holder: "classes",
             buttons: Object.entries(SB_UNIT_CLASSES).map(([name, tag]) => ({
@@ -284,6 +294,13 @@ function SbBoard(tabs, items, tabsOf, makeCard, { classes = false } = {}) {
                 title: name + " Units",
                 test: (e) => !SbClasses(e).length || SbClasses(e).includes(tag)
             }))
+        });
+        const types = new Map(items.flatMap(SbTypes));
+        choices.push({
+            holder: "types",
+            buttons: [...types]
+                .sort((a, b) => a[1].localeCompare(b[1]))
+                .map(([tag, name]) => ({ label: icon(tag), title: name, test: (e) => SbTypes(e).some(([t]) => t === tag) }))
         });
     }
     return WmBoard(tabs, items, {

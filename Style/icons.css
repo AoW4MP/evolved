@@ -461,6 +461,7 @@ unitConstruct,
 unitFey,
 unitAnimal,
 unitSettler,
+unitUmbral,
 unitDragon {
     width: 20px;
     height: 20px;
@@ -549,6 +550,11 @@ unitDragon {
 
 unitAnimal {
     content: url(/evolved/Icons/Interface/Header/animal.png);
+}
+
+/* the game has no icon for this tag (Cosmic Overdrive's Umbral Demon): the header's */
+unitUmbral {
+    content: url(/evolved/Icons/Interface/DropdownIcons/umbral_demon.png);
 }
 
 knowledge {

@@ -22,23 +22,22 @@
         <script src="/evolved/Data/worldmap.js"></script>
         <script src="/evolved/Data/spellbook.js"></script>
         <script>
-            // Evolved's own Enchantments page: a tab per affinity, a dual tome's on both of its own. Everything comes from Data/GEN/SpellBook.json (Data/spellbook.js).
+            // Evolved's own Enchantments page: a tab per where they come from (General Research and the affinities' tomes are
+            // Generic), affinity and unit class buttons as filters. Everything comes from Data/GEN/SpellBook.json (Data/spellbook.js).
 
             const TABS = [
-                ["Generic", "Generic Research"],
-                ["Cultures", "Cultures &amp; Pacts"],
-                ["Order", "<empireorder></empireorder> Order"],
-                ["Chaos", "<empirechaos></empirechaos> Chaos"],
-                ["Nature", "<empirenature></empirenature> Nature"],
-                ["Materium", "<empirematter></empirematter> Materium"],
-                ["Astral", "<empirearcana></empirearcana> Astral"],
-                ["Shadow", "<empireshadow></empireshadow> Shadow"],
-                ["Other", "Other"]
+                ["Generic", "Generic"],
+                ["Cultures", "Cultures"],
+                ["Dwellings", "Dwellings"],
+                ["Happenings", "Happenings"]
             ];
 
             async function HandlePage() {
                 const book = await SbLoad();
-                SbBoard(TABS, book.spells.filter((s) => s.page === "Enchantment"), (s) => s.tabs, SbSpellCard, { affinity: false });
+                const [affinities] = SbBoard(TABS, book.spells.filter((s) => s.page === "Enchantment"), (s) => s.tabs, SbSpellCard, { classes: true });
+                // an affinity had a tab of its own (?type=Order): its button instead
+                const old = Object.keys(SB_AFFINITIES).indexOf(new URLSearchParams(location.search).get("type"));
+                if (old >= 0) affinities[old].click();
             }
         </script>
 
@@ -57,6 +56,7 @@
             <div class="wm-filters">
                 <input type="text" class="wm-search" id="filterInput" placeholder="Search all enchantments" />
                 <div id="affinities" class="wm-choices"></div>
+                <div id="classes" class="wm-choices"></div>
                 <div id="sorts" class="wm-choices"></div>
             </div>
             <div id="panels"></div>

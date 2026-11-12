@@ -3,6 +3,20 @@
 // the mod. Style/spellbook.css and Data/worldmap.js go with it.
 
 const SB_AFFINITIES = { Order: "empireorder", Chaos: "empirechaos", Nature: "empirenature", Materium: "empirematter", Astral: "empirearcana", Shadow: "empireshadow" };
+// the unit classes an enchantment names among its Affected Unit Types (the Enchantments page's buttons), melee first
+const SB_UNIT_CLASSES = {
+    Fighter: "unitFighter",
+    Shield: "unitShield",
+    Polearm: "unitPolearm",
+    Shock: "unitShock",
+    "Magic Fighter": "unitMagicFighter",
+    Skirmisher: "unitSkirmisher",
+    Ranged: "unitRanged",
+    "Battle Mage": "unitBattleMage",
+    Support: "unitSupport",
+    Scout: "unitScout",
+    Mythic: "unitMythic"
+};
 // where a spell's source is listed
 const SB_SOURCE_PAGE = {
     "Ancient Wonder": (s) => "AncientWonders.html" + (s.tab ? "?type=" + s.tab + "&" : ""),
@@ -244,20 +258,38 @@ function SbCost(e) {
     return e.cost.reduce((sum, [amount]) => sum + amount, 0);
 }
 
+// the classes a spell's Affected Unit Types name ("<unitShield></unitShield> Shield Unit"), by their icon tag. None: it
+// is for a kind of unit of any class (Animal, Tier I), or for any unit
+function SbClasses(e) {
+    return (e.requisites || []).map((r) => r.match(/^<(unit\w+)><\/\1>\s*.+ Unit$/)?.[1]).filter(Boolean);
+}
+
 // tabs: [[id, label (HTML)]]. tabsOf: the tabs a thing is on. A thing on two tabs has a card on each. The search and the
-// affinity buttons work across all tabs, whose counts follow (WmBoard)
-function SbBoard(tabs, items, tabsOf, makeCard, { affinity = true } = {}) {
+// affinity buttons work across all tabs, whose counts follow (WmBoard). classes: a button per unit class too (in
+// #classes), which keeps what is for that class and what names none, as Hero Equipment does with a hero's class
+function SbBoard(tabs, items, tabsOf, makeCard, { classes = false } = {}) {
     const byName = (a, b) => a.name.localeCompare(b.name);
-    const affinities = Object.entries(SB_AFFINITIES).map(([name, icon]) => ({
-        label: "<" + icon + "></" + icon + ">",
+    const icon = (tag) => "<" + tag + "></" + tag + ">";
+    const affinities = Object.entries(SB_AFFINITIES).map(([name, tag]) => ({
+        label: icon(tag),
         title: name,
         test: (e) => (e.affinities || []).includes(name)
     }));
-    if (!affinity) document.getElementById("affinities").remove();
-    WmBoard(tabs, items, {
+    const choices = [{ holder: "affinities", buttons: affinities }];
+    if (classes) {
+        choices.push({
+            holder: "classes",
+            buttons: Object.entries(SB_UNIT_CLASSES).map(([name, tag]) => ({
+                label: icon(tag),
+                title: name + " Units",
+                test: (e) => !SbClasses(e).length || SbClasses(e).includes(tag)
+            }))
+        });
+    }
+    return WmBoard(tabs, items, {
         tabsOf,
         makeCard,
-        choices: affinity ? [{ holder: "affinities", buttons: affinities }] : [],
+        choices,
         sorts: [
             { id: "tier", label: "Tier", order: (a, b) => SbGroup(a).rank - SbGroup(b).rank || byName(a, b), group: SbGroup },
             { id: "name", label: "Name", order: byName },

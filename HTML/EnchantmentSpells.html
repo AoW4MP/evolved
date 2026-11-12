@@ -34,10 +34,7 @@
 
             async function HandlePage() {
                 const book = await SbLoad();
-                const [affinities] = SbBoard(TABS, book.spells.filter((s) => s.page === "Enchantment"), (s) => s.tabs, SbSpellCard, { units: true });
-                // an affinity had a tab of its own (?type=Order): its button instead
-                const old = Object.keys(SB_AFFINITIES).indexOf(new URLSearchParams(location.search).get("type"));
-                if (old >= 0) affinities[old].click();
+                SbBoard(TABS, book.spells.filter((s) => s.page === "Enchantment"), (s) => s.tabs, SbSpellCard, { units: true });
             }
         </script>
 

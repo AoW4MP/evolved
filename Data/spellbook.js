@@ -328,7 +328,7 @@ function SbBoard(tabs, items, tabsOf, makeCard, { units = false } = {}) {
                 }))
         });
     }
-    return WmBoard(tabs, items, {
+    WmBoard(tabs, items, {
         tabsOf,
         makeCard,
         choices,

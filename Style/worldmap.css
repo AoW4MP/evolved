@@ -18,9 +18,10 @@
     gap: 8px;
     margin: 6px 0 20px;
 }
+/* its words and count on one baseline (centred, the smaller count stood higher), its icon centred */
 .wm-tab {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 6px;
     padding: 6px 18px;
     color: #bbcdf6;
@@ -32,6 +33,7 @@
 }
 /* one size in a square, without the nudges a text icon has in icons.css (a class icon's margin-top lifts it) */
 .wm-tab > :not(span) {
+    align-self: center;
     position: static;
     width: 24px;
     height: 24px;
@@ -119,6 +121,11 @@
     max-height: none;
     object-fit: contain;
     margin: 0;
+}
+/* a unit class's or type's bronze icon (Icons/Interface/DropdownIcons, Enchantments) has wide empty edges */
+.wm-choice > .wm-choice-unit {
+    width: 32px;
+    height: 32px;
 }
 /* a choice in words (Active, Passive) */
 .wm-choice.wm-choice-text {

@@ -3,19 +3,39 @@
 // the mod. Style/spellbook.css and Data/worldmap.js go with it.
 
 const SB_AFFINITIES = { Order: "empireorder", Chaos: "empirechaos", Nature: "empirenature", Materium: "empirematter", Astral: "empirearcana", Shadow: "empireshadow" };
-// the unit classes an enchantment names among its Affected Unit Types (the Enchantments page's buttons), melee first
+// the unit classes an enchantment names among its Affected Unit Types (the Enchantments page's buttons), melee first:
+// their icon tag, and their bronze icon in Icons/Interface/DropdownIcons, as the Units menu shows them
 const SB_UNIT_CLASSES = {
-    Fighter: "unitFighter",
-    Shield: "unitShield",
-    Polearm: "unitPolearm",
-    Shock: "unitShock",
-    "Magic Fighter": "unitMagicFighter",
-    Skirmisher: "unitSkirmisher",
-    Ranged: "unitRanged",
-    "Battle Mage": "unitBattleMage",
-    Support: "unitSupport",
-    Scout: "unitScout",
-    Mythic: "unitMythic"
+    Fighter: ["unitFighter", "fighter_unit"],
+    Shield: ["unitShield", "shield_unit"],
+    Polearm: ["unitPolearm", "polearm_unit"],
+    Shock: ["unitShock", "shock_unit"],
+    "Magic Fighter": ["unitMagicFighter", "magic_fighter"],
+    Skirmisher: ["unitSkirmisher", "skirmisher_unit"],
+    Ranged: ["unitRanged", "ranged_unit"],
+    "Battle Mage": ["unitBattleMage", "battle_mage_unit"],
+    Support: ["unitSupport", "support_unit"],
+    Scout: ["unitScout", "scout_unit"],
+    Mythic: ["unitMythic", "mythic_unit"]
+};
+// a unit type's bronze icon there, by its icon tag. Cavalry, Merfolk and Spider aren't in the Units menu: their icons are
+// the game's white ones (Icons/TML) in that bronze. One with none shows its tag's icon
+const SB_UNIT_TYPE_ICONS = {
+    unitAccursed: "accursed_fiend",
+    unitAnimal: "animal",
+    unitCavalry: "cavalry",
+    unitCelestial: "celestial",
+    unitConstruct: "construct",
+    unitDragon: "dragon",
+    unitElemental: "elemental",
+    unitEthereal: "ethereal",
+    unitFey: "fey",
+    unitFiend: "infernal_fiend",
+    unitMerfolk: "merfolk",
+    unitPlant: "plant",
+    unitSpider: "spider",
+    unitUmbral: "umbral_demon",
+    unitUndead: "undead"
 };
 // where a spell's source is listed
 const SB_SOURCE_PAGE = {
@@ -274,12 +294,13 @@ function SbTypes(e) {
 }
 
 // tabs: [[id, label (HTML)]]. tabsOf: the tabs a thing is on. A thing on two tabs has a card on each. The search and the
-// affinity buttons work across all tabs, whose counts follow (WmBoard). units: a button per unit class (in #classes),
-// which keeps what is for that class and what names none (Empowered Beasts is for an Animal of any class), as Hero
-// Equipment does with a hero's class; and per unit type the things name (in #types), which keeps what names it
+// affinity buttons work across all tabs, whose counts follow (WmBoard). units: a button per unit class (in #classes) and
+// per unit type the things name (in #types), each keeping what names it among its Affected Unit Types: Empowered Beasts
+// is under Animal, not under a class
 function SbBoard(tabs, items, tabsOf, makeCard, { units = false } = {}) {
     const byName = (a, b) => a.name.localeCompare(b.name);
     const icon = (tag) => "<" + tag + "></" + tag + ">";
+    const bronze = (file) => '<img class="wm-choice-unit" src="/evolved/Icons/Interface/DropdownIcons/' + file + '.png" alt="" />';
     const affinities = Object.entries(SB_AFFINITIES).map(([name, tag]) => ({
         label: icon(tag),
         title: name,
@@ -289,10 +310,10 @@ function SbBoard(tabs, items, tabsOf, makeCard, { units = false } = {}) {
     if (units) {
         choices.push({
             holder: "classes",
-            buttons: Object.entries(SB_UNIT_CLASSES).map(([name, tag]) => ({
-                label: icon(tag),
+            buttons: Object.entries(SB_UNIT_CLASSES).map(([name, [tag, file]]) => ({
+                label: bronze(file),
                 title: name + " Units",
-                test: (e) => !SbClasses(e).length || SbClasses(e).includes(tag)
+                test: (e) => SbClasses(e).includes(tag)
             }))
         });
         const types = new Map(items.flatMap(SbTypes));
@@ -300,7 +321,11 @@ function SbBoard(tabs, items, tabsOf, makeCard, { units = false } = {}) {
             holder: "types",
             buttons: [...types]
                 .sort((a, b) => a[1].localeCompare(b[1]))
-                .map(([tag, name]) => ({ label: icon(tag), title: name, test: (e) => SbTypes(e).some(([t]) => t === tag) }))
+                .map(([tag, name]) => ({
+                    label: SB_UNIT_TYPE_ICONS[tag] ? bronze(SB_UNIT_TYPE_ICONS[tag]) : icon(tag),
+                    title: name,
+                    test: (e) => SbTypes(e).some(([t]) => t === tag)
+                }))
         });
     }
     return WmBoard(tabs, items, {

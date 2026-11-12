@@ -408,7 +408,7 @@ function EmFactionPage() {
             ["Society", "<empiregeneral></empiregeneral> Society Traits"],
             ["Prophecy", "<questpoints></questpoints> Prophecies"],
             ["Rulers", "<unitruler></unitruler> Ruler Types"],
-            ["Cultures", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/CultureUnitsIcon.png" alt="" /> Cultures']
+            ["Cultures", '<img src="/evolved/Icons/Interface/TabIcons/culture.png" alt="" /> Cultures']
         ],
         things,
         {

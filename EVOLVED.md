@@ -159,8 +159,10 @@ words, so Overcharge Cast's "Grant your Spells Overcharge" and the Wizard King r
 Overcharge ability and the Overcharged status, not Overcharged Spell. Of about 19,800 such links, 185 open another
 tooltip now, each the game's: Defense Mode, First Strike, Control Loss Immunity and Hero their concepts (the same
 words), Souls, Tomes, Wizard Kings and Affinities their game concepts, not the lore ones, "War" War, not an Umbral
-Dwelling's, a Bounty the Ruler's quest, not the Bounty ability, Rising Fury its animal's, Magic Strike and Evasion their
-concepts (Evasion's has no numbers).
+Dwelling's, a Bounty the Ruler's quest, not the Bounty ability, Rising Fury its animal's, Magic Strike its concept, and
+Evasion as a bonus in % ("+10% Evasion": hero skills, Living Shadows, Leafskin) its concept, not the status that stacks.
+Moon and Shadow's "Gain 3 Evasion" is stacks of the status, which the game links to the concept too: `SITE_LINKS` in
+`alltexts.py` links it to the status (`GLOBAL.PROPERTIES.EVASION`, as Observe's).
 
 `Data/GEN/LinkedAbilities.json` (`abilities.py` in aow4_diff_tools) holds the abilities the game's texts link to that
 the dump leaves out, as no unit has them from the start (Infernal Blaze, Sprint, Fire Bomb: 68), in `Abilities.json`'s

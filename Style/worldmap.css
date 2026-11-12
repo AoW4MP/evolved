@@ -41,10 +41,12 @@
     object-fit: contain;
     margin: 0;
 }
+/* in the site's number font, as unit stats: Minion's old-style figures were small and dim at a glance */
 .wm-tab .wm-count {
     margin-left: 3px;
-    color: #8d97ad;
-    font-size: 14px;
+    color: #b4bfd8;
+    font-family: Number;
+    font-size: 15px;
 }
 .wm-tab:hover {
     color: white;

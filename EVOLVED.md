@@ -265,6 +265,7 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - Sets, their bonuses and requirements, and each material's texts, local income and combat enchantment come from `Data/GEN/MagicMaterials.json`, which `magicmaterials.py` in aow4_diff_tools generates from the live game plus the mod.
   Pictures come by the material's key, the infusion count from `Data/EN/ItemForgeUpgrades.json`.
 - Each material card links to `HTML/Infusions.html?material=<name>`, which picks that material's filter.
+- No text over the tabs (until 2026-11-12 the game's tutorial page on Magic Materials, `TUTORIAL@MAGICMATERIALS@PAGE01`, "You have selected a magic material..."; Infestations had a line of its own, not the game's). The game has tutorial texts for few of the World Map and Spells pages (Ancient Wonders, Infestations, Enchantments, Transformations, Special Improvements), written for when they pop up ("You have just researched..."), and concept texts for most but not Cosmic or Oceanic Happenings, Realm Traits or Strategic Spells: no page has one, so they stay alike.
 - `Data/Builder.js`: a concept link written as `{<hp></hp>}` shows the concept's own name ("Hit Point"), on every page.
 
 ### World Map pages

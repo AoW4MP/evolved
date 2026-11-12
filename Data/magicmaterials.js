@@ -32,8 +32,6 @@ const MagicMaterialsPage = (() => {
         await Load();
         const tabs = document.getElementById("tabs");
         const page = document.getElementById("materials");
-        const intro = findBy(jsonAllFromPOLocalized, "id", "TUTORIAL@MAGICMATERIALS@PAGE01");
-        if (intro) document.getElementById("intro").innerHTML = intro.description;
 
         const order = Object.keys(SET_STYLE);
         const rank = (s) => (order.includes(s.key) ? order.indexOf(s.key) : order.length);

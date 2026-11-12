@@ -15,7 +15,13 @@ function WmTabs(entries) {
         const tab = document.createElement("button");
         tab.className = "wm-tab";
         tab.dataset.id = e.id;
-        tab.innerHTML = e.label + " <span>" + e.count + "</span>";
+        tab.innerHTML = e.label;
+        // its words and count (.wm-count) in one line of text, on one baseline, and that line centred beside its icon
+        const words = [...tab.childNodes].filter((n) => n.nodeType === Node.TEXT_NODE);
+        const line = WmElement("span", "wm-tab-words", "");
+        line.append(words.map((n) => n.textContent).join("").trim() + " ", WmElement("span", "wm-count", String(e.count)));
+        words.forEach((n) => n.remove());
+        tab.append(line);
         tab.onclick = () => open(e.id);
         tabs.append(tab);
         page.append(e.panel);
@@ -35,7 +41,7 @@ function WmTabsSearch(placeholder, heads) {
 // a search bar under a page's tabs, over the cards of all of them at once (the World Map pages, Ancient Wonders, Realm
 // Traits). A card stays while its text holds every word typed, folded parts and its data-search words too (a wonder's
 // stories, built only when opened); each tab's count follows, a group heading goes with the last of its cards, and a tab
-// with nothing left says so. pairs: [tab, panel] (a tab's count is its <span>); cards and heads: selectors in a panel
+// with nothing left says so. pairs: [tab, panel] (a tab's count is its .wm-count); cards and heads: selectors in a panel
 function WmSearchBar(pairs, cards, heads, placeholder) {
     const filters = WmElement("div", "wm-filters");
     const input = WmElement("input", "wm-search");
@@ -75,7 +81,7 @@ function WmSearchBar(pairs, cards, heads, placeholder) {
                 if (shown) left++, headLeft++;
             }
             closeHead();
-            p.tab.querySelector("span").textContent = left;
+            p.tab.querySelector(".wm-count").textContent = left;
             p.none.hidden = left > 0;
         }
     });
@@ -133,7 +139,7 @@ function WmBoard(tabs, items, { tabsOf, makeCard, choices = [], sorts = [] }) {
             c.shown = typed.every((w) => c.words.includes(w)) && chosen.every((b) => !b || b.test(c.e));
             if (c.shown) left[c.id] = (left[c.id] || 0) + 1;
         }
-        document.querySelectorAll("#tabs .wm-tab").forEach((t) => (t.querySelector("span").textContent = left[t.dataset.id] || 0));
+        document.querySelectorAll("#tabs .wm-tab").forEach((t) => (t.querySelector(".wm-count").textContent = left[t.dataset.id] || 0));
         Lay();
     }
 

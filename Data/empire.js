@@ -623,7 +623,7 @@ async function EmPantheonPage() {
             p.node.classList.toggle("em-pan-dim", !on);
             if (on) lit[p.page] = (lit[p.page] || 0) + 1;
         }
-        document.querySelectorAll("#tabs .wm-tab").forEach((t) => (t.querySelector("span").textContent = lit[t.dataset.id] || 0));
+        document.querySelectorAll("#tabs .wm-tab").forEach((t) => (t.querySelector(".wm-count").textContent = lit[t.dataset.id] || 0));
         document.querySelectorAll(".em-pan-line").forEach((l) => l.classList.toggle("em-pan-dim", Boolean(kind || typed.length)));
     }
     document.getElementById("filterInput").addEventListener("input", (event) => {

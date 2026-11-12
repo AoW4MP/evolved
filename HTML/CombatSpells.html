@@ -25,12 +25,12 @@
             // Evolved's own Tactical Spells page: a tab per kind, a Damage/Debuff Spell on both of them. Everything comes from Data/GEN/SpellBook.json (Data/spellbook.js).
 
             const TABS = [
-                ["Healing", "Healing"],
-                ["Buff", "Buff"],
-                ["Damage", "Damage"],
-                ["Debuff", "Debuff"],
-                ["Enchantment", "Combat Enchantments"],
-                ["Summon", "Combat Summons"]
+                ["Healing", "<healingspell></healingspell> Healing"],
+                ["Buff", "<buffspell></buffspell> Buff"],
+                ["Damage", "<damagespell></damagespell> Damage"],
+                ["Debuff", "<debuffspell></debuffspell> Debuff"],
+                ["Enchantment", "<combatenchantmentspell></combatenchantmentspell> Combat Enchantments"],
+                ["Summon", "<summonspell></summonspell> Combat Summons"]
             ];
 
             async function HandlePage() {

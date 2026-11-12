@@ -1509,40 +1509,71 @@ fullActionContinue {
     top: 6px;
 }
 
+/* the spell pages' tabs: the game's spell type icons (Icons/Text/spelltype_*.png) in the Units menu's bronze, as dark
+   bronze on the purple they hardly showed (Icons/Interface/TabIcons, EVOLVED.md) */
 transformation {
     max-width: 15px;
-    content: url(/evolved/Icons/Text/spelltype_transformation.png);
+    content: url(/evolved/Icons/Interface/TabIcons/transformation.png);
     position: relative;
     top: 3px;
 }
-
 terraforming {
     max-width: 15px;
-    content: url(/evolved/Icons/Text/spelltype_terraforming.png);
+    content: url(/evolved/Icons/Interface/TabIcons/terraforming.png);
     position: relative;
     top: 3px;
 }
 worldspell {
     max-width: 15px;
-    content: url(/evolved/Icons/Text/spelltype_world.png);
+    content: url(/evolved/Icons/Interface/TabIcons/world.png);
     position: relative;
     top: 3px;
 }
 cityspell {
     max-width: 15px;
-    content: url(/evolved/Icons/Text/spelltype_city.png);
+    content: url(/evolved/Icons/Interface/TabIcons/city.png);
     position: relative;
     top: 3px;
 }
 armyspell {
     max-width: 15px;
-    content: url(/evolved/Icons/Text/spelltype_army.png);
+    content: url(/evolved/Icons/Interface/TabIcons/army.png);
     position: relative;
     top: 3px;
 }
 summonspell {
     max-width: 15px;
-    content: url(/evolved/Icons/Text/spelltype_summon.png);
+    content: url(/evolved/Icons/Interface/TabIcons/summon.png);
+    position: relative;
+    top: 3px;
+}
+healingspell {
+    max-width: 15px;
+    content: url(/evolved/Icons/Interface/TabIcons/healing.png);
+    position: relative;
+    top: 3px;
+}
+buffspell {
+    max-width: 15px;
+    content: url(/evolved/Icons/Interface/TabIcons/buff.png);
+    position: relative;
+    top: 3px;
+}
+damagespell {
+    max-width: 15px;
+    content: url(/evolved/Icons/Interface/TabIcons/damage.png);
+    position: relative;
+    top: 3px;
+}
+debuffspell {
+    max-width: 15px;
+    content: url(/evolved/Icons/Interface/TabIcons/debuff.png);
+    position: relative;
+    top: 3px;
+}
+combatenchantmentspell {
+    max-width: 15px;
+    content: url(/evolved/Icons/Interface/TabIcons/combatenchantment.png);
     position: relative;
     top: 3px;
 }

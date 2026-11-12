@@ -18,10 +18,10 @@
     gap: 8px;
     margin: 6px 0 20px;
 }
-/* its words and count on one baseline (centred, the smaller count stood higher), its icon centred */
+/* its icon and its line of words and count (WmTabs) centred beside each other */
 .wm-tab {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 6px;
     padding: 6px 18px;
     color: #bbcdf6;
@@ -33,7 +33,6 @@
 }
 /* one size in a square, without the nudges a text icon has in icons.css (a class icon's margin-top lifts it) */
 .wm-tab > :not(span) {
-    align-self: center;
     position: static;
     width: 24px;
     height: 24px;
@@ -42,7 +41,8 @@
     object-fit: contain;
     margin: 0;
 }
-.wm-tab span {
+.wm-tab .wm-count {
+    margin-left: 3px;
     color: #8d97ad;
     font-size: 14px;
 }

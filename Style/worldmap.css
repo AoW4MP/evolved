@@ -41,6 +41,12 @@
     object-fit: contain;
     margin: 0;
 }
+/* a Units menu picture (Icons/Interface/DropdownIcons) has wide empty edges: drawn larger, without making the tab taller */
+.wm-tab > img.wm-tab-pic {
+    width: 32px;
+    height: 32px;
+    margin: -4px;
+}
 /* in the site's number font, as unit stats: Minion's old-style figures were small and dim at a glance */
 .wm-tab .wm-count {
     margin-left: 3px;

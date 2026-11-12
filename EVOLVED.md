@@ -152,6 +152,15 @@ as a text of `all.json` gets that text's links, written as the dump writes them 
 `<hyperlink>Seal of Transference</hyperlink>`, a link effect that lasts for 3 `<turn></turn> <hyperlink>Turns</hyperlink>`";
 about 3,000 links in 1,800 texts, the Paragon abilities' links to Infernal Blaze and the others among them; the spell book's texts too, which are the dump's, so Mark of Tyranny links Cult of Tyranny). An
 entry's own `name` stays unlinked; a `name` inside an entry (a trait's effect lines) is relinked.
+A link to a concept (one of `concept_tooltips.json`, not a unit's) carries it, on a link the dump has already too:
+`<hyperlink data-global="GLOBAL.SpellOverchargeConcept">Overcharge</hyperlink>`, and `AddTagIconsForStatusEffects` opens
+that concept first, as it does for a link of all.json. Before (until 2026-11-12) a dump's link was looked up by its
+words, so Overcharge Cast's "Grant your Spells Overcharge" and the Wizard King rituals' "become Overcharged" opened the
+Overcharge ability and the Overcharged status, not Overcharged Spell. Of about 19,800 such links, 185 open another
+tooltip now, each the game's: Defense Mode, First Strike, Control Loss Immunity and Hero their concepts (the same
+words), Souls, Tomes, Wizard Kings and Affinities their game concepts, not the lore ones, "War" War, not an Umbral
+Dwelling's, a Bounty the Ruler's quest, not the Bounty ability, Rising Fury its animal's, Magic Strike and Evasion their
+concepts (Evasion's has no numbers).
 
 `Data/GEN/LinkedAbilities.json` (`abilities.py` in aow4_diff_tools) holds the abilities the game's texts link to that
 the dump leaves out, as no unit has them from the start (Infernal Blaze, Sprint, Fire Bomb: 68), in `Abilities.json`'s

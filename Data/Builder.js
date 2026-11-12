@@ -56,10 +56,13 @@ function extractHyperlinks(text) {
     const links = [];
     let index = 0;
 
-    // '<hyperlink data-slug="…">': a link to an ability its name doesn't tell apart (RestoreDumpLinks)
-    text = text.replace(/<hyperlink(?: data-slug="([^"]*)")?>(.*?)<\/hyperlink>/g, (_, slug, inner) => {
+    // '<hyperlink data-slug="…">': a link to an ability its name doesn't tell apart; data-global="…": the concept the
+    // game links to (RestoreDumpLinks)
+    text = text.replace(/<hyperlink((?: data-(?:slug|global)="[^"]*")*)>(.*?)<\/hyperlink>/g, (_, attrs, inner) => {
         const token = `__HYPERLINK_${index}__`;
-        links.push({ token, inner, slug });
+        const slug = attrs.match(/data-slug="([^"]*)"/)?.[1];
+        const global = attrs.match(/data-global="([^"]*)"/)?.[1];
+        links.push({ token, inner, slug, global });
         index++;
         return token;
     });
@@ -334,7 +337,13 @@ function AddTagIconsForStatusEffects(text, onlyGameLinks = false) {
     for (const link of extracted.links) {
         let restored;
 
-        if (abilityTagCache.has(link.inner)) {
+        if (link.global && jsonConceptTooltipsLocalized?.[link.global]) {
+            // the concept the game links to, as a link of all.json opens it: "Overcharge" is Overcharged Spell there,
+            // not the Overcharge ability
+            restored =
+                `<span style="color:white;text-decoration:underline">${link.inner.trim()}</span>` +
+                `<span class="conceptTooltipHandler" data-global="${link.global}" style="display:none"></span>`;
+        } else if (abilityTagCache.has(link.inner)) {
             // Existing: unit ability → status effect tooltip; by its slug where its name is another's too
             restored = abilityTagCache.get(link.inner).replacement;
             if (link.slug) restored = restored.replace('<span class="statusEffectHandler">', `<span class="statusEffectHandler" data-slug="${link.slug}">`);
@@ -3566,7 +3575,7 @@ function showAffinitySymbols(tomes) {
 // a link naming the unit, in a dump's text or in one the tools filled in
 function UnitNameLink(unitName) {
     const escapedName = escapeRegex(unitName.trim()).replace(/\s+/g, "\\s+");
-    return new RegExp(`<hyperlink>\\s*${escapedName}\\s*<\\/hyperlink>|\\]\\s*${escapedName}\\s*\\[\\/hyperlink\\]`, "i");
+    return new RegExp(`<hyperlink\\b[^>]*>\\s*${escapedName}\\s*<\\/hyperlink>|\\]\\s*${escapedName}\\s*\\[\\/hyperlink\\]`, "i");
 }
 
 function CheckIfInSpells(unitID, unitName) {
@@ -3585,7 +3594,7 @@ function CheckIfMatchingAbility(unitName) {
 
     const escapedName = escapeRegex(unitName.trim()).replace(/\s+/g, "\\s+");
     // Match <hyperlink> NAME </hyperlink> with flexible spaces around name
-    const regex = new RegExp(`<hyperlink>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
+    const regex = new RegExp(`<hyperlink\\b[^>]*>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
 
     for (let i = 0; i < jsonUnitAbilities.length; i++) {
         if (unitName === "Fire Runestone") {
@@ -3637,7 +3646,7 @@ function CheckIfFromHeroSkill(unitName, matchingList) {
 
     const escapedName = escapeRegex(unitName.trim()).replace(/\s+/g, "\\s+");
     // Match <hyperlink> NAME </hyperlink> with flexible spaces around name
-    const regex = new RegExp(`<hyperlink>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
+    const regex = new RegExp(`<hyperlink\\b[^>]*>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
 
     let j = 0;
     for (const skill of jsonHeroSkills) {
@@ -3663,7 +3672,7 @@ function CheckIfFromGovernance(unitName) {
 
     const escapedName = escapeRegex(unitName.trim()).replace(/\s+/g, "\\s+");
     // Match <hyperlink> NAME </hyperlink> with flexible spaces around name
-    const regex = new RegExp(`<hyperlink>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
+    const regex = new RegExp(`<hyperlink\\b[^>]*>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
 
     for (let i = 0; i < jsonHeroGovernance.length; i++) {
         if (jsonHeroGovernance[i].screen_description.indexOf(unitName) != -1) {
@@ -3723,7 +3732,7 @@ function CheckIfInStructure(id, unitName) {
 
     const escapedName = escapeRegex(unitName.trim()).replace(/\s+/g, "\\s+");
     // Match <hyperlink> NAME </hyperlink> with flexible spaces around name
-    const regex = new RegExp(`<hyperlink>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
+    const regex = new RegExp(`<hyperlink\\b[^>]*>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
     if (unitName == "Titan") {
         const archonGate = findBy(jsonStructureUpgrades, "id", "_teleporter___archon_gate");
         structure.add(archonGate);
@@ -3798,7 +3807,7 @@ function CheckIfInEmpireTree(unitName) {
 
     const escapedName = escapeRegex(unitName.trim()).replace(/\s+/g, "\\s+");
     // Match <hyperlink> NAME </hyperlink> with flexible spaces around name
-    const regex = new RegExp(`<hyperlink>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
+    const regex = new RegExp(`<hyperlink\\b[^>]*>\\s*${escapedName}\\s*<\\/hyperlink>`, "i");
 
     for (let i = 0; i < jsonEmpire.length; i++) {
         if (regex.test(jsonEmpire[i].description)) {

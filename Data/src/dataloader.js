@@ -307,17 +307,22 @@ async function GetAllData(selectedLang) {
 // Seal of Transference[/hyperlink] ... [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]"). A dump text with the same
 // words as a text of all.json gets its links back, as the dump writes them: "<hyperlink>Seal of Transference</hyperlink>".
 // A link to an ability that shares its name with another (abilityLinkSlugs) names it by its slug:
-// '<hyperlink data-slug="00000497000044D9">Water Shift</hyperlink>'
+// '<hyperlink data-slug="00000497000044D9">Water Shift</hyperlink>'. A link to a concept names it, as its words may
+// name something else: Overcharge Cast's "Grant your Spells [hyperlink,GLOBAL.SpellOverchargeConcept]Overcharge" is
+// '<hyperlink data-global="GLOBAL.SpellOverchargeConcept">Overcharge</hyperlink>', not the Overcharge ability. So is
+// a link the dump has already. Not a unit's: UnitNameLink and the like find a unit by its link's words
 function RestoreDumpLinks(dumps, allFromPO) {
     const HYPERLINK = /\[hyperlink,([^\]]*)\]([\s\S]*?)\[\/hyperlink\]/g;
     const words = (s) => s.replace(/<[^>]*>|\[\/?bullet[^\]]*\]|\s+/g, "");
+    const concept = (key) => (!key.startsWith("GLOBAL.UNITS.") && jsonConceptTooltipsLocalized?.[key] ? key : undefined);
+    const openTag = (slug, global) => "<hyperlink" + (slug ? ` data-slug="${slug}"` : "") + (global ? ` data-global="${global}"` : "") + ">";
 
     // the texts of all.json with links, by their words; of two with the same words, the one with more links
     const linked = new Map();
     for (const entry of allFromPO) {
         for (const [key, text] of Object.entries(entry)) {
             if (key === "id" || typeof text !== "string" || !text.includes("[hyperlink,")) continue;
-            const links = [...text.matchAll(HYPERLINK)].map((m) => ({ words: m[2].trim(), slug: abilityLinkSlugs.get(m[1]) }));
+            const links = [...text.matchAll(HYPERLINK)].map((m) => ({ words: m[2].trim(), slug: abilityLinkSlugs.get(m[1]), global: concept(m[1]) }));
             const k = words(text.replace(HYPERLINK, "$2"));
             // a text that is a link and nothing else ("Defense Mode") is a name: the dump's names stay unlinked
             if (links.length === 1 && words(links[0].words) === k) continue;
@@ -329,33 +334,35 @@ function RestoreDumpLinks(dumps, allFromPO) {
         const links = linked.get(words(text.replace(/<\/?hyperlink>/g, "")));
         if (!links) return text;
 
-        // the text without its tags, each tag one "\0", with where each character stands in the text and whether a
-        // link of the dump holds it
+        // the text without its tags, each tag one "\0", with where each character stands in the text and the link of
+        // the dump that holds it: {start, end (of its opening tag), close (where its closing tag starts)}
         let plain = "";
         const at = [];
         const inLink = [];
-        let depth = 0;
+        const open = [];
         for (const m of text.matchAll(/<[^>]*>|[^<]+|</g)) {
             if (m[0].length > 1 && m[0].startsWith("<")) {
-                if (/^<hyperlink\b[^>]*>$/i.test(m[0])) depth++; // and "<hyperlink.GLOBAL.ExcavationConcept>"
-                else if (/^<\/hyperlink>$/i.test(m[0])) depth = Math.max(0, depth - 1);
+                // and "<hyperlink.GLOBAL.ExcavationConcept>"
+                if (/^<hyperlink\b[^>]*>$/i.test(m[0])) open.push({ start: m.index, end: m.index + m[0].length, tag: m[0] });
+                else if (/^<\/hyperlink>$/i.test(m[0]) && open.length) open.pop().close = m.index;
                 plain += "\0";
                 at.push(m.index);
-                inLink.push(depth > 0);
+                inLink.push(open.at(-1) ?? null);
                 continue;
             }
             for (let i = 0; i < m[0].length; i++) {
                 plain += m[0][i];
                 at.push(m.index + i);
-                inLink.push(depth > 0);
+                inLink.push(open.at(-1) ?? null);
             }
         }
         at.push(text.length);
 
-        // each link's words in the game's order, after the one before; a link the dump has already is passed by
-        const wraps = [];
+        // each link's words in the game's order, after the one before. A link the dump has already gets its concept
+        // if it is that link's words and nothing else. Edits in the text's order: [start, end, new text]
+        const edits = [];
         let from = 0;
-        for (const { words: link, slug } of links) {
+        for (const { words: link, slug, global } of links) {
             const icon = link.match(/^(?:<(\w+)><\/\1>\s*)+/)?.[0].replace(/\s+/g, "") ?? "";
             const name = link.replace(/<[^>]*>/g, "").trim();
             if (!name) continue;
@@ -364,16 +371,22 @@ function RestoreDumpLinks(dumps, allFromPO) {
             const m = found.exec(plain);
             if (!m) continue;
             from = m.index + name.length;
-            if (inLink.slice(m.index, from).some(Boolean)) continue;
+            const holders = new Set(inLink.slice(m.index, from));
+            if (holders.size > 1 || !holders.has(null)) {
+                const [own] = holders;
+                const ownWords = own && own.close !== undefined && text.slice(own.end, own.close).replace(/<[^>]*>/g, "").trim();
+                if (global && holders.size === 1 && own.tag === "<hyperlink>" && words(ownWords || "") === words(name)) edits.push([own.start, own.end, openTag(null, global)]);
+                continue;
+            }
             let start = at[m.index];
             // a link with an icon holds it too: "3<hyperlink><temphp></temphp> Temporary Hit Point</hyperlink>"
             const before = text.slice(0, start).trimEnd();
             if (icon && before.toLowerCase().endsWith(icon.toLowerCase())) start = before.length - icon.length;
-            wraps.push([start, at[from - 1] + 1, slug ? `<hyperlink data-slug="${slug}">` : "<hyperlink>"]);
+            const end = at[from - 1] + 1;
+            edits.push([start, start, openTag(slug, global)], [end, end, "</hyperlink>"]);
         }
-        for (const [start, end, open] of wraps.reverse()) {
-            text = text.slice(0, start) + open + text.slice(start, end) + "</hyperlink>" + text.slice(end);
-        }
+        // from the last, so each edit's place stands: a link's end before the next link's start at the same place
+        for (const [start, end, insert] of edits.reverse()) text = text.slice(0, start) + insert + text.slice(end);
         return text;
     }
 

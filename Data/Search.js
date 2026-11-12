@@ -361,8 +361,8 @@ function returnEmpireTreeList(fieldToSearch) {
 
 
 function Sanitize(string) {
-    string = string.replaceAll("<hyperlink>", "");
-    string = string.replaceAll("</hyperlink>", "");
+    // and a link with its target: '<hyperlink data-global="…">'
+    string = string.replace(/<\/?hyperlink\b[^>]*>/g, "");
     return string;
 }
 

@@ -153,18 +153,14 @@ const MagicMaterialsPage = (() => {
     function Enchantment(combat) {
         const div = document.createElement("div");
         div.className = "mm-ench";
-        // the picture is named after the enchantment, older ones after its text id
-        const byName = combat.name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
-        const byId = combat.key;
-        const img = document.createElement("img");
-        img.className = "mm-ench-picture";
-        img.alt = "";
-        img.src = "/evolved/Icons/CombatEnchantments/" + byName + ".png";
-        img.onerror = () => {
-            if (img.src.endsWith("/" + byName + ".png") && byId && byId !== byName) img.src = "/evolved/Icons/CombatEnchantments/" + byId + ".png";
-            else img.remove();
-        };
-        div.append(img);
+        // the picture magicmaterials.py found for it (the site's, by the enchantment's name or text id, or the game's)
+        if (combat.icon) {
+            const img = document.createElement("img");
+            img.className = "mm-ench-picture";
+            img.alt = "";
+            img.src = "/evolved/Icons/CombatEnchantments/" + combat.icon;
+            div.append(img);
+        }
         const words = document.createElement("div");
         words.innerHTML =
             '<div class="mm-label">Combat Enchantment</div>' +

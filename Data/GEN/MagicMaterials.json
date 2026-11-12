@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-05 21:09",
- "build": "exe of 2026-11-05",
+ "generated": "2026-11-12 22:38",
+ "build": "exe of 2026-11-06",
  "mod": "AoW 4 Evolved",
  "sets": [
   {
@@ -70,7 +70,8 @@
    "combat": {
     "name": "Umbral Ramblings",
     "description": "The attacking units find themselves speaking in an unknown, ancient tongue.<br><br>After the first <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<br>At the start of the attacker's turn, every attacking [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] adjacent to another attacking unit has 30% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink]. <br><br>If resisted, the unit suffers -5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] instead.",
-    "key": "umbral_ramblings"
+    "key": "umbral_ramblings",
+    "icon": "umbral_ramblings.png"
    },
    "dlc": "ELDRITCHREALMS"
   },
@@ -91,7 +92,8 @@
    "combat": {
     "name": "Ghostfire Curse",
     "description": "When a unit is inflicted with [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink], it has a base 60% chance of gaining another [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] stack.",
-    "key": "ghostfire_curse"
+    "key": "ghostfire_curse",
+    "icon": "ghostfire_curse.png"
    },
    "dlc": "SILVERSEAS"
   },
@@ -108,7 +110,8 @@
    "combat": {
     "name": "Parasitic Contamination",
     "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all enemy units with [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] have a 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink].",
-    "key": "parasitic_infection"
+    "key": "parasitic_infection",
+    "icon": "parasitic_infection.png"
    },
    "dlc": "THRONESOFBLOOD"
   },
@@ -125,7 +128,8 @@
    "combat": {
     "name": "Rampant Fire",
     "description": "Several areas and flammable obstacles are [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
-    "key": "firestarter"
+    "key": "firestarter",
+    "icon": "rampant_fire.png"
    }
   },
   "focus_crystals": {
@@ -145,7 +149,8 @@
    "combat": {
     "name": "Focused Gaze",
     "description": "Base [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] and [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks of all defending units gain +3 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].",
-    "key": "focused_gaze"
+    "key": "focused_gaze",
+    "icon": "focused_gaze.png"
    }
   },
   "arcanium_ore": {
@@ -165,7 +170,8 @@
    "combat": {
     "name": "Arcanium Tremors",
     "description": "Every 2 <turn></turn>, all non-[hyperlink,GLOBAL.PROPERTIES.FLOATING_MOVEMENT]Floating[/hyperlink] and non-[hyperlink,GLOBAL.PROPERTIES.FLYING_MOVEMENT]Flying[/hyperlink] attacking units suffer 20 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].",
-    "key": "arcanium_tremors"
+    "key": "arcanium_tremors",
+    "icon": "arcanium_tremors.png"
    }
   },
   "astral_dew": {
@@ -185,7 +191,8 @@
    "combat": {
     "name": "Displaced Reality",
     "description": "Every 2 <turn></turn>, all units are teleported by 2 hexes.",
-    "key": "displacing_reality"
+    "key": "displacing_reality",
+    "icon": "displaced_reality.png"
    }
   },
   "archon_blood": {
@@ -201,7 +208,8 @@
    "combat": {
     "name": "Archon Martyrdom",
     "description": "When a defending unit dies, all adjacent hostile units suffer 15 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] and have 90% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink].",
-    "key": "archon_martyrdom"
+    "key": "archon_martyrdom",
+    "icon": "archon_martyrdom.png"
    }
   },
   "tranquility_pool": {
@@ -217,7 +225,8 @@
    "combat": {
     "name": "Wave of Tranquility",
     "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all Status Effects on all units are dispelled.",
-    "key": "wave_of_tranquility"
+    "key": "wave_of_tranquility",
+    "icon": "wave_of_tranquility.png"
    }
   },
   "haste_berries": {
@@ -237,7 +246,8 @@
    "combat": {
     "name": "Unnatural Speed",
     "description": "Defending Units have [hyperlink,GLOBAL.PROPERTIES.HASTENED]Hastened[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.SWIFT]Swift[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SLIPPERY]Slippery[/hyperlink] until the end of combat.",
-    "key": "hasteful_onslaught"
+    "key": "hasteful_onslaught",
+    "icon": "unnatural_speed.png"
    }
   },
   "silvertongue_fruit": {
@@ -257,7 +267,8 @@
    "combat": {
     "name": "Distracting Whispers",
     "description": "Each 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], one of the attacking units has a 90% base chance of suffering [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] until the end of combat.",
-    "key": "silvertongue_whispers"
+    "key": "silvertongue_whispers",
+    "icon": "distracting_whispers.png"
    }
   },
   "rainbow_clover": {
@@ -293,7 +304,8 @@
    "combat": {
     "name": "Oh So Lucky",
     "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all defending units gain [hyperlink,GLOBAL.PROPERTIES.RALLYING]Rally[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink].",
-    "key": "oh_so_lucky"
+    "key": "oh_so_lucky",
+    "icon": "oh_so_lucky.png"
    }
   }
  }

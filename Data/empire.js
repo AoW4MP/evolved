@@ -445,7 +445,7 @@ function EmFactionPage() {
 
 // ------------------------------------------------------------------------------------------------------------- Pantheon Tree
 
-// the Pantheon's rewards by kind: [id, label, the frame's class]. A node's kind is read from its id and picture, as upstream did
+// the Pantheon's rewards by kind: [id, the button's label]. A node's kind is read from its id and picture, as upstream did
 const EM_PANTHEON_KINDS = [
     ["trait", "Society Traits"],
     ["origin", "Origins"],
@@ -543,9 +543,9 @@ function EmPantheonCard(p) {
     return card;
 }
 
-// a node of the tree, in its kind's frame, its card on hover
+// a node of the tree, every kind in the same slot (the kind buttons find a kind), its card on hover
 function EmPantheonNode(p) {
-    const node = WmElement("div", "em-pan-node em-pan-" + p.kind, '<img src="' + p.icon + '" alt="" />');
+    const node = WmElement("div", "em-pan-node", '<img src="' + p.icon + '" alt="" />');
     node.style.left = p.x + "px";
     node.style.top = p.y + "px";
     if (p.dlc && dlcMap[p.dlc]) node.append(WmElement("span", "em-pan-dlc", '<img src="' + dlcMap[p.dlc].src + '" alt="" />'));
@@ -614,18 +614,20 @@ async function EmPantheonPage() {
     });
     WmTabs(entries);
 
-    // the search and a kind's button light up what they find and dim the rest; the tabs count what is lit
+    // the search and a kind's button ring what they find in gold and fade the rest; the tabs count what is found
     let typed = [];
     let kind = null;
     function Light() {
+        const asked = Boolean(kind || typed.length);
         const lit = {};
         for (const p of things) {
             const on = (!kind || p.kind === kind) && typed.every((w) => p.node.dataset.search.includes(w));
             p.node.classList.toggle("em-pan-dim", !on);
+            p.node.classList.toggle("em-pan-lit", on && asked);
             if (on) lit[p.page] = (lit[p.page] || 0) + 1;
         }
         document.querySelectorAll("#tabs .wm-tab").forEach((t) => (t.querySelector(".wm-count").textContent = lit[t.dataset.id] || 0));
-        document.querySelectorAll(".em-pan-line").forEach((l) => l.classList.toggle("em-pan-dim", Boolean(kind || typed.length)));
+        document.querySelectorAll(".em-pan-line").forEach((l) => l.classList.toggle("em-pan-dim", asked));
     }
     document.getElementById("filterInput").addEventListener("input", (event) => {
         typed = event.target.value.toLowerCase().split(/\s+/).filter(Boolean);
@@ -634,7 +636,7 @@ async function EmPantheonPage() {
     const holder = document.getElementById("kinds");
     for (const [id, label] of EM_PANTHEON_KINDS) {
         const count = things.filter((p) => p.kind === id).length;
-        const button = WmElement("button", "wm-choice wm-choice-text em-pan-choice", '<span class="em-pan-swatch em-pan-' + id + '"></span>' + label);
+        const button = WmElement("button", "wm-choice wm-choice-text", label);
         button.title = count + " " + label.toLowerCase();
         button.onclick = () => {
             kind = kind === id ? null : id;

@@ -406,7 +406,8 @@ function EmFactionPage() {
         [
             ["Form", "<unit></unit> Form Traits"],
             ["Society", "<empiregeneral></empiregeneral> Society Traits"],
-            ["Prophecy", "<questpoints></questpoints> Prophecies"],
+            // the eye on the game's prophecy quests (TabIcons/prophecy.png)
+            ["Prophecy", '<img src="/evolved/Icons/Interface/TabIcons/prophecy.png" alt="" /> Prophecies'],
             ["Rulers", "<unitruler></unitruler> Ruler Types"],
             ["Cultures", '<img src="/evolved/Icons/Interface/TabIcons/culture.png" alt="" /> Cultures']
         ],

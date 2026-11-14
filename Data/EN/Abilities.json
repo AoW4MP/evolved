@@ -200,7 +200,7 @@
   ],
   "accuracy": "90%",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "6",
+  "range": "4",
   "notes": [
    {
     "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
@@ -320,6 +320,12 @@
   "description": "",
   "name": "<xpCol>Frost Protection</xpCol>",
   "slug": "Frost_resistance_6"
+ },
+ {
+  "damage": "<fireCol>4<damagefire></damagefire></fireCol>",
+  "description": "",
+  "name": "<fireCol>Fire Weakness</fireCol>",
+  "slug": "Fire_weakness_4"
  },
  {
   "description": "Unit gains Killing Momentum.",
@@ -1467,6 +1473,9 @@
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
   "accuracy": "Always Hits",
@@ -1534,6 +1543,9 @@
   "requisites": [
    {
     "requisite": "<hyperlink>Melee</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
   "accuracy": "Always Hits",
@@ -2196,12 +2208,6 @@
   "description": "",
   "name": "<xpCol>Frost Protection</xpCol>",
   "slug": "Frost_resistance_2"
- },
- {
-  "damage": "<fireCol>4<damagefire></damagefire></fireCol>",
-  "description": "",
-  "name": "<fireCol>Fire Weakness</fireCol>",
-  "slug": "Fire_weakness_4"
  },
  {
   "description": "The unit's attacks:<bulletlist><bullet>Ignore up to 2 <statuseffectresistance></statuseffectresistance> <hyperlink>Status Resistance</hyperlink>.</bullet><bullet>Ignore up to 1 <resistance></resistance> <hyperlink>Resistance</hyperlink>.</bullet><bullet>Ignore up to 1 <defense></defense> <hyperlink>Defense</hyperlink>.</bullet></bulletlist>",
@@ -30620,7 +30626,7 @@
  {
   "notes": [
    {
-    "note": "Cooldown: 3 <turn></turn>"
+    "note": "Can only be used once per battle."
    }
   ],
   "description": "The caster:<bulletlist><bullet>Refreshes all ability cooldowns.</bullet><bullet>Gains Elemental Focus.</bullet></bulletlist>",
@@ -30999,7 +31005,7 @@
     "note": "Cooldown: 3 <turn></turn>"
    }
   ],
-  "description": "All friendly units in combat:<bulletlist><bullet>Heal for +20 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist>",
+  "description": "All friendly units in combat:<bulletlist><bullet>Heal for +30 <hyperlink><temphp></temphp> Temporary Hit Points</hyperlink>.</bullet></bulletlist>",
   "name": "Rite of Restoration",
   "slug": "hs_ritualist_rite_of_restoration_ability_hs_ritualist_rite_of_restoration",
   "damage": "",
@@ -42983,10 +42989,17 @@
   "icon": "0000048B00000BAB"
  },
  {
-  "modifiers": [],
-  "description": "Fire Heavy Magelock at target enemy unit.",
-  "name": "Fire Heavy Magelock",
-  "slug": "fire_heavy_magelocks_(item_forge)_ability_equipment_item_carbine_base",
+  "notes": [
+   {
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
+   }
+  ],
+  "description": "Fires ranged projectiles at target enemy unit.",
+  "name": "Shoot Crossbow",
+  "slug": "shoot_crossbow_(item_forge)_ability_equipment_item_carbine_base",
   "damage": "30<damagephysical></damagephysical> ",
   "requisites": [
    {
@@ -42999,47 +43012,29 @@
     "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
-  "accuracy": "100%",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "5",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
-  "icon": "000004A60000089C"
+  "accuracy": "90%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "000003BD00002EA7"
  },
  {
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
-  "description": "Quickly fire Heavy Magelock at target enemy unit, with reduced accuracy and effectiveness.",
-  "name": "Snapshot Heavy Magelock",
-  "slug": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_equipment_item_carbine_base",
-  "damage": "25<damagephysical></damagephysical> ",
+  "notes": [],
+  "description": "Single Melee Strike.",
+  "name": "Quick Stab",
+  "slug": "quick_stab_ability_equipment_item_carbine_base",
+  "damage": "16<damagephysical></damagephysical> ",
   "requisites": [
    {
-    "requisite": "<hyperlink>Missile</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
+    "requisite": "<hyperlink>Melee</hyperlink>"
    },
    {
     "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
-  "accuracy": "80%",
+  "accuracy": "100%",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
-  "icon": "0000048B00000BAB"
+  "range": "1",
+  "icon": "000003E3000057D6"
  },
  {
   "modifiers": [],
@@ -43591,76 +43586,52 @@
   "icon": "000003BD000020C9"
  },
  {
-  "modifiers": [
+  "notes": [
    {
-    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
-    "name": "Piercing",
-    "count": 1
+    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
+   },
+   {
+    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
    }
   ],
-  "description": "Fire Heavy Magelock at target enemy unit.",
-  "name": "Fire Heavy Magelock",
-  "slug": "fire_heavy_magelocks_(item_forge)_ability_mercantile_carbine_item_tier_1",
-  "damage": "38<damagephysical></damagephysical> ",
+  "description": "Fires ranged projectiles at target enemy unit.",
+  "name": "Shoot Carbine",
+  "slug": "shoot_crossbow_(item_forge)_ability_mercantile_carbine_item_tier_1",
+  "damage": "30<damagephysical></damagephysical> ",
   "requisites": [
    {
     "requisite": "<hyperlink>Missile</hyperlink>"
    },
    {
     "requisite": "<hyperlink>Base</hyperlink>"
+   },
+   {
+    "requisite": "<hyperlink>Single Shot</hyperlink>"
+   }
+  ],
+  "accuracy": "90%",
+  "actionPoints": "<singleuseaction></singleuseaction>",
+  "range": "4",
+  "icon": "000003BD00002EA7"
+ },
+ {
+  "notes": [],
+  "description": "Single Melee Strike.",
+  "name": "Quick Stab",
+  "slug": "quick_stab_ability_mercantile_carbine_item_tier_1",
+  "damage": "16<damagephysical></damagephysical> ",
+  "requisites": [
+   {
+    "requisite": "<hyperlink>Melee</hyperlink>"
    },
    {
     "requisite": "<hyperlink>Single Shot</hyperlink>"
    }
   ],
   "accuracy": "100%",
-  "actionPoints": "<fullaction></fullaction>",
-  "range": "5",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
-  "icon": "000004A60000089C"
- },
- {
-  "modifiers": [
-   {
-    "description": "Ignore 50% of the target's <defense></defense> <hyperlink>Defense</hyperlink>.",
-    "name": "Piercing",
-    "count": 1
-   }
-  ],
-  "description": "Quickly fire Heavy Magelock at target enemy unit, with reduced accuracy and effectiveness.",
-  "name": "Snapshot Heavy Magelock",
-  "slug": "fire_heavy_magelocks_snap_shot_(item_forge)_ability_mercantile_carbine_item_tier_1",
-  "damage": "25<damagephysical></damagephysical> ",
-  "requisites": [
-   {
-    "requisite": "<hyperlink>Missile</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Base</hyperlink>"
-   },
-   {
-    "requisite": "<hyperlink>Single Shot</hyperlink>"
-   }
-  ],
-  "accuracy": "80%",
   "actionPoints": "<singleuseaction></singleuseaction>",
-  "range": "4",
-  "notes": [
-   {
-    "note": "Affected by <hyperlink>Line of Sight</hyperlink> rules."
-   },
-   {
-    "note": "Cannot be used when within an enemy <hyperlink>Zone of Control</hyperlink>."
-   }
-  ],
-  "icon": "0000048B00000BAB"
+  "range": "1",
+  "icon": "000003E3000057D6"
  },
  {
   "modifiers": [
@@ -56229,7 +56200,7 @@
    }
   ],
   "accuracy": "Always Hits",
-  "actionPoints": "<fullactioncontinue></fullactioncontinue>",
+  "actionPoints": "<fullaction></fullaction>",
   "range": "5",
   "notes": [
    {

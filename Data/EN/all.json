@@ -15347,7 +15347,7 @@
     "warning_nogain": "<fireCol>Boosting does not generate enough Allegiance!</fireCol>",
     "warning_nonextstate": "<fireCol>There is no next Diplomatic State to boost toward!</fireCol>",
     "warning_requireinfluence": "<fireCol>A <whisperingStone></whisperingStone> [hyperlink,GLOBAL.DiplomaticTokenConcept]Whispering Stone[/hyperlink] must be assigned in order to boost Allegiance!</fireCol>",
-    "warning_vassal": "<fireCol>Cannot boost relations with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] that are a [hyperlink,GLOBAL.PactOfVassalageConcept]Vassal[/hyperlink] of another Ruler.</fireCol>"
+    "warning_vassal": "<fireCol>Cannot boost relations with [hyperlink,GLOBAL.PactOfVassalageConcept]Vassals[/hyperlink] of another Ruler.</fireCol>"
   },
   {
     "id": "DIPLOMACY@HOUSE_INFLUENCE_PER_TURN",
@@ -29368,7 +29368,7 @@
   },
   {
     "id": "DLC@ELDRITCHREALMS@ELDRITCH_SPECIALIZATION@MADCASTER@ABILITY03",
-    "description": "Enemies in a 2-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Sustain 30 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Sustain 30 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and have a base 90% chance of becoming [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet><bullet>Sustain 30 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>",
+    "description": "Enemies in a 2-hex radius have 1 of these effects occur to them at random:<bulletlist><bullet>Sustain 30 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Sustain 30 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet><bullet>Sustain 30 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and gain 3 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet></bulletlist>",
     "DLC": "ELDRITCHREALMS",
     "name": "Cosmic Pulse"
   },
@@ -71005,7 +71005,7 @@
     "id": "DLC@WAYSOFWAR@TOME_SHADES@SKILL5",
     "adjacent_name": "Shade Network - Adjacent City",
     "DLC": "WAYSOFWAR",
-    "description": "<bulletlist><bullet>+10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income.</bullet><bullet>+10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] for each non-owned city that shares a border with this [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>+10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] income.</bullet><bullet>+5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] for [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] originating from this city.</bullet></bulletlist>",
     "name": "Shade Network"
   },
   {
@@ -76951,7 +76951,7 @@
   },
   {
     "id": "HERO_SKILLS@CRYOMANCY@MODIFIER",
-    "description": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.SLOWED]Slowed[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] targets."
+    "description": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] targets."
   },
   {
     "id": "HERO_SKILLS@DEATH_KNIGHT@SUNDERING_SWEEP",
@@ -77837,7 +77837,7 @@
   },
   {
     "id": "HERO_SKILLS@RITUALIST@BATTLEFIELD_RESTORATION",
-    "description": "All friendly units in combat:<bulletlist><bullet>Heal for +20 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
+    "description": "All friendly units in combat:<bulletlist><bullet>Heal for +30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>",
     "name": "Rite of Restoration"
   },
   {
@@ -78935,7 +78935,7 @@
   },
   {
     "id": "HERO_TRAIT@GOVERNANCE@AGRICULTURAL_GOVERNOR",
-    "description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br>Each <farm></farm> [hyperlink,GLOBAL.FarmConcept]Farm[/hyperlink] grants +5<food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet><white>Renown level 2</white><br>Each <farm></farm> [hyperlink,GLOBAL.FarmConcept]Farm[/hyperlink] grants +5<happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet><white>Renown level 3</white><br>Each <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] grants +1<gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink], +1<mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], and +1<knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet><white>Renown level 4</white><br>Acquiring new <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] requires -30% less <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet></bulletlist>",
+    "description": "While Governor, the governed city gains benefits based on the Renown level of this Hero:<bulletlist><bullet><white>Renown level 1</white><br>Each <farm></farm> [hyperlink,GLOBAL.FarmConcept]Farm[/hyperlink] grants +5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet><white>Renown level 2</white><br>Each <farm></farm> [hyperlink,GLOBAL.FarmConcept]Farm[/hyperlink] grants +5 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet><white>Renown level 3</white><br>Each <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] grants +1 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink], +1 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], and +1 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet><white>Renown level 4</white><br>Acquiring new <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] requires -30% less <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet></bulletlist>",
     "lvl0": "Each <farm></farm> [hyperlink,GLOBAL.FarmConcept]Farm[/hyperlink] grants +5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink]",
     "lvl1": "Each <farm></farm> [hyperlink,GLOBAL.FarmConcept]Farm[/hyperlink] grants +5 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink]",
     "lvl2": "Each <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] grants +1 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink], +1 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], and +1 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink]",
@@ -90009,7 +90009,7 @@
   {
     "id": "META_EMPIRE@PROGRESSION_ITEM@CULTURE_TRAIT_DRUID",
     "bio": "Caretakers of the natural order, maintaining a carefully tended biome.",
-    "effect1_description": "[hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] gain <bulletlist><bullet>+20% <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] if the city core province contains Grasslands, Fungus Fields or Swamp.</bullet><bullet>+20% <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] if the city core province contains Forest, Rocky or Mountains.</bullet><bullet>+10% <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] if the city core province contains Ashlands.</bullet><bullet>+10% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] if the city core province contains Snow, Ice or Sand.</bullet></bulletlist>",
+    "effect1_description": "[hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] gain <bulletlist><bullet>+20% <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] if the city core province contains Grasslands, Fungus Fields, or Swamp.</bullet><bullet>+20% <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] if the city core province contains Forest, Rocky, or Mountains.</bullet><bullet>+10% <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] if the city core province contains Ashlands or Sand.</bullet><bullet>+10% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] if the city core province contains Snow, Ice, or Water.</bullet></bulletlist>",
     "effect2_description": "Terraforming spells cost -25% less <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] and <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Point[/hyperlink] to cast.",
     "effect3_description": "-20% [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] for [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL]Elemental[/hyperlink] Units.",
     "lore": "Caretakers of the natural order, maintaining a carefully tended biome.",
@@ -90073,7 +90073,7 @@
     "bio": "They know when to flatter and when to extort, elevating intrigue itself to a lucrative art.",
     "description": "Unlock <eventColor>{SocietyTrait}</eventColor>.",
     "effect1_description": "[hyperlink,GLOBAL.PronouncementsConcept]Pronouncements[/hyperlink] cost -50% less",
-    "effect2_description": "[hyperlink,GLOBAL.IndependentCityTradeConcept]Trade[/hyperlink] with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] costs you -100% resources. (Cost increases from other sources still apply!)",
+    "effect2_description": "[hyperlink,GLOBAL.IndependentCityTradeConcept]Trade[/hyperlink] options with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] to increase income from [hyperlink,GLOBAL.TradeRouteConcept]Trade Routes[/hyperlink] no longer cost resources.",
     "effect3_description": "Gain +1 <whisperingStone></whisperingStone> [hyperlink,GLOBAL.DiplomaticTokenConcept]Whispering Stone[/hyperlink].",
     "lore": "They know when to flatter and when to extort, elevating intrigue itself to a lucrative art.",
     "name": "Rogue Culture Trait",
@@ -90941,7 +90941,7 @@
   },
   {
     "id": "META_EMPIRE@TRAIT_CURSE_OF_UNDEATH",
-    "description": "The inhabitants of this realm are cursed with a restless death.<bulletlist><bullet>[hyperlink,GLOBAL.MarauderConcept]Marauder[/hyperlink] and <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.CURSE_OF_UNDEATH]Curse of Undeath[/hyperlink].</bullet></bulletlist>",
+    "description": "The inhabitants of this realm are cursed with a restless death.<bulletlist><bullet>[hyperlink,GLOBAL.MarauderConcept]Marauder[/hyperlink], <minorcity></minorcity> [hyperlink,GLOBAL.DwellingConcept]Dwelling[/hyperlink], and <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.CURSE_OF_UNDEATH]Curse of Undeath[/hyperlink].</bullet></bulletlist>",
     "name": "Curse of Undeath",
     "property_description": "When this Unit dies, it is resurrected with 20% of its maximum [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] after 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]."
   },
@@ -109989,7 +109989,7 @@
   },
   {
     "id": "TOME_TELEPORTATION@SKILL5",
-    "description": "<bulletlist><bulletlist><bullet>+15 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] income.</bullet><bullet>+4 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] income for each Astral Trade Relay built in your empire.</bullet></bulletlist></bulletlist>",
+    "description": "<bulletlist><bulletlist><bullet>+10 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] income.</bullet><bullet>+5 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] income for each Astral Trade Relay built in your empire.</bullet></bulletlist></bulletlist>",
     "name": "Astral Trade Relay"
   },
   {
@@ -119214,7 +119214,9 @@
     "route_escorts": "Trader Escorts",
     "subheader_free_city": "[hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] with [hyperlink,GLOBAL.IndependentCityConcept]Free City[/hyperlink]",
     "subheader_other_empire": "[hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] with City of other [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink]",
-    "subheader_outpost": "[hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] with [hyperlink,GLOBAL.OutpostConcept]Outpost[/hyperlink]"
+    "subheader_outpost": "[hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] with [hyperlink,GLOBAL.OutpostConcept]Outpost[/hyperlink]",
+    "header_incoming": "Incoming Trade Routes",
+    "subheader_incoming": "[hyperlink,GLOBAL.TradeRouteConcept]Trade Route[/hyperlink] established by City of other [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink]"
   },
   {
     "id": "INTERFACE@TREASURE_EVENT",

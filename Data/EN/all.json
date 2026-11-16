@@ -546,7 +546,7 @@
   },
   {
     "id": "AFFINITYCONTENT@ASTRAL_FINISHER_SPELL",
-    "description": "Channel the Age of Astral to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <arcana></arcana> [hyperlink,GLOBAL.AstralConcept]Astral Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Each turn in combat, a random enemy takes <eventColor>{amount}</eventColor> mixed Fire, Lightning, and Frost, damage and gets <eventColor>{amount2}</eventColor> [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] and <eventColor>{amount3}</eventColor> [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>",
+    "description": "Channel the Age of Astral to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <arcana></arcana> [hyperlink,GLOBAL.AstralConcept]Astral Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Each turn in combat, a random enemy takes 15 mixed Fire, Lightning, and Frost, damage and gets 2 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] and 2 [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>",
     "name": "Age of Astral",
     "prop_description": "Each turn, a random enemy takes 15 mixed Fire, Lightning, and Frost, damage and gets 2 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] and 2 [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink]."
   },
@@ -568,7 +568,7 @@
   },
   {
     "id": "AFFINITYCONTENT@MATERIUM_FINISHER_SPELL",
-    "description": "Channel the Age of Materium to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <matter></matter> [hyperlink,GLOBAL.MateriumConcept]Materium Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Each turn in combat, a friendly unit gains [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]. Repeats <eventColor>{amount}</eventColor>-<eventColor>{amount2}</eventColor> times.</bullet></bulletlist>",
+    "description": "Channel the Age of Materium to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <matter></matter> [hyperlink,GLOBAL.MateriumConcept]Materium Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Each turn in combat, a friendly unit gains [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]. Repeats 2-4 times.</bullet></bulletlist>",
     "name": "Age of Materium",
     "prop_description": "Each turn, a friendly unit gains [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_DEFENSE]Bolstered Defense[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]. Repeats 2-4 times."
   },
@@ -579,7 +579,7 @@
   },
   {
     "id": "AFFINITYCONTENT@NATURE_FINISHER_SPELL",
-    "description": "Channel the Age of Nature to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <nature></nature> [hyperlink,GLOBAL.NatureConcept]Nature Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Every <eventColor>{amount}</eventColor> turns in combat, a Tier <eventColor>{tierMin}</eventColor>-<eventColor>{tierMax}</eventColor> nature unit is summoned on your side.</bullet></bulletlist>",
+    "description": "Channel the Age of Nature to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <nature></nature> [hyperlink,GLOBAL.NatureConcept]Nature Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Every 2 turns in combat, a Tier II-III nature unit is summoned on your side.</bullet></bulletlist>",
     "name": "Age of Nature",
     "prop_description": "Every 2 turns, a Tier 2-3 nature unit is summoned on your side."
   },
@@ -594,7 +594,7 @@
   },
   {
     "id": "AFFINITYCONTENT@ORDER_FINISHER_SPELL",
-    "description": "Channel the Age of Order to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <order></order> [hyperlink,GLOBAL.OrderConcept]Order Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Each turn in combat, a random ally gains <eventColor>{amount}</eventColor> random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] and loses all [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].</bullet></bulletlist>",
+    "description": "Channel the Age of Order to reach the [hyperlink,GLOBAL.MagicVictoryConcept]Magic Victory[/hyperlink]. While channeling:<bulletlist><bullet>Your <order></order> [hyperlink,GLOBAL.OrderConcept]Order Affinity[/hyperlink] [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] cost -50% <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink], and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Each turn in combat, a random ally gains 3 random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] and loses all [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].</bullet></bulletlist>",
     "name": "Age of Order",
     "prop_description": "Each turn, a random ally gains 3 random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] and loses all [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink]."
   },
@@ -5507,7 +5507,7 @@
     "id": "COLONYUPGRADES_STRATEGIC@OBSERVATORY",
     "description": "This [hyperlink,GLOBAL.CityConcept]City[/hyperlink] gains <eventColor>{visionbonus}</eventColor> Vision Range and True Sight.",
     "name": "Observatory",
-    "unit_property": "Has True Sight and <eventColor>{visionbonus}</eventColor> Vision Range."
+    "unit_property": "Has True Sight and +6 Vision Range."
   },
   {
     "id": "COLONYUPGRADES_STRATEGIC@OBSIDIAN_WEAPONSMITH",
@@ -6474,7 +6474,7 @@
   },
   {
     "id": "COMBATPROPERTIES_TACTICAL@CRASHING_RUBBLE@MARKER",
-    "description": "When this expires, burning debris will crash down, and units within <eventColor>{range}</eventColor> <range></range> will suffer <eventColor>{damagephysical}</eventColor> <damagePhysical></damagePhysical> and <eventColor>{damagefire}</eventColor> <damageFire></damageFire>. The target hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink]."
+    "description": "When this expires, burning debris will crash down, and units within 1 <range></range> will suffer 10 <damagePhysical></damagePhysical> and 10 <damageFire></damageFire>. The target hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink]."
   },
   {
     "id": "COMBATPROPERTIES_TACTICAL@CURSE_OF_THE_GORGON",
@@ -10063,7 +10063,7 @@
     "id": "CULTURE_DARK_RESEARCH@CULTOFDEATH@SKILL_3",
     "description": "Units in friendly armies in the target Province:<bulletlist><bullet>Restore all [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain +15 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] until the end of their next combat.</bullet><bullet>Gain +20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] until the end of their next combat.</bullet></bulletlist>",
     "name": "Morbid Sacrifice",
-    "unit_property_description": "Until the end of their next combat, this unit has:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+<eventColor>{MoraleBonus}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet></bulletlist>"
+    "unit_property_description": "Until the end of their next combat, this unit has:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+15 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet></bulletlist>"
   },
   {
     "id": "CULTURE_DARK_RESEARCH@CULTOFTYRANNY@SKILL_1",
@@ -14280,7 +14280,7 @@
     "operation_description": "Destroy the Summoning Rift.",
     "operation_name": "Raze Summoning Rift",
     "spell_name": "Conjure Summoning Rift",
-    "structure_description": "<bulletlist><bullet>The owner can cast [hyperlink,GLOBAL.WorldMapSpellConcept]World Map Spells[/hyperlink] on or adjacent to this structure.</bullet><bullet>During combat in this province the owner's <casttactical></casttactical> [hyperlink,GLOBAL.CombatSummonSpellConcept]Combat Summon Spells[/hyperlink] are <eventColor>{Discount}</eventColor>% cheaper to cast.</bullet><bullet>The Owner's units in this province [hyperlink,GLOBAL.WorldMapRegeneration]regenerate[/hyperlink] +<eventColor>{HPBonus}</eventColor> [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>"
+    "structure_description": "<bulletlist><bullet>The owner can cast [hyperlink,GLOBAL.WorldMapSpellConcept]World Map Spells[/hyperlink] on or adjacent to this structure.</bullet><bullet>During combat in this province the owner's <casttactical></casttactical> [hyperlink,GLOBAL.CombatSummonSpellConcept]Combat Summon Spells[/hyperlink] are 20% cheaper to cast.</bullet><bullet>The Owner's units in this province [hyperlink,GLOBAL.WorldMapRegeneration]regenerate[/hyperlink] +15 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>"
   },
   {
     "id": "CULTURE_MYSTIC@UNIT_01",
@@ -33085,7 +33085,7 @@
   },
   {
     "id": "DLC@ELDRITCHREALMS@TOME_CORRUPTION@UNIT_ABILITY_5",
-    "description": "<bulletlist><bullet>Linked unit:<bulletlist><bullet>Sustains <eventColor>{hitpoints}</eventColor> unblockable <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist></bullet><bullet>Caster unit:<bulletlist><bullet>Heals <eventColor>{hitpoints}</eventColor> [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Point[/hyperlink].</bullet><bullet>Steals up to <eventColor>{MaxTransfer}</eventColor> [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] from linked unit.</bullet></bulletlist></bullet></bulletlist><br>Disables [hyperlink,GLOBAL.PROPERTIES.FURY]Fury[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SURRENDER]Surrender[/hyperlink] for this turn.",
+    "description": "<bulletlist><bullet>Linked unit:<bulletlist><bullet>Sustains 30 unblockable <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist></bullet><bullet>Caster unit:<bulletlist><bullet>Heals 30 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Steals up to 3 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] from linked unit.</bullet></bulletlist></bullet></bulletlist><br>Disables [hyperlink,GLOBAL.PROPERTIES.FURY]Fury[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SURRENDER]Surrender[/hyperlink] for this turn.",
     "DLC": "ELDRITCHREALMS",
     "name": "Gratitude"
   },
@@ -33131,7 +33131,7 @@
     "id": "DLC@ELDRITCHREALMS@TOME_TENTACLE@TOME@SKILL3",
     "description": "Base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]</bullet><bullet>Gain base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "DLC": "ELDRITCHREALMS",
-    "modifier_description": "<bulletlist><bullet>Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for <eventColor>{duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>",
+    "modifier_description": "<bulletlist><bullet>Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>",
     "modifier_description_simple": "Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
     "name": "Constricting Focus",
     "modifier_description_simple_status_vuln": "<bulletlist><bullet>Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>"
@@ -33842,7 +33842,7 @@
     "id": "DLC@ELDRITCHREALMS@VISITSITES_STRATEGIC@VISIT_OPERATION",
     "description": "Visiting [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.SUNLIGHT_GEYSER_PROPERTY]Sunlight geyser property[/hyperlink] for 5 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] and heal 50% of their max [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].",
     "DLC": "ELDRITCHREALMS",
-    "description_no_heal": "Visiting [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain <eventColor>{buff}</eventColor> for <eventColor>{turn}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+    "description_no_heal": "Visiting [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.EYESTALK_ROOT_PROPERTY]Eyestalk root property[/hyperlink] for 5 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
     "name": "Visit"
   },
   {
@@ -33886,7 +33886,7 @@
   },
   {
     "id": "DLC@ELDRITCHREALMS@WILDLIFE@DIRECASTER@ABILITY02",
-    "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to <eventColor>{Distance}</eventColor> hexes.</bullet><bullet>Inflicted with [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for <eventColor>{duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
+    "description": "Enemy units in a 1-hex radius have a base 60% chance of being:<bulletlist><bullet>Teleported up to 3 hexes.</bullet><bullet>Inflicted with [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
     "DLC": "ELDRITCHREALMS",
     "master_description": "Hysteria Storm:<bulletlist><bullet>Has a base 90% chance of inflicting its effects.</bullet></bulletlist>",
     "master_name": "Champion Hysteria Storm",
@@ -34574,7 +34574,7 @@
   },
   {
     "id": "DLC@EMPIRESANDASHES@CULTURE_REAVER@FEDERATE_SOLDIER@UNIT_PROPERTY",
-    "description": "This unit is part of the core Federation:<bulletlist><bullet>Bonus damage and accuracy against units with [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] targets for +<eventColor>{HealingPercentageBonus}</eventColor>% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+2 [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
+    "description": "This unit is part of the core Federation:<bulletlist><bullet>Bonus damage and accuracy against units with [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] targets for +20% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+2 [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
     "DLC": "EMPIRESANDASHES",
     "name": "Federate Soldier"
   },
@@ -54051,7 +54051,7 @@
     "id": "DLC@RISEFROMRUIN@TSR_SOE@WONDER_PROPERTY",
     "debuff_name": "Mana Deficiency: No spells cast",
     "DLC": "RISEFROMRUIN",
-    "description": "This unit suffers <eventColor>{amount}</eventColor> of <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] at the end of its <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] if no [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] was cast this turn.<br><br>When a friendly [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] is cast, this unit gains [hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink] for <eventColor>{buffduration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
+    "description": "This unit suffers 10 of <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] at the end of its <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] if no [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] was cast this turn.<br><br>When a friendly [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] is cast, this unit gains [hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].",
     "name": "Mana Deficiency"
   },
   {
@@ -61251,7 +61251,7 @@
   },
   {
     "id": "DLC@THRONESOFBLOOD@COMBATPROPERTIES_TACTICAL@BLOODLIGHT_REFRACTION",
-    "description": "Your [hyperlink,GLOBAL.PROPERTIES.EXPEDITION_LEADER]Expedition Leader[/hyperlink] refracts Bloodlight.<br><br>When ending their turn, they remove Bloodlight in a <eventColor>{radius}</eventColor>-hex radius.<br>If they remove any Bloodlight this way, they gain [hyperlink,GLOBAL.PROPERTIES.REFLECTION_SPIRIT_SHIELD]Lesser Spirit Shield[/hyperlink] for <eventColor>{duration}</eventColor>.",
+    "description": "Your [hyperlink,GLOBAL.PROPERTIES.EXPEDITION_LEADER]Expedition Leader[/hyperlink] refracts Bloodlight.<br><br>When ending their turn, they remove Bloodlight in a 1-hex radius.<br>If they remove any Bloodlight this way, they gain [hyperlink,GLOBAL.PROPERTIES.REFLECTION_SPIRIT_SHIELD]Lesser Spirit Shield[/hyperlink] for 3.",
     "DLC": "THRONESOFBLOOD",
     "name": "Bloodlight Refraction"
   },
@@ -61438,7 +61438,7 @@
   },
   {
     "id": "DLC@THRONESOFBLOOD@HERO_SKILL@VAMPIRE@SKILL07",
-    "description": "Deal unblockable damage to target friendly unit. Then the caster:<bulletlist><bullet>Heals for 25 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains <eventColor>{amount}</eventColor> [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
+    "description": "Deal unblockable damage to target friendly unit. Then the caster:<bulletlist><bullet>Heals for 25 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Gains 2 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>",
     "DLC": "THRONESOFBLOOD",
     "name": "Drain Familiar"
   },
@@ -71898,7 +71898,7 @@
   },
   {
     "id": "EMPIRE_DEVELOPMENT@GENERAL@ADVANCED_SCRYING",
-    "description": "Your [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] and [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] gain <eventColor>{VisionrangeIncrease}</eventColor> [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] and +3 [hyperlink,GLOBAL.SensorRangeConcept]Sensing Range[/hyperlink].",
+    "description": "Your [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] and [hyperlink,GLOBAL.CityConcept]Cities[/hyperlink] gain +2 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] and +3 [hyperlink,GLOBAL.SensorRangeConcept]Sensing Range[/hyperlink].",
     "name": "Advanced Sensing"
   },
   {
@@ -72843,7 +72843,7 @@
   },
   {
     "id": "EQUIPMENT@RING@LUCKY_RING",
-    "description": "+<eventColor>{chance}</eventColor>% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink].",
+    "description": "+5% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink].",
     "name": "Lucky Ring"
   },
   {
@@ -76347,7 +76347,7 @@
   },
   {
     "id": "HERO_ITEM@ORBS_10@MODIFIER",
-    "description": "<bulletlist><bullet>Deals the same amount of damage in another random damage type.</bullet><bullet>Grants a base <eventColor>{chance}</eventColor>% chance of inflicting a random status effect.</bullet></bulletlist>"
+    "description": "<bulletlist><bullet>Deals the same amount of damage in another random damage type.</bullet><bullet>Grants a base 90% chance of inflicting a random status effect.</bullet></bulletlist>"
   },
   {
     "id": "HERO_ITEM@ORBS_10",
@@ -78402,7 +78402,7 @@
   {
     "id": "HERO_SKILLS@WARLOCK@EMPOWERED_PACT",
     "blood_pact_description": "Link with the target friendly unit, while active target gains:<bulletlist><bullet>Any damage dealt to the caster is dealt to the target as well.</bullet><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet></bulletlist>The caster gains:<bulletlist><bullet>+20% damage</bullet><bullet>Ignore 2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet></bulletlist>",
-    "broken_spirit_description": "Link to target enemy unit, each turn the target:<bulletlist><bullet>Suffers <eventColor>{value}</eventColor> [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink]</bullet><bullet>Suffers <eventColor>{value}</eventColor> [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink]</bullet><bullet>Suffers <eventColor>{value}</eventColor> [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY_STATUS_RES]Status Vulnerability[/hyperlink]</bullet><bullet>Suffers -10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet><bullet>Suffers [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]</bullet></bulletlist>",
+    "broken_spirit_description": "Link to target enemy unit, each turn the target:<bulletlist><bullet>Suffers 1 [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink]</bullet><bullet>Suffers 1 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink]</bullet><bullet>Suffers 1 [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY_STATUS_RES]Status Vulnerability[/hyperlink]</bullet><bullet>Suffers -10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink]</bullet><bullet>Suffers [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]</bullet></bulletlist>",
     "hex_pact_description": "Link to target enemy unit, each turn the target:<bulletlist><bullet>Suffers 1 [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink]</bullet><bullet>Suffers 1 [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink]</bullet><bullet>Suffers 1 [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY_STATUS_RES]Status Vulnerability[/hyperlink]</bullet><bullet>Suffers [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink]</bullet></bulletlist>",
     "servitude_description": "Link with the target friendly unit, while active target gains:<bulletlist><bullet>Any damage dealt to the caster is dealt to the target as well.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.RESURGENCE]Resurgence[/hyperlink]</bullet><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet></bulletlist>The caster gains:<bulletlist><bullet>+20% damage</bullet><bullet>Ignore 2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet></bulletlist>"
   },
@@ -79971,7 +79971,7 @@
     "alignment_agenda": "Alignment Agenda",
     "alignment_agenda_description": "The [hyperlink,GLOBAL.HighConcept]High[/hyperlink] Culture has an [hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink] Agenda, which grants bonuses for the following alignment levels:<bulletlist><bullet><reputation8></reputation8> Pure Good: +25 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] in all [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet><reputation4></reputation4> Neutral: +10 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink] and +10 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] per <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] level above Neutral in all [hyperlink,GLOBAL.CityConcept]City[/hyperlink].</bullet><bullet><reputation0></reputation0> Pure Evil: [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] start [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] in an [hyperlink,GLOBAL.PROPERTIES.AWAKENED]Awakened[/hyperlink] state.</bullet></bulletlist>",
     "alignment_agenda_hyperlink": "[hyperlink,GLOBAL.AlignmentAgendaConcept]Alignment Agenda[/hyperlink]",
-    "alignment_description": "Determines how <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] and other [hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] see you. Affected by [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink] traits and various actions.<br><br>Affects relations with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] and [hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] with Neutral or better Alignment. In addition a <reputation6></reputation6> Good Alignment (or better) will increase the chance of positive random events occurring, while an <reputation2></reputation2> Evil Alignment (or worse) will make negative random events more likely.<br><br>[hyperlink,GLOBAL.HighConcept]High[/hyperlink] Culture has an [hyperlink,GLOBAL.AlignmentAgendaConcept]Alignment Agenda[/hyperlink].<br><br>[hyperlink,GLOBAL.EmpireRelationConcept]Empire Relations[/hyperlink] for each Alignment level: <bulletlist><bullet><eventColor>{PureGoodMinValue}</eventColor> to <eventColor>{PureGoodMaxValue}</eventColor>: <reputation8></reputation8> Pure Good: <eventColor>{PureGoodRelationValue}</eventColor> <goodRelation></goodRelation></bullet><bullet><eventColor>{VeryGoodMinValue}</eventColor> to <eventColor>{VeryGoodMaxValue}</eventColor>: <reputation7></reputation7> Very Good: <eventColor>{VeryGoodRelationValue}</eventColor> <goodRelation></goodRelation></bullet><bullet><eventColor>{GoodMinValue}</eventColor> to <eventColor>{GoodMaxValue}</eventColor>: <reputation6></reputation6> Good: <eventColor>{GoodRelationValue}</eventColor> <goodRelation></goodRelation></bullet><bullet><eventColor>{NeutralMaxValue}</eventColor> to <eventColor>{NeutralMinValue}</eventColor>: <reputation4></reputation4> Neutral: No effects</bullet><bullet><eventColor>{EvilMaxValue}</eventColor> to <eventColor>{EvilMinValue}</eventColor>: <reputation2></reputation2> Evil: <eventColor>{EvilRelationValue}</eventColor> <badRelation></badRelation></bullet><bullet><eventColor>{VeryEvilMaxValue}</eventColor> to <eventColor>{VeryEvilMinValue}</eventColor>: <reputation1></reputation1> Very Evil: <eventColor>{VeryEvilRelationValue}</eventColor> <badRelation></badRelation></bullet><bullet><eventColor>{PureEvilMaxValue}</eventColor> to <eventColor>{PureEvilMinValue}</eventColor>: <reputation0></reputation0> Pure Evil: <eventColor>{PureEvilRelationValue}</eventColor> <badRelation></badRelation></bullet></bulletlist>",
+    "alignment_description": "Determines how <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] and other [hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] see you. Affected by [hyperlink,GLOBAL.LeaderConcept]Ruler[/hyperlink] traits and various actions.<br><br>Affects relations with <minorcity></minorcity> [hyperlink,GLOBAL.IndependentCityConcept]Free Cities[/hyperlink] and [hyperlink,GLOBAL.EmpireConcept]Empires[/hyperlink] with Neutral or better Alignment. In addition a <reputation6></reputation6> Good Alignment (or better) will increase the chance of positive random events occurring, while an <reputation2></reputation2> Evil Alignment (or worse) will make negative random events more likely.<br><br>[hyperlink,GLOBAL.HighConcept]High[/hyperlink] Culture has an [hyperlink,GLOBAL.AlignmentAgendaConcept]Alignment Agenda[/hyperlink].<br><br>[hyperlink,GLOBAL.EmpireRelationConcept]Empire Relations[/hyperlink] for each Alignment level: <bulletlist><bullet>100 to 130: <reputation8></reputation8> Pure Good: +300 <goodRelation></goodRelation></bullet><bullet>40 to 99: <reputation7></reputation7> Very Good: +200 <goodRelation></goodRelation></bullet><bullet>10 to 39: <reputation6></reputation6> Good: +100 <goodRelation></goodRelation></bullet><bullet>9 to -9: <reputation4></reputation4> Neutral: No effects</bullet><bullet>-10 to -39: <reputation2></reputation2> Evil: -100 <badRelation></badRelation></bullet><bullet>-40 to -99: <reputation1></reputation1> Very Evil: -200 <badRelation></badRelation></bullet><bullet>-100 to -130: <reputation0></reputation0> Pure Evil: -300 <badRelation></badRelation></bullet></bulletlist>",
     "alignment_hyperlink": "[hyperlink,GLOBAL.AlignmentConcept]Alignment[/hyperlink]",
     "breaking_alliance_with": "You are breaking an Alliance",
     "breaking_alliance_with_you": "Your Alliance is being broken",
@@ -89264,7 +89264,7 @@
   },
   {
     "id": "MAGICMATERIALS@RINGS_OF_BINDING",
-    "description": "[hyperlink,GLOBAL.HeroConcept]Heroes[/hyperlink] gain:<bulletlist><bullet><eventColor>{defensebonus}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet><eventColor>{resistancebonus}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet><eventColor>{damagebonus}</eventColor> bonus damage</bullet></bulletlist>",
+    "description": "[hyperlink,GLOBAL.HeroConcept]Heroes[/hyperlink] gain:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet><bullet>+10% bonus damage</bullet></bulletlist>",
     "name": "Rings of Binding"
   },
   {
@@ -89522,7 +89522,7 @@
     "id": "META_EMPIRE@ASCENSION_TRAIT@MATERIUM@FORGEMASTER",
     "hero_trait_description": "Gain [hyperlink,GLOBAL.PROPERTIES.ASCENSION_FORGEMASTER_PROPERTY]Ascended Forgemaster[/hyperlink].",
     "hero_trait_name": "Ascension: Forgemaster",
-    "property_description": "This hero grants:<bulletlist><bullet>+<eventColor>{DRAFTBONUS}</eventColor> <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] and +<eventColor>{STRUCTUREPRODUCTION}</eventColor> <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] to its governed City.</bullet><bullet>Units in this hero's army gain +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink] and +1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet></bulletlist>",
+    "property_description": "This hero grants:<bulletlist><bullet>+20 <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink] and +20 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] to its governed City.</bullet><bullet>Units in this hero's army gain +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink] and +1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet></bulletlist>",
     "property_name": "Ascended Forgemaster"
   },
   {
@@ -90121,7 +90121,7 @@
   {
     "id": "META_EMPIRE@PROGRESSION_ITEM@CULTURE_TRAIT_WIZARD@UNIT_PROPERTY",
     "debuff_name": "Mana Addiction: No spells cast",
-    "description": "When a friendly [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] is cast, this unit gains [hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink] for <eventColor>{buffduration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].<br>This unit suffers <eventColor>{Moraleloss}</eventColor> <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] at the end of its <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] if no [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] was cast this turn.",
+    "description": "When a friendly [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] is cast, this unit gains [hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].<br>This unit suffers -5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] at the end of its <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] if no [hyperlink,GLOBAL.CombatSpellConcept]Combat Spell[/hyperlink] was cast this turn.",
     "name": "Attunement: Mana Addicted"
   },
   {
@@ -92239,7 +92239,7 @@
   },
   {
     "id": "NODES_STRATEGIC@RUINED_NODE_SETTINGS@RUINED_NODE_RESTORATION_OPERATION",
-    "description": "Requires this location to be within your [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] or occupied by one of your [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink]. Replaces this ruined node with a <eventColor>{NodeName}</eventColor>, providing income and bonuses again.<br><br>The cost of this action decreases per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] till it reaches a minimum cost.",
+    "description": "Requires this location to be within your [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] or occupied by one of your [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink]. Replaces this ruined node with a [hyperlink,GLOBAL.STRUCTURES.BLOOD_GLASS]Blood Glass[/hyperlink], providing income and bonuses again.<br><br>The cost of this action decreases per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] till it reaches a minimum cost.",
     "name": "Restore Node"
   },
   {
@@ -94777,7 +94777,7 @@
   },
   {
     "id": "SHAREDMODIFIERS_UNITPROPERTIES@DECAYING",
-    "description": "<bulletlist><bullet>Unit sustains 3 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] each <turn></turn>.</bullet><bullet>Unit receives -25% healing in combat.</bullet><bullet>Stacks up to <eventColor>{amount}</eventColor> times.<br><br>Decaying [hyperlink,GLOBAL.OpposingStatusEffectsConcept]counters[/hyperlink] [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink].</bullet></bulletlist>",
+    "description": "<bulletlist><bullet>Unit sustains 3 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] each <turn></turn>.</bullet><bullet>Unit receives -25% healing in combat.</bullet><bullet>Stacks up to 4 times.<br><br>Decaying [hyperlink,GLOBAL.OpposingStatusEffectsConcept]counters[/hyperlink] [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink].</bullet></bulletlist>",
     "guaranteed_modifier_description": "Inflicts [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn>.",
     "modifier_description": "Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
     "multi_modifier_description": "Base 120% chance of inflicting 2x [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
@@ -94903,7 +94903,7 @@
   },
   {
     "id": "SHAREDMODIFIERS_UNITPROPERTIES@LIFE_SEED",
-    "description": "When this unit dies, it heals a unit on the caster's side within 4 hexes by 15 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] for each stack of Life Seed it has.<br><br>Life seed stacks up to <eventColor>{maxStacks}</eventColor> times.",
+    "description": "When this unit dies, it heals a unit on the caster's side within 4 hexes by 15 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] for each stack of Life Seed it has.<br><br>Life seed stacks up to 3 times.",
     "modifier_description": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.LIFE_SEED_ON_DEATH]Life Seed[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
     "modifier_guaranteed": "Inflict [hyperlink,GLOBAL.PROPERTIES.LIFE_SEED_ON_DEATH]Life Seed[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
     "name": "Life Seed"
@@ -110859,7 +110859,7 @@
   },
   {
     "id": "TRIGGER@EFFECT@PRIMAL_EXHAUSTION_STATUS",
-    "description": "This unit has <eventColor>{IntResDebuff}</eventColor>, <eventColor>{IntDefDebuff}</eventColor> and deals <eventColor>{IntDamageDebuff}</eventColor> damage.",
+    "description": "This unit has -1 <resistance></resistance>, -1 <defense></defense> and deals -10% damage.",
     "name": "Primal Exhaustion"
   },
   {
@@ -113824,7 +113824,7 @@
   },
   {
     "id": "UNITPROPERTIES_TACTICALOBSTACLES@ELECTRIFIED_TAG",
-    "description": "Units passing through or ending their turn on this hex will become [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for <eventColor>{timer}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
+    "description": "Units passing through or ending their turn on this hex will become [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].",
     "name": "Electrically Charged"
   },
   {
@@ -116414,7 +116414,7 @@
   },
   {
     "id": "WILDLIFE_UNITPROPERTIES@SAP_STRENGTH",
-    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Have a base <eventColor>{chance}</eventColor>% chance of receiving 2 stacks of [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>The caster gains:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] for each enemy affected.</bullet></bulletlist>",
+    "description": "Enemy units in a 1-hex radius:<bulletlist><bullet>Have a base 90% chance of receiving 2 stacks of [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>The caster gains:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] for each enemy affected.</bullet></bulletlist>",
     "description_2": "Enemy units in a 1-hex radius:<bulletlist><bullet>Have a base 120% chance of receiving 3 stacks of [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>The caster gains:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] for each enemy affected.</bullet></bulletlist>",
     "description_master": "Sap Strength:<bulletlist><bullet>Has a base 120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink].</bullet><bullet>Also grants [hyperlink,GLOBAL.PROPERTIES.FORTUNE]Fortune[/hyperlink] to the caster.</bullet></bulletlist>",
     "name": "Sap Strength",
@@ -117877,7 +117877,7 @@
   },
   {
     "id": "EVOLVED@TOME_CLEANSING_FLAMES@CONSECRATING_FIRESTORM",
-    "description": "In target [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>The province gains [hyperlink,GLOBAL.PROPERTIES.CONSECRATING_FIRESTORM]Consecrating Firestorm[/hyperlink] for <eventColor>{CONSECRATING_FIRESTORM_SPELL>Duration}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet><bullet>If it has an enemy owned [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink], it is [hyperlink,GLOBAL.PillagingConcept]Pillaged[/hyperlink].</bullet></bulletlist>",
+    "description": "In target [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>The province gains [hyperlink,GLOBAL.PROPERTIES.CONSECRATING_FIRESTORM]Consecrating Firestorm[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet><bullet>If it has an enemy owned [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink], it is [hyperlink,GLOBAL.PillagingConcept]Pillaged[/hyperlink].</bullet></bulletlist>",
     "display_description": "At the start of combat in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>Units not belonging to the caster suffer [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on random hexes.</bullet></bulletlist>"
   },
   {
@@ -119422,7 +119422,7 @@
   },
   {
     "id": "ONE_FOR_ALL@PROPERTY",
-    "description": "Adjacent friendly units gain <eventColor>{damagebonus}</eventColor>% damage.",
+    "description": "Adjacent friendly units gain +20% damage.",
     "name": "One for All "
   },
   {
@@ -120193,7 +120193,7 @@
   {
     "id": "DLC@SILVERSEAS@CULTURE_MERCANTILE@BARONY@BOUNTY_HUNTER",
     "DLC": "SILVERSEAS",
-    "description": "Against units with [hyperlink,GLOBAL.PROPERTIES.BOUNTY]Bounty[/hyperlink], this unit:<bulletlist><bullet>Deals +<eventColor>{DamageIncrease}</eventColor>% damage.</bullet><bullet>Gains +<eventColor>{DefenseBoost}</eventColor> <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and +<eventColor>{ResistBoost}</eventColor> <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>",
+    "description": "Against units with [hyperlink,GLOBAL.PROPERTIES.BOUNTY]Bounty[/hyperlink], this unit:<bulletlist><bullet>Deals +20% damage.</bullet><bullet>Gains +2 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and +2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet></bulletlist>",
     "modifier_description": "+20% damage against targets with [hyperlink,GLOBAL.PROPERTIES.BOUNTY]Bounty[/hyperlink].",
     "name": "Bounty Hunter"
   },
@@ -120226,7 +120226,7 @@
   {
     "id": "DLC@SILVERSEAS@CULTURE_MERCANTILE@CARTEL@OBSERVANT",
     "DLC": "SILVERSEAS",
-    "description": "At the end of this unit's turn, enemy units in a <eventColor>{Distance}</eventColor>-hex range of this unit:<bulletlist><bullet>Suffer [hyperlink,GLOBAL.PROPERTIES.LEVERAGE]Leverage[/hyperlink].</bullet></bulletlist>Disabled if this unit is [hyperlink,GLOBAL.EngagedInMeleeConcept]Engaged in Melee[/hyperlink].",
+    "description": "At the end of this unit's turn, enemy units in a 4-hex range of this unit:<bulletlist><bullet>Suffer [hyperlink,GLOBAL.PROPERTIES.LEVERAGE]Leverage[/hyperlink].</bullet></bulletlist>Disabled if this unit is [hyperlink,GLOBAL.EngagedInMeleeConcept]Engaged in Melee[/hyperlink].",
     "name": "Observant"
   },
   {
@@ -122893,7 +122893,7 @@
   {
     "id": "DLC@SILVERSEAS@MEGAWONDERS_STRATEGIC@TEMPESTUOUS_VORTEX",
     "DLC": "SILVERSEAS",
-    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province.</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province grants <eventColor>{income}</eventColor> <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The <eventColor>{combatproperty}</eventColor> <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] starting their <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in this Province gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for <eventColor>{turns}</eventColor> <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with <eventColor>{amount}</eventColor> [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The ability to draft [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] in the City for <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Friendly Units starting their <turn></turn> Turn in the Domain gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for <eventColor>{turn}</eventColor> <turn></turn> Turns.</bullet></bulletlist>",
+    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province.</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.VORTEX_STORM]Vortex storm[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] starting their <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in this Province gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The ability to draft [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] in the City for <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Friendly Units starting their <turn></turn> Turn in the Domain gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> Turns.</bullet></bulletlist>",
     "lore": "\"Half of the king's fleet was behind us when we heard the cry from the crow's nest: 'The sea has opened to swallow us! A maelstrom as vast as an empire!' With death behind us, we set sail for the vortex, to ride its current and escape our fate. But our ship cracked, the helm broke, and the sea swallowed us whole.\"<br><br>—Amaro Arieta, ghost of the Haunted Armada, Wisdom of the Fallen: As cited by Noctus.",
     "name": "Tempestuous Vortex"
   },

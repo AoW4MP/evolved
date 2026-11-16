@@ -5306,6 +5306,13 @@
     "displayHtml": "Galleon Wreckage",
     "description": "Wreckage from a galleon transporting goods and currency.<br><br>Moving your [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink] onto it will grant you <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink], <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] or [hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] equipment."
   },
+  "GLOBAL.PROPERTI.EXPEDITION_LEADER": {
+    "name": "Expedition Leader",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTI.EXPEDITION_LEADER",
+    "displayHtml": "Expedition Leader",
+    "description": "The Hero leading this army is the Expedition Leader. If the Expedition Leader flees or dies but the battle is won, the remaining forces will revive the Expedition Leader after battle."
+  },
   "GLOBAL.PROPERTIES.ACCURSED_ARMORS_GROUP": {
     "name": "Accursed Armors",
     "icon": null,
@@ -5337,6 +5344,14 @@
     "displayHtml": "Curse of Servitude",
     "description": "When this unit dies, it summons a [hyperlink,GLOBAL.UNITS.DECAYING_ZOMBIE]Decaying Zombie[/hyperlink] under the Prophet's control.",
     "image": "0000048D00001832"
+  },
+  "GLOBAL.PROPERTIES.ANCIENT_DRACONIC_INSTINCT": {
+    "name": "Ancient Draconic Frenzy",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ANCIENT_DRACONIC_INSTINCT",
+    "displayHtml": "Ancient Draconic Frenzy",
+    "description": "All [hyperlink,GLOBAL.PROPERTIES.DRAGON]Dragon[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink] until the end of combat.",
+    "image": "0000049300000AB0"
   },
   "GLOBAL.PROPERTIES.ANIMAL_GUARDIAN": {
     "name": "Animal Guardian",
@@ -5386,6 +5401,22 @@
     "description": "While the Ascended Artillerist is in combat:<bulletlist><bullet>At the start of the owner's <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink] enemies are struck for 20 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>",
     "image": "0000048D000004CE"
   },
+  "GLOBAL.PROPERTIES.ASCENSION_ASCENDED_SUMMONER_PROPERTY_GROUP": {
+    "name": "Led by Ascended Summoner",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ASCENSION_ASCENDED_SUMMONER_PROPERTY_GROUP",
+    "displayHtml": "Led by Ascended Summoner",
+    "description": "This unit gains +10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] and deals 10% more damage.",
+    "image": "0000048D000003DD"
+  },
+  "GLOBAL.PROPERTIES.ASCENSION_BEASTBOND_PROPERTY_MODIFIER": {
+    "name": "Beastbond",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ASCENSION_BEASTBOND_PROPERTY_MODIFIER",
+    "displayHtml": "Beastbond",
+    "description": "Attacks inflict +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] per stack of [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] on the target.",
+    "image": "0000048D0000044A"
+  },
   "GLOBAL.PROPERTIES.ASHLAND_CAMOUFLAGE": {
     "name": "Ashland Camouflage",
     "icon": null,
@@ -5393,6 +5424,14 @@
     "displayHtml": "Ashland Camouflage",
     "description": "This unit cannot be detected when on Ashland hexes.",
     "image": "00000497000043F3"
+  },
+  "GLOBAL.PROPERTIES.ASTRAL_DRAGON_MAJOR_TRANSFORMATION": {
+    "name": "Stormbreath",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ASTRAL_DRAGON_MAJOR_TRANSFORMATION",
+    "displayHtml": "Stormbreath",
+    "description": "This unit gains:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Its breath attack:<bulletlist><bullet>Increases in size.</bullet><bullet>Becomes part <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] if not an Astral Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>Has a base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "000003E300006E14"
   },
   "GLOBAL.PROPERTIES.ASTRAL_INCARNATE_UNIT_PROPERTY": {
     "name": "Astral Incarnate",
@@ -5466,6 +5505,14 @@
     "description": "When this unit's total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reach 60% and 30%, it gains [hyperlink,GLOBAL.PROPERTIES.PRECOGNITION]Precognition[/hyperlink].",
     "image": "00000497000039DD"
   },
+  "GLOBAL.PROPERTIES.BEHEMOTHS_DREADFUL_PRESENCE": {
+    "name": "Behemoth's Dreadful Presence",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.BEHEMOTHS_DREADFUL_PRESENCE",
+    "displayHtml": "Behemoth's Dreadful Presence",
+    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], every unit has a 90% of suffering [hyperlink,GLOBAL.PROPERTIES.REMORSE]Remorse[/hyperlink].",
+    "image": "0000049300000AC5"
+  },
   "GLOBAL.PROPERTIES.BERSERKERS_RAGE_THRESHOLD_EVENT": {
     "name": "Belt of the Berserker",
     "icon": null,
@@ -5481,6 +5528,13 @@
     "displayHtml": "Mask of Prosperity",
     "description": "<bulletlist><bullet>This unit is absorbing the damage of another unit, reduced by 50%.</bullet><bullet>At the start of each turn, gain [hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink].</bullet></bulletlist>",
     "image": "0000048B00000280"
+  },
+  "GLOBAL.PROPERTIES.BHAJIFS_DISRUPTION_BLOCK_OP": {
+    "name": "Bhajif's Disruption",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.BHAJIFS_DISRUPTION_BLOCK_OP",
+    "displayHtml": "Bhajif's Disruption",
+    "description": "Cannot cast combat spells."
   },
   "GLOBAL.PROPERTIES.BLESSED_ARMORS_GROUP": {
     "name": "Blessed Armors",
@@ -5562,6 +5616,14 @@
     "description": "This unit deals +40% damage to [hyperlink,GLOBAL.PROPERTIES.CAVALRY_GROUP]Optional Cavalry[/hyperlink] units.",
     "image": "000003E3000055A5"
   },
+  "GLOBAL.PROPERTIES.CELESTIAL_RAIN": {
+    "name": "Celestial Rain",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.CELESTIAL_RAIN",
+    "displayHtml": "Celestial Rain",
+    "description": "Every 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>All units become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] for 3 <turn></turn> Turns</bullet><bullet>All [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.CELESTIAL]Celestial[/hyperlink] units have their negative status effects cleansed.</bullet></bulletlist>",
+    "image": "0000049300000E8B"
+  },
   "GLOBAL.PROPERTIES.CELESTIAL_SLAYER": {
     "name": "Celestial Slayer",
     "icon": null,
@@ -5584,6 +5646,14 @@
     "displayHtml": "Chaos Incarnate",
     "description": "For each stack of Affinity Incarnate, this unit gains:<bulletlist><bullet>+1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001437"
+  },
+  "GLOBAL.PROPERTIES.CHAOS_MAJOR_TRANSFORMATION_PROPERTY": {
+    "name": "Infernobreath",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.CHAOS_MAJOR_TRANSFORMATION_PROPERTY",
+    "displayHtml": "Infernobreath",
+    "description": "This unit gains:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Its breath attack:<bulletlist><bullet>Increases in size.</bullet><bullet>Becomes part <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] if not a Chaos Dragon.</bullet><bullet>Deals +30% more damage.</bullet><bullet>Always inflicts [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>Sets affected hexes [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "000003E300006E1B"
   },
   "GLOBAL.PROPERTIES.CHAOTIC_INFLUENCE_EMPOWERED_GROUP": {
     "name": "Empowered Chaotic Influence",
@@ -5713,6 +5783,22 @@
     "description": "At the end of the attacker's <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<bulletlist><bullet>All non-[hyperlink,GLOBAL.PROPERTIES.FROSTLING_TRANSFORMATION_PROPERTY_GROUP]Frostling Transformation[/hyperlink] units suffer 6 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>90% base chance of all [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] units suffering [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink].</bullet></bulletlist>",
     "image": "000003E100001C20"
   },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_BURNING_IMMUNITY": {
+    "name": "Immunity to Burning Attackers",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_BURNING_IMMUNITY",
+    "displayHtml": "Immunity to Burning Attackers",
+    "description": "Until the end of battle, all attacking units are immune to suffering [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]",
+    "image": "000003E300005B18"
+  },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_CRASHING_RUBBLE": {
+    "name": "Crashing Rubble",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_CRASHING_RUBBLE",
+    "displayHtml": "Crashing Rubble",
+    "description": "Every 2 <turn></turn>, a marker is placed. Then, after 1 <turn></turn> burning debris will crash down, and units within 1 <range></range> of the marker will suffer 10 <damagePhysical></damagePhysical> and 10 <damageFire></damageFire>. The target hexes will gain [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
+    "image": "000003FE00000C3A"
+  },
   "GLOBAL.PROPERTIES.COMBATPROPERTY_FEY_AUTUMN": {
     "name": "Autumn Storm",
     "icon": null,
@@ -5777,6 +5863,30 @@
     "description": "[hyperlink,GLOBAL.PROPERTIES.COMBATPROPERTY_FEY_WINTER]Winter Sorrow[/hyperlink] is active in this province.",
     "image": "000003DF000018E4"
   },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_GRASPING_FLORA": {
+    "name": "Grasping Flora",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_GRASPING_FLORA",
+    "displayHtml": "Grasping Flora",
+    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], several [hyperlink,GLOBAL.UNITS.LIVING_VINE_UNIT]Living Vines[/hyperlink] are summoned on random positions which last for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] on the defender's side.",
+    "image": "0000049300001702"
+  },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_LESSER_REBIRTH": {
+    "name": "Lesser Rebirth",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_LESSER_REBIRTH",
+    "displayHtml": "Lesser Rebirth",
+    "description": "All attacking Tier 1 - Tier 3 units gain [hyperlink,GLOBAL.PROPERTIES.FIERY_REBIRTH]Fiery Rebirth[/hyperlink].",
+    "image": "000004C0000002DD"
+  },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_RAMPANT_FIRE": {
+    "name": "Rampant Fire",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_RAMPANT_FIRE",
+    "displayHtml": "Rampant Fire",
+    "description": "Several areas and flammable obstacles are [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].",
+    "image": "000004150000002C"
+  },
   "GLOBAL.PROPERTIES.COMBATPROPERTY_RAZED": {
     "name": "Razed",
     "icon": null,
@@ -5792,6 +5902,30 @@
     "displayHtml": "Blinding Sandstorm",
     "description": "At the end of the attacker's <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]:<bulletlist><bullet>60% base chance for units of suffering [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink].</bullet></bulletlist>",
     "image": "000003E100001C3C"
+  },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_SUMMON_DEVASTATORS": {
+    "name": "Bring in Devastators",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_SUMMON_DEVASTATORS",
+    "displayHtml": "Bring in Devastators",
+    "description": "At the start of combat, your stack leader brings in 3 [hyperlink,GLOBAL.UNITS.DEVASTATOR_SPHERE_UNIT]Devastator Spheres[/hyperlink].",
+    "image": "000004C000000472"
+  },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_THE_ONE": {
+    "name": "The Wailing",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_THE_ONE",
+    "displayHtml": "The Wailing",
+    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], the attacker's units lose 5 morale.",
+    "image": "000004AC000000A6"
+  },
+  "GLOBAL.PROPERTIES.COMBATPROPERTY_VIOLENTLY_VOLATILE": {
+    "name": "Tuned for Destruction",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.COMBATPROPERTY_VIOLENTLY_VOLATILE",
+    "displayHtml": "Tuned for Destruction",
+    "description": "Defending units have a variety of <caststrategic></caststrategic> [hyperlink,GLOBAL.UnitEnchantmentConcept]Unit Enchantments[/hyperlink] and explode on death, dealing 20 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] to units within a 2-hex range.",
+    "image": "0000049300000197"
   },
   "GLOBAL.PROPERTIES.COMBATPROPERTY_VOLCANIC_ERUPTION": {
     "name": "Volcanic Eruptions",
@@ -5983,6 +6117,46 @@
     "description": "<happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] loss is reduced by 50%",
     "image": "000003E100001EC4"
   },
+  "GLOBAL.PROPERTIES.ECHOING_SHRIEKS": {
+    "name": "Reverberant Acoustics",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ECHOING_SHRIEKS",
+    "displayHtml": "Reverberant Acoustics",
+    "description": "All [hyperlink,GLOBAL.UNITS.SHRIEKING_BAT]Shrieking Bats[/hyperlink] have their attacks affect all targets in a 1-hex area of their primary target and have [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink].",
+    "image": "0000049300000FB0"
+  },
+  "GLOBAL.PROPERTIES.ELDRITCH_GAZE": {
+    "name": "Eldritch Gaze",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ELDRITCH_GAZE",
+    "displayHtml": "Eldritch Gaze",
+    "description": "Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]:<bulletlist><bullet>All non-[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] have a 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.INSANITY]Insanity[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If it fails, the Unit suffers -10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] instead.</bullet></bulletlist>",
+    "image": "0000049300001600"
+  },
+  "GLOBAL.PROPERTIES.ELDRITCH_LURE": {
+    "name": "Eldritch Lure",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ELDRITCH_LURE",
+    "displayHtml": "Eldritch Lure",
+    "description": "Non-[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in this [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>Suffer [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink]</bullet><bullet>Cannot regenerate and lose 6 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].</bullet></bulletlist>",
+    "image": "0000049300001609"
+  },
+  "GLOBAL.PROPERTIES.ELDRITCH_WAKE": {
+    "name": "Eldritch Wake",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ELDRITCH_WAKE",
+    "displayHtml": "Eldritch Wake",
+    "description": "[hyperlink,GLOBAL.PROPERTIES.ETHEREAL]Ethereal[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] have their [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] Attacks and [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] Abilities jump to another target within 2 hexes, but their Damage and Healing is reduced by 40%.",
+    "image": "000004930000160D"
+  },
+  "GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT": {
+    "name": "Elemental Attunement",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT",
+    "displayHtml": "Elemental Attunement",
+    "description": "All [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL]Elemental[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT_UNITPROP]Elemental Attunement[/hyperlink] until the end of combat.",
+    "image": "0000049300000AB2"
+  },
   "GLOBAL.PROPERTIES.ELEMENTAL_ATTUNEMENT_UNITPROP": {
     "name": "Elemental Attunement",
     "icon": null,
@@ -6127,6 +6301,14 @@
     "description": "This unit is part of the core Federation:<bulletlist><bullet>Bonus damage and accuracy against units with [hyperlink,GLOBAL.PROPERTIES.ENGAGED_BY_LEVIES]Engaged by Levies[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities heal [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] targets for +20% [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>For each unit in the army with [hyperlink,GLOBAL.PROPERTIES.FEDERATE_LEVY]Federate Levy[/hyperlink] gain:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+2 [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]</bullet></bulletlist></bullet></bulletlist>",
     "image": "0000048D00001FBD"
   },
+  "GLOBAL.PROPERTIES.FEEDING_FRENZY": {
+    "name": "Feeding Frenzy",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.FEEDING_FRENZY",
+    "displayHtml": "Feeding Frenzy",
+    "description": "Defending [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain [hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.CORPSE_EATING]Corpse Eating[/hyperlink] until the end of combat.",
+    "image": "000004930000190D"
+  },
   "GLOBAL.PROPERTIES.FEUDAL_MONARCHS_DOMINION": {
     "name": "Monarch's Dominion",
     "icon": null,
@@ -6173,6 +6355,14 @@
     "globalName": "GLOBAL.PROPERTIES.FIRE_SEAL_DEBUFF_GROUP",
     "displayHtml": "Seal of Fire",
     "description": "At the start of the turn, this unit sustains 10 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].<br><br>If the unit dies while under this effect, it explodes dealing 20 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] to adjacent friendly units.",
+    "image": "000004970000107F"
+  },
+  "GLOBAL.PROPERTIES.FIRE_SEAL_DEBUFF_GROUP_MASTER": {
+    "name": "Champion Seal of Fire",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.FIRE_SEAL_DEBUFF_GROUP_MASTER",
+    "displayHtml": "Champion Seal of Fire",
+    "description": "At the start of the turn, this unit sustains 15 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].<br><br>If the unit dies while under this effect, it explodes dealing 30 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] to adjacent friendly units.",
     "image": "000004970000107F"
   },
   "GLOBAL.PROPERTIES.FORGEFATHER_PROPERTY": {
@@ -6229,6 +6419,13 @@
     "displayHtml": "Gloom Shepherd",
     "description": "While this unit is the leader of the army, units gain:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS_IMMUNITY]Umbral Malady Immunity[/hyperlink]</bullet></bulletlist>",
     "image": "0000049700000F29"
+  },
+  "GLOBAL.PROPERTIES.GOOD_1_UNIT_PROPERTY": {
+    "name": "Good",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.GOOD_1_UNIT_PROPERTY",
+    "displayHtml": "Good",
+    "description": "<reputation6></reputation6> Good"
   },
   "GLOBAL.PROPERTIES.GOOD_2_UNIT_PROPERTY": {
     "name": "Very Good",
@@ -6387,6 +6584,22 @@
     "description": "Damage increases as the target loses health, up to +50%.",
     "image": "0000048B00000574"
   },
+  "GLOBAL.PROPERTIES.HS_FEUDAL_LORD_STACK_PROP": {
+    "name": "Feudal Lord",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.HS_FEUDAL_LORD_STACK_PROP",
+    "displayHtml": "Feudal Lord",
+    "description": "While army leader, all non-[hyperlink,GLOBAL.HeroConcept]Hero[/hyperlink] units in army have:<bulletlist><bullet>-20% base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink]</bullet></bulletlist>",
+    "image": "0000048D000010C1"
+  },
+  "GLOBAL.PROPERTIES.HS_FIGHTING_I_MOD": {
+    "name": "Fighting",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.HS_FIGHTING_I_MOD",
+    "displayHtml": "Fighting",
+    "description": "[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks and [hyperlink,GLOBAL.MagicStrikeConcept]Magic Strikes[/hyperlink] gain +10% damage.",
+    "image": "0000048B000002D5"
+  },
   "GLOBAL.PROPERTIES.HS_SPIRITBREAKER_MOD": {
     "name": "Willbreaker",
     "icon": null,
@@ -6427,6 +6640,14 @@
     "description": "Whenever a spell is cast, this units gains a random [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].",
     "image": "000004A600000512"
   },
+  "GLOBAL.PROPERTIES.INTIMIDATING_AURA_PROPERTY_GROUP": {
+    "name": "Intimidation Aura",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.INTIMIDATING_AURA_PROPERTY_GROUP",
+    "displayHtml": "Intimidation Aura",
+    "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INTIMIDATING_AURA]Intimidating Aura[/hyperlink].</bullet></bulletlist>",
+    "image": "000003E1000012B3"
+  },
   "GLOBAL.PROPERTIES.LED_BY_ARCHON": {
     "name": "Led by Archon",
     "icon": null,
@@ -6451,6 +6672,14 @@
     "description": "This hero is the Liege Lord of their House, granting them and House units in their army:<bulletlist><bullet>-10% base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink].</bullet><bullet>Regenerate an additional +5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per World Map <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>+5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet></bulletlist><br>This bonus increases as this Hero gains <renown></renown> [hyperlink,GLOBAL.RenownConcept]Renown[/hyperlink].",
     "image": "0000048D000012A7"
   },
+  "GLOBAL.PROPERTIES.LIGHTNING_BLADES_PROPERTY_GROUP": {
+    "name": "Lightning Blades",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.LIGHTNING_BLADES_PROPERTY_GROUP",
+    "displayHtml": "Lightning Blades",
+    "description": "Unit's attacks have:<bulletlist><bullet>+2 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "image": "0000041B0000121F"
+  },
   "GLOBAL.PROPERTIES.LIGHT_OF_THE_DEPTHS": {
     "name": "Light of the Depths",
     "icon": null,
@@ -6474,6 +6703,14 @@
     "displayHtml": "Lithorine Link",
     "description": "Adjacent Lithorine units gain:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.WARDED]Warded[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.REINFORCED]Reinforced[/hyperlink]</bullet></bulletlist>",
     "image": "000004AC000000DF"
+  },
+  "GLOBAL.PROPERTIES.MAGECRAFT_I_MOD": {
+    "name": "Magecraft I",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.MAGECRAFT_I_MOD",
+    "displayHtml": "Magecraft I",
+    "description": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks and [hyperlink,GLOBAL.DebuffConcept]Debuff[/hyperlink] abilities:<bulletlist><bullet>Ignore up to 1 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>Gain +10% damage.</bullet></bulletlist>",
+    "image": "0000048D00000CC3"
   },
   "GLOBAL.PROPERTIES.MARTYR": {
     "name": "Martyr",
@@ -6507,6 +6744,14 @@
     "description": "For each stack of Affinity Incarnate, this unit gains:<bulletlist><bullet>+1 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D0000143F"
   },
+  "GLOBAL.PROPERTIES.MATERIUM_MAJOR_TRANSFORMATION_PROPERTY": {
+    "name": "Rustbreath",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.MATERIUM_MAJOR_TRANSFORMATION_PROPERTY",
+    "displayHtml": "Rustbreath",
+    "description": "This unit gains:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Its breath attack:<bulletlist><bullet>Increases in size.</bullet><bullet>Becomes part <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] if not a Materium Dragon.</bullet><bullet>Inflicts guaranteed [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink].</bullet><bullet>Inflicts guaranteed [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink].</bullet><bullet>Dispels all [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink] on enemies</bullet></bulletlist>.</bullet></bulletlist>",
+    "image": "000003E300006E21"
+  },
   "GLOBAL.PROPERTIES.MERFOLK": {
     "name": "Merfolk",
     "icon": null,
@@ -6538,6 +6783,14 @@
     "description": "Unit gains +3 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink] due to being produced in a City with a Volcanologists' Guild.",
     "image": "8D1FD0C900000572"
   },
+  "GLOBAL.PROPERTIES.NAGA_FORM_PROPERTY_GROUP": {
+    "name": "Naga Transformation",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.NAGA_FORM_PROPERTY_GROUP",
+    "displayHtml": "Naga Transformation",
+    "description": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FAST_MOVEMENT]Fast Movement[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.AMPHIBIOUS_MOVEMENT]Amphibious[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIP_AWAY]Slip Away[/hyperlink]</bullet><bullet>Immunity to [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink]</bullet><bullet>+2 <defenseblight></defenseblight> [hyperlink,GLOBAL.BlightResistanceConcept]Blight Protection[/hyperlink]</bullet><bullet>+2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet></bulletlist>",
+    "image": "0000049700000598"
+  },
   "GLOBAL.PROPERTIES.NATURE_INCARNATE_UNIT_PROPERTY": {
     "name": "Nature Incarnate",
     "icon": null,
@@ -6545,6 +6798,14 @@
     "displayHtml": "Nature Incarnate",
     "description": "For each stack of Affinity Incarnate, this unit gains:<bulletlist><bullet>+1 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001443"
+  },
+  "GLOBAL.PROPERTIES.NATURE_MAJOR_TRANSFORMATION_PROPERTY": {
+    "name": "Lifebreath",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.NATURE_MAJOR_TRANSFORMATION_PROPERTY",
+    "displayHtml": "Lifebreath",
+    "description": "This unit gains:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Its breath attack:<bulletlist><bullet>Increases in size.</bullet><bullet>Becomes part <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] if not a Nature Dragon.</bullet><bullet>Heals friendly units for +20 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Revives friendly dead units with 30% of their total [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "000003E300006E29"
   },
   "GLOBAL.PROPERTIES.NAVAL_UNIT": {
     "name": "Embarked Unit",
@@ -6577,6 +6838,14 @@
     "displayHtml": "Order Influence",
     "description": "Unit has:<bulletlist><bullet>-2 <defensespirit></defensespirit> [hyperlink,GLOBAL.SpiritResistanceConcept]Spirit Protection[/hyperlink]</bullet></bulletlist>",
     "image": "000004A600000705"
+  },
+  "GLOBAL.PROPERTIES.ORDER_MAJOR_TRANSFORMATION_PROPERTY": {
+    "name": "Purebreath",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ORDER_MAJOR_TRANSFORMATION_PROPERTY",
+    "displayHtml": "Purebreath",
+    "description": "This unit gains:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Its breath attack:<bulletlist><bullet>Increases in size.</bullet><bullet>Becomes part <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] if not an Order Dragon.</bullet><bullet>Heals friendly units hit by 25 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and removes their [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "000003E300006E32"
   },
   "GLOBAL.PROPERTIES.ORDER_OF_BERSERKER": {
     "name": "Order of the Berserker",
@@ -6658,6 +6927,14 @@
     "description": "This unit gains +50% [hyperlink,GLOBAL.EvasionConcept]Evasion[/hyperlink].",
     "image": "0000048B0000125D"
   },
+  "GLOBAL.PROPERTIES.PAINBOUND": {
+    "name": "Painbound",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.PAINBOUND",
+    "displayHtml": "Painbound",
+    "description": "Target race embraces pain and when hit by an attack gain:<bulletlist><bullet>2 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>A random positive status effect.</bullet></bulletlist>",
+    "image": "000004970000335A"
+  },
   "GLOBAL.PROPERTIES.PAINBOUND_PROPERTY_GROUP": {
     "name": "Painbound",
     "icon": null,
@@ -6674,6 +6951,14 @@
     "description": "When in the water, this unit has:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>",
     "image": "0000048B0000166A"
   },
+  "GLOBAL.PROPERTIES.PARASITICINFECTION": {
+    "name": "Parasitic Contamination",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.PARASITICINFECTION",
+    "displayHtml": "Parasitic Contamination",
+    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], all enemy units with [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] have a 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.BLOOD_PARASITE]Blood Parasite[/hyperlink].",
+    "image": "0000049300000F8E"
+  },
   "GLOBAL.PROPERTIES.PHASE_SHIFT_NIXING_GROUP": {
     "name": "Phase-shift Nixing",
     "icon": null,
@@ -6682,6 +6967,13 @@
     "description": "This unit cannot use any [hyperlink,GLOBAL.TeleportAbilityConcept]Teleport[/hyperlink] abilities.",
     "image": "000004A600000590"
   },
+  "GLOBAL.PROPERTIES.PINNED": {
+    "name": "Pinned",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.PINNED",
+    "displayHtml": "Pinned",
+    "description": "This unit cannot move, because it has moved into an enemy's [hyperlink,GLOBAL.ZoneOfControlConcept]Zone of Control[/hyperlink]."
+  },
   "GLOBAL.PROPERTIES.PLANT_GUARDIAN": {
     "name": "Plant Guardian",
     "icon": null,
@@ -6689,6 +6981,14 @@
     "displayHtml": "Plant Guardian",
     "description": "All other friendly [hyperlink,GLOBAL.PROPERTIES.PLANT]Plant[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in the [hyperlink,GLOBAL.ArmyConcept]Army[/hyperlink] gain +1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink] and <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].",
     "image": "0000048B00000FAA"
+  },
+  "GLOBAL.PROPERTIES.PLEASURE_FROM_PAIN": {
+    "name": "Pleasure from Pain",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.PLEASURE_FROM_PAIN",
+    "displayHtml": "Pleasure from Pain",
+    "description": "All defending units have [hyperlink,GLOBAL.PROPERTIES.CURSE_EATER]Curse Eater[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.PAINBOUND_PROPERTY_GROUP]Painbound[/hyperlink].",
+    "image": "0000049300000FBF"
   },
   "GLOBAL.PROPERTIES.POISONOUS": {
     "name": "Poisonous",
@@ -6865,6 +7165,30 @@
     "description": "Units in this sector during combat:<bulletlist><bullet>Become [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>Every <turn></turn> Turn:<bulletlist><bullet>All units are displaced 1 hex.</bullet><bullet>Up to 3 random units sustain 10 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] and have a base 60% chance of suffering [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
     "image": "0000048B0000164A"
   },
+  "GLOBAL.PROPERTIES.RAMPANT_DEBRIS": {
+    "name": "Rampant Debris",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.RAMPANT_DEBRIS",
+    "displayHtml": "Rampant Debris",
+    "description": "If Combat takes place in water, several additional debris Obstacles are present which are [hyperlink,GLOBAL.SlowingConcept]Slowing[/hyperlink] or [hyperlink,GLOBAL.ExplosiveConcept]Explosive[/hyperlink].",
+    "image": "0000049300001882"
+  },
+  "GLOBAL.PROPERTIES.RAMPANT_UMBRAL_TAINT": {
+    "name": "Rampant Umbral Taint",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.RAMPANT_UMBRAL_TAINT",
+    "displayHtml": "Rampant Umbral Taint",
+    "description": "Several areas contain Umbral Taint.<br><br>Units passing through or ending their turn in Umbral Taint suffer [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] and -5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] unless they have [hyperlink,GLOBAL.PROPERTIES.SHADOW_SICKNESS_IMMUNITY]Umbral Malady Immunity[/hyperlink].",
+    "image": "00000493000006E0"
+  },
+  "GLOBAL.PROPERTIES.RAMPANT_WHIRLPOOLS": {
+    "name": "Rampant Whirlpools",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.RAMPANT_WHIRLPOOLS",
+    "displayHtml": "Rampant Whirlpools",
+    "description": "Several [hyperlink,GLOBAL.VortexConcept]Vortex[/hyperlink] obstacles are present in combat. They will exile [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] which enter them to the Underground.<br>Defending [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] entering a Vortex are displaced instead.",
+    "image": "0000049300001921"
+  },
   "GLOBAL.PROPERTIES.REALMTRAIT__SANDSTORM_DISPLAY": {
     "name": "Blinding Sandstorm",
     "icon": null,
@@ -6897,6 +7221,14 @@
     "description": "Attacking this unit deals an extra 4 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].<br><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000049700001073"
   },
+  "GLOBAL.PROPERTIES.REMORSEFUL_SEAL_DEBUFF_GROUP_MASTER": {
+    "name": "Champion Seal of Resonance",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.REMORSEFUL_SEAL_DEBUFF_GROUP_MASTER",
+    "displayHtml": "Champion Seal of Resonance",
+    "description": "Attacking this unit deals an extra 6 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].<br><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "image": "0000049700001073"
+  },
   "GLOBAL.PROPERTIES.RESISTANT_STRIKE": {
     "name": "Resistant Strike",
     "icon": null,
@@ -6919,6 +7251,14 @@
     "displayHtml": "River Walk",
     "description": "Moving through Rivers costs 6 <movementgeneral></movementgeneral> [hyperlink,GLOBAL.MovePointConcept]Move Points[/hyperlink] instead of 12.",
     "image": "000003BD0000131C"
+  },
+  "GLOBAL.PROPERTIES.ROCKY_CAMOUFLAGE": {
+    "name": "Rock Camouflage",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.ROCKY_CAMOUFLAGE",
+    "displayHtml": "Rock Camouflage",
+    "description": "This unit cannot be detected when on Rocky or Mountain hexes.",
+    "image": "000003E3000061CE"
   },
   "GLOBAL.PROPERTIES.SANDSTORMS_UNIT_PROPERTY": {
     "name": "Blinding Sandstorm",
@@ -6959,6 +7299,14 @@
     "displayHtml": "Shadow Incarnate",
     "description": "For each stack of Affinity Incarnate, this unit gains:<bulletlist><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000048D00001447"
+  },
+  "GLOBAL.PROPERTIES.SHADOW_MAJOR_TRANSFORMATION_PROPERTY": {
+    "name": "Frostbreath",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.SHADOW_MAJOR_TRANSFORMATION_PROPERTY",
+    "displayHtml": "Frostbreath",
+    "description": "This unit gains:<bulletlist><bullet>+20 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>Its breath attack:<bulletlist><bullet>Increases in size.</bullet><bullet>Becomes part <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] if not a Shadow Dragon.</bullet><bullet>Has a base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink]. If unsuccessful inflicts [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "000003E300006E3D"
   },
   "GLOBAL.PROPERTIES.SHADOW_SICKNESS": {
     "name": "Umbral Malady",
@@ -7007,6 +7355,14 @@
     "displayHtml": "Siren Song",
     "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], a random attacking [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink] has a 120% chance of suffering [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. If unsuccessful, the unit suffers [hyperlink,GLOBAL.PROPERTIES.DISTRACTED]Distracted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] instead.",
     "image": "0000049300001962"
+  },
+  "GLOBAL.PROPERTIES.SLAVERS": {
+    "name": "Slavers",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.SLAVERS",
+    "displayHtml": "Slavers",
+    "description": "Defender [hyperlink,GLOBAL.PROPERTIES.BATTLE_MAGE]Battle Mage Unit[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.SUPPORT_UNIT]Support Unit[/hyperlink] units gain [hyperlink,GLOBAL.PROPERTIES.SUBDUE_PANTHEON]Subdue[/hyperlink]. Other units gain a base 30% [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink] chance on their base attacks, increased for Single Shot.",
+    "image": "00000493000018F5"
   },
   "GLOBAL.PROPERTIES.SLOW_MOVEMENT": {
     "name": "Slow Movement",
@@ -7274,6 +7630,14 @@
     "description": "Enemy attacking units restore 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] on hit.<br><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000049700001078"
   },
+  "GLOBAL.PROPERTIES.TRANSFERENCE_SEAL_DEBUFF_GROUP_MASTER": {
+    "name": "Champion Seal of Transference",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.TRANSFERENCE_SEAL_DEBUFF_GROUP_MASTER",
+    "displayHtml": "Champion Seal of Transference",
+    "description": "Enemy attacking units restore 8 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] on hit.<br><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
+    "image": "0000049700001078"
+  },
   "GLOBAL.PROPERTIES.TREACHEROUS_REFLECTION": {
     "name": "Treacherous Reflection",
     "icon": null,
@@ -7385,6 +7749,14 @@
     "description": "At the end of each turn:<bulletlist><bullet>This unit:<bulletlist><bullet>Sustains 10 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>Loses a stack of a [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist></bullet><bullet>The linked unit:<bulletlist><bullet>Heals 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Steals the removed [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink] stack.</bullet></bulletlist></bullet></bulletlist>",
     "image": "0000049700000D73"
   },
+  "GLOBAL.PROPERTIES.UNDYING_BATTLEFIELD": {
+    "name": "Undying Battlefield",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.UNDYING_BATTLEFIELD",
+    "displayHtml": "Undying Battlefield",
+    "description": "Every <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], each corpse is resurrected as a random Skeleton unit with [hyperlink,GLOBAL.PROPERTIES.BERSERK]Berserk[/hyperlink].<br><br>Skeleton units themselves are not resurrected by this effect, are [hyperlink,GLOBAL.PROPERTIES.NON_VITAL]Non-Vital[/hyperlink], and die at the end of combat.",
+    "image": "0000049300000ABD"
+  },
   "GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT": {
     "name": "Athletics",
     "icon": null,
@@ -7415,6 +7787,14 @@
     "displayHtml": "Volcanic Heat",
     "description": "This unit is in a province affected by volcanic activity and subject to the following:<bulletlist><bullet>This unit [hyperlink,GLOBAL.PROPERTIES.CANNOT_REGENERATE]Cannot Regenerate[/hyperlink].</bullet><bullet>This unit suffers -3 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink], but gains +3 <defensefrost></defensefrost> [hyperlink,GLOBAL.FrostResistanceConcept]Frost Protection[/hyperlink].</bullet></bulletlist>",
     "image": "000003E100001C46"
+  },
+  "GLOBAL.PROPERTIES.VORTEX_STORM": {
+    "name": "Vortex Storm",
+    "icon": null,
+    "globalName": "GLOBAL.PROPERTIES.VORTEX_STORM",
+    "displayHtml": "Vortex Storm",
+    "description": "During [hyperlink,GLOBAL.CombatConcept]Combat[/hyperlink] on water:<bulletlist><bullet>All [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] suffer [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] until the end of combat.</bullet><bullet>Several [hyperlink,GLOBAL.VortexConcept]Vortex[/hyperlink] obstacles are present in combat.</bullet><bullet>Every 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink], all Units are displaced by 1 hex.</bullet></bulletlist>",
+    "image": "0000049300001853"
   },
   "GLOBAL.PROPERTIES.VOXSEBAS_BLESSING_ABILITY": {
     "name": "Chosen of Vox'Sebas",
@@ -7583,6 +7963,14 @@
     "description": "Base attacks gain:<bulletlist><bullet>+2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks.",
     "image": "0000041B000008FB"
   },
+  "GLOBAL.SPECIAL_OPERATION.BROKEN_WIZARD_TOWER_SPELL": {
+    "name": "Cosmic Inspiration",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATION.BROKEN_WIZARD_TOWER_SPELL",
+    "displayHtml": "Cosmic Inspiration",
+    "description": "<bulletlist><bullet>Requires target owned [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 or more [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] in its [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] adjacent to the [hyperlink,GLOBAL.STRUCTURES.BROKEN_WIZARD_TOWER]Broken Wizard's Throne[/hyperlink].</bullet><bullet>Each City can only be targeted once by this Spell.</bullet><bullet>Immediately unlocks a random [hyperlink,GLOBAL.SpellConcept]Spell[/hyperlink] that you do not have access to yet.</bullet></bulletlist>",
+    "image": "0000049300001630"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.ABRADE_MOUNTAIN": {
     "name": "Summon Storm Runestele",
     "icon": null,
@@ -7663,6 +8051,13 @@
     "description": "For 3 turns, at the start of your turn:<bulletlist><bullet>Enemy units take 8 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>All [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] units have a 90% chance of becoming [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] for 1 turn.</bullet></bulletlist>",
     "image": "000004A60000083F"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.ASTRAL_WISP_RITUAL": {
+    "name": "Astral Wisp Ritual",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.ASTRAL_WISP_RITUAL",
+    "displayHtml": "Astral Wisp Ritual",
+    "description": "Summons an [hyperlink,GLOBAL.UNITS.ASTRAL_WISP_UNIT]Astral Wisp[/hyperlink] on target hex."
+  },
   "GLOBAL.SPECIAL_OPERATIONS.BHAJIFS_DISRUPTION": {
     "name": "Bhajif's Disruption",
     "icon": null,
@@ -7719,6 +8114,14 @@
     "description": "Target enemy [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]:<bulletlist><bullet>Has 120% chance of suffering [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].<bulletlist><bullet>This effect repeats 5 times.</bullet></bulletlist></bullet><bullet>Suffers [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.PACIFIED]Pacified[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet></bulletlist>",
     "image": "000004930000164E"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.CHAIN_LIGHTNING": {
+    "name": "Chain Lightning",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.CHAIN_LIGHTNING",
+    "displayHtml": "Chain Lightning",
+    "description": "Target enemy unit:<bulletlist><bullet>Sustains 30 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Is inflicted with 2 [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink].</bullet><bullet>This effect passes on to another enemy within 3 hexes.</bullet><bullet>Passes on up to 2 times.</bullet></bulletlist>",
+    "image": "0000041B00001238"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.CLAIRVOYANCE_RITUAL": {
     "name": "Clairvoyance Ritual",
     "icon": null,
@@ -7734,6 +8137,14 @@
     "displayHtml": "Cosmic Wake",
     "description": "Target [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink]:<bulletlist><bullet>If it contains an enemy [hyperlink,GLOBAL.ProvinceImprovementConcept]Province Improvement[/hyperlink] and no [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink], it is removed and the <population></population> [hyperlink,GLOBAL.PopulationConcept]Population[/hyperlink] is lost.</bullet><bullet>Enemy [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] in the province sustain 4 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink], <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink], <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink], <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink], <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink], and <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet></bulletlist>",
     "image": "0000041B000012A4"
+  },
+  "GLOBAL.SPECIAL_OPERATIONS.CRABIFY_SPELL": {
+    "name": "Temporary Crabification",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.CRABIFY_SPELL",
+    "displayHtml": "Temporary Crabification",
+    "description": "Target friendly non-[hyperlink,GLOBAL.PROPERTIES.HERO]Hero[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Unit[/hyperlink]:<bulletlist><bullet>Transforms into a [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crab[/hyperlink] until the end of the battle.</bullet><bullet>Has its [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] reset.</bullet><bullet>Loses all [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] and [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effects[/hyperlink].</bullet><bullet>Loses all <caststrategic></caststrategic> [hyperlink,GLOBAL.UnitEnchantmentConcept]Unit Enchantments[/hyperlink], <caststrategic></caststrategic> [hyperlink,GLOBAL.RaceTransformationConcept]Race Transformations[/hyperlink], and ranks until the end of the battle.</bullet></bulletlist>Does not work in lava battles.",
+    "image": "00000493000019E1"
   },
   "GLOBAL.SPECIAL_OPERATIONS.CRYSTAL_CRASH": {
     "name": "Crystal Crash",
@@ -7783,6 +8194,14 @@
     "description": "Target [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] that is marked to be struck by a [hyperlink,GLOBAL.CataclysmConcept]Cataclysm[/hyperlink] loses its mark and will not be struck next Cataclysm.<br><br>This spell does not contribute to the [hyperlink,GLOBAL.FracturingWindsConcept]Devouring Winds[/hyperlink] and cannot [hyperlink,GLOBAL.BackfireConcept]Backfire[/hyperlink].",
     "image": "000004D5000000AC"
   },
+  "GLOBAL.SPECIAL_OPERATIONS.DRACONIC_VITALITY": {
+    "name": "Draconic Vitality",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.DRACONIC_VITALITY",
+    "displayHtml": "Draconic Vitality",
+    "description": "Target race is imbued with Dragon-like vitality, granting them:<bulletlist><bullet>+5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Point[/hyperlink] regeneration per [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink] <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>+3 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per Unit Rank.</bullet><bullet>+2 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink] per Hero Level, up to Level 10.</bullet></bulletlist>",
+    "image": "000003E300006B3C"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.EARTHSHAPE_ASHLAND": {
     "name": "Earthshape: Ashland",
     "icon": null,
@@ -7830,6 +8249,14 @@
     "displayHtml": "Ignite",
     "description": "Target enemy unit:<bulletlist><bullet>Sustains 25 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Is inflicted with [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet><bullet>The ground is set [hyperlink,GLOBAL.OnFireConcept]On Fire[/hyperlink].</bullet></bulletlist>",
     "image": "000003AD00002BCD"
+  },
+  "GLOBAL.SPECIAL_OPERATIONS.FLAMEBURST": {
+    "name": "Flameburst Weapons",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.FLAMEBURST",
+    "displayHtml": "Flameburst Weapons",
+    "description": "Grants enchanted units:<bulletlist><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink].</bullet><bullet>Killing a unit causes it to explode, adjacent enemies:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain 2 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist></bullet></bulletlist>",
+    "image": "000003E50000195D"
   },
   "GLOBAL.SPECIAL_OPERATIONS.FLOOD_THE_LAND": {
     "name": "Earthshape: Swamp",
@@ -8163,6 +8590,13 @@
     "displayHtml": "Thulyana's Contortion",
     "description": "Summon a [hyperlink,GLOBAL.UNITS.MISBORN_MISTLING]Abominable Mistling[/hyperlink], a transformed and monstrous Fey that favors brute force over Fey tricks."
   },
+  "GLOBAL.SPECIAL_OPERATIONS.SUMMON_VAULT_GUARDIAN": {
+    "name": "Summon Progenitor Golem",
+    "icon": null,
+    "globalName": "GLOBAL.SPECIAL_OPERATIONS.SUMMON_VAULT_GUARDIAN",
+    "displayHtml": "Summon Progenitor Golem",
+    "description": "Summon a friendly [hyperlink,GLOBAL.UNITS.PROGENITOR_GOLEM]Progenitor Golem[/hyperlink] on the target hex, which lasts for 3 <turn></turn>"
+  },
   "GLOBAL.SPECIAL_OPERATIONS.TEAR_FRACTURE": {
     "name": "Tear Fracture",
     "icon": null,
@@ -8282,6 +8716,13 @@
     "description": "Unique global effect: <bulletlist><bullet>+15 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink].</bullet></bulletlist>",
     "image": "0000042A000008E2"
   },
+  "GLOBAL.STRUCTURES.BARREN_WELLSPRING": {
+    "name": "Barren Wellspring",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.BARREN_WELLSPRING",
+    "displayHtml": "Barren Wellspring",
+    "description": "<bulletlist><bullet>+1 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] per [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] with [hyperlink,GLOBAL.SandConcept]Sand[/hyperlink] or [hyperlink,GLOBAL.AstralBarrensConcept]Astral Barrens[/hyperlink] in the [hyperlink,GLOBAL.CityConcept]City[/hyperlink] [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>Adds the [hyperlink,GLOBAL.UNITS.GRIMBEAK_CROW]Grimbeak Crow[/hyperlink] unit to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet><bullet>Unlocks the Restore action which turns this [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] into a [hyperlink,GLOBAL.STRUCTURES.HIDDEN_WELLSPRING]Hidden Wellspring[/hyperlink].</bullet></bulletlist>"
+  },
   "GLOBAL.STRUCTURES.BLOOD_GLASS": {
     "name": "Blood Glass",
     "icon": null,
@@ -8304,6 +8745,14 @@
     "displayHtml": "Broken Wizard's Throne",
     "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>A <researchpost></researchpost> [hyperlink,GLOBAL.ResearchPostConcept]Research Post[/hyperlink] in the Province gains +10 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELEMENTAL_DEFENSES]Elemental Defenses[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>Enemy [hyperlink,GLOBAL.SpellConcept]Spells[/hyperlink] have 33% chance of [hyperlink,GLOBAL.BackfireConcept]Backfiring[/hyperlink] within the domain.</bullet><bullet>The City's owner gains 15 <caststrategic></caststrategic> [hyperlink,GLOBAL.WorldMapCastingPointConcept]World Map Casting Points[/hyperlink] and <optactical></optactical> [hyperlink,GLOBAL.CombatCastingPointConcept]Combat Casting Points[/hyperlink].</bullet><bullet>Unlocks the [hyperlink,GLOBAL.SPECIAL_OPERATIONS.BROKEN_WIZARD_TOWER_SPELL]Cosmic Inspiration[/hyperlink] <caststrategic></caststrategic> [hyperlink,GLOBAL.CitySpellConcept]City Spell[/hyperlink].</bullet></bulletlist>"
   },
+  "GLOBAL.STRUCTURES.CHITINOUS_NODE": {
+    "name": "Chitinous Growths",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.CHITINOUS_NODE",
+    "displayHtml": "Chitinous Growths",
+    "description": "These grotesque growths deposit valuable liquid and ore at unnatural speed.",
+    "image": "00000493000004F3"
+  },
   "GLOBAL.STRUCTURES.CRUSADER_HOST": {
     "name": "Crusader Host",
     "icon": null,
@@ -8318,6 +8767,13 @@
     "displayHtml": "Fireforge Stone",
     "description": "Unique global effect: <bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] cost 20% less <unitprod></unitprod> [hyperlink,GLOBAL.UnitProductionConcept]Draft[/hyperlink].</bullet></bulletlist>",
     "image": "0000042A000008DC"
+  },
+  "GLOBAL.STRUCTURES.FISH_NODE": {
+    "name": "Fishing Ground",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.FISH_NODE",
+    "displayHtml": "Fishing Ground",
+    "description": "A plentiful source of fish."
   },
   "GLOBAL.STRUCTURES.FLEETING_FRACTURED_INFESTATION": {
     "name": "Fleeting Fractured Infestation",
@@ -8334,12 +8790,26 @@
     "description": "Unique global effect: <bulletlist><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] gain +20% <xp></xp> experience from combat.</bullet></bulletlist>",
     "image": "0000042A000008DE"
   },
+  "GLOBAL.STRUCTURES.FOOD_NODE": {
+    "name": "Pastures",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.FOOD_NODE",
+    "displayHtml": "Pastures",
+    "description": "Roaming herds on lush fields."
+  },
+  "GLOBAL.STRUCTURES.FORSAKEN_TEMPLE": {
+    "name": "Forsaken Temple",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.FORSAKEN_TEMPLE",
+    "displayHtml": "Forsaken Temple",
+    "description": "<bulletlist><bullet>+1 <structureprod></structureprod> [hyperlink,GLOBAL.StructureProductionConcept]Production[/hyperlink] per <researchpost></researchpost> [hyperlink,GLOBAL.ResearchPostConcept]Research Post[/hyperlink] in the [hyperlink,GLOBAL.CityConcept]City[/hyperlink] [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>Adds the [hyperlink,GLOBAL.UNITS.SPIRIT_HAWK_UNIT]Spirit Hawk[/hyperlink] unit to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet><bullet>Unlocks the Restore action which turns this [hyperlink,GLOBAL.AncientWonderConcept]Ancient Wonder[/hyperlink] into a [hyperlink,GLOBAL.STRUCTURES.SECRET_TEMPLE]Secret Temple[/hyperlink].</bullet></bulletlist>"
+  },
   "GLOBAL.STRUCTURES.FOUNTAIN_OF_CREATION_LANDMARK": {
     "name": "Fountain of Creation",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURES.FOUNTAIN_OF_CREATION_LANDMARK",
     "displayHtml": "Fountain of Creation",
-    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>A <farm></farm> Farm in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CELESTIAL_RAIN]Celestial rain[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet><farm></farm> Farms in the domain grant +2 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] and +2 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CELESTIAL_RAIN]Celestial rain[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink] in the domain.</bullet></bulletlist>"
+    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>A <farm></farm> Farm in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CELESTIAL_RAIN]Celestial Rain[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet><farm></farm> Farms in the domain grant +2 <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] and +2 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CELESTIAL_RAIN]Celestial Rain[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink] in the domain.</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURES.FRACTURED_INFESTATION": {
     "name": "Fractured Infestation",
@@ -8361,6 +8831,13 @@
     "globalName": "GLOBAL.STRUCTURES.GOLDEN_ZIGGURAT",
     "displayHtml": "Golden Ziggurat",
     "description": "<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] [hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] require -50% less <gold></gold> [hyperlink,GLOBAL.GoldConcept]Gold[/hyperlink] and <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] base [hyperlink,GLOBAL.UnitUpkeepConcept]Unit Upkeep[/hyperlink] in this [hyperlink,GLOBAL.CityConcept]City[/hyperlink] [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink].</bullet><bullet>Adds the [hyperlink,GLOBAL.UNITS.PHOENIX]Phoenix[/hyperlink] unit to the [hyperlink,GLOBAL.RequestMilitaryAidConcept]Rally of the Lieges[/hyperlink].</bullet></bulletlist>"
+  },
+  "GLOBAL.STRUCTURES.GOLD_NODE": {
+    "name": "Gold Vein",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.GOLD_NODE",
+    "displayHtml": "Gold Vein",
+    "description": "A large vein of valuable gold."
   },
   "GLOBAL.STRUCTURES.GREAT_BIRD_NEST_SPAWNER": {
     "name": "Great Bird Nest",
@@ -8396,7 +8873,14 @@
     "icon": null,
     "globalName": "GLOBAL.STRUCTURES.LEVIATHAN_TENTACLES",
     "displayHtml": "Leviathan Tentacles",
-    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>-20 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] and +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELDRITCH_LURE]Eldritch lure[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+100 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink]</bullet><bullet>Allows recruitment of [hyperlink,GLOBAL.UNITS.ASTRAL_WISP_UNIT]Astral Wisps[/hyperlink], [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpents[/hyperlink], and [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoners[/hyperlink].</bullet><bullet>On new turn, this Landmark is bound, putting it in a dormant state where its other adjacency effects are disabled.</bullet></bulletlist>"
+    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>-20 <happiness></happiness> [hyperlink,GLOBAL.CityStabilityConcept]City Stability[/hyperlink] and +10 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ELDRITCH_LURE]Eldritch Lure[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>+100 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink]</bullet><bullet>Allows recruitment of [hyperlink,GLOBAL.UNITS.ASTRAL_WISP_UNIT]Astral Wisps[/hyperlink], [hyperlink,GLOBAL.UNITS.ASTRAL_SERPENT_UNIT]Astral Serpents[/hyperlink], and [hyperlink,GLOBAL.UNITS.ASTRAL_SIPHONER_UNIT]Astral Siphoners[/hyperlink].</bullet><bullet>On new turn, this Landmark is bound, putting it in a dormant state where its other adjacency effects are disabled.</bullet></bulletlist>"
+  },
+  "GLOBAL.STRUCTURES.MANA_NODE": {
+    "name": "Mana Node",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.MANA_NODE",
+    "displayHtml": "Mana Node",
+    "description": "Magical currents converge at this location."
   },
   "GLOBAL.STRUCTURES.MISTWALKER_CAMP_SPRING": {
     "name": "Mistwalker Camp",
@@ -8404,6 +8888,29 @@
     "globalName": "GLOBAL.STRUCTURES.MISTWALKER_CAMP_SPRING",
     "displayHtml": "Mistwalker Camp",
     "description": "A crude encampment where sinister Fey lurk in the mists.<br>Provinces in this infestation's territory have [hyperlink,GLOBAL.PROPERTIES.MISTY]Misty[/hyperlink].<br>If left unchecked, they will grow in strength, expand their territory, and send out invasion armies."
+  },
+  "GLOBAL.STRUCTURES.MONOLITHS_NODE": {
+    "name": "Monoliths",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.MONOLITHS_NODE",
+    "displayHtml": "Monoliths",
+    "description": "There is writing in an unknown language on these obsidian giants.",
+    "image": "00000493000004F2"
+  },
+  "GLOBAL.STRUCTURES.OASIS_NODE": {
+    "name": "Oasis",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.OASIS_NODE",
+    "displayHtml": "Oasis",
+    "description": "A lush oasis full of nutritious food."
+  },
+  "GLOBAL.STRUCTURES.ORCHARD_NODE": {
+    "name": "Blossom Orchard",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.ORCHARD_NODE",
+    "displayHtml": "Blossom Orchard",
+    "description": "Eternally blooming trees offering bounty of fruit and wood.",
+    "image": "00000493000008D0"
   },
   "GLOBAL.STRUCTURES.PALE_TIDEBLOOM": {
     "name": "Pale Tidebloom",
@@ -8426,6 +8933,13 @@
     "globalName": "GLOBAL.STRUCTURES.PEARL_NODE",
     "displayHtml": "Pearl Reef",
     "description": "A bloom of valuable pearls."
+  },
+  "GLOBAL.STRUCTURES.PRODUCTION_NODE": {
+    "name": "Iron Deposit",
+    "icon": null,
+    "globalName": "GLOBAL.STRUCTURES.PRODUCTION_NODE",
+    "displayHtml": "Iron Deposit",
+    "description": "A rich vein full of iron."
   },
   "GLOBAL.STRUCTURES.RAINBOW_CLOVER": {
     "name": "Rainbow Clover",
@@ -8476,14 +8990,14 @@
     "icon": null,
     "globalName": "GLOBAL.STRUCTURES.TEMPESTUOUS_VORTEX",
     "displayHtml": "Tempestuous Vortex",
-    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province.</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.VORTEX_STORM]Vortex storm[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] starting their <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in this Province gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The ability to draft [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] in the City for <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Friendly Units starting their <turn></turn> Turn in the Domain gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> Turns.</bullet></bulletlist>"
+    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>Allows the construction of a <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province.</bullet><bullet>A <conduit></conduit> [hyperlink,GLOBAL.ConduitConcept]Conduit[/hyperlink] in this province grants +5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink] income.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.VORTEX_STORM]Vortex Storm[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.UnitConcept]Units[/hyperlink] starting their <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink] in this Province gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The ability to draft [hyperlink,GLOBAL.UNITS.LIGHTNING_RUNE_CRAB]Lightning Rune Crabs[/hyperlink] in the City for <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>Friendly Units starting their <turn></turn> Turn in the Domain gain [hyperlink,GLOBAL.PROPERTIES.ACCELERATED_MOVEMENT]Accelerated Movement[/hyperlink] for 3 <turn></turn> Turns.</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURES.THORN_HEART_LANDMARK": {
     "name": "Thorn Heart",
     "icon": null,
     "globalName": "GLOBAL.STRUCTURES.THORN_HEART_LANDMARK",
     "displayHtml": "Thorn Heart",
-    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>+5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>A Farm <farm></farm> in this province grants +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] additional income.</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The City terraforms 1 province on the surface within a 5 province radius of its [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. The terraformed province:<bulletlist><bullet>Gains [hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink].</bullet><bullet>Loses [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink].</bullet></bulletlist></bullet><bullet>The City's [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] gains the [hyperlink,GLOBAL.PROPERTIES.PARASITICINFECTION]Parasiticinfection[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink] when fighting in a province with Sunless.</bullet></bulletlist>"
+    "description": "[hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gain:<bulletlist><bullet>+5 <food></food> [hyperlink,GLOBAL.FoodConcept]Food[/hyperlink].</bullet><bullet>+5 <mana></mana> [hyperlink,GLOBAL.ManaConcept]Mana[/hyperlink].</bullet><bullet>A Farm <farm></farm> in this province grants +5 <knowledge></knowledge> [hyperlink,GLOBAL.KnowledgeConcept]Knowledge[/hyperlink] additional income.</bullet></bulletlist>A [hyperlink,GLOBAL.CityConcept]City[/hyperlink] with 3 [hyperlink,GLOBAL.ProvinceConcept]Provinces[/hyperlink] adjacent to this Landmark gains:<bulletlist><bullet>The City terraforms 1 province on the surface within a 5 province radius of its [hyperlink,GLOBAL.DomainConcept]Domain[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]. The terraformed province:<bulletlist><bullet>Gains [hyperlink,GLOBAL.SunlessConcept]Sunless[/hyperlink].</bullet><bullet>Loses [hyperlink,GLOBAL.GloomTerrainConcept]Gloom[/hyperlink].</bullet></bulletlist></bullet><bullet>The City's [hyperlink,GLOBAL.EmpireConcept]Empire[/hyperlink] gains the [hyperlink,GLOBAL.PROPERTIES.PARASITICINFECTION]Parasitic Contamination[/hyperlink] <casttactical></casttactical> [hyperlink,GLOBAL.CombatEnchantmentConcept]Combat Enchantment[/hyperlink] when fighting in a province with Sunless.</bullet></bulletlist>"
   },
   "GLOBAL.STRUCTURES.TRANQUILITY_POOL": {
     "name": "Tranquility Pool",

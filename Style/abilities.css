@@ -1,0 +1,22 @@
+/* The Abilities pages (Active Abilities, Passives, Status Effects): the Spells pages' cards (Style/spellbook.css) under the
+   World Map pages' tabs (Style/worldmap.css), an active ability drawn as on a unit's card (Style/heroes.css) */
+
+/* an active ability's card is its tooltip, as on a unit's card, at the card's width */
+.ab-card > .itemAbility {
+    width: auto;
+    margin: 0;
+    padding-bottom: 6px;
+}
+.ab-card > .itemAbility .abilityHighLighter {
+    margin-top: 0;
+}
+.ab-card .wm-part,
+.ab-card .unitUnlocks {
+    margin-top: 8px;
+}
+/* what the card says of itself: where its effects vary, what has none */
+.ab-note {
+    margin-top: 6px;
+    color: #8d97ad;
+    font-size: 14px;
+}

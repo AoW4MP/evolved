@@ -1,9 +1,12 @@
 // What the Abilities pages share (Active Abilities, Passives, Status Effects): the Spells pages' cards and board (SbCard,
 // WmBoard), with the Heroes pages' cards for what gives an ability (Data/heroes.js). The abilities are the dump's
 // (Data/EN/Abilities.json), with the 68 the game's texts link to that no unit has from the start
-// (Data/GEN/LinkedAbilities.json, aow4_diff_tools/abilities.py); each the same thing once. Which are status effects, and
-// what the game says of each (negative or positive, stacks, counters, dispellable), is Data/GEN/StatusEffects.json
-// (aow4_diff_tools/statuseffects.py). Style/abilities.css, Data/worldmap.js, Data/spellbook.js and Data/heroes.js go with it.
+// (Data/GEN/LinkedAbilities.json, aow4_diff_tools/abilities.py); each the same thing once, and only what a player meets in
+// the game: what a unit in play, a hero skill, item or infusion a player can get, or a unit's medal has, or what the game
+// gives otherwise, not what is only in its files (Data/GEN/AbilitiesInPlay.json, aow4_diff_tools/inplay.py). Which are
+// status effects, and what the game says of each (negative or positive, stacks, counters, dispellable), is
+// Data/GEN/StatusEffects.json (aow4_diff_tools/statuseffects.py). Style/abilities.css, Data/worldmap.js, Data/spellbook.js
+// and Data/heroes.js go with it.
 
 // the damage an attack deals, by its icon tag in the dump, in the game's order
 const AB_DAMAGE = [
@@ -36,6 +39,43 @@ const AB_KINDS = [
 ];
 // the medal ranks a unit's rewards come at (medal_rewards_2 ... _6)
 const AB_RANKS = { 2: "Soldier", 3: "Veteran", 4: "Elite", 5: "Champion", 6: "Legend" };
+// a unit's type and class among its secondary passives (the small icons by its name), by slug. The game writes them in
+// one group of texts (UPGRADES_CORE_UNITPROPERTIES@); the classes are the Units menu's Class pages', with Settler and
+// Civilian (getUnitTypeTag). The other secondary passives are a unit's movement, terrain, size and the like (Floating,
+// Forest Walk, Large Target, Cannot be Displaced, Magic Origin, Cavalry: written as requisites), on the Units tab
+const AB_UNIT_TYPES = new Set([
+    "000003fe00000018", // Animal
+    "0000048b00000406", // Accursed Fiend
+    "000003e3000059af", // Celestial
+    "000003e3000071ff", // Construct
+    "000003e30000426c", // Dragon
+    "000003e300004968", // Elemental
+    "000003e300004802", // Ethereal
+    "000003fe0000001c", // Fey
+    "000003fe000000c2", // Infernal Fiend
+    "0000049700003d5f", // Penguin
+    "000003e3000051e7", // Plant
+    "000004150000025b", // Spider
+    "0000049700000cbe", // Umbral Demon
+    "000003e500001a37" // Undead
+]);
+const AB_UNIT_CLASSES = new Set([
+    "000003e300004ea6", // Fighter
+    "0000039f000016f0", // Shield
+    "0000039f000016f2", // Polearm
+    "000003bd000028b7", // Shock
+    "0000049700003951", // Magic Fighter
+    "000003e600000492", // Skirmisher
+    "0000039f000016f1", // Ranged
+    "000003e300004c86", // Battle Mage
+    "000003bd000020c0", // Support
+    "000003fe00000060", // Scout
+    "000003e300004e9f", // Mythic
+    "000003fe00000020", // Siegecraft
+    "0000041b00001910", // Tower
+    "000003fe000000c6", // Settler
+    "000003ec000021b1" // Civilian
+]);
 const AB_BY_NAME = (a, b) => AbName(a).localeCompare(AbName(b));
 
 function AbName(e) {
@@ -91,13 +131,20 @@ function AbOnce(list, key) {
 // ------------------------------------------------------------------------------------------------------------- Who has it
 
 let abUsers = null;
-// for each ability slug, what has it: units (as one of their abilities or passives, or a medal's reward), hero skills, items
-// and infusions. Heroes' things are those a player can get (the Heroes pages' lists), each copy, as copies with another
-// slug for the same ability are one card there
+// what nothing in play holds and the game gives nowhere a player meets it: by slug (aow4_diff_tools/inplay.py)
+let abLeftOut = new Set();
+// for each ability slug, what has it: units in play (as one of their abilities or passives, or a medal's reward), hero
+// skills, items and infusions. Heroes' things are those a player can get (the Heroes pages' lists, and the Item Forge's
+// base items: the Eldritch Relics' Mind Spike), each copy, as copies with another slug for the same ability are one card there
 async function AbLoadUsers() {
     if (abUsers) return abUsers;
     // an item's card on hover says where it comes from
-    const [sources] = await Promise.all([HbLoadSources(), HbLoadItemSources()]);
+    const [sources, , inPlay] = await Promise.all([
+        HbLoadSources(),
+        HbLoadItemSources(),
+        fetch("/evolved/Data/GEN/AbilitiesInPlay.json").then((res) => res.json())
+    ]);
+    abLeftOut = new Set(inPlay.left_out.map((e) => e.slug));
     abUsers = new Map();
     const get = (slug) => {
         if (!abUsers.has(slug)) abUsers.set(slug, { units: [], lists: new Set(), medals: [], skills: [], items: [], infusions: [] });
@@ -116,7 +163,10 @@ async function AbLoadUsers() {
         }
     }
     for (const s of HbSkills(sources, { all: true })) for (const a of s.abilities || []) get(a.slug).skills.push(s);
-    for (const i of jsonHeroItemsLocalized.filter((i) => i.tier_numerals)) for (const a of i.ability_slugs) get(a.slug).items.push(i);
+    const bases = new Set(jsonItemForgeTypes.map((t) => String(t.base_hero_item_resid)));
+    for (const i of jsonHeroItemsLocalized.filter((i) => i.tier_numerals || bases.has(String(i.resid)))) {
+        for (const a of i.ability_slugs) get(a.slug).items.push(i);
+    }
     for (const u of HbInfusions()) for (const a of u.abilities || []) get(a.slug).infusions.push(u);
     return abUsers;
 }
@@ -134,6 +184,17 @@ function AbUsersOf(slugs) {
         u.infusions.forEach((i) => all.infusions.has(i.name) || all.infusions.set(i.name, i));
     }
     return all;
+}
+
+// whether a unit in play, a hero skill, item or infusion a player can get, or a medal has it
+function AbHeld(users) {
+    return users.units.size + users.medals.size + users.skills.size + users.items.size + users.infusions.size > 0;
+}
+
+// whether a player meets a thing nothing of the dump in play holds: what the game gives otherwise (a linked ability, a
+// status effect), as inplay.py traces it. Its copies are one card, which a player meets if they meet one copy
+function AbGiven(e) {
+    return e.slugs.some((s) => !abLeftOut.has(s));
 }
 
 // a list of what gives an ability, as an artifact's spells are listed (SpellList): icon and name, its card on hover
@@ -235,7 +296,9 @@ function AbActives() {
         e.varies = e.copies.some((c) => (c.modifiers || []).length > e.modifiers.length);
         e.linked = e.copies.some((c) => jsonLinkedAbilities.includes(c));
     }
-    return list;
+    // what a player meets: what something in play has (not only an old hero skill's Bless, a deprecated unit's attack), or
+    // a linked ability the game gives in play (a spell's, a signature skill's)
+    return list.filter((e) => AbHeld(AbUsersOf(e.slugs)) || (e.linked && AbGiven(e)));
 }
 
 function AbActiveCard(e) {
@@ -244,29 +307,27 @@ function AbActiveCard(e) {
     if (/–/.test(e.damage)) card.querySelector("#abilityDamage").title = "Its damage depends on the unit: see the unit";
     if (e.varies) card.append(WmElement("div", "ab-note", "Some units and items add more effects to it: see them."));
     const users = AbUsersParts(card, e.slugs);
-    if (!users.units.size && !users.skills.size && !users.items.size && !users.infusions.size) {
-        card.append(WmElement("div", "ab-note", e.linked ? "No unit has it from the start: something in play gives it." : "Nothing on the site has it from the start."));
-    }
+    if (!AbHeld(users)) card.append(WmElement("div", "ab-note", "No unit has it from the start: something in play gives it."));
     return card;
 }
 
 // ------------------------------------------------------------------------------------------------------------- Passive
 
-// what kind of passive a unit's or hero's is (its tabs): a unit's own, a unit's type or class (its secondary passives), a
-// hero's (a skill's, an item's, an infusion's), a Champion medal's; Other: none of these (Fire Protection and the like, which
-// spells and traits give)
+// a passive's tabs: a unit's type or class, a unit's (its own, its movement, size...), a hero's (a skill's, an item's, an
+// infusion's), a Champion medal's (a unit's medal reward that names it: not the +10 Hit Points every unit's medals give)
 function AbPassiveTabs(e, users) {
+    if (e.slugs.some((s) => AB_UNIT_TYPES.has(s))) return ["Types"];
+    if (e.slugs.some((s) => AB_UNIT_CLASSES.has(s))) return ["Classes"];
     const tabs = [];
-    const has = (key) => e.slugs.some((s) => abUsers.get(s)?.lists.has(key));
-    if (has("primary_passives") || has("abilities")) tabs.push("Units");
-    if (has("secondary_passives")) tabs.push("Types");
+    if (users.units.size) tabs.push("Units");
     if (users.skills.size || users.items.size || users.infusions.size) tabs.push("Heroes");
     if (users.medals.size && !/^[+-]/.test(AbName(e))) tabs.push("Medals");
-    return tabs.length ? tabs : ["Other"];
+    return tabs;
 }
 
-// the passives, each once (copies with the same name and text): not the status effects, nor the rewards every unit's
-// medals give (+10 Hit Points, +1 Defense)
+// the passives, each once (copies with the same name and text), that something in play has: not the status effects, nor
+// what only an old or disabled hero skill holds (the Dragon Lords' Auras, Cull the Weak), nor the bonuses of a spell the
+// dump has for such a skill (the Primal Communions: the enchantments' passives are on the Enchantments page)
 function AbPassives() {
     const status = AbStatusInfo();
     const list = AbOnce(
@@ -278,10 +339,10 @@ function AbPassives() {
         e.tabs = AbPassiveTabs(e, users);
         e.count = users.units.size + users.medals.size;
     }
-    return list.filter((e) => !(e.tabs[0] === "Other" && AbUsersOf(e.slugs).medals.size));
+    return list.filter((e) => e.tabs.length);
 }
 
-const AB_PASSIVE_TYPES = { Units: "Unit Passive", Types: "Unit Type", Heroes: "Hero Passive", Medals: "Champion Medal", Other: "Passive" };
+const AB_PASSIVE_TYPES = { Units: "Unit Passive", Types: "Unit Type", Classes: "Unit Class", Heroes: "Hero Passive", Medals: "Champion Medal" };
 
 function AbPassiveCard(e) {
     const card = AbCard(e, AB_PASSIVE_TYPES[e.tabs[0]]);
@@ -291,14 +352,16 @@ function AbPassiveCard(e) {
 
 // ------------------------------------------------------------------------------------------------------------- Status
 
-// the status effects, each once (copies with the same name and text), with what the game says of them
+// the status effects a player meets, each once (copies with the same name and text), with what the game says of the copies
+// in play: not those only the files have (the old affinity traits, a spell's status from before it changed: Earth Shatter)
 function AbStatuses() {
     const status = AbStatusInfo();
     const list = AbOnce(
         AbAll().filter((a) => status.has(a.slug)),
         (a) => JSON.stringify([a.name, a.description])
-    );
+    ).filter(AbGiven);
     for (const e of list) {
+        e.slugs = e.slugs.filter((s) => !abLeftOut.has(s));
         const info = e.slugs.map((s) => status.get(s));
         e.kinds = ["Negative", "Positive"].filter((k) => info.some((i) => i.kinds.includes(k)));
         e.stacks = Math.max(0, ...info.map((i) => i.stacks || 0)) || null;
@@ -364,9 +427,9 @@ async function AbPassivesPage() {
         [
             ["Units", "<unit></unit> Units"],
             ["Types", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/animal.png" alt="" /> Unit Types'],
+            ["Classes", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/shock_unit.png" alt="" /> Unit Classes'],
             ["Heroes", "<unithero></unithero> Heroes"],
-            ["Medals", "<medal_champion></medal_champion> Champion Medals"],
-            ["Other", "<casttactical></casttactical> Other"]
+            ["Medals", "<medal_champion></medal_champion> Champion Medals"]
         ],
         AbPassives(),
         {

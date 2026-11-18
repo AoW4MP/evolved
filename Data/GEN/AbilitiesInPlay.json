@@ -1,0 +1,277 @@
+{
+ "generated": "2026-11-18 23:15",
+ "build": "exe of 2026-11-13",
+ "mod": "AoW 4 Evolved",
+ "left_out": [
+  {
+   "slug": "0000046A00000147",
+   "name": "Artillery Barrage",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Artillerist [THeroSkill]"
+  },
+  {
+   "slug": "0000048D00000CAA",
+   "name": "Channel Power",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Mage - Channel Power [THeroSkill]"
+  },
+  {
+   "slug": "0000048D0000094F",
+   "name": "Conjure Astral Ward",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Ritualist - Conjure Astral Ward [THeroSkill]"
+  },
+  {
+   "slug": "0000048B00000356",
+   "name": "Conjure Wildgrowth",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Ritualist - Conjure Wildgrowth [THeroSkill]"
+  },
+  {
+   "slug": "000003E300005C3F",
+   "name": "Draining Blade",
+   "kind": "Active",
+   "why": "Nothing gives it: SHS - Draining Blade - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "000003E3000069D4",
+   "name": "Inspiring Resistance",
+   "kind": "Active",
+   "why": "Nothing gives it: Inspiring Warden - Hero Property: Trait [THeroTraitProperty]"
+  },
+  {
+   "slug": "000003E30000564A",
+   "name": "Mass Rejuvenation",
+   "kind": "Active",
+   "why": "Nothing gives it: SHS - Mass Rejuvenation - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "000003E300005639",
+   "name": "Restoration",
+   "kind": "Active",
+   "why": "Nothing gives it: SHS - Restoration - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "000003E300006115",
+   "name": "Sanctify",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Sanctify [THeroSkill]"
+  },
+  {
+   "slug": "000003E30000565C",
+   "name": "Summon Elemental",
+   "kind": "Active",
+   "why": "Nothing gives it: SHS - Summon Elemental - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "0000048D00000D03",
+   "name": "Temporal Plague",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Mage - Temporal Plague [THeroSkill]"
+  },
+  {
+   "slug": "0000041B00000952",
+   "name": "Undying Loyalty",
+   "kind": "Active",
+   "why": "Nothing gives it: HS - Ritualist - Undying Loyalty [THeroSkill]"
+  },
+  {
+   "slug": "0000048d00000caf",
+   "name": "Channel Power",
+   "kind": "Status",
+   "why": "Nothing gives it: HS - Mage - Channel Power [THeroSkill]"
+  },
+  {
+   "slug": "0000041b00001b98",
+   "name": "Chaos Brand",
+   "kind": "Status",
+   "why": "Nothing gives it: Chaos Brand (item) - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "8d1fd0c900000576",
+   "name": "Destructive Regrowth",
+   "kind": "Status",
+   "why": "Nothing gives it: Destructive Regrowth - Unit Effect: Temporary Property [TStrategicUnitTemporaryPropertyEffect]"
+  },
+  {
+   "slug": "000003df000013ea",
+   "name": "Drained",
+   "kind": "Status",
+   "why": "Unused: Core Action: Affinity Cost - [DEPRECATED] Astral -1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "0000049700002c9d",
+   "name": "Dungeon Hazard",
+   "kind": "Status",
+   "why": "Nothing gives it: Dungeon Hazard - Unit Targeter - Dungeon [TStrategicUnitSingleTargeter]"
+  },
+  {
+   "slug": "000003df000013f0",
+   "name": "Dwindling",
+   "kind": "Status",
+   "why": "Unused: Core Action: Affinity Cost - [DEPRECATED] Shadow -1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "8d1fd0c9000002a0",
+   "name": "Earth Shatter",
+   "kind": "Status",
+   "why": "Nothing gives it: Earth Shatter - Unit Effect: Temporary Property [TStrategicUnitTemporaryPropertyEffect]"
+  },
+  {
+   "slug": "000003df000013db",
+   "name": "Elevated",
+   "kind": "Status",
+   "why": "A story realm's: AP2 - Affinity Aspect: Order - Unit Property Group; Unused: Cheat Script: +1 Order Affinity; Unused: Core Action: Affinity Reward - [DEPRECATED] Order +1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "000003df000013ed",
+   "name": "Empowered",
+   "kind": "Status",
+   "why": "A story realm's: AP2 - Affinity Aspect: Shadow - Unit Property Group; Unused: Cheat Script: +1 Shadow Affinity; Unused: Core Action: Affinity Reward - [DEPRECATED] Shadow +1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "0000048d00001faf",
+   "name": "Engaged by Levies",
+   "kind": "Status",
+   "why": "Nothing gives it: Federate Levy - Engaged by Levies - Unit Property: Halo [TUnitHaloProperty]; Unused: Engaged by Levies - Unit Property: Ability Modifier [TEST]"
+  },
+  {
+   "slug": "000003df000013de",
+   "name": "Fallen",
+   "kind": "Status",
+   "why": "Unused: Core Action: Affinity Cost - [DEPRECATED] Order -1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "000003df000013d2",
+   "name": "Fatigued",
+   "kind": "Status",
+   "why": "Unused: Core Action: Affinity Cost - [DEPRECATED] Materium -1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "0000048b0000011c",
+   "name": "Final Ultimatum",
+   "kind": "Status",
+   "why": "Nothing gives it: Final Ultimatum - Unit Targeter: Single [TTacticalUnitSingleTargeter]"
+  },
+  {
+   "slug": "000003df000013e1",
+   "name": "Flourishing",
+   "kind": "Status",
+   "why": "A story realm's: AP2 - Affinity Aspect: Nature - Unit Property Group; Unused: Cheat Script: +1 Nature Affinity; Unused: Core Action: Affinity Reward - [DEPRECATED] Nature +1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "0000048b00000386",
+   "name": "Fortified Summons",
+   "kind": "Status",
+   "why": "Nothing gives it: HS - Ritualist - Fortified Summons [THeroSkill]"
+  },
+  {
+   "slug": "0000049700003184",
+   "name": "Fumbling Despair",
+   "kind": "Status",
+   "why": "Nothing gives it: Fumbling Despair - Effect Property [TTacticalUnitPropertyEffect]"
+  },
+  {
+   "slug": "0000049700002a37",
+   "name": "Hyper-Awareness",
+   "kind": "Status",
+   "why": "Nothing gives it: Hyper Aware - Effect [TTacticalUnitPropertyEffect]"
+  },
+  {
+   "slug": "000003df000013e7",
+   "name": "Imbued",
+   "kind": "Status",
+   "why": "A story realm's: AP2 - Affinity Aspect: Astral - Unit Property Group; Unused: Cheat Script: +1 Astral Affinity; Unused: Core Action: Affinity Reward - [DEPRECATED] Astral +1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "000003df000013f3",
+   "name": "Inspired",
+   "kind": "Status",
+   "why": "Nothing gives it: Affinity Hero Trait - All Affinities +1 - Temp Property Magic Effect [TStrategicUnitTemporaryPropertyEffect]"
+  },
+  {
+   "slug": "000003df000013d8",
+   "name": "Jinxed",
+   "kind": "Status",
+   "why": "Unused: Core Action: Affinity Cost - [DEPRECATED] Chaos -1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "000003df000013d5",
+   "name": "Lucky",
+   "kind": "Status",
+   "why": "A story realm's: AP2 - Affinity Aspect: Chaos - Unit Property Group; A story realm's: SotAM2 - Affinity Aspect: Chaos - Unit Property Group; Unused: Cheat Script: +1 Chaos Affinity; Unused: Core Action: Affinity Reward - [DEPRECATED] Chaos +1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "000004930000174c",
+   "name": "Mercifully Returned",
+   "kind": "Status",
+   "why": "A story realm's: SotAM1 Arcanum (Gabriel) - Adventure Set; A story realm's: SotAM1: Shrouded Regions - Gabriel - AW Intro Event"
+  },
+  {
+   "slug": "000003e300005618",
+   "name": "Reckless Rage",
+   "kind": "Status",
+   "why": "Nothing gives it: SHS - Reckless Rage - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "0000048d00001610",
+   "name": "Resilient Incarnation",
+   "kind": "Status",
+   "why": "Nothing gives it: Resilient Incarnation - Unit Targeter: Circle [TTacticalUnitCircleTargeter]"
+  },
+  {
+   "slug": "8d1fd0c90000053f",
+   "name": "Retaliating Growths",
+   "kind": "Status",
+   "why": "Nothing gives it: Retaliating Growths - Unit Targeter: Circle [TTacticalUnitCircleTargeter]"
+  },
+  {
+   "slug": "0000048b00001063",
+   "name": "Rite of Fanaticism",
+   "kind": "Status",
+   "why": "Spell no one can get: Rite of Fanaticism"
+  },
+  {
+   "slug": "0000048b000010ba",
+   "name": "Rite of Stoic Defense",
+   "kind": "Status",
+   "why": "Spell no one can get: Rite of Fanaticism"
+  },
+  {
+   "slug": "8d1fd0c9000004be",
+   "name": "Shifting Phase",
+   "kind": "Status",
+   "why": "Nothing gives it: Shifting Phase - Ability [TAbilityProperty]"
+  },
+  {
+   "slug": "8d1fd0c900000342",
+   "name": "Static Shields",
+   "kind": "Status",
+   "why": "Nothing gives it: Static Shield - Unit Targeter - Circle [TTacticalUnitCircleTargeter]"
+  },
+  {
+   "slug": "000003df000013cd",
+   "name": "Steeled",
+   "kind": "Status",
+   "why": "A story realm's: AP2 - Affinity Aspect: Materium - Unit Property Group; Unused: Cheat Script: +1 Materium Affinity; Unused: Core Action: Affinity Reward - [DEPRECATED] Materium +1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "000003df000013f6",
+   "name": "Traumatized",
+   "kind": "Status",
+   "why": "Nothing gives it: Affinity Hero Trait - All Affinities -1 - Temp Property Magic Effect [TStrategicUnitTemporaryPropertyEffect]"
+  },
+  {
+   "slug": "000003df000013e4",
+   "name": "Withered",
+   "kind": "Status",
+   "why": "Unused: Core Action: Affinity Cost - [DEPRECATED] Nature -1 [Leader[Player[StoryEvent]]]"
+  },
+  {
+   "slug": "8d1fd0c900000327",
+   "name": "Wrath of the Emperor",
+   "kind": "Status",
+   "why": "Nothing gives it: Wrath of the Emperor - Temp Property [TStrategicUnitTemporaryPropertyEffect]"
+  }
+ ]
+}

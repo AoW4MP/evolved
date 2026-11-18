@@ -39,10 +39,12 @@ const AB_KINDS = [
 ];
 // the medal ranks a unit's rewards come at (medal_rewards_2 ... _6)
 const AB_RANKS = { 2: "Soldier", 3: "Veteran", 4: "Elite", 5: "Champion", 6: "Legend" };
-// a unit's type and class among its secondary passives (the small icons by its name), by slug. The game writes them in
-// one group of texts (UPGRADES_CORE_UNITPROPERTIES@); the classes are the Units menu's Class pages', with Settler and
-// Civilian (getUnitTypeTag). The other secondary passives are a unit's movement, terrain, size and the like (Floating,
-// Forest Walk, Large Target, Cannot be Displaced, Magic Origin, Cavalry: written as requisites), on the Units tab
+// a unit's type and class among its secondary passives (the small icons by its name), by slug, which the Passives page
+// leaves out: the Units menu's Types and Class pages group the units by them, and a unit card's icon, or a link to one, shows
+// its text. The game writes them in one group of texts (UPGRADES_CORE_UNITPROPERTIES@); the classes are the Units menu's
+// Class pages', with Settler and Civilian (getUnitTypeTag). The other secondary passives are a unit's movement, terrain,
+// size and the like (Floating, Forest Walk, Large Target, Cannot be Displaced, Magic Origin, Cavalry: written as
+// requisites), on the Units tab
 const AB_UNIT_TYPES = new Set([
     "000003fe00000018", // Animal
     "0000048b00000406", // Accursed Fiend
@@ -313,11 +315,11 @@ function AbActiveCard(e) {
 
 // ------------------------------------------------------------------------------------------------------------- Passive
 
-// a passive's tabs: a unit's type or class, a unit's (its own, its movement, size...), a hero's (a skill's, an item's, an
-// infusion's), a Champion medal's (a unit's medal reward that names it: not the +10 Hit Points every unit's medals give)
+// a passive's tabs: a unit's (its own, its movement, size...), a hero's (a skill's, an item's, an infusion's), a Champion
+// medal's (a unit's medal reward that names it: not the +10 Hit Points every unit's medals give). None for a unit's type
+// or class
 function AbPassiveTabs(e, users) {
-    if (e.slugs.some((s) => AB_UNIT_TYPES.has(s))) return ["Types"];
-    if (e.slugs.some((s) => AB_UNIT_CLASSES.has(s))) return ["Classes"];
+    if (e.slugs.some((s) => AB_UNIT_TYPES.has(s) || AB_UNIT_CLASSES.has(s))) return [];
     const tabs = [];
     if (users.units.size) tabs.push("Units");
     if (users.skills.size || users.items.size || users.infusions.size) tabs.push("Heroes");
@@ -325,8 +327,8 @@ function AbPassiveTabs(e, users) {
     return tabs;
 }
 
-// the passives, each once (copies with the same name and text), that something in play has: not the status effects, nor
-// what only an old or disabled hero skill holds (the Dragon Lords' Auras, Cull the Weak), nor the bonuses of a spell the
+// the passives, each once (copies with the same name and text), that something in play has: not the status effects, a
+// unit's type or class, nor what only an old or disabled hero skill holds (the Dragon Lords' Auras, Cull the Weak), nor the bonuses of a spell the
 // dump has for such a skill (the Primal Communions: the enchantments' passives are on the Enchantments page)
 function AbPassives() {
     const status = AbStatusInfo();
@@ -342,7 +344,7 @@ function AbPassives() {
     return list.filter((e) => e.tabs.length);
 }
 
-const AB_PASSIVE_TYPES = { Units: "Unit Passive", Types: "Unit Type", Classes: "Unit Class", Heroes: "Hero Passive", Medals: "Champion Medal" };
+const AB_PASSIVE_TYPES = { Units: "Unit Passive", Heroes: "Hero Passive", Medals: "Champion Medal" };
 
 function AbPassiveCard(e) {
     const card = AbCard(e, AB_PASSIVE_TYPES[e.tabs[0]]);
@@ -426,8 +428,6 @@ async function AbPassivesPage() {
     WmBoard(
         [
             ["Units", "<unit></unit> Units"],
-            ["Types", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/animal.png" alt="" /> Unit Types'],
-            ["Classes", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/shock_unit.png" alt="" /> Unit Classes'],
             ["Heroes", "<unithero></unithero> Heroes"],
             ["Medals", "<medal_champion></medal_champion> Champion Medals"]
         ],

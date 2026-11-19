@@ -598,5 +598,6 @@ function BdShowOpened() {
     shown.querySelector(".bd-shown-facts").textContent = facts.join(" · ");
     const notes = shown.querySelector(".bd-notes-text");
     notes.innerHTML = BdNotes(bdOpened.notes);
-    notes.hidden = !bdOpened.notes;
+    // folded (the Faction Creator's line), the fold goes when there are none
+    (notes.closest("details") || notes).hidden = !bdOpened.notes;
 }

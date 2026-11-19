@@ -502,6 +502,7 @@
             const placeHolderTomes = [];
 
             function HandlePage() {
+                FcTabs();
                 jsonTomes = [...jsonTomes, ...placeHolderTomes];
                 SetRandomStart();
                 // Evolved's Builds List (Data/builds.js): the publish form, filled in when a build was opened from the list
@@ -530,13 +531,16 @@
             <a class="wm-sort fc-list-link" href="/evolved/HTML/FactionList.html">Builds List</a>
         </div>
 
-        <!-- a build opened from the Builds List: its name, facts and notes (BdOpenBuild) -->
+        <!-- a build opened from the Builds List: its name and facts on a line, its notes folded (BdOpenBuild) -->
         <div id="bdShown" class="fc-shown" hidden>
-            <div class="bd-shown-name"></div>
-            <div class="bd-shown-facts"></div>
-            <div class="bd-notes-text"></div>
+            <span class="bd-shown-name"></span>
+            <span class="bd-shown-facts"></span>
+            <details class="bd-shown-notes"><summary>Notes</summary><div class="bd-notes-text"></div></details>
         </div>
 
+        <!-- the faction, what it has, and publishing it: a tab each (FcTabs) -->
+        <div id="fcTabs" class="wm-tabs"></div>
+        <div class="fc-panel" data-tab="faction">
         <div class="factioncreator" id="capture">
             <div class="typeHolder" id="factioncreator">
                 <div class="container">
@@ -646,8 +650,8 @@
                         <hr />
                     </div>
 
-                    <div class="subDivider">
-                        <div style="width: 280px">
+                    <div class="subDivider fc-columns">
+                        <div class="fc-col">
                             <div class="subSubDiv">
                                 <div style="min-height: 200px">
                                     <span class="small_title"> Ruler</span>
@@ -743,8 +747,8 @@
                             </div>-->
                         </div>
 
-                        <div style="width: 300px">
-                            <div class="subSubDiv" style="min-height: 200px">
+                        <div class="fc-col">
+                            <div class="subSubDiv">
                                 <span class="small_title"> Race</span>
                                 <input
                                     type="text"
@@ -776,6 +780,8 @@
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="fc-col">
                             <div class="subSubDiv2">
                                 <div id="buttonContainer3">
                                     <span class="small_title"> Culture & Society</span>
@@ -831,11 +837,13 @@
                 </div>
                  
             </div>
-            <!-- the overview: what the faction has (units, spells, structures...), beside the choices -->
+        </div>
+        </div>
+            <!-- the overview: what the faction has (units, spells, structures...), its own tab -->
+        <div class="fc-panel" data-tab="overview" hidden>
             <div class="fc-overview">
-                <!-- the overview's buttons: hiding it, and its highlights (the stars), which go with it (builds.css) -->
+                <!-- its highlights (the stars) -->
                 <div class="fc-overview-bar">
-                    <button class="button-overview" id="toggleButton">Hide Overview</button>
                     <button class="button-random" onclick="ResetHighlights()" id="toggleButton1">
                         Reset <favourite></favourite>
                     </button>
@@ -864,6 +872,10 @@
             </div>
         </div>
 
+        <div class="fc-panel" data-tab="publish" hidden>
+            <div id="publish"></div>
+        </div>
+
         <div id="hiddentooltips" style="display: none"></div>
 
         <div class="selectionsHolder" id="selectionsHolder">
@@ -877,7 +889,6 @@
             </div>
         </div>
 
-        <div id="publish"></div>
         <div class="fc-credit">Faction Creator contributors: lucasandradz</div>
         </div>
 
@@ -893,12 +904,31 @@
                 });
             }
 
-            document.getElementById("toggleButton").addEventListener("click", function (event) {
-                const panel = document.getElementById("overviewPanel");
-                const hidden = panel.style.display === "none";
-                panel.style.display = hidden ? "block" : "none";
-                event.target.textContent = hidden ? "Hide Overview" : "Show Overview";
-            });
+            // The tabs: the faction, what it has (its count, the overview's entries, follows it as it is made again), and
+            // publishing it. One shown at a time: the overview stood beside the faction and pushed it aside
+            function FcTabs() {
+                const bar = document.getElementById("fcTabs");
+                const tabs = [
+                    ["faction", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/FactionCreator.png" alt="" /> Faction', ""],
+                    ["overview", '<img src="/evolved/Icons/Interface/TabIcons/army.png" alt="" /> Overview', "0"],
+                    ["publish", '<img class="wm-tab-pic" src="/evolved/Icons/Interface/DropdownIcons/BuildsList.png" alt="" /> Publish', ""]
+                ];
+                for (const [id, label, count] of tabs) {
+                    const tab = WmTab(id, label, count);
+                    tab.onclick = () => FcOpenTab(id);
+                    bar.append(tab);
+                }
+                FcOpenTab("faction");
+                const overview = document.getElementById("mainoverview");
+                const count = () => (bar.querySelector('[data-id="overview"] .wm-count').textContent = overview.querySelectorAll(".overview_list_entry").length);
+                new MutationObserver(count).observe(overview, { childList: true, subtree: true });
+                count();
+            }
+
+            function FcOpenTab(id) {
+                document.querySelectorAll("#fcTabs .wm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.id === id));
+                document.querySelectorAll(".fc-panel").forEach((p) => (p.hidden = p.dataset.tab !== id));
+            }
         </script>
     </body>
 </html>

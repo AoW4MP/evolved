@@ -330,9 +330,10 @@
 }
 
 
-/* ---------------------------------------------------------------- the Faction Creator: the page's own layout (its panel
-   of choices, the overview beside it, the pick-list) in the cards' frames, buttons and labels. Its rules are in its
-   page's <style>; these are .fc-page's, so they win */
+/* ---------------------------------------------------------------- the Faction Creator: tabs for the faction, what it has
+   (the overview) and publishing it, one at a time, so neither pushes the other aside nor the page scrolls; the faction a
+   sheet of three columns (ruler, race, culture and society) over its tome path. Its page's own <style> stays; these are
+   .fc-page's, so they win */
 
 .fc-page {
     max-width: 1500px;
@@ -343,7 +344,7 @@
     justify-content: center;
     align-items: center;
     gap: 8px;
-    margin: 4px 0 18px;
+    margin: 4px 0 14px;
 }
 .fc-share {
     display: flex;
@@ -362,31 +363,56 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-/* a build opened from the Builds List */
+.fc-page .wm-tabs {
+    margin: 0 0 14px;
+}
+/* a tab without a count (the faction, publishing) */
+.fc-page .wm-count:empty {
+    display: none;
+}
+.fc-panel[hidden] {
+    display: none;
+}
+/* a build opened from the Builds List: its name and facts on a line, its notes folded under them */
 .fc-shown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2px 12px;
     box-sizing: border-box;
-    max-width: 900px;
-    margin: 0 auto 18px;
-    padding: 10px 16px;
+    max-width: 1180px;
+    margin: 0 auto 12px;
+    padding: 6px 16px;
     color: #bbcdf6;
     background: url(/evolved/Icons/tooltipBG.png);
     background-size: cover;
     border: 1px solid #555;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
-.fc-shown[hidden] {
+.fc-shown[hidden],
+.bd-shown-notes[hidden] {
     display: none;
 }
 .bd-shown-name {
     color: #d7c297;
-    font-size: 20px;
+    font-size: 18px;
 }
 .bd-shown-facts {
     color: #8d97ad;
     font-size: 14px;
 }
-.fc-shown .bd-notes-text:not([hidden]) {
-    margin-top: 8px;
+.bd-shown-notes > summary {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.bd-shown-notes[open] {
+    flex-basis: 100%;
+}
+.bd-shown-notes .bd-notes-text {
+    margin: 4px 0 4px;
 }
 .fc-credit {
     margin-top: 16px;
@@ -394,20 +420,24 @@
     font-size: 13px;
     text-align: center;
 }
-.fc-page #publish {
-    margin-top: 28px;
-}
 
-/* its panel of choices: a card's frame */
+/* the faction: a card's frame, centred */
+.fc-page .typeHolder {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
 .fc-page .container {
     box-sizing: border-box;
-    padding: 10px 14px 14px;
+    width: 100%;
+    padding: 10px 18px 12px;
     border: 1px solid #555;
     border-image: none;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
     font-size: 14px;
 }
 .fc-page .container hr {
+    margin: 6px 0;
     border: 0;
     border-top: 1px solid rgba(215, 194, 151, 0.25);
 }
@@ -432,7 +462,6 @@
     outline: none;
 }
 /* its buttons as the cards' sorts */
-.fc-page .button-overview,
 .fc-page .button-random {
     height: 34px;
     padding: 0 12px;
@@ -444,71 +473,19 @@
     font-size: 15px;
     filter: none;
 }
-.fc-page .button-overview:hover,
 .fc-page .button-random:hover {
     color: white;
     border-color: #d7c297;
     filter: none;
 }
-
-/* the choices and the overview side by side, the overview taking the rest of the row (its groups in columns of their
-   own width, as many as fit: the page's own rule ran them down a fixed height and on past the window's edge) */
-.fc-page .factioncreator {
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 16px 20px;
-}
-.fc-page .typeHolder {
-    flex: 0 1 700px;
-    min-width: 0;
-}
-.fc-page .container {
-    width: 100%;
-}
-.fc-page .subDivider {
-    flex-wrap: wrap;
-    gap: 0 20px;
-}
-/* the ruler's and race's columns: inline widths in the page */
-.fc-page .subDivider > div {
-    flex: 1 1 260px;
-    width: auto !important;
-    min-width: 0;
-}
-.fc-page .subSubDiv,
-.fc-page .subSubDiv2 {
-    width: auto;
-}
-.fc-overview {
-    flex: 1 1 440px;
-    min-width: 0;
-}
-.fc-overview-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-/* the highlights' buttons go with the overview */
-.fc-overview:has(#overviewPanel[style*="none"]) .fc-overview-bar .button-random {
-    display: none;
-}
-/* its groups in balanced columns of their own width, as many as fit */
-.fc-page .overview {
-    display: block;
-    max-height: none;
-    columns: 216px;
-    column-gap: 4px;
-}
-/* the tome path: as many tomes to a row as fit (the page's rule had eight, wider than a phone) */
-.fc-page #tomePathButton {
-    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)) !important;
-    row-gap: 22px;
-}
-/* the panel's head, the sigil, the faction's affinities and the extra points beside them: as tall as they are (the page
-   gives it 90px), under each other where there is no room */
+/* the sheet's head, the sigil, the faction's affinities and the extra points: as tall as they are (the page gives it
+   90px), under each other where there is no room, without the page's break before its line */
 .fc-page .container > div:first-child {
     height: auto !important;
-    min-height: 90px;
+    min-height: 76px;
+}
+.fc-page .container > div:first-child > br {
+    display: none;
 }
 .fc-page .container > div:first-child > div[style*="space-between"] {
     flex-wrap: wrap;
@@ -523,13 +500,147 @@
     flex-wrap: wrap;
     max-width: 100% !important;
 }
+
+/* three columns: the ruler, the race, the culture and society (were two, the culture under the race) */
+.fc-page .fc-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 28px;
+}
+.fc-page .fc-col {
+    min-width: 0;
+}
+.fc-page .fc-col br {
+    display: none;
+}
+.fc-page .fc-col div[style*="min-height"],
+.fc-page .subSubDiv,
+.fc-page .subSubDiv2 {
+    width: auto;
+    min-height: 0 !important;
+}
+/* a column's heading, and the ruler's and race's names, on one line of one height in the three */
+.fc-page .fc-col .small_title {
+    display: inline-block;
+    margin: 2px 8px 6px 0;
+    line-height: 28px;
+    vertical-align: middle;
+}
+.fc-page .fc-col .inputfield {
+    width: calc(100% - 80px);
+    height: 28px;
+    vertical-align: middle;
+}
+/* a choice: its picture in a box of one size, its words beside it; a choice under another (a class, a tome, a trait, a
+   subculture) indented by one step (the page's own: 30px, the form traits 36px, a Vision's reading's words without
+   its picture's room, the Ascension's and Ambition's empty slot a small plus) */
+.fc-page .button,
+.fc-page .button-inset {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    left: 0;
+    min-height: 44px;
+    margin: 0;
+    padding: 2px 0;
+    color: #e8e2d4;
+    background: none;
+    border: 0;
+    font: inherit;
+    font-size: 14px;
+    text-align: left;
+}
+.fc-page .button-inset {
+    margin-left: 24px;
+}
+/* a choice that doesn't apply (a dragon type or clan for another ruler, a subculture or a Vision's reading the culture
+   or trait hasn't), and the empty button over the tome path: no row */
+.fc-page .button:empty,
+.fc-page .button-inset:empty {
+    display: none;
+}
+.fc-page .button > img {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.fc-page .button-inset > img {
+    flex: none;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+.fc-page .button-inset > img:not([src]) {
+    visibility: hidden;
+}
+/* an empty slot (the Ascension, the Ambition): a dashed box, as the tome path's */
+.fc-page .button-inset > img.padded-image {
+    box-sizing: border-box;
+    padding: 8px;
+    border: 2px dashed #555;
+    border-radius: 4px;
+}
+.fc-page .button-inset:hover > img.padded-image {
+    border-color: #d7c297;
+}
+/* the clear buttons by a heading (Ascension, Ambition, the tome path's Clear All) */
+.fc-page .button[style*="float"] {
+    display: inline-flex;
+    gap: 4px;
+    min-height: 0;
+    padding: 0;
+}
+.fc-page .button[style*="float"] > img {
+    width: 18px;
+    height: 18px;
+}
+.fc-page #buttonContainer7,
+.fc-page #buttonContainer15 {
+    margin-top: 10px;
+}
+/* the form traits: a list of choices inside the button that opens their pick-list */
+.fc-page #originButtonFormTrait {
+    display: block;
+    width: 100%;
+    min-width: 0 !important;
+    min-height: 44px !important;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+}
+.fc-page #selected-options-container {
+    display: flex;
+    flex-direction: column;
+}
+/* the tome path: as many tomes to a row as fit (the page's rule had eight, wider than a phone) */
+.fc-page #tomePathButton {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)) !important;
+    row-gap: 22px;
+    margin: 22px 0 4px !important;
+}
+
+/* the overview: what the faction has, its groups (units, spells, structures...) in balanced columns, as many as fit */
+.fc-overview-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+.fc-page .overview {
+    display: block;
+    max-height: none;
+    columns: 216px;
+    column-gap: 8px;
+}
 .fc-page #active-indices:empty {
     display: none;
 }
 .fc-page #overviewPanel > p:has(#active-indices:empty) {
     margin: 4px 0;
 }
-/* the overview: what the faction has, in groups (units, spells, structures...) */
 .fc-page .column {
     box-sizing: border-box;
     width: 100%;
@@ -829,9 +940,8 @@
     .hbb-picks {
         align-items: stretch;
     }
-    .fc-page .typeHolder,
-    .fc-overview {
-        flex-basis: 100%;
+    .fc-page .fc-columns {
+        grid-template-columns: minmax(0, 1fr);
     }
     .fc-page .overview {
         columns: 2;

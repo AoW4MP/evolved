@@ -3,8 +3,8 @@
 // lists them (BdListPage), HTML/FactionCreator.html publishes and opens them (BdPublishPanel, BdOpenBuild).
 // Style/builds.css goes with it.
 
-// the web app's address (…/exec), set once it is deployed; empty, the list and the publish form say so
-const BD_API = "";
+// the web app's address (…/exec), deployed 2026-11-19; empty, the list and the publish form say the list isn't open
+const BD_API = "https://script.google.com/macros/s/AKfycbzU2TMnODTRyjqaGosINF7qGdiV0xZa5D3WSrqtd-YpVI7AS6jkD2D9AsLdVC_rmX82yA/exec";
 // the tags a build can have, as Server/builds.gs keeps them
 const BD_TAGS = ["Roleplay", "Theme", "PVP", "Casual", "Hardcore"];
 // the edit key is hashed with this in front, as Server/builds.gs does (Owner)

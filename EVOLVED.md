@@ -371,7 +371,7 @@ alpha 60 as its shadow fills the box), 93px; `BuildsList.png` the Tomes screen's
   all but 6 of them the base game's, linking to MinionsArt's site; its read handed out every build's edit key, so anyone
   could delete anyone's. The 6 Evolved ones (2026-10-26, test names, nothing of Silver Seas in them) weren't carried over.
   Evolved's store is `Server/builds.gs`, a web app over a sheet in the maintainer's Google account, and `BD_API` in
-  `Data/builds.js` is its address; empty, the list and the publish form say the list isn't open yet. Setting it up:
+  `Data/builds.js` is its address (deployed 2026-11-19); empty, the list and the publish form say the list isn't open yet. Setting it up:
   1. A new Google Sheet; Extensions > Apps Script; replace the sample code with `Server/builds.gs`; save.
   2. Deploy > New deployment > Web app: execute as Me, who has access Anyone. Allow its access (Google calls a script of
      one's own "unverified": Advanced > Go to the project). `@OnlyCurrentDoc` keeps that access to this sheet.

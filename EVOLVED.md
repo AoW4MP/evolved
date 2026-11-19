@@ -467,9 +467,13 @@ Builder" is "Faction Creator", as its page.
   picked or removed (`HbbSigRoom`; the page wraps `setSignatureSelection`), its lowest node or picture (a picked skill's
   100px picture overhangs its node) and 7px. A fixed room missed that the slots' holders are inline blocks, each a line
   lower than the last, so a fourth slot's lower skill hung out of the frame with a scroll bar (Still as Stone).
-  A round or shield node is placed 5px further right (`BuildSkillTreeEntry`): a square's and a diamond's centres stood
-  5px right of a round one's, so a column of mixed shapes was crooked in every tree (Purging Strikes over Still as
-  Stone, a Warrior column). `HbbFit`
+  Every node is centred on the same point whatever its shape (`BuildSkillTreeEntry`, by its final shape): a diamond
+  (90px) 5px left and 10px up, a square (59px, its border in it: `builds.css`) 10.5px right and 5.5px down, a round or
+  shield one (70px) 5px right. A round one wasn't moved (its centre 5px left of the others': Purging Strikes over Still
+  as Stone), a skill made a shield for its name (Defense, Vigor, Resistance) kept a square's or diamond's moves
+  (Adaptive Vigor 15px off), and a square drew 57px (its 2px border thinner), 1.5px off. Checked on 2026-11-19 with
+  every signature skill of every slot of every ruler type, dragon type and clan (458 picks, 832 skills behind them, each
+  100px left of its slot and 50px above or 40px below) and every column and row of the 23 trees (within 0.6px). `HbbFit`
   then zooms them to the room, down to 60% (1000px wide fits most ruler types; a phone scrolls them by themselves). For
   the zoom `resizeParentToFitChildren` in `Hero.js` measures the nodes by their places in their tree (`offsetLeft`...),
   which `zoom` leaves as they are: by their boxes on screen, as it did, the zoomed trees came out too narrow and

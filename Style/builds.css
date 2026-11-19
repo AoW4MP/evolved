@@ -755,6 +755,13 @@
     text-transform: uppercase;
     text-shadow: 2px 2px black;
 }
+/* a square skill 59px, its border in it (the page's 55px and a 2px border drew 57px, the border thinner), so its centre is
+   the other shapes' (Hero.js, BuildSkillTreeEntry) */
+.hbb-page .shape-square {
+    box-sizing: border-box;
+    width: 59px;
+    height: 59px;
+}
 /* the pick-list of signature skills, larger than the page's own (50px icons, a button's 13.33px names in a window up to
    half the screen's height), as the screen has the room: 72px icons, 17px names, up to 80% of the screen's height */
 .hbb-page ~ .selectionsHolder .selections {

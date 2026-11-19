@@ -1185,13 +1185,9 @@ function BuildSkillTreeEntry(currentSkill, row, holder, treespace, extraOffset, 
 
             overwriteIcon = skill.icon;
             abilityIconType = "";
-            topPosition -= 10;
-            leftPosition -= 5;
             //  abilityIconType = GetAbilityBackground(skill.damage);
         } else {
             form = "square";
-            topPosition += 5;
-            leftPosition += 10;
         }
     }
 
@@ -1203,9 +1199,18 @@ function BuildSkillTreeEntry(currentSkill, row, holder, treespace, extraOffset, 
         form = "shield";
     }
 
-    // a round or shield node (70px) 5px further right: a square's (59px, 10px right) and a diamond's (90px, 5px left)
-    // centres were 5px right of its, so a column of mixed shapes stood crooked (Purging Strikes over Still as Stone)
-    if (form === "circle" || form === "shield") {
+    // each shape's node centred on the same point, by its final shape: a diamond (90px) 5px left and 10px up, a square
+    // (59px, its border in it: builds.css) 10.5px right and 5.5px down, a round or shield one (70px) 5px right. The
+    // square's and diamond's moves were made before a Defense, Vigor or Resistance skill became a shield, which kept them
+    // (Adaptive Vigor 15px off); a round one wasn't moved, its centre 5px left of the others' (Purging Strikes over Still
+    // as Stone); and a square drew 57px (its 2px border thinner), its centre 1.5px off theirs
+    if (form === "diamond") {
+        topPosition -= 10;
+        leftPosition -= 5;
+    } else if (form === "square") {
+        topPosition += 5.5;
+        leftPosition += 10.5;
+    } else {
         leftPosition += 5;
     }
 

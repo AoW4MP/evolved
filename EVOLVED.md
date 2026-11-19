@@ -425,7 +425,11 @@ Builder" is "Faction Creator", as its page.
     Physical Form row, six on a line; Extra Affinity Points in a row across the Culture row's width, beside the
     affinity they add to, in a box as the names' fields (border #555; with the rows' fainter #3c3c3c it looked the
     shorter at the same 32px) (each an icon and its number as the affinity's line has them, its arrows stacked after them,
-    cut from their 26x43 pictures to 10x12; the number 2px lower for Minion's descent). Until 2026-11-19 a line of
+    cut from their 26x43 pictures to 12x13, the one at the top of its half of the box and the other at the foot of
+    its, 3px apart, each half the box's height to hit (were 10x12 and touching, and the page's own `.AddSubtract:hover`
+    moved them 2px left; now they brighten); the number 2px lower for Minion's descent). Under 560px, or on any touch
+    screen (`pointer: coarse`), each is a stepper a finger can hit, two to a line: a 36x32 button for one less, the
+    icon and its number, one for one more. Until 2026-11-19 a line of
     fields of their own widths, none at a column's edge, the extra points' numbers under their icons (a box 60px tall),
     after the old page's sigil: a shield with a symbol nothing set (`SelectSymbol`'s pick-list was never opened, nor
     is it in the link), removed on 2026-11-19 at the maintainer's call, its room given to the sixth affinity and the

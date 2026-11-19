@@ -546,7 +546,7 @@
     align-items: center;
     box-sizing: border-box;
     height: 32px;
-    padding: 0 6px;
+    padding: 0 4px;
     /* the names' fields' ground and border: with the rows' fainter ones (#3c3c3c) it looked the shorter */
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid #555;
@@ -554,13 +554,13 @@
 .fc-page .fc-extra-one {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 1px;
 }
 /* the number 2px lower, the icon back up 1px: Minion's descent set the number 1.5px over the icon's middle */
 .fc-page .fc-extra-one > div:first-child {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 2px;
     padding-top: 2px;
     font-size: 15px;
     line-height: 1;
@@ -572,18 +572,39 @@
 .fc-page .fc-arrows {
     display: flex;
     flex-direction: column;
+    padding: 1px 0;
 }
-.fc-page .AddSubtract {
+/* an arrow: the box's height between the two, 12px wide (10 until 2026-11-19, their points touching), the one at the
+   top of its half, the other at the foot of its, 3px apart; the page's own rule moved it 2px left under the mouse
+   (margin -2px), here it brightens where it is */
+.fc-page .AddSubtract,
+.fc-page .AddSubtract:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 14px;
     margin: 0;
     padding: 0;
     line-height: 0;
+    background: none;
+    border: 0;
     cursor: pointer;
 }
-/* the arrows' pictures are 26x43, the arrow in their middle third: 10px wide, cut to it */
+.fc-page .AddSubtract:hover {
+    filter: brightness(1.5);
+}
+.fc-page .fc-arrows > :first-child {
+    align-items: flex-start;
+}
+.fc-page .fc-arrows > :last-child {
+    align-items: flex-end;
+}
+/* its picture is 26x43, the arrow in the middle: 12px wide, cut to 13px tall around it */
 .fc-page .AddSubtract img {
     display: block;
-    width: 10px;
-    height: 12px;
+    width: 12px;
+    height: 13px;
     object-fit: cover;
 }
 
@@ -1312,6 +1333,41 @@
     .fc-page #extraAffinity {
         justify-content: space-between;
         gap: 2px;
+    }
+}
+/* a phone, or any touch screen: arrows a finger can hit, a stepper each (the one less, the icon and its number, the
+   one more), two to a line */
+@media (max-width: 560px), (pointer: coarse) {
+    .fc-page #extraAffinity {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 12px;
+        height: auto;
+        padding: 6px;
+    }
+    .fc-page .fc-extra-one {
+        justify-content: space-between;
+        gap: 6px;
+    }
+    .fc-page .fc-arrows {
+        display: contents;
+    }
+    .fc-page .fc-arrows > :last-child {
+        order: -1;
+    }
+    .fc-page .AddSubtract,
+    .fc-page .AddSubtract:hover {
+        width: 36px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid #444;
+    }
+    .fc-page .fc-arrows > .AddSubtract {
+        align-items: center;
+    }
+    .fc-page .AddSubtract img {
+        width: 14px;
+        height: 16px;
     }
 }
 

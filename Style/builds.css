@@ -750,14 +750,40 @@
     text-transform: uppercase;
     text-shadow: 2px 2px black;
 }
-/* the pick-list of signature skills: Remove, when the slot has one, across the list's top */
+/* the pick-list of signature skills, larger than the page's own (50px icons, a button's 13.33px names in a window up to
+   half the screen's height), as the screen has the room: 72px icons, 17px names, up to 80% of the screen's height */
+.hbb-page ~ .selectionsHolder .selections {
+    max-height: 80vh;
+    padding: 14px 18px;
+}
+.hbb-page ~ .selectionsHolder #selections {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.hbb-page ~ .selectionsHolder .list-button {
+    align-items: center;
+    gap: 4px;
+    min-height: 84px;
+    padding: 6px 10px;
+    font-size: 17px;
+}
+.hbb-page ~ .selectionsHolder .list-button .empireNodeIcon {
+    flex: none;
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+.hbb-page ~ .selectionsHolder .list-name {
+    padding: 0 6px;
+}
+/* Remove, when the slot has one, across the list's top, a pixel larger than the skills */
 .selectionsHolder .hbb-remove {
     grid-column: 1 / -1;
     justify-content: center;
-    padding: 8px;
+    min-height: 0 !important;
+    padding: 10px;
     color: #ef9a9a;
-    /* a pixel larger than the list's skills (a button's 13.33px) */
-    font-size: 14.33px;
+    font-size: 18px !important;
 }
 /* the pick-list of signature skills: its entries' names */
 .hbb-page ~ .selectionsHolder .list-name,
@@ -768,6 +794,18 @@
 /* ---------------------------------------------------------------- a phone */
 
 @media (max-width: 800px) {
+    /* the pick-list of signature skills a column, its icons smaller */
+    .hbb-page ~ .selectionsHolder .wrappers {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+    }
+    .hbb-page ~ .selectionsHolder .list-button .empireNodeIcon {
+        width: 56px;
+        height: 56px;
+    }
+    .hbb-page ~ .selectionsHolder .list-button {
+        min-height: 66px;
+    }
     /* the ruler types wrap: Hero would start its line indented */
     .hbb-chip-apart {
         margin-left: 0;

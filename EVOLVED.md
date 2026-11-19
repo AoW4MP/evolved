@@ -366,7 +366,10 @@ winged helmet (`RadialMenu_Heroes`, `[INTERFACEASSETS]TXA\32?14`; a neighbour's 
 alpha 60 as its shadow fills the box), 93px; `BuildsList.png` the Lore button's quill, lit
 (`Button_Lore_OVER`, `[INTERFACEASSETS]TXA\6?664`: whiter than `_DEFAULT`'s, as the shield and helmet beside it), ringed, 104px; for a
 few hours on 2026-11-19 it was the Tomes screen's bookshelf (`Tome_bookshelf_default`), whose small dark books were a
-smudge at 20px. The menu's "Faction Builder" is "Faction Creator", as its page.
+smudge at 20px. Those are the menu's sizes; the titles' are by eye beside the other pages' (2026-11-19): the shield
+90px and the helmet 92px, as their bright solid shapes looked larger than the rings (they were 102 and 106), and the
+quill 112px, as its dark glass vanishes on the black page and it looked smaller (was 104). The menu's "Faction
+Builder" is "Faction Creator", as its page.
 
 - **Builds List: Evolved's own store.** Until 2026-11-19 the list read MinionsArt's (a Google Apps Script web app over a
   Google Sheet, `script.google.com/macros/s/AKfycbz5r36…/exec`) and the Faction Creator published there: 3,597 builds,

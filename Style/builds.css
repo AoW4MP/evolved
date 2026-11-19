@@ -546,15 +546,17 @@
     align-items: center;
     box-sizing: border-box;
     height: 32px;
-    padding: 0 4px;
+    padding: 0 3px;
     /* the names' fields' ground and border: with the rows' fainter ones (#3c3c3c) it looked the shorter */
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid #555;
 }
+/* the arrows 3px after the number (1 until 2026-11-19, too close); for the room, the icons 19px and the box's sides 3px,
+   which keeps 6px between a point's arrows and the next icon */
 .fc-page .fc-extra-one {
     display: flex;
     align-items: center;
-    gap: 1px;
+    gap: 3px;
 }
 /* the number 2px lower, the icon back up 1px: Minion's descent set the number 1.5px over the icon's middle */
 .fc-page .fc-extra-one > div:first-child {
@@ -567,7 +569,7 @@
 }
 .fc-page .fc-extra-one > div:first-child > * {
     top: -1px;
-    max-height: 20px;
+    max-height: 19px;
 }
 .fc-page .fc-arrows {
     display: flex;
@@ -1319,9 +1321,10 @@
 
 /* ---------------------------------------------------------------- a phone */
 
-/* the head where the extra points' row (270px) no longer fits a third of the sheet: the affinity beside the names, the
-   extra points under them; on a phone a column */
-@media (max-width: 940px) {
+/* the head where the extra points' row no longer fits a third of the sheet with room between its points (under 1000px a
+   third is under 290px, a point's arrows nearer the next icon than their own number): the affinity beside the names,
+   the extra points under them; on a phone a column */
+@media (max-width: 1000px) {
     .fc-page .fc-head {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }

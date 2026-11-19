@@ -424,7 +424,8 @@ Builder" is "Faction Creator", as its page.
     (were in the columns' heads) as wide as the Ruler row; Affinity (an icon and its number kept together) as the
     Physical Form row, six on a line; Extra Affinity Points in a row across the Culture row's width, beside the
     affinity they add to, in a box as the names' fields (border #555; with the rows' fainter #3c3c3c it looked the
-    shorter at the same 32px) (each an icon and its number as the affinity's line has them, its arrows stacked after them,
+    shorter at the same 32px) (each a 19px icon and its number as the affinity's line has them, its arrows stacked 3px after them (1 until
+    2026-11-19, too close), 6px before the next icon,
     cut from their 26x43 pictures to 12x13, the one at the top of its half of the box and the other at the foot of
     its, 3px apart, each half the box's height to hit (were 10x12 and touching, and the page's own `.AddSubtract:hover`
     moved them 2px left; now they brighten); the number 2px lower for Minion's descent). Under 560px, or on any touch
@@ -433,7 +434,8 @@ Builder" is "Faction Creator", as its page.
     fields of their own widths, none at a column's edge, the extra points' numbers under their icons (a box 60px tall),
     after the old page's sigil: a shield with a symbol nothing set (`SelectSymbol`'s pick-list was never opened, nor
     is it in the link), removed on 2026-11-19 at the maintainer's call, its room given to the sixth affinity and the
-    extra points' row. Under 940px (where the extra points' 270px no longer fit a third) the affinity beside the names,
+    extra points' row. Under 1000px (where a third is under 290px, a point's arrows nearer the next icon than their own number) the
+    affinity beside the names,
     the extra points under them at their own width; under 560px a column. Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
     Class, Starting Tome, Ascension, Ambition), the race (Physical Form, Form Traits) and the culture (Culture, its
     sub-choice, Society Traits), a row and the next 8px apart (5 until 2026-11-19; the sheet had the room); then the

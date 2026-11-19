@@ -1644,57 +1644,29 @@ function ReturnSkillItself(lookup, subTypeOverride) {
                 // Shallow clone of skill — safe for top-level edits
                 //let skill = { ...originalSkill };
 
-                const dragonBreath = [
-                    "limited_breath_ability_000003BD00002895",
-                    "cone_breath_ability_000003BD00002895",
-                    "line_breath_ability_000003BD00002895",
-                    "comet_breath_ability_000003BD00002895"
-                ];
+                // A Dragon Lord's breath (Lesser, Cone, Line, Comet) by its dragon type: the dump has the Materium one alone
+                // (Physical, Bleeding). The game's plugins for each type ("Cone Breath - Order Plugin"...: aow4_diff_tools,
+                // 2026-11-19) deal the same damage in their type's channel and inflict their type's status effect, at the
+                // Materium one's chance (60% for the Lesser, 90% for the others), Order's Distracted 30 points lower and for 1
+                // turn. Matched by the start of its slug: the old list named slugs the dump no longer has
+                // ("limited_breath_ability_000003BD00002895"), so every type read as Materium; and Shadow's was Slowed
+                const breathOf = {
+                    AstralDragon: ["lightning", "Electrified", 0, 3],
+                    ChaosDragon: ["fire", "Burning", 0, 3],
+                    NatureDragon: ["blight", "Poisoned", 0, 3],
+                    OrderDragon: ["spirit", "Distracted", -30, 1],
+                    ShadowDragon: ["frost", "Chilled", 0, 3]
+                }[subTypeOverride];
+                const isBreath = /^(limited|cone|line|comet)_breath_ability/.test(skill.slug);
 
-                //   console.log(skill.name);
-
-                if (dragonBreath.includes(skill.slug)) {
-                    switch (subTypeOverride) {
-                        case "AstralDragon":
-                            skill.damage = skill.damage.replaceAll("physical", "lightning");
-                            skill.modifiers[0].name = skill.modifiers[0].name.replaceAll("Bleeding", "Electrified");
-                            skill.modifiers[0].description = skill.modifiers[0].description.replaceAll(
-                                "Bleeding",
-                                "Electrified"
-                            );
-                            break;
-                        case "OrderDragon":
-                            skill.damage = skill.damage.replaceAll("physical", "spirit");
-                            skill.modifiers[0].name = skill.modifiers[0].name.replaceAll("Bleeding", "Distracted");
-                            skill.modifiers[0].description = skill.modifiers[0].description.replaceAll(
-                                "Bleeding",
-                                "Distracted"
-                            );
-                            break;
-                        case "ChaosDragon":
-                            skill.damage = skill.damage.replaceAll("physical", "fire");
-                            skill.modifiers[0].name = skill.modifiers[0].name.replaceAll("Bleeding", "Burning");
-                            skill.modifiers[0].description = skill.modifiers[0].description.replaceAll(
-                                "Bleeding",
-                                "Burning"
-                            );
-                            break;
-                        case "ShadowDragon":
-                            skill.damage = skill.damage.replaceAll("physical", "frost");
-                            skill.modifiers[0].name = skill.modifiers[0].name.replaceAll("Bleeding", "Slowed");
-                            skill.modifiers[0].description = skill.modifiers[0].description.replaceAll(
-                                "Bleeding",
-                                "Slowed"
-                            );
-                            break;
-                        case "NatureDragon":
-                            skill.damage = skill.damage.replaceAll("physical", "blight");
-                            skill.modifiers[0].name = skill.modifiers[0].name.replaceAll("Bleeding", "Poisoned");
-                            skill.modifiers[0].description = skill.modifiers[0].description.replaceAll(
-                                "Bleeding",
-                                "Poisoned"
-                            );
-                            break;
+                if (isBreath && breathOf) {
+                    const [channel, status, chanceDelta, turns] = breathOf;
+                    skill.damage = (skill.damage || "").replaceAll("physical", channel);
+                    if (skill.modifiers && skill.modifiers[0]) {
+                        const chance = Number(((skill.modifiers[0].description || "").match(/(\d+)%/) || [])[1] || 0) + chanceDelta;
+                        skill.modifiers[0].name = status;
+                        skill.modifiers[0].description =
+                            "Base " + chance + "% chance of inflicting " + status + " for " + turns + " <turn></turn> " + (turns === 1 ? "Turn" : "Turns") + ".";
                     }
                 }
 

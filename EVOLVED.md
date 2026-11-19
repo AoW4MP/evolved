@@ -467,6 +467,12 @@ Builder" is "Faction Creator", as its page.
   picked or removed (`HbbSigRoom`; the page wraps `setSignatureSelection`), its lowest node or picture (a picked skill's
   100px picture overhangs its node) and 7px. A fixed room missed that the slots' holders are inline blocks, each a line
   lower than the last, so a fourth slot's lower skill hung out of the frame with a scroll bar (Still as Stone).
+  A Dragon Lord's breaths (Lesser, Cone, Line, Comet) read as its dragon type's (`ReturnSkillItself`): the dump has the
+  Materium ones alone (Physical, Bleeding), and the game's plugins for each type ("Cone Breath - Order Plugin"...)
+  deal the same damage in their type's channel (Astral Lightning, Chaos Fire, Nature Blight, Order Spirit, Shadow Frost)
+  and inflict its status at the Materium one's chance (60% for the Lesser, 90% for the others): Electrified, Burning,
+  Poisoned, Chilled, and Order's Distracted 30 points lower and for 1 turn. Until 2026-11-19 every type read as Materium:
+  the rewrite matched slugs the dump no longer has (`..._000003BD00002895`), and it gave Shadow Slowed and Order 90%.
   Every node is centred on the same point whatever its shape (`BuildSkillTreeEntry`, by its final shape): a diamond
   (90px) 5px left and 10px up, a square (59px, its border in it: `builds.css`) 10.5px right and 5.5px down, a round or
   shield one (70px) 5px right. A round one wasn't moved (its centre 5px left of the others': Purging Strikes over Still

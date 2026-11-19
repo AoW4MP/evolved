@@ -415,47 +415,37 @@
     margin: 4px 0 4px;
 }
 
-/* the faction: a card's frame, centred, as wide as its three columns need (was 1180px, half of it empty) */
+/* the faction: one sheet. Its head (the sigil, the names, the affinity, the extra points) over three columns of rows (the
+   ruler's, the race's, the culture's and society's) over the tome path. A row is a choice: its picture, the game's word
+   for it over its name (FcDress in the page), its tags (affinities, DLC, a form trait's points) at its end; a choice that
+   follows from another a step in, a line from it. Until 2026-11-19 the choices were the old page's: words beside pictures
+   of many sizes, indented by many steps, the names' fields in the columns' heads, the tome path's tiles loose */
 .fc-page .typeHolder {
     width: 100%;
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
 }
-.fc-page .container {
+.fc-page .fc-sheet {
+    display: block;
     box-sizing: border-box;
     width: 100%;
-    padding: 10px 18px 12px;
+    padding: 14px 18px 16px;
+    color: #e8e2d4;
     border: 1px solid #555;
     border-image: none;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
     font-size: 14px;
 }
-.fc-page .container hr {
-    margin: 6px 0;
-    border: 0;
-    border-top: 1px solid rgba(215, 194, 151, 0.25);
-}
-.fc-page .small_title {
-    font-family: inherit;
+/* what a field, a group or a row is */
+.fc-page .fc-label,
+.fc-page .fc-cap {
     color: #d7c297;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
 }
-.fc-page .inputfield {
-    box-sizing: border-box;
-    padding: 4px 8px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid #555;
-    border-image: none;
-    font: inherit;
-}
-.fc-page .inputfield:focus {
-    border-color: #d7c297;
-    outline: none;
-}
-/* its buttons as the cards' sorts */
+/* its buttons (the overview's) as the cards' sorts */
 .fc-page .button-random {
     height: 34px;
     padding: 0 12px;
@@ -472,173 +462,420 @@
     border-color: #d7c297;
     filter: none;
 }
-/* the sheet's head, the sigil, the faction's affinities and the extra points: as tall as they are (the page gives it
-   90px), under each other where there is no room, without the page's break before its line */
-.fc-page .container > div:first-child {
-    height: auto !important;
-    min-height: 76px;
-}
-.fc-page .container > div:first-child > br {
-    display: none;
-}
-.fc-page .container > div:first-child > div[style*="space-between"] {
+
+/* the head: a line of fields, each its label over it */
+.fc-page .fc-head {
+    display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 10px 18px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(215, 194, 151, 0.25);
 }
-/* the faction's affinities, level with the sigil: by a margin, which keeps their room (the page moves them down 20px) */
-.fc-page .affinityText {
-    top: 0;
-    margin-top: 20px;
-}
-/* the sigil: the shield and its symbol on it (the symbol was placed by the sheet's corner, off the shield once the
-   sheet's padding changed) */
 .fc-page .playerSigil {
     position: relative;
-    float: left;
+    flex: none;
+    align-self: center;
     width: 70px;
     height: 70px;
-    margin-right: 10px;
 }
 .fc-page .playerSigil .shield {
     display: block;
     float: none;
 }
+/* the symbol on the shield (it was placed by the sheet's corner) */
 .fc-page .playerSigil .symbol {
     top: 12px;
     left: 13px;
 }
-/* the extra affinity points: an affinity's number under its icon, between its up and down arrows (the page's box was
-   too narrow for them side by side, and that alone put the number under it) */
-.fc-page #extraAffinity {
-    flex-wrap: wrap;
-    max-width: 100% !important;
+.fc-page .fc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
-.fc-page #extraAffinity > div > div:first-child {
+.fc-page .fc-field .inputfield {
+    box-sizing: border-box;
+    width: 140px;
+    height: 32px;
+    padding: 4px 8px;
+    color: white;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid #555;
+    border-image: none;
+    font: inherit;
+    font-size: 15px;
+}
+.fc-page .fc-field .inputfield:hover,
+.fc-page .fc-field .inputfield:focus {
+    border-color: #d7c297;
+    outline: none;
+}
+/* the affinity: what room the line leaves, on two lines if it must */
+.fc-page .fc-affinity {
+    flex: 1 1 0;
+    min-width: 110px;
+}
+.fc-page .affinityText {
+    position: static;
+    max-width: none;
+    min-height: 32px;
+    font-size: 15px;
+    line-height: 32px;
+}
+.fc-page .fc-aff {
+    margin-right: 6px;
+    white-space: nowrap;
+}
+.fc-page .fc-extra {
+    margin-left: auto;
+}
+.fc-page #extraAffinity {
+    display: flex;
+    gap: 2px;
+    padding: 2px 4px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #3c3c3c;
+}
+.fc-page .fc-extra-one {
+    display: flex;
+    align-items: center;
+}
+/* an affinity's number under its icon, between its arrows */
+.fc-page .fc-extra-one > div:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-width: 26px;
+    min-width: 24px;
+    font-size: 13px;
+    line-height: 1;
+}
+.fc-page .fc-arrows {
+    display: flex;
+    flex-direction: column;
+}
+.fc-page .AddSubtract {
+    margin: 0;
+    padding: 1px;
+    line-height: 0;
+    cursor: pointer;
 }
 
-/* three columns: the ruler, the race, the culture and society (were two, the culture under the race) */
+/* three columns of rows */
 .fc-page .fc-columns {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0 28px;
+    align-items: start;
+    gap: 0 16px;
 }
 .fc-page .fc-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     min-width: 0;
 }
-.fc-page .fc-col br {
-    display: none;
+.fc-page .fc-group {
+    margin: 9px 0 1px;
 }
-.fc-page .fc-col div[style*="min-height"],
-.fc-page .subSubDiv,
-.fc-page .subSubDiv2 {
-    width: auto;
-    min-height: 0 !important;
-}
-/* a column's heading, and the ruler's and race's names, on one line of one height in the three */
-.fc-page .fc-col .small_title {
-    display: inline-block;
-    margin: 2px 8px 6px 0;
-    line-height: 28px;
-    vertical-align: middle;
-}
-.fc-page .fc-col .inputfield {
-    width: calc(100% - 80px);
-    height: 28px;
-    vertical-align: middle;
-}
-/* a choice: its picture in a box of one size, its words beside it; a choice under another (a class, a tome, a trait, a
-   subculture) indented by one step (the page's own: 30px, the form traits 36px, a Vision's reading's words without
-   its picture's room, the Ascension's and Ambition's empty slot a small plus) */
-.fc-page .button,
-.fc-page .button-inset {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
+/* a row: a choice of its own kind (the ruler, the form, the culture...), a trait (form, society) a smaller one */
+.fc-page .fc-slot,
+.fc-page #selected-options-container > button {
+    position: relative;
     left: 0;
-    min-height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 50px;
     margin: 0;
-    padding: 2px 0;
+    padding: 4px 10px 4px 4px;
     color: #e8e2d4;
-    background: none;
-    border: 0;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #3c3c3c;
     font: inherit;
     font-size: 14px;
     text-align: left;
+    cursor: pointer;
+    filter: none;
 }
-.fc-page .button-inset {
-    margin-left: 24px;
+.fc-page .fc-slot:hover,
+.fc-page #selected-options-container > button:hover {
+    border-color: #d7c297;
+    filter: none;
 }
-/* a choice that doesn't apply (a dragon type or clan for another ruler, a subculture or a Vision's reading the culture
-   or trait hasn't), and the empty button over the tome path: no row */
-.fc-page .button:empty,
-.fc-page .button-inset:empty {
+/* a choice that doesn't apply (a dragon type for a Champion, a school for a culture without one, a reading for a trait
+   without one): no row */
+.fc-page .fc-slot:empty {
     display: none;
 }
-.fc-page .button > img {
+.fc-page .fc-slot > img,
+.fc-page #selected-options-container > button > img {
     flex: none;
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
-.fc-page .button-inset > img {
+/* a Vision's reading has no picture */
+.fc-page .fc-slot > img:not([src]) {
+    display: none;
+}
+.fc-page .fc-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+}
+.fc-page .fc-cap {
+    color: #a8987a;
+    font-size: 11px;
+}
+.fc-page .fc-name {
+    line-height: 1.25;
+}
+.fc-page .fc-tags {
+    display: flex;
     flex: none;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+/* a trait: smaller */
+.fc-page .fc-trait,
+.fc-page #selected-options-container > button {
+    min-height: 42px;
+    padding: 3px 10px 3px 4px;
+}
+.fc-page .fc-trait > img,
+.fc-page #selected-options-container > button > img {
     width: 34px;
     height: 34px;
-    object-fit: contain;
 }
-.fc-page .button-inset > img:not([src]) {
-    visibility: hidden;
-}
-/* an empty slot (the Ascension, the Ambition): a dashed box, as the tome path's */
-.fc-page .button-inset > img.padded-image {
-    box-sizing: border-box;
-    padding: 8px;
-    border: 2px dashed #555;
-    border-radius: 4px;
-}
-.fc-page .button-inset:hover > img.padded-image {
-    border-color: #d7c297;
-}
-/* the clear buttons by a heading (Ascension, Ambition, the tome path's Clear All) */
-.fc-page .button[style*="float"] {
+/* a form trait's points: a ring at its end, a flaw's (fewer points) red */
+.fc-page .fc-points {
     display: inline-flex;
-    gap: 4px;
-    min-height: 0;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 22px;
+    height: 22px;
+    margin-left: 6px;
+    padding: 0 3px;
+    color: #d7c297;
+    border: 1px solid #6b5f45;
+    border-radius: 11px;
+    font-size: 12px;
 }
-.fc-page .button[style*="float"] > img {
-    width: 18px;
-    height: 18px;
+.fc-page .fc-points.fc-minus {
+    color: #e3907f;
+    border-color: #7a4a40;
 }
-.fc-page #buttonContainer7,
-.fc-page #buttonContainer15 {
-    margin-top: 10px;
+/* a choice that follows from another: a step in, a line from the one above */
+.fc-page .fc-sub {
+    width: calc(100% - 22px);
+    min-height: 44px;
+    margin-left: 22px;
 }
-/* the form traits: a list of choices inside the button that opens their pick-list */
-.fc-page #originButtonFormTrait {
+.fc-page .fc-sub > img {
+    width: 34px;
+    height: 34px;
+}
+.fc-page .fc-trait.fc-sub {
+    min-height: 36px;
+    padding-left: 10px;
+}
+.fc-page .fc-sub::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -14px;
+    width: 9px;
+    height: calc(50% + 6px);
+    border-left: 1px solid #5a5a5a;
+    border-bottom: 1px solid #5a5a5a;
+}
+/* the form traits: their rows inside the button that opens their pick-list; none, an empty row */
+.fc-page .fc-traits {
     display: block;
     width: 100%;
-    min-width: 0 !important;
-    min-height: 44px !important;
+    margin: 0;
     padding: 0;
+    color: inherit;
+    background: none;
+    border: 0;
+    font: inherit;
     text-align: left;
     cursor: pointer;
 }
 .fc-page #selected-options-container {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
-/* the tome path: as many tomes to a row as fit (the page's rule had eight, wider than a phone) */
+.fc-page .fc-traits:has(#selected-options-container:empty) {
+    height: 42px;
+    background: url(/evolved/Icons/Interface/addsymbol.png) center / 18px no-repeat rgba(0, 0, 0, 0.2);
+    border: 1px dashed #555;
+}
+.fc-page .fc-traits:has(#selected-options-container:empty):hover {
+    border-color: #d7c297;
+}
+/* an Ascension, an Ambition: none, a dashed row with a plus and its label; one, a cross at its end that removes it */
+.fc-page .fc-slot > img.padded-image {
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px dashed #666;
+}
+.fc-page .fc-slot:has(> img.padded-image) {
+    background: rgba(0, 0, 0, 0.2);
+    border-style: dashed;
+    border-color: #555;
+}
+.fc-page .fc-slot:has(> img.padded-image):hover {
+    border-color: #d7c297;
+}
+.fc-page .fc-slot:has(> img.padded-image)::after {
+    content: attr(data-cap);
+    color: #a8987a;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+.fc-page .fc-clearable {
+    position: relative;
+}
+.fc-page .fc-clearable > .fc-slot {
+    padding-right: 34px;
+}
+.fc-page .fc-clear {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    display: flex;
+    padding: 3px;
+    background: none;
+    border: 0;
+    opacity: 0.75;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.fc-page .fc-clear:hover {
+    opacity: 1;
+}
+.fc-page .fc-clear > img {
+    width: 16px;
+    height: 16px;
+}
+.fc-page .fc-clearable:has(img.padded-image) > .fc-clear {
+    display: none;
+}
+
+/* the tome path: a line of tiles, each the tome's picture, its affinities at its top, its tier at its foot */
+.fc-page .fc-tomes {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(215, 194, 151, 0.25);
+}
+.fc-page .fc-tomes-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.fc-page .fc-tomes-head .fc-group {
+    margin: 0;
+}
+.fc-page .fc-clear-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 4px;
+    color: #e3907f;
+    background: none;
+    border: 0;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+.fc-page .fc-clear-all:hover {
+    color: #ffb3a5;
+}
+.fc-page .fc-clear-all > img {
+    width: 16px;
+    height: 16px;
+}
 .fc-page #tomePathButton {
-    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)) !important;
-    row-gap: 22px;
-    margin: 22px 0 4px !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+.fc-page .tome-button-small {
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #3c3c3c;
+    filter: none;
+}
+.fc-page .tome-button-small:hover {
+    border-color: #d7c297;
+    filter: none;
+}
+.fc-page .tome-button-small::before {
+    display: none;
+}
+/* Faction.js places these by inline styles */
+.fc-page .tome-button-small > img {
+    position: absolute !important;
+    top: 7px !important;
+    left: 7px;
+    width: 48px;
+    height: 48px;
+}
+.fc-page .tome-button-small > span {
+    position: absolute !important;
+    top: auto !important;
+    right: 4px;
+    bottom: 2px;
+    color: #d7c297;
+    font-size: 13px !important;
+    line-height: 1;
+}
+.fc-page .tome-button-small > div:first-of-type {
+    position: absolute !important;
+    top: 1px !important;
+    left: 2px !important;
+    line-height: 0;
+}
+.fc-page .tome-button-small > div:not([class]):not(:first-of-type) {
+    top: auto !important;
+    right: auto !important;
+    bottom: 2px;
+    left: 3px;
+    line-height: 0;
+}
+.fc-page .tome-remove-btn {
+    top: 2px;
+    right: 2px;
+    padding: 1px;
+}
+.fc-page .tome-warning-icon {
+    top: 2px;
+    right: 6px;
+    left: auto;
+}
+.fc-page .tome-invalid {
+    border-color: #e05252;
+    outline: none;
+}
+.fc-page .tome-add-slot {
+    width: 64px;
+    height: 64px;
+    border-width: 1px;
+    border-radius: 0;
 }
 
 /* the overview: what the faction has, its groups (units, spells, structures...) in balanced columns, as many as fit */
@@ -962,6 +1199,16 @@
     }
     .fc-page .fc-columns {
         grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+    .fc-page .fc-field {
+        flex: 1 1 140px;
+    }
+    .fc-page .fc-field .inputfield {
+        width: 100%;
+    }
+    .fc-page .fc-extra {
+        margin-left: 0;
     }
     .fc-page .overview {
         columns: 2;

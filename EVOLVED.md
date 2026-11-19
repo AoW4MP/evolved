@@ -418,17 +418,26 @@ Builder" is "Faction Creator", as its page.
   fits a 1700x1280 window whole, the sheet 575-620px tall): Faction, Overview (its count the overview's entries,
   followed as it is made again: a `MutationObserver`) and Publish. Until 2026-11-19 the overview stood beside the
   choices, pushing them aside, and the publish form under them, a scroll away.
-  - Faction: one sheet, at most 1000px wide and centred (1180px for a few hours, half of it empty): the sigil (its
-    symbol placed on the shield, not by the sheet's corner), the faction's affinities and the extra points (a number
-    under its icon, between its arrows: the page's narrow box alone had wrapped it there) over
-    three columns, Ruler, Race, and Culture & Society (were two, the culture under the race), over the tome path. Every
-    choice is its picture in a box of one size (40px, 34px for one under another) and its words, and a choice under
-    another is indented by one step, 24px: the page's were 30px, the form traits 36px, a Vision's reading's words without
-    its picture's room, and an empty Ascension or Ambition a small plus (now a dashed box, as the tome path's). A choice
-    that doesn't apply (a dragon type for a Champion) and the empty button over the tome path take no row (`:empty`).
-    The columns' headings and the ruler's and race's names are one line of one height. A choice picked from its
-    pick-list shows without the list's "+" (`selectOrigin` drew the slot as a list entry: "Dominator +"; a build
-    opened from a link never had it).
+  - Faction: one sheet, at most 960px wide and centred, redrawn on 2026-11-19 (the old page's markup and its layout
+    rules are gone; its ids stay, as `Faction.js` draws into them). Its head is a line of labelled fields: the sigil
+    (its symbol on the shield), Ruler Name and Race Name (were in the columns' heads), Affinity (an icon and its
+    number kept together, so six affinities break between two of them) and Extra Affinity Points (a number under its
+    icon, between its arrows). Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
+    Class, Starting Tome, Ascension, Ambition), the race (Physical Form, Form Traits) and the culture (Culture, its
+    sub-choice, Society Traits); then the tome path as tiles (the tome, its affinities at the top, its tier and DLC at
+    the foot; a red border for one whose requirements aren't met). A row is a framed choice: its picture, the game's
+    word for it over its name, its tags (affinities, DLC) at its end. `FcRows` in the page wraps `SetButtonInfo` so
+    every way a slot is filled (a pick, Randomise, a link) goes through `FcDress`, which makes the row; pick-list
+    entries are left alone. The captions are the game's words: "Physical Form", "Starting Tome", "Hero Class", "Society
+    Traits", and each culture's own word for its sub-choice (Leading Cult, Authority, School, Government, Tradition,
+    Organization, Oath: `CULTURE_*@SUBCULTURE@NAME`); the Architect's ("Affinity"), Primal's ("Primal Spirit") and the
+    ruler types' ("Dragon Type"...) are the site's, as the game has none. Names lose the caption's prefix ("Hero
+    Class: ", "Ascension: "); a dragon type is its own name (the claw ability's text gave it "✦ … - Dragon Claw"); a
+    form trait's points are a ring at its end (a flaw's red). A choice that follows from another (a dragon type, a
+    culture's sub-choice, a Vision's reading) is a step in, with a line from the one above. A traits group or an
+    Ascension or Ambition without a choice is a dashed row (the latter two with their label; a cross removes one).
+    A choice that doesn't apply takes no row (`:empty`). A choice picked from its pick-list shows without the list's
+    "+" (`selectOrigin` drew the slot as a list entry: "Dominator +"; a build opened from a link never had it).
   - Overview: Reset and Show/Hide non-★ over the groups, in balanced columns (`columns: 216px`).
   - Publish: Publish to the Builds List (`BdPublishPanel`): name, tags, notes with a preview, the edit key; Publish, or
     Save Changes for the visitor's own build.

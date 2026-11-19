@@ -503,6 +503,7 @@
 
             function HandlePage() {
                 FcTabs();
+                FcRows();
                 jsonTomes = [...jsonTomes, ...placeHolderTomes];
                 SetRandomStart();
                 // Evolved's Builds List (Data/builds.js): the publish form, filled in when a build was opened from the list
@@ -543,296 +544,128 @@
         <div class="fc-panel" data-tab="faction">
         <div class="factioncreator" id="capture">
             <div class="typeHolder" id="factioncreator">
-                <div class="container">
-                    <div style="height: 90px">
+                <div class="container fc-sheet">
+                    <!-- the head: the sigil, the ruler's and race's names, the faction's affinity, the extra affinity points -->
+                    <div class="fc-head">
                         <div class="playerSigil">
-                            <!-- <canvas id="myCanvas" class="shield" width="70" height="70" style="float:left"></canvas>
-                        <canvas class="symbol" id="myCanvas2" width="50" height="50" style="float:left"></canvas>-->
-                            <img
-                                class="shield"
-                                id="shield"
-                                src="/evolved/Icons/Interface/Sigil.png"
-                                width="70px"
-                                height="70px" />
-                            <img class="symbol" id="symbol" src="/evolved/Icons/Interface/symbol.png" height="45px" />
+                            <img class="shield" id="shield" src="/evolved/Icons/Interface/Sigil.png" width="70" height="70" alt="" />
+                            <img class="symbol" id="symbol" src="/evolved/Icons/Interface/symbol.png" height="45" alt="" />
                         </div>
-                        <!--  <button class="test" id="shieldColor" onclick="ChangeShieldCol()"> </button>
-                    <button class="test" id="symbolColor" onclick="ChangeSymbolCol()"> </button>-->
-                        <div style="display: flex; flex-direction: row; justify-content: space-between">
+                        <label class="fc-field">
+                            <span class="fc-label">Ruler Name</span>
+                            <input type="text" value="Ruler Name" pattern="[a-zA-Z0-9\s]+" class="inputfield" id="fname1" maxlength="35" name="fname" />
+                        </label>
+                        <label class="fc-field">
+                            <span class="fc-label">Race Name</span>
+                            <input type="text" value="Race Name" pattern="[a-zA-Z0-9\s]+" class="inputfield" id="fname" maxlength="35" name="fname" />
+                        </label>
+                        <div class="fc-field fc-affinity">
+                            <span class="fc-label">Affinity</span>
                             <div id="currentAffinity" class="affinityText"></div>
-                            <div>
-                                Extra Affinity Points
-                                <div
-                                    id="extraAffinity"
-                                    style="
-                                        max-width: 300px;
-                                        display: flex;
-                                        justify-content: space-evenly;
-                                        background-color: #f0f8ff2b;
-                                        position: relative;
-                                    ">
-                                    <div style="display: flex; height: 50px">
-                                        <div id="extraOrder"></div>
-                                        <div style="display: flex; flex-direction: column">
-                                            <button class="AddSubtract" onclick="AddExtra('order','⮝')">
-                                                <img src="/evolved/Icons/Interface/arrow_up.png" width="15px" />
-                                            </button>
-                                            <button class="AddSubtract" onclick="AddExtra('order','⮟')">
-                                                <img src="/evolved/Icons/Interface/arrow_down.png" width="15px" />
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div style="display: flex; height: 50px">
-                                        <div id="extraChaos"></div>
-
-                                        <div style="display: flex; flex-direction: column">
-                                            <button class="AddSubtract" onclick="AddExtra('chaos','⮝')">
-                                                <img src="/evolved/Icons/Interface/arrow_up.png" width="15px" />
-                                            </button>
-                                            <button class="AddSubtract" onclick="AddExtra('chaos','⮟')">
-                                                <img src="/evolved/Icons/Interface/arrow_down.png" width="15px" />
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div style="display: flex; height: 50px">
-                                        <div id="extraNature"></div>
-                                        <div style="display: flex; flex-direction: column">
-                                            <button class="AddSubtract" onclick="AddExtra('nature','⮝')">
-                                                <img src="/evolved/Icons/Interface/arrow_up.png" width="15px" />
-                                            </button>
-                                            <button class="AddSubtract" onclick="AddExtra('nature','⮟')">
-                                                <img src="/evolved/Icons/Interface/arrow_down.png" width="15px" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; height: 50px">
-                                        <div id="extraShadow"></div>
-
-                                        <div style="display: flex; flex-direction: column">
-                                            <button class="AddSubtract" onclick="AddExtra('shadow','⮝')">
-                                                <img src="/evolved/Icons/Interface/arrow_up.png" width="15px" />
-                                            </button>
-                                            <button class="AddSubtract" onclick="AddExtra('shadow','⮟')">
-                                                <img src="/evolved/Icons/Interface/arrow_down.png" width="15px" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; height: 50px">
-                                        <div id="extraMaterium"></div>
-
-                                        <div style="display: flex; flex-direction: column">
-                                            <button class="AddSubtract" onclick="AddExtra('materium','⮝')">
-                                                <img src="/evolved/Icons/Interface/arrow_up.png" width="15px" />
-                                            </button>
-                                            <button class="AddSubtract" onclick="AddExtra('materium','⮟')">
-                                                <img src="/evolved/Icons/Interface/arrow_down.png" width="15px" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; height: 50px">
-                                        <div id="extraAstral"></div>
-
-                                        <div style="display: flex; flex-direction: column">
-                                            <button class="AddSubtract" onclick="AddExtra('astral','⮝')">
-                                                <img src="/evolved/Icons/Interface/arrow_up.png" width="15px" />
-                                            </button>
-                                            <button class="AddSubtract" onclick="AddExtra('astral','⮟')">
-                                                <img src="/evolved/Icons/Interface/arrow_down.png" width="15px" />
-                                            </button>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="fc-field fc-extra">
+                            <span class="fc-label">Extra Affinity Points</span>
+                            <div id="extraAffinity">
+                            <div class="fc-extra-one">
+                                <div id="extraOrder"></div>
+                                <div class="fc-arrows">
+                                    <button class="AddSubtract" onclick="AddExtra('order','⮝')" title="One more"><img src="/evolved/Icons/Interface/arrow_up.png" width="15" alt="+" /></button>
+                                    <button class="AddSubtract" onclick="AddExtra('order','⮟')" title="One less"><img src="/evolved/Icons/Interface/arrow_down.png" width="15" alt="-" /></button>
                                 </div>
+                            </div>
+                            <div class="fc-extra-one">
+                                <div id="extraChaos"></div>
+                                <div class="fc-arrows">
+                                    <button class="AddSubtract" onclick="AddExtra('chaos','⮝')" title="One more"><img src="/evolved/Icons/Interface/arrow_up.png" width="15" alt="+" /></button>
+                                    <button class="AddSubtract" onclick="AddExtra('chaos','⮟')" title="One less"><img src="/evolved/Icons/Interface/arrow_down.png" width="15" alt="-" /></button>
+                                </div>
+                            </div>
+                            <div class="fc-extra-one">
+                                <div id="extraNature"></div>
+                                <div class="fc-arrows">
+                                    <button class="AddSubtract" onclick="AddExtra('nature','⮝')" title="One more"><img src="/evolved/Icons/Interface/arrow_up.png" width="15" alt="+" /></button>
+                                    <button class="AddSubtract" onclick="AddExtra('nature','⮟')" title="One less"><img src="/evolved/Icons/Interface/arrow_down.png" width="15" alt="-" /></button>
+                                </div>
+                            </div>
+                            <div class="fc-extra-one">
+                                <div id="extraShadow"></div>
+                                <div class="fc-arrows">
+                                    <button class="AddSubtract" onclick="AddExtra('shadow','⮝')" title="One more"><img src="/evolved/Icons/Interface/arrow_up.png" width="15" alt="+" /></button>
+                                    <button class="AddSubtract" onclick="AddExtra('shadow','⮟')" title="One less"><img src="/evolved/Icons/Interface/arrow_down.png" width="15" alt="-" /></button>
+                                </div>
+                            </div>
+                            <div class="fc-extra-one">
+                                <div id="extraMaterium"></div>
+                                <div class="fc-arrows">
+                                    <button class="AddSubtract" onclick="AddExtra('materium','⮝')" title="One more"><img src="/evolved/Icons/Interface/arrow_up.png" width="15" alt="+" /></button>
+                                    <button class="AddSubtract" onclick="AddExtra('materium','⮟')" title="One less"><img src="/evolved/Icons/Interface/arrow_down.png" width="15" alt="-" /></button>
+                                </div>
+                            </div>
+                            <div class="fc-extra-one">
+                                <div id="extraAstral"></div>
+                                <div class="fc-arrows">
+                                    <button class="AddSubtract" onclick="AddExtra('astral','⮝')" title="One more"><img src="/evolved/Icons/Interface/arrow_up.png" width="15" alt="+" /></button>
+                                    <button class="AddSubtract" onclick="AddExtra('astral','⮟')" title="One less"><img src="/evolved/Icons/Interface/arrow_down.png" width="15" alt="-" /></button>
+                                </div>
+                            </div>
                             </div>
                         </div>
-                        <br />
-                        <hr />
                     </div>
 
-                    <div class="subDivider fc-columns">
+                    <!-- the choices: a row each (FcDress in the page: its caption, its name, its tags at its end); one that
+                         follows from another (a dragon type, a culture's school, a Vision's reading) a step in -->
+                    <div class="fc-columns">
                         <div class="fc-col">
-                            <div class="subSubDiv">
-                                <div style="min-height: 200px">
-                                    <span class="small_title"> Ruler</span>
-                                    <input
-                                        type="text"
-                                        value="Ruler Name"
-                                        pattern="[a-zA-Z0-9\s]+"
-                                        class="inputfield"
-                                        id="fname1"
-                                        maxlength="35"
-                                        name="fname" />
-
-                                    <!--<input type="text" value="Title" class="inputfield" id="fname2" name="fname">-->
-                                    <div id="buttonContainer">
-                                        <button
-                                            class="button"
-                                            id="originButtonOrigin"
-                                            onclick="SetupButtons(event,'Origin')"></button>
-                                    </div>
-
-                                    <div id="buttonContainer10">
-                                        <button
-                                            class="button-inset"
-                                            id="originButtonSubType"
-                                            onclick="SetupButtons(event,'SubType')"></button>
-                                    </div>
-                                    <div id="buttonContainer8">
-                                        <button
-                                            class="button-inset"
-                                            id="originButtonClass"
-                                            onclick="SetupButtons(event,'Class')"></button>
-                                    </div>
-                                    <div id="buttonContainer9">
-                                        <button
-                                            class="button-inset"
-                                            id="originButtonTome"
-                                            onclick="SetupButtons(event,'Tome')"></button>
-                                    </div>
-                                    <br /><br />
-                                    <div id="buttonContainer7">
-                                        <span class="small_title"> Ascension</span>
-                                        <button
-                                            style="float: right; color: red"
-                                            class="button"
-                                            onclick="ClearAscensionSkill()">
-                                            <img src="/evolved/Icons/Interface/CloseX.png" height="20px" />
-                                        </button>
-                                        <button
-                                            class="button-inset"
-                                            id="originButtonAscension"
-                                            onclick="SetupButtons(event,'Ascension')">
-                                            <img
-                                                class="padded-image"
-                                                src="/evolved/Icons/Interface/addsymbol.png"
-                                                height="20px" />
-                                        </button>
-                                    </div>
-                                    <br /><br />
-                                    <div id="buttonContainer15">
-                                        <span class="small_title"> Ambition</span>
-                                        <button
-                                            style="float: right; color: red"
-                                            class="button"
-                                            onclick="ClearAmbition()">
-                                            <img src="/evolved/Icons/Interface/CloseX.png" height="20px" />
-                                        </button>
-                                        <button
-                                            class="button-inset"
-                                            id="originButtonAmbition"
-                                            onclick="SetupButtons(event,'Ambition')">
-                                            <img
-                                                class="padded-image"
-                                                src="/evolved/Icons/Interface/addsymbol.png"
-                                                height="20px" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- <div class="subSubDiv2">
-                                <span class="small_title">Signature Skills</span>
-                                <button style="float: right; color: red" class="button" onclick="RemoveLastSkill()">
-                                    X
+                            <button class="fc-slot" id="originButtonOrigin" onclick="SetupButtons(event,'Origin')"></button>
+                            <button class="fc-slot fc-sub" id="originButtonSubType" onclick="SetupButtons(event,'SubType')"></button>
+                            <button class="fc-slot" id="originButtonClass" onclick="SetupButtons(event,'Class')"></button>
+                            <button class="fc-slot" id="originButtonTome" onclick="SetupButtons(event,'Tome')"></button>
+                            <div class="fc-clearable">
+                                <button class="fc-slot" id="originButtonAscension" data-cap="Ascension" onclick="SetupButtons(event,'Ascension')">
+                                    <img class="padded-image" src="/evolved/Icons/Interface/addsymbol.png" alt="" />
                                 </button>
-                                <div id="buttonContainer6" style="height: 100px">
-                                    <button
-                                        class="button2"
-                                        id="originButtonSignature"
-                                        onclick="SetupButtons(event,'Signature')">
-                                        +
-                                    </button>
-                                </div>
-                            </div>-->
+                                <button class="fc-clear" onclick="ClearAscensionSkill()" title="Remove the Ascension">
+                                    <img src="/evolved/Icons/Interface/CloseX.png" alt="Remove" />
+                                </button>
+                            </div>
+                            <div class="fc-clearable">
+                                <button class="fc-slot" id="originButtonAmbition" data-cap="Ambition" onclick="SetupButtons(event,'Ambition')">
+                                    <img class="padded-image" src="/evolved/Icons/Interface/addsymbol.png" alt="" />
+                                </button>
+                                <button class="fc-clear" onclick="ClearAmbition()" title="Remove the Ambition">
+                                    <img src="/evolved/Icons/Interface/CloseX.png" alt="Remove" />
+                                </button>
+                            </div>
                         </div>
 
                         <div class="fc-col">
-                            <div class="subSubDiv">
-                                <span class="small_title"> Race</span>
-                                <input
-                                    type="text"
-                                    class="inputfield"
-                                    pattern="[a-zA-Z0-9\s]+"
-                                    value="Race Name"
-                                    id="fname"
-                                    maxlength="35"
-                                    name="fname" />
-
-                                <div id="buttonContainer5">
-                                    <button
-                                        class="button"
-                                        id="originButtonForm"
-                                        onclick="SetupButtons(event,'Form')"></button>
-                                </div>
-
-                                <div id="buttonContainer4">
-                                    <button
-                                        style="
-                                            background-color: transparent;
-                                            min-height: 40px;
-                                            min-width: 200px;
-                                            border: none;
-                                        "
-                                        id="originButtonFormTrait"
-                                        onclick="SetupButtons(event,'FormTrait')">
-                                        <span id="selected-options-container" style="color: white"></span>
-                                    </button>
-                                </div>
-                            </div>
+                            <button class="fc-slot" id="originButtonForm" onclick="SetupButtons(event,'Form')"></button>
+                            <div class="fc-label fc-group">Form Traits</div>
+                            <button class="fc-traits" id="originButtonFormTrait" onclick="SetupButtons(event,'FormTrait')">
+                                <span id="selected-options-container"></span>
+                            </button>
                         </div>
-                        <div class="fc-col">
-                            <div class="subSubDiv2">
-                                <div id="buttonContainer3">
-                                    <span class="small_title"> Culture & Society</span>
-                                    <button
-                                        class="button"
-                                        id="originButtonCulture"
-                                        onclick="SetupButtons(event,'Culture')"></button>
-                                    <button
-                                        class="button-inset"
-                                        id="originButtonSubCulture"
-                                        onclick="SetupButtons(event,'SubCulture')"></button>
-                                </div>
 
-                                <div id="buttonContainer2">
-                                    <button
-                                        class="button-inset"
-                                        id="originButtonSociety1"
-                                        onclick="SetupButtons(event,'Society1')"></button>
-                                    <button
-                                        class="button-inset"
-                                        id="originButtonSubSociety1"
-                                        onclick="SetupButtons(event,'SubSociety1')"></button>
-                                </div>
-                                <div id="buttonContainer1">
-                                    <button
-                                        class="button-inset"
-                                        id="originButtonSociety2"
-                                        onclick="SetupButtons(event,'Society2')"></button>
-                                    <button
-                                        class="button-inset"
-                                        id="originButtonSubSociety2"
-                                        onclick="SetupButtons(event,'SubSociety2')"></button>
-                                </div>
-                            </div>
+                        <div class="fc-col">
+                            <button class="fc-slot" id="originButtonCulture" onclick="SetupButtons(event,'Culture')"></button>
+                            <button class="fc-slot fc-sub" id="originButtonSubCulture" onclick="SetupButtons(event,'SubCulture')"></button>
+                            <div class="fc-label fc-group">Society Traits</div>
+                            <button class="fc-slot fc-trait" id="originButtonSociety1" onclick="SetupButtons(event,'Society1')"></button>
+                            <button class="fc-slot fc-trait fc-sub" id="originButtonSubSociety1" onclick="SetupButtons(event,'SubSociety1')"></button>
+                            <button class="fc-slot fc-trait" id="originButtonSociety2" onclick="SetupButtons(event,'Society2')"></button>
+                            <button class="fc-slot fc-trait fc-sub" id="originButtonSubSociety2" onclick="SetupButtons(event,'SubSociety2')"></button>
                         </div>
                     </div>
 
-                    <div>
-                        <hr />
-
-                        <button class="button-inset" id="originButtonTome2"></button>
-
-                        <span class="small_title"> Tome Path</span>
-
-                        <button style="float: right; color: red" class="button" onclick="ClearTomePath()">
-                            <img src="/evolved/Icons/Interface/CloseX.png" height="20px" /> Clear All
-                        </button>
-                        <br />
-                        <div
-                            style="display: grid; grid-template-columns: repeat(8, 2fr); margin: 15px"
-                            id="tomePathButton"></div>
+                    <!-- the tome path: the starting tome and the tomes after it, in order -->
+                    <div class="fc-tomes">
+                        <div class="fc-tomes-head">
+                            <span class="fc-label fc-group">Tome Path</span>
+                            <button class="fc-clear-all" onclick="ClearTomePath()" title="Keep the starting tome alone">
+                                <img src="/evolved/Icons/Interface/CloseX.png" alt="" /> Clear All
+                            </button>
+                        </div>
+                        <div id="tomePathButton"></div>
                     </div>
                 </div>
                  
@@ -927,6 +760,72 @@
             function FcOpenTab(id) {
                 document.querySelectorAll("#fcTabs .wm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.id === id));
                 document.querySelectorAll(".fc-panel").forEach((p) => (p.hidden = p.dataset.tab !== id));
+            }
+
+            // The sheet's rows. Faction.js' SetButtonInfo draws a choice as its picture and a line of its name and tags; FcDress
+            // makes that a row: a choice of its own kind gets the game's word for it over its name ("Physical Form",
+            // "Starting Tome", a culture's "School" or "Oath"), its tags (affinities, DLC) go to the row's end, and so does a
+            // form trait's points ("1: Sharp Eyes" was its name). A dragon type is its own name: the claw's text gave it the
+            // claw's damage icon and "- Dragon Claw". The pick-lists' entries are left as they are
+            const FC_CAPTIONS = { Origin: "Ruler", Class: "Hero Class", Tome: "Starting Tome", Ascension: "Ascension", Ambition: "Ambition", Form: "Physical Form", Culture: "Culture" };
+            const FC_SUBTYPES = { "Dragon Lord": "Dragon Type", "Giant King": "Giant Type", "Elder Vampire": "Vampire Type" };
+            // the game's (CULTURE_MYSTIC@SUBCULTURE@NAME...); the Architect's and Primal's have none
+            const FC_SUBCULTURES = { Architect: "Affinity", Dark: "Leading Cult", Feudal: "Authority", Mercantile: "Organization", Mystic: "School", Nomad: "Tradition", Oathsworn: "Oath", Primal: "Primal Spirit", Reaver: "Government" };
+
+            function FcRows() {
+                const draw = SetButtonInfo;
+                SetButtonInfo = function (button, origin, type, inSelectionsList) {
+                    draw(button, origin, type, inSelectionsList);
+                    if (!inSelectionsList) FcDress(button, origin, type);
+                };
+                // the faction's affinity: an icon and its number together, so a line too full breaks between affinities
+                // (Empire of the Cosmos' checks read an icon and the number after it, which they still are)
+                const affinity = affinityToDisplayHtml;
+                affinityToDisplayHtml = (text) => affinity(text).replace(/(<(empire\w+)><\/\2>)\s*(\d+)/g, '<span class="fc-aff">$1$3</span>');
+            }
+
+            function FcCaption(type) {
+                if (type === "SubType") return FC_SUBTYPES[currentOrigin.name] || "Type";
+                if (type === "SubCulture") return FC_SUBCULTURES[currentCulture.name] || "";
+                return FC_CAPTIONS[type] || "";
+            }
+
+            function FcDress(button, origin, type) {
+                const name = button.querySelector(":scope > span");
+                if (!name) return;
+                name.className = "fc-name";
+                const tags = document.createElement("span");
+                tags.className = "fc-tags";
+                while (name.lastChild && (name.lastChild.nodeType === 1 || !name.lastChild.textContent.trim())) {
+                    if (name.lastChild.nodeType === 1) tags.prepend(name.lastChild);
+                    else name.lastChild.remove();
+                }
+                if (type === "SubType") name.textContent = origin.name;
+                const first = name.firstChild;
+                if (first && first.nodeType === 3) {
+                    let text = first.textContent.trim().replace(/^(Hero Class|Ascension):\s*/, "");
+                    const cost = type === "FormTrait" && text.match(/^(-?\d+):\s*/);
+                    if (cost) {
+                        text = text.slice(cost[0].length);
+                        const points = document.createElement("span");
+                        points.className = "fc-points" + (Number(cost[1]) < 0 ? " fc-minus" : "");
+                        points.textContent = cost[1];
+                        tags.append(points);
+                    }
+                    first.textContent = text;
+                }
+                const text = document.createElement("span");
+                text.className = "fc-text";
+                name.replaceWith(text);
+                const caption = FcCaption(type);
+                if (caption) {
+                    const cap = document.createElement("span");
+                    cap.className = "fc-cap";
+                    cap.textContent = caption;
+                    text.append(cap);
+                }
+                text.append(name);
+                button.append(tags);
             }
         </script>
     </body>

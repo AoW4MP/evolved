@@ -18,6 +18,13 @@
     text-align: center;
     text-wrap: balance;
 }
+/* the remark on older versions' builds: a warning's amber, set apart from what the list is */
+.bd-remark {
+    margin-top: 6px;
+    color: #e6b35c;
+    font-size: 14px;
+    font-style: italic;
+}
 .bd-tools {
     display: flex;
     flex-wrap: wrap;

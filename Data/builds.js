@@ -377,14 +377,14 @@ async function BdListPage() {
     const panels = document.getElementById("panels");
     const key = BdKeyPanel(document.getElementById("buildTools"));
     const dataset = BdDataset();
-    // a sentence to a line, centred
+    // a sentence to a line, centred; the older versions' a remark of its own
     const intro = document.getElementById("intro");
-    for (const sentence of [
-        "Factions made by the players of the Evolved mod and published from the Faction Creator.",
-        "A build opens in the creator, where it can be changed and published as a build of your own.",
-        dataset ? "A build made on an older version of the game is under Older Versions: it may not be what the game has now." : ""
-    ].filter(Boolean)) {
-        intro.append(WmElement("div", "", sentence));
+    intro.append(
+        WmElement("div", "", "Factions made by the players of the Evolved mod and published from the Faction Creator."),
+        WmElement("div", "", "A build opens in the creator, where it can be changed and published as a build of your own.")
+    );
+    if (dataset) {
+        intro.append(WmElement("div", "bd-remark", "A build made on an older version of the game is under Older Versions: it may not be what the game has now."));
     }
     if (!BD_API) {
         document.querySelector(".wm-filters").hidden = true;

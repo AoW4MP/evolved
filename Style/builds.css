@@ -1012,6 +1012,47 @@
     width: auto;
     min-width: 200px;
 }
+/* its picture in a box of its size: its affinities in a row at the picture's foot (wrapping upward: the Tome of the
+   Cosmos has six), its DLC at its top right corner, alike on every entry; its name after it, its plus at the end. Until
+   2026-11-19 the affinities were moved over the picture by 58px from where the name's length put them, the name centred
+   in what was left, so neither stood where the next entry's did (SetTomePathInfo in Faction.js) */
+.selectionsHolder .tome-pick-pic {
+    position: relative;
+    flex: none;
+    width: 50px;
+    height: 50px;
+}
+.selectionsHolder .tome-pick-pic > img {
+    display: block;
+}
+.selectionsHolder .tome-pick-aff {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 1px;
+    max-width: 52px;
+}
+.selectionsHolder .tome-pick-aff > * {
+    top: 0;
+}
+.selectionsHolder .tome-pick-dlc {
+    position: absolute;
+    top: 1px;
+    right: -3px;
+}
+.selectionsHolder .tome-pick-dlc > * {
+    display: block;
+    top: 0;
+    margin-top: 0;
+}
+.selectionsHolder .tome-pick-name {
+    flex: 1 1 auto;
+    padding: 0 8px 0 10px;
+    font-size: 15px;
+    text-align: left;
+}
 /* no sideways scrollbar where every list fits: when a list's own scrollbar came, the browser added one that stayed
    after the window had widened for it, with nothing to scroll (the list 15px shorter). A phone's lists are wider than
    its screen and keep theirs */

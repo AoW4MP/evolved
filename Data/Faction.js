@@ -878,34 +878,39 @@ function SetTomePathInfo(button, origin) {
 
     image.src = "/evolved/Icons/TomeIcons/" + origin.icon + ".png"; // Set the image source to your image file
 
-    // Create a span element to hold the button text
+    // the entry: the tome's picture with its affinities at its foot and its DLC at its corner (in a box of the picture's
+    // size, so they sit alike on every entry), its name after it, its plus at the end (builds.css .tome-pick-*). The
+    // affinities were moved over the picture by 58px from where the name's length put them, and the name centred
     const buttonText = document.createElement("span");
     const newDivButton = document.createElement("div");
+    buttonText.className = "tome-pick-name";
     buttonText.innerHTML = romanize(origin.tier) + ": ";
     var clearname = origin.name.replace("Tome of the", "");
-    buttonText.innerHTML += clearname.replace("Tome of", "");
-    buttonText.style = "display: block;font-size: 15px;position: relative;text-align: center;";
+    buttonText.innerHTML += clearname.replace("Tome of", "").trim();
+
+    const picture = document.createElement("span");
+    picture.className = "tome-pick-pic";
+    picture.appendChild(image);
 
     var affinity = "";
-    const affinityText = document.createElement("div");
-    affinityText.style = "position: relative;left: -58px;top: 13px;";
+    const affinityText = document.createElement("span");
+    affinityText.className = "tome-pick-aff";
     if ("affinities" in origin) {
         affinity = ClearAffinityExtraTags(duplicateTags(origin.affinities));
         affinity = affinity.replaceAll(",", "");
-        affinityText.innerHTML += " " + affinity;
+        affinityText.innerHTML += affinity;
     }
-    // Append the image and button text to the button element
-    newDivButton.appendChild(image);
-    newDivButton.appendChild(affinityText);
-    newDivButton.appendChild(buttonText);
+    picture.appendChild(affinityText);
 
     if ("DLC" in origin) {
-        let DLCTAG = document.createElement("div");
-        DLCTAG.style = "    position: absolute; left: 30px;top: 4px;";
+        let DLCTAG = document.createElement("span");
+        DLCTAG.className = "tome-pick-dlc";
         let dlcTag = origin.DLC.replaceAll(" ", "");
         DLCTAG.innerHTML = "<" + dlcTag + "></" + dlcTag + ">";
-        newDivButton.appendChild(DLCTAG);
+        picture.appendChild(DLCTAG);
     }
+    newDivButton.appendChild(picture);
+    newDivButton.appendChild(buttonText);
 
     button.append(newDivButton);
 

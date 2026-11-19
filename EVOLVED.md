@@ -456,7 +456,10 @@ Builder" is "Faction Creator", as its page.
     large and thin, over a sentence on what publishing does.
   - The pick-lists: a tome's entry is as wide as it needs, at least the 200px all had (`.list-button-long`, a fixed
     200px: the picture, the affinities drawn over it but taking their room, the name and the plus came to 211px, so
-    "I: Hydromancy" took two lines). From 801px wide the list and its window don't scroll sideways: when a list's own
+    "I: Hydromancy" took two lines). A tome's entry (`SetTomePathInfo`) is its picture in a box of its size, its
+    affinities in a row at the picture's foot (wrapping upward: Cosmos has six) and its DLC at its corner, then its
+    name, then its plus, all at the same place on every entry (`.tome-pick-*`); until 2026-11-19 the affinities were
+    moved over the picture by 58px from where the name's length put them, the name centred in what was left. From 801px wide the list and its window don't scroll sideways: when a list's own
     scrollbar came, the browser added a sideways one that stayed after the window had widened for it, with nothing to
     scroll. A phone's lists are wider than its screen and keep theirs.
   A build opened from the list (`?u=…&b=<id>`) counts a view and shows its name and facts on a line over the tabs, its

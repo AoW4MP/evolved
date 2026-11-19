@@ -337,6 +337,11 @@
 
 .fc-page {
     max-width: 1500px;
+    /* on whole pixels: centred by auto margins, a window of odd width put the page half a pixel over, and with it every
+       box in it. Borders are drawn snapped to whole pixels, words aren't, so a points ring's number sat off its ring's
+       centre by that much. The left margin is rounded down (1532 = 1500 + the page's padding); a browser without round()
+       keeps the auto margin */
+    margin-left: max(0px, round(down, (100% - 1532px) / 2, 1px));
 }
 .fc-toolbar {
     display: flex;
@@ -565,12 +570,13 @@
     cursor: pointer;
 }
 
-/* three columns of rows */
+/* three columns of rows, 296px each in the full sheet (922 inside it; a 16px gap made them 296.67, a row's end a third
+   of a pixel over, its ring's number off its ring) */
 .fc-page .fc-columns {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
-    gap: 0 16px;
+    gap: 0 17px;
 }
 .fc-page .fc-col {
     display: flex;
@@ -670,7 +676,8 @@
     min-width: 22px;
     height: 22px;
     margin-left: 6px;
-    padding: 2px 3px 0;
+    /* the number a quarter pixel left: on whole pixels the ring's centre, a number drawn a quarter right of it at 1x */
+    padding: 2px 3.25px 0 2.75px;
     color: #d7c297;
     border: 1px solid #6b5f45;
     border-radius: 11px;

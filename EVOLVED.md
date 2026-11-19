@@ -439,7 +439,12 @@ Builder" is "Faction Creator", as its page.
     A choice that doesn't apply takes no row (`:empty`). A row's affinity icons are 20px, as its DLC tag (the text's
     15px were small beside it). Minion Pro's deep descent sets words about 3px high in a box: the names' fields have
     more padding at the top, and Clear All's cross is raised to its words; an affinity icon's own 3px drop (icons.css)
-    is undone in the extra points, where it ran into the number. A choice picked from its pick-list shows without the list's
+    is undone in the extra points, where it ran into the number. The sheet is on whole pixels, so a ring's number is
+    centred on its ring: borders are drawn snapped to whole pixels and words aren't, so a box at a fraction of a pixel
+    has its words off its border by that fraction. The page's left margin is rounded down (`round()`; auto margins put
+    it half a pixel over in a window of odd width), the columns are 296px (a 17px gap; 16 made them 296.67), and the
+    ring's number is a quarter pixel left (`padding: 2px 3.25px 0 2.75px`), as it's drawn that much right at 1x. Before,
+    a number sat up to a pixel right in a window of even width. A choice picked from its pick-list shows without the list's
     "+" (`selectOrigin` drew the slot as a list entry: "Dominator +"; a build opened from a link never had it).
   - Overview: Reset and Show/Hide non-★ over the groups, in balanced columns (`columns: 240px`), the entries 15px
     (were 13px, smaller than the site's lists).

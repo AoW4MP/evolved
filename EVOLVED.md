@@ -436,9 +436,13 @@ Builder" is "Faction Creator", as its page.
     form trait's points are a ring at its end (a flaw's red). A choice that follows from another (a dragon type, a
     culture's sub-choice, a Vision's reading) is a step in, with a line from the one above. A traits group or an
     Ascension or Ambition without a choice is a dashed row (the latter two with their label; a cross removes one).
-    A choice that doesn't apply takes no row (`:empty`). A choice picked from its pick-list shows without the list's
+    A choice that doesn't apply takes no row (`:empty`). A row's affinity icons are 20px, as its DLC tag (the text's
+    15px were small beside it). Minion Pro's deep descent sets words about 3px high in a box: the names' fields have
+    more padding at the top, and Clear All's cross is raised to its words; an affinity icon's own 3px drop (icons.css)
+    is undone in the extra points, where it ran into the number. A choice picked from its pick-list shows without the list's
     "+" (`selectOrigin` drew the slot as a list entry: "Dominator +"; a build opened from a link never had it).
-  - Overview: Reset and Show/Hide non-★ over the groups, in balanced columns (`columns: 216px`).
+  - Overview: Reset and Show/Hide non-★ over the groups, in balanced columns (`columns: 240px`), the entries 15px
+    (were 13px, smaller than the site's lists).
   - Publish: Publish to the Builds List (`BdPublishPanel`): name, tags, notes with a preview, the edit key; Publish, or
     Save Changes for the visitor's own build.
   A build opened from the list (`?u=…&b=<id>`) counts a view and shows its name and facts on a line over the tabs, its

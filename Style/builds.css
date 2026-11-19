@@ -498,7 +498,7 @@
     box-sizing: border-box;
     width: 140px;
     height: 32px;
-    padding: 4px 8px;
+    padding: 7px 8px 1px;
     color: white;
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid #555;
@@ -546,9 +546,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2px;
     min-width: 24px;
     font-size: 13px;
     line-height: 1;
+}
+.fc-page .fc-extra-one > div:first-child > * {
+    top: 0;
 }
 .fc-page .fc-arrows {
     display: flex;
@@ -638,9 +642,13 @@
     display: flex;
     flex: none;
     align-items: center;
-    gap: 2px;
+    gap: 3px;
     margin-left: auto;
     white-space: nowrap;
+}
+.fc-page .fc-tags > :is(empireorder, empirechaos, empirenature, empireshadow, empirematter, empirematerium, empirearcana, empireastral) {
+    max-height: 20px;
+    top: 0;
 }
 /* a trait: smaller */
 .fc-page .fc-trait,
@@ -662,7 +670,7 @@
     min-width: 22px;
     height: 22px;
     margin-left: 6px;
-    padding: 0 3px;
+    padding: 2px 3px 0;
     color: #d7c297;
     border: 1px solid #6b5f45;
     border-radius: 11px;
@@ -803,6 +811,8 @@
     color: #ffb3a5;
 }
 .fc-page .fc-clear-all > img {
+    position: relative;
+    top: -3px;
     width: 16px;
     height: 16px;
 }
@@ -889,7 +899,7 @@
 .fc-page .overview {
     display: block;
     max-height: none;
-    columns: 216px;
+    columns: 240px;
     column-gap: 8px;
 }
 .fc-page #active-indices:empty {
@@ -918,14 +928,14 @@
     width: 100%;
     min-width: 0;
     max-width: none;
-    min-height: 32px;
-    margin-top: 3px;
-    padding: 1px 4px;
+    min-height: 36px;
+    margin-top: 4px;
+    padding: 1px 6px;
     color: #e8e2d4;
     background-color: rgba(0, 0, 0, 0.45);
     border: 1px solid #444;
     border-image: none;
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0;
     text-transform: none;
     filter: none;

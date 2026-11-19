@@ -545,18 +545,8 @@
         <div class="factioncreator" id="capture">
             <div class="typeHolder" id="factioncreator">
                 <div class="container fc-sheet">
-                    <!-- the head, on the columns' grid: the sigil and the faction's affinity, the ruler's and race's names, the extra affinity points -->
+                    <!-- the head, on the columns' grid: the ruler's and race's names, the faction's affinity, the extra affinity points -->
                     <div class="fc-head">
-                        <div class="fc-hcol">
-                        <div class="playerSigil">
-                            <img class="shield" id="shield" src="/evolved/Icons/Interface/Sigil.png" width="70" height="70" alt="" />
-                            <img class="symbol" id="symbol" src="/evolved/Icons/Interface/symbol.png" height="45" alt="" />
-                        </div>
-                        <div class="fc-field fc-affinity">
-                            <span class="fc-label">Affinity</span>
-                            <div id="currentAffinity" class="affinityText"></div>
-                        </div>
-                        </div>
                         <div class="fc-hcol">
                         <label class="fc-field">
                             <span class="fc-label">Ruler Name</span>
@@ -566,6 +556,12 @@
                             <span class="fc-label">Race Name</span>
                             <input type="text" value="Race Name" pattern="[a-zA-Z0-9\s]+" class="inputfield" id="fname" maxlength="35" name="fname" />
                         </label>
+                        </div>
+                        <div class="fc-hcol">
+                        <div class="fc-field fc-affinity">
+                            <span class="fc-label">Affinity</span>
+                            <div id="currentAffinity" class="affinityText"></div>
+                        </div>
                         </div>
                         <div class="fc-hcol">
                         <div class="fc-field fc-extra">

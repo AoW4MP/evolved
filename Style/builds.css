@@ -480,10 +480,11 @@
     filter: none;
 }
 
-/* the head on the columns' grid, a column each: the sigil and the faction's affinity (from the Ruler row's left edge),
-   the ruler's and race's names (as wide as the Physical Form row), the extra affinity points (as the Culture row); each
-   field its label over it, the labels on one line. Until 2026-11-19 a line of fields of their own widths, none at a
-   column's edge */
+/* the head on the columns' grid, a column each: the ruler's and race's names (as wide as the Ruler row), the faction's
+   affinity (as the Physical Form row; six on a line), the extra affinity points in a row (as the Culture row), beside
+   the affinity they add to; each field its label over it, the labels on one line, the fields 32px tall. Until 2026-11-19
+   a line of fields of their own widths, none at a column's edge, after the old page's sigil (a shield with a symbol,
+   which nothing set: its pick-list was never opened, nor in the link) */
 .fc-page .fc-head {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -502,22 +503,6 @@
 .fc-page .fc-hcol > .fc-field {
     flex: 1 1 0;
     min-width: 0;
-}
-.fc-page .playerSigil {
-    position: relative;
-    flex: none;
-    align-self: center;
-    width: 70px;
-    height: 70px;
-}
-.fc-page .playerSigil .shield {
-    display: block;
-    float: none;
-}
-/* the symbol on the shield (it was placed by the sheet's corner) */
-.fc-page .playerSigil .symbol {
-    top: 12px;
-    left: 13px;
 }
 .fc-page .fc-field {
     display: flex;
@@ -553,31 +538,35 @@
     margin-right: 6px;
     white-space: nowrap;
 }
-/* the extra points across their column, spread */
+/* the extra points in a row across their column, spread: an affinity's icon and its number as the affinity's line
+   has them, its arrows stacked after them. Until 2026-11-19 the number under the icon, the box 60px tall */
 .fc-page #extraAffinity {
     display: flex;
     justify-content: space-between;
-    gap: 2px;
-    padding: 3px 6px;
+    align-items: center;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0 6px;
     background: rgba(0, 0, 0, 0.35);
     border: 1px solid #3c3c3c;
 }
 .fc-page .fc-extra-one {
     display: flex;
     align-items: center;
+    gap: 2px;
 }
-/* an affinity's number under its icon (5px apart; 2 were too close), between its arrows */
+/* the number 2px lower, the icon back up 1px: Minion's descent set the number 1.5px over the icon's middle */
 .fc-page .fc-extra-one > div:first-child {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
-    min-width: 24px;
-    font-size: 13px;
+    gap: 3px;
+    padding-top: 2px;
+    font-size: 15px;
     line-height: 1;
 }
 .fc-page .fc-extra-one > div:first-child > * {
-    top: 0;
+    top: -1px;
+    max-height: 20px;
 }
 .fc-page .fc-arrows {
     display: flex;
@@ -585,9 +574,16 @@
 }
 .fc-page .AddSubtract {
     margin: 0;
-    padding: 1px;
+    padding: 0;
     line-height: 0;
     cursor: pointer;
+}
+/* the arrows' pictures are 26x43, the arrow in their middle third: 10px wide, cut to it */
+.fc-page .AddSubtract img {
+    display: block;
+    width: 10px;
+    height: 12px;
+    object-fit: cover;
 }
 
 /* three columns of rows, 296px each in the full sheet (922 inside it; a 16px gap made them 296.67, a row's end a third
@@ -1286,9 +1282,9 @@
 
 /* ---------------------------------------------------------------- a phone */
 
-/* the head where the extra points' box (260px) no longer fits a third of the sheet: the sigil and affinity beside the
-   names, the extra points under them; on a phone a column */
-@media (max-width: 920px) {
+/* the head where the extra points' row (270px) no longer fits a third of the sheet: the affinity beside the names, the
+   extra points under them; on a phone a column */
+@media (max-width: 940px) {
     .fc-page .fc-head {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }

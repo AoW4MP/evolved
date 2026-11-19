@@ -420,13 +420,16 @@ Builder" is "Faction Creator", as its page.
   choices, pushing them aside, and the publish form under them, a scroll away.
   - Faction: one sheet, at most 960px wide and centred, redrawn on 2026-11-19 (the old page's markup and its layout
     rules are gone; its ids stay, as `Faction.js` draws into them). Its head is on the columns' grid, a column each
-    (`.fc-hcol`), each field its label over it, the labels on one line: the sigil (its symbol on the shield) and
-    Affinity (an icon and its number kept together, so six affinities break between two of them) from the Ruler row's
-    left edge; Ruler Name and Race Name (were in the columns' heads) as wide as the Physical Form row; Extra Affinity
-    Points (a number 5px under its icon, between its arrows) across the Culture row's width. Until 2026-11-19 a line of
-    fields of their own widths, none at a column's edge. Under 920px (where the extra points' 260px no longer fit a
-    third) the sigil and affinity beside the names, the extra points under them at their own width; under 560px a
-    column. Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
+    (`.fc-hcol`), each field its label over it, the labels on one line, the fields 32px tall: Ruler Name and Race Name
+    (were in the columns' heads) as wide as the Ruler row; Affinity (an icon and its number kept together) as the
+    Physical Form row, six on a line; Extra Affinity Points in a row across the Culture row's width, beside the
+    affinity they add to (each an icon and its number as the affinity's line has them, its arrows stacked after them,
+    cut from their 26x43 pictures to 10x12; the number 2px lower for Minion's descent). Until 2026-11-19 a line of
+    fields of their own widths, none at a column's edge, the extra points' numbers under their icons (a box 60px tall),
+    after the old page's sigil: a shield with a symbol nothing set (`SelectSymbol`'s pick-list was never opened, nor
+    is it in the link), removed on 2026-11-19 at the maintainer's call, its room given to the sixth affinity and the
+    extra points' row. Under 940px (where the extra points' 270px no longer fit a third) the affinity beside the names,
+    the extra points under them at their own width; under 560px a column. Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
     Class, Starting Tome, Ascension, Ambition), the race (Physical Form, Form Traits) and the culture (Culture, its
     sub-choice, Society Traits), a row and the next 8px apart (5 until 2026-11-19; the sheet had the room); then the
     tome path as tiles (the tome, its affinities at the top, its tier and DLC at

@@ -430,8 +430,14 @@ Builder" is "Faction Creator", as its page.
   no skill to start with, and the base game's signature skills, as the Champion.
   Skill points are the game's (2026-11-19; were 24, the starting skill taken off): `Global Hero Settings` gives 1 a
   level and its level table goes to 20 (the game's default most; none at level 1), so 19 (`HERO_SKILL_POINTS`). A
-  signature skill (levels 4, 8, 12, 16, by the signature paths) costs a point (the default cost; the game records that
-  the level gave it one, `FGaveSkillPoint`), so the four don't draw on the 19. The Champion's, Wizard King's and Dragon
+  signature skill (levels 4, 8, 12, 16, by the signature paths) costs none, and each one picked gives a point, for one
+  of the two skills behind it (the maintainer's word on the game; the game records that a signature skill gave its
+  point, `FGaveSkillPoint`): 23 with all four. For a few hours on 2026-11-19 the builder took a signature skill to cost
+  the point its level gave, and stayed at 19. The pick-list of a slot with one has Remove (a point less); removing or
+  replacing one takes the skills chosen behind it with it, their points back (they stayed spent, though their nodes
+  went). A share link names the signature skills by slot, an empty one empty (`c9::cb`), and reading one empties the
+  slots first: they were listed without the empty ones, so a removed slot's followers came back a slot early, and Copy
+  Share Link, which reads its own link back, left a slot the link left empty as it was. Old links read as before. The Champion's, Wizard King's and Dragon
   Lord's starting skills are on their ruler's unit and Enthralling Presence in every Eldritch Sovereign's loadout, none
   of which can be refunded ("Can Be Respecced" false): free (`FREE_STARTING_SKILLS`). An Elder Vampire's is its
   class's (the "Vampire Lord - Starting Hero Skill Script" learns it with `LearnRespeccableSkill`: Draining Bite for the

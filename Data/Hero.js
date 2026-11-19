@@ -7,8 +7,9 @@ var rulerSubType = "OrderDragon";
 let currentSelectedSkillsArray = [];
 var currentsignatureSelectionsArray = [];
 // A hero's skill points, as the game gives them (Global Hero Settings, read with aow4_diff_tools; 2026-11-19): 1 a level
-// from level 2 to 20 (the default most; none at level 1), 19. A signature skill (levels 4, 8, 12, 16) costs a point,
-// which its own level gives, so the four don't draw on these
+// from level 2 to 20 (the default most; none at level 1), 19. A signature skill (levels 4, 8, 12, 16) costs none, and
+// each one picked gives a point, for one of the two skills behind it (the maintainer's word on the game): 23 with all
+// four (RecountSkillPoints)
 const HERO_SKILL_POINTS = 19;
 // the starting skills a ruler is made with, which cost no point and can't be refunded ("Can Be Respecced" false): the
 // Champion's, Wizard King's and Dragon Lord's are on their ruler's unit, Enthralling Presence is in every Eldritch
@@ -96,19 +97,11 @@ function GetQuickLinkHero() {
     }
     code += ",";
 
-    // 3 signatures
-    if (signature1 != "") {
-        code += decimalToHex(LookUpHeroTableData(signature1));
-    }
-    if (signature2 != "") {
-        code += ":" + decimalToHex(LookUpHeroTableData(signature2));
-    }
-    if (signature3 != "") {
-        code += ":" + decimalToHex(LookUpHeroTableData(signature3));
-    }
-    if (signature4 != "") {
-        code += ":" + decimalToHex(LookUpHeroTableData(signature4));
-    }
+    // 3 signatures, each in its slot's place, an empty slot empty ("c9::cb"; trailing empties dropped): they were listed
+    // without the empty ones, so a removed slot's followers came back a slot early
+    const slots = [signature1, signature2, signature3, signature4].map((x) => (x !== "" && x !== undefined && x !== null ? decimalToHex(LookUpHeroTableData(x)) : ""));
+    while (slots.length && slots[slots.length - 1] === "") slots.pop();
+    code += slots.join(":");
     code += ",";
     //4 sigskills
     for (let index = 0; index < currentsignatureSelectionsArray.length; index++) {
@@ -277,15 +270,18 @@ function LookupCode(code) {
         }
     }
 
-    // 3 = signatures
+    // 3 = signatures, by slot (an empty one empty). The slots are emptied first: Copy Share Link reads its own link back,
+    // and a slot the link leaves empty kept what it had
+    signature1 = signature2 = signature3 = signature4 = "";
     var sigs = splitcode[3];
     // 4 sigs or less
     var signatures = sigs.split(":");
     //  console.log(signatures);
 
-    if (signatures[0] != "") {
+    {
         for (let index = 0; index < signatures.length; index++) {
             let number = signatures[index];
+            if (!number) continue;
             let numbernew = jsonBuilderHeroLookUp[hexToDecimal(number)].resid;
 
             if (index == 0) {
@@ -908,6 +904,15 @@ function BuildChoicesPanel(choiceslist, originButton, slot, evt) {
     const panel = document.getElementById("choicesPanel");
     panel.innerHTML = "";
 
+    // a slot with a signature skill can have none again, giving back its point and the points of what is behind it
+    if ([signature1, signature2, signature3, signature4][slot - 1]) {
+        const remove = document.createElement("BUTTON");
+        remove.className = "list-button hbb-remove";
+        remove.textContent = "Remove this signature skill";
+        remove.addEventListener("click", () => ClearAndSetSignature(null, originButton, slot));
+        panel.appendChild(remove);
+    }
+
     choiceslist.forEach((choice) => {
         const choiceNode = document.createElement("BUTTON");
         const thisSkill = ReturnHeroSkillItself(null, choice.resid);
@@ -925,24 +930,23 @@ function BuildChoicesPanel(choiceslist, originButton, slot, evt) {
    
 }
 
+// a slot's signature skill picked (or none: removed). The skills chosen behind the one it replaces go with it, and their
+// points come back; the points follow (a signature skill picked gives one)
 function ClearAndSetSignature(chosenSkill, origin, slot) {
-    if (slot == 1) {
-        signature1 = chosenSkill.resid;
-
-        SetBaseSignatureChoices(200, 100, 0, signature1, 1);
-    } else if (slot == 2) {
-        signature2 = chosenSkill.resid;
-
-        SetBaseSignatureChoices(200, 300, 0, signature2, 2);
-    } else if (slot == 3) {
-        signature3 = chosenSkill.resid;
-
-        SetBaseSignatureChoices(200, 500, 0, signature3, 3);
-    } else if (slot == 4) {
-        signature4 = chosenSkill.resid;
-        SetBaseSignatureChoices(200, 700, 0, signature4, 4);
-        //  console.log("signature4 " + signature4 + " " + chosenSkill.resid + " " + slot);
+    const old = [signature1, signature2, signature3, signature4][slot - 1];
+    if (old) {
+        const oldSkill = ReturnHeroSkillItself(null, old);
+        const gone = new Set((oldSkill ? GetSignatureSkillUnlocks(oldSkill) : []).filter(Boolean).map((x) => String(x.resid)));
+        currentsignatureSelectionsArray = currentsignatureSelectionsArray.filter((r) => !gone.has(String(r)));
     }
+    const value = chosenSkill ? chosenSkill.resid : "";
+    if (slot == 1) signature1 = value;
+    else if (slot == 2) signature2 = value;
+    else if (slot == 3) signature3 = value;
+    else if (slot == 4) signature4 = value;
+    SetBaseSignatureChoices(200, 100 + (slot - 1) * 200, 0, value, slot);
+    if (!chosenSkill) closePanel();
+    UpdateSkillPoints();
 }
 
 function closePanel() {
@@ -996,6 +1000,7 @@ function setSignatureSelection(chosenSkill, origin, slot, holder, treespace) {
 
         BuildSkillTreeEntry(skill2, row, holder, treespace, extraOffset2);
     }
+    UpdateSkillPoints();
 }
 
 function GetSignatureSkillUnlocks(currentSig) {
@@ -1445,12 +1450,18 @@ function toggleNodeSelection(nodeData, nodeElement, isSig) {
     // CreateSummary();
 }
 
-// the points left: the 19, less a point for each skill chosen (in the trees or under a signature skill), each once, the
-// ruler's free starting skill not. Counted from the lists, as the old count by steps took the starting skill twice
+// the signature skills picked, their slots' in order
+function SignaturesPicked() {
+    return [signature1, signature2, signature3, signature4].filter((x) => x !== "" && x !== undefined && x !== null);
+}
+
+// the points left: the 19 and a point for each signature skill picked, less a point for each skill chosen (in the trees or
+// under a signature skill), each once, the ruler's free starting skill not. Counted from the lists, as the old count by
+// steps took the starting skill twice
 function RecountSkillPoints() {
     const chosen = new Set([...currentSelectedSkillsArray, ...currentsignatureSelectionsArray].map(String));
     chosen.delete(String(FREE_STARTING_SKILLS[rulerOrigin]));
-    currentSkillPoints = HERO_SKILL_POINTS - chosen.size;
+    currentSkillPoints = HERO_SKILL_POINTS + SignaturesPicked().length - chosen.size;
 }
 
 function UpdateSkillPoints() {

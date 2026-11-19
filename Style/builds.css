@@ -596,6 +596,8 @@
     border: 1px solid #444;
     border-image: none;
     background-color: rgba(0, 0, 0, 0.45);
+    /* a button doesn't take the page's font */
+    font-family: inherit;
 }
 .selectionsHolder .list-button:hover {
     border-color: #d7c297;
@@ -747,6 +749,13 @@
     text-align: center;
     text-transform: uppercase;
     text-shadow: 2px 2px black;
+}
+/* the pick-list of signature skills: Remove, when the slot has one, across the list's top */
+.selectionsHolder .hbb-remove {
+    grid-column: 1 / -1;
+    justify-content: center;
+    padding: 8px;
+    color: #ef9a9a;
 }
 /* the pick-list of signature skills: its entries' names */
 .hbb-page ~ .selectionsHolder .list-name,

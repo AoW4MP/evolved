@@ -27,7 +27,7 @@
 
 const SHEET = "Builds";
 const COLUMNS = ["Id", "Created", "Updated", "Dataset", "Name", "Code", "Tags", "Notes", "Views", "Owner", "Hidden"];
-const TAGS = ["Roleplay", "Theme", "PVP", "Casual", "Hardcore"];
+const TAGS = ["Roleplay", "Theme", "PvP", "Casual", "Hardcore"];
 const LIMITS = { name: 80, notes: 5000, code: 1000, dataset: 40, key: 100, perOwner: 100 };
 // the edit key is hashed with this in front, as Data/builds.js does (BdOwner)
 const OWNER_SALT = "evolved-builds:";
@@ -246,7 +246,8 @@ function Code(value) {
     return code;
 }
 
+// the tags picked that are TAGS, in its spelling and order, whatever their case ("PVP" is PvP)
 function Tags(value) {
-    const picked = String(value || "").split(",").map((t) => t.trim());
-    return TAGS.filter((t) => picked.includes(t));
+    const picked = String(value || "").split(",").map((t) => t.trim().toLowerCase());
+    return TAGS.filter((t) => picked.includes(t.toLowerCase()));
 }

@@ -6,7 +6,7 @@
 // the web app's address (…/exec), deployed 2026-11-19; empty, the list and the publish form say the list isn't open
 const BD_API = "https://script.google.com/macros/s/AKfycbzU2TMnODTRyjqaGosINF7qGdiV0xZa5D3WSrqtd-YpVI7AS6jkD2D9AsLdVC_rmX82yA/exec";
 // the tags a build can have, as Server/builds.gs keeps them
-const BD_TAGS = ["Roleplay", "Theme", "PVP", "Casual", "Hardcore"];
+const BD_TAGS = ["Roleplay", "Theme", "PvP", "Casual", "Hardcore"];
 // the edit key is hashed with this in front, as Server/builds.gs does (Owner)
 const BD_OWNER_SALT = "evolved-builds:";
 
@@ -153,11 +153,17 @@ function BdGeneratedName(build) {
     return [build.culture.name, build.form.name, build.heroClass?.name].filter(Boolean).join(" ");
 }
 
+// a build's tags in BD_TAGS' spelling, whatever the store has ("PVP", before the store spelled it PvP)
+function BdTags(tags) {
+    return BD_TAGS.filter((t) => tags.some((x) => x.toLowerCase() === t.toLowerCase()));
+}
+
 // a published build for the list: the store's build, what its code holds, whether it is the visitor's
 function BdModel(b, mine) {
     const build = BdDecode(b.code);
     return {
         ...b,
+        tags: BdTags(b.tags),
         build,
         title: b.name || (build ? BdGeneratedName(build) : "A build"),
         // WmBoard searches a thing's name and its card's text
@@ -574,7 +580,7 @@ async function BdOpenBuild(panel) {
         panel.querySelector("#bdName").value = bdOpened.name;
         panel.querySelector("#bdNotes").value = bdOpened.notes;
         panel.querySelector("#bdNotes").dispatchEvent(new Event("input"));
-        panel.querySelectorAll("#bdTags .wm-choice").forEach((b) => b.classList.toggle("selected", bdOpened.tags.includes(b.textContent)));
+        panel.querySelectorAll("#bdTags .wm-choice").forEach((b) => b.classList.toggle("selected", BdTags(bdOpened.tags).includes(b.textContent)));
     }
     BdShowOpened();
 }
@@ -586,7 +592,7 @@ function BdShowOpened() {
     shown.hidden = false;
     shown.querySelector(".bd-shown-name").textContent = bdOpened.name || "A published build";
     const facts = [bdOpened.dataset, bdOpened.views + (bdOpened.views === 1 ? " view" : " views")];
-    if (bdOpened.tags.length) facts.push(bdOpened.tags.join(", "));
+    if (bdOpened.tags.length) facts.push(BdTags(bdOpened.tags).join(", "));
     if (bdOpened.mine) facts.push("yours");
     if (bdOpened.dataset !== BdDataset()) facts.push("made on an older version of the game");
     shown.querySelector(".bd-shown-facts").textContent = facts.join(" · ");

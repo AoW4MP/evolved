@@ -385,7 +385,8 @@ smudge at 20px. The menu's "Faction Builder" is "Faction Creator", as its page.
     kept). Pruning a build: delete its row, or type anything in Hidden to keep it out of the list. Owner is a SHA-256 hash
     of the publisher's edit key (salted with `evolved-builds:`, `BdOwner` and `Owner` alike), so no key is stored or shown;
     the list knows a visitor's own builds by hashing theirs. A key publishes at most 100 builds, not the same build twice;
-    a name is 80 characters at most, notes 5,000, the tags those of `BD_TAGS`. Writes are POSTs (a form's body, so
+    a name is 80 characters at most, notes 5,000, the tags those of `BD_TAGS`, whatever their case (the first deployment
+    spelled PvP "PVP"; the site and the script read either as PvP). Writes are POSTs (a form's body, so
     nothing asks first) under a lock; the list is a GET.
   - **A new DLC or beta:** change the top strip's `data-dataset` (One dataset, above). Each build keeps the dataset it was
     published or last saved on: the list opens on the current one's builds (its tab named after it, with the DLC's icon),

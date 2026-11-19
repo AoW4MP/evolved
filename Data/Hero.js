@@ -12,11 +12,12 @@ var currentsignatureSelectionsArray = [];
 const HERO_SKILL_POINTS = 19;
 // the starting skills a ruler is made with, which cost no point and can't be refunded ("Can Be Respecced" false): the
 // Champion's, Wizard King's and Dragon Lord's are on their ruler's unit, Enthralling Presence is in every Eldritch
-// Sovereign's loadout. The others' cost a point and can be refunded (ResetSkills presets them): a Giant King's is its
-// loadout's (by its weapon: the obelisk's Conjure Sword, preset by clan, or an axe's or warhammer's Hurl), an Elder
-// Vampire's its class's (the "Vampire Lord - Starting Hero Skill Script" learns it as respeccable: Draining Bite for a
-// melee class, Siphon Blood for the others), and an Eldritch Sovereign has a second, its loadout's (Delirium, Eldritch
-// Rituals, Eldritch Phase I or Desperate Anguish), which the builder leaves to be chosen. A hero has none
+// Sovereign's loadout. The others' cost a point and can be refunded: an Elder Vampire's is its class's, which
+// ResetSkills presets (the "Vampire Lord - Starting Hero Skill Script" learns it as respeccable: Draining Bite for a
+// melee class, Siphon Blood for the others); a Giant King's is its loadout's, by its weapon (an obelisk's Conjure Sword,
+// an axe's or warhammer's Hurl), and an Eldritch Sovereign has a second, its loadout's (Delirium, Eldritch Rituals,
+// Eldritch Phase I or Desperate Anguish): the builder doesn't know the loadout, so these are left to be chosen. A hero
+// has none
 const FREE_STARTING_SKILLS = { Champion: 4273492481388, Wizard: 5111011084976, Dragon: 4273492487240, Eldritch: 5046586576674 };
 // the classes the game tags HeroClassRange.MeleeClass (their Archetypes): an Elder Vampire of these starts with Draining
 // Bite, of the others (RangedClass) with Siphon Blood
@@ -188,23 +189,9 @@ function ResetSkills() {
         currentSelectedSkillsArray = [5046586576674];
         currentSkillPoints--;
     } else if (rulerOrigin == "Giant") {
-        if (rulerSubType == "GiantFire") {
-            // fire summon
-            currentSelectedSkillsArray = [5046586578740];
-        }
-        if (rulerSubType == "GiantFrost") {
-            // fire summon
-            currentSelectedSkillsArray = [5046586582508];
-        }
-        if (rulerSubType == "GiantStorm") {
-            // fire summon
-            currentSelectedSkillsArray = [5046586578726];
-        }
-        if (rulerSubType == "GiantRock") {
-            // fire summon
-            currentSelectedSkillsArray = [5046586578733];
-        }
-        currentSkillPoints--;
+        // its loadout's, by its weapon (an obelisk's Conjure Sword, an axe's or warhammer's Hurl), which the builder
+        // doesn't know: left to be chosen, as the Eldritch Sovereign's loadout skill
+        currentSelectedSkillsArray = [];
     } else if (rulerOrigin == "Vampire") {
         // its class's: Draining Bite for a melee class, Siphon Blood for the others
         currentSelectedSkillsArray = [VAMPIRE_MELEE_CLASSES.includes(rulerClass) ? VAMPIRE_DRAINING_BITE : VAMPIRE_SIPHON_BLOOD];

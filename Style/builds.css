@@ -806,6 +806,23 @@
 .fc-page .fc-clearable > .fc-slot {
     padding-right: 34px;
 }
+/* a cross that removes (an Ascension's, an Ambition's, a path tome's, Clear All's): a crisp cross in a dark ring, its
+   red brighter under the mouse. Until 2026-11-19 the game's CloseX orb (dark red glass, 300px) at 15-16px, a muddy
+   dot; the pick-list's close keeps it, larger */
+.fc-page .fc-x {
+    display: block;
+    flex: none;
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 2l8 8M10 2l-8 8' stroke='%23ff8a7a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center / 10px no-repeat rgba(0, 0, 0, 0.7);
+    border: 1px solid #b0503f;
+    border-radius: 50%;
+}
+.fc-page :hover > .fc-x {
+    background-color: rgba(120, 32, 22, 0.75);
+    border-color: #ff8a7a;
+}
 .fc-page .fc-clear {
     position: absolute;
     top: 50%;
@@ -814,16 +831,8 @@
     padding: 3px;
     background: none;
     border: 0;
-    opacity: 0.75;
     cursor: pointer;
     transform: translateY(-50%);
-}
-.fc-page .fc-clear:hover {
-    opacity: 1;
-}
-.fc-page .fc-clear > img {
-    width: 16px;
-    height: 16px;
 }
 .fc-page .fc-clearable:has(img.padded-image) > .fc-clear {
     display: none;
@@ -858,11 +867,9 @@
 .fc-page .fc-clear-all:hover {
     border-color: #d7c297;
 }
-.fc-page .fc-clear-all > img {
+.fc-page .fc-clear-all > .fc-x {
     position: relative;
     top: -2px;
-    width: 15px;
-    height: 15px;
 }
 .fc-page #tomePathButton {
     display: flex;
@@ -918,7 +925,15 @@
 .fc-page .tome-remove-btn {
     top: 2px;
     right: 2px;
-    padding: 1px;
+    padding: 0;
+    line-height: 0;
+    background: none;
+    border-radius: 50%;
+}
+.fc-page .tome-remove-btn > .fc-x {
+    width: 20px;
+    height: 20px;
+    background-size: 11px;
 }
 .fc-page .tome-warning-icon {
     top: 2px;

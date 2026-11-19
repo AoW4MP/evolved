@@ -759,7 +759,7 @@ function SetTomePathInfoSmall(buttonHolder, origin, index, isInvalid) {
 
     if (index > 0) {
         let removeBtn = document.createElement("div");
-        removeBtn.innerHTML = "<img src='/evolved/Icons/Interface/CloseX.png' height='15px' />";
+        removeBtn.innerHTML = "<span class='fc-x'></span>"; // a crisp cross in a ring (builds.css); the CloseX orb was a dark dot at 15px
         removeBtn.className = "tome-remove-btn";
         removeBtn.addEventListener("click", function (e) {
             e.stopPropagation();

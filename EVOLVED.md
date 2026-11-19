@@ -451,7 +451,10 @@ Builder" is "Faction Creator", as its page.
     Ascension or Ambition without a choice is a dashed row (the latter two with their label; a cross removes one).
     A choice that doesn't apply takes no row (`:empty`). A row's affinity icons are 20px, as its DLC tag (the text's
     15px were small beside it). Minion Pro's deep descent sets words about 3px high in a box: the names' fields have
-    more padding at the top, and Clear All (the site's button, `wm-sort`, since 2026-11-19; was small red words) has
+    more padding at the top, A cross that removes (an Ascension's, an Ambition's, a
+    path tome's on its tile, Clear All's) is `.fc-x`, a crisp cross drawn in CSS in a dark ring, its red brighter
+    under the mouse; until 2026-11-19 the game's CloseX orb (dark red glass) at 15-16px, a muddy dot (the pick-list's
+    close keeps it, larger). and Clear All (the site's button, `wm-sort`, since 2026-11-19; was small red words) has
     4px more room over its words, its cross raised 2px to their middle; an affinity icon's own 3px drop (icons.css)
     is undone in the extra points, where it ran into the number. The sheet is on whole pixels, so a ring's number is
     centred on its ring: borders are drawn snapped to whole pixels and words aren't, so a box at a fraction of a pixel

@@ -311,7 +311,8 @@ function selectOrigin(origin, type) {
         originButton.textContent = "";
     }
 
-    SetButtonInfo(originButton, origin, type, true);
+    // the slot shows the choice alone: the pick-list's flag (true) gave it the list's "+" (Dominator +)
+    SetButtonInfo(originButton, origin, type, false);
 
     // assign current selection
     switch (type) {

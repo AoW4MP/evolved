@@ -426,7 +426,9 @@ Builder" is "Faction Creator", as its page.
     another is indented by one step, 24px: the page's were 30px, the form traits 36px, a Vision's reading's words without
     its picture's room, and an empty Ascension or Ambition a small plus (now a dashed box, as the tome path's). A choice
     that doesn't apply (a dragon type for a Champion) and the empty button over the tome path take no row (`:empty`).
-    The columns' headings and the ruler's and race's names are one line of one height.
+    The columns' headings and the ruler's and race's names are one line of one height. A choice picked from its
+    pick-list shows without the list's "+" (`selectOrigin` drew the slot as a list entry: "Dominator +"; a build
+    opened from a link never had it).
   - Overview: Reset and Show/Hide non-★ over the groups, in balanced columns (`columns: 216px`).
   - Publish: Publish to the Builds List (`BdPublishPanel`): name, tags, notes with a preview, the edit key; Publish, or
     Save Changes for the visitor's own build.

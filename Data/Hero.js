@@ -6,7 +6,24 @@ var rulerClass = "Warrior";
 var rulerSubType = "OrderDragon";
 let currentSelectedSkillsArray = [];
 var currentsignatureSelectionsArray = [];
-var currentSkillPoints = 24;
+// A hero's skill points, as the game gives them (Global Hero Settings, read with aow4_diff_tools; 2026-11-19): 1 a level
+// from level 2 to 20 (the default most; none at level 1), 19. A signature skill (levels 4, 8, 12, 16) costs a point,
+// which its own level gives, so the four don't draw on these
+const HERO_SKILL_POINTS = 19;
+// the starting skills a ruler is made with, which cost no point and can't be refunded ("Can Be Respecced" false): the
+// Champion's, Wizard King's and Dragon Lord's are on their ruler's unit, Enthralling Presence is in every Eldritch
+// Sovereign's loadout. The others' cost a point and can be refunded (ResetSkills presets them): a Giant King's is its
+// loadout's (by its weapon: the obelisk's Conjure Sword, preset by clan, or an axe's or warhammer's Hurl), an Elder
+// Vampire's its class's (the "Vampire Lord - Starting Hero Skill Script" learns it as respeccable: Draining Bite for a
+// melee class, Siphon Blood for the others), and an Eldritch Sovereign has a second, its loadout's (Delirium, Eldritch
+// Rituals, Eldritch Phase I or Desperate Anguish), which the builder leaves to be chosen. A hero has none
+const FREE_STARTING_SKILLS = { Champion: 4273492481388, Wizard: 5111011084976, Dragon: 4273492487240, Eldritch: 5046586576674 };
+// the classes the game tags HeroClassRange.MeleeClass (their Archetypes): an Elder Vampire of these starts with Draining
+// Bite, of the others (RangedClass) with Siphon Blood
+const VAMPIRE_MELEE_CLASSES = ["Warrior", "Defender", "Death Knight", "Spellblade"];
+const VAMPIRE_DRAINING_BITE = 5046586584708;
+const VAMPIRE_SIPHON_BLOOD = 5046586584725;
+var currentSkillPoints = HERO_SKILL_POINTS;
 
 const exclusionListElementalistDisplines = [5222680233915, 5222680233899, 5222680233884, 5222680233875];
 const exclusionListElementalistFinalSkills = [5222680234221, 5222680234241, 5222680234248, 5222680234256];
@@ -65,9 +82,10 @@ function GetQuickLinkHero() {
     // 1 class
 
     code += rulerClass + ",";
-    //2 skills
-    for (let index = 0; index < currentSelectedSkillsArray.length; index++) {
-        var number = decimalToHex(LookUpHeroTableData(currentSelectedSkillsArray[index]));
+    //2 skills, each once
+    const chosenSkills = [...new Set(currentSelectedSkillsArray.map(String))].map(Number);
+    for (let index = 0; index < chosenSkills.length; index++) {
+        var number = decimalToHex(LookUpHeroTableData(chosenSkills[index]));
         //console.log(number);
         if (index == 0) {
             code += number;
@@ -130,7 +148,7 @@ function ResetAll() {
     ResetSkills();
 
     ResetSignatures();
-    currentSkillPoints = 24;
+    currentSkillPoints = HERO_SKILL_POINTS;
     UpdatePage();
 
     SetStartingSkillsSelection();
@@ -187,7 +205,10 @@ function ResetSkills() {
             currentSelectedSkillsArray = [5046586578733];
         }
         currentSkillPoints--;
-    } else if (rulerOrigin == "Vampire" || rulerOrigin == "Hero") {
+    } else if (rulerOrigin == "Vampire") {
+        // its class's: Draining Bite for a melee class, Siphon Blood for the others
+        currentSelectedSkillsArray = [VAMPIRE_MELEE_CLASSES.includes(rulerClass) ? VAMPIRE_DRAINING_BITE : VAMPIRE_SIPHON_BLOOD];
+    } else if (rulerOrigin == "Hero") {
         currentSelectedSkillsArray = [];
         // no preset skills
     }
@@ -203,7 +224,7 @@ function ResetSignatures() {
 }
 
 function LookupCode(code) {
-    currentSkillPoints = 24;
+    currentSkillPoints = HERO_SKILL_POINTS;
     code = code.replaceAll("%20", " ");
     var splitcode = code.split(",");
     // console.log("Splitcode" + splitcode);
@@ -1427,18 +1448,8 @@ function toggleNodeSelection(nodeData, nodeElement, isSig) {
             }
         });
         if (allowedToDisable) {
-            // dont turn off skill if its the starting ones
-            if (
-                nodeData.resid == 4273492481388 ||
-                nodeData.resid == 5111011084976 ||
-                nodeData.resid == 4273492487240 ||
-                nodeData.resid == 5046586576674 ||
-                // giant skills
-                nodeData.resid == 5046586578740 ||
-                nodeData.resid == 5046586582508 ||
-                nodeData.resid == 5046586578726 ||
-                nodeData.resid == 5046586578733
-            ) {
+            // a ruler's free starting skill can't be refunded; a Giant King's, which costs a point, can
+            if (Object.values(FREE_STARTING_SKILLS).some((r) => String(r) === String(nodeData.resid))) {
                 return;
             }
             deactivateNode(nodeElement, nodeData, isSig);
@@ -1447,7 +1458,16 @@ function toggleNodeSelection(nodeData, nodeElement, isSig) {
     // CreateSummary();
 }
 
+// the points left: the 19, less a point for each skill chosen (in the trees or under a signature skill), each once, the
+// ruler's free starting skill not. Counted from the lists, as the old count by steps took the starting skill twice
+function RecountSkillPoints() {
+    const chosen = new Set([...currentSelectedSkillsArray, ...currentsignatureSelectionsArray].map(String));
+    chosen.delete(String(FREE_STARTING_SKILLS[rulerOrigin]));
+    currentSkillPoints = HERO_SKILL_POINTS - chosen.size;
+}
+
 function UpdateSkillPoints() {
+    RecountSkillPoints();
     var skillPointDiv = document.getElementById("currentSkillPoints");
     skillPointDiv.innerHTML = currentSkillPoints.toString();
 

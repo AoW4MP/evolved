@@ -427,7 +427,21 @@ Builder" is "Faction Creator", as its page.
   page). After the six ruler types, Hero: a hero who isn't the ruler (`?u=Hero,…`; 2026-11-19, the maintainer's word on
   the game) has the Champion's tree without the ruler's own skills, Command and those that require it (Coordinated and
   Decisive Command: `HERO_RULER_ONLY` and `RulerOnlySkills` in `Hero.js`, as the data marks none of them the ruler's),
-  no skill to start with (all 24 points), and the base game's signature skills, as the Champion. The buttons: each sets
+  no skill to start with, and the base game's signature skills, as the Champion.
+  Skill points are the game's (2026-11-19; were 24, the starting skill taken off): `Global Hero Settings` gives 1 a
+  level and its level table goes to 20 (the game's default most; none at level 1), so 19 (`HERO_SKILL_POINTS`). A
+  signature skill (levels 4, 8, 12, 16, by the signature paths) costs a point (the default cost; the game records that
+  the level gave it one, `FGaveSkillPoint`), so the four don't draw on the 19. The Champion's, Wizard King's and Dragon
+  Lord's starting skills are on their ruler's unit and Enthralling Presence in every Eldritch Sovereign's loadout, none
+  of which can be refunded ("Can Be Respecced" false): free (`FREE_STARTING_SKILLS`). A Giant King's is its loadout's,
+  by its weapon (the obelisk's Conjure Sword, preset by clan; an axe's or warhammer's Hurl), and an Elder Vampire's its
+  class's (the "Vampire Lord - Starting Hero Skill Script" learns it with `LearnRespeccableSkill`: Draining Bite for the
+  classes tagged `HeroClassRange.MeleeClass`, Warrior, Defender, Death Knight and Spellblade, Siphon Blood for the
+  others; until then the builder gave the Elder Vampire none): both cost a point and can be deselected, a refund. An
+  Eldritch Sovereign's loadout gives a second skill too (Delirium, Eldritch Rituals, Eldritch Phase I or Desperate
+  Anguish, by loadout), which can be refunded and which the builder leaves to be chosen. The points are counted from
+  what is chosen (`RecountSkillPoints`), each skill once: the old count by steps took the starting skill twice, and a
+  share link named it twice. The buttons: each sets
   its select, which stays hidden as `Hero.js` reads and sets it, and tells it as choosing did; `HbbSync` shows what `Hero.js` holds (a Dragon Lord's Ranger is a Warrior, which the old select didn't show) and greys
   the classes a ruler type can't be, for a hero opened from a link too (only a change of ruler type did). Skill Points
   and Build Name beside them. The trees are headed by what they are ("Chaos Dragon Skills", "Warrior Skills", "Signature

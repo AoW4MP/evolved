@@ -57,6 +57,12 @@
                     HbbTrim();
                     HbbFit();
                 };
+                // and each time a signature skill is picked or removed: the signature column's room
+                const hbbSetSignature = setSignatureSelection;
+                setSignatureSelection = function () {
+                    hbbSetSignature.apply(this, arguments);
+                    HbbSigRoom();
+                };
                 window.addEventListener("resize", HbbFit);
                 
                 // Get the dropdown element
@@ -296,8 +302,7 @@
             // in by that, less 10px, its nodes and lines with it (they are placed in the same wrapper).
             // The trees start 50-65px down too, and the signature slots 110px: all three columns are pulled up by the same
             // amount, the first row 10px under its heading, the rows of the three level as they were. The signature column's
-            // nodes are placed absolutely, down to 830px (the fourth slot's picked skill: its 100px picture overhangs its
-            // node), so its wrapper, pulled up with the others, is given that height and the 20px more the trees have under them
+            // nodes are placed absolutely, so it is given their room (HbbSigRoom)
             function HbbTrim() {
                 for (const [column, holderId] of [["hbbRulerTree", "treeHolder"], ["hbbClassTree", "treeHolderClass"]]) {
                     const holder = document.getElementById(holderId);
@@ -321,7 +326,20 @@
                     const sigWrapper = document.querySelector(".hbb-tree-sig").lastElementChild;
                     sigWrapper.style.marginTop = -up - Math.round(off) + "px";
                 }
-                document.querySelector(".hbb-tree-sig").lastElementChild.style.minHeight = "856px";
+                HbbSigRoom();
+            }
+
+            // The signature column as tall as what it shows: its nodes are placed absolutely, so it had no height of its own,
+            // and a picked skill's picture overhangs its node. Measured each time the trees are made and a signature skill
+            // is picked or removed, its lowest node and picture, 7px more (31px to the frame's edge, as under the trees). A
+            // fixed room for the lowest a skill can go left 100px empty under fewer
+            function HbbSigRoom() {
+                const column = document.querySelector(".hbb-tree-sig").lastElementChild;
+                const zoom = Number(document.getElementById("treespace").style.zoom) || 1;
+                column.style.minHeight = "";
+                const top = column.getBoundingClientRect().top;
+                const lowest = Math.max(0, ...[...column.querySelectorAll(".unittype_ic, .unittype_ic img")].map((n) => n.getBoundingClientRect().bottom - top));
+                column.style.minHeight = Math.ceil(lowest / zoom) + 7 + "px";
             }
 
             // The trees as large as the room allows, at most their own size and at least 60% (a phone's still scroll, their

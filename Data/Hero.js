@@ -1203,6 +1203,12 @@ function BuildSkillTreeEntry(currentSkill, row, holder, treespace, extraOffset, 
         form = "shield";
     }
 
+    // a round or shield node (70px) 5px further right: a square's (59px, 10px right) and a diamond's (90px, 5px left)
+    // centres were 5px right of its, so a column of mixed shapes stood crooked (Purging Strikes over Still as Stone)
+    if (form === "circle" || form === "shield") {
+        leftPosition += 5;
+    }
+
     let newNode = document.createElement("DIV");
 
     // Convert the x and y coordinates to pixel positions

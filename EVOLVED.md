@@ -462,8 +462,14 @@ Builder" is "Faction Creator", as its page.
   skill level with the class tree's first row. Their
   tops are trimmed the same way: they start 50-65px down and the page put them 20px lower still (70-85px under their
   headings, the signature slots 123px), so the three columns are pulled up alike, the first row 10px under its heading;
-  the frame's 120px under the trees is 24px, and the signature column, whose nodes are placed absolutely, is given its
-  height (the fourth slot's picked skill reaches 830px: its 100px picture overhangs its node). `HbbFit`
+  the frame's 120px under the trees is 24px, and the signature column, whose nodes are placed absolutely (it had no
+  height of its own), is as tall as what it shows: measured each time the trees are made and a signature skill is
+  picked or removed (`HbbSigRoom`; the page wraps `setSignatureSelection`), its lowest node or picture (a picked skill's
+  100px picture overhangs its node) and 7px. A fixed room missed that the slots' holders are inline blocks, each a line
+  lower than the last, so a fourth slot's lower skill hung out of the frame with a scroll bar (Still as Stone).
+  A round or shield node is placed 5px further right (`BuildSkillTreeEntry`): a square's and a diamond's centres stood
+  5px right of a round one's, so a column of mixed shapes was crooked in every tree (Purging Strikes over Still as
+  Stone, a Warrior column). `HbbFit`
   then zooms them to the room, down to 60% (1000px wide fits most ruler types; a phone scrolls them by themselves). For
   the zoom `resizeParentToFitChildren` in `Hero.js` measures the nodes by their places in their tree (`offsetLeft`...),
   which `zoom` leaves as they are: by their boxes on screen, as it did, the zoomed trees came out too narrow and

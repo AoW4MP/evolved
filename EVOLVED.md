@@ -363,8 +363,10 @@ Druidic Terraformers, Arcane Surge and the Sprint medal, which are gone from `Dr
 with title icons: `FactionCreator.png` is the creator panel's own shield and symbol (`Icons/Interface/Sigil.png`,
 `symbol.png`), drawn as the panel draws them, 85px as it is solid; `HeroBuilder.png` the radial menu's Heroes glyph, the
 winged helmet (`RadialMenu_Heroes`, `[INTERFACEASSETS]TXA\32?14`; a neighbour's edge at its left cut away, trimmed at
-alpha 60 as its shadow fills the box), 93px; `BuildsList.png` the Tomes screen's bookshelf (`Tome_bookshelf_default`,
-`TXA\8?58`, trimmed at alpha 100 for its glow), 93px. The menu's "Faction Builder" is "Faction Creator", as its page.
+alpha 60 as its shadow fills the box), 93px; `BuildsList.png` the Lore button's quill, lit
+(`Button_Lore_OVER`, `[INTERFACEASSETS]TXA\6?664`: whiter than `_DEFAULT`'s, as the shield and helmet beside it), ringed, 104px; for a
+few hours on 2026-11-19 it was the Tomes screen's bookshelf (`Tome_bookshelf_default`), whose small dark books were a
+smudge at 20px. The menu's "Faction Builder" is "Faction Creator", as its page.
 
 - **Builds List: Evolved's own store.** Until 2026-11-19 the list read MinionsArt's (a Google Apps Script web app over a
   Google Sheet, `script.google.com/macros/s/AKfycbz5r36…/exec`) and the Faction Creator published there: 3,597 builds,

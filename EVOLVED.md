@@ -109,7 +109,9 @@ game's world-map HUD (its sheet is `Icons/Interface/TopBar.png`), in three bands
     lightened 30%, with the game's action point (`Icons/TML/actionpoint.png`) in it, as an ability costs one; ringed
     (104px).
   - `Passives.png` is a passive's slot, the circle (`Passive_DEFAULT`), lightened 60%, with the empty action point
-    (`actionpointempty`, lightened to show on the glass): a passive costs none.
+    (`actionpointempty`, lightened to show on the glass): a passive costs none. The game's ring is notched, in
+    segments of a bronze that lightened from peach to olive, and read as broken at 20px and 40px, so it is redrawn
+    whole, 3.5px round the glass's black rim, in the diamond's gold (`#C0A261`, the average of its frame; 2026-11-19).
   - `StatusEffects.png` is the unit banner's two arrows for a status effect, the green one up over the red one down
     (`Warning_Positive`, `Warning_Negative`, `TCUnitBanner.xaml`; the text icons `<warningpositive>` and
     `<warningnegative>` are the same arrows), as a glyph (93px; 104px by the title).

@@ -908,7 +908,7 @@ function BuildChoicesPanel(choiceslist, originButton, slot, evt) {
     if ([signature1, signature2, signature3, signature4][slot - 1]) {
         const remove = document.createElement("BUTTON");
         remove.className = "list-button hbb-remove";
-        remove.textContent = "Remove this signature skill";
+        remove.textContent = "Remove this Signature Skill";
         remove.addEventListener("click", () => ClearAndSetSignature(null, originButton, slot));
         panel.appendChild(remove);
     }

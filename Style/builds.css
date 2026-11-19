@@ -720,7 +720,7 @@
 }
 .hbb-page .tree-space {
     margin: 0 auto;
-    padding: 14px 20px 120px;
+    padding: 14px 20px 24px;
     border: 1px solid #555;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -730,6 +730,10 @@
 }
 .hbb-tree + .hbb-tree {
     margin-left: 30px;
+}
+/* the trees under their headings: the page placed them 20px down (HbbTrim pulls them up by where they start) */
+.hbb-tree > div:last-child {
+    top: 0 !important;
 }
 /* the signature skills: the slots 215-285px into their column and the skills they unlock from 95px (Hero.js), so the
    column is pulled in by 90px and 200px wide (was 350) */

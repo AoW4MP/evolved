@@ -456,7 +456,11 @@ Builder" is "Faction Creator", as its page.
   placed at fixed spots up to 1,400px, and the page overflowed even at 1920). A ruler's or class's tree starts 10-155px
   into its column, by the skills' places in the data: `HbbTrim` pulls each column in by that, less 10px, after every
   build of the trees (the page wraps `UpdatePage`), and the signature column is 200px (was 350: its slots are 215-285px
-  in, the skills they unlock from 95px), so the trees are 1,415-1,765px wide by ruler type (were 1,660-1,930). `HbbFit`
+  in, the skills they unlock from 95px), so the trees are 1,415-1,765px wide by ruler type (were 1,660-1,930). Their
+  tops are trimmed the same way: they start 50-65px down and the page put them 20px lower still (70-85px under their
+  headings, the signature slots 123px), so the three columns are pulled up alike, the first row 10px under its heading;
+  the frame's 120px under the trees is 24px, and the signature column, whose nodes are placed absolutely, is given its
+  height (the fourth slot's picked skill reaches 830px: its 100px picture overhangs its node). `HbbFit`
   then zooms them to the room, down to 60% (1000px wide fits most ruler types; a phone scrolls them by themselves). For
   the zoom `resizeParentToFitChildren` in `Hero.js` measures the nodes by their places in their tree (`offsetLeft`...),
   which `zoom` leaves as they are: by their boxes on screen, as it did, the zoomed trees came out too narrow and

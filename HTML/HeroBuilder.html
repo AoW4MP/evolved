@@ -293,7 +293,11 @@
             }
 
             // A ruler's or class's tree starts 10-155px into its column (the skills' places in the data): its column is pulled
-            // in by that, less 10px, its nodes and lines with it (they are placed in the same wrapper)
+            // in by that, less 10px, its nodes and lines with it (they are placed in the same wrapper).
+            // The trees start 50-65px down too, and the signature slots 110px: all three columns are pulled up by the same
+            // amount, the first row 10px under its heading, the rows of the three level as they were. The signature column's
+            // nodes are placed absolutely, down to 830px (the fourth slot's picked skill: its 100px picture overhangs its
+            // node), so its wrapper, pulled up with the others, is given that height and the 20px more the trees have under them
             function HbbTrim() {
                 for (const [column, holderId] of [["hbbRulerTree", "treeHolder"], ["hbbClassTree", "treeHolderClass"]]) {
                     const holder = document.getElementById(holderId);
@@ -302,6 +306,10 @@
                     holder.parentElement.style.marginLeft = -trim + "px";
                     document.getElementById(column).style.width = holder.offsetWidth - trim + "px";
                 }
+                const tops = ["treeHolder", "treeHolderClass"].flatMap((id) => [...document.getElementById(id).children].map((c) => c.offsetTop));
+                const up = tops.length ? Math.max(0, Math.min(...tops) - 10) : 0;
+                document.querySelectorAll(".hbb-tree").forEach((column) => (column.lastElementChild.style.marginTop = -up + "px"));
+                document.querySelector(".hbb-tree-sig").lastElementChild.style.minHeight = "856px";
             }
 
             // The trees as large as the room allows, at most their own size and at least 60% (a phone's still scroll, their

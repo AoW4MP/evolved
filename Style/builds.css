@@ -480,15 +480,28 @@
     filter: none;
 }
 
-/* the head: a line of fields, each its label over it */
+/* the head on the columns' grid, a column each: the sigil and the faction's affinity (from the Ruler row's left edge),
+   the ruler's and race's names (as wide as the Physical Form row), the extra affinity points (as the Culture row); each
+   field its label over it, the labels on one line. Until 2026-11-19 a line of fields of their own widths, none at a
+   column's edge */
 .fc-page .fc-head {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 10px 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 12px 17px;
     margin-bottom: 14px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(215, 194, 151, 0.25);
+}
+.fc-page .fc-hcol {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+}
+.fc-page .fc-hcol > .fc-field {
+    flex: 1 1 0;
+    min-width: 0;
 }
 .fc-page .playerSigil {
     position: relative;
@@ -513,7 +526,7 @@
 }
 .fc-page .fc-field .inputfield {
     box-sizing: border-box;
-    width: 140px;
+    width: 100%;
     height: 32px;
     padding: 7px 8px 1px;
     color: white;
@@ -528,11 +541,7 @@
     border-color: #d7c297;
     outline: none;
 }
-/* the affinity: what room the line leaves, on two lines if it must */
-.fc-page .fc-affinity {
-    flex: 1 1 0;
-    min-width: 110px;
-}
+/* the affinity: on two lines if it must */
 .fc-page .affinityText {
     position: static;
     max-width: none;
@@ -544,13 +553,12 @@
     margin-right: 6px;
     white-space: nowrap;
 }
-.fc-page .fc-extra {
-    margin-left: auto;
-}
+/* the extra points across their column, spread */
 .fc-page #extraAffinity {
     display: flex;
+    justify-content: space-between;
     gap: 2px;
-    padding: 2px 4px;
+    padding: 3px 6px;
     background: rgba(0, 0, 0, 0.35);
     border: 1px solid #3c3c3c;
 }
@@ -558,12 +566,12 @@
     display: flex;
     align-items: center;
 }
-/* an affinity's number under its icon, between its arrows */
+/* an affinity's number under its icon (5px apart; 2 were too close), between its arrows */
 .fc-page .fc-extra-one > div:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
     min-width: 24px;
     font-size: 13px;
     line-height: 1;
@@ -818,26 +826,25 @@
 .fc-page .fc-tomes-head .fc-group {
     margin: 0;
 }
+/* Clear All: the site's button (wm-sort, as Randomise's), its cross before its words; until 2026-11-19 small red words
+   without a frame */
 .fc-page .fc-clear-all {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 2px 4px;
-    color: #e3907f;
-    background: none;
-    border: 0;
-    font: inherit;
-    font-size: 13px;
-    cursor: pointer;
+    gap: 7px;
+    height: 32px;
+    /* Minion's deep descent sets the words 2.5px high: 4px more room over them, the cross raised back to their middle */
+    padding: 4px 12px 0;
+    font-size: 15px;
 }
 .fc-page .fc-clear-all:hover {
-    color: #ffb3a5;
+    border-color: #d7c297;
 }
 .fc-page .fc-clear-all > img {
     position: relative;
-    top: -3px;
-    width: 16px;
-    height: 16px;
+    top: -2px;
+    width: 15px;
+    height: 15px;
 }
 .fc-page #tomePathButton {
     display: flex;
@@ -1279,6 +1286,38 @@
 
 /* ---------------------------------------------------------------- a phone */
 
+/* the head where the extra points' box (260px) no longer fits a third of the sheet: the sigil and affinity beside the
+   names, the extra points under them; on a phone a column */
+@media (max-width: 920px) {
+    .fc-page .fc-head {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .fc-page .fc-hcol:last-child {
+        grid-column: 1 / -1;
+    }
+    /* the extra points' box its own width, not spread across the sheet */
+    .fc-page .fc-hcol:last-child > .fc-field {
+        flex: none;
+    }
+    .fc-page #extraAffinity {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+}
+@media (max-width: 560px) {
+    .fc-page .fc-head {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    /* across the phone's width, spread, as in a third of the full sheet (about as wide) */
+    .fc-page .fc-hcol:last-child > .fc-field {
+        flex: 1 1 0;
+    }
+    .fc-page #extraAffinity {
+        justify-content: space-between;
+        gap: 2px;
+    }
+}
+
 @media (max-width: 800px) {
     /* the pick-list of signature skills a column, its icons smaller */
     .hbb-page ~ .selectionsHolder .wrappers {
@@ -1305,15 +1344,6 @@
     .fc-page .fc-columns {
         grid-template-columns: minmax(0, 1fr);
         gap: 16px;
-    }
-    .fc-page .fc-field {
-        flex: 1 1 140px;
-    }
-    .fc-page .fc-field .inputfield {
-        width: 100%;
-    }
-    .fc-page .fc-extra {
-        margin-left: 0;
     }
     .fc-page .overview {
         columns: 2;

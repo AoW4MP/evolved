@@ -419,10 +419,14 @@ Builder" is "Faction Creator", as its page.
   followed as it is made again: a `MutationObserver`) and Publish. Until 2026-11-19 the overview stood beside the
   choices, pushing them aside, and the publish form under them, a scroll away.
   - Faction: one sheet, at most 960px wide and centred, redrawn on 2026-11-19 (the old page's markup and its layout
-    rules are gone; its ids stay, as `Faction.js` draws into them). Its head is a line of labelled fields: the sigil
-    (its symbol on the shield), Ruler Name and Race Name (were in the columns' heads), Affinity (an icon and its
-    number kept together, so six affinities break between two of them) and Extra Affinity Points (a number under its
-    icon, between its arrows). Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
+    rules are gone; its ids stay, as `Faction.js` draws into them). Its head is on the columns' grid, a column each
+    (`.fc-hcol`), each field its label over it, the labels on one line: the sigil (its symbol on the shield) and
+    Affinity (an icon and its number kept together, so six affinities break between two of them) from the Ruler row's
+    left edge; Ruler Name and Race Name (were in the columns' heads) as wide as the Physical Form row; Extra Affinity
+    Points (a number 5px under its icon, between its arrows) across the Culture row's width. Until 2026-11-19 a line of
+    fields of their own widths, none at a column's edge. Under 920px (where the extra points' 260px no longer fit a
+    third) the sigil and affinity beside the names, the extra points under them at their own width; under 560px a
+    column. Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
     Class, Starting Tome, Ascension, Ambition), the race (Physical Form, Form Traits) and the culture (Culture, its
     sub-choice, Society Traits), a row and the next 8px apart (5 until 2026-11-19; the sheet had the room); then the
     tome path as tiles (the tome, its affinities at the top, its tier and DLC at
@@ -439,7 +443,8 @@ Builder" is "Faction Creator", as its page.
     Ascension or Ambition without a choice is a dashed row (the latter two with their label; a cross removes one).
     A choice that doesn't apply takes no row (`:empty`). A row's affinity icons are 20px, as its DLC tag (the text's
     15px were small beside it). Minion Pro's deep descent sets words about 3px high in a box: the names' fields have
-    more padding at the top, and Clear All's cross is raised to its words; an affinity icon's own 3px drop (icons.css)
+    more padding at the top, and Clear All (the site's button, `wm-sort`, since 2026-11-19; was small red words) has
+    4px more room over its words, its cross raised 2px to their middle; an affinity icon's own 3px drop (icons.css)
     is undone in the extra points, where it ran into the number. The sheet is on whole pixels, so a ring's number is
     centred on its ring: borders are drawn snapped to whole pixels and words aren't, so a box at a fraction of a pixel
     has its words off its border by that fraction. The page's left margin is rounded down (`round()`; auto margins put

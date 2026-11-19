@@ -187,7 +187,7 @@ function ResetSkills() {
             currentSelectedSkillsArray = [5046586578733];
         }
         currentSkillPoints--;
-    } else if (rulerOrigin == "Vampire") {
+    } else if (rulerOrigin == "Vampire" || rulerOrigin == "Hero") {
         currentSelectedSkillsArray = [];
         // no preset skills
     }
@@ -657,7 +657,7 @@ function GetAllAvailableSignatureSkills(slot) {
     var listOfSkills = [];
     for (var s = 0; s < jsonHeroSkills.length; s++) {
         if (jsonHeroSkills[s].type == "signature") {
-            if ((rulerOrigin == "Champion" || rulerOrigin == "Wizard") && jsonHeroSkills[s].DLC == undefined) {
+            if ((rulerOrigin == "Champion" || rulerOrigin == "Wizard" || rulerOrigin == "Hero") && jsonHeroSkills[s].DLC == undefined) {
                 if (slot === 1 && jsonHeroSkills[s].name.indexOf("Initiate") != -1) {
                     listOfSkills.push(jsonHeroSkills[s]);
                 }
@@ -1073,10 +1073,31 @@ function BuildLine(offset, targetnode, treespace, extraOffsetLeft, extraOffsetTo
     treespace.appendChild(connectionLine);
 }
 
+// A hero who isn't the ruler ("Hero") has the Champion's tree without the ruler's own skills: Command, and those that
+// require it (Coordinated Command, Decisive Command). The data marks none of them as the ruler's
+const HERO_RULER_ONLY = ["hs_champion_command"];
+function RulerOnlySkills() {
+    const out = new Set(jsonHeroSkills.filter((x) => HERO_RULER_ONLY.includes(x.id)).map((x) => String(x.resid)));
+    let grew = true;
+    while (grew) {
+        grew = false;
+        for (const x of jsonHeroSkills) {
+            if (!out.has(String(x.resid)) && (x.required_skills || []).some((r) => out.has(String(r.resid)))) {
+                out.add(String(x.resid));
+                grew = true;
+            }
+        }
+    }
+    return out;
+}
+
 function SetUpTreeNodes(keyword, subtype, row, color, holder, treespace) {
+    const rulerOnly = keyword === "Hero" ? RulerOnlySkills() : null;
+    if (rulerOnly) keyword = "Champion";
     let overrideKeyword = keyword;
     for (var s = 0; s < jsonHeroSkills.length; s++) {
         let currentSkill = jsonHeroSkills[s];
+        if (rulerOnly && rulerOnly.has(String(currentSkill.resid))) continue;
         // Check if the current skill is of the right class
         if ("tree_name" in currentSkill) {
             // check type

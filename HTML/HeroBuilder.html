@@ -232,7 +232,9 @@
                 Dragon: ["dragon_lord", "Dragon Lord"],
                 Eldritch: ["eldritch_sovereign", "Eldritch Sovereign"],
                 Giant: ["giant_king", "Giant King"],
-                Vampire: ["elder_vampire", "Elder Vampire"]
+                Vampire: ["elder_vampire", "Elder Vampire"],
+                // a hero who isn't the ruler: the Champion's tree without Command (SetUpTreeNodes in Hero.js)
+                Hero: ["", "Hero"]
             };
             const HBB_DRAGONS = {
                 OrderDragon: ["order", "Order"],
@@ -278,7 +280,9 @@
                     }
                 };
                 const portrait = (id) => '<img src="/evolved/Icons/FactionCreation/' + id + '.png" alt="" />';
-                row("hbbRulers", "actionDropdownOrigin", (v, text) => portrait(HBB_RULERS[v][0]) + HBB_RULERS[v][1]);
+                row("hbbRulers", "actionDropdownOrigin", (v, text) => (v === "Hero" ? "<hero></hero>" : portrait(HBB_RULERS[v][0])) + HBB_RULERS[v][1]);
+                // Hero, not a ruler type, set a little apart from them
+                document.querySelector('#hbbRulers .hbb-chip[data-value="Hero"]').classList.add("hbb-chip-apart");
                 row("hbbDragons", "actionDropdownOriginDragon", (v) => "<" + HBB_DRAGONS[v][0] + "></" + HBB_DRAGONS[v][0] + ">" + HBB_DRAGONS[v][1]);
                 row("hbbGiants", "actionDropdownOriginGiant", (v) => portrait(HBB_CLANS[v][0]) + HBB_CLANS[v][1]);
                 row("hbbClasses", "actionDropdownClass", (v, text) => {
@@ -372,7 +376,7 @@
             <!-- the hero: ruler type (and dragon type or clan) and class as buttons (HbbPickers), which set the selects
                  Hero.js reads and sets; its skill points and build name -->
             <div class="hbb-picks">
-                <div class="hbb-pick"><span class="wm-label">Ruler Type</span><div id="hbbRulers" class="wm-choices"></div></div>
+                <div class="hbb-pick"><span class="wm-label">Ruler Type or Hero</span><div id="hbbRulers" class="wm-choices"></div></div>
                 <div class="hbb-pick" id="hbbDragonPick"><span class="wm-label">Dragon Type</span><div id="hbbDragons" class="wm-choices"></div></div>
                 <div class="hbb-pick" id="hbbGiantPick"><span class="wm-label">Clan</span><div id="hbbGiants" class="wm-choices"></div></div>
                 <div class="hbb-pick"><span class="wm-label">Class</span><div id="hbbClasses" class="wm-choices"></div></div>
@@ -393,6 +397,7 @@
                     <option id="Eldritch" value="Eldritch">Eldritch Sovereign</option>
                     <option id="Giant" value="Giant">Giant King</option>
                     <option id="Vampire" value="Vampire">Elder Vampire</option>
+                    <option id="Hero" value="Hero">Hero</option>
                 </select>
                 <div id="actionDropdownOriginDragonHolder">
                     <select id="actionDropdownOriginDragon">

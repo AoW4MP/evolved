@@ -424,8 +424,11 @@ Builder" is "Faction Creator", as its page.
   Gone with the old form: its notes editor, tag dropdown, `&edit`, and settings.js' key helpers, `buildTags` and
   `patchDates` (the old list named a build's patch by its date).
 - **Hero Builder:** the ruler type, the dragon type or clan, and the class are rows of buttons (`HbbPickers` in the
-  page): each sets its select, which stays hidden as `Hero.js` reads and sets it, and tells it as choosing did;
-  `HbbSync` shows what `Hero.js` holds (a Dragon Lord's Ranger is a Warrior, which the old select didn't show) and greys
+  page). After the six ruler types, Hero: a hero who isn't the ruler (`?u=Hero,…`; 2026-11-19, the maintainer's word on
+  the game) has the Champion's tree without the ruler's own skills, Command and those that require it (Coordinated and
+  Decisive Command: `HERO_RULER_ONLY` and `RulerOnlySkills` in `Hero.js`, as the data marks none of them the ruler's),
+  no skill to start with (all 24 points), and the base game's signature skills, as the Champion. The buttons: each sets
+  its select, which stays hidden as `Hero.js` reads and sets it, and tells it as choosing did; `HbbSync` shows what `Hero.js` holds (a Dragon Lord's Ranger is a Warrior, which the old select didn't show) and greys
   the classes a ruler type can't be, for a hero opened from a link too (only a change of ruler type did). Skill Points
   and Build Name beside them. The trees are headed by what they are ("Chaos Dragon Skills", "Warrior Skills", "Signature
   Skills": upstream's "Affinity Skills"), centred in a frame on the game's skill tree background (the old pickers were

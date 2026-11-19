@@ -735,13 +735,18 @@
 .hbb-tree > div:last-child {
     top: 0 !important;
 }
-/* the signature skills: the slots 215-285px into their column and the skills they unlock from 95px (Hero.js), so the
-   column is pulled in by 90px and 200px wide (was 350) */
+/* the signature skills: the slots 215-285px into their column and the skills they unlock from 95px, to their left
+   (Hero.js). The column is 160px wide (was 350), the slots centred under its heading (their centre, 250px, at its 80:
+   the wrapper pulled in by 170px), and the unlocked skills reach 75px out on its left, so it stands 95px from the
+   class tree (the others 30px) */
 .hbb-tree-sig {
-    width: 200px;
+    width: 160px;
+}
+.hbb-tree + .hbb-tree-sig {
+    margin-left: 95px;
 }
 .hbb-tree-sig > div:last-child {
-    margin-left: -90px;
+    margin-left: -170px;
 }
 .hbb-tree-sig #treeHolderSignature1 {
     width: 200px !important;

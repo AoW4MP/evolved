@@ -377,9 +377,15 @@ async function BdListPage() {
     const panels = document.getElementById("panels");
     const key = BdKeyPanel(document.getElementById("buildTools"));
     const dataset = BdDataset();
-    document.getElementById("intro").textContent =
-        "Factions the players of Evolved made and published from the Faction Creator. A build opens in the creator, where it can be changed and published as a build of your own." +
-        (dataset ? " A build made on an older version of the game is under Older Versions: it may not be what the game has now." : "");
+    // a sentence to a line, centred
+    const intro = document.getElementById("intro");
+    for (const sentence of [
+        "Factions the players of Evolved made and published from the Faction Creator.",
+        "A build opens in the creator, where it can be changed and published as a build of your own.",
+        dataset ? "A build made on an older version of the game is under Older Versions: it may not be what the game has now." : ""
+    ].filter(Boolean)) {
+        intro.append(WmElement("div", "", sentence));
+    }
     if (!BD_API) {
         document.querySelector(".wm-filters").hidden = true;
         panels.append(WmElement("div", "bd-message", "The Builds List isn't open yet: publishing and listing builds come soon."));

@@ -3,28 +3,27 @@
 
 /* ---------------------------------------------------------------- the Builds List */
 
+/* what the list is, a sentence to a line, centred; under it Make a Build and the edit key */
 .bd-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto 16px;
+}
+.bd-intro {
+    color: #bbcdf6;
+    font-size: 15px;
+    text-align: center;
+    text-wrap: balance;
+}
+.bd-tools {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px 24px;
-    max-width: 900px;
-    margin: 0 auto 14px;
-}
-.bd-intro {
-    flex: 1 1 420px;
-    color: #bbcdf6;
-    font-size: 15px;
-}
-.bd-tools {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-}
-.bd-tools .bd-key {
-    align-self: stretch;
+    gap: 8px;
 }
 .bd-create {
     display: inline-flex;
@@ -733,9 +732,6 @@
     }
     .fc-page .overview {
         columns: 2;
-    }
-    .bd-tools {
-        align-items: stretch;
     }
     .bd-field {
         grid-template-columns: minmax(0, 1fr);

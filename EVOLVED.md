@@ -424,7 +424,8 @@ Builder" is "Faction Creator", as its page.
     number kept together, so six affinities break between two of them) and Extra Affinity Points (a number under its
     icon, between its arrows). Under it three columns of rows: the ruler (Ruler, its Dragon/Giant/Vampire Type, Hero
     Class, Starting Tome, Ascension, Ambition), the race (Physical Form, Form Traits) and the culture (Culture, its
-    sub-choice, Society Traits); then the tome path as tiles (the tome, its affinities at the top, its tier and DLC at
+    sub-choice, Society Traits), a row and the next 8px apart (5 until 2026-11-19; the sheet had the room); then the
+    tome path as tiles (the tome, its affinities at the top, its tier and DLC at
     the foot; a red border for one whose requirements aren't met). A row is a framed choice: its picture, the game's
     word for it over its name, its tags (affinities, DLC) at its end. `FcRows` in the page wraps `SetButtonInfo` so
     every way a slot is filled (a pick, Randomise, a link) goes through `FcDress`, which makes the row; pick-list
@@ -449,7 +450,15 @@ Builder" is "Faction Creator", as its page.
   - Overview: Reset and Show/Hide non-★ over the groups, in balanced columns (`columns: 240px`), the entries 15px
     (were 13px, smaller than the site's lists).
   - Publish: Publish to the Builds List (`BdPublishPanel`): name, tags, notes with a preview, the edit key; Publish, or
-    Save Changes for the visitor's own build.
+    Save Changes for the visitor's own build. Its heading is in Minion Pro Semibold (`MINIONPRO-SEMIBOLD.OTF`, loaded
+    by builds.css as "Minion Semibold"; the site loads Medium alone) in its own case, over "Share this faction with
+    other players of the Evolved mod." and a line as the sheet's head's; until 2026-11-19 the Header face in capitals,
+    large and thin, over a sentence on what publishing does.
+  - The pick-lists: a tome's entry is as wide as it needs, at least the 200px all had (`.list-button-long`, a fixed
+    200px: the picture, the affinities drawn over it but taking their room, the name and the plus came to 211px, so
+    "I: Hydromancy" took two lines). From 801px wide the list and its window don't scroll sideways: when a list's own
+    scrollbar came, the browser added a sideways one that stayed after the window had widened for it, with nothing to
+    scroll. A phone's lists are wider than its screen and keep theirs.
   A build opened from the list (`?u=…&b=<id>`) counts a view and shows its name and facts on a line over the tabs, its
   notes folded under them (`#bdShown`); the visitor's own fills the form, another's leaves it empty, as what they
   publish is theirs. On a phone the columns are under each other. `RebuildFromParam` no longer posts a view to

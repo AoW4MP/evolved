@@ -491,7 +491,7 @@ function BdPublishPanel(holder) {
     const panel = WmElement("div", "bd-publish");
     panel.innerHTML =
         '<div class="bd-publish-title">Publish to the Builds List</div>' +
-        '<div class="bd-publish-text">Share this faction with the players of Evolved: it goes in the <a href="/evolved/HTML/FactionList.html">Builds List</a> as it is now, with a name, tags and notes of your own.</div>' +
+        '<div class="bd-publish-text">Share this faction with other players of the Evolved mod.</div>' +
         '<label class="bd-field"><span class="wm-label">Name</span><input id="bdName" class="wm-search" maxlength="80" placeholder="Leave empty to name it after its culture, class and ruler type" /></label>' +
         '<div class="bd-field"><span class="wm-label">Tags</span><div id="bdTags" class="wm-choices"></div></div>' +
         '<label class="bd-field"><span class="wm-label">Notes</span><textarea id="bdNotes" maxlength="5000" rows="6" placeholder="How to play it, what to pick first, what it beats... A line starting with # is a heading, **words** are bold, and [hp], [mana], [gold] and the like are the game\'s icons."></textarea></label>' +

@@ -260,16 +260,28 @@
     border: 1px solid #555;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
+/* its heading in Minion Pro Semibold, in its own case, over a line as the sheet's head: until 2026-11-19 the Header face
+   in capitals, large and thin. The site loads Minion's Medium alone (as "Regular"); a bold of that is the browser's own */
+@font-face {
+    font-family: "Minion Semibold";
+    src: url(/evolved/Style/MinionPro/MINIONPRO-SEMIBOLD.OTF);
+}
 .bd-publish-title {
     color: #d7c297;
-    font-family: Header, serif;
-    font-size: 22px;
+    font-family: "Minion Semibold", Regular, serif;
+    font-size: 23px;
+    letter-spacing: 0.4px;
     text-align: center;
-    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #000;
 }
 .bd-publish-text {
-    margin: 6px 0 4px;
+    margin: 4px 0 0;
+    padding-bottom: 12px;
     text-align: center;
+    border-bottom: 1px solid rgba(215, 194, 151, 0.25);
+}
+.bd-publish-text + .bd-field {
+    margin-top: 14px;
 }
 .bd-publish-text a,
 .bd-publish a {
@@ -578,14 +590,18 @@
     align-items: start;
     gap: 0 17px;
 }
+/* a row and the next 8px apart (5 until 2026-11-19; the sheet had the room); a step-in row's line reaches up that far */
+.fc-page .fc-columns {
+    --fc-gap: 8px;
+}
 .fc-page .fc-col {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: var(--fc-gap);
     min-width: 0;
 }
 .fc-page .fc-group {
-    margin: 9px 0 1px;
+    margin: 9px 0 -1px;
 }
 /* a row: a choice of its own kind (the ruler, the form, the culture...), a trait (form, society) a smaller one */
 .fc-page .fc-slot,
@@ -704,10 +720,10 @@
 .fc-page .fc-sub::before {
     content: "";
     position: absolute;
-    top: -6px;
+    top: calc(-1px - var(--fc-gap));
     left: -14px;
     width: 9px;
-    height: calc(50% + 6px);
+    height: calc(50% + 1px + var(--fc-gap));
     border-left: 1px solid #5a5a5a;
     border-bottom: 1px solid #5a5a5a;
 }
@@ -727,7 +743,7 @@
 .fc-page #selected-options-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: var(--fc-gap);
 }
 .fc-page .fc-traits:has(#selected-options-container:empty) {
     height: 42px;
@@ -987,6 +1003,23 @@
 .selectionsHolder .list-button:hover {
     border-color: #d7c297;
     filter: none;
+}
+/* a tome's entry as wide as it needs, at least the 200px all had: the tome's picture, its affinities (drawn over the
+   picture, still taking their room), its name and its plus came to 211px, so the longest names took two lines
+   ("I: Hydromancy") */
+.selectionsHolder .list-button-long {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 200px;
+}
+/* no sideways scrollbar where every list fits: when a list's own scrollbar came, the browser added one that stayed
+   after the window had widened for it, with nothing to scroll (the list 15px shorter). A phone's lists are wider than
+   its screen and keep theirs */
+@media (min-width: 801px) {
+    .selectionsHolder .selections,
+    .selectionsHolder .wrappers {
+        overflow-x: hidden;
+    }
 }
 .selectionsHolder .list-button.selected,
 .selectionsHolder .list-button-currentequipped {

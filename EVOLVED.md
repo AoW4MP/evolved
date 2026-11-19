@@ -459,7 +459,9 @@ Builder" is "Faction Creator", as its page.
     "I: Hydromancy" took two lines). A tome's entry (`SetTomePathInfo`) is its picture in a box of its size, its
     affinities in a row at the picture's foot (wrapping upward: Cosmos has six) and its DLC at its corner, then its
     name, then its plus, all at the same place on every entry (`.tome-pick-*`); until 2026-11-19 the affinities were
-    moved over the picture by 58px from where the name's length put them, the name centred in what was left. From 801px wide the list and its window don't scroll sideways: when a list's own
+    moved over the picture by 58px from where the name's length put them, the name centred in what was left. An
+    entry's plus (a form trait's Toggle) picks it, as a tap on the entry shows its tooltip on a phone; under the mouse
+    it has a gold frame as a row's (was bright green: the page's `background-color: green`, brightness 2). From 801px wide the list and its window don't scroll sideways: when a list's own
     scrollbar came, the browser added a sideways one that stayed after the window had widened for it, with nothing to
     scroll. A phone's lists are wider than its screen and keep theirs.
   A build opened from the list (`?u=…&b=<id>`) counts a view and shows its name and facts on a line over the tabs, its

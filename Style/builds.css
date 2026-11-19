@@ -381,7 +381,7 @@
     align-items: baseline;
     gap: 2px 12px;
     box-sizing: border-box;
-    max-width: 1180px;
+    max-width: 1000px;
     margin: 0 auto 12px;
     padding: 6px 16px;
     color: #bbcdf6;
@@ -414,17 +414,11 @@
 .bd-shown-notes .bd-notes-text {
     margin: 4px 0 4px;
 }
-.fc-credit {
-    margin-top: 16px;
-    color: #8d97ad;
-    font-size: 13px;
-    text-align: center;
-}
 
-/* the faction: a card's frame, centred */
+/* the faction: a card's frame, centred, as wide as its three columns need (was 1180px, half of it empty) */
 .fc-page .typeHolder {
     width: 100%;
-    max-width: 1180px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .fc-page .container {
@@ -496,9 +490,35 @@
     top: 0;
     margin-top: 20px;
 }
+/* the sigil: the shield and its symbol on it (the symbol was placed by the sheet's corner, off the shield once the
+   sheet's padding changed) */
+.fc-page .playerSigil {
+    position: relative;
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+.fc-page .playerSigil .shield {
+    display: block;
+    float: none;
+}
+.fc-page .playerSigil .symbol {
+    top: 12px;
+    left: 13px;
+}
+/* the extra affinity points: an affinity's number under its icon, between its up and down arrows (the page's box was
+   too narrow for them side by side, and that alone put the number under it) */
 .fc-page #extraAffinity {
     flex-wrap: wrap;
     max-width: 100% !important;
+}
+.fc-page #extraAffinity > div > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
 }
 
 /* three columns: the ruler, the race, the culture and society (were two, the culture under the race) */

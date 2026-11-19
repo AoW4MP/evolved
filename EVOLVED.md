@@ -418,7 +418,9 @@ Builder" is "Faction Creator", as its page.
   fits a 1700x1280 window whole, the sheet 575-620px tall): Faction, Overview (its count the overview's entries,
   followed as it is made again: a `MutationObserver`) and Publish. Until 2026-11-19 the overview stood beside the
   choices, pushing them aside, and the publish form under them, a scroll away.
-  - Faction: one sheet, at most 1180px wide and centred: the sigil, the faction's affinities and the extra points over
+  - Faction: one sheet, at most 1000px wide and centred (1180px for a few hours, half of it empty): the sigil (its
+    symbol placed on the shield, not by the sheet's corner), the faction's affinities and the extra points (a number
+    under its icon, between its arrows: the page's narrow box alone had wrapped it there) over
     three columns, Ruler, Race, and Culture & Society (were two, the culture under the race), over the tome path. Every
     choice is its picture in a box of one size (40px, 34px for one under another) and its words, and a choice under
     another is indented by one step, 24px: the page's were 30px, the form traits 36px, a Vision's reading's words without
@@ -432,7 +434,8 @@ Builder" is "Faction Creator", as its page.
   notes folded under them (`#bdShown`); the visitor's own fills the form, another's leaves it empty, as what they
   publish is theirs. On a phone the columns are under each other. `RebuildFromParam` no longer posts a view to
   MinionsArt's store by the link. Gone with the old form: its notes editor, tag dropdown, `&edit`, and settings.js' key
-  helpers, `buildTags` and `patchDates` (the old list named a build's patch by its date).
+  helpers, `buildTags` and `patchDates` (the old list named a build's patch by its date), and upstream's
+  "Faction Creator contributors" line (2026-11-19, the maintainer's call).
 - **Hero Builder:** the ruler type, the dragon type or clan, and the class are rows of buttons (`HbbPickers` in the
   page). After the six ruler types, Hero: a hero who isn't the ruler (`?u=Hero,…`; 2026-11-19, the maintainer's word on
   the game) has the Champion's tree without the ruler's own skills, Command and those that require it (Coordinated and

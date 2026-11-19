@@ -619,7 +619,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    gap: 12px 28px;
+    /* a row and the next are a break's line apart, a gap either side of it: 16px */
+    gap: 8px 28px;
     max-width: 1500px;
     margin: 0 auto 18px;
 }
@@ -630,6 +631,20 @@
 }
 .hbb-pick[hidden] {
     display: none;
+}
+/* the ruler types end their line, and a dragon type's or clan's row, when there is one, has a line of its own under
+   them, the class's next: the clans fitted beside the ruler types, where the dragon types didn't. A break is a line of
+   no height (a negative margin doesn't take its gap back) */
+.hbb-break {
+    flex-basis: 100%;
+    height: 0;
+}
+.hbb-break-sub {
+    display: none;
+}
+#hbbDragonPick:not([hidden]) ~ .hbb-break-sub,
+#hbbGiantPick:not([hidden]) ~ .hbb-break-sub {
+    display: block;
 }
 /* a choice: its picture or icon and its name */
 .hbb-chip {
@@ -742,6 +757,10 @@
 /* ---------------------------------------------------------------- a phone */
 
 @media (max-width: 800px) {
+    /* the ruler types wrap: Hero would start its line indented */
+    .hbb-chip-apart {
+        margin-left: 0;
+    }
     .hbb-name .wm-search {
         width: 100%;
     }

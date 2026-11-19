@@ -455,10 +455,11 @@ Builder" is "Faction Creator", as its page.
   Skills": upstream's "Affinity Skills"), centred in a frame on the game's skill tree background (the old pickers were
   placed at fixed spots up to 1,400px, and the page overflowed even at 1920). A ruler's or class's tree starts 10-155px
   into its column, by the skills' places in the data: `HbbTrim` pulls each column in by that, less 10px, after every
-  build of the trees (the page wraps `UpdatePage`), and the signature column is 160px (was 350: its slots are 215-285px
-  in, the skills they unlock from 95px, to their left), the slots centred under its heading and the unlocked skills
-  reaching 75px out on its left, so it stands 95px from the class tree: the trees are 1,440-1,790px wide by ruler type
-  (were 1,660-1,930). Their
+  build of the trees (the page wraps `UpdatePage`), and the signature column is 200px (was 350: its slots are 215-285px
+  in, the skills they unlock from 95px, to their left), the two together centred under its heading (for a few hours on
+  2026-11-19 the slots alone were, which pushed the unlocked skills out to the left): the trees are 1,415-1,765px wide
+  by ruler type (were 1,660-1,930). The signature column's top is measured (`HbbTrim`): the first slot's first unlocked
+  skill level with the class tree's first row. Their
   tops are trimmed the same way: they start 50-65px down and the page put them 20px lower still (70-85px under their
   headings, the signature slots 123px), so the three columns are pulled up alike, the first row 10px under its heading;
   the frame's 120px under the trees is 24px, and the signature column, whose nodes are placed absolutely, is given its

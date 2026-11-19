@@ -309,6 +309,18 @@
                 const tops = ["treeHolder", "treeHolderClass"].flatMap((id) => [...document.getElementById(id).children].map((c) => c.offsetTop));
                 const up = tops.length ? Math.max(0, Math.min(...tops) - 10) : 0;
                 document.querySelectorAll(".hbb-tree").forEach((column) => (column.lastElementChild.style.marginTop = -up + "px"));
+                // the signature column's top: the first slot's first unlocked skill (a round one is placed 50px above the
+                // slot) level with the class tree's first row. Measured, as the page's own layout sets the column a little
+                // lower (its holders are inline blocks); a zoom divided out
+                const space = document.getElementById("treespace");
+                const zoom = Number(space.style.zoom) || 1;
+                const slot = document.querySelector("#treeHolderSignature1 .shape-signature");
+                const classTops = [...document.querySelectorAll("#treeHolderClass .unittype_ic")].map((n) => n.getBoundingClientRect().top);
+                if (slot && classTops.length) {
+                    const off = (slot.getBoundingClientRect().top - 50 * zoom - Math.min(...classTops)) / zoom;
+                    const sigWrapper = document.querySelector(".hbb-tree-sig").lastElementChild;
+                    sigWrapper.style.marginTop = -up - Math.round(off) + "px";
+                }
                 document.querySelector(".hbb-tree-sig").lastElementChild.style.minHeight = "856px";
             }
 

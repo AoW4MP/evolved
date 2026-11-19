@@ -736,17 +736,13 @@
     top: 0 !important;
 }
 /* the signature skills: the slots 215-285px into their column and the skills they unlock from 95px, to their left
-   (Hero.js). The column is 160px wide (was 350), the slots centred under its heading (their centre, 250px, at its 80:
-   the wrapper pulled in by 170px), and the unlocked skills reach 75px out on its left, so it stands 95px from the
-   class tree (the others 30px) */
+   (Hero.js): the column is 200px wide (was 350), the two together centred under its heading (the wrapper pulled in by
+   90px). For a few hours on 2026-11-19 the slots alone were centred, which pushed the unlocked skills out to the left */
 .hbb-tree-sig {
-    width: 160px;
-}
-.hbb-tree + .hbb-tree-sig {
-    margin-left: 95px;
+    width: 200px;
 }
 .hbb-tree-sig > div:last-child {
-    margin-left: -170px;
+    margin-left: -90px;
 }
 .hbb-tree-sig #treeHolderSignature1 {
     width: 200px !important;

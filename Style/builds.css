@@ -710,6 +710,17 @@
 .hbb-tree + .hbb-tree {
     margin-left: 30px;
 }
+/* the signature skills: the slots 215-285px into their column and the skills they unlock from 95px (Hero.js), so the
+   column is pulled in by 90px and 200px wide (was 350) */
+.hbb-tree-sig {
+    width: 200px;
+}
+.hbb-tree-sig > div:last-child {
+    margin-left: -90px;
+}
+.hbb-tree-sig #treeHolderSignature1 {
+    width: 200px !important;
+}
 .hbb-tree-label {
     color: #d7c297;
     font-size: 16px;

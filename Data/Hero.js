@@ -477,24 +477,16 @@ function SetUpSignatures(row) {
     SetBaseSignatureChoices(200, 700, row, signature4, 4);
 }
 
+// a tree's holder as wide and tall as its nodes reach, by their places in it (offsetLeft, offsetTop...), which a zoom on
+// the trees leaves as they are (HeroBuilder.html's HbbFit): their boxes on screen shrink with it, and measured by those
+// the zoomed trees came out too narrow and overlapped
 function resizeParentToFitChildren(parent) {
-    const children = Array.from(parent.children); // Get all child elements
     let maxWidth = 0;
     let maxHeight = 0;
-
-    children.forEach((child) => {
-        const childRect = child.getBoundingClientRect(); // Get the child's position and size relative to the viewport
-        const parentRect = parent.getBoundingClientRect(); // Get the parent's position and size
-
-        // Calculate the child's position relative to the parent
-        const childRight = childRect.right - parentRect.left;
-        const childBottom = childRect.bottom - parentRect.top;
-
-        maxWidth = Math.max(maxWidth, childRight);
-        maxHeight = Math.max(maxHeight, childBottom);
-    });
-
-    // Apply the calculated dimensions to the parent
+    for (const child of parent.children) {
+        maxWidth = Math.max(maxWidth, child.offsetLeft + child.offsetWidth);
+        maxHeight = Math.max(maxHeight, child.offsetTop + child.offsetHeight);
+    }
     parent.style.width = maxWidth + "px";
     parent.style.height = maxHeight + "px";
 }

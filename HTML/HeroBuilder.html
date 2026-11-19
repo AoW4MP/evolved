@@ -50,6 +50,14 @@
           
 
             function HandlePage() {
+                // each time the trees are made: their columns without their empty left margins, and all of them made to fit
+                const hbbUpdatePage = UpdatePage;
+                UpdatePage = function () {
+                    hbbUpdatePage.apply(this, arguments);
+                    HbbTrim();
+                    HbbFit();
+                };
+                window.addEventListener("resize", HbbFit);
                 
                 // Get the dropdown element
                     const dropdownOrigin = document.getElementById("actionDropdownOrigin");
@@ -280,6 +288,28 @@
                 HbbSync();
             }
 
+            // A ruler's or class's tree starts 10-155px into its column (the skills' places in the data): its column is pulled
+            // in by that, less 10px, its nodes and lines with it (they are placed in the same wrapper)
+            function HbbTrim() {
+                for (const [column, holderId] of [["hbbRulerTree", "treeHolder"], ["hbbClassTree", "treeHolderClass"]]) {
+                    const holder = document.getElementById(holderId);
+                    const lefts = [...holder.children].map((c) => c.offsetLeft);
+                    const trim = lefts.length ? Math.max(0, Math.min(...lefts) - 10) : 0;
+                    holder.parentElement.style.marginLeft = -trim + "px";
+                    document.getElementById(column).style.width = holder.offsetWidth - trim + "px";
+                }
+            }
+
+            // The trees as large as the room allows, at most their own size and at least 60% (a phone's still scroll, their
+            // nodes too small to tap below that): a zoom, under which the trees keep their own measures (resizeParentToFitChildren)
+            function HbbFit() {
+                const space = document.getElementById("treespace");
+                space.style.zoom = "";
+                const room = space.parentElement.clientWidth;
+                const scale = Math.max(0.6, Math.min(1, room / space.offsetWidth));
+                space.style.zoom = scale < 1 ? String(scale) : "";
+            }
+
             function HbbSync() {
                 // what Hero.js holds, which a ruler type can change without its select (a Dragon Lord's Ranger is a Warrior)
                 if (typeof rulerOrigin !== "undefined" && rulerOrigin) document.getElementById("actionDropdownOrigin").value = rulerOrigin;
@@ -390,21 +420,21 @@
             <div class="hbb-scroll">
                 <div class="tree-space" id="treespace">
                     <div style="position: relative; display: flex; justify-content: flex-start">
-                        <div class="hbb-tree">
+                        <div class="hbb-tree" id="hbbRulerTree">
                             <div class="hbb-tree-label" id="hbbRulerLabel">Ruler Skills</div>
                             <div style="position: relative; top: 20px">
                                 <div class="tree-grid" id="treeHolder"></div>
                                 <div class="" id="treeLineHolder"></div>
                             </div>
                         </div>
-                        <div class="hbb-tree">
+                        <div class="hbb-tree" id="hbbClassTree">
                             <div class="hbb-tree-label" id="hbbClassLabel">Class Skills</div>
                             <div style="position: relative; top: 20px">
                                 <div class="tree-grid" id="treeHolderClass"></div>
                                 <div class="" id="treeLineHolderClass"></div>
                             </div>
                         </div>
-                        <div class="hbb-tree">
+                        <div class="hbb-tree hbb-tree-sig">
                             <div class="hbb-tree-label">Signature Skills</div>
                             <div style="postion: relative; top: 20px">
                                 <div class="tree-grid" style="width: 350px" id="treeHolderSignature1"></div>

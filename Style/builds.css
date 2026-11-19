@@ -1,0 +1,747 @@
+/* The Builds/Planners pages: the Builds List's cards and the Faction Creator's publish form (Data/builds.js), on the Spells
+   and Heroes pages' cards (Style/spellbook.css, Style/heroes.css) under the World Map pages' tabs (Style/worldmap.css) */
+
+/* ---------------------------------------------------------------- the Builds List */
+
+.bd-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px 24px;
+    max-width: 900px;
+    margin: 0 auto 14px;
+}
+.bd-intro {
+    flex: 1 1 420px;
+    color: #bbcdf6;
+    font-size: 15px;
+}
+.bd-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+.bd-tools .bd-key {
+    align-self: stretch;
+}
+.bd-create {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.bd-message {
+    color: #bbcdf6;
+    text-align: center;
+    padding: 40px 0;
+}
+/* the ruler types' portraits and the cultures' emblems: pictures, a little larger than text icons; a portrait is a scene,
+   filling its button */
+.bd-pictures .wm-choice img {
+    width: 30px;
+    height: 30px;
+}
+#rulers .wm-choice img {
+    width: 34px;
+    height: 32px;
+    object-fit: cover;
+}
+
+/* a build's card */
+.bd-card .bd-head {
+    color: inherit;
+    text-decoration: none;
+}
+.bd-card .bd-head:hover .sb-name {
+    color: #ffe9a8;
+    text-decoration: underline;
+}
+.bd-dlcs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2px;
+    max-width: 120px;
+}
+.bd-dlcs .mountToolTip {
+    display: flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+}
+/* its affinity points, the most first */
+.bd-affinities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+    margin-bottom: 4px;
+    color: white;
+    font-family: Number;
+    font-size: 15px;
+}
+.bd-affinities > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+/* a row of things: its label in a column of its own, so the rows' icons line up */
+.bd-row {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+.bd-things {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+.bd-thing {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid #444;
+    cursor: help;
+}
+.bd-thing:hover {
+    border-color: #d7c297;
+}
+.bd-thing img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+.bd-thing.bd-big {
+    width: 40px;
+    height: 40px;
+}
+.bd-thing.bd-big img {
+    width: 36px;
+    height: 36px;
+}
+.bd-class > * {
+    position: static;
+    width: 26px;
+    height: 26px;
+    max-width: none;
+    object-fit: contain;
+    margin: 0;
+}
+/* the ruler's and race's own names */
+.bd-names {
+    margin-top: 8px;
+    color: #e8e2d4;
+    font-style: italic;
+}
+.bd-tags {
+    margin-top: 8px;
+}
+.bd-tags > span {
+    padding: 1px 8px;
+    color: #e8e2d4;
+    background: rgba(215, 194, 151, 0.15);
+    border: 1px solid rgba(215, 194, 151, 0.35);
+    font-size: 13px;
+}
+.bd-notes {
+    margin-top: 8px;
+}
+.bd-notes > summary {
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.bd-notes-text {
+    margin-top: 4px;
+    color: #e8e2d4;
+    line-height: 1.4;
+}
+.bd-notes-head {
+    display: block;
+    margin-top: 4px;
+    color: #d7c297;
+    font-size: 16px;
+}
+.bd-own {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+}
+.bd-own .wm-sort {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 28px;
+    text-decoration: none;
+}
+/* a small card in a tooltip (a tome, a form) */
+.bd-tip {
+    max-width: 420px;
+}
+
+/* ---------------------------------------------------------------- the edit key */
+
+.bd-key {
+    box-sizing: border-box;
+    max-width: 520px;
+    padding: 6px 12px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    text-align: left;
+}
+.bd-key > summary {
+    color: #d7c297;
+    cursor: pointer;
+}
+.bd-key-text {
+    margin: 6px 0;
+    font-size: 14px;
+}
+.bd-key-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+}
+.bd-key-value {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 6px 8px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #555;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+.bd-key-input {
+    flex: 1 1 200px;
+    width: auto;
+}
+.bd-say {
+    margin-top: 8px;
+    color: #a5d6a7;
+}
+.bd-say.bd-bad {
+    color: #ef9a9a;
+}
+.bd-say a {
+    color: #ffe9a8;
+}
+
+/* ---------------------------------------------------------------- the Faction Creator's publish form */
+
+.bd-publish {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 14px 20px 18px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.bd-publish-title {
+    color: #d7c297;
+    font-family: Header, serif;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.bd-publish-text {
+    margin: 6px 0 4px;
+    text-align: center;
+}
+.bd-publish-text a,
+.bd-publish a {
+    color: #ffe9a8;
+}
+.bd-field {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: start;
+    gap: 10px;
+    margin-top: 12px;
+}
+.bd-field > .wm-label {
+    padding-top: 8px;
+}
+.bd-field .wm-search,
+.bd-field textarea {
+    width: 100%;
+}
+.bd-field textarea {
+    box-sizing: border-box;
+    padding: 6px 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #555;
+    font: inherit;
+    font-size: 15px;
+    resize: vertical;
+}
+.bd-preview-field[hidden] {
+    display: none;
+}
+.bd-preview-field .bd-notes-text {
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px dashed #555;
+}
+.bd-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 14px;
+}
+.bd-actions .wm-sort[hidden] {
+    display: none;
+}
+.bd-actions .wm-sort:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+.bd-publish > .bd-say {
+    text-align: center;
+}
+.bd-publish .bd-key {
+    max-width: none;
+    margin-top: 14px;
+}
+
+
+/* ---------------------------------------------------------------- the Faction Creator: the page's own layout (its panel
+   of choices, the overview beside it, the pick-list) in the cards' frames, buttons and labels. Its rules are in its
+   page's <style>; these are .fc-page's, so they win */
+
+.fc-page {
+    max-width: 1500px;
+}
+.fc-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 18px;
+}
+.fc-share {
+    display: flex;
+    flex: 0 1 640px;
+    gap: 6px;
+    min-width: 0;
+}
+.fc-share .wm-search {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+}
+.fc-list-link {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* a build opened from the Builds List */
+.fc-shown {
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto 18px;
+    padding: 10px 16px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.fc-shown[hidden] {
+    display: none;
+}
+.bd-shown-name {
+    color: #d7c297;
+    font-size: 20px;
+}
+.bd-shown-facts {
+    color: #8d97ad;
+    font-size: 14px;
+}
+.fc-shown .bd-notes-text:not([hidden]) {
+    margin-top: 8px;
+}
+.fc-credit {
+    margin-top: 16px;
+    color: #8d97ad;
+    font-size: 13px;
+    text-align: center;
+}
+.fc-page #publish {
+    margin-top: 28px;
+}
+
+/* its panel of choices: a card's frame */
+.fc-page .container {
+    box-sizing: border-box;
+    padding: 10px 14px 14px;
+    border: 1px solid #555;
+    border-image: none;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+}
+.fc-page .container hr {
+    border: 0;
+    border-top: 1px solid rgba(215, 194, 151, 0.25);
+}
+.fc-page .small_title {
+    font-family: inherit;
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.fc-page .inputfield {
+    box-sizing: border-box;
+    padding: 4px 8px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #555;
+    border-image: none;
+    font: inherit;
+}
+.fc-page .inputfield:focus {
+    border-color: #d7c297;
+    outline: none;
+}
+/* its buttons as the cards' sorts */
+.fc-page .button-overview,
+.fc-page .button-random {
+    height: 34px;
+    padding: 0 12px;
+    color: #bbcdf6;
+    background: url(/evolved/Icons/tooltipBG.png);
+    border: 1px solid #555;
+    border-image: none;
+    font: inherit;
+    font-size: 15px;
+    filter: none;
+}
+.fc-page .button-overview:hover,
+.fc-page .button-random:hover {
+    color: white;
+    border-color: #d7c297;
+    filter: none;
+}
+
+/* the choices and the overview side by side, the overview taking the rest of the row (its groups in columns of their
+   own width, as many as fit: the page's own rule ran them down a fixed height and on past the window's edge) */
+.fc-page .factioncreator {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px 20px;
+}
+.fc-page .typeHolder {
+    flex: 0 1 700px;
+    min-width: 0;
+}
+.fc-page .container {
+    width: 100%;
+}
+.fc-page .subDivider {
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+/* the ruler's and race's columns: inline widths in the page */
+.fc-page .subDivider > div {
+    flex: 1 1 260px;
+    width: auto !important;
+    min-width: 0;
+}
+.fc-page .subSubDiv,
+.fc-page .subSubDiv2 {
+    width: auto;
+}
+.fc-overview {
+    flex: 1 1 440px;
+    min-width: 0;
+}
+.fc-overview-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+/* the highlights' buttons go with the overview */
+.fc-overview:has(#overviewPanel[style*="none"]) .fc-overview-bar .button-random {
+    display: none;
+}
+/* its groups in balanced columns of their own width, as many as fit */
+.fc-page .overview {
+    display: block;
+    max-height: none;
+    columns: 216px;
+    column-gap: 4px;
+}
+/* the tome path: as many tomes to a row as fit (the page's rule had eight, wider than a phone) */
+.fc-page #tomePathButton {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)) !important;
+    row-gap: 22px;
+}
+/* the panel's head, the sigil, the faction's affinities and the extra points beside them: as tall as they are (the page
+   gives it 90px), under each other where there is no room */
+.fc-page .container > div:first-child {
+    height: auto !important;
+    min-height: 90px;
+}
+.fc-page .container > div:first-child > div[style*="space-between"] {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+/* the faction's affinities, level with the sigil: by a margin, which keeps their room (the page moves them down 20px) */
+.fc-page .affinityText {
+    top: 0;
+    margin-top: 20px;
+}
+.fc-page #extraAffinity {
+    flex-wrap: wrap;
+    max-width: 100% !important;
+}
+.fc-page #active-indices:empty {
+    display: none;
+}
+.fc-page #overviewPanel > p:has(#active-indices:empty) {
+    margin: 4px 0;
+}
+/* the overview: what the faction has, in groups (units, spells, structures...) */
+.fc-page .column {
+    box-sizing: border-box;
+    width: 100%;
+    break-inside: avoid;
+    padding: 6px 8px;
+    font-family: inherit;
+    color: #d7c297;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.fc-page .column > :first-child br:first-child {
+    display: none;
+}
+.fc-page .overview_list_entry {
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    min-height: 32px;
+    margin-top: 3px;
+    padding: 1px 4px;
+    color: #e8e2d4;
+    background-color: rgba(0, 0, 0, 0.45);
+    border: 1px solid #444;
+    border-image: none;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+    filter: none;
+}
+.fc-page .overview_list_entry:hover {
+    border-color: #d7c297;
+    color: white;
+    filter: none;
+}
+.fc-page .overview_list_entry.highlighted {
+    background-color: rgba(24, 42, 64, 0.85);
+    background-position: right 4px center;
+    border-color: #6f8fb8;
+}
+
+/* the pick-list: a card's frame */
+.fc-page ~ .selectionsHolder .selections,
+.selectionsHolder .selections {
+    padding: 10px 12px;
+    background: url(/evolved/Icons/tooltipBG.png);
+    background-size: cover;
+    border: 1px solid #555;
+    border-image: none;
+    box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.5);
+}
+.selectionsHolder #selections {
+    margin: 0 30px 8px;
+    color: #d7c297;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.selectionsHolder .list-button,
+.selectionsHolder .list-button-currentequipped,
+.selectionsHolder .list-button-disabled {
+    border: 1px solid #444;
+    border-image: none;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+.selectionsHolder .list-button:hover {
+    border-color: #d7c297;
+    filter: none;
+}
+.selectionsHolder .list-button.selected,
+.selectionsHolder .list-button-currentequipped {
+    background-color: rgba(76, 175, 80, 0.35);
+    border-color: #7cb87f;
+}
+
+/* ---------------------------------------------------------------- the Hero Builder: its pickers as rows of buttons, its
+   trees on the game's skill tree background in a card's frame, scrolling alone where the window is narrower. Its tree
+   rules are in its page's <style> */
+
+.hbb-page {
+    max-width: 1800px;
+}
+.hbb-picks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 12px 28px;
+    max-width: 1500px;
+    margin: 0 auto 18px;
+}
+.hbb-pick {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.hbb-pick[hidden] {
+    display: none;
+}
+/* a choice: its picture or icon and its name */
+.hbb-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px 0 4px;
+}
+.hbb-chip > img {
+    width: 26px;
+    height: 26px;
+    object-fit: cover;
+    border: 1px solid #444;
+}
+.hbb-chip > :not(img) {
+    position: static;
+    width: 22px;
+    height: 22px;
+    max-width: none;
+    object-fit: contain;
+    margin: 0;
+}
+.hbb-chip.selected {
+    color: #ffe9a8;
+}
+.hbb-chip:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+.hbb-facts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 12px 20px;
+}
+.hbb-points {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+#currentSkillPoints {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 34px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #d7c297;
+    font-family: Number;
+    font-size: 18px;
+}
+.hbb-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.hbb-name .wm-search {
+    width: 240px;
+    height: 34px;
+}
+/* the trees: centred, scrolling by themselves where the window is narrower than they are */
+.hbb-scroll {
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+.hbb-page .tree-space {
+    margin: 0 auto;
+    padding: 14px 20px 120px;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+.hbb-tree {
+    position: relative;
+    flex: none;
+}
+.hbb-tree + .hbb-tree {
+    margin-left: 30px;
+}
+.hbb-tree-label {
+    color: #d7c297;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+}
+/* the pick-list of signature skills: its entries' names */
+.hbb-page ~ .selectionsHolder .list-name,
+.selectionsHolder .list-name {
+    color: #e8e2d4;
+}
+
+/* ---------------------------------------------------------------- a phone */
+
+@media (max-width: 800px) {
+    .hbb-name .wm-search {
+        width: 100%;
+    }
+    .hbb-picks {
+        align-items: stretch;
+    }
+    .fc-page .typeHolder,
+    .fc-overview {
+        flex-basis: 100%;
+    }
+    .fc-page .overview {
+        columns: 2;
+    }
+    .bd-tools {
+        align-items: stretch;
+    }
+    .bd-field {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4px;
+    }
+    .bd-field > .wm-label {
+        padding-top: 0;
+    }
+}

@@ -576,25 +576,4 @@ function buildLookupMap(array, key) {
     return lookupMaps.get(mapKey);
 }
 
-const patchDates = [
-    // date ranges of patches
-    { name: "Sprite 1.2", from: new Date("2026-07-02"), to: new Date("2026-11-29") },
-    { name: "Sprite 1.1", from: new Date("2026-06-24"), to: new Date("2026-07-01") },
-    { name: "Sprite 1.0", from: new Date("2026-06-16"), to: new Date("2026-06-23") },
-    { name: "Scorpion 1.2.1", from: new Date("2026-04-01"), to: new Date("2026-06-15") },
-    { name: "Scorpion 1.2", from: new Date("2026-03-24"), to: new Date("2026-03-31") },
-    { name: "Scorpion 1.1", from: new Date("2026-03-12"), to: new Date("2026-03-23") },
-    { name: "Scorpion 1.0", from: new Date("2026-03-09"), to: new Date("2026-03-11") },
-    { name: "Gargoyle 1.2.2", from: new Date("2025-12-09"), to: new Date("2026-03-08") },
-    { name: "Gargoyle 1.2.1", from: new Date("2025-11-26"), to: new Date("2025-12-08") },
-    { name: "Gargoyle 1.2", from: new Date("2025-11-25"), to: new Date("2025-11-25") },
-    { name: "Gargoyle 1.1", from: new Date("2025-11-13"), to: new Date("2025-11-24") },
-    { name: "Gargoyle 1.0", from: new Date("2025-11-11"), to: new Date("2025-11-12") },
-    { name: "Wisp", from: new Date("2025-09-30"), to: new Date("2025-11-10") },
-    { name: "Griffon 1.2", from: new Date("2025-08-26"), to: new Date("2025-09-29") },
-    { name: "Griffon 1.1", from: new Date("2025-08-14"), to: new Date("2025-08-25") },
-    { name: "Griffon 1.0", from: new Date("2025-08-12"), to: new Date("2025-11-13") },
-    { name: "Ogre 1.2.1", from: new Date("2025-04-29"), to: new Date("2025-08-11") },
-    { name: "Ogre 1.2", from: new Date("2025-04-15"), to: new Date("2025-04-28") }
-];
 

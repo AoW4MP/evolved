@@ -41,8 +41,6 @@ var currentHighlights = "";
 
 var extraOrder, extraChaos, extraNature, extraMaterium, extraShadow, extraAstral;
 
-var buildTags = ["Roleplay", "Theme", "PVP", "Casual"];
-
 var listOfPantheonTraits = [
     "talented_collectors",
     "subterranean_society",
@@ -3975,61 +3973,8 @@ function hexToDecimal(hex) {
     return parseInt(hex, 16);
 }
 
+// a link's build (?u=): the creator set to it. A build opened from Evolved's Builds List (?b=) has its view counted and
+// its name, tags and notes shown by Data/builds.js (BdOpenBuild); upstream's list counted views by the link here
 function RebuildFromParam(code) {
-    console.log(code);
     reversLookUp(code);
-    spinner.style.display = "block"; // Show the spinner
-    fetch(
-        "https://script.google.com/macros/s/AKfycbz5r36EOFcrtfu2Y3CN8DdgDkJDiq6NHf7Y6JEv1IkngOG4we3F5uFU6o5aYFSnm5M4/exec",
-        {
-            method: "POST",
-            body: new URLSearchParams({
-                action: "incrementView",
-                buildId: window.location.href.split("?")[0] + "?u=" + code.replaceAll(" ", "%20")
-            })
-        }
-    )
-        .then((res) => res.json()) // Parse the JSON from response
-        .then((builds) => {
-            if (builds[0] != undefined) {
-                FillInBuildDetails(builds[0]);
-            }
-        })
-        .finally(() => {
-            spinner.style.display = "none"; // Hide spinner after fetch is done
-        });
-
-    if (window.location.href.indexOf("&edit") != -1) {
-        // save current url for overwriting
-        document.getElementById("oldURL").innerHTML = window.location.href.split("?")[0] + "?u=" + code;
-        // show edit button
-        var editButton = document.getElementById("overwriteButton");
-        editButton.style.display = "block";
-        //   alert("Editing");
-    }
-
-    // check if build code is here
-
-    // if (build.editKey === getOrCreateUserEditKey()) {
-}
-
-function FillInBuildDetails(build) {
-    console.log(build);
-    var nameBuild = document.getElementById("buildName");
-    nameBuild.value = build.BuildName;
-    var notesBlock = document.getElementById("notesDisplay");
-    console.log(build.Notes);
-    var convertedNotes = convertBracketsToHTML(build.Notes);
-    console.log(convertedNotes);
-    convertedNotes = convertNamesToHTML(convertedNotes);
-    console.log(convertedNotes);
-    notesBlock.innerHTML = convertedNotes;
-    if (build.Tags != "") {
-        const tagArray = new Set(build.Tags.split(",").map((tag) => tag.trim()));
-        updateTagList(tagArray);
-    }
-
-    rawNotes = build.Notes;
-
-    // const tagArray = Array.from(selectedTags);
 }

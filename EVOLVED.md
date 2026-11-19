@@ -253,7 +253,7 @@ Evolved is exported in English only, so the other languages are removed:
 The website's own dump in `Data/EN` is of the game the mod is played on, a beta when there is one (the Manta beta until
 it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to upstream's `Data/BETA`, which is deleted:
 
-- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice on the left of the top strip (`.hud-facts`), "Silver Seas Dataset". Update the name in it when the game's version or beta changes.
+- `HTML/header.html`: upstream's "Switch To … Beta Dataset" checkbox is replaced by a plain notice on the left of the top strip (`.hud-facts`), "Silver Seas Dataset". Update the name in it when the game's version or beta changes, and its `data-dataset` ("Silver Seas"), which the Builds List records with each build (see Builds/Planners pages).
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
 - `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.
@@ -353,6 +353,79 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - Passives: tabs Units (a unit's own passives, and its movement, terrain walks, camouflage, size, origin: Floating, Forest Walk, Large Target, Cannot be Displaced, Magic Origin, Cavalry), Heroes (a skill's, item's or infusion's) and Champion Medals (a unit's medal reward that names it: Champion Heal and the like; not the +10 Hit Points every unit's medals give). A passive on several is on each tab. Sorted by name or by how many units have it. A unit's type and class aren't listed (`AB_UNIT_TYPES`, `AB_UNIT_CLASSES` in `abilities.js`: the secondary passives the game writes in one group of texts, `UPGRADES_CORE_UNITPROPERTIES@`, the types Animal, Undead, Fiend... Spider and Penguin, the classes the Units menu's Class pages with Settler and Civilian): the Units menu's Types and Class pages group the units by them, and a unit card's icon for each, or a link to one, shows its text. For a few hours on 2026-11-18 they had tabs of their own, Unit Types and Unit Classes. Until then Unit Types held all secondary passives, and an Other tab what nothing in play has: the Dragon Lords' Auras (only their old "HS - <Affinity> Aura - DISABLED" skills hold them), Cull the Weak and Resistance Training (an "Invalid" and a "DISABLED" skill's), and the seven Primal Communions, the Primal subcultures' enchantments' passives, which the dump has only for the invalid "HS - Primal Fury" skills: the enchantments are on the Enchantments page, as no other enchantment's passives are here.
 - Status Effects: the dump's own list (`Data/EN/StatusEffects.json`, 320; upstream's hand-made `Data/GEN/StatusEffects.json` had 245 and lacked Bleeding, Chilled, Doomed...), tabs Negative and Positive as the game counts them. `statuseffects.py` in aow4_diff_tools writes `Data/GEN/StatusEffects.json` (now its own, read as `jsonStatusEffects`: `{effects: [{slug, name, kinds, stacks, counters, dispellable}]}`) from the game's status effect descriptions (`TMagicStatusEffectDescription`): AI Is Positive (what the dispels' Positive Filter reads), Max Stacks, Opposing Status Effect Descriptions (what it counters) and the type "Status Effect - Dispelable" that dispels and cleanses remove. Refuged and Gilded are described both ways and are on both tabs; the mind control effects (Dominated, Possessed, Final Ultimatum) have no description and are negative. The flag is left at its default (positive) on a few that read as negative: Yearning for the Song (a Morale loss) and the handcrafted regions' events' Decreased Defense, Slowed Movement and Soaked (the maintainer is reporting them to Paradox; the site keeps the game's word). Left out (`inplay.py`, 27 cards): the affinity hero traits (Elevated, Withered, Lucky... the Affinity Cost and Reward actions are "[DEPRECATED]"; the rest story realms' and cheat scripts'), Inspired and Traumatized, the Empire Tree's Rites (Rite of Fanaticism, Rite of Stoic Defense: spells no one can get), Channel Power and Fortified Summons (old hero skills'), Hyper-Awareness's status copy (units and the infusion have its passive), the statuses spells applied before they changed (Earth Shatter, Wrath of the Emperor, Static Shields), and Evolved's own copies nothing applies (`8D1FD0C9…`: Destructive Regrowth, Earth Shatter, Retaliating Growths, Shifting Phase, Static Shields, Wrath of the Emperor; the game's copies of Destructive Regrowth and Retaliating Growths are applied, and Final Ultimatum is Evolved's copy, the game's being unused). A card has the units that have it from the start, its stacks, whether it is dispellable, and what it counters where its text doesn't say (28 of 32 say it: "Strengthened counters Weakened"; not Encouraged and Demoralized, Lamenters' Song and Yearning for the Song). Buttons for Stacking, Dispellable, Not dispellable and Has a counter. `HTML/Synergies.html` (not in the menu) reads the new file. The tabs' and cards' arrows are the game's text icons `<warningnegative>` and `<warningpositive>` (`Icons/TML`), the unit banner's: `tmlicons.py` cut their atlas boxes whole, with the white edges of their neighbours around them, and now clears the empty margins the atlas gives each image (2026-11-18; no other text icon has any).
 - `Style/icons.css`: `<unitCivilian>` is `Icons/Text/civilian.png` (the wagon, beside `settler.png`); upstream's `Icons/Interface/Header/civilian.png` doesn't exist, so the tag showed nothing anywhere.
+
+### Builds/Planners pages
+
+`HTML/FactionList.html` (Builds List), `HTML/FactionCreator.html` and `HTML/HeroBuilder.html` are Evolved's own pages
+(same URLs; 2026-11-19). They share `Style/builds.css`; the Builds List and the Faction Creator's publish form are
+`Data/builds.js`, on the Heroes and Empire pages' cards and the board (`WmBoard`). The menu's are the game's art (were
+Druidic Terraformers, Arcane Surge and the Sprint medal, which are gone from `DropdownIcons`), cut as the Heroes menu's,
+with title icons: `FactionCreator.png` is the creator panel's own shield and symbol (`Icons/Interface/Sigil.png`,
+`symbol.png`), drawn as the panel draws them, 85px as it is solid; `HeroBuilder.png` the radial menu's Heroes glyph, the
+winged helmet (`RadialMenu_Heroes`, `[INTERFACEASSETS]TXA\32?14`; a neighbour's edge at its left cut away, trimmed at
+alpha 60 as its shadow fills the box), 93px; `BuildsList.png` the Tomes screen's bookshelf (`Tome_bookshelf_default`,
+`TXA\8?58`, trimmed at alpha 100 for its glow), 93px. The menu's "Faction Builder" is "Faction Creator", as its page.
+
+- **Builds List: Evolved's own store.** Until 2026-11-19 the list read MinionsArt's (a Google Apps Script web app over a
+  Google Sheet, `script.google.com/macros/s/AKfycbz5r36…/exec`) and the Faction Creator published there: 3,597 builds,
+  all but 6 of them the base game's, linking to MinionsArt's site; its read handed out every build's edit key, so anyone
+  could delete anyone's. The 6 Evolved ones (2026-10-26, test names, nothing of Silver Seas in them) weren't carried over.
+  Evolved's store is `Server/builds.gs`, a web app over a sheet in the maintainer's Google account, and `BD_API` in
+  `Data/builds.js` is its address; empty, the list and the publish form say the list isn't open yet. Setting it up:
+  1. A new Google Sheet; Extensions > Apps Script; replace the sample code with `Server/builds.gs`; save.
+  2. Deploy > New deployment > Web app: execute as Me, who has access Anyone. Allow its access (Google calls a script of
+     one's own "unverified": Advanced > Go to the project). `@OnlyCurrentDoc` keeps that access to this sheet.
+  3. The web app's address (`https://script.google.com/macros/s/…/exec`) in `BD_API`. The first call makes the sheet's
+     tab "Builds" with its columns.
+  A change to the script: Deploy > Manage deployments > edit > Version: New version, which keeps the address.
+  - The sheet has a row per build: Id, Created, Updated, Dataset, Name, Code (the Faction Creator's `?u=`), Tags, Notes,
+    Views, Owner, Hidden, found by their headings (columns can be moved, or added: a column of the maintainer's own is
+    kept). Pruning a build: delete its row, or type anything in Hidden to keep it out of the list. Owner is a SHA-256 hash
+    of the publisher's edit key (salted with `evolved-builds:`, `BdOwner` and `Owner` alike), so no key is stored or shown;
+    the list knows a visitor's own builds by hashing theirs. A key publishes at most 100 builds, not the same build twice;
+    a name is 80 characters at most, notes 5,000, the tags those of `BD_TAGS`. Writes are POSTs (a form's body, so
+    nothing asks first) under a lock; the list is a GET.
+  - **A new DLC or beta:** change the top strip's `data-dataset` (One dataset, above). Each build keeps the dataset it was
+    published or last saved on: the list opens on the current one's builds (its tab named after it, with the DLC's icon),
+    and those of older ones are under Older Versions (by dataset, sorted Newest), marked in the creator as "made on an
+    older version of the game". My Builds holds the visitor's own of any dataset.
+  - A build's card (`BdCard`): its name, or its culture, form and class ("Dark Elfkin Warlock"; the old list's "Dark
+    Warlock of Eldritch Sovereign"), with the culture's emblem (the ruler types' portraits are dark scenes, alike at that
+    size) and the DLCs it needs; its affinities as the creator counts them (`GetAffinityTotalFromList`, its extra points
+    added); rows for its ruler (type, dragon type, clan or bloodline, class, Ascension, ambition), race (form, traits),
+    culture (subculture, society traits) and tome path, each thing its card on hover (the Faction Traits page's for a
+    trait, ruler type and culture, the Heroes pages' for an Ascension and an ambition, a small one for a tome or form);
+    the ruler's and race's names; tags; notes, folded; its dataset, date and views; Edit and Delete for the visitor's own.
+    `BdDecode` reads a code as `reversLookUp` in `Faction.js` does, the old codes' subculture-only culture and
+    weapon-for-class too. Search, buttons for a main affinity (its most and those one fewer), ruler type, culture and
+    tag; sorted Newest, Most Viewed or Name.
+  - Notes are plain text: a line starting with "# " a heading, `**bold**`, `[hp]` a game icon (a tag the browser knows no
+    element of; `[img]` and `[script]` stay text), everything else escaped (`BdNotes`). The old form saved a rich-text
+    box's HTML and drew it as HTML, other people's included. Notes aren't run through the site's links: "Tome of Zeal"
+    linked the Zeal status effect.
+  - The edit key is the old one (`localStorage` "editKey", made by `getOrCreateUserEditKey`): a panel to show, copy, save
+    to a file or replace it (`BdKeyPanel`, on the list and the publish form).
+- **Faction Creator:** its choices and overview keep `Faction.js`; the page is in the cards' frames, buttons and labels
+  (its own `<style>` stays, `.fc-page`'s rules in `builds.css` win). Randomise, the link field and Copy Share Link (which
+  makes the link and copies it: were Make Share Link and Copy), and Builds List over it. The overview sits beside the
+  choices and takes the rest of the row, its groups in balanced columns (`columns: 216px`): the page's rule ran them
+  down 650px and on past the window's edge (1265px wide in a 1200px window); Hide Overview, Reset and Show/Hide non-★ are
+  one row, the latter two hidden with the overview. On a phone the panel's two columns, head and tome path wrap (it was
+  759px wide at 390). Under it, Publish to the Builds List (`BdPublishPanel`): name, tags, notes with a preview, the edit
+  key; Publish, or Save Changes for the visitor's own build. A build opened from the list (`?u=…&b=<id>`) counts a view
+  and shows its name, facts and notes over the creator (`#bdShown`); the visitor's own fills the form, another's leaves
+  it empty, as what they publish is theirs. `RebuildFromParam` no longer posts a view to MinionsArt's store by the link.
+  Gone with the old form: its notes editor, tag dropdown, `&edit`, and settings.js' key helpers, `buildTags` and
+  `patchDates` (the old list named a build's patch by its date).
+- **Hero Builder:** the ruler type, the dragon type or clan, and the class are rows of buttons (`HbbPickers` in the
+  page): each sets its select, which stays hidden as `Hero.js` reads and sets it, and tells it as choosing did;
+  `HbbSync` shows what `Hero.js` holds (a Dragon Lord's Ranger is a Warrior, which the old select didn't show) and greys
+  the classes a ruler type can't be, for a hero opened from a link too (only a change of ruler type did). Skill Points
+  and Build Name beside them. The trees are headed by what they are ("Chaos Dragon Skills", "Warrior Skills", "Signature
+  Skills": upstream's "Affinity Skills"), centred in a frame on the game's skill tree background, and scroll by
+  themselves where the window is narrower than their 1,830px: the old pickers were placed at fixed spots up to 1,400px
+  and the page overflowed even at 1920. `zoom` to fit was tried: `resizeParentToFitChildren` measures on screen, so the
+  zoomed trees overlapped. The summary panel, which nothing filled (`CreateSummary` isn't called), is gone.
 
 ### Search
 

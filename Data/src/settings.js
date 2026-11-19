@@ -10,10 +10,6 @@ function setUserSettings(settings) {
   localStorage.setItem("userSettings", JSON.stringify(settings));
 }
 
-function OverwriteEditKey() {
-  localStorage.setItem("editKey", document.getElementById("overwriteKey").value);
-}
-
 function CheckBoxTooltips() {
   let hoverDiv = document.getElementById("hoverDiv");
   let hoverDiv2 = document.getElementById("hoverDiv2");
@@ -32,29 +28,7 @@ function CheckBoxTooltips() {
   document.documentElement.classList.toggle("highlight-numbers", checkboxNumbers.checked);
 }
 
-function CopyField() {
-    var copyText = document.getElementById("YourKey");
-
-    // Select the text field
-    // For mobile devices
-    console.log("Key  " + copyText);
-
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.innerText);
-}
-
-function ShowLoad() {
-    var loadButtons = document.getElementById("loadkey");
-    loadButtons.style.display = "block";
-}
-
-function HideKey() {
-    document.getElementById("YourKey").style.display = "none";
-}
-function RevealKey() {
-    document.getElementById("YourKey").style.display = "block";
-}
-
+// the Builds List's edit key (Data/builds.js: BdKeyPanel), to a file
 function downloadEditKeyFile() {
   const text =
     "Age of Wonders 4 Evolved (aow4mp.github.io/evolved)\nYour Build Edit Key : " + getOrCreateUserEditKey(); // Replace with your dynamic content

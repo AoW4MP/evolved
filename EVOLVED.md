@@ -423,7 +423,8 @@ Builder" is "Faction Creator", as its page.
     (`.fc-hcol`), each field its label over it, the labels on one line, the fields 32px tall: Ruler Name and Race Name
     (were in the columns' heads) as wide as the Ruler row; Affinity (an icon and its number kept together) as the
     Physical Form row, six on a line; Extra Affinity Points in a row across the Culture row's width, beside the
-    affinity they add to (each an icon and its number as the affinity's line has them, its arrows stacked after them,
+    affinity they add to, in a box as the names' fields (border #555; with the rows' fainter #3c3c3c it looked the
+    shorter at the same 32px) (each an icon and its number as the affinity's line has them, its arrows stacked after them,
     cut from their 26x43 pictures to 10x12; the number 2px lower for Minion's descent). Until 2026-11-19 a line of
     fields of their own widths, none at a column's edge, the extra points' numbers under their icons (a box 60px tall),
     after the old page's sigil: a shield with a symbol nothing set (`SelectSymbol`'s pick-list was never opened, nor

@@ -547,8 +547,9 @@
     box-sizing: border-box;
     height: 32px;
     padding: 0 6px;
-    background: rgba(0, 0, 0, 0.35);
-    border: 1px solid #3c3c3c;
+    /* the names' fields' ground and border: with the rows' fainter ones (#3c3c3c) it looked the shorter */
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid #555;
 }
 .fc-page .fc-extra-one {
     display: flex;

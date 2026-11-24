@@ -2874,11 +2874,11 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     addTooltipListeners(critTooltip, critspan);
 
-    // its figures (members), from its formation in the game with the mod (aow4_diff_tools' unitfigures.py), with
+    // its figures (members), from its formation in the game with the mod (aow4_diff_tools' unitextras.py), with
     // the game's Casualty concept, which tells what losing them does
     const figures = unitCard.querySelector("p#figures");
     const figuresTooltip = unitCard.querySelector("div#figures_tt");
-    const figureCount = jsonUnitFigures[unitEN.resid];
+    const figureCount = (jsonUnitExtras[unitEN.resid] || {}).figures;
     figures.style.display = figuresTooltip.style.display = figureCount ? "" : "none";
     if (figureCount) {
         figures.innerHTML = figureCount;
@@ -3066,7 +3066,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     let summonInfo = canBeSummoned(unitEN.id);
     if (summonInfo == true) {
-        upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN.tier, ""));
+        upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, ""));
     }
 
     let critChance = 0;
@@ -3075,11 +3075,11 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     for (let y = 0; y < unitEN.secondary_passives.length; y++) {
         if (unitEN.secondary_passives[y].icon == "findMgicOrinIcon") {
             if (lowUpkeep === true) {
-                upkeepValue.innerHTML = upkeepAmount(getSummonedUpkeep(unitEN.tier, 0.75));
+                upkeepValue.innerHTML = upkeepAmount(getSummonedUpkeep(unitEN, 0.75));
             } else if (faithfulUpkeep === true) {
-                upkeepValue.innerHTML = upkeepAmount(getSummonedUpkeep(unitEN.tier, 0.9));
+                upkeepValue.innerHTML = upkeepAmount(getSummonedUpkeep(unitEN, 0.9));
             } else {
-                upkeepValue.innerHTML = upkeepAmount(getSummonedUpkeep(unitEN.tier, ""));
+                upkeepValue.innerHTML = upkeepAmount(getSummonedUpkeep(unitEN, ""));
             }
 
             if (summonInfo.length > 0) {
@@ -3172,7 +3172,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
-                upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN.tier, 0.75) + "*");
+                upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, 0.75) + "*");
             }
         }
 
@@ -3187,9 +3187,9 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN.tier, 1.5) + "*");
+                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, 1.5) + "*");
                 } else {
-                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN.tier, 1.5) + ">*");
+                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, 1.5) + ">*");
                 }
             }
         }
@@ -3205,9 +3205,9 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN.tier, 0.9) + "*");
+                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, 0.9) + "*");
                 } else {
-                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN.tier, 0.9) + ">*");
+                    upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, 0.9) + ">*");
                 }
             }
         }
@@ -3312,16 +3312,11 @@ function canBeSummoned(id) {
     return false;
 }
 
-function getSummonedUpkeep(tier, lowMaintenance) {
-    const upkeepTable = {
-        1: "8<mana></mana>",
-        2: "12<mana></mana>",
-        3: "20<mana></mana>",
-        4: "30<mana></mana> 3<influence></influence>",
-        5: "60<mana></mana> 7<influence></influence>"
-    };
-    const base = upkeepTable[tier];
-    if (!base) return ""; // fallback if invalid tier
+// a unit's upkeep when summoned: its tier's Upkeep Cost (Summoned) in the game with the mod (aow4_diff_tools'
+// unitextras.py; the mod's Tier IV and V take 5 and 10 Imperium, upstream's table here had the game's 3 and 7)
+function getSummonedUpkeep(unit, lowMaintenance) {
+    const base = (jsonUnitExtras[unit.resid] || {}).summoned_upkeep;
+    if (!base) return "";
 
     return lowMaintenance ? ReduceUpkeepPercentage(base, lowMaintenance) : base;
 }

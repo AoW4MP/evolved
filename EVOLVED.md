@@ -590,8 +590,8 @@ unlocked by a choice in Oceanic Happening Mating Season").
 A unit's card shows its figures (members) after Combat Speed (2026-11-24, as upstream's of 2026-11-19, with its
 `Icons/Text/figure_count.png`, its art moved up to the middle of the image: upstream's had a transparent top fifth,
 so it stood lower than the row's other icons), with the game's Casualty concept as tooltip, which tells what losing them does. The number
-is the positions of the unit's formation in the game with the mod (`Data/GEN/UnitFigures.json`, by resid, from
-`unitfigures.py`; see Game data), not upstream's `figure` field: theirs is vanilla (Evolved moves Gremlin, Zealot and
+is the positions of the unit's formation in the game with the mod (`Data/GEN/UnitExtras.json`'s `figures`, by
+resid, from `unitextras.py`; see Game data), not upstream's `figure` field: theirs is vanilla (Evolved moves Gremlin, Zealot and
 Daylight Spear from 7 figures and five units from 8), and the dump gave 4 for the 7 of "Special 4 3 staggered", which
 upstream corrected by hand. A faction mount or a transformation can change it in play (an exotic mount's 2 or 3, Angelize's
 Positions (Small)): the card shows the unit as it is drafted. The stat row is a centred flex row (`.unit_stats`), as six
@@ -600,7 +600,9 @@ stats no longer fit the floats' fixed start. The name bar, the tier line and the
 stats 4px right (`left` -4px, was -16, and its stats without their 5% offset). The tier line reads "Tier: II  Upkeep: 12 gold", the game's words for each
 (`INTERFACE@TEXT` `tier`, `upkeep`), close together and centred on the panel: upstream spread Tier and the upkeep to the
 panel's ends. "Tier: II" has the Unit Tier concept as tooltip, "Upkeep:" the game's Unit Upkeep text; what changes the upkeep (Low Maintenance,
-summoning) writes into `#upkeepvalue`, each amount through `upkeepAmount`. The amounts stand 1px below their labels'
+summoning) writes into `#upkeepvalue`, each amount through `upkeepAmount`. The Summoned line's upkeep is the unit's
+tier's Upkeep Cost (Summoned) in the game with the mod (`getSummonedUpkeep`, `UnitExtras.json`'s `summoned_upkeep`):
+upstream's table by tier had the game's 3 and 7 Imperium for Tier IV and V, the mod's are 5 and 10 (2026-11-24). The amounts stand 1px below their labels'
 baseline and the tier's numeral 0.5px (`.unit_tier_value`, 2026-11-24, the maintainer's call; the numeral by
 `transform`, as a relative offset's half pixel is drawn as a whole one, which looked too low): beside lowercase words
 (Tier, Upkeep's descending p's) capitals and figures on the same baseline read as standing higher. An amount's icon
@@ -702,7 +704,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`), `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), `ancientwonders.py`, `worldmap.py`, `spells.py`, `affinityattacks.py` (`Data/GEN/AffinityAttacks.json`), `unitfigures.py` (`Data/GEN/UnitFigures.json`), `heroskills.py` (`Data/GEN/HeroSkillSources.json`), `heroitems.py` (`Data/GEN/HeroItemSources.json`), `statuseffects.py` (`Data/GEN/StatusEffects.json`) and `inplay.py` (`Data/GEN/AbilitiesInPlay.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`), `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), `ancientwonders.py`, `worldmap.py`, `spells.py`, `affinityattacks.py` (`Data/GEN/AffinityAttacks.json`), `unitextras.py` (`Data/GEN/UnitExtras.json`), `heroskills.py` (`Data/GEN/HeroSkillSources.json`), `heroitems.py` (`Data/GEN/HeroItemSources.json`), `statuseffects.py` (`Data/GEN/StatusEffects.json`) and `inplay.py` (`Data/GEN/AbilitiesInPlay.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
 Then `python checktooltips.py` there lists tooltip links that open the text they are in (see `LinksElsewhere` above).
 A new culture's emblem or a DLC's relic and landmark pictures have to be on the site before `citytree.py`, `spells.py`
 and `worldmap.py` run, as they look for them: run those three again after adding them.

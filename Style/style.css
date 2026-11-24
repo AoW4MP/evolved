@@ -1465,11 +1465,18 @@ tab {
     position: relative;
     top: 1px;
 }
-/* an upkeep's icon with its middle on the amount's (measured): Gold's and Mana's were 3px above it (they sit on the
-   baseline, twice a figure's height); Imperium's, a short one, already had it, so it keeps its place (2px here, 3 with
-   the span's 1) */
+/* a numeral only half as much: a full pixel looked too low beside Tier (the maintainer, 2026-11-24); by a transform,
+   as an offset's half pixel is drawn as a whole one */
+#tierlabel > .unit_tier_value {
+    top: 0;
+    display: inline-block;
+    transform: translateY(0.5px);
+}
+/* an upkeep's icon with its middle on the amount's: Gold's and Mana's were 3px above it (they sit on the baseline,
+   twice a figure's height); Gold 1px higher than the measured middle, which looked low (the maintainer); Imperium's, a
+   short one, already had it, so it keeps its place (2px here, 3 with the span's 1) */
 .unit_tier_value > gold {
-    top: 6px;
+    top: 5px;
 }
 .unit_tier_value > mana {
     top: 5px;

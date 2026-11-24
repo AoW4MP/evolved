@@ -279,6 +279,10 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - Each material card links to `HTML/Infusions.html?material=<name>`, which picks that material's filter.
 - No text over the tabs (until 2026-11-12 the game's tutorial page on Magic Materials, `TUTORIAL@MAGICMATERIALS@PAGE01`, "You have selected a magic material..."; Infestations had a line of its own, not the game's). The game has tutorial texts for few of the World Map and Spells pages (Ancient Wonders, Infestations, Enchantments, Transformations, Special Improvements), written for when they pop up ("You have just researched..."), and concept texts for most but not Cosmic or Oceanic Happenings, Realm Traits or Strategic Spells: no page has one, so they stay alike.
 - `Data/Builder.js`: a concept link written as `{<hp></hp>}` shows the concept's own name ("Hit Point"), on every page.
+- `Data/Builder.js`: an ability's notes in its tooltip have their links as the game's (`GetAbilityToolTip`, 2026-11-24,
+  the maintainer): "Affected by Line of Sight rules" (445 abilities) and "Cannot be used when within an enemy Zone of
+  Control" (710) open those concepts, which no page showed; the dump's `<hyperlink>Line of Sight</hyperlink>` showed
+  as plain white words. Only the game's links: no other words in them are linked.
 
 ### World Map pages
 
@@ -587,9 +591,21 @@ nothing to show it). The Artifacts page has a Silver Seas Artifacts tab (`Artifa
 An Oceanic happening whose choices unlock a unit is one of its origins, through the spell book's `sites` ("Unit production
 unlocked by a choice in Oceanic Happening Mating Season").
 
+An ability's small icons on its picture (Cooldown, Once per battle, Weapon or Magic) stand in the picture's lower corners,
+their bottoms on its bottom edge, in a box with the picture (`.unit_ability_pic`, `addAbilityslot`, 2026-11-24):
+upstream placed them from the row's bottom, so they went down when the name or damage took a second line (the
+maintainer: many damage types from enchantments), and a name with diamonds had them hang 5px below the picture. Every
+ability's row is as high (48px, more where the name or damage takes two lines), its picture and name centred in it:
+a name's diamonds made its row 49px with the picture at its top, one without 40, so Defense Mode stood against the row
+under it (the maintainer: Ice Nova "sticking" to it); the diamonds no longer raise the line. A picture
+whose art fills its whole square (Ice Nova's: a dark square with a diamond drawn on it, 11 of the game's 3,156 unit
+icons) is cut to the frame's diamond once loaded, by its corners' alpha (`ClipOpaqueAbilityIcon`), on the card and in
+the tooltip: it stood out as a black square.
+
 A unit's card shows its figures (members) after Combat Speed (2026-11-24, as upstream's of 2026-11-19, with its
 `Icons/Text/figure_count.png`, its art moved up to the middle of the image: upstream's had a transparent top fifth,
-so it stood lower than the row's other icons), with the game's Casualty concept as tooltip, which tells what losing them does. The number
+so it stood lower than the row's other icons; 30px tall, 28 wide, as its art has more space round it than the others':
+at their 25 it looked smaller, 2026-11-24, the maintainer), with the game's Casualty concept as tooltip, which tells what losing them does. The number
 is the positions of the unit's formation in the game with the mod (`Data/GEN/UnitExtras.json`'s `figures`, by
 resid, from `unitextras.py`; see Game data), not upstream's `figure` field: theirs is vanilla (Evolved moves Gremlin, Zealot and
 Daylight Spear from 7 figures and five units from 8), and the dump gave 4 for the 7 of "Special 4 3 staggered", which
@@ -618,9 +634,11 @@ A unit's card's Enchant button works again (2026-11-24), from the game with the 
 requisite filters (any of, none of, all of) against the unit's requisites (`EnchantUpgradesFor`): Brutal Mark not to
 Barbarian units, Dormant Enchantment's variant by class. Upstream's hand-coded culture exclusions (one for a Signet of
 Knighthood the game no longer has) and its check against the dump's class list are gone. A picked one changes the card
-as the game does (`EnchantEffectsFor`): Hit Points, Defense and Resistance with a purple `*`, Status Resistance, a
-type's resistance or weakness (the dump's slug for the new value; another of that type names it where none has it:
-`addResistanceSlot`), the abilities it gives, its passive as the game's unit panel shows it (the property's own text in
+as the game does (`EnchantEffectsFor`): Hit Points, Defense, Resistance, Status Resistance and a type's protection or
+weakness, each with a purple `*` (the last two since 2026-11-24, the maintainer: Mage Armor, Mighty Meek, Undead
+Resentment, Shaper's Touch; a protection made 0 goes, as in the game), a protection's damage reduction from the Defense
+and Resistance as enchanted (were the unit's own) (the dump's slug for the new value; another of that type names it
+where none has it: `addResistanceSlot`), the abilities it gives, its passive as the game's unit panel shows it (the property's own text in
 `all.json`, `GameText`, with the enchantment's icon: `AddEnchantPassiveSlot`; the enchantment's own name and text where
 the game shows none), and the attacks whose requisites its ability modifiers ask (`EnchantAttacksOn`,
 `ApplyEnchantAttacks`): extra damage first (only to the types an attack deals, for those that say so), then the
@@ -628,9 +646,23 @@ multipliers as the game works them out: the bonuses add up, with the unit's own 
 `multipliers`: a Mythic unit's +10% to weapon attacks, which the dump's damage has: the card takes it out first), on
 the damage before any, and the result is rounded up. The maintainer's Kraken with Empowered Beasts and Force of Nature:
 Melee Strike 20 x 1.3 = 26 and its +4 Blight 5.2, 6; Tentacle Vortex 26 x 1.3 = 33.8, 34 (as in the game); a Warg's 14
-is 17. The name
-marked with a purple `*`; no line of its own per enchantment in the tooltip (dropped 2026-11-24, the maintainer: the
-enchantment shows on the card and beside the picture, and its effects in the numbers and among the modifiers). Extra
+is 17. The modifiers an enchantment gives an attack join its own, each with a purple diamond after the attack's name and
+a purple bullet in its tooltip (`enchant_bullet`), its own ones green: upstream's purple `*` after the name of a changed
+attack is gone (2026-11-24, the maintainer: it went with its lines in the tooltip). A number an enchantment changed has
+a purple `*` after it instead (`ENCHANT_MARK`), as a stat has: each damage type that differs from the attack's own or is
+new, on the card and in the tooltip, and the tooltip's range and accuracy (36 of the enchantments' attack effects only
+change the damage, with no modifier: Cosmos Awakening, Siege Magic). An attack's critical hit chance shows in its
+tooltip after the range, only where it is not 0, as in the game (the maintainer's screenshot: a Peacebringer's Shoot
+Bow with Artisan Armaments and Fateful Imbuement, 50%): the sum of its own (an item's Trueshot, 20), the unit's (the
+twelve Fiends', 20, from the dump's Infernal Fiend group: in the game too, the maintainer's Skald's Heat of the
+Revel) and the enchantments' that apply to it (`CritChanceOf`; `UnitEnchantments.json`'s `ability_crit`, `crit` and
+the attacks' `crit`), with a purple `*` where an enchantment adds to it. The dump has none of it. Accuracy, range and
+crit chance stay on one line, as the game's (the crit chance wrapped below "Always Hits"), in an ability's tooltip as
+wide as the game's for its text, with less room at the sides (`.tooltiptextnew:has(#abilityAcc)`: 440px in all, 10px
+at the sides; was 360, 20px, and "Single Action" broke in two beside them; a phone's stays full width). An ability or passive an enchantment gives stands 4px from the entries round it
+(`.unit_enchant_row`; its purple band touched them). No line of its own per enchantment
+in the tooltip (dropped 2026-11-24, the maintainer: the enchantment shows in the unit's list, and its effects in the
+numbers and among the modifiers). Extra
 damage "only to the types it deals" (Ice Focus' Ice Nova damage per tier) goes to the attack's own types, not to
 those another enchantment adds: else the order they were picked in decided it. A modifier for Repeating or Single Action
 attacks only (its Ability Type Filter: Frenzying Imbuement's Life Steal, 5 and 10) goes to those by the attack's action.

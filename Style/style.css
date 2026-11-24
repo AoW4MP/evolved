@@ -1195,13 +1195,36 @@ tab {
     filter: brightness(150%);
 }
 
+/* every ability's row as high, its picture and name centred in it (the maintainer, 2026-11-24): a name with
+   diamonds made its row 49px, its picture at the top, one without 40, so Defense Mode stood close to the row under it */
 .unit_abilityslot {
     position: relative;
     width: 310px;
     margin: 1px;
     display: flex;
-    min-height: 40px;
+    min-height: 48px;
     max-height: 100px;
+}
+
+/* an ability's picture with its small icons (Cooldown, Weapon or Magic), which are placed on it */
+.unit_ability_pic {
+    position: relative;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+/* an ability or passive an enchantment gives (its purple band): a little apart from the entries round it, which its
+   band touched (the maintainer, 2026-11-24) */
+.unit_enchant_row {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* an ability's picture whose art fills its square (ClipOpaqueAbilityIcon: Ice Nova's), cut to the frame's diamond */
+.ability_icon_clipped {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
 .origin_icon:hover {
@@ -1895,6 +1918,15 @@ hr {
 .tooltiptextnew.wide {
     max-width: 500px;
 }
+/* an ability's tooltip as wide as the game's for its text (about 28 times its size; 440px in all) and with less room at
+   the sides (the maintainer, 2026-11-24, by the game's Peacebringer): its head line on one line, accuracy, range and
+   crit chance as the action points beside them; at 300px "Single Action" broke in two. A phone's stays full width */
+.tooltiptextnew:has(#abilityAcc) {
+    width: 400px;
+    max-width: 400px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 hyperlink {
     color: beige;
@@ -2060,6 +2092,11 @@ popUpHeader2 {
 bullet:before {
     content: "\25C6";
     padding-right: 5px;
+}
+
+/* a modifier an enchantment gives an attack, in the enchantments' purple as its diamond on the unit card */
+bullet.enchant_bullet::before {
+    color: #aa84f6;
 }
 
 bulletlist {

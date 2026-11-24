@@ -1338,6 +1338,8 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     if ("damage" in abilityLoc) {
         abilityDam = abilityLoc.damage;
     }
+    // the damage as the card shows it: with a purple * after each number an enchantment changed
+    let abilityDamShown = abilityDam;
 
     abilityType = abilityLoc.actionPoints;
 
@@ -1365,7 +1367,8 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
 
     if ("modifiers" in abilityLoc) {
         for (let l = 0; l < abilityLoc.modifiers.length; l++) {
-            abilityName += '<span style="color:#addd9e;font-size: 20px">&#11049</span>';
+            // a diamond doesn't raise the line (a row with them was 49px, one without 40: .unit_abilityslot)
+            abilityName += '<span style="color:#addd9e;font-size: 20px;line-height: 1">&#11049</span>';
             /* let modName = abilityLoc.modifiers[l].name.split("^")[0];
 
             let modDesc = abilityLoc.modifiers[l].description;
@@ -1381,17 +1384,28 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
         const changed = ApplyEnchantAttacks(abilityLoc, enchantAttacks);
         if (changed.changed || changed.notes.length > 0) {
             abilityDam = changed.damage;
-            // the game's lines for them join the ability's own modifiers, a diamond each, as those have
-            for (const note of changed.notes) abilityName += '<span style="color:#addd9e;font-size: 20px">&#11049</span>';
-            abilityName += '<span style="color:#aa84f6;font-size: 20px">*</span>';
+            abilityDamShown = changed.damageMarked;
+            // the game's lines for them join the ability's own modifiers, a diamond each as those have, in the
+            // enchantments' purple (the maintainer, 2026-11-24: was the own green, and a purple * after them all)
+            for (const note of changed.notes) abilityName += '<span style="color:#aa84f6;font-size: 20px;line-height: 1">&#11049</span>';
             enchantedAbility = {
                 ...abilityLoc,
                 damage: changed.damage,
                 range: changed.range,
                 accuracy: changed.accuracy,
+                enchantMarked: changed.marked,
                 modifiers: [...(abilityLoc.modifiers || []), ...changed.notes]
             };
         }
+    }
+    // its critical hit chance, for its tooltip (after the range, where it is not 0)
+    const crit = CritChanceOf(a, enchantAttacks);
+    if (crit.total > 0) {
+        enchantedAbility = {
+            ...enchantedAbility,
+            crit: crit.total,
+            enchantMarked: { ...(enchantedAbility.enchantMarked || {}), crit: crit.enchanted }
+        };
     }
 
     // add notes
@@ -1457,9 +1471,10 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     // tex.setAttribute('onclick', '');
     let dam = document.createElement("DIV");
     dam.className = "ability_damage";
-    dam.innerHTML = abilityDam;
+    dam.innerHTML = abilityDamShown;
 
     let abilityIconType = "";
+    ClipOpaqueAbilityIcon(imag);
     imag.setAttribute("src", "/evolved/Icons/UnitIcons/" + abilityIcon + ".png");
 
     abilityIconType = GetAbilityBackground(abilityDam);
@@ -1474,33 +1489,39 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     imag.setAttribute("onerror", "this.setAttribute('src','" + errorImage + "')");
     imag.setAttribute("width", "40");
     imag.setAttribute("height", "40");
+    // the picture with its small icons in its lower corners, their bottoms on its bottom edge, in a box of their own
+    // (.unit_ability_pic), centred in the row: from the row's bottom they went down with it when the name or damage
+    // took a second line, and a name with diamonds (a 49px row) had them hang 5px below the picture
+    const pic = document.createElement("div");
+    pic.className = "unit_ability_pic";
+    pic.appendChild(imag);
     let imageExtra;
     if (Cooldown != "") {
         imageExtra = document.createElement("IMG");
         imageExtra.setAttribute("src", "/evolved/Icons/Text/turn.png");
-        imageExtra.setAttribute("style", " position: absolute; height: 18px; left: 0px;bottom: 4px;");
-        btn.append(imageExtra);
+        imageExtra.setAttribute("style", " position: absolute; height: 18px; left: 0px;top: 22px;");
+        pic.append(imageExtra);
     }
 
     if (Once != "") {
         imageExtra = document.createElement("IMG");
         imageExtra.setAttribute("src", "/evolved/Icons/Text/once.png");
-        imageExtra.setAttribute("style", " position: absolute; height: 18px; left: 0px;bottom: 4px;");
-        btn.append(imageExtra);
+        imageExtra.setAttribute("style", " position: absolute; height: 18px; left: 0px;top: 22px;");
+        pic.append(imageExtra);
     }
 
     if (Melee != "") {
         imageExtra = document.createElement("IMG");
         imageExtra.setAttribute("src", "/evolved/Icons/Text/armor_small.png");
-        imageExtra.setAttribute("style", " position: absolute; height: 15px; left: 30px;bottom: 5px;");
-        btn.append(imageExtra);
+        imageExtra.setAttribute("style", " position: absolute; height: 15px; left: 30px;top: 24px;");
+        pic.append(imageExtra);
     }
 
     if (Magic != "") {
         imageExtra = document.createElement("IMG");
         imageExtra.setAttribute("src", "/evolved/Icons/Text/resistance_small.png");
-        imageExtra.setAttribute("style", " position: absolute; height: 15px; left: 30px;bottom: 4px;");
-        btn.append(imageExtra);
+        imageExtra.setAttribute("style", " position: absolute; height: 15px; left: 30px;top: 25px;");
+        pic.append(imageExtra);
     }
 
     let spa = GetAbilityToolTip(enchantedAbility, uniqueMedal);
@@ -1520,18 +1541,45 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
             "style",
             "background-image: linear-gradient(to right, rgb(95 47 162 / 0%), rgb(146 47 162 / 25%), rgb(222 88 228 / 50%), rgb(138 47 162 / 26%), rgb(151 47 162 / 0%));"
         );
+        btn.classList.add("unit_enchant_row");
     }
 
     holder.append(btn);
     btn.ability = abilityEn;
-    btn.appendChild(imag);
+    btn.appendChild(pic);
+    // the name and the damage centred in the row, as the picture is
     let divider = document.createElement("div");
-    divider.setAttribute("style", "display: flex;justify-content: space-between;width: 100%;");
+    divider.setAttribute("style", "display: flex;justify-content: space-between;align-items: center;width: 100%;");
     divider.append(tex);
     divider.append(dam);
     btn.append(divider);
 
     addTooltipListeners(tex, spa);
+}
+
+// An ability's picture whose art fills its whole square (Ice Nova's: a dark square with a diamond drawn on it, 11 of
+// the game's unit icons) is cut to the ability frame's diamond, inside which the others' art lies: its corners hid
+// the frame and stood out as a black square. Checked once its picture has loaded, by its corners' alpha
+const opaqueAbilityIcons = new Map();
+function ClipOpaqueAbilityIcon(img) {
+    img.addEventListener("load", () => {
+        const src = img.currentSrc || img.src;
+        if (!opaqueAbilityIcons.has(src)) {
+            let opaque = false;
+            try {
+                const canvas = document.createElement("canvas");
+                canvas.width = canvas.height = 16;
+                const ctx = canvas.getContext("2d", { willReadFrequently: true });
+                ctx.drawImage(img, 0, 0, 16, 16);
+                const alpha = (x, y) => ctx.getImageData(x, y, 1, 1).data[3];
+                opaque = alpha(0, 0) > 200 && alpha(15, 0) > 200 && alpha(0, 15) > 200 && alpha(15, 15) > 200;
+            } catch (e) {
+                // a picture the page may not read: left as it is
+            }
+            opaqueAbilityIcons.set(src, opaque);
+        }
+        img.classList.toggle("ability_icon_clipped", opaqueAbilityIcons.get(src));
+    });
 }
 
 function GetAbilityBackground(abilityDam) {
@@ -1618,21 +1666,33 @@ function GetAbilityToolTip(ability, uniqueMedal) {
     let abilityName = element.querySelector("#abilityName");
     abilityName.innerHTML = ability.name.toUpperCase();
 
+    // a number an enchantment changed with a purple *, as on the card (ApplyEnchantAttacks)
+    const marked = ability.enchantMarked || {};
     let abilityDam = element.querySelector("#abilityDamage");
-    abilityDam.innerHTML = ability.damage;
+    abilityDam.innerHTML = marked.damage || ability.damage;
 
     // ability icon
     let abilityIcon = element.querySelector("#abilityIcon");
+    ClipOpaqueAbilityIcon(abilityIcon);
     let abilityBackground = GetAbilityBackground(ability.damage);
     abilityIcon.setAttribute("src", "/evolved/Icons/UnitIcons/" + ability.icon + ".png");
     abilityIcon.style.backgroundImage = "url(/evolved/Icons/Interface/" + abilityBackground + ".png";
 
     // accuracy range and actions
     let accuracy = element.querySelector("#abilityAcc");
-    accuracy.innerHTML = ability.accuracy + "<accuracy></accuracy>";
+    accuracy.innerHTML = ability.accuracy + (marked.accuracy ? ENCHANT_MARK : "") + "<accuracy></accuracy>";
 
     let range = element.querySelector("#abilityRange");
-    range.innerHTML = ability.range + "<range></range>";
+    range.innerHTML = ability.range + (marked.range ? ENCHANT_MARK : "") + "<range></range>";
+
+    // its critical hit chance after the range, as the game shows it: only where it is not 0 (a unit's ability has it
+    // worked out by addAbilityslot; any other its own, CritChanceOf)
+    const critChance = ability.crit ?? CritChanceOf(ability.slug, []).total;
+    if (critChance > 0) {
+        const critSlot = element.querySelector("#abilityCrit");
+        critSlot.innerHTML = critChance + "%" + (marked.crit ? ENCHANT_MARK : "") + "<crit></crit>";
+        critSlot.style.display = "";
+    }
 
     let actions = element.querySelector("#abilityAction");
     actions.innerHTML = ability.actionPoints;
@@ -1654,7 +1714,8 @@ function GetAbilityToolTip(ability, uniqueMedal) {
     if (Array.isArray(ability.modifiers)) {
         for (const modifier of ability.modifiers) {
             abilityName += "&#11049";
-            abilityMod += "<bullet>" + AddTagIconsForStatusEffects(modifier.name) + "<br>"; // AddTagIconsForStatusEffects(ability.modifiers[l].name) + "<br>";
+            // an enchantment's modifier (ApplyEnchantAttacks) with a purple bullet, as its diamond on the card
+            abilityMod += (modifier.enchant ? '<bullet class="enchant_bullet">' : "<bullet>") + AddTagIconsForStatusEffects(modifier.name) + "<br>";
             abilityMod += AddTagIconsForStatusEffects(modifier.description) + "</bullet><br>";
         }
     }
@@ -1694,7 +1755,11 @@ function GetAbilityToolTip(ability, uniqueMedal) {
         }
     }
 
-    modifierSpan.innerHTML += '<span style="color:#a4a4a6; font-size: 13px">' + abilityNote + "</span>";
+    // with their links as the game's: "Line of Sight" and "Zone of Control" open their concepts (the dump writes
+    // "<hyperlink>Line of Sight</hyperlink>", which showed as plain words); no other words linked (onlyGameLinks).
+    // 14px (the maintainer, 2026-11-24: was 13)
+    modifierSpan.innerHTML +=
+        '<span style="color:#a4a4a6; font-size: 14px">' + AddTagIconsForStatusEffects(abilityNote, true) + "</span>";
 
     let reqs = element.querySelector("#abilityTags");
     reqs.innerHTML = "";
@@ -1811,6 +1876,7 @@ function addPassiveslot(a, div, enchant) {
             "style",
             "background-image: linear-gradient(to right, rgb(95 47 162 / 0%), rgb(146 47 162 / 25%), rgb(222 88 228 / 50%), rgb(138 47 162 / 26%), rgb(151 47 162 / 0%));"
         );
+        btn.classList.add("unit_enchant_row");
     }
 
     let spa = CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr);
@@ -1890,7 +1956,8 @@ function combineDamageStrings(str1, str2) {
     return result.join(" ");
 }
 
-function addResistanceSlot(a, resistance, defense, holder) {
+// enchanted: an enchantment changed it (a purple * after the number, as a stat's)
+function addResistanceSlot(a, resistance, defense, holder, enchanted) {
     let abilityName,
         abilityIcon,
         abilityDescr,
@@ -2019,7 +2086,7 @@ function addResistanceSlot(a, resistance, defense, holder) {
     spa.innerHTML += ")";
 
     holder.appendChild(btn);
-    btn.innerHTML = abilityDam;
+    btn.innerHTML = abilityDam + (enchanted ? ENCHANT_MARK : "");
 
     btn.appendChild(imag);
 
@@ -2030,7 +2097,7 @@ function addResistanceSlot(a, resistance, defense, holder) {
     return;
 }
 
-function addstatusResistanceSlot(a, holder) {
+function addstatusResistanceSlot(a, holder, enchanted) {
     let abilityName,
         abilityIcon,
         abilityDescr,
@@ -2059,7 +2126,7 @@ function addstatusResistanceSlot(a, holder) {
     abilityDam = a;
 
     holder.appendChild(btn);
-    btn.innerHTML = '<p class="resistanceNumber">' + abilityDam;
+    btn.innerHTML = '<p class="resistanceNumber">' + abilityDam + (enchanted ? ENCHANT_MARK : "");
 
     btn.appendChild(imag);
 
@@ -2826,9 +2893,8 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     // the enchantments put on the unit (the Enchant button), from the game with the mod: what they do to its stats,
     // resistances, attacks and abilities, and the passives they show (UnitEnchantments.json)
     const enchantEffects = EnchantEffectsFor(unitEN, activeEnchantList);
-    const enchantMark = '<span style="color:#aa84f6">*</span>';
     const enchanted = (base, key) =>
-        enchantEffects.stats[key] ? Number(base) + enchantEffects.stats[key] + enchantMark : base;
+        enchantEffects.stats[key] ? Number(base) + enchantEffects.stats[key] + ENCHANT_MARK : base;
     hp.innerHTML = enchanted(unitEN.hp, "hp");
     armor.innerHTML = enchanted(armorValue, "armor");
     shield.innerHTML = enchanted(shieldValue, "resistance");
@@ -2844,7 +2910,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     const statusResistance = Number(unitEN.status_resistance) + (enchantEffects.stats.status_resistance || 0);
     if (statusResistance != 0) {
-        addstatusResistanceSlot(statusResistance, resistanceHolder);
+        addstatusResistanceSlot(statusResistance, resistanceHolder, !!enchantEffects.stats.status_resistance);
     }
 
     // its resistances with the enchantments': a type the unit is immune to stays so
@@ -2864,8 +2930,16 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         }
     }
 
+    // each with the unit's Defense and Resistance as enchanted, for its damage reduction (were the unit's own)
+    const enchantedTypes = Object.keys(enchantEffects.resistances);
     for (const slug of resistanceSlugs) {
-        addResistanceSlot(slug, unitEN.resistance, unitEN.armor, resistanceHolder);
+        addResistanceSlot(
+            slug,
+            Number(shieldValue) + (enchantEffects.stats.resistance || 0),
+            Number(armorValue) + (enchantEffects.stats.armor || 0),
+            resistanceHolder,
+            enchantedTypes.some((type) => slug.startsWith(type + "_"))
+        );
         const upper = slug.toUpperCase();
         if (upper.indexOf("BLIGHT") != -1) {
             additionalBlight = ReturnWeaknessOrResistanceNumber(slug);
@@ -4238,6 +4312,10 @@ function EnchantEffectsFor(unit, enchants) {
             out.attacks.push({ own: true, attack: { filter: own.filter, multiplier: own.multiplier } });
         }
     }
+    // its own critical hit chance (a Fiend's 20%), with an enchantment on it or not: the dump has none of it
+    for (const own of (jsonUnitEnchantments.crit || {})[unit.resid] || []) {
+        out.attacks.push({ own: true, attack: { filter: own.filter, crit: own.crit, ability_type: own.ability_type } });
+    }
     return out;
 }
 
@@ -4254,6 +4332,23 @@ function EnchantAttacksOn(slug, enchantAttacks) {
             ? x.attack.slug == slug
             : have != undefined && MeetsRequisiteFilter(x.attack.filter, have) && typeFits(x.attack.ability_type)
     );
+}
+
+// after a number an enchantment changed: a stat on the card, an attack's damage, range, accuracy or crit chance
+const ENCHANT_MARK = '<span style="color:#aa84f6">*</span>';
+
+// an ability's critical hit chance in percent, as the game's tooltip shows it after the range: the sum of its own
+// (an item's Trueshot), the unit's (a Fiend's) and the enchantments' (Fateful Imbuement's) that apply to it
+// (UnitEnchantments.json's ability_crit, crit, attacks); enchanted: an enchantment adds to it
+function CritChanceOf(slug, attacks) {
+    let total = ((typeof jsonUnitEnchantments != "undefined" && jsonUnitEnchantments.ability_crit) || {})[slug] || 0;
+    let enchanted = false;
+    for (const { own, attack } of attacks || []) {
+        if (!attack.crit) continue;
+        total += attack.crit;
+        if (!own) enchanted = true;
+    }
+    return { total: total, enchanted: enchanted };
 }
 
 // a damage string's numbers by type ("22<damagephysical></damagephysical> 4<damageblight></damageblight>")
@@ -4273,7 +4368,9 @@ function ApplyEnchantAttacks(ability, attacks) {
     let damage = ability.damage || "";
     let range = ability.range;
     let accuracy = ability.accuracy;
-    const own = attacks.filter((x) => x.own).reduce((sum, x) => sum + x.attack.multiplier - 1, 0);
+    const marked = { damage: damage, range: false, accuracy: false };
+    // the unit's own multipliers (its own crit chance, also among them, has none)
+    const own = attacks.filter((x) => x.own).reduce((sum, x) => sum + (x.attack.multiplier || 1) - 1, 0);
     let bonus = 0;
     let changed = false;
     const notes = [];
@@ -4291,7 +4388,7 @@ function ApplyEnchantAttacks(ability, attacks) {
         if (isOwn) continue;
         for (const note of attack.notes || []) {
             if (!notes.some((n) => n.name == note.name && n.description == note.text)) {
-                notes.push({ name: note.name, description: note.text || "" });
+                notes.push({ name: note.name, description: note.text || "", enchant: true });
             }
         }
         if (attack.damage && damage != "") {
@@ -4305,27 +4402,39 @@ function ApplyEnchantAttacks(ability, attacks) {
         }
         if (attack.range && range != undefined) {
             range = parseInt(range) + attack.range;
-            changed = true;
+            changed = marked.range = true;
         }
         if (attack.accuracy && accuracy != undefined) {
             accuracy = parseInt(accuracy) + attack.accuracy + "%";
-            changed = true;
+            changed = marked.accuracy = true;
         }
     }
     if (damage != "" && changed) {
-        damage = Object.entries(raw)
-            .map(([tag, r]) => Math.ceil(r * (1 + own + bonus) - 1e-9) + "<" + tag + "></" + tag + ">")
+        // each number with a purple * where it differs from the attack's own (a type an enchantment adds, too)
+        const before = DamageParts(damage);
+        const after = Object.entries(raw).map(([tag, r]) => [tag, Math.ceil(r * (1 + own + bonus) - 1e-9)]);
+        damage = after.map(([tag, n]) => n + "<" + tag + "></" + tag + ">").join(" ");
+        marked.damage = after
+            .map(([tag, n]) => n + (n != before[tag] ? ENCHANT_MARK : "") + "<" + tag + "></" + tag + ">")
             .join(" ");
     }
-    // no line of its own per enchantment in the tooltip (the maintainer, 2026-11-24): the enchantment shows on the
-    // card and beside the picture, and its effects in the attack's numbers and among its modifiers
-    return { damage: damage, range: range, accuracy: accuracy, changed: changed, notes: notes };
+    // no line of its own per enchantment in the tooltip (the maintainer, 2026-11-24): the enchantment shows in the
+    // unit's list, and its effects in the attack's numbers and among its modifiers (purple diamonds and bullets)
+    return {
+        damage: damage,
+        damageMarked: marked.damage,
+        marked: marked,
+        range: range,
+        accuracy: accuracy,
+        changed: changed,
+        notes: notes
+    };
 }
 
 // an enchantment's passive on a unit, as the game's unit panel shows it, with the enchantment's icon
 function AddEnchantPassiveSlot(enchant, name, text, holder) {
     const btn = document.createElement("DIV");
-    btn.className = "unit_passiveslot";
+    btn.className = "unit_passiveslot unit_enchant_row";
     btn.setAttribute(
         "style",
         "background-image: linear-gradient(to right, rgb(95 47 162 / 0%), rgb(146 47 162 / 25%), rgb(222 88 228 / 50%), rgb(138 47 162 / 26%), rgb(151 47 162 / 0%));"

@@ -97,7 +97,7 @@
 
                 <p class="stat_num" id="figures">1</p>
                 <div class="unit_stat_icon" id="figures_tt">
-                    <img class="unit_stat_icon" src="/evolved/Icons/Text/figure_count.png" width="23 " height="25 " />
+                    <img class="unit_stat_icon" src="/evolved/Icons/Text/figure_count.png" width="28 " height="30 " />
                 </div>
                 <br />
             </div>
@@ -292,9 +292,11 @@
            
            
             <div style="display: flex; justify-content: space-between">
-                <div>
+                <!-- accuracy, range and crit chance on one line, as the game's (crit chance wrapped below "Always Hits") -->
+                <div style="white-space: nowrap">
                     <div class="abilityLineSlot" id="abilityAcc">ACC<accuracy></accuracy></div>
                     <div class="abilityLineSlot" id="abilityRange">RAN<range></range></div>
+                    <div class="abilityLineSlot" id="abilityCrit" style="display: none"></div>
                 </div>
                
                 <div>

@@ -1559,6 +1559,20 @@
       "name": "Fateful Imbuement",
       "text": "Unit has:<bulletlist><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet><bullet>Has [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink]</bullet></bulletlist>"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "crit": 20
+     }
     ]
    }
   ],
@@ -5271,6 +5285,7 @@
        ],
        "all": []
       },
+      "crit": 10,
       "damage": "4<damageblight></damageblight> "
      },
      {
@@ -5285,6 +5300,7 @@
         "Single Shot"
        ]
       },
+      "crit": 10,
       "damage": "8<damageblight></damageblight> "
      }
     ]
@@ -6191,6 +6207,20 @@
       "name": "Artisan Armaments",
       "text": "Unit has:<bulletlist><bullet>+30% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink].</bullet></bulletlist>"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "crit": 30
+     }
     ]
    }
   ],
@@ -6574,6 +6604,7 @@
        "none": [],
        "all": []
       },
+      "crit": 20,
       "notes": [
        {
         "name": "Flameburst Weapons",
@@ -12682,30 +12713,30 @@
    "Missile (Base)",
    "Missile Weapon"
   ],
-  "0000049700003B52": [],
   "0000041B00001C65": [
    "Support Ability"
   ],
-  "000004970000447A": [
-   "Magic Weapon"
-  ],
   "0000041B0000148D": [],
-  "0000049700000955": [],
-  "000004970000137B": [
-   "Support Ability"
-  ],
   "000003E300006BAB": [
    "Magic Weapon"
   ],
+  "0000049700000955": [],
+  "0000048B000001F5": [],
   "000003E3000071C6": [
+   "Support Ability"
+  ],
+  "0000049700000587": [
    "Support Ability"
   ],
   "0000048D00001C02": [
    "Magic Weapon",
    "Single Shot"
   ],
-  "0000048B000001F5": [],
-  "0000049700000587": [
+  "000004970000447A": [
+   "Magic Weapon"
+  ],
+  "0000049700003B52": [],
+  "000004970000137B": [
    "Support Ability"
   ]
  },
@@ -13810,5 +13841,178 @@
     "multiplier": 1.1
    }
   ]
+ },
+ "crit": {
+  "5360119185601": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "5291399710073": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "5046586587716": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "5046586586963": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4660039517438": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4514010631024": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4514010630880": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4273492482756": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4273492482736": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4273492482644": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4273492478523": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ],
+  "4264902529363": [
+   {
+    "filter": {
+     "any": [
+      "Magic Weapon",
+      "Melee Weapon",
+      "Missile Weapon"
+     ],
+     "none": [],
+     "all": []
+    },
+    "crit": 20
+   }
+  ]
+ },
+ "ability_crit": {
+  "trueshot_ability_trueshot_item_tier_4": 20
  }
 }

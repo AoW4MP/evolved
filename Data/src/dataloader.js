@@ -203,7 +203,8 @@ async function GetAllData(selectedLang) {
         "StructurePredictions.json",
         "LinkedAbilities.json",
         "SpellBook.json",
-        "AffinityAttacks.json"
+        "AffinityAttacks.json",
+        "UnitFigures.json"
     ];
     const fileNames = [
         // ingame dump files
@@ -262,7 +263,8 @@ async function GetAllData(selectedLang) {
             "jsonStructurePredictions",
             "jsonLinkedAbilities",
             "jsonSpellBook",
-            "jsonAffinityAttacks"
+            "jsonAffinityAttacks",
+            "jsonUnitFigures"
         ];
         const targets = [
             "jsonHeroItems",

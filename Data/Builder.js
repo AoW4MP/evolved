@@ -2796,9 +2796,13 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     unitNameDiv.innerHTML += name.toUpperCase();
 
+    // the name bar's ends: the exotic mount tag at the left, the DLC's at the right (as upstream, 2026-11-19)
+    const mountedTag = unitCard.querySelector("div#mounted");
+    const dlcTag = unitCard.querySelector("div#DLC");
+    mountedTag.innerHTML = "";
+    dlcTag.innerHTML = "";
     if ("DLC" in unitEN) {
-        let newDivForMount = AddDLCTag(unitEN.DLC);
-        unitNameDiv.append(newDivForMount);
+        dlcTag.append(AddDLCTag(unitEN.DLC));
     }
 
     // if in the list of mounted, add tooltip
@@ -2808,7 +2812,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
         imag = document.createElement("IMG");
         imag.setAttribute("src", "/evolved/Icons/Text/MountInteraction.png");
-        imag.setAttribute("height", "35px");
+        imag.setAttribute("height", "25px");
 
         spa = document.createElement("SPAN");
 
@@ -2816,14 +2820,9 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
             "If an <hyperlink>Exotic Mount Trait</hyperlink> is chosen, this unit gains that mount, even if it was not mounted before";
 
         newDivForMount.appendChild(imag);
-        newDivForMount.appendChild(spa);
-        newDivForMount.setAttribute(
-            "style",
-            "    text-transform: none;width: 1px;margin-left: 30px;height: 20px;float: left;"
-        );
-        // get position of button
+        newDivForMount.setAttribute("style", "text-transform: none;height: 20px;");
         addTooltipListeners(newDivForMount, spa);
-        unitNameDiv.append(newDivForMount);
+        mountedTag.append(newDivForMount);
     }
 
     let hpspan = document.createElement("span");
@@ -2874,6 +2873,25 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     }
 
     addTooltipListeners(critTooltip, critspan);
+
+    // its figures (members), from its formation in the game with the mod (aow4_diff_tools' unitfigures.py), with
+    // the game's Casualty concept, which tells what losing them does
+    const figures = unitCard.querySelector("p#figures");
+    const figuresTooltip = unitCard.querySelector("div#figures_tt");
+    const figureCount = jsonUnitFigures[unitEN.resid];
+    figures.style.display = figuresTooltip.style.display = figureCount ? "" : "none";
+    if (figureCount) {
+        figures.innerHTML = figureCount;
+        const casualtyText = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@CASUALTIES");
+        const figuresSpan = document.createElement("span");
+        figuresSpan.innerHTML =
+            '<span style="color:#d7c297;text-transform: uppercase ">' +
+            RemoveHyperLinks(casualtyText.hyperlink) +
+            "</span><br><span>" +
+            AddTagIconsForStatusEffects(casualtyText.description) +
+            "</span>";
+        addTooltipListeners(figuresTooltip, figuresSpan);
+    }
 
     const damageRedText = findBy(jsonAllFromPOLocalized, "id", "INTERFACE@TEXT");
 
@@ -3013,12 +3031,39 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         }
     }
 
+    // "Tier II  Upkeep: 12 gold", each part with its concept's tooltip; what changes the upkeep below writes its value
     const tierText = findBy(jsonAllFromPOLocalized, "id", "INTERFACE@TEXT");
-    tier.innerHTML = tierText.tier + " " + romanize(unitEN.tier) + ": " + unitEN.upkeep;
+    const tierConcept = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@UNIT_TIER");
+    tier.innerHTML =
+        '<span class="unit_tier_part" id="tierlabel">' +
+        tierText.tier +
+        " " +
+        romanize(unitEN.tier) +
+        '</span><span class="unit_tier_part" id="upkeeplabel">' +
+        tierText.upkeep +
+        ': <span id="upkeepvalue"></span></span>';
+    const upkeepValue = tier.querySelector("#upkeepvalue");
+    upkeepValue.innerHTML = unitEN.upkeep;
+    const tierSpan = document.createElement("span");
+    tierSpan.innerHTML =
+        '<span style="color:#d7c297;text-transform: uppercase ">' +
+        tierConcept.name +
+        "</span><br><span>" +
+        AddTagIconsForStatusEffects(tierConcept.description) +
+        "</span>";
+    addTooltipListeners(tier.querySelector("#tierlabel"), tierSpan);
+    const upkeepSpan = document.createElement("span");
+    upkeepSpan.innerHTML =
+        '<span style="color:#d7c297;text-transform: uppercase ">' +
+        tierText.unit_upkeep +
+        "</span><br><span>" +
+        AddTagIconsForStatusEffects(tierText.unit_upkeep_description) +
+        "</span>";
+    addTooltipListeners(tier.querySelector("#upkeeplabel"), upkeepSpan);
 
     let summonInfo = canBeSummoned(unitEN.id);
     if (summonInfo == true) {
-        tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, "");
+        upkeepValue.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, "");
     }
 
     let critChance = 0;
@@ -3027,11 +3072,11 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
     for (let y = 0; y < unitEN.secondary_passives.length; y++) {
         if (unitEN.secondary_passives[y].icon == "findMgicOrinIcon") {
             if (lowUpkeep === true) {
-                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.75);
+                upkeepValue.innerHTML = getSummonedUpkeep(unitEN.tier, 0.75);
             } else if (faithfulUpkeep === true) {
-                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, 0.9);
+                upkeepValue.innerHTML = getSummonedUpkeep(unitEN.tier, 0.9);
             } else {
-                tier.innerHTML = "Tier " + romanize(unitEN.tier) + ": " + getSummonedUpkeep(unitEN.tier, "");
+                upkeepValue.innerHTML = getSummonedUpkeep(unitEN.tier, "");
             }
 
             if (summonInfo.length > 0) {
@@ -3117,55 +3162,49 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
         if (unitEN.primary_passives[x].icon == "findlowmaintenanceicon") {
             if (unitEN.upkeep.indexOf("influence") != -1) {
-                tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + "*";
+                upkeepValue.innerHTML = ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + "*";
             } else {
-                tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + ">*";
+                upkeepValue.innerHTML = ReduceUpkeepPercentage(unitEN.upkeep, 0.75) + ">*";
             }
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
-                tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.75) + "*";
+                upkeepValue.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.75) + "*";
             }
         }
 
         if (unitEN.primary_passives[x].slug.indexOf("high_maintenance") != -1) {
             if (unitEN.upkeep.indexOf("influence") != -1) {
-                tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + "*";
+                upkeepValue.innerHTML = ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + "*";
             } else {
-                tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + ">*";
+                upkeepValue.innerHTML = ReduceUpkeepPercentage(unitEN.upkeep, 1.5) + ">*";
             }
 
             let lowUpkeep = true;
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + "*";
+                    upkeepValue.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + "*";
                 } else {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + ">*";
+                    upkeepValue.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 1.5) + ">*";
                 }
             }
         }
 
         if (unitEN.primary_passives[x].slug.indexOf("faithful") != -1) {
             if (unitEN.upkeep.indexOf("influence") != -1) {
-                tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.9) + "*";
+                upkeepValue.innerHTML = ReduceUpkeepPercentage(unitEN.upkeep, 0.9) + "*";
             } else {
-                tier.innerHTML =
-                    "Tier " + romanize(unitEN.tier) + ": " + ReduceUpkeepPercentage(unitEN.upkeep, 0.9) + ">*";
+                upkeepValue.innerHTML = ReduceUpkeepPercentage(unitEN.upkeep, 0.9) + ">*";
             }
 
             let faithfulUpkeep = true;
 
             if (summonInfo.length > 0) {
                 if (unitEN.upkeep.indexOf("influence") != -1) {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.9) + "*";
+                    upkeepValue.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.9) + "*";
                 } else {
-                    tier.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.9) + ">*";
+                    upkeepValue.innerHTML += "<br> Summoned: " + getSummonedUpkeep(unitEN.tier, 0.9) + ">*";
                 }
             }
         }

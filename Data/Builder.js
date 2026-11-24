@@ -2802,10 +2802,8 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
 
     let enchantButton = unitCard.querySelector("button#enchantButton");
     let enchantHolder = unitCard.querySelector("div#enchantHolder");
-    let activeEnchant = unitCard.querySelector("div#activeEnchants");
 
     enchantButton.param = unitType;
-    enchantButton.activeListHolder = activeEnchant;
     enchantButton.unit = unitEN.id;
     enchantButton.unitData = unitEN;
     enchantButton.originDiv = unitCard;
@@ -3008,18 +3006,23 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         }
     }
 
-    // the enchantments' passives, as the game's unit panel shows them; the enchantment itself where it shows none
+    // the enchantments' passives, as the game's unit panel shows them; the enchantment itself where it shows none.
+    // A cross on each takes the enchantment off the unit (AddEnchantRemover)
     for (const { enchant, up } of enchantEffects.upgrades) {
+        const rows = [];
         if (!up.passives || up.passives.length == 0) {
-            AddEnchantPassiveSlot(enchant, enchant.name, enchant.description, unitTabHolder);
+            rows.push(AddEnchantPassiveSlot(enchant, enchant.name, enchant.description, unitTabHolder));
         }
         for (const passive of up.passives || []) {
             if (passive.slug) {
+                const before = unitTabHolder.childElementCount;
                 addPassiveslot(passive.slug, unitTabHolder, true);
+                if (unitTabHolder.childElementCount > before) rows.push(unitTabHolder.lastElementChild);
             } else {
-                AddEnchantPassiveSlot(enchant, passive.name || enchant.name, passive.text || enchant.description, unitTabHolder);
+                rows.push(AddEnchantPassiveSlot(enchant, passive.name || enchant.name, passive.text || enchant.description, unitTabHolder));
             }
         }
+        for (const row of rows) AddEnchantRemover(row, enchant, unitCard, unitEN);
     }
 
     y = "";
@@ -4158,17 +4161,14 @@ function ShowPossibleEnchantments(evt) {
 
     holder.innerHTML = "";
 
-    let activeHolder = evt.currentTarget.activeListHolder;
-
     for (let i = 0; i < compatibleList.length; i++) {
         let enchantEntry = createTooltipForEnchant(compatibleList[i]);
 
         enchantEntry.addEventListener("click", SetEnchantment);
         enchantEntry.enchant = compatibleList[i];
-        enchantEntry.activeHolder = activeHolder;
         enchantEntry.activeEnchantList = activeEnchantList;
         enchantEntry.originDiv = evt.currentTarget.originDiv;
-        enchantEntry.unit = evt.currentTarget.unit;
+        enchantEntry.unitData = unitData;
 
         holder.appendChild(enchantEntry);
     }
@@ -4245,8 +4245,14 @@ function EnchantEffectsFor(unit, enchants) {
 function EnchantAttacksOn(slug, enchantAttacks) {
     if (!Array.isArray(enchantAttacks) || enchantAttacks.length == 0) return [];
     const have = jsonUnitEnchantments.abilities[slug];
+    // a modifier for Repeating or Single Action attacks only (Frenzying Imbuement's Life Steal: 5, 10)
+    const ability = jsonUnitAbilities.find((e) => e.slug === slug);
+    const repeating = ((ability && ability.actionPoints) || "").includes("repeatingaction");
+    const typeFits = (t) => !t || (t == "Repeating") == repeating;
     return enchantAttacks.filter((x) =>
-        x.attack.slug ? x.attack.slug == slug : have != undefined && MeetsRequisiteFilter(x.attack.filter, have)
+        x.attack.slug
+            ? x.attack.slug == slug
+            : have != undefined && MeetsRequisiteFilter(x.attack.filter, have) && typeFits(x.attack.ability_type)
     );
 }
 
@@ -4346,6 +4352,7 @@ function AddEnchantPassiveSlot(enchant, name, text, holder) {
     btn.appendChild(imag);
     btn.append(tex);
     addTooltipListeners(tex, spa);
+    return btn;
 }
 
 function createTooltipForEnchant(item) {
@@ -4373,50 +4380,37 @@ function createTooltipForEnchant(item) {
 }
 
 function SetEnchantment(evt) {
-    if (!isInArray(evt.currentTarget.activeEnchantList, evt.currentTarget.enchant)) {
-        evt.currentTarget.originDiv.activeEnchantList.push(evt.currentTarget.enchant);
-        evt.currentTarget.remove();
-        let activeEnch = document.createElement("Div");
-        activeEnch.className = "enchantButton";
-        const image = document.createElement("img");
-
-        image.setAttribute("width", "40");
-        image.setAttribute("height", "40");
-        image.setAttribute("src", "/evolved/Icons/SpellIcons/" + evt.currentTarget.enchant.icon + ".png");
-
-        activeEnch.className = "tooltip";
-        activeEnch.setAttribute("style", "padding: 0px");
-        let span = document.createElement("span");
-        span.innerHTML = evt.currentTarget.enchant.name + "<hr>" + evt.currentTarget.enchant.description;
-        span.setAttribute("style", "left: 50px;");
-
-        addTooltipListeners(activeEnch, span);
-
-        //activeEnch.appendChild(span);
-        activeEnch.appendChild(image);
-        // activeEnch.activeEnchantList = evt.currentTarget.activeEnchantList;
-        activeEnch.thisEnchant = evt.currentTarget.enchant;
-
-        activeEnch.unit = evt.currentTarget.unit;
-        activeEnch.originDiv = evt.currentTarget.originDiv;
-        activeEnch.activeHolder = evt.currentTarget.activeHolder;
-
-        activeEnch.addEventListener("click", RemoveActiveEnchant);
-
-        let holder = evt.currentTarget.activeHolder;
-        let unit = evt.currentTarget.unit;
-        holder.appendChild(activeEnch);
+    const entry = evt.currentTarget;
+    if (!isInArray(entry.originDiv.activeEnchantList, entry.enchant)) {
+        entry.originDiv.activeEnchantList.push(entry.enchant);
+        entry.remove();
     }
-    showUnit(evt.currentTarget.unit);
+    ReshowUnit(entry.unitData);
 }
 
-function RemoveActiveEnchant(evt) {
-    let origin = evt.currentTarget.originDiv;
+// a unit's card drawn again, that unit's (a unit has a card per sub-culture: by its id alone the first one's was)
+function ReshowUnit(unit) {
+    showUnit(unit.id, unit.sub_culture_name, unit.resid);
+}
 
-    origin.activeEnchantList = origin.activeEnchantList.filter((item) => item !== evt.currentTarget.thisEnchant);
-
-    showUnit(evt.currentTarget.unit);
-    evt.currentTarget.remove();
+// a cross on an enchantment's entry in a unit's list (on hover; always on a touch screen) that takes the enchantment
+// off the unit: the list shows what is on it, the cross takes it off (was a second row of its icons beside the
+// picture, each taking it off)
+function AddEnchantRemover(row, enchant, unitCard, unit) {
+    if (!row) return;
+    const x = document.createElement("button");
+    x.type = "button";
+    x.className = "unit-enchant-x";
+    x.title = "Remove " + enchant.name;
+    x.setAttribute("aria-label", "Remove " + enchant.name);
+    x.addEventListener("click", (evt) => {
+        evt.stopPropagation();
+        const list = unitCard.activeEnchantList || [];
+        const i = list.indexOf(enchant);
+        if (i != -1) list.splice(i, 1);
+        ReshowUnit(unit);
+    });
+    row.appendChild(x);
 }
 
 function GetAbilityInfo(ability) {

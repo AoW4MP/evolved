@@ -632,7 +632,13 @@ is 17. The name
 marked with a purple `*`; no line of its own per enchantment in the tooltip (dropped 2026-11-24, the maintainer: the
 enchantment shows on the card and beside the picture, and its effects in the numbers and among the modifiers). Extra
 damage "only to the types it deals" (Ice Focus' Ice Nova damage per tier) goes to the attack's own types, not to
-those another enchantment adds: else the order they were picked in decided it. The attack's tooltip also has the game's own lines for the
+those another enchantment adds: else the order they were picked in decided it. A modifier for Repeating or Single Action
+attacks only (its Ability Type Filter: Frenzying Imbuement's Life Steal, 5 and 10) goes to those by the attack's action.
+An enchantment on a unit is taken off by the cross on its entries in the unit's list (`AddEnchantRemover`: the Faction
+Creator's cross, shown on hover, always on a touch screen); upstream's row of its icons beside the picture
+(`#activeEnchants`), which took it off when clicked, is gone: it showed the enchantments twice. Picking or removing one
+draws that unit's card again (`ReshowUnit`: by id, sub-culture and resid; by id alone the first sub-culture's card was
+drawn: an Arcanist of the second school enchanted the first's). The attack's tooltip also has the game's own lines for the
 enchantments' ability modifiers, among its modifiers, each with its numbers (Ciphers of Dissonance's Dissonant: "Inflict
 a stack of Dissonance" on a repeating attack, 2 on a Single Shot; Savage Strike, Bounty Hunter): what the game's ability
 tooltip shows, conditional ones too, those it keeps out of it not (Frost Infusion's damage only changes the number). An

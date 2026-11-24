@@ -1946,6 +1946,17 @@ helpcolor {
     border-image-repeat: stretch;
 }
 
+/* the Enchant list: a name on two lines stays left-aligned beside its icon, which sits in the middle (a button centres
+   its text) */
+#enchantHolder .enchantButton {
+    align-items: center;
+    text-align: left;
+    column-gap: 6px;
+}
+#enchantHolder .enchantButton > img {
+    flex: none;
+}
+
 .enchantButton:hover {
     background-color: darkslategrey;
     filter: brightness(150%);

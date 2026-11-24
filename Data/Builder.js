@@ -1381,10 +1381,18 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     if (enchantAttacks.length > 0) {
         const changed = ApplyEnchantAttacks(abilityLoc, enchantAttacks);
         enchantLines = changed.lines;
-        if (enchantLines.length > 0) {
+        if (enchantLines.length > 0 || changed.notes.length > 0) {
             abilityDam = changed.damage;
+            // the game's lines for them join the ability's own modifiers, a diamond each, as those have
+            for (const note of changed.notes) abilityName += '<span style="color:#addd9e;font-size: 20px">&#11049</span>';
             abilityName += '<span style="color:#aa84f6;font-size: 20px">*</span>';
-            enchantedAbility = { ...abilityLoc, damage: changed.damage, range: changed.range, accuracy: changed.accuracy };
+            enchantedAbility = {
+                ...abilityLoc,
+                damage: changed.damage,
+                range: changed.range,
+                accuracy: changed.accuracy,
+                modifiers: [...(abilityLoc.modifiers || []), ...changed.notes]
+            };
         }
     }
 
@@ -1668,7 +1676,8 @@ function GetAbilityToolTip(ability, uniqueMedal, enchantLines) {
     // what the enchantments on the unit add to it (ApplyEnchantAttacks)
     if (enchantLines && enchantLines.length > 0) {
         modifierSpan.innerHTML +=
-            '<span style="color:#aa84f6;font-size: 14px">' + AddTagIconsForStatusEffects(enchantLines.join("<br>")) + "</span>";
+            // not through AddTagIconsForStatusEffects: it made Empowered Beasts' "Empowered" a link to the status effect
+            '<span style="color:#aa84f6;font-size: 14px">' + enchantLines.join("<br>") + "</span>";
     }
 
     // notes
@@ -2840,7 +2849,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         addAbilityslot(unitEN.abilities[k].slug, unitTabHolder, enchantEffects.attacks, null, splitName);
     }
     for (const { up } of enchantEffects.upgrades) {
-        for (const slug of up.abilities || []) addAbilityslot(slug, unitTabHolder, enchantEffects.attacks, true);
+        for (const ability of up.abilities || []) addAbilityslot(ability.slug, unitTabHolder, enchantEffects.attacks, true);
     }
 
     const statusResistance = Number(unitEN.status_resistance) + (enchantEffects.stats.status_resistance || 0);
@@ -3016,12 +3025,7 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
             if (passive.slug) {
                 addPassiveslot(passive.slug, unitTabHolder, true);
             } else {
-                AddEnchantPassiveSlot(
-                    enchant,
-                    GameText(passive.name) || enchant.name,
-                    GameText(passive.text) || enchant.description,
-                    unitTabHolder
-                );
+                AddEnchantPassiveSlot(enchant, passive.name || enchant.name, passive.text || enchant.description, unitTabHolder);
             }
         }
     }
@@ -4197,37 +4201,72 @@ function EnchantUpgradesFor(enchant, unit) {
     return upgrades.filter((up) => MeetsRequisiteFilter(up.filter, have));
 }
 
-// what the enchantments on a unit do to it, added up
+// a damage string ("12<damagefrost></damagefrost> ") with each number times n
+function ScaleDamage(damage, n) {
+    return damage.replace(/(\d+)(<\w+><\/\w+>)/g, (all, num, tag) => Math.floor(Number(num) * n + 1e-9) + tag);
+}
+
+// what the enchantments on a unit do to it, added up. An ability it gives that deals more for each tier of the unit
+// (Ice Focus' Ice Nova: +4 past the first) takes that as an attack change of its own, for the unit's tier
 function EnchantEffectsFor(unit, enchants) {
     const out = { upgrades: [], stats: {}, resistances: {}, attacks: [] };
+    const tierCount = (perTier) => Number(unit.tier) - (perTier.skip_first ? 1 : 0);
     for (const enchant of enchants || []) {
         for (const up of EnchantUpgradesFor(enchant, unit)) {
             out.upgrades.push({ enchant: enchant, up: up });
             for (const [k, v] of Object.entries(up.stats || {})) out.stats[k] = (out.stats[k] || 0) + v;
             for (const [k, v] of Object.entries(up.resistances || {})) out.resistances[k] = (out.resistances[k] || 0) + v;
-            for (const attack of up.attacks || []) out.attacks.push({ enchant: enchant, attack: attack });
+            for (const attack of up.attacks || []) {
+                const a = { ...attack };
+                if (a.per_tier && tierCount(a.per_tier) > 0) {
+                    a.damage = combineDamageStrings(a.damage || "", ScaleDamage(a.per_tier.damage, tierCount(a.per_tier)));
+                    a.existing = a.existing || a.per_tier.existing;
+                }
+                out.attacks.push({ enchant: enchant, attack: a });
+            }
+            for (const ability of up.abilities || []) {
+                if (ability.per_tier && tierCount(ability.per_tier) > 0) {
+                    out.attacks.push({
+                        enchant: enchant,
+                        attack: {
+                            slug: ability.slug,
+                            damage: ScaleDamage(ability.per_tier.damage, tierCount(ability.per_tier)),
+                            existing: ability.per_tier.existing,
+                            tier: true
+                        }
+                    });
+                }
+            }
         }
     }
     return out;
 }
 
-// the enchantments' attack changes an ability takes, by its requisites
+// the enchantments' attack changes an ability takes: by its requisites, or its own (an ability one gives)
 function EnchantAttacksOn(slug, enchantAttacks) {
     if (!Array.isArray(enchantAttacks) || enchantAttacks.length == 0) return [];
     const have = jsonUnitEnchantments.abilities[slug];
-    if (!have) return [];
-    return enchantAttacks.filter((x) => x.attack && MeetsRequisiteFilter(x.attack.filter, have));
+    return enchantAttacks.filter((x) =>
+        x.attack.slug ? x.attack.slug == slug : have != undefined && MeetsRequisiteFilter(x.attack.filter, have)
+    );
 }
 
 // an ability's damage, range and accuracy with those changes: extra damage first (only to the types it already deals
-// for some), then the multipliers; and a line for each in its tooltip
+// for some), then the multipliers, rounded down (the game: a Kraken's 29 is 34 with +20%); a line for each in its
+// tooltip, and the game's own lines for them (Dissonant, Savage Strike), with the ability's modifiers
 function ApplyEnchantAttacks(ability, attacks) {
     let damage = ability.damage || "";
     let range = ability.range;
     let accuracy = ability.accuracy;
     let multiplier = 1;
     const lines = [];
+    const notes = [];
     for (const { enchant, attack } of attacks) {
+        for (const note of attack.notes || []) {
+            if (!notes.some((n) => n.name == note.name && n.description == note.text)) {
+                notes.push({ name: note.name, description: note.text || "" });
+            }
+        }
         let added = "";
         if (attack.damage && damage != "") {
             added = attack.damage;
@@ -4242,7 +4281,7 @@ function ApplyEnchantAttacks(ability, attacks) {
         if (attack.range && range != undefined) range = parseInt(range) + attack.range;
         if (attack.accuracy && accuracy != undefined) accuracy = parseInt(accuracy) + attack.accuracy + "%";
         const parts = [];
-        if (added != "") parts.push("+" + added.trim().replaceAll(" ", " +"));
+        if (added != "") parts.push("+" + added.trim().replaceAll(" ", " +") + (attack.tier ? " for its tier" : ""));
         if (attack.multiplier && damage != "") parts.push((attack.multiplier > 1 ? "+" : "") + Math.round((attack.multiplier - 1) * 100) + "% damage");
         if (attack.range) parts.push("+" + attack.range + "<range></range>");
         if (attack.accuracy) parts.push("+" + attack.accuracy + "%<accuracy></accuracy>");
@@ -4253,16 +4292,8 @@ function ApplyEnchantAttacks(ability, attacks) {
             );
         }
     }
-    if (multiplier != 1) damage = IncreaseDamageValue(damage, multiplier);
-    return { damage: damage, range: range, accuracy: accuracy, lines: lines };
-}
-
-// a text of the game by its text id ("TOME_CRYOMANCY@SKILL_3@NAME": all.json's TOME_CRYOMANCY@SKILL_3, its name)
-function GameText(textId) {
-    if (!textId) return undefined;
-    const at = textId.lastIndexOf("@");
-    const entry = findBy(jsonAllFromPOLocalized, "id", textId.slice(0, at));
-    return entry ? entry[textId.slice(at + 1).toLowerCase()] : undefined;
+    if (multiplier != 1) damage = ScaleDamage(damage, multiplier);
+    return { damage: damage, range: range, accuracy: accuracy, lines: lines, notes: notes };
 }
 
 // an enchantment's passive on a unit, as the game's unit panel shows it, with the enchantment's icon

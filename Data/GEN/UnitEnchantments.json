@@ -12,8 +12,28 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@STORY_EVENT@1167_509@TITLE",
-      "text": "DLC@ELDRITCHREALMS@COSMIC_HAPPENING@UNIT_CHANGE_04@PROPERTY_01@DESCRIPTION"
+      "name": "Sign Of The Lumbering Staff",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities have +1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLOW_MOVEMENT]Slow Movement[/hyperlink] in combat.</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Support Ability"
+       ],
+       "none": [
+        "Can't have Range Modified Ability"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Sign Of The Lumbering Staff",
+        "text": "+1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink]"
+       }
+      ]
      }
     ]
    }
@@ -29,8 +49,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@STORY_EVENT@1167_507@TITLE",
-      "text": "DLC@ELDRITCHREALMS@COSMIC_HAPPENING@UNIT_CHANGE_03@PROPERTY_01@DESCRIPTION"
+      "name": "Sign Of The Vanguard",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink] in combat.</bullet><bullet>[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks against this unit have -20% [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks deal -20% damage.</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -42,7 +62,13 @@
        "none": [],
        "all": []
       },
-      "multiplier": 0.8
+      "multiplier": 0.8,
+      "notes": [
+       {
+        "name": "Sign Of The Vanguard",
+        "text": "-20% damage"
+       }
+      ]
      }
     ]
    }
@@ -58,8 +84,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@CRISIS@1167_417@NAME",
-      "text": "DLC@ELDRITCHREALMS@COSMIC_HAPPENING@UNIT_CHANGE_02@PROPERTY_01@DESCRIPTION"
+      "name": "Sign of the Cleft Shield",
+      "text": "Unit has:<bulletlist><bullet>-4 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink].</bullet><bullet>Base attacks deal +40% damage.</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -74,7 +100,13 @@
        "none": [],
        "all": []
       },
-      "multiplier": 1.4
+      "multiplier": 1.4,
+      "notes": [
+       {
+        "name": "Sign of the Cleft Shield",
+        "text": "+40% damage."
+       }
+      ]
      }
     ]
    }
@@ -92,8 +124,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@COSMIC_HAPPENING@UNIT_CHANGE_01@NAME",
-      "text": "DLC@ELDRITCHREALMS@COSMIC_HAPPENING@UNIT_CHANGE_01@PROPERTY_01@DESCRIPTION"
+      "name": "Sign of the Huntress",
+      "text": "[hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] and [hyperlink,GLOBAL.RangedConcept]Missile[/hyperlink] attacks have +30% damage and -1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink]."
      }
     ],
     "attacks": [
@@ -106,7 +138,13 @@
        "none": [],
        "all": []
       },
-      "multiplier": 1.3
+      "multiplier": 1.3,
+      "notes": [
+       {
+        "name": "Sign of the Huntress",
+        "text": "+30% damage and 1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -124,8 +162,8 @@
     },
     "passives": [
      {
-      "name": "TOME_COLD_DARK@SKILL4@NAME",
-      "text": "TOME_COLD_DARK@SKILL4@PROP_DESCRIPTION"
+      "name": "Nightveil Focus",
+      "text": "Unit has:<bulletlist><bullet>Attacks deal +2 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>Attacks have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.UNIVERSAL_CAMOUFLAGE]Universal Camouflage[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -141,8 +179,13 @@
        ],
        "all": []
       },
-      "name": "TOME_CRYOMANCY@SKILL_6@NAME",
-      "damage": "2<damagefrost></damagefrost> "
+      "damage": "2<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Blind",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -156,8 +199,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_CRYOMANCY@SKILL_6@NAME",
-      "damage": "4<damagefrost></damagefrost> "
+      "damage": "4<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Blind",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -174,12 +222,59 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_ETERNAL_ICE@SKILL5@NAME",
-      "text": "DLC@SILVERSEAS@TOME_ETERNAL_ICE@SKILL5@PROP_DESCRIPTION"
+      "name": "Ice Focus",
+      "text": "Unit has:<bulletlist><bullet>Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] with all attacks.</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.ICE_NOVA]Ice Nova[/hyperlink] ability.</bullet><bullet>The damage of this ability increases with the unit's tier.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "000004970000447A"
+     {
+      "slug": "000004970000447A",
+      "per_tier": {
+       "damage": "4<damagephysical></damagephysical> 4<damageblight></damageblight> 4<damagelightning></damagelightning> 4<damagefire></damagefire> 4<damagespirit></damagespirit> 4<damagefrost></damagefrost> ",
+       "skip_first": true,
+       "existing": true
+      }
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Chilled",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Chilled",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     }
     ]
    }
   ],
@@ -197,8 +292,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_ETERNAL_ICE@SKILL4@NAME",
-      "text": "DLC@SILVERSEAS@TOME_ETERNAL_ICE@SKILL4@PROP_DESCRIPTION"
+      "name": "Eternal Ice Blades",
+      "text": "Unit's attacks:<bulletlist><bullet>Deal +2 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>Inflict [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>This unit gains [hyperlink,GLOBAL.PROPERTIES.REGENERATION]Regeneration[/hyperlink] when it inflicts [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -214,8 +309,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damagefrost></damagefrost> "
+      "damage": "2<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Chilled",
+        "text": "Inflict [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -229,8 +329,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damagefrost></damagefrost> "
+      "damage": "4<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Chilled",
+        "text": "Inflicts 2 stacks of [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -254,8 +359,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_PIRACY@TOME@SKILL5@NAME",
-      "text": "DLC@SILVERSEAS@TOME_PIRACY@TOME@SKILL5@DESCRIPTION_PROP"
+      "name": "Raiders of the Sea",
+      "text": "Unit has:<bulletlist><bullet>Increase resources gained from [hyperlink,GLOBAL.PillagingConcept]Pillaging[/hyperlink] a [hyperlink,GLOBAL.ProvinceConcept]Province[/hyperlink] by 100%. Does not stack.</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.SAILOR]Sailor[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -274,8 +379,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_PIRACY@TOME@SKILL4@NAME",
-      "text": "DLC@SILVERSEAS@TOME_PIRACY@TOME@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Plundering Blades",
+      "text": "Units attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Have a base 60% chance of [hyperlink,GLOBAL.PROPERTIES.ROB]Rob[/hyperlink] the target.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -291,8 +396,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damagephysical></damagephysical> "
+      "damage": "2<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Rob",
+        "text": "Base 60% chance to [hyperlink,GLOBAL.PROPERTIES.ROB]Rob[/hyperlink] the target."
+       }
+      ]
      },
      {
       "filter": {
@@ -306,8 +416,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damagephysical></damagephysical> "
+      "damage": "4<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Rob",
+        "text": "Base 90% chance to [hyperlink,GLOBAL.PROPERTIES.ROB]Rob[/hyperlink] the target."
+       }
+      ]
      }
     ]
    }
@@ -327,8 +442,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_PIRACY@TOME@SKILL3@NAME",
-      "text": "DLC@SILVERSEAS@TOME_PIRACY@TOME@SKILL3@PROPERTY_DESCRIPTION"
+      "name": "Ember Dust Residue",
+      "text": "Units attacks:<bulletlist><bullet>Deal +1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]. Increased for Single Shots.</bullet><bullet>The third strike from a base attack has a base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.EMBER_DUST]Ember Dust[/hyperlink].</bullet><bullet>Single Shot base attacks instead get a base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.EMBER_DUST]Ember Dust[/hyperlink].</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -344,8 +459,26 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagefire></damagefire> "
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Ember Dust",
+        "text": "Third strike has a base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.EMBER_DUST]Ember Dust[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -359,8 +492,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "2<damagefire></damagefire> "
+      "damage": "2<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Ember Dust",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.EMBER_DUST]Ember Dust[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -379,8 +517,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_DAMNED@TOME@SKILL4@NAME",
-      "text": "DLC@SILVERSEAS@TOME_DAMNED@TOME@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Accursed Blades",
+      "text": "Attacks have:<bulletlist><bullet>+1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -396,8 +534,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "1<damagefire></damagefire> 1<damagefrost></damagefrost> "
+      "damage": "1<damagefire></damagefire> 1<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Ghostfire",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -411,8 +554,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "2<damagefire></damagefire> 2<damagefrost></damagefrost> "
+      "damage": "2<damagefire></damagefire> 2<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Ghostfire",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -432,8 +580,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_HYDROMANCY@TOME@SKILL4@NAME",
-      "text": "DLC@SILVERSEAS@TOME_HYDROMANCY@TOME@SKILL4@PROP_DESCRIPTION"
+      "name": "Flowing Imbuement",
+      "text": "Unit's attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>On the third strike, push the unit away 1 hex and inflict [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink].</bullet><bullet>Non-repeating attacks have a base 90% chance of triggering this effect instead.</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -449,7 +597,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "2<damagephysical></damagephysical> "
      },
      {
@@ -464,8 +611,45 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "4<damagephysical></damagephysical> "
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Flowing Imbuement",
+        "text": "Third attack in a turn applies [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] and pushes the target back."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Flowing Imbuement",
+        "text": "Base 90% chance of applying [hyperlink,GLOBAL.PROPERTIES.WET]Wet[/hyperlink] and push the target back."
+       }
+      ]
      }
     ]
    }
@@ -481,8 +665,25 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_HYDROMANCY@TOME@SKILL3@NAME",
-      "text": "DLC@SILVERSEAS@TOME_HYDROMANCY@TOME@SKILL3@PROP_DESCRIPTION"
+      "name": "Staves of the River",
+      "text": "Unit's [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities:<bulletlist><bullet>Heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet><bullet>Dispel 1 status effect.</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Support Ability"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Staves of the River",
+        "text": "Heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink] and dispel 1 status effect."
+       }
+      ]
      }
     ]
    }
@@ -506,8 +707,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_COSMOS@SKILL2@NAME",
-      "text": "EVOLVED@TOME_COSMOS@COSMOS_AWAKENING@PROP_DESCRIPTION"
+      "name": "Cosmos Awakening",
+      "text": "Units has:<bulletlist><bullet>+1 damage of each damage channel.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -523,7 +724,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagefrost></damagefrost> "
      },
      {
@@ -538,7 +738,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damagefrost></damagefrost> "
      },
      {
@@ -553,7 +752,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagespirit></damagespirit> "
      },
      {
@@ -568,7 +766,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damagespirit></damagespirit> "
      },
      {
@@ -583,7 +780,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damageblight></damageblight> "
      },
      {
@@ -598,7 +794,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damageblight></damageblight> "
      },
      {
@@ -613,7 +808,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagephysical></damagephysical> "
      },
      {
@@ -628,7 +822,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damagephysical></damagephysical> "
      },
      {
@@ -643,7 +836,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagefire></damagefire> "
      },
      {
@@ -658,7 +850,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damagefire></damagefire> "
      },
      {
@@ -673,7 +864,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagelightning></damagelightning> "
      },
      {
@@ -688,7 +878,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damagelightning></damagelightning> "
      }
     ]
@@ -706,8 +895,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_WEAVER@SKILL3@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_WEAVER@SKILL3@PROP_DESCRIPTION"
+      "name": "Dread Hunters",
+      "text": "Unit:<bulletlist><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.DEMORALIZER]Demoralizer[/hyperlink]</bullet><bullet>Attacks deal +20% damage against [hyperlink,GLOBAL.PROPERTIES.IMMOBILIZED]Immobilized[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] targets.</bullet></bulletlist>"
      }
     ]
    }
@@ -724,12 +913,14 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_SPRITE@SKILL03@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_SPRITE@SKILL03@PROP_DESCRIPTION"
+      "name": "Fairy Dust",
+      "text": "Unit has:<bulletlist><bullet>Gain the [hyperlink,GLOBAL.PROPERTIES.FAIRY_DUST_ABILITY]Fairy Dust[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000049700003B52"
+     {
+      "slug": "0000049700003B52"
+     }
     ]
    }
   ],
@@ -752,8 +943,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_SPRITE@SKILL02@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_SPRITE@SKILL02@PROP_DESCRIPTION"
+      "name": "Fey Bond",
+      "text": "This unit:<bulletlist><bullet>On combat start, gains +10 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].</bullet><bullet>When at neutral morale, gain +2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>When at high morale, gain +4 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -773,11 +964,49 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_BURNING_PASSION@SKILL04@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_BURNING_PASSION@SKILL04@PROP_DESCRIPTION"
+      "name": "Strength Sapping Imbuement",
+      "text": "Unit's attacks:<bulletlist><bullet>+1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Base attacks have a base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. On success gain [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Strength Sapping Imbuement",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. On a success gain [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Strength Sapping Imbuement",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]. On a success gain [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
      {
       "filter": {
        "any": [
@@ -790,7 +1019,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "1<damagefire></damagefire> "
      },
      {
@@ -805,7 +1033,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "2<damagefire></damagefire> "
      }
     ]
@@ -827,8 +1054,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_BURNING_PASSION@SKILL03@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_BURNING_PASSION@SKILL03@PROP_DESCRIPTION"
+      "name": "Blazing Aura",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BLAZING_AURA]Blazing Aura[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -846,8 +1073,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_ABJURATION@SKILL05@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_ABJURATION@SKILL05@PROP_DESCRIPTION"
+      "name": "Mage Armor",
+      "text": "Unit has:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -870,8 +1097,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SECRETSOFTHEARCHMAGES@TOME_ABJURATION@SKILL04@NAME",
-      "text": "DLC@SECRETSOFTHEARCHMAGES@TOME_ABJURATION@SKILL04@PROP_DESCRIPTION"
+      "name": "Abjurer Glyphs",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BATTLE_SHIELD]Battle Shields[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -889,12 +1116,19 @@
     },
     "passives": [
      {
-      "name": "TOME_CHAOS_CHANNELING@SKILL7@NAME",
-      "text": "TOME_CHAOS_CHANNELING@SKILL7@PROP_DESCRIPTION"
+      "name": "Flamer Focus",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.FIRE_BOMB]Fire Bomb[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "000003E300006BAB"
+     {
+      "slug": "000003E300006BAB",
+      "per_tier": {
+       "damage": "4<damagephysical></damagephysical> 4<damageblight></damageblight> 4<damagelightning></damagelightning> 4<damagefire></damagefire> 4<damagespirit></damagespirit> 4<damagefrost></damagefrost> ",
+       "skip_first": true,
+       "existing": true
+      }
+     }
     ]
    }
   ],
@@ -914,8 +1148,8 @@
     },
     "passives": [
      {
-      "name": "DLC@RISEFROMRUIN@TOME_WARLORD@SKILL03@NAME",
-      "text": "DLC@RISEFROMRUIN@TOME_WARLORD@SKILL03@PROPERTY_DESCRIPTION"
+      "name": "Relentless Might",
+      "text": "Unit has:<bulletlist><bullet>+1 [hyperlink,GLOBAL.RetaliationConcept]Retaliation Attack[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] when it attacks.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ]
    }
@@ -937,8 +1171,56 @@
     },
     "passives": [
      {
-      "name": "DLC@RISEFROMRUIN@TOME_SAND_STALKER@SKILL5@NAME",
-      "text": "DLC@RISEFROMRUIN@TOME_SAND_STALKER@SKILL5@PROP_DESCRIPTION"
+      "name": "Scorpion Venom Weapons",
+      "text": "Attacks have:<bulletlist><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>+2 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] when flanking.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Poisoned",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       },
+       {
+        "name": "Weakened",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Poisoned",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       },
+       {
+        "name": "Weakened",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -956,8 +1238,8 @@
     },
     "passives": [
      {
-      "name": "DLC@THRONESOFBLOOD@TOME_BLOOD_RITE@SKILL4@NAME",
-      "text": "DLC@THRONESOFBLOOD@TOME_BLOOD_RITE@SKILL4@PROP_DESCRIPTION"
+      "name": "Sanguine Focus",
+      "text": "Unit's attacks have:<bulletlist><bullet>+2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -973,8 +1255,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damagephysical></damagephysical> "
+      "damage": "2<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Bleeding",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -988,8 +1275,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damagephysical></damagephysical> "
+      "damage": "4<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Bleeding",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -1006,8 +1298,8 @@
     },
     "passives": [
      {
-      "name": "DLC@THRONESOFBLOOD@TOME_CRIMSON_REIGN@SKILL3@NAME",
-      "text": "EVOLVED@TOME_CRIMSON_REIGN@MANTLE_OF_BLOOD@PROP_DESCRIPTION"
+      "name": "Mantle of the Blood Noble",
+      "text": "Unit:<bulletlist><bullet>Has [hyperlink,GLOBAL.PROPERTIES.COAGULATE]Coagulate[/hyperlink]</bullet><bullet>At the start of combat, for each friendly non-summon Tier I, Tier II, and Tier III unit, gains:<bulletlist><bullet>+5 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+5% healing received in combat.</bullet></bulletlist></bullet></bulletlist>"
      }
     ]
    }
@@ -1027,8 +1319,48 @@
     },
     "passives": [
      {
-      "name": "DLC@THRONESOFBLOOD@TOME_TORMENT@SKILL3@NAME",
-      "text": "DLC@THRONESOFBLOOD@TOME_TORMENT@SKILL3@PROP_DESCRIPTION"
+      "name": "Tormenting Imbuement",
+      "text": "Unit's attacks:<bulletlist><bullet>Have a base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.TORMENT]Torment[/hyperlink] until the end of combat.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Torment",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.TORMENT]Torment[/hyperlink] until the end of combat."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Torment",
+        "text": "Base 120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.TORMENT]Torment[/hyperlink] until the end of combat."
+       }
+      ]
      }
     ]
    }
@@ -1047,8 +1379,8 @@
     },
     "passives": [
      {
-      "name": "DLC@THRONESOFBLOOD@TOME_BLOOD_RITE@SKILL2@NAME",
-      "text": "DLC@THRONESOFBLOOD@TOME_BLOOD_RITE@SKILL2@PROP_DESCRIPTION"
+      "name": "Blood Drinking Blades",
+      "text": "This unit's attacks:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>When striking units with [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink]. heal for 3 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -1064,7 +1396,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "2<damagephysical></damagephysical> "
      },
      {
@@ -1079,7 +1410,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "4<damagephysical></damagephysical> "
      }
     ]
@@ -1100,8 +1430,48 @@
     },
     "passives": [
      {
-      "name": "TOME_CYCLES@SKILL6@NAME",
-      "text": "TOME_CYCLES@SKILL6@PROP_DESCRIPTION"
+      "name": "Blooming Imbuement",
+      "text": "Unit's attacks have:<bulletlist><bullet>A base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.LIFE_SEED_ON_DEATH]Life Seed[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>+20% damage against [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Life Seed",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.LIFE_SEED_ON_DEATH]Life Seed[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Life Seed",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.LIFE_SEED_ON_DEATH]Life Seed[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -1117,8 +1487,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ARCHONPROPHECY@TOME_REVENANT@SKILL3@NAME",
-      "text": "DLC@ARCHONPROPHECY@TOME_REVENANT@SKILL3@PROP_DESCRIPTION"
+      "name": "Undead Resentment",
+      "text": "Unit has:<bulletlist><bullet>+2 <defensespirit></defensespirit> [hyperlink,GLOBAL.SpiritResistanceConcept]Spirit Protection[/hyperlink]</bullet><bullet>+2 <defensefire></defensefire> [hyperlink,GLOBAL.FireResistanceConcept]Fire Protection[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.VICIOUS_KILLER]Vicious Killer[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "resistances": {
@@ -1143,8 +1513,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ARCHONPROPHECY@TOME_ARCHON@SKILL5@NAME",
-      "text": "DLC@ARCHONPROPHECY@TOME_ARCHON@SKILL5@PROP_DESCRIPTION"
+      "name": "Holy Aura",
+      "text": "Unit has:<bulletlist><bullet>Adjacent friendly units have 2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>Adjacent enemy units sustain 4 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] at the end of the turn.</bullet></bulletlist>"
      }
     ]
    }
@@ -1165,8 +1535,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ARCHONPROPHECY@TOME_PROPHECIES@SKILL5@NAME",
-      "text": "DLC@ARCHONPROPHECY@TOME_PROPHECIES@SKILL5@PROP_DESCRIPTION"
+      "name": "Prescient Circlets",
+      "text": "Unit gains [hyperlink,GLOBAL.PROPERTIES.PRECOGNITION]Precognition[/hyperlink] when entering [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink]."
      }
     ]
    }
@@ -1186,8 +1556,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ARCHONPROPHECY@TOME_PROPHECIES@SKILL4@NAME",
-      "text": "DLC@ARCHONPROPHECY@TOME_PROPHECIES@SKILL4@PROP_DESCRIPTION"
+      "name": "Fateful Imbuement",
+      "text": "Unit has:<bulletlist><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet><bullet>Has [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -1213,8 +1583,8 @@
     },
     "passives": [
      {
-      "name": "DLC@GIANTKINGS@TOME_DUNGEON_DEPTHS@SKILL5@NAME",
-      "text": "DLC@GIANTKINGS@TOME_DUNGEON_DEPTHS@SKILL5@PROP_DESCRIPTION"
+      "name": "Raiders of the Deep",
+      "text": "This unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.CAVE_WALK]Cave Walk[/hyperlink]</bullet><bullet>While in the Underground:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist></bullet><bullet>While above ground:<bulletlist><bullet>Deal +10% damage</bullet></bulletlist></bullet></bulletlist>"
      }
     ]
    },
@@ -1237,8 +1607,8 @@
     },
     "passives": [
      {
-      "name": "DLC@GIANTKINGS@TOME_DUNGEON_DEPTHS@SKILL5@NAME",
-      "text": "DLC@GIANTKINGS@TOME_DUNGEON_DEPTHS@SKILL5@PROP_DESCRIPTION"
+      "name": "Raiders of the Deep",
+      "text": "This unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.CAVE_WALK]Cave Walk[/hyperlink]</bullet><bullet>While in the Underground:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist></bullet><bullet>While above ground:<bulletlist><bullet>Deal +10% damage</bullet></bulletlist></bullet></bulletlist>"
      }
     ]
    }
@@ -1260,8 +1630,8 @@
     },
     "passives": [
      {
-      "name": "DLC@GIANTKINGS@TOME_GEOMANCY@SKILL3@NAME",
-      "text": "DLC@GIANTKINGS@TOME_GEOMANCY@SKILL3@PROP_DESCRIPTION"
+      "name": "Resonant Weapons",
+      "text": "This unit's attacks:<bulletlist><bullet>Apply extra damage and [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] based on the terrain.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ]
    }
@@ -1279,8 +1649,8 @@
     },
     "passives": [
      {
-      "name": "TOME_TERRA@SKILL6@NAME",
-      "text": "TOME_TERRA@SKILL6@PROP_DESCRIPTION"
+      "name": "Ley Line Focus",
+      "text": "At the start of the turn and until the unit moves, this unit has:<bulletlist><bullet>+30% damage</bullet><bullet>+2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -1298,8 +1668,48 @@
     },
     "passives": [
      {
-      "name": "DLC@GIANTKINGS@TOME_CRYSTAL_DWELLING@SKILL_1@NAME",
-      "text": "DLC@GIANTKINGS@TOME_CRYSTAL_DWELLING@SKILL_1@PROP_DESCRIPTION"
+      "name": "Crystal Focus",
+      "text": "Unit's attacks have:<bulletlist><bullet>A base 30% chance of applying [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink].</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Volatile Charge",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Volatile Charge",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.VOLATILE_CHARGE]Volatile Charge[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -1319,8 +1729,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_CALAMITY@SKILL5@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_CALAMITY@SKILL5@PROP_DESCRIPTION"
+      "name": "Accursed Imbuement",
+      "text": "Unit's attacks have:<bulletlist><bullet>+2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+2 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink]</bullet><bullet>Inflict [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -1336,8 +1746,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damagefire></damagefire> 2<damagefrost></damagefrost> "
+      "damage": "2<damagefire></damagefire> 2<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Ghostfire",
+        "text": "Inflicts [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -1351,8 +1766,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damagefire></damagefire> 4<damagefrost></damagefrost> "
+      "damage": "4<damagefire></damagefire> 4<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Ghostfire",
+        "text": "Inflicts 2 stacks of [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -1373,8 +1793,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_CALAMITY@SKILL6@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_CALAMITY@SKILL6@PROP_DESCRIPTION"
+      "name": "Accursed Armors",
+      "text": "When a melee range attack hits, the attacker has a 60% chance of being inflicted with [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
      }
     ],
     "stats": {
@@ -1398,8 +1818,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_PROSPERITY@SKILL4@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_PROSPERITY@SKILL4@PROP_DESCRIPTION"
+      "name": "Blessed Armors",
+      "text": "This unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INNER_GRACE]Inner Grace[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -1418,12 +1838,31 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_PROSPERITY@SKILL5@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_PROSPERITY@SKILL5@PROP_DESCRIPTION"
+      "name": "Staves of Grace",
+      "text": "This unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INNER_GRACE]Inner Grace[/hyperlink].</bullet><bullet>Their [hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities grant 1 [hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink].</bullet><bullet>The [hyperlink,GLOBAL.PROPERTIES.CLEANSING_RAIN]Cleansing Rain[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "000004970000137B"
+     {
+      "slug": "000004970000137B"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Support Ability"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Staves of Grace",
+        "text": "Target gains 1 [hyperlink,GLOBAL.PROPERTIES.GRACE]Grace[/hyperlink]."
+       }
+      ]
+     }
     ]
    }
   ],
@@ -1449,8 +1888,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL3_BRAVERY@NAME",
-      "text": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL3_BRAVERY@PROP_DESCRIPTION"
+      "name": "Pledge of Strife",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.WARRIORS_SOUL]Warrior's Soul[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -1477,8 +1916,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL3_RIGHTEOUSNESS@NAME",
-      "text": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL3_RIGHTEOUSNESS@PROP_DESCRIPTION"
+      "name": "Pledge of Righteousness",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.NOBILITY]Nobility[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -1505,8 +1944,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL3_WISDOM@NAME",
-      "text": "DLC@WAYSOFWAR@CULTURE_OATHSWORN@SKILL3_WISDOM@PROP_DESCRIPTION"
+      "name": "Pledge of Harmony",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.HARMONIZE]Harmonize[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -1528,8 +1967,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ROCK@SKILL6@NAME",
-      "text": "TOME_ROCK@SKILL6@PROP_DESCRIPTION"
+      "name": "Obsidian Weapons",
+      "text": "Unit's attacks have:<bulletlist><bullet>+1 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -1545,8 +1984,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "1<damagephysical></damagephysical> "
+      "damage": "1<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Bleeding",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -1560,8 +2004,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "2<damagephysical></damagephysical> "
+      "damage": "2<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Bleeding",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -1581,8 +2030,48 @@
     },
     "passives": [
      {
-      "name": "EVOLVED@TOME_ENCHANTMENT@PURGING_IMBUEMENT@NAME",
-      "text": "TOME_ENCHANTMENT@SKILL6@PROP_DESCRIPTION"
+      "name": "Purging Imbuement",
+      "text": "Unit's attacks:<bulletlist><bullet>Deal +20% damage against [hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] units.</bullet><bullet>Have a base 60% chance of removing 1 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Purging Imbuement",
+        "text": "Base 60% chance of removing 1 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Purging Imbuement",
+        "text": "Base 90% chance of removing 1 [hyperlink,GLOBAL.PositiveStatusEffectConcept]Positive Status Effect[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -1598,12 +2087,14 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@TOME_FEY_MIST@SKILL2@NAME",
-      "text": "DLC@PRIMALFURY@TOME_FEY_MIST@SKILL2@PROP_DESCRIPTION"
+      "name": "Staves of Mist",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.SOOTHING_MIST]Fey Blessing[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000049700000587"
+     {
+      "slug": "0000049700000587"
+     }
     ]
    }
   ],
@@ -1632,6 +2123,66 @@
      {
       "slug": "00000497000002bb"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Tunneling Spider's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SPIDER]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Tunneling Spider's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SPIDER]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Tunneling Spider's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SPIDER]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1657,8 +2208,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@SPIDER_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_PROP_DESCRIPTION"
+      "name": "Spider Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_SPIDER]Tunneling Spider's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.CAVE_WALK]Cave Walk[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Tunneling Spider's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SPIDER]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Tunneling Spider's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SPIDER]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Tunneling Spider's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SPIDER]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -1688,6 +2299,66 @@
      {
       "slug": "00000497000002b5"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Glacial Mammoth's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MAMMOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Glacial Mammoth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MAMMOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Glacial Mammoth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MAMMOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1713,8 +2384,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@MAMMOTH_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_PROP_DESCRIPTION"
+      "name": "Mammoth Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_MAMMOTH]Glacial Mammoth's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.ARCTIC_WALK]Arctic Walk[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Glacial Mammoth's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MAMMOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Glacial Mammoth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MAMMOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Glacial Mammoth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MAMMOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -1744,6 +2475,66 @@
      {
       "slug": "00000497000002af"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Storm Crow's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROW]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Storm Crow's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROW]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Storm Crow's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROW]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1769,8 +2560,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@CROW_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_PROP_DESCRIPTION"
+      "name": "Crow Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_CROW]Storm Crow's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.GRASSLAND_WALK]Grassland Walk[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Storm Crow's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROW]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Storm Crow's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROW]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Storm Crow's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROW]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -1800,6 +2651,66 @@
      {
       "slug": "00000497000002c1"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Dune Serpent's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SERPENT]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Dune Serpent's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SERPENT]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Dune Serpent's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SERPENT]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1825,8 +2736,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@SERPENT_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_PROP_DESCRIPTION"
+      "name": "Serpent Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_SERPENT]Dune Serpent's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SAND_WALK]Sand Walk[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Dune Serpent's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SERPENT]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Dune Serpent's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SERPENT]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Dune Serpent's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SERPENT]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -1856,6 +2827,66 @@
      {
       "slug": "00000497000002c7"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Primal Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SABERTOOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Ash Sabertooth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SABERTOOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Ash Sabertooth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SABERTOOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1881,8 +2912,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@SABERTOOTH_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_PROP_DESCRIPTION"
+      "name": "Sabertooth Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_SABERTOOTH]Ash Sabertooth's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.DESOLATE_WALK]Desolate Walk[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Primal Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SABERTOOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Ash Sabertooth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SABERTOOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Ash Sabertooth's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_SABERTOOTH]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -1912,6 +3003,66 @@
      {
       "slug": "000004970000029d"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Mire Crocodile's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROCODILE]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Mire Crocodile's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROCODILE]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Mire Crocodile's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROCODILE]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1937,8 +3088,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@CROCODILE_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_CROC_PROP_DESCRIPTION"
+      "name": "Crocodile Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_CROCODILE]Mire Crocodile's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SWAMP_WALK]Swamp Walk[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.DISEASE_IMMUNITY]Status Effect Immunity: Diseased[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Mire Crocodile's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROCODILE]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Mire Crocodile's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROCODILE]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Mire Crocodile's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_CROCODILE]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -1968,6 +3179,66 @@
      {
       "slug": "0000049700000291"
      }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Sylvan Wolf's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_WOLF]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Sylvan Wolf's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_WOLF]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Sylvan Wolf's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_WOLF]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     }
     ]
    },
    {
@@ -1993,8 +3264,68 @@
     },
     "passives": [
      {
-      "name": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@WOLF_NAME",
-      "text": "DLC@PRIMALFURY@CULTURE_PRIMAL@SKILL3@ENCHANTMENT_PROP_DESCRIPTION"
+      "name": "Wolf Primal Communion",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_MOD_GROUP_WOLF]Sylvan Wolf's Boon[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.EXPEDITED_FOREST]Forest Walk[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Cleaving Charge - Requisite",
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Sylvan Wolf's Boon",
+        "text": "Gain 1 stack of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_WOLF]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Sylvan Wolf's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_WOLF]Rising Fury[/hyperlink] on use."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Cleaving Charge - Requisite"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Sylvan Wolf's Boon",
+        "text": "Gain 2 stacks of [hyperlink,GLOBAL.PROPERTIES.PRIMAL_FURY_WOLF]Rising Fury[/hyperlink] on use."
+       }
+      ]
      }
     ]
    }
@@ -2022,8 +3353,27 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@CULTURE_MERCANTILE@RESEARCH@SKILL_4@NAME",
-      "text": "DLC@SILVERSEAS@CULTURE_MERCANTILE@RESEARCH@SKILL_4@DESCRIPTION"
+      "name": "Bounty Hunter's Writ",
+      "text": "Grants non-Mercantile, units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BOUNTY_HUNTER]Bounty Hunter[/hyperlink]</bullet><bullet>Support units gain [hyperlink,GLOBAL.PROPERTIES.ASSIGN_BOUNTY]Assign Bounty[/hyperlink] instead.</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Bounty Hunter",
+        "text": "+20% damage against targets with [hyperlink,GLOBAL.PROPERTIES.BOUNTY]Bounty[/hyperlink]."
+       }
+      ]
      }
     ]
    },
@@ -2039,8 +3389,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@CULTURE_MERCANTILE@RESEARCH@SKILL_4@NAME",
-      "text": "DLC@SILVERSEAS@CULTURE_MERCANTILE@RESEARCH@SKILL_4@DESCRIPTION"
+      "name": "Bounty Hunter's Writ",
+      "text": "Grants non-Mercantile, units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BOUNTY_HUNTER]Bounty Hunter[/hyperlink]</bullet><bullet>Support units gain [hyperlink,GLOBAL.PROPERTIES.ASSIGN_BOUNTY]Assign Bounty[/hyperlink] instead.</bullet></bulletlist>"
      }
     ]
    }
@@ -2067,8 +3417,8 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@CULTURE_MERCANTILE@RESEARCH@SKILL_1@NAME",
-      "text": "DLC@SILVERSEAS@CULTURE_MERCANTILE@RESEARCH@SKILL_1@DESCRIPTION"
+      "name": "Signia of the Cartel",
+      "text": "Grants non-Mercantile units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.OBSERVANT]Observant[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2096,8 +3446,8 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@CULTURE_REAVER@SKILL5@NAME",
-      "text": "DLC@EMPIRESANDASHES@CULTURE_REAVER@SKILL5@PROP_DESCRIPTION"
+      "name": "Banner of the Federation",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FEDERATE_SOLDIER]Federate Soldier[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2124,8 +3474,8 @@
     },
     "passives": [
      {
-      "name": "DLC@RISEFROMRUIN@CULTURE_NOMAD@SUBCULTURE@SCAVENGERS@RESEARCH_SKILL@SCAVENGERS_BAGS@NAME",
-      "text": "DLC@RISEFROMRUIN@CULTURE_NOMAD@SUBCULTURE@SCAVENGERS@RESEARCH_SKILL@SCAVENGERS_BAGS@DESCRIPTION"
+      "name": "Scavenger's Bags",
+      "text": "Grant non-Culture units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.SCAVENGER]Scavenger[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2152,8 +3502,8 @@
     },
     "passives": [
      {
-      "name": "DLC@RISEFROMRUIN@CULTURE_NOMAD@SUBCULTURE@CONQUERERS@RESEARCH_SKILL@CHIMES_OF_MOMENTUM@NAME",
-      "text": "DLC@RISEFROMRUIN@CULTURE_NOMAD@SUBCULTURE@CONQUERERS@RESEARCH_SKILL@CHIMES_OF_MOMENTUM@DESCRIPTION"
+      "name": "Chimes of Momentum",
+      "text": "Grant non-Culture units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.EMPOWERING_MOMENTUM]Empowering Momentum[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2205,8 +3555,8 @@
     },
     "passives": [
      {
-      "name": "CULTURE_DARK_RESEARCH@CULTOFDEATH@SKILL_1@NAME",
-      "text": "CULTURE_DARK_RESEARCH@CULTOFDEATH@SKILL_1@DESCRIPTION"
+      "name": "Mark of the Death Cult",
+      "text": "Grants non-Dark units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.POWER_FROM_DEATH]Power from Death[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2234,8 +3584,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ARCHONPROPHECY@CULTURE_ARCHITECT@SKILL1@NAME",
-      "text": "DLC@ARCHONPROPHECY@CULTURE_ARCHITECT@AFFINITY_INCARNATE@GENERAL@DESCRIPTION"
+      "name": "Incarnate Mark",
+      "text": "For each stack of Affinity Incarnate this unit gains damage based on their Empire's dominant [hyperlink,GLOBAL.AffinityConcept]Affinity[/hyperlink]:<bulletlist><bullet><order></order> [hyperlink,GLOBAL.OrderConcept]Order Affinity[/hyperlink]: +1 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink]</bullet><bullet><chaos></chaos> [hyperlink,GLOBAL.ChaosConcept]Chaos Affinity[/hyperlink]: +1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink]</bullet><bullet><arcana></arcana> [hyperlink,GLOBAL.AstralConcept]Astral Affinity[/hyperlink]: +1 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink]</bullet><bullet><matter></matter> [hyperlink,GLOBAL.MateriumConcept]Materium Affinity[/hyperlink]: +1 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]</bullet><bullet><nature></nature> [hyperlink,GLOBAL.NatureConcept]Nature Affinity[/hyperlink]: +1 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink]</bullet><bullet><shadow></shadow> [hyperlink,GLOBAL.ShadowConcept]Shadow Affinity[/hyperlink]: +1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ]
    }
@@ -2254,8 +3604,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@TOME_CLEANSING_FLAME@TOME@SKILL1@NAME",
-      "text": "EVOLVED@TOME_CLEANSING_FLAMES@FLAME_BLESSED_CHAMPIONS@DESCRIPTION"
+      "name": "Flame Blessed Champions",
+      "text": "Makes base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +1 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -2271,8 +3621,17 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "1<damagefire></damagefire> 1<damagespirit></damagespirit> "
+      "damage": "1<damagefire></damagefire> 1<damagespirit></damagespirit> ",
+      "notes": [
+       {
+        "name": "Cleansing Flames",
+        "text": "Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       },
+       {
+        "name": "Burning",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -2286,8 +3645,17 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "2<damagefire></damagefire> 2<damagespirit></damagespirit> "
+      "damage": "2<damagefire></damagefire> 2<damagespirit></damagespirit> ",
+      "notes": [
+       {
+        "name": "Cleansing Flames",
+        "text": "Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       },
+       {
+        "name": "Burning",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -2305,8 +3673,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@TOME_CLEANSING_FLAME@TOME@SKILL4@NAME",
-      "text": "EVOLVED@TOME_CLEANSING_FLAMES@PUREFLAME_STAVES@DESCRIPTION"
+      "name": "Pureflame Staves",
+      "text": "Makes base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Deal +1 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Gain base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink]</bullet><bullet>Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -2320,8 +3688,17 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "1<damagefire></damagefire> 1<damagespirit></damagespirit> "
+      "damage": "1<damagefire></damagefire> 1<damagespirit></damagespirit> ",
+      "notes": [
+       {
+        "name": "Condemned",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] until the end of battle."
+       },
+       {
+        "name": "Cleansing Flames",
+        "text": "Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -2333,8 +3710,17 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "2<damagefire></damagefire> 2<damagespirit></damagespirit> "
+      "damage": "2<damagefire></damagefire> 2<damagespirit></damagespirit> ",
+      "notes": [
+       {
+        "name": "Condemned",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONDEMNED]Condemned[/hyperlink] until the end of battle."
+       },
+       {
+        "name": "Cleansing Flames",
+        "text": "Create [hyperlink,GLOBAL.CleansingFlamesHazard]Cleansing Flames[/hyperlink] on the target hex for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -2362,8 +3748,48 @@
     },
     "passives": [
      {
-      "name": "CULTURE_MYTHIC_RESEARCH@SPELL_ARCANISTS@SKILL_1@NAME",
-      "text": "CULTURE_MYTHIC_RESEARCH@SPELL_ARCANISTS@SKILL_1@PROP_DESCRIPTION"
+      "name": "Ciphers of Dissonance",
+      "text": "This unit's attacks inflict [hyperlink,GLOBAL.PROPERTIES.DISSONANCE]Dissonance[/hyperlink]."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Dissonant",
+        "text": "Inflict a stack of [hyperlink,GLOBAL.PROPERTIES.DISSONANCE]Dissonance[/hyperlink]"
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Dissonant",
+        "text": "Inflict 2 stacks of [hyperlink,GLOBAL.PROPERTIES.DISSONANCE]Dissonance[/hyperlink]"
+       }
+      ]
      }
     ]
    }
@@ -2381,8 +3807,8 @@
     },
     "passives": [
      {
-      "name": "DLC@ELDRITCHREALMS@TOME_TENTACLE@TOME@SKILL3@NAME",
-      "text": "DLC@ELDRITCHREALMS@TOME_TENTACLE@TOME@SKILL3@DESCRIPTION"
+      "name": "Constricting Focus",
+      "text": "Base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks of enchanted units:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink]</bullet><bullet>Gain base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -2396,8 +3822,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damagephysical></damagephysical> "
+      "damage": "2<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Constricting",
+        "text": "<bulletlist><bullet>Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>"
+       }
+      ]
      },
      {
       "filter": {
@@ -2409,8 +3840,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damagephysical></damagephysical> "
+      "damage": "4<damagephysical></damagephysical> ",
+      "notes": [
+       {
+        "name": "Constricting",
+        "text": "<bulletlist><bullet>Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CONSTRICTED]Constricted[/hyperlink] for 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>If unsuccessful, inflicts [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink].</bullet></bulletlist>"
+       }
+      ]
      }
     ]
    }
@@ -2426,8 +3862,8 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@TOME_DREADNAUGHT@SKILL3@NAME",
-      "text": "DLC@EMPIRESANDASHES@TOME_DREADNAUGHT@SKILL3@PROP_DESCRIPTION"
+      "name": "Tuning Kits",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.OVERCHARGE_ABILITY]Overcharge[/hyperlink] ability.</bullet></bulletlist>"
      }
     ]
    }
@@ -2447,8 +3883,31 @@
     },
     "passives": [
      {
-      "name": "DLC@SILVERSEAS@TOME_DAMNED@TOME@SKILL2@NAME",
-      "text": "DLC@SILVERSEAS@TOME_DAMNED@TOME@SKILL2@PROP_DESCRIPTION"
+      "name": "Mark of the Damned",
+      "text": "Attacks have:<bulletlist><bullet>Inflict [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] on units that do not have it.</bullet><bullet>Inflict [hyperlink,GLOBAL.PROPERTIES.DAMNED]Damned[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Inflict Damned",
+        "text": "Inflicts [hyperlink,GLOBAL.PROPERTIES.DAMNED]Damned[/hyperlink]"
+       },
+       {
+        "name": "Ghostfire",
+        "text": "Inflict [hyperlink,GLOBAL.PROPERTIES.GHOSTFIRE]Ghostfire[/hyperlink] on units that do not have it."
+       }
+      ]
      }
     ]
    }
@@ -2468,8 +3927,8 @@
     },
     "passives": [
      {
-      "name": "TOME_WARDING@SKILL4@NAME",
-      "text": "TOME_WARDING@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Static Shields",
+      "text": "This unit gains [hyperlink,GLOBAL.PROPERTIES.STATIC_SHIELD_GROUP]Static Shield[/hyperlink] when it enters [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink]."
      }
     ]
    }
@@ -2485,8 +3944,8 @@
     },
     "passives": [
      {
-      "name": "TOME_FERTILITY@SKILL6@NAME",
-      "text": "TOME_FERTILITY@SKILL6@PROP_DESCRIPTION"
+      "name": "Staves of Life",
+      "text": "When this unit uses an Attack or Support ability, a random friendly unit within 3 hexes of it heals for 15 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]."
      }
     ]
    }
@@ -2508,8 +3967,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_SHADES@SHADOW_BLADES@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_SHADES@SHADOW_BLADES@PROPERTY_DESCRIPTION"
+      "name": "Shadow Weapons",
+      "text": "This unit's attacks:<bulletlist><bullet>Deal +3 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink] when [hyperlink,GLOBAL.FlankingConcept]<flank></flank> Flanking[/hyperlink] or attacking [hyperlink,GLOBAL.PROPERTIES.BLINDED]Blind[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ]
    }
@@ -2528,12 +3987,14 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_DISCIPLINE@FOCUS_AIM@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_DISCIPLINE@FOCUS_AIM@PROP_DESCRIPTION"
+      "name": "Focus Aim",
+      "text": "This unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.FOCUS]Focus Aim[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000048B000001F5"
+     {
+      "slug": "0000048B000001F5"
+     }
     ]
    }
   ],
@@ -2554,8 +4015,8 @@
     },
     "passives": [
      {
-      "name": "DLC@WAYSOFWAR@TOME_DISCIPLINE@EMPOWERED_STRIKES@NAME",
-      "text": "DLC@WAYSOFWAR@TOME_DISCIPLINE@EMPOWERED_STRIKES@PROPERTY_DESCRIPTION"
+      "name": "Empowered Strikes",
+      "text": "This unit's base [hyperlink,GLOBAL.MeleeConcept]Melee[/hyperlink] attacks and [hyperlink,GLOBAL.MagicStrikeConcept]Magic Strikes[/hyperlink]:<bulletlist><bullet>Deal +2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink].</bullet><bullet>Third attack in a turn has a 30% base chance of inflicting [hyperlink,GLOBAL.PROPERTIES.STUNNED]Stunned[/hyperlink] for 1 <turn></turn> Turn</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -2570,7 +4031,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "2<damagephysical></damagephysical> "
      },
      {
@@ -2584,7 +4044,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "4<damagephysical></damagephysical> "
      }
     ]
@@ -2607,8 +4066,48 @@
     },
     "passives": [
      {
-      "name": "EVOLVED@TOME_SEVERING@DISRUPTING_WEAPONS@NAME",
-      "text": "DLC@EMPIRESANDASHES@TOME_SEVERING@SKILL4@PROP_DESCRIPTION"
+      "name": "Disrupting Weapons",
+      "text": "Unit's attacks have:<bulletlist><bullet>A base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DISRUPTION_TOOLTIP_PROPERTY]Disrupted[/hyperlink] for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Disrupted",
+        "text": "Base 60% chance of draining all <caststrategic></caststrategic> [hyperlink,GLOBAL.UnitEnchantmentConcept]Unit Enchantments[/hyperlink] from target for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Disrupted",
+        "text": "Base 90% chance of draining all <caststrategic></caststrategic> [hyperlink,GLOBAL.UnitEnchantmentConcept]Unit Enchantments[/hyperlink] from target for 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -2625,8 +4124,8 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@TOME_SEVERING@SKILL3@NAME",
-      "text": "DLC@EMPIRESANDASHES@TOME_SEVERING@SKILL3@UNIT_DESCRIPTION"
+      "name": "Null Shield",
+      "text": "When unit enters [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink], it and adjacent friendly units gain:<bulletlist><bullet>+5 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2645,8 +4144,8 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@TOME_CONSTRUCT@SKILL3@NAME",
-      "text": "DLC@EMPIRESANDASHES@TOME_CONSTRUCT@SKILL3@DESCRIPTION"
+      "name": "Compounding Defense",
+      "text": "When adjacent to another unit with Compounding Defense this unit gains:<bulletlist><bullet>+1 <defense></defense> [hyperlink,GLOBAL.DefenseConcept]Defense[/hyperlink]</bullet><bullet>+1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -2662,8 +4161,8 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@TOME_DREADNAUGHT@SKILL5@NAME",
-      "text": "DLC@EMPIRESANDASHES@TOME_DREADNAUGHT@SKILL5@PROP_DESCRIPTION"
+      "name": "Warding Metals",
+      "text": "Unit has:<bulletlist><bullet>+2 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -2684,8 +4183,8 @@
     },
     "passives": [
      {
-      "name": "TOME_SUPREMACY@SKILL4@NAME",
-      "text": "EVOLVED@TOME_SUPREMACY@SUPREME_MAGIC@PROPERTY_DESCRIPTION"
+      "name": "Supreme Magic",
+      "text": "<bulletlist><bullet>Attacks deal +2 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink].</bullet><bullet>Attacks ignore 2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>Killing a unit causes it to explode, dealing 20 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] to adjacent enemy units.</bullet></bulletlist><br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -2701,8 +4200,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damagespirit></damagespirit> "
+      "damage": "2<damagespirit></damagespirit> ",
+      "notes": [
+       {
+        "name": "Supreme Magic",
+        "text": "Killing a unit causes it to explode, dealing 20 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] to adjacent enemy units."
+       }
+      ]
      },
      {
       "filter": {
@@ -2716,8 +4220,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damagespirit></damagespirit> "
+      "damage": "4<damagespirit></damagespirit> ",
+      "notes": [
+       {
+        "name": "Supreme Magic",
+        "text": "Killing a unit causes it to explode, dealing 20 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] to adjacent enemy units."
+       }
+      ]
      }
     ]
    }
@@ -2737,11 +4246,30 @@
     },
     "passives": [
      {
-      "name": "TOME_INQUISITION@SKILL4@NAME",
-      "text": "EVOLVED@TOME_INQUISITION@INQUISITORS_MARK@PROPERTY_DESCRIPTION"
+      "name": "Inquisitor's Mark",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink].</bullet><bullet>Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Weakened",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
      {
       "filter": {
        "any": [
@@ -2754,7 +4282,25 @@
         "Single Shot"
        ]
       },
-      "name": "UNITPROPERTIES@ZEAL@NAME",
+      "notes": [
+       {
+        "name": "Weakened",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.WEAKENED]Weakened[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
       "damage": "4<damagespirit></damagespirit> "
      },
      {
@@ -2769,7 +4315,6 @@
        ],
        "all": []
       },
-      "name": "UNITPROPERTIES@ZEAL@NAME",
       "damage": "2<damagespirit></damagespirit> "
      }
     ]
@@ -2791,8 +4336,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ZEAL@SKILL5@NAME",
-      "text": "TOME_ZEAL@SKILL5@PROP_DESCRIPTION"
+      "name": "Legion of Zeal",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ZEAL]Zeal[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -2808,7 +4353,6 @@
         "Single Shot"
        ]
       },
-      "name": "UNITPROPERTIES@ZEAL@NAME",
       "damage": "4<damagespirit></damagespirit> "
      },
      {
@@ -2823,7 +4367,6 @@
        ],
        "all": []
       },
-      "name": "UNITPROPERTIES@ZEAL@NAME",
       "damage": "2<damagespirit></damagespirit> "
      }
     ]
@@ -2841,12 +4384,14 @@
     },
     "passives": [
      {
-      "name": "TOME_ETERNAL_LORD@SKILL3@NAME",
-      "text": "TOME_ETERNAL_LORD@SKILL3@PROP_DESCRIPTION"
+      "name": "True Death Magic",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.EVOCATION_OF_DEATH]Curse of the Reaper[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000049700000955"
+     {
+      "slug": "0000049700000955"
+     }
     ]
    }
   ],
@@ -2866,8 +4411,8 @@
     },
     "passives": [
      {
-      "name": "TOME_GREAT_TRANSFORMATION@SKILL2@NAME",
-      "text": "TOME_GREAT_TRANSFORMATION@SKILL2@PROP_DESCRIPTION"
+      "name": "Fetid Legion",
+      "text": "Unit has:<bulletlist><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.WEAKENING]Weakening Aura[/hyperlink].</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -2891,8 +4436,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ARCH_MAGE@SKILL3@NAME",
-      "text": "TOME_ARCH_MAGE@SKILL3@PROPERTY_DESCRIPTION"
+      "name": "Cosmic Overdrive",
+      "text": "Unit has:<bulletlist><bullet>+20% damage.</bullet><bullet>[hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effects[/hyperlink] last 1 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], with a minimum of 1.</bullet><bullet>If non-mythic [hyperlink,GLOBAL.PROPERTIES.MAGIC_ORIGIN]Magic Origin[/hyperlink] it gains [hyperlink,GLOBAL.PROPERTIES.VERY_FAST_MOVEMENT]Athletics[/hyperlink].</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -2924,12 +4469,14 @@
     },
     "passives": [
      {
-      "name": "TOME_TELEPORTATION@SKILL4@NAME",
-      "text": "TOME_TELEPORTATION@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Phasing Enchantment",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.CHARGED_PHASE_TELEPORT]Charged Phase[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000041B0000148D"
+     {
+      "slug": "0000041B0000148D"
+     }
     ]
    }
   ],
@@ -2948,8 +4495,8 @@
     },
     "passives": [
      {
-      "name": "TOME_AMPLIFICATION@SKILL3@NAME",
-      "text": "EVOLVED@TOME_NATURES_WRATH@FRENZYING_IMBUEMENT@PROPERTY_DESCRIPTION"
+      "name": "Frenzying Imbuement",
+      "text": "Unit has:<bulletlist><bullet>+2 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] on attacks.</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.FRENZY]Frenzy[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.NEW_LIFE_STEAL]Life Steal[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -2965,7 +4512,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "2<damageblight></damageblight> "
      },
      {
@@ -2980,8 +4526,79 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "4<damageblight></damageblight> "
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Life Steal",
+        "text": "Attacks heal 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Life Steal",
+        "text": "Attacks heal 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Frenzy",
+        "text": "Gains a stack of [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] when landing a hit."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Frenzy",
+        "text": "Gains 2 [hyperlink,GLOBAL.PROPERTIES.STRENGTHENED]Strengthened[/hyperlink] when landing a hit."
+       }
+      ]
      }
     ]
    }
@@ -3000,8 +4617,8 @@
     },
     "passives": [
      {
-      "name": "TOME_EVOCATION@SKILL2@NAME",
-      "text": "TOME_EVOCATION@SKILL2@PROPERTY_DESCRIPTION"
+      "name": "Lightning Blades",
+      "text": "Unit's attacks have:<bulletlist><bullet>+2 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3017,8 +4634,13 @@
        ],
        "all": []
       },
-      "name": "TOME_EVOCATION@SKILL2@NAME",
-      "damage": "2<damagelightning></damagelightning> "
+      "damage": "2<damagelightning></damagelightning> ",
+      "notes": [
+       {
+        "name": "Lightning Blades",
+        "text": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] targets."
+       }
+      ]
      },
      {
       "filter": {
@@ -3032,8 +4654,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_EVOCATION@SKILL2@NAME",
-      "damage": "4<damagelightning></damagelightning> "
+      "damage": "4<damagelightning></damagelightning> ",
+      "notes": [
+       {
+        "name": "Lightning Blades",
+        "text": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] targets."
+       }
+      ]
      }
     ]
    }
@@ -3050,8 +4677,8 @@
     },
     "passives": [
      {
-      "name": "TOME_CREATOR@SKILL4@NAME",
-      "text": "TOME_CREATOR@SKILL4@PROP_DESCRIPTION"
+      "name": "Shaper's Touch",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.NATURAL_REGENERATION_GROUP]Natural Regeneration[/hyperlink]</bullet><bullet>+10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink]</bullet><bullet>+2 <defenselightning></defenselightning> [hyperlink,GLOBAL.LightningResistanceConcept]Lightning Protection[/hyperlink]</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -3077,8 +4704,8 @@
     },
     "passives": [
      {
-      "name": "TOME_CRUCIBLE@SKILL5@NAME",
-      "text": "EVOLVED@TOME_CRUCIBLE@METEOR_PROJECTILES@PROP_DESCRIPTION"
+      "name": "Meteor Imbuement",
+      "text": "Unit's base attacks:<bulletlist><bullet>Deal +4 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] on the target and adjacent enemies.</bullet><bullet>Have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink] on each target hit for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Gain [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink], making them able to destroy reinforced obstacles.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3093,8 +4720,17 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "4<damagefire></damagefire> "
+      "damage": "4<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Meteor Imbuement",
+        "text": "<bulletlist><bullet>+4 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] to the target and adjacent enemies.</bullet><bullet>Has [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink]</bullet></bulletlist>"
+       },
+       {
+        "name": "Sundered Defense",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -3107,8 +4743,17 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "8<damagefire></damagefire> "
+      "damage": "8<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Meteor Imbuement",
+        "text": "<bulletlist><bullet>+8 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink] to the target and adjacent enemies.</bullet><bullet>Has [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink]</bullet></bulletlist>"
+       },
+       {
+        "name": "Sundered Defense",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3127,8 +4772,48 @@
     },
     "passives": [
      {
-      "name": "TOME_ENCHANTMENT@SKILL4@NAME",
-      "text": "TOME_ENCHANTMENT@SKILL4@PROP_DESCRIPTION"
+      "name": "Sundering Blades",
+      "text": "Unit's attacks have:<bulletlist><bullet>Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Sundered Defense",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Sundered Defense",
+        "text": "Inflict [hyperlink,GLOBAL.PROPERTIES.SUNDERED_DEFENSE]Sundered Defense[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3145,8 +4830,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ENCHANTMENT@SKILL3@NAME",
-      "text": "TOME_ENCHANTMENT@SKILL3@PROP_DESCRIPTION"
+      "name": "Seeker Arrows",
+      "text": "Unit has:<bulletlist><bullet>+1 [hyperlink,GLOBAL.RangeConcept]<range></range> Range[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -3162,8 +4847,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ENCHANTMENT@SKILL1@NAME",
-      "text": "TOME_ENCHANTMENT@SKILL1@PROP_DESCRIPTION"
+      "name": "Spell-Tempered Shields",
+      "text": "<bulletlist><bullet>Unit has +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink].</bullet><bullet>When entering [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink], this unit and all adjacent allies gain +1 <resistance></resistance> [hyperlink,GLOBAL.ResistanceConcept]Resistance[/hyperlink] until the start of the next turn.</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -3187,8 +4872,8 @@
     },
     "passives": [
      {
-      "name": "TOME_TRANSMUTATION@SKILL1@NAME",
-      "text": "TOME_TRANSMUTATION@SKILL1@PROP_DESCRIPTION"
+      "name": "Adaptive Armor",
+      "text": "Once per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink], when this unit is damaged by [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks or spells it gains:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.STATUS_PROTECTION]Status Protection[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -3208,12 +4893,14 @@
     },
     "passives": [
      {
-      "name": "TOME_GLADES@SKILL4@NAME",
-      "text": "TOME_GLADES@SKILL4@PROP_DESCRIPTION"
+      "name": "Aspect of the Root",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.ASPECT_ROOT]Aspect of the Root[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000041B00001C65"
+     {
+      "slug": "0000041B00001C65"
+     }
     ]
    }
   ],
@@ -3232,8 +4919,8 @@
     },
     "passives": [
      {
-      "name": "EVOLVED@TOME_ROOTS@POISON_IMBUEMENT@NAME",
-      "text": "TOME_ROOTS@SKILL3@PROP_DESCRIPTION"
+      "name": "Poison Imbuement",
+      "text": "Unit's attacks have:<bulletlist><bullet>+1 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3249,8 +4936,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "1<damageblight></damageblight> "
+      "damage": "1<damageblight></damageblight> ",
+      "notes": [
+       {
+        "name": "Poisoned",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -3264,8 +4956,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "2<damageblight></damageblight> "
+      "damage": "2<damageblight></damageblight> ",
+      "notes": [
+       {
+        "name": "Poisoned",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3284,8 +4981,8 @@
     },
     "passives": [
      {
-      "name": "TOME_CHAOS_CHANNELING@SKILL4@NAME",
-      "text": "TOME_CHAOS_CHANNELING@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Demonic Siphon",
+      "text": "Whenever another unit dies in battle, this unit gains:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INFERNAL_MIGHT]Infernal Might[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>+5 <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink].<br><br>Does not trigger on the death of [hyperlink,GLOBAL.PROPERTIES.COMBAT_SUMMON]Combat Summons[/hyperlink], [hyperlink,GLOBAL.PROPERTIES.TOWER_UNIT]Tower[/hyperlink], and [hyperlink,GLOBAL.PROPERTIES.SIEGECRAFT_UNIT]Siegecraft[/hyperlink] units.</bullet></bulletlist>"
      }
     ]
    }
@@ -3305,8 +5002,44 @@
     },
     "passives": [
      {
-      "name": "TOME_PANDEMONIUM@SKILL3@NAME",
-      "text": "TOME_PANDEMONIUM@SKILL3@PROPERTY_DESCRIPTION"
+      "name": "Havoc Magic",
+      "text": "Unit's base [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks have:<bulletlist><bullet>A base 30% chance of inflicting a random [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effect[/hyperlink].</bullet></bulletlist> <br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Havoc Magic",
+        "text": "60% chance of inflicting a random [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effect[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Havoc Magic",
+        "text": "90% chance of inflicting a random [hyperlink,GLOBAL.NegativeStatusEffectConcept]Negative Status Effect[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3326,8 +5059,48 @@
     },
     "passives": [
      {
-      "name": "TOME_MAYHEM@SKILL1@NAME",
-      "text": "TOME_MAYHEM@SKILL1@PROP_DESCRIPTION"
+      "name": "Mark of Misfortune",
+      "text": "Unit's attacks:<bulletlist><bullet>Inflict [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink].</bullet></bulletlist> <br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Misfortune",
+        "text": "Inflicts [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Misfortune",
+        "text": " Inflicts 2x [hyperlink,GLOBAL.PROPERTIES.MISFORTUNE]Misfortune[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3343,8 +5116,8 @@
     },
     "passives": [
      {
-      "name": "TOME_FAITH@SKILL3@NAME",
-      "text": "TOME_FAITH@SKILL3@PROP_DESCRIPTION"
+      "name": "Staves of Mending",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.MENDING_TOUCH]Mending Touch[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -3364,8 +5137,8 @@
     },
     "passives": [
      {
-      "name": "TOME_CRYOMANCY@SKILL_3@NAME",
-      "text": "TOME_CRYOMANCY@SKILL_3@PROP_DESCRIPTION"
+      "name": "Frost Infusion",
+      "text": "Unit's attacks have:<bulletlist><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.FROZEN]Frozen[/hyperlink] and [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] units.</bullet></bulletlist> <br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3381,7 +5154,6 @@
        ],
        "all": []
       },
-      "name": "TOME_CRYOMANCY@SKILL_3@NAME",
       "damage": "2<damagefrost></damagefrost> "
      },
      {
@@ -3396,7 +5168,6 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_CRYOMANCY@SKILL_3@NAME",
       "damage": "4<damagefrost></damagefrost> "
      }
     ]
@@ -3416,8 +5187,8 @@
     },
     "passives": [
      {
-      "name": "TOME_PYROMANCY@SKILL2@NAME",
-      "text": "TOME_PYROMANCY@SKILL2@PROPERTY_DESCRIPTION"
+      "name": "Searing Blades",
+      "text": "Unit's attacks have:<bulletlist><bullet>+2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>+10% damage against targets that are [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3433,8 +5204,13 @@
        ],
        "all": []
       },
-      "name": "TOME_PYROMANCY@SKILL2@NAME",
-      "damage": "2<damagefire></damagefire> "
+      "damage": "2<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Searing Blades",
+        "text": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] targets."
+       }
+      ]
      },
      {
       "filter": {
@@ -3448,8 +5224,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_PYROMANCY@SKILL2@NAME",
-      "damage": "4<damagefire></damagefire> "
+      "damage": "4<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Searing Blades",
+        "text": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] targets."
+       }
+      ]
      }
     ]
    }
@@ -3471,8 +5252,8 @@
     },
     "passives": [
      {
-      "name": "TOME_GODDESS_NATURE@SKILL3@NAME",
-      "text": "TOME_GODDESS_NATURE@SKILL3@PROP_DESCRIPTION"
+      "name": "Force of Nature",
+      "text": "<bulletlist><bullet>Unit has +10% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet><bullet>Attacks deal +4 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink]</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3488,7 +5269,6 @@
        ],
        "all": []
       },
-      "name": "TOME_GODDESS_NATURE@SKILL3@NAME",
       "damage": "4<damageblight></damageblight> "
      },
      {
@@ -3503,7 +5283,6 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_GODDESS_NATURE@SKILL3@NAME",
       "damage": "8<damageblight></damageblight> "
      }
     ]
@@ -3523,8 +5302,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ROOTS@SKILL5@NAME",
-      "text": "TOME_ROOTS@SKILL5@PROP_DESCRIPTION"
+      "name": "Blight Blades",
+      "text": "Unit's attacks have:<bulletlist><bullet>+2 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet><bullet>+10% damage against [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] units.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3540,8 +5319,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damageblight></damageblight> "
+      "damage": "2<damageblight></damageblight> ",
+      "notes": [
+       {
+        "name": "Blight Blades",
+        "text": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] targets."
+       }
+      ]
      },
      {
       "filter": {
@@ -3555,8 +5339,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damageblight></damageblight> "
+      "damage": "4<damageblight></damageblight> ",
+      "notes": [
+       {
+        "name": "Blight Blades",
+        "text": "+10% damage against [hyperlink,GLOBAL.PROPERTIES.POISONED]Poisoned[/hyperlink] or [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] targets."
+       }
+      ]
      }
     ]
    }
@@ -3583,8 +5372,66 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@CULTURE_REAVER@SKILL3@NAME",
-      "text": "DLC@EMPIRESANDASHES@CULTURE_REAVER@SKILL3@PROP_DESCRIPTION"
+      "name": "Engraving of Focus",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.FOCUSED_AGGRESSION]Focused Aggression[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Magic Strike"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Focused Aggression",
+        "text": "+10% damage per stack of [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink] on the target."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Strike",
+        "Melee Strike (Base)",
+        "Melee Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Focused Aggression",
+        "text": "Inflict [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Strike",
+        "Melee Strike (Base)",
+        "Melee Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Focused Aggression",
+        "text": "Inflict 2 [hyperlink,GLOBAL.PROPERTIES.MARKED]Marked[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3600,12 +5447,14 @@
     },
     "passives": [
      {
-      "name": "DLC@EMPIRESANDASHES@TOME_ALCHEMY@SKILL1@NAME",
-      "text": "DLC@EMPIRESANDASHES@TOME_ALCHEMY@SKILL1@PROP_DESCRIPTION"
+      "name": "Mysterious Tonic",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.DISTRIBUTE_TONIC]Distribute Tonic[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "000003E3000071C6"
+     {
+      "slug": "000003E3000071C6"
+     }
     ]
    }
   ],
@@ -3624,12 +5473,19 @@
     },
     "passives": [
      {
-      "name": "DLC@DRAGONLORDS@TOME_DRAGONS@SKILL3@NAME",
-      "text": "DLC@DRAGONLORDS@TOME_DRAGONS@SKILL3@PROP_DESCRIPTION"
+      "name": "Dragonstrike Infusion",
+      "text": "Unit has:<bulletlist><bullet>The [hyperlink,GLOBAL.PROPERTIES.DRACONIC_FOCUS_BREATH]Dragonstrike[/hyperlink] ability.</bullet></bulletlist>"
      }
     ],
     "abilities": [
-     "0000048D00001C02"
+     {
+      "slug": "0000048D00001C02",
+      "per_tier": {
+       "damage": "4<damagephysical></damagephysical> 4<damageblight></damageblight> 4<damagelightning></damagelightning> 4<damagefire></damagefire> 4<damagespirit></damagespirit> 4<damagefrost></damagefrost> ",
+       "skip_first": true,
+       "existing": true
+      }
+     }
     ]
    }
   ],
@@ -3647,8 +5503,8 @@
     },
     "passives": [
      {
-      "name": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@NAME",
-      "text": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@PROP_DESCRIPTION"
+      "name": "Rapid Evolution Enchantment",
+      "text": "Unit gains:<bulletlist><bullet><eventColor>{RAPID_EVOLUTION_XP_PER)TURN>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIP_AWAY]Slip Away[/hyperlink]</bullet></bulletlist>"
      },
      {
       "slug": "000003e300004ee3"
@@ -3668,8 +5524,8 @@
     },
     "passives": [
      {
-      "name": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@NAME",
-      "text": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@PROP_DESCRIPTION"
+      "name": "Rapid Evolution Enchantment",
+      "text": "Unit gains:<bulletlist><bullet><eventColor>{RAPID_EVOLUTION_XP_PER)TURN>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIP_AWAY]Slip Away[/hyperlink]</bullet></bulletlist>"
      },
      {
       "slug": "000003e300004ee3"
@@ -3689,8 +5545,8 @@
     },
     "passives": [
      {
-      "name": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@NAME",
-      "text": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@PROP_DESCRIPTION"
+      "name": "Rapid Evolution Enchantment",
+      "text": "Unit gains:<bulletlist><bullet><eventColor>{RAPID_EVOLUTION_XP_PER)TURN>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIP_AWAY]Slip Away[/hyperlink]</bullet></bulletlist>"
      },
      {
       "slug": "000003e300004ee3"
@@ -3710,8 +5566,8 @@
     },
     "passives": [
      {
-      "name": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@NAME",
-      "text": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@PROP_DESCRIPTION"
+      "name": "Rapid Evolution Enchantment",
+      "text": "Unit gains:<bulletlist><bullet><eventColor>{RAPID_EVOLUTION_XP_PER)TURN>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIP_AWAY]Slip Away[/hyperlink]</bullet></bulletlist>"
      },
      {
       "slug": "000003e300004ee3"
@@ -3731,8 +5587,8 @@
     },
     "passives": [
      {
-      "name": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@NAME",
-      "text": "DLC@DRAGONLORDS@TOME_EVOLUTION@SKILL2@PROP_DESCRIPTION"
+      "name": "Rapid Evolution Enchantment",
+      "text": "Unit gains:<bulletlist><bullet><eventColor>{RAPID_EVOLUTION_XP_PER)TURN>XP}</eventColor> [hyperlink,GLOBAL.ExperienceConcept]<xp></xp> Experience[/hyperlink] per <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turn[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SLIP_AWAY]Slip Away[/hyperlink]</bullet></bulletlist>"
      },
      {
       "slug": "000003e300004ee3"
@@ -3754,8 +5610,8 @@
     },
     "passives": [
      {
-      "name": "TOME_SCRYING@SKILL4@NAME",
-      "text": "TOME_SCRYING@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Guided Projectiles",
+      "text": "Unit's base attacks:<bulletlist><bullet>Fire 1 hex further without Long Range [hyperlink,GLOBAL.AccuracyConcept]<accuracy></accuracy> Accuracy[/hyperlink] penalties.</bullet><bullet>Ignore [hyperlink,GLOBAL.ObscuringConcept]Obscuring[/hyperlink] penalties caused by units in the way and certain terrain.</bullet></bulletlist>"
      }
     ]
    }
@@ -3773,8 +5629,8 @@
     },
     "passives": [
      {
-      "name": "TOME_AMPLIFICATION@SKILL6@NAME",
-      "text": "EVOLVED@TOME_EVOCATION@LIGHTNING_FOCUS@PROPERTY_DESCRIPTION"
+      "name": "Lightning Focus",
+      "text": "Unit's [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks have:<bulletlist><bullet>+2 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3788,8 +5644,13 @@
        ],
        "all": []
       },
-      "name": "TOME_AMPLIFICATION@SKILL6@NAME",
-      "damage": "2<damagelightning></damagelightning> "
+      "damage": "2<damagelightning></damagelightning> ",
+      "notes": [
+       {
+        "name": "Electrified",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -3801,8 +5662,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_AMPLIFICATION@SKILL6@NAME",
-      "damage": "4<damagelightning></damagelightning> "
+      "damage": "4<damagelightning></damagelightning> ",
+      "notes": [
+       {
+        "name": "Electrified",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.ELECTRIFIED]Electrified[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3819,8 +5685,8 @@
     },
     "passives": [
      {
-      "name": "TOME_CRYOMANCY@SKILL_6@NAME",
-      "text": "TOME_CRYOMANCY@SKILL_6@PROP_DESCRIPTION"
+      "name": "Frost Arrows",
+      "text": "Unit's attacks have:<bulletlist><bullet>+1 <damageFrost></damageFrost> [hyperlink,GLOBAL.FrostDamageConcept]Frost Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3836,8 +5702,13 @@
        ],
        "all": []
       },
-      "name": "TOME_CRYOMANCY@SKILL_6@NAME",
-      "damage": "1<damagefrost></damagefrost> "
+      "damage": "1<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Chilled",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -3851,8 +5722,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_CRYOMANCY@SKILL_6@NAME",
-      "damage": "2<damagefrost></damagefrost> "
+      "damage": "2<damagefrost></damagefrost> ",
+      "notes": [
+       {
+        "name": "Chilled",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.CHILLED]Chilled[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3872,8 +5748,8 @@
     },
     "passives": [
      {
-      "name": "TOME_EVOCATION@SKILL4@NAME",
-      "text": "TOME_EVOCATION@SKILL4@PROPERTY_DESCRIPTION"
+      "name": "Amplifying Imbuement",
+      "text": "Unit's base attacks:<bulletlist><bullet>Deal +3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink].</bullet><bullet>Deal 3 <damageLightning></damageLightning> [hyperlink,GLOBAL.LightningDamageConcept]Lightning Damage[/hyperlink] to 2 other targets within 2 hexes.</bullet><bullet>Have a base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] on each target hit for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3889,8 +5765,13 @@
        ],
        "all": []
       },
-      "name": "TOME_EVOCATION@SKILL4@NAME",
-      "damage": "3<damagelightning></damagelightning> "
+      "damage": "3<damagelightning></damagelightning> ",
+      "notes": [
+       {
+        "name": "Sundered Resistance",
+        "text": "Base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -3904,8 +5785,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_EVOCATION@SKILL4@NAME",
-      "damage": "6<damagelightning></damagelightning> "
+      "damage": "6<damagelightning></damagelightning> ",
+      "notes": [
+       {
+        "name": "Sundered Resistance",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SUNDERED_RESISTANCE]Sundered Resistance[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3925,8 +5811,8 @@
     },
     "passives": [
      {
-      "name": "TOME_PYROMANCY@SKILL6@NAME",
-      "text": "TOME_PYROMANCY@SKILL6@PROPERTY_DESCRIPTION"
+      "name": "Fiery Imbuement",
+      "text": "Unit's attacks have:<bulletlist><bullet>+1 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -3942,8 +5828,13 @@
        ],
        "all": []
       },
-      "name": "TOME_PYROMANCY@SKILL6@NAME",
-      "damage": "1<damagefire></damagefire> "
+      "damage": "1<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Burning",
+        "text": "Base 60% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -3957,8 +5848,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_PYROMANCY@SKILL6@NAME",
-      "damage": "2<damagefire></damagefire> "
+      "damage": "2<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Burning",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -3998,13 +5894,53 @@
     },
     "passives": [
      {
-      "name": "TOME_BEACON@SKILL5@NAME",
-      "text": "TOME_BEACON@SKILL5@PROPERTY_DESCRIPTION"
+      "name": "Mighty Meek",
+      "text": "Unit:<bulletlist><bullet>Has [hyperlink,GLOBAL.PROPERTIES.FAITHFUL]Faithful[/hyperlink].</bullet><bullet>Has +2 <statuseffectresistance></statuseffectresistance> [hyperlink,GLOBAL.StatusResistanceConcept]Status Resistance[/hyperlink].</bullet><bullet>Deals +1 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] on attacks for each Unit Tier of the target.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "stats": {
      "status_resistance": 2
-    }
+    },
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Mighty Meek",
+        "text": "+1 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] for each Unit Tier of the target."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon (Base)",
+        "Melee Strike (Base)",
+        "Missile (Base)"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Mighty Meek",
+        "text": "+2 <damageSpirit></damageSpirit> [hyperlink,GLOBAL.SpiritDamageConcept]Spirit Damage[/hyperlink] for each Unit Tier of the target."
+       }
+      ]
+     }
+    ]
    }
   ],
   "necrotic_imbuement": [
@@ -4022,8 +5958,48 @@
     },
     "passives": [
      {
-      "name": "TOME_NECROMANCY@SKILL4@NAME",
-      "text": "TOME_NECROMANCY@SKILL4@PROP_DESCRIPTION"
+      "name": "Necrotic Imbuement",
+      "text": "Unit's attacks have:<bulletlist><bullet>A base 30% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink].</bullet></bulletlist> <br>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Decaying",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Decaying",
+        "text": "Base 120% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -4042,6 +6018,46 @@
     "passives": [
      {
       "slug": "0000048b000000e5"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Soulbound",
+        "text": "Base 90% chance of inflicting [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink] until the end of battle."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Soulbound",
+        "text": "Inflicts [hyperlink,GLOBAL.PROPERTIES.SOULBOUND]Soulbound[/hyperlink] until the end of battle."
+       }
+      ]
      }
     ]
    }
@@ -4062,8 +6078,27 @@
     },
     "passives": [
      {
-      "name": "TOME_HERALDS_DOOM@SKILL3@NAME",
-      "text": "TOME_HERALDS_DOOM@SKILL3@PROP_DESCRIPTION"
+      "name": "Cruel Weaponry",
+      "text": "Unit has:<bulletlist><bullet>+30% damage against units with <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] of \"Low\" or worse.</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Cruel",
+        "text": "+30% damage against units with <happiness></happiness> [hyperlink,GLOBAL.UnitMoraleConcept]Morale[/hyperlink] of \"Low\" or worse."
+       }
+      ]
      }
     ]
    }
@@ -4079,8 +6114,25 @@
     },
     "passives": [
      {
-      "name": "TOME_WARDING@SKILL2@NAME",
-      "text": "TOME_WARDING@SKILL2@PROPERRTY_DESCRIPTION"
+      "name": "Staves of Warding",
+      "text": "[hyperlink,GLOBAL.SupportConcept]Support[/hyperlink] abilities grant +2 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink] to affected units."
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Support Ability"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Staves of Warding",
+        "text": "Target gains 2 [hyperlink,GLOBAL.PROPERTIES.BOLSTERED_RESISTANCE]Bolstered Resistance[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -4098,8 +6150,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ARTIFICING@SKILL4@NAME",
-      "text": "TOME_ARTIFICING@SKILL4@PROP_DESCRIPTION"
+      "name": "Siege Magic",
+      "text": "Unit has:<bulletlist><bullet>+10% damage</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.SIEGE_BREAKER]Siege Breaker[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink].</bullet></bulletlist>"
      }
     ],
     "attacks": [
@@ -4134,8 +6186,8 @@
     },
     "passives": [
      {
-      "name": "TOME_ARTIFICING@SKILL2@NAME",
-      "text": "TOME_ARTIFICING@SKILL2@PROP_DESCRIPTION"
+      "name": "Artisan Armaments",
+      "text": "Unit has:<bulletlist><bullet>+30% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -4154,8 +6206,8 @@
     },
     "passives": [
      {
-      "name": "TOME_CYCLES@SKILL1@NAME",
-      "text": "EVOLVED@TOME_CYCLES@BLADES_OF_DECAY@PROP_DESCRIPTION"
+      "name": "Blades of Decay",
+      "text": "Unit's attacks:<bulletlist><bullet>Deal +2 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink].</bullet><bullet>Inflict [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -4171,8 +6223,13 @@
        ],
        "all": []
       },
-      "name": null,
-      "damage": "2<damageblight></damageblight> "
+      "damage": "2<damageblight></damageblight> ",
+      "notes": [
+       {
+        "name": "Decaying",
+        "text": "Inflicts [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn>."
+       }
+      ]
      },
      {
       "filter": {
@@ -4186,8 +6243,13 @@
         "Single Shot"
        ]
       },
-      "name": null,
-      "damage": "4<damageblight></damageblight> "
+      "damage": "4<damageblight></damageblight> ",
+      "notes": [
+       {
+        "name": "Decaying",
+        "text": "Inflicts 2 stacks of [hyperlink,GLOBAL.PROPERTIES.DECAYING]Decaying[/hyperlink] for 3 <turn></turn>."
+       }
+      ]
      }
     ]
    }
@@ -4209,8 +6271,8 @@
     },
     "passives": [
      {
-      "name": "TOME_REVELRY@SKILL3@NAME",
-      "text": "TOME_REVELRY@SKILL3@PROPERTY_DESCRIPTION"
+      "name": "Bloodfury Weapons",
+      "text": "This unit has:<bulletlist><bullet>+2 <damagePhysical></damagePhysical> [hyperlink,GLOBAL.PhysicalDamageConcept]Physical Damage[/hyperlink] on attacks.</bullet><bullet>On kill, adjacent enemies to the target gain 2 [hyperlink,GLOBAL.PROPERTIES.BLEEDING]Bleeding[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -4226,7 +6288,6 @@
        ],
        "all": []
       },
-      "name": null,
       "damage": "2<damagephysical></damagephysical> "
      },
      {
@@ -4241,7 +6302,6 @@
         "Single Shot"
        ]
       },
-      "name": null,
       "damage": "4<damagephysical></damagephysical> "
      }
     ]
@@ -4270,8 +6330,8 @@
     },
     "passives": [
      {
-      "name": "CULTURE_MYTHIC_RESEARCH@SKILL_2@NAME",
-      "text": "CULTURE_MYTHIC_RESEARCH@SKILL_2@PROP_DESCRIPTION"
+      "name": "Scroll of Attunement",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.ATTUNEMENT_EMPOWER]Elemental Attunement[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -4298,8 +6358,48 @@
     },
     "passives": [
      {
-      "name": "CULTURE_DARK_RESEARCH@CULTOFTYRANNY@SKILL_1@NAME",
-      "text": "CULTURE_DARK_RESEARCH@CULTOFTYRANNY@SKILL_1@DESCRIPTION"
+      "name": "Mark of Tyranny",
+      "text": "Grants non-Dark units:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.CULT_OF_TYRANNY]Cult of Tyranny[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Exploit Vulnerability",
+        "text": "Base 60% chance of:<bulletlist><bullet>Inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Healing self for 5 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>"
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Exploit Vulnerability",
+        "text": "Base 90% chance of:<bulletlist><bullet>Inflicting [hyperlink,GLOBAL.PROPERTIES.STATUS_VULNERABILITY]Status Vulnerability[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet><bullet>Healing self for 10 [hyperlink,GLOBAL.TemporaryHitPointConcept]<temphp></temphp> Temporary Hit Points[/hyperlink].</bullet></bulletlist>"
+       }
+      ]
      }
     ]
    }
@@ -4317,8 +6417,8 @@
     },
     "passives": [
      {
-      "name": "TOME_DEVASTATION@SKILL5@NAME",
-      "text": "EVOLVED@TOME_DEVASTATION@FOCUS_OF_DEVASTATION@PROP_DESCRIPTION"
+      "name": "Focus of Devastation",
+      "text": "Unit's [hyperlink,GLOBAL.MagicConcept]Magic[/hyperlink] attacks have:<bulletlist><bullet>+2 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>A base 60% chance of canceling [hyperlink,GLOBAL.DefenseModeConcept]Defense Modes[/hyperlink].</bullet><bullet>[hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink], making them able to destroy reinforced obstacles.</bullet></bulletlist>Effects [hyperlink,GLOBAL.EnchantingNonRepeatingConcept]are increased[/hyperlink] for Single Shot attacks."
      }
     ],
     "attacks": [
@@ -4332,8 +6432,13 @@
        ],
        "all": []
       },
-      "name": "TOME_DEVASTATION@SKILL5@NAME",
-      "damage": "2<damagefire></damagefire> "
+      "damage": "2<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Focus of Devastation",
+        "text": "Grants a 60% chance of canceling [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink]."
+       }
+      ]
      },
      {
       "filter": {
@@ -4345,8 +6450,13 @@
         "Single Shot"
        ]
       },
-      "name": "TOME_DEVASTATION@SKILL5@NAME",
-      "damage": "4<damagefire></damagefire> "
+      "damage": "4<damagefire></damagefire> ",
+      "notes": [
+       {
+        "name": "Focus of Devastation",
+        "text": "Grants a 90% chance of canceling [hyperlink,GLOBAL.DefenseModeConcept]Defense Mode[/hyperlink]."
+       }
+      ]
      }
     ]
    }
@@ -4383,8 +6493,8 @@
     },
     "passives": [
      {
-      "name": "TOME_GENERIC@WAYFINDER_ENCHANTMENT@NAME",
-      "text": "TOME_GENERIC@WAYFINDER_ENCHANTMENT@PROPERTY_DESCRIPTION"
+      "name": "Wayfinder Enchantment",
+      "text": "When this unit routs in combat:<bulletlist><bullet>It never dies.</bullet><bullet>It returns 2 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink] sooner.</bullet></bulletlist>"
      }
     ]
    }
@@ -4400,8 +6510,8 @@
     },
     "passives": [
      {
-      "name": "TOME_GENERIC@ENCHANTED_CROW_COMPANION@NAME",
-      "text": "TOME_GENERIC@ENCHANTED_CROW_COMPANION@PROPERTY_DESCRIPTION"
+      "name": "Enchanted Crow Companion",
+      "text": "Unit has:<bulletlist><bullet>+2 [hyperlink,GLOBAL.VisionRangeConcept]Vision Range[/hyperlink] on the [hyperlink,GLOBAL.WorldMapConcept]World Map[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -4424,8 +6534,8 @@
     },
     "passives": [
      {
-      "name": "TOME_SUBJUGATION@SKILL2@NAME",
-      "text": "TOME_SUBJUGATION@SKILL2@PROPERTY_DESCRIPTION"
+      "name": "Intimidation Aura",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.INTIMIDATING_AURA]Intimidating Aura[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -4447,8 +6557,27 @@
     },
     "passives": [
      {
-      "name": "TOME_WILD_MAGIC@SKILL3@NAME",
-      "text": "TOME_WILD_MAGIC@SKILL3@PROPERTY_DESCRIPTION"
+      "name": "Flameburst Weapons",
+      "text": "This unit has:<bulletlist><bullet>+20% [hyperlink,GLOBAL.CriticalHitConcept]<crit></crit> Critical Hit Chance[/hyperlink]</bullet><bullet>Killing a unit causes it to explode, adjacent enemies:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain 2 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist></bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Flameburst Weapons",
+        "text": "Killing a unit causes it to explode, adjacent enemies:<bulletlist><bullet>Sustain 15 <damageFire></damageFire> [hyperlink,GLOBAL.FireDamageConcept]Fire Damage[/hyperlink].</bullet><bullet>Gain 2 [hyperlink,GLOBAL.PROPERTIES.BURNING]Burning[/hyperlink] for 3 <turn></turn> [hyperlink,GLOBAL.TurnConcept]Turns[/hyperlink].</bullet></bulletlist>"
+       }
+      ]
      }
     ]
    }
@@ -4464,8 +6593,8 @@
     },
     "passives": [
      {
-      "name": "TOME_VIGOR@SKILL4@NAME",
-      "text": "TOME_VIGOR@SKILL4@PROP_DESCRIPTION"
+      "name": "Empowered Beasts",
+      "text": "Enchanted unit:<bulletlist><bullet>Deals +20% damage.</bullet><bullet>Gains +10 [hyperlink,GLOBAL.HitPointConcept]<hp></hp> Hit Points[/hyperlink].</bullet><bullet>Gains [hyperlink,GLOBAL.PROPERTIES.DEMOLISHER]Demolisher[/hyperlink].</bullet></bulletlist>"
      }
     ],
     "stats": {
@@ -4509,8 +6638,8 @@
     },
     "passives": [
      {
-      "name": "CULTURE_INDUSTRIOUS_RESEARCH@SKILL_5@NAME",
-      "text": "CULTURE_INDUSTRIOUS_RESEARCH@SKILL_5@PROPERTY_DESCRIPTION"
+      "name": "Rune of Industry",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.BOLSTERING]Bolstering[/hyperlink].</bullet></bulletlist>"
      }
     ]
    }
@@ -4623,8 +6752,8 @@
     },
     "passives": [
      {
-      "name": "CULTURE_FEUDAL_RESEARCH@SKILL_1@NAME",
-      "text": "CULTURE_FEUDAL_RESEARCH@SKILL_1@PROP_DESCRIPTION"
+      "name": "Signet of Loyalty",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.STAND_TOGETHER]Stand Together[/hyperlink]</bullet></bulletlist>"
      }
     ]
    }
@@ -4651,8 +6780,48 @@
     },
     "passives": [
      {
-      "name": "CULTURE_BARBARIAN_RESEARCH@SKILL_1@NAME",
-      "text": "CULTURE_BARBARIAN_RESEARCH@SKILL_1@PROPERTY_DESCRIPTION"
+      "name": "Brutal Mark",
+      "text": "Unit has:<bulletlist><bullet>[hyperlink,GLOBAL.PROPERTIES.PRIMAL_MARK]Savage Strike[/hyperlink]</bullet></bulletlist>"
+     }
+    ],
+    "attacks": [
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [
+        "Single Shot"
+       ],
+       "all": []
+      },
+      "notes": [
+       {
+        "name": "Savage Strike",
+        "text": "Deals an additional 4 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] on a critical hit."
+       }
+      ]
+     },
+     {
+      "filter": {
+       "any": [
+        "Magic Weapon",
+        "Melee Weapon",
+        "Missile Weapon"
+       ],
+       "none": [],
+       "all": [
+        "Single Shot"
+       ]
+      },
+      "notes": [
+       {
+        "name": "Savage Strike",
+        "text": "Deals an additional 8 <damageBlight></damageBlight> [hyperlink,GLOBAL.BlightDamageConcept]Blight Damage[/hyperlink] on a critical hit."
+       }
+      ]
      }
     ]
    }
@@ -6837,6 +9006,7 @@
    "Melee Weapon"
   ],
   "magic_strike_(base)_ability_000004E0000000C1": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -6849,6 +9019,7 @@
    "Magic Weapon"
   ],
   "magic_strike_(base)_ability_000004E0000000B4": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -6878,6 +9049,7 @@
    "Melee Weapon"
   ],
   "anti-magic_breath_ability_000004E000000059": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "melee_strike_(base)_ability_000004E000000033": [
@@ -6915,7 +9087,9 @@
    "Single Shot"
   ],
   "assign_bounty_unit_property_ability_000004D000000AEA_000004d000000a36": [],
-  "endurance_potion_ability_000004D000000AEA_000004d000000a36": [],
+  "endurance_potion_ability_000004D000000AEA_000004d000000a36": [
+   "Support Ability"
+  ],
   "000003e300004c97": [],
   "melee_strike_(base)_ability_000004D000000AE9_000004d000000a36": [
    "Melee Strike (Base)",
@@ -6923,6 +9097,7 @@
   ],
   "0000048d000021ae": [],
   "magic_strike_(base)_ability_000004D000000AE7_000004d000000a40": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -6933,7 +9108,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "curse_inversion_ability_000004D000000AE5_000004d000000a40": [],
+  "curse_inversion_ability_000004D000000AE5_000004d000000a40": [
+   "Support Ability"
+  ],
   "divine_weakness_ability_000004D000000AE5_000004d000000a40": [],
   "taunt_strike_(base)_ability_000004D000000AE3_000004d000000a40": [
    "Melee Strike (Base)",
@@ -6996,15 +9173,18 @@
    "Magic Weapon"
   ],
   "magic_strike_(base)_ability_000004D000000584": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
   "sun_and_life_ability_000004D000000584": [
-   "Magic Weapon"
+   "Magic Weapon",
+   "Support Ability"
   ],
   "riddle_of_light_ability_000004D000000584": [],
   "magic_strike_(base)_ability_000004D000000579": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -7037,18 +9217,21 @@
    "Melee Weapon"
   ],
   "magic_rebuke_ability_000004C800000483": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "greater_phase_ability_000004C800000483": [],
   "magic_rebuke_ability_000004C80000047A": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "greater_phase_ability_000004C80000047A": [],
   "magic_rebuke_ability_000004C80000045A": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
@@ -7114,14 +9297,18 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "recovering_windpull_unit_property_ability_000004C500000D1E_000004c500000dce": [],
+  "recovering_windpull_unit_property_ability_000004C500000D1E_000004c500000dce": [
+   "Support Ability"
+  ],
   "distributing_wind_unit_property_ability_000004C500000D1E_000004c500000dce": [],
   "magic_blast_(single)_ability_000004C500000D1E_000004c500000dcf": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "recovering_windpull_unit_property_ability_000004C500000D1E_000004c500000dcf": [],
+  "recovering_windpull_unit_property_ability_000004C500000D1E_000004c500000dcf": [
+   "Support Ability"
+  ],
   "weave_momentum_unit_property_ability_000004C500000D1E_000004c500000dcf": [],
   "melee_charge_strike_(base)_ability_000004C500000D1D_000004c500000dcf": [
    "Melee Strike (Base)",
@@ -7138,7 +9325,9 @@
    "Missile Weapon",
    "Single Shot"
   ],
-  "catch!_unit_property_ability_000004C500000D1B_000004c500000dce": [],
+  "catch!_unit_property_ability_000004C500000D1B_000004c500000dce": [
+   "Support Ability"
+  ],
   "shoot_bow_ability_000004C500000D19_000004c500000dce": [
    "Missile (Base)",
    "Missile Weapon"
@@ -7153,12 +9342,16 @@
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "windborne_rescue_unit_property_ability_000004C500000D18_000004c500000dce": [],
+  "windborne_rescue_unit_property_ability_000004C500000D18_000004c500000dce": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004C500000D18_000004c500000dcf": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "windborne_rescue_unit_property_ability_000004C500000D18_000004c500000dcf": [],
+  "windborne_rescue_unit_property_ability_000004C500000D18_000004c500000dcf": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004C500000B15": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -7178,7 +9371,9 @@
    "Missile Weapon",
    "Single Shot"
   ],
-  "gift_blood_of_the_exarch_ability_000004C500000B10": [],
+  "gift_blood_of_the_exarch_ability_000004C500000B10": [
+   "Support Ability"
+  ],
   "blood_pull_ability_000004C500000B10": [
    "Magic Weapon"
   ],
@@ -7222,7 +9417,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "light_heal_ability_000004C0000004F3": [],
+  "light_heal_ability_000004C0000004F3": [
+   "Support Ability"
+  ],
   "brilliant_phase_ability_000004C0000004F3": [
    "Magic Weapon"
   ],
@@ -7231,7 +9428,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "lesser_heal_ability_000004C0000004EB": [],
+  "lesser_heal_ability_000004C0000004EB": [
+   "Support Ability"
+  ],
   "magic_bolts_ability_000004C0000004E9": [
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -7248,7 +9447,9 @@
   "sunburst_ability_000004C0000004AB": [
    "Magic Weapon"
   ],
-  "mend_the_weak_ability_000004C0000004AB": [],
+  "mend_the_weak_ability_000004C0000004AB": [
+   "Support Ability"
+  ],
   "fire_cleave_unit_property_ability_000004B300000008": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -7285,6 +9486,7 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000004A200000019": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -7334,7 +9536,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "dirge_of_sorrows_ability_00000497000042B1": [],
+  "dirge_of_sorrows_ability_00000497000042B1": [
+   "Support Ability"
+  ],
   "dirge_of_the_damned_ability_00000497000042B1": [],
   "shoot_bow_ability_0000049700004247": [
    "Missile (Base)",
@@ -7345,12 +9549,14 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_0000049700003C66": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
   "moon_and_shadow_ability_0000049700003C66": [
-   "Magic Weapon"
+   "Magic Weapon",
+   "Support Ability"
   ],
   "riddle_of_night_ability_0000049700003C66": [],
   "shoot_bow_ability_0000049700003C06": [
@@ -7365,20 +9571,27 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "webbed_transfusion_ability_0000049700003BB8": [],
-  "spider_rebirth_ability_0000049700003BB8": [],
+  "webbed_transfusion_ability_0000049700003BB8": [
+   "Support Ability"
+  ],
+  "spider_rebirth_ability_0000049700003BB8": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_0000049700003B6F": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "morning_boon_ability_0000049700003B6F": [],
+  "morning_boon_ability_0000049700003B6F": [
+   "Support Ability"
+  ],
   "magic_bolts_ability_0000049700003B6E": [
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
   "evening_bane_ability_0000049700003B6E": [],
   "magic_strike_(base)_ability_0000049700003B0A": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -7386,6 +9599,7 @@
   "kiss_of_seduction_ability_0000049700003B0A": [],
   "orb_of_desire_taunt_unit_property_ability_0000049700003AFB": [],
   "magic_strike_(base)_ability_0000049700003A44": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -7395,7 +9609,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "magic_shield_ability_00000497000039B9": [],
+  "magic_shield_ability_00000497000039B9": [
+   "Support Ability"
+  ],
   "heavy_melee_charge_strike_(giants)_ability_00000497000037E3": [
    "Melee Strike (Base)",
    "Melee Strike (Charge)",
@@ -7411,6 +9627,7 @@
   ],
   "discern_weakness_ability_00000497000037A2": [],
   "magic_strike_(base)_ability_0000049700003753": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -7425,9 +9642,15 @@
    "Melee Weapon",
    "Single Shot"
   ],
-  "command_attack_ability_000004970000370F": [],
-  "command_defend_ability_000004970000370F": [],
-  "command_retreat_ability_000004970000370F": [],
+  "command_attack_ability_000004970000370F": [
+   "Support Ability"
+  ],
+  "command_defend_ability_000004970000370F": [
+   "Support Ability"
+  ],
+  "command_retreat_ability_000004970000370F": [
+   "Support Ability"
+  ],
   "0000049700003725": [],
   "melee_strike_(base)_ability_000004970000366E": [
    "Melee Strike (Base)",
@@ -7661,14 +9884,20 @@
    "Melee Weapon",
    "Single Shot"
   ],
-  "angelic_grace_ability_00000490000028FF": [],
+  "angelic_grace_ability_00000490000028FF": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000028E0": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "healing_portent_ability_00000490000028E0": [],
-  "striking_portent_ability_00000490000028E0": [],
+  "healing_portent_ability_00000490000028E0": [
+   "Support Ability"
+  ],
+  "striking_portent_ability_00000490000028E0": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_00000490000028DE": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -7678,48 +9907,62 @@
    "Melee Weapon",
    "Single Shot"
   ],
-  "lay_on_hands_ability_00000490000028DE": [],
+  "lay_on_hands_ability_00000490000028DE": [
+   "Support Ability"
+  ],
   "architect_affinity_blast_ability_00000490000016DF_0000048d0000176d": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "incarnate_restoration_ability_00000490000016DF_0000048d0000176d": [],
+  "incarnate_restoration_ability_00000490000016DF_0000048d0000176d": [
+   "Support Ability"
+  ],
   "conjure_affinity_tesseract_unit_property_ability_00000490000016DF_0000048d0000176d": [],
   "architect_affinity_blast_ability_00000490000016DF_0000048d00001785": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "incarnate_restoration_ability_00000490000016DF_0000048d00001785": [],
+  "incarnate_restoration_ability_00000490000016DF_0000048d00001785": [
+   "Support Ability"
+  ],
   "conjure_affinity_tesseract_unit_property_ability_00000490000016DF_0000048d00001785": [],
   "architect_affinity_blast_ability_00000490000016DF_0000048d0000178f": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "incarnate_restoration_ability_00000490000016DF_0000048d0000178f": [],
+  "incarnate_restoration_ability_00000490000016DF_0000048d0000178f": [
+   "Support Ability"
+  ],
   "conjure_affinity_tesseract_unit_property_ability_00000490000016DF_0000048d0000178f": [],
   "architect_affinity_blast_ability_00000490000016DF_0000048d00001797": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "incarnate_restoration_ability_00000490000016DF_0000048d00001797": [],
+  "incarnate_restoration_ability_00000490000016DF_0000048d00001797": [
+   "Support Ability"
+  ],
   "conjure_affinity_tesseract_unit_property_ability_00000490000016DF_0000048d00001797": [],
   "architect_affinity_blast_ability_00000490000016DF_0000048d0000179d": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "incarnate_restoration_ability_00000490000016DF_0000048d0000179d": [],
+  "incarnate_restoration_ability_00000490000016DF_0000048d0000179d": [
+   "Support Ability"
+  ],
   "conjure_affinity_tesseract_unit_property_ability_00000490000016DF_0000048d0000179d": [],
   "architect_affinity_blast_ability_00000490000016DF_0000048d000017a1": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "incarnate_restoration_ability_00000490000016DF_0000048d000017a1": [],
+  "incarnate_restoration_ability_00000490000016DF_0000048d000017a1": [
+   "Support Ability"
+  ],
   "conjure_affinity_tesseract_unit_property_ability_00000490000016DF_0000048d000017a1": [],
   "melee_strike_(base)_ability_00000490000016DE_0000048d0000176d": [
    "Melee Strike (Base)",
@@ -7750,37 +9993,49 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "cultivate_affinity_ability_00000490000016DD_0000048d0000176d": [],
+  "cultivate_affinity_ability_00000490000016DD_0000048d0000176d": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000016DD_0000048d00001785": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "cultivate_affinity_ability_00000490000016DD_0000048d00001785": [],
+  "cultivate_affinity_ability_00000490000016DD_0000048d00001785": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000016DD_0000048d0000178f": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "cultivate_affinity_ability_00000490000016DD_0000048d0000178f": [],
+  "cultivate_affinity_ability_00000490000016DD_0000048d0000178f": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000016DD_0000048d00001797": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "cultivate_affinity_ability_00000490000016DD_0000048d00001797": [],
+  "cultivate_affinity_ability_00000490000016DD_0000048d00001797": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000016DD_0000048d0000179d": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "cultivate_affinity_ability_00000490000016DD_0000048d0000179d": [],
+  "cultivate_affinity_ability_00000490000016DD_0000048d0000179d": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000016DD_0000048d000017a1": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "cultivate_affinity_ability_00000490000016DD_0000048d000017a1": [],
+  "cultivate_affinity_ability_00000490000016DD_0000048d000017a1": [
+   "Support Ability"
+  ],
   "sweeping_charge_unit_property_ability_00000490000016DC_0000048d0000176d": [
    "Melee Strike (Base)",
    "Melee Strike (Charge)",
@@ -7881,7 +10136,9 @@
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "spur_to_action_ability_00000490000014C5": [],
+  "spur_to_action_ability_00000490000014C5": [
+   "Support Ability"
+  ],
   "call_guard_ability_00000490000014C5": [],
   "terra_bolts_ability_000004900000140E": [
    "Magic Weapon",
@@ -7902,16 +10159,24 @@
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "expert_advice_ability_0000049000001402": [],
-  "get_back_in_the_fight_ability_0000049000001402": [],
-  "spur_to_action_ability_0000049000001402": [],
+  "expert_advice_ability_0000049000001402": [
+   "Support Ability"
+  ],
+  "get_back_in_the_fight_ability_0000049000001402": [
+   "Support Ability"
+  ],
+  "spur_to_action_ability_0000049000001402": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_00000490000013FE": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "conjure_greater_beast_ability_00000490000013FE": [],
-  "nurture_ability_00000490000013FE": [],
+  "nurture_ability_00000490000013FE": [
+   "Support Ability"
+  ],
   "flaming_charge_strike_ability_0000049000000EA6_0000049700000fb8": [
    "Melee Strike (Base)",
    "Melee Strike (Charge)",
@@ -7964,22 +10229,34 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "vow_of_healing_ability_0000049000000E8B_0000049700000fb5": [],
-  "vow_of_purification_ability_0000049000000E8B_0000049700000fb5": [],
+  "vow_of_healing_ability_0000049000000E8B_0000049700000fb5": [
+   "Support Ability"
+  ],
+  "vow_of_purification_ability_0000049000000E8B_0000049700000fb5": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_0000049000000E8B_0000049700000fb2": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "vow_of_healing_ability_0000049000000E8B_0000049700000fb2": [],
-  "vow_of_purification_ability_0000049000000E8B_0000049700000fb2": [],
+  "vow_of_healing_ability_0000049000000E8B_0000049700000fb2": [
+   "Support Ability"
+  ],
+  "vow_of_purification_ability_0000049000000E8B_0000049700000fb2": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_0000049000000E8B_0000049700000fb8": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "vow_of_healing_ability_0000049000000E8B_0000049700000fb8": [],
-  "vow_of_purification_ability_0000049000000E8B_0000049700000fb8": [],
+  "vow_of_healing_ability_0000049000000E8B_0000049700000fb8": [
+   "Support Ability"
+  ],
+  "vow_of_purification_ability_0000049000000E8B_0000049700000fb8": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_0000049000000E8A_0000049700000fb5": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -8176,6 +10453,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002dc": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "melee_charge_strike_(base)_ability_000004900000031E_00000497000002df": [
@@ -8185,6 +10463,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002df": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "melee_charge_strike_(base)_ability_000004900000031E_00000497000002e1": [
@@ -8194,6 +10473,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002e1": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "melee_charge_strike_(base)_ability_000004900000031E_00000497000002dd": [
@@ -8203,6 +10483,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002dd": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "melee_charge_strike_(base)_ability_000004900000031E_00000497000002de": [
@@ -8212,6 +10493,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002de": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "melee_charge_strike_(base)_ability_000004900000031E_00000497000002e0": [
@@ -8221,6 +10503,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002e0": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "melee_charge_strike_(base)_ability_000004900000031E_00000497000002db": [
@@ -8230,6 +10513,7 @@
    "Single Shot"
   ],
   "cleaving_charge_ability_000004900000031E_00000497000002db": [
+   "Cleaving Charge - Requisite",
    "Melee Weapon"
   ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002dc": [
@@ -8238,49 +10522,63 @@
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002dc": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002dc": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002dc": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002df": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002df": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002df": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002df": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002e1": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002e1": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002e1": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002e1": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002dd": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002dd": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002dd": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002dd": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002de": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002de": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002de": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002de": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002e0": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002e0": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002e0": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002e0": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000004900000031D_00000497000002db": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "summon_totem_animal_ability_000004900000031D_00000497000002db": [],
-  "spiritual_healing_ability_000004900000031D_00000497000002db": [],
+  "spiritual_healing_ability_000004900000031D_00000497000002db": [
+   "Support Ability"
+  ],
   "shoot_blowgun_ability_000004900000031C_00000497000002dc": [
    "Missile (Base)",
    "Missile Weapon"
@@ -8348,37 +10646,51 @@
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002dc": [],
+  "primal_renewal_ability_000004900000031B_00000497000002dc": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004900000031B_00000497000002df": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002df": [],
+  "primal_renewal_ability_000004900000031B_00000497000002df": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004900000031B_00000497000002e1": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002e1": [],
+  "primal_renewal_ability_000004900000031B_00000497000002e1": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004900000031B_00000497000002dd": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002dd": [],
+  "primal_renewal_ability_000004900000031B_00000497000002dd": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004900000031B_00000497000002de": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002de": [],
+  "primal_renewal_ability_000004900000031B_00000497000002de": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004900000031B_00000497000002e0": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002e0": [],
+  "primal_renewal_ability_000004900000031B_00000497000002e0": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000004900000031B_00000497000002db": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "primal_renewal_ability_000004900000031B_00000497000002db": [],
+  "primal_renewal_ability_000004900000031B_00000497000002db": [
+   "Support Ability"
+  ],
   "melee_charge_strike_(base)_ability_(elephant_mammoth_only)_00000490000002C1": [
    "Melee Strike (Base)",
    "Melee Strike (Charge)",
@@ -8444,11 +10756,13 @@
    "Missile Weapon"
   ],
   "magic_strike_(base)_ability_0000048D00001F88_0000048d00001f6f": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
   "breaching_shot_unit_property_ability_0000048D00001F88_0000048d00001f6f": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "marking_blast_(single)_ability_0000048D00001F87_0000048d00001f6f": [
@@ -8456,7 +10770,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "patch_up_ability_0000048D00001F87_0000048d00001f6f": [],
+  "patch_up_ability_0000048D00001F87_0000048d00001f6f": [
+   "Support Ability"
+  ],
   "demolition_blast_ability_0000048D00001F87_0000048d00001f6f": [
    "Magic Weapon"
   ],
@@ -8489,7 +10805,9 @@
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "deathly_vitality_ability_0000048D00001A22_0000048d000019d6": [],
+  "deathly_vitality_ability_0000048D00001A22_0000048d000019d6": [
+   "Support Ability"
+  ],
   "magic_bolts_ability_0000048D000019EC_0000048d000019d6": [
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -8562,7 +10880,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "astral_bond_ability_0000048D000006F4_0000048d00000620": [],
+  "astral_bond_ability_0000048D000006F4_0000048d00000620": [
+   "Support Ability"
+  ],
   "spirit_summon_dormant_unit_property_ability_0000048D000006F4_0000048d00000620": [],
   "magic_bolts_ability_0000048D000006AC_0000048d0000061d": [
    "Magic Weapon",
@@ -8611,7 +10931,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "rejuvenating_flames_ability_000004890000137C": [],
+  "rejuvenating_flames_ability_000004890000137C": [
+   "Support Ability"
+  ],
   "magic_bolts_ability_000004890000137B": [
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -8661,19 +10983,27 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "core_link_ability_000004890000136E": [],
+  "core_link_ability_000004890000136E": [
+   "Support Ability"
+  ],
   "magic_spike_ability_0000048900001231": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
   "magic_rebuke_ability_0000048900001231": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "rain_of_prosperity_ability_0000048900001231": [],
-  "bestow_mask_of_prosperity_ability_0000048900001231": [],
+  "rain_of_prosperity_ability_0000048900001231": [
+   "Support Ability"
+  ],
+  "bestow_mask_of_prosperity_ability_0000048900001231": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_0000048900001230": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -8694,8 +11024,11 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "graceful_rain_ability_0000048900001228": [],
+  "graceful_rain_ability_0000048900001228": [
+   "Support Ability"
+  ],
   "magic_spike_ability_0000048900001227": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
@@ -8703,6 +11036,7 @@
   "ghostfire_storm_ability_0000048900001227": [],
   "force_mask_of_calamity_ability_0000048900001227": [],
   "magic_rebuke_ability_0000048900001227": [
+   "Can't have Range Modified Ability",
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
@@ -8741,13 +11075,17 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000004890000118E": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
-  "monk_meditate_ability_000004890000118E": [],
+  "monk_meditate_ability_000004890000118E": [
+   "Support Ability"
+  ],
   "monk_leap_ability_000004890000118E": [],
   "magic_strike_(base)_ability_0000048900000F5E": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -8758,8 +11096,12 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "tyrants_mark_ability_0000048900000E9C": [],
-  "tyrants_assault_ability_0000048900000E9C": [],
+  "tyrants_mark_ability_0000048900000E9C": [
+   "Support Ability"
+  ],
+  "tyrants_assault_ability_0000048900000E9C": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_0000048900000E7C": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -8780,7 +11122,9 @@
    "Single Shot"
   ],
   "subdue_ability_00000489000000A4_0000048d00001f64": [],
-  "patch_up_ability_00000489000000A4_0000048d00001f64": [],
+  "patch_up_ability_00000489000000A4_0000048d00001f64": [
+   "Support Ability"
+  ],
   "fire_heavy_magelocks_snap_shot_ability_00000489000000A3_0000048d00001f64": [
    "Missile (Base)",
    "Missile Weapon",
@@ -8881,7 +11225,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "nimu_soothing_ability_0000046400000057": [],
+  "nimu_soothing_ability_0000046400000057": [
+   "Support Ability"
+  ],
   "protective_symbiosis_ability_0000046400000057": [],
   "melee_strike_(base)_ability_0000046400000056": [
    "Melee Strike (Base)",
@@ -8921,8 +11267,11 @@
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "embolden_allies_ability_0000041B00001AB3": [],
+  "embolden_allies_ability_0000041B00001AB3": [
+   "Support Ability"
+  ],
   "magic_strike_(base)_ability_0000041B00001A56": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -8938,11 +11287,14 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_0000041B00001A1E": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
-  "resurrect_zombie_ability_0000041B0000185F": [],
+  "resurrect_zombie_ability_0000041B0000185F": [
+   "Support Ability"
+  ],
   "mind_strike_ability_0000041B000017AF": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -8992,6 +11344,7 @@
    "Melee Weapon"
   ],
   "magic_strike_(base)_ability_0000041B00001009": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9016,7 +11369,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "revitalize_ability_0000041B00000E5F": [],
+  "revitalize_ability_0000041B00000E5F": [
+   "Support Ability"
+  ],
   "seduce_ability_0000041B00000E5F": [],
   "living_vine_entangle_ability_0000041B00000E32": [],
   "heavy_melee_charge_strike_(giants)_ability_0000041B00000BB2": [
@@ -9034,6 +11389,7 @@
   ],
   "consume_chaos_ability_0000041B00000B70": [],
   "magic_strike_(base)_ability_0000041B00000AE0": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9062,14 +11418,20 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "strengthen_undead_ability_0000041B000005EF": [],
-  "raise_undead_ability_(necromancer)_0000041B000005EF": [],
+  "strengthen_undead_ability_0000041B000005EF": [
+   "Support Ability"
+  ],
+  "raise_undead_ability_(necromancer)_0000041B000005EF": [
+   "Support Ability"
+  ],
   "magic_strike_(base)_ability_0000041B00000569": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
   "magic_strike_(base)_ability_0000041B00000568": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9086,13 +11448,17 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "unleash_the_beast_ability_0000041B000003A5": [],
+  "unleash_the_beast_ability_0000041B000003A5": [
+   "Support Ability"
+  ],
   "conjure_animal_ability_0000041B000003A5": [],
   "melee_strike_(base)_ability_0000041B00000379": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
-  "healing_sap_ability_0000041B00000379": [],
+  "healing_sap_ability_0000041B00000379": [
+   "Support Ability"
+  ],
   "launch_ability_00000415000003EE": [
    "Missile (Base)",
    "Missile Weapon"
@@ -9110,6 +11476,7 @@
    "Missile Weapon"
   ],
   "magic_strike_(base)_ability_000003EC00002919": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9167,6 +11534,7 @@
    "Magic Weapon"
   ],
   "magic_strike_(base)_ability_000003EC00001891": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9187,6 +11555,7 @@
    "Magic Weapon"
   ],
   "magic_strike_(base)_ability_000003EC00001885": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9327,13 +11696,17 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "blooming_life_ability_000003EC000008CB": [],
+  "blooming_life_ability_000003EC000008CB": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000003EC000008C9": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "budding_strength_ability_000003EC000008C9": [],
+  "budding_strength_ability_000003EC000008C9": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000003EC000008B2": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -9342,12 +11715,15 @@
    "Melee Weapon",
    "Single Shot"
   ],
-  "krazura_crystal_establish_link_unit_ability_000003E3000074BC": [],
+  "krazura_crystal_establish_link_unit_ability_000003E3000074BC": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000003E3000072B0": [
    "Melee Strike (Base)",
    "Melee Weapon"
   ],
   "acid_spray_ability_000003E3000072B0": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "flurry_of_swords_ability_000003E3000072AE": [
@@ -9406,6 +11782,7 @@
    "Melee Weapon"
   ],
   "magic_strike_(base)_ability_000003E300006EE3": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9416,6 +11793,7 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000003E300006EE0": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9433,6 +11811,7 @@
    "Melee Weapon"
   ],
   "lightning_breath_dragon_ability_000003E300006BEC": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "melee_strike_(base)_ability_000003E300006BD8": [
@@ -9443,6 +11822,7 @@
    "Melee Weapon"
   ],
   "purifying_breath_dragon_ability_000003E300006BD8": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "melee_strike_(base)_ability_000003E300006B9C": [
@@ -9467,8 +11847,11 @@
    "Magic Weapon",
    "Single Shot"
   ],
-  "beacon_of_hope_ability_000003E3000063D4": [],
+  "beacon_of_hope_ability_000003E3000063D4": [
+   "Support Ability"
+  ],
   "magic_strike_(base)_ability_000003E3000063D0": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9497,8 +11880,12 @@
   "divine_vengence_ability_000003E30000619A": [
    "Magic Weapon"
   ],
-  "provide_sanctuary_ability_000003E30000614E": [],
-  "divine_beacons_grace_ability_000003E300006109": [],
+  "provide_sanctuary_ability_000003E30000614E": [
+   "Support Ability"
+  ],
+  "divine_beacons_grace_ability_000003E300006109": [
+   "Support Ability"
+  ],
   "magic_bolts_ability_000003E3000060E4": [
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9509,7 +11896,9 @@
    "Melee Weapon"
   ],
   "finger_of_death_ability_000003E300006016": [],
-  "greater_consume_corpse_ability_000003E300006016": [],
+  "greater_consume_corpse_ability_000003E300006016": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000003E300005F79": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -9535,9 +11924,14 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "astral_blessing_ability_000003E300005EB2": [],
-  "shatter_self_ability_000003E300005EB2": [],
+  "astral_blessing_ability_000003E300005EB2": [
+   "Support Ability"
+  ],
+  "shatter_self_ability_000003E300005EB2": [
+   "Support Ability"
+  ],
   "magic_strike_(base)_ability_000003E300005EA2": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9608,7 +12002,9 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "restart_the_cycle_ability_000003E300005BB7": [],
+  "restart_the_cycle_ability_000003E300005BB7": [
+   "Support Ability"
+  ],
   "cycles_end_ability_000003E300005BB7": [
    "Magic Weapon",
    "Single Shot"
@@ -9622,6 +12018,7 @@
   ],
   "trackers_mark_ability_000003E300005B5E": [],
   "magic_strike_(base)_ability_000003E300005B27": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9632,6 +12029,7 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000003E300005B26": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9645,6 +12043,7 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000003E300005AC4": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -9665,8 +12064,12 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "song_of_revelry_ability_000003E300005A54": [],
-  "song_of_carnage_ability_000003E300005A54": [],
+  "song_of_revelry_ability_000003E300005A54": [
+   "Support Ability"
+  ],
+  "song_of_carnage_ability_000003E300005A54": [
+   "Support Ability"
+  ],
   "melee_charge_strike_(base)_ability_000003E300005A2D": [
    "Melee Strike (Base)",
    "Melee Strike (Charge)",
@@ -9720,19 +12123,25 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "soothing_breeze_ability_000003E300005450_0000048d00000609": [],
+  "soothing_breeze_ability_000003E300005450_0000048d00000609": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000003E300005450_0000048d0000061d": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "soothing_breeze_ability_000003E300005450_0000048d0000061d": [],
+  "soothing_breeze_ability_000003E300005450_0000048d0000061d": [
+   "Support Ability"
+  ],
   "magic_blast_(single)_ability_000003E300005450_0000048d00000620": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "soothing_breeze_ability_000003E300005450_0000048d00000620": [],
+  "soothing_breeze_ability_000003E300005450_0000048d00000620": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000003E300005447_0000048d00000609": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -9840,8 +12249,12 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "strength_of_steel_property_ability_000003E3000052F7": [],
-  "transfer_defense_property_ability_000003E3000052F7": [],
+  "strength_of_steel_property_ability_000003E3000052F7": [
+   "Support Ability"
+  ],
+  "transfer_defense_property_ability_000003E3000052F7": [
+   "Support Ability"
+  ],
   "shoot_crossbow_ability_000003E3000052F6": [
    "Missile (Base)",
    "Missile Weapon",
@@ -9866,7 +12279,9 @@
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
-  "awaken_ability_000003E3000052ED": [],
+  "awaken_ability_000003E3000052ED": [
+   "Support Ability"
+  ],
   "exposing_light_ability_000003E3000052ED": [
    "Magic Weapon"
   ],
@@ -9879,8 +12294,12 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "twin_awaken_ability_000003E3000052EB": [],
-  "mending_awakening_ability_000003E3000052EB": [],
+  "twin_awaken_ability_000003E3000052EB": [
+   "Support Ability"
+  ],
+  "mending_awakening_ability_000003E3000052EB": [
+   "Support Ability"
+  ],
   "melee_strike_(base)_ability_000003E3000052EA": [
    "Melee Strike (Base)",
    "Melee Weapon"
@@ -9904,8 +12323,12 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "kindle_resolve_ability_000003E3000052E0": [],
-  "invigorate_ability_000003E3000052E0": [],
+  "kindle_resolve_ability_000003E3000052E0": [
+   "Support Ability"
+  ],
+  "invigorate_ability_000003E3000052E0": [
+   "Support Ability"
+  ],
   "shoot_bow_ability_000003E3000052DF": [
    "Missile (Base)",
    "Missile Weapon"
@@ -9951,13 +12374,17 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "soothing_standard_ability_000003E3000052D2_0000048d000011e2": [],
+  "soothing_standard_ability_000003E3000052D2_0000048d000011e2": [
+   "Support Ability"
+  ],
   "banner_smite_ability_000003E3000052D2_0000048d00001220": [
    "Magic Weapon",
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "soothing_standard_ability_000003E3000052D2_0000048d00001220": [],
+  "soothing_standard_ability_000003E3000052D2_0000048d00001220": [
+   "Support Ability"
+  ],
   "shoot_bow_ability_000003E3000052D1_0000048d00001220": [
    "Missile (Base)",
    "Missile Weapon"
@@ -9997,8 +12424,11 @@
   "wild_eruption_ability_000003E30000526C": [
    "Magic Weapon"
   ],
-  "awaken_flora_ability_000003E30000526C": [],
+  "awaken_flora_ability_000003E30000526C": [
+   "Support Ability"
+  ],
   "magic_strike_(base)_ability_000003E300004F60": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10009,6 +12439,7 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000003E300004F5F": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10026,6 +12457,7 @@
    "Melee Weapon"
   ],
   "frost_breath_dragon_ability_000003E300004E76": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "melee_strike_(base)_ability_000003E300004E3A": [
@@ -10049,6 +12481,7 @@
    "Single Shot"
   ],
   "magic_strike_(base)_ability_000003E300004A3B": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10105,6 +12538,7 @@
    "Missile Weapon"
   ],
   "magic_strike_(base)_ability_000003E300004A01": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10113,6 +12547,7 @@
    "Magic Weapon"
   ],
   "magic_strike_(base)_ability_000003E3000049FD": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10132,8 +12567,12 @@
    "Magic Weapon (Base)",
    "Single Shot"
   ],
-  "bless_ability_000003E300004830": [],
-  "healing_prayer_ability_000003E300004830": [],
+  "bless_ability_000003E300004830": [
+   "Support Ability"
+  ],
+  "healing_prayer_ability_000003E300004830": [
+   "Support Ability"
+  ],
   "magic_bolts_ability_000003E300004519": [
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10172,11 +12611,13 @@
   ],
   "violent_gorging_unit_property_ability_(monster_version)_000003E100001190": [],
   "magic_strike_(base)_ability_000003E100001183": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
   ],
   "magic_strike_(base)_ability_000003E100001164": [
+   "Can't have Range Modified Ability",
    "Magic Strike",
    "Magic Weapon",
    "Magic Weapon (Base)"
@@ -10188,7 +12629,9 @@
    "Single Shot"
   ],
   "phase_ability_000003E100001160": [],
-  "cleansing_touch_ability_000003E100001160": [],
+  "cleansing_touch_ability_000003E100001160": [
+   "Support Ability"
+  ],
   "melee_charge_strike_(base)_ability_000003E100001153": [
    "Melee Strike (Base)",
    "Melee Strike (Charge)",
@@ -10203,6 +12646,7 @@
    "Melee Weapon"
   ],
   "fire_breath_dragon_ability_000003BD00002904": [
+   "Can't have Range Modified Ability",
    "Magic Weapon"
   ],
   "magic_bolts_ability_000003BD000028E2": [
@@ -10234,6 +12678,32 @@
   "launch_ability_000003AD00002BFD": [
    "Missile (Base)",
    "Missile Weapon"
-  ]
+  ],
+  "000004970000447A": [
+   "Magic Weapon"
+  ],
+  "000004970000137B": [
+   "Support Ability"
+  ],
+  "0000041B00001C65": [
+   "Support Ability"
+  ],
+  "0000049700003B52": [],
+  "0000049700000587": [
+   "Support Ability"
+  ],
+  "0000049700000955": [],
+  "000003E300006BAB": [
+   "Magic Weapon"
+  ],
+  "0000048D00001C02": [
+   "Magic Weapon",
+   "Single Shot"
+  ],
+  "0000041B0000148D": [],
+  "000003E3000071C6": [
+   "Support Ability"
+  ],
+  "0000048B000001F5": []
  }
 }

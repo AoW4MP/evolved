@@ -624,8 +624,14 @@ type's resistance or weakness (the dump's slug for the new value; another of tha
 `all.json`, `GameText`, with the enchantment's icon: `AddEnchantPassiveSlot`; the enchantment's own name and text where
 the game shows none), and the attacks whose requisites its ability modifiers ask (`EnchantAttacksOn`,
 `ApplyEnchantAttacks`): extra damage first (only to the types an attack deals, for those that say so), then the
-multipliers (Empowered Beasts' +20%: a Warg's 14 is 17), the name marked with a purple `*` and a line in its tooltip for
-each. Single Shot attacks have their own modifiers in the game (Frost Infusion: +4 Frost to them, +2 to the others), not
+multipliers, rounded down as the game does (Empowered Beasts' +20%: a Kraken's 29 is 34, a Warg's 14 is 16), the name
+marked with a purple `*` and a line in its tooltip for each. The attack's tooltip also has the game's own lines for the
+enchantments' ability modifiers, among its modifiers, each with its numbers (Ciphers of Dissonance's Dissonant: "Inflict
+a stack of Dissonance" on a repeating attack, 2 on a Single Shot; Savage Strike, Bounty Hunter): what the game's ability
+tooltip shows, conditional ones too, those it keeps out of it not (Frost Infusion's damage only changes the number). An
+ability an enchantment gives that deals more per tier of the unit has it for the card's unit (Ice Focus' Ice Nova: 16,
++4 for each tier past the first: a Tier II Warlock's is 20). The Enchant list keeps a name on two lines left-aligned
+beside its icon (a button centred it). Single Shot attacks have their own modifiers in the game (Frost Infusion: +4 Frost to them, +2 to the others), not
 upstream's doubling. What applies only to some hits or targets (Savage Strike on a critical hit, +10% against the Frozen)
 changes no number: the passive says it. Upstream's hand-made `Data/GEN/EnchantmentTables.json` (90 enchantments, the
 game's numbers before the mod) and the commented-out code that read it are gone; the card hadn't used them.

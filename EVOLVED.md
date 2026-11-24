@@ -605,7 +605,8 @@ baseline and the tier's numeral 0.5px (`.unit_tier_value`, 2026-11-24, the maint
 `transform`, as a relative offset's half pixel is drawn as a whole one, which looked too low): beside lowercase words
 (Tier, Upkeep's descending p's) capitals and figures on the same baseline read as standing higher. An amount's icon
 stands about its figures' middle: Mana 5px down (its middle on theirs, measured at 6x), Gold 5px (1px above theirs: on
-it, it looked low); both stood 3px above it, sitting on the baseline at twice a figure's height. Imperium, a short icon,
+it, it looked low); both stood 3px above it, sitting on the baseline at twice a figure's height. Gold has 3px after it: its `left: 3px`
+(`icons.css`) took them from the space after it, so Imperium stood 3px closer to it than to Mana (Kraken). Imperium, a short icon,
 keeps its place (2px, 3 with the span's 1). The name bar has an exotic mount's tag at its left end and the DLC's at its right
 (`#mounted`, `#DLC`), the mount's 25px (was 35), as upstream's; they lie over the bar (`.unit_name_tag`, absolute) as the
 tags did, where upstream gave them columns of their own, which wrapped a longer name (Ancient Hoarfrost Manta).

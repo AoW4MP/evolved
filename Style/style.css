@@ -1477,6 +1477,8 @@ tab {
    short one, already had it, so it keeps its place (2px here, 3 with the span's 1) */
 .unit_tier_value > gold {
     top: 5px;
+    /* the 3px its left: 3px (icons.css) takes from the space after it, so Imperium stands as far from it as from Mana */
+    margin-right: 3px;
 }
 .unit_tier_value > mana {
     top: 5px;

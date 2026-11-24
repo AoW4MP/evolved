@@ -595,7 +595,9 @@ is the positions of the unit's formation in the game with the mod (`Data/GEN/Uni
 Daylight Spear from 7 figures and five units from 8), and the dump gave 4 for the 7 of "Special 4 3 staggered", which
 upstream corrected by hand. A faction mount or a transformation can change it in play (an exotic mount's 2 or 3, Angelize's
 Positions (Small)): the card shows the unit as it is drafted. The stat row is a centred flex row (`.unit_stats`), as six
-stats no longer fit the floats' fixed start. The tier line reads "Tier: II  Upkeep: 12 gold", the game's words for each
+stats no longer fit the floats' fixed start. The name bar, the tier line and the stat row are centred on the panel under them
+(2026-11-24): the name bar stood 4.5px right of it (`margin-right` 12.5px, was 8), the stat row's band 16px left of it and its
+stats 4px right (`left` -4px, was -16, and its stats without their 5% offset). The tier line reads "Tier: II  Upkeep: 12 gold", the game's words for each
 (`INTERFACE@TEXT` `tier`, `upkeep`), close together and centred on the panel: upstream spread Tier and the upkeep to the
 panel's ends. "Tier: II" has the Unit Tier concept as tooltip, "Upkeep:" the game's Unit Upkeep text; what changes the upkeep (Low Maintenance,
 summoning) writes into `#upkeepvalue`. The name bar has an exotic mount's tag at its left end and the DLC's at its right

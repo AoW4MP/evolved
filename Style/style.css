@@ -1459,6 +1459,24 @@ tab {
 .unit_tier_part:hover {
     filter: brightness(150%);
 }
+/* the tier's numeral and the upkeep's amounts 1px below their labels' baseline: capitals and figures beside lowercase
+   words (Tier, Upkeep's descending p's) read as standing higher though they share it */
+.unit_tier_value {
+    position: relative;
+    top: 1px;
+}
+/* an upkeep's icon with its middle on the amount's (measured): Gold's and Mana's were 3px above it (they sit on the
+   baseline, twice a figure's height); Imperium's, a short one, already had it, so it keeps its place (2px here, 3 with
+   the span's 1) */
+.unit_tier_value > gold {
+    top: 6px;
+}
+.unit_tier_value > mana {
+    top: 5px;
+}
+.unit_tier_value > influence {
+    top: 2px;
+}
 
 .tome_name {
     font-size: 28px;

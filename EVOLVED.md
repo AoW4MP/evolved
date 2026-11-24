@@ -600,7 +600,11 @@ stats no longer fit the floats' fixed start. The name bar, the tier line and the
 stats 4px right (`left` -4px, was -16, and its stats without their 5% offset). The tier line reads "Tier: II  Upkeep: 12 gold", the game's words for each
 (`INTERFACE@TEXT` `tier`, `upkeep`), close together and centred on the panel: upstream spread Tier and the upkeep to the
 panel's ends. "Tier: II" has the Unit Tier concept as tooltip, "Upkeep:" the game's Unit Upkeep text; what changes the upkeep (Low Maintenance,
-summoning) writes into `#upkeepvalue`. The name bar has an exotic mount's tag at its left end and the DLC's at its right
+summoning) writes into `#upkeepvalue`, each amount through `upkeepAmount`. The numeral and the amounts stand 1px below
+their labels' baseline (`.unit_tier_value`, 2026-11-24, the maintainer's call): beside lowercase words (Tier, Upkeep's
+descending p's) capitals and figures on the same baseline read as standing higher. An amount's icon has its middle on
+the figures' (measured at 6x): Gold 6px down, Mana 5px (both stood 3px above them, sitting on the baseline at twice a
+figure's height); Imperium, a short icon, keeps its place (2px, 3 with the span's 1). The name bar has an exotic mount's tag at its left end and the DLC's at its right
 (`#mounted`, `#DLC`), the mount's 25px (was 35), as upstream's; they lie over the bar (`.unit_name_tag`, absolute) as the
 tags did, where upstream gave them columns of their own, which wrapped a longer name (Ancient Hoarfrost Manta).
 

@@ -186,7 +186,7 @@ async function GetAllData(selectedLang) {
     const basePathLocal = `/evolved/Data/${selectedLang}/`;
 
     const fileNamesGeneric = [
-        "EnchantmentTables.json",
+        "UnitEnchantments.json",
         "all_spawnsets.json",
         "BuilderLookup.json",
         "AscendedInfo.json",
@@ -245,7 +245,7 @@ async function GetAllData(selectedLang) {
         const dataLocal = (textsLocal ?? textsEN).map((text) => JSON.parse(text));
 
         const genericTargets = [
-            "jsonEnchantments",
+            "jsonUnitEnchantments",
             "jsonSpawnTables",
             "jsonBuilderLookUp",
             "jsonExtraAscendedInfo",

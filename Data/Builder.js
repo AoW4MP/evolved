@@ -1322,7 +1322,6 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
     let abilityName,
         abilityIcon,
         abilityDam,
-        abilityEncht,
         abilityAcc,
         abilityRange,
         abilityType,
@@ -1375,147 +1374,19 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
         }
     }
 
-    let combinedReq = "";
-
-    for (let m = 0; m < abilityReq.length; m++) {
-        combinedReq += abilityReq[m].requisite + ",";
+    // the enchantments on the unit: what they do to this ability (UnitEnchantments.json, by its requisites)
+    const enchantAttacks = EnchantAttacksOn(a, list);
+    let enchantLines = [];
+    let enchantedAbility = abilityLoc;
+    if (enchantAttacks.length > 0) {
+        const changed = ApplyEnchantAttacks(abilityLoc, enchantAttacks);
+        enchantLines = changed.lines;
+        if (enchantLines.length > 0) {
+            abilityDam = changed.damage;
+            abilityName += '<span style="color:#aa84f6;font-size: 20px">*</span>';
+            enchantedAbility = { ...abilityLoc, damage: changed.damage, range: changed.range, accuracy: changed.accuracy };
+        }
     }
-    abilityEncht = "";
-    // enchantment handling disabled for now
-    /*for (let p = 0; p < list.length; p++) {
-        let foundEnchantment = false;
-
-        for (let k = 0; k < jsonEnchantments.length; k++) {
-            if (jsonEnchantments[k].id === list[p].id) {
-                foundEnchantment = true;
-                if ("damage" in jsonEnchantments[k]) {
-                    console.log("damage increase");
-                    abilityDam = IncreaseDamageValue(abilityDam, 1.2);
-                }
-                if ("attack" in jsonEnchantments[k]) {
-                    for (t = 0; t < jsonEnchantments[k].attack.length; t++) {
-                        if ("type2" in jsonEnchantments[k].attack[t]) {
-                            if (jsonEnchantments[k].attack[t].type2.indexOf("*") != -1) {
-                                if (
-                                    combinedReq.indexOf(jsonEnchantments[k].attack[t].type) != -1 ||
-                                    combinedReq.indexOf(jsonEnchantments[k].attack[t].type2.split("*")[1]) != -1
-                                ) {
-                                    abilityName += '<span style="color:#aa84f6;font-size: 20px">*</span>';
-                                    abilityEncht +=
-                                        '<bullet><img src="/evolved/Icons/SpellIcons/' +
-                                        jsonEnchantments[k].id +
-                                        ".png\" height='20px'>" +
-                                        jsonEnchantments[k].attack[t].description +
-                                        "<br>";
-                                    abilityEncht += "</bullet><br>";
-
-                                    if ("range" in jsonEnchantments[k].attack[t]) {
-                                        abilityRange += jsonEnchantments[k].attack[t].range + "*";
-                                    }
-                                }
-                            }
-                            // or check, not and
-                            else {
-                                if (
-                                    combinedReq.indexOf(jsonEnchantments[k].attack[t].type) != -1 &&
-                                    combinedReq.indexOf(jsonEnchantments[k].attack[t].type2) != -1
-                                ) {
-                                    abilityName += '<span style="color:#aa84f6;font-size: 20px">*</span>';
-                                    abilityEncht +=
-                                        '<bullet><img src="/evolved/Icons/SpellIcons/' +
-                                        jsonEnchantments[k].id +
-                                        ".png\" height='20px'>" +
-                                        jsonEnchantments[k].attack[t].description +
-                                        "<br>";
-                                    abilityEncht += "</bullet><br>";
-
-                                    if ("range" in jsonEnchantments[k].attack[t]) {
-                                        abilityRange += jsonEnchantments[k].attack[t].range + "*";
-                                    }
-                                }
-                            }
-                        } else {
-                            if (combinedReq.indexOf(jsonEnchantments[k].attack[t].type) != -1) {
-                                abilityName += '<span style="color:#aa84f6;font-size: 20px">*</span>';
-                                abilityEncht +=
-                                    '<bullet><img src="/evolved/Icons/SpellIcons/' +
-                                    jsonEnchantments[k].id +
-                                    ".png\" height='20px'>" +
-                                    jsonEnchantments[k].attack[t].description +
-                                    "<br>";
-                                abilityEncht += "</bullet><br>";
-
-                                if ("range" in jsonEnchantments[k].attack[t]) {
-                                    abilityRange =
-                                        parseInt(
-                                            parseInt(jsonEnchantments[k].attack[t].range) + parseInt(abilityRange)
-                                        ) + "*";
-                                }
-                            }
-                        }
-                    }
-                }
-                let doubled;
-                if ("damage_change" in jsonEnchantments[k]) {
-                    if (jsonEnchantments[k].requisites.length > 1) {
-                        if (jsonEnchantments[k].requisites[1].type.indexOf("*") != -1) {
-                            if (
-                                combinedReq.indexOf(jsonEnchantments[k].requisites[0].type) != -1 ||
-                                combinedReq.indexOf(jsonEnchantments[k].requisites[1].type.split("*")[1]) != -1
-                            ) {
-                                if (abilityDam != "") {
-                                    if (abilityType != "<repeatingaction></repeatingaction>") {
-                                        // double damage
-                                        doubled = doubleNumbers(jsonEnchantments[k].damage_change);
-                                        abilityDam = combineDamageStrings(abilityDam, doubled);
-                                    } else {
-                                        abilityDam = combineDamageStrings(
-                                            abilityDam,
-                                            jsonEnchantments[k].damage_change
-                                        );
-                                    }
-                                }
-                            }
-                            // or check, not and
-                       /* } else {
-                            if (
-                                combinedReq.indexOf(jsonEnchantments[k].requisites[0].type) != -1 &&
-                                combinedReq.indexOf(jsonEnchantments[k].requisites[1].type) != -1
-                            ) {
-                                if (abilityDam != "") {
-                                    if (abilityType != "<repeatingaction></repeatingaction>") {
-                                        // double damage
-                                        doubled = doubleNumbers(jsonEnchantments[k].damage_change);
-                                        abilityDam = combineDamageStrings(abilityDam, doubled);
-                                    } else {
-                                        abilityDam = combineDamageStrings(
-                                            abilityDam,
-                                            jsonEnchantments[k].damage_change
-                                        );
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        if (combinedReq.indexOf(jsonEnchantments[k].requisites[0].type) != -1) {
-                            if (abilityDam != "") {
-                                if (abilityType != "<repeatingaction></repeatingaction>") {
-                                    // double damage
-                                    doubled = doubleNumbers(jsonEnchantments[k].damage_change);
-                                    abilityDam = combineDamageStrings(abilityDam, doubled);
-                                } else {
-                                    abilityDam = combineDamageStrings(abilityDam, jsonEnchantments[k].damage_change);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if (foundEnchantment == false) {
-            console.log("missing enchantment info for : " + list[p].name);
-        }
-    }*/
 
     // add notes
 
@@ -1626,7 +1497,7 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
         btn.append(imageExtra);
     }
 
-    let spa = GetAbilityToolTip(abilityLoc, uniqueMedal);
+    let spa = GetAbilityToolTip(enchantedAbility, uniqueMedal, enchantLines);
 
     if (abilityEn.name.indexOf("Defense Mode") > -1) {
         spa.innerHTML =
@@ -1732,7 +1603,7 @@ function GetChampionMedalText(uniqueMedal, abilityName) {
     return section ?? null;
 }
 
-function GetAbilityToolTip(ability, uniqueMedal) {
+function GetAbilityToolTip(ability, uniqueMedal, enchantLines) {
     // get template
     const abiltyTemplate = ability_slot_template.content.cloneNode(true);
     const element = abiltyTemplate.firstElementChild;
@@ -1794,9 +1665,10 @@ function GetAbilityToolTip(ability, uniqueMedal) {
         modifierSpan.innerHTML += '<span style="color:#addd9e;font-size: 14px">' + abilityMod + "</span>";
     }
 
-    let abilityEncht = "";
-    if (abilityEncht != "") {
-        modifierSpan.innerHTML += '<span style="color:#aa84f6;font-size: 14px">' + abilityEncht + "</span>";
+    // what the enchantments on the unit add to it (ApplyEnchantAttacks)
+    if (enchantLines && enchantLines.length > 0) {
+        modifierSpan.innerHTML +=
+            '<span style="color:#aa84f6;font-size: 14px">' + AddTagIconsForStatusEffects(enchantLines.join("<br>")) + "</span>";
     }
 
     // notes
@@ -1949,52 +1821,6 @@ function addPassiveslot(a, div, enchant) {
 
     btn.append(tex);
     addTooltipListeners(tex, spa);
-}
-
-function addUniquePassiveSlot(enchantment, descr, div, overwrite) {
-    let abilityName,
-        abilityIcon,
-        abilityDescr,
-        j = "";
-
-    if (overwrite != "") {
-        abilityName = overwrite;
-    } else {
-        abilityName = enchantment.name;
-    }
-
-    abilityIcon = enchantment.id;
-    abilityDescr = descr;
-
-    let btn = document.createElement("DIV");
-    btn.className = "unit_passiveslot";
-    let imag = document.createElement("IMG");
-    imag.className = "unit_ability_icon";
-
-    let tex = document.createElement("DIV");
-    tex.className = "tooltip";
-    tex.setAttribute("onclick", "");
-    tex.innerHTML = abilityName;
-
-    imag.setAttribute("src", "/evolved/Icons/SpellIcons/" + abilityIcon + ".png");
-    imag.setAttribute("onerror", "this.setAttribute('src','" + errorImage + "')");
-    imag.setAttribute("width", "40");
-    imag.setAttribute("height", "40");
-
-    btn.setAttribute(
-        "style",
-        "background-image: linear-gradient(to right, rgb(95 47 162 / 0%), rgb(146 47 162 / 25%), rgb(222 88 228 / 50%), rgb(138 47 162 / 26%), rgb(151 47 162 / 0%));"
-    );
-
-    let spa = CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr);
-    div.appendChild(btn);
-
-    btn.appendChild(imag);
-
-    //tex.appendChild(spa);
-
-    btn.append(tex);
-    addTooltipListeners(btn, spa);
 }
 
 function CreatePassiveSlotToolTip(abilityIcon, abilityName, abilityDescr) {
@@ -2998,36 +2824,68 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         splitName = ab;
     }
 
+    // the enchantments put on the unit (the Enchant button), from the game with the mod: what they do to its stats,
+    // resistances, attacks and abilities, and the passives they show (UnitEnchantments.json)
+    const enchantEffects = EnchantEffectsFor(unitEN, activeEnchantList);
+    const enchantMark = '<span style="color:#aa84f6">*</span>';
+    const enchanted = (base, key) =>
+        enchantEffects.stats[key] ? Number(base) + enchantEffects.stats[key] + enchantMark : base;
+    hp.innerHTML = enchanted(unitEN.hp, "hp");
+    armor.innerHTML = enchanted(armorValue, "armor");
+    shield.innerHTML = enchanted(shieldValue, "resistance");
+
     for (let k = 0; k < unitLoc.abilities.length; k++) {
         // check if its got a unique medal
 
-        addAbilityslot(unitEN.abilities[k].slug, unitTabHolder, activeEnchantList, null, splitName);
+        addAbilityslot(unitEN.abilities[k].slug, unitTabHolder, enchantEffects.attacks, null, splitName);
+    }
+    for (const { up } of enchantEffects.upgrades) {
+        for (const slug of up.abilities || []) addAbilityslot(slug, unitTabHolder, enchantEffects.attacks, true);
     }
 
-    if (unitEN.status_resistance != "0") {
-        addstatusResistanceSlot(unitEN.status_resistance, resistanceHolder);
+    const statusResistance = Number(unitEN.status_resistance) + (enchantEffects.stats.status_resistance || 0);
+    if (statusResistance != 0) {
+        addstatusResistanceSlot(statusResistance, resistanceHolder);
     }
 
-    for (let z = 0; z < unitEN.resistances.length; z++) {
-        addResistanceSlot(unitEN.resistances[z].slug, unitEN.resistance, unitEN.armor, resistanceHolder);
-        if (unitEN.resistances[z].slug.toUpperCase().indexOf("BLIGHT") != -1) {
-            additionalBlight = ReturnWeaknessOrResistanceNumber(unitEN.resistances[z].slug);
+    // its resistances with the enchantments': a type the unit is immune to stays so
+    const resistanceSlugs = unitEN.resistances.map((r) => r.slug);
+    for (const [type, value] of Object.entries(enchantEffects.resistances)) {
+        const i = resistanceSlugs.findIndex((slug) => slug.startsWith(type + "_"));
+        const old = i == -1 ? 0 : Number(ReturnWeaknessOrResistanceNumber(resistanceSlugs[i]));
+        if (Number.isNaN(old)) continue;
+        const total = old + value;
+        const slug = total > 0 ? type + "_resistance_" + total : total < 0 ? type + "_weakness_" + -total : null;
+        if (i == -1) {
+            if (slug) resistanceSlugs.push(slug);
+        } else if (slug) {
+            resistanceSlugs[i] = slug;
+        } else {
+            resistanceSlugs.splice(i, 1);
         }
-        if (unitEN.resistances[z].slug.toUpperCase().indexOf("PHYSICAL") != -1) {
-            additionalPhysical = ReturnWeaknessOrResistanceNumber(unitEN.resistances[z].slug);
+    }
+
+    for (const slug of resistanceSlugs) {
+        addResistanceSlot(slug, unitEN.resistance, unitEN.armor, resistanceHolder);
+        const upper = slug.toUpperCase();
+        if (upper.indexOf("BLIGHT") != -1) {
+            additionalBlight = ReturnWeaknessOrResistanceNumber(slug);
         }
-        if (unitEN.resistances[z].slug.toUpperCase().indexOf("FIRE") != -1) {
-            additionalFire = ReturnWeaknessOrResistanceNumber(unitEN.resistances[z].slug);
+        if (upper.indexOf("PHYSICAL") != -1) {
+            additionalPhysical = ReturnWeaknessOrResistanceNumber(slug);
         }
-        if (unitEN.resistances[z].slug.toUpperCase().indexOf("FROST") != -1) {
-            additionalFrost = ReturnWeaknessOrResistanceNumber(unitEN.resistances[z].slug);
+        if (upper.indexOf("FIRE") != -1) {
+            additionalFire = ReturnWeaknessOrResistanceNumber(slug);
+        }
+        if (upper.indexOf("FROST") != -1) {
+            additionalFrost = ReturnWeaknessOrResistanceNumber(slug);
         }
 
-        if (unitEN.resistances[z].slug.toUpperCase().indexOf("LIGHTNING") != -1) {
-            additionalShock = ReturnWeaknessOrResistanceNumber(unitEN.resistances[z].slug);
+        if (upper.indexOf("LIGHTNING") != -1) {
+            additionalShock = ReturnWeaknessOrResistanceNumber(slug);
         }
-        if (unitEN.resistances[z].slug.toUpperCase().indexOf("SPIRIT") != -1) {
-            additionalSpirit = ReturnWeaknessOrResistanceNumber(unitEN.resistances[z].slug);
+        if (upper.indexOf("SPIRIT") != -1) {
+            additionalSpirit = ReturnWeaknessOrResistanceNumber(slug);
         }
     }
 
@@ -3095,70 +2953,6 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
             }
         }
     }
-    /* for (x in activeEnchantList) {
-        for (k = 0; k < jsonEnchantments.length; k++) {
-            if (jsonEnchantments[k].id === activeEnchantList[x].id) {
-                if ("hp" in jsonEnchantments[k]) {
-                    hpvalue += jsonEnchantments[k].hp;
-                    hp.innerHTML = hpvalue + "*";
-                }
-                if ("mp" in jsonEnchantments[k]) {
-                    mp.innerHTML = jsonEnchantments[k].mp + "*";
-                }
-
-                if ("resistance" in jsonEnchantments[k]) {
-                    shieldValue += jsonEnchantments[k].resistance;
-                    shield.innerHTML = shieldValue + "*";
-                }
-                if ("armor" in jsonEnchantments[k]) {
-                    armorValue += jsonEnchantments[k].armor;
-                    armor.innerHTML = armorValue + "*";
-                }
-                if ("crit" in jsonEnchantments[k]) {
-                    critChance += parseInt(jsonEnchantments[k].crit);
-                    crit.setAttribute("style", "display:block");
-                    crit.innerHTML = "+" + critChance + "%";
-                }
-                if ("passive" in jsonEnchantments[k]) {
-                    for (t = 0; t < jsonEnchantments[k].passive.length; t++) {
-                        addPassiveslot(jsonEnchantments[k].passive[t].slug, unitTabHolder, true);
-
-                        if (jsonEnchantments[k].passive[t].slug.indexOf("faithful") != -1) {
-                            console.log("faithful found");
-                            tier.innerHTML =
-                                "Tier " +
-                                romanize(unitEN.tier) +
-                                ": " +
-                                ReduceUpkeepPercentage(unitEN.upkeep, 0.9) +
-                                "*";
-                            let faithfulUpkeep = true;
-                        }
-                    }
-                }
-
-                if ("passive_unique" in jsonEnchantments[k]) {
-                    for (t = 0; t < jsonEnchantments[k].passive_unique.length; t++) {
-                        let overwrite = "";
-                        if ("overwriteName" in jsonEnchantments[k].passive_unique[t]) {
-                            overwrite = jsonEnchantments[k].passive_unique[t].overwriteName;
-                        }
-                        addUniquePassiveSlot(
-                            activeEnchantList[x],
-                            jsonEnchantments[k].passive_unique[t].description,
-                            unitTabHolder,
-                            overwrite
-                        );
-                    }
-                }
-
-                if ("active" in jsonEnchantments[k]) {
-                    for (t = 0; t < jsonEnchantments[k].active.length; t++) {
-                        addAbilityslot(jsonEnchantments[k].active[t].slug, unitTabHolder, activeEnchantList, true);
-                    }
-                }
-            }
-        }
-    } */
 
     for (let x = 0; x < unitEN.primary_passives.length; x++) {
         addPassiveslot(unitEN.primary_passives[x].slug, unitTabHolder);
@@ -3209,6 +3003,25 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
                 } else {
                     upkeepValue.innerHTML += "<br> Summoned: " + upkeepAmount(getSummonedUpkeep(unitEN, 0.9) + ">*");
                 }
+            }
+        }
+    }
+
+    // the enchantments' passives, as the game's unit panel shows them; the enchantment itself where it shows none
+    for (const { enchant, up } of enchantEffects.upgrades) {
+        if (!up.passives || up.passives.length == 0) {
+            AddEnchantPassiveSlot(enchant, enchant.name, enchant.description, unitTabHolder);
+        }
+        for (const passive of up.passives || []) {
+            if (passive.slug) {
+                addPassiveslot(passive.slug, unitTabHolder, true);
+            } else {
+                AddEnchantPassiveSlot(
+                    enchant,
+                    GameText(passive.name) || enchant.name,
+                    GameText(passive.text) || enchant.description,
+                    unitTabHolder
+                );
             }
         }
     }
@@ -4326,99 +4139,11 @@ function ShowPossibleEnchantments(evt) {
         activeEnchantList = evt.currentTarget.originDiv.activeEnchantList;
     }
 
-    unitType = unitType.replaceAll("_", " ");
-
-    let list = findEnchantmentsSpells();
-
-    let compatibleList = [];
-    let exclusionList = [];
-    let i = "";
-
-    // check if culture
-    if ("culture_name" in evt.currentTarget.unitData) {
-        culture = evt.currentTarget.unitData.culture_name.toLowerCase();
-    } else {
-        culture = "none";
-    }
-
-    for (i = 0; i < list.length; i++) {
-        let j = "";
-
-        if (list[i].id === "brutal_mark") {
-            if (culture == "barbarian") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "signet_of_knighthood") {
-            if (culture == "feudal") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "scroll_of_attunement") {
-            if (culture == "mystic") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "ciphers_of_dissonance") {
-            if (culture == "mystic") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "brand_of_wrath") {
-            if (culture == "dark") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "dormant_enchantment") {
-            if (culture == "high") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "rune_of_industry") {
-            if (culture == "industrious") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (
-            list[i].id === "pledge_of_strife" ||
-            list[i].id === "pledge_of_righteousness" ||
-            list[i].id === "pledge_of_harmony"
-        ) {
-            if (culture == "oathsworn") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (list[i].id === "engraving_of_focus") {
-            if (culture == "reaver") {
-                exclusionList.push(list[i]);
-            }
-        }
-        if (culture == "primal") {
-            if (
-                list[i].id === "crocodile_primal_communion" ||
-                list[i].id === "wolf_primal_communion" ||
-                list[i].id === "sabertooth_primal_communion" ||
-                list[i].id === "crow_primal_communion" ||
-                list[i].id === "mammoth_primal_communion" ||
-                list[i].id === "spider_primal_communion" ||
-                list[i].id === "serpent_primal_communion"
-            ) {
-                exclusionList.push(list[i]);
-            }
-        }
-
-        // Usage:
-        const enchant = list[i];
-        const unitData = evt.currentTarget.unitData;
-
-        if (
-            isCompatibleForEnchantment(enchant, unitData, unitType, activeEnchantList, exclusionList) &&
-            !isInArray(activeEnchantList, enchant) &&
-            !isInArray(exclusionList, enchant)
-        ) {
-            compatibleList.push(enchant);
-        }
-    }
+    // what the game lets this unit take (UnitEnchantments.json: each enchantment's unit filter, the unit's requisites)
+    const unitData = evt.currentTarget.unitData;
+    let compatibleList = findEnchantmentsSpells().filter(
+        (enchant) => EnchantUpgradesFor(enchant, unitData).length > 0 && !isInArray(activeEnchantList, enchant)
+    );
 
     // sort list alphabetically
     compatibleList = compatibleList.sort((a, b) => {
@@ -4453,36 +4178,123 @@ function ShowPossibleEnchantments(evt) {
     }
 }
 
-function hasPassiveForEnchantment(unitData, type) {
-    // type to slug dictionary
-    const thisAb = jsonUnitAbilitiesLocalized.find((entry) => entry.name === type);
-    if (thisAb == undefined) {
-        return false;
-    }
-    console.log(thisAb.name + type);
-
-    return unitData.secondary_passives.some((p) => p.slug === thisAb.slug);
+// Unit enchantments, from the game with the mod (Data/GEN/UnitEnchantments.json, aow4_diff_tools' enchantments.py): for
+// each one its unit upgrades, each with the unit requisites it asks (filter: any of, none of, all of) and what it does;
+// for each unit and ability, its requisites that some filter names
+function MeetsRequisiteFilter(filter, have) {
+    return (
+        (filter.any.length == 0 || filter.any.some((r) => have.includes(r))) &&
+        !filter.none.some((r) => have.includes(r)) &&
+        filter.all.every((r) => have.includes(r))
+    );
 }
 
-function isCompatibleForEnchantment(enchant, unitData, unitType, activeEnchantList, exclusionList) {
-    for (const req of enchant.enchantment_requisites) {
-        const rawReq = req.requisite;
-        const parts = rawReq.split("> ");
-        const type = parts[1];
+// the upgrades of an enchantment (a spell of Spells.json) the unit takes: none, it can't have it
+function EnchantUpgradesFor(enchant, unit) {
+    const upgrades = jsonUnitEnchantments.enchantments[enchant.id];
+    const have = jsonUnitEnchantments.units[unit.resid];
+    if (!upgrades || !have) return [];
+    return upgrades.filter((up) => MeetsRequisiteFilter(up.filter, have));
+}
 
-        if (type) {
-            if (type === unitType.toLowerCase()) return true;
-            if (hasPassiveForEnchantment(unitData, type)) return true;
-        } else {
-            if (rawReq === "Units that Evolve" && hasPassiveForEnchantment(unitData, "Evolve")) return true;
-            if (rawReq === "Tier I" && unitData.tier == 1) return true;
-
-            const normalized = rawReq.replaceAll(" ", "_").toLowerCase();
-            const nestedType = normalized.split("> ")[1] || normalized;
-            if (hasPassiveForEnchantment(unitData, nestedType)) return true;
+// what the enchantments on a unit do to it, added up
+function EnchantEffectsFor(unit, enchants) {
+    const out = { upgrades: [], stats: {}, resistances: {}, attacks: [] };
+    for (const enchant of enchants || []) {
+        for (const up of EnchantUpgradesFor(enchant, unit)) {
+            out.upgrades.push({ enchant: enchant, up: up });
+            for (const [k, v] of Object.entries(up.stats || {})) out.stats[k] = (out.stats[k] || 0) + v;
+            for (const [k, v] of Object.entries(up.resistances || {})) out.resistances[k] = (out.resistances[k] || 0) + v;
+            for (const attack of up.attacks || []) out.attacks.push({ enchant: enchant, attack: attack });
         }
     }
-    return false;
+    return out;
+}
+
+// the enchantments' attack changes an ability takes, by its requisites
+function EnchantAttacksOn(slug, enchantAttacks) {
+    if (!Array.isArray(enchantAttacks) || enchantAttacks.length == 0) return [];
+    const have = jsonUnitEnchantments.abilities[slug];
+    if (!have) return [];
+    return enchantAttacks.filter((x) => x.attack && MeetsRequisiteFilter(x.attack.filter, have));
+}
+
+// an ability's damage, range and accuracy with those changes: extra damage first (only to the types it already deals
+// for some), then the multipliers; and a line for each in its tooltip
+function ApplyEnchantAttacks(ability, attacks) {
+    let damage = ability.damage || "";
+    let range = ability.range;
+    let accuracy = ability.accuracy;
+    let multiplier = 1;
+    const lines = [];
+    for (const { enchant, attack } of attacks) {
+        let added = "";
+        if (attack.damage && damage != "") {
+            added = attack.damage;
+            if (attack.existing) {
+                added = (attack.damage.match(/\d+<(\w+)><\/\1>/g) || [])
+                    .filter((part) => damage.includes("<" + part.match(/<(\w+)>/)[1] + ">"))
+                    .join(" ");
+            }
+            if (added != "") damage = combineDamageStrings(damage, added);
+        }
+        if (attack.multiplier && damage != "") multiplier *= attack.multiplier;
+        if (attack.range && range != undefined) range = parseInt(range) + attack.range;
+        if (attack.accuracy && accuracy != undefined) accuracy = parseInt(accuracy) + attack.accuracy + "%";
+        const parts = [];
+        if (added != "") parts.push("+" + added.trim().replaceAll(" ", " +"));
+        if (attack.multiplier && damage != "") parts.push((attack.multiplier > 1 ? "+" : "") + Math.round((attack.multiplier - 1) * 100) + "% damage");
+        if (attack.range) parts.push("+" + attack.range + "<range></range>");
+        if (attack.accuracy) parts.push("+" + attack.accuracy + "%<accuracy></accuracy>");
+        if (parts.length > 0) {
+            lines.push(
+                '<img src="/evolved/Icons/SpellIcons/' + enchant.icon + '.png" height="20px" style="vertical-align: middle"> ' +
+                    enchant.name + ": " + parts.join(", ")
+            );
+        }
+    }
+    if (multiplier != 1) damage = IncreaseDamageValue(damage, multiplier);
+    return { damage: damage, range: range, accuracy: accuracy, lines: lines };
+}
+
+// a text of the game by its text id ("TOME_CRYOMANCY@SKILL_3@NAME": all.json's TOME_CRYOMANCY@SKILL_3, its name)
+function GameText(textId) {
+    if (!textId) return undefined;
+    const at = textId.lastIndexOf("@");
+    const entry = findBy(jsonAllFromPOLocalized, "id", textId.slice(0, at));
+    return entry ? entry[textId.slice(at + 1).toLowerCase()] : undefined;
+}
+
+// an enchantment's passive on a unit, as the game's unit panel shows it, with the enchantment's icon
+function AddEnchantPassiveSlot(enchant, name, text, holder) {
+    const btn = document.createElement("DIV");
+    btn.className = "unit_passiveslot";
+    btn.setAttribute(
+        "style",
+        "background-image: linear-gradient(to right, rgb(95 47 162 / 0%), rgb(146 47 162 / 25%), rgb(222 88 228 / 50%), rgb(138 47 162 / 26%), rgb(151 47 162 / 0%));"
+    );
+    const imag = document.createElement("IMG");
+    imag.className = "unit_ability_icon";
+    imag.setAttribute("src", "/evolved/Icons/SpellIcons/" + enchant.icon + ".png");
+    imag.setAttribute("onerror", "this.setAttribute('src','" + errorImage + "')");
+    imag.setAttribute("width", "40");
+    imag.setAttribute("height", "40");
+    const tex = document.createElement("DIV");
+    tex.className = "tooltip";
+    tex.setAttribute("onclick", "");
+    tex.innerHTML = name;
+    const spa = document.createElement("SPAN");
+    spa.innerHTML =
+        '<div class="abilityHighLighter"><img style="float:left; position:relative; top:-7px; height:30px; width:30px" src="/evolved/Icons/SpellIcons/' +
+        enchant.icon +
+        '.png"><p style="color: #d7c297;">' +
+        name.toUpperCase() +
+        "</p></div><hr>" +
+        AddTagIconsForStatusEffects(text || "");
+    holder.appendChild(btn);
+    btn.appendChild(imag);
+    btn.append(tex);
+    addTooltipListeners(tex, spa);
 }
 
 function createTooltipForEnchant(item) {

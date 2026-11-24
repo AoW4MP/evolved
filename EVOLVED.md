@@ -613,6 +613,23 @@ keeps its place (2px, 3 with the span's 1). The name bar has an exotic mount's t
 (`#mounted`, `#DLC`), the mount's 25px (was 35), as upstream's; they lie over the bar (`.unit_name_tag`, absolute) as the
 tags did, where upstream gave them columns of their own, which wrapped a longer name (Ancient Hoarfrost Manta).
 
+A unit's card's Enchant button works again (2026-11-24), from the game with the mod (`Data/GEN/UnitEnchantments.json`,
+`enchantments.py`; see Game data). It offers what the game lets the unit take: each enchantment's unit upgrades with their
+requisite filters (any of, none of, all of) against the unit's requisites (`EnchantUpgradesFor`): Brutal Mark not to
+Barbarian units, Dormant Enchantment's variant by class. Upstream's hand-coded culture exclusions (one for a Signet of
+Knighthood the game no longer has) and its check against the dump's class list are gone. A picked one changes the card
+as the game does (`EnchantEffectsFor`): Hit Points, Defense and Resistance with a purple `*`, Status Resistance, a
+type's resistance or weakness (the dump's slug for the new value; another of that type names it where none has it:
+`addResistanceSlot`), the abilities it gives, its passive as the game's unit panel shows it (the property's own text in
+`all.json`, `GameText`, with the enchantment's icon: `AddEnchantPassiveSlot`; the enchantment's own name and text where
+the game shows none), and the attacks whose requisites its ability modifiers ask (`EnchantAttacksOn`,
+`ApplyEnchantAttacks`): extra damage first (only to the types an attack deals, for those that say so), then the
+multipliers (Empowered Beasts' +20%: a Warg's 14 is 17), the name marked with a purple `*` and a line in its tooltip for
+each. Single Shot attacks have their own modifiers in the game (Frost Infusion: +4 Frost to them, +2 to the others), not
+upstream's doubling. What applies only to some hits or targets (Savage Strike on a critical hit, +10% against the Frozen)
+changes no number: the passive says it. Upstream's hand-made `Data/GEN/EnchantmentTables.json` (90 enchantments, the
+game's numbers before the mod) and the commented-out code that read it are gone; the card hadn't used them.
+
 ### Old lists
 
 `Data/GEN/WorldStructures.json` and `CosmicHappenings.json` aren't loaded by the site any more, and `showWorldStructure`, `showCosmicHappening` and the like are gone. Keep them: `worldmap.py` finds the pictures through them. Removed as nothing read them (2026-11-24, with the maintainer's leave): upstream's `CombatEnchantments.json`, `SpawnTables.json` and `item_forge.json`, old copies of `ItemForgeTypes.json` and `ItemForgeUpgrades.json` in `Data/GEN` (the site reads the dump's in `Data/EN`), and the unlinked `HTML/HeroBuilderBeta.html` with its `Data/HeroBeta.js`. `Data/GEN/Relics.json` is now written by `spells.py`, with the game's names and spells, keeping upstream's ids and pictures. An old `Spells.html?wonder=` link goes to the wonder's page.
@@ -704,7 +721,7 @@ The other folders under `Icons/` are made by hand. An icon they lack can be take
 
 When syncing, any data conflict is resolved in favour of the local dump. Non-conflicting upstream data changes are accepted; the next game dump corrects them if the mod overrides them.
 
-After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`), `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), `ancientwonders.py`, `worldmap.py`, `spells.py`, `affinityattacks.py` (`Data/GEN/AffinityAttacks.json`), `unitextras.py` (`Data/GEN/UnitExtras.json`), `heroskills.py` (`Data/GEN/HeroSkillSources.json`), `heroitems.py` (`Data/GEN/HeroItemSources.json`), `statuseffects.py` (`Data/GEN/StatusEffects.json`) and `inplay.py` (`Data/GEN/AbilitiesInPlay.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
+After copying a new dump into `Data/EN`, double-click `update_site.bat` in aow4_diff_tools. It runs `abilities.py` (`Data/GEN/LinkedAbilities.json`), `alltexts.py` (`Data/EN/all.json`, `concept_tooltips.json`), `spawnsets.py` (`Data/GEN/all_spawnsets.json`, `all_spawnsets_strategic.json`), `tmlicons.py` (`Icons/TML`, `Style/tmlicons.css`), `realmtraits.py`, `citytree.py` (`Data/GEN/CityTreeLinks.json`, `StructurePredictions.json`), `magicmaterials.py` (`Data/GEN/MagicMaterials.json`), `ancientwonders.py`, `worldmap.py`, `spells.py`, `affinityattacks.py` (`Data/GEN/AffinityAttacks.json`), `unitextras.py` (`Data/GEN/UnitExtras.json`), `enchantments.py` (`Data/GEN/UnitEnchantments.json`), `heroskills.py` (`Data/GEN/HeroSkillSources.json`), `heroitems.py` (`Data/GEN/HeroItemSources.json`), `statuseffects.py` (`Data/GEN/StatusEffects.json`) and `inplay.py` (`Data/GEN/AbilitiesInPlay.json`), in that order: `alltexts.py` leaves the abilities `abilities.py` writes out of the concept tooltips.
 Then `python checktooltips.py` there lists tooltip links that open the text they are in (see `LinksElsewhere` above).
 A new culture's emblem or a DLC's relic and landmark pictures have to be on the site before `citytree.py`, `spells.py`
 and `worldmap.py` run, as they look for them: run those three again after adding them.

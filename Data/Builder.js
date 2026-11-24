@@ -3031,13 +3031,13 @@ function showUnit(unitID, subcultureCheck, resID, divOrigin) {
         }
     }
 
-    // "Tier II  Upkeep: 12 gold", each part with its concept's tooltip; what changes the upkeep below writes its value
+    // "Tier: II  Upkeep: 12 gold", each part with its concept's tooltip; what changes the upkeep below writes its value
     const tierText = findBy(jsonAllFromPOLocalized, "id", "INTERFACE@TEXT");
     const tierConcept = findBy(jsonAllFromPOLocalized, "id", "CONCEPT@UNIT_TIER");
     tier.innerHTML =
         '<span class="unit_tier_part" id="tierlabel">' +
         tierText.tier +
-        " " +
+        ": " +
         romanize(unitEN.tier) +
         '</span><span class="unit_tier_part" id="upkeeplabel">' +
         tierText.upkeep +

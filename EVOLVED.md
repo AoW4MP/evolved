@@ -588,7 +588,8 @@ An Oceanic happening whose choices unlock a unit is one of its origins, through 
 unlocked by a choice in Oceanic Happening Mating Season").
 
 A unit's card shows its figures (members) after Combat Speed (2026-11-24, as upstream's of 2026-11-19, with its
-`Icons/Text/figure_count.png`), with the game's Casualty concept as tooltip, which tells what losing them does. The number
+`Icons/Text/figure_count.png`, its art moved up to the middle of the image: upstream's had a transparent top fifth,
+so it stood lower than the row's other icons), with the game's Casualty concept as tooltip, which tells what losing them does. The number
 is the positions of the unit's formation in the game with the mod (`Data/GEN/UnitFigures.json`, by resid, from
 `unitfigures.py`; see Game data), not upstream's `figure` field: theirs is vanilla (Evolved moves Gremlin, Zealot and
 Daylight Spear from 7 figures and five units from 8), and the dump gave 4 for the 7 of "Special 4 3 staggered", which

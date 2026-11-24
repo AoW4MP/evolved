@@ -624,7 +624,11 @@ type's resistance or weakness (the dump's slug for the new value; another of tha
 `all.json`, `GameText`, with the enchantment's icon: `AddEnchantPassiveSlot`; the enchantment's own name and text where
 the game shows none), and the attacks whose requisites its ability modifiers ask (`EnchantAttacksOn`,
 `ApplyEnchantAttacks`): extra damage first (only to the types an attack deals, for those that say so), then the
-multipliers, rounded down as the game does (Empowered Beasts' +20%: a Kraken's 29 is 34, a Warg's 14 is 16), the name
+multipliers as the game works them out: the bonuses add up, with the unit's own (`UnitEnchantments.json`'s
+`multipliers`: a Mythic unit's +10% to weapon attacks, which the dump's damage has: the card takes it out first), on
+the damage before any, and the result is rounded up. The maintainer's Kraken with Empowered Beasts and Force of Nature:
+Melee Strike 20 x 1.3 = 26 and its +4 Blight 5.2, 6; Tentacle Vortex 26 x 1.3 = 33.8, 34 (as in the game); a Warg's 14
+is 17. The name
 marked with a purple `*` and a line in its tooltip for each. The attack's tooltip also has the game's own lines for the
 enchantments' ability modifiers, among its modifiers, each with its numbers (Ciphers of Dissonance's Dissonant: "Inflict
 a stack of Dissonance" on a repeating attack, 2 on a Single Shot; Savage Strike, Bounty Hunter): what the game's ability

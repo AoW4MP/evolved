@@ -4239,6 +4239,13 @@ function EnchantEffectsFor(unit, enchants) {
             }
         }
     }
+    // the unit's own damage multipliers (a Mythic unit's x1.1 to weapon attacks), which an enchantment's damage takes
+    // too: only with an enchantment on it, as the dump's damage has them already
+    if (out.attacks.length > 0) {
+        for (const own of jsonUnitEnchantments.multipliers[unit.resid] || []) {
+            out.attacks.push({ own: true, attack: { filter: own.filter, multiplier: own.multiplier } });
+        }
+    }
     return out;
 }
 
@@ -4251,17 +4258,37 @@ function EnchantAttacksOn(slug, enchantAttacks) {
     );
 }
 
-// an ability's damage, range and accuracy with those changes: extra damage first (only to the types it already deals
-// for some), then the multipliers, rounded down (the game: a Kraken's 29 is 34 with +20%); a line for each in its
-// tooltip, and the game's own lines for them (Dissonant, Savage Strike), with the ability's modifiers
+// a damage string's numbers by type ("22<damagephysical></damagephysical> 4<damageblight></damageblight>")
+function DamageParts(damage) {
+    const out = {};
+    for (const m of (damage || "").matchAll(/(\d+)<(\w+)><\/\2>/g)) out[m[2]] = (out[m[2]] || 0) + Number(m[1]);
+    return out;
+}
+
+// an ability's damage, range and accuracy with those changes, as the game works them out: damage bonuses add up
+// (a Mythic unit's +10%, Empowered Beasts' +20%: x1.3) on the damage before any, the enchantments' extra damage
+// included, and the result is rounded up. The dump's damage has the unit's own bonuses: the number before them is
+// the whole one they round up from (a Kraken's 22 is 20 x 1.1, its 29 is 26 x 1.1). The game's Kraken with
+// Empowered Beasts and Force of Nature: Melee Strike 20 x 1.3 = 26 and Blight 4 x 1.3 = 5.2, 6; Tentacle Vortex
+// 26 x 1.3 = 33.8, 34. A line for each in its tooltip, and the game's own lines for them (Dissonant, Savage Strike),
+// with the ability's modifiers
 function ApplyEnchantAttacks(ability, attacks) {
     let damage = ability.damage || "";
     let range = ability.range;
     let accuracy = ability.accuracy;
-    let multiplier = 1;
+    const own = attacks.filter((x) => x.own).reduce((sum, x) => sum + x.attack.multiplier - 1, 0);
+    let bonus = 0;
     const lines = [];
     const notes = [];
-    for (const { enchant, attack } of attacks) {
+    const before = (d) => {
+        if (own == 0) return d;
+        let r = Math.floor(d / (1 + own) + 1e-9);
+        if (r * (1 + own) <= d - 1 + 1e-9) r = d / (1 + own);
+        return r;
+    };
+    const raw = Object.fromEntries(Object.entries(DamageParts(damage)).map(([tag, d]) => [tag, before(d)]));
+    for (const { enchant, attack, own: isOwn } of attacks) {
+        if (isOwn) continue;
         for (const note of attack.notes || []) {
             if (!notes.some((n) => n.name == note.name && n.description == note.text)) {
                 notes.push({ name: note.name, description: note.text || "" });
@@ -4269,15 +4296,11 @@ function ApplyEnchantAttacks(ability, attacks) {
         }
         let added = "";
         if (attack.damage && damage != "") {
-            added = attack.damage;
-            if (attack.existing) {
-                added = (attack.damage.match(/\d+<(\w+)><\/\1>/g) || [])
-                    .filter((part) => damage.includes("<" + part.match(/<(\w+)>/)[1] + ">"))
-                    .join(" ");
-            }
-            if (added != "") damage = combineDamageStrings(damage, added);
+            const parts = Object.entries(DamageParts(attack.damage)).filter(([tag]) => !attack.existing || tag in raw);
+            for (const [tag, n] of parts) raw[tag] = (raw[tag] || 0) + n;
+            added = parts.map(([tag, n]) => n + "<" + tag + "></" + tag + ">").join(" ");
         }
-        if (attack.multiplier && damage != "") multiplier *= attack.multiplier;
+        if (attack.multiplier && damage != "") bonus += attack.multiplier - 1;
         if (attack.range && range != undefined) range = parseInt(range) + attack.range;
         if (attack.accuracy && accuracy != undefined) accuracy = parseInt(accuracy) + attack.accuracy + "%";
         const parts = [];
@@ -4292,7 +4315,11 @@ function ApplyEnchantAttacks(ability, attacks) {
             );
         }
     }
-    if (multiplier != 1) damage = ScaleDamage(damage, multiplier);
+    if (damage != "" && lines.length > 0) {
+        damage = Object.entries(raw)
+            .map(([tag, r]) => Math.ceil(r * (1 + own + bonus) - 1e-9) + "<" + tag + "></" + tag + ">")
+            .join(" ");
+    }
     return { damage: damage, range: range, accuracy: accuracy, lines: lines, notes: notes };
 }
 

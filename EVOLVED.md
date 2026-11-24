@@ -615,7 +615,7 @@ tags did, where upstream gave them columns of their own, which wrapped a longer 
 
 ### Old lists
 
-`Data/GEN/WorldStructures.json`, `CosmicHappenings.json` and `CombatEnchantments.json` aren't loaded by the site any more, and `showWorldStructure`, `showCosmicHappening` and the like are gone. Keep the first two: `worldmap.py` finds the pictures through them. `Data/GEN/Relics.json` is now written by `spells.py`, with the game's names and spells, keeping upstream's ids and pictures. An old `Spells.html?wonder=` link goes to the wonder's page.
+`Data/GEN/WorldStructures.json` and `CosmicHappenings.json` aren't loaded by the site any more, and `showWorldStructure`, `showCosmicHappening` and the like are gone. Keep them: `worldmap.py` finds the pictures through them. Removed as nothing read them (2026-11-24, with the maintainer's leave): upstream's `CombatEnchantments.json`, `SpawnTables.json` and `item_forge.json`, old copies of `ItemForgeTypes.json` and `ItemForgeUpgrades.json` in `Data/GEN` (the site reads the dump's in `Data/EN`), and the unlinked `HTML/HeroBuilderBeta.html` with its `Data/HeroBeta.js`. `Data/GEN/Relics.json` is now written by `spells.py`, with the game's names and spells, keeping upstream's ids and pictures. An old `Spells.html?wonder=` link goes to the wonder's page.
 
 On a phone a sidebar page has no column for its sidebar: it comes above the cards, and a card wider than the page (a unit's) scrolls by itself. A long page title wraps between its two icons.
 

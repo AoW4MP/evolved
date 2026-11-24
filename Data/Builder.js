@@ -1376,12 +1376,10 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
 
     // the enchantments on the unit: what they do to this ability (UnitEnchantments.json, by its requisites)
     const enchantAttacks = EnchantAttacksOn(a, list);
-    let enchantLines = [];
     let enchantedAbility = abilityLoc;
     if (enchantAttacks.length > 0) {
         const changed = ApplyEnchantAttacks(abilityLoc, enchantAttacks);
-        enchantLines = changed.lines;
-        if (enchantLines.length > 0 || changed.notes.length > 0) {
+        if (changed.changed || changed.notes.length > 0) {
             abilityDam = changed.damage;
             // the game's lines for them join the ability's own modifiers, a diamond each, as those have
             for (const note of changed.notes) abilityName += '<span style="color:#addd9e;font-size: 20px">&#11049</span>';
@@ -1505,7 +1503,7 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
         btn.append(imageExtra);
     }
 
-    let spa = GetAbilityToolTip(enchantedAbility, uniqueMedal, enchantLines);
+    let spa = GetAbilityToolTip(enchantedAbility, uniqueMedal);
 
     if (abilityEn.name.indexOf("Defense Mode") > -1) {
         spa.innerHTML =
@@ -1611,7 +1609,7 @@ function GetChampionMedalText(uniqueMedal, abilityName) {
     return section ?? null;
 }
 
-function GetAbilityToolTip(ability, uniqueMedal, enchantLines) {
+function GetAbilityToolTip(ability, uniqueMedal) {
     // get template
     const abiltyTemplate = ability_slot_template.content.cloneNode(true);
     const element = abiltyTemplate.firstElementChild;
@@ -1673,12 +1671,6 @@ function GetAbilityToolTip(ability, uniqueMedal, enchantLines) {
         modifierSpan.innerHTML += '<span style="color:#addd9e;font-size: 14px">' + abilityMod + "</span>";
     }
 
-    // what the enchantments on the unit add to it (ApplyEnchantAttacks)
-    if (enchantLines && enchantLines.length > 0) {
-        modifierSpan.innerHTML +=
-            // not through AddTagIconsForStatusEffects: it made Empowered Beasts' "Empowered" a link to the status effect
-            '<span style="color:#aa84f6;font-size: 14px">' + enchantLines.join("<br>") + "</span>";
-    }
 
     // notes
 
@@ -4270,15 +4262,14 @@ function DamageParts(damage) {
 // included, and the result is rounded up. The dump's damage has the unit's own bonuses: the number before them is
 // the whole one they round up from (a Kraken's 22 is 20 x 1.1, its 29 is 26 x 1.1). The game's Kraken with
 // Empowered Beasts and Force of Nature: Melee Strike 20 x 1.3 = 26 and Blight 4 x 1.3 = 5.2, 6; Tentacle Vortex
-// 26 x 1.3 = 33.8, 34. A line for each in its tooltip, and the game's own lines for them (Dissonant, Savage Strike),
-// with the ability's modifiers
+// 26 x 1.3 = 33.8, 34. The game's own lines for them (Dissonant, Savage Strike) join the ability's modifiers
 function ApplyEnchantAttacks(ability, attacks) {
     let damage = ability.damage || "";
     let range = ability.range;
     let accuracy = ability.accuracy;
     const own = attacks.filter((x) => x.own).reduce((sum, x) => sum + x.attack.multiplier - 1, 0);
     let bonus = 0;
-    const lines = [];
+    let changed = false;
     const notes = [];
     const before = (d) => {
         if (own == 0) return d;
@@ -4287,6 +4278,9 @@ function ApplyEnchantAttacks(ability, attacks) {
         return r;
     };
     const raw = Object.fromEntries(Object.entries(DamageParts(damage)).map(([tag, d]) => [tag, before(d)]));
+    // "the types it deals" (Adding Mode 2: Ice Focus' Ice Nova damage per tier) are the ability's own, not those
+    // another enchantment adds: else the order they were picked in decided it (+12 Blight and Fire on Ice Nova)
+    const ownTypes = Object.keys(raw);
     for (const { enchant, attack, own: isOwn } of attacks) {
         if (isOwn) continue;
         for (const note of attack.notes || []) {
@@ -4294,33 +4288,32 @@ function ApplyEnchantAttacks(ability, attacks) {
                 notes.push({ name: note.name, description: note.text || "" });
             }
         }
-        let added = "";
         if (attack.damage && damage != "") {
-            const parts = Object.entries(DamageParts(attack.damage)).filter(([tag]) => !attack.existing || tag in raw);
+            const parts = Object.entries(DamageParts(attack.damage)).filter(([tag]) => !attack.existing || ownTypes.includes(tag));
             for (const [tag, n] of parts) raw[tag] = (raw[tag] || 0) + n;
-            added = parts.map(([tag, n]) => n + "<" + tag + "></" + tag + ">").join(" ");
+            if (parts.length > 0) changed = true;
         }
-        if (attack.multiplier && damage != "") bonus += attack.multiplier - 1;
-        if (attack.range && range != undefined) range = parseInt(range) + attack.range;
-        if (attack.accuracy && accuracy != undefined) accuracy = parseInt(accuracy) + attack.accuracy + "%";
-        const parts = [];
-        if (added != "") parts.push("+" + added.trim().replaceAll(" ", " +") + (attack.tier ? " for its tier" : ""));
-        if (attack.multiplier && damage != "") parts.push((attack.multiplier > 1 ? "+" : "") + Math.round((attack.multiplier - 1) * 100) + "% damage");
-        if (attack.range) parts.push("+" + attack.range + "<range></range>");
-        if (attack.accuracy) parts.push("+" + attack.accuracy + "%<accuracy></accuracy>");
-        if (parts.length > 0) {
-            lines.push(
-                '<img src="/evolved/Icons/SpellIcons/' + enchant.icon + '.png" height="20px" style="vertical-align: middle"> ' +
-                    enchant.name + ": " + parts.join(", ")
-            );
+        if (attack.multiplier && damage != "") {
+            bonus += attack.multiplier - 1;
+            changed = true;
+        }
+        if (attack.range && range != undefined) {
+            range = parseInt(range) + attack.range;
+            changed = true;
+        }
+        if (attack.accuracy && accuracy != undefined) {
+            accuracy = parseInt(accuracy) + attack.accuracy + "%";
+            changed = true;
         }
     }
-    if (damage != "" && lines.length > 0) {
+    if (damage != "" && changed) {
         damage = Object.entries(raw)
             .map(([tag, r]) => Math.ceil(r * (1 + own + bonus) - 1e-9) + "<" + tag + "></" + tag + ">")
             .join(" ");
     }
-    return { damage: damage, range: range, accuracy: accuracy, lines: lines, notes: notes };
+    // no line of its own per enchantment in the tooltip (the maintainer, 2026-11-24): the enchantment shows on the
+    // card and beside the picture, and its effects in the attack's numbers and among its modifiers
+    return { damage: damage, range: range, accuracy: accuracy, changed: changed, notes: notes };
 }
 
 // an enchantment's passive on a unit, as the game's unit panel shows it, with the enchantment's icon

@@ -629,7 +629,10 @@ multipliers as the game works them out: the bonuses add up, with the unit's own 
 the damage before any, and the result is rounded up. The maintainer's Kraken with Empowered Beasts and Force of Nature:
 Melee Strike 20 x 1.3 = 26 and its +4 Blight 5.2, 6; Tentacle Vortex 26 x 1.3 = 33.8, 34 (as in the game); a Warg's 14
 is 17. The name
-marked with a purple `*` and a line in its tooltip for each. The attack's tooltip also has the game's own lines for the
+marked with a purple `*`; no line of its own per enchantment in the tooltip (dropped 2026-11-24, the maintainer: the
+enchantment shows on the card and beside the picture, and its effects in the numbers and among the modifiers). Extra
+damage "only to the types it deals" (Ice Focus' Ice Nova damage per tier) goes to the attack's own types, not to
+those another enchantment adds: else the order they were picked in decided it. The attack's tooltip also has the game's own lines for the
 enchantments' ability modifiers, among its modifiers, each with its numbers (Ciphers of Dissonance's Dissonant: "Inflict
 a stack of Dissonance" on a repeating attack, 2 on a Single Shot; Savage Strike, Bounty Hunter): what the game's ability
 tooltip shows, conditional ones too, those it keeps out of it not (Frost Infusion's damage only changes the number). An

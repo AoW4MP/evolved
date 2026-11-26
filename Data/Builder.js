@@ -4629,20 +4629,21 @@ function populateGenericCard(divOrigin, { name, description, tier = "", cost = "
 // Bargain Price a second time, unit type by type. Elsewhere the prediction mostly repeats the description
 // ("+15 Draft income" after "+15 Draft."), but some effects are only in it (a Town Hall's +1 Province Annex Range).
 // One text for the versions of a structure that differ in a few lines, one version per Affinity (an Architect's Monuments
-// III and IV): the lines they share, then what each has. null for any other structure
+// III and IV): the lines they all have, then what each has besides. Lines are matched by their text, not their place:
+// a version can have one line fewer (the mod's Materium Zenith has no Protection). null for any other structure
 function StructureVersions(structure) {
     const texts = [...new Set(jsonStructureUpgradesLocalized.filter((s) => s.id === structure.id && s.name === structure.name).map((s) => s.description))];
     if (texts.length < 2) return null;
     const parts = texts.map((t) => (t || "").match(/^([\s\S]*?)<bulletlist>([\s\S]*)<\/bulletlist>([\s\S]*)$/));
     if (parts.some((p) => !p || p[1] !== parts[0][1] || p[3] !== parts[0][3])) return null;
     const lines = parts.map((p) => [...p[2].matchAll(/<bullet>([\s\S]*?)<\/bullet>/g)].map((m) => m[1].replace(/\.\s*$/, "")));
-    if (lines[0].length < 2 || lines.some((l) => l.length !== lines[0].length)) return null;
-    const differs = lines[0].map((line, i) => lines.some((l) => l[i] !== line));
-    if (!differs.includes(true) || !differs.includes(false)) return null;
+    const shared = lines[0].filter((line) => lines.every((l) => l.includes(line)));
+    const own = lines.map((l) => l.filter((line) => !shared.includes(line)));
+    if (!shared.length || own.some((o) => !o.length)) return null;
     const bullets = (list) => "<bulletlist>" + list.map((b) => "<bullet>" + b + ".</bullet>").join("") + "</bulletlist>";
     return (
-        parts[0][1] + bullets(lines[0].filter((l, i) => !differs[i])) +
-        '<div style="margin-top: 1em">By Affinity:</div>' + bullets(lines.map((l) => l.filter((b, i) => differs[i]).join(", "))) +
+        parts[0][1] + bullets(shared) +
+        '<div style="margin-top: 1em">By Affinity:</div>' + bullets(own.map((o) => o.join(", "))) +
         parts[0][3]
     );
 }

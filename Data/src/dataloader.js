@@ -242,7 +242,12 @@ async function GetAllData(selectedLang) {
             fetch("/evolved/HTML/templates.html").then((res) => res.text())
         ]);
         const dataEN = textsEN.map((text) => JSON.parse(text));
-        const dataLocal = (textsLocal ?? textsEN).map((text) => JSON.parse(text));
+        // what nothing changes, all.json and the concepts, read once where the two sets are the same files (English):
+        // all.json is 8.6 MB
+        const unchanged = new Set(["all.json", "concept_tooltips.json"]);
+        const dataLocal = textsLocal
+            ? textsLocal.map((text) => JSON.parse(text))
+            : textsEN.map((text, i) => (unchanged.has(fileNames[i]) ? dataEN[i] : JSON.parse(text)));
 
         const genericTargets = [
             "jsonUnitEnchantments",
@@ -313,15 +318,23 @@ async function GetAllData(selectedLang) {
 // name something else: Overcharge Cast's "Grant your Spells [hyperlink,GLOBAL.SpellOverchargeConcept]Overcharge" is
 // '<hyperlink data-global="GLOBAL.SpellOverchargeConcept">Overcharge</hyperlink>', not the Overcharge ability. So is
 // a link the dump has already. Not a unit's: UnitNameLink and the like find a unit by its link's words
+const relinkedBy = new WeakMap();
 function RestoreDumpLinks(dumps, allFromPO) {
     const HYPERLINK = /\[hyperlink,([^\]]*)\]([\s\S]*?)\[\/hyperlink\]/g;
     const words = (s) => s.replace(/<[^>]*>|\[\/?bullet[^\]]*\]|\s+/g, "");
     const concept = (key) => (!key.startsWith("GLOBAL.UNITS.") && jsonConceptTooltipsLocalized?.[key] ? key : undefined);
     const openTag = (slug, global) => "<hyperlink" + (slug ? ` data-slug="${slug}"` : "") + (global ? ` data-global="${global}"` : "") + ">";
 
-    // the texts of all.json with links, by their words; of two with the same words, the one with more links
-    const linked = new Map();
-    for (const entry of allFromPO) {
+    // the texts of all.json with links, by their words; of two with the same words, the one with more links. Made once
+    // for an all.json (AddExtraData's three calls read the same one in English), with the texts relinked by it: the
+    // two sets of dumps hold the same texts, and many texts more than once (Melee Strike 312 times)
+    let made = relinkedBy.get(allFromPO);
+    if (!made) {
+        made = { linked: new Map(), relinked: new Map() };
+        relinkedBy.set(allFromPO, made);
+    }
+    const { linked, relinked } = made;
+    for (const entry of linked.size ? [] : allFromPO) {
         for (const [key, text] of Object.entries(entry)) {
             if (key === "id" || typeof text !== "string" || !text.includes("[hyperlink,")) continue;
             const links = [...text.matchAll(HYPERLINK)].map((m) => ({ words: m[2].trim(), slug: abilityLinkSlugs.get(m[1]), global: concept(m[1]) }));
@@ -400,7 +413,11 @@ function RestoreDumpLinks(dumps, allFromPO) {
         else if (node && typeof node === "object") {
             for (const [key, value] of Object.entries(node)) {
                 if (typeof value === "string") {
-                    if (!NOT_TEXT.has(key) && !(entry && key === "name") && value.length > 3) node[key] = Relink(value);
+                    if (!NOT_TEXT.has(key) && !(entry && key === "name") && value.length > 3) {
+                        let text = relinked.get(value);
+                        if (text === undefined) relinked.set(value, (text = Relink(value)));
+                        node[key] = text;
+                    }
                 } else Walk(value, false);
             }
         }
@@ -500,8 +517,16 @@ function AddExtraData() {
 const abilityMap = {};
 const abilityNameMap = {};
 
+// the data, asked for as soon as this file has run (Init.js), not once the other scripts have; CheckData waits for it
+let dataLoading = null;
+function StartData() {
+    return (dataLoading ??= GetAllData("EN"));
+}
+
+let dataChecked = false;
 async function CheckData() {
-    if (jsonSiegeProjects === undefined) {
+    if (!dataChecked) {
+        dataChecked = true;
         let storedSettings = getUserSettings();
         if (storedSettings === null) {
             setUserSettings({
@@ -528,7 +553,7 @@ async function CheckData() {
         }
         CheckBoxTooltips();
 
-        await GetAllData("EN");
+        await StartData();
 
         AddExtraData();
 

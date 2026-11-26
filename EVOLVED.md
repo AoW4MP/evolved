@@ -246,7 +246,8 @@ Evolved is exported in English only, so the other languages are removed:
   (`Data/EN/UI.json`, `Data/GEN/UI.json`) are deleted: they only translated the menu, and in English every label was
   the menu's own text. `index.html` no longer calls it. `GetAllData` downloads the English files once for both the
   English and the "localized" sets (`fetchJsonTexts`), reading each twice, as `AddExtraData` changes the two apart;
-  upstream fetched every file twice at once, about 14 MB more on a first visit.
+  upstream fetched every file twice at once, about 14 MB more on a first visit. `all.json` and `concept_tooltips.json`,
+  which nothing changes, are read once for both (see Loading).
 
 ### One dataset
 
@@ -257,6 +258,39 @@ it went live with the Silver Seas DLC on 2026-11-03), so there is no switch to u
 - `Data/Builder.js`: the `showBetaTooltip` lookup is removed.
 - `Data/src/settings.js`: `showBeta` is no longer saved and `SwitchToBeta()` is removed.
 - `Data/src/dataloader.js`: `CheckData` always calls `GetAllData("EN")`, even if a visitor's browser still has `showBeta` saved.
+### Loading
+
+Every page loads the site's scripts and all its data, then makes the data ready (`AddExtraData`) before drawing itself:
+on the local server about 0.6s of a page's 0.65s (2026-11-26, all 106 pages measured). What was made faster that day,
+each page's data and markup checked the same before and after:
+
+- `Data/Init.js`: the seven scripts (`SITE_SCRIPTS`) are downloaded all at once with the header, as `Init.js` runs
+  (`<link rel="preload">`), and run in their order once the header is in (`async = false`; `Builder.js` reads its
+  settings boxes as it runs). They were asked for one after another, each when the one before had run, and never came
+  from the browser's cache: `jQuery.getScript` gives each a new address every time (`?_=<time>`), about 0.46 MB on every
+  page. Now they are cached as the rest of the site is (on GitHub Pages for 10 minutes, so a page may run the previous
+  scripts for up to 10 minutes after a push, as it may the previous data and styles). `requireAjax` is gone.
+- `Data/src/dataloader.js`: the data is asked for as soon as `dataloader.js` has run (`StartData`), not once the last
+  script has; `CheckData` waits for it (`dataChecked` says it has run, as `jsonSiegeProjects` did).
+- `GetAllData` reads `all.json` (8.6 MB) and `concept_tooltips.json` once for the English and "localized" sets: both
+  are only read. The other files are still read twice, as `AddExtraData` changes the two sets apart.
+- `RestoreDumpLinks` makes its lookup of `all.json`'s linked texts once (its three calls read the same `all.json`) and
+  relinks each text once (`relinkedBy`): the two sets of dumps hold the same texts, many more than once (Melee Strike
+  312 times). `AddExtraData` went from about 0.25s to 0.13s.
+- `Data/Builder.js`: a link's tooltip (status effect, unit, concept, structure: `HandleExtraTooltips`) is made when it
+  is first opened (`LazyTooltip`), not every link's at once two seconds after the page loaded: 0.28s on Active
+  Abilities, a long pause on every page of many cards. A tooltip is shown by its HTML (`TurnOnTooltip`,
+  `OpenStackedTooltip`), so the made-later one shows the same, as compared for every kind of link.
+- An ability picture is checked for filling its square (`ClipOpaqueAbilityIcon`) off the page's thread: decoded and
+  made small by `createImageBitmap`, not drawn on a canvas (0.1s of a page of cards). Both ways pick the same pictures,
+  8 of the 3,152 the browser reads. The first time one of them shows, it is clipped a moment after it appears.
+
+Median of the 106 pages on the local server, first visit 0.64s to 0.47s, the next 0.51s to 0.35s; with 60ms per request
+(as online), the home page 2.29s to 1.24s and Feudal 2.26s to 1.29s. Left as they are: a page's own cards (Active
+Abilities, Passives, Hero Equipment and Skill List draw 0.3-0.5s of cards, every tab's, as their search works across
+tabs), the Builds List's wait for its store (1.5-2.4s, Google Apps Script), Google Analytics and jQuery (others'
+scripts), and `all.json`'s size.
+
 ### City Tree
 
 `HTML/CityTrees.html` is Evolved's own page, replacing upstream's (same URL and menu link):
@@ -606,8 +640,8 @@ ability's row is as high (48px, more where the name or damage takes two lines), 
 a name's diamonds made its row 49px with the picture at its top, one without 40, so Defense Mode stood against the row
 under it (the maintainer: Ice Nova "sticking" to it); the diamonds no longer raise the line. A picture
 whose art fills its whole square (Ice Nova's: a dark square with a diamond drawn on it, 11 of the game's 3,156 unit
-icons) is cut to the frame's diamond once loaded, by its corners' alpha (`ClipOpaqueAbilityIcon`), on the card and in
-the tooltip: it stood out as a black square.
+icons) is cut to the frame's diamond once loaded, by its corners' alpha (`ClipOpaqueAbilityIcon`, read off the page's
+thread: see Loading), on the card and in the tooltip: it stood out as a black square.
 
 A unit's card shows its figures (members) after Combat Speed (2026-11-24, as upstream's of 2026-11-19, with its
 `Icons/Text/figure_count.png`, its art moved up to the middle of the image: upstream's had a transparent top fifth,

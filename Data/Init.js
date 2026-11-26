@@ -2,33 +2,52 @@ let searchParams = new URLSearchParams(window.location.search);
 let searchKeyword = searchParams.get("u");
 
 
+// The site's scripts, in the order they run, each needing those before it. All are downloaded at once, with the header,
+// as this file runs, and from the browser's cache on the next page; they run in this order once the header is in
+// (Builder.js reads its settings boxes as it runs). Until 2026-11-26 one after another, each asked for when the one
+// before had run, and never from the cache (jQuery.getScript gave each a new address every time): about 0.17s on the
+// local server before the data was asked for, a round trip per script online. The data is asked for as soon as
+// dataloader.js has run (StartData), while the others are still read.
+const SITE_SCRIPTS = [
+    "/evolved/Data/src/settings.js",
+    "/evolved/Data/src/dataloader.js",
+    "/evolved/Data/src/tooltips.js",
+    "/evolved/Data/src/lookuputils.js",
+    "/evolved/Data/Search.js",
+    "/evolved/Data/Faction.js",
+    "/evolved/Data/Builder.js"
+];
+for (const src of SITE_SCRIPTS) {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "script";
+    link.href = src;
+    document.head.append(link);
+}
+const headerHtml = fetch("/evolved/HTML/header.html").then((res) => res.text());
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Load header
-    fetch("/evolved/HTML/header.html")
-        .then((res) => res.text())
-        .then((html) => {
-            document.body.insertAdjacentHTML("afterbegin", html);
-GetHamburgerMenu();
-            requireAjax("/evolved/Data/src/settings.js", function () {
-                requireAjax("/evolved/Data/src/dataloader.js", function () {
-                    requireAjax("/evolved/Data/src/tooltips.js", function () {
-                        requireAjax("/evolved/Data/src/lookuputils.js", function () {
-                            requireAjax("/evolved/Data/Search.js", function () {
-                                requireAjax("/evolved/Data/Faction.js", function () {
-                                    requireAjax("/evolved/Data/Builder.js", function () {
-                                        CheckData();
-                                        // wait for a while and then  HandleExtraTooltips();
-                                        setTimeout(function () {
-                                            HandleExtraTooltips();
-                                        }, 2000);
-                                    });
-                                });
-                            });
-                        });
-                    });
-                });
-            });
-        });
+    headerHtml.then((html) => {
+        document.body.insertAdjacentHTML("afterbegin", html);
+        GetHamburgerMenu();
+        // in order: a script added by a script runs as soon as it is in, unless it is not async
+        for (const src of SITE_SCRIPTS) {
+            const script = document.createElement("script");
+            script.src = src;
+            script.async = false;
+            if (src.endsWith("/dataloader.js")) script.onload = () => StartData();
+            if (src === SITE_SCRIPTS.at(-1)) {
+                script.onload = () => {
+                    CheckData();
+                    // wait for a while and then  HandleExtraTooltips();
+                    setTimeout(function () {
+                        HandleExtraTooltips();
+                    }, 2000);
+                };
+            }
+            document.head.append(script);
+        }
+    });
 });
 
 
@@ -108,7 +127,3 @@ function GetHamburgerMenu(){
 
 }
 
-
-function requireAjax(file, callback) {
-    jQuery.getScript(file, callback);
-}

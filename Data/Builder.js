@@ -584,37 +584,59 @@ function createStatusEffectTooltip(effectData, handlerType = "status") {
 
 // A link to a Province Improvement or City Structure ("Cities may build the <conduit></conduit> Altar of Marching
 // Gloom") opens the structure's own card, as the game opens the structure's tooltip; null for any other link
-function StructureTooltip(globalName, concept) {
+function StructureOfLink(globalName, concept) {
     if (!globalName.startsWith("GLOBAL.STRUCTURE_UPGRADES.")) return null;
     const words = (s) => (s || "").replace(/<[^>]+>/g, "").trim().toLowerCase();
     // by name: "_teleporter___teleporter" is also an empty entry
-    const structure = jsonStructureUpgradesLocalized.find((s) => words(s.name) === words(concept.name) && s.description);
-    if (!structure) return null;
+    return jsonStructureUpgradesLocalized.find((s) => words(s.name) === words(concept.name) && s.description) ?? null;
+}
+
+function StructureTooltip(structure) {
     const card = structure_card_template.content.cloneNode(true).firstElementChild;
     return showStructure(structure.resid, false, card).firstElementChild;
+}
+
+// A link's tooltip, made when it is first opened: make() gives its HTML, or an element whose HTML it is (a tooltip is
+// shown by its HTML: TurnOnTooltip, OpenStackedTooltip). Until 2026-11-26 every link's was made at once, two seconds
+// after the page had loaded: 0.28s on Active Abilities, whose cards have hundreds
+function LazyTooltip(el, make, type) {
+    const span = document.createElement("span");
+    let made = false;
+    // before the tooltip's own listeners, which show it
+    el.addEventListener(
+        "mouseenter",
+        () => {
+            if (made) return;
+            made = true;
+            const content = make();
+            span.innerHTML = typeof content === "string" ? content : (content?.innerHTML ?? "");
+        },
+        true
+    );
+    addTooltipListeners(el, span, type);
 }
 
 function HandleExtraTooltips(specificDiv) {
     const root = specificDiv ?? document;
 
     root.querySelectorAll(".statusEffectHandler").forEach((el) => {
-        let spantest = document.createElement("span");
-        spantest.innerHTML = lookupStatusEffect(el.dataset.ability ?? el.innerText, el.dataset.slug);
-        addTooltipListeners(el, spantest, "something");
+        LazyTooltip(el, () => lookupStatusEffect(el.dataset.ability ?? el.innerText, el.dataset.slug), "something");
     });
 
     root.querySelectorAll(".unitTooltipHandler").forEach((el) => {
-        if (el.previousElementSibling) addTooltipListeners(el.previousElementSibling, UnitTooltip(el.dataset.unit), "unit");
+        if (el.previousElementSibling) LazyTooltip(el.previousElementSibling, () => UnitTooltip(el.dataset.unit), "unit");
     });
 
     root.querySelectorAll(".conceptTooltipHandler").forEach((el) => {
         const globalName = el.getAttribute("data-global");
         const concept = jsonConceptTooltipsLocalized?.[globalName];
         if (!concept) return;
+        // Attach to the visible underlined sibling, not the hidden handler itself
+        const visibleSibling = el.previousElementSibling;
 
-        const structure = StructureTooltip(globalName, concept);
+        const structure = StructureOfLink(globalName, concept);
         if (structure) {
-            if (el.previousElementSibling) addTooltipListeners(el.previousElementSibling, structure);
+            if (visibleSibling) LazyTooltip(visibleSibling, () => StructureTooltip(structure));
             return;
         }
 
@@ -624,15 +646,16 @@ function HandleExtraTooltips(specificDiv) {
             : concept.icon
               ? `<${concept.icon}></${concept.icon}> `
               : "";
-        const tooltipEl = document.createElement("span");
-        tooltipEl.innerHTML =
-            `<p style="color:#d7c297"><span style="font-size:16px">${iconHtml}${concept.name.toUpperCase()}</span></p>` +
-            // a list already ends its line, so the game's blank line after one needs a single <br>
-            AddTagIconsForStatusEffects(concept.description.replaceAll("</bulletlist><br><br>", "</bulletlist><br>"));
-
-        // Attach to the visible underlined sibling, not the hidden handler itself
-        const visibleSibling = el.previousElementSibling;
-        if (visibleSibling) addTooltipListeners(visibleSibling, tooltipEl, "concept");
+        if (visibleSibling) {
+            LazyTooltip(
+                visibleSibling,
+                () =>
+                    `<p style="color:#d7c297"><span style="font-size:16px">${iconHtml}${concept.name.toUpperCase()}</span></p>` +
+                    // a list already ends its line, so the game's blank line after one needs a single <br>
+                    AddTagIconsForStatusEffects(concept.description.replaceAll("</bulletlist><br><br>", "</bulletlist><br>")),
+                "concept"
+            );
+        }
     });
 
     //// ← new: concept tooltips
@@ -1563,26 +1586,32 @@ function addAbilityslot(a, holder, list, enchant, uniqueMedal) {
 
 // An ability's picture whose art fills its whole square (Ice Nova's: a dark square with a diamond drawn on it, 11 of
 // the game's unit icons) is cut to the ability frame's diamond, inside which the others' art lies: its corners hid
-// the frame and stood out as a black square. Checked once its picture has loaded, by its corners' alpha
+// the frame and stood out as a black square. Checked once its picture has loaded, by its corners' alpha at 16px: the
+// picture decoded and made small off the page's thread (createImageBitmap), once per picture. Until 2026-11-26 drawn on
+// a canvas on it, which decoded it there: 0.1s of a page of cards (the same 8 of the 3152 pictures fill their square)
 const opaqueAbilityIcons = new Map();
+let abilityIconCanvas = null;
+async function AbilityIconFillsSquare(img) {
+    try {
+        const bitmap = await createImageBitmap(img, { resizeWidth: 16, resizeHeight: 16, resizeQuality: "low" });
+        abilityIconCanvas ??= Object.assign(document.createElement("canvas"), { width: 16, height: 16 });
+        const ctx = abilityIconCanvas.getContext("2d", { willReadFrequently: true });
+        ctx.clearRect(0, 0, 16, 16);
+        ctx.drawImage(bitmap, 0, 0);
+        bitmap.close();
+        const data = ctx.getImageData(0, 0, 16, 16).data;
+        const alpha = (x, y) => data[(y * 16 + x) * 4 + 3];
+        return alpha(0, 0) > 200 && alpha(15, 0) > 200 && alpha(0, 15) > 200 && alpha(15, 15) > 200;
+    } catch (e) {
+        // a picture the page may not read: left as it is
+        return false;
+    }
+}
 function ClipOpaqueAbilityIcon(img) {
-    img.addEventListener("load", () => {
+    img.addEventListener("load", async () => {
         const src = img.currentSrc || img.src;
-        if (!opaqueAbilityIcons.has(src)) {
-            let opaque = false;
-            try {
-                const canvas = document.createElement("canvas");
-                canvas.width = canvas.height = 16;
-                const ctx = canvas.getContext("2d", { willReadFrequently: true });
-                ctx.drawImage(img, 0, 0, 16, 16);
-                const alpha = (x, y) => ctx.getImageData(x, y, 1, 1).data[3];
-                opaque = alpha(0, 0) > 200 && alpha(15, 0) > 200 && alpha(0, 15) > 200 && alpha(15, 15) > 200;
-            } catch (e) {
-                // a picture the page may not read: left as it is
-            }
-            opaqueAbilityIcons.set(src, opaque);
-        }
-        img.classList.toggle("ability_icon_clipped", opaqueAbilityIcons.get(src));
+        if (!opaqueAbilityIcons.has(src)) opaqueAbilityIcons.set(src, AbilityIconFillsSquare(img));
+        img.classList.toggle("ability_icon_clipped", await opaqueAbilityIcons.get(src));
     });
 }
 

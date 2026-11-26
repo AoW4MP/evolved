@@ -1,6 +1,6 @@
 // What the World Map pages made from the game's data share (Infestations, Landmarks, Cosmic and Oceanic Happenings,
-// Province Improvements): their tabs, cards and unit links, and the tabs (WmTab) and search bar Ancient Wonders and Realm
-// Traits use too (Magic Materials, the tabs).
+// Province Improvements, Realm Traits): their tabs, cards and unit links, and the tabs (WmTab) and search bar Ancient
+// Wonders uses too (Magic Materials, the tabs). Search shows the same cards.
 // Style/worldmap.css goes with it.
 
 // entries: {id, label (HTML), count, panel}. A tab's own address is ?type=<id>&; returns the function that opens a tab
@@ -252,6 +252,35 @@ function WmUnits(units, others) {
     return holder;
 }
 
+// things under a label, as an artifact's spells are listed (SpellList): icon and name, its card or cards on hover (made
+// when first wanted), folded away past UNIT_LIST_FOLD of them unless fold: false. things: [{name, icon, card: () =>
+// element or [elements]}]; by name, unless sorted: false keeps their order. What gives an ability (Data/abilities.js), a
+// tome's skills (SbTomeCard: by tier, never folded, as they are what the card is for)
+function WmThingList(label, things, { sorted = true, fold: folding = true } = {}) {
+    const fold = folding && things.length > UNIT_LIST_FOLD;
+    const part = WmElement(fold ? "details" : "div", "unitUnlocks", fold ? "<summary>" + label + " (" + things.length + ")</summary>" : '<div class="unitUnlocksLabel">' + label + "</div>");
+    const list = WmElement("div", "unitUnlocksList");
+    const plain = (s) => (s || "").replace(/<[^>]+>/g, "").trim();
+    if (sorted) things = [...things].sort((a, b) => plain(a.name).localeCompare(plain(b.name)));
+    for (const t of things) {
+        const entry = WmElement("a", "", (t.icon ? '<img class="unitUnlocksIcon" src="' + t.icon + '" alt="" onerror="this.remove()" />' : "") + t.name);
+        const tip = document.createElement("span");
+        entry.addEventListener(
+            "mouseenter",
+            () => {
+                if (tip.firstChild) return;
+                tip.append(...[t.card()].flat());
+                LazyImages(tip);
+            },
+            true
+        );
+        addTooltipListeners(entry, tip);
+        list.append(entry);
+    }
+    part.append(list);
+    return part;
+}
+
 function WmEnchantment(e) {
     const div = WmElement("div", "wm-ench");
     if (e.icon) {
@@ -388,4 +417,46 @@ function WmChoice(o) {
         row.append(units);
     }
     return row;
+}
+
+// ------------------------------------------------------------------------------------------------------------- Realm Traits
+
+// Data/GEN/RealmTraits.json, from aow4_diff_tools/realmtraits.py (the game with the mod): the Realm Traits page and Search.
+// Each category's colour, for its panel's band and its cards' edge
+const WM_REALM_COLORS = ["rgb(110, 140, 60)", "rgb(50, 120, 160)", "rgb(150, 100, 50)", "rgb(140, 50, 90)", "rgb(90, 90, 150)"];
+
+function WmRealmSlug(name) {
+    return "rt-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+}
+
+// a realm trait, drawn as the game's tooltip, a trait's icon from Icons/RealmTraits when the game has one named after it.
+// On its page a mutually exclusive trait is a link to its card there; elsewhere (Search: category, the trait's category
+// under its name) a link to it on the page
+function WmRealmTrait(t, exclusiveLabel, { category } = {}) {
+    const card = WmElement("div", "rt-card");
+    card.id = WmRealmSlug(t.name);
+    card.style.setProperty("--cat", WM_REALM_COLORS[t.category] || "rgb(100, 100, 100)");
+    const head = WmElement(
+        "div",
+        "rt-title",
+        (t.icon ? '<img class="rt-icon" src="/evolved/Icons/RealmTraits/' + t.icon + '.png" alt="" />' : "") +
+            '<div class="rt-names"><div class="rt-name">' + t.name + "</div>" +
+            (category ? '<div class="rt-complexity">' + category.name + "</div>" : "") +
+            (t.complexity ? '<div class="rt-complexity">' + t.complexity + "</div>" : "") + "</div>"
+    );
+    if (t.dlc) head.append(AddDLCTag(t.dlc));
+    card.append(head);
+    card.append(WmElement("div", "rt-text", WmMarkup(t.description)));
+    if (t.exclusive.length) {
+        const href = (n) => (category ? "/evolved/HTML/RealmTraits.html" : "") + "#" + WmRealmSlug(n);
+        card.append(
+            WmElement(
+                "div",
+                "rt-exclusive",
+                '<span class="rt-exclusive-label">' + exclusiveLabel + "</span> " +
+                    t.exclusive.map((n) => '<a class="rt-exclusive-link" href="' + href(n) + '"' + (category ? ' target="_blank"' : "") + ">" + n + "</a>").join(", ")
+            )
+        );
+    }
+    return card;
 }

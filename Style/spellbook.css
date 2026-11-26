@@ -43,6 +43,14 @@
     color: #d7c297;
     font-size: 18px;
 }
+/* a name that opens its page (a tome's in Search) */
+.sb-name a {
+    color: inherit;
+    text-decoration: none;
+}
+.sb-name a:hover {
+    text-decoration: underline;
+}
 .sb-variant {
     margin-left: 4px;
     color: #bbcdf6;

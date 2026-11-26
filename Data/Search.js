@@ -1,21 +1,26 @@
 // Spells, siege projects and the world map's sites come from the files their own pages read, made from the game and the mod
 // (aow4_diff_tools: spells.py, ancientwonders.py, magicmaterials.py, worldmap.py); so do the cards shown for them. So do the
 // hero skills, equipment, infusions, ambitions and governors: the Heroes pages' things (Data/heroes.js), what no one can
-// get left out; and the artifacts, traits, prophecies, ruler types and cultures of the Empire pages (Data/empire.js)
+// get left out; and the artifacts, traits, prophecies, ruler types and cultures of the Empire pages (Data/empire.js). The
+// tomes are the dump's, with a card of their own (SbTomeCard); the realm traits and status effects their pages' (Realm
+// Traits: Data/worldmap.js, Status Effects: Data/abilities.js), only those a player meets
 let searchBooks = null;
 
 async function LoadSearchBooks() {
     const read = (name) => fetch("/evolved/Data/GEN/" + name + ".json").then((res) => res.json());
-    const [book, infestations, landmarks, happenings, , , heroSources] = await Promise.all([
+    const [book, infestations, landmarks, happenings, realm, , , heroSources] = await Promise.all([
         SbLoad(),
         read("Infestations"),
         read("Landmarks"),
         read("Happenings"),
+        read("RealmTraits"),
         AncientWondersPage.Load(),
         MagicMaterialsPage.Load(),
         HbLoadSources(),
         HbLoadItemSources()
     ]);
+    // which status effects a player meets; what has each is found when its card is first drawn (Data/abilities.js)
+    await AbLoad();
     // the dump's DLC, as the books' own (a trailing space in the dump)
     const withDlc = (list) => list.map((e) => ({ ...e, dlc: (e.DLC || "").trim() || null }));
     searchBooks = {
@@ -32,7 +37,10 @@ async function LoadSearchBooks() {
         ambitions: withDlc(HbAmbitions()),
         governors: HbGovernors(),
         artifacts: EmArtifacts(),
-        factionTraits: EmFactionThings()
+        factionTraits: EmFactionThings(),
+        tomes: withDlc(jsonTomesLocalized.filter((t) => t.id)),
+        realmTraits: realm.traits.map((t) => ({ ...t, categoryEntry: realm.categories.find((c) => c.key === t.category), exclusiveLabel: realm.exclusive_label })),
+        statuses: AbStatuses()
     };
 }
 
@@ -69,7 +77,11 @@ const SEARCH_WORDS = {
     ambitions: (e) => [e.name, e.screen_description, e.ambitions.map((g) => [g.screen_description, g.reward_properties.map((r) => [r.name, r.screen_description])])],
     governors: (e) => [e.name, e.variant, e.tab, e.level_data.map((l) => l.effect_description)],
     artifacts: (e) => [e.name, e.description, e.lore, EmText(e.property)?.description, e.spells.map((id) => jsonSpellBook.spells.find((x) => x.id === id)?.name), e.units],
-    factionTraits: (e) => EmFactionWords(e)
+    factionTraits: (e) => EmFactionWords(e),
+    // a tome by its skills' names too: "ignite" finds the Tome of Pyromancy
+    tomes: (e) => [e.name, SbTomeType(e), e.gameplay_description, e.lore_description, e.lore_author, (e.skills || []).map((s) => s.name)],
+    realmTraits: (e) => [e.name, e.categoryEntry?.name, e.subcategory, e.complexity, e.description, e.exclusive],
+    statuses: (e) => [AbName(e), e.description, e.kinds.map((k) => k + " Status Effect")]
 };
 
 function returnFromBook(book, fieldToSearch) {
@@ -122,7 +134,10 @@ const filterMap = {
     factionTraitCheck: "ft",
     empireTreeCheck: "et",
     artifactCheck : "ar",
-    infusionsCheck: "i"
+    infusionsCheck: "i",
+    tomesCheck: "t",
+    statusEffectsCheck: "se",
+    realmTraitsCheck: "rt"
 };
 
 const input = document.getElementById("searchInput");
@@ -173,6 +188,9 @@ const happeningsChecked = document.getElementById("happeningsCheck");
 const cityStructuresChecked = document.getElementById("cityStructuresCheck");
 const ambitionsChecked = document.getElementById("ambitionsCheck");
 const governanceChecked = document.getElementById("governanceCheck");
+const tomesChecked = document.getElementById("tomesCheck");
+const statusEffectsChecked = document.getElementById("statusEffectsCheck");
+const realmTraitsChecked = document.getElementById("realmTraitsCheck");
 const infusionsChecked = document.getElementById("infusionsCheck");
 
 const deprecatedCheckList = ["000003e300005fe2", "000003e300005fe5", "000003e300005fe7", "000003e300005fe6"];
@@ -341,13 +359,13 @@ function returnUnitList(fieldToSearch) {
             }
         }
 
+        // a unit's own Protections, Weaknesses and Immunities, by the game's names ("Frost Protection", "Fire Weakness"):
+        // the dump's slugs say "resistance" ("Frost_resistance_4"), which no text of the game does any more
         if (resistancesChecked.checked) {
             if (Array.isArray(unit.resistances)) {
                 for (const resistance of unit.resistances) {
-                    if (
-                        resistance.slug.toLowerCase().replaceAll("_", " ").includes(search) &&
-                        !depCheckResID(unit.resid)
-                    ) {
+                    const name = HbPlain(abilityMap[resistance.slug]?.name) || resistance.slug.replaceAll("_", " ");
+                    if (name.toLowerCase().includes(search) && !depCheckResID(unit.resid)) {
                         let entry;
                         if (unit.sub_culture_name && !architectCultureUnits.includes(enUnit.id)) {
                             entry = `${enUnit.id},${enUnit.sub_culture_name}`;
@@ -460,8 +478,10 @@ function searchAll(keyword) {
         SetButtonsAndDivs(list, "Units" + "-button", "searchUnit", undefined, undefined, undefined);
         //   SetButtonsAndDivs(list, "buttonHolder", "searchUnit", undefined, undefined, undefined);
     }
+    if (tomesChecked.checked) ShowFromBook("Tomes", returnFromBook("tomes", fields[0]), SbTomeCard, true);
     if (spellsChecked.checked) ShowFromBook("Spells", returnFromBook("spells", fields[0]), SbSpellCard, true);
     if (siegeChecked.checked) ShowFromBook("Siege Projects", returnFromBook("siege", fields[0]), SbSiegeCard, true);
+    if (statusEffectsChecked.checked) ShowFromBook("Status Effects", returnFromBook("statuses", fields[0]), AbStatusCard, true);
     if (listStructures.length > 0) {
         SetCollapsibleButtonsAndDivs("Structures", listStructures, "searchStruct");
     }
@@ -475,6 +495,9 @@ function searchAll(keyword) {
         const found = returnFromBook("happenings", fields[0]);
         ShowFromBook("Cosmic Happenings", found.filter((e) => e.group !== "Oceanic"), WmHappening);
         ShowFromBook("Oceanic Happenings", found.filter((e) => e.group === "Oceanic"), WmHappening);
+    }
+    if (realmTraitsChecked.checked) {
+        ShowFromBook("Realm Traits", returnFromBook("realmTraits", fields[0]), (t) => WmRealmTrait(t, t.exclusiveLabel, { category: t.categoryEntry }), true);
     }
     if (heroSkillChecked.checked) ShowFromBook("Hero Skills", returnFromBook("heroSkills", fields[0]), HbSkillCard, true);
     if (heroItemsChecked.checked) ShowFromBook("Hero Equipment", returnFromBook("heroItems", fields[0]), HbItemCard, true);

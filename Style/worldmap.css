@@ -350,6 +350,81 @@ a.wm-unit:hover {
     background: rgba(255, 255, 255, 0.04);
     border-left: 3px solid #d7c297;
 }
+/* a realm trait (WmRealmTrait): its page and Search */
+.rt-card {
+    box-sizing: border-box;
+    background-image: url(/evolved/Icons/tooltipBG.png);
+    border-style: solid;
+    border-image: url(/evolved/Icons/9slicetooltip.png);
+    border-image-slice: 4 10 4 10 fill;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--cat);
+    padding: 8px 12px 12px;
+    color: #bbcdf6;
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+    scroll-margin-top: 20px;
+}
+.rt-flash {
+    animation: rt-flash 1.6s ease-out;
+}
+@keyframes rt-flash {
+    0%,
+    30% {
+        box-shadow: 0 0 6px 4px rgba(215, 194, 151, 0.9), inset 3px 0 0 var(--cat);
+    }
+    100% {
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--cat);
+    }
+}
+.rt-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.rt-names {
+    flex: 1;
+    min-width: 0;
+}
+.rt-name {
+    color: #d7c297;
+    font-size: 18px;
+    font-variant: small-caps;
+    letter-spacing: 0.5px;
+}
+.rt-complexity {
+    color: #e8e2d4;
+    font-size: 14px;
+}
+.rt-title .mountToolTip {
+    display: flex !important;
+    float: none !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin-left: 0 !important;
+}
+.rt-icon {
+    width: 52px;
+    height: 52px;
+    flex: none;
+}
+/* "Mutually exclusive with:" stands out, in the same font and size as the text */
+.rt-exclusive {
+    margin-top: 10px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(220, 110, 100, 0.35);
+}
+.rt-exclusive-label {
+    color: #f08a7e;
+}
+.rt-exclusive-link {
+    color: white;
+    text-decoration: underline;
+}
+.rt-exclusive-link:hover {
+    color: #d7c297;
+}
 @media (max-width: 800px) {
     .wm-card,
     .wm-columns {

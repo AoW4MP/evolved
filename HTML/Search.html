@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="/evolved/Style/magicmaterials.css" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/heroes.css" />
         <link rel="stylesheet" type="text/css" href="/evolved/Style/empire.css" />
+        <link rel="stylesheet" type="text/css" href="/evolved/Style/abilities.css" />
         <link rel="shortcut icon" type="image/x-icon" href="/evolved/favicon.ico" />
         <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
         <meta charset="UTF-8" />
@@ -48,6 +49,7 @@
         <script src="/evolved/Data/magicmaterials.js"></script>
         <script src="/evolved/Data/heroes.js"></script>
         <script src="/evolved/Data/empire.js"></script>
+        <script src="/evolved/Data/abilities.js"></script>
         <script>
           
             async function HandlePage() {
@@ -149,11 +151,15 @@
 
                                     <label class="switch">
                                         <input type="checkbox" name="checkToggle" id="resistancesCheck" />
-                                        Resistances
+                                        Protections & Weaknesses
                                     </label>
                                 </div>
                             </div>
                             <div id="otherSearchFilters">
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="tomesCheck" checked="checked" />
+                                    Tomes
+                                </label>
                                 <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="spellsCheck" checked="checked" />
                                     Spells
@@ -161,6 +167,10 @@
                                 <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="siegeCheck" checked="checked" />
                                     Siege Projects
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="statusEffectsCheck" checked="checked" />
+                                    Status Effects
                                 </label>
                                 <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="heroSkillsCheck" checked="checked" />
@@ -189,6 +199,10 @@
                                 <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="happeningsCheck" checked="checked" />
                                     Happenings
+                                </label>
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="realmTraitsCheck" checked="checked" />
+                                    Realm Traits
                                 </label>
                                   <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="artifactCheck" checked="checked" />

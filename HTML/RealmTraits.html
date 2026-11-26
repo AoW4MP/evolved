@@ -23,13 +23,11 @@
         <script>
             // Evolved's Realm Traits page: every trait the game's realm setup offers, a tab per category.
             // Data/GEN/RealmTraits.json comes from aow4_diff_tools/realmtraits.py (the game with the mod); a trait's
-            // icon is in Icons/RealmTraits when the game has one named after it.
+            // card and its category's colour are Data/worldmap.js' (WmRealmTrait, WM_REALM_COLORS), which Search shows too.
+            // #rt-<trait> opens on that trait's card (Search's links to a mutually exclusive one).
 
-            // each category's colour, for its panel's band and its cards' edge
-            const CATEGORY_COLORS = ["rgb(110, 140, 60)", "rgb(50, 120, 160)", "rgb(150, 100, 50)", "rgb(140, 50, 90)", "rgb(90, 90, 150)"];
             // each category's tab icon: the realm setup's own category button (RealmTraitButton_Default_<category>)
             const CATEGORY_ICONS = ["geography", "clime", "inhabitants", "presence", "misc"];
-            const slug = (name) => "rt-" + name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
             async function HandlePage() {
                 const data = await fetch("/evolved/Data/GEN/RealmTraits.json").then((res) => res.json());
@@ -41,7 +39,7 @@
                     const traits = data.traits.filter((t) => t.category === category.key);
                     if (!traits.length) continue;
                     const title = category.name.replace(/ Trait$/, "");
-                    const color = CATEGORY_COLORS[category.key] || "rgb(100, 100, 100)";
+                    const color = WM_REALM_COLORS[category.key] || "rgb(100, 100, 100)";
 
                     const icon = CATEGORY_ICONS[category.key];
                     const tab = WmTab(title, (icon ? '<img src="/evolved/Icons/Interface/TabIcons/' + icon + '.png" alt="" /> ' : "") + title, traits.length);
@@ -68,7 +66,7 @@
                             head.textContent = sub;
                             cards.append(head);
                         }
-                        for (const t of traits.filter((t) => (t.subcategory || "") === sub)) cards.append(TraitCard(t, data.exclusive_label));
+                        for (const t of traits.filter((t) => (t.subcategory || "") === sub)) cards.append(WmRealmTrait(t, data.exclusive_label));
                     }
                     section.append(cards);
                     page.append(section);
@@ -82,47 +80,25 @@
                     const a = e.target.closest("a.rt-exclusive-link");
                     if (!a) return;
                     e.preventDefault();
-                    const card = document.getElementById(a.getAttribute("href").slice(1));
-                    if (!card) return;
-                    OpenCategory(card.closest(".rt-section").dataset.type);
-                    card.scrollIntoView({ behavior: "smooth", block: "center" });
-                    card.classList.remove("rt-flash");
-                    void card.offsetWidth;
-                    card.classList.add("rt-flash");
+                    ShowTrait(a.getAttribute("href").slice(1));
                 });
+                if (location.hash) ShowTrait(location.hash.slice(1), true);
+            }
+
+            function ShowTrait(id, keepAddress) {
+                const card = document.getElementById(id);
+                if (!card) return;
+                OpenCategory(card.closest(".rt-section").dataset.type, keepAddress);
+                card.scrollIntoView({ behavior: "smooth", block: "center" });
+                card.classList.remove("rt-flash");
+                void card.offsetWidth;
+                card.classList.add("rt-flash");
             }
 
             function OpenCategory(type, keepAddress) {
                 document.querySelectorAll("#tabs .wm-tab").forEach((t) => t.classList.toggle("selected", t.dataset.id === type));
                 document.querySelectorAll(".rt-section").forEach((s) => (s.hidden = s.dataset.type !== type));
                 if (!keepAddress) history.replaceState(null, "", "?type=" + type + "&");
-            }
-
-            function TraitCard(t, exclusiveLabel) {
-                const card = document.createElement("div");
-                card.className = "rt-card";
-                card.id = slug(t.name);
-                const head = document.createElement("div");
-                head.className = "rt-title";
-                head.innerHTML =
-                    (t.icon ? '<img class="rt-icon" src="/evolved/Icons/RealmTraits/' + t.icon + '.png" alt="" />' : "") +
-                    '<div class="rt-names"><div class="rt-name">' + t.name + "</div>" +
-                    (t.complexity ? '<div class="rt-complexity">' + t.complexity + "</div>" : "") + "</div>";
-                if (t.dlc) head.append(AddDLCTag(t.dlc));
-                card.append(head);
-                const body = document.createElement("div");
-                body.className = "rt-text";
-                body.innerHTML = AddTagIconsForStatusEffects(t.description);
-                card.append(body);
-                if (t.exclusive.length) {
-                    const ex = document.createElement("div");
-                    ex.className = "rt-exclusive";
-                    ex.innerHTML =
-                        '<span class="rt-exclusive-label">' + exclusiveLabel + "</span> " +
-                        t.exclusive.map((n) => '<a class="rt-exclusive-link" href="#' + slug(n) + '">' + n + "</a>").join(", ");
-                    card.append(ex);
-                }
-                return card;
             }
         </script>
 
@@ -197,81 +173,6 @@
         margin-top: 6px;
         padding-bottom: 3px;
         border-bottom: 1px solid rgba(215, 194, 151, 0.3);
-    }
-    /* a trait, drawn as the game's tooltip */
-    .rt-card {
-        box-sizing: border-box;
-        background-image: url(/evolved/Icons/tooltipBG.png);
-        border-style: solid;
-        border-image: url(/evolved/Icons/9slicetooltip.png);
-        border-image-slice: 4 10 4 10 fill;
-        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--cat);
-        padding: 8px 12px 12px;
-        color: #bbcdf6;
-        font-size: 15px;
-        text-shadow: 2px 2px black;
-        scroll-margin-top: 20px;
-    }
-    .rt-flash {
-        animation: rt-flash 1.6s ease-out;
-    }
-    @keyframes rt-flash {
-        0%,
-        30% {
-            box-shadow: 0 0 6px 4px rgba(215, 194, 151, 0.9), inset 3px 0 0 var(--cat);
-        }
-        100% {
-            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3), inset 3px 0 0 var(--cat);
-        }
-    }
-    .rt-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 8px;
-    }
-    .rt-names {
-        flex: 1;
-        min-width: 0;
-    }
-    .rt-name {
-        color: #d7c297;
-        font-size: 18px;
-        font-variant: small-caps;
-        letter-spacing: 0.5px;
-    }
-    .rt-complexity {
-        color: #e8e2d4;
-        font-size: 14px;
-    }
-    .rt-title .mountToolTip {
-        display: flex !important;
-        float: none !important;
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-        margin-left: 0 !important;
-    }
-    .rt-icon {
-        width: 52px;
-        height: 52px;
-        flex: none;
-    }
-    /* "Mutually exclusive with:" stands out, in the same font and size as the text */
-    .rt-exclusive {
-        margin-top: 10px;
-        padding-top: 7px;
-        border-top: 1px solid rgba(220, 110, 100, 0.35);
-    }
-    .rt-exclusive-label {
-        color: #f08a7e;
-    }
-    .rt-exclusive-link {
-        color: white;
-        text-decoration: underline;
-    }
-    .rt-exclusive-link:hover {
-        color: #d7c297;
     }
     @media (max-width: 800px) {
         .rt-cards {

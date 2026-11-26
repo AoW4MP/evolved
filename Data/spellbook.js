@@ -261,6 +261,42 @@ function SbTomeMedallions(skills, holder) {
     }
 }
 
+// a tome's own page: its affinity's for a tome of one affinity, Dual Tomes for one of two (each affinity's page lists it too,
+// as GetAllTomesWithAffinity has it), the Culture page for a culture's and General Research, Dwelling Tomes for a pact
+const SB_TOME_PAGES = { empirearcana: "AstralTomes", empirechaos: "ChaosTomes", empirematter: "MateriumTomes", empirenature: "NatureTomes", empireorder: "OrderTomes", empireshadow: "ShadowTomes" };
+function SbTomePage(t) {
+    if (IsDwellingPact(t)) return "/evolved/HTML/DwellingTomes.html?type=" + t.id + "&";
+    if (!t.affinities) return "/evolved/HTML/GeneralCultureTomes.html#culture=" + (t.id === "general_research" ? t.id : t.id.split("_")[0] + "&sub=" + t.id);
+    const page = t.affinities.includes("2 ") ? SB_TOME_PAGES[t.affinities.match(/<(empire\w+)>/)[1]] : "DualTomes";
+    return "/evolved/HTML/" + page + ".html?type=" + t.id + "&";
+}
+
+// what a tome is: its affinity pips (a pip per point, as on its page: "2 <empireorder></empireorder> ..." is two; not
+// the Tome of the Cosmos' Reputation) and "Tome", a culture's or a pact's
+function SbTomeType(t) {
+    if (IsDwellingPact(t)) return "Dwelling Pact";
+    if (!t.affinities) return t.id === "general_research" ? "Tome" : "Culture Tome";
+    const pips = t.affinities
+        .split(", ")
+        .filter((a) => a && !a.includes("reputa"))
+        .map((a) => a.split(" ")[1].repeat(a.split(" ")[0]))
+        .join("");
+    return pips + " Tome";
+}
+
+// a tome as Search shows it: its name a link to its page, what it is and its tier, its text (the game's links only, as on
+// its page), and what it unlocks in the game's order (SbTomeSkills), each with its card or cards on hover
+function SbTomeCard(t) {
+    const card = SbCard({ name: '<a href="' + SbTomePage(t) + '" target="_blank">' + t.name + "</a>", tier: t.tier, dlc: t.dlc }, SbTomeType(t), "/evolved/Icons/TomeIcons/" + t.icon + ".png");
+    card.querySelector(".sb-text").innerHTML = AddTagIconsForStatusEffects(t.gameplay_description || "", true);
+    const skills = SbTomeSkills(t);
+    if (skills.length) {
+        const things = skills.map((s) => ({ name: s.name, icon: s.cards[0].querySelector(".sb-head > img")?.getAttribute("src"), card: () => s.cards }));
+        card.append(WmThingList("Skills", things, { sorted: false, fold: false }));
+    }
+    return card;
+}
+
 // a spell's or siege project's own page
 function SbShowCards(cards, divID) {
     const grid = WmElement("div", "sb-cards" + (cards.length === 1 ? " sb-single" : ""));

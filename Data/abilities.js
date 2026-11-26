@@ -135,11 +135,11 @@ function AbOnce(list, key) {
 let abUsers = null;
 // what nothing in play holds and the game gives nowhere a player meets it: by slug (aow4_diff_tools/inplay.py)
 let abLeftOut = new Set();
-// for each ability slug, what has it: units in play (as one of their abilities or passives, or a medal's reward), hero
-// skills, items and infusions. Heroes' things are those a player can get (the Heroes pages' lists, and the Item Forge's
-// base items: the Eldritch Relics' Mind Spike), each copy, as copies with another slug for the same ability are one card there
-async function AbLoadUsers() {
-    if (abUsers) return abUsers;
+let abSources = null;
+// what the lists need: the Heroes pages' hero skill sources and what is left out of play. Search waits for this alone,
+// the map of what has an ability (AbUsers, about 90ms) being made when a card first wants it
+async function AbLoad() {
+    if (abSources) return;
     // an item's card on hover says where it comes from
     const [sources, , inPlay] = await Promise.all([
         HbLoadSources(),
@@ -147,6 +147,19 @@ async function AbLoadUsers() {
         fetch("/evolved/Data/GEN/AbilitiesInPlay.json").then((res) => res.json())
     ]);
     abLeftOut = new Set(inPlay.left_out.map((e) => e.slug));
+    abSources = sources;
+}
+
+async function AbLoadUsers() {
+    await AbLoad();
+    return AbUsers();
+}
+
+// for each ability slug, what has it: units in play (as one of their abilities or passives, or a medal's reward), hero
+// skills, items and infusions. Heroes' things are those a player can get (the Heroes pages' lists, and the Item Forge's
+// base items: the Eldritch Relics' Mind Spike), each copy, as copies with another slug for the same ability are one card there
+function AbUsers() {
+    if (abUsers) return abUsers;
     abUsers = new Map();
     const get = (slug) => {
         if (!abUsers.has(slug)) abUsers.set(slug, { units: [], lists: new Set(), medals: [], skills: [], items: [], infusions: [] });
@@ -164,7 +177,7 @@ async function AbLoadUsers() {
             for (const a of u["medal_rewards_" + rank] || []) get(a.slug).medals.push([u.id, name]);
         }
     }
-    for (const s of HbSkills(sources, { all: true })) for (const a of s.abilities || []) get(a.slug).skills.push(s);
+    for (const s of HbSkills(abSources, { all: true })) for (const a of s.abilities || []) get(a.slug).skills.push(s);
     const bases = new Set(jsonItemForgeTypes.map((t) => String(t.base_hero_item_resid)));
     for (const i of jsonHeroItemsLocalized.filter((i) => i.tier_numerals || bases.has(String(i.resid)))) {
         for (const a of i.ability_slugs) get(a.slug).items.push(i);
@@ -177,7 +190,7 @@ async function AbLoadUsers() {
 function AbUsersOf(slugs) {
     const all = { units: new Set(), medals: new Map(), skills: new Map(), items: new Map(), infusions: new Map() };
     for (const slug of slugs) {
-        const u = abUsers.get(slug);
+        const u = AbUsers().get(slug);
         if (!u) continue;
         u.units.forEach((id) => all.units.add(id));
         u.medals.forEach(([id, rank]) => all.medals.set(id, rank));
@@ -199,23 +212,6 @@ function AbGiven(e) {
     return e.slugs.some((s) => !abLeftOut.has(s));
 }
 
-// a list of what gives an ability, as an artifact's spells are listed (SpellList): icon and name, its card on hover
-// (made when first wanted). things: [{name, icon, card: () => element}]
-function AbThingList(label, things) {
-    const fold = things.length > UNIT_LIST_FOLD;
-    const part = WmElement(fold ? "details" : "div", "unitUnlocks", fold ? "<summary>" + label + " (" + things.length + ")</summary>" : '<div class="unitUnlocksLabel">' + label + "</div>");
-    const list = WmElement("div", "unitUnlocksList");
-    for (const t of things.sort((a, b) => AbWords(a.name).localeCompare(AbWords(b.name)))) {
-        const entry = WmElement("a", "", (t.icon ? '<img class="unitUnlocksIcon" src="' + t.icon + '" alt="" onerror="this.remove()" />' : "") + t.name);
-        const tip = document.createElement("span");
-        entry.addEventListener("mouseenter", () => tip.firstChild || tip.append(t.card()), true);
-        addTooltipListeners(entry, tip);
-        list.append(entry);
-    }
-    part.append(list);
-    return part;
-}
-
 // the parts of a card that say what has the ability: units (a medal's: the units whose medal it is), hero skills, items,
 // infusions. A folded list is in the card's text too, so its names are searched
 function AbUsersParts(card, slugs, { medal = false } = {}) {
@@ -228,11 +224,11 @@ function AbUsersParts(card, slugs, { medal = false } = {}) {
     }
     const icon = (folder, name) => "/evolved/Icons/" + folder + "/" + name + ".png";
     const skills = [...users.skills.values()].map((s) => ({ name: s.name, icon: icon("UnitIcons", s.icon), card: () => HbSkillCard(s) }));
-    if (skills.length) card.append(AbThingList("Hero Skills", skills));
+    if (skills.length) card.append(WmThingList("Hero Skills", skills));
     const items = [...users.items.values()].map((i) => ({ name: i.name, icon: icon("UnitIcons", i.icon), card: () => HbItemCard(i) }));
-    if (items.length) card.append(AbThingList("Hero Items", items));
+    if (items.length) card.append(WmThingList("Hero Items", items));
     const infusions = [...users.infusions.values()].map((u) => ({ name: u.name, icon: icon("UnitIcons", u.icon), card: () => HbInfusionCard(u) }));
-    if (infusions.length) card.append(AbThingList("Infusions", infusions));
+    if (infusions.length) card.append(WmThingList("Infusions", infusions));
     return users;
 }
 

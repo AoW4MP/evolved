@@ -81,14 +81,13 @@
 
             
 
+            // what a unit is found by, greyed out while Units is off
             function updateUnitSubFilters() {
-                   const unitsToggle = document.getElementById("unitsCheck");
-            const unitSubFilters = document.querySelectorAll("#unitSubFilters input[type='checkbox']");
-                const enabled = unitsToggle.checked;
-                unitSubFilters.forEach((cb) => {
+                const enabled = document.getElementById("unitsCheck").checked;
+                document.getElementById("unitSubLabel").style.opacity = enabled ? "1" : "0.5";
+                document.querySelectorAll("#unitSubFilters input[type='checkbox']").forEach((cb) => {
                     cb.disabled = !enabled;
-                    cb.parentElement.style.opacity = enabled ? "1" : "0.5"; // grey out labels
-                    
+                    cb.parentElement.style.opacity = enabled ? "1" : "0.5";
                 });
             }
             
@@ -110,52 +109,18 @@
                     <div style="height: auto; color: white; text-align: center; padding-top: 12px">DLC Filters:<div id="dlcButtonRow" style="display: flex; flex-wrap: wrap; gap: 6px;    justify-content: center;"></div></div>
                     <div style="height: auto; color: white; text-align: center">
                       <hr style="margin-bottom: 16px">Search Filters:
+                        <!-- a switch per section of the menu, each for all its tabs of results; then what a unit is found by -->
                         <div id="searchFilters">
                             <label class="switch">
-
-                                <input
-                                    type="checkbox"
-                                    name="checkToggle"
-                                    id="toggleAllCheck"
-                                    checked="checked"
-                                    onchange="toggle(this)" />
+                                <input type="checkbox" name="checkToggle" id="toggleAllCheck" checked="checked" onchange="toggle(this)" />
                                 Toggle All
                             </label>
-
-                            <div id="unitSearchFilters">
+                            <div class="filterLabel">Search in:</div>
+                            <div class="filterRow" id="sectionFilters">
                                 <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="unitsCheck" checked="checked" />
                                     Units
                                 </label>
-                                  <div id="unitSubFilters">
-                                    <label class="switch">
-                                        <input type="checkbox" name="checkToggle" id="namesCheck" checked="checked" />
-                                        Unit Name
-                                    </label>
-                                    <label class="switch">
-                                        <input type="checkbox" name="checkToggle" id="abilityNamesCheck" checked="checked" />
-                                        Ability Names
-                                    </label>
-                                    <label class="switch">
-                                        <input
-                                            type="checkbox"
-                                            name="checkToggle"
-                                            id="abilityDescriptionCheck"
-                                            checked="checked" />
-                                        Ability Descriptions & Modifiers
-                                    </label>
-                                    <label class="switch">
-                                        <input type="checkbox" name="checkToggle" id="passivesCheck" checked="checked" />
-                                        Passives & Types
-                                    </label>
-
-                                    <label class="switch">
-                                        <input type="checkbox" name="checkToggle" id="resistancesCheck" />
-                                        Protections & Weaknesses
-                                    </label>
-                                </div>
-                            </div>
-                            <div id="otherSearchFilters">
                                 <label class="switch">
                                     <input type="checkbox" name="checkToggle" id="tomesCheck" checked="checked" />
                                     Tomes
@@ -165,60 +130,39 @@
                                     Spells
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="siegeCheck" checked="checked" />
-                                    Siege Projects
+                                    <input type="checkbox" name="checkToggle" id="worldMapCheck" checked="checked" />
+                                    World Map
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="statusEffectsCheck" checked="checked" />
-                                    Status Effects
+                                    <input type="checkbox" name="checkToggle" id="heroesCheck" checked="checked" />
+                                    Heroes
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="heroSkillsCheck" checked="checked" />
-                                    Hero Skills
+                                    <input type="checkbox" name="checkToggle" id="empireCheck" checked="checked" />
+                                    Empire
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="heroItemsCheck" checked="checked" />
-                                    Hero Equipment
+                                    <input type="checkbox" name="checkToggle" id="abilitiesCheck" checked="checked" />
+                                    Abilities
                                 </label>
-                                   <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="infusionsCheck" checked="checked" />
-                                    Item Forge Infusions
+                            </div>
+                            <div class="filterLabel" id="unitSubLabel">Units by:</div>
+                            <div class="filterRow" id="unitSubFilters">
+                                <label class="switch">
+                                    <input type="checkbox" name="checkToggle" id="namesCheck" checked="checked" />
+                                    Name
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="ambitionsCheck" checked="checked" />
-                                    Hero Ambitions
+                                    <input type="checkbox" name="checkToggle" id="abilityNamesCheck" checked="checked" />
+                                    Ability &amp; Passive Names
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="governanceCheck" checked="checked" />
-                                    Hero Governance
+                                    <input type="checkbox" name="checkToggle" id="abilityDescriptionCheck" checked="checked" />
+                                    Ability &amp; Passive Texts
                                 </label>
                                 <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="worldStructuresCheck" checked="checked" />
-                                    World Structures
-                                </label>
-                                <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="happeningsCheck" checked="checked" />
-                                    Happenings
-                                </label>
-                                <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="realmTraitsCheck" checked="checked" />
-                                    Realm Traits
-                                </label>
-                                  <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="artifactCheck" checked="checked" />
-                                    Artifacts
-                                </label>
-                                <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="cityStructuresCheck" checked="checked" />
-                                    City Structures & SPI
-                                </label>
-                                <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="factionTraitCheck" checked="checked" />
-                                    Faction Traits
-                                </label>
-                                <label class="switch">
-                                    <input type="checkbox" name="checkToggle" id="empireTreeCheck" checked="checked" />
-                                    Empire Tree
+                                    <input type="checkbox" name="checkToggle" id="resistancesCheck" />
+                                    Protections &amp; Weaknesses
                                 </label>
                             </div>
                         </div>

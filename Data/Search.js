@@ -116,30 +116,24 @@ const excludeListStructures = [
     "astral_focus_crystal"
 ];
 
+// the switches, by their code in a search's address (?f=): one per section of the menu (Units, Tomes, Spells, World Map,
+// Heroes, Empire, Abilities), each for all its tabs of results, and what a unit is found by
 const filterMap = {
     unitsCheck: "u",
+    tomesCheck: "t",
+    spellsCheck: "s",
+    worldMapCheck: "wm",
+    heroesCheck: "h",
+    empireCheck: "e",
+    abilitiesCheck: "ab",
     namesCheck: "un",
     abilityNamesCheck: "an",
     abilityDescriptionCheck: "ad",
-    passivesCheck: "p",
-    resistancesCheck: "r",
-    spellsCheck: "s",
-    siegeCheck: "sg",
-    heroSkillsCheck: "hs",
-    heroItemsCheck: "hi",
-    ambitionsCheck: "ha",
-    governanceCheck: "hg",
-    worldStructuresCheck: "ws",
-    happeningsCheck: "ch",
-    cityStructuresCheck: "cs",
-    factionTraitCheck: "ft",
-    empireTreeCheck: "et",
-    artifactCheck : "ar",
-    infusionsCheck: "i",
-    tomesCheck: "t",
-    statusEffectsCheck: "se",
-    realmTraitsCheck: "rt"
+    resistancesCheck: "r"
 };
+// Until 2026-11-26 a switch per kind of result: an old link's code turns on the section that kind is in now. Passives &
+// Types ("p") is gone: a unit's passives (its type among them) are always searched with its abilities
+const OLD_FILTER_CODES = { sg: "s", ws: "wm", ch: "wm", rt: "wm", cs: "wm", hs: "h", hi: "h", ha: "h", hg: "h", i: "h", ft: "e", et: "e", ar: "e", se: "ab" };
 
 const input = document.getElementById("searchInput");
 const output = document.getElementById("searchOutput");
@@ -168,31 +162,19 @@ function SearchDlcButtons() {
 }
 SearchDlcButtons();
 
-// unit checks
+// the sections searched
 const unitsChecked = document.getElementById("unitsCheck");
+const tomesChecked = document.getElementById("tomesCheck");
+const spellsChecked = document.getElementById("spellsCheck");
+const worldMapChecked = document.getElementById("worldMapCheck");
+const heroesChecked = document.getElementById("heroesCheck");
+const empireChecked = document.getElementById("empireCheck");
+const abilitiesChecked = document.getElementById("abilitiesCheck");
+// what a unit is found by
 const namesChecked = document.getElementById("namesCheck");
 const abilityNamesChecked = document.getElementById("abilityNamesCheck");
 const abilityDescriptionChecked = document.getElementById("abilityDescriptionCheck");
-const passivesChecked = document.getElementById("passivesCheck");
 const resistancesChecked = document.getElementById("resistancesCheck");
-
-// rest checks
-const spellsChecked = document.getElementById("spellsCheck");
-const siegeChecked = document.getElementById("siegeCheck");
-const artifactChecked = document.getElementById("artifactCheck");
-const empireTreeChecked = document.getElementById("empireTreeCheck");
-const heroSkillChecked = document.getElementById("heroSkillsCheck");
-const factionTraitsChecked = document.getElementById("factionTraitCheck");
-const heroItemsChecked = document.getElementById("heroItemsCheck");
-const worldStructuresChecked = document.getElementById("worldStructuresCheck");
-const happeningsChecked = document.getElementById("happeningsCheck");
-const cityStructuresChecked = document.getElementById("cityStructuresCheck");
-const ambitionsChecked = document.getElementById("ambitionsCheck");
-const governanceChecked = document.getElementById("governanceCheck");
-const tomesChecked = document.getElementById("tomesCheck");
-const statusEffectsChecked = document.getElementById("statusEffectsCheck");
-const realmTraitsChecked = document.getElementById("realmTraitsCheck");
-const infusionsChecked = document.getElementById("infusionsCheck");
 
 const deprecatedCheckList = ["000003e300005fe2", "000003e300005fe5", "000003e300005fe7", "000003e300005fe6"];
 const invalidUnitCheckList = ["fracture", "townsman"];
@@ -217,8 +199,8 @@ async function rememberSearch() {
     // filter settings
     const rawSearch = window.location.search.replace(/&amp;/g, "&");
     let params = new URLSearchParams(rawSearch);
-    const filters = (params.get("f") || "").split(",");
-    if (filters != "") {
+    const filters = (params.get("f") || "").split(",").map((code) => OLD_FILTER_CODES[code] || code);
+    if (params.get("f")) {
         for (const [id, code] of Object.entries(filterMap)) {
             const el = document.getElementById(id);
             if (el) el.checked = filters.includes(code);
@@ -460,8 +442,8 @@ function searchAll(keyword) {
     let list = Array.from(listSet);
 
 
-    let listStructures = cityStructuresChecked.checked ? returnStructure(fields[0]) : "";
-    let listEmpireTree = empireTreeChecked.checked ? returnEmpireTreeList(fields[0]) : "";
+    let listStructures = worldMapChecked.checked ? returnStructure(fields[0]) : "";
+    let listEmpireTree = empireChecked.checked ? returnEmpireTreeList(fields[0]) : "";
 
     var buttonHolder = document.getElementById("buttonHolder");
 
@@ -480,36 +462,44 @@ function searchAll(keyword) {
         //   SetButtonsAndDivs(list, "buttonHolder", "searchUnit", undefined, undefined, undefined);
     }
     if (tomesChecked.checked) ShowFromBook("Tomes", returnFromBook("tomes", fields[0]), SbTomeCard, true);
-    if (spellsChecked.checked) ShowFromBook("Spells", returnFromBook("spells", fields[0]), SbSpellCard, true);
-    if (siegeChecked.checked) ShowFromBook("Siege Projects", returnFromBook("siege", fields[0]), SbSiegeCard, true);
-    if (statusEffectsChecked.checked) ShowFromBook("Status Effects", returnFromBook("statuses", fields[0]), AbStatusCard, true);
+    if (spellsChecked.checked) {
+        ShowFromBook("Spells", returnFromBook("spells", fields[0]), SbSpellCard, true);
+        ShowFromBook("Siege Projects", returnFromBook("siege", fields[0]), SbSiegeCard, true);
+    }
+    if (abilitiesChecked.checked) ShowFromBook("Status Effects", returnFromBook("statuses", fields[0]), AbStatusCard, true);
     if (listStructures.length > 0) {
         SetCollapsibleButtonsAndDivs("Structures", listStructures, "searchStruct");
     }
-    if (worldStructuresChecked.checked) {
+    if (worldMapChecked.checked) {
         ShowFromBook("Ancient Wonders", returnFromBook("wonders", fields[0]), AncientWondersPage.Card);
         ShowFromBook("Landmarks", returnFromBook("landmarks", fields[0]), WmLandmark);
         ShowFromBook("Infestations", returnFromBook("infestations", fields[0]), WmInfestation);
         ShowFromBook("Magic Materials", returnFromBook("materials", fields[0]), MagicMaterialsPage.Card);
     }
-    if (happeningsChecked.checked) {
+    if (worldMapChecked.checked) {
         const found = returnFromBook("happenings", fields[0]);
         ShowFromBook("Cosmic Happenings", found.filter((e) => e.group !== "Oceanic"), WmHappening);
         ShowFromBook("Oceanic Happenings", found.filter((e) => e.group === "Oceanic"), WmHappening);
     }
-    if (realmTraitsChecked.checked) {
+    if (worldMapChecked.checked) {
         ShowFromBook("Realm Traits", returnFromBook("realmTraits", fields[0]), (t) => WmRealmTrait(t, t.exclusiveLabel, { category: t.categoryEntry }), true);
     }
-    if (heroSkillChecked.checked) ShowFromBook("Hero Skills", returnFromBook("heroSkills", fields[0]), HbSkillCard, true);
-    if (heroItemsChecked.checked) ShowFromBook("Hero Equipment", returnFromBook("heroItems", fields[0]), HbItemCard, true);
-    if (infusionsChecked.checked) ShowFromBook("Item Forge Infusions", returnFromBook("infusions", fields[0]), HbInfusionCard, true);
+    if (heroesChecked.checked) {
+        ShowFromBook("Hero Skills", returnFromBook("heroSkills", fields[0]), HbSkillCard, true);
+        ShowFromBook("Hero Equipment", returnFromBook("heroItems", fields[0]), HbItemCard, true);
+        ShowFromBook("Item Forge Infusions", returnFromBook("infusions", fields[0]), HbInfusionCard, true);
+    }
     if (listEmpireTree.length > 0) {
         SetCollapsibleButtonsAndDivs("Empire Tree", listEmpireTree, "searchEmpire");
     }
-    if (artifactChecked.checked) ShowFromBook("Artifacts/Secret Spells", returnFromBook("artifacts", fields[0]), EmArtifactCard, true);
-    if (factionTraitsChecked.checked) ShowFromBook("Faction Traits", returnFromBook("factionTraits", fields[0]), EmFactionCard, true);
-    if (ambitionsChecked.checked) ShowFromBook("Hero Ambitions", returnFromBook("ambitions", fields[0]), HbAmbitionCard, true);
-    if (governanceChecked.checked) ShowFromBook("Hero Governance", returnFromBook("governors", fields[0]), HbGovernorCard, true);
+    if (empireChecked.checked) {
+        ShowFromBook("Artifacts/Secret Spells", returnFromBook("artifacts", fields[0]), EmArtifactCard, true);
+        ShowFromBook("Faction Traits", returnFromBook("factionTraits", fields[0]), EmFactionCard, true);
+    }
+    if (heroesChecked.checked) {
+        ShowFromBook("Hero Ambitions", returnFromBook("ambitions", fields[0]), HbAmbitionCard, true);
+        ShowFromBook("Hero Governance", returnFromBook("governors", fields[0]), HbGovernorCard, true);
+    }
 
     SetLevelUpStuff();
     SetCollapsibleStuff();
@@ -582,11 +572,8 @@ function searchArray(keyword, arraytosearch, listToPushTo, index) {
 function findUnitWithAbility(ability, results) {
     for (const unit of jsonUnitsLocalized) {
         const enUnit = findBy(jsonUnits, "resid", unit.resid);
-        const checkSources = [
-            ...(unit.abilities || []),
-            ...(passivesChecked.checked ? unit.primary_passives || [] : []),
-            ...(passivesChecked.checked ? unit.secondary_passives || [] : [])
-        ];
+        // its abilities and passives, its type among them (Undead, Animal)
+        const checkSources = [...(unit.abilities || []), ...(unit.primary_passives || []), ...(unit.secondary_passives || [])];
 
         if (checkSources.some((source) => source.slug === ability) && !depCheckResID(unit.resid)) {
             const entry =

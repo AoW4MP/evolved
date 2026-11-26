@@ -823,30 +823,28 @@ p {
     color: white;
 }
 
-/* Search's filters: one grid of three columns, as wide as their labels and centred in the box; Toggle All above the
-   middle column, then the unit filters and, a little lower, the others */
+/* Search's filters: a row of switches per kind ("Search in:" the menu's sections, "Units by:"), each with its label in a
+   column of its own, and Toggle All over the rows; centred in the box, a row wrapping where it hasn't the room */
 #searchFilters {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
-    column-gap: 24px;
+    grid-template-columns: max-content minmax(0, max-content);
+    column-gap: 14px;
     justify-content: center;
+    align-items: baseline;
     text-align: left;
-    margin-top: 10px;
+    margin: 10px 12px 0;
 }
 #searchFilters > .switch:first-child {
     grid-column: 2;
 }
-/* Units starts the next row instead of filling the cell beside Toggle All */
-#unitSearchFilters > .switch {
-    grid-column-start: 1;
+#searchFilters .filterLabel {
+    color: #d7c297;
+    text-align: right;
 }
-#unitSearchFilters,
-#unitSubFilters,
-#otherSearchFilters {
-    display: contents;
-}
-#otherSearchFilters > .switch:nth-child(-n + 3) {
-    margin-top: 10px;
+#searchFilters .filterRow {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
 }
 /* a phone: no column beside the cards for the sidebar, which comes above them */
 @media (max-width: 800px) {
@@ -874,21 +872,17 @@ p {
         overflow-x: auto;
     }
 }
-/* a phone: two columns that wrap their labels */
+/* a phone: each row's label over it */
 @media (max-width: 800px) {
     #searchFilters {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 12px;
-        padding: 0 8px;
+        grid-template-columns: minmax(0, 1fr);
     }
     #searchFilters > .switch:first-child {
-        grid-column: 1 / -1;
+        grid-column: 1;
     }
-    #otherSearchFilters > .switch:nth-child(-n + 3) {
-        margin-top: 0;
-    }
-    #otherSearchFilters > .switch:nth-child(-n + 2) {
-        margin-top: 10px;
+    #searchFilters .filterLabel {
+        text-align: left;
+        margin-top: 6px;
     }
 }
 

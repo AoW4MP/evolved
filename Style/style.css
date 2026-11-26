@@ -824,7 +824,7 @@ p {
 }
 
 /* Search's filters: a row of switches per kind ("Search in:" the menu's sections, "Units by:"), each with its label in a
-   column of its own, and Toggle All over the rows; centred in the box, a row wrapping where it hasn't the room */
+   column of its own; centred in the box, a row wrapping where it hasn't the room */
 #searchFilters {
     display: grid;
     grid-template-columns: max-content minmax(0, max-content);
@@ -833,9 +833,6 @@ p {
     align-items: baseline;
     text-align: left;
     margin: 10px 12px 0;
-}
-#searchFilters > .switch:first-child {
-    grid-column: 2;
 }
 #searchFilters .filterLabel {
     color: #d7c297;
@@ -876,9 +873,6 @@ p {
 @media (max-width: 800px) {
     #searchFilters {
         grid-template-columns: minmax(0, 1fr);
-    }
-    #searchFilters > .switch:first-child {
-        grid-column: 1;
     }
     #searchFilters .filterLabel {
         text-align: left;

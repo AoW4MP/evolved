@@ -67,20 +67,6 @@
                 if (searchWaiting !== null) searchData(searchWaiting);
             }
 
-            function toggle(source) {
-                checkboxes = document.getElementsByName("checkToggle");
-                // Create a new 'change' event
-
-                // Dispatch it.
-
-                for (var checkbox in checkboxes) {
-                    checkboxes[checkbox].checked = source.checked;
-                }
-                updateUnitSubFilters();
-            }
-
-            
-
             // what a unit is found by, greyed out while Units is off
             function updateUnitSubFilters() {
                 const enabled = document.getElementById("unitsCheck").checked;
@@ -111,10 +97,6 @@
                       <hr style="margin-bottom: 16px">Search Filters:
                         <!-- a switch per section of the menu, each for all its tabs of results; then what a unit is found by -->
                         <div id="searchFilters">
-                            <label class="switch">
-                                <input type="checkbox" name="checkToggle" id="toggleAllCheck" checked="checked" onchange="toggle(this)" />
-                                Toggle All
-                            </label>
                             <div class="filterLabel">Search in:</div>
                             <div class="filterRow" id="sectionFilters">
                                 <label class="switch">

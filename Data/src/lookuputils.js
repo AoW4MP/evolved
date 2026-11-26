@@ -269,8 +269,9 @@ async function SetLevelUpStuff() {
     } else if (document.querySelector(".subDiv") != null) {
         // no unit asked for: the first subculture's first unit
         showSubDiv(null, document.querySelector(".subDiv").id);
-    } else if (document.querySelector(".tablink[data-tier]") != null) {
-        // nothing asked for on a Units or Tomes page: its first entry
+    } else if (document.querySelector(".tablink[data-tier]") != null && !document.getElementById("searchInput")) {
+        // nothing asked for on a Units or Tomes page: its first entry. Not on Search (its Units have tier buttons too),
+        // which shows all it found
         OpenFirstEntry(document);
     } else {
         // no unit asked for: the full list is showing, so its ☰ is the one lit

@@ -78,8 +78,9 @@ const SEARCH_WORDS = {
     governors: (e) => [e.name, e.variant, e.tab, e.level_data.map((l) => l.effect_description)],
     artifacts: (e) => [e.name, e.description, e.lore, EmText(e.property)?.description, e.spells.map((id) => jsonSpellBook.spells.find((x) => x.id === id)?.name), e.units],
     factionTraits: (e) => EmFactionWords(e),
-    // a tome by its skills' names too: "ignite" finds the Tome of Pyromancy
-    tomes: (e) => [e.name, SbTomeType(e), e.gameplay_description, e.lore_description, e.lore_author, (e.skills || []).map((s) => s.name)],
+    // a tome by what its card shows, its skills' names too ("ignite" finds the Tome of Pyromancy); not its lore, which the
+    // card doesn't show ("burning" found the Tome of Exaltation by "the burning flame of your wrath")
+    tomes: (e) => [e.name, SbTomeType(e), e.gameplay_description, (e.skills || []).map((s) => s.name)],
     realmTraits: (e) => [e.name, e.categoryEntry?.name, e.subcategory, e.complexity, e.description, e.exclusive],
     statuses: (e) => [AbName(e), e.description, e.kinds.map((k) => k + " Status Effect")]
 };

@@ -1027,17 +1027,17 @@ function SetButtonsAndDivs(list, parent, cardType, otherParent, subcultureCheck)
     if (cardType in TIER_LIST_TYPES && list.length > 1) AddTierFilter(buttonHolder, TIER_LIST_TYPES[cardType]);
 }
 
-// the lists with tier buttons: the Units and Tomes pages', not Search's
-const TIER_LIST_TYPES = { unit: "units", unitTomeIcon: "units", subcultureUnit: "units", tome: "tomes" };
+// the lists with tier buttons: the Units and Tomes pages', and Search's units
+const TIER_LIST_TYPES = { unit: "units", unitTomeIcon: "units", subcultureUnit: "units", tome: "tomes", searchUnit: "units" };
 
 function UnitTierOf(id, subculture) {
     const units = jsonUnits.filter((u) => u.id === id && depCheckResID(u.resid) != true);
     return (units.find((u) => subculture === undefined || u.sub_culture_name === subculture) ?? units[0])?.tier ?? 0;
 }
 
-// The tier buttons at the top of a Units or Tomes page's sidebar: they filter its list and its cards. One choice for the
-// page, so it stays when another subculture is picked; a tier its list doesn't have is greyed out. None for a list with no
-// tiers at all (a pact's tomes)
+// The tier buttons at the top of a Units or Tomes page's sidebar, and of Search's Units: they filter its list and its cards.
+// One choice for the page, so it stays when another subculture is picked or another search made (a list made after the
+// choice takes it at once); a tier its list doesn't have is greyed out. None for a list with no tiers at all (a pact's tomes)
 let tierShown = 0;
 function AddTierFilter(holder, kind) {
     const tiers = new Set([...holder.querySelectorAll("[data-tier]")].map((b) => Number(b.dataset.tier)));
@@ -1061,9 +1061,11 @@ function AddTierFilter(holder, kind) {
     none.className = "tier-none";
     none.hidden = true;
     holder.prepend(bar, none);
+    if (tierShown) FilterTier(tierShown, true);
 }
 
-function FilterTier(tier) {
+// keepView: leave the cards showing as they are (a list just made: Search's next search shows all it found)
+function FilterTier(tier, keepView) {
     tierShown = tier;
     for (const el of document.querySelectorAll("[data-tier]")) el.classList.toggle("tier-hidden", tier !== 0 && Number(el.dataset.tier) !== tier);
     for (const bar of document.querySelectorAll(".tier-filter")) {
@@ -1072,6 +1074,7 @@ function FilterTier(tier) {
         none.hidden = tier === 0 || bar.parentElement.querySelector(`[data-tier="${tier}"]`) !== null;
         none.textContent = none.hidden ? "" : "No Tier " + romanize(tier) + " " + bar.dataset.kind + " here.";
     }
+    if (keepView) return;
     // the card being read isn't of this tier: all that are
     if (document.getElementById(currentView)?.classList.contains("tier-hidden")) {
         document.getElementById(currentView + "-button")?.closest(".w3-bar")?.querySelector(".listViewButton")?.click();

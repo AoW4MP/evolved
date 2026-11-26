@@ -1170,7 +1170,8 @@ function SetCollapsibleButtonsAndDivs(overwrite, list, cardType) {
             break;
 
         case "unit":
-            btn.className = "collapsibleUnits";
+            // a sidebar button as the others, which folds the list open (Search's Units)
+            btn.className = "w3-bar-item w3-button collapsibleUnits";
             let content = document.createElement("DIV");
             content.setAttribute("id", overwrite + "-button");
             content.className = "contentUnits";

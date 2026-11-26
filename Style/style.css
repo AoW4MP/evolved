@@ -914,28 +914,23 @@ p {
     font-size: 16px;
 }
 
-.collapsibleUnits {
-    color: white;
-    cursor: pointer;
-    padding: 8px 16px;
-    border: none;
-    text-align: left;
-    outline: 0;
-    border-width: 10px;
-    border-style: solid;
-    border-image: url(/evolved/Icons/9slicetooltip.png);
-    border-image-slice: 10 10 10 10;
-    background-color: black;
-    border-image-repeat: stretch;
-}
-
-.active,
-.collapsibleUnits:hover {
+.active {
     background-color: darkslategray;
 }
 
-.collapsibleUnits:after {
+/* Search's Units fold: a sidebar button as the others (w3-bar-item w3-button), with ▼, ▲ while open; black while open as
+   the others are when not picked (the global .active above), lighter on hover as they are */
+.w3-bar .collapsibleUnits:after {
     content: "▼";
+    float: right;
+    font-size: 11px;
+    line-height: 23px;
+}
+.w3-bar .collapsibleUnits.active:after {
+    content: "▲";
+}
+.w3-bar .collapsibleUnits.active:not(:hover) {
+    background-color: black;
 }
 
 .contentUnits {

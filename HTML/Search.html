@@ -61,28 +61,8 @@
                 console.log("handling");
                 rememberSearch();
                  updateUnitSubFilters();
-                
-                const container = document.getElementById("dlcButtonRow");
-
-for (const key in dlcMap) {
-  const btn = document.createElement("button");
-  btn.className = "dlc-button"; // optional class for styling
-  btn.title = dlcMap[key].text; // tooltip
-btn.id = key;
-  // Custom tag that your stylesheet will convert to an icon
-  const iconTag = document.createElement(key);
-  // can also be data-attribute or empty
- btn.addEventListener("click", () => {
-    handleDlcClick(key, dlcMap[key]);
-  });
-  btn.appendChild(iconTag);
-  container.appendChild(btn);
-}
-            }
-            
-            function handleDlcClick(DLC){
-                document.getElementById("searchInput").value = DLC ;
-                 searchData();
+                // a search asked for while the data loaded (the DLC icons are drawn before it, Data/Search.js)
+                if (searchWaiting !== null) searchData(searchWaiting);
             }
 
             function toggle(source) {

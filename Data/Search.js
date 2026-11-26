@@ -129,6 +129,29 @@ const input = document.getElementById("searchInput");
 const output = document.getElementById("searchOutput");
 const result = document.getElementById("searchResult");
 
+// The DLC icons over the search box, one per DLC in dlcMap: drawn as soon as this file loads, not once the page's data
+// is in (they came about a second late). A search asked for before that waits for it (searchData)
+let searchWaiting = null;
+
+function SearchDlcButtons() {
+    const row = document.getElementById("dlcButtonRow");
+    if (!row || row.children.length) return;
+    for (const key in dlcMap) {
+        const button = document.createElement("button");
+        button.className = "dlc-button";
+        button.title = dlcMap[key].text;
+        button.id = key;
+        // a tag the stylesheet draws as the DLC's icon
+        button.append(document.createElement(key));
+        button.onclick = () => {
+            input.value = key;
+            searchData();
+        };
+        row.append(button);
+    }
+}
+SearchDlcButtons();
+
 // unit checks
 const unitsChecked = document.getElementById("unitsCheck");
 const namesChecked = document.getElementById("namesCheck");
@@ -202,6 +225,12 @@ function getActiveFilters() {
 function restoreFiltersFromURL() {}
 
 function searchData(keywords) {
+    if (!searchBooks) {
+        searchWaiting = keywords ?? input.value;
+        result.textContent = "Loading…";
+        return;
+    }
+    result.textContent = "";
     let filter = "";
 
     output.innerHTML = "";

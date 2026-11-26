@@ -920,11 +920,15 @@ p {
 
 /* Search's Units fold: a sidebar button as the others (w3-bar-item w3-button), with ▼, ▲ while open; black while open as
    the others are when not picked (the global .active above), lighter on hover as they are */
+/* the arrow placed apart, centred on the right: as part of the button's content (floated) it made that taller, and the
+   button, which centres its content, drew the text 4px higher than the others' */
 .w3-bar .collapsibleUnits:after {
     content: "▼";
-    float: right;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 11px;
-    line-height: 23px;
 }
 .w3-bar .collapsibleUnits.active:after {
     content: "▲";
